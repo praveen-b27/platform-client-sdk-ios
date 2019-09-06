@@ -1,8 +1,8 @@
 ---
-title: Platform API Client SDK - iOS (Swift 4)
+title: Platform API Client SDK - iOS
 ---
 
-Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/ios/](https://developer.mypurecloud.com/api/rest/client-libraries/ios/)
+The iOS SDK is compatible with Swift 5 and does not require any external dependencies. Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/ios/](https://developer.mypurecloud.com/api/rest/client-libraries/ios/)
 
 ## Install using CocoaPods
 
@@ -59,7 +59,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.ie"
 In order to make a request, call the desired method on one of the SDK's API classes. For example, to get details for the authenticated user:
 
 ~~~ swift
-let expand: [String] = [UsersAPI.Expand_getUsersMe.enummember.rawValue]
+let expand: [String] = [UsersAPI.Expand_getUsersMe.presence.rawValue]
 UsersAPI.getUsersMe(expand: expand) { (response, error) in
     if let error = error {
         dump(error)

@@ -11,7 +11,7 @@ This package can be found at https://cocoapods.org/pods/PureCloudPlatformClientV
 Reference the SDK's pod in your project's Podfile:
 
 ```
-pod 'PureCloudPlatformClientV2'
+pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '2.0.4'
 ```
 
 Then install your project's dependencies:

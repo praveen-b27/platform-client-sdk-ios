@@ -6,12 +6,12 @@ The iOS SDK is compatible with Swift 5 and does not require any external depende
 
 ## Install using CocoaPods
 
-This package can be found at https://cocoapods.org/pods/PureCloudPlatformClientV2 and the source is on github at https://github.com/MyPureCloud/platform-client-sdk-ios.
+This package's source is on github at https://github.com/MyPureCloud/platform-client-sdk-ios.
 
 Reference the SDK's pod in your project's Podfile:
 
 ```
-pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '2.0.4'
+pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '2.0.5'
 ```
 
 Then install your project's dependencies:
@@ -19,6 +19,15 @@ Then install your project's dependencies:
 ```
 pod install
 ```
+
+:::primary
+**Package Size Warning**
+
+The SDK package is quite large as it contains every API request and model for the Platform API. xcode has a limit on the length of command line arguments when compiling an application. Because the SDK is so large, it can exceed the maximum length when the xcode project resides in a directory with a path that is already long. It is recommended to keep projects using the SDK in a path as short as possible.
+
+As a workaround, it may be desirable to add the SDK's source code to the xcode project manually on an as-needed basis to only include the APIs used by the application and models required for those APIs.
+:::
+
 
 ## Using the SDK
 
@@ -41,7 +50,7 @@ PureCloudPlatformClientV2API.accessToken = "YOUR_ACCESS_TOKEN"
 :::primary
 **Implicit Grant Tutorial**
 
-See the [iOS Web View Implicit Grant tutorial](/api/tutorials/) for a walkthrough of how to implement the OAuth Implicit Grant flow and authorize the SDK using Swift's native [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview).
+See the [Authorizing the iOS SDK](/api/tutorials/ios-auth/) tutorial for a walkthrough of how to implement the OAuth Implicit Grant flow and authorize the SDK using Swift's native [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview).
 :::
 
 

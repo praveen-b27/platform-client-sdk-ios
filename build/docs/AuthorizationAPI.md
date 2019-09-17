@@ -680,7 +680,7 @@ This endpoint does not require any parameters.
 
 
 
-> [DomainOrganizationRole](DomainOrganizationRole.html) getAuthorizationRole(roleId)
+> [DomainOrganizationRole](DomainOrganizationRole.html) getAuthorizationRole(roleId, expand)
 
 Get a single organization role.
 
@@ -701,9 +701,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
+let expand: [String] = [AuthorizationAPI.Expand_getAuthorizationRole.enummember.rawValue] // Which fields, if any, to expand.
 
 // Code example
-AuthorizationAPI.getAuthorizationRole(roleId: roleId) { (response, error) in
+AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -719,6 +720,7 @@ AuthorizationAPI.getAuthorizationRole(roleId: roleId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: unusedpermissions ("unusedPermissions") |
 {: class="table-striped"}
 
 

@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAnalyticsConversationsDetailsJob**](ConversationsAPI.html#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async request |
 | [**deleteConversationParticipantCode**](ConversationsAPI.html#deleteConversationParticipantCode) | Delete a code used to add a communication to this participant |
 | [**deleteConversationParticipantFlaggedreason**](ConversationsAPI.html#deleteConversationParticipantFlaggedreason) | Remove flagged reason from conversation participant. |
 | [**deleteConversationsCallParticipantConsult**](ConversationsAPI.html#deleteConversationsCallParticipantConsult) | Cancel the transfer |
@@ -16,6 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete a Twitter messaging integration |
 | [**getAnalyticsConversationDetails**](ConversationsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
 | [**getAnalyticsConversationsDetails**](ConversationsAPI.html#getAnalyticsConversationsDetails) | Gets multiple conversations by id |
+| [**getAnalyticsConversationsDetailsJob**](ConversationsAPI.html#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
+| [**getAnalyticsConversationsDetailsJobResults**](ConversationsAPI.html#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async query |
 | [**getConversation**](ConversationsAPI.html#getConversation) | Get conversation |
 | [**getConversationParticipantSecureivrsession**](ConversationsAPI.html#getConversationParticipantSecureivrsession) | Fetch info on a secure session |
 | [**getConversationParticipantSecureivrsessions**](ConversationsAPI.html#getConversationParticipantSecureivrsessions) | Get a list of secure sessions for this participant. |
@@ -60,6 +63,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsLineIntegrationId) | Get a LINE messenger integration |
 | [**getConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitter) | Get a list of Twitter Integrations |
 | [**getConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitterIntegrationId) | Get a Twitter messaging integration |
+| [**getConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsapp) | Get a list of WhatsApp Integrations |
+| [**getConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsappIntegrationId) | Get a WhatsApp messaging integration |
 | [**getConversationsMessagingSticker**](ConversationsAPI.html#getConversationsMessagingSticker) | Get a list of Messaging Stickers |
 | [**patchConversationParticipant**](ConversationsAPI.html#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI.html#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
@@ -88,8 +93,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessageParticipant**](ConversationsAPI.html#patchConversationsMessageParticipant) | Update conversation participant |
 | [**patchConversationsMessageParticipantAttributes**](ConversationsAPI.html#patchConversationsMessageParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsMessageParticipantCommunication**](ConversationsAPI.html#patchConversationsMessageParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
+| [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Activate a WhatsApp messaging integration. |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](ConversationsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
+| [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](ConversationsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
 | [**postConversationDisconnect**](ConversationsAPI.html#postConversationDisconnect) | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resyncronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**postConversationParticipantCallbacks**](ConversationsAPI.html#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
@@ -125,6 +132,57 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsEmailMessagesDraft**](ConversationsAPI.html#putConversationsEmailMessagesDraft) | Update conversation draft reply |
 | [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration |
 {: class="table-striped"}
+
+<a name="deleteAnalyticsConversationsDetailsJob"></a>
+
+# **deleteAnalyticsConversationsDetailsJob**
+
+
+
+> Void deleteAnalyticsConversationsDetailsJob(jobId)
+
+Delete/cancel an async request
+
+
+
+Wraps DELETE /api/v2/analytics/conversations/details/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+ConversationsAPI.deleteAnalyticsConversationsDetailsJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteAnalyticsConversationsDetailsJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteConversationParticipantCode"></a>
 
@@ -592,6 +650,112 @@ ConversationsAPI.getAnalyticsConversationsDetails(_id: _id) { (response, error) 
 ### Return type
 
 [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+
+<a name="getAnalyticsConversationsDetailsJob"></a>
+
+# **getAnalyticsConversationsDetailsJob**
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus.html) getAnalyticsConversationsDetailsJob(jobId)
+
+Get status for async query for conversation details
+
+
+
+Wraps GET /api/v2/analytics/conversations/details/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+ConversationsAPI.getAnalyticsConversationsDetailsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getAnalyticsConversationsDetailsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getAnalyticsConversationsDetailsJobResults"></a>
+
+# **getAnalyticsConversationsDetailsJobResults**
+
+
+
+> [AnalyticsConversationAsyncQueryResponse](AnalyticsConversationAsyncQueryResponse.html) getAnalyticsConversationsDetailsJobResults(jobId, cursor)
+
+Fetch a page of results for an async query
+
+
+
+Wraps GET /api/v2/analytics/conversations/details/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
+
+// Code example
+ConversationsAPI.getAnalyticsConversationsDetailsJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getAnalyticsConversationsDetailsJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html)
 
 <a name="getConversation"></a>
 
@@ -2889,6 +3053,112 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integ
 
 [**TwitterIntegration**](TwitterIntegration.html)
 
+<a name="getConversationsMessagingIntegrationsWhatsapp"></a>
+
+# **getConversationsMessagingIntegrationsWhatsapp**
+
+
+
+> [WhatsAppIntegrationEntityListing](WhatsAppIntegrationEntityListing.html) getConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber)
+
+Get a list of WhatsApp Integrations
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/whatsapp  
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html)
+
+<a name="getConversationsMessagingIntegrationsWhatsappIntegrationId"></a>
+
+# **getConversationsMessagingIntegrationsWhatsappIntegrationId**
+
+
+
+> [WhatsAppIntegration](WhatsAppIntegration.html) getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId)
+
+Get a WhatsApp messaging integration
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}  
+
+Requires ANY permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
+
 <a name="getConversationsMessagingSticker"></a>
 
 # **getConversationsMessagingSticker**
@@ -4422,6 +4692,60 @@ ConversationsAPI.patchConversationsMessageParticipantCommunication(conversationI
 
 [**Empty**](Empty.html)
 
+<a name="patchConversationsMessagingIntegrationsWhatsappIntegrationId"></a>
+
+# **patchConversationsMessagingIntegrationsWhatsappIntegrationId**
+
+
+
+> [WhatsAppIntegration](WhatsAppIntegration.html) patchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId, body)
+
+Activate a WhatsApp messaging integration.
+
+The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}  
+
+Requires ANY permissions: 
+
+* messaging:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: WhatsAppIntegrationUpdateRequest = new WhatsAppIntegrationUpdateRequest(...) // WhatsAppIntegrationUpdateRequest
+
+// Code example
+ConversationsAPI.patchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingIntegrationsWhatsappIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**WhatsAppIntegrationUpdateRequest**](WhatsAppIntegrationUpdateRequest.html)| WhatsAppIntegrationUpdateRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
+
 <a name="postAnalyticsConversationDetailsProperties"></a>
 
 # **postAnalyticsConversationDetailsProperties**
@@ -4527,6 +4851,58 @@ ConversationsAPI.postAnalyticsConversationsAggregatesQuery(body: body) { (respon
 ### Return type
 
 [**AggregateQueryResponse**](AggregateQueryResponse.html)
+
+<a name="postAnalyticsConversationsDetailsJobs"></a>
+
+# **postAnalyticsConversationsDetailsJobs**
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse.html) postAnalyticsConversationsDetailsJobs(body)
+
+Query for conversation details asynchronously
+
+
+
+Wraps POST /api/v2/analytics/conversations/details/jobs  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AsyncConversationQuery = new AsyncConversationQuery(...) // query
+
+// Code example
+ConversationsAPI.postAnalyticsConversationsDetailsJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postAnalyticsConversationsDetailsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AsyncConversationQuery**](AsyncConversationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 <a name="postAnalyticsConversationsDetailsQuery"></a>
 

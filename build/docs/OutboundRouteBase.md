@@ -21,7 +21,7 @@ title: OutboundRouteBase
 | **classificationTypes** | **[String]** | The site associated to the outbound route. | |
 | **enabled** | **Bool** |  | [optional] |
 | **distribution** | **String** |  | [optional] |
-| **externalTrunkBases** | [**[UriReference]**](UriReference.html) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
+| **externalTrunkBases** | [**[DomainEntityRef]**](DomainEntityRef.html) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

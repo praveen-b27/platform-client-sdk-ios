@@ -216,8 +216,8 @@ open class OAuthAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthClientEntityListing> 

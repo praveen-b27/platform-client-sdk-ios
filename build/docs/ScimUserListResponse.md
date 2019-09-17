@@ -8,11 +8,11 @@ SCIM User List Response
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **totalResults** | **Int64** | Total Results | [optional] |
-| **startIndex** | **Int64** | Start index | [optional] |
-| **itemsPerPage** | **Int64** | Items per Page | [optional] |
+| **totalResults** | **Int64** | The total number of results. | [optional] |
+| **startIndex** | **Int64** | The 1-based index of the first result returned by this request. Add this to itemsPerPage when requesting the next page of results. | [optional] |
+| **itemsPerPage** | **Int64** | The number of resources returned per page. | [optional] |
 | **resources** | [**[ScimV2User]**](ScimV2User.html) | Resources | [optional] |
-| **schemas** | **[String]** | schemas supported | [optional] |
+| **schemas** | **[String]** | The list of supported schemas. | [optional] |
 {: class="table table-striped"}
 
 

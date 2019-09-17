@@ -252,6 +252,7 @@ open class AlertingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -573,6 +574,7 @@ open class AlertingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -791,8 +793,8 @@ open class AlertingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
@@ -952,6 +954,7 @@ open class AlertingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -1270,6 +1273,7 @@ open class AlertingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -1486,8 +1490,8 @@ open class AlertingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
@@ -1590,6 +1594,7 @@ open class AlertingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -1984,6 +1989,7 @@ open class AlertingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",

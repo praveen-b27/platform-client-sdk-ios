@@ -18,17 +18,17 @@ public class WorkspaceMember: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var workspace: UriReference?
+    public var workspace: DomainEntityRef?
     /** The workspace member type. */
     public var memberType: MemberType?
-    public var member: UriReference?
+    public var member: DomainEntityRef?
     public var user: User?
     public var group: Group?
     public var securityProfile: SecurityProfile?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, workspace: UriReference?, memberType: MemberType?, member: UriReference?, user: User?, group: Group?, securityProfile: SecurityProfile?, selfUri: String?) {
+    public init(_id: String?, name: String?, workspace: DomainEntityRef?, memberType: MemberType?, member: DomainEntityRef?, user: User?, group: Group?, securityProfile: SecurityProfile?, selfUri: String?) {
         
         self._id = _id
         

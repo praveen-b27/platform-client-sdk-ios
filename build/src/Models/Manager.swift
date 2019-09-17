@@ -8,13 +8,13 @@
 import Foundation
 
 
-/** User&#39;s Manager */
+/** The user&#39;s manager. */
 
 public class Manager: Codable {
 
     /** The ID of the manager. */
     public var value: String?
-    /** URI for Manager User record. */
+    /** The URI of the manager&#39;s user record. */
     public var ref: String?
 
     public init(value: String?, ref: String?) {

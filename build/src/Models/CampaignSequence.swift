@@ -26,7 +26,7 @@ public class CampaignSequence: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
     /** The ordered list of Campaigns that this CampaignSequence will run. */
-    public var campaigns: [UriReference]?
+    public var campaigns: [DomainEntityRef]?
     /** A zero-based index indicating which Campaign this CampaignSequence is currently on. */
     public var currentCampaign: Int?
     /** The current status of the CampaignSequence. A CampaignSequence can be turned &#39;on&#39; or &#39;off&#39;. */
@@ -38,7 +38,7 @@ public class CampaignSequence: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaigns: [UriReference]?, currentCampaign: Int?, status: Status?, stopMessage: String?, _repeat: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaigns: [DomainEntityRef]?, currentCampaign: Int?, status: Status?, stopMessage: String?, _repeat: Bool?, selfUri: String?) {
         
         self._id = _id
         

@@ -23,7 +23,7 @@ public class ScimPhoneNumber: Codable {
     }
     /** A phone number in E.164 format. */
     public var value: String?
-    /** The type of phone number.  */
+    /** The type of phone number. */
     public var type: ModelType?
     /** Indicates whether the phone number is the primary phone number. */
     public var primary: Bool?

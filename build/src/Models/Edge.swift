@@ -28,6 +28,7 @@ public class Edge: Codable {
         case rma = "RMA"
         case unpairing = "UNPAIRING"
         case unpaired = "UNPAIRED"
+        case initializing = "INITIALIZING"
     }
     public enum OnlineStatus: String, Codable { 
         case online = "ONLINE"

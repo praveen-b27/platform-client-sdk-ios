@@ -12,7 +12,7 @@ import Foundation
 public class QueueUtilizationDiagnostic: Codable {
 
     /** Identifier of the queue */
-    public var queue: UriReference?
+    public var queue: DomainEntityRef?
     /** The number of users joined to the queue */
     public var usersInQueue: Int?
     /** The number of users active on the queue */
@@ -30,7 +30,7 @@ public class QueueUtilizationDiagnostic: Codable {
     /** The number of users currently engaged in a communication that is not part of the campaign */
     public var usersOnANonCampaignCall: Int?
 
-    public init(queue: UriReference?, usersInQueue: Int?, activeUsersInQueue: Int?, usersOnQueue: Int?, usersNotUtilized: Int?, usersOnQueueWithStation: Int?, usersOnACampaignCall: Int?, usersOnDifferentEdgeGroup: Int?, usersOnANonCampaignCall: Int?) {
+    public init(queue: DomainEntityRef?, usersInQueue: Int?, activeUsersInQueue: Int?, usersOnQueue: Int?, usersNotUtilized: Int?, usersOnQueueWithStation: Int?, usersOnACampaignCall: Int?, usersOnDifferentEdgeGroup: Int?, usersOnANonCampaignCall: Int?) {
         
         self.queue = queue
         

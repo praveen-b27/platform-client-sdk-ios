@@ -85,15 +85,15 @@ public class MessageMediaParticipant: Codable {
     /** The wrap-up prompt indicating the type of wrap-up to be performed. */
     public var wrapupPrompt: String?
     /** The PureCloud user for this participant. */
-    public var user: UriReference?
+    public var user: DomainEntityRef?
     /** The PureCloud queue for this participant. */
-    public var queue: UriReference?
+    public var queue: DomainEntityRef?
     /** A list of ad-hoc attributes for the participant. */
     public var attributes: [String:String]?
     /** If the conversation ends in error, contains additional error details. */
     public var errorInfo: ErrorBody?
     /** The Engage script that should be used by this participant. */
-    public var script: UriReference?
+    public var script: DomainEntityRef?
     /** The amount of time the participant has to complete wrap-up. */
     public var wrapupTimeoutMs: Int?
     /** Value is true when the participant has skipped wrap-up. */
@@ -103,9 +103,9 @@ public class MessageMediaParticipant: Codable {
     /** The source provider for the communication. */
     public var provider: String?
     /** If this participant represents an external contact, then this will be the reference for the external contact. */
-    public var externalContact: UriReference?
+    public var externalContact: DomainEntityRef?
     /** If this participant represents an external org, then this will be the reference for the external org. */
-    public var externalOrganization: UriReference?
+    public var externalOrganization: DomainEntityRef?
     /** Wrapup for this participant, if it has been applied. */
     public var wrapup: Wrapup?
     /** The peer communication corresponding to a matching leg for this communication. */
@@ -129,7 +129,7 @@ public class MessageMediaParticipant: Codable {
     /** The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type. */
     public var recipientType: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: UriReference?, queue: UriReference?, attributes: [String:String]?, errorInfo: ErrorBody?, script: UriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: UriReference?, externalOrganization: UriReference?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorBody?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?) {
         
         self._id = _id
         

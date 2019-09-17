@@ -22,11 +22,11 @@ public class WebChatDeployment: Codable {
     public var webChatConfig: WebChatConfig?
     public var allowedDomains: [String]?
     /** The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment. */
-    public var flow: UriReference?
+    public var flow: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, authenticationRequired: Bool?, authenticationUrl: String?, disabled: Bool?, webChatConfig: WebChatConfig?, allowedDomains: [String]?, flow: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, authenticationRequired: Bool?, authenticationUrl: String?, disabled: Bool?, webChatConfig: WebChatConfig?, allowedDomains: [String]?, flow: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

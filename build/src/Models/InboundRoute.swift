@@ -17,29 +17,29 @@ public class InboundRoute: Codable {
     /** The search pattern that the mailbox name should match. */
     public var pattern: String?
     /** The queue to route the emails to. */
-    public var queue: UriReference?
+    public var queue: DomainEntityRef?
     /** The priority to use for routing. */
     public var priority: Int?
     /** The skills to use for routing. */
-    public var skills: [UriReference]?
+    public var skills: [DomainEntityRef]?
     /** The language to use for routing. */
-    public var language: UriReference?
+    public var language: DomainEntityRef?
     /** The sender name to use for outgoing replies. */
     public var fromName: String?
     /** The sender email to use for outgoing replies. */
     public var fromEmail: String?
     /** The flow to use for processing the email. */
-    public var flow: UriReference?
+    public var flow: DomainEntityRef?
     /** The route to use for email replies. */
     public var replyEmailAddress: QueueEmailAddress?
     /** The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute. */
     public var autoBcc: [EmailAddress]?
     /** The flow to use for processing inbound emails that have been marked as spam. */
-    public var spamFlow: UriReference?
+    public var spamFlow: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, pattern: String?, queue: UriReference?, priority: Int?, skills: [UriReference]?, language: UriReference?, fromName: String?, fromEmail: String?, flow: UriReference?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, pattern: String?, queue: DomainEntityRef?, priority: Int?, skills: [DomainEntityRef]?, language: DomainEntityRef?, fromName: String?, fromEmail: String?, flow: DomainEntityRef?, replyEmailAddress: QueueEmailAddress?, autoBcc: [EmailAddress]?, spamFlow: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

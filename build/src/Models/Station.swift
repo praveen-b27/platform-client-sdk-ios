@@ -24,8 +24,8 @@ public class Station: Codable {
     public var userId: String?
     /** The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone. */
     public var webRtcUserId: String?
-    public var primaryEdge: UriReference?
-    public var secondaryEdge: UriReference?
+    public var primaryEdge: DomainEntityRef?
+    public var secondaryEdge: DomainEntityRef?
     public var type: String?
     public var lineAppearanceId: String?
     /** The default or configured value of media dscp for the station. Empty if station type is not inin_webrtc_softphone. */
@@ -37,7 +37,7 @@ public class Station: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, userId: String?, webRtcUserId: String?, primaryEdge: UriReference?, secondaryEdge: UriReference?, type: String?, lineAppearanceId: String?, webRtcMediaDscp: Int?, webRtcPersistentEnabled: Bool?, webRtcForceTurn: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, userId: String?, webRtcUserId: String?, primaryEdge: DomainEntityRef?, secondaryEdge: DomainEntityRef?, type: String?, lineAppearanceId: String?, webRtcMediaDscp: Int?, webRtcPersistentEnabled: Bool?, webRtcForceTurn: Bool?, selfUri: String?) {
         
         self._id = _id
         

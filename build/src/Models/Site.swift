@@ -38,8 +38,8 @@ public class Site: Codable {
     public var modifiedByApp: String?
     /** The application that created the resource. */
     public var createdByApp: String?
-    public var primarySites: [UriReference]?
-    public var secondarySites: [UriReference]?
+    public var primarySites: [DomainEntityRef]?
+    public var secondarySites: [DomainEntityRef]?
     public var primaryEdges: [Edge]?
     public var secondaryEdges: [Edge]?
     public var addresses: [Contact]?
@@ -54,7 +54,7 @@ public class Site: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [UriReference]?, secondarySites: [UriReference]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, selfUri: String?) {
         
         self._id = _id
         

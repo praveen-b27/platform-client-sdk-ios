@@ -47,7 +47,7 @@ public class OutboundRoute: Codable {
     public var enabled: Bool?
     public var distribution: Distribution?
     /** Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. */
-    public var externalTrunkBases: [UriReference]?
+    public var externalTrunkBases: [DomainEntityRef]?
     /** The site associated to the outbound route. */
     public var site: Site?
     /** Is this outbound route being managed remotely. */
@@ -55,7 +55,7 @@ public class OutboundRoute: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, classificationTypes: [String]?, enabled: Bool?, distribution: Distribution?, externalTrunkBases: [UriReference]?, site: Site?, managed: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, classificationTypes: [String]?, enabled: Bool?, distribution: Distribution?, externalTrunkBases: [DomainEntityRef]?, site: Site?, managed: Bool?, selfUri: String?) {
         
         self._id = _id
         

@@ -44,7 +44,7 @@ public class EdgeLine: Codable {
     public var modifiedByApp: String?
     /** The application that created the resource. */
     public var createdByApp: String?
-    public var schema: UriReference?
+    public var schema: DomainEntityRef?
     public var properties: [String:JSON]?
     public var edge: Edge?
     public var edgeGroup: EdgeGroup?
@@ -55,7 +55,7 @@ public class EdgeLine: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, schema: UriReference?, properties: [String:JSON]?, edge: Edge?, edgeGroup: EdgeGroup?, lineType: LineType?, endpoint: Endpoint?, ipAddress: String?, logicalInterfaceId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, schema: DomainEntityRef?, properties: [String:JSON]?, edge: Edge?, edgeGroup: EdgeGroup?, lineType: LineType?, endpoint: Endpoint?, ipAddress: String?, logicalInterfaceId: String?, selfUri: String?) {
         
         self._id = _id
         

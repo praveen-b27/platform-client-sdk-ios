@@ -39,20 +39,20 @@ public class Line: Codable {
     /** The application that created the resource. */
     public var createdByApp: String?
     public var properties: [String:JSON]?
-    public var edgeGroup: UriReference?
-    public var template: UriReference?
-    public var site: UriReference?
-    public var lineBaseSettings: UriReference?
+    public var edgeGroup: DomainEntityRef?
+    public var template: DomainEntityRef?
+    public var site: DomainEntityRef?
+    public var lineBaseSettings: DomainEntityRef?
     /** The primary edge associated to the line. (Deprecated) */
     public var primaryEdge: Edge?
     /** The secondary edge associated to the line. (Deprecated) */
     public var secondaryEdge: Edge?
-    public var loggedInUser: UriReference?
-    public var defaultForUser: UriReference?
+    public var loggedInUser: DomainEntityRef?
+    public var defaultForUser: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, properties: [String:JSON]?, edgeGroup: UriReference?, template: UriReference?, site: UriReference?, lineBaseSettings: UriReference?, primaryEdge: Edge?, secondaryEdge: Edge?, loggedInUser: UriReference?, defaultForUser: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, properties: [String:JSON]?, edgeGroup: DomainEntityRef?, template: DomainEntityRef?, site: DomainEntityRef?, lineBaseSettings: DomainEntityRef?, primaryEdge: Edge?, secondaryEdge: Edge?, loggedInUser: DomainEntityRef?, defaultForUser: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

@@ -11,14 +11,14 @@ import Foundation
 
 public class CampaignInteractions: Codable {
 
-    public var campaign: UriReference?
+    public var campaign: DomainEntityRef?
     public var pendingInteractions: [CampaignInteraction]?
     public var proceedingInteractions: [CampaignInteraction]?
     public var previewingInteractions: [CampaignInteraction]?
     public var interactingInteractions: [CampaignInteraction]?
     public var scheduledInteractions: [CampaignInteraction]?
 
-    public init(campaign: UriReference?, pendingInteractions: [CampaignInteraction]?, proceedingInteractions: [CampaignInteraction]?, previewingInteractions: [CampaignInteraction]?, interactingInteractions: [CampaignInteraction]?, scheduledInteractions: [CampaignInteraction]?) {
+    public init(campaign: DomainEntityRef?, pendingInteractions: [CampaignInteraction]?, proceedingInteractions: [CampaignInteraction]?, previewingInteractions: [CampaignInteraction]?, interactingInteractions: [CampaignInteraction]?, scheduledInteractions: [CampaignInteraction]?) {
         
         self.campaign = campaign
         

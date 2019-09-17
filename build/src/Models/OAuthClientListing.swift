@@ -29,9 +29,9 @@ public class OAuthClientListing: Codable {
     /** Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateModified: Date?
     /** User that created this client */
-    public var createdBy: UriReference?
+    public var createdBy: DomainEntityRef?
     /** User that last modified this client */
-    public var modifiedBy: UriReference?
+    public var modifiedBy: DomainEntityRef?
     /** The scope requested by this client. Scopes only apply to clients not using the client_credential grant */
     public var scope: [String]?
     /** Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant */
@@ -39,7 +39,7 @@ public class OAuthClientListing: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, secret: String?, roleIds: [String]?, dateCreated: Date?, dateModified: Date?, createdBy: UriReference?, modifiedBy: UriReference?, scope: [String]?, roleDivisions: [RoleDivision]?, selfUri: String?) {
+    public init(_id: String?, name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, secret: String?, roleIds: [String]?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, scope: [String]?, roleDivisions: [RoleDivision]?, selfUri: String?) {
         
         self._id = _id
         

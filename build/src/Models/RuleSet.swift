@@ -22,15 +22,15 @@ public class RuleSet: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
     /** A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions. */
-    public var contactList: UriReference?
+    public var contactList: DomainEntityRef?
     /** A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions. */
-    public var queue: UriReference?
+    public var queue: DomainEntityRef?
     /** The list of rules. */
     public var rules: [DialerRule]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: UriReference?, queue: UriReference?, rules: [DialerRule]?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, queue: DomainEntityRef?, rules: [DialerRule]?, selfUri: String?) {
         
         self._id = _id
         

@@ -46,13 +46,13 @@ public class Extension: Codable {
     public var createdByApp: String?
     public var number: String?
     /** A Uri reference to the owner of this extension, which is either a User or an IVR */
-    public var owner: UriReference?
-    public var extensionPool: UriReference?
+    public var owner: DomainEntityRef?
+    public var extensionPool: DomainEntityRef?
     public var ownerType: OwnerType?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, number: String?, owner: UriReference?, extensionPool: UriReference?, ownerType: OwnerType?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, number: String?, owner: DomainEntityRef?, extensionPool: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
         
         self._id = _id
         

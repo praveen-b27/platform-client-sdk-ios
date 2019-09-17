@@ -1045,6 +1045,7 @@ open class UsersAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -1267,8 +1268,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -1324,6 +1325,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -1396,6 +1398,7 @@ open class UsersAPI {
     "id" : "aeiou"
   },
   "authorization" : {
+    "unusedRoles" : [ "" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -1653,6 +1656,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -1717,6 +1721,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -2027,6 +2032,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -2277,6 +2283,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -2340,6 +2347,7 @@ open class UsersAPI {
     "id" : "aeiou"
   },
   "authorization" : {
+    "unusedRoles" : [ "" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -2741,6 +2749,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -2811,6 +2820,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -3026,8 +3036,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -3237,6 +3247,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -3479,6 +3490,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -3551,6 +3563,7 @@ open class UsersAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -4030,8 +4043,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4111,6 +4124,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "unusedRoles" : [ "" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",
@@ -4232,8 +4246,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4340,8 +4354,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4508,6 +4522,7 @@ open class UsersAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -4747,6 +4762,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -4810,6 +4826,7 @@ open class UsersAPI {
     "id" : "aeiou"
   },
   "authorization" : {
+    "unusedRoles" : [ "" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -5134,6 +5151,7 @@ open class UsersAPI {
         "title" : "aeiou",
         "division" : "",
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -5389,8 +5407,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5452,6 +5470,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -5534,6 +5553,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -5749,8 +5769,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5811,6 +5831,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -5875,6 +5896,7 @@ open class UsersAPI {
     "id" : "aeiou"
   },
   "authorization" : {
+    "unusedRoles" : [ "" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -6131,6 +6153,7 @@ open class UsersAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -6217,6 +6240,7 @@ open class UsersAPI {
   "orgAuthorization" : [ {
     "default" : true,
     "userCount" : 123,
+    "unusedPermissions" : [ "aeiou" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -6460,6 +6484,7 @@ open class UsersAPI {
     "title" : "aeiou",
     "division" : "",
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -6844,6 +6869,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -7141,6 +7167,7 @@ open class UsersAPI {
     "id" : "aeiou"
   },
   "authorization" : {
+    "unusedRoles" : [ "" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -7443,6 +7470,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -8131,8 +8159,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8297,8 +8325,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8379,8 +8407,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8461,6 +8489,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -8676,8 +8705,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter body: (body) Users 
@@ -9432,6 +9461,7 @@ open class UsersAPI {
     "id" : "aeiou"
   },
   "authorization" : {
+    "unusedRoles" : [ "" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -9772,6 +9802,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -10071,6 +10102,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -10368,6 +10400,7 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -10701,6 +10734,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "unusedRoles" : [ "" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",
@@ -10886,8 +10920,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

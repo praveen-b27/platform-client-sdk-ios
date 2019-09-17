@@ -17,18 +17,14 @@ public class ScimV2GroupReference: Codable {
         case group = "Group"
         case serviceProviderConfig = "ServiceProviderConfig"
     }
-    /** Resource SCIM meta */
-    public var meta: ScimMetadata?
-    /** SCIM Resource Type of member */
+    /** The SCIM resource type. Can be user or group. */
     public var type: ModelType?
     /** The ID of the group member. Can be userId or groupId. */
     public var value: String?
-    /** Ref to entity */
+    /** The reference URI of the SCIM resource. */
     public var ref: String?
 
-    public init(meta: ScimMetadata?, type: ModelType?, value: String?, ref: String?) {
-        
-        self.meta = meta
+    public init(type: ModelType?, value: String?, ref: String?) {
         
         self.type = type
         
@@ -39,7 +35,6 @@ public class ScimV2GroupReference: Codable {
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case meta
         case type
         case value
         case ref = "$ref"

@@ -12,9 +12,9 @@ import Foundation
 public class CampaignProgress: Codable {
 
     /** Identifier of the campaign */
-    public var campaign: UriReference?
+    public var campaign: DomainEntityRef?
     /** Identifier of the contact list */
-    public var contactList: UriReference?
+    public var contactList: DomainEntityRef?
     /** Number of contacts processed during the campaign */
     public var numberOfContactsCalled: Int64?
     /** Total number of contacts in the campaign */
@@ -22,7 +22,7 @@ public class CampaignProgress: Codable {
     /** Percentage of contacts processed during the campaign */
     public var percentage: Int64?
 
-    public init(campaign: UriReference?, contactList: UriReference?, numberOfContactsCalled: Int64?, totalNumberOfContacts: Int64?, percentage: Int64?) {
+    public init(campaign: DomainEntityRef?, contactList: DomainEntityRef?, numberOfContactsCalled: Int64?, totalNumberOfContacts: Int64?, percentage: Int64?) {
         
         self.campaign = campaign
         

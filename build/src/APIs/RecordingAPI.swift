@@ -349,6 +349,7 @@ open class RecordingAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -1116,6 +1117,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -1496,6 +1498,7 @@ open class RecordingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -1818,6 +1821,7 @@ open class RecordingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -2322,6 +2326,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -2872,6 +2877,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -3440,6 +3446,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -4004,6 +4011,7 @@ open class RecordingAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -4601,6 +4609,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -5199,6 +5208,7 @@ open class RecordingAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -5493,8 +5503,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -5704,7 +5714,8 @@ open class RecordingAPI {
     },
     "action" : "aeiou",
     "integrationId" : "aeiou",
-    "actionDate" : "2000-01-23T04:56:07.000+0000"
+    "actionDate" : "2000-01-23T04:56:07.000+0000",
+    "includeScreenRecordings" : true
   },
   "totalRecordings" : 123,
   "totalProcessedRecordings" : 123
@@ -5855,7 +5866,8 @@ open class RecordingAPI {
       },
       "action" : "aeiou",
       "integrationId" : "aeiou",
-      "actionDate" : "2000-01-23T04:56:07.000+0000"
+      "actionDate" : "2000-01-23T04:56:07.000+0000",
+      "includeScreenRecordings" : true
     },
     "totalRecordings" : 123,
     "totalProcessedRecordings" : 123
@@ -5864,8 +5876,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6370,6 +6382,7 @@ open class RecordingAPI {
                 "id" : "aeiou"
               },
               "authorization" : {
+                "unusedRoles" : [ "" ],
                 "permissions" : [ "aeiou" ],
                 "permissionPolicies" : [ {
                   "policyDescription" : "aeiou",
@@ -6591,8 +6604,8 @@ open class RecordingAPI {
                 "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
                 "pageSize" : 123,
-                "previousUri" : "aeiou",
-                "nextUri" : "aeiou"
+                "nextUri" : "aeiou",
+                "previousUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6673,8 +6686,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -7024,6 +7037,7 @@ open class RecordingAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -7245,8 +7259,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -7420,6 +7434,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -7637,8 +7652,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7862,6 +7877,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -8406,8 +8422,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -8648,8 +8664,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8978,6 +8994,7 @@ open class RecordingAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -9199,8 +9216,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -9435,6 +9452,7 @@ open class RecordingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -9815,7 +9833,8 @@ open class RecordingAPI {
     },
     "action" : "aeiou",
     "integrationId" : "aeiou",
-    "actionDate" : "2000-01-23T04:56:07.000+0000"
+    "actionDate" : "2000-01-23T04:56:07.000+0000",
+    "includeScreenRecordings" : true
   },
   "totalRecordings" : 123,
   "totalProcessedRecordings" : 123
@@ -9904,6 +9923,7 @@ open class RecordingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -10494,6 +10514,7 @@ open class RecordingAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -10715,8 +10736,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -10874,6 +10895,7 @@ open class RecordingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -11375,6 +11397,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -11744,6 +11767,7 @@ open class RecordingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -12253,6 +12277,7 @@ open class RecordingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -12619,7 +12644,8 @@ open class RecordingAPI {
     },
     "action" : "aeiou",
     "integrationId" : "aeiou",
-    "actionDate" : "2000-01-23T04:56:07.000+0000"
+    "actionDate" : "2000-01-23T04:56:07.000+0000",
+    "includeScreenRecordings" : true
   },
   "totalRecordings" : 123,
   "totalProcessedRecordings" : 123
@@ -13015,6 +13041,7 @@ open class RecordingAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -13236,8 +13263,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

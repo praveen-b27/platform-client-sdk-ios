@@ -305,6 +305,7 @@ open class GroupsAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -580,6 +581,7 @@ open class GroupsAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -795,8 +797,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter groupId: (path) Group ID 
@@ -847,6 +849,7 @@ open class GroupsAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -917,6 +920,7 @@ open class GroupsAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -1132,8 +1136,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter groupId: (path) Group ID 
@@ -1345,6 +1349,7 @@ open class GroupsAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -1543,8 +1548,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -1666,6 +1671,7 @@ open class GroupsAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -1959,8 +1965,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2131,6 +2137,7 @@ open class GroupsAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -2422,6 +2429,7 @@ open class GroupsAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -2708,6 +2716,7 @@ open class GroupsAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",

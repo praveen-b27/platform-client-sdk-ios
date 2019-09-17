@@ -8,7 +8,7 @@ Represents a SCIM V2 Create User
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **schemas** | **[String]** | schemas supported | [optional] |
+| **schemas** | **[String]** | The list of supported schemas. | [optional] |
 | **active** | **Bool** | Indicates whether the user&#39;s administrative status is active. | [optional] |
 | **userName** | **String** | The user&#39;s PureCloud email address. Must be unique. | |
 | **displayName** | **String** | The display name for the user. | |
@@ -19,8 +19,7 @@ Represents a SCIM V2 Create User
 | **photos** | [**[Photo]**](Photo.html) | A list of the user&#39;s photos. | [optional] |
 | **externalId** | **String** | The external ID of the user. Set by the provisioning client. caseExact is set to true. mutability is set to readWrite. | [optional] |
 | **groups** | [**[ScimV2GroupReference]**](ScimV2GroupReference.html) | A list of groups that the user is a member of. | [optional] |
-| **roles** | **[String]** | Roles | [optional] |
-| **meta** | [**ScimMetadata**](ScimMetadata.html) | Resource SCIM meta | [optional] |
+| **roles** | **[String]** | A list of roles assigned to the user. | [optional] |
 | **urnietfparamsscimschemasextensionenterprise20User** | [**ScimV2EnterpriseUser**](ScimV2EnterpriseUser.html) |  | [optional] |
 {: class="table table-striped"}
 

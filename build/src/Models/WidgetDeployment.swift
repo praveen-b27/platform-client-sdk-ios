@@ -27,7 +27,7 @@ public class WidgetDeployment: Codable {
     /** When true, all create chat operations using this Deployment will be rejected. */
     public var disabled: Bool?
     /** The URI of the Inbound Chat Flow to run when new chats are initiated under this Deployment. */
-    public var flow: UriReference?
+    public var flow: DomainEntityRef?
     /** The list of domains that are approved to use this Deployment; the list will be added to CORS headers for ease of web use. */
     public var allowedDomains: [String]?
     /** The type of display widget for which this Deployment is configured, which controls the administrator settings shown. */
@@ -37,7 +37,7 @@ public class WidgetDeployment: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, authenticationRequired: Bool?, disabled: Bool?, flow: UriReference?, allowedDomains: [String]?, clientType: ClientType?, clientConfig: WidgetClientConfig?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, authenticationRequired: Bool?, disabled: Bool?, flow: DomainEntityRef?, allowedDomains: [String]?, clientType: ClientType?, clientConfig: WidgetClientConfig?, selfUri: String?) {
         
         self._id = _id
         

@@ -11,6 +11,11 @@ import Foundation
 
 public class CreateUser: Codable {
 
+    public enum State: String, Codable { 
+        case active = "active"
+        case inactive = "inactive"
+        case deleted = "deleted"
+    }
     /** User&#39;s full name */
     public var name: String?
     public var department: String?
@@ -23,8 +28,10 @@ public class CreateUser: Codable {
     public var password: String?
     /** The division to which this user will belong */
     public var divisionId: String?
+    /** Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive. */
+    public var state: State?
 
-    public init(name: String?, department: String?, email: String?, addresses: [Contact]?, title: String?, password: String?, divisionId: String?) {
+    public init(name: String?, department: String?, email: String?, addresses: [Contact]?, title: String?, password: String?, divisionId: String?, state: State?) {
         
         self.name = name
         
@@ -39,6 +46,8 @@ public class CreateUser: Codable {
         self.password = password
         
         self.divisionId = divisionId
+        
+        self.state = state
         
     }
 

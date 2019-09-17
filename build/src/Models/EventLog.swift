@@ -33,8 +33,8 @@ public class EventLog: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var errorEntity: UriReference?
-    public var relatedEntity: UriReference?
+    public var errorEntity: DomainEntityRef?
+    public var relatedEntity: DomainEntityRef?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var timestamp: Date?
     public var level: Level?
@@ -44,7 +44,7 @@ public class EventLog: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, errorEntity: UriReference?, relatedEntity: UriReference?, timestamp: Date?, level: Level?, category: Category?, correlationId: String?, eventMessage: EventMessage?, selfUri: String?) {
+    public init(_id: String?, name: String?, errorEntity: DomainEntityRef?, relatedEntity: DomainEntityRef?, timestamp: Date?, level: Level?, category: Category?, correlationId: String?, eventMessage: EventMessage?, selfUri: String?) {
         
         self._id = _id
         

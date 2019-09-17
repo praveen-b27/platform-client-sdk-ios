@@ -26,7 +26,7 @@ public class ContactListFilter: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
     /** The contact list the filter is based on. */
-    public var contactList: UriReference?
+    public var contactList: DomainEntityRef?
     /** Groups of conditions to filter the contacts by. */
     public var clauses: [ContactListFilterClause]?
     /** How to join clauses together. */
@@ -34,7 +34,7 @@ public class ContactListFilter: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: UriReference?, clauses: [ContactListFilterClause]?, filterType: FilterType?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, clauses: [ContactListFilterClause]?, filterType: FilterType?, selfUri: String?) {
         
         self._id = _id
         

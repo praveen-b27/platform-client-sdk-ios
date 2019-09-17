@@ -39,7 +39,7 @@ public class PhoneBase: Codable {
     /** The application that created the resource. */
     public var createdByApp: String?
     /** A phone metabase is essentially a database for storing phone configuration settings, which simplifies the configuration process. */
-    public var phoneMetaBase: UriReference?
+    public var phoneMetaBase: DomainEntityRef?
     /** The list of linebases associated with the phone base. */
     public var lines: [LineBase]?
     public var properties: [String:JSON]?
@@ -47,7 +47,7 @@ public class PhoneBase: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneMetaBase: UriReference?, lines: [LineBase]?, properties: [String:JSON]?, capabilities: PhoneCapabilities?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneMetaBase: DomainEntityRef?, lines: [LineBase]?, properties: [String:JSON]?, capabilities: PhoneCapabilities?, selfUri: String?) {
         
         self._id = _id
         

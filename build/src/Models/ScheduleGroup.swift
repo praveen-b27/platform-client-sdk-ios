@@ -42,15 +42,15 @@ public class ScheduleGroup: Codable {
     /** The timezone the schedules are a part of.  This is not a schedule property to allow a schedule to be used in multiple timezones. */
     public var timeZone: String?
     /** The schedules defining the hours an organization is open. */
-    public var openSchedules: [UriReference]?
+    public var openSchedules: [DomainEntityRef]?
     /** The schedules defining the hours an organization is closed. */
-    public var closedSchedules: [UriReference]?
+    public var closedSchedules: [DomainEntityRef]?
     /** The schedules defining the hours an organization is closed for the holidays. */
-    public var holidaySchedules: [UriReference]?
+    public var holidaySchedules: [DomainEntityRef]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, timeZone: String?, openSchedules: [UriReference]?, closedSchedules: [UriReference]?, holidaySchedules: [UriReference]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, timeZone: String?, openSchedules: [DomainEntityRef]?, closedSchedules: [DomainEntityRef]?, holidaySchedules: [DomainEntityRef]?, selfUri: String?) {
         
         self._id = _id
         

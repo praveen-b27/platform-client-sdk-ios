@@ -12,7 +12,7 @@ import Foundation
 public class TimeZoneMappingPreview: Codable {
 
     /** The associated ContactList */
-    public var contactList: UriReference?
+    public var contactList: DomainEntityRef?
     /** The number of contacts per time zone that mapped to only that time zone */
     public var contactsPerTimeZone: [String:Int64]?
     /** The number of contacts per time zone that mapped to only that time zone and were mapped using the zip code column */
@@ -30,7 +30,7 @@ public class TimeZoneMappingPreview: Codable {
     /** The total number of contacts in the contact list */
     public var contactListSize: Int64?
 
-    public init(contactList: UriReference?, contactsPerTimeZone: [String:Int64]?, contactsMappedUsingZipCode: [String:Int64]?, contactsMappedToASingleZone: Int64?, contactsMappedToASingleZoneUsingZipCode: Int64?, contactsMappedToMultipleZones: Int64?, contactsMappedToMultipleZonesUsingZipCode: Int64?, contactsInDefaultWindow: Int64?, contactListSize: Int64?) {
+    public init(contactList: DomainEntityRef?, contactsPerTimeZone: [String:Int64]?, contactsMappedUsingZipCode: [String:Int64]?, contactsMappedToASingleZone: Int64?, contactsMappedToASingleZoneUsingZipCode: Int64?, contactsMappedToMultipleZones: Int64?, contactsMappedToMultipleZonesUsingZipCode: Int64?, contactsInDefaultWindow: Int64?, contactListSize: Int64?) {
         
         self.contactList = contactList
         

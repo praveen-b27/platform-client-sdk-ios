@@ -23,7 +23,7 @@ public class ModelResponse: Codable {
     /** Version number required for updates. */
     public var version: Int?
     /** One or more libraries response is associated with. */
-    public var libraries: [UriReference]?
+    public var libraries: [DomainEntityRef]?
     /** One or more texts associated with the response. */
     public var texts: [ResponseText]?
     /** User that created the response */
@@ -39,7 +39,7 @@ public class ModelResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, libraries: [UriReference]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, selfUri: String?) {
         
         self._id = _id
         

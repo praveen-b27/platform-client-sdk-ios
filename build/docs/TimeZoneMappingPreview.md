@@ -7,7 +7,7 @@ title: TimeZoneMappingPreview
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **contactList** | [**UriReference**](UriReference.html) | The associated ContactList | [optional] |
+| **contactList** | [**DomainEntityRef**](DomainEntityRef.html) | The associated ContactList | [optional] |
 | **contactsPerTimeZone** | **[String:Int64]** | The number of contacts per time zone that mapped to only that time zone | [optional] |
 | **contactsMappedUsingZipCode** | **[String:Int64]** | The number of contacts per time zone that mapped to only that time zone and were mapped using the zip code column | [optional] |
 | **contactsMappedToASingleZone** | **Int64** | The total number of contacts that mapped to a single time zone | [optional] |

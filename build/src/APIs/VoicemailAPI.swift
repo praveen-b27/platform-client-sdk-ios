@@ -587,8 +587,8 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -642,6 +642,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -1056,8 +1057,8 @@ open class VoicemailAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter groupId: (path) Group ID 
@@ -1170,6 +1171,7 @@ open class VoicemailAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -1916,8 +1918,8 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1971,6 +1973,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -2385,8 +2388,8 @@ open class VoicemailAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2885,8 +2888,8 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -2940,6 +2943,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -3880,8 +3884,8 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -3935,6 +3939,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -4349,8 +4354,8 @@ open class VoicemailAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter ids: (query) An optional comma separated list of VoicemailMessage ids (optional)
@@ -4853,8 +4858,8 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4908,6 +4913,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -5322,8 +5328,8 @@ open class VoicemailAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -5766,8 +5772,8 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -5821,6 +5827,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -6410,6 +6417,7 @@ open class VoicemailAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -7088,8 +7096,8 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -7143,6 +7151,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -8040,8 +8049,8 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -8095,6 +8104,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -8928,8 +8938,8 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -8983,6 +8993,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -9811,8 +9822,8 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -9866,6 +9877,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",

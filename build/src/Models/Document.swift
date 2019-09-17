@@ -36,9 +36,9 @@ public class Document: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateUploaded: Date?
     public var contentUri: String?
-    public var workspace: UriReference?
-    public var createdBy: UriReference?
-    public var uploadedBy: UriReference?
+    public var workspace: DomainEntityRef?
+    public var createdBy: DomainEntityRef?
+    public var uploadedBy: DomainEntityRef?
     public var contentType: String?
     public var contentLength: Int64?
     public var systemType: SystemType?
@@ -51,7 +51,7 @@ public class Document: Codable {
     public var tagValues: [TagValue]?
     public var attributes: [DocumentAttribute]?
     public var thumbnails: [DocumentThumbnail]?
-    public var uploadStatus: UriReference?
+    public var uploadStatus: DomainEntityRef?
     public var uploadDestinationUri: String?
     public var uploadMethod: UploadMethod?
     public var lockInfo: LockInfo?
@@ -63,7 +63,7 @@ public class Document: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, changeNumber: Int?, dateCreated: Date?, dateModified: Date?, dateUploaded: Date?, contentUri: String?, workspace: UriReference?, createdBy: UriReference?, uploadedBy: UriReference?, contentType: String?, contentLength: Int64?, systemType: SystemType?, filename: String?, pageCount: Int64?, read: Bool?, callerAddress: String?, receiverAddress: String?, tags: [String]?, tagValues: [TagValue]?, attributes: [DocumentAttribute]?, thumbnails: [DocumentThumbnail]?, uploadStatus: UriReference?, uploadDestinationUri: String?, uploadMethod: UploadMethod?, lockInfo: LockInfo?, acl: [String]?, sharingStatus: SharingStatus?, sharingUri: String?, downloadSharingUri: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, changeNumber: Int?, dateCreated: Date?, dateModified: Date?, dateUploaded: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, uploadedBy: DomainEntityRef?, contentType: String?, contentLength: Int64?, systemType: SystemType?, filename: String?, pageCount: Int64?, read: Bool?, callerAddress: String?, receiverAddress: String?, tags: [String]?, tagValues: [TagValue]?, attributes: [DocumentAttribute]?, thumbnails: [DocumentThumbnail]?, uploadStatus: DomainEntityRef?, uploadDestinationUri: String?, uploadMethod: UploadMethod?, lockInfo: LockInfo?, acl: [String]?, sharingStatus: SharingStatus?, sharingUri: String?, downloadSharingUri: String?, selfUri: String?) {
         
         self._id = _id
         

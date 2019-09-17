@@ -12,6 +12,7 @@ title: DomainOrganizationRole
 | **_description** | **String** |  | [optional] |
 | **defaultRoleId** | **String** |  | [optional] |
 | **permissions** | **[String]** |  | [optional] |
+| **unusedPermissions** | **[String]** |  | [optional] |
 | **permissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy.html) |  | [optional] |
 | **userCount** | **Int** |  | [optional] |
 | **roleNeedsUpdate** | **Bool** | Optional unless patch operation. | [optional] |

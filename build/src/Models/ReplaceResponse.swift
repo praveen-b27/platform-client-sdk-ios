@@ -18,11 +18,11 @@ public class ReplaceResponse: Codable {
     public var _id: String?
     public var name: String?
     public var changeNumber: Int?
-    public var uploadStatus: UriReference?
+    public var uploadStatus: DomainEntityRef?
     public var uploadDestinationUri: String?
     public var uploadMethod: UploadMethod?
 
-    public init(_id: String?, name: String?, changeNumber: Int?, uploadStatus: UriReference?, uploadDestinationUri: String?, uploadMethod: UploadMethod?) {
+    public init(_id: String?, name: String?, changeNumber: Int?, uploadStatus: DomainEntityRef?, uploadDestinationUri: String?, uploadMethod: UploadMethod?) {
         
         self._id = _id
         

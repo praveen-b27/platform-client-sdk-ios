@@ -11,9 +11,9 @@ import Foundation
 
 public class QueueMessagingAddresses: Codable {
 
-    public var smsAddress: UriReference?
+    public var smsAddress: DomainEntityRef?
 
-    public init(smsAddress: UriReference?) {
+    public init(smsAddress: DomainEntityRef?) {
         
         self.smsAddress = smsAddress
         

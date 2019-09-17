@@ -20,9 +20,9 @@ title: Endpoint
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
 | **count** | **Int** |  | [optional] |
 | **properties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-| **schema** | [**UriReference**](UriReference.html) | Schema | |
+| **schema** | [**DomainEntityRef**](DomainEntityRef.html) | Schema | |
 | **enabled** | **Bool** |  | [optional] |
-| **site** | [**UriReference**](UriReference.html) |  | [optional] |
+| **site** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **dids** | **[String]** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

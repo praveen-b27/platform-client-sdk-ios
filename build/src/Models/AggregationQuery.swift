@@ -44,6 +44,7 @@ public class AggregationQuery: Codable {
         case divisionid = "divisionId"
         case flaggedreason = "flaggedReason"
         case provider = "provider"
+        case flowouttype = "flowOutType"
         case stationid = "stationId"
         case edgeid = "edgeId"
         case dnis = "dnis"

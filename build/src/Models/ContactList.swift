@@ -21,7 +21,7 @@ public class ContactList: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
     /** The division this entity belongs to. */
-    public var division: UriReference?
+    public var division: DomainEntityRef?
     /** The names of the contact data columns. */
     public var columnNames: [String]?
     /** Indicates which columns are phone numbers. */
@@ -35,7 +35,7 @@ public class ContactList: Codable {
     /** The number of contacts in the ContactList. */
     public var size: Int64?
     /** AttemptLimits for this ContactList. */
-    public var attemptLimits: UriReference?
+    public var attemptLimits: DomainEntityRef?
     /** Indicates if automatic time zone mapping is to be used for this ContactList. */
     public var automaticTimeZoneMapping: Bool?
     /** The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if &#39;automaticTimeZoneMapping&#39; is set to true. */
@@ -43,7 +43,7 @@ public class ContactList: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: UriReference?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: UriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, columnNames: [String]?, phoneColumns: [ContactPhoneNumberColumn]?, importStatus: ImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int64?, attemptLimits: DomainEntityRef?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, selfUri: String?) {
         
         self._id = _id
         

@@ -25,11 +25,11 @@ public class CampaignSchedule: Codable {
     /** The time zone for this CampaignSchedule. For example, Africa/Abidjan. */
     public var timeZone: String?
     /** The Campaign that this CampaignSchedule is for. */
-    public var campaign: UriReference?
+    public var campaign: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, intervals: [ScheduleInterval]?, timeZone: String?, campaign: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, intervals: [ScheduleInterval]?, timeZone: String?, campaign: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

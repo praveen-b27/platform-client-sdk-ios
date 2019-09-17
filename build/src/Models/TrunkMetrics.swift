@@ -13,12 +13,12 @@ public class TrunkMetrics: Codable {
 
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var eventTime: Date?
-    public var logicalInterface: UriReference?
-    public var trunk: UriReference?
+    public var logicalInterface: DomainEntityRef?
+    public var trunk: DomainEntityRef?
     public var calls: TrunkMetricsCalls?
     public var qos: TrunkMetricsQoS?
 
-    public init(eventTime: Date?, logicalInterface: UriReference?, trunk: UriReference?, calls: TrunkMetricsCalls?, qos: TrunkMetricsQoS?) {
+    public init(eventTime: Date?, logicalInterface: DomainEntityRef?, trunk: DomainEntityRef?, calls: TrunkMetricsCalls?, qos: TrunkMetricsQoS?) {
         
         self.eventTime = eventTime
         

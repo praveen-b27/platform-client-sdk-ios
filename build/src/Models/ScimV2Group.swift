@@ -12,9 +12,9 @@ import Foundation
 
 public class ScimV2Group: Codable {
 
-    /** SCIM Resource identifier */
+    /** The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always. */
     public var _id: String?
-    /** schemas supported */
+    /** The list of supported schemas. */
     public var schemas: [String]?
     /** The display name for the group. */
     public var displayName: String?

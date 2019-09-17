@@ -25,7 +25,7 @@ public class DataSchema: Codable {
     /** The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists */
     public var enabled: Bool?
     /** The URI of the user that created this schema. */
-    public var createdBy: UriReference?
+    public var createdBy: DomainEntityRef?
     /** The date and time this schema was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateCreated: Date?
     /** A JSON schema defining the extension to the built-in entity type. */
@@ -33,7 +33,7 @@ public class DataSchema: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, appliesTo: [AppliesTo]?, enabled: Bool?, createdBy: UriReference?, dateCreated: Date?, jsonSchema: JsonSchemaDocument?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, appliesTo: [AppliesTo]?, enabled: Bool?, createdBy: DomainEntityRef?, dateCreated: Date?, jsonSchema: JsonSchemaDocument?, selfUri: String?) {
         
         self._id = _id
         

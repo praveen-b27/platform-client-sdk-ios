@@ -15,7 +15,7 @@ title: PhoneStatus
 | **provision** | [**ProvisionInfo**](ProvisionInfo.html) | Provision information for this phone | [optional] |
 | **lineStatuses** | [**[LineStatus]**](LineStatus.html) | A list of LineStatus information for each of the lines of this phone | [optional] |
 | **phoneAssignmentToEdgeType** | **String** | The phone status&#39;s edge assignment type. | [optional] |
-| **edge** | [**UriReference**](UriReference.html) | The URI of the edge that provided this status information. | [optional] |
+| **edge** | [**DomainEntityRef**](DomainEntityRef.html) | The URI of the edge that provided this status information. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -25,11 +25,11 @@ public class SequenceSchedule: Codable {
     /** The time zone for this SequenceSchedule. For example, Africa/Abidjan. */
     public var timeZone: String?
     /** The CampaignSequence that this SequenceSchedule is for. */
-    public var sequence: UriReference?
+    public var sequence: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, intervals: [ScheduleInterval]?, timeZone: String?, sequence: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, intervals: [ScheduleInterval]?, timeZone: String?, sequence: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

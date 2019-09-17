@@ -42,17 +42,17 @@ public class IVR: Codable {
     /** The phone number(s) to contact the IVR by.  Each phone number must be unique and not in use by another resource.  For example, a user and an iVR cannot have the same phone number. */
     public var dnis: [String]?
     /** The Architect flow to execute during the hours an organization is open. */
-    public var openHoursFlow: UriReference?
+    public var openHoursFlow: DomainEntityRef?
     /** The Architect flow to execute during the hours an organization is closed. */
-    public var closedHoursFlow: UriReference?
+    public var closedHoursFlow: DomainEntityRef?
     /** The Architect flow to execute during an organization&#39;s holiday hours. */
-    public var holidayHoursFlow: UriReference?
+    public var holidayHoursFlow: DomainEntityRef?
     /** The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well. */
-    public var scheduleGroup: UriReference?
+    public var scheduleGroup: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, dnis: [String]?, openHoursFlow: UriReference?, closedHoursFlow: UriReference?, holidayHoursFlow: UriReference?, scheduleGroup: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, dnis: [String]?, openHoursFlow: DomainEntityRef?, closedHoursFlow: DomainEntityRef?, holidayHoursFlow: DomainEntityRef?, scheduleGroup: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

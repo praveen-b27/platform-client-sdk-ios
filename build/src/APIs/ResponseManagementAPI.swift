@@ -181,6 +181,7 @@ open class ResponseManagementAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -401,8 +402,8 @@ open class ResponseManagementAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -488,6 +489,7 @@ open class ResponseManagementAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -812,6 +814,7 @@ open class ResponseManagementAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -1158,6 +1161,7 @@ open class ResponseManagementAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -1384,8 +1388,8 @@ open class ResponseManagementAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter libraryId: (query) Library ID 
@@ -1477,6 +1481,7 @@ open class ResponseManagementAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -1795,6 +1800,7 @@ open class ResponseManagementAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -2122,6 +2128,7 @@ open class ResponseManagementAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -2348,8 +2355,8 @@ open class ResponseManagementAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   }
 }}]
      
@@ -2428,6 +2435,7 @@ open class ResponseManagementAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -2753,6 +2761,7 @@ open class ResponseManagementAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",

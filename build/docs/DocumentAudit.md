@@ -9,8 +9,8 @@ title: DocumentAudit
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **user** | [**UriReference**](UriReference.html) |  | [optional] |
-| **workspace** | [**UriReference**](UriReference.html) |  | [optional] |
+| **user** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **transactionId** | **String** |  | [optional] |
 | **transactionInitiator** | **Bool** |  | [optional] |
 | **application** | **String** |  | [optional] |

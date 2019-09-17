@@ -21,7 +21,7 @@ public class Workspace: Codable {
     public var name: String?
     public var type: ModelType?
     public var isCurrentUserWorkspace: Bool?
-    public var user: UriReference?
+    public var user: DomainEntityRef?
     public var bucket: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateCreated: Date?
@@ -33,7 +33,7 @@ public class Workspace: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, type: ModelType?, isCurrentUserWorkspace: Bool?, user: UriReference?, bucket: String?, dateCreated: Date?, dateModified: Date?, summary: WorkspaceSummary?, acl: [String]?, _description: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, type: ModelType?, isCurrentUserWorkspace: Bool?, user: DomainEntityRef?, bucket: String?, dateCreated: Date?, dateModified: Date?, summary: WorkspaceSummary?, acl: [String]?, _description: String?, selfUri: String?) {
         
         self._id = _id
         

@@ -7,9 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async request |
 | [**deleteAnalyticsReportingSchedule**](AnalyticsAPI.html#deleteAnalyticsReportingSchedule) | Delete a scheduled report job. |
 | [**getAnalyticsConversationDetails**](AnalyticsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
 | [**getAnalyticsConversationsDetails**](AnalyticsAPI.html#getAnalyticsConversationsDetails) | Gets multiple conversations by id |
+| [**getAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
+| [**getAnalyticsConversationsDetailsJobResults**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsReportingExports**](AnalyticsAPI.html#getAnalyticsReportingExports) | Get all view export requests for a user |
 | [**getAnalyticsReportingMetadata**](AnalyticsAPI.html#getAnalyticsReportingMetadata) | Get list of reporting metadata. |
 | [**getAnalyticsReportingReportIdMetadata**](AnalyticsAPI.html#getAnalyticsReportingReportIdMetadata) | Get a reporting metadata. |
@@ -22,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsReportingTimeperiods**](AnalyticsAPI.html#getAnalyticsReportingTimeperiods) | Get a list of report time periods. |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
+| [**postAnalyticsConversationsDetailsJobs**](AnalyticsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](AnalyticsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
 | [**postAnalyticsEvaluationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
 | [**postAnalyticsFlowsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsFlowsAggregatesQuery) | Query for flow aggregates |
@@ -36,6 +40,57 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsUsersObservationsQuery**](AnalyticsAPI.html#postAnalyticsUsersObservationsQuery) | Query for user observations |
 | [**putAnalyticsReportingSchedule**](AnalyticsAPI.html#putAnalyticsReportingSchedule) | Update a scheduled report job. |
 {: class="table-striped"}
+
+<a name="deleteAnalyticsConversationsDetailsJob"></a>
+
+# **deleteAnalyticsConversationsDetailsJob**
+
+
+
+> Void deleteAnalyticsConversationsDetailsJob(jobId)
+
+Delete/cancel an async request
+
+
+
+Wraps DELETE /api/v2/analytics/conversations/details/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.deleteAnalyticsConversationsDetailsJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AnalyticsAPI.deleteAnalyticsConversationsDetailsJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteAnalyticsReportingSchedule"></a>
 
@@ -190,6 +245,112 @@ AnalyticsAPI.getAnalyticsConversationsDetails(_id: _id) { (response, error) in
 ### Return type
 
 [**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+
+<a name="getAnalyticsConversationsDetailsJob"></a>
+
+# **getAnalyticsConversationsDetailsJob**
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus.html) getAnalyticsConversationsDetailsJob(jobId)
+
+Get status for async query for conversation details
+
+
+
+Wraps GET /api/v2/analytics/conversations/details/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+AnalyticsAPI.getAnalyticsConversationsDetailsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsConversationsDetailsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getAnalyticsConversationsDetailsJobResults"></a>
+
+# **getAnalyticsConversationsDetailsJobResults**
+
+
+
+> [AnalyticsConversationAsyncQueryResponse](AnalyticsConversationAsyncQueryResponse.html) getAnalyticsConversationsDetailsJobResults(jobId, cursor)
+
+Fetch a page of results for an async query
+
+
+
+Wraps GET /api/v2/analytics/conversations/details/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
+
+// Code example
+AnalyticsAPI.getAnalyticsConversationsDetailsJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsConversationsDetailsJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse.html)
 
 <a name="getAnalyticsReportingExports"></a>
 
@@ -809,6 +970,58 @@ AnalyticsAPI.postAnalyticsConversationsAggregatesQuery(body: body) { (response, 
 ### Return type
 
 [**AggregateQueryResponse**](AggregateQueryResponse.html)
+
+<a name="postAnalyticsConversationsDetailsJobs"></a>
+
+# **postAnalyticsConversationsDetailsJobs**
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse.html) postAnalyticsConversationsDetailsJobs(body)
+
+Query for conversation details asynchronously
+
+
+
+Wraps POST /api/v2/analytics/conversations/details/jobs  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AsyncConversationQuery = new AsyncConversationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsConversationsDetailsJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsConversationsDetailsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AsyncConversationQuery**](AsyncConversationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 <a name="postAnalyticsConversationsDetailsQuery"></a>
 

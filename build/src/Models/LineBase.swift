@@ -38,12 +38,12 @@ public class LineBase: Codable {
     public var modifiedByApp: String?
     /** The application that created the resource. */
     public var createdByApp: String?
-    public var lineMetaBase: UriReference?
+    public var lineMetaBase: DomainEntityRef?
     public var properties: [String:JSON]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, lineMetaBase: UriReference?, properties: [String:JSON]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, lineMetaBase: DomainEntityRef?, properties: [String:JSON]?, selfUri: String?) {
         
         self._id = _id
         

@@ -19,8 +19,8 @@ public class UserRecording: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateModified: Date?
     public var contentUri: String?
-    public var workspace: UriReference?
-    public var createdBy: UriReference?
+    public var workspace: DomainEntityRef?
+    public var createdBy: DomainEntityRef?
     public var conversation: Conversation?
     public var contentLength: Int64?
     public var durationMilliseconds: Int64?
@@ -29,7 +29,7 @@ public class UserRecording: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, contentUri: String?, workspace: UriReference?, createdBy: UriReference?, conversation: Conversation?, contentLength: Int64?, durationMilliseconds: Int64?, thumbnails: [DocumentThumbnail]?, read: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, conversation: Conversation?, contentLength: Int64?, durationMilliseconds: Int64?, thumbnails: [DocumentThumbnail]?, read: Bool?, selfUri: String?) {
         
         self._id = _id
         

@@ -18,11 +18,11 @@ public class RuleSetDiagnostic: Codable {
         case phoneConditionsWithMulticolumnPreview = "PHONE_CONDITIONS_WITH_MULTICOLUMN_PREVIEW"
     }
     /** A campaign rule set */
-    public var ruleSet: UriReference?
+    public var ruleSet: DomainEntityRef?
     /** Diagnostic warnings for the rule set */
     public var warnings: [Warnings]?
 
-    public init(ruleSet: UriReference?, warnings: [Warnings]?) {
+    public init(ruleSet: DomainEntityRef?, warnings: [Warnings]?) {
         
         self.ruleSet = ruleSet
         

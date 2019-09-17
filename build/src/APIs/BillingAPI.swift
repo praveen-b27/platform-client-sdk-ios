@@ -17,7 +17,7 @@ open class BillingAPI {
     
     /**
      
-     Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+     Get a report of the billable license usages
      
      - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
      - parameter endDate: (query) The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
@@ -43,10 +43,10 @@ open class BillingAPI {
 
     /**
      
-     Get a report of the billable usages (e.g. licenses and devices utilized) for a given period.
+     Get a report of the billable license usages
      
      - GET /api/v2/billing/reports/billableusage
-     - 
+     - Report is of the billable usages (e.g. licenses and devices utilized) for a given period. If response's status is InProgress, wait a few seconds, then try the same request again.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -63,7 +63,8 @@ open class BillingAPI {
     } ],
     "totalUsage" : "aeiou"
   } ],
-  "startDate" : "2000-01-23T04:56:07.000+0000"
+  "startDate" : "2000-01-23T04:56:07.000+0000",
+  "status" : "aeiou"
 }}]
      
      - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 

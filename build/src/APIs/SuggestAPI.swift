@@ -22,6 +22,7 @@ open class SuggestAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -105,8 +106,8 @@ open class SuggestAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -157,6 +158,7 @@ open class SuggestAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -240,8 +242,8 @@ open class SuggestAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -347,8 +349,8 @@ open class SuggestAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -446,8 +448,8 @@ open class SuggestAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },

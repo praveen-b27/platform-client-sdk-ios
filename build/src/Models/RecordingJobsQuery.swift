@@ -19,18 +19,22 @@ public class RecordingJobsQuery: Codable {
     public var action: Action?
     /** The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var actionDate: Date?
-    /** Integration ID */
+    /** Integration ID (Required only for EXPORT action) */
     public var integrationId: String?
+    /** Include Screen recordings for export action, default value = true  */
+    public var includeScreenRecordings: Bool?
     /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query. */
     public var conversationQuery: AsyncConversationQuery?
 
-    public init(action: Action?, actionDate: Date?, integrationId: String?, conversationQuery: AsyncConversationQuery?) {
+    public init(action: Action?, actionDate: Date?, integrationId: String?, includeScreenRecordings: Bool?, conversationQuery: AsyncConversationQuery?) {
         
         self.action = action
         
         self.actionDate = actionDate
         
         self.integrationId = integrationId
+        
+        self.includeScreenRecordings = includeScreenRecordings
         
         self.conversationQuery = conversationQuery
         

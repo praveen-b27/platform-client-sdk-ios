@@ -20,9 +20,9 @@ A group of schedules that define the operating hours of an organization.
 | **modifiedByApp** | **String** | The application that last modified the resource. | [optional] |
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
 | **timeZone** | **String** | The timezone the schedules are a part of.  This is not a schedule property to allow a schedule to be used in multiple timezones. | [optional] |
-| **openSchedules** | [**[UriReference]**](UriReference.html) | The schedules defining the hours an organization is open. | [optional] |
-| **closedSchedules** | [**[UriReference]**](UriReference.html) | The schedules defining the hours an organization is closed. | [optional] |
-| **holidaySchedules** | [**[UriReference]**](UriReference.html) | The schedules defining the hours an organization is closed for the holidays. | [optional] |
+| **openSchedules** | [**[DomainEntityRef]**](DomainEntityRef.html) | The schedules defining the hours an organization is open. | [optional] |
+| **closedSchedules** | [**[DomainEntityRef]**](DomainEntityRef.html) | The schedules defining the hours an organization is closed. | [optional] |
+| **holidaySchedules** | [**[DomainEntityRef]**](DomainEntityRef.html) | The schedules defining the hours an organization is closed for the holidays. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

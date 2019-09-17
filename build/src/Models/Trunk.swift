@@ -56,19 +56,19 @@ public class Trunk: Codable {
     /** The type of this trunk. */
     public var trunkType: TrunkType?
     /** The Edge using this trunk. */
-    public var edge: UriReference?
+    public var edge: DomainEntityRef?
     /** The trunk base configuration used on this trunk. */
-    public var trunkBase: UriReference?
+    public var trunkBase: DomainEntityRef?
     /** The metabase used to create this trunk. */
-    public var trunkMetabase: UriReference?
+    public var trunkMetabase: DomainEntityRef?
     /** The edge group associated with this trunk. */
-    public var edgeGroup: UriReference?
+    public var edgeGroup: DomainEntityRef?
     /** True if this trunk is in-service.  This comes from the trunk_enabled property of the referenced trunk base. */
     public var inService: Bool?
     /** True if the Edge used by this trunk is in-service */
     public var enabled: Bool?
     /** The Logical Interface on the Edge to which the trunk is assigned. */
-    public var logicalInterface: UriReference?
+    public var logicalInterface: DomainEntityRef?
     /** The connected status of the trunk */
     public var connectedStatus: TrunkConnectedStatus?
     /** The trunk optionsStatus */
@@ -88,7 +88,7 @@ public class Trunk: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkType: TrunkType?, edge: UriReference?, trunkBase: UriReference?, trunkMetabase: UriReference?, edgeGroup: UriReference?, inService: Bool?, enabled: Bool?, logicalInterface: UriReference?, connectedStatus: TrunkConnectedStatus?, optionsStatus: [TrunkMetricsOptions]?, registersStatus: [TrunkMetricsRegisters]?, ipStatus: TrunkMetricsNetworkTypeIp?, optionsEnabledStatus: OptionsEnabledStatus?, registersEnabledStatus: RegistersEnabledStatus?, family: Int?, proxyAddressList: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkType: TrunkType?, edge: DomainEntityRef?, trunkBase: DomainEntityRef?, trunkMetabase: DomainEntityRef?, edgeGroup: DomainEntityRef?, inService: Bool?, enabled: Bool?, logicalInterface: DomainEntityRef?, connectedStatus: TrunkConnectedStatus?, optionsStatus: [TrunkMetricsOptions]?, registersStatus: [TrunkMetricsRegisters]?, ipStatus: TrunkMetricsNetworkTypeIp?, optionsEnabledStatus: OptionsEnabledStatus?, registersEnabledStatus: RegistersEnabledStatus?, family: Int?, proxyAddressList: [String]?, selfUri: String?) {
         
         self._id = _id
         

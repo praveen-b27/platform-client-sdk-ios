@@ -16,7 +16,7 @@ public class Photo: Codable {
         case photo = "photo"
         case thumbnail = "thumbnail"
     }
-    /** The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG.  */
+    /** The URI of the photo. Photos are limited to 240 KB and JPG, GIF, and PNG formats. Returns a JPG. */
     public var value: String?
     /** The type of photo. */
     public var type: ModelType?

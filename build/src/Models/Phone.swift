@@ -39,11 +39,11 @@ public class Phone: Codable {
     /** The application that created the resource. */
     public var createdByApp: String?
     /** The site associated to the phone. */
-    public var site: UriReference?
+    public var site: DomainEntityRef?
     /** Phone Base Settings */
-    public var phoneBaseSettings: UriReference?
-    public var lineBaseSettings: UriReference?
-    public var phoneMetaBase: UriReference?
+    public var phoneBaseSettings: DomainEntityRef?
+    public var lineBaseSettings: DomainEntityRef?
+    public var phoneMetaBase: DomainEntityRef?
     /** Lines */
     public var lines: [Line]?
     /** The status of the phone and lines from the primary Edge. */
@@ -55,13 +55,13 @@ public class Phone: Codable {
     public var properties: [String:JSON]?
     public var capabilities: PhoneCapabilities?
     /** This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones. */
-    public var webRtcUser: UriReference?
+    public var webRtcUser: DomainEntityRef?
     public var primaryEdge: Edge?
     public var secondaryEdge: Edge?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, site: UriReference?, phoneBaseSettings: UriReference?, lineBaseSettings: UriReference?, phoneMetaBase: UriReference?, lines: [Line]?, status: PhoneStatus?, secondaryStatus: PhoneStatus?, userAgentInfo: UserAgentInfo?, properties: [String:JSON]?, capabilities: PhoneCapabilities?, webRtcUser: UriReference?, primaryEdge: Edge?, secondaryEdge: Edge?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, site: DomainEntityRef?, phoneBaseSettings: DomainEntityRef?, lineBaseSettings: DomainEntityRef?, phoneMetaBase: DomainEntityRef?, lines: [Line]?, status: PhoneStatus?, secondaryStatus: PhoneStatus?, userAgentInfo: UserAgentInfo?, properties: [String:JSON]?, capabilities: PhoneCapabilities?, webRtcUser: DomainEntityRef?, primaryEdge: Edge?, secondaryEdge: Edge?, selfUri: String?) {
         
         self._id = _id
         

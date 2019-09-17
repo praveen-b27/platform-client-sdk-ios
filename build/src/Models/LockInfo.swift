@@ -20,14 +20,14 @@ public class LockInfo: Codable {
         case thumbnail = "THUMBNAIL"
         case textExtraction = "TEXT_EXTRACTION"
     }
-    public var lockedBy: UriReference?
+    public var lockedBy: DomainEntityRef?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateCreated: Date?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateExpires: Date?
     public var action: Action?
 
-    public init(lockedBy: UriReference?, dateCreated: Date?, dateExpires: Date?, action: Action?) {
+    public init(lockedBy: DomainEntityRef?, dateCreated: Date?, dateExpires: Date?, action: Action?) {
         
         self.lockedBy = lockedBy
         

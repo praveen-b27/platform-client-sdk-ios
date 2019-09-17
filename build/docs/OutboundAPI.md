@@ -4060,7 +4060,7 @@ OutboundAPI.postOutboundContactlistContactsBulk(contactListId: contactListId, bo
 
 
 
-> [UriReference](UriReference.html) postOutboundContactlistExport(contactListId)
+> [DomainEntityRef](DomainEntityRef.html) postOutboundContactlistExport(contactListId)
 
 Initiate the export of a contact list.
 
@@ -4105,7 +4105,7 @@ OutboundAPI.postOutboundContactlistExport(contactListId: contactListId) { (respo
 
 ### Return type
 
-[**UriReference**](UriReference.html)
+[**DomainEntityRef**](DomainEntityRef.html)
 
 <a name="postOutboundContactlistfilters"></a>
 
@@ -4320,7 +4320,7 @@ OutboundAPI.postOutboundConversationDnc(conversationId: conversationId) { (error
 
 
 
-> [UriReference](UriReference.html) postOutboundDnclistExport(dncListId)
+> [DomainEntityRef](DomainEntityRef.html) postOutboundDnclistExport(dncListId)
 
 Initiate the export of a dnc list.
 
@@ -4365,7 +4365,7 @@ OutboundAPI.postOutboundDnclistExport(dncListId: dncListId) { (response, error) 
 
 ### Return type
 
-[**UriReference**](UriReference.html)
+[**DomainEntityRef**](DomainEntityRef.html)
 
 <a name="postOutboundDnclistPhonenumbers"></a>
 

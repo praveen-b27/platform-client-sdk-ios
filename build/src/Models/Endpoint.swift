@@ -41,14 +41,14 @@ public class Endpoint: Codable {
     public var count: Int?
     public var properties: [String:JSON]?
     /** Schema */
-    public var schema: UriReference?
+    public var schema: DomainEntityRef?
     public var enabled: Bool?
-    public var site: UriReference?
+    public var site: DomainEntityRef?
     public var dids: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, count: Int?, properties: [String:JSON]?, schema: UriReference?, enabled: Bool?, site: UriReference?, dids: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, count: Int?, properties: [String:JSON]?, schema: DomainEntityRef?, enabled: Bool?, site: DomainEntityRef?, dids: [String]?, selfUri: String?) {
         
         self._id = _id
         

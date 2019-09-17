@@ -39,11 +39,11 @@ public class DncList: Codable {
     /** A gryphon license number. Required if the dncSourceType is gryphon. */
     public var licenseId: String?
     /** The division this DncList belongs to. */
-    public var division: UriReference?
+    public var division: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, division: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

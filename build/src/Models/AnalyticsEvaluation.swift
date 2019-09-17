@@ -29,10 +29,10 @@ public class AnalyticsEvaluation: Codable {
     public var formName: String?
     /** The calibration id used for the purpose of training evaluators */
     public var calibrationId: String?
-    public var oTotalCriticalScore: Int64?
     public var oTotalScore: Int64?
+    public var oTotalCriticalScore: Int64?
 
-    public init(evaluationId: String?, evaluatorId: String?, userId: String?, eventTime: Date?, queueId: String?, formId: String?, contextId: String?, formName: String?, calibrationId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
+    public init(evaluationId: String?, evaluatorId: String?, userId: String?, eventTime: Date?, queueId: String?, formId: String?, contextId: String?, formName: String?, calibrationId: String?, oTotalScore: Int64?, oTotalCriticalScore: Int64?) {
         
         self.evaluationId = evaluationId
         
@@ -52,9 +52,9 @@ public class AnalyticsEvaluation: Codable {
         
         self.calibrationId = calibrationId
         
-        self.oTotalCriticalScore = oTotalCriticalScore
-        
         self.oTotalScore = oTotalScore
+        
+        self.oTotalCriticalScore = oTotalCriticalScore
         
     }
 

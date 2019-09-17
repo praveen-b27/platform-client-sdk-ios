@@ -34,21 +34,21 @@ public class TwitterIntegration: Codable {
     /** The Twitter environment name, e.g.: env-beta (required for premium tier) */
     public var envName: String?
     /** The recipient associated to the Twitter Integration. This recipient is used to associate a flow to an integration */
-    public var recipient: UriReference?
+    public var recipient: DomainEntityRef?
     /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateCreated: Date?
     /** Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateModified: Date?
     /** User reference that created this Integration */
-    public var createdBy: UriReference?
+    public var createdBy: DomainEntityRef?
     /** User reference that last modified this Integration */
-    public var modifiedBy: UriReference?
+    public var modifiedBy: DomainEntityRef?
     /** Version number required for updates. */
     public var version: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: UriReference?, dateCreated: Date?, dateModified: Date?, createdBy: UriReference?, modifiedBy: UriReference?, version: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, selfUri: String?) {
         
         self._id = _id
         

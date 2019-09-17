@@ -12,7 +12,7 @@ import Foundation
 
 public class ScimV2CreateUser: Codable {
 
-    /** schemas supported */
+    /** The list of supported schemas. */
     public var schemas: [String]?
     /** Indicates whether the user&#39;s administrative status is active. */
     public var active: Bool?
@@ -34,13 +34,11 @@ public class ScimV2CreateUser: Codable {
     public var externalId: String?
     /** A list of groups that the user is a member of. */
     public var groups: [ScimV2GroupReference]?
-    /** Roles */
+    /** A list of roles assigned to the user. */
     public var roles: [String]?
-    /** Resource SCIM meta */
-    public var meta: ScimMetadata?
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
 
-    public init(schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [String]?, meta: ScimMetadata?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?) {
+    public init(schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [String]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?) {
         
         self.schemas = schemas
         
@@ -66,8 +64,6 @@ public class ScimV2CreateUser: Codable {
         
         self.roles = roles
         
-        self.meta = meta
-        
         self.urnietfparamsscimschemasextensionenterprise20User = urnietfparamsscimschemasextensionenterprise20User
         
     }
@@ -85,7 +81,6 @@ public class ScimV2CreateUser: Codable {
         case externalId
         case groups
         case roles
-        case meta
         case urnietfparamsscimschemasextensionenterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
     }
 

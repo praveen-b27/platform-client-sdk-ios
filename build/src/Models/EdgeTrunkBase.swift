@@ -44,14 +44,14 @@ public class EdgeTrunkBase: Codable {
     /** The application that created the resource. */
     public var createdByApp: String?
     /** The meta-base this trunk is based on. */
-    public var trunkMetabase: UriReference?
+    public var trunkMetabase: DomainEntityRef?
     public var properties: [String:JSON]?
     /** The type of this trunk base. */
     public var trunkType: TrunkType?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkMetabase: UriReference?, properties: [String:JSON]?, trunkType: TrunkType?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, trunkMetabase: DomainEntityRef?, properties: [String:JSON]?, trunkType: TrunkType?, selfUri: String?) {
         
         self._id = _id
         

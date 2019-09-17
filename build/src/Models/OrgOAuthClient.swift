@@ -27,9 +27,9 @@ public class OrgOAuthClient: Codable {
     /** Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateModified: Date?
     /** User that created this client */
-    public var createdBy: UriReference?
+    public var createdBy: DomainEntityRef?
     /** User that last modified this client */
-    public var modifiedBy: UriReference?
+    public var modifiedBy: DomainEntityRef?
     /** The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  */
     public var authorizedGrantType: AuthorizedGrantType?
     /** The scope requested by this client. Scopes only apply to clients not using the client_credential grant */
@@ -39,7 +39,7 @@ public class OrgOAuthClient: Codable {
     /** The  oauth client&#39;s organization. */
     public var organization: NamedEntity?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: UriReference?, modifiedBy: UriReference?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, organization: NamedEntity?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, organization: NamedEntity?) {
         
         self._id = _id
         

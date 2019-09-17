@@ -12,8 +12,8 @@ title: RuleSet
 | **dateCreated** | [**Date**](Date.html) | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **dateModified** | [**Date**](Date.html) | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
-| **contactList** | [**UriReference**](UriReference.html) | A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions. | [optional] |
-| **queue** | [**UriReference**](UriReference.html) | A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions. | [optional] |
+| **contactList** | [**DomainEntityRef**](DomainEntityRef.html) | A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions. | [optional] |
+| **queue** | [**DomainEntityRef**](DomainEntityRef.html) | A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions. | [optional] |
 | **rules** | [**[DialerRule]**](DialerRule.html) | The list of rules. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

@@ -11,10 +11,10 @@ import Foundation
 
 public class QueueEmailAddress: Codable {
 
-    public var domain: UriReference?
+    public var domain: DomainEntityRef?
     public var route: InboundRoute?
 
-    public init(domain: UriReference?, route: InboundRoute?) {
+    public init(domain: DomainEntityRef?, route: InboundRoute?) {
         
         self.domain = domain
         

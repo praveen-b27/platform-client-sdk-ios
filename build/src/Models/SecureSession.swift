@@ -19,7 +19,7 @@ public class SecureSession: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The flow to execute securely */
-    public var flow: UriReference?
+    public var flow: DomainEntityRef?
     /** Customer-provided data */
     public var userData: String?
     /** The current state of a secure session */
@@ -31,7 +31,7 @@ public class SecureSession: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, flow: UriReference?, userData: String?, state: State?, sourceParticipantId: String?, disconnect: Bool?, selfUri: String?) {
+    public init(_id: String?, flow: DomainEntityRef?, userData: String?, state: State?, sourceParticipantId: String?, disconnect: Bool?, selfUri: String?) {
         
         self._id = _id
         

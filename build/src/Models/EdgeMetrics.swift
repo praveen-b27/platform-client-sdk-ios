@@ -11,7 +11,7 @@ import Foundation
 
 public class EdgeMetrics: Codable {
 
-    public var edge: UriReference?
+    public var edge: DomainEntityRef?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var eventTime: Date?
     public var upTimeMsec: Int64?
@@ -21,7 +21,7 @@ public class EdgeMetrics: Codable {
     public var subsystems: [EdgeMetricsSubsystem]?
     public var networks: [EdgeMetricsNetwork]?
 
-    public init(edge: UriReference?, eventTime: Date?, upTimeMsec: Int64?, processors: [EdgeMetricsProcessor]?, memory: [EdgeMetricsMemory]?, disks: [EdgeMetricsDisk]?, subsystems: [EdgeMetricsSubsystem]?, networks: [EdgeMetricsNetwork]?) {
+    public init(edge: DomainEntityRef?, eventTime: Date?, upTimeMsec: Int64?, processors: [EdgeMetricsProcessor]?, memory: [EdgeMetricsMemory]?, disks: [EdgeMetricsDisk]?, subsystems: [EdgeMetricsSubsystem]?, networks: [EdgeMetricsNetwork]?) {
         
         self.edge = edge
         

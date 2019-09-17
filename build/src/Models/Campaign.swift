@@ -38,17 +38,17 @@ public class Campaign: Codable {
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
     /** The ContactList for this Campaign to dial. */
-    public var contactList: UriReference?
+    public var contactList: DomainEntityRef?
     /** The Queue for this Campaign to route calls to. Required for all dialing modes except agentless. */
-    public var queue: UriReference?
+    public var queue: DomainEntityRef?
     /** The strategy this Campaign will use for dialing. */
     public var dialingMode: DialingMode?
     /** The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless. */
-    public var script: UriReference?
+    public var script: DomainEntityRef?
     /** The EdgeGroup that will place the calls. Required for all dialing modes except preview. */
-    public var edgeGroup: UriReference?
+    public var edgeGroup: DomainEntityRef?
     /** The identifier of the site to be used for dialing; can be set in place of an edge group. */
-    public var site: UriReference?
+    public var site: DomainEntityRef?
     /** The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates. */
     public var campaignStatus: CampaignStatus?
     /** The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. */
@@ -56,11 +56,11 @@ public class Campaign: Codable {
     /** The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns. */
     public var abandonRate: Double?
     /** DncLists for this Campaign to check before placing a call. */
-    public var dncLists: [UriReference]?
+    public var dncLists: [DomainEntityRef]?
     /** The callable time set for this campaign to check before placing a call. */
-    public var callableTimeSet: UriReference?
+    public var callableTimeSet: DomainEntityRef?
     /** The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview. */
-    public var callAnalysisResponseSet: UriReference?
+    public var callAnalysisResponseSet: DomainEntityRef?
     /** A list of current error conditions associated with the campaign. */
     public var errors: [RestErrorDetail]?
     /** The caller id name to be displayed on the outbound call. */
@@ -70,7 +70,7 @@ public class Campaign: Codable {
     /** The number of outbound lines to be concurrently dialed. Only applicable to non-preview campaigns; only required for agentless. */
     public var outboundLineCount: Int?
     /** Rule sets to be applied while this campaign is dialing. */
-    public var ruleSets: [UriReference]?
+    public var ruleSets: [DomainEntityRef]?
     /** Whether or not agents can skip previews without placing a call. Only applicable for preview campaigns. */
     public var skipPreviewDisabled: Bool?
     /** The number of seconds before a call will be automatically placed on a preview. A value of 0 indicates no automatic placement of calls. Only applicable to preview campaigns. */
@@ -88,13 +88,13 @@ public class Campaign: Codable {
     /** The priority of this campaign relative to other campaigns that are running on the same queue. 5 is the highest priority, 1 the lowest. */
     public var priority: Int?
     /** Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied. */
-    public var contactListFilters: [UriReference]?
+    public var contactListFilters: [DomainEntityRef]?
     /** The division this campaign belongs to. */
-    public var division: UriReference?
+    public var division: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: UriReference?, queue: UriReference?, dialingMode: DialingMode?, script: UriReference?, edgeGroup: UriReference?, site: UriReference?, campaignStatus: CampaignStatus?, phoneColumns: [PhoneColumn]?, abandonRate: Double?, dncLists: [UriReference]?, callableTimeSet: UriReference?, callAnalysisResponseSet: UriReference?, errors: [RestErrorDetail]?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, ruleSets: [UriReference]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int64?, alwaysRunning: Bool?, contactSort: ContactSort?, contactSorts: [ContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [UriReference]?, division: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DomainEntityRef?, queue: DomainEntityRef?, dialingMode: DialingMode?, script: DomainEntityRef?, edgeGroup: DomainEntityRef?, site: DomainEntityRef?, campaignStatus: CampaignStatus?, phoneColumns: [PhoneColumn]?, abandonRate: Double?, dncLists: [DomainEntityRef]?, callableTimeSet: DomainEntityRef?, callAnalysisResponseSet: DomainEntityRef?, errors: [RestErrorDetail]?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, ruleSets: [DomainEntityRef]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int64?, alwaysRunning: Bool?, contactSort: ContactSort?, contactSorts: [ContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DomainEntityRef]?, division: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

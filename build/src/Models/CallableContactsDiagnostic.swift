@@ -12,15 +12,15 @@ import Foundation
 public class CallableContactsDiagnostic: Codable {
 
     /** Attempt limits for the campaign&#39;s contact list */
-    public var attemptLimits: UriReference?
+    public var attemptLimits: DomainEntityRef?
     /** Do not call lists for the campaign */
-    public var dncLists: [UriReference]?
+    public var dncLists: [DomainEntityRef]?
     /** Callable time sets for the campaign */
-    public var callableTimeSet: UriReference?
+    public var callableTimeSet: DomainEntityRef?
     /** Rule sets for the campaign */
-    public var ruleSets: [UriReference]?
+    public var ruleSets: [DomainEntityRef]?
 
-    public init(attemptLimits: UriReference?, dncLists: [UriReference]?, callableTimeSet: UriReference?, ruleSets: [UriReference]?) {
+    public init(attemptLimits: DomainEntityRef?, dncLists: [DomainEntityRef]?, callableTimeSet: DomainEntityRef?, ruleSets: [DomainEntityRef]?) {
         
         self.attemptLimits = attemptLimits
         

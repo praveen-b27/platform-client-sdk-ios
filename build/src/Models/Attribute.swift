@@ -17,16 +17,16 @@ public class Attribute: Codable {
     public var name: String?
     public var version: Int?
     public var _description: String?
-    public var createdBy: UriReference?
+    public var createdBy: DomainEntityRef?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateCreated: Date?
-    public var modifiedBy: UriReference?
+    public var modifiedBy: DomainEntityRef?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateModified: Date?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, _description: String?, createdBy: UriReference?, dateCreated: Date?, modifiedBy: UriReference?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, _description: String?, createdBy: DomainEntityRef?, dateCreated: Date?, modifiedBy: DomainEntityRef?, dateModified: Date?, selfUri: String?) {
         
         self._id = _id
         

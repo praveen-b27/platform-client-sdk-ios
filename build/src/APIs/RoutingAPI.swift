@@ -895,8 +895,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter domainName: (path) email domain 
@@ -984,8 +984,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
@@ -1135,8 +1135,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -1247,6 +1247,7 @@ open class RoutingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -1616,6 +1617,7 @@ open class RoutingAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -1875,8 +1877,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter messengerType: (query) Messenger Type (optional)
@@ -2255,6 +2257,7 @@ open class RoutingAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -2353,6 +2356,7 @@ open class RoutingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -2570,8 +2574,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -2694,8 +2698,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -2744,6 +2748,8 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      
      Get list of queues.
@@ -2753,11 +2759,12 @@ open class RoutingAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter name: (query) Name (optional)
      - parameter active: (query) Active (optional)
+     - parameter _id: (query) ID(s) (optional)
      - parameter divisionId: (query) Division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueues(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, active: Bool? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, active: active, divisionId: divisionId)
+    open class func getRoutingQueues(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, active: Bool? = nil, _id: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, active: active, _id: _id, divisionId: divisionId)
         requestBuilder.execute { (response: Response<QueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2901,8 +2908,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2910,11 +2917,12 @@ open class RoutingAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter name: (query) Name (optional)
      - parameter active: (query) Active (optional)
+     - parameter _id: (query) ID(s) (optional)
      - parameter divisionId: (query) Division ID(s) (optional)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
-    open class func getRoutingQueuesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, active: Bool? = nil, divisionId: [String]? = nil) -> RequestBuilder<QueueEntityListing> {
+    open class func getRoutingQueuesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, active: Bool? = nil, _id: [String]? = nil, divisionId: [String]? = nil) -> RequestBuilder<QueueEntityListing> {
         let path = "/api/v2/routing/queues"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2936,6 +2944,8 @@ open class RoutingAPI {
             "name": name, 
             
             "active": active, 
+            
+            "id": _id, 
             
             "divisionId": divisionId
             
@@ -3133,8 +3143,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 100] (optional, default to 25)
@@ -3359,8 +3369,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 500] (optional, default to 25)
@@ -3565,8 +3575,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter joined: (query) Joined (optional)
@@ -3739,8 +3749,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3910,8 +3920,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4146,6 +4156,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -4494,6 +4505,7 @@ open class RoutingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -4716,8 +4728,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
@@ -4961,8 +4973,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5068,8 +5080,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5176,8 +5188,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5281,6 +5293,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -5587,6 +5600,7 @@ open class RoutingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -5804,8 +5818,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -5964,8 +5978,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6046,8 +6060,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6907,6 +6921,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -7520,6 +7535,7 @@ open class RoutingAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -8048,6 +8064,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -8560,8 +8577,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

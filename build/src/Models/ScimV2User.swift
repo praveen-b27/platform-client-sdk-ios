@@ -8,13 +8,13 @@
 import Foundation
 
 
-/** SCIM version 2 User */
+/** SCIM V2 User */
 
 public class ScimV2User: Codable {
 
-    /** SCIM Resource identifier */
+    /** The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always. */
     public var _id: String?
-    /** schemas supported */
+    /** The list of supported schemas. */
     public var schemas: [String]?
     /** Indicates whether the user&#39;s administrative status is active. */
     public var active: Bool?
@@ -36,13 +36,13 @@ public class ScimV2User: Codable {
     public var externalId: String?
     /** A list of groups that the user is a member of. */
     public var groups: [ScimV2GroupReference]?
-    /** Roles */
+    /** A list of roles assigned to the user. */
     public var roles: [String]?
+    public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
     /** Resource SCIM meta */
     public var meta: ScimMetadata?
-    public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
 
-    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [String]?, meta: ScimMetadata?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?) {
+    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [String]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, meta: ScimMetadata?) {
         
         self._id = _id
         
@@ -70,9 +70,9 @@ public class ScimV2User: Codable {
         
         self.roles = roles
         
-        self.meta = meta
-        
         self.urnietfparamsscimschemasextensionenterprise20User = urnietfparamsscimschemasextensionenterprise20User
+        
+        self.meta = meta
         
     }
 
@@ -90,8 +90,8 @@ public class ScimV2User: Codable {
         case externalId
         case groups
         case roles
-        case meta
         case urnietfparamsscimschemasextensionenterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case meta
     }
 
 

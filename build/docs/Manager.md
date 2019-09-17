@@ -2,14 +2,14 @@
 title: Manager
 ---
 ## Manager
-User&#39;s Manager
+The user&#39;s manager.
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **value** | **String** | The ID of the manager. | [optional] |
-| **ref** | **String** | URI for Manager User record. | [optional] |
+| **ref** | **String** | The URI of the manager&#39;s user record. | [optional] |
 {: class="table table-striped"}
 
 

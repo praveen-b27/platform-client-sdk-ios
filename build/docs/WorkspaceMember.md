@@ -9,9 +9,9 @@ title: WorkspaceMember
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **workspace** | [**UriReference**](UriReference.html) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **memberType** | **String** | The workspace member type. | |
-| **member** | [**UriReference**](UriReference.html) |  | [optional] |
+| **member** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **user** | [**User**](User.html) |  | [optional] |
 | **group** | [**Group**](Group.html) |  | [optional] |
 | **securityProfile** | [**SecurityProfile**](SecurityProfile.html) |  | [optional] |

@@ -1142,8 +1142,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -1361,8 +1361,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -1578,8 +1578,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -2314,8 +2314,8 @@ open class OutboundAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -2369,6 +2369,7 @@ open class OutboundAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -3176,8 +3177,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -3371,8 +3372,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -3602,8 +3603,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -4287,8 +4288,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -4459,8 +4460,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -4730,8 +4731,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -5154,8 +5155,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Import status (optional, default to false)
@@ -5413,8 +5414,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -5662,8 +5663,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5930,8 +5931,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -6455,8 +6456,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -7637,9 +7638,9 @@ open class OutboundAPI {
      - parameter contactListId: (path) ContactList ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postOutboundContactlistExport(contactListId: String, completion: @escaping ((_ data: UriReference?,_ error: Error?) -> Void)) {
+    open class func postOutboundContactlistExport(contactListId: String, completion: @escaping ((_ data: DomainEntityRef?,_ error: Error?) -> Void)) {
         let requestBuilder = postOutboundContactlistExportWithRequestBuilder(contactListId: contactListId)
-        requestBuilder.execute { (response: Response<UriReference>?, error) -> Void in
+        requestBuilder.execute { (response: Response<DomainEntityRef>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -7672,9 +7673,9 @@ open class OutboundAPI {
      
      - parameter contactListId: (path) ContactList ID 
 
-     - returns: RequestBuilder<UriReference> 
+     - returns: RequestBuilder<DomainEntityRef> 
      */
-    open class func postOutboundContactlistExportWithRequestBuilder(contactListId: String) -> RequestBuilder<UriReference> {
+    open class func postOutboundContactlistExportWithRequestBuilder(contactListId: String) -> RequestBuilder<DomainEntityRef> {
         var path = "/api/v2/outbound/contactlists/{contactListId}/export"
         let contactListIdPreEscape = "\(contactListId)"
         let contactListIdPostEscape = contactListIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7689,7 +7690,7 @@ open class OutboundAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<UriReference>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DomainEntityRef>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -8021,9 +8022,9 @@ open class OutboundAPI {
      - parameter dncListId: (path) DncList ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postOutboundDnclistExport(dncListId: String, completion: @escaping ((_ data: UriReference?,_ error: Error?) -> Void)) {
+    open class func postOutboundDnclistExport(dncListId: String, completion: @escaping ((_ data: DomainEntityRef?,_ error: Error?) -> Void)) {
         let requestBuilder = postOutboundDnclistExportWithRequestBuilder(dncListId: dncListId)
-        requestBuilder.execute { (response: Response<UriReference>?, error) -> Void in
+        requestBuilder.execute { (response: Response<DomainEntityRef>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -8056,9 +8057,9 @@ open class OutboundAPI {
      
      - parameter dncListId: (path) DncList ID 
 
-     - returns: RequestBuilder<UriReference> 
+     - returns: RequestBuilder<DomainEntityRef> 
      */
-    open class func postOutboundDnclistExportWithRequestBuilder(dncListId: String) -> RequestBuilder<UriReference> {
+    open class func postOutboundDnclistExportWithRequestBuilder(dncListId: String) -> RequestBuilder<DomainEntityRef> {
         var path = "/api/v2/outbound/dnclists/{dncListId}/export"
         let dncListIdPreEscape = "\(dncListId)"
         let dncListIdPostEscape = dncListIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8073,7 +8074,7 @@ open class OutboundAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<UriReference>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DomainEntityRef>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

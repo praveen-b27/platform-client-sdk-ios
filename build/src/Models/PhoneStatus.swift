@@ -42,11 +42,11 @@ public class PhoneStatus: Codable {
     /** The phone status&#39;s edge assignment type. */
     public var phoneAssignmentToEdgeType: PhoneAssignmentToEdgeType?
     /** The URI of the edge that provided this status information. */
-    public var edge: UriReference?
+    public var edge: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, operationalStatus: OperationalStatus?, edgesStatus: EdgesStatus?, eventCreationTime: String?, provision: ProvisionInfo?, lineStatuses: [LineStatus]?, phoneAssignmentToEdgeType: PhoneAssignmentToEdgeType?, edge: UriReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, operationalStatus: OperationalStatus?, edgesStatus: EdgesStatus?, eventCreationTime: String?, provision: ProvisionInfo?, lineStatuses: [LineStatus]?, phoneAssignmentToEdgeType: PhoneAssignmentToEdgeType?, edge: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         

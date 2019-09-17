@@ -22,9 +22,9 @@ public class CampaignInteraction: Codable {
         case fax = "FAX"
     }
     public var _id: String?
-    public var campaign: UriReference?
-    public var agent: UriReference?
-    public var contact: UriReference?
+    public var campaign: DomainEntityRef?
+    public var agent: DomainEntityRef?
+    public var contact: DomainEntityRef?
     public var destinationAddress: String?
     /** Boolean value if there is an active preview call on the interaction */
     public var activePreviewCall: Bool?
@@ -38,8 +38,8 @@ public class CampaignInteraction: Codable {
     public var callRoutedTime: Date?
     /** The time when the customer and routing participant are connected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var previewConnectedTime: Date?
-    public var queue: UriReference?
-    public var script: UriReference?
+    public var queue: DomainEntityRef?
+    public var script: DomainEntityRef?
     /** Describes what happened with call analysis for instance: disposition.classification.callable.person, disposition.classification.callable.noanswer */
     public var disposition: Disposition?
     public var callerName: String?
@@ -51,9 +51,9 @@ public class CampaignInteraction: Codable {
     public var dialerSystemParticipantId: String?
     public var dialingMode: String?
     /** Any skills that are attached to the call for routing */
-    public var skills: [UriReference]?
+    public var skills: [DomainEntityRef]?
 
-    public init(_id: String?, campaign: UriReference?, agent: UriReference?, contact: UriReference?, destinationAddress: String?, activePreviewCall: Bool?, lastActivePreviewWrapupTime: Date?, creationTime: Date?, callPlacedTime: Date?, callRoutedTime: Date?, previewConnectedTime: Date?, queue: UriReference?, script: UriReference?, disposition: Disposition?, callerName: String?, callerAddress: String?, previewPopDeliveredTime: Date?, conversation: ConversationBasic?, dialerSystemParticipantId: String?, dialingMode: String?, skills: [UriReference]?) {
+    public init(_id: String?, campaign: DomainEntityRef?, agent: DomainEntityRef?, contact: DomainEntityRef?, destinationAddress: String?, activePreviewCall: Bool?, lastActivePreviewWrapupTime: Date?, creationTime: Date?, callPlacedTime: Date?, callRoutedTime: Date?, previewConnectedTime: Date?, queue: DomainEntityRef?, script: DomainEntityRef?, disposition: Disposition?, callerName: String?, callerAddress: String?, previewPopDeliveredTime: Date?, conversation: ConversationBasic?, dialerSystemParticipantId: String?, dialingMode: String?, skills: [DomainEntityRef]?) {
         
         self._id = _id
         

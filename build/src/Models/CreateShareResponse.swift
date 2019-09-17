@@ -23,17 +23,17 @@ public class CreateShareResponse: Codable {
     public var _id: String?
     public var name: String?
     public var sharedEntityType: SharedEntityType?
-    public var sharedEntity: UriReference?
+    public var sharedEntity: DomainEntityRef?
     public var memberType: MemberType?
-    public var member: UriReference?
-    public var sharedBy: UriReference?
-    public var workspace: UriReference?
+    public var member: DomainEntityRef?
+    public var sharedBy: DomainEntityRef?
+    public var workspace: DomainEntityRef?
     public var succeeded: [Share]?
     public var failed: [Share]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, sharedEntityType: SharedEntityType?, sharedEntity: UriReference?, memberType: MemberType?, member: UriReference?, sharedBy: UriReference?, workspace: UriReference?, succeeded: [Share]?, failed: [Share]?, selfUri: String?) {
+    public init(_id: String?, name: String?, sharedEntityType: SharedEntityType?, sharedEntity: DomainEntityRef?, memberType: MemberType?, member: DomainEntityRef?, sharedBy: DomainEntityRef?, workspace: DomainEntityRef?, succeeded: [Share]?, failed: [Share]?, selfUri: String?) {
         
         self._id = _id
         

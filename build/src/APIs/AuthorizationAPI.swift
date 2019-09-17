@@ -404,8 +404,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -808,8 +808,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -907,15 +907,23 @@ open class AuthorizationAPI {
     
     
     
+    
+    public enum Expand_getAuthorizationRole: String { 
+        case unusedpermissions = "unusedPermissions"
+    }
+
+    
+    
     /**
      
      Get a single organization role.
      
      - parameter roleId: (path) Role ID 
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationRole(roleId: String, completion: @escaping ((_ data: DomainOrganizationRole?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationRoleWithRequestBuilder(roleId: roleId)
+    open class func getAuthorizationRole(roleId: String, expand: [String]? = nil, completion: @escaping ((_ data: DomainOrganizationRole?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationRoleWithRequestBuilder(roleId: roleId, expand: expand)
         requestBuilder.execute { (response: Response<DomainOrganizationRole>?, error) -> Void in
             do {
                 if let e = error {
@@ -944,6 +952,7 @@ open class AuthorizationAPI {
      - examples: [{contentType=application/json, example={
   "default" : true,
   "userCount" : 123,
+  "unusedPermissions" : [ "aeiou" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",
@@ -965,6 +974,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -1306,10 +1316,11 @@ open class AuthorizationAPI {
 }}]
      
      - parameter roleId: (path) Role ID 
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
 
      - returns: RequestBuilder<DomainOrganizationRole> 
      */
-    open class func getAuthorizationRoleWithRequestBuilder(roleId: String) -> RequestBuilder<DomainOrganizationRole> {
+    open class func getAuthorizationRoleWithRequestBuilder(roleId: String, expand: [String]? = nil) -> RequestBuilder<DomainOrganizationRole> {
         var path = "/api/v2/authorization/roles/{roleId}"
         let roleIdPreEscape = "\(roleId)"
         let roleIdPostEscape = roleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1322,7 +1333,12 @@ open class AuthorizationAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
 
         let requestBuilder: RequestBuilder<DomainOrganizationRole>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1393,6 +1409,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -1727,6 +1744,7 @@ open class AuthorizationAPI {
   "userOrgRole" : {
     "default" : true,
     "userCount" : 123,
+    "unusedPermissions" : [ "aeiou" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ "" ],
     "selfUri" : "aeiou",
@@ -1841,8 +1859,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter roleId: (path) Role ID 
@@ -1952,6 +1970,7 @@ open class AuthorizationAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -2167,8 +2186,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter roleId: (path) Role ID 
@@ -2278,6 +2297,7 @@ open class AuthorizationAPI {
   "entities" : [ {
     "default" : true,
     "userCount" : 123,
+    "unusedPermissions" : [ "aeiou" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -2299,6 +2319,7 @@ open class AuthorizationAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -2642,8 +2663,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -2989,6 +3010,7 @@ open class AuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "unusedRoles" : [ "" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",
@@ -3085,6 +3107,7 @@ open class AuthorizationAPI {
      - examples: [{contentType=application/json, example={
   "default" : true,
   "userCount" : 123,
+  "unusedPermissions" : [ "aeiou" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",
@@ -3106,6 +3129,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -3741,6 +3765,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -4075,6 +4100,7 @@ open class AuthorizationAPI {
   "userOrgRole" : {
     "default" : true,
     "userCount" : 123,
+    "unusedPermissions" : [ "aeiou" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ "" ],
     "selfUri" : "aeiou",
@@ -4153,6 +4179,7 @@ open class AuthorizationAPI {
      - examples: [{contentType=application/json, example={
   "default" : true,
   "userCount" : 123,
+  "unusedPermissions" : [ "aeiou" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",
@@ -4174,6 +4201,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -4576,6 +4604,7 @@ open class AuthorizationAPI {
   "entities" : [ {
     "default" : true,
     "userCount" : 123,
+    "unusedPermissions" : [ "aeiou" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -4597,6 +4626,7 @@ open class AuthorizationAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -4940,8 +4970,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter force: (query) Restore default roles (optional, default to false)
@@ -5164,6 +5194,7 @@ open class AuthorizationAPI {
      - examples: [{contentType=application/json, example={
   "default" : true,
   "userCount" : 123,
+  "unusedPermissions" : [ "aeiou" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",
@@ -5185,6 +5216,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -5719,6 +5751,7 @@ open class AuthorizationAPI {
   "entities" : [ {
     "default" : true,
     "userCount" : 123,
+    "unusedPermissions" : [ "aeiou" ],
     "permissions" : [ "aeiou" ],
     "permissionPolicies" : [ {
       "policyDescription" : "aeiou",
@@ -5740,6 +5773,7 @@ open class AuthorizationAPI {
               "id" : "aeiou"
             },
             "authorization" : {
+              "unusedRoles" : [ "" ],
               "permissions" : [ "aeiou" ],
               "permissionPolicies" : [ {
                 "policyDescription" : "aeiou",
@@ -6083,8 +6117,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter body: (body) Organization roles list 
@@ -6146,6 +6180,7 @@ open class AuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "unusedRoles" : [ "" ],
   "permissions" : [ "aeiou" ],
   "permissionPolicies" : [ {
     "policyDescription" : "aeiou",

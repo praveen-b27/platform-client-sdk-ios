@@ -29,7 +29,7 @@ public class GDPRRequest: Codable {
     public var _id: String?
     public var name: String?
     /** The user that created this request */
-    public var createdBy: UriReference?
+    public var createdBy: DomainEntityRef?
     /** The replacement terms for the provided search terms, in the case of a GDPR_UPDATE request */
     public var replacementTerms: [ReplacementTerm]?
     /** The type of GDPR request */
@@ -45,7 +45,7 @@ public class GDPRRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, createdBy: UriReference?, replacementTerms: [ReplacementTerm]?, requestType: RequestType?, createdDate: Date?, status: Status?, subject: GDPRSubject?, resultsUrl: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, createdBy: DomainEntityRef?, replacementTerms: [ReplacementTerm]?, requestType: RequestType?, createdDate: Date?, status: Status?, subject: GDPRSubject?, resultsUrl: String?, selfUri: String?) {
         
         self._id = _id
         

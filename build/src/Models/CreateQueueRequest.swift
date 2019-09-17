@@ -43,9 +43,9 @@ public class CreateQueueRequest: Codable {
     /** The skill evaluation method to use when routing conversations. */
     public var skillEvaluationMethod: SkillEvaluationMethod?
     /** The in-queue flow to use for conversations waiting in queue. */
-    public var queueFlow: UriReference?
+    public var queueFlow: DomainEntityRef?
     /** The prompt used for whisper on the queue, if configured. */
-    public var whisperPrompt: UriReference?
+    public var whisperPrompt: DomainEntityRef?
     /** Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. */
     public var autoAnswerOnly: Bool?
     /** The name to use for caller identification for outbound calls from this queue. */
@@ -62,7 +62,7 @@ public class CreateQueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: UriReference?, whisperPrompt: UriReference?, autoAnswerOnly: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, sourceQueueId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, sourceQueueId: String?, selfUri: String?) {
         
         self._id = _id
         

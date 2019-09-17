@@ -13,6 +13,61 @@ open class ConversationsAPI {
     
     
     
+    /**
+     
+     Delete/cancel an async request
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAnalyticsConversationsDetailsJob(jobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete/cancel an async request
+     
+     - DELETE /api/v2/analytics/conversations/details/jobs/{jobId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/analytics/conversations/details/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -893,6 +948,314 @@ open class ConversationsAPI {
     
     /**
      
+     Get status for async query for conversation details
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsConversationsDetailsJob(jobId: String, completion: @escaping ((_ data: AsyncQueryStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AsyncQueryStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get status for async query for conversation details
+     
+     - GET /api/v2/analytics/conversations/details/jobs/{jobId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorMessage" : "aeiou",
+  "submissionDate" : "2000-01-23T04:56:07.000+0000",
+  "completionDate" : "2000-01-23T04:56:07.000+0000",
+  "state" : "aeiou",
+  "expirationDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<AsyncQueryStatus> 
+     */
+    open class func getAnalyticsConversationsDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<AsyncQueryStatus> {
+        var path = "/api/v2/analytics/conversations/details/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncQueryStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Fetch a page of results for an async query
+     
+     - parameter jobId: (path) jobId 
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsConversationsDetailsJobResults(jobId: String, cursor: String? = nil, completion: @escaping ((_ data: AnalyticsConversationAsyncQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: jobId, cursor: cursor)
+        requestBuilder.execute { (response: Response<AnalyticsConversationAsyncQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Fetch a page of results for an async query
+     
+     - GET /api/v2/analytics/conversations/details/jobs/{jobId}/results
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursor" : "aeiou",
+  "conversations" : [ {
+    "conversationStart" : "2000-01-23T04:56:07.000+0000",
+    "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
+    "evaluations" : [ {
+      "evaluationId" : "aeiou",
+      "formId" : "aeiou",
+      "queueId" : "aeiou",
+      "oTotalScore" : 123456789,
+      "oTotalCriticalScore" : 123456789,
+      "formName" : "aeiou",
+      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "contextId" : "aeiou",
+      "evaluatorId" : "aeiou",
+      "userId" : "aeiou",
+      "calibrationId" : "aeiou"
+    } ],
+    "conversationId" : "aeiou",
+    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
+    "surveys" : [ {
+      "queueId" : "aeiou",
+      "surveyStatus" : "aeiou",
+      "oSurveyTotalScore" : 123456789,
+      "surveyId" : "aeiou",
+      "surveyFormName" : "aeiou",
+      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "surveyFormId" : "aeiou",
+      "surveyFormContextId" : "aeiou",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
+      "userId" : "aeiou",
+      "surveyPromoterScore" : 123
+    } ],
+    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "originatingDirection" : "aeiou",
+    "participants" : [ {
+      "participantId" : "aeiou",
+      "sessions" : [ {
+        "monitoredParticipantId" : "aeiou",
+        "cobrowseRole" : "aeiou",
+        "videoAddressSelf" : "aeiou",
+        "addressSelf" : "aeiou",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "aeiou",
+        "roomId" : "aeiou",
+        "messageType" : "aeiou",
+        "dnis" : "aeiou",
+        "videoRoomId" : "aeiou",
+        "flow" : {
+          "entryType" : "aeiou",
+          "issuedCallback" : true,
+          "exitReason" : "aeiou",
+          "transferTargetName" : "aeiou",
+          "flowVersion" : "aeiou",
+          "flowName" : "aeiou",
+          "transferTargetAddress" : "aeiou",
+          "outcomes" : [ {
+            "flowOutcomeId" : "aeiou",
+            "flowOutcome" : "aeiou",
+            "flowOutcomeStartTimestamp" : "2000-01-23T04:56:07.000+0000",
+            "flowOutcomeValue" : "aeiou",
+            "flowOutcomeEndTimestamp" : "2000-01-23T04:56:07.000+0000"
+          } ],
+          "transferType" : "aeiou",
+          "entryReason" : "aeiou",
+          "endingLanguage" : "aeiou",
+          "flowId" : "aeiou",
+          "startingLanguage" : "aeiou",
+          "flowType" : "aeiou"
+        },
+        "dispositionAnalyzer" : "aeiou",
+        "addressOther" : "aeiou",
+        "cobrowseRoomId" : "aeiou",
+        "protocolCallId" : "aeiou",
+        "mediaType" : "aeiou",
+        "monitoredSessionId" : "aeiou",
+        "outboundCampaignId" : "aeiou",
+        "addressTo" : "aeiou",
+        "edgeId" : "aeiou",
+        "timeoutSeconds" : 123,
+        "metrics" : [ {
+          "name" : "aeiou",
+          "emitDate" : "2000-01-23T04:56:07.000+0000",
+          "value" : 123456789
+        } ],
+        "mediaBridgeId" : "aeiou",
+        "journeyActionMapVersion" : "aeiou",
+        "screenShareRoomId" : "aeiou",
+        "outboundContactId" : "aeiou",
+        "peerId" : "aeiou",
+        "remoteNameDisplayable" : "aeiou",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "callbackNumbers" : [ "aeiou" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "aeiou",
+        "sharingScreen" : true,
+        "sessionDnis" : "aeiou",
+        "segments" : [ {
+          "queueId" : "aeiou",
+          "conference" : true,
+          "subject" : "aeiou",
+          "sourceConversationId" : "aeiou",
+          "groupId" : "aeiou",
+          "errorCode" : "aeiou",
+          "requestedRoutingSkillIds" : [ "aeiou" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+0000",
+          "wrapUpNote" : "aeiou",
+          "destinationSessionId" : "aeiou",
+          "disconnectType" : "aeiou",
+          "segmentStart" : "2000-01-23T04:56:07.000+0000",
+          "requestedRoutingUserIds" : [ "aeiou" ],
+          "scoredAgents" : [ {
+            "scoredAgentId" : "aeiou",
+            "agentScore" : 123
+          } ],
+          "videoMuted" : true,
+          "q850ResponseCodes" : [ 123456789 ],
+          "audioMuted" : true,
+          "wrapUpCode" : "aeiou",
+          "destinationConversationId" : "aeiou",
+          "wrapUpTags" : [ "aeiou" ],
+          "sourceSessionId" : "aeiou",
+          "sipResponseCodes" : [ 123456789 ],
+          "requestedLanguageId" : "aeiou",
+          "segmentType" : "aeiou",
+          "properties" : [ {
+            "propertyType" : "aeiou",
+            "property" : "aeiou",
+            "value" : "aeiou"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "aeiou",
+        "provider" : "aeiou",
+        "journeyCustomerIdType" : "aeiou",
+        "journeyCustomerId" : "aeiou",
+        "callbackUserName" : "aeiou",
+        "addressFrom" : "aeiou",
+        "ani" : "aeiou",
+        "direction" : "aeiou",
+        "journeyCustomerSessionId" : "aeiou",
+        "sessionId" : "aeiou",
+        "journeyActionId" : "aeiou",
+        "dispositionName" : "disposition.classification.callable.machine",
+        "scriptId" : "aeiou",
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
+          "underrunPackets" : 123456789,
+          "overrunPackets" : 123456789,
+          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxLatencyMs" : 123456789,
+          "codecs" : [ "aeiou" ],
+          "receivedPackets" : 123456789,
+          "duplicatePackets" : 123456789,
+          "invalidPackets" : 123456789,
+          "discardedPackets" : 123456789
+        } ],
+        "outboundContactListId" : "aeiou"
+      } ],
+      "externalContactId" : "aeiou",
+      "purpose" : "aeiou",
+      "externalOrganizationId" : "aeiou",
+      "participantName" : "aeiou",
+      "userId" : "aeiou",
+      "flaggedReason" : "aeiou"
+    } ],
+    "divisionIds" : [ "aeiou" ]
+  } ]
+}}]
+     
+     - parameter jobId: (path) jobId 
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+
+     - returns: RequestBuilder<AnalyticsConversationAsyncQueryResponse> 
+     */
+    open class func getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil) -> RequestBuilder<AnalyticsConversationAsyncQueryResponse> {
+        var path = "/api/v2/analytics/conversations/details/jobs/{jobId}/results"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "cursor": cursor
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AnalyticsConversationAsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Get conversation
      
      - parameter conversationId: (path) conversation ID 
@@ -1258,8 +1621,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1313,6 +1676,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -2455,8 +2819,8 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -2510,6 +2874,7 @@ open class ConversationsAPI {
             "id" : "aeiou"
           },
           "authorization" : {
+            "unusedRoles" : [ "" ],
             "permissions" : [ "aeiou" ],
             "permissionPolicies" : [ {
               "policyDescription" : "aeiou",
@@ -2921,8 +3286,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter communicationType: (query) Call or Chat communication filtering (optional)
@@ -3799,8 +4164,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallbackConversationEntityListing> 
@@ -3984,8 +4349,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallConversationEntityListing> 
@@ -4298,6 +4663,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -4625,8 +4991,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size, maximum 50 (optional, default to 25)
@@ -5188,8 +5554,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ChatConversationEntityListing> 
@@ -5684,8 +6050,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CobrowseConversationEntityListing> 
@@ -6044,8 +6410,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -6475,8 +6841,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<EmailConversationEntityListing> 
@@ -6841,6 +7207,7 @@ open class ConversationsAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -7408,8 +7775,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<MessageConversationEntityListing> 
@@ -7496,8 +7863,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7595,8 +7962,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7774,8 +8141,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7957,8 +8324,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8079,6 +8446,223 @@ open class ConversationsAPI {
     
     
     
+    /**
+     
+     Get a list of WhatsApp Integrations
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingIntegrationsWhatsapp(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: WhatsAppIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsWhatsappWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<WhatsAppIntegrationEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of WhatsApp Integrations
+     
+     - GET /api/v2/conversations/messaging/integrations/whatsapp
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "activationStatusCode" : "aeiou",
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "phoneNumber" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
+    "activationErrorInfo" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "name" : "aeiou",
+    "recipient" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+
+     - returns: RequestBuilder<WhatsAppIntegrationEntityListing> 
+     */
+    open class func getConversationsMessagingIntegrationsWhatsappWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<WhatsAppIntegrationEntityListing> {
+        let path = "/api/v2/conversations/messaging/integrations/whatsapp"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<WhatsAppIntegrationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a WhatsApp messaging integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: String, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: integrationId)
+        requestBuilder.execute { (response: Response<WhatsAppIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a WhatsApp messaging integration
+     
+     - GET /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activationStatusCode" : "aeiou",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "phoneNumber" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "activationErrorInfo" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) Integration ID 
+
+     - returns: RequestBuilder<WhatsAppIntegration> 
+     */
+    open class func getConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<WhatsAppIntegration> {
+        var path = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
     
     
     /**
@@ -8137,8 +8721,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter messengerType: (path) Messenger Type 
@@ -8673,8 +9257,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8728,6 +9312,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -9808,8 +10393,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -9863,6 +10448,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -10870,8 +11456,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -10925,6 +11511,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -11932,8 +12519,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -11987,6 +12574,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -12994,8 +13582,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -13049,6 +13637,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -14056,8 +14645,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -14111,6 +14700,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -14752,6 +15342,106 @@ open class ConversationsAPI {
     
     /**
      
+     Activate a WhatsApp messaging integration.
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) WhatsAppIntegrationUpdateRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: String, body: WhatsAppIntegrationUpdateRequest, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: integrationId, body: body)
+        requestBuilder.execute { (response: Response<WhatsAppIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Activate a WhatsApp messaging integration.
+     
+     - PATCH /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}
+     - The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activationStatusCode" : "aeiou",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "phoneNumber" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "activationErrorInfo" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) WhatsAppIntegrationUpdateRequest 
+
+     - returns: RequestBuilder<WhatsAppIntegration> 
+     */
+    open class func patchConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: String, body: WhatsAppIntegrationUpdateRequest) -> RequestBuilder<WhatsAppIntegration> {
+        var path = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
      Index conversation properties
      
      - parameter conversationId: (path) conversationId 
@@ -14898,6 +15588,65 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Query for conversation details asynchronously
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsConversationsDetailsJobs(body: AsyncConversationQuery, completion: @escaping ((_ data: AsyncQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsConversationsDetailsJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AsyncQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for conversation details asynchronously
+     
+     - POST /api/v2/analytics/conversations/details/jobs
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "jobId" : "aeiou"
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<AsyncQueryResponse> 
+     */
+    open class func postAnalyticsConversationsDetailsJobsWithRequestBuilder(body: AsyncConversationQuery) -> RequestBuilder<AsyncQueryResponse> {
+        let path = "/api/v2/analytics/conversations/details/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -15845,8 +16594,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15900,6 +16649,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -16901,8 +17651,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "previousUri" : "aeiou",
-          "nextUri" : "aeiou"
+          "nextUri" : "aeiou",
+          "previousUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -16956,6 +17706,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "authorization" : {
+          "unusedRoles" : [ "" ],
           "permissions" : [ "aeiou" ],
           "permissionPolicies" : [ {
             "policyDescription" : "aeiou",
@@ -18485,6 +19236,7 @@ open class ConversationsAPI {
       "id" : "aeiou"
     },
     "authorization" : {
+      "unusedRoles" : [ "" ],
       "permissions" : [ "aeiou" ],
       "permissionPolicies" : [ {
         "policyDescription" : "aeiou",
@@ -18885,6 +19637,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       },
       "authorization" : {
+        "unusedRoles" : [ "" ],
         "permissions" : [ "aeiou" ],
         "permissionPolicies" : [ {
           "policyDescription" : "aeiou",
@@ -19111,8 +19864,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 

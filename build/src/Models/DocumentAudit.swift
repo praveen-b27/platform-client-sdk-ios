@@ -109,8 +109,8 @@ public class DocumentAudit: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var user: UriReference?
-    public var workspace: UriReference?
+    public var user: DomainEntityRef?
+    public var workspace: DomainEntityRef?
     public var transactionId: String?
     public var transactionInitiator: Bool?
     public var application: String?
@@ -126,7 +126,7 @@ public class DocumentAudit: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: UriReference?, workspace: UriReference?, transactionId: String?, transactionInitiator: Bool?, application: String?, serviceName: String?, level: Level?, timestamp: Date?, status: Status?, actionContext: ActionContext?, action: Action?, entity: AuditEntityReference?, changes: [AuditChange]?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: DomainEntityRef?, workspace: DomainEntityRef?, transactionId: String?, transactionInitiator: Bool?, application: String?, serviceName: String?, level: Level?, timestamp: Date?, status: Status?, actionContext: ActionContext?, action: Action?, entity: AuditEntityReference?, changes: [AuditChange]?, selfUri: String?) {
         
         self._id = _id
         

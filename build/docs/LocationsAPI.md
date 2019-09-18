@@ -255,7 +255,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let q64: String = "" // q64
-let expand: [String] = [""] // expand
+let expand: [String] = [LocationsAPI.Expand_getLocationsSearch.enummember.rawValue] // Provides more details about a specified resource
 
 // Code example
 LocationsAPI.getLocationsSearch(q64: q64, expand: expand) { (response, error) in
@@ -274,7 +274,7 @@ LocationsAPI.getLocationsSearch(q64: q64, expand: expand) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
-| **expand** | [**[String]**](String.html)| expand | [optional] |
+| **expand** | [**[String]**](String.html)| Provides more details about a specified resource | [optional]<br />**Values**: images ("images") |
 {: class="table-striped"}
 
 

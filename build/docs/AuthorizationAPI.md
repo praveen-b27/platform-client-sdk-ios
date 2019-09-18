@@ -701,7 +701,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
-let expand: [String] = [AuthorizationAPI.Expand_getAuthorizationRole.enummember.rawValue] // Which fields, if any, to expand.
+let expand: [String] = [AuthorizationAPI.Expand_getAuthorizationRole.enummember.rawValue] // Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role
 
 // Code example
 AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (response, error) in
@@ -720,7 +720,7 @@ AuthorizationAPI.getAuthorizationRole(roleId: roleId, expand: expand) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: unusedpermissions ("unusedPermissions") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role | [optional]<br />**Values**: unusedpermissions ("unusedPermissions") |
 {: class="table-striped"}
 
 
@@ -1275,7 +1275,7 @@ AuthorizationAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectT
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), user ("USER") |
+| **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), user ("USER") |
 | **body** | **[String]**| Object Id List | |
 {: class="table-striped"}
 
@@ -1365,7 +1365,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let roleId: String = "" // Role ID
 let body: SubjectDivisions = new SubjectDivisions(...) // Subjects and Divisions
-let subjectType: String = "PC_USER" // what the type of the subject is, PC_GROUP or PC_USER
+let subjectType: String = "PC_USER" // what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
 
 // Code example
 AuthorizationAPI.postAuthorizationRole(roleId: roleId, body: body, subjectType: subjectType) { (error) in
@@ -1384,7 +1384,7 @@ AuthorizationAPI.postAuthorizationRole(roleId: roleId, body: body, subjectType: 
 | ------------- | ------------- | ------------- | ------------- |
 | **roleId** | **String**| Role ID | |
 | **body** | [**SubjectDivisions**](SubjectDivisions.html)| Subjects and Divisions | |
-| **subjectType** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
 {: class="table-striped"}
 
 
@@ -1581,7 +1581,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let subjectId: String = "" // Subject ID (user or group)
 let divisionId: String = "" // the id of the division to which to make the grant
 let roleId: String = "" // the id of the role to grant
-let subjectType: String = "PC_USER" // what the type of the subject is, PC_GROUP or PC_USER
+let subjectType: String = "PC_USER" // what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
 
 // Code example
 AuthorizationAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: divisionId, roleId: roleId, subjectType: subjectType) { (error) in
@@ -1601,7 +1601,7 @@ AuthorizationAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divi
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **divisionId** | **String**| the id of the division to which to make the grant | |
 | **roleId** | **String**| the id of the role to grant | |
-| **subjectType** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
 {: class="table-striped"}
 
 

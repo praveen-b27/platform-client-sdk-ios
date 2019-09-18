@@ -491,13 +491,18 @@ open class SearchAPI {
     
     
     
+    public enum Expand_getLocationsSearch: String { 
+        case images = "images"
+    }
+
+    
     
     /**
      
      Search locations using the q64 value returned from a previous search
      
      - parameter q64: (query) q64 
-     - parameter expand: (query) expand (optional)
+     - parameter expand: (query) Provides more details about a specified resource (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getLocationsSearch(q64: String, expand: [String]? = nil, completion: @escaping ((_ data: LocationsSearchResponse?,_ error: Error?) -> Void)) {
@@ -568,7 +573,7 @@ open class SearchAPI {
 }}]
      
      - parameter q64: (query) q64 
-     - parameter expand: (query) expand (optional)
+     - parameter expand: (query) Provides more details about a specified resource (optional)
 
      - returns: RequestBuilder<LocationsSearchResponse> 
      */
@@ -623,6 +628,7 @@ open class SearchAPI {
         case calleruserConversationsummary = "callerUser.conversationSummary"
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
+        case images = "images"
     }
 
     
@@ -759,6 +765,7 @@ open class SearchAPI {
         case calleruserConversationsummary = "callerUser.conversationSummary"
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
+        case images = "images"
     }
 
     

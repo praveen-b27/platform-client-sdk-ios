@@ -680,6 +680,9 @@ open class ConversationsAPI {
     } ],
     "externalContactId" : "aeiou",
     "purpose" : "aeiou",
+    "attributes" : {
+      "key" : "aeiou"
+    },
     "externalOrganizationId" : "aeiou",
     "participantName" : "aeiou",
     "userId" : "aeiou",
@@ -908,6 +911,9 @@ open class ConversationsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "attributes" : {
+        "key" : "aeiou"
+      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -1212,6 +1218,9 @@ open class ConversationsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "attributes" : {
+        "key" : "aeiou"
+      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -5245,6 +5254,230 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ChatConversation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a web chat conversation message
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter messageId: (path) messageId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsChatMessage(conversationId: String, messageId: String, completion: @escaping ((_ data: WebChatMessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsChatMessageWithRequestBuilder(conversationId: conversationId, messageId: messageId)
+        requestBuilder.execute { (response: Response<WebChatMessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a web chat conversation message
+     
+     - GET /api/v2/conversations/chats/{conversationId}/messages/{messageId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "bodyType" : "aeiou",
+  "sender" : "",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "body" : "aeiou",
+  "conversation" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "member" : {
+      "role" : "aeiou",
+      "joinDate" : "2000-01-23T04:56:07.000+0000",
+      "displayName" : "aeiou",
+      "customFields" : {
+        "key" : "aeiou"
+      },
+      "avatarImageUrl" : "aeiou",
+      "leaveDate" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "authenticatedGuest" : true
+    },
+    "id" : "aeiou"
+  },
+  "timestamp" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter messageId: (path) messageId 
+
+     - returns: RequestBuilder<WebChatMessage> 
+     */
+    open class func getConversationsChatMessageWithRequestBuilder(conversationId: String, messageId: String) -> RequestBuilder<WebChatMessage> {
+        var path = "/api/v2/conversations/chats/{conversationId}/messages/{messageId}"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let messageIdPreEscape = "\(messageId)"
+        let messageIdPostEscape = messageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messageId}", with: messageIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WebChatMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getConversationsChatMessages: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    
+    
+    
+    
+    /**
+     
+     Get the messages of a chat conversation.
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter after: (query) If specified, get the messages chronologically after the id of this message (optional)
+     - parameter before: (query) If specified, get the messages chronologically before the id of this message (optional)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter maxResults: (query) Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsChatMessages(conversationId: String, after: String? = nil, before: String? = nil, sortOrder: SortOrder_getConversationsChatMessages? = nil, maxResults: Int? = nil, completion: @escaping ((_ data: WebChatMessageEntityList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsChatMessagesWithRequestBuilder(conversationId: conversationId, after: after, before: before, sortOrder: sortOrder, maxResults: maxResults)
+        requestBuilder.execute { (response: Response<WebChatMessageEntityList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the messages of a chat conversation.
+     
+     - GET /api/v2/conversations/chats/{conversationId}/messages
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "next" : "aeiou",
+  "previousPage" : "aeiou",
+  "entities" : [ {
+    "bodyType" : "aeiou",
+    "sender" : "",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "body" : "aeiou",
+    "conversation" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "member" : {
+        "role" : "aeiou",
+        "joinDate" : "2000-01-23T04:56:07.000+0000",
+        "displayName" : "aeiou",
+        "customFields" : {
+          "key" : "aeiou"
+        },
+        "avatarImageUrl" : "aeiou",
+        "leaveDate" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "authenticatedGuest" : true
+      },
+      "id" : "aeiou"
+    },
+    "timestamp" : "2000-01-23T04:56:07.000+0000"
+  } ],
+  "selfUri" : "aeiou",
+  "pageSize" : 123
+}}]
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter after: (query) If specified, get the messages chronologically after the id of this message (optional)
+     - parameter before: (query) If specified, get the messages chronologically before the id of this message (optional)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter maxResults: (query) Limit the returned number of messages, up to a maximum of 100 (optional, default to 100)
+
+     - returns: RequestBuilder<WebChatMessageEntityList> 
+     */
+    open class func getConversationsChatMessagesWithRequestBuilder(conversationId: String, after: String? = nil, before: String? = nil, sortOrder: SortOrder_getConversationsChatMessages? = nil, maxResults: Int? = nil) -> RequestBuilder<WebChatMessageEntityList> {
+        var path = "/api/v2/conversations/chats/{conversationId}/messages"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "after": after, 
+            
+            "before": before, 
+            
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "maxResults": maxResults?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<WebChatMessageEntityList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -15517,9 +15750,9 @@ open class ConversationsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsConversationsAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsConversationsAggregatesQuery(body: ConversationAggregationQuery, completion: @escaping ((_ data: ConversationAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ConversationAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -15576,9 +15809,9 @@ open class ConversationsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<ConversationAggregateQueryResponse> 
      */
-    open class func postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: ConversationAggregationQuery) -> RequestBuilder<ConversationAggregateQueryResponse> {
         let path = "/api/v2/analytics/conversations/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -15587,7 +15820,7 @@ open class ConversationsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ConversationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -15847,6 +16080,9 @@ open class ConversationsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "attributes" : {
+        "key" : "aeiou"
+      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -18324,6 +18560,195 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CreateCallResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Send a message on behalf of a communication in a chat conversation.
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter communicationId: (path) communicationId 
+     - parameter body: (body) Message 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsChatCommunicationMessages(conversationId: String, communicationId: String, body: CreateWebChatMessageRequest, completion: @escaping ((_ data: WebChatMessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsChatCommunicationMessagesWithRequestBuilder(conversationId: conversationId, communicationId: communicationId, body: body)
+        requestBuilder.execute { (response: Response<WebChatMessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Send a message on behalf of a communication in a chat conversation.
+     
+     - POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "bodyType" : "aeiou",
+  "sender" : "",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "body" : "aeiou",
+  "conversation" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "member" : {
+      "role" : "aeiou",
+      "joinDate" : "2000-01-23T04:56:07.000+0000",
+      "displayName" : "aeiou",
+      "customFields" : {
+        "key" : "aeiou"
+      },
+      "avatarImageUrl" : "aeiou",
+      "leaveDate" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "authenticatedGuest" : true
+    },
+    "id" : "aeiou"
+  },
+  "timestamp" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter communicationId: (path) communicationId 
+     - parameter body: (body) Message 
+
+     - returns: RequestBuilder<WebChatMessage> 
+     */
+    open class func postConversationsChatCommunicationMessagesWithRequestBuilder(conversationId: String, communicationId: String, body: CreateWebChatMessageRequest) -> RequestBuilder<WebChatMessage> {
+        var path = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let communicationIdPreEscape = "\(communicationId)"
+        let communicationIdPostEscape = communicationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{communicationId}", with: communicationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WebChatMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Send a typing-indicator on behalf of a communication in a chat conversation.
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter communicationId: (path) communicationId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsChatCommunicationTyping(conversationId: String, communicationId: String, completion: @escaping ((_ data: WebChatTyping?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsChatCommunicationTypingWithRequestBuilder(conversationId: conversationId, communicationId: communicationId)
+        requestBuilder.execute { (response: Response<WebChatTyping>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Send a typing-indicator on behalf of a communication in a chat conversation.
+     
+     - POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sender" : "",
+  "id" : "aeiou",
+  "conversation" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "member" : {
+      "role" : "aeiou",
+      "joinDate" : "2000-01-23T04:56:07.000+0000",
+      "displayName" : "aeiou",
+      "customFields" : {
+        "key" : "aeiou"
+      },
+      "avatarImageUrl" : "aeiou",
+      "leaveDate" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "authenticatedGuest" : true
+    },
+    "id" : "aeiou"
+  },
+  "timestamp" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter communicationId: (path) communicationId 
+
+     - returns: RequestBuilder<WebChatTyping> 
+     */
+    open class func postConversationsChatCommunicationTypingWithRequestBuilder(conversationId: String, communicationId: String) -> RequestBuilder<WebChatTyping> {
+        var path = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let communicationIdPreEscape = "\(communicationId)"
+        let communicationIdPostEscape = communicationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{communicationId}", with: communicationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WebChatTyping>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

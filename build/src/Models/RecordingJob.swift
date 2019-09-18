@@ -39,8 +39,10 @@ public class RecordingJob: Codable {
     public var errorMessage: String?
     /** The URI for this object */
     public var selfUri: String?
+    /** Details of the user created the job */
+    public var user: AddressableEntityRef?
 
-    public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, selfUri: String?) {
+    public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, selfUri: String?, user: AddressableEntityRef?) {
         
         self._id = _id
         
@@ -62,6 +64,8 @@ public class RecordingJob: Codable {
         
         self.selfUri = selfUri
         
+        self.user = user
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -75,6 +79,7 @@ public class RecordingJob: Codable {
         case percentProgress
         case errorMessage
         case selfUri
+        case user
     }
 
 

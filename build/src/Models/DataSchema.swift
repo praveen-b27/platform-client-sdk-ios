@@ -22,7 +22,7 @@ public class DataSchema: Codable {
     public var version: Int?
     /** One of \&quot;CONTACT\&quot; or \&quot;EXTERNAL_ORGANIZATION\&quot;.  Indicates the built-in entity type to which this schema applies. */
     public var appliesTo: [AppliesTo]?
-    /** The schema&#39;s current enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists */
+    /** The schema&#39;s enabled/disabled status. A disabled schema cannot be assigned to any other entities, but the data on those entities from the schema still exists. */
     public var enabled: Bool?
     /** The URI of the user that created this schema. */
     public var createdBy: DomainEntityRef?

@@ -8737,9 +8737,9 @@ open class UsersAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsUsersAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: PresenceQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsUsersAggregatesQuery(body: UserAggregationQuery, completion: @escaping ((_ data: UserAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<PresenceQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UserAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -8799,9 +8799,9 @@ open class UsersAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<PresenceQueryResponse> 
+     - returns: RequestBuilder<UserAggregateQueryResponse> 
      */
-    open class func postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<PresenceQueryResponse> {
+    open class func postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: UserAggregationQuery) -> RequestBuilder<UserAggregateQueryResponse> {
         let path = "/api/v2/analytics/users/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8810,7 +8810,7 @@ open class UsersAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<PresenceQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UserAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -8911,9 +8911,9 @@ open class UsersAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsUsersObservationsQuery(body: ObservationQuery, completion: @escaping ((_ data: ObservationQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsUsersObservationsQuery(body: UserObservationQuery, completion: @escaping ((_ data: UserObservationQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsUsersObservationsQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<ObservationQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UserObservationQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -8985,9 +8985,9 @@ open class UsersAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<ObservationQueryResponse> 
+     - returns: RequestBuilder<UserObservationQueryResponse> 
      */
-    open class func postAnalyticsUsersObservationsQueryWithRequestBuilder(body: ObservationQuery) -> RequestBuilder<ObservationQueryResponse> {
+    open class func postAnalyticsUsersObservationsQueryWithRequestBuilder(body: UserObservationQuery) -> RequestBuilder<UserObservationQueryResponse> {
         let path = "/api/v2/analytics/users/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8996,7 +8996,7 @@ open class UsersAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UserObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -9017,7 +9017,7 @@ open class UsersAPI {
      - parameter subjectId: (path) Subject ID (user or group) 
      - parameter divisionId: (path) the id of the division to which to make the grant 
      - parameter roleId: (path) the id of the role to grant 
-     - parameter subjectType: (query) what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)
+     - parameter subjectType: (query) what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postAuthorizationSubjectDivisionRole(subjectId: String, divisionId: String, roleId: String, subjectType: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -9044,7 +9044,7 @@ open class UsersAPI {
      - parameter subjectId: (path) Subject ID (user or group) 
      - parameter divisionId: (path) the id of the division to which to make the grant 
      - parameter roleId: (path) the id of the role to grant 
-     - parameter subjectType: (query) what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)
+     - parameter subjectType: (query) what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)
 
      - returns: RequestBuilder<Void> 
      */

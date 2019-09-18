@@ -16,6 +16,7 @@ public class ScimMetadata: Codable {
         case user = "User"
         case group = "Group"
         case serviceProviderConfig = "ServiceProviderConfig"
+        case resourceType = "ResourceType"
     }
     /** The type of the resource. */
     public var resourceType: ResourceType?

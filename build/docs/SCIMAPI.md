@@ -11,10 +11,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteScimV2User**](SCIMAPI.html#deleteScimV2User) | Delete a user |
 | [**getScimGroup**](SCIMAPI.html#getScimGroup) | Get a group |
 | [**getScimGroups**](SCIMAPI.html#getScimGroups) | Get a list of groups |
+| [**getScimResourcetype**](SCIMAPI.html#getScimResourcetype) | Get the SCIM configuration |
+| [**getScimResourcetypes**](SCIMAPI.html#getScimResourcetypes) | Get the SCIM resource types |
+| [**getScimServiceproviderconfig**](SCIMAPI.html#getScimServiceproviderconfig) | Get the SCIM configuration |
 | [**getScimUser**](SCIMAPI.html#getScimUser) | Get a user |
 | [**getScimUsers**](SCIMAPI.html#getScimUsers) | Get a list of users |
 | [**getScimV2Group**](SCIMAPI.html#getScimV2Group) | Get a group |
 | [**getScimV2Groups**](SCIMAPI.html#getScimV2Groups) | Get a list of groups |
+| [**getScimV2Resourcetype**](SCIMAPI.html#getScimV2Resourcetype) | Get the SCIM configuration |
+| [**getScimV2Resourcetypes**](SCIMAPI.html#getScimV2Resourcetypes) | Get the SCIM resource types |
 | [**getScimV2Serviceproviderconfig**](SCIMAPI.html#getScimV2Serviceproviderconfig) | Get the SCIM configuration |
 | [**getScimV2User**](SCIMAPI.html#getScimV2User) | Get a user |
 | [**getScimV2Users**](SCIMAPI.html#getScimV2Users) | Get a list of users |
@@ -248,6 +253,159 @@ SCIMAPI.getScimGroups(startIndex: startIndex, count: count, filter: filter) { (r
 
 [**ScimGroupListResponse**](ScimGroupListResponse.html)
 
+<a name="getScimResourcetype"></a>
+
+# **getScimResourcetype**
+
+
+
+> [ScimConfigResourceType](ScimConfigResourceType.html) getScimResourcetype(resourceType)
+
+Get the SCIM configuration
+
+
+
+Wraps GET /api/v2/scim/resourcetypes/{resourceType}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let resourceType: SCIMAPI.ResourceType_getScimResourcetype = SCIMAPI.ResourceType_getScimResourcetype.enummember // The ID of a resource.
+
+// Code example
+SCIMAPI.getScimResourcetype(resourceType: resourceType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SCIMAPI.getScimResourcetype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **resourceType** | **String**| The ID of a resource. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceType**](ScimConfigResourceType.html)
+
+<a name="getScimResourcetypes"></a>
+
+# **getScimResourcetypes**
+
+
+
+> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimResourcetypes(filter)
+
+Get the SCIM resource types
+
+
+
+Wraps GET /api/v2/scim/resourcetypes  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filter: String = "" // Filtered results are invalid and will result in a 403 (Unauthorized) return.
+
+// Code example
+SCIMAPI.getScimResourcetypes(filter: filter) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SCIMAPI.getScimResourcetypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
+
+<a name="getScimServiceproviderconfig"></a>
+
+# **getScimServiceproviderconfig**
+
+
+
+> [ScimServiceProviderConfig](ScimServiceProviderConfig.html) getScimServiceproviderconfig(ifNoneMatch)
+
+Get the SCIM configuration
+
+
+
+Wraps GET /api/v2/scim/serviceproviderconfig  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let ifNoneMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
+
+// Code example
+SCIMAPI.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SCIMAPI.getScimServiceproviderconfig was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScimServiceProviderConfig**](ScimServiceProviderConfig.html)
+
 <a name="getScimUser"></a>
 
 # **getScimUser**
@@ -469,6 +627,108 @@ SCIMAPI.getScimV2Groups(filter: filter, startIndex: startIndex, count: count) { 
 ### Return type
 
 [**ScimGroupListResponse**](ScimGroupListResponse.html)
+
+<a name="getScimV2Resourcetype"></a>
+
+# **getScimV2Resourcetype**
+
+
+
+> [ScimConfigResourceType](ScimConfigResourceType.html) getScimV2Resourcetype(resourceType)
+
+Get the SCIM configuration
+
+
+
+Wraps GET /api/v2/scim/v2/resourcetypes/{resourceType}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let resourceType: SCIMAPI.ResourceType_getScimV2Resourcetype = SCIMAPI.ResourceType_getScimV2Resourcetype.enummember // The ID of a resource.
+
+// Code example
+SCIMAPI.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SCIMAPI.getScimV2Resourcetype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **resourceType** | **String**| The ID of a resource. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceType**](ScimConfigResourceType.html)
+
+<a name="getScimV2Resourcetypes"></a>
+
+# **getScimV2Resourcetypes**
+
+
+
+> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimV2Resourcetypes(filter)
+
+Get the SCIM resource types
+
+
+
+Wraps GET /api/v2/scim/v2/resourcetypes  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filter: String = "" // Filtered results are invalid and will result in a 403 (Unauthorized) return.
+
+// Code example
+SCIMAPI.getScimV2Resourcetypes(filter: filter) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SCIMAPI.getScimV2Resourcetypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
 
 <a name="getScimV2Serviceproviderconfig"></a>
 

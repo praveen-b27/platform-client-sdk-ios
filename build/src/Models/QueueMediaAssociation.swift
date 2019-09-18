@@ -19,31 +19,31 @@ public class QueueMediaAssociation: Codable {
         case callback = "Callback"
         case message = "Message"
     }
+    /** The reference ID for this QueueMediaAssociation */
+    public var _id: String?
     /** The queue to associate with the service goal group */
     public var queue: QueueReference?
     /** The media types of the given queue to associate with the service goal group */
     public var mediaTypes: [MediaTypes]?
-    /** The reference ID for this QueueMediaAssociation */
-    public var _id: String?
     /** If marked true on a PATCH, this QueueMediaAssociation will be permanently deleted */
     public var delete: Bool?
 
-    public init(queue: QueueReference?, mediaTypes: [MediaTypes]?, _id: String?, delete: Bool?) {
+    public init(_id: String?, queue: QueueReference?, mediaTypes: [MediaTypes]?, delete: Bool?) {
+        
+        self._id = _id
         
         self.queue = queue
         
         self.mediaTypes = mediaTypes
-        
-        self._id = _id
         
         self.delete = delete
         
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
         case queue
         case mediaTypes
-        case _id = "id"
         case delete
     }
 

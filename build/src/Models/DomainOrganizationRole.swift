@@ -17,6 +17,7 @@ public class DomainOrganizationRole: Codable {
     public var _description: String?
     public var defaultRoleId: String?
     public var permissions: [String]?
+    /** A collection of the permissions the role is not using */
     public var unusedPermissions: [String]?
     public var permissionPolicies: [DomainPermissionPolicy]?
     public var userCount: Int?

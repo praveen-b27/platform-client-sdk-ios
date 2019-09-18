@@ -26,9 +26,11 @@ public class LocationSearchRequest: Codable {
     public var pageNumber: Int?
     /** Multi-value sort order, list of multiple sort values */
     public var sort: [SearchSort]?
+    /** Provides more details about a specified resource */
+    public var expand: [String]?
     public var query: [LocationSearchCriteria]?
 
-    public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, query: [LocationSearchCriteria]?) {
+    public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, expand: [String]?, query: [LocationSearchCriteria]?) {
         
         self.sortOrder = sortOrder
         
@@ -39,6 +41,8 @@ public class LocationSearchRequest: Codable {
         self.pageNumber = pageNumber
         
         self.sort = sort
+        
+        self.expand = expand
         
         self.query = query
         

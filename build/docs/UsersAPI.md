@@ -2560,7 +2560,7 @@ UsersAPI.patchUsersBulk(body: body) { (response, error) in
 
 
 
-> [PresenceQueryResponse](PresenceQueryResponse.html) postAnalyticsUsersAggregatesQuery(body)
+> [UserAggregateQueryResponse](UserAggregateQueryResponse.html) postAnalyticsUsersAggregatesQuery(body)
 
 Query for user aggregates
 
@@ -2580,7 +2580,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: UserAggregationQuery = new UserAggregationQuery(...) // query
 
 // Code example
 UsersAPI.postAnalyticsUsersAggregatesQuery(body: body) { (response, error) in
@@ -2598,13 +2598,13 @@ UsersAPI.postAnalyticsUsersAggregatesQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**UserAggregationQuery**](UserAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**PresenceQueryResponse**](PresenceQueryResponse.html)
+[**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
 
 <a name="postAnalyticsUsersDetailsQuery"></a>
 
@@ -2664,7 +2664,7 @@ UsersAPI.postAnalyticsUsersDetailsQuery(body: body) { (response, error) in
 
 
 
-> [ObservationQueryResponse](ObservationQueryResponse.html) postAnalyticsUsersObservationsQuery(body)
+> [UserObservationQueryResponse](UserObservationQueryResponse.html) postAnalyticsUsersObservationsQuery(body)
 
 Query for user observations
 
@@ -2684,7 +2684,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ObservationQuery = new ObservationQuery(...) // query
+let body: UserObservationQuery = new UserObservationQuery(...) // query
 
 // Code example
 UsersAPI.postAnalyticsUsersObservationsQuery(body: body) { (response, error) in
@@ -2702,13 +2702,13 @@ UsersAPI.postAnalyticsUsersObservationsQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | |
+| **body** | [**UserObservationQuery**](UserObservationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.html)
+[**UserObservationQueryResponse**](UserObservationQueryResponse.html)
 
 <a name="postAuthorizationSubjectDivisionRole"></a>
 
@@ -2739,7 +2739,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let subjectId: String = "" // Subject ID (user or group)
 let divisionId: String = "" // the id of the division to which to make the grant
 let roleId: String = "" // the id of the role to grant
-let subjectType: String = "PC_USER" // what the type of the subject is, PC_GROUP or PC_USER
+let subjectType: String = "PC_USER" // what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
 
 // Code example
 UsersAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: divisionId, roleId: roleId, subjectType: subjectType) { (error) in
@@ -2759,7 +2759,7 @@ UsersAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: 
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **divisionId** | **String**| the id of the division to which to make the grant | |
 | **roleId** | **String**| the id of the role to grant | |
-| **subjectType** | **String**| what the type of the subject is, PC_GROUP or PC_USER | [optional] [default to PC_USER] |
+| **subjectType** | **String**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to PC_USER] |
 {: class="table-striped"}
 
 

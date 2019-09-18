@@ -12,7 +12,7 @@ title: DomainOrganizationRoleCreate
 | **_description** | **String** |  | [optional] |
 | **defaultRoleId** | **String** |  | [optional] |
 | **permissions** | **[String]** |  | [optional] |
-| **unusedPermissions** | **[String]** |  | [optional] |
+| **unusedPermissions** | **[String]** | A collection of the permissions the role is not using | [optional] |
 | **permissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy.html) |  | [optional] |
 | **userCount** | **Int** |  | [optional] |
 | **roleNeedsUpdate** | **Bool** | Optional unless patch operation. | [optional] |

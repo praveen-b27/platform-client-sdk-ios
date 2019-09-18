@@ -2552,7 +2552,7 @@ RoutingAPI.patchUserRoutingskillsBulk(userId: userId, body: body) { (response, e
 
 
 
-> [QualifierMappingObservationQueryResponse](QualifierMappingObservationQueryResponse.html) postAnalyticsQueuesObservationsQuery(body)
+> [QueueObservationQueryResponse](QueueObservationQueryResponse.html) postAnalyticsQueuesObservationsQuery(body)
 
 Query for queue observations
 
@@ -2572,7 +2572,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ObservationQuery = new ObservationQuery(...) // query
+let body: QueueObservationQuery = new QueueObservationQuery(...) // query
 
 // Code example
 RoutingAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error) in
@@ -2590,13 +2590,13 @@ RoutingAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | |
+| **body** | [**QueueObservationQuery**](QueueObservationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
 <a name="postRoutingEmailDomainRoutes"></a>
 

@@ -20,9 +20,9 @@ open class FlowsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsFlowsAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsFlowsAggregatesQuery(body: FlowAggregationQuery, completion: @escaping ((_ data: FlowAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<FlowAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -79,9 +79,9 @@ open class FlowsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<FlowAggregateQueryResponse> 
      */
-    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: FlowAggregationQuery) -> RequestBuilder<FlowAggregateQueryResponse> {
         let path = "/api/v2/analytics/flows/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -90,7 +90,7 @@ open class FlowsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<FlowAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -105,9 +105,9 @@ open class FlowsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsFlowsObservationsQuery(body: ObservationQuery, completion: @escaping ((_ data: QualifierMappingObservationQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsFlowsObservationsQuery(body: FlowObservationQuery, completion: @escaping ((_ data: FlowObservationQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<QualifierMappingObservationQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<FlowObservationQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -133,9 +133,6 @@ open class FlowsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "systemToOrganizationMappings" : {
-    "key" : [ "aeiou" ]
-  },
   "results" : [ {
     "data" : [ {
       "metric" : "aeiou",
@@ -182,9 +179,9 @@ open class FlowsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<QualifierMappingObservationQueryResponse> 
+     - returns: RequestBuilder<FlowObservationQueryResponse> 
      */
-    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: ObservationQuery) -> RequestBuilder<QualifierMappingObservationQueryResponse> {
+    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: FlowObservationQuery) -> RequestBuilder<FlowObservationQueryResponse> {
         let path = "/api/v2/analytics/flows/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -193,7 +190,7 @@ open class FlowsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<QualifierMappingObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<FlowObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

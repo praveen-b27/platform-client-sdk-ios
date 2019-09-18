@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowVersions**](ArchitectAPI.html#getFlowVersions) | Get flow version list |
 | [**getFlows**](ArchitectAPI.html#getFlows) | Get a pageable list of flows, filtered by query parameters |
 | [**getFlowsDatatable**](ArchitectAPI.html#getFlowsDatatable) | Returns a specific datatable by id |
+| [**getFlowsDatatableImportJob**](ArchitectAPI.html#getFlowsDatatableImportJob) | Returns the state information about an import job |
 | [**getFlowsDatatableRow**](ArchitectAPI.html#getFlowsDatatableRow) | Returns a specific row for the datatable |
 | [**getFlowsDatatableRows**](ArchitectAPI.html#getFlowsDatatableRows) | Returns the rows for the datatable with the given id |
 | [**getFlowsDatatables**](ArchitectAPI.html#getFlowsDatatables) | Retrieve a list of datatables for the org |
@@ -2819,6 +2820,60 @@ ArchitectAPI.getFlowsDatatable(datatableId: datatableId, expand: expand) { (resp
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+<a name="getFlowsDatatableImportJob"></a>
+
+# **getFlowsDatatableImportJob**
+
+
+
+> [DataTableImportJob](DataTableImportJob.html) getFlowsDatatableImportJob(datatableId, importJobId)
+
+Returns the state information about an import job
+
+Returns the state information about an import job.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}  
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let importJobId: String = "" // id of import job
+
+// Code example
+ArchitectAPI.getFlowsDatatableImportJob(datatableId: datatableId, importJobId: importJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsDatatableImportJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+| **importJobId** | **String**| id of import job | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
 
 <a name="getFlowsDatatableRow"></a>
 

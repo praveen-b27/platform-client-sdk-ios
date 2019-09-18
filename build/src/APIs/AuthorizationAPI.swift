@@ -919,7 +919,7 @@ open class AuthorizationAPI {
      Get a single organization role.
      
      - parameter roleId: (path) Role ID 
-     - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter expand: (query) Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAuthorizationRole(roleId: String, expand: [String]? = nil, completion: @escaping ((_ data: DomainOrganizationRole?,_ error: Error?) -> Void)) {
@@ -1316,7 +1316,7 @@ open class AuthorizationAPI {
 }}]
      
      - parameter roleId: (path) Role ID 
-     - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter expand: (query) Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)
 
      - returns: RequestBuilder<DomainOrganizationRole> 
      */
@@ -3501,6 +3501,7 @@ open class AuthorizationAPI {
         case campaign = "CAMPAIGN"
         case contactlist = "CONTACTLIST"
         case dnclist = "DNCLIST"
+        case messagingcampaign = "MESSAGINGCAMPAIGN"
         case managementunit = "MANAGEMENTUNIT"
         case businessunit = "BUSINESSUNIT"
         case flow = "FLOW"
@@ -3646,7 +3647,7 @@ open class AuthorizationAPI {
      
      - parameter roleId: (path) Role ID 
      - parameter body: (body) Subjects and Divisions 
-     - parameter subjectType: (query) what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)
+     - parameter subjectType: (query) what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postAuthorizationRole(roleId: String, body: SubjectDivisions, subjectType: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -3672,7 +3673,7 @@ open class AuthorizationAPI {
      
      - parameter roleId: (path) Role ID 
      - parameter body: (body) Subjects and Divisions 
-     - parameter subjectType: (query) what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)
+     - parameter subjectType: (query) what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)
 
      - returns: RequestBuilder<Void> 
      */
@@ -5016,7 +5017,7 @@ open class AuthorizationAPI {
      - parameter subjectId: (path) Subject ID (user or group) 
      - parameter divisionId: (path) the id of the division to which to make the grant 
      - parameter roleId: (path) the id of the role to grant 
-     - parameter subjectType: (query) what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)
+     - parameter subjectType: (query) what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postAuthorizationSubjectDivisionRole(subjectId: String, divisionId: String, roleId: String, subjectType: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -5043,7 +5044,7 @@ open class AuthorizationAPI {
      - parameter subjectId: (path) Subject ID (user or group) 
      - parameter divisionId: (path) the id of the division to which to make the grant 
      - parameter roleId: (path) the id of the role to grant 
-     - parameter subjectType: (query) what the type of the subject is, PC_GROUP or PC_USER (optional, default to PC_USER)
+     - parameter subjectType: (query) what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to PC_USER)
 
      - returns: RequestBuilder<Void> 
      */

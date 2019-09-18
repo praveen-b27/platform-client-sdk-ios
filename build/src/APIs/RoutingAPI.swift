@@ -4121,6 +4121,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+  "shortCodeBillingType" : "aeiou",
   "selfUri" : "aeiou",
   "provisionedThroughPureCloud" : true,
   "dateModified" : "2000-01-23T04:56:07.000+0000",
@@ -4470,6 +4471,7 @@ open class RoutingAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+    "shortCodeBillingType" : "aeiou",
     "selfUri" : "aeiou",
     "provisionedThroughPureCloud" : true,
     "dateModified" : "2000-01-23T04:56:07.000+0000",
@@ -6096,9 +6098,9 @@ open class RoutingAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsQueuesObservationsQuery(body: ObservationQuery, completion: @escaping ((_ data: QualifierMappingObservationQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsQueuesObservationsQuery(body: QueueObservationQuery, completion: @escaping ((_ data: QueueObservationQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<QualifierMappingObservationQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<QueueObservationQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -6173,9 +6175,9 @@ open class RoutingAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<QualifierMappingObservationQueryResponse> 
+     - returns: RequestBuilder<QueueObservationQueryResponse> 
      */
-    open class func postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: ObservationQuery) -> RequestBuilder<QualifierMappingObservationQueryResponse> {
+    open class func postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: QueueObservationQuery) -> RequestBuilder<QueueObservationQueryResponse> {
         let path = "/api/v2/analytics/queues/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6184,7 +6186,7 @@ open class RoutingAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<QualifierMappingObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueueObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -6886,6 +6888,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+  "shortCodeBillingType" : "aeiou",
   "selfUri" : "aeiou",
   "provisionedThroughPureCloud" : true,
   "dateModified" : "2000-01-23T04:56:07.000+0000",
@@ -8029,6 +8032,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+  "shortCodeBillingType" : "aeiou",
   "selfUri" : "aeiou",
   "provisionedThroughPureCloud" : true,
   "dateModified" : "2000-01-23T04:56:07.000+0000",

@@ -36,6 +36,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsCallsHistory**](ConversationsAPI.html#getConversationsCallsHistory) | Get call history |
 | [**getConversationsCallsMaximumconferenceparties**](ConversationsAPI.html#getConversationsCallsMaximumconferenceparties) | Get the maximum number of participants that this user can have on a conference |
 | [**getConversationsChat**](ConversationsAPI.html#getConversationsChat) | Get chat conversation |
+| [**getConversationsChatMessage**](ConversationsAPI.html#getConversationsChatMessage) | Get a web chat conversation message |
+| [**getConversationsChatMessages**](ConversationsAPI.html#getConversationsChatMessages) | Get the messages of a chat conversation. |
 | [**getConversationsChatParticipantWrapup**](ConversationsAPI.html#getConversationsChatParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsChatParticipantWrapupcodes**](ConversationsAPI.html#getConversationsChatParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsChats**](ConversationsAPI.html#getConversationsChats) | Get active chat conversations for the logged in user |
@@ -111,6 +113,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCallbackParticipantReplace**](ConversationsAPI.html#postConversationsCallbackParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallbacks**](ConversationsAPI.html#postConversationsCallbacks) | Create a Callback |
 | [**postConversationsCalls**](ConversationsAPI.html#postConversationsCalls) | Create a call conversation |
+| [**postConversationsChatCommunicationMessages**](ConversationsAPI.html#postConversationsChatCommunicationMessages) | Send a message on behalf of a communication in a chat conversation. |
+| [**postConversationsChatCommunicationTyping**](ConversationsAPI.html#postConversationsChatCommunicationTyping) | Send a typing-indicator on behalf of a communication in a chat conversation. |
 | [**postConversationsChatParticipantReplace**](ConversationsAPI.html#postConversationsChatParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsChats**](ConversationsAPI.html#postConversationsChats) | Create a web chat conversation |
 | [**postConversationsCobrowsesessionParticipantReplace**](ConversationsAPI.html#postConversationsCobrowsesessionParticipantReplace) | Replace this participant with the specified user and/or address |
@@ -1642,6 +1646,118 @@ ConversationsAPI.getConversationsChat(conversationId: conversationId) { (respons
 ### Return type
 
 [**ChatConversation**](ChatConversation.html)
+
+<a name="getConversationsChatMessage"></a>
+
+# **getConversationsChatMessage**
+
+
+
+> [WebChatMessage](WebChatMessage.html) getConversationsChatMessage(conversationId, messageId)
+
+Get a web chat conversation message
+
+
+
+Wraps GET /api/v2/conversations/chats/{conversationId}/messages/{messageId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let messageId: String = "" // messageId
+
+// Code example
+ConversationsAPI.getConversationsChatMessage(conversationId: conversationId, messageId: messageId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsChatMessage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **messageId** | **String**| messageId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WebChatMessage**](WebChatMessage.html)
+
+<a name="getConversationsChatMessages"></a>
+
+# **getConversationsChatMessages**
+
+
+
+> [WebChatMessageEntityList](WebChatMessageEntityList.html) getConversationsChatMessages(conversationId, after, before, sortOrder, maxResults)
+
+Get the messages of a chat conversation.
+
+
+
+Wraps GET /api/v2/conversations/chats/{conversationId}/messages  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let after: String = "" // If specified, get the messages chronologically after the id of this message
+let before: String = "" // If specified, get the messages chronologically before the id of this message
+let sortOrder: ConversationsAPI.SortOrder_getConversationsChatMessages = ConversationsAPI.SortOrder_getConversationsChatMessages.enummember // Sort order
+let maxResults: Int = 100 // Limit the returned number of messages, up to a maximum of 100
+
+// Code example
+ConversationsAPI.getConversationsChatMessages(conversationId: conversationId, after: after, before: before, sortOrder: sortOrder, maxResults: maxResults) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsChatMessages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **after** | **String**| If specified, get the messages chronologically after the id of this message | [optional] |
+| **before** | **String**| If specified, get the messages chronologically before the id of this message | [optional] |
+| **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **maxResults** | **Int**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WebChatMessageEntityList**](WebChatMessageEntityList.html)
 
 <a name="getConversationsChatParticipantWrapup"></a>
 
@@ -4806,7 +4922,7 @@ ConversationsAPI.postAnalyticsConversationDetailsProperties(conversationId: conv
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsConversationsAggregatesQuery(body)
+> [ConversationAggregateQueryResponse](ConversationAggregateQueryResponse.html) postAnalyticsConversationsAggregatesQuery(body)
 
 Query for conversation aggregates
 
@@ -4826,7 +4942,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: ConversationAggregationQuery = new ConversationAggregationQuery(...) // query
 
 // Code example
 ConversationsAPI.postAnalyticsConversationsAggregatesQuery(body: body) { (response, error) in
@@ -4844,13 +4960,13 @@ ConversationsAPI.postAnalyticsConversationsAggregatesQuery(body: body) { (respon
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html)
 
 <a name="postAnalyticsConversationsDetailsJobs"></a>
 
@@ -5651,6 +5767,114 @@ ConversationsAPI.postConversationsCalls(body: body) { (response, error) in
 ### Return type
 
 [**CreateCallResponse**](CreateCallResponse.html)
+
+<a name="postConversationsChatCommunicationMessages"></a>
+
+# **postConversationsChatCommunicationMessages**
+
+
+
+> [WebChatMessage](WebChatMessage.html) postConversationsChatCommunicationMessages(conversationId, communicationId, body)
+
+Send a message on behalf of a communication in a chat conversation.
+
+
+
+Wraps POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+let body: CreateWebChatMessageRequest = new CreateWebChatMessageRequest(...) // Message
+
+// Code example
+ConversationsAPI.postConversationsChatCommunicationMessages(conversationId: conversationId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsChatCommunicationMessages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest.html)| Message | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WebChatMessage**](WebChatMessage.html)
+
+<a name="postConversationsChatCommunicationTyping"></a>
+
+# **postConversationsChatCommunicationTyping**
+
+
+
+> [WebChatTyping](WebChatTyping.html) postConversationsChatCommunicationTyping(conversationId, communicationId)
+
+Send a typing-indicator on behalf of a communication in a chat conversation.
+
+
+
+Wraps POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let communicationId: String = "" // communicationId
+
+// Code example
+ConversationsAPI.postConversationsChatCommunicationTyping(conversationId: conversationId, communicationId: communicationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsChatCommunicationTyping was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **communicationId** | **String**| communicationId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WebChatTyping**](WebChatTyping.html)
 
 <a name="postConversationsChatParticipantReplace"></a>
 

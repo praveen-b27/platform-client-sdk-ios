@@ -5679,11 +5679,59 @@ open class RecordingAPI {
   "errorMessage" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
+  "user" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
   "recordingJobsQuery" : {
     "conversationQuery" : {
-      "evaluationFilters" : [ "" ],
-      "surveyFilters" : [ "" ],
-      "segmentFilters" : [ "" ],
+      "evaluationFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
+      "surveyFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
+      "segmentFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "propertyType" : "aeiou",
+            "property" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "limit" : 123,
       "orderBy" : "aeiou",
       "interval" : "aeiou",
@@ -5692,8 +5740,6 @@ open class RecordingAPI {
         "clauses" : [ {
           "predicates" : [ {
             "metric" : "aeiou",
-            "propertyType" : "aeiou",
-            "property" : "aeiou",
             "range" : {
               "lt" : 1.3579000000000001069366817318950779736042022705078125,
               "gte" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5709,7 +5755,20 @@ open class RecordingAPI {
         } ],
         "type" : "aeiou"
       } ],
-      "mediaEndpointStatFilters" : [ "" ],
+      "mediaEndpointStatFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "order" : "aeiou"
     },
     "action" : "aeiou",
@@ -5831,11 +5890,59 @@ open class RecordingAPI {
     "errorMessage" : "aeiou",
     "id" : "aeiou",
     "state" : "aeiou",
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "recordingJobsQuery" : {
       "conversationQuery" : {
-        "evaluationFilters" : [ "" ],
-        "surveyFilters" : [ "" ],
-        "segmentFilters" : [ "" ],
+        "evaluationFilters" : [ {
+          "predicates" : [ "" ],
+          "clauses" : [ {
+            "predicates" : [ {
+              "metric" : "aeiou",
+              "range" : "",
+              "type" : "aeiou",
+              "dimension" : "aeiou",
+              "value" : "aeiou",
+              "operator" : "aeiou"
+            } ],
+            "type" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "surveyFilters" : [ {
+          "predicates" : [ "" ],
+          "clauses" : [ {
+            "predicates" : [ {
+              "metric" : "aeiou",
+              "range" : "",
+              "type" : "aeiou",
+              "dimension" : "aeiou",
+              "value" : "aeiou",
+              "operator" : "aeiou"
+            } ],
+            "type" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "segmentFilters" : [ {
+          "predicates" : [ "" ],
+          "clauses" : [ {
+            "predicates" : [ {
+              "metric" : "aeiou",
+              "propertyType" : "aeiou",
+              "property" : "aeiou",
+              "range" : "",
+              "type" : "aeiou",
+              "dimension" : "aeiou",
+              "value" : "aeiou",
+              "operator" : "aeiou"
+            } ],
+            "type" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
         "limit" : 123,
         "orderBy" : "aeiou",
         "interval" : "aeiou",
@@ -5844,8 +5951,6 @@ open class RecordingAPI {
           "clauses" : [ {
             "predicates" : [ {
               "metric" : "aeiou",
-              "propertyType" : "aeiou",
-              "property" : "aeiou",
               "range" : {
                 "lt" : 1.3579000000000001069366817318950779736042022705078125,
                 "gte" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5861,7 +5966,20 @@ open class RecordingAPI {
           } ],
           "type" : "aeiou"
         } ],
-        "mediaEndpointStatFilters" : [ "" ],
+        "mediaEndpointStatFilters" : [ {
+          "predicates" : [ "" ],
+          "clauses" : [ {
+            "predicates" : [ {
+              "range" : "",
+              "type" : "aeiou",
+              "dimension" : "aeiou",
+              "value" : "aeiou",
+              "operator" : "aeiou"
+            } ],
+            "type" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
         "order" : "aeiou"
       },
       "action" : "aeiou",
@@ -9798,11 +9916,59 @@ open class RecordingAPI {
   "errorMessage" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
+  "user" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
   "recordingJobsQuery" : {
     "conversationQuery" : {
-      "evaluationFilters" : [ "" ],
-      "surveyFilters" : [ "" ],
-      "segmentFilters" : [ "" ],
+      "evaluationFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
+      "surveyFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
+      "segmentFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "propertyType" : "aeiou",
+            "property" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "limit" : 123,
       "orderBy" : "aeiou",
       "interval" : "aeiou",
@@ -9811,8 +9977,6 @@ open class RecordingAPI {
         "clauses" : [ {
           "predicates" : [ {
             "metric" : "aeiou",
-            "propertyType" : "aeiou",
-            "property" : "aeiou",
             "range" : {
               "lt" : 1.3579000000000001069366817318950779736042022705078125,
               "gte" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9828,7 +9992,20 @@ open class RecordingAPI {
         } ],
         "type" : "aeiou"
       } ],
-      "mediaEndpointStatFilters" : [ "" ],
+      "mediaEndpointStatFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "order" : "aeiou"
     },
     "action" : "aeiou",
@@ -12609,11 +12786,59 @@ open class RecordingAPI {
   "errorMessage" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
+  "user" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
   "recordingJobsQuery" : {
     "conversationQuery" : {
-      "evaluationFilters" : [ "" ],
-      "surveyFilters" : [ "" ],
-      "segmentFilters" : [ "" ],
+      "evaluationFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
+      "surveyFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
+      "segmentFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "propertyType" : "aeiou",
+            "property" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "limit" : 123,
       "orderBy" : "aeiou",
       "interval" : "aeiou",
@@ -12622,8 +12847,6 @@ open class RecordingAPI {
         "clauses" : [ {
           "predicates" : [ {
             "metric" : "aeiou",
-            "propertyType" : "aeiou",
-            "property" : "aeiou",
             "range" : {
               "lt" : 1.3579000000000001069366817318950779736042022705078125,
               "gte" : 1.3579000000000001069366817318950779736042022705078125,
@@ -12639,7 +12862,20 @@ open class RecordingAPI {
         } ],
         "type" : "aeiou"
       } ],
-      "mediaEndpointStatFilters" : [ "" ],
+      "mediaEndpointStatFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "range" : "",
+            "type" : "aeiou",
+            "dimension" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "order" : "aeiou"
     },
     "action" : "aeiou",

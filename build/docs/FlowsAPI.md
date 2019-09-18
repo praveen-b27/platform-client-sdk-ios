@@ -17,7 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsFlowsAggregatesQuery(body)
+> [FlowAggregateQueryResponse](FlowAggregateQueryResponse.html) postAnalyticsFlowsAggregatesQuery(body)
 
 Query for flow aggregates
 
@@ -37,7 +37,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: FlowAggregationQuery = new FlowAggregationQuery(...) // query
 
 // Code example
 FlowsAPI.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) in
@@ -55,13 +55,13 @@ FlowsAPI.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**FlowAggregationQuery**](FlowAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html)
 
 <a name="postAnalyticsFlowsObservationsQuery"></a>
 
@@ -69,7 +69,7 @@ FlowsAPI.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) in
 
 
 
-> [QualifierMappingObservationQueryResponse](QualifierMappingObservationQueryResponse.html) postAnalyticsFlowsObservationsQuery(body)
+> [FlowObservationQueryResponse](FlowObservationQueryResponse.html) postAnalyticsFlowsObservationsQuery(body)
 
 Query for flow observations
 
@@ -89,7 +89,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ObservationQuery = new ObservationQuery(...) // query
+let body: FlowObservationQuery = new FlowObservationQuery(...) // query
 
 // Code example
 FlowsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error) in
@@ -107,11 +107,11 @@ FlowsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | |
+| **body** | [**FlowObservationQuery**](FlowObservationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**FlowObservationQueryResponse**](FlowObservationQueryResponse.html)
 

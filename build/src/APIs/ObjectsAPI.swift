@@ -407,6 +407,7 @@ open class ObjectsAPI {
         case campaign = "CAMPAIGN"
         case contactlist = "CONTACTLIST"
         case dnclist = "DNCLIST"
+        case messagingcampaign = "MESSAGINGCAMPAIGN"
         case managementunit = "MANAGEMENTUNIT"
         case businessunit = "BUSINESSUNIT"
         case flow = "FLOW"

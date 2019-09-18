@@ -16,6 +16,7 @@ public class ScimV2GroupReference: Codable {
         case user = "User"
         case group = "Group"
         case serviceProviderConfig = "ServiceProviderConfig"
+        case resourceType = "ResourceType"
     }
     /** The SCIM resource type. Can be user or group. */
     public var type: ModelType?

@@ -338,6 +338,269 @@ open class SCIMAPI {
 
     
     
+    public enum ResourceType_getScimResourcetype: String { 
+        case user = "User"
+        case group = "Group"
+        case serviceProviderConfig = "ServiceProviderConfig"
+        case resourceType = "ResourceType"
+    }
+
+    
+    
+    /**
+     
+     Get the SCIM configuration
+     
+     - parameter resourceType: (path) The ID of a resource. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getScimResourcetype(resourceType: ResourceType_getScimResourcetype, completion: @escaping ((_ data: ScimConfigResourceType?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimResourcetypeWithRequestBuilder(resourceType: resourceType)
+        requestBuilder.execute { (response: Response<ScimConfigResourceType>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the SCIM configuration
+     
+     - GET /api/v2/scim/resourcetypes/{resourceType}
+     - 
+     - examples: [{contentType=application/json, example={
+  "schema" : "aeiou",
+  "endpoint" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
+  "schemas" : [ "aeiou" ],
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "schemaExtensions" : [ {
+    "schema" : "aeiou",
+    "required" : true
+  } ],
+  "id" : "aeiou"
+}}]
+     
+     - parameter resourceType: (path) The ID of a resource. 
+
+     - returns: RequestBuilder<ScimConfigResourceType> 
+     */
+    open class func getScimResourcetypeWithRequestBuilder(resourceType: ResourceType_getScimResourcetype) -> RequestBuilder<ScimConfigResourceType> {
+        var path = "/api/v2/scim/resourcetypes/{resourceType}"
+        let resourceTypePreEscape = "\(resourceType.rawValue)"
+        let resourceTypePostEscape = resourceTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{resourceType}", with: resourceTypePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScimConfigResourceType>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get the SCIM resource types
+     
+     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getScimResourcetypes(filter: String? = nil, completion: @escaping ((_ data: ScimConfigResourceTypesListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimResourcetypesWithRequestBuilder(filter: filter)
+        requestBuilder.execute { (response: Response<ScimConfigResourceTypesListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the SCIM resource types
+     
+     - GET /api/v2/scim/resourcetypes
+     - 
+     - examples: [{contentType=application/json, example={
+  "totalResults" : 123456789,
+  "startIndex" : 123456789,
+  "itemsPerPage" : 123456789,
+  "schemas" : [ "aeiou" ],
+  "Resources" : [ {
+    "schema" : "aeiou",
+    "endpoint" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
+    "schemas" : [ "aeiou" ],
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "schemaExtensions" : [ {
+      "schema" : "aeiou",
+      "required" : true
+    } ],
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+
+     - returns: RequestBuilder<ScimConfigResourceTypesListResponse> 
+     */
+    open class func getScimResourcetypesWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimConfigResourceTypesListResponse> {
+        let path = "/api/v2/scim/resourcetypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "filter": filter
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ScimConfigResourceTypesListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get the SCIM configuration
+     
+     - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getScimServiceproviderconfig(ifNoneMatch: String? = nil, completion: @escaping ((_ data: ScimServiceProviderConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimServiceproviderconfigWithRequestBuilder(ifNoneMatch: ifNoneMatch)
+        requestBuilder.execute { (response: Response<ScimServiceProviderConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the SCIM configuration
+     
+     - GET /api/v2/scim/serviceproviderconfig
+     - 
+     - examples: [{contentType=application/json, example={
+  "patch" : {
+    "supported" : true
+  },
+  "filter" : {
+    "maxResults" : 123,
+    "supported" : true
+  },
+  "documentationUri" : "aeiou",
+  "authenticationSchemes" : [ {
+    "documentationUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "specUri" : "aeiou",
+    "type" : "aeiou",
+    "primary" : true
+  } ],
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
+  "schemas" : [ "aeiou" ],
+  "etag" : "",
+  "sort" : "",
+  "bulk" : {
+    "maxPayloadSize" : 123,
+    "maxOperations" : 123,
+    "supported" : true
+  },
+  "changePassword" : ""
+}}]
+     
+     - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
+
+     - returns: RequestBuilder<ScimServiceProviderConfig> 
+     */
+    open class func getScimServiceproviderconfigWithRequestBuilder(ifNoneMatch: String? = nil) -> RequestBuilder<ScimServiceProviderConfig> {
+        let path = "/api/v2/scim/serviceproviderconfig"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "If-None-Match": ifNoneMatch
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+
+        let requestBuilder: RequestBuilder<ScimServiceProviderConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+    }
+
+    
+    
     
     
     
@@ -762,6 +1025,176 @@ open class SCIMAPI {
 
     
     
+    public enum ResourceType_getScimV2Resourcetype: String { 
+        case user = "User"
+        case group = "Group"
+        case serviceProviderConfig = "ServiceProviderConfig"
+        case resourceType = "ResourceType"
+    }
+
+    
+    
+    /**
+     
+     Get the SCIM configuration
+     
+     - parameter resourceType: (path) The ID of a resource. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getScimV2Resourcetype(resourceType: ResourceType_getScimV2Resourcetype, completion: @escaping ((_ data: ScimConfigResourceType?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimV2ResourcetypeWithRequestBuilder(resourceType: resourceType)
+        requestBuilder.execute { (response: Response<ScimConfigResourceType>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the SCIM configuration
+     
+     - GET /api/v2/scim/v2/resourcetypes/{resourceType}
+     - 
+     - examples: [{contentType=application/json, example={
+  "schema" : "aeiou",
+  "endpoint" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
+  "schemas" : [ "aeiou" ],
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "schemaExtensions" : [ {
+    "schema" : "aeiou",
+    "required" : true
+  } ],
+  "id" : "aeiou"
+}}]
+     
+     - parameter resourceType: (path) The ID of a resource. 
+
+     - returns: RequestBuilder<ScimConfigResourceType> 
+     */
+    open class func getScimV2ResourcetypeWithRequestBuilder(resourceType: ResourceType_getScimV2Resourcetype) -> RequestBuilder<ScimConfigResourceType> {
+        var path = "/api/v2/scim/v2/resourcetypes/{resourceType}"
+        let resourceTypePreEscape = "\(resourceType.rawValue)"
+        let resourceTypePostEscape = resourceTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{resourceType}", with: resourceTypePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScimConfigResourceType>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get the SCIM resource types
+     
+     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getScimV2Resourcetypes(filter: String? = nil, completion: @escaping ((_ data: ScimConfigResourceTypesListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimV2ResourcetypesWithRequestBuilder(filter: filter)
+        requestBuilder.execute { (response: Response<ScimConfigResourceTypesListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the SCIM resource types
+     
+     - GET /api/v2/scim/v2/resourcetypes
+     - 
+     - examples: [{contentType=application/json, example={
+  "totalResults" : 123456789,
+  "startIndex" : 123456789,
+  "itemsPerPage" : 123456789,
+  "schemas" : [ "aeiou" ],
+  "Resources" : [ {
+    "schema" : "aeiou",
+    "endpoint" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
+    "schemas" : [ "aeiou" ],
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "schemaExtensions" : [ {
+      "schema" : "aeiou",
+      "required" : true
+    } ],
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+
+     - returns: RequestBuilder<ScimConfigResourceTypesListResponse> 
+     */
+    open class func getScimV2ResourcetypesWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimConfigResourceTypesListResponse> {
+        let path = "/api/v2/scim/v2/resourcetypes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "filter": filter
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ScimConfigResourceTypesListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
     
     /**
      
@@ -795,13 +1228,37 @@ open class SCIMAPI {
      - GET /api/v2/scim/v2/serviceproviderconfig
      - 
      - examples: [{contentType=application/json, example={
+  "patch" : {
+    "supported" : true
+  },
+  "filter" : {
+    "maxResults" : 123,
+    "supported" : true
+  },
   "documentationUri" : "aeiou",
+  "authenticationSchemes" : [ {
+    "documentationUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "specUri" : "aeiou",
+    "type" : "aeiou",
+    "primary" : true
+  } ],
   "meta" : {
     "location" : "aeiou",
     "lastModified" : "2000-01-23T04:56:07.000+0000",
     "version" : "aeiou",
     "resourceType" : "aeiou"
-  }
+  },
+  "schemas" : [ "aeiou" ],
+  "etag" : "",
+  "sort" : "",
+  "bulk" : {
+    "maxPayloadSize" : 123,
+    "maxOperations" : 123,
+    "supported" : true
+  },
+  "changePassword" : ""
 }}]
      
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)

@@ -315,6 +315,9 @@ open class AnalyticsAPI {
     } ],
     "externalContactId" : "aeiou",
     "purpose" : "aeiou",
+    "attributes" : {
+      "key" : "aeiou"
+    },
     "externalOrganizationId" : "aeiou",
     "participantName" : "aeiou",
     "userId" : "aeiou",
@@ -543,6 +546,9 @@ open class AnalyticsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "attributes" : {
+        "key" : "aeiou"
+      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -847,6 +853,9 @@ open class AnalyticsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "attributes" : {
+        "key" : "aeiou"
+      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -1914,9 +1923,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsConversationsAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsConversationsAggregatesQuery(body: ConversationAggregationQuery, completion: @escaping ((_ data: ConversationAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ConversationAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1973,9 +1982,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<ConversationAggregateQueryResponse> 
      */
-    open class func postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsConversationsAggregatesQueryWithRequestBuilder(body: ConversationAggregationQuery) -> RequestBuilder<ConversationAggregateQueryResponse> {
         let path = "/api/v2/analytics/conversations/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1984,7 +1993,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ConversationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -2244,6 +2253,9 @@ open class AnalyticsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "attributes" : {
+        "key" : "aeiou"
+      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -2293,9 +2305,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsEvaluationsAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsEvaluationsAggregatesQuery(body: EvaluationAggregationQuery, completion: @escaping ((_ data: EvaluationAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2352,9 +2364,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<EvaluationAggregateQueryResponse> 
      */
-    open class func postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: EvaluationAggregationQuery) -> RequestBuilder<EvaluationAggregateQueryResponse> {
         let path = "/api/v2/analytics/evaluations/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2363,7 +2375,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -2378,9 +2390,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsFlowsAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsFlowsAggregatesQuery(body: FlowAggregationQuery, completion: @escaping ((_ data: FlowAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<FlowAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2437,9 +2449,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<FlowAggregateQueryResponse> 
      */
-    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsFlowsAggregatesQueryWithRequestBuilder(body: FlowAggregationQuery) -> RequestBuilder<FlowAggregateQueryResponse> {
         let path = "/api/v2/analytics/flows/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2448,7 +2460,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<FlowAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -2463,9 +2475,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsFlowsObservationsQuery(body: ObservationQuery, completion: @escaping ((_ data: QualifierMappingObservationQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsFlowsObservationsQuery(body: FlowObservationQuery, completion: @escaping ((_ data: FlowObservationQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<QualifierMappingObservationQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<FlowObservationQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2491,9 +2503,6 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "systemToOrganizationMappings" : {
-    "key" : [ "aeiou" ]
-  },
   "results" : [ {
     "data" : [ {
       "metric" : "aeiou",
@@ -2540,9 +2549,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<QualifierMappingObservationQueryResponse> 
+     - returns: RequestBuilder<FlowObservationQueryResponse> 
      */
-    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: ObservationQuery) -> RequestBuilder<QualifierMappingObservationQueryResponse> {
+    open class func postAnalyticsFlowsObservationsQueryWithRequestBuilder(body: FlowObservationQuery) -> RequestBuilder<FlowObservationQueryResponse> {
         let path = "/api/v2/analytics/flows/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2551,7 +2560,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<QualifierMappingObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<FlowObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -2566,9 +2575,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsQueuesObservationsQuery(body: ObservationQuery, completion: @escaping ((_ data: QualifierMappingObservationQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsQueuesObservationsQuery(body: QueueObservationQuery, completion: @escaping ((_ data: QueueObservationQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<QualifierMappingObservationQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<QueueObservationQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2643,9 +2652,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<QualifierMappingObservationQueryResponse> 
+     - returns: RequestBuilder<QueueObservationQueryResponse> 
      */
-    open class func postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: ObservationQuery) -> RequestBuilder<QualifierMappingObservationQueryResponse> {
+    open class func postAnalyticsQueuesObservationsQueryWithRequestBuilder(body: QueueObservationQuery) -> RequestBuilder<QueueObservationQueryResponse> {
         let path = "/api/v2/analytics/queues/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2654,7 +2663,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<QualifierMappingObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueueObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -2995,9 +3004,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsSurveysAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsSurveysAggregatesQuery(body: SurveyAggregationQuery, completion: @escaping ((_ data: SurveyAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<SurveyAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -3054,9 +3063,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<SurveyAggregateQueryResponse> 
      */
-    open class func postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: SurveyAggregationQuery) -> RequestBuilder<SurveyAggregateQueryResponse> {
         let path = "/api/v2/analytics/surveys/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -3065,7 +3074,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SurveyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -3080,9 +3089,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsUsersAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: PresenceQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsUsersAggregatesQuery(body: UserAggregationQuery, completion: @escaping ((_ data: UserAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<PresenceQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UserAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -3142,9 +3151,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<PresenceQueryResponse> 
+     - returns: RequestBuilder<UserAggregateQueryResponse> 
      */
-    open class func postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<PresenceQueryResponse> {
+    open class func postAnalyticsUsersAggregatesQueryWithRequestBuilder(body: UserAggregationQuery) -> RequestBuilder<UserAggregateQueryResponse> {
         let path = "/api/v2/analytics/users/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -3153,7 +3162,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<PresenceQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UserAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -3254,9 +3263,9 @@ open class AnalyticsAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsUsersObservationsQuery(body: ObservationQuery, completion: @escaping ((_ data: ObservationQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsUsersObservationsQuery(body: UserObservationQuery, completion: @escaping ((_ data: UserObservationQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsUsersObservationsQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<ObservationQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<UserObservationQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -3328,9 +3337,9 @@ open class AnalyticsAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<ObservationQueryResponse> 
+     - returns: RequestBuilder<UserObservationQueryResponse> 
      */
-    open class func postAnalyticsUsersObservationsQueryWithRequestBuilder(body: ObservationQuery) -> RequestBuilder<ObservationQueryResponse> {
+    open class func postAnalyticsUsersObservationsQueryWithRequestBuilder(body: UserObservationQuery) -> RequestBuilder<UserObservationQueryResponse> {
         let path = "/api/v2/analytics/users/observations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -3339,7 +3348,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<UserObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

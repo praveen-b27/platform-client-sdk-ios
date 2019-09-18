@@ -925,7 +925,7 @@ AnalyticsAPI.postAnalyticsConversationDetailsProperties(conversationId: conversa
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsConversationsAggregatesQuery(body)
+> [ConversationAggregateQueryResponse](ConversationAggregateQueryResponse.html) postAnalyticsConversationsAggregatesQuery(body)
 
 Query for conversation aggregates
 
@@ -945,7 +945,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: ConversationAggregationQuery = new ConversationAggregationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsConversationsAggregatesQuery(body: body) { (response, error) in
@@ -963,13 +963,13 @@ AnalyticsAPI.postAnalyticsConversationsAggregatesQuery(body: body) { (response, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse.html)
 
 <a name="postAnalyticsConversationsDetailsJobs"></a>
 
@@ -1081,7 +1081,7 @@ AnalyticsAPI.postAnalyticsConversationsDetailsQuery(body: body) { (response, err
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsEvaluationsAggregatesQuery(body)
+> [EvaluationAggregateQueryResponse](EvaluationAggregateQueryResponse.html) postAnalyticsEvaluationsAggregatesQuery(body)
 
 Query for evaluation aggregates
 
@@ -1101,7 +1101,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: EvaluationAggregationQuery = new EvaluationAggregationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, error) in
@@ -1119,13 +1119,13 @@ AnalyticsAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 <a name="postAnalyticsFlowsAggregatesQuery"></a>
 
@@ -1133,7 +1133,7 @@ AnalyticsAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, er
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsFlowsAggregatesQuery(body)
+> [FlowAggregateQueryResponse](FlowAggregateQueryResponse.html) postAnalyticsFlowsAggregatesQuery(body)
 
 Query for flow aggregates
 
@@ -1153,7 +1153,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: FlowAggregationQuery = new FlowAggregationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) in
@@ -1171,13 +1171,13 @@ AnalyticsAPI.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) i
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**FlowAggregationQuery**](FlowAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html)
 
 <a name="postAnalyticsFlowsObservationsQuery"></a>
 
@@ -1185,7 +1185,7 @@ AnalyticsAPI.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) i
 
 
 
-> [QualifierMappingObservationQueryResponse](QualifierMappingObservationQueryResponse.html) postAnalyticsFlowsObservationsQuery(body)
+> [FlowObservationQueryResponse](FlowObservationQueryResponse.html) postAnalyticsFlowsObservationsQuery(body)
 
 Query for flow observations
 
@@ -1205,7 +1205,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ObservationQuery = new ObservationQuery(...) // query
+let body: FlowObservationQuery = new FlowObservationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error) in
@@ -1223,13 +1223,13 @@ AnalyticsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | |
+| **body** | [**FlowObservationQuery**](FlowObservationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**FlowObservationQueryResponse**](FlowObservationQueryResponse.html)
 
 <a name="postAnalyticsQueuesObservationsQuery"></a>
 
@@ -1237,7 +1237,7 @@ AnalyticsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error)
 
 
 
-> [QualifierMappingObservationQueryResponse](QualifierMappingObservationQueryResponse.html) postAnalyticsQueuesObservationsQuery(body)
+> [QueueObservationQueryResponse](QueueObservationQueryResponse.html) postAnalyticsQueuesObservationsQuery(body)
 
 Query for queue observations
 
@@ -1257,7 +1257,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ObservationQuery = new ObservationQuery(...) // query
+let body: QueueObservationQuery = new QueueObservationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error) in
@@ -1275,13 +1275,13 @@ AnalyticsAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | |
+| **body** | [**QueueObservationQuery**](QueueObservationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html)
+[**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
 <a name="postAnalyticsReportingExports"></a>
 
@@ -1443,7 +1443,7 @@ AnalyticsAPI.postAnalyticsReportingSchedules(body: body) { (response, error) in
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsSurveysAggregatesQuery(body)
+> [SurveyAggregateQueryResponse](SurveyAggregateQueryResponse.html) postAnalyticsSurveysAggregatesQuery(body)
 
 Query for survey aggregates
 
@@ -1463,7 +1463,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: SurveyAggregationQuery = new SurveyAggregationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error) in
@@ -1481,13 +1481,13 @@ AnalyticsAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
 
 <a name="postAnalyticsUsersAggregatesQuery"></a>
 
@@ -1495,7 +1495,7 @@ AnalyticsAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error)
 
 
 
-> [PresenceQueryResponse](PresenceQueryResponse.html) postAnalyticsUsersAggregatesQuery(body)
+> [UserAggregateQueryResponse](UserAggregateQueryResponse.html) postAnalyticsUsersAggregatesQuery(body)
 
 Query for user aggregates
 
@@ -1515,7 +1515,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: UserAggregationQuery = new UserAggregationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsUsersAggregatesQuery(body: body) { (response, error) in
@@ -1533,13 +1533,13 @@ AnalyticsAPI.postAnalyticsUsersAggregatesQuery(body: body) { (response, error) i
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**UserAggregationQuery**](UserAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**PresenceQueryResponse**](PresenceQueryResponse.html)
+[**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
 
 <a name="postAnalyticsUsersDetailsQuery"></a>
 
@@ -1599,7 +1599,7 @@ AnalyticsAPI.postAnalyticsUsersDetailsQuery(body: body) { (response, error) in
 
 
 
-> [ObservationQueryResponse](ObservationQueryResponse.html) postAnalyticsUsersObservationsQuery(body)
+> [UserObservationQueryResponse](UserObservationQueryResponse.html) postAnalyticsUsersObservationsQuery(body)
 
 Query for user observations
 
@@ -1619,7 +1619,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: ObservationQuery = new ObservationQuery(...) // query
+let body: UserObservationQuery = new UserObservationQuery(...) // query
 
 // Code example
 AnalyticsAPI.postAnalyticsUsersObservationsQuery(body: body) { (response, error) in
@@ -1637,13 +1637,13 @@ AnalyticsAPI.postAnalyticsUsersObservationsQuery(body: body) { (response, error)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ObservationQuery**](ObservationQuery.html)| query | |
+| **body** | [**UserObservationQuery**](UserObservationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ObservationQueryResponse**](ObservationQueryResponse.html)
+[**UserObservationQueryResponse**](UserObservationQueryResponse.html)
 
 <a name="putAnalyticsReportingSchedule"></a>
 

@@ -2194,7 +2194,7 @@ QualityAPI.patchQualityFormsSurvey(formId: formId, body: body) { (response, erro
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsEvaluationsAggregatesQuery(body)
+> [EvaluationAggregateQueryResponse](EvaluationAggregateQueryResponse.html) postAnalyticsEvaluationsAggregatesQuery(body)
 
 Query for evaluation aggregates
 
@@ -2214,7 +2214,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: EvaluationAggregationQuery = new EvaluationAggregationQuery(...) // query
 
 // Code example
 QualityAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, error) in
@@ -2232,13 +2232,13 @@ QualityAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 <a name="postAnalyticsSurveysAggregatesQuery"></a>
 
@@ -2246,7 +2246,7 @@ QualityAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, erro
 
 
 
-> [AggregateQueryResponse](AggregateQueryResponse.html) postAnalyticsSurveysAggregatesQuery(body)
+> [SurveyAggregateQueryResponse](SurveyAggregateQueryResponse.html) postAnalyticsSurveysAggregatesQuery(body)
 
 Query for survey aggregates
 
@@ -2266,7 +2266,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: AggregationQuery = new AggregationQuery(...) // query
+let body: SurveyAggregationQuery = new SurveyAggregationQuery(...) // query
 
 // Code example
 QualityAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error) in
@@ -2284,13 +2284,13 @@ QualityAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error) i
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AggregationQuery**](AggregationQuery.html)| query | |
+| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AggregateQueryResponse**](AggregateQueryResponse.html)
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
 
 <a name="postQualityCalibrations"></a>
 

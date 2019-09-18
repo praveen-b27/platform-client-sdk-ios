@@ -18,12 +18,12 @@ public class DomainEdgeSoftwareVersionDto: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var publishDate: Date?
     public var edgeUri: String?
-    public var current: Bool?
     public var latestRelease: Bool?
+    public var current: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, edgeVersion: String?, publishDate: Date?, edgeUri: String?, current: Bool?, latestRelease: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, edgeVersion: String?, publishDate: Date?, edgeUri: String?, latestRelease: Bool?, current: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -35,9 +35,9 @@ public class DomainEdgeSoftwareVersionDto: Codable {
         
         self.edgeUri = edgeUri
         
-        self.current = current
-        
         self.latestRelease = latestRelease
+        
+        self.current = current
         
         self.selfUri = selfUri
         
@@ -49,8 +49,8 @@ public class DomainEdgeSoftwareVersionDto: Codable {
         case edgeVersion
         case publishDate
         case edgeUri
-        case current
         case latestRelease
+        case current
         case selfUri
     }
 

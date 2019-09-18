@@ -8,17 +8,50 @@
 import Foundation
 
 
+/** SCIM Provider Config for PureCloud. */
 
 public class ScimServiceProviderConfig: Codable {
 
+    /** schemas supported */
+    public var schemas: [String]?
     /** Documentation */
     public var documentationUri: String?
-    /** Configuration SCIM meta data */
+    /** Patch support */
+    public var patch: ScimServiceProviderConfigSimpleFeature?
+    /** Filter support. Additional properties: maxResults */
+    public var filter: ScimServiceProviderConfigFilterFeature?
+    /** Entity Tag support */
+    public var etag: ScimServiceProviderConfigSimpleFeature?
+    /** Sort support */
+    public var sort: ScimServiceProviderConfigSimpleFeature?
+    /** Bulk support */
+    public var bulk: ScimServiceProviderConfigBulkFeature?
+    /** Change password */
+    public var changePassword: ScimServiceProviderConfigSimpleFeature?
+    /** Authentication schemes supported. */
+    public var authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?
+    /** Resource SCIM meta */
     public var meta: ScimMetadata?
 
-    public init(documentationUri: String?, meta: ScimMetadata?) {
+    public init(schemas: [String]?, documentationUri: String?, patch: ScimServiceProviderConfigSimpleFeature?, filter: ScimServiceProviderConfigFilterFeature?, etag: ScimServiceProviderConfigSimpleFeature?, sort: ScimServiceProviderConfigSimpleFeature?, bulk: ScimServiceProviderConfigBulkFeature?, changePassword: ScimServiceProviderConfigSimpleFeature?, authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?, meta: ScimMetadata?) {
+        
+        self.schemas = schemas
         
         self.documentationUri = documentationUri
+        
+        self.patch = patch
+        
+        self.filter = filter
+        
+        self.etag = etag
+        
+        self.sort = sort
+        
+        self.bulk = bulk
+        
+        self.changePassword = changePassword
+        
+        self.authenticationSchemes = authenticationSchemes
         
         self.meta = meta
         

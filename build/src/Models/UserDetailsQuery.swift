@@ -18,11 +18,9 @@ public class UserDetailsQuery: Codable {
     /** Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?
     /** Filters that target the users to retrieve data for */
-    public var userFilters: [AnalyticsQueryFilter]?
-    /** Filters that target system and organization presence-level data */
-    public var presenceFilters: [AnalyticsQueryFilter]?
+    public var userFilters: [UserDetailQueryFilter]?
     /** Filters that target agent routing status-level data */
-    public var routingStatusFilters: [AnalyticsQueryFilter]?
+    public var routingStatusFilters: [RoutingStatusDetailQueryFilter]?
     /** Include faceted search and aggregate roll-ups of presence data in your search results. This does not function as a filter, but rather, summary data about the presence results matching your filters */
     public var presenceAggregations: [AnalyticsQueryAggregation]?
     /** Include faceted search and aggregate roll-ups of agent routing status data in your search results. This does not function as a filter, but rather, summary data about the agent routing status results matching your filters */
@@ -31,14 +29,13 @@ public class UserDetailsQuery: Codable {
     public var paging: PagingSpec?
     /** Sort the result set in ascending/descending order. Default is ascending */
     public var order: Order?
+    public var presenceDetailFilters: [PresenceDetailQueryFilter]?
 
-    public init(interval: String?, userFilters: [AnalyticsQueryFilter]?, presenceFilters: [AnalyticsQueryFilter]?, routingStatusFilters: [AnalyticsQueryFilter]?, presenceAggregations: [AnalyticsQueryAggregation]?, routingStatusAggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?, order: Order?) {
+    public init(interval: String?, userFilters: [UserDetailQueryFilter]?, routingStatusFilters: [RoutingStatusDetailQueryFilter]?, presenceAggregations: [AnalyticsQueryAggregation]?, routingStatusAggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?, order: Order?, presenceDetailFilters: [PresenceDetailQueryFilter]?) {
         
         self.interval = interval
         
         self.userFilters = userFilters
-        
-        self.presenceFilters = presenceFilters
         
         self.routingStatusFilters = routingStatusFilters
         
@@ -49,6 +46,8 @@ public class UserDetailsQuery: Codable {
         self.paging = paging
         
         self.order = order
+        
+        self.presenceDetailFilters = presenceDetailFilters
         
     }
 

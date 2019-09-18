@@ -27,6 +27,10 @@ public class SmsPhoneNumber: Codable {
     public enum AutoRenewable: String, Codable { 
         case quarterly = "Quarterly"
     }
+    public enum ShortCodeBillingType: String, Codable { 
+        case basic = "Basic"
+        case vanity = "Vanity"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -60,10 +64,12 @@ public class SmsPhoneNumber: Codable {
     public var autoRenewable: AutoRenewable?
     /** The id of an address attached to this phone number. */
     public var addressId: SmsAddress?
+    /** BillingType of this phone number, if the phoneNumberType is shortcode. */
+    public var shortCodeBillingType: ShortCodeBillingType?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, selfUri: String?) {
+    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, selfUri: String?) {
         
         self._id = _id
         
@@ -99,6 +105,8 @@ public class SmsPhoneNumber: Codable {
         
         self.addressId = addressId
         
+        self.shortCodeBillingType = shortCodeBillingType
+        
         self.selfUri = selfUri
         
     }
@@ -121,6 +129,7 @@ public class SmsPhoneNumber: Codable {
         case renewalDate
         case autoRenewable
         case addressId
+        case shortCodeBillingType
         case selfUri
     }
 

@@ -28,6 +28,7 @@ public class AnalyticsParticipant: Codable {
         case fax = "fax"
         case workflow = "workflow"
         case campaign = "campaign"
+        case api = "api"
     }
     public enum FlaggedReason: String, Codable { 
         case general = "general"
@@ -36,6 +37,8 @@ public class AnalyticsParticipant: Codable {
     public var participantId: String?
     /** A human readable name identifying the participant */
     public var participantName: String?
+    /** List of attributes associated to this participant */
+    public var attributes: [String:String]?
     /** If a user, then this will be the unique identifier for the user */
     public var userId: String?
     /** The participant&#39;s purpose */
@@ -49,11 +52,13 @@ public class AnalyticsParticipant: Codable {
     /** List of sessions associated to this participant */
     public var sessions: [AnalyticsSession]?
 
-    public init(participantId: String?, participantName: String?, userId: String?, purpose: Purpose?, externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, sessions: [AnalyticsSession]?) {
+    public init(participantId: String?, participantName: String?, attributes: [String:String]?, userId: String?, purpose: Purpose?, externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, sessions: [AnalyticsSession]?) {
         
         self.participantId = participantId
         
         self.participantName = participantName
+        
+        self.attributes = attributes
         
         self.userId = userId
         

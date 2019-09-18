@@ -12137,9 +12137,9 @@ open class QualityAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsEvaluationsAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsEvaluationsAggregatesQuery(body: EvaluationAggregationQuery, completion: @escaping ((_ data: EvaluationAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<EvaluationAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -12196,9 +12196,9 @@ open class QualityAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<EvaluationAggregateQueryResponse> 
      */
-    open class func postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsEvaluationsAggregatesQueryWithRequestBuilder(body: EvaluationAggregationQuery) -> RequestBuilder<EvaluationAggregateQueryResponse> {
         let path = "/api/v2/analytics/evaluations/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -12207,7 +12207,7 @@ open class QualityAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EvaluationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -12222,9 +12222,9 @@ open class QualityAPI {
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAnalyticsSurveysAggregatesQuery(body: AggregationQuery, completion: @escaping ((_ data: AggregateQueryResponse?,_ error: Error?) -> Void)) {
+    open class func postAnalyticsSurveysAggregatesQuery(body: SurveyAggregationQuery, completion: @escaping ((_ data: SurveyAggregateQueryResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<AggregateQueryResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<SurveyAggregateQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -12281,9 +12281,9 @@ open class QualityAPI {
      
      - parameter body: (body) query 
 
-     - returns: RequestBuilder<AggregateQueryResponse> 
+     - returns: RequestBuilder<SurveyAggregateQueryResponse> 
      */
-    open class func postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: AggregationQuery) -> RequestBuilder<AggregateQueryResponse> {
+    open class func postAnalyticsSurveysAggregatesQueryWithRequestBuilder(body: SurveyAggregationQuery) -> RequestBuilder<SurveyAggregateQueryResponse> {
         let path = "/api/v2/analytics/surveys/aggregates/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -12292,7 +12292,7 @@ open class QualityAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SurveyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

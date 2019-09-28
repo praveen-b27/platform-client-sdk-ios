@@ -1657,7 +1657,7 @@ ConversationsAPI.getConversationsChat(conversationId: conversationId) { (respons
 
 Get a web chat conversation message
 
-
+The current user must be involved with the conversation to get its messages.
 
 Wraps GET /api/v2/conversations/chats/{conversationId}/messages/{messageId}  
 
@@ -1710,7 +1710,7 @@ ConversationsAPI.getConversationsChatMessage(conversationId: conversationId, mes
 
 Get the messages of a chat conversation.
 
-
+The current user must be involved with the conversation to get its messages.
 
 Wraps GET /api/v2/conversations/chats/{conversationId}/messages  
 

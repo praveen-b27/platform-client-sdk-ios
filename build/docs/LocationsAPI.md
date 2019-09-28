@@ -309,7 +309,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let locationId: String = "" // Location ID
-let body: LocationUpdateDefinition = new LocationUpdateDefinition(...) // Location
+let body: LocationCreateUpdateDefinition = new LocationCreateUpdateDefinition(...) // Location
 
 // Code example
 LocationsAPI.patchLocation(locationId: locationId, body: body) { (response, error) in
@@ -328,7 +328,7 @@ LocationsAPI.patchLocation(locationId: locationId, body: body) { (response, erro
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **locationId** | **String**| Location ID | |
-| **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition.html)| Location | |
+| **body** | [**LocationCreateUpdateDefinition**](LocationCreateUpdateDefinition.html)| Location | |
 {: class="table-striped"}
 
 
@@ -362,7 +362,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: LocationDefinition = new LocationDefinition(...) // Location
+let body: LocationCreateUpdateDefinition = new LocationCreateUpdateDefinition(...) // Location
 
 // Code example
 LocationsAPI.postLocations(body: body) { (response, error) in
@@ -380,7 +380,7 @@ LocationsAPI.postLocations(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**LocationDefinition**](LocationDefinition.html)| Location | |
+| **body** | [**LocationCreateUpdateDefinition**](LocationCreateUpdateDefinition.html)| Location | |
 {: class="table-striped"}
 
 

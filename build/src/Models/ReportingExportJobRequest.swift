@@ -74,8 +74,10 @@ public class ReportingExportJobRequest: Codable {
     public var read: Bool?
     /** The locale use for localization of the exported data, i.e. en-us, es-mx   */
     public var locale: String?
+    /** Indicates if durations are formatted in hh:mm:ss format instead of ms */
+    public var hasFormatDurations: Bool?
 
-    public init(name: String?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?) {
+    public init(name: String?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?) {
         
         self.name = name
         
@@ -94,6 +96,8 @@ public class ReportingExportJobRequest: Codable {
         self.read = read
         
         self.locale = locale
+        
+        self.hasFormatDurations = hasFormatDurations
         
     }
 

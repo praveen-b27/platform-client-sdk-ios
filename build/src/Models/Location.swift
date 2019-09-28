@@ -11,9 +11,13 @@ import Foundation
 
 public class Location: Codable {
 
+    /** Unique identifier for the location */
     public var _id: String?
+    /** Unique identifier for the location floorplan image */
     public var floorplanId: String?
+    /** Users coordinates on the floorplan. Only used when floorplanImage is set */
     public var coordinates: [String:Double]?
+    /** Optional description on the users location */
     public var notes: String?
     public var locationDefinition: LocationDefinition?
 

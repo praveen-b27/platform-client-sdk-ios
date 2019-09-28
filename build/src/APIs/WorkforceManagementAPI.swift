@@ -768,7 +768,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -781,9 +780,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -793,8 +789,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -2313,7 +2317,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -2326,9 +2329,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -2338,8 +2338,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -2633,7 +2641,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -2646,9 +2653,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -2658,8 +2662,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -2966,7 +2978,6 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -2979,9 +2990,6 @@ open class WorkforceManagementAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -2991,8 +2999,16 @@ open class WorkforceManagementAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -3269,7 +3285,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -3282,9 +3297,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -3294,8 +3306,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -5070,7 +5090,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5083,9 +5102,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -5095,8 +5111,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -5389,7 +5413,6 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -5402,9 +5425,6 @@ open class WorkforceManagementAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -5414,8 +5434,16 @@ open class WorkforceManagementAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -6242,7 +6270,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6255,9 +6282,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -6267,8 +6291,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -6886,7 +6918,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6899,9 +6930,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -6911,8 +6939,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -7807,7 +7843,6 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7820,9 +7855,6 @@ open class WorkforceManagementAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -7832,8 +7864,16 @@ open class WorkforceManagementAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -8125,7 +8165,6 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -8138,9 +8177,6 @@ open class WorkforceManagementAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -8150,8 +8186,16 @@ open class WorkforceManagementAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -8422,7 +8466,6 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -8435,9 +8478,6 @@ open class WorkforceManagementAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -8447,8 +8487,16 @@ open class WorkforceManagementAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -10499,7 +10547,6 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -10512,9 +10559,6 @@ open class WorkforceManagementAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -10524,8 +10568,16 @@ open class WorkforceManagementAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",

@@ -534,7 +534,7 @@ RecordingAPI.getConversationRecordingmetadata(conversationId: conversationId) { 
 
 
 
-> [Recording](Recording.html) getConversationRecordingmetadataRecordingId(conversationId, recordingId)
+> [RecordingMetadata](RecordingMetadata.html) getConversationRecordingmetadataRecordingId(conversationId, recordingId)
 
 Get metadata for a specific recording. Does not return playable media.
 
@@ -579,7 +579,7 @@ RecordingAPI.getConversationRecordingmetadataRecordingId(conversationId: convers
 
 ### Return type
 
-[**Recording**](Recording.html)
+[**RecordingMetadata**](RecordingMetadata.html)
 
 <a name="getConversationRecordings"></a>
 

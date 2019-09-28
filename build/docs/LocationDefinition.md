@@ -9,6 +9,7 @@ title: LocationDefinition
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name of the Location. | |
+| **contactUser** | [**AddressableEntityRef**](AddressableEntityRef.html) | Site contact for the location | [optional] |
 | **emergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) |  | [optional] |
 | **address** | [**LocationAddress**](LocationAddress.html) |  | [optional] |
 | **addressVerified** | **Bool** |  | [optional] |

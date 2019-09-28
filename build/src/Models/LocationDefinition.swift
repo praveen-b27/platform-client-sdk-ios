@@ -19,6 +19,8 @@ public class LocationDefinition: Codable {
     public var _id: String?
     /** The name of the Location. */
     public var name: String?
+    /** Site contact for the location */
+    public var contactUser: AddressableEntityRef?
     public var emergencyNumber: LocationEmergencyNumber?
     public var address: LocationAddress?
     public var addressVerified: Bool?
@@ -34,11 +36,13 @@ public class LocationDefinition: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, emergencyNumber: LocationEmergencyNumber?, address: LocationAddress?, addressVerified: Bool?, state: State?, notes: String?, version: Int?, path: [String]?, profileImage: [LocationImage]?, floorplanImage: [LocationImage]?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactUser: AddressableEntityRef?, emergencyNumber: LocationEmergencyNumber?, address: LocationAddress?, addressVerified: Bool?, state: State?, notes: String?, version: Int?, path: [String]?, profileImage: [LocationImage]?, floorplanImage: [LocationImage]?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.contactUser = contactUser
         
         self.emergencyNumber = emergencyNumber
         
@@ -65,6 +69,7 @@ public class LocationDefinition: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case contactUser
         case emergencyNumber
         case address
         case addressVerified

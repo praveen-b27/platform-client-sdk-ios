@@ -10,6 +10,7 @@ title: Operation
 | **_id** | **String** |  | [optional] |
 | **complete** | **Bool** |  | [optional] |
 | **user** | [**User**](User.html) |  | [optional] |
+| **client** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **errorMessage** | **String** |  | [optional] |
 | **errorCode** | **String** |  | [optional] |
 | **errorDetails** | [**[Detail]**](Detail.html) |  | [optional] |

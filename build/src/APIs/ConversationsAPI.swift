@@ -1862,7 +1862,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -1875,9 +1874,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -1887,8 +1883,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -3060,7 +3061,6 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
-              "path" : [ "aeiou" ],
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -3073,9 +3073,6 @@ open class ConversationsAPI {
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
               "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "state" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
                 "resolution" : "aeiou"
@@ -3085,8 +3082,13 @@ open class ConversationsAPI {
                 "e164" : "aeiou",
                 "type" : "aeiou"
               },
-              "addressVerified" : true,
-              "version" : 123
+              "version" : 123,
+              "path" : [ "aeiou" ],
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "contactUser" : "",
+              "state" : "aeiou",
+              "addressVerified" : true
             } ],
             "id" : "aeiou",
             "type" : "aeiou",
@@ -4849,7 +4851,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -4862,9 +4863,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -4874,8 +4872,16 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : {
+              "selfUri" : "aeiou",
+              "id" : "aeiou"
+            },
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -5294,7 +5300,7 @@ open class ConversationsAPI {
      Get a web chat conversation message
      
      - GET /api/v2/conversations/chats/{conversationId}/messages/{messageId}
-     - 
+     - The current user must be involved with the conversation to get its messages.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5405,7 +5411,7 @@ open class ConversationsAPI {
      Get the messages of a chat conversation.
      
      - GET /api/v2/conversations/chats/{conversationId}/messages
-     - 
+     - The current user must be involved with the conversation to get its messages.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -7617,7 +7623,6 @@ open class ConversationsAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -7630,9 +7635,6 @@ open class ConversationsAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -7642,8 +7644,16 @@ open class ConversationsAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -9722,7 +9732,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -9735,9 +9744,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -9747,8 +9753,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -10858,7 +10869,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -10871,9 +10881,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -10883,8 +10890,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -11921,7 +11933,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -11934,9 +11945,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -11946,8 +11954,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -12984,7 +12997,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -12997,9 +13009,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -13009,8 +13018,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -14047,7 +14061,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -14060,9 +14073,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -14072,8 +14082,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -15110,7 +15125,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -15123,9 +15137,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -15135,8 +15146,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -17062,7 +17078,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -17075,9 +17090,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -17087,8 +17099,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -18119,7 +18136,6 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -18132,9 +18148,6 @@ open class ConversationsAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -18144,8 +18157,13 @@ open class ConversationsAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : "",
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -19838,7 +19856,6 @@ open class ConversationsAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -19851,9 +19868,6 @@ open class ConversationsAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -19863,8 +19877,16 @@ open class ConversationsAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -20239,7 +20261,6 @@ open class ConversationsAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -20252,9 +20273,6 @@ open class ConversationsAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -20264,8 +20282,16 @@ open class ConversationsAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",

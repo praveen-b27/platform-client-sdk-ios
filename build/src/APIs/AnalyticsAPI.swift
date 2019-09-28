@@ -1044,6 +1044,7 @@ open class AnalyticsAPI {
     "interval" : "aeiou",
     "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
+    "hasFormatDurations" : true,
     "exportFormat" : "aeiou",
     "status" : "aeiou"
   } ],
@@ -2816,6 +2817,7 @@ open class AnalyticsAPI {
   "interval" : "aeiou",
   "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
+  "hasFormatDurations" : true,
   "exportFormat" : "aeiou",
   "status" : "aeiou"
 }}]

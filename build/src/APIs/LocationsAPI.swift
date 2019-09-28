@@ -111,7 +111,6 @@ open class LocationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "path" : [ "aeiou" ],
   "address" : {
     "zipcode" : "aeiou",
     "country" : "aeiou",
@@ -124,9 +123,6 @@ open class LocationsAPI {
   "notes" : "aeiou",
   "floorplanImage" : [ "" ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
   "profileImage" : [ {
     "imageUri" : "aeiou",
     "resolution" : "aeiou"
@@ -136,8 +132,16 @@ open class LocationsAPI {
     "e164" : "aeiou",
     "type" : "aeiou"
   },
-  "addressVerified" : true,
-  "version" : 123
+  "version" : 123,
+  "path" : [ "aeiou" ],
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "contactUser" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "state" : "aeiou",
+  "addressVerified" : true
 }}]
      
      - parameter locationId: (path) Location ID 
@@ -212,7 +216,6 @@ open class LocationsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -225,9 +228,6 @@ open class LocationsAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -237,8 +237,16 @@ open class LocationsAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -329,7 +337,6 @@ open class LocationsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -342,9 +349,6 @@ open class LocationsAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -354,8 +358,16 @@ open class LocationsAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -455,7 +467,6 @@ open class LocationsAPI {
   "pageSize" : 123,
   "currentPage" : "aeiou",
   "results" : [ {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -468,9 +479,6 @@ open class LocationsAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -480,8 +488,16 @@ open class LocationsAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   } ]
 }}]
      
@@ -527,7 +543,7 @@ open class LocationsAPI {
      - parameter body: (body) Location 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchLocation(locationId: String, body: LocationUpdateDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
+    open class func patchLocation(locationId: String, body: LocationCreateUpdateDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
         let requestBuilder = patchLocationWithRequestBuilder(locationId: locationId, body: body)
         requestBuilder.execute { (response: Response<LocationDefinition>?, error) -> Void in
             do {
@@ -555,7 +571,6 @@ open class LocationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "path" : [ "aeiou" ],
   "address" : {
     "zipcode" : "aeiou",
     "country" : "aeiou",
@@ -568,9 +583,6 @@ open class LocationsAPI {
   "notes" : "aeiou",
   "floorplanImage" : [ "" ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
   "profileImage" : [ {
     "imageUri" : "aeiou",
     "resolution" : "aeiou"
@@ -580,8 +592,16 @@ open class LocationsAPI {
     "e164" : "aeiou",
     "type" : "aeiou"
   },
-  "addressVerified" : true,
-  "version" : 123
+  "version" : 123,
+  "path" : [ "aeiou" ],
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "contactUser" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "state" : "aeiou",
+  "addressVerified" : true
 }}]
      
      - parameter locationId: (path) Location ID 
@@ -589,7 +609,7 @@ open class LocationsAPI {
 
      - returns: RequestBuilder<LocationDefinition> 
      */
-    open class func patchLocationWithRequestBuilder(locationId: String, body: LocationUpdateDefinition) -> RequestBuilder<LocationDefinition> {
+    open class func patchLocationWithRequestBuilder(locationId: String, body: LocationCreateUpdateDefinition) -> RequestBuilder<LocationDefinition> {
         var path = "/api/v2/locations/{locationId}"
         let locationIdPreEscape = "\(locationId)"
         let locationIdPostEscape = locationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -616,7 +636,7 @@ open class LocationsAPI {
      - parameter body: (body) Location 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLocations(body: LocationDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
+    open class func postLocations(body: LocationCreateUpdateDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
         let requestBuilder = postLocationsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<LocationDefinition>?, error) -> Void in
             do {
@@ -644,7 +664,6 @@ open class LocationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "path" : [ "aeiou" ],
   "address" : {
     "zipcode" : "aeiou",
     "country" : "aeiou",
@@ -657,9 +676,6 @@ open class LocationsAPI {
   "notes" : "aeiou",
   "floorplanImage" : [ "" ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "state" : "aeiou",
   "profileImage" : [ {
     "imageUri" : "aeiou",
     "resolution" : "aeiou"
@@ -669,15 +685,23 @@ open class LocationsAPI {
     "e164" : "aeiou",
     "type" : "aeiou"
   },
-  "addressVerified" : true,
-  "version" : 123
+  "version" : 123,
+  "path" : [ "aeiou" ],
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "contactUser" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "state" : "aeiou",
+  "addressVerified" : true
 }}]
      
      - parameter body: (body) Location 
 
      - returns: RequestBuilder<LocationDefinition> 
      */
-    open class func postLocationsWithRequestBuilder(body: LocationDefinition) -> RequestBuilder<LocationDefinition> {
+    open class func postLocationsWithRequestBuilder(body: LocationCreateUpdateDefinition) -> RequestBuilder<LocationDefinition> {
         let path = "/api/v2/locations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -738,7 +762,6 @@ open class LocationsAPI {
   "pageSize" : 123,
   "currentPage" : "aeiou",
   "results" : [ {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -751,9 +774,6 @@ open class LocationsAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -763,8 +783,16 @@ open class LocationsAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   } ]
 }}]
      

@@ -414,7 +414,6 @@ open class SearchAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -427,9 +426,6 @@ open class SearchAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -439,8 +435,16 @@ open class SearchAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -542,7 +546,6 @@ open class SearchAPI {
   "pageSize" : 123,
   "currentPage" : "aeiou",
   "results" : [ {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -555,9 +558,6 @@ open class SearchAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -567,8 +567,16 @@ open class SearchAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   } ]
 }}]
      
@@ -1116,7 +1124,6 @@ open class SearchAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1129,9 +1136,6 @@ open class SearchAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -1141,8 +1145,16 @@ open class SearchAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -1821,7 +1833,6 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
-                "path" : [ "aeiou" ],
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -1834,9 +1845,6 @@ open class SearchAPI {
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
                 "selfUri" : "aeiou",
-                "name" : "aeiou",
-                "id" : "aeiou",
-                "state" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
                   "resolution" : "aeiou"
@@ -1846,8 +1854,13 @@ open class SearchAPI {
                   "e164" : "aeiou",
                   "type" : "aeiou"
                 },
-                "addressVerified" : true,
-                "version" : 123
+                "version" : 123,
+                "path" : [ "aeiou" ],
+                "name" : "aeiou",
+                "id" : "aeiou",
+                "contactUser" : "",
+                "state" : "aeiou",
+                "addressVerified" : true
               } ],
               "id" : "aeiou",
               "type" : "aeiou",
@@ -2471,7 +2484,6 @@ open class SearchAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -2484,9 +2496,6 @@ open class SearchAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -2496,8 +2505,16 @@ open class SearchAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -2580,7 +2597,6 @@ open class SearchAPI {
   "pageSize" : 123,
   "currentPage" : "aeiou",
   "results" : [ {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -2593,9 +2609,6 @@ open class SearchAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -2605,8 +2618,16 @@ open class SearchAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   } ]
 }}]
      
@@ -3064,7 +3085,6 @@ open class SearchAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -3077,9 +3097,6 @@ open class SearchAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -3089,8 +3106,16 @@ open class SearchAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -3755,7 +3780,6 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
-                "path" : [ "aeiou" ],
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -3768,9 +3792,6 @@ open class SearchAPI {
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
                 "selfUri" : "aeiou",
-                "name" : "aeiou",
-                "id" : "aeiou",
-                "state" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
                   "resolution" : "aeiou"
@@ -3780,8 +3801,13 @@ open class SearchAPI {
                   "e164" : "aeiou",
                   "type" : "aeiou"
                 },
-                "addressVerified" : true,
-                "version" : 123
+                "version" : 123,
+                "path" : [ "aeiou" ],
+                "name" : "aeiou",
+                "id" : "aeiou",
+                "contactUser" : "",
+                "state" : "aeiou",
+                "addressVerified" : true
               } ],
               "id" : "aeiou",
               "type" : "aeiou",

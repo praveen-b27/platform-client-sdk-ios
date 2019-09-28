@@ -28,7 +28,9 @@ public class Recording: Codable {
     public var name: String?
     public var conversationId: String?
     public var path: String?
+    /** The start time of the recording. Null when there is no playable media. */
     public var startTime: String?
+    /** The end time of the recording. Null when there is no playable media. */
     public var endTime: String?
     /** The type of media that the recording is. At the moment that could be audio, chat, or email. */
     public var media: String?
@@ -44,7 +46,7 @@ public class Recording: Codable {
     public var fileState: FileState?
     /** The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var restoreExpirationTime: Date?
-    /** The different mediaUris for the recording. */
+    /** The different mediaUris for the recording. Null when there is no playable media. */
     public var mediaUris: [String:MediaResult]?
     public var estimatedTranscodeTimeMs: Int64?
     public var actualTranscodeTimeMs: Int64?
@@ -56,7 +58,7 @@ public class Recording: Codable {
     public var deleteDate: Date?
     /** Duration of transcoded media in milliseconds */
     public var outputDurationMs: Int?
-    /** Size of transcoded media in bytes */
+    /** Size of transcoded media in bytes. 0 if there is no transcoded media. */
     public var outputSizeInBytes: Int?
     /** How many archive restorations the organization is allowed to have. */
     public var maxAllowedRestorationsForOrg: Int?

@@ -73,7 +73,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesPhysicalinterfaces**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesPhysicalinterfaces) | Get physical interfaces for edges. |
 | [**getTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSite) | Get a Site by ID. |
 | [**getTelephonyProvidersEdgesSiteNumberplan**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSiteNumberplan) | Get a Number Plan by ID. |
-| [**getTelephonyProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSiteNumberplans) | Get the list of Number Plans for this Site. |
+| [**getTelephonyProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSiteNumberplans) | Get the list of Number Plans for this Site. Only fetches the first 200 records. |
 | [**getTelephonyProvidersEdgesSiteNumberplansClassifications**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSiteNumberplansClassifications) | Get a list of Classifications for this Site |
 | [**getTelephonyProvidersEdgesSiteOutboundroute**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSiteOutboundroute) | Get an outbound route |
 | [**getTelephonyProvidersEdgesSiteOutboundroutes**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesSiteOutboundroutes) | Get outbound routes |
@@ -124,7 +124,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesPhone) | Update a Phone by ID |
 | [**putTelephonyProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesPhonebasesetting) | Update a Phone Base Settings by ID |
 | [**putTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesSite) | Update a Site by ID. |
-| [**putTelephonyProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesSiteNumberplans) | Update the list of Number Plans. |
+| [**putTelephonyProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesSiteNumberplans) | Update the list of Number Plans. A user can update maximum 200 number plans at a time. |
 | [**putTelephonyProvidersEdgesSiteOutboundroute**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesSiteOutboundroute) | Update outbound route |
 | [**putTelephonyProvidersEdgesTrunkbasesetting**](TelephonyProvidersEdgeAPI.html#putTelephonyProvidersEdgesTrunkbasesetting) | Update a Trunk Base Settings object by ID |
 {: class="table-striped"}
@@ -3717,7 +3717,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSiteNumberplan(siteId: siteI
 
 > [[NumberPlan]](NumberPlan.html) getTelephonyProvidersEdgesSiteNumberplans(siteId)
 
-Get the list of Number Plans for this Site.
+Get the list of Number Plans for this Site. Only fetches the first 200 records.
 
 
 
@@ -6474,7 +6474,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesSite(siteId: siteId, body: b
 
 > [[NumberPlan]](NumberPlan.html) putTelephonyProvidersEdgesSiteNumberplans(siteId, body)
 
-Update the list of Number Plans.
+Update the list of Number Plans. A user can update maximum 200 number plans at a time.
 
 
 

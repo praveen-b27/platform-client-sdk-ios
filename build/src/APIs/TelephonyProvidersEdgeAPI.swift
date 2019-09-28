@@ -1432,7 +1432,6 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "location" : {
-      "path" : [ "aeiou" ],
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -1445,9 +1444,6 @@ open class TelephonyProvidersEdgeAPI {
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
         "resolution" : "aeiou"
@@ -1457,8 +1453,16 @@ open class TelephonyProvidersEdgeAPI {
         "e164" : "aeiou",
         "type" : "aeiou"
       },
-      "addressVerified" : true,
-      "version" : 123
+      "version" : 123,
+      "path" : [ "aeiou" ],
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "contactUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "state" : "aeiou",
+      "addressVerified" : true
     },
     "id" : "aeiou",
     "state" : "aeiou",
@@ -1690,7 +1694,6 @@ open class TelephonyProvidersEdgeAPI {
       "modifiedByApp" : "aeiou",
       "modifiedBy" : "aeiou",
       "location" : {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1703,9 +1706,6 @@ open class TelephonyProvidersEdgeAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -1715,8 +1715,16 @@ open class TelephonyProvidersEdgeAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       },
       "id" : "aeiou",
       "state" : "aeiou",
@@ -1988,7 +1996,6 @@ open class TelephonyProvidersEdgeAPI {
         "modifiedByApp" : "aeiou",
         "modifiedBy" : "aeiou",
         "location" : {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -2001,9 +2008,6 @@ open class TelephonyProvidersEdgeAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -2013,8 +2017,16 @@ open class TelephonyProvidersEdgeAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         },
         "id" : "aeiou",
         "state" : "aeiou",
@@ -3473,7 +3485,6 @@ open class TelephonyProvidersEdgeAPI {
       "modifiedByApp" : "aeiou",
       "modifiedBy" : "aeiou",
       "location" : {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -3486,9 +3497,6 @@ open class TelephonyProvidersEdgeAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -3498,8 +3506,16 @@ open class TelephonyProvidersEdgeAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       },
       "id" : "aeiou",
       "state" : "aeiou",
@@ -5203,7 +5219,6 @@ open class TelephonyProvidersEdgeAPI {
       "modifiedByApp" : "aeiou",
       "modifiedBy" : "aeiou",
       "location" : {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5216,9 +5231,6 @@ open class TelephonyProvidersEdgeAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -5228,8 +5240,16 @@ open class TelephonyProvidersEdgeAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       },
       "id" : "aeiou",
       "state" : "aeiou",
@@ -5693,7 +5713,6 @@ open class TelephonyProvidersEdgeAPI {
         "modifiedByApp" : "aeiou",
         "modifiedBy" : "aeiou",
         "location" : {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -5706,9 +5725,6 @@ open class TelephonyProvidersEdgeAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -5718,8 +5734,16 @@ open class TelephonyProvidersEdgeAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         },
         "id" : "aeiou",
         "state" : "aeiou",
@@ -5978,7 +6002,6 @@ open class TelephonyProvidersEdgeAPI {
       "modifiedByApp" : "aeiou",
       "modifiedBy" : "aeiou",
       "location" : {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5991,9 +6014,6 @@ open class TelephonyProvidersEdgeAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -6003,8 +6023,16 @@ open class TelephonyProvidersEdgeAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       },
       "id" : "aeiou",
       "state" : "aeiou",
@@ -6527,7 +6555,6 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "location" : {
-      "path" : [ "aeiou" ],
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -6540,9 +6567,6 @@ open class TelephonyProvidersEdgeAPI {
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
         "resolution" : "aeiou"
@@ -6552,8 +6576,16 @@ open class TelephonyProvidersEdgeAPI {
         "e164" : "aeiou",
         "type" : "aeiou"
       },
-      "addressVerified" : true,
-      "version" : 123
+      "version" : 123,
+      "path" : [ "aeiou" ],
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "contactUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "state" : "aeiou",
+      "addressVerified" : true
     },
     "id" : "aeiou",
     "state" : "aeiou",
@@ -6805,7 +6837,6 @@ open class TelephonyProvidersEdgeAPI {
       "modifiedByApp" : "aeiou",
       "modifiedBy" : "aeiou",
       "location" : {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6818,9 +6849,6 @@ open class TelephonyProvidersEdgeAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -6830,8 +6858,16 @@ open class TelephonyProvidersEdgeAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       },
       "id" : "aeiou",
       "state" : "aeiou",
@@ -7095,7 +7131,6 @@ open class TelephonyProvidersEdgeAPI {
         "modifiedByApp" : "aeiou",
         "modifiedBy" : "aeiou",
         "location" : {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7108,9 +7143,6 @@ open class TelephonyProvidersEdgeAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -7120,8 +7152,16 @@ open class TelephonyProvidersEdgeAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         },
         "id" : "aeiou",
         "state" : "aeiou",
@@ -7969,7 +8009,6 @@ open class TelephonyProvidersEdgeAPI {
           "modifiedByApp" : "aeiou",
           "modifiedBy" : "aeiou",
           "location" : {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -7982,9 +8021,6 @@ open class TelephonyProvidersEdgeAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -7994,8 +8030,16 @@ open class TelephonyProvidersEdgeAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : {
+              "selfUri" : "aeiou",
+              "id" : "aeiou"
+            },
+            "state" : "aeiou",
+            "addressVerified" : true
           },
           "id" : "aeiou",
           "state" : "aeiou",
@@ -8346,7 +8390,6 @@ open class TelephonyProvidersEdgeAPI {
         "modifiedByApp" : "aeiou",
         "modifiedBy" : "aeiou",
         "location" : {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -8359,9 +8402,6 @@ open class TelephonyProvidersEdgeAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -8371,8 +8411,16 @@ open class TelephonyProvidersEdgeAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         },
         "id" : "aeiou",
         "state" : "aeiou",
@@ -8759,7 +8807,6 @@ open class TelephonyProvidersEdgeAPI {
   "modifiedByApp" : "aeiou",
   "modifiedBy" : "aeiou",
   "location" : {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -8772,9 +8819,6 @@ open class TelephonyProvidersEdgeAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -8784,8 +8828,16 @@ open class TelephonyProvidersEdgeAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   },
   "id" : "aeiou",
   "state" : "aeiou",
@@ -8922,7 +8974,7 @@ open class TelephonyProvidersEdgeAPI {
     
     /**
      
-     Get the list of Number Plans for this Site.
+     Get the list of Number Plans for this Site. Only fetches the first 200 records.
      
      - parameter siteId: (path) Site ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -8947,7 +8999,7 @@ open class TelephonyProvidersEdgeAPI {
 
     /**
      
-     Get the list of Number Plans for this Site.
+     Get the list of Number Plans for this Site. Only fetches the first 200 records.
      
      - GET /api/v2/telephony/providers/edges/sites/{siteId}/numberplans
      - 
@@ -9497,7 +9549,6 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "location" : {
-      "path" : [ "aeiou" ],
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -9510,9 +9561,6 @@ open class TelephonyProvidersEdgeAPI {
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
         "resolution" : "aeiou"
@@ -9522,8 +9570,16 @@ open class TelephonyProvidersEdgeAPI {
         "e164" : "aeiou",
         "type" : "aeiou"
       },
-      "addressVerified" : true,
-      "version" : 123
+      "version" : 123,
+      "path" : [ "aeiou" ],
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "contactUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "state" : "aeiou",
+      "addressVerified" : true
     },
     "id" : "aeiou",
     "state" : "aeiou",
@@ -11390,7 +11446,6 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "location" : {
-      "path" : [ "aeiou" ],
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -11403,9 +11458,6 @@ open class TelephonyProvidersEdgeAPI {
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
         "resolution" : "aeiou"
@@ -11415,8 +11467,16 @@ open class TelephonyProvidersEdgeAPI {
         "e164" : "aeiou",
         "type" : "aeiou"
       },
-      "addressVerified" : true,
-      "version" : 123
+      "version" : 123,
+      "path" : [ "aeiou" ],
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "contactUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "state" : "aeiou",
+      "addressVerified" : true
     },
     "id" : "aeiou",
     "state" : "aeiou",
@@ -12029,7 +12089,6 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "location" : {
-      "path" : [ "aeiou" ],
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -12042,9 +12101,6 @@ open class TelephonyProvidersEdgeAPI {
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
         "resolution" : "aeiou"
@@ -12054,8 +12110,16 @@ open class TelephonyProvidersEdgeAPI {
         "e164" : "aeiou",
         "type" : "aeiou"
       },
-      "addressVerified" : true,
-      "version" : 123
+      "version" : 123,
+      "path" : [ "aeiou" ],
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "contactUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "state" : "aeiou",
+      "addressVerified" : true
     },
     "id" : "aeiou",
     "state" : "aeiou",
@@ -12450,7 +12514,6 @@ open class TelephonyProvidersEdgeAPI {
         "modifiedByApp" : "aeiou",
         "modifiedBy" : "aeiou",
         "location" : {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -12463,9 +12526,6 @@ open class TelephonyProvidersEdgeAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -12475,8 +12535,16 @@ open class TelephonyProvidersEdgeAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         },
         "id" : "aeiou",
         "state" : "aeiou",
@@ -12947,7 +13015,6 @@ open class TelephonyProvidersEdgeAPI {
   "modifiedByApp" : "aeiou",
   "modifiedBy" : "aeiou",
   "location" : {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -12960,9 +13027,6 @@ open class TelephonyProvidersEdgeAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -12972,8 +13036,16 @@ open class TelephonyProvidersEdgeAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   },
   "id" : "aeiou",
   "state" : "aeiou",
@@ -13254,7 +13326,6 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "location" : {
-      "path" : [ "aeiou" ],
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -13267,9 +13338,6 @@ open class TelephonyProvidersEdgeAPI {
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
         "resolution" : "aeiou"
@@ -13279,8 +13347,16 @@ open class TelephonyProvidersEdgeAPI {
         "e164" : "aeiou",
         "type" : "aeiou"
       },
-      "addressVerified" : true,
-      "version" : 123
+      "version" : 123,
+      "path" : [ "aeiou" ],
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "contactUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "state" : "aeiou",
+      "addressVerified" : true
     },
     "id" : "aeiou",
     "state" : "aeiou",
@@ -13507,7 +13583,6 @@ open class TelephonyProvidersEdgeAPI {
       "modifiedByApp" : "aeiou",
       "modifiedBy" : "aeiou",
       "location" : {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -13520,9 +13595,6 @@ open class TelephonyProvidersEdgeAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -13532,8 +13604,16 @@ open class TelephonyProvidersEdgeAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       },
       "id" : "aeiou",
       "state" : "aeiou",
@@ -14588,7 +14668,6 @@ open class TelephonyProvidersEdgeAPI {
     "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "location" : {
-      "path" : [ "aeiou" ],
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -14601,9 +14680,6 @@ open class TelephonyProvidersEdgeAPI {
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "state" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
         "resolution" : "aeiou"
@@ -14613,8 +14689,16 @@ open class TelephonyProvidersEdgeAPI {
         "e164" : "aeiou",
         "type" : "aeiou"
       },
-      "addressVerified" : true,
-      "version" : 123
+      "version" : 123,
+      "path" : [ "aeiou" ],
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "contactUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "state" : "aeiou",
+      "addressVerified" : true
     },
     "id" : "aeiou",
     "state" : "aeiou",
@@ -14855,7 +14939,6 @@ open class TelephonyProvidersEdgeAPI {
         "modifiedByApp" : "aeiou",
         "modifiedBy" : "aeiou",
         "location" : {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -14868,9 +14951,6 @@ open class TelephonyProvidersEdgeAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -14880,8 +14960,16 @@ open class TelephonyProvidersEdgeAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         },
         "id" : "aeiou",
         "state" : "aeiou",
@@ -15283,7 +15371,6 @@ open class TelephonyProvidersEdgeAPI {
   "modifiedByApp" : "aeiou",
   "modifiedBy" : "aeiou",
   "location" : {
-    "path" : [ "aeiou" ],
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -15296,9 +15383,6 @@ open class TelephonyProvidersEdgeAPI {
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "state" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
       "resolution" : "aeiou"
@@ -15308,8 +15392,16 @@ open class TelephonyProvidersEdgeAPI {
       "e164" : "aeiou",
       "type" : "aeiou"
     },
-    "addressVerified" : true,
-    "version" : 123
+    "version" : 123,
+    "path" : [ "aeiou" ],
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "contactUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "state" : "aeiou",
+    "addressVerified" : true
   },
   "id" : "aeiou",
   "state" : "aeiou",
@@ -15350,7 +15442,7 @@ open class TelephonyProvidersEdgeAPI {
     
     /**
      
-     Update the list of Number Plans.
+     Update the list of Number Plans. A user can update maximum 200 number plans at a time.
      
      - parameter siteId: (path) Site ID 
      - parameter body: (body) List of number plans 
@@ -15376,7 +15468,7 @@ open class TelephonyProvidersEdgeAPI {
 
     /**
      
-     Update the list of Number Plans.
+     Update the list of Number Plans. A user can update maximum 200 number plans at a time.
      
      - PUT /api/v2/telephony/providers/edges/sites/{siteId}/numberplans
      - 

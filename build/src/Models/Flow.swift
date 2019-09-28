@@ -31,7 +31,10 @@ public class Flow: Codable {
     public var division: WritableDivision?
     public var _description: String?
     public var type: ModelType?
+    /** User that has the flow locked. */
     public var lockedUser: User?
+    /** OAuth client that has the flow locked. */
+    public var lockedClient: DomainEntityRef?
     public var active: Bool?
     public var system: Bool?
     public var deleted: Bool?
@@ -47,7 +50,7 @@ public class Flow: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, selfUri: String?) {
         
         self._id = _id
         
@@ -60,6 +63,8 @@ public class Flow: Codable {
         self.type = type
         
         self.lockedUser = lockedUser
+        
+        self.lockedClient = lockedClient
         
         self.active = active
         
@@ -92,6 +97,7 @@ public class Flow: Codable {
         case _description = "description"
         case type
         case lockedUser
+        case lockedClient
         case active
         case system
         case deleted

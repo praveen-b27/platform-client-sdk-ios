@@ -249,7 +249,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -262,9 +261,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -274,8 +270,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -423,10 +427,7 @@ open class QualityAPI {
           "agent" : ""
         } ],
         "priority" : 123,
-        "queue" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        }
+        "queue" : ""
       },
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1678,7 +1679,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1691,9 +1691,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -1703,8 +1700,13 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : "",
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -2297,7 +2299,6 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -2310,9 +2311,6 @@ open class QualityAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -2322,8 +2320,16 @@ open class QualityAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -2660,7 +2666,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -2673,9 +2678,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -2685,8 +2687,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -2834,10 +2844,7 @@ open class QualityAPI {
           "agent" : ""
         } ],
         "priority" : 123,
-        "queue" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        }
+        "queue" : ""
       },
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3558,7 +3565,6 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -3571,9 +3577,6 @@ open class QualityAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -3583,8 +3586,16 @@ open class QualityAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -3732,10 +3743,7 @@ open class QualityAPI {
             "agent" : ""
           } ],
           "priority" : 123,
-          "queue" : {
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          }
+          "queue" : ""
         },
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -4487,7 +4495,6 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -4500,9 +4507,6 @@ open class QualityAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -4512,8 +4516,16 @@ open class QualityAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -5391,7 +5403,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5404,9 +5415,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -5416,8 +5424,13 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : "",
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -6140,7 +6153,6 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
-              "path" : [ "aeiou" ],
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -6153,9 +6165,6 @@ open class QualityAPI {
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
               "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "state" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
                 "resolution" : "aeiou"
@@ -6165,8 +6174,13 @@ open class QualityAPI {
                 "e164" : "aeiou",
                 "type" : "aeiou"
               },
-              "addressVerified" : true,
-              "version" : 123
+              "version" : 123,
+              "path" : [ "aeiou" ],
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "contactUser" : "",
+              "state" : "aeiou",
+              "addressVerified" : true
             } ],
             "id" : "aeiou",
             "type" : "aeiou",
@@ -7253,7 +7267,6 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7266,9 +7279,6 @@ open class QualityAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -7278,8 +7288,13 @@ open class QualityAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : "",
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -7649,7 +7664,6 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7662,9 +7676,6 @@ open class QualityAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -7674,8 +7685,16 @@ open class QualityAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -9618,7 +9637,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -9631,9 +9649,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -9643,8 +9658,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -10073,7 +10096,6 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -10086,9 +10108,6 @@ open class QualityAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -10098,8 +10117,16 @@ open class QualityAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -11613,7 +11640,6 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
-              "path" : [ "aeiou" ],
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -11626,9 +11652,6 @@ open class QualityAPI {
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
               "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "state" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
                 "resolution" : "aeiou"
@@ -11638,8 +11661,13 @@ open class QualityAPI {
                 "e164" : "aeiou",
                 "type" : "aeiou"
               },
-              "addressVerified" : true,
-              "version" : 123
+              "version" : 123,
+              "path" : [ "aeiou" ],
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "contactUser" : "",
+              "state" : "aeiou",
+              "addressVerified" : true
             } ],
             "id" : "aeiou",
             "type" : "aeiou",
@@ -12536,7 +12564,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -12549,9 +12576,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -12561,8 +12585,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -12710,10 +12742,7 @@ open class QualityAPI {
           "agent" : ""
         } ],
         "priority" : 123,
-        "queue" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        }
+        "queue" : ""
       },
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13959,7 +13988,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -13972,9 +14000,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -13984,8 +14009,13 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : "",
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -14788,7 +14818,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -14801,9 +14830,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -14813,8 +14839,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -15525,7 +15559,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -15538,9 +15571,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -15550,8 +15580,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -15894,7 +15932,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -15907,9 +15944,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -15919,8 +15953,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -16068,10 +16110,7 @@ open class QualityAPI {
           "agent" : ""
         } ],
         "priority" : 123,
-        "queue" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        }
+        "queue" : ""
       },
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17318,7 +17357,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -17331,9 +17369,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -17343,8 +17378,13 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : "",
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -18089,7 +18129,6 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -18102,9 +18141,6 @@ open class QualityAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -18114,8 +18150,16 @@ open class QualityAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",

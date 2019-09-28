@@ -14,6 +14,7 @@ title: FlowVersion
 | **type** | **String** |  | [optional] |
 | **secure** | **Bool** |  | [optional] |
 | **createdBy** | [**User**](User.html) |  | [optional] |
+| **createdByClient** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **configurationUri** | **String** |  | [optional] |
 | **dateCreated** | **Int64** |  | [optional] |
 | **generationId** | **String** |  | [optional] |

@@ -109,10 +109,12 @@ public class ReportingExportJobResponse: Codable {
     public var locale: String?
     /** The percentage of the job that has completed processing */
     public var percentageComplete: Double?
+    /** Indicates if durations are formatted in hh:mm:ss format instead of ms */
+    public var hasFormatDurations: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, status: Status?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, selfUri: String?) {
+    public init(_id: String?, name: String?, status: Status?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -146,6 +148,8 @@ public class ReportingExportJobResponse: Codable {
         
         self.percentageComplete = percentageComplete
         
+        self.hasFormatDurations = hasFormatDurations
+        
         self.selfUri = selfUri
         
     }
@@ -167,6 +171,7 @@ public class ReportingExportJobResponse: Codable {
         case modifiedDateTime
         case locale
         case percentageComplete
+        case hasFormatDurations
         case selfUri
     }
 

@@ -31,11 +31,14 @@ public class HistoryEntry: Codable {
     public var resource: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var timestamp: Date?
+    /** User associated with this entry. */
     public var user: User?
+    /** OAuth client associated with this entry. */
+    public var client: DomainEntityRef?
     public var version: String?
     public var secure: Bool?
 
-    public init(action: Action?, resource: String?, timestamp: Date?, user: User?, version: String?, secure: Bool?) {
+    public init(action: Action?, resource: String?, timestamp: Date?, user: User?, client: DomainEntityRef?, version: String?, secure: Bool?) {
         
         self.action = action
         
@@ -44,6 +47,8 @@ public class HistoryEntry: Codable {
         self.timestamp = timestamp
         
         self.user = user
+        
+        self.client = client
         
         self.version = version
         

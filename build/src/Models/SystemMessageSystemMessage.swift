@@ -14,9 +14,11 @@ public class SystemMessageSystemMessage: Codable {
     public enum SystemTopicType: String, Codable { 
         case noLongerSubscribed = "no_longer_subscribed"
         case subscriptionChanged = "subscription_changed"
+        case tokenRevoked = "token_revoked"
     }
     public enum Reason: String, Codable { 
         case anotherChannelSubscribed = "another_channel_subscribed"
+        case userTokensRevoked = "user_tokens_revoked"
     }
     public var channelId: String?
     public var systemTopicType: SystemTopicType?

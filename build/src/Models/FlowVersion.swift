@@ -24,6 +24,7 @@ public class FlowVersion: Codable {
     public var type: ModelType?
     public var secure: Bool?
     public var createdBy: User?
+    public var createdByClient: DomainEntityRef?
     public var configurationUri: String?
     public var dateCreated: Int64?
     public var generationId: String?
@@ -31,7 +32,7 @@ public class FlowVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, createdBy: User?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -46,6 +47,8 @@ public class FlowVersion: Codable {
         self.secure = secure
         
         self.createdBy = createdBy
+        
+        self.createdByClient = createdByClient
         
         self.configurationUri = configurationUri
         
@@ -67,6 +70,7 @@ public class FlowVersion: Codable {
         case type
         case secure
         case createdBy
+        case createdByClient
         case configurationUri
         case dateCreated
         case generationId

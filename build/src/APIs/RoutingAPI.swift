@@ -1424,7 +1424,6 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -1437,9 +1436,6 @@ open class RoutingAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -1449,8 +1445,16 @@ open class RoutingAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -1459,6 +1463,11 @@ open class RoutingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "lockedClient" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "division" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1466,17 +1475,18 @@ open class RoutingAPI {
     },
     "publishedVersion" : {
       "generationId" : "aeiou",
+      "createdByClient" : "",
+      "selfUri" : "aeiou",
+      "type" : "aeiou",
+      "secure" : true,
+      "configurationUri" : "aeiou",
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
       "createdBy" : "",
-      "selfUri" : "aeiou",
       "name" : "aeiou",
       "id" : "aeiou",
-      "type" : "aeiou",
-      "secure" : true,
-      "commitVersion" : "aeiou",
-      "configurationUri" : "aeiou"
+      "commitVersion" : "aeiou"
     },
     "currentOperation" : {
       "errorMessageParams" : {
@@ -1484,6 +1494,7 @@ open class RoutingAPI {
       },
       "actionStatus" : "aeiou",
       "errorMessage" : "aeiou",
+      "client" : "",
       "errorCode" : "aeiou",
       "id" : "aeiou",
       "complete" : true,
@@ -1794,7 +1805,6 @@ open class RoutingAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -1807,9 +1817,6 @@ open class RoutingAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -1819,8 +1826,16 @@ open class RoutingAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : {
+              "selfUri" : "aeiou",
+              "id" : "aeiou"
+            },
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -1829,6 +1844,11 @@ open class RoutingAPI {
           "longitude" : 1.3579000000000001069366817318950779736042022705078125
         }
       },
+      "lockedClient" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "division" : {
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1836,17 +1856,18 @@ open class RoutingAPI {
       },
       "publishedVersion" : {
         "generationId" : "aeiou",
+        "createdByClient" : "",
+        "selfUri" : "aeiou",
+        "type" : "aeiou",
+        "secure" : true,
+        "configurationUri" : "aeiou",
         "configurationVersion" : "aeiou",
         "dateCreated" : 123456789,
         "publishResultUri" : "aeiou",
         "createdBy" : "",
-        "selfUri" : "aeiou",
         "name" : "aeiou",
         "id" : "aeiou",
-        "type" : "aeiou",
-        "secure" : true,
-        "commitVersion" : "aeiou",
-        "configurationUri" : "aeiou"
+        "commitVersion" : "aeiou"
       },
       "currentOperation" : {
         "errorMessageParams" : {
@@ -1854,6 +1875,7 @@ open class RoutingAPI {
         },
         "actionStatus" : "aeiou",
         "errorMessage" : "aeiou",
+        "client" : "",
         "errorCode" : "aeiou",
         "id" : "aeiou",
         "complete" : true,
@@ -2533,7 +2555,6 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -2546,9 +2567,6 @@ open class RoutingAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -2558,8 +2576,16 @@ open class RoutingAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -4334,7 +4360,6 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -4347,9 +4372,6 @@ open class RoutingAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -4359,8 +4381,16 @@ open class RoutingAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -4684,7 +4714,6 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -4697,9 +4726,6 @@ open class RoutingAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -4709,8 +4735,16 @@ open class RoutingAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -5472,7 +5506,6 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5485,9 +5518,6 @@ open class RoutingAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -5497,8 +5527,16 @@ open class RoutingAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -5779,7 +5817,6 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -5792,9 +5829,6 @@ open class RoutingAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -5804,8 +5838,16 @@ open class RoutingAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -7101,7 +7143,6 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -7114,9 +7155,6 @@ open class RoutingAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -7126,8 +7164,16 @@ open class RoutingAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -7715,7 +7761,6 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7728,9 +7773,6 @@ open class RoutingAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -7740,8 +7782,16 @@ open class RoutingAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -7750,6 +7800,11 @@ open class RoutingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "lockedClient" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "division" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -7757,17 +7812,18 @@ open class RoutingAPI {
     },
     "publishedVersion" : {
       "generationId" : "aeiou",
+      "createdByClient" : "",
+      "selfUri" : "aeiou",
+      "type" : "aeiou",
+      "secure" : true,
+      "configurationUri" : "aeiou",
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
       "createdBy" : "",
-      "selfUri" : "aeiou",
       "name" : "aeiou",
       "id" : "aeiou",
-      "type" : "aeiou",
-      "secure" : true,
-      "commitVersion" : "aeiou",
-      "configurationUri" : "aeiou"
+      "commitVersion" : "aeiou"
     },
     "currentOperation" : {
       "errorMessageParams" : {
@@ -7775,6 +7831,7 @@ open class RoutingAPI {
       },
       "actionStatus" : "aeiou",
       "errorMessage" : "aeiou",
+      "client" : "",
       "errorCode" : "aeiou",
       "id" : "aeiou",
       "complete" : true,
@@ -8245,7 +8302,6 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -8258,9 +8314,6 @@ open class RoutingAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -8270,8 +8323,16 @@ open class RoutingAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",

@@ -34,6 +34,7 @@ public class HistoryListing: Codable {
     public var _id: String?
     public var complete: Bool?
     public var user: User?
+    public var client: DomainEntityRef?
     public var errorMessage: String?
     public var errorCode: String?
     public var errorDetails: [Detail]?
@@ -55,13 +56,15 @@ public class HistoryListing: Codable {
     public var pageNumber: Int?
     public var pageCount: Int?
 
-    public init(_id: String?, complete: Bool?, user: User?, errorMessage: String?, errorCode: String?, errorDetails: [Detail]?, errorMessageParams: [String:String]?, actionName: ActionName?, actionStatus: ActionStatus?, name: String?, _description: String?, system: Bool?, started: Date?, completed: Date?, entities: [HistoryEntry]?, total: Int64?, pageSize: Int?, pageNumber: Int?, pageCount: Int?) {
+    public init(_id: String?, complete: Bool?, user: User?, client: DomainEntityRef?, errorMessage: String?, errorCode: String?, errorDetails: [Detail]?, errorMessageParams: [String:String]?, actionName: ActionName?, actionStatus: ActionStatus?, name: String?, _description: String?, system: Bool?, started: Date?, completed: Date?, entities: [HistoryEntry]?, total: Int64?, pageSize: Int?, pageNumber: Int?, pageCount: Int?) {
         
         self._id = _id
         
         self.complete = complete
         
         self.user = user
+        
+        self.client = client
         
         self.errorMessage = errorMessage
         
@@ -101,6 +104,7 @@ public class HistoryListing: Codable {
         case _id = "id"
         case complete
         case user
+        case client
         case errorMessage
         case errorCode
         case errorDetails

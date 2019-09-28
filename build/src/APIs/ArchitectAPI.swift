@@ -351,6 +351,11 @@ open class ArchitectAPI {
   },
   "actionStatus" : "aeiou",
   "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "errorCode" : "aeiou",
   "id" : "aeiou",
   "complete" : true,
@@ -546,7 +551,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -559,9 +563,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -571,8 +572,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -886,6 +895,11 @@ open class ArchitectAPI {
   },
   "actionStatus" : "aeiou",
   "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "errorCode" : "aeiou",
   "id" : "aeiou",
   "complete" : true,
@@ -1081,7 +1095,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1094,9 +1107,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -1106,8 +1116,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -1580,6 +1598,11 @@ open class ArchitectAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "failedObjects" : [ {
     "name" : "aeiou",
     "errorCode" : "aeiou",
@@ -1780,7 +1803,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1793,9 +1815,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -1805,8 +1824,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -3533,6 +3560,11 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -3728,7 +3760,6 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -3741,9 +3772,6 @@ open class ArchitectAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -3753,8 +3781,16 @@ open class ArchitectAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -3911,12 +3947,18 @@ open class ArchitectAPI {
   "entities" : [ {
     "resource" : "aeiou",
     "action" : "aeiou",
+    "client" : "",
     "secure" : true,
     "user" : "",
     "version" : "aeiou",
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "name" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "id" : "aeiou",
   "complete" : true,
   "user" : {
@@ -4111,7 +4153,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -4124,9 +4165,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -4136,8 +4174,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -4458,6 +4504,11 @@ open class ArchitectAPI {
       },
       "actionStatus" : "aeiou",
       "errorMessage" : "aeiou",
+      "client" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "errorCode" : "aeiou",
       "id" : "aeiou",
       "complete" : true,
@@ -4653,7 +4704,6 @@ open class ArchitectAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -4666,9 +4716,6 @@ open class ArchitectAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -4678,8 +4725,16 @@ open class ArchitectAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : {
+              "selfUri" : "aeiou",
+              "id" : "aeiou"
+            },
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -5349,12 +5404,18 @@ open class ArchitectAPI {
   "entities" : [ {
     "resource" : "aeiou",
     "action" : "aeiou",
+    "client" : "",
     "secure" : true,
     "user" : "",
     "version" : "aeiou",
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "name" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "id" : "aeiou",
   "complete" : true,
   "user" : {
@@ -5549,7 +5610,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5562,9 +5622,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -5574,8 +5631,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -6220,7 +6285,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6233,9 +6297,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -6245,8 +6306,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -6255,6 +6324,11 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "lockedClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -6262,17 +6336,18 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "createdByClient" : "",
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   },
   "currentOperation" : {
     "errorMessageParams" : {
@@ -6280,6 +6355,7 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : "",
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -6422,12 +6498,18 @@ open class ArchitectAPI {
   "entities" : [ {
     "resource" : "aeiou",
     "action" : "aeiou",
+    "client" : "",
     "secure" : true,
     "user" : "",
     "version" : "aeiou",
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "name" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "id" : "aeiou",
   "complete" : true,
   "user" : {
@@ -6622,7 +6704,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6635,9 +6716,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -6647,8 +6725,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -6829,6 +6915,15 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "generationId" : "aeiou",
+  "createdByClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "type" : "aeiou",
+  "secure" : true,
+  "configurationUri" : "aeiou",
   "configurationVersion" : "aeiou",
   "dateCreated" : 123456789,
   "publishResultUri" : "aeiou",
@@ -7024,7 +7119,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -7037,9 +7131,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -7049,8 +7140,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -7059,13 +7158,9 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "id" : "aeiou",
-  "type" : "aeiou",
-  "secure" : true,
-  "commitVersion" : "aeiou",
-  "configurationUri" : "aeiou"
+  "commitVersion" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -7233,6 +7328,15 @@ open class ArchitectAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "generationId" : "aeiou",
+    "createdByClient" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
@@ -7428,7 +7532,6 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7441,9 +7544,6 @@ open class ArchitectAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -7453,8 +7553,16 @@ open class ArchitectAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -7463,13 +7571,9 @@ open class ArchitectAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -7829,7 +7933,6 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7842,9 +7945,6 @@ open class ArchitectAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -7854,8 +7954,16 @@ open class ArchitectAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -7864,6 +7972,11 @@ open class ArchitectAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "lockedClient" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "division" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -7871,17 +7984,18 @@ open class ArchitectAPI {
     },
     "publishedVersion" : {
       "generationId" : "aeiou",
+      "createdByClient" : "",
+      "selfUri" : "aeiou",
+      "type" : "aeiou",
+      "secure" : true,
+      "configurationUri" : "aeiou",
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
       "createdBy" : "",
-      "selfUri" : "aeiou",
       "name" : "aeiou",
       "id" : "aeiou",
-      "type" : "aeiou",
-      "secure" : true,
-      "commitVersion" : "aeiou",
-      "configurationUri" : "aeiou"
+      "commitVersion" : "aeiou"
     },
     "currentOperation" : {
       "errorMessageParams" : {
@@ -7889,6 +8003,7 @@ open class ArchitectAPI {
       },
       "actionStatus" : "aeiou",
       "errorMessage" : "aeiou",
+      "client" : "",
       "errorCode" : "aeiou",
       "id" : "aeiou",
       "complete" : true,
@@ -8700,6 +8815,11 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -8895,7 +9015,6 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -8908,9 +9027,6 @@ open class ArchitectAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -8920,8 +9036,16 @@ open class ArchitectAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -9037,6 +9161,11 @@ open class ArchitectAPI {
       },
       "actionStatus" : "aeiou",
       "errorMessage" : "aeiou",
+      "client" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "errorCode" : "aeiou",
       "id" : "aeiou",
       "complete" : true,
@@ -9232,7 +9361,6 @@ open class ArchitectAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
-            "path" : [ "aeiou" ],
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -9245,9 +9373,6 @@ open class ArchitectAPI {
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
             "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "state" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
               "resolution" : "aeiou"
@@ -9257,8 +9382,16 @@ open class ArchitectAPI {
               "e164" : "aeiou",
               "type" : "aeiou"
             },
-            "addressVerified" : true,
-            "version" : 123
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : {
+              "selfUri" : "aeiou",
+              "id" : "aeiou"
+            },
+            "state" : "aeiou",
+            "addressVerified" : true
           } ],
           "id" : "aeiou",
           "type" : "aeiou",
@@ -9583,6 +9716,11 @@ open class ArchitectAPI {
   },
   "actionStatus" : "aeiou",
   "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "errorCode" : "aeiou",
   "id" : "aeiou",
   "complete" : true,
@@ -9778,7 +9916,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -9791,9 +9928,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -9803,8 +9937,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -9970,6 +10112,11 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -10165,7 +10312,6 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -10178,9 +10324,6 @@ open class ArchitectAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -10190,8 +10333,16 @@ open class ArchitectAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -10443,6 +10594,11 @@ open class ArchitectAPI {
   },
   "actionStatus" : "aeiou",
   "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "errorCode" : "aeiou",
   "id" : "aeiou",
   "complete" : true,
@@ -10638,7 +10794,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -10651,9 +10806,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -10663,8 +10815,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -10829,6 +10989,15 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "generationId" : "aeiou",
+  "createdByClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "type" : "aeiou",
+  "secure" : true,
+  "configurationUri" : "aeiou",
   "configurationVersion" : "aeiou",
   "dateCreated" : 123456789,
   "publishResultUri" : "aeiou",
@@ -11024,7 +11193,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -11037,9 +11205,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -11049,8 +11214,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -11059,13 +11232,9 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "id" : "aeiou",
-  "type" : "aeiou",
-  "secure" : true,
-  "commitVersion" : "aeiou",
-  "configurationUri" : "aeiou"
+  "commitVersion" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -11328,7 +11497,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -11341,9 +11509,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -11353,8 +11518,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -11363,6 +11536,11 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "lockedClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -11370,17 +11548,18 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "createdByClient" : "",
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   },
   "currentOperation" : {
     "errorMessageParams" : {
@@ -11388,6 +11567,7 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : "",
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -11468,6 +11648,11 @@ open class ArchitectAPI {
   },
   "actionStatus" : "aeiou",
   "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "errorCode" : "aeiou",
   "id" : "aeiou",
   "complete" : true,
@@ -11663,7 +11848,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -11676,9 +11860,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -11688,8 +11869,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -11971,7 +12160,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -11984,9 +12172,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -11996,8 +12181,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -12006,6 +12199,11 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "lockedClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -12013,17 +12211,18 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "createdByClient" : "",
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   },
   "currentOperation" : {
     "errorMessageParams" : {
@@ -12031,6 +12230,7 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : "",
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -12314,7 +12514,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -12327,9 +12526,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -12339,8 +12535,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -12349,6 +12553,11 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "lockedClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -12356,17 +12565,18 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "createdByClient" : "",
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   },
   "currentOperation" : {
     "errorMessageParams" : {
@@ -12374,6 +12584,7 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : "",
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -12465,6 +12676,11 @@ open class ArchitectAPI {
   },
   "actionStatus" : "aeiou",
   "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "errorCode" : "aeiou",
   "id" : "aeiou",
   "complete" : true,
@@ -12660,7 +12876,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -12673,9 +12888,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -12685,8 +12897,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -12971,7 +13191,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -12984,9 +13203,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -12996,8 +13212,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -13006,6 +13230,11 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "lockedClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13013,17 +13242,18 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "createdByClient" : "",
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   },
   "currentOperation" : {
     "errorMessageParams" : {
@@ -13031,6 +13261,7 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : "",
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -13314,7 +13545,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -13327,9 +13557,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -13339,8 +13566,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -13349,6 +13584,11 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "lockedClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13356,17 +13596,18 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "createdByClient" : "",
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   },
   "currentOperation" : {
     "errorMessageParams" : {
@@ -13374,6 +13615,7 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : "",
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -13603,6 +13845,11 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -13798,7 +14045,6 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -13811,9 +14057,6 @@ open class ArchitectAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -13823,8 +14066,16 @@ open class ArchitectAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -14084,6 +14335,11 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -14279,7 +14535,6 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
-          "path" : [ "aeiou" ],
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -14292,9 +14547,6 @@ open class ArchitectAPI {
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
           "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
             "resolution" : "aeiou"
@@ -14304,8 +14556,16 @@ open class ArchitectAPI {
             "e164" : "aeiou",
             "type" : "aeiou"
           },
-          "addressVerified" : true,
-          "version" : 123
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
         } ],
         "id" : "aeiou",
         "type" : "aeiou",
@@ -14948,7 +15208,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -14961,9 +15220,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -14973,8 +15229,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",
@@ -14983,6 +15247,11 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "lockedClient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -14990,17 +15259,18 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "createdByClient" : "",
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "secure" : true,
-    "commitVersion" : "aeiou",
-    "configurationUri" : "aeiou"
+    "commitVersion" : "aeiou"
   },
   "currentOperation" : {
     "errorMessageParams" : {
@@ -15008,6 +15278,7 @@ open class ArchitectAPI {
     },
     "actionStatus" : "aeiou",
     "errorMessage" : "aeiou",
+    "client" : "",
     "errorCode" : "aeiou",
     "id" : "aeiou",
     "complete" : true,
@@ -15263,6 +15534,11 @@ open class ArchitectAPI {
   },
   "actionStatus" : "aeiou",
   "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "errorCode" : "aeiou",
   "id" : "aeiou",
   "complete" : true,
@@ -15458,7 +15734,6 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
-        "path" : [ "aeiou" ],
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -15471,9 +15746,6 @@ open class ArchitectAPI {
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
         "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
           "resolution" : "aeiou"
@@ -15483,8 +15755,16 @@ open class ArchitectAPI {
           "e164" : "aeiou",
           "type" : "aeiou"
         },
-        "addressVerified" : true,
-        "version" : 123
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
       } ],
       "id" : "aeiou",
       "type" : "aeiou",

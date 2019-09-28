@@ -21,7 +21,10 @@ public class DependencyStatus: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
+    /** User that initiated the build. */
     public var user: User?
+    /** OAuth client that initiated the build. */
+    public var client: DomainEntityRef?
     public var buildId: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateStarted: Date?
@@ -32,13 +35,15 @@ public class DependencyStatus: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: User?, buildId: String?, dateStarted: Date?, dateCompleted: Date?, status: Status?, failedObjects: [FailedObject]?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: User?, client: DomainEntityRef?, buildId: String?, dateStarted: Date?, dateCompleted: Date?, status: Status?, failedObjects: [FailedObject]?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.user = user
+        
+        self.client = client
         
         self.buildId = buildId
         
@@ -58,6 +63,7 @@ public class DependencyStatus: Codable {
         case _id = "id"
         case name
         case user
+        case client
         case buildId
         case dateStarted
         case dateCompleted

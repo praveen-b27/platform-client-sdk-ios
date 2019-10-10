@@ -1508,8 +1508,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2018,8 +2018,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2223,8 +2223,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2442,8 +2442,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -2859,8 +2859,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3057,8 +3057,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3267,8 +3267,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3474,8 +3474,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4401,8 +4401,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -4777,8 +4777,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5067,8 +5067,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5183,8 +5183,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5866,8 +5866,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5996,8 +5996,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -7579,8 +7579,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -8026,8 +8026,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -8206,110 +8206,6 @@ open class ArchitectAPI {
     
     
     
-    /**
-     
-     Returns the state information about an import job
-     
-     - parameter datatableId: (path) id of datatable 
-     - parameter importJobId: (path) id of import job 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getFlowsDatatableImportJob(datatableId: String, importJobId: String, completion: @escaping ((_ data: DataTableImportJob?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsDatatableImportJobWithRequestBuilder(datatableId: datatableId, importJobId: importJobId)
-        requestBuilder.execute { (response: Response<DataTableImportJob>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     
-     Returns the state information about an import job
-     
-     - GET /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}
-     - Returns the state information about an import job.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "owner" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "uploadURI" : "aeiou",
-  "importMode" : "aeiou",
-  "countRecordsFailed" : 123,
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "countRecordsProcessed" : 123,
-  "errorInformation" : {
-    "messageWithParams" : "aeiou",
-    "code" : "aeiou",
-    "entityName" : "aeiou",
-    "entityId" : "aeiou",
-    "contextId" : "aeiou",
-    "details" : [ {
-      "fieldName" : "aeiou",
-      "entityName" : "aeiou",
-      "errorCode" : "aeiou",
-      "entityId" : "aeiou"
-    } ],
-    "messageParams" : {
-      "key" : "aeiou"
-    },
-    "message" : "aeiou",
-    "errors" : [ "" ],
-    "status" : 123
-  },
-  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "status" : "aeiou"
-}}]
-     
-     - parameter datatableId: (path) id of datatable 
-     - parameter importJobId: (path) id of import job 
-
-     - returns: RequestBuilder<DataTableImportJob> 
-     */
-    open class func getFlowsDatatableImportJobWithRequestBuilder(datatableId: String, importJobId: String) -> RequestBuilder<DataTableImportJob> {
-        var path = "/api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}"
-        let datatableIdPreEscape = "\(datatableId)"
-        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
-        let importJobIdPreEscape = "\(importJobId)"
-        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
-        let body: Data? = nil
-            
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<DataTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    
-    
-    
-    
     
     
     /**
@@ -8443,8 +8339,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -8569,8 +8465,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -8711,8 +8607,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9417,8 +9313,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

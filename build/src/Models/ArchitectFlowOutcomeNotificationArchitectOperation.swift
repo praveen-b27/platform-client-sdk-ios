@@ -34,6 +34,7 @@ public class ArchitectFlowOutcomeNotificationArchitectOperation: Codable {
     public var _id: String?
     public var complete: Bool?
     public var user: ArchitectFlowOutcomeNotificationUser?
+    public var client: ArchitectFlowOutcomeNotificationClient?
     public var actionName: ActionName?
     public var actionStatus: ActionStatus?
     public var errorMessage: String?
@@ -41,13 +42,15 @@ public class ArchitectFlowOutcomeNotificationArchitectOperation: Codable {
     public var errorMessageParams: ArchitectFlowOutcomeNotificationErrorMessageParams?
     public var errorDetails: [ArchitectFlowOutcomeNotificationErrorDetail]?
 
-    public init(_id: String?, complete: Bool?, user: ArchitectFlowOutcomeNotificationUser?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: ArchitectFlowOutcomeNotificationErrorMessageParams?, errorDetails: [ArchitectFlowOutcomeNotificationErrorDetail]?) {
+    public init(_id: String?, complete: Bool?, user: ArchitectFlowOutcomeNotificationUser?, client: ArchitectFlowOutcomeNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: ArchitectFlowOutcomeNotificationErrorMessageParams?, errorDetails: [ArchitectFlowOutcomeNotificationErrorDetail]?) {
         
         self._id = _id
         
         self.complete = complete
         
         self.user = user
+        
+        self.client = client
         
         self.actionName = actionName
         
@@ -67,6 +70,7 @@ public class ArchitectFlowOutcomeNotificationArchitectOperation: Codable {
         case _id = "id"
         case complete
         case user
+        case client
         case actionName
         case actionStatus
         case errorMessage

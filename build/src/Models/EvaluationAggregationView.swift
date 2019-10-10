@@ -13,6 +13,8 @@ public class EvaluationAggregationView: Codable {
 
     public enum Target: String, Codable { 
         case nevaluations = "nEvaluations"
+        case nevaluationsdeleted = "nEvaluationsDeleted"
+        case nevaluationsrescored = "nEvaluationsRescored"
         case ototalcriticalscore = "oTotalCriticalScore"
         case ototalscore = "oTotalScore"
     }

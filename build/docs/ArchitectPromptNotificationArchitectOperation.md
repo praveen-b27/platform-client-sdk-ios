@@ -10,6 +10,7 @@ title: ArchitectPromptNotificationArchitectOperation
 | **_id** | **String** |  | [optional] |
 | **complete** | **Bool** |  | [optional] |
 | **user** | [**ArchitectPromptNotificationUser**](ArchitectPromptNotificationUser.html) |  | [optional] |
+| **client** | [**ArchitectPromptNotificationClient**](ArchitectPromptNotificationClient.html) |  | [optional] |
 | **actionName** | **String** |  | [optional] |
 | **actionStatus** | **String** |  | [optional] |
 | **errorMessage** | **String** |  | [optional] |

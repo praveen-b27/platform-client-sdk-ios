@@ -406,8 +406,8 @@ open class ResponseManagementAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1404,8 +1404,8 @@ open class ResponseManagementAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter libraryId: (query) Library ID 
@@ -2383,8 +2383,8 @@ open class ResponseManagementAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   }
 }}]
      

@@ -139,6 +139,7 @@ open class BillingAPI {
      - examples: [{contentType=application/json, example={
   "inRampPeriod" : true,
   "billingPeriodEndDate" : "2000-01-23T04:56:07.000+0000",
+  "minimumMonthlyAmount" : "aeiou",
   "selfUri" : "aeiou",
   "contractEndDate" : "2000-01-23T04:56:07.000+0000",
   "contractAmendmentDate" : "2000-01-23T04:56:07.000+0000",

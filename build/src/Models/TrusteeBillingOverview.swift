@@ -47,11 +47,13 @@ public class TrusteeBillingOverview: Codable {
     public var contractEffectiveDate: Date?
     /** Date-time the contract ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var contractEndDate: Date?
+    /** Minimum amount that will be charged for the month */
+    public var minimumMonthlyAmount: String?
     public var inRampPeriod: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, organization: Entity?, currency: String?, enabledProducts: [String]?, subscriptionType: SubscriptionType?, rampPeriodStartDate: Date?, rampPeriodEndDate: Date?, billingPeriodStartDate: Date?, billingPeriodEndDate: Date?, usages: [SubscriptionOverviewUsage]?, contractAmendmentDate: Date?, contractEffectiveDate: Date?, contractEndDate: Date?, inRampPeriod: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, organization: Entity?, currency: String?, enabledProducts: [String]?, subscriptionType: SubscriptionType?, rampPeriodStartDate: Date?, rampPeriodEndDate: Date?, billingPeriodStartDate: Date?, billingPeriodEndDate: Date?, usages: [SubscriptionOverviewUsage]?, contractAmendmentDate: Date?, contractEffectiveDate: Date?, contractEndDate: Date?, minimumMonthlyAmount: String?, inRampPeriod: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -81,6 +83,8 @@ public class TrusteeBillingOverview: Codable {
         
         self.contractEndDate = contractEndDate
         
+        self.minimumMonthlyAmount = minimumMonthlyAmount
+        
         self.inRampPeriod = inRampPeriod
         
         self.selfUri = selfUri
@@ -102,6 +106,7 @@ public class TrusteeBillingOverview: Codable {
         case contractAmendmentDate
         case contractEffectiveDate
         case contractEndDate
+        case minimumMonthlyAmount
         case inRampPeriod
         case selfUri
     }

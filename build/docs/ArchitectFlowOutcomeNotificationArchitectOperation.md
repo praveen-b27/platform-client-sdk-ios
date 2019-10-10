@@ -10,6 +10,7 @@ title: ArchitectFlowOutcomeNotificationArchitectOperation
 | **_id** | **String** |  | [optional] |
 | **complete** | **Bool** |  | [optional] |
 | **user** | [**ArchitectFlowOutcomeNotificationUser**](ArchitectFlowOutcomeNotificationUser.html) |  | [optional] |
+| **client** | [**ArchitectFlowOutcomeNotificationClient**](ArchitectFlowOutcomeNotificationClient.html) |  | [optional] |
 | **actionName** | **String** |  | [optional] |
 | **actionStatus** | **String** |  | [optional] |
 | **errorMessage** | **String** |  | [optional] |

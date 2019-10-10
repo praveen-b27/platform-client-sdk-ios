@@ -34,6 +34,7 @@ public class ArchitectPromptNotificationArchitectOperation: Codable {
     public var _id: String?
     public var complete: Bool?
     public var user: ArchitectPromptNotificationUser?
+    public var client: ArchitectPromptNotificationClient?
     public var actionName: ActionName?
     public var actionStatus: ActionStatus?
     public var errorMessage: String?
@@ -41,13 +42,15 @@ public class ArchitectPromptNotificationArchitectOperation: Codable {
     public var errorMessageParams: ArchitectPromptNotificationErrorMessageParams?
     public var errorDetails: [ArchitectPromptNotificationErrorDetail]?
 
-    public init(_id: String?, complete: Bool?, user: ArchitectPromptNotificationUser?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: ArchitectPromptNotificationErrorMessageParams?, errorDetails: [ArchitectPromptNotificationErrorDetail]?) {
+    public init(_id: String?, complete: Bool?, user: ArchitectPromptNotificationUser?, client: ArchitectPromptNotificationClient?, actionName: ActionName?, actionStatus: ActionStatus?, errorMessage: String?, errorCode: String?, errorMessageParams: ArchitectPromptNotificationErrorMessageParams?, errorDetails: [ArchitectPromptNotificationErrorDetail]?) {
         
         self._id = _id
         
         self.complete = complete
         
         self.user = user
+        
+        self.client = client
         
         self.actionName = actionName
         
@@ -67,6 +70,7 @@ public class ArchitectPromptNotificationArchitectOperation: Codable {
         case _id = "id"
         case complete
         case user
+        case client
         case actionName
         case actionStatus
         case errorMessage

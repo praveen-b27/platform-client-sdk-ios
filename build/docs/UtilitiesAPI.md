@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**getDate**](UtilitiesAPI.html#getDate) | Get the current system date/time |
+| [**getIpranges**](UtilitiesAPI.html#getIpranges) | Get public ip address ranges for PureCloud |
 | [**getTimezones**](UtilitiesAPI.html#getTimezones) | Get time zones list |
 | [**postCertificateDetails**](UtilitiesAPI.html#postCertificateDetails) | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 | [**postGmscTokens**](UtilitiesAPI.html#postGmscTokens) | Generate a JWT for use with common cloud. |
@@ -59,6 +60,53 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**ServerDate**](ServerDate.html)
+
+<a name="getIpranges"></a>
+
+# **getIpranges**
+
+
+
+> [IpAddressRangeListing](IpAddressRangeListing.html) getIpranges()
+
+Get public ip address ranges for PureCloud
+
+
+
+Wraps GET /api/v2/ipranges  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UtilitiesAPI.getIpranges() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UtilitiesAPI.getIpranges was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**IpAddressRangeListing**](IpAddressRangeListing.html)
 
 <a name="getTimezones"></a>
 

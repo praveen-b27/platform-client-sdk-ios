@@ -28,6 +28,7 @@ public class EventMessage: Codable {
         case callRuleNoDncListsConfigured = "CALL_RULE_NO_DNC_LISTS_CONFIGURED"
         case callRuleUpdatedPhoneColumn = "CALL_RULE_UPDATED_PHONE_COLUMN"
         case contactListFilterEvaluationFailed = "CONTACT_LIST_FILTER_EVALUATION_FAILED"
+        case contactListFilterInternalError = "CONTACT_LIST_FILTER_INTERNAL_ERROR"
         case contactColumnsLimitExceeded = "CONTACT_COLUMNS_LIMIT_EXCEEDED"
         case contactColumnLengthLimitExceeded = "CONTACT_COLUMN_LENGTH_LIMIT_EXCEEDED"
         case contactDatumLengthLimitExceeded = "CONTACT_DATUM_LENGTH_LIMIT_EXCEEDED"

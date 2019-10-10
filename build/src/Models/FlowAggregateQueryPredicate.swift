@@ -37,6 +37,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case flaggedreason = "flaggedReason"
         case flowid = "flowId"
         case flowname = "flowName"
+        case flowouttype = "flowOutType"
         case flowoutcome = "flowOutcome"
         case flowoutcomeid = "flowOutcomeId"
         case flowoutcomevalue = "flowOutcomeValue"

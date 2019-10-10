@@ -21,17 +21,17 @@ public class UserDetailsQuery: Codable {
     public var userFilters: [UserDetailQueryFilter]?
     /** Filters that target agent routing status-level data */
     public var routingStatusFilters: [RoutingStatusDetailQueryFilter]?
+    /** Sort the result set in ascending/descending order. Default is ascending */
+    public var order: Order?
     /** Include faceted search and aggregate roll-ups of presence data in your search results. This does not function as a filter, but rather, summary data about the presence results matching your filters */
     public var presenceAggregations: [AnalyticsQueryAggregation]?
     /** Include faceted search and aggregate roll-ups of agent routing status data in your search results. This does not function as a filter, but rather, summary data about the agent routing status results matching your filters */
     public var routingStatusAggregations: [AnalyticsQueryAggregation]?
     /** Page size and number to control iterating through large result sets. Default page size is 25 */
     public var paging: PagingSpec?
-    /** Sort the result set in ascending/descending order. Default is ascending */
-    public var order: Order?
     public var presenceDetailFilters: [PresenceDetailQueryFilter]?
 
-    public init(interval: String?, userFilters: [UserDetailQueryFilter]?, routingStatusFilters: [RoutingStatusDetailQueryFilter]?, presenceAggregations: [AnalyticsQueryAggregation]?, routingStatusAggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?, order: Order?, presenceDetailFilters: [PresenceDetailQueryFilter]?) {
+    public init(interval: String?, userFilters: [UserDetailQueryFilter]?, routingStatusFilters: [RoutingStatusDetailQueryFilter]?, order: Order?, presenceAggregations: [AnalyticsQueryAggregation]?, routingStatusAggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?, presenceDetailFilters: [PresenceDetailQueryFilter]?) {
         
         self.interval = interval
         
@@ -39,13 +39,13 @@ public class UserDetailsQuery: Codable {
         
         self.routingStatusFilters = routingStatusFilters
         
+        self.order = order
+        
         self.presenceAggregations = presenceAggregations
         
         self.routingStatusAggregations = routingStatusAggregations
         
         self.paging = paging
-        
-        self.order = order
         
         self.presenceDetailFilters = presenceDetailFilters
         

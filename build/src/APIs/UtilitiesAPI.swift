@@ -68,6 +68,67 @@ open class UtilitiesAPI {
     }
 
     
+    /**
+     
+     Get public ip address ranges for PureCloud
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIpranges(completion: @escaping ((_ data: IpAddressRangeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIprangesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<IpAddressRangeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get public ip address ranges for PureCloud
+     
+     - GET /api/v2/ipranges
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "service" : "aeiou",
+    "cidr" : "aeiou",
+    "region" : "aeiou"
+  } ]
+}}]
+
+     - returns: RequestBuilder<IpAddressRangeListing> 
+     */
+    open class func getIprangesWithRequestBuilder() -> RequestBuilder<IpAddressRangeListing> {
+        let path = "/api/v2/ipranges"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IpAddressRangeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     
@@ -121,8 +182,8 @@ open class UtilitiesAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)

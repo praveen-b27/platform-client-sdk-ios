@@ -13,13 +13,16 @@ public class ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuild
 
     public var status: String?
     public var user: ArchitectDependencyTrackingBuildNotificationUser?
+    public var client: ArchitectDependencyTrackingBuildNotificationClient?
     public var startTime: Date?
 
-    public init(status: String?, user: ArchitectDependencyTrackingBuildNotificationUser?, startTime: Date?) {
+    public init(status: String?, user: ArchitectDependencyTrackingBuildNotificationUser?, client: ArchitectDependencyTrackingBuildNotificationClient?, startTime: Date?) {
         
         self.status = status
         
         self.user = user
+        
+        self.client = client
         
         self.startTime = startTime
         

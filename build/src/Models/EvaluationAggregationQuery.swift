@@ -16,15 +16,19 @@ public class EvaluationAggregationQuery: Codable {
         case contextid = "contextId"
         case conversationid = "conversationId"
         case divisionid = "divisionId"
+        case evaluationcreateddate = "evaluationCreatedDate"
         case evaluationid = "evaluationId"
         case evaluatorid = "evaluatorId"
         case formid = "formId"
         case queueid = "queueId"
         case rescind = "rescind"
+        case rescored = "rescored"
         case userid = "userId"
     }
     public enum Metrics: String, Codable { 
         case nevaluations = "nEvaluations"
+        case nevaluationsdeleted = "nEvaluationsDeleted"
+        case nevaluationsrescored = "nEvaluationsRescored"
         case ototalcriticalscore = "oTotalCriticalScore"
         case ototalscore = "oTotalScore"
     }

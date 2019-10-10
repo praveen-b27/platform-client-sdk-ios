@@ -46,6 +46,7 @@ public class Site: Codable {
     public var edges: [Edge]?
     /** Recurrance rule, time zone, and start/end settings for automatic edge updates for this site */
     public var edgeAutoUpdateConfig: EdgeAutoUpdateConfig?
+    public var mediaRegionsUseLatencyBased: Bool?
     /** Location */
     public var location: LocationDefinition?
     public var managed: Bool?
@@ -54,7 +55,7 @@ public class Site: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, selfUri: String?) {
         
         self._id = _id
         
@@ -92,6 +93,8 @@ public class Site: Codable {
         
         self.edgeAutoUpdateConfig = edgeAutoUpdateConfig
         
+        self.mediaRegionsUseLatencyBased = mediaRegionsUseLatencyBased
+        
         self.location = location
         
         self.managed = managed
@@ -121,6 +124,7 @@ public class Site: Codable {
         case addresses
         case edges
         case edgeAutoUpdateConfig
+        case mediaRegionsUseLatencyBased
         case location
         case managed
         case ntpSettings

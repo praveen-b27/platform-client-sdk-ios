@@ -39,8 +39,10 @@ public class AsyncConversationQuery: Codable {
     public var orderBy: OrderBy?
     /** Specify number of results to be returned */
     public var limit: Int?
+    /** Add a filter to only include conversations that started after the beginning of the interval start date (UTC) */
+    public var startOfDayIntervalMatching: Bool?
 
-    public init(interval: String?, conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, limit: Int?) {
+    public init(interval: String?, conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, limit: Int?, startOfDayIntervalMatching: Bool?) {
         
         self.interval = interval
         
@@ -59,6 +61,8 @@ public class AsyncConversationQuery: Codable {
         self.orderBy = orderBy
         
         self.limit = limit
+        
+        self.startOfDayIntervalMatching = startOfDayIntervalMatching
         
     }
 

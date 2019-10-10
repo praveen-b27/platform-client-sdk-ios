@@ -19,12 +19,14 @@ public class EvaluationDetailQueryPredicate: Codable {
     public enum Dimension: String, Codable { 
         case calibrationid = "calibrationId"
         case contextid = "contextId"
+        case deleted = "deleted"
         case evaluationid = "evaluationId"
         case evaluatorid = "evaluatorId"
         case eventtime = "eventTime"
         case formid = "formId"
         case formname = "formName"
         case queueid = "queueId"
+        case rescored = "rescored"
         case userid = "userId"
     }
     public enum Metric: String, Codable { 

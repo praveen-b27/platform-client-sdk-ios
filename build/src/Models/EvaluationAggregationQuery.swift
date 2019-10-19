@@ -32,6 +32,20 @@ public class EvaluationAggregationQuery: Codable {
         case ototalcriticalscore = "oTotalCriticalScore"
         case ototalscore = "oTotalScore"
     }
+    public enum AlternateTimeDimension: String, Codable { 
+        case calibrationid = "calibrationId"
+        case contextid = "contextId"
+        case conversationid = "conversationId"
+        case divisionid = "divisionId"
+        case evaluationcreateddate = "evaluationCreatedDate"
+        case evaluationid = "evaluationId"
+        case evaluatorid = "evaluatorId"
+        case formid = "formId"
+        case queueid = "queueId"
+        case rescind = "rescind"
+        case rescored = "rescored"
+        case userid = "userId"
+    }
     /** Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?
     /** Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H */
@@ -48,8 +62,10 @@ public class EvaluationAggregationQuery: Codable {
     public var flattenMultivaluedDimensions: Bool?
     /** Custom derived metric views */
     public var views: [EvaluationAggregationView]?
+    /** Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. */
+    public var alternateTimeDimension: AlternateTimeDimension?
 
-    public init(interval: String?, granularity: String?, timeZone: String?, groupBy: [GroupBy]?, filter: EvaluationAggregateQueryFilter?, metrics: [Metrics]?, flattenMultivaluedDimensions: Bool?, views: [EvaluationAggregationView]?) {
+    public init(interval: String?, granularity: String?, timeZone: String?, groupBy: [GroupBy]?, filter: EvaluationAggregateQueryFilter?, metrics: [Metrics]?, flattenMultivaluedDimensions: Bool?, views: [EvaluationAggregationView]?, alternateTimeDimension: AlternateTimeDimension?) {
         
         self.interval = interval
         
@@ -66,6 +82,8 @@ public class EvaluationAggregationQuery: Codable {
         self.flattenMultivaluedDimensions = flattenMultivaluedDimensions
         
         self.views = views
+        
+        self.alternateTimeDimension = alternateTimeDimension
         
     }
 

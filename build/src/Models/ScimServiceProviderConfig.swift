@@ -12,23 +12,23 @@ import Foundation
 
 public class ScimServiceProviderConfig: Codable {
 
-    /** schemas supported */
+    /** The list of supported schemas. */
     public var schemas: [String]?
-    /** Documentation */
+    /** The HTTP-addressable URL that points to the service provider&#39;s documentation. */
     public var documentationUri: String?
-    /** Patch support */
+    /** \&quot;patch\&quot; configuration options. */
     public var patch: ScimServiceProviderConfigSimpleFeature?
-    /** Filter support. Additional properties: maxResults */
+    /** \&quot;filter\&quot; configuration options. */
     public var filter: ScimServiceProviderConfigFilterFeature?
-    /** Entity Tag support */
+    /** \&quot;ETag\&quot; configuration options. */
     public var etag: ScimServiceProviderConfigSimpleFeature?
-    /** Sort support */
+    /** \&quot;sort\&quot; configuration options. */
     public var sort: ScimServiceProviderConfigSimpleFeature?
-    /** Bulk support */
+    /** \&quot;bulk\&quot; configuration options. */
     public var bulk: ScimServiceProviderConfigBulkFeature?
-    /** Change password */
+    /** \&quot;changePassword\&quot; configuration options. */
     public var changePassword: ScimServiceProviderConfigSimpleFeature?
-    /** Authentication schemes supported. */
+    /** The list of supported authentication schemes. */
     public var authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?
     /** Resource SCIM meta */
     public var meta: ScimMetadata?

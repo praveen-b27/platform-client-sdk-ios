@@ -8,13 +8,13 @@
 import Foundation
 
 
-/** Extension schemas supported by PureCloud SCIM. */
+/** Schema extensions supported by PureCloud SCIM. */
 
 public class ScimConfigResourceTypeSchemaExtension: Codable {
 
-    /** The URI of an extended schema, e.g., \&quot;urn:edu:2.0:Staff\&quot;.  This MUST be equal to the \&quot;id\&quot; attribute of a \&quot;Schema\&quot; */
+    /** The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema.  */
     public var schema: String?
-    /** True if schema extension must be included in resource. */
+    /** Indicates whether a schema extension is required. */
     public var _required: Bool?
 
     public init(schema: String?, _required: Bool?) {

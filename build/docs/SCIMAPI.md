@@ -11,16 +11,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteScimV2User**](SCIMAPI.html#deleteScimV2User) | Delete a user |
 | [**getScimGroup**](SCIMAPI.html#getScimGroup) | Get a group |
 | [**getScimGroups**](SCIMAPI.html#getScimGroups) | Get a list of groups |
-| [**getScimResourcetype**](SCIMAPI.html#getScimResourcetype) | Get the SCIM configuration |
-| [**getScimResourcetypes**](SCIMAPI.html#getScimResourcetypes) | Get the SCIM resource types |
-| [**getScimServiceproviderconfig**](SCIMAPI.html#getScimServiceproviderconfig) | Get the SCIM configuration |
+| [**getScimResourcetype**](SCIMAPI.html#getScimResourcetype) | Get a resource type |
+| [**getScimResourcetypes**](SCIMAPI.html#getScimResourcetypes) | Get a list of resource types |
+| [**getScimServiceproviderconfig**](SCIMAPI.html#getScimServiceproviderconfig) | Get a service provider&#39;s configuration |
 | [**getScimUser**](SCIMAPI.html#getScimUser) | Get a user |
 | [**getScimUsers**](SCIMAPI.html#getScimUsers) | Get a list of users |
 | [**getScimV2Group**](SCIMAPI.html#getScimV2Group) | Get a group |
 | [**getScimV2Groups**](SCIMAPI.html#getScimV2Groups) | Get a list of groups |
-| [**getScimV2Resourcetype**](SCIMAPI.html#getScimV2Resourcetype) | Get the SCIM configuration |
-| [**getScimV2Resourcetypes**](SCIMAPI.html#getScimV2Resourcetypes) | Get the SCIM resource types |
-| [**getScimV2Serviceproviderconfig**](SCIMAPI.html#getScimV2Serviceproviderconfig) | Get the SCIM configuration |
+| [**getScimV2Resourcetype**](SCIMAPI.html#getScimV2Resourcetype) | Get a resource type |
+| [**getScimV2Resourcetypes**](SCIMAPI.html#getScimV2Resourcetypes) | Get a list of resource types |
+| [**getScimV2Serviceproviderconfig**](SCIMAPI.html#getScimV2Serviceproviderconfig) | Get a service provider&#39;s configuration |
 | [**getScimV2User**](SCIMAPI.html#getScimV2User) | Get a user |
 | [**getScimV2Users**](SCIMAPI.html#getScimV2Users) | Get a list of users |
 | [**patchScimGroup**](SCIMAPI.html#patchScimGroup) | Modify a group |
@@ -62,7 +62,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/users.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in
@@ -81,7 +81,7 @@ SCIMAPI.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -116,7 +116,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/v2/users.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.deleteScimV2User(userId: userId, ifMatch: ifMatch) { (response, error) in
@@ -135,7 +135,7 @@ SCIMAPI.deleteScimV2User(userId: userId, ifMatch: ifMatch) { (response, error) i
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -224,7 +224,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let startIndex: Int = 1 // The 1-based index of the first query result.
-let count: Int = 25 // The requested number of items per page. A value of 0 returns totalResults.
+let count: Int = 25 // The requested number of items per page. A value of 0 returns \"totalResults\".
 let filter: String = "" // Filters results.
 
 // Code example
@@ -244,7 +244,7 @@ SCIMAPI.getScimGroups(startIndex: startIndex, count: count, filter: filter) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **Int**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **Int**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 | **filter** | **String**| Filters results. | [optional] |
 {: class="table-striped"}
 
@@ -261,7 +261,7 @@ SCIMAPI.getScimGroups(startIndex: startIndex, count: count, filter: filter) { (r
 
 > [ScimConfigResourceType](ScimConfigResourceType.html) getScimResourcetype(resourceType)
 
-Get the SCIM configuration
+Get a resource type
 
 
 
@@ -278,7 +278,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let resourceType: SCIMAPI.ResourceType_getScimResourcetype = SCIMAPI.ResourceType_getScimResourcetype.enummember // The ID of a resource.
+let resourceType: SCIMAPI.ResourceType_getScimResourcetype = SCIMAPI.ResourceType_getScimResourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/resourcetypes.
 
 // Code example
 SCIMAPI.getScimResourcetype(resourceType: resourceType) { (response, error) in
@@ -296,7 +296,7 @@ SCIMAPI.getScimResourcetype(resourceType: resourceType) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **resourceType** | **String**| The ID of a resource. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType") |
+| **resourceType** | **String**| The type of resource. Returned with GET /api/v2/scim/resourcetypes. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType") |
 {: class="table-striped"}
 
 
@@ -310,9 +310,9 @@ SCIMAPI.getScimResourcetype(resourceType: resourceType) { (response, error) in
 
 
 
-> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimResourcetypes(filter)
+> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimResourcetypes()
 
-Get the SCIM resource types
+Get a list of resource types
 
 
 
@@ -329,10 +329,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let filter: String = "" // Filtered results are invalid and will result in a 403 (Unauthorized) return.
 
 // Code example
-SCIMAPI.getScimResourcetypes(filter: filter) { (response, error) in
+SCIMAPI.getScimResourcetypes() { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -344,11 +343,8 @@ SCIMAPI.getScimResourcetypes(filter: filter) { (response, error) in
 
 ### Parameters
 
+This endpoint does not require any parameters.
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
@@ -363,7 +359,7 @@ SCIMAPI.getScimResourcetypes(filter: filter) { (response, error) in
 
 > [ScimServiceProviderConfig](ScimServiceProviderConfig.html) getScimServiceproviderconfig(ifNoneMatch)
 
-Get the SCIM configuration
+Get a service provider&#39;s configuration
 
 
 
@@ -380,7 +376,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let ifNoneMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
+let ifNoneMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. 
 
 // Code example
 SCIMAPI.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in
@@ -398,7 +394,7 @@ SCIMAPI.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional] |
+| **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional] |
 {: class="table-striped"}
 
 
@@ -490,7 +486,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let filter: String = "" // Filters results.
 let startIndex: Int = 1 // The 1-based index of the first query result.
-let count: Int = 25 // The requested number of items per page. A value of 0 returns totalResults.
+let count: Int = 25 // The requested number of items per page. A value of 0 returns \"totalResults\".
 
 // Code example
 SCIMAPI.getScimUsers(filter: filter, startIndex: startIndex, count: count) { (response, error) in
@@ -510,7 +506,7 @@ SCIMAPI.getScimUsers(filter: filter, startIndex: startIndex, count: count) { (re
 | ------------- | ------------- | ------------- | ------------- |
 | **filter** | **String**| Filters results. | |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **Int**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **Int**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 {: class="table-striped"}
 
 
@@ -600,7 +596,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let filter: String = "" // Filters results.
 let startIndex: Int = 1 // The 1-based index of the first query result.
-let count: Int = 25 // The requested number of items per page. A value of 0 returns totalResults.
+let count: Int = 25 // The requested number of items per page. A value of 0 returns \"totalResults\".
 
 // Code example
 SCIMAPI.getScimV2Groups(filter: filter, startIndex: startIndex, count: count) { (response, error) in
@@ -620,7 +616,7 @@ SCIMAPI.getScimV2Groups(filter: filter, startIndex: startIndex, count: count) { 
 | ------------- | ------------- | ------------- | ------------- |
 | **filter** | **String**| Filters results. | |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **Int**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **Int**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 {: class="table-striped"}
 
 
@@ -636,7 +632,7 @@ SCIMAPI.getScimV2Groups(filter: filter, startIndex: startIndex, count: count) { 
 
 > [ScimConfigResourceType](ScimConfigResourceType.html) getScimV2Resourcetype(resourceType)
 
-Get the SCIM configuration
+Get a resource type
 
 
 
@@ -653,7 +649,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let resourceType: SCIMAPI.ResourceType_getScimV2Resourcetype = SCIMAPI.ResourceType_getScimV2Resourcetype.enummember // The ID of a resource.
+let resourceType: SCIMAPI.ResourceType_getScimV2Resourcetype = SCIMAPI.ResourceType_getScimV2Resourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes.
 
 // Code example
 SCIMAPI.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in
@@ -671,7 +667,7 @@ SCIMAPI.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **resourceType** | **String**| The ID of a resource. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType") |
+| **resourceType** | **String**| The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType") |
 {: class="table-striped"}
 
 
@@ -685,9 +681,9 @@ SCIMAPI.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in
 
 
 
-> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimV2Resourcetypes(filter)
+> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimV2Resourcetypes()
 
-Get the SCIM resource types
+Get a list of resource types
 
 
 
@@ -704,10 +700,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let filter: String = "" // Filtered results are invalid and will result in a 403 (Unauthorized) return.
 
 // Code example
-SCIMAPI.getScimV2Resourcetypes(filter: filter) { (response, error) in
+SCIMAPI.getScimV2Resourcetypes() { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -719,11 +714,8 @@ SCIMAPI.getScimV2Resourcetypes(filter: filter) { (response, error) in
 
 ### Parameters
 
+This endpoint does not require any parameters.
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **filter** | **String**| Filtered results are invalid and will result in a 403 (Unauthorized) return. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
@@ -738,7 +730,7 @@ SCIMAPI.getScimV2Resourcetypes(filter: filter) { (response, error) in
 
 > [ScimServiceProviderConfig](ScimServiceProviderConfig.html) getScimV2Serviceproviderconfig(ifNoneMatch)
 
-Get the SCIM configuration
+Get a service provider&#39;s configuration
 
 
 
@@ -865,7 +857,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let filter: String = "" // Filters results.
 let startIndex: Int = 1 // The 1-based index of the first query result.
-let count: Int = 25 // The requested number of items per page. A value of 0 returns totalResults.
+let count: Int = 25 // The requested number of items per page. A value of 0 returns \"totalResults\".
 
 // Code example
 SCIMAPI.getScimV2Users(filter: filter, startIndex: startIndex, count: count) { (response, error) in
@@ -885,7 +877,7 @@ SCIMAPI.getScimV2Users(filter: filter, startIndex: startIndex, count: count) { (
 | ------------- | ------------- | ------------- | ------------- |
 | **filter** | **String**| Filters results. | |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] [default to 1] |
-| **count** | **Int**| The requested number of items per page. A value of 0 returns totalResults. | [optional] [default to 25] |
+| **count** | **Int**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
 {: class="table-striped"}
 
 
@@ -921,7 +913,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/groups.
 let body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -941,7 +933,7 @@ SCIMAPI.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (respon
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups. | |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a group. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -978,7 +970,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/users.
 let body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -998,7 +990,7 @@ SCIMAPI.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response,
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a user. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -1034,7 +1026,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.
 let body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -1054,7 +1046,7 @@ SCIMAPI.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (resp
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. | |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a group. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -1091,7 +1083,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/v2/users.
 let body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -1111,7 +1103,7 @@ SCIMAPI.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (respons
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a user. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -1251,7 +1243,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/groups.
 let body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.putScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -1271,7 +1263,7 @@ SCIMAPI.putScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups. | |
 | **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to replace a group. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -1308,7 +1300,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/users.
 let body: ScimV2User = new ScimV2User(...) // The information used to replace a user.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.putScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -1328,7 +1320,7 @@ SCIMAPI.putScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, e
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
 | **body** | [**ScimV2User**](ScimV2User.html)| The information used to replace a user. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -1364,7 +1356,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.
 let body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.putScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -1384,7 +1376,7 @@ SCIMAPI.putScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (respon
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. | |
 | **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to replace a group. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -1421,7 +1413,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/v2/users.
 let body: ScimV2User = new ScimV2User(...) // The information used to replace a user.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a scimType of \"invalidVers\".
+let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
 
 // Code example
 SCIMAPI.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in
@@ -1441,7 +1433,7 @@ SCIMAPI.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response,
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
 | **body** | [**ScimV2User**](ScimV2User.html)| The information used to replace a user. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. | [optional] |
+| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
 {: class="table-striped"}
 
 

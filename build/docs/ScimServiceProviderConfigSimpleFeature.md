@@ -2,13 +2,13 @@
 title: ScimServiceProviderConfigSimpleFeature
 ---
 ## ScimServiceProviderConfigSimpleFeature
-Configuration support.
+Configuration options.
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **supported** | **Bool** | Indicates if configuration options is supported. | [optional] |
+| **supported** | **Bool** | Indicates whether configuration options are supported. | [optional] |
 {: class="table table-striped"}
 
 

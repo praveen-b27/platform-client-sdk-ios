@@ -14,7 +14,7 @@ public class Manager: Codable {
 
     /** The ID of the manager. */
     public var value: String?
-    /** The URI of the manager&#39;s user record. */
+    /** The reference URI of the manager&#39;s user record. */
     public var ref: String?
 
     public init(value: String?, ref: String?) {

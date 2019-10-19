@@ -8,15 +8,15 @@
 import Foundation
 
 
-/** Bulk feature configuration */
+/** Bulk configuration options. */
 
 public class ScimServiceProviderConfigBulkFeature: Codable {
 
-    /** Indicates if configuration options is supported. */
+    /** Indicates whether configuration options are supported. */
     public var supported: Bool?
-    /** Maximum operations per bulk request. */
+    /** The maximum number of operations for each bulk request. */
     public var maxOperations: Int?
-    /** Maximum payload size. */
+    /** The maximum payload size. */
     public var maxPayloadSize: Int?
 
     public init(supported: Bool?, maxOperations: Int?, maxPayloadSize: Int?) {

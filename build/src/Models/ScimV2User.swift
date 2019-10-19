@@ -12,7 +12,7 @@ import Foundation
 
 public class ScimV2User: Codable {
 
-    /** The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always. */
+    /** The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;. */
     public var _id: String?
     /** The list of supported schemas. */
     public var schemas: [String]?
@@ -20,23 +20,23 @@ public class ScimV2User: Codable {
     public var active: Bool?
     /** The user&#39;s PureCloud email address. Must be unique. */
     public var userName: String?
-    /** The display name for the user. */
+    /** The display name of the user. */
     public var displayName: String?
-    /** A new password for a PureCloud user. Does not return an existing password. */
+    /** The new password for the PureCloud user. Does not return an existing password. */
     public var password: String?
     /** The user&#39;s title. */
     public var title: String?
-    /** A list of the user&#39;s phone numbers. */
+    /** The list of the user&#39;s phone numbers. */
     public var phoneNumbers: [ScimPhoneNumber]?
-    /** A list of the user&#39;s email addresses. */
+    /** The list of the user&#39;s email addresses. */
     public var emails: [ScimEmail]?
-    /** A list of the user&#39;s photos. */
+    /** The list of the user&#39;s photos. */
     public var photos: [Photo]?
-    /** The external ID of the user. Set by the provisioning client. caseExact is set to true. mutability is set to readWrite. */
+    /** The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;. */
     public var externalId: String?
-    /** A list of groups that the user is a member of. */
+    /** The list of groups that the user is a member of. */
     public var groups: [ScimV2GroupReference]?
-    /** A list of roles assigned to the user. */
+    /** The list of roles assigned to the user. */
     public var roles: [String]?
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
     /** Resource SCIM meta */

@@ -77,8 +77,10 @@ public class ReportingExportJobRequest: Codable {
     public var locale: String?
     /** Indicates if durations are formatted in hh:mm:ss format instead of ms */
     public var hasFormatDurations: Bool?
+    /** Indicates if filters will be split in aggregate detail exports */
+    public var hasSplitFilters: Bool?
 
-    public init(name: String?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?) {
+    public init(name: String?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?) {
         
         self.name = name
         
@@ -99,6 +101,8 @@ public class ReportingExportJobRequest: Codable {
         self.locale = locale
         
         self.hasFormatDurations = hasFormatDurations
+        
+        self.hasSplitFilters = hasSplitFilters
         
     }
 

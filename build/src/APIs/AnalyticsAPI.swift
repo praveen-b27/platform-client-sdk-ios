@@ -161,16 +161,18 @@ open class AnalyticsAPI {
   "conversationStart" : "2000-01-23T04:56:07.000+0000",
   "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
   "evaluations" : [ {
-    "evaluationId" : "aeiou",
     "formId" : "aeiou",
     "queueId" : "aeiou",
     "oTotalScore" : 123456789,
     "oTotalCriticalScore" : 123456789,
+    "contextId" : "aeiou",
+    "userId" : "aeiou",
+    "evaluationId" : "aeiou",
+    "deleted" : true,
     "formName" : "aeiou",
     "eventTime" : "2000-01-23T04:56:07.000+0000",
-    "contextId" : "aeiou",
+    "rescored" : true,
     "evaluatorId" : "aeiou",
-    "userId" : "aeiou",
     "calibrationId" : "aeiou"
   } ],
   "conversationId" : "aeiou",
@@ -392,16 +394,18 @@ open class AnalyticsAPI {
     "conversationStart" : "2000-01-23T04:56:07.000+0000",
     "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
     "evaluations" : [ {
-      "evaluationId" : "aeiou",
       "formId" : "aeiou",
       "queueId" : "aeiou",
       "oTotalScore" : 123456789,
       "oTotalCriticalScore" : 123456789,
+      "contextId" : "aeiou",
+      "userId" : "aeiou",
+      "evaluationId" : "aeiou",
+      "deleted" : true,
       "formName" : "aeiou",
       "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "contextId" : "aeiou",
+      "rescored" : true,
       "evaluatorId" : "aeiou",
-      "userId" : "aeiou",
       "calibrationId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
@@ -699,16 +703,18 @@ open class AnalyticsAPI {
     "conversationStart" : "2000-01-23T04:56:07.000+0000",
     "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
     "evaluations" : [ {
-      "evaluationId" : "aeiou",
       "formId" : "aeiou",
       "queueId" : "aeiou",
       "oTotalScore" : 123456789,
       "oTotalCriticalScore" : 123456789,
+      "contextId" : "aeiou",
+      "userId" : "aeiou",
+      "evaluationId" : "aeiou",
+      "deleted" : true,
       "formName" : "aeiou",
       "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "contextId" : "aeiou",
+      "rescored" : true,
       "evaluatorId" : "aeiou",
-      "userId" : "aeiou",
       "calibrationId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
@@ -1039,6 +1045,7 @@ open class AnalyticsAPI {
       "oauthClientIds" : [ "aeiou" ]
     },
     "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
+    "hasSplitFilters" : true,
     "name" : "aeiou",
     "viewType" : "aeiou",
     "interval" : "aeiou",
@@ -1052,8 +1059,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ReportingExportJobListing> 
@@ -1142,8 +1149,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1479,8 +1486,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter scheduleId: (path) Schedule ID 
@@ -1754,8 +1761,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -2100,16 +2107,18 @@ open class AnalyticsAPI {
     "conversationStart" : "2000-01-23T04:56:07.000+0000",
     "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
     "evaluations" : [ {
-      "evaluationId" : "aeiou",
       "formId" : "aeiou",
       "queueId" : "aeiou",
       "oTotalScore" : 123456789,
       "oTotalCriticalScore" : 123456789,
+      "contextId" : "aeiou",
+      "userId" : "aeiou",
+      "evaluationId" : "aeiou",
+      "deleted" : true,
       "formName" : "aeiou",
       "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "contextId" : "aeiou",
+      "rescored" : true,
       "evaluatorId" : "aeiou",
-      "userId" : "aeiou",
       "calibrationId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
@@ -2812,6 +2821,7 @@ open class AnalyticsAPI {
     "oauthClientIds" : [ "aeiou" ]
   },
   "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
+  "hasSplitFilters" : true,
   "name" : "aeiou",
   "viewType" : "aeiou",
   "interval" : "aeiou",

@@ -2,15 +2,15 @@
 title: ScimServiceProviderConfigBulkFeature
 ---
 ## ScimServiceProviderConfigBulkFeature
-Bulk feature configuration
+Bulk configuration options.
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **supported** | **Bool** | Indicates if configuration options is supported. | [optional] |
-| **maxOperations** | **Int** | Maximum operations per bulk request. | [optional] |
-| **maxPayloadSize** | **Int** | Maximum payload size. | [optional] |
+| **supported** | **Bool** | Indicates whether configuration options are supported. | [optional] |
+| **maxOperations** | **Int** | The maximum number of operations for each bulk request. | [optional] |
+| **maxPayloadSize** | **Int** | The maximum payload size. | [optional] |
 {: class="table table-striped"}
 
 

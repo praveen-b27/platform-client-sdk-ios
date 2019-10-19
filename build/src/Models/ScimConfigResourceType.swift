@@ -12,19 +12,19 @@ import Foundation
 
 public class ScimConfigResourceType: Codable {
 
-    /** The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always. */
+    /** The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;. */
     public var _id: String?
-    /** schemas supported */
+    /** The list of supported schemas. */
     public var schemas: [String]?
-    /** Resource name. */
+    /** The name of the resource type. */
     public var name: String?
-    /** Resource description. */
+    /** The description of the resource type. */
     public var _description: String?
-    /** The resource type&#39;s primary/base schema URI. */
+    /** The URI of the primary or base schema for the resource type. */
     public var schema: String?
-    /** Resource extension schemas */
+    /** The list of schema extensions for the resource type. */
     public var schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?
-    /** Resource HTTP endpoint. */
+    /** The HTTP-addressable endpoint of the resource type. Appears after the base URL. */
     public var endpoint: String?
     /** Resource SCIM meta */
     public var meta: ScimMetadata?

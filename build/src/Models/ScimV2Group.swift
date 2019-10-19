@@ -12,13 +12,13 @@ import Foundation
 
 public class ScimV2Group: Codable {
 
-    /** The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always. */
+    /** The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;. */
     public var _id: String?
     /** The list of supported schemas. */
     public var schemas: [String]?
-    /** The display name for the group. */
+    /** The display name of the group. */
     public var displayName: String?
-    /** A list of members in a SCIM group. */
+    /** The list of members in the group. */
     public var members: [ScimV2MemberReference]?
     /** Resource SCIM meta */
     public var meta: ScimMetadata?

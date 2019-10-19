@@ -8,8 +8,8 @@ Represents a SCIM V2 Patch Request (See RFC7644 for detailed usage)
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **schemas** | **[String]** | A list of schemas used in the patch request. | |
-| **operations** | [**[ScimV2PatchOperation]**](ScimV2PatchOperation.html) |  | [optional] |
+| **schemas** | **[String]** | The list of schemas used in the PATCH request. | |
+| **operations** | [**[ScimV2PatchOperation]**](ScimV2PatchOperation.html) | The list of operations to perform for the PATCH request. | [optional] |
 {: class="table table-striped"}
 
 

@@ -8,13 +8,13 @@
 import Foundation
 
 
-/** Filter support configuration. */
+/** \&quot;filter\&quot; configuration options. */
 
 public class ScimServiceProviderConfigFilterFeature: Codable {
 
-    /** Indicates if configuration options is supported. */
+    /** Indicates whether configuration options are supported. */
     public var supported: Bool?
-    /** Maximum results returned from filtered query. */
+    /** The maximum number of results returned from a filtered query. */
     public var maxResults: Int?
 
     public init(supported: Bool?, maxResults: Int?) {

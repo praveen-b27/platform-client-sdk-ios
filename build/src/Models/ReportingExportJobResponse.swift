@@ -112,10 +112,12 @@ public class ReportingExportJobResponse: Codable {
     public var percentageComplete: Double?
     /** Indicates if durations are formatted in hh:mm:ss format instead of ms */
     public var hasFormatDurations: Bool?
+    /** Indicates if filters will be split in aggregate detail exports */
+    public var hasSplitFilters: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, status: Status?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, status: Status?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -151,6 +153,8 @@ public class ReportingExportJobResponse: Codable {
         
         self.hasFormatDurations = hasFormatDurations
         
+        self.hasSplitFilters = hasSplitFilters
+        
         self.selfUri = selfUri
         
     }
@@ -173,6 +177,7 @@ public class ReportingExportJobResponse: Codable {
         case locale
         case percentageComplete
         case hasFormatDurations
+        case hasSplitFilters
         case selfUri
     }
 

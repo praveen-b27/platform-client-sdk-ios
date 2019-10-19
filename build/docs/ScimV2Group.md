@@ -8,10 +8,10 @@ SCIM version 2 Group
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | The ID of the SCIM resource. Set by the service provider. caseExact is set to true. Mutability is set to readOnly. Returned is set to always. | [optional] |
+| **_id** | **String** | The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;. | [optional] |
 | **schemas** | **[String]** | The list of supported schemas. | [optional] |
-| **displayName** | **String** | The display name for the group. | [optional] |
-| **members** | [**[ScimV2MemberReference]**](ScimV2MemberReference.html) | A list of members in a SCIM group. | [optional] |
+| **displayName** | **String** | The display name of the group. | [optional] |
+| **members** | [**[ScimV2MemberReference]**](ScimV2MemberReference.html) | The list of members in the group. | [optional] |
 | **meta** | [**ScimMetadata**](ScimMetadata.html) | Resource SCIM meta | [optional] |
 {: class="table table-striped"}
 

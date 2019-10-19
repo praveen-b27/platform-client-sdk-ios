@@ -8,11 +8,11 @@
 import Foundation
 
 
-/** Configuration support. */
+/** Configuration options. */
 
 public class ScimServiceProviderConfigSimpleFeature: Codable {
 
-    /** Indicates if configuration options is supported. */
+    /** Indicates whether configuration options are supported. */
     public var supported: Bool?
 
     public init(supported: Bool?) {

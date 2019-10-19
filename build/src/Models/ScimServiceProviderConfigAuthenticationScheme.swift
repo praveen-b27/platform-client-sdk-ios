@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Authentication Schema */
+/** Authentication schema. */
 
 public class ScimServiceProviderConfigAuthenticationScheme: Codable {
 
@@ -19,17 +19,17 @@ public class ScimServiceProviderConfigAuthenticationScheme: Codable {
         case httpbasic = "httpbasic"
         case httpdigest = "httpdigest"
     }
-    /** Name */
+    /** The name of the authentication scheme, for example, HTTP Basic. */
     public var name: String?
-    /** Description */
+    /** The description of the authentication scheme. */
     public var _description: String?
-    /** An HTTP-addressable URL pointing to the authentication scheme&#39;s specification. */
+    /** The HTTP-addressable URL that points to the authentication scheme&#39;s specification. */
     public var specUri: String?
-    /** An HTTP-addressable URL pointing to the authentication scheme&#39;s usage documentation */
+    /** The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation. */
     public var documentationUri: String?
-    /** The authentication type. */
+    /** The type of authentication scheme. */
     public var type: ModelType?
-    /** Indication of primary method of authentication. */
+    /** Indicates the primary method of authentication. */
     public var primary: Bool?
 
     public init(name: String?, _description: String?, specUri: String?, documentationUri: String?, type: ModelType?, primary: Bool?) {

@@ -18,9 +18,9 @@ public class ScimMetadata: Codable {
         case serviceProviderConfig = "ServiceProviderConfig"
         case resourceType = "ResourceType"
     }
-    /** The type of the resource. */
+    /** The type of SCIM resource. */
     public var resourceType: ResourceType?
-    /** The last time that the resource was modified. Time in ISO 6501 (UTC) format. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The last time that the resource was modified. Date time is represented as an ISO-8601 string, for example, yyyy-MM-ddTHH:mm:ss.SSSZ. */
     public var lastModified: Date?
     /** The URI of the resource. */
     public var location: String?

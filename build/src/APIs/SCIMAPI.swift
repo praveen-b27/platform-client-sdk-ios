@@ -20,7 +20,7 @@ open class SCIMAPI {
      Delete a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteScimUser(userId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
@@ -53,7 +53,7 @@ open class SCIMAPI {
      - examples: [{contentType=application/json, example={ }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<Empty> 
      */
@@ -91,7 +91,7 @@ open class SCIMAPI {
      Delete a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteScimV2User(userId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
@@ -124,7 +124,7 @@ open class SCIMAPI {
      - examples: [{contentType=application/json, example={ }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<Empty> 
      */
@@ -250,7 +250,7 @@ open class SCIMAPI {
      Get a list of groups
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
      - parameter filter: (query) Filters results. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -305,7 +305,7 @@ open class SCIMAPI {
 }}]
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
      - parameter filter: (query) Filters results. (optional)
 
      - returns: RequestBuilder<ScimGroupListResponse> 
@@ -349,9 +349,9 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM configuration
+     Get a resource type
      
-     - parameter resourceType: (path) The ID of a resource. 
+     - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/resourcetypes. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimResourcetype(resourceType: ResourceType_getScimResourcetype, completion: @escaping ((_ data: ScimConfigResourceType?,_ error: Error?) -> Void)) {
@@ -374,7 +374,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM configuration
+     Get a resource type
      
      - GET /api/v2/scim/resourcetypes/{resourceType}
      - 
@@ -397,7 +397,7 @@ open class SCIMAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter resourceType: (path) The ID of a resource. 
+     - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/resourcetypes. 
 
      - returns: RequestBuilder<ScimConfigResourceType> 
      */
@@ -422,17 +422,14 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
      
-     Get the SCIM resource types
+     Get a list of resource types
      
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScimResourcetypes(filter: String? = nil, completion: @escaping ((_ data: ScimConfigResourceTypesListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getScimResourcetypesWithRequestBuilder(filter: filter)
+    open class func getScimResourcetypes(completion: @escaping ((_ data: ScimConfigResourceTypesListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimResourcetypesWithRequestBuilder()
         requestBuilder.execute { (response: Response<ScimConfigResourceTypesListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -451,7 +448,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM resource types
+     Get a list of resource types
      
      - GET /api/v2/scim/resourcetypes
      - 
@@ -479,12 +476,10 @@ open class SCIMAPI {
     "id" : "aeiou"
   } ]
 }}]
-     
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
 
      - returns: RequestBuilder<ScimConfigResourceTypesListResponse> 
      */
-    open class func getScimResourcetypesWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimConfigResourceTypesListResponse> {
+    open class func getScimResourcetypesWithRequestBuilder() -> RequestBuilder<ScimConfigResourceTypesListResponse> {
         let path = "/api/v2/scim/resourcetypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -494,12 +489,7 @@ open class SCIMAPI {
         let body: Data? = nil
             
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "filter": filter
-            
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimConfigResourceTypesListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -511,9 +501,9 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM configuration
+     Get a service provider's configuration
      
-     - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
+     - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimServiceproviderconfig(ifNoneMatch: String? = nil, completion: @escaping ((_ data: ScimServiceProviderConfig?,_ error: Error?) -> Void)) {
@@ -536,7 +526,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM configuration
+     Get a service provider's configuration
      
      - GET /api/v2/scim/serviceproviderconfig
      - 
@@ -574,7 +564,7 @@ open class SCIMAPI {
   "changePassword" : ""
 }}]
      
-     - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
+     - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
 
      - returns: RequestBuilder<ScimServiceProviderConfig> 
      */
@@ -726,7 +716,7 @@ open class SCIMAPI {
      
      - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimUsers(filter: String, startIndex: Int? = nil, count: Int? = nil, completion: @escaping ((_ data: ScimUserListResponse?,_ error: Error?) -> Void)) {
@@ -809,7 +799,7 @@ open class SCIMAPI {
      
      - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
 
      - returns: RequestBuilder<ScimUserListResponse> 
      */
@@ -938,7 +928,7 @@ open class SCIMAPI {
      
      - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimV2Groups(filter: String, startIndex: Int? = nil, count: Int? = nil, completion: @escaping ((_ data: ScimGroupListResponse?,_ error: Error?) -> Void)) {
@@ -993,7 +983,7 @@ open class SCIMAPI {
      
      - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
 
      - returns: RequestBuilder<ScimGroupListResponse> 
      */
@@ -1036,9 +1026,9 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM configuration
+     Get a resource type
      
-     - parameter resourceType: (path) The ID of a resource. 
+     - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimV2Resourcetype(resourceType: ResourceType_getScimV2Resourcetype, completion: @escaping ((_ data: ScimConfigResourceType?,_ error: Error?) -> Void)) {
@@ -1061,7 +1051,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM configuration
+     Get a resource type
      
      - GET /api/v2/scim/v2/resourcetypes/{resourceType}
      - 
@@ -1084,7 +1074,7 @@ open class SCIMAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter resourceType: (path) The ID of a resource. 
+     - parameter resourceType: (path) The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. 
 
      - returns: RequestBuilder<ScimConfigResourceType> 
      */
@@ -1109,17 +1099,14 @@ open class SCIMAPI {
     }
 
     
-    
-    
     /**
      
-     Get the SCIM resource types
+     Get a list of resource types
      
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScimV2Resourcetypes(filter: String? = nil, completion: @escaping ((_ data: ScimConfigResourceTypesListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getScimV2ResourcetypesWithRequestBuilder(filter: filter)
+    open class func getScimV2Resourcetypes(completion: @escaping ((_ data: ScimConfigResourceTypesListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimV2ResourcetypesWithRequestBuilder()
         requestBuilder.execute { (response: Response<ScimConfigResourceTypesListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -1138,7 +1125,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM resource types
+     Get a list of resource types
      
      - GET /api/v2/scim/v2/resourcetypes
      - 
@@ -1166,12 +1153,10 @@ open class SCIMAPI {
     "id" : "aeiou"
   } ]
 }}]
-     
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
 
      - returns: RequestBuilder<ScimConfigResourceTypesListResponse> 
      */
-    open class func getScimV2ResourcetypesWithRequestBuilder(filter: String? = nil) -> RequestBuilder<ScimConfigResourceTypesListResponse> {
+    open class func getScimV2ResourcetypesWithRequestBuilder() -> RequestBuilder<ScimConfigResourceTypesListResponse> {
         let path = "/api/v2/scim/v2/resourcetypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1181,12 +1166,7 @@ open class SCIMAPI {
         let body: Data? = nil
             
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "filter": filter
-            
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimConfigResourceTypesListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1198,7 +1178,7 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM configuration
+     Get a service provider's configuration
      
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1223,7 +1203,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM configuration
+     Get a service provider's configuration
      
      - GET /api/v2/scim/v2/serviceproviderconfig
      - 
@@ -1413,7 +1393,7 @@ open class SCIMAPI {
      
      - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimV2Users(filter: String, startIndex: Int? = nil, count: Int? = nil, completion: @escaping ((_ data: ScimUserListResponse?,_ error: Error?) -> Void)) {
@@ -1496,7 +1476,7 @@ open class SCIMAPI {
      
      - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns totalResults. (optional, default to 25)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
 
      - returns: RequestBuilder<ScimUserListResponse> 
      */
@@ -1539,7 +1519,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to modify a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func patchScimGroup(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
@@ -1588,7 +1568,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to modify a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
      */
@@ -1626,7 +1606,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter body: (body) The information used to modify a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func patchScimUser(userId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
@@ -1703,7 +1683,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter body: (body) The information used to modify a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
      */
@@ -1741,7 +1721,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to modify a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func patchScimV2Group(groupId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
@@ -1790,7 +1770,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to modify a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
      */
@@ -1828,7 +1808,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter body: (body) The information used to modify a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func patchScimV2User(userId: String, body: ScimV2PatchRequest, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
@@ -1905,7 +1885,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter body: (body) The information used to modify a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
      */
@@ -2143,7 +2123,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to replace a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func putScimGroup(groupId: String, body: ScimV2Group, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
@@ -2192,7 +2172,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
      - parameter body: (body) The information used to replace a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
      */
@@ -2230,7 +2210,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter body: (body) The information used to replace a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func putScimUser(userId: String, body: ScimV2User, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
@@ -2307,7 +2287,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
      - parameter body: (body) The information used to replace a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
      */
@@ -2345,7 +2325,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to replace a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func putScimV2Group(groupId: String, body: ScimV2Group, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
@@ -2394,7 +2374,7 @@ open class SCIMAPI {
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
      - parameter body: (body) The information used to replace a group. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
      */
@@ -2432,7 +2412,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter body: (body) The information used to replace a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func putScimV2User(userId: String, body: ScimV2User, ifMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
@@ -2509,7 +2489,7 @@ open class SCIMAPI {
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
      - parameter body: (body) The information used to replace a user. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a scimType of \&quot;invalidVers\&quot;. (optional)
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
      */

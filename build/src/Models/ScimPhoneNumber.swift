@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM V2 ScimEmail */
+/** SCIM V2 phone number */
 
 public class ScimPhoneNumber: Codable {
 
@@ -21,7 +21,7 @@ public class ScimPhoneNumber: Codable {
         case mobile = "mobile"
         case other = "other"
     }
-    /** A phone number in E.164 format. */
+    /** The phone number in E.164 or tel URI format, for example, tel:+nnnnnnnn; ext=xxxxx. */
     public var value: String?
     /** The type of phone number. */
     public var type: ModelType?

@@ -18,9 +18,9 @@ public class ScimV2MemberReference: Codable {
         case serviceProviderConfig = "ServiceProviderConfig"
         case resourceType = "ResourceType"
     }
-    /** The SCIM resource type. Can be user or group. */
+    /** The type of SCIM resource. */
     public var type: ModelType?
-    /** The ID of the group member. Can be userId or groupId. */
+    /** The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;. */
     public var value: String?
     /** The reference URI of the SCIM resource. */
     public var ref: String?

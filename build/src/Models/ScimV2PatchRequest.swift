@@ -12,8 +12,9 @@ import Foundation
 
 public class ScimV2PatchRequest: Codable {
 
-    /** A list of schemas used in the patch request. */
+    /** The list of schemas used in the PATCH request. */
     public var schemas: [String]?
+    /** The list of operations to perform for the PATCH request. */
     public var operations: [ScimV2PatchOperation]?
 
     public init(schemas: [String]?, operations: [ScimV2PatchOperation]?) {

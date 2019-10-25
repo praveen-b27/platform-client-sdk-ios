@@ -19,6 +19,8 @@ public class UserDetailsQuery: Codable {
     public var interval: String?
     /** Filters that target the users to retrieve data for */
     public var userFilters: [UserDetailQueryFilter]?
+    /** Filters that target system and organization presence-level data */
+    public var presenceFilters: [PresenceDetailQueryFilter]?
     /** Filters that target agent routing status-level data */
     public var routingStatusFilters: [RoutingStatusDetailQueryFilter]?
     /** Sort the result set in ascending/descending order. Default is ascending */
@@ -29,13 +31,14 @@ public class UserDetailsQuery: Codable {
     public var routingStatusAggregations: [AnalyticsQueryAggregation]?
     /** Page size and number to control iterating through large result sets. Default page size is 25 */
     public var paging: PagingSpec?
-    public var presenceDetailFilters: [PresenceDetailQueryFilter]?
 
-    public init(interval: String?, userFilters: [UserDetailQueryFilter]?, routingStatusFilters: [RoutingStatusDetailQueryFilter]?, order: Order?, presenceAggregations: [AnalyticsQueryAggregation]?, routingStatusAggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?, presenceDetailFilters: [PresenceDetailQueryFilter]?) {
+    public init(interval: String?, userFilters: [UserDetailQueryFilter]?, presenceFilters: [PresenceDetailQueryFilter]?, routingStatusFilters: [RoutingStatusDetailQueryFilter]?, order: Order?, presenceAggregations: [AnalyticsQueryAggregation]?, routingStatusAggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?) {
         
         self.interval = interval
         
         self.userFilters = userFilters
+        
+        self.presenceFilters = presenceFilters
         
         self.routingStatusFilters = routingStatusFilters
         
@@ -46,8 +49,6 @@ public class UserDetailsQuery: Codable {
         self.routingStatusAggregations = routingStatusAggregations
         
         self.paging = paging
-        
-        self.presenceDetailFilters = presenceDetailFilters
         
     }
 

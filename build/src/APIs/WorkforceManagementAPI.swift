@@ -538,6 +538,10 @@ open class WorkforceManagementAPI {
         "severeAlertThresholdMinutes" : 123
       },
       "scheduling" : {
+        "planningPeriod" : {
+          "weekCount" : 123,
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        },
         "maxOccupancyPercentForDeferredWork" : 123,
         "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
         "shrinkageOverrides" : {
@@ -1001,6 +1005,10 @@ open class WorkforceManagementAPI {
       "severeAlertThresholdMinutes" : 123
     },
     "scheduling" : {
+      "planningPeriod" : {
+        "weekCount" : 123,
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      },
       "maxOccupancyPercentForDeferredWork" : 123,
       "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
       "shrinkageOverrides" : {
@@ -1975,6 +1983,10 @@ open class WorkforceManagementAPI {
     "severeAlertThresholdMinutes" : 123
   },
   "scheduling" : {
+    "planningPeriod" : {
+      "weekCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000"
+    },
     "maxOccupancyPercentForDeferredWork" : 123,
     "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
     "shrinkageOverrides" : {
@@ -3989,6 +4001,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maximumDaysOffPerPlanningPeriod" : 123,
   "optionalDays" : {
     "values" : [ "aeiou" ]
   },
@@ -4001,36 +4014,34 @@ open class WorkforceManagementAPI {
     "version" : 123
   },
   "flexibleWeeklyPaidTime" : true,
-  "maximumDays" : 123,
   "shiftStartVariances" : {
     "values" : [ {
       "applicableDays" : [ "aeiou" ],
       "maxShiftStartVarianceMinutes" : 123
     } ]
   },
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
   "constrainWeeklyPaidTime" : true,
-  "constrainPaidTimeGranularity" : true,
   "enabled" : true,
-  "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "delete" : true
-  } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
+  "minimumShiftStartDistanceMinutes" : 123,
+  "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
     "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "constrainDayOff" : true,
     "flexiblePaidTime" : true,
-    "constrainContiguousWorkTime" : true,
     "delete" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
     "constrainStopTime" : true,
     "latestStopTimeMinutesFromMidnight" : 123,
+    "id" : "aeiou",
+    "constrainEarliestStopTime" : true,
+    "exactStartTimeMinutesFromMidnight" : 123,
+    "dayOffRule" : "aeiou",
+    "startIncrementMinutes" : 123,
+    "constrainContiguousWorkTime" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 123,
+    "synchronizeAgentsSchedules" : true,
+    "earliestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
       "lengthMinutes" : 123,
@@ -4040,7 +4051,9 @@ open class WorkforceManagementAPI {
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "aeiou",
+      "minimumLengthFromShiftStartMinutes" : 123,
       "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 123,
       "exactStartTimeMinutes" : 123,
       "countsAsContiguousWorkTime" : true,
       "id" : "aeiou",
@@ -4049,7 +4062,7 @@ open class WorkforceManagementAPI {
     "maximumPaidTimeMinutes" : 123,
     "name" : "aeiou",
     "days" : "",
-    "id" : "aeiou",
+    "synchronizationType" : "aeiou",
     "minimumContiguousWorkTimeMinutes" : 123,
     "exactPaidTimeMinutes" : 123,
     "earliestStartTimeMinutesFromMidnight" : 123,
@@ -4059,7 +4072,26 @@ open class WorkforceManagementAPI {
   "weeklyMinimumPaidMinutes" : 123,
   "id" : "aeiou",
   "paidTimeGranularityMinutes" : 123,
-  "weeklyExactPaidMinutes" : 123
+  "maximumConsecutiveWorkingWeekends" : 123,
+  "weeklyExactPaidMinutes" : 123,
+  "minimumPaidHoursPerPlanningPeriod" : 123,
+  "maximumPaidHoursPerPlanningPeriod" : 123,
+  "maximumDays" : 123,
+  "minimumWorkingDaysPerWeek" : 123,
+  "selfUri" : "aeiou",
+  "minimumTimeBetweenShiftsMinutes" : 123,
+  "constrainPaidTimeGranularity" : true,
+  "agents" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "delete" : true
+  } ],
+  "weeklyMaximumPaidMinutes" : 123,
+  "name" : "aeiou",
+  "minimumDaysOffPerPlanningPeriod" : 123,
+  "minimumConsecutiveTimeOffPerWeekMinutes" : 123,
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "startDayOfWeekend" : "aeiou"
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -4138,6 +4170,7 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "maximumDaysOffPerPlanningPeriod" : 123,
     "optionalDays" : {
       "values" : [ "aeiou" ]
     },
@@ -4150,36 +4183,34 @@ open class WorkforceManagementAPI {
       "version" : 123
     },
     "flexibleWeeklyPaidTime" : true,
-    "maximumDays" : 123,
     "shiftStartVariances" : {
       "values" : [ {
         "applicableDays" : [ "aeiou" ],
         "maxShiftStartVarianceMinutes" : 123
       } ]
     },
-    "selfUri" : "aeiou",
-    "minimumTimeBetweenShiftsMinutes" : 123,
     "constrainWeeklyPaidTime" : true,
-    "constrainPaidTimeGranularity" : true,
     "enabled" : true,
-    "agents" : [ {
-      "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "delete" : true
-    } ],
-    "weeklyMaximumPaidMinutes" : 123,
-    "name" : "aeiou",
+    "minimumShiftStartDistanceMinutes" : 123,
+    "maximumConsecutiveWorkingDays" : 123,
     "constrainMinimumTimeBetweenShifts" : true,
     "shifts" : [ {
-      "exactStartTimeMinutesFromMidnight" : 123,
       "maximumContiguousWorkTimeMinutes" : 123,
-      "startIncrementMinutes" : 123,
+      "constrainDayOff" : true,
       "flexiblePaidTime" : true,
-      "constrainContiguousWorkTime" : true,
       "delete" : true,
-      "latestStartTimeMinutesFromMidnight" : 123,
       "constrainStopTime" : true,
       "latestStopTimeMinutesFromMidnight" : 123,
+      "id" : "aeiou",
+      "constrainEarliestStopTime" : true,
+      "exactStartTimeMinutesFromMidnight" : 123,
+      "dayOffRule" : "aeiou",
+      "startIncrementMinutes" : 123,
+      "constrainContiguousWorkTime" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 123,
+      "synchronizeAgentsSchedules" : true,
+      "earliestStopTimeMinutesFromMidnight" : 123,
       "activities" : [ {
         "startTimeIncrementMinutes" : 123,
         "lengthMinutes" : 123,
@@ -4189,7 +4220,9 @@ open class WorkforceManagementAPI {
         "countsAsPaidTime" : true,
         "delete" : true,
         "activityCodeId" : "aeiou",
+        "minimumLengthFromShiftStartMinutes" : 123,
         "startTimeIsRelativeToShiftStart" : true,
+        "minimumLengthFromShiftEndMinutes" : 123,
         "exactStartTimeMinutes" : 123,
         "countsAsContiguousWorkTime" : true,
         "id" : "aeiou",
@@ -4198,7 +4231,7 @@ open class WorkforceManagementAPI {
       "maximumPaidTimeMinutes" : 123,
       "name" : "aeiou",
       "days" : "",
-      "id" : "aeiou",
+      "synchronizationType" : "aeiou",
       "minimumContiguousWorkTimeMinutes" : 123,
       "exactPaidTimeMinutes" : 123,
       "earliestStartTimeMinutesFromMidnight" : 123,
@@ -4208,8 +4241,27 @@ open class WorkforceManagementAPI {
     "weeklyMinimumPaidMinutes" : 123,
     "id" : "aeiou",
     "paidTimeGranularityMinutes" : 123,
-    "agentCount" : 123,
-    "weeklyExactPaidMinutes" : 123
+    "maximumConsecutiveWorkingWeekends" : 123,
+    "weeklyExactPaidMinutes" : 123,
+    "minimumPaidHoursPerPlanningPeriod" : 123,
+    "maximumPaidHoursPerPlanningPeriod" : 123,
+    "maximumDays" : 123,
+    "minimumWorkingDaysPerWeek" : 123,
+    "selfUri" : "aeiou",
+    "minimumTimeBetweenShiftsMinutes" : 123,
+    "constrainPaidTimeGranularity" : true,
+    "agents" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "delete" : true
+    } ],
+    "weeklyMaximumPaidMinutes" : 123,
+    "name" : "aeiou",
+    "minimumDaysOffPerPlanningPeriod" : 123,
+    "minimumConsecutiveTimeOffPerWeekMinutes" : 123,
+    "constrainMaximumConsecutiveWorkingWeekends" : true,
+    "startDayOfWeekend" : "aeiou",
+    "agentCount" : 123
   } ]
 }}]
      
@@ -4370,6 +4422,10 @@ open class WorkforceManagementAPI {
         "severeAlertThresholdMinutes" : 123
       },
       "scheduling" : {
+        "planningPeriod" : {
+          "weekCount" : 123,
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        },
         "maxOccupancyPercentForDeferredWork" : 123,
         "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
         "shrinkageOverrides" : {
@@ -4530,6 +4586,10 @@ open class WorkforceManagementAPI {
         "severeAlertThresholdMinutes" : 123
       },
       "scheduling" : {
+        "planningPeriod" : {
+          "weekCount" : 123,
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        },
         "maxOccupancyPercentForDeferredWork" : 123,
         "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
         "shrinkageOverrides" : {
@@ -5567,6 +5627,10 @@ open class WorkforceManagementAPI {
       "severeAlertThresholdMinutes" : 123
     },
     "scheduling" : {
+      "planningPeriod" : {
+        "weekCount" : 123,
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      },
       "maxOccupancyPercentForDeferredWork" : 123,
       "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
       "shrinkageOverrides" : {
@@ -5966,6 +6030,10 @@ open class WorkforceManagementAPI {
     "severeAlertThresholdMinutes" : 123
   },
   "scheduling" : {
+    "planningPeriod" : {
+      "weekCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000"
+    },
     "maxOccupancyPercentForDeferredWork" : 123,
     "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
     "shrinkageOverrides" : {
@@ -6563,6 +6631,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maximumDaysOffPerPlanningPeriod" : 123,
   "optionalDays" : {
     "values" : [ "aeiou" ]
   },
@@ -6575,36 +6644,34 @@ open class WorkforceManagementAPI {
     "version" : 123
   },
   "flexibleWeeklyPaidTime" : true,
-  "maximumDays" : 123,
   "shiftStartVariances" : {
     "values" : [ {
       "applicableDays" : [ "aeiou" ],
       "maxShiftStartVarianceMinutes" : 123
     } ]
   },
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
   "constrainWeeklyPaidTime" : true,
-  "constrainPaidTimeGranularity" : true,
   "enabled" : true,
-  "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "delete" : true
-  } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
+  "minimumShiftStartDistanceMinutes" : 123,
+  "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
     "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "constrainDayOff" : true,
     "flexiblePaidTime" : true,
-    "constrainContiguousWorkTime" : true,
     "delete" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
     "constrainStopTime" : true,
     "latestStopTimeMinutesFromMidnight" : 123,
+    "id" : "aeiou",
+    "constrainEarliestStopTime" : true,
+    "exactStartTimeMinutesFromMidnight" : 123,
+    "dayOffRule" : "aeiou",
+    "startIncrementMinutes" : 123,
+    "constrainContiguousWorkTime" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 123,
+    "synchronizeAgentsSchedules" : true,
+    "earliestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
       "lengthMinutes" : 123,
@@ -6614,7 +6681,9 @@ open class WorkforceManagementAPI {
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "aeiou",
+      "minimumLengthFromShiftStartMinutes" : 123,
       "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 123,
       "exactStartTimeMinutes" : 123,
       "countsAsContiguousWorkTime" : true,
       "id" : "aeiou",
@@ -6623,7 +6692,7 @@ open class WorkforceManagementAPI {
     "maximumPaidTimeMinutes" : 123,
     "name" : "aeiou",
     "days" : "",
-    "id" : "aeiou",
+    "synchronizationType" : "aeiou",
     "minimumContiguousWorkTimeMinutes" : 123,
     "exactPaidTimeMinutes" : 123,
     "earliestStartTimeMinutesFromMidnight" : 123,
@@ -6633,7 +6702,26 @@ open class WorkforceManagementAPI {
   "weeklyMinimumPaidMinutes" : 123,
   "id" : "aeiou",
   "paidTimeGranularityMinutes" : 123,
-  "weeklyExactPaidMinutes" : 123
+  "maximumConsecutiveWorkingWeekends" : 123,
+  "weeklyExactPaidMinutes" : 123,
+  "minimumPaidHoursPerPlanningPeriod" : 123,
+  "maximumPaidHoursPerPlanningPeriod" : 123,
+  "maximumDays" : 123,
+  "minimumWorkingDaysPerWeek" : 123,
+  "selfUri" : "aeiou",
+  "minimumTimeBetweenShiftsMinutes" : 123,
+  "constrainPaidTimeGranularity" : true,
+  "agents" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "delete" : true
+  } ],
+  "weeklyMaximumPaidMinutes" : 123,
+  "name" : "aeiou",
+  "minimumDaysOffPerPlanningPeriod" : 123,
+  "minimumConsecutiveTimeOffPerWeekMinutes" : 123,
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "startDayOfWeekend" : "aeiou"
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -9765,6 +9853,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maximumDaysOffPerPlanningPeriod" : 123,
   "optionalDays" : {
     "values" : [ "aeiou" ]
   },
@@ -9777,36 +9866,34 @@ open class WorkforceManagementAPI {
     "version" : 123
   },
   "flexibleWeeklyPaidTime" : true,
-  "maximumDays" : 123,
   "shiftStartVariances" : {
     "values" : [ {
       "applicableDays" : [ "aeiou" ],
       "maxShiftStartVarianceMinutes" : 123
     } ]
   },
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
   "constrainWeeklyPaidTime" : true,
-  "constrainPaidTimeGranularity" : true,
   "enabled" : true,
-  "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "delete" : true
-  } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
+  "minimumShiftStartDistanceMinutes" : 123,
+  "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
     "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "constrainDayOff" : true,
     "flexiblePaidTime" : true,
-    "constrainContiguousWorkTime" : true,
     "delete" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
     "constrainStopTime" : true,
     "latestStopTimeMinutesFromMidnight" : 123,
+    "id" : "aeiou",
+    "constrainEarliestStopTime" : true,
+    "exactStartTimeMinutesFromMidnight" : 123,
+    "dayOffRule" : "aeiou",
+    "startIncrementMinutes" : 123,
+    "constrainContiguousWorkTime" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 123,
+    "synchronizeAgentsSchedules" : true,
+    "earliestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
       "lengthMinutes" : 123,
@@ -9816,7 +9903,9 @@ open class WorkforceManagementAPI {
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "aeiou",
+      "minimumLengthFromShiftStartMinutes" : 123,
       "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 123,
       "exactStartTimeMinutes" : 123,
       "countsAsContiguousWorkTime" : true,
       "id" : "aeiou",
@@ -9825,7 +9914,7 @@ open class WorkforceManagementAPI {
     "maximumPaidTimeMinutes" : 123,
     "name" : "aeiou",
     "days" : "",
-    "id" : "aeiou",
+    "synchronizationType" : "aeiou",
     "minimumContiguousWorkTimeMinutes" : 123,
     "exactPaidTimeMinutes" : 123,
     "earliestStartTimeMinutesFromMidnight" : 123,
@@ -9835,7 +9924,26 @@ open class WorkforceManagementAPI {
   "weeklyMinimumPaidMinutes" : 123,
   "id" : "aeiou",
   "paidTimeGranularityMinutes" : 123,
-  "weeklyExactPaidMinutes" : 123
+  "maximumConsecutiveWorkingWeekends" : 123,
+  "weeklyExactPaidMinutes" : 123,
+  "minimumPaidHoursPerPlanningPeriod" : 123,
+  "maximumPaidHoursPerPlanningPeriod" : 123,
+  "maximumDays" : 123,
+  "minimumWorkingDaysPerWeek" : 123,
+  "selfUri" : "aeiou",
+  "minimumTimeBetweenShiftsMinutes" : 123,
+  "constrainPaidTimeGranularity" : true,
+  "agents" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "delete" : true
+  } ],
+  "weeklyMaximumPaidMinutes" : 123,
+  "name" : "aeiou",
+  "minimumDaysOffPerPlanningPeriod" : 123,
+  "minimumConsecutiveTimeOffPerWeekMinutes" : 123,
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "startDayOfWeekend" : "aeiou"
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -9905,6 +10013,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maximumDaysOffPerPlanningPeriod" : 123,
   "optionalDays" : {
     "values" : [ "aeiou" ]
   },
@@ -9917,36 +10026,34 @@ open class WorkforceManagementAPI {
     "version" : 123
   },
   "flexibleWeeklyPaidTime" : true,
-  "maximumDays" : 123,
   "shiftStartVariances" : {
     "values" : [ {
       "applicableDays" : [ "aeiou" ],
       "maxShiftStartVarianceMinutes" : 123
     } ]
   },
-  "selfUri" : "aeiou",
-  "minimumTimeBetweenShiftsMinutes" : 123,
   "constrainWeeklyPaidTime" : true,
-  "constrainPaidTimeGranularity" : true,
   "enabled" : true,
-  "agents" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "delete" : true
-  } ],
-  "weeklyMaximumPaidMinutes" : 123,
-  "name" : "aeiou",
+  "minimumShiftStartDistanceMinutes" : 123,
+  "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
-    "exactStartTimeMinutesFromMidnight" : 123,
     "maximumContiguousWorkTimeMinutes" : 123,
-    "startIncrementMinutes" : 123,
+    "constrainDayOff" : true,
     "flexiblePaidTime" : true,
-    "constrainContiguousWorkTime" : true,
     "delete" : true,
-    "latestStartTimeMinutesFromMidnight" : 123,
     "constrainStopTime" : true,
     "latestStopTimeMinutesFromMidnight" : 123,
+    "id" : "aeiou",
+    "constrainEarliestStopTime" : true,
+    "exactStartTimeMinutesFromMidnight" : 123,
+    "dayOffRule" : "aeiou",
+    "startIncrementMinutes" : 123,
+    "constrainContiguousWorkTime" : true,
+    "constrainLatestStopTime" : true,
+    "latestStartTimeMinutesFromMidnight" : 123,
+    "synchronizeAgentsSchedules" : true,
+    "earliestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
       "lengthMinutes" : 123,
@@ -9956,7 +10063,9 @@ open class WorkforceManagementAPI {
       "countsAsPaidTime" : true,
       "delete" : true,
       "activityCodeId" : "aeiou",
+      "minimumLengthFromShiftStartMinutes" : 123,
       "startTimeIsRelativeToShiftStart" : true,
+      "minimumLengthFromShiftEndMinutes" : 123,
       "exactStartTimeMinutes" : 123,
       "countsAsContiguousWorkTime" : true,
       "id" : "aeiou",
@@ -9965,7 +10074,7 @@ open class WorkforceManagementAPI {
     "maximumPaidTimeMinutes" : 123,
     "name" : "aeiou",
     "days" : "",
-    "id" : "aeiou",
+    "synchronizationType" : "aeiou",
     "minimumContiguousWorkTimeMinutes" : 123,
     "exactPaidTimeMinutes" : 123,
     "earliestStartTimeMinutesFromMidnight" : 123,
@@ -9975,7 +10084,26 @@ open class WorkforceManagementAPI {
   "weeklyMinimumPaidMinutes" : 123,
   "id" : "aeiou",
   "paidTimeGranularityMinutes" : 123,
-  "weeklyExactPaidMinutes" : 123
+  "maximumConsecutiveWorkingWeekends" : 123,
+  "weeklyExactPaidMinutes" : 123,
+  "minimumPaidHoursPerPlanningPeriod" : 123,
+  "maximumPaidHoursPerPlanningPeriod" : 123,
+  "maximumDays" : 123,
+  "minimumWorkingDaysPerWeek" : 123,
+  "selfUri" : "aeiou",
+  "minimumTimeBetweenShiftsMinutes" : 123,
+  "constrainPaidTimeGranularity" : true,
+  "agents" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "delete" : true
+  } ],
+  "weeklyMaximumPaidMinutes" : 123,
+  "name" : "aeiou",
+  "minimumDaysOffPerPlanningPeriod" : 123,
+  "minimumConsecutiveTimeOffPerWeekMinutes" : 123,
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "startDayOfWeekend" : "aeiou"
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -10082,6 +10210,10 @@ open class WorkforceManagementAPI {
       "severeAlertThresholdMinutes" : 123
     },
     "scheduling" : {
+      "planningPeriod" : {
+        "weekCount" : 123,
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      },
       "maxOccupancyPercentForDeferredWork" : 123,
       "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
       "shrinkageOverrides" : {

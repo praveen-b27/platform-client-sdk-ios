@@ -12,6 +12,14 @@ import Foundation
 
 public class WorkPlanShift: Codable {
 
+    public enum SynchronizationType: String, Codable { 
+        case shiftStart = "ShiftStart"
+        case shiftStartAndPaidDuration = "ShiftStartAndPaidDuration"
+    }
+    public enum DayOffRule: String, Codable { 
+        case nextDayOff = "NextDayOff"
+        case previousDayOff = "PreviousDayOff"
+    }
     /** Name of the shift */
     public var name: String?
     /** Days of the week applicable for this shift */
@@ -26,8 +34,14 @@ public class WorkPlanShift: Codable {
     public var latestStartTimeMinutesFromMidnight: Int?
     /** Whether the latest stop time constraint for the shift is enabled */
     public var constrainStopTime: Bool?
+    /** Whether the latest stop time constraint for the shift is enabled */
+    public var constrainLatestStopTime: Bool?
     /** Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true */
     public var latestStopTimeMinutesFromMidnight: Int?
+    /** Whether the earliest stop time constraint for the shift is enabled */
+    public var constrainEarliestStopTime: Bool?
+    /** This is the earliest time a shift can end */
+    public var earliestStopTimeMinutesFromMidnight: Int?
     /** Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true */
     public var startIncrementMinutes: Int?
     /** Whether the paid time setting for the shift is flexible */
@@ -44,6 +58,14 @@ public class WorkPlanShift: Codable {
     public var minimumContiguousWorkTimeMinutes: Int?
     /** Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true */
     public var maximumContiguousWorkTimeMinutes: Int?
+    /** Whether synchronization for agent is enabled */
+    public var synchronizeAgentsSchedules: Bool?
+    /** This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true */
+    public var synchronizationType: SynchronizationType?
+    /** Whether day off rule is enabled */
+    public var constrainDayOff: Bool?
+    /** The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true */
+    public var dayOffRule: DayOffRule?
     /** Activities configured for this shift */
     public var activities: [WorkPlanActivity]?
     /** ID of the shift. This is required only for the case of updating an existing shift */
@@ -51,7 +73,7 @@ public class WorkPlanShift: Codable {
     /** If marked true for updating an existing shift, the shift will be permanently deleted */
     public var delete: Bool?
 
-    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [WorkPlanActivity]?, _id: String?, delete: Bool?) {
+    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, synchronizeAgentsSchedules: Bool?, synchronizationType: SynchronizationType?, constrainDayOff: Bool?, dayOffRule: DayOffRule?, activities: [WorkPlanActivity]?, _id: String?, delete: Bool?) {
         
         self.name = name
         
@@ -67,7 +89,13 @@ public class WorkPlanShift: Codable {
         
         self.constrainStopTime = constrainStopTime
         
+        self.constrainLatestStopTime = constrainLatestStopTime
+        
         self.latestStopTimeMinutesFromMidnight = latestStopTimeMinutesFromMidnight
+        
+        self.constrainEarliestStopTime = constrainEarliestStopTime
+        
+        self.earliestStopTimeMinutesFromMidnight = earliestStopTimeMinutesFromMidnight
         
         self.startIncrementMinutes = startIncrementMinutes
         
@@ -85,6 +113,14 @@ public class WorkPlanShift: Codable {
         
         self.maximumContiguousWorkTimeMinutes = maximumContiguousWorkTimeMinutes
         
+        self.synchronizeAgentsSchedules = synchronizeAgentsSchedules
+        
+        self.synchronizationType = synchronizationType
+        
+        self.constrainDayOff = constrainDayOff
+        
+        self.dayOffRule = dayOffRule
+        
         self.activities = activities
         
         self._id = _id
@@ -101,7 +137,10 @@ public class WorkPlanShift: Codable {
         case earliestStartTimeMinutesFromMidnight
         case latestStartTimeMinutesFromMidnight
         case constrainStopTime
+        case constrainLatestStopTime
         case latestStopTimeMinutesFromMidnight
+        case constrainEarliestStopTime
+        case earliestStopTimeMinutesFromMidnight
         case startIncrementMinutes
         case flexiblePaidTime
         case exactPaidTimeMinutes
@@ -110,6 +149,10 @@ public class WorkPlanShift: Codable {
         case constrainContiguousWorkTime
         case minimumContiguousWorkTimeMinutes
         case maximumContiguousWorkTimeMinutes
+        case synchronizeAgentsSchedules
+        case synchronizationType
+        case constrainDayOff
+        case dayOffRule
         case activities
         case _id = "id"
         case delete

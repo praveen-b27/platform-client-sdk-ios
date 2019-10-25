@@ -18,14 +18,18 @@ public class SchedulingSettings: Codable {
     public var defaultShrinkagePercent: Double?
     /** Shrinkage overrides for scheduling */
     public var shrinkageOverrides: ShrinkageOverrides?
+    /** Planning period settings for scheduling */
+    public var planningPeriod: PlanningPeriodSettings?
 
-    public init(maxOccupancyPercentForDeferredWork: Int?, defaultShrinkagePercent: Double?, shrinkageOverrides: ShrinkageOverrides?) {
+    public init(maxOccupancyPercentForDeferredWork: Int?, defaultShrinkagePercent: Double?, shrinkageOverrides: ShrinkageOverrides?, planningPeriod: PlanningPeriodSettings?) {
         
         self.maxOccupancyPercentForDeferredWork = maxOccupancyPercentForDeferredWork
         
         self.defaultShrinkagePercent = defaultShrinkagePercent
         
         self.shrinkageOverrides = shrinkageOverrides
+        
+        self.planningPeriod = planningPeriod
         
     }
 

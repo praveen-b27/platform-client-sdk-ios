@@ -84,7 +84,8 @@ open class IntegrationsAPI {
     } ],
     "category" : "aeiou",
     "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou"
+    "configAdvancedSchemaUri" : "aeiou",
+    "vendorOAuthClientIds" : [ "aeiou" ]
   },
   "notes" : "aeiou",
   "reportedState" : {
@@ -417,7 +418,8 @@ open class IntegrationsAPI {
     } ],
     "category" : "aeiou",
     "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou"
+    "configAdvancedSchemaUri" : "aeiou",
+    "vendorOAuthClientIds" : [ "aeiou" ]
   },
   "notes" : "aeiou",
   "reportedState" : {
@@ -694,7 +696,8 @@ open class IntegrationsAPI {
       } ],
       "category" : "aeiou",
       "maxInstances" : 123,
-      "configAdvancedSchemaUri" : "aeiou"
+      "configAdvancedSchemaUri" : "aeiou",
+      "vendorOAuthClientIds" : [ "aeiou" ]
     },
     "notes" : "aeiou",
     "reportedState" : {
@@ -2076,7 +2079,8 @@ open class IntegrationsAPI {
       } ],
       "category" : "aeiou",
       "maxInstances" : 123,
-      "configAdvancedSchemaUri" : "aeiou"
+      "configAdvancedSchemaUri" : "aeiou",
+      "vendorOAuthClientIds" : [ "aeiou" ]
     },
     "notes" : "aeiou",
     "reportedState" : {
@@ -2700,6 +2704,7 @@ open class IntegrationsAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -2711,6 +2716,12 @@ open class IntegrationsAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -2723,6 +2734,7 @@ open class IntegrationsAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -3038,6 +3050,7 @@ open class IntegrationsAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -3049,6 +3062,12 @@ open class IntegrationsAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -3061,6 +3080,7 @@ open class IntegrationsAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -4135,7 +4155,8 @@ open class IntegrationsAPI {
   } ],
   "category" : "aeiou",
   "maxInstances" : 123,
-  "configAdvancedSchemaUri" : "aeiou"
+  "configAdvancedSchemaUri" : "aeiou",
+  "vendorOAuthClientIds" : [ "aeiou" ]
 }}]
      
      - parameter typeId: (path) Integration Type Id 
@@ -4341,7 +4362,8 @@ open class IntegrationsAPI {
     } ],
     "category" : "aeiou",
     "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou"
+    "configAdvancedSchemaUri" : "aeiou",
+    "vendorOAuthClientIds" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -4487,7 +4509,8 @@ open class IntegrationsAPI {
     } ],
     "category" : "aeiou",
     "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou"
+    "configAdvancedSchemaUri" : "aeiou",
+    "vendorOAuthClientIds" : [ "aeiou" ]
   },
   "notes" : "aeiou",
   "reportedState" : {
@@ -4894,7 +4917,8 @@ open class IntegrationsAPI {
     } ],
     "category" : "aeiou",
     "maxInstances" : 123,
-    "configAdvancedSchemaUri" : "aeiou"
+    "configAdvancedSchemaUri" : "aeiou",
+    "vendorOAuthClientIds" : [ "aeiou" ]
   },
   "notes" : "aeiou",
   "reportedState" : {

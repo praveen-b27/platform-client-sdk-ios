@@ -1185,6 +1185,7 @@ open class UsersAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
+              "images" : "aeiou",
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -1196,6 +1197,12 @@ open class UsersAPI {
               },
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
+              "addressVerificationDetails" : {
+                "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                "service" : "smartystreets-us",
+                "status" : "aeiou"
+              },
               "selfUri" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
@@ -1208,6 +1215,7 @@ open class UsersAPI {
               },
               "version" : 123,
               "path" : [ "aeiou" ],
+              "addressStored" : true,
               "name" : "aeiou",
               "id" : "aeiou",
               "contactUser" : {
@@ -1579,6 +1587,7 @@ open class UsersAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "locations" : [ {
+      "images" : "aeiou",
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -1590,6 +1599,12 @@ open class UsersAPI {
       },
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
+      "addressVerificationDetails" : {
+        "dateStarted" : "2000-01-23T04:56:07.000+0000",
+        "dateFinished" : "2000-01-23T04:56:07.000+0000",
+        "service" : "smartystreets-us",
+        "status" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
@@ -1602,6 +1617,7 @@ open class UsersAPI {
       },
       "version" : 123,
       "path" : [ "aeiou" ],
+      "addressStored" : true,
       "name" : "aeiou",
       "id" : "aeiou",
       "contactUser" : {
@@ -1906,6 +1922,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1917,6 +1934,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -1929,6 +1952,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -2221,6 +2245,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -2232,6 +2257,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -2244,6 +2275,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -2540,6 +2572,7 @@ open class UsersAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "locations" : [ {
+      "images" : "aeiou",
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -2551,6 +2584,12 @@ open class UsersAPI {
       },
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
+      "addressVerificationDetails" : {
+        "dateStarted" : "2000-01-23T04:56:07.000+0000",
+        "dateFinished" : "2000-01-23T04:56:07.000+0000",
+        "service" : "smartystreets-us",
+        "status" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
@@ -2563,6 +2602,7 @@ open class UsersAPI {
       },
       "version" : 123,
       "path" : [ "aeiou" ],
+      "addressStored" : true,
       "name" : "aeiou",
       "id" : "aeiou",
       "contactUser" : {
@@ -3017,6 +3057,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -3028,6 +3069,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -3040,6 +3087,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -3150,6 +3198,7 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "locations" : [ {
+    "images" : "aeiou",
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -3161,6 +3210,12 @@ open class UsersAPI {
     },
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
+    "addressVerificationDetails" : {
+      "dateStarted" : "2000-01-23T04:56:07.000+0000",
+      "dateFinished" : "2000-01-23T04:56:07.000+0000",
+      "service" : "smartystreets-us",
+      "status" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
@@ -3173,6 +3228,7 @@ open class UsersAPI {
     },
     "version" : 123,
     "path" : [ "aeiou" ],
+    "addressStored" : true,
     "name" : "aeiou",
     "id" : "aeiou",
     "contactUser" : {
@@ -3443,6 +3499,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -3454,6 +3511,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -3466,6 +3529,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -3735,6 +3799,7 @@ open class UsersAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
+            "images" : "aeiou",
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -3746,6 +3811,12 @@ open class UsersAPI {
             },
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
+            "addressVerificationDetails" : {
+              "dateStarted" : "2000-01-23T04:56:07.000+0000",
+              "dateFinished" : "2000-01-23T04:56:07.000+0000",
+              "service" : "smartystreets-us",
+              "status" : "aeiou"
+            },
             "selfUri" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
@@ -3758,6 +3829,7 @@ open class UsersAPI {
             },
             "version" : 123,
             "path" : [ "aeiou" ],
+            "addressStored" : true,
             "name" : "aeiou",
             "id" : "aeiou",
             "contactUser" : {
@@ -4720,6 +4792,7 @@ open class UsersAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -4731,6 +4804,12 @@ open class UsersAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -4743,6 +4822,7 @@ open class UsersAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -5043,6 +5123,7 @@ open class UsersAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "locations" : [ {
+      "images" : "aeiou",
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -5054,6 +5135,12 @@ open class UsersAPI {
       },
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
+      "addressVerificationDetails" : {
+        "dateStarted" : "2000-01-23T04:56:07.000+0000",
+        "dateFinished" : "2000-01-23T04:56:07.000+0000",
+        "service" : "smartystreets-us",
+        "status" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
@@ -5066,6 +5153,7 @@ open class UsersAPI {
       },
       "version" : 123,
       "path" : [ "aeiou" ],
+      "addressStored" : true,
       "name" : "aeiou",
       "id" : "aeiou",
       "contactUser" : {
@@ -5364,6 +5452,7 @@ open class UsersAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
+            "images" : "aeiou",
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -5375,6 +5464,12 @@ open class UsersAPI {
             },
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
+            "addressVerificationDetails" : {
+              "dateStarted" : "2000-01-23T04:56:07.000+0000",
+              "dateFinished" : "2000-01-23T04:56:07.000+0000",
+              "service" : "smartystreets-us",
+              "status" : "aeiou"
+            },
             "selfUri" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
@@ -5387,6 +5482,7 @@ open class UsersAPI {
             },
             "version" : 123,
             "path" : [ "aeiou" ],
+            "addressStored" : true,
             "name" : "aeiou",
             "id" : "aeiou",
             "contactUser" : {
@@ -5778,6 +5874,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5789,6 +5886,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -5801,6 +5904,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -6125,6 +6229,7 @@ open class UsersAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "locations" : [ {
+      "images" : "aeiou",
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -6136,6 +6241,12 @@ open class UsersAPI {
       },
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
+      "addressVerificationDetails" : {
+        "dateStarted" : "2000-01-23T04:56:07.000+0000",
+        "dateFinished" : "2000-01-23T04:56:07.000+0000",
+        "service" : "smartystreets-us",
+        "status" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
@@ -6148,6 +6259,7 @@ open class UsersAPI {
       },
       "version" : 123,
       "path" : [ "aeiou" ],
+      "addressStored" : true,
       "name" : "aeiou",
       "id" : "aeiou",
       "contactUser" : {
@@ -6709,6 +6821,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6720,6 +6833,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -6732,6 +6851,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -7106,6 +7226,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -7117,6 +7238,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -7129,6 +7256,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -7408,6 +7536,7 @@ open class UsersAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "locations" : [ {
+      "images" : "aeiou",
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -7419,6 +7548,12 @@ open class UsersAPI {
       },
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
+      "addressVerificationDetails" : {
+        "dateStarted" : "2000-01-23T04:56:07.000+0000",
+        "dateFinished" : "2000-01-23T04:56:07.000+0000",
+        "service" : "smartystreets-us",
+        "status" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
@@ -7431,6 +7566,7 @@ open class UsersAPI {
       },
       "version" : 123,
       "path" : [ "aeiou" ],
+      "addressStored" : true,
       "name" : "aeiou",
       "id" : "aeiou",
       "contactUser" : {
@@ -7715,6 +7851,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -7726,6 +7863,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -7738,6 +7881,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -7829,6 +7973,7 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "locations" : [ {
+    "images" : "aeiou",
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -7840,6 +7985,12 @@ open class UsersAPI {
     },
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
+    "addressVerificationDetails" : {
+      "dateStarted" : "2000-01-23T04:56:07.000+0000",
+      "dateFinished" : "2000-01-23T04:56:07.000+0000",
+      "service" : "smartystreets-us",
+      "status" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
@@ -7852,6 +8003,7 @@ open class UsersAPI {
     },
     "version" : 123,
     "path" : [ "aeiou" ],
+    "addressStored" : true,
     "name" : "aeiou",
     "id" : "aeiou",
     "contactUser" : {
@@ -8742,6 +8894,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -8753,6 +8906,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -8765,6 +8924,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -9077,6 +9237,127 @@ open class UsersAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Bulk-grant roles and divisions to a subject.
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) Pairs of role and division IDs 
+     - parameter subjectType: (query) what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationSubjectBulkadd(subjectId: String, body: RoleDivisionGrants, subjectType: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationSubjectBulkaddWithRequestBuilder(subjectId: subjectId, body: body, subjectType: subjectType)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Bulk-grant roles and divisions to a subject.
+     
+     - POST /api/v2/authorization/subjects/{subjectId}/bulkadd
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) Pairs of role and division IDs 
+     - parameter subjectType: (query) what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postAuthorizationSubjectBulkaddWithRequestBuilder(subjectId: String, body: RoleDivisionGrants, subjectType: String? = nil) -> RequestBuilder<Void> {
+        var path = "/api/v2/authorization/subjects/{subjectId}/bulkadd"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "subjectType": subjectType
+            
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Bulk-remove grants from a subject.
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) Pairs of role and division IDs 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationSubjectBulkremove(subjectId: String, body: RoleDivisionGrants, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationSubjectBulkremoveWithRequestBuilder(subjectId: subjectId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Bulk-remove grants from a subject.
+     
+     - POST /api/v2/authorization/subjects/{subjectId}/bulkremove
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) Pairs of role and division IDs 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postAuthorizationSubjectBulkremoveWithRequestBuilder(subjectId: String, body: RoleDivisionGrants) -> RequestBuilder<Void> {
+        var path = "/api/v2/authorization/subjects/{subjectId}/bulkremove"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -9718,6 +9999,7 @@ open class UsersAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "locations" : [ {
+      "images" : "aeiou",
       "address" : {
         "zipcode" : "aeiou",
         "country" : "aeiou",
@@ -9729,6 +10011,12 @@ open class UsersAPI {
       },
       "notes" : "aeiou",
       "floorplanImage" : [ "" ],
+      "addressVerificationDetails" : {
+        "dateStarted" : "2000-01-23T04:56:07.000+0000",
+        "dateFinished" : "2000-01-23T04:56:07.000+0000",
+        "service" : "smartystreets-us",
+        "status" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "profileImage" : [ {
         "imageUri" : "aeiou",
@@ -9741,6 +10029,7 @@ open class UsersAPI {
       },
       "version" : 123,
       "path" : [ "aeiou" ],
+      "addressStored" : true,
       "name" : "aeiou",
       "id" : "aeiou",
       "contactUser" : {
@@ -10063,6 +10352,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -10074,6 +10364,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -10086,6 +10382,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -10367,6 +10664,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -10378,6 +10676,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -10390,6 +10694,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -10660,6 +10965,7 @@ open class UsersAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -10671,6 +10977,12 @@ open class UsersAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -10683,6 +10995,7 @@ open class UsersAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {

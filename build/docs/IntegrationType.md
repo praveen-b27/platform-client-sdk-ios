@@ -30,6 +30,7 @@ Descriptor for a type of Integration.
 | **nonInstallable** | **Bool** | Indicates if the integration type is installable or not. | [optional] |
 | **maxInstances** | **Int** | The maximum number of integration instances allowable for this integration type | [optional] |
 | **userPermissions** | **[String]** | List of permissions required to permit user access to the integration type. | [optional] |
+| **vendorOAuthClientIds** | **[String]** | List of OAuth Client IDs that must be authorized when the integration is created. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -593,17 +593,83 @@ open class SCIMAPI {
     
     
     
+    public enum Attributes_getScimUser: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
+    public enum ExcludedAttributes_getScimUser: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
     
     /**
      
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScimUser(userId: String, ifNoneMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
-        let requestBuilder = getScimUserWithRequestBuilder(userId: userId, ifNoneMatch: ifNoneMatch)
+    open class func getScimUser(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimUserWithRequestBuilder(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch)
         requestBuilder.execute { (response: Response<ScimV2User>?, error) -> Void in
             do {
                 if let e = error {
@@ -675,11 +741,13 @@ open class SCIMAPI {
 }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func getScimUserWithRequestBuilder(userId: String, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func getScimUserWithRequestBuilder(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {
         var path = "/api/v2/scim/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -692,7 +760,14 @@ open class SCIMAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "attributes": attributes, 
+            
+            "excludedAttributes": excludedAttributes
+            
+        ])
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
         ]
@@ -709,18 +784,84 @@ open class SCIMAPI {
     
     
     
+    public enum Attributes_getScimUsers: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
+    public enum ExcludedAttributes_getScimUsers: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
     
     /**
      
      Get a list of users
      
-     - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScimUsers(filter: String, startIndex: Int? = nil, count: Int? = nil, completion: @escaping ((_ data: ScimUserListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getScimUsersWithRequestBuilder(filter: filter, startIndex: startIndex, count: count)
+    open class func getScimUsers(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil, completion: @escaping ((_ data: ScimUserListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimUsersWithRequestBuilder(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter)
         requestBuilder.execute { (response: Response<ScimUserListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -742,7 +883,7 @@ open class SCIMAPI {
      Get a list of users
      
      - GET /api/v2/scim/users
-     - 
+     - To return all active users, do not use a filter parameter. To return inactive users, set \"filter\" to \"active eq false\". By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \"attributes\" to \"id,active\" or \"excludeAttributes\" to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -797,13 +938,15 @@ open class SCIMAPI {
   } ]
 }}]
      
-     - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
 
      - returns: RequestBuilder<ScimUserListResponse> 
      */
-    open class func getScimUsersWithRequestBuilder(filter: String, startIndex: Int? = nil, count: Int? = nil) -> RequestBuilder<ScimUserListResponse> {
+    open class func getScimUsersWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimUserListResponse> {
         let path = "/api/v2/scim/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -819,6 +962,10 @@ open class SCIMAPI {
             "startIndex": startIndex?.encodeToJSON(), 
             
             "count": count?.encodeToJSON(), 
+            
+            "attributes": attributes, 
+            
+            "excludedAttributes": excludedAttributes, 
             
             "filter": filter
             
@@ -1270,17 +1417,83 @@ open class SCIMAPI {
     
     
     
+    public enum Attributes_getScimV2User: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
+    public enum ExcludedAttributes_getScimV2User: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
     
     /**
      
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScimV2User(userId: String, ifNoneMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
-        let requestBuilder = getScimV2UserWithRequestBuilder(userId: userId, ifNoneMatch: ifNoneMatch)
+    open class func getScimV2User(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil, completion: @escaping ((_ data: ScimV2User?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimV2UserWithRequestBuilder(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch)
         requestBuilder.execute { (response: Response<ScimV2User>?, error) -> Void in
             do {
                 if let e = error {
@@ -1352,11 +1565,13 @@ open class SCIMAPI {
 }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
      */
-    open class func getScimV2UserWithRequestBuilder(userId: String, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {
+    open class func getScimV2UserWithRequestBuilder(userId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil) -> RequestBuilder<ScimV2User> {
         var path = "/api/v2/scim/v2/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1369,7 +1584,14 @@ open class SCIMAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "attributes": attributes, 
+            
+            "excludedAttributes": excludedAttributes
+            
+        ])
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
         ]
@@ -1386,18 +1608,84 @@ open class SCIMAPI {
     
     
     
+    public enum Attributes_getScimV2Users: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
+    public enum ExcludedAttributes_getScimV2Users: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case photos = "photos"
+        case groups = "groups"
+        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserPhotos = "urn:ietf:params:scim:schemas:core:2.0:User:photos"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+    }
+
+    
+    
+    
     
     /**
      
      Get a list of users
      
-     - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getScimV2Users(filter: String, startIndex: Int? = nil, count: Int? = nil, completion: @escaping ((_ data: ScimUserListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getScimV2UsersWithRequestBuilder(filter: filter, startIndex: startIndex, count: count)
+    open class func getScimV2Users(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil, completion: @escaping ((_ data: ScimUserListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getScimV2UsersWithRequestBuilder(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter)
         requestBuilder.execute { (response: Response<ScimUserListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -1419,7 +1707,7 @@ open class SCIMAPI {
      Get a list of users
      
      - GET /api/v2/scim/v2/users
-     - 
+     - To return all active users, do not use a filter parameter. To return inactive users, set \"filter\" to \"active eq false\". By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \"attributes\" to \"id,active\" or \"excludeAttributes\" to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1474,13 +1762,15 @@ open class SCIMAPI {
   } ]
 }}]
      
-     - parameter filter: (query) Filters results. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
 
      - returns: RequestBuilder<ScimUserListResponse> 
      */
-    open class func getScimV2UsersWithRequestBuilder(filter: String, startIndex: Int? = nil, count: Int? = nil) -> RequestBuilder<ScimUserListResponse> {
+    open class func getScimV2UsersWithRequestBuilder(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil) -> RequestBuilder<ScimUserListResponse> {
         let path = "/api/v2/scim/v2/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1496,6 +1786,10 @@ open class SCIMAPI {
             "startIndex": startIndex?.encodeToJSON(), 
             
             "count": count?.encodeToJSON(), 
+            
+            "attributes": attributes, 
+            
+            "excludedAttributes": excludedAttributes, 
             
             "filter": filter
             

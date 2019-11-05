@@ -15,9 +15,9 @@ public class WfmForecastModificationIntervalOffsetValue: Codable {
     /** The number of 15 minute intervals past referenceStartDate to which to apply this modification */
     public var intervalIndex: Int?
     /** The value to set for the given interval */
-    public var value: Int?
+    public var value: Double?
 
-    public init(intervalIndex: Int?, value: Int?) {
+    public init(intervalIndex: Int?, value: Double?) {
         
         self.intervalIndex = intervalIndex
         

@@ -819,6 +819,7 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
+                "images" : "aeiou",
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -830,6 +831,12 @@ open class VoicemailAPI {
                 },
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
+                "addressVerificationDetails" : {
+                  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                  "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                  "service" : "smartystreets-us",
+                  "status" : "aeiou"
+                },
                 "selfUri" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
@@ -842,6 +849,7 @@ open class VoicemailAPI {
                 },
                 "version" : 123,
                 "path" : [ "aeiou" ],
+                "addressStored" : true,
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "contactUser" : "",
@@ -1325,6 +1333,7 @@ open class VoicemailAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -1336,6 +1345,12 @@ open class VoicemailAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -1348,6 +1363,7 @@ open class VoicemailAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -2155,6 +2171,7 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
+                "images" : "aeiou",
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -2166,6 +2183,12 @@ open class VoicemailAPI {
                 },
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
+                "addressVerificationDetails" : {
+                  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                  "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                  "service" : "smartystreets-us",
+                  "status" : "aeiou"
+                },
                 "selfUri" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
@@ -2178,6 +2201,7 @@ open class VoicemailAPI {
                 },
                 "version" : 123,
                 "path" : [ "aeiou" ],
+                "addressStored" : true,
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "contactUser" : "",
@@ -3126,6 +3150,7 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
+              "images" : "aeiou",
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -3137,6 +3162,12 @@ open class VoicemailAPI {
               },
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
+              "addressVerificationDetails" : {
+                "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                "service" : "smartystreets-us",
+                "status" : "aeiou"
+              },
               "selfUri" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
@@ -3149,6 +3180,7 @@ open class VoicemailAPI {
               },
               "version" : 123,
               "path" : [ "aeiou" ],
+              "addressStored" : true,
               "name" : "aeiou",
               "id" : "aeiou",
               "contactUser" : "",
@@ -4123,6 +4155,7 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
+                "images" : "aeiou",
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -4134,6 +4167,12 @@ open class VoicemailAPI {
                 },
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
+                "addressVerificationDetails" : {
+                  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                  "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                  "service" : "smartystreets-us",
+                  "status" : "aeiou"
+                },
                 "selfUri" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
@@ -4146,6 +4185,7 @@ open class VoicemailAPI {
                 },
                 "version" : 123,
                 "path" : [ "aeiou" ],
+                "addressStored" : true,
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "contactUser" : "",
@@ -5098,6 +5138,7 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
+                "images" : "aeiou",
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -5109,6 +5150,12 @@ open class VoicemailAPI {
                 },
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
+                "addressVerificationDetails" : {
+                  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                  "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                  "service" : "smartystreets-us",
+                  "status" : "aeiou"
+                },
                 "selfUri" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
@@ -5121,6 +5168,7 @@ open class VoicemailAPI {
                 },
                 "version" : 123,
                 "path" : [ "aeiou" ],
+                "addressStored" : true,
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "contactUser" : "",
@@ -6013,6 +6061,7 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
+                "images" : "aeiou",
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -6024,6 +6073,12 @@ open class VoicemailAPI {
                 },
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
+                "addressVerificationDetails" : {
+                  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                  "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                  "service" : "smartystreets-us",
+                  "status" : "aeiou"
+                },
                 "selfUri" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
@@ -6036,6 +6091,7 @@ open class VoicemailAPI {
                 },
                 "version" : 123,
                 "path" : [ "aeiou" ],
+                "addressStored" : true,
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "contactUser" : "",
@@ -6580,6 +6636,7 @@ open class VoicemailAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -6591,6 +6648,12 @@ open class VoicemailAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -6603,6 +6666,7 @@ open class VoicemailAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -7342,6 +7406,7 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
+              "images" : "aeiou",
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -7353,6 +7418,12 @@ open class VoicemailAPI {
               },
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
+              "addressVerificationDetails" : {
+                "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                "service" : "smartystreets-us",
+                "status" : "aeiou"
+              },
               "selfUri" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
@@ -7365,6 +7436,7 @@ open class VoicemailAPI {
               },
               "version" : 123,
               "path" : [ "aeiou" ],
+              "addressStored" : true,
               "name" : "aeiou",
               "id" : "aeiou",
               "contactUser" : "",
@@ -8296,6 +8368,7 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
+              "images" : "aeiou",
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -8307,6 +8380,12 @@ open class VoicemailAPI {
               },
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
+              "addressVerificationDetails" : {
+                "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                "service" : "smartystreets-us",
+                "status" : "aeiou"
+              },
               "selfUri" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
@@ -8319,6 +8398,7 @@ open class VoicemailAPI {
               },
               "version" : 123,
               "path" : [ "aeiou" ],
+              "addressStored" : true,
               "name" : "aeiou",
               "id" : "aeiou",
               "contactUser" : "",
@@ -9186,6 +9266,7 @@ open class VoicemailAPI {
               "selfUri" : "aeiou",
               "name" : "aeiou",
               "locations" : [ {
+                "images" : "aeiou",
                 "address" : {
                   "zipcode" : "aeiou",
                   "country" : "aeiou",
@@ -9197,6 +9278,12 @@ open class VoicemailAPI {
                 },
                 "notes" : "aeiou",
                 "floorplanImage" : [ "" ],
+                "addressVerificationDetails" : {
+                  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                  "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                  "service" : "smartystreets-us",
+                  "status" : "aeiou"
+                },
                 "selfUri" : "aeiou",
                 "profileImage" : [ {
                   "imageUri" : "aeiou",
@@ -9209,6 +9296,7 @@ open class VoicemailAPI {
                 },
                 "version" : 123,
                 "path" : [ "aeiou" ],
+                "addressStored" : true,
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "contactUser" : "",
@@ -10071,6 +10159,7 @@ open class VoicemailAPI {
             "selfUri" : "aeiou",
             "name" : "aeiou",
             "locations" : [ {
+              "images" : "aeiou",
               "address" : {
                 "zipcode" : "aeiou",
                 "country" : "aeiou",
@@ -10082,6 +10171,12 @@ open class VoicemailAPI {
               },
               "notes" : "aeiou",
               "floorplanImage" : [ "" ],
+              "addressVerificationDetails" : {
+                "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                "service" : "smartystreets-us",
+                "status" : "aeiou"
+              },
               "selfUri" : "aeiou",
               "profileImage" : [ {
                 "imageUri" : "aeiou",
@@ -10094,6 +10189,7 @@ open class VoicemailAPI {
               },
               "version" : 123,
               "path" : [ "aeiou" ],
+              "addressStored" : true,
               "name" : "aeiou",
               "id" : "aeiou",
               "contactUser" : "",

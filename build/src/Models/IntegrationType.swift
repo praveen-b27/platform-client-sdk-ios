@@ -55,10 +55,12 @@ public class IntegrationType: Codable {
     public var maxInstances: Int?
     /** List of permissions required to permit user access to the integration type. */
     public var userPermissions: [String]?
+    /** List of OAuth Client IDs that must be authorized when the integration is created. */
+    public var vendorOAuthClientIds: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, provider: String?, category: String?, images: [UserImage]?, configPropertiesSchemaUri: String?, configAdvancedSchemaUri: String?, helpUri: String?, termsOfServiceUri: String?, vendorName: String?, vendorWebsiteUri: String?, marketplaceUri: String?, faqUri: String?, privacyPolicyUri: String?, supportContactUri: String?, salesContactUri: String?, helpLinks: [HelpLink]?, credentials: [String:CredentialSpecification]?, nonInstallable: Bool?, maxInstances: Int?, userPermissions: [String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, provider: String?, category: String?, images: [UserImage]?, configPropertiesSchemaUri: String?, configAdvancedSchemaUri: String?, helpUri: String?, termsOfServiceUri: String?, vendorName: String?, vendorWebsiteUri: String?, marketplaceUri: String?, faqUri: String?, privacyPolicyUri: String?, supportContactUri: String?, salesContactUri: String?, helpLinks: [HelpLink]?, credentials: [String:CredentialSpecification]?, nonInstallable: Bool?, maxInstances: Int?, userPermissions: [String]?, vendorOAuthClientIds: [String]?, selfUri: String?) {
         
         self._id = _id
         
@@ -104,6 +106,8 @@ public class IntegrationType: Codable {
         
         self.userPermissions = userPermissions
         
+        self.vendorOAuthClientIds = vendorOAuthClientIds
+        
         self.selfUri = selfUri
         
     }
@@ -131,6 +135,7 @@ public class IntegrationType: Codable {
         case nonInstallable
         case maxInstances
         case userPermissions
+        case vendorOAuthClientIds
         case selfUri
     }
 

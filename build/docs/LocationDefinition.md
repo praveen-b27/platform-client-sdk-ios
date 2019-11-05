@@ -8,17 +8,20 @@ title: LocationDefinition
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **name** | **String** | The name of the Location. | |
-| **contactUser** | [**AddressableEntityRef**](AddressableEntityRef.html) | Site contact for the location | [optional] |
-| **emergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) |  | [optional] |
+| **name** | **String** |  | [optional] |
+| **contactUser** | [**AddressableEntityRef**](AddressableEntityRef.html) | Site contact for the location entity | [optional] |
+| **emergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) | Emergency number for the location entity | [optional] |
 | **address** | [**LocationAddress**](LocationAddress.html) |  | [optional] |
-| **addressVerified** | **Bool** |  | [optional] |
-| **state** | **String** | Current activity status of the location. | [optional] |
-| **notes** | **String** |  | [optional] |
-| **version** | **Int** |  | [optional] |
+| **state** | **String** | Current state of the location entity | [optional] |
+| **notes** | **String** | Notes for the location entity | [optional] |
+| **version** | **Int** | Current version of the location entity, value to be supplied should be retrieved by a GET or on create/update response | [optional] |
 | **path** | **[String]** | A list of ancestor IDs in order | [optional] |
-| **profileImage** | [**[LocationImage]**](LocationImage.html) | Profile image set for the location | [optional] |
-| **floorplanImage** | [**[LocationImage]**](LocationImage.html) |  | [optional] |
+| **profileImage** | [**[LocationImage]**](LocationImage.html) | Profile image of the location entity, retrieved with ?expand=images query parameter | [optional] |
+| **floorplanImage** | [**[LocationImage]**](LocationImage.html) | Floorplan images of the location entity, retrieved with ?expand=images query parameter | [optional] |
+| **addressVerificationDetails** | [**LocationAddressVerificationDetails**](LocationAddressVerificationDetails.html) | Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter | [optional] |
+| **addressVerified** | **Bool** | Boolean field which states if the address has been verified as an actual address | [optional] |
+| **addressStored** | **Bool** | Boolean field which states if the address has been stored for E911 | [optional] |
+| **images** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

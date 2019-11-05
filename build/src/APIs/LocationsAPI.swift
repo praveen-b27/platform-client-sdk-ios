@@ -71,6 +71,7 @@ open class LocationsAPI {
     
     public enum Expand_getLocation: String { 
         case images = "images"
+        case addressverificationdetails = "addressVerificationDetails"
     }
 
     
@@ -111,6 +112,7 @@ open class LocationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "images" : "aeiou",
   "address" : {
     "zipcode" : "aeiou",
     "country" : "aeiou",
@@ -122,6 +124,12 @@ open class LocationsAPI {
   },
   "notes" : "aeiou",
   "floorplanImage" : [ "" ],
+  "addressVerificationDetails" : {
+    "dateStarted" : "2000-01-23T04:56:07.000+0000",
+    "dateFinished" : "2000-01-23T04:56:07.000+0000",
+    "service" : "smartystreets-us",
+    "status" : "aeiou"
+  },
   "selfUri" : "aeiou",
   "profileImage" : [ {
     "imageUri" : "aeiou",
@@ -134,6 +142,7 @@ open class LocationsAPI {
   },
   "version" : 123,
   "path" : [ "aeiou" ],
+  "addressStored" : true,
   "name" : "aeiou",
   "id" : "aeiou",
   "contactUser" : {
@@ -216,6 +225,7 @@ open class LocationsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "images" : "aeiou",
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -227,6 +237,12 @@ open class LocationsAPI {
     },
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
+    "addressVerificationDetails" : {
+      "dateStarted" : "2000-01-23T04:56:07.000+0000",
+      "dateFinished" : "2000-01-23T04:56:07.000+0000",
+      "service" : "smartystreets-us",
+      "status" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
@@ -239,6 +255,7 @@ open class LocationsAPI {
     },
     "version" : 123,
     "path" : [ "aeiou" ],
+    "addressStored" : true,
     "name" : "aeiou",
     "id" : "aeiou",
     "contactUser" : {
@@ -337,6 +354,7 @@ open class LocationsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "images" : "aeiou",
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -348,6 +366,12 @@ open class LocationsAPI {
     },
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
+    "addressVerificationDetails" : {
+      "dateStarted" : "2000-01-23T04:56:07.000+0000",
+      "dateFinished" : "2000-01-23T04:56:07.000+0000",
+      "service" : "smartystreets-us",
+      "status" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
@@ -360,6 +384,7 @@ open class LocationsAPI {
     },
     "version" : 123,
     "path" : [ "aeiou" ],
+    "addressStored" : true,
     "name" : "aeiou",
     "id" : "aeiou",
     "contactUser" : {
@@ -418,6 +443,7 @@ open class LocationsAPI {
     
     public enum Expand_getLocationsSearch: String { 
         case images = "images"
+        case addressverificationdetails = "addressVerificationDetails"
     }
 
     
@@ -467,6 +493,7 @@ open class LocationsAPI {
   "pageSize" : 123,
   "currentPage" : "aeiou",
   "results" : [ {
+    "images" : "aeiou",
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -478,6 +505,12 @@ open class LocationsAPI {
     },
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
+    "addressVerificationDetails" : {
+      "dateStarted" : "2000-01-23T04:56:07.000+0000",
+      "dateFinished" : "2000-01-23T04:56:07.000+0000",
+      "service" : "smartystreets-us",
+      "status" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
@@ -490,6 +523,7 @@ open class LocationsAPI {
     },
     "version" : 123,
     "path" : [ "aeiou" ],
+    "addressStored" : true,
     "name" : "aeiou",
     "id" : "aeiou",
     "contactUser" : {
@@ -571,6 +605,7 @@ open class LocationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "images" : "aeiou",
   "address" : {
     "zipcode" : "aeiou",
     "country" : "aeiou",
@@ -582,6 +617,12 @@ open class LocationsAPI {
   },
   "notes" : "aeiou",
   "floorplanImage" : [ "" ],
+  "addressVerificationDetails" : {
+    "dateStarted" : "2000-01-23T04:56:07.000+0000",
+    "dateFinished" : "2000-01-23T04:56:07.000+0000",
+    "service" : "smartystreets-us",
+    "status" : "aeiou"
+  },
   "selfUri" : "aeiou",
   "profileImage" : [ {
     "imageUri" : "aeiou",
@@ -594,6 +635,7 @@ open class LocationsAPI {
   },
   "version" : 123,
   "path" : [ "aeiou" ],
+  "addressStored" : true,
   "name" : "aeiou",
   "id" : "aeiou",
   "contactUser" : {
@@ -664,6 +706,7 @@ open class LocationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "images" : "aeiou",
   "address" : {
     "zipcode" : "aeiou",
     "country" : "aeiou",
@@ -675,6 +718,12 @@ open class LocationsAPI {
   },
   "notes" : "aeiou",
   "floorplanImage" : [ "" ],
+  "addressVerificationDetails" : {
+    "dateStarted" : "2000-01-23T04:56:07.000+0000",
+    "dateFinished" : "2000-01-23T04:56:07.000+0000",
+    "service" : "smartystreets-us",
+    "status" : "aeiou"
+  },
   "selfUri" : "aeiou",
   "profileImage" : [ {
     "imageUri" : "aeiou",
@@ -687,6 +736,7 @@ open class LocationsAPI {
   },
   "version" : 123,
   "path" : [ "aeiou" ],
+  "addressStored" : true,
   "name" : "aeiou",
   "id" : "aeiou",
   "contactUser" : {
@@ -762,6 +812,7 @@ open class LocationsAPI {
   "pageSize" : 123,
   "currentPage" : "aeiou",
   "results" : [ {
+    "images" : "aeiou",
     "address" : {
       "zipcode" : "aeiou",
       "country" : "aeiou",
@@ -773,6 +824,12 @@ open class LocationsAPI {
     },
     "notes" : "aeiou",
     "floorplanImage" : [ "" ],
+    "addressVerificationDetails" : {
+      "dateStarted" : "2000-01-23T04:56:07.000+0000",
+      "dateFinished" : "2000-01-23T04:56:07.000+0000",
+      "service" : "smartystreets-us",
+      "status" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "profileImage" : [ {
       "imageUri" : "aeiou",
@@ -785,6 +842,7 @@ open class LocationsAPI {
     },
     "version" : 123,
     "path" : [ "aeiou" ],
+    "addressStored" : true,
     "name" : "aeiou",
     "id" : "aeiou",
     "contactUser" : {

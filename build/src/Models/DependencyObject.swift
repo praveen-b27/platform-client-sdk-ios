@@ -50,6 +50,7 @@ public class DependencyObject: Codable {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
     /** The dependency identifier */
     public var _id: String?

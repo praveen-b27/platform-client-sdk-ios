@@ -551,6 +551,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -562,6 +563,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -574,6 +581,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -1095,6 +1103,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1106,6 +1115,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -1118,6 +1133,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -1342,6 +1358,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -1390,6 +1407,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -1434,6 +1452,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -1803,6 +1822,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -1814,6 +1834,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -1826,6 +1852,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -1909,6 +1936,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -1953,6 +1981,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2106,6 +2135,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2150,6 +2180,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2311,6 +2342,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2365,6 +2397,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2535,6 +2568,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2583,6 +2617,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2627,6 +2662,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2935,6 +2971,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -2981,6 +3018,7 @@ open class ArchitectAPI {
         case user = "USER"
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
+        case workflow = "WORKFLOW"
     }
 
     
@@ -3760,6 +3798,7 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -3771,6 +3810,12 @@ open class ArchitectAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -3783,6 +3828,7 @@ open class ArchitectAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -4153,6 +4199,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -4164,6 +4211,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -4176,6 +4229,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -4704,6 +4758,7 @@ open class ArchitectAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
+            "images" : "aeiou",
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -4715,6 +4770,12 @@ open class ArchitectAPI {
             },
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
+            "addressVerificationDetails" : {
+              "dateStarted" : "2000-01-23T04:56:07.000+0000",
+              "dateFinished" : "2000-01-23T04:56:07.000+0000",
+              "service" : "smartystreets-us",
+              "status" : "aeiou"
+            },
             "selfUri" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
@@ -4727,6 +4788,7 @@ open class ArchitectAPI {
             },
             "version" : 123,
             "path" : [ "aeiou" ],
+            "addressStored" : true,
             "name" : "aeiou",
             "id" : "aeiou",
             "contactUser" : {
@@ -5610,6 +5672,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5621,6 +5684,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -5633,6 +5702,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -6285,6 +6355,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6296,6 +6367,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -6308,6 +6385,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -6704,6 +6782,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6715,6 +6794,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -6727,6 +6812,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -7119,6 +7205,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -7130,6 +7217,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -7142,6 +7235,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -7532,6 +7626,7 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7543,6 +7638,12 @@ open class ArchitectAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -7555,6 +7656,7 @@ open class ArchitectAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -7632,8 +7734,11 @@ open class ArchitectAPI {
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case workflow = "workflow"
     }
 
+    
+    
     
     
     
@@ -7693,6 +7798,7 @@ open class ArchitectAPI {
      - parameter publishVersionId: (query) Publish version ID (optional)
      - parameter editableBy: (query) Editable by (optional)
      - parameter lockedBy: (query) Locked by (optional)
+     - parameter lockedByClientId: (query) Locked by client ID (optional)
      - parameter secure: (query) Secure (optional)
      - parameter deleted: (query) Include deleted (optional, default to false)
      - parameter includeSchemas: (query) Include variable schemas (optional, default to false)
@@ -7701,8 +7807,8 @@ open class ArchitectAPI {
      - parameter divisionId: (query) division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlows(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, publishVersionId: String? = nil, editableBy: String? = nil, lockedBy: String? = nil, secure: Secure_getFlows? = nil, deleted: Bool? = nil, includeSchemas: Bool? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: FlowEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsWithRequestBuilder(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, publishVersionId: publishVersionId, editableBy: editableBy, lockedBy: lockedBy, secure: secure, deleted: deleted, includeSchemas: includeSchemas, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId)
+    open class func getFlows(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, publishVersionId: String? = nil, editableBy: String? = nil, lockedBy: String? = nil, lockedByClientId: String? = nil, secure: Secure_getFlows? = nil, deleted: Bool? = nil, includeSchemas: Bool? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: FlowEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsWithRequestBuilder(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, publishVersionId: publishVersionId, editableBy: editableBy, lockedBy: lockedBy, lockedByClientId: lockedByClientId, secure: secure, deleted: deleted, includeSchemas: includeSchemas, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId)
         requestBuilder.execute { (response: Response<FlowEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7933,6 +8039,7 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7944,6 +8051,12 @@ open class ArchitectAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -7956,6 +8069,7 @@ open class ArchitectAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -8042,6 +8156,7 @@ open class ArchitectAPI {
      - parameter publishVersionId: (query) Publish version ID (optional)
      - parameter editableBy: (query) Editable by (optional)
      - parameter lockedBy: (query) Locked by (optional)
+     - parameter lockedByClientId: (query) Locked by client ID (optional)
      - parameter secure: (query) Secure (optional)
      - parameter deleted: (query) Include deleted (optional, default to false)
      - parameter includeSchemas: (query) Include variable schemas (optional, default to false)
@@ -8051,7 +8166,7 @@ open class ArchitectAPI {
 
      - returns: RequestBuilder<FlowEntityListing> 
      */
-    open class func getFlowsWithRequestBuilder(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, publishVersionId: String? = nil, editableBy: String? = nil, lockedBy: String? = nil, secure: Secure_getFlows? = nil, deleted: Bool? = nil, includeSchemas: Bool? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<FlowEntityListing> {
+    open class func getFlowsWithRequestBuilder(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, publishVersionId: String? = nil, editableBy: String? = nil, lockedBy: String? = nil, lockedByClientId: String? = nil, secure: Secure_getFlows? = nil, deleted: Bool? = nil, includeSchemas: Bool? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<FlowEntityListing> {
         let path = "/api/v2/flows"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8087,6 +8202,8 @@ open class ArchitectAPI {
             "editableBy": editableBy, 
             
             "lockedBy": lockedBy, 
+            
+            "lockedByClientId": lockedByClientId, 
             
             "secure": secure?.rawValue, 
             
@@ -8520,6 +8637,7 @@ open class ArchitectAPI {
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case workflow = "workflow"
     }
 
     
@@ -8911,6 +9029,7 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -8922,6 +9041,12 @@ open class ArchitectAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -8934,6 +9059,7 @@ open class ArchitectAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -9257,6 +9383,7 @@ open class ArchitectAPI {
           "selfUri" : "aeiou",
           "name" : "aeiou",
           "locations" : [ {
+            "images" : "aeiou",
             "address" : {
               "zipcode" : "aeiou",
               "country" : "aeiou",
@@ -9268,6 +9395,12 @@ open class ArchitectAPI {
             },
             "notes" : "aeiou",
             "floorplanImage" : [ "" ],
+            "addressVerificationDetails" : {
+              "dateStarted" : "2000-01-23T04:56:07.000+0000",
+              "dateFinished" : "2000-01-23T04:56:07.000+0000",
+              "service" : "smartystreets-us",
+              "status" : "aeiou"
+            },
             "selfUri" : "aeiou",
             "profileImage" : [ {
               "imageUri" : "aeiou",
@@ -9280,6 +9413,7 @@ open class ArchitectAPI {
             },
             "version" : 123,
             "path" : [ "aeiou" ],
+            "addressStored" : true,
             "name" : "aeiou",
             "id" : "aeiou",
             "contactUser" : {
@@ -9812,6 +9946,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -9823,6 +9958,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -9835,6 +9976,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -10208,6 +10350,7 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -10219,6 +10362,12 @@ open class ArchitectAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -10231,6 +10380,7 @@ open class ArchitectAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -10690,6 +10840,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -10701,6 +10852,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -10713,6 +10870,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -11089,6 +11247,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -11100,6 +11259,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -11112,6 +11277,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -11393,6 +11559,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -11404,6 +11571,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -11416,6 +11589,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -11744,6 +11918,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -11755,6 +11930,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -11767,6 +11948,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -12056,6 +12238,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -12067,6 +12250,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -12079,6 +12268,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -12410,6 +12600,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -12421,6 +12612,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -12433,6 +12630,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -12772,6 +12970,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -12783,6 +12982,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -12795,6 +13000,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -13087,6 +13293,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -13098,6 +13305,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -13110,6 +13323,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -13441,6 +13655,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -13452,6 +13667,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -13464,6 +13685,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -13941,6 +14163,7 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -13952,6 +14175,12 @@ open class ArchitectAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -13964,6 +14193,7 @@ open class ArchitectAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -14431,6 +14661,7 @@ open class ArchitectAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -14442,6 +14673,12 @@ open class ArchitectAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -14454,6 +14691,7 @@ open class ArchitectAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -15104,6 +15342,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -15115,6 +15354,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -15127,6 +15372,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -15630,6 +15876,7 @@ open class ArchitectAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -15641,6 +15888,12 @@ open class ArchitectAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -15653,6 +15906,7 @@ open class ArchitectAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {

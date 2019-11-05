@@ -8,14 +8,14 @@ title: LocationCreateUpdateDefinition
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the Location. | |
-| **address** | [**LocationAddress**](LocationAddress.html) |  | [optional] |
-| **emergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) |  | [optional] |
-| **version** | **Int** |  | [optional] |
+| **version** | **Int** | Current version of the location | [optional] |
 | **state** | **String** | Current activity status of the location. | [optional] |
-| **notes** | **String** |  | [optional] |
-| **contactUser** | **String** | The user id of the location contact | [optional] |
-| **path** | **[String]** |  | [optional] |
+| **path** | **[String]** | A list of ancestor ids | [optional] |
 | **addressVerified** | **Bool** |  | [optional] |
+| **notes** | **String** | Notes for the location | [optional] |
+| **contactUser** | **String** | The user id of the location contact | [optional] |
+| **emergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) | Emergency number for the location | [optional] |
+| **address** | [**LocationAddress**](LocationAddress.html) | Address of the location | [optional] |
 {: class="table table-striped"}
 
 

@@ -17,36 +17,41 @@ public class LocationCreateUpdateDefinition: Codable {
     }
     /** The name of the Location. */
     public var name: String?
-    public var address: LocationAddress?
-    public var emergencyNumber: LocationEmergencyNumber?
+    /** Current version of the location */
     public var version: Int?
     /** Current activity status of the location. */
     public var state: State?
+    /** A list of ancestor ids */
+    public var path: [String]?
+    public var addressVerified: Bool?
+    /** Notes for the location */
     public var notes: String?
     /** The user id of the location contact */
     public var contactUser: String?
-    public var path: [String]?
-    public var addressVerified: Bool?
+    /** Emergency number for the location */
+    public var emergencyNumber: LocationEmergencyNumber?
+    /** Address of the location */
+    public var address: LocationAddress?
 
-    public init(name: String?, address: LocationAddress?, emergencyNumber: LocationEmergencyNumber?, version: Int?, state: State?, notes: String?, contactUser: String?, path: [String]?, addressVerified: Bool?) {
+    public init(name: String?, version: Int?, state: State?, path: [String]?, addressVerified: Bool?, notes: String?, contactUser: String?, emergencyNumber: LocationEmergencyNumber?, address: LocationAddress?) {
         
         self.name = name
-        
-        self.address = address
-        
-        self.emergencyNumber = emergencyNumber
         
         self.version = version
         
         self.state = state
         
+        self.path = path
+        
+        self.addressVerified = addressVerified
+        
         self.notes = notes
         
         self.contactUser = contactUser
         
-        self.path = path
+        self.emergencyNumber = emergencyNumber
         
-        self.addressVerified = addressVerified
+        self.address = address
         
     }
 

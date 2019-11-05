@@ -43,6 +43,7 @@ public class ConversationAggregationView: Codable {
         case theldcomplete = "tHeldComplete"
         case tivr = "tIvr"
         case tnotresponding = "tNotResponding"
+        case tshortabandon = "tShortAbandon"
         case ttalk = "tTalk"
         case ttalkcomplete = "tTalkComplete"
         case tuserresponsetime = "tUserResponseTime"

@@ -22,6 +22,7 @@ public class Flow: Codable {
         case securecall = "SECURECALL"
         case speech = "SPEECH"
         case surveyinvite = "SURVEYINVITE"
+        case workflow = "WORKFLOW"
     }
     /** The flow identifier */
     public var _id: String?

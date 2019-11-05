@@ -38,6 +38,7 @@ public class ScimV2User: Codable {
     public var groups: [ScimV2GroupReference]?
     /** The list of roles assigned to the user. */
     public var roles: [String]?
+    /** SCIM enterprise user attributes */
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
     /** Resource SCIM meta */
     public var meta: ScimMetadata?

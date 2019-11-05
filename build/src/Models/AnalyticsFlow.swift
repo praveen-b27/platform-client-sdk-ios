@@ -22,6 +22,7 @@ public class AnalyticsFlow: Codable {
         case securecall = "SECURECALL"
         case speech = "SPEECH"
         case surveyinvite = "SURVEYINVITE"
+        case workflow = "WORKFLOW"
     }
     public enum EntryType: String, Codable { 
         case dnis = "dnis"

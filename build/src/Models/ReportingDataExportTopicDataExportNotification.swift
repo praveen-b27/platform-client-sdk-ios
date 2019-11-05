@@ -22,6 +22,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
     }
     public enum ExportFormat: String, Codable { 
         case csv = "CSV"
+        case pdf = "PDF"
     }
     public enum ViewType: String, Codable { 
         case queuePerformanceSummaryView = "QUEUE_PERFORMANCE_SUMMARY_VIEW"

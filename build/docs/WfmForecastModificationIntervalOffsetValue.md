@@ -9,7 +9,7 @@ Override the value of a single interval in a forecast
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **intervalIndex** | **Int** | The number of 15 minute intervals past referenceStartDate to which to apply this modification | |
-| **value** | **Int** | The value to set for the given interval | |
+| **value** | **Double** | The value to set for the given interval | |
 {: class="table table-striped"}
 
 

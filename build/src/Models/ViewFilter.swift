@@ -79,6 +79,7 @@ public class ViewFilter: Codable {
         case outboundcall = "outboundcall"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case workflow = "workflow"
     }
     public enum FlowEntryTypes: String, Codable { 
         case dnis = "dnis"

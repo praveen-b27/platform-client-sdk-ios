@@ -56,6 +56,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsUsersAggregatesQuery**](UsersAPI.html#postAnalyticsUsersAggregatesQuery) | Query for user aggregates |
 | [**postAnalyticsUsersDetailsQuery**](UsersAPI.html#postAnalyticsUsersDetailsQuery) | Query for user details |
 | [**postAnalyticsUsersObservationsQuery**](UsersAPI.html#postAnalyticsUsersObservationsQuery) | Query for user observations |
+| [**postAuthorizationSubjectBulkadd**](UsersAPI.html#postAuthorizationSubjectBulkadd) | Bulk-grant roles and divisions to a subject. |
+| [**postAuthorizationSubjectBulkremove**](UsersAPI.html#postAuthorizationSubjectBulkremove) | Bulk-remove grants from a subject. |
 | [**postAuthorizationSubjectDivisionRole**](UsersAPI.html#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
 | [**postUserExternalid**](UsersAPI.html#postUserExternalid) | Create mapping between external identifier and user. Limit 100 per entity. |
 | [**postUserInvite**](UsersAPI.html#postUserInvite) | Send an activation email to the user |
@@ -2709,6 +2711,114 @@ UsersAPI.postAnalyticsUsersObservationsQuery(body: body) { (response, error) in
 ### Return type
 
 [**UserObservationQueryResponse**](UserObservationQueryResponse.html)
+
+<a name="postAuthorizationSubjectBulkadd"></a>
+
+# **postAuthorizationSubjectBulkadd**
+
+
+
+> Void postAuthorizationSubjectBulkadd(subjectId, body, subjectType)
+
+Bulk-grant roles and divisions to a subject.
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkadd  
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
+let subjectType: String = "PC_USER" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+
+// Code example
+UsersAPI.postAuthorizationSubjectBulkadd(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.postAuthorizationSubjectBulkadd was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| Subject ID (user or group) | |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
+| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postAuthorizationSubjectBulkremove"></a>
+
+# **postAuthorizationSubjectBulkremove**
+
+
+
+> Void postAuthorizationSubjectBulkremove(subjectId, body)
+
+Bulk-remove grants from a subject.
+
+
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkremove  
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
+
+// Code example
+UsersAPI.postAuthorizationSubjectBulkremove(subjectId: subjectId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.postAuthorizationSubjectBulkremove was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| Subject ID (user or group) | |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postAuthorizationSubjectDivisionRole"></a>
 

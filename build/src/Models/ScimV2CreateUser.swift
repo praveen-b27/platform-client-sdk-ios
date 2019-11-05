@@ -36,6 +36,7 @@ public class ScimV2CreateUser: Codable {
     public var groups: [ScimV2GroupReference]?
     /** The list of roles assigned to the user. */
     public var roles: [String]?
+    /** SCIM enterprise user attributes */
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
 
     public init(schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [String]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?) {

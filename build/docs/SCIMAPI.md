@@ -408,7 +408,7 @@ SCIMAPI.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, erro
 
 
 
-> [ScimV2User](ScimV2User.html) getScimUser(userId, ifNoneMatch)
+> [ScimV2User](ScimV2User.html) getScimUser(userId, attributes, excludedAttributes, ifNoneMatch)
 
 Get a user
 
@@ -416,10 +416,8 @@ Get a user
 
 Wraps GET /api/v2/scim/users/{userId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* directory:user:view
-* directory:user:edit
 
 ### Example
 
@@ -430,10 +428,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/users.
+let attributes: [String] = [SCIMAPI.Attributes_getScimUser.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+let excludedAttributes: [String] = [SCIMAPI.ExcludedAttributes_getScimUser.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
 let ifNoneMatch: String = "" // TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
 
 // Code example
-SCIMAPI.getScimUser(userId: userId, ifNoneMatch: ifNoneMatch) { (response, error) in
+SCIMAPI.getScimUser(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -449,6 +449,8 @@ SCIMAPI.getScimUser(userId: userId, ifNoneMatch: ifNoneMatch) { (response, error
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
+| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
+| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
 | **ifNoneMatch** | **String**| TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional] |
 {: class="table-striped"}
 
@@ -463,18 +465,16 @@ SCIMAPI.getScimUser(userId: userId, ifNoneMatch: ifNoneMatch) { (response, error
 
 
 
-> [ScimUserListResponse](ScimUserListResponse.html) getScimUsers(filter, startIndex, count)
+> [ScimUserListResponse](ScimUserListResponse.html) getScimUsers(startIndex, count, attributes, excludedAttributes, filter)
 
 Get a list of users
 
-
+To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
 
 Wraps GET /api/v2/scim/users  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* directory:user:view
-* directory:user:edit
 
 ### Example
 
@@ -484,12 +484,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let filter: String = "" // Filters results.
 let startIndex: Int = 1 // The 1-based index of the first query result.
 let count: Int = 25 // The requested number of items per page. A value of 0 returns \"totalResults\".
+let attributes: [String] = [SCIMAPI.Attributes_getScimUsers.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+let excludedAttributes: [String] = [SCIMAPI.ExcludedAttributes_getScimUsers.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
+let filter: String = "" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\", \"userName eq search@sample.org\", \"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\", \"email eq search@sample.org\", \"division eq divisionName\", \"externalId eq 167844\", \"active eq false\".
 
 // Code example
-SCIMAPI.getScimUsers(filter: filter, startIndex: startIndex, count: count) { (response, error) in
+SCIMAPI.getScimUsers(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -504,9 +506,11 @@ SCIMAPI.getScimUsers(filter: filter, startIndex: startIndex, count: count) { (re
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter** | **String**| Filters results. | |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] [default to 1] |
 | **count** | **Int**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
+| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
+| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
+| **filter** | **String**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. | [optional] |
 {: class="table-striped"}
 
 
@@ -779,7 +783,7 @@ SCIMAPI.getScimV2Serviceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, er
 
 
 
-> [ScimV2User](ScimV2User.html) getScimV2User(userId, ifNoneMatch)
+> [ScimV2User](ScimV2User.html) getScimV2User(userId, attributes, excludedAttributes, ifNoneMatch)
 
 Get a user
 
@@ -787,10 +791,8 @@ Get a user
 
 Wraps GET /api/v2/scim/v2/users/{userId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* directory:user:view
-* directory:user:edit
 
 ### Example
 
@@ -801,10 +803,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // The ID of a user. Returned with GET /api/v2/scim/v2/users.
+let attributes: [String] = [SCIMAPI.Attributes_getScimV2User.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+let excludedAttributes: [String] = [SCIMAPI.ExcludedAttributes_getScimV2User.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
 let ifNoneMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.
 
 // Code example
-SCIMAPI.getScimV2User(userId: userId, ifNoneMatch: ifNoneMatch) { (response, error) in
+SCIMAPI.getScimV2User(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -820,6 +824,8 @@ SCIMAPI.getScimV2User(userId: userId, ifNoneMatch: ifNoneMatch) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
+| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
+| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
 | **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional] |
 {: class="table-striped"}
 
@@ -834,18 +840,16 @@ SCIMAPI.getScimV2User(userId: userId, ifNoneMatch: ifNoneMatch) { (response, err
 
 
 
-> [ScimUserListResponse](ScimUserListResponse.html) getScimV2Users(filter, startIndex, count)
+> [ScimUserListResponse](ScimUserListResponse.html) getScimV2Users(startIndex, count, attributes, excludedAttributes, filter)
 
 Get a list of users
 
-
+To return all active users, do not use a filter parameter. To return inactive users, set \&quot;filter\&quot; to \&quot;active eq false\&quot;. By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \&quot;attributes\&quot; to \&quot;id,active\&quot; or \&quot;excludeAttributes\&quot; to \&quot;externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\&quot;.
 
 Wraps GET /api/v2/scim/v2/users  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* directory:user:view
-* directory:user:edit
 
 ### Example
 
@@ -855,12 +859,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let filter: String = "" // Filters results.
 let startIndex: Int = 1 // The 1-based index of the first query result.
 let count: Int = 25 // The requested number of items per page. A value of 0 returns \"totalResults\".
+let attributes: [String] = [SCIMAPI.Attributes_getScimV2Users.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \"attributes\" to avoid expensive secondary calls for the default attributes.
+let excludedAttributes: [String] = [SCIMAPI.ExcludedAttributes_getScimV2Users.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \"excludedAttributes\". Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes.
+let filter: String = "" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\", \"userName eq search@sample.org\", \"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\", \"email eq search@sample.org\", \"division eq divisionName\", \"externalId eq 167844\", \"active eq false\".
 
 // Code example
-SCIMAPI.getScimV2Users(filter: filter, startIndex: startIndex, count: count) { (response, error) in
+SCIMAPI.getScimV2Users(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -875,9 +881,11 @@ SCIMAPI.getScimV2Users(filter: filter, startIndex: startIndex, count: count) { (
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter** | **String**| Filters results. | |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] [default to 1] |
 | **count** | **Int**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. | [optional] [default to 25] |
+| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the default attributes (externalId, enterprise-user:manager, roles). Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
+| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes (externalId, enterprise-user:manager, roles) minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), photos ("photos"), groups ("groups"), rolesurnIetfParamsScimSchemasCore20UserId ("rolesurn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserPhotos ("urn:ietf:params:scim:schemas:core:2.0:User:photos"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value") |
+| **filter** | **String**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. | [optional] |
 {: class="table-striped"}
 
 

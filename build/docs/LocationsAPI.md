@@ -113,7 +113,7 @@ LocationsAPI.getLocation(locationId: locationId, expand: expand) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **locationId** | **String**| Location ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: images ("images") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: images ("images"), addressverificationdetails ("addressVerificationDetails") |
 {: class="table-striped"}
 
 
@@ -274,7 +274,7 @@ LocationsAPI.getLocationsSearch(q64: q64, expand: expand) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
-| **expand** | [**[String]**](String.html)| Provides more details about a specified resource | [optional]<br />**Values**: images ("images") |
+| **expand** | [**[String]**](String.html)| Provides more details about a specified resource | [optional]<br />**Values**: images ("images"), addressverificationdetails ("addressVerificationDetails") |
 {: class="table-striped"}
 
 

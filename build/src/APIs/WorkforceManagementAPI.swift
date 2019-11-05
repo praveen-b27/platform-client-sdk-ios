@@ -772,6 +772,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -783,6 +784,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -795,6 +802,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -2329,6 +2337,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -2340,6 +2349,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -2352,6 +2367,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -2653,6 +2669,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -2664,6 +2681,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -2676,6 +2699,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -2990,6 +3014,7 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -3001,6 +3026,12 @@ open class WorkforceManagementAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -3013,6 +3044,7 @@ open class WorkforceManagementAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -3297,6 +3329,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -3308,6 +3341,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -3320,6 +3359,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -5150,6 +5190,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -5161,6 +5202,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -5173,6 +5220,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -5473,6 +5521,7 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -5484,6 +5533,12 @@ open class WorkforceManagementAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -5496,6 +5551,7 @@ open class WorkforceManagementAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -6338,6 +6394,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -6349,6 +6406,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -6361,6 +6424,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -7006,6 +7070,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -7017,6 +7082,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -7029,6 +7100,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {
@@ -7931,6 +8003,7 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -7942,6 +8015,12 @@ open class WorkforceManagementAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -7954,6 +8033,7 @@ open class WorkforceManagementAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -8253,6 +8333,7 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -8264,6 +8345,12 @@ open class WorkforceManagementAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -8276,6 +8363,7 @@ open class WorkforceManagementAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -8360,8 +8448,27 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "submittedBy" : "",
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "notes" : "aeiou",
     "selfUri" : "aeiou",
+    "fullDayManagementUnitDates" : [ "aeiou" ],
+    "partialDayStartDateTimes" : [ "2000-01-23T04:56:07.000+0000" ],
+    "submittedDate" : "2000-01-23T04:56:07.000+0000",
+    "reviewedBy" : "",
+    "activityCodeId" : "aeiou",
+    "isFullDayRequest" : true,
+    "markedAsRead" : true,
+    "dailyDurationMinutes" : 123,
     "id" : "aeiou",
+    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
     "user" : {
       "addresses" : [ "" ],
       "acdAutoAnswer" : true,
@@ -8554,6 +8661,7 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "locations" : [ {
+          "images" : "aeiou",
           "address" : {
             "zipcode" : "aeiou",
             "country" : "aeiou",
@@ -8565,6 +8673,12 @@ open class WorkforceManagementAPI {
           },
           "notes" : "aeiou",
           "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
           "selfUri" : "aeiou",
           "profileImage" : [ {
             "imageUri" : "aeiou",
@@ -8577,6 +8691,7 @@ open class WorkforceManagementAPI {
           },
           "version" : 123,
           "path" : [ "aeiou" ],
+          "addressStored" : true,
           "name" : "aeiou",
           "id" : "aeiou",
           "contactUser" : {
@@ -8592,7 +8707,8 @@ open class WorkforceManagementAPI {
         "primary" : true,
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
-    }
+    },
+    "status" : "aeiou"
   } ]
 }}]
      
@@ -9370,7 +9486,7 @@ open class WorkforceManagementAPI {
         "metric" : "aeiou",
         "values" : [ {
           "intervalIndex" : 123,
-          "value" : 123
+          "value" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "attributes" : {
           "mediaTypes" : [ "aeiou" ],
@@ -9525,7 +9641,7 @@ open class WorkforceManagementAPI {
         "metric" : "aeiou",
         "values" : [ {
           "intervalIndex" : 123,
-          "value" : 123
+          "value" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "attributes" : {
           "mediaTypes" : [ "aeiou" ],
@@ -9676,7 +9792,7 @@ open class WorkforceManagementAPI {
         "metric" : "aeiou",
         "values" : [ {
           "intervalIndex" : 123,
-          "value" : 123
+          "value" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "attributes" : {
           "mediaTypes" : [ "aeiou" ],
@@ -10679,6 +10795,7 @@ open class WorkforceManagementAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "locations" : [ {
+        "images" : "aeiou",
         "address" : {
           "zipcode" : "aeiou",
           "country" : "aeiou",
@@ -10690,6 +10807,12 @@ open class WorkforceManagementAPI {
         },
         "notes" : "aeiou",
         "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
         "selfUri" : "aeiou",
         "profileImage" : [ {
           "imageUri" : "aeiou",
@@ -10702,6 +10825,7 @@ open class WorkforceManagementAPI {
         },
         "version" : 123,
         "path" : [ "aeiou" ],
+        "addressStored" : true,
         "name" : "aeiou",
         "id" : "aeiou",
         "contactUser" : {

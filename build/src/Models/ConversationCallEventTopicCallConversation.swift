@@ -21,8 +21,9 @@ public class ConversationCallEventTopicCallConversation: Codable {
     public var participants: [ConversationCallEventTopicCallMediaParticipant]?
     public var otherMediaUris: [String]?
     public var recordingState: RecordingState?
+    public var maxParticipants: Int?
 
-    public init(_id: String?, name: String?, participants: [ConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, recordingState: RecordingState?) {
+    public init(_id: String?, name: String?, participants: [ConversationCallEventTopicCallMediaParticipant]?, otherMediaUris: [String]?, recordingState: RecordingState?, maxParticipants: Int?) {
         
         self._id = _id
         
@@ -34,6 +35,8 @@ public class ConversationCallEventTopicCallConversation: Codable {
         
         self.recordingState = recordingState
         
+        self.maxParticipants = maxParticipants
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -42,6 +45,7 @@ public class ConversationCallEventTopicCallConversation: Codable {
         case participants
         case otherMediaUris
         case recordingState
+        case maxParticipants
     }
 
 

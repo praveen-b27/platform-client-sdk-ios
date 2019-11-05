@@ -17,26 +17,35 @@ public class LocationDefinition: Codable {
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** The name of the Location. */
     public var name: String?
-    /** Site contact for the location */
+    /** Site contact for the location entity */
     public var contactUser: AddressableEntityRef?
+    /** Emergency number for the location entity */
     public var emergencyNumber: LocationEmergencyNumber?
     public var address: LocationAddress?
-    public var addressVerified: Bool?
-    /** Current activity status of the location. */
+    /** Current state of the location entity */
     public var state: State?
+    /** Notes for the location entity */
     public var notes: String?
+    /** Current version of the location entity, value to be supplied should be retrieved by a GET or on create/update response */
     public var version: Int?
     /** A list of ancestor IDs in order */
     public var path: [String]?
-    /** Profile image set for the location */
+    /** Profile image of the location entity, retrieved with ?expand=images query parameter */
     public var profileImage: [LocationImage]?
+    /** Floorplan images of the location entity, retrieved with ?expand=images query parameter */
     public var floorplanImage: [LocationImage]?
+    /** Address verification information, retrieve dwith the ?expand=addressVerificationDetails query parameter */
+    public var addressVerificationDetails: LocationAddressVerificationDetails?
+    /** Boolean field which states if the address has been verified as an actual address */
+    public var addressVerified: Bool?
+    /** Boolean field which states if the address has been stored for E911 */
+    public var addressStored: Bool?
+    public var images: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactUser: AddressableEntityRef?, emergencyNumber: LocationEmergencyNumber?, address: LocationAddress?, addressVerified: Bool?, state: State?, notes: String?, version: Int?, path: [String]?, profileImage: [LocationImage]?, floorplanImage: [LocationImage]?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactUser: AddressableEntityRef?, emergencyNumber: LocationEmergencyNumber?, address: LocationAddress?, state: State?, notes: String?, version: Int?, path: [String]?, profileImage: [LocationImage]?, floorplanImage: [LocationImage]?, addressVerificationDetails: LocationAddressVerificationDetails?, addressVerified: Bool?, addressStored: Bool?, images: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -47,8 +56,6 @@ public class LocationDefinition: Codable {
         self.emergencyNumber = emergencyNumber
         
         self.address = address
-        
-        self.addressVerified = addressVerified
         
         self.state = state
         
@@ -62,6 +69,14 @@ public class LocationDefinition: Codable {
         
         self.floorplanImage = floorplanImage
         
+        self.addressVerificationDetails = addressVerificationDetails
+        
+        self.addressVerified = addressVerified
+        
+        self.addressStored = addressStored
+        
+        self.images = images
+        
         self.selfUri = selfUri
         
     }
@@ -72,13 +87,16 @@ public class LocationDefinition: Codable {
         case contactUser
         case emergencyNumber
         case address
-        case addressVerified
         case state
         case notes
         case version
         case path
         case profileImage
         case floorplanImage
+        case addressVerificationDetails
+        case addressVerified
+        case addressStored
+        case images
         case selfUri
     }
 

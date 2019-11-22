@@ -100,8 +100,12 @@ public class Participant: Codable {
     public var screenRecordingState: ScreenRecordingState?
     /** The reason specifying why participant flagged the conversation. */
     public var flaggedReason: FlaggedReason?
+    /** The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var startAcwTime: Date?
+    /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var endAcwTime: Date?
 
-    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, attributes: [String:String]?, calls: [Call]?, callbacks: [Callback]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?) {
+    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, attributes: [String:String]?, calls: [Call]?, callbacks: [Callback]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?) {
         
         self._id = _id
         
@@ -185,6 +189,10 @@ public class Participant: Codable {
         
         self.flaggedReason = flaggedReason
         
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -229,6 +237,8 @@ public class Participant: Codable {
         case evaluations
         case screenRecordingState
         case flaggedReason
+        case startAcwTime
+        case endAcwTime
     }
 
 

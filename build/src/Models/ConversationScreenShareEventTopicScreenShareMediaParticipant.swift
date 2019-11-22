@@ -81,11 +81,13 @@ public class ConversationScreenShareEventTopicScreenShareMediaParticipant: Codab
     public var screenRecordingState: String?
     public var flaggedReason: FlaggedReason?
     public var journeyContext: ConversationScreenShareEventTopicJourneyContext?
+    public var startAcwTime: Date?
+    public var endAcwTime: Date?
     public var context: String?
     public var peerCount: Int?
     public var sharing: Bool?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationScreenShareEventTopicUriReference?, queue: ConversationScreenShareEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationScreenShareEventTopicErrorBody?, script: ConversationScreenShareEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationScreenShareEventTopicUriReference?, externalOrganization: ConversationScreenShareEventTopicUriReference?, wrapup: ConversationScreenShareEventTopicWrapup?, conversationRoutingData: ConversationScreenShareEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationScreenShareEventTopicJourneyContext?, context: String?, peerCount: Int?, sharing: Bool?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationScreenShareEventTopicUriReference?, queue: ConversationScreenShareEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationScreenShareEventTopicErrorBody?, script: ConversationScreenShareEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationScreenShareEventTopicUriReference?, externalOrganization: ConversationScreenShareEventTopicUriReference?, wrapup: ConversationScreenShareEventTopicWrapup?, conversationRoutingData: ConversationScreenShareEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationScreenShareEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, context: String?, peerCount: Int?, sharing: Bool?) {
         
         self._id = _id
         
@@ -149,6 +151,10 @@ public class ConversationScreenShareEventTopicScreenShareMediaParticipant: Codab
         
         self.journeyContext = journeyContext
         
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
+        
         self.context = context
         
         self.peerCount = peerCount
@@ -189,6 +195,8 @@ public class ConversationScreenShareEventTopicScreenShareMediaParticipant: Codab
         case screenRecordingState
         case flaggedReason
         case journeyContext
+        case startAcwTime
+        case endAcwTime
         case context
         case peerCount
         case sharing

@@ -112,6 +112,10 @@ public class CallMediaParticipant: Codable {
     public var journeyContext: JourneyContext?
     /** Information on how a communication should be routed to an agent. */
     public var conversationRoutingData: ConversationRoutingData?
+    /** The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var startAcwTime: Date?
+    /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var endAcwTime: Date?
     /** Value is true when the call is muted. */
     public var muted: Bool?
     /** Value is true when the call is confined. */
@@ -137,7 +141,7 @@ public class CallMediaParticipant: Codable {
     /** User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567. */
     public var uuiData: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorBody?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, consultParticipantId: String?, uuiData: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorBody?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, consultParticipantId: String?, uuiData: String?) {
         
         self._id = _id
         
@@ -199,6 +203,10 @@ public class CallMediaParticipant: Codable {
         
         self.conversationRoutingData = conversationRoutingData
         
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
+        
         self.muted = muted
         
         self.confined = confined
@@ -256,6 +264,8 @@ public class CallMediaParticipant: Codable {
         case flaggedReason
         case journeyContext
         case conversationRoutingData
+        case startAcwTime
+        case endAcwTime
         case muted
         case confined
         case recording

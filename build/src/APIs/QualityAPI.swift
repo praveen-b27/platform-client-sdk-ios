@@ -437,6 +437,7 @@ open class QualityAPI {
         "priority" : 123,
         "queue" : ""
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -445,6 +446,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -1130,6 +1132,7 @@ open class QualityAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -1138,6 +1141,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -2878,6 +2882,7 @@ open class QualityAPI {
         "priority" : 123,
         "queue" : ""
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -2886,6 +2891,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -3785,6 +3791,7 @@ open class QualityAPI {
           "priority" : 123,
           "queue" : ""
         },
+        "endAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "aniName" : "aeiou",
@@ -3793,6 +3800,7 @@ open class QualityAPI {
         "userUri" : "aeiou",
         "dnis" : "aeiou",
         "ani" : "aeiou",
+        "startAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : {
           "provisional" : true,
           "code" : "aeiou",
@@ -4321,7 +4329,7 @@ open class QualityAPI {
      Get audits for conversation or recording
      
      - GET /api/v2/quality/conversations/{conversationId}/audits
-     - 
+     - Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -4894,6 +4902,7 @@ open class QualityAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -4902,6 +4911,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -5781,6 +5791,7 @@ open class QualityAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -5789,6 +5800,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -6774,6 +6786,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "endAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "aniName" : "aeiou",
@@ -6782,6 +6795,7 @@ open class QualityAPI {
         "userUri" : "aeiou",
         "dnis" : "aeiou",
         "ani" : "aeiou",
+        "startAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : {
           "provisional" : true,
           "code" : "aeiou",
@@ -11308,6 +11322,7 @@ open class QualityAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -11316,6 +11331,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -12856,6 +12872,7 @@ open class QualityAPI {
         "priority" : 123,
         "queue" : ""
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -12864,6 +12881,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -13543,6 +13561,7 @@ open class QualityAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -13551,6 +13570,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -16256,6 +16276,7 @@ open class QualityAPI {
         "priority" : 123,
         "queue" : ""
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -16264,6 +16285,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -16739,7 +16761,7 @@ open class QualityAPI {
      Update an evaluation
      
      - PUT /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}
-     - 
+     - The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -16944,6 +16966,7 @@ open class QualityAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -16952,6 +16975,7 @@ open class QualityAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",

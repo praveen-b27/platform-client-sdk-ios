@@ -3002,7 +3002,7 @@ ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize
 
 
 
-> [FlowDivisionViewEntityListing](FlowDivisionViewEntityListing.html) getFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, _id, name, publishVersionId, publishedAfter, publishedBefore, divisionId)
+> [FlowDivisionViewEntityListing](FlowDivisionViewEntityListing.html) getFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, _id, name, publishVersionId, publishedAfter, publishedBefore, divisionId, includeSchemas)
 
 Get a pageable list of basic flow information objects filterable by query parameters.
 
@@ -3033,9 +3033,10 @@ let publishVersionId: String = "" // Publish version ID
 let publishedAfter: String = "" // Published after
 let publishedBefore: String = "" // Published before
 let divisionId: [String] = [""] // division ID(s)
+let includeSchemas: Bool = false // Include variable schemas
 
 // Code example
-ArchitectAPI.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, publishVersionId: publishVersionId, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId) { (response, error) in
+ArchitectAPI.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, publishVersionId: publishVersionId, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId, includeSchemas: includeSchemas) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3061,6 +3062,7 @@ ArchitectAPI.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize:
 | **publishedAfter** | **String**| Published after | [optional] |
 | **publishedBefore** | **String**| Published before | [optional] |
 | **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
+| **includeSchemas** | **Bool**| Include variable schemas | [optional] [default to false] |
 {: class="table-striped"}
 
 

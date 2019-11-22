@@ -577,7 +577,7 @@ open class LocationsAPI {
      - parameter body: (body) Location 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchLocation(locationId: String, body: LocationCreateUpdateDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
+    open class func patchLocation(locationId: String, body: LocationUpdateDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
         let requestBuilder = patchLocationWithRequestBuilder(locationId: locationId, body: body)
         requestBuilder.execute { (response: Response<LocationDefinition>?, error) -> Void in
             do {
@@ -651,7 +651,7 @@ open class LocationsAPI {
 
      - returns: RequestBuilder<LocationDefinition> 
      */
-    open class func patchLocationWithRequestBuilder(locationId: String, body: LocationCreateUpdateDefinition) -> RequestBuilder<LocationDefinition> {
+    open class func patchLocationWithRequestBuilder(locationId: String, body: LocationUpdateDefinition) -> RequestBuilder<LocationDefinition> {
         var path = "/api/v2/locations/{locationId}"
         let locationIdPreEscape = "\(locationId)"
         let locationIdPostEscape = locationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -678,7 +678,7 @@ open class LocationsAPI {
      - parameter body: (body) Location 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLocations(body: LocationCreateUpdateDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
+    open class func postLocations(body: LocationCreateDefinition, completion: @escaping ((_ data: LocationDefinition?,_ error: Error?) -> Void)) {
         let requestBuilder = postLocationsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<LocationDefinition>?, error) -> Void in
             do {
@@ -751,7 +751,7 @@ open class LocationsAPI {
 
      - returns: RequestBuilder<LocationDefinition> 
      */
-    open class func postLocationsWithRequestBuilder(body: LocationCreateUpdateDefinition) -> RequestBuilder<LocationDefinition> {
+    open class func postLocationsWithRequestBuilder(body: LocationCreateDefinition) -> RequestBuilder<LocationDefinition> {
         let path = "/api/v2/locations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         

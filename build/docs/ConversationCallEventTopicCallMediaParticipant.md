@@ -38,6 +38,8 @@ title: ConversationCallEventTopicCallMediaParticipant
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
 | **journeyContext** | [**ConversationCallEventTopicJourneyContext**](ConversationCallEventTopicJourneyContext.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **muted** | **Bool** |  | [optional] |
 | **confined** | **Bool** |  | [optional] |
 | **recording** | **Bool** |  | [optional] |

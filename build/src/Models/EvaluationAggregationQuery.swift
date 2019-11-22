@@ -33,18 +33,8 @@ public class EvaluationAggregationQuery: Codable {
         case ototalscore = "oTotalScore"
     }
     public enum AlternateTimeDimension: String, Codable { 
-        case calibrationid = "calibrationId"
-        case contextid = "contextId"
-        case conversationid = "conversationId"
-        case divisionid = "divisionId"
         case evaluationcreateddate = "evaluationCreatedDate"
-        case evaluationid = "evaluationId"
-        case evaluatorid = "evaluatorId"
-        case formid = "formId"
-        case queueid = "queueId"
-        case rescind = "rescind"
-        case rescored = "rescored"
-        case userid = "userId"
+        case eventtime = "eventTime"
     }
     /** Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?

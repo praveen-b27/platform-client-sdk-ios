@@ -37,6 +37,9 @@ title: DomainLogicalInterface
 | **inheritPhoneTrunkBasesIPv4** | **Bool** | The IPv4 phone trunk base assignment will be inherited from the Edge Group. | [optional] |
 | **inheritPhoneTrunkBasesIPv6** | **Bool** | The IPv6 phone trunk base assignment will be inherited from the Edge Group. | [optional] |
 | **useForInternalEdgeCommunication** | **Bool** | This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. | [optional] |
+| **useForIndirectEdgeCommunication** | **Bool** | Site Interconnects using the \&quot;Indirect\&quot; method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end. | [optional] |
+| **useForCloudProxyEdgeCommunication** | **Bool** | Site Interconnects using the \&quot;Cloud Proxy\&quot; method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option. | [optional] |
+| **publicNatIpAddress** | **String** | NENT IP Address | [optional] |
 | **externalTrunkBaseAssignments** | [**[TrunkBaseAssignment]**](TrunkBaseAssignment.html) | External trunk base settings to use for external communication from this interface. | [optional] |
 | **phoneTrunkBaseAssignments** | [**[TrunkBaseAssignment]**](TrunkBaseAssignment.html) | Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true. | [optional] |
 | **traceEnabled** | **Bool** |  | [optional] |

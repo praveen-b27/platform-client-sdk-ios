@@ -36,6 +36,8 @@ public class QueueConversationVideoEventTopicParticipant: Codable {
     public var wrapupPrompt: String?
     public var wrapupTimeoutMs: Int?
     public var wrapup: QueueConversationVideoEventTopicWrapup?
+    public var startAcwTime: Date?
+    public var endAcwTime: Date?
     public var conversationRoutingData: QueueConversationVideoEventTopicConversationRoutingData?
     public var alertingTimeoutMs: Int?
     public var monitoredParticipantId: String?
@@ -53,7 +55,7 @@ public class QueueConversationVideoEventTopicParticipant: Codable {
     public var videos: [QueueConversationVideoEventTopicVideo]?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int?, wrapup: QueueConversationVideoEventTopicWrapup?, conversationRoutingData: QueueConversationVideoEventTopicConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationVideoEventTopicCall]?, callbacks: [QueueConversationVideoEventTopicCallback]?, chats: [QueueConversationVideoEventTopicChat]?, cobrowsesessions: [QueueConversationVideoEventTopicCobrowse]?, emails: [QueueConversationVideoEventTopicEmail]?, messages: [QueueConversationVideoEventTopicMessage]?, screenshares: [QueueConversationVideoEventTopicScreenshare]?, socialExpressions: [QueueConversationVideoEventTopicSocialExpression]?, videos: [QueueConversationVideoEventTopicVideo]?, additionalProperties: JSON?) {
+    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int?, wrapup: QueueConversationVideoEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationVideoEventTopicConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationVideoEventTopicCall]?, callbacks: [QueueConversationVideoEventTopicCallback]?, chats: [QueueConversationVideoEventTopicChat]?, cobrowsesessions: [QueueConversationVideoEventTopicCobrowse]?, emails: [QueueConversationVideoEventTopicEmail]?, messages: [QueueConversationVideoEventTopicMessage]?, screenshares: [QueueConversationVideoEventTopicScreenshare]?, socialExpressions: [QueueConversationVideoEventTopicSocialExpression]?, videos: [QueueConversationVideoEventTopicVideo]?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -88,6 +90,10 @@ public class QueueConversationVideoEventTopicParticipant: Codable {
         self.wrapupTimeoutMs = wrapupTimeoutMs
         
         self.wrapup = wrapup
+        
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
         
         self.conversationRoutingData = conversationRoutingData
         
@@ -141,6 +147,8 @@ public class QueueConversationVideoEventTopicParticipant: Codable {
         case wrapupPrompt
         case wrapupTimeoutMs
         case wrapup
+        case startAcwTime
+        case endAcwTime
         case conversationRoutingData
         case alertingTimeoutMs
         case monitoredParticipantId

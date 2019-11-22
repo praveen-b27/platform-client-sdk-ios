@@ -38,6 +38,8 @@ title: ConversationChatEventTopicChatMediaParticipant
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
 | **journeyContext** | [**ConversationChatEventTopicJourneyContext**](ConversationChatEventTopicJourneyContext.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **roomId** | **String** |  | [optional] |
 | **avatarImageUrl** | **String** |  | [optional] |
 {: class="table table-striped"}

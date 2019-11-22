@@ -8301,6 +8301,7 @@ open class RecordingAPI {
           "priority" : 123,
           "queue" : ""
         },
+        "endAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "aniName" : "aeiou",
@@ -8309,6 +8310,7 @@ open class RecordingAPI {
         "userUri" : "aeiou",
         "dnis" : "aeiou",
         "ani" : "aeiou",
+        "startAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : {
           "provisional" : true,
           "code" : "aeiou",
@@ -11327,6 +11329,66 @@ open class RecordingAPI {
     
     
     
+    /**
+     
+     Get a list of conversations with protected recordings
+     
+     - parameter body: (body) conversationIds 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRecordingsDeletionprotection(body: ConversationDeletionProtectionQuery, completion: @escaping ((_ data: [AddressableEntityRef]?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRecordingsDeletionprotectionWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<[AddressableEntityRef]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of conversations with protected recordings
+     
+     - POST /api/v2/recordings/deletionprotection
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example=[ {
+  "selfUri" : "aeiou",
+  "id" : "aeiou"
+} ]}]
+     
+     - parameter body: (body) conversationIds 
+
+     - returns: RequestBuilder<[AddressableEntityRef]> 
+     */
+    open class func postRecordingsDeletionprotectionWithRequestBuilder(body: ConversationDeletionProtectionQuery) -> RequestBuilder<[AddressableEntityRef]> {
+        let path = "/api/v2/recordings/deletionprotection"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[AddressableEntityRef]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -11363,7 +11425,7 @@ open class RecordingAPI {
      Updates the retention records on a recording.
      
      - PUT /api/v2/conversations/{conversationId}/recordings/{recordingId}
-     - Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+     - Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -13786,6 +13848,64 @@ open class RecordingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Apply or revoke recording protection for conversations
+     
+     - parameter protect: (query) Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRecordingsDeletionprotection(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRecordingsDeletionprotectionWithRequestBuilder(protect: protect, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Apply or revoke recording protection for conversations
+     
+     - PUT /api/v2/recordings/deletionprotection
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter protect: (query) Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func putRecordingsDeletionprotectionWithRequestBuilder(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil) -> RequestBuilder<Void> {
+        let path = "/api/v2/recordings/deletionprotection"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "protect": protect
+            
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

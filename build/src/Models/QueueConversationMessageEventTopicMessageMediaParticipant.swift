@@ -92,12 +92,14 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
     public var screenRecordingState: String?
     public var flaggedReason: FlaggedReason?
     public var journeyContext: QueueConversationMessageEventTopicJourneyContext?
+    public var startAcwTime: Date?
+    public var endAcwTime: Date?
     public var messages: [QueueConversationMessageEventTopicMessageDetails]?
     public var type: ModelType?
     public var recipientCountry: String?
     public var recipientType: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationMessageEventTopicUriReference?, queue: QueueConversationMessageEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationMessageEventTopicErrorBody?, script: QueueConversationMessageEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationMessageEventTopicUriReference?, externalOrganization: QueueConversationMessageEventTopicUriReference?, wrapup: QueueConversationMessageEventTopicWrapup?, conversationRoutingData: QueueConversationMessageEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationMessageEventTopicJourneyContext?, messages: [QueueConversationMessageEventTopicMessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationMessageEventTopicUriReference?, queue: QueueConversationMessageEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationMessageEventTopicErrorBody?, script: QueueConversationMessageEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationMessageEventTopicUriReference?, externalOrganization: QueueConversationMessageEventTopicUriReference?, wrapup: QueueConversationMessageEventTopicWrapup?, conversationRoutingData: QueueConversationMessageEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationMessageEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, messages: [QueueConversationMessageEventTopicMessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?) {
         
         self._id = _id
         
@@ -161,6 +163,10 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         
         self.journeyContext = journeyContext
         
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
+        
         self.messages = messages
         
         self.type = type
@@ -203,6 +209,8 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         case screenRecordingState
         case flaggedReason
         case journeyContext
+        case startAcwTime
+        case endAcwTime
         case messages
         case type
         case recipientCountry

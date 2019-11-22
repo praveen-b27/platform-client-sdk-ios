@@ -16,17 +16,17 @@ public class ScimServiceProviderConfig: Codable {
     public var schemas: [String]?
     /** The HTTP-addressable URL that points to the service provider&#39;s documentation. */
     public var documentationUri: String?
-    /** \&quot;patch\&quot; configuration options. */
+    /** The \&quot;patch\&quot; configuration options. */
     public var patch: ScimServiceProviderConfigSimpleFeature?
-    /** \&quot;filter\&quot; configuration options. */
+    /** The \&quot;filter\&quot; configuration options. */
     public var filter: ScimServiceProviderConfigFilterFeature?
-    /** \&quot;ETag\&quot; configuration options. */
+    /** The \&quot;etag\&quot; configuration options. */
     public var etag: ScimServiceProviderConfigSimpleFeature?
-    /** \&quot;sort\&quot; configuration options. */
+    /** The \&quot;sort\&quot; configuration options. */
     public var sort: ScimServiceProviderConfigSimpleFeature?
-    /** \&quot;bulk\&quot; configuration options. */
+    /** The \&quot;bulk\&quot; configuration options. */
     public var bulk: ScimServiceProviderConfigBulkFeature?
-    /** \&quot;changePassword\&quot; configuration options. */
+    /** The \&quot;changePassword\&quot; configuration options. */
     public var changePassword: ScimServiceProviderConfigSimpleFeature?
     /** The list of supported authentication schemes. */
     public var authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?

@@ -107,6 +107,10 @@ public class CobrowseMediaParticipant: Codable {
     public var journeyContext: JourneyContext?
     /** Information on how a communication should be routed to an agent. */
     public var conversationRoutingData: ConversationRoutingData?
+    /** The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var startAcwTime: Date?
+    /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var endAcwTime: Date?
     /** The co-browse session ID. */
     public var cobrowseSessionId: String?
     /** This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer). */
@@ -118,7 +122,7 @@ public class CobrowseMediaParticipant: Codable {
     /** The time when the provider event which triggered this conversation update happened in the corrected provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var providerEventTime: Date?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorBody?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorBody?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, providerEventTime: Date?) {
         
         self._id = _id
         
@@ -180,6 +184,10 @@ public class CobrowseMediaParticipant: Codable {
         
         self.conversationRoutingData = conversationRoutingData
         
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
+        
         self.cobrowseSessionId = cobrowseSessionId
         
         self.cobrowseRole = cobrowseRole
@@ -223,6 +231,8 @@ public class CobrowseMediaParticipant: Codable {
         case flaggedReason
         case journeyContext
         case conversationRoutingData
+        case startAcwTime
+        case endAcwTime
         case cobrowseSessionId
         case cobrowseRole
         case controlling

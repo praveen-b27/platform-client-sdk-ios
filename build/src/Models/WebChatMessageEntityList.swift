@@ -14,10 +14,10 @@ public class WebChatMessageEntityList: Codable {
     public var pageSize: Int?
     public var entities: [WebChatMessage]?
     public var previousPage: String?
-    public var next: String?
     public var selfUri: String?
+    public var next: String?
 
-    public init(pageSize: Int?, entities: [WebChatMessage]?, previousPage: String?, next: String?, selfUri: String?) {
+    public init(pageSize: Int?, entities: [WebChatMessage]?, previousPage: String?, selfUri: String?, next: String?) {
         
         self.pageSize = pageSize
         
@@ -25,9 +25,9 @@ public class WebChatMessageEntityList: Codable {
         
         self.previousPage = previousPage
         
-        self.next = next
-        
         self.selfUri = selfUri
+        
+        self.next = next
         
     }
 

@@ -38,6 +38,8 @@ title: QueueConversationCobrowseEventTopicCobrowseMediaParticipant
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
 | **journeyContext** | [**QueueConversationCobrowseEventTopicJourneyContext**](QueueConversationCobrowseEventTopicJourneyContext.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **cobrowseSessionId** | **String** |  | [optional] |
 | **cobrowseRole** | **String** |  | [optional] |
 | **viewerUrl** | **String** |  | [optional] |

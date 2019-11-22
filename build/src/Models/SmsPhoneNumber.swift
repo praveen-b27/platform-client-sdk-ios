@@ -24,6 +24,11 @@ public class SmsPhoneNumber: Codable {
         case pending = "PENDING"
         case pendingCancellation = "PENDING_CANCELLATION"
     }
+    public enum Capabilities: String, Codable { 
+        case sms = "sms"
+        case mms = "mms"
+        case voice = "voice"
+    }
     public enum AutoRenewable: String, Codable { 
         case quarterly = "Quarterly"
     }
@@ -42,6 +47,8 @@ public class SmsPhoneNumber: Codable {
     public var provisionedThroughPureCloud: Bool?
     /** Status of the provisioned phone number. */
     public var phoneNumberStatus: PhoneNumberStatus?
+    /** The capabilities of the phone number available for provisioning. */
+    public var capabilities: [Capabilities]?
     /** The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. */
     public var countryCode: String?
     /** Date this phone number was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
@@ -69,7 +76,7 @@ public class SmsPhoneNumber: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, selfUri: String?) {
+    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, selfUri: String?) {
         
         self._id = _id
         
@@ -82,6 +89,8 @@ public class SmsPhoneNumber: Codable {
         self.provisionedThroughPureCloud = provisionedThroughPureCloud
         
         self.phoneNumberStatus = phoneNumberStatus
+        
+        self.capabilities = capabilities
         
         self.countryCode = countryCode
         
@@ -118,6 +127,7 @@ public class SmsPhoneNumber: Codable {
         case phoneNumberType
         case provisionedThroughPureCloud
         case phoneNumberStatus
+        case capabilities
         case countryCode
         case dateCreated
         case dateModified

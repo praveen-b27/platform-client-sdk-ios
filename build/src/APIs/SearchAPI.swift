@@ -1432,6 +1432,7 @@ open class SearchAPI {
             "id" : "aeiou"
           }
         },
+        "endAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "aniName" : "aeiou",
@@ -1440,6 +1441,7 @@ open class SearchAPI {
         "userUri" : "aeiou",
         "dnis" : "aeiou",
         "ani" : "aeiou",
+        "startAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : {
           "provisional" : true,
           "code" : "aeiou",
@@ -3411,6 +3413,7 @@ open class SearchAPI {
             "id" : "aeiou"
           }
         },
+        "endAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "aniName" : "aeiou",
@@ -3419,6 +3422,7 @@ open class SearchAPI {
         "userUri" : "aeiou",
         "dnis" : "aeiou",
         "ani" : "aeiou",
+        "startAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : {
           "provisional" : true,
           "code" : "aeiou",

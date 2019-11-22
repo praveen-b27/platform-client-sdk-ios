@@ -13,6 +13,7 @@ title: DialerResponsesetConfigChangeResponseSet
 | **dateModified** | [**Date**](Date.html) |  | [optional] |
 | **version** | **Int** |  | [optional] |
 | **responses** | [**[String:DialerResponsesetConfigChangeReaction]**](DialerResponsesetConfigChangeReaction.html) |  | [optional] |
+| **beepDetectionEnabled** | **Bool** |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

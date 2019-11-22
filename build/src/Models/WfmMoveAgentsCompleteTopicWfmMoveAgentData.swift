@@ -12,12 +12,14 @@ import Foundation
 public class WfmMoveAgentsCompleteTopicWfmMoveAgentData: Codable {
 
     public enum Result: String, Codable { 
-        case moveSuccessful = "MoveSuccessful"
-        case nothingToDo = "NothingToDo"
         case alreadyMoved = "AlreadyMoved"
-        case destinationManagementUnitDoesNotExist = "DestinationManagementUnitDoesNotExist"
+        case destinationBusinessUnitAgentLimitExceeded = "DestinationBusinessUnitAgentLimitExceeded"
         case destinationManagementUnitAgentLimitExceeded = "DestinationManagementUnitAgentLimitExceeded"
+        case destinationManagementUnitDoesNotExist = "DestinationManagementUnitDoesNotExist"
+        case moveSuccessful = "MoveSuccessful"
         case movingToDifferentManagementUnit = "MovingToDifferentManagementUnit"
+        case nothingToDo = "NothingToDo"
+        case sourceManagementUnitNotAuthorized = "SourceManagementUnitNotAuthorized"
     }
     public var user: WfmMoveAgentsCompleteTopicUserReference?
     public var result: Result?

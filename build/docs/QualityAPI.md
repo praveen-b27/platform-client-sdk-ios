@@ -81,8 +81,9 @@ Delete a calibration by id.
 
 Wraps DELETE /api/v2/quality/calibrations/{calibrationId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:delete
 
 ### Example
 
@@ -134,8 +135,9 @@ Delete an evaluation
 
 Wraps DELETE /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:delete
 
 ### Example
 
@@ -342,8 +344,9 @@ Delete a keywordSet by id.
 
 Wraps DELETE /api/v2/quality/keywordsets/{keywordSetId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:delete
 
 ### Example
 
@@ -392,8 +395,9 @@ Bulk delete of keyword sets; this will only delete the keyword sets that match t
 
 Wraps DELETE /api/v2/quality/keywordsets  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:delete
 
 ### Example
 
@@ -442,8 +446,9 @@ Including the number of evaluations and average evaluation score
 
 Wraps GET /api/v2/quality/agents/activity  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 
@@ -515,8 +520,9 @@ Get a calibration by id.  Requires either calibrator id or conversation id
 
 Wraps GET /api/v2/quality/calibrations/{calibrationId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:view
 
 ### Example
 
@@ -570,8 +576,9 @@ Get the list of calibrations
 
 Wraps GET /api/v2/quality/calibrations  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:view
 
 ### Example
 
@@ -635,12 +642,18 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 
 Get audits for conversation or recording
 
-
+Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
 
 Wraps GET /api/v2/quality/conversations/{conversationId}/audits  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:viewAudit
+* quality:evaluation:viewAudit
+* quality:survey:viewAudit
+* recording:recording:viewAudit
+* recording:annotation:viewAudit
+* recording:screenRecording:viewAudit
 
 ### Example
 
@@ -706,8 +719,9 @@ Get an evaluation
 
 Wraps GET /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 
@@ -761,8 +775,9 @@ Get the surveys for a conversation
 
 Wraps GET /api/v2/quality/conversations/{conversationId}/surveys  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:survey:view
 
 ### Example
 
@@ -812,8 +827,9 @@ Query params must include one of conversationId, evaluatorUserId, or agentUserId
 
 Wraps GET /api/v2/quality/evaluations/query  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 
@@ -897,8 +913,9 @@ Get an evaluator activity
 
 Wraps GET /api/v2/quality/evaluators/activity  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:view
 
 ### Example
 
@@ -1596,8 +1613,9 @@ Get a keywordSet by id.
 
 Wraps GET /api/v2/quality/keywordsets/{keywordSetId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:view
 
 ### Example
 
@@ -1647,8 +1665,9 @@ Get the list of keyword sets
 
 Wraps GET /api/v2/quality/keywordsets  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:view
 
 ### Example
 
@@ -2046,8 +2065,9 @@ Get a survey for a conversation
 
 Wraps GET /api/v2/quality/surveys/{surveyId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:survey:view
 
 ### Example
 
@@ -2306,8 +2326,9 @@ Create a calibration
 
 Wraps POST /api/v2/quality/calibrations  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:add
 
 ### Example
 
@@ -2359,8 +2380,9 @@ Create an evaluation
 
 Wraps POST /api/v2/quality/conversations/{conversationId}/evaluations  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:add
 
 ### Example
 
@@ -2621,8 +2643,9 @@ Create a Keyword Set
 
 Wraps POST /api/v2/quality/keywordsets  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:add
 
 ### Example
 
@@ -2932,8 +2955,9 @@ Update a calibration to the specified calibration via PUT.  Editable fields incl
 
 Wraps PUT /api/v2/quality/calibrations/{calibrationId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:calibration:edit
 
 ### Example
 
@@ -2981,12 +3005,15 @@ QualityAPI.putQualityCalibration(calibrationId: calibrationId, body: body) { (re
 
 Update an evaluation
 
-
+The quality:evaluation:edit permission allows modification of most fields, while the quality:evaluation:editScore permission allows an evaluator to change just the question scores, and the quality:evaluation:editAgentSignoff permission allows an agent to change the agent comments and sign off on the evaluation.
 
 Wraps PUT /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:evaluation:edit
+* quality:evaluation:editScore
+* quality:evaluation:editAgentSignoff
 
 ### Example
 
@@ -3204,8 +3231,9 @@ Update a keywordSet to the specified keywordSet via PUT.
 
 Wraps PUT /api/v2/quality/keywordsets/{keywordSetId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* quality:keywordset:edit
 
 ### Example
 

@@ -38,6 +38,8 @@ title: QueueConversationMessageEventTopicMessageMediaParticipant
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
 | **journeyContext** | [**QueueConversationMessageEventTopicJourneyContext**](QueueConversationMessageEventTopicJourneyContext.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **messages** | [**[QueueConversationMessageEventTopicMessageDetails]**](QueueConversationMessageEventTopicMessageDetails.html) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **recipientCountry** | **String** |  | [optional] |

@@ -2247,6 +2247,7 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123,
     "nexthop" : "aeiou"
   } ],
+  "publicNatIpAddress" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "lastModifiedUserId" : "aeiou",
   "lastModifiedCorrelationId" : "aeiou",
@@ -2273,9 +2274,11 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "ifStatus" : "aeiou",
   "selfUri" : "aeiou",
+  "useForCloudProxyEdgeCommunication" : true,
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "ipv6Capabilities" : "",
   "version" : 123,
+  "useForIndirectEdgeCommunication" : true,
   "ipv4Capabilities" : {
     "metric" : 123,
     "pingEnabled" : true,
@@ -2430,6 +2433,7 @@ open class TelephonyProvidersEdgeAPI {
       "family" : 123,
       "nexthop" : "aeiou"
     } ],
+    "publicNatIpAddress" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "lastModifiedUserId" : "aeiou",
     "lastModifiedCorrelationId" : "aeiou",
@@ -2456,9 +2460,11 @@ open class TelephonyProvidersEdgeAPI {
     } ],
     "ifStatus" : "aeiou",
     "selfUri" : "aeiou",
+    "useForCloudProxyEdgeCommunication" : true,
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "ipv6Capabilities" : "",
     "version" : 123,
+    "useForIndirectEdgeCommunication" : true,
     "ipv4Capabilities" : {
       "metric" : 123,
       "pingEnabled" : true,
@@ -6246,6 +6252,7 @@ open class TelephonyProvidersEdgeAPI {
       "family" : 123,
       "nexthop" : "aeiou"
     } ],
+    "publicNatIpAddress" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "lastModifiedUserId" : "aeiou",
     "lastModifiedCorrelationId" : "aeiou",
@@ -6272,9 +6279,11 @@ open class TelephonyProvidersEdgeAPI {
     } ],
     "ifStatus" : "aeiou",
     "selfUri" : "aeiou",
+    "useForCloudProxyEdgeCommunication" : true,
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "ipv6Capabilities" : "",
     "version" : 123,
+    "useForIndirectEdgeCommunication" : true,
     "ipv4Capabilities" : {
       "metric" : 123,
       "pingEnabled" : true,
@@ -10916,6 +10925,7 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123,
     "nexthop" : "aeiou"
   } ],
+  "publicNatIpAddress" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "lastModifiedUserId" : "aeiou",
   "lastModifiedCorrelationId" : "aeiou",
@@ -10942,9 +10952,11 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "ifStatus" : "aeiou",
   "selfUri" : "aeiou",
+  "useForCloudProxyEdgeCommunication" : true,
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "ipv6Capabilities" : "",
   "version" : 123,
+  "useForIndirectEdgeCommunication" : true,
   "ipv4Capabilities" : {
     "metric" : 123,
     "pingEnabled" : true,
@@ -13967,6 +13979,7 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123,
     "nexthop" : "aeiou"
   } ],
+  "publicNatIpAddress" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "lastModifiedUserId" : "aeiou",
   "lastModifiedCorrelationId" : "aeiou",
@@ -13993,9 +14006,11 @@ open class TelephonyProvidersEdgeAPI {
   } ],
   "ifStatus" : "aeiou",
   "selfUri" : "aeiou",
+  "useForCloudProxyEdgeCommunication" : true,
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "ipv6Capabilities" : "",
   "version" : 123,
+  "useForIndirectEdgeCommunication" : true,
   "ipv4Capabilities" : {
     "metric" : 123,
     "pingEnabled" : true,

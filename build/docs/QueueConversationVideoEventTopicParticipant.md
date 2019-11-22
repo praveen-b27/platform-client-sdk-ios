@@ -24,6 +24,8 @@ title: QueueConversationVideoEventTopicParticipant
 | **wrapupPrompt** | **String** |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **conversationRoutingData** | [**QueueConversationVideoEventTopicConversationRoutingData**](QueueConversationVideoEventTopicConversationRoutingData.html) |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **monitoredParticipantId** | **String** |  | [optional] |

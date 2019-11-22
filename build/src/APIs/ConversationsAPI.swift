@@ -1440,6 +1440,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -1448,6 +1449,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -2647,6 +2649,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "aniName" : "aeiou",
@@ -2655,6 +2658,7 @@ open class ConversationsAPI {
       "userUri" : "aeiou",
       "dnis" : "aeiou",
       "ani" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapup" : {
         "provisional" : true,
         "code" : "aeiou",
@@ -3452,6 +3456,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
@@ -3470,6 +3475,7 @@ open class ConversationsAPI {
       "direction" : "aeiou"
     },
     "uuiData" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "muted" : true,
     "ani" : "aeiou",
     "direction" : "aeiou",
@@ -3808,6 +3814,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "callbackUserName" : "aeiou",
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3815,6 +3822,7 @@ open class ConversationsAPI {
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,
@@ -4152,6 +4160,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "callbackUserName" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -4159,6 +4168,7 @@ open class ConversationsAPI {
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "direction" : "aeiou",
       "wrapup" : {
         "provisional" : true,
@@ -4325,6 +4335,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "disconnectType" : "aeiou",
@@ -4343,6 +4354,7 @@ open class ConversationsAPI {
         "direction" : "aeiou"
       },
       "uuiData" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "muted" : true,
       "ani" : "aeiou",
       "direction" : "aeiou",
@@ -5235,12 +5247,14 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,
@@ -5785,12 +5799,14 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "disconnectType" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "direction" : "aeiou",
       "wrapup" : {
         "provisional" : true,
@@ -5950,12 +5966,14 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "controlling" : [ "aeiou" ],
     "direction" : "aeiou",
     "wrapup" : {
@@ -6279,12 +6297,14 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "disconnectType" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "controlling" : [ "aeiou" ],
       "direction" : "aeiou",
       "wrapup" : {
@@ -6452,12 +6472,14 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,
@@ -7068,12 +7090,14 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "disconnectType" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "direction" : "aeiou",
       "wrapup" : {
         "provisional" : true,
@@ -7243,6 +7267,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
@@ -7250,6 +7275,7 @@ open class ConversationsAPI {
     "fromAddress" : "",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,
@@ -8014,12 +8040,14 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "endAcwTime" : "2000-01-23T04:56:07.000+0000",
       "wrapupRequired" : true,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "disconnectType" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
+      "startAcwTime" : "2000-01-23T04:56:07.000+0000",
       "direction" : "aeiou",
       "wrapup" : {
         "provisional" : true,
@@ -9344,6 +9372,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -9352,6 +9381,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -10489,6 +10519,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -10497,6 +10528,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -11561,6 +11593,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -11569,6 +11602,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -12633,6 +12667,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -12641,6 +12676,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -13705,6 +13741,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -13713,6 +13750,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -14777,6 +14815,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -14785,6 +14824,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -16740,6 +16780,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -16748,6 +16789,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -17806,6 +17848,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "aniName" : "aeiou",
@@ -17814,6 +17857,7 @@ open class ConversationsAPI {
     "userUri" : "aeiou",
     "dnis" : "aeiou",
     "ani" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapup" : {
       "provisional" : true,
       "code" : "aeiou",
@@ -19041,12 +19085,14 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,
@@ -19270,12 +19316,14 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,
@@ -19592,12 +19640,14 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,
@@ -20634,6 +20684,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       }
     },
+    "endAcwTime" : "2000-01-23T04:56:07.000+0000",
     "wrapupRequired" : true,
     "connectedTime" : "2000-01-23T04:56:07.000+0000",
     "disconnectType" : "aeiou",
@@ -20641,6 +20692,7 @@ open class ConversationsAPI {
     "fromAddress" : "",
     "id" : "aeiou",
     "state" : "aeiou",
+    "startAcwTime" : "2000-01-23T04:56:07.000+0000",
     "direction" : "aeiou",
     "wrapup" : {
       "provisional" : true,

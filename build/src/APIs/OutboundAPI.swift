@@ -2017,6 +2017,7 @@ open class OutboundAPI {
             "id" : "aeiou"
           }
         },
+        "endAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapupRequired" : true,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "aniName" : "aeiou",
@@ -2025,6 +2026,7 @@ open class OutboundAPI {
         "userUri" : "aeiou",
         "dnis" : "aeiou",
         "ani" : "aeiou",
+        "startAcwTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : {
           "provisional" : true,
           "code" : "aeiou",
@@ -2144,6 +2146,7 @@ open class OutboundAPI {
               "alertingTimeoutMs" : 123,
               "emails" : [ "" ],
               "conversationRoutingData" : "",
+              "endAcwTime" : "2000-01-23T04:56:07.000+0000",
               "wrapupRequired" : true,
               "connectedTime" : "2000-01-23T04:56:07.000+0000",
               "aniName" : "aeiou",
@@ -2152,6 +2155,7 @@ open class OutboundAPI {
               "userUri" : "aeiou",
               "dnis" : "aeiou",
               "ani" : "aeiou",
+              "startAcwTime" : "2000-01-23T04:56:07.000+0000",
               "wrapup" : "",
               "address" : "aeiou",
               "evaluations" : [ "" ],

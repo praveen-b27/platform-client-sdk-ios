@@ -80,6 +80,12 @@ public class DomainLogicalInterface: Codable {
     public var inheritPhoneTrunkBasesIPv6: Bool?
     /** This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. */
     public var useForInternalEdgeCommunication: Bool?
+    /** Site Interconnects using the \&quot;Indirect\&quot; method will communicate using the Public IP Address specified on the interface. Use this option when a NAT enabled firewall is between the Edge and the far end. */
+    public var useForIndirectEdgeCommunication: Bool?
+    /** Site Interconnects using the \&quot;Cloud Proxy\&quot; method will broker the connection between them with a Cloud Proxy. This method is required for connections between one or more Sites using Cloud Media, but can optionally be used between two premises Sites if Direct or Indirect are not an option. */
+    public var useForCloudProxyEdgeCommunication: Bool?
+    /** NENT IP Address */
+    public var publicNatIpAddress: String?
     /** External trunk base settings to use for external communication from this interface. */
     public var externalTrunkBaseAssignments: [TrunkBaseAssignment]?
     /** Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true. */
@@ -92,7 +98,7 @@ public class DomainLogicalInterface: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, edgeUri: String?, edgeAssignedId: String?, friendlyName: String?, vlanTagId: Int?, hardwareAddress: String?, physicalAdapterId: String?, ifStatus: String?, interfaceType: InterfaceType?, routes: [DomainNetworkRoute]?, addresses: [DomainNetworkAddress]?, ipv4Capabilities: DomainCapabilities?, ipv6Capabilities: DomainCapabilities?, currentState: CurrentState?, lastModifiedUserId: String?, lastModifiedCorrelationId: String?, commandResponses: [DomainNetworkCommandResponse]?, inheritPhoneTrunkBasesIPv4: Bool?, inheritPhoneTrunkBasesIPv6: Bool?, useForInternalEdgeCommunication: Bool?, externalTrunkBaseAssignments: [TrunkBaseAssignment]?, phoneTrunkBaseAssignments: [TrunkBaseAssignment]?, traceEnabled: Bool?, startDate: Date?, endDate: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, edgeUri: String?, edgeAssignedId: String?, friendlyName: String?, vlanTagId: Int?, hardwareAddress: String?, physicalAdapterId: String?, ifStatus: String?, interfaceType: InterfaceType?, routes: [DomainNetworkRoute]?, addresses: [DomainNetworkAddress]?, ipv4Capabilities: DomainCapabilities?, ipv6Capabilities: DomainCapabilities?, currentState: CurrentState?, lastModifiedUserId: String?, lastModifiedCorrelationId: String?, commandResponses: [DomainNetworkCommandResponse]?, inheritPhoneTrunkBasesIPv4: Bool?, inheritPhoneTrunkBasesIPv6: Bool?, useForInternalEdgeCommunication: Bool?, useForIndirectEdgeCommunication: Bool?, useForCloudProxyEdgeCommunication: Bool?, publicNatIpAddress: String?, externalTrunkBaseAssignments: [TrunkBaseAssignment]?, phoneTrunkBaseAssignments: [TrunkBaseAssignment]?, traceEnabled: Bool?, startDate: Date?, endDate: Date?, selfUri: String?) {
         
         self._id = _id
         
@@ -154,6 +160,12 @@ public class DomainLogicalInterface: Codable {
         
         self.useForInternalEdgeCommunication = useForInternalEdgeCommunication
         
+        self.useForIndirectEdgeCommunication = useForIndirectEdgeCommunication
+        
+        self.useForCloudProxyEdgeCommunication = useForCloudProxyEdgeCommunication
+        
+        self.publicNatIpAddress = publicNatIpAddress
+        
         self.externalTrunkBaseAssignments = externalTrunkBaseAssignments
         
         self.phoneTrunkBaseAssignments = phoneTrunkBaseAssignments
@@ -199,6 +211,9 @@ public class DomainLogicalInterface: Codable {
         case inheritPhoneTrunkBasesIPv4
         case inheritPhoneTrunkBasesIPv6
         case useForInternalEdgeCommunication
+        case useForIndirectEdgeCommunication
+        case useForCloudProxyEdgeCommunication
+        case publicNatIpAddress
         case externalTrunkBaseAssignments
         case phoneTrunkBaseAssignments
         case traceEnabled

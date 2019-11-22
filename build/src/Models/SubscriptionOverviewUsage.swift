@@ -31,8 +31,12 @@ public class SubscriptionOverviewUsage: Codable {
     public var usageNotes: String?
     /** Indicates whether the item is cancellable */
     public var isCancellable: Bool?
+    /** Quantity multiplier for this charge */
+    public var bundleQuantity: String?
+    /** A charge from a third party entity */
+    public var isThirdParty: Bool?
 
-    public init(name: String?, partNumber: String?, grouping: String?, unitOfMeasureType: String?, usageQuantity: String?, overagePrice: String?, prepayQuantity: String?, prepayPrice: String?, usageNotes: String?, isCancellable: Bool?) {
+    public init(name: String?, partNumber: String?, grouping: String?, unitOfMeasureType: String?, usageQuantity: String?, overagePrice: String?, prepayQuantity: String?, prepayPrice: String?, usageNotes: String?, isCancellable: Bool?, bundleQuantity: String?, isThirdParty: Bool?) {
         
         self.name = name
         
@@ -53,6 +57,10 @@ public class SubscriptionOverviewUsage: Codable {
         self.usageNotes = usageNotes
         
         self.isCancellable = isCancellable
+        
+        self.bundleQuantity = bundleQuantity
+        
+        self.isThirdParty = isThirdParty
         
     }
 

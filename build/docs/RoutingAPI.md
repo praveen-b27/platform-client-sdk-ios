@@ -1368,7 +1368,7 @@ RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, page
 
 
 
-> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageSize, pageNumber, sortBy, name, active, _id, divisionId)
+> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageSize, pageNumber, sortBy, name, _id, divisionId)
 
 Get list of queues.
 
@@ -1392,12 +1392,11 @@ let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
 let sortBy: String = "name" // Sort by
 let name: String = "" // Name
-let active: Bool = true // Active
 let _id: [String] = [""] // ID(s)
 let divisionId: [String] = [""] // Division ID(s)
 
 // Code example
-RoutingAPI.getRoutingQueues(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, active: active, _id: _id, divisionId: divisionId) { (response, error) in
+RoutingAPI.getRoutingQueues(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, _id: _id, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1416,7 +1415,6 @@ RoutingAPI.getRoutingQueues(pageSize: pageSize, pageNumber: pageNumber, sortBy: 
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortBy** | **String**| Sort by | [optional] [default to name] |
 | **name** | **String**| Name | [optional] |
-| **active** | **Bool**| Active | [optional] |
 | **_id** | [**[String]**](String.html)| ID(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
 {: class="table-striped"}

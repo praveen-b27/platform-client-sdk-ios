@@ -1044,6 +1044,10 @@ open class AnalyticsAPI {
       "flowEntryTypes" : [ "aeiou" ],
       "oauthClientIds" : [ "aeiou" ]
     },
+    "selectedColumns" : [ {
+      "columnOrder" : 123,
+      "columnName" : "aeiou"
+    } ],
     "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
     "hasSplitFilters" : true,
     "name" : "aeiou",
@@ -2820,6 +2824,10 @@ open class AnalyticsAPI {
     "flowEntryTypes" : [ "aeiou" ],
     "oauthClientIds" : [ "aeiou" ]
   },
+  "selectedColumns" : [ {
+    "columnOrder" : 123,
+    "columnName" : "aeiou"
+  } ],
   "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
   "hasSplitFilters" : true,
   "name" : "aeiou",

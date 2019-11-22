@@ -79,8 +79,10 @@ public class ReportingExportJobRequest: Codable {
     public var hasFormatDurations: Bool?
     /** Indicates if filters will be split in aggregate detail exports */
     public var hasSplitFilters: Bool?
+    /** The list of ordered selected columns from the export view by the user */
+    public var selectedColumns: [SelectedColumns]?
 
-    public init(name: String?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?) {
+    public init(name: String?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?) {
         
         self.name = name
         
@@ -103,6 +105,8 @@ public class ReportingExportJobRequest: Codable {
         self.hasFormatDurations = hasFormatDurations
         
         self.hasSplitFilters = hasSplitFilters
+        
+        self.selectedColumns = selectedColumns
         
     }
 

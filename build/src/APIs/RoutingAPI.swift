@@ -2798,8 +2798,6 @@ open class RoutingAPI {
     
     
     
-    
-    
     /**
      
      Get list of queues.
@@ -2808,13 +2806,12 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter name: (query) Name (optional)
-     - parameter active: (query) Active (optional)
      - parameter _id: (query) ID(s) (optional)
      - parameter divisionId: (query) Division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueues(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, active: Bool? = nil, _id: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, active: active, _id: _id, divisionId: divisionId)
+    open class func getRoutingQueues(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, _id: _id, divisionId: divisionId)
         requestBuilder.execute { (response: Response<QueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2966,13 +2963,12 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter name: (query) Name (optional)
-     - parameter active: (query) Active (optional)
      - parameter _id: (query) ID(s) (optional)
      - parameter divisionId: (query) Division ID(s) (optional)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
-    open class func getRoutingQueuesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, active: Bool? = nil, _id: [String]? = nil, divisionId: [String]? = nil) -> RequestBuilder<QueueEntityListing> {
+    open class func getRoutingQueuesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil) -> RequestBuilder<QueueEntityListing> {
         let path = "/api/v2/routing/queues"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2992,8 +2988,6 @@ open class RoutingAPI {
             "sortBy": sortBy, 
             
             "name": name, 
-            
-            "active": active, 
             
             "id": _id, 
             
@@ -4171,6 +4165,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+  "capabilities" : [ "aeiou" ],
   "shortCodeBillingType" : "aeiou",
   "selfUri" : "aeiou",
   "provisionedThroughPureCloud" : true,
@@ -4533,6 +4528,7 @@ open class RoutingAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+    "capabilities" : [ "aeiou" ],
     "shortCodeBillingType" : "aeiou",
     "selfUri" : "aeiou",
     "provisionedThroughPureCloud" : true,
@@ -6986,6 +6982,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+  "capabilities" : [ "aeiou" ],
   "shortCodeBillingType" : "aeiou",
   "selfUri" : "aeiou",
   "provisionedThroughPureCloud" : true,
@@ -8161,6 +8158,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
+  "capabilities" : [ "aeiou" ],
   "shortCodeBillingType" : "aeiou",
   "selfUri" : "aeiou",
   "provisionedThroughPureCloud" : true,

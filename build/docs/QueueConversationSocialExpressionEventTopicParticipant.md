@@ -24,6 +24,8 @@ title: QueueConversationSocialExpressionEventTopicParticipant
 | **wrapupPrompt** | **String** |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **conversationRoutingData** | [**QueueConversationSocialExpressionEventTopicConversationRoutingData**](QueueConversationSocialExpressionEventTopicConversationRoutingData.html) |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **monitoredParticipantId** | **String** |  | [optional] |

@@ -31,10 +31,14 @@ public class FlowDivisionView: Codable {
     /** The division to which this entity belongs. */
     public var division: WritableDivision?
     public var type: ModelType?
+    /** json schema describing the inputs for the flow */
+    public var inputSchema: JsonSchemaDocument?
+    /** json schema describing the outputs for the flow */
+    public var outputSchema: JsonSchemaDocument?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, selfUri: String?) {
         
         self._id = _id
         
@@ -43,6 +47,10 @@ public class FlowDivisionView: Codable {
         self.division = division
         
         self.type = type
+        
+        self.inputSchema = inputSchema
+        
+        self.outputSchema = outputSchema
         
         self.selfUri = selfUri
         
@@ -53,6 +61,8 @@ public class FlowDivisionView: Codable {
         case name
         case division
         case type
+        case inputSchema
+        case outputSchema
         case selfUri
     }
 

@@ -81,10 +81,12 @@ public class ConversationChatEventTopicChatMediaParticipant: Codable {
     public var screenRecordingState: String?
     public var flaggedReason: FlaggedReason?
     public var journeyContext: ConversationChatEventTopicJourneyContext?
+    public var startAcwTime: Date?
+    public var endAcwTime: Date?
     public var roomId: String?
     public var avatarImageUrl: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationChatEventTopicUriReference?, queue: ConversationChatEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationChatEventTopicErrorBody?, script: ConversationChatEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationChatEventTopicUriReference?, externalOrganization: ConversationChatEventTopicUriReference?, wrapup: ConversationChatEventTopicWrapup?, conversationRoutingData: ConversationChatEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationChatEventTopicJourneyContext?, roomId: String?, avatarImageUrl: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationChatEventTopicUriReference?, queue: ConversationChatEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationChatEventTopicErrorBody?, script: ConversationChatEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationChatEventTopicUriReference?, externalOrganization: ConversationChatEventTopicUriReference?, wrapup: ConversationChatEventTopicWrapup?, conversationRoutingData: ConversationChatEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationChatEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, roomId: String?, avatarImageUrl: String?) {
         
         self._id = _id
         
@@ -148,6 +150,10 @@ public class ConversationChatEventTopicChatMediaParticipant: Codable {
         
         self.journeyContext = journeyContext
         
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
+        
         self.roomId = roomId
         
         self.avatarImageUrl = avatarImageUrl
@@ -186,6 +192,8 @@ public class ConversationChatEventTopicChatMediaParticipant: Codable {
         case screenRecordingState
         case flaggedReason
         case journeyContext
+        case startAcwTime
+        case endAcwTime
         case roomId
         case avatarImageUrl
     }

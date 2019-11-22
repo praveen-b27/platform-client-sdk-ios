@@ -38,6 +38,8 @@ title: ConversationVideoEventTopicVideoMediaParticipant
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
 | **journeyContext** | [**ConversationVideoEventTopicJourneyContext**](ConversationVideoEventTopicJourneyContext.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **audioMuted** | **Bool** |  | [optional] |
 | **videoMuted** | **Bool** |  | [optional] |
 | **sharingScreen** | **Bool** |  | [optional] |

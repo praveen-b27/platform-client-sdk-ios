@@ -38,6 +38,8 @@ title: ConversationScreenShareEventTopicScreenShareMediaParticipant
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
 | **journeyContext** | [**ConversationScreenShareEventTopicJourneyContext**](ConversationScreenShareEventTopicJourneyContext.html) |  | [optional] |
+| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **context** | **String** |  | [optional] |
 | **peerCount** | **Int** |  | [optional] |
 | **sharing** | **Bool** |  | [optional] |

@@ -8662,6 +8662,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Get a pageable list of basic flow information objects filterable by query parameters.
@@ -8677,10 +8679,11 @@ open class ArchitectAPI {
      - parameter publishedAfter: (query) Published after (optional)
      - parameter publishedBefore: (query) Published before (optional)
      - parameter divisionId: (query) division ID(s) (optional)
+     - parameter includeSchemas: (query) Include variable schemas (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlowsDivisionviews(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, publishVersionId: String? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: FlowDivisionViewEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsDivisionviewsWithRequestBuilder(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, publishVersionId: publishVersionId, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId)
+    open class func getFlowsDivisionviews(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, publishVersionId: String? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil, includeSchemas: Bool? = nil, completion: @escaping ((_ data: FlowDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDivisionviewsWithRequestBuilder(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, publishVersionId: publishVersionId, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId, includeSchemas: includeSchemas)
         requestBuilder.execute { (response: Response<FlowDivisionViewEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -8716,6 +8719,19 @@ open class ArchitectAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -8740,10 +8756,11 @@ open class ArchitectAPI {
      - parameter publishedAfter: (query) Published after (optional)
      - parameter publishedBefore: (query) Published before (optional)
      - parameter divisionId: (query) division ID(s) (optional)
+     - parameter includeSchemas: (query) Include variable schemas (optional, default to false)
 
      - returns: RequestBuilder<FlowDivisionViewEntityListing> 
      */
-    open class func getFlowsDivisionviewsWithRequestBuilder(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, publishVersionId: String? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<FlowDivisionViewEntityListing> {
+    open class func getFlowsDivisionviewsWithRequestBuilder(type: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, publishVersionId: String? = nil, publishedAfter: String? = nil, publishedBefore: String? = nil, divisionId: [String]? = nil, includeSchemas: Bool? = nil) -> RequestBuilder<FlowDivisionViewEntityListing> {
         let path = "/api/v2/flows/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8776,7 +8793,9 @@ open class ArchitectAPI {
             
             "publishedBefore": publishedBefore, 
             
-            "divisionId": divisionId
+            "divisionId": divisionId, 
+            
+            "includeSchemas": includeSchemas
             
         ])
 

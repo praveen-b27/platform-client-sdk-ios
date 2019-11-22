@@ -13,6 +13,7 @@ title: SmsPhoneNumber
 | **phoneNumberType** | **String** | Type of the phone number provisioned. | [optional] |
 | **provisionedThroughPureCloud** | **Bool** | Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud | [optional] |
 | **phoneNumberStatus** | **String** | Status of the provisioned phone number. | [optional] |
+| **capabilities** | **[String]** | The capabilities of the phone number available for provisioning. | [optional] |
 | **countryCode** | **String** | The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. | [optional] |
 | **dateCreated** | [**Date**](Date.html) | Date this phone number was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **dateModified** | [**Date**](Date.html) | Date this phone number was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |

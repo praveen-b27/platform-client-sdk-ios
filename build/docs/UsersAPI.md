@@ -9,7 +9,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteAuthorizationSubjectDivisionRole**](UsersAPI.html#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
 | [**deleteUser**](UsersAPI.html#deleteUser) | Delete user |
-| [**deleteUserExternalidAuthorityNameExternalKey**](UsersAPI.html#deleteUserExternalidAuthorityNameExternalKey) | Delete the external identifier for user. |
 | [**deleteUserRoles**](UsersAPI.html#deleteUserRoles) | Removes all the roles from the user. |
 | [**deleteUserRoutinglanguage**](UsersAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
 | [**deleteUserRoutingskill**](UsersAPI.html#deleteUserRoutingskill) | Remove routing skill from user |
@@ -25,8 +24,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserAdjacents**](UsersAPI.html#getUserAdjacents) | Get adjacents |
 | [**getUserCallforwarding**](UsersAPI.html#getUserCallforwarding) | Get a user&#39;s CallForwarding |
 | [**getUserDirectreports**](UsersAPI.html#getUserDirectreports) | Get direct reports |
-| [**getUserExternalid**](UsersAPI.html#getUserExternalid) | Get the external identifiers for a user. |
-| [**getUserExternalidAuthorityName**](UsersAPI.html#getUserExternalidAuthorityName) | Get the external identifier of user for an authority. |
 | [**getUserFavorites**](UsersAPI.html#getUserFavorites) | Get favorites |
 | [**getUserGeolocation**](UsersAPI.html#getUserGeolocation) | Get a user&#39;s Geolocation |
 | [**getUserOutofoffice**](UsersAPI.html#getUserOutofoffice) | Get a OutOfOffice |
@@ -41,7 +38,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserSuperiors**](UsersAPI.html#getUserSuperiors) | Get superiors |
 | [**getUserTrustors**](UsersAPI.html#getUserTrustors) | List the organizations that have authorized/trusted the user. |
 | [**getUsers**](UsersAPI.html#getUsers) | Get the list of available users. |
-| [**getUsersExternalidAuthorityNameExternalKey**](UsersAPI.html#getUsersExternalidAuthorityNameExternalKey) | Get the user associated with external identifier. |
 | [**getUsersMe**](UsersAPI.html#getUsersMe) | Get current user details. |
 | [**getUsersSearch**](UsersAPI.html#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**patchUser**](UsersAPI.html#patchUser) | Update user |
@@ -59,7 +55,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAuthorizationSubjectBulkadd**](UsersAPI.html#postAuthorizationSubjectBulkadd) | Bulk-grant roles and divisions to a subject. |
 | [**postAuthorizationSubjectBulkremove**](UsersAPI.html#postAuthorizationSubjectBulkremove) | Bulk-remove grants from a subject. |
 | [**postAuthorizationSubjectDivisionRole**](UsersAPI.html#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
-| [**postUserExternalid**](UsersAPI.html#postUserExternalid) | Create mapping between external identifier and user. Limit 100 per entity. |
 | [**postUserInvite**](UsersAPI.html#postUserInvite) | Send an activation email to the user |
 | [**postUserPassword**](UsersAPI.html#postUserPassword) | Change a users password |
 | [**postUserRoutinglanguages**](UsersAPI.html#postUserRoutinglanguages) | Add routing language to user |
@@ -184,61 +179,6 @@ UsersAPI.deleteUser(userId: userId) { (response, error) in
 ### Return type
 
 [**Empty**](Empty.html)
-
-<a name="deleteUserExternalidAuthorityNameExternalKey"></a>
-
-# **deleteUserExternalidAuthorityNameExternalKey**
-
-
-
-> Void deleteUserExternalidAuthorityNameExternalKey(userId, authorityName, externalKey)
-
-Delete the external identifier for user.
-
-
-
-Wraps DELETE /api/v2/users/{userId}/externalid/{authorityName}/{externalKey}  
-
-Requires ANY permissions: 
-
-* directory:user:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let userId: String = "" // User ID
-let authorityName: String = "" // Authority Name
-let externalKey: String = "" // External Key
-
-// Code example
-UsersAPI.deleteUserExternalidAuthorityNameExternalKey(userId: userId, authorityName: authorityName, externalKey: externalKey) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("UsersAPI.deleteUserExternalidAuthorityNameExternalKey was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
-| **authorityName** | **String**| Authority Name | |
-| **externalKey** | **String**| External Key | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
 
 <a name="deleteUserRoles"></a>
 
@@ -1031,110 +971,6 @@ UsersAPI.getUserDirectreports(userId: userId, expand: expand) { (response, error
 
 [**[User]**](User.html)
 
-<a name="getUserExternalid"></a>
-
-# **getUserExternalid**
-
-
-
-> [[UserExternalIdentifier]](UserExternalIdentifier.html) getUserExternalid(userId)
-
-Get the external identifiers for a user.
-
-
-
-Wraps GET /api/v2/users/{userId}/externalid  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let userId: String = "" // User ID
-
-// Code example
-UsersAPI.getUserExternalid(userId: userId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("UsersAPI.getUserExternalid was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**[UserExternalIdentifier]**](UserExternalIdentifier.html)
-
-<a name="getUserExternalidAuthorityName"></a>
-
-# **getUserExternalidAuthorityName**
-
-
-
-> [UserExternalIdentifier](UserExternalIdentifier.html) getUserExternalidAuthorityName(userId, authorityName)
-
-Get the external identifier of user for an authority.
-
-Authority name and external key are case sensitive.
-
-Wraps GET /api/v2/users/{userId}/externalid/{authorityName}  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let userId: String = "" // User ID
-let authorityName: String = "" // Authority Name
-
-// Code example
-UsersAPI.getUserExternalidAuthorityName(userId: userId, authorityName: authorityName) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("UsersAPI.getUserExternalidAuthorityName was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
-| **authorityName** | **String**| Authority Name | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**UserExternalIdentifier**](UserExternalIdentifier.html)
-
 <a name="getUserFavorites"></a>
 
 # **getUserFavorites**
@@ -1903,61 +1739,6 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 ### Return type
 
 [**UserEntityListing**](UserEntityListing.html)
-
-<a name="getUsersExternalidAuthorityNameExternalKey"></a>
-
-# **getUsersExternalidAuthorityNameExternalKey**
-
-
-
-> [User](User.html) getUsersExternalidAuthorityNameExternalKey(authorityName, externalKey, expand)
-
-Get the user associated with external identifier.
-
-Authority name and external key are case sensitive.
-
-Wraps GET /api/v2/users/externalid/{authorityName}/{externalKey}  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let authorityName: String = "" // Authority Name
-let externalKey: String = "" // External Key
-let expand: [String] = [UsersAPI.Expand_getUsersExternalidAuthorityNameExternalKey.enummember.rawValue] // Which fields, if any, to expand
-
-// Code example
-UsersAPI.getUsersExternalidAuthorityNameExternalKey(authorityName: authorityName, externalKey: externalKey, expand: expand) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("UsersAPI.getUsersExternalidAuthorityNameExternalKey was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **authorityName** | **String**| Authority Name | |
-| **externalKey** | **String**| External Key | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), authorizationUnusedroles ("authorization.unusedRoles"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
-{: class="table-striped"}
-
-
-### Return type
-
-[**User**](User.html)
 
 <a name="getUsersMe"></a>
 
@@ -2876,60 +2657,6 @@ UsersAPI.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: 
 ### Return type
 
 `nil` (empty response body)
-
-<a name="postUserExternalid"></a>
-
-# **postUserExternalid**
-
-
-
-> [[UserExternalIdentifier]](UserExternalIdentifier.html) postUserExternalid(userId, body)
-
-Create mapping between external identifier and user. Limit 100 per entity.
-
-Authority Name and External key are case sensitive.
-
-Wraps POST /api/v2/users/{userId}/externalid  
-
-Requires ANY permissions: 
-
-* directory:user:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let userId: String = "" // User ID
-let body: UserExternalIdentifier = new UserExternalIdentifier(...) // 
-
-// Code example
-UsersAPI.postUserExternalid(userId: userId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("UsersAPI.postUserExternalid was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
-| **body** | [**UserExternalIdentifier**](UserExternalIdentifier.html)|  | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**[UserExternalIdentifier]**](UserExternalIdentifier.html)
 
 <a name="postUserInvite"></a>
 

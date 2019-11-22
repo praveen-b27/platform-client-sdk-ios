@@ -81,6 +81,8 @@ public class QueueConversationCallbackEventTopicCallbackMediaParticipant: Codabl
     public var screenRecordingState: String?
     public var flaggedReason: FlaggedReason?
     public var journeyContext: QueueConversationCallbackEventTopicJourneyContext?
+    public var startAcwTime: Date?
+    public var endAcwTime: Date?
     public var outboundPreview: QueueConversationCallbackEventTopicDialerPreview?
     public var voicemail: QueueConversationCallbackEventTopicVoicemail?
     public var callbackNumbers: [String]?
@@ -90,7 +92,7 @@ public class QueueConversationCallbackEventTopicCallbackMediaParticipant: Codabl
     public var callbackScheduledTime: Date?
     public var automatedCallbackConfigId: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallbackEventTopicUriReference?, queue: QueueConversationCallbackEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallbackEventTopicErrorBody?, script: QueueConversationCallbackEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationCallbackEventTopicUriReference?, externalOrganization: QueueConversationCallbackEventTopicUriReference?, wrapup: QueueConversationCallbackEventTopicWrapup?, conversationRoutingData: QueueConversationCallbackEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallbackEventTopicJourneyContext?, outboundPreview: QueueConversationCallbackEventTopicDialerPreview?, voicemail: QueueConversationCallbackEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallbackEventTopicUriReference?, queue: QueueConversationCallbackEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallbackEventTopicErrorBody?, script: QueueConversationCallbackEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationCallbackEventTopicUriReference?, externalOrganization: QueueConversationCallbackEventTopicUriReference?, wrapup: QueueConversationCallbackEventTopicWrapup?, conversationRoutingData: QueueConversationCallbackEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallbackEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: QueueConversationCallbackEventTopicDialerPreview?, voicemail: QueueConversationCallbackEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?) {
         
         self._id = _id
         
@@ -154,6 +156,10 @@ public class QueueConversationCallbackEventTopicCallbackMediaParticipant: Codabl
         
         self.journeyContext = journeyContext
         
+        self.startAcwTime = startAcwTime
+        
+        self.endAcwTime = endAcwTime
+        
         self.outboundPreview = outboundPreview
         
         self.voicemail = voicemail
@@ -204,6 +210,8 @@ public class QueueConversationCallbackEventTopicCallbackMediaParticipant: Codabl
         case screenRecordingState
         case flaggedReason
         case journeyContext
+        case startAcwTime
+        case endAcwTime
         case outboundPreview
         case voicemail
         case callbackNumbers

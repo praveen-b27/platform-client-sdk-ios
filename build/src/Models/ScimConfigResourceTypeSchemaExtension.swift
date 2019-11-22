@@ -12,7 +12,7 @@ import Foundation
 
 public class ScimConfigResourceTypeSchemaExtension: Codable {
 
-    /** The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema.  */
+    /** The URI of an extended schema, for example, \&quot;urn:edu:2.0:Staff\&quot;. Must be equal to the \&quot;id\&quot; attribute of a schema. */
     public var schema: String?
     /** Indicates whether a schema extension is required. */
     public var _required: Bool?

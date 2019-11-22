@@ -17,9 +17,10 @@ public class DialerResponsesetConfigChangeResponseSet: Codable {
     public var dateModified: Date?
     public var version: Int?
     public var responses: [String:DialerResponsesetConfigChangeReaction]?
+    public var beepDetectionEnabled: Bool?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, responses: [String:DialerResponsesetConfigChangeReaction]?, additionalProperties: JSON?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, responses: [String:DialerResponsesetConfigChangeReaction]?, beepDetectionEnabled: Bool?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -33,6 +34,8 @@ public class DialerResponsesetConfigChangeResponseSet: Codable {
         
         self.responses = responses
         
+        self.beepDetectionEnabled = beepDetectionEnabled
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -44,6 +47,7 @@ public class DialerResponsesetConfigChangeResponseSet: Codable {
         case dateModified
         case version
         case responses
+        case beepDetectionEnabled
         case additionalProperties
     }
 

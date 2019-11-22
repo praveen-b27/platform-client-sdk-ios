@@ -83,6 +83,9 @@ public class FlowAggregationQuery: Codable {
         case tflowexit = "tFlowExit"
         case tflowoutcome = "tFlowOutcome"
     }
+    public enum AlternateTimeDimension: String, Codable { 
+        case eventtime = "eventTime"
+    }
     /** Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?
     /** Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H */
@@ -99,8 +102,10 @@ public class FlowAggregationQuery: Codable {
     public var flattenMultivaluedDimensions: Bool?
     /** Custom derived metric views */
     public var views: [FlowAggregationView]?
+    /** Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. */
+    public var alternateTimeDimension: AlternateTimeDimension?
 
-    public init(interval: String?, granularity: String?, timeZone: String?, groupBy: [GroupBy]?, filter: FlowAggregateQueryFilter?, metrics: [Metrics]?, flattenMultivaluedDimensions: Bool?, views: [FlowAggregationView]?) {
+    public init(interval: String?, granularity: String?, timeZone: String?, groupBy: [GroupBy]?, filter: FlowAggregateQueryFilter?, metrics: [Metrics]?, flattenMultivaluedDimensions: Bool?, views: [FlowAggregationView]?, alternateTimeDimension: AlternateTimeDimension?) {
         
         self.interval = interval
         
@@ -117,6 +122,8 @@ public class FlowAggregationQuery: Codable {
         self.flattenMultivaluedDimensions = flattenMultivaluedDimensions
         
         self.views = views
+        
+        self.alternateTimeDimension = alternateTimeDimension
         
     }
 

@@ -156,6 +156,7 @@ open class BillingAPI {
   "id" : "aeiou",
   "usages" : [ {
     "overagePrice" : "aeiou",
+    "isThirdParty" : true,
     "prepayQuantity" : "aeiou",
     "isCancellable" : true,
     "name" : "aeiou",
@@ -164,7 +165,8 @@ open class BillingAPI {
     "unitOfMeasureType" : "aeiou",
     "usageNotes" : "aeiou",
     "grouping" : "aeiou",
-    "prepayPrice" : "aeiou"
+    "prepayPrice" : "aeiou",
+    "bundleQuantity" : "aeiou"
   } ],
   "enabledProducts" : [ "aeiou" ]
 }}]

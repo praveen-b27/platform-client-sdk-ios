@@ -116,10 +116,12 @@ public class ReportingExportJobResponse: Codable {
     public var hasSplitFilters: Bool?
     /** The list of ordered selected columns from the export view by the user */
     public var selectedColumns: [SelectedColumns]?
+    /** Indicates if custom participant attributes will be exported */
+    public var hasCustomParticipantAttributes: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, status: Status?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, selfUri: String?) {
+    public init(_id: String?, name: String?, status: Status?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -159,6 +161,8 @@ public class ReportingExportJobResponse: Codable {
         
         self.selectedColumns = selectedColumns
         
+        self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
+        
         self.selfUri = selfUri
         
     }
@@ -183,6 +187,7 @@ public class ReportingExportJobResponse: Codable {
         case hasFormatDurations
         case hasSplitFilters
         case selectedColumns
+        case hasCustomParticipantAttributes
         case selfUri
     }
 

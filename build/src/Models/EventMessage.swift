@@ -18,6 +18,7 @@ public class EventMessage: Codable {
         case campaignStartError = "CAMPAIGN_START_ERROR"
         case campaignRuleStartError = "CAMPAIGN_RULE_START_ERROR"
         case campaignSetDialingModeError = "CAMPAIGN_SET_DIALING_MODE_ERROR"
+        case campaignStopped = "CAMPAIGN_STOPPED"
         case campaignThrottled = "CAMPAIGN_THROTTLED"
         case invalidCallableTimeZone = "INVALID_CALLABLE_TIME_ZONE"
         case callbackCreationInvalidNumber = "CALLBACK_CREATION_INVALID_NUMBER"

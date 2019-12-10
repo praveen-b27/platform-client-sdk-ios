@@ -19,8 +19,6 @@ Activity configured for shift in work plan
 | **startTimeIncrementMinutes** | **Int** | Increment in offset minutes that would contribute to different possible start times for the activity | [optional] |
 | **countsAsPaidTime** | **Bool** | Whether the activity is paid | [optional] |
 | **countsAsContiguousWorkTime** | **Bool** | Whether the activity duration is counted towards contiguous work time | [optional] |
-| **minimumLengthFromShiftStartMinutes** | **Int** | The minimum duration between shift start and shift item (e.g., break or meal) start in minutes | [optional] |
-| **minimumLengthFromShiftEndMinutes** | **Int** | The minimum duration between shift item (e.g., break or meal) end and shift end in minutes | [optional] |
 | **_id** | **String** | ID of the activity. This is required only for the case of updating an existing activity | [optional] |
 | **delete** | **Bool** | If marked true for updating an existing activity, the activity will be permanently deleted | [optional] |
 {: class="table table-striped"}

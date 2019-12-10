@@ -2,7 +2,7 @@
 title: ScimEmail
 ---
 ## ScimEmail
-SCIM V2 ScimEmail
+Defines a SCIM email address.
 
 ## Properties
 

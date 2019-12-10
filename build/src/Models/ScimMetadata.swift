@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** The meta object of the SCIM V2 implementation. */
+/** Defines the SCIM metadata. */
 
 public class ScimMetadata: Codable {
 

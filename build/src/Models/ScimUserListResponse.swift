@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM User List Response */
+/** Defines a response for a list of SCIM users. */
 
 public class ScimUserListResponse: Codable {
 

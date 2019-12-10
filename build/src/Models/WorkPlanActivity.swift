@@ -34,16 +34,12 @@ public class WorkPlanActivity: Codable {
     public var countsAsPaidTime: Bool?
     /** Whether the activity duration is counted towards contiguous work time */
     public var countsAsContiguousWorkTime: Bool?
-    /** The minimum duration between shift start and shift item (e.g., break or meal) start in minutes */
-    public var minimumLengthFromShiftStartMinutes: Int?
-    /** The minimum duration between shift item (e.g., break or meal) end and shift end in minutes */
-    public var minimumLengthFromShiftEndMinutes: Int?
     /** ID of the activity. This is required only for the case of updating an existing activity */
     public var _id: String?
     /** If marked true for updating an existing activity, the activity will be permanently deleted */
     public var delete: Bool?
 
-    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?, _id: String?, delete: Bool?) {
+    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, _id: String?, delete: Bool?) {
         
         self.activityCodeId = activityCodeId
         
@@ -67,10 +63,6 @@ public class WorkPlanActivity: Codable {
         
         self.countsAsContiguousWorkTime = countsAsContiguousWorkTime
         
-        self.minimumLengthFromShiftStartMinutes = minimumLengthFromShiftStartMinutes
-        
-        self.minimumLengthFromShiftEndMinutes = minimumLengthFromShiftEndMinutes
-        
         self._id = _id
         
         self.delete = delete
@@ -89,8 +81,6 @@ public class WorkPlanActivity: Codable {
         case startTimeIncrementMinutes
         case countsAsPaidTime
         case countsAsContiguousWorkTime
-        case minimumLengthFromShiftStartMinutes
-        case minimumLengthFromShiftEndMinutes
         case _id = "id"
         case delete
     }

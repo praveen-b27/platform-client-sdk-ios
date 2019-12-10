@@ -2,7 +2,7 @@
 title: ScimPhoneNumber
 ---
 ## ScimPhoneNumber
-SCIM V2 phone number
+Defines a SCIM phone number.
 
 ## Properties
 

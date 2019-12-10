@@ -58,6 +58,8 @@ public class Recording: Codable {
     public var deleteDate: Date?
     /** The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var exportDate: Date?
+    /** The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var exportedDate: Date?
     /** Duration of transcoded media in milliseconds */
     public var outputDurationMs: Int?
     /** Size of transcoded media in bytes. 0 if there is no transcoded media. */
@@ -73,7 +75,7 @@ public class Recording: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, annotations: [Annotation]?, transcript: [ChatMessage]?, emailTranscript: [RecordingEmailMessage]?, messagingTranscript: [RecordingMessagingMessage]?, fileState: FileState?, restoreExpirationTime: Date?, mediaUris: [String:MediaResult]?, estimatedTranscodeTimeMs: Int64?, actualTranscodeTimeMs: Int64?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, outputDurationMs: Int?, outputSizeInBytes: Int?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, users: [User]?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, annotations: [Annotation]?, transcript: [ChatMessage]?, emailTranscript: [RecordingEmailMessage]?, messagingTranscript: [RecordingMessagingMessage]?, fileState: FileState?, restoreExpirationTime: Date?, mediaUris: [String:MediaResult]?, estimatedTranscodeTimeMs: Int64?, actualTranscodeTimeMs: Int64?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, exportedDate: Date?, outputDurationMs: Int?, outputSizeInBytes: Int?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, users: [User]?, selfUri: String?) {
         
         self._id = _id
         
@@ -115,6 +117,8 @@ public class Recording: Codable {
         
         self.exportDate = exportDate
         
+        self.exportedDate = exportedDate
+        
         self.outputDurationMs = outputDurationMs
         
         self.outputSizeInBytes = outputSizeInBytes
@@ -152,6 +156,7 @@ public class Recording: Codable {
         case archiveMedium
         case deleteDate
         case exportDate
+        case exportedDate
         case outputDurationMs
         case outputSizeInBytes
         case maxAllowedRestorationsForOrg

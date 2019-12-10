@@ -28,11 +28,11 @@ public class CreateManagementUnitApiRequest: Codable {
     /** The configured first day of the week for scheduling and forecasting purposes */
     public var startDayOfWeek: StartDayOfWeek?
     /** The configuration for the management unit.  If omitted, reasonable defaults will be assigned */
-    public var settings: CreateManagementUnitSettings?
+    public var settings: CreateManagementUnitSettingsRequest?
     /** The id of the division to which this management unit belongs.  Defaults to home division ID */
     public var divisionId: String?
 
-    public init(name: String?, timeZone: String?, startDayOfWeek: StartDayOfWeek?, settings: CreateManagementUnitSettings?, divisionId: String?) {
+    public init(name: String?, timeZone: String?, startDayOfWeek: StartDayOfWeek?, settings: CreateManagementUnitSettingsRequest?, divisionId: String?) {
         
         self.name = name
         

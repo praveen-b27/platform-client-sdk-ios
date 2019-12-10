@@ -1181,7 +1181,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroups(man
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ManagementUnitSettings](ManagementUnitSettings.html) getWorkforcemanagementManagementunitSettings(muId)
+> [ManagementUnitSettingsResponse](ManagementUnitSettingsResponse.html) getWorkforcemanagementManagementunitSettings(muId)
 
 Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
 
@@ -1225,7 +1225,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSettings(muId: muId) 
 
 ### Return type
 
-[**ManagementUnitSettings**](ManagementUnitSettings.html)
+[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
 
 <a name="getWorkforcemanagementManagementunitShifttradesMatched"></a>
 
@@ -2500,7 +2500,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitServicegoalgroup(ma
 
 
 
-> [ManagementUnitSettings](ManagementUnitSettings.html) patchWorkforcemanagementManagementunitSettings(muId, body)
+> [ManagementUnitSettingsResponse](ManagementUnitSettingsResponse.html) patchWorkforcemanagementManagementunitSettings(muId, body)
 
 Update the settings for the requested management unit
 
@@ -2521,7 +2521,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: ManagementUnitSettings = new ManagementUnitSettings(...) // config
+let body: ManagementUnitSettingsRequest = new ManagementUnitSettingsRequest(...) // config
 
 // Code example
 WorkforceManagementAPI.patchWorkforcemanagementManagementunitSettings(muId: muId, body: body) { (response, error) in
@@ -2540,13 +2540,13 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitSettings(muId: muId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**ManagementUnitSettings**](ManagementUnitSettings.html)| config | [optional] |
+| **body** | [**ManagementUnitSettingsRequest**](ManagementUnitSettingsRequest.html)| config | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ManagementUnitSettings**](ManagementUnitSettings.html)
+[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
 
 <a name="patchWorkforcemanagementManagementunitUserTimeoffrequest"></a>
 

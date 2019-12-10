@@ -2,7 +2,7 @@
 title: Manager
 ---
 ## Manager
-The user&#39;s manager.
+Defines a SCIM manager.
 
 ## Properties
 

@@ -3662,6 +3662,63 @@ open class RoutingAPI {
     }
 
     
+    /**
+     
+     Get Contact Center Settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSettingsContactcenter(completion: @escaping ((_ data: ContactCenterSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSettingsContactcenterWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ContactCenterSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get Contact Center Settings
+     
+     - GET /api/v2/routing/settings/contactcenter
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "removeSkillsFromBlindTransfer" : true
+}}]
+
+     - returns: RequestBuilder<ContactCenterSettings> 
+     */
+    open class func getRoutingSettingsContactcenterWithRequestBuilder() -> RequestBuilder<ContactCenterSettings> {
+        let path = "/api/v2/routing/settings/contactcenter"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactCenterSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -5936,6 +5993,55 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<QueueMemberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update Contact Center Settings
+     
+     - parameter body: (body) Contact Center Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingSettingsContactcenter(body: ContactCenterSettings, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingSettingsContactcenterWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update Contact Center Settings
+     
+     - PATCH /api/v2/routing/settings/contactcenter
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) Contact Center Settings 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchRoutingSettingsContactcenterWithRequestBuilder(body: ContactCenterSettings) -> RequestBuilder<Void> {
+        let path = "/api/v2/routing/settings/contactcenter"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }

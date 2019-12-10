@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM V2 Photo */
+/** Defines a SCIM photo. */
 
 public class Photo: Codable {
 

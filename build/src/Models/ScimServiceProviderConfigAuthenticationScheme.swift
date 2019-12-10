@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Authentication schema. */
+/** Defines an authentication scheme in the SCIM service provider&#39;s configuration. */
 
 public class ScimServiceProviderConfigAuthenticationScheme: Codable {
 

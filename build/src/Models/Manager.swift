@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** The user&#39;s manager. */
+/** Defines a SCIM manager. */
 
 public class Manager: Codable {
 

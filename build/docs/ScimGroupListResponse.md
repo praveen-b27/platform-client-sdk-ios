@@ -2,7 +2,7 @@
 title: ScimGroupListResponse
 ---
 ## ScimGroupListResponse
-SCIM Group List Response
+Defines a response for a list of SCIM groups.
 
 ## Properties
 

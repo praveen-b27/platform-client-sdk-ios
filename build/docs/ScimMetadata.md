@@ -2,7 +2,7 @@
 title: ScimMetadata
 ---
 ## ScimMetadata
-The meta object of the SCIM V2 implementation.
+Defines the SCIM metadata.
 
 ## Properties
 

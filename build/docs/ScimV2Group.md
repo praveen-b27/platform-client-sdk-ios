@@ -2,7 +2,7 @@
 title: ScimV2Group
 ---
 ## ScimV2Group
-SCIM version 2 Group
+Defines a SCIM group.
 
 ## Properties
 
@@ -12,7 +12,7 @@ SCIM version 2 Group
 | **schemas** | **[String]** | The list of supported schemas. | [optional] |
 | **displayName** | **String** | The display name of the group. | [optional] |
 | **members** | [**[ScimV2MemberReference]**](ScimV2MemberReference.html) | The list of members in the group. | [optional] |
-| **meta** | [**ScimMetadata**](ScimMetadata.html) | Resource SCIM meta | [optional] |
+| **meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. | [optional] |
 {: class="table table-striped"}
 
 

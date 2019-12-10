@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM V2 ScimEmail */
+/** Defines a SCIM email address. */
 
 public class ScimEmail: Codable {
 

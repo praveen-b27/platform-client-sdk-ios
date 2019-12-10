@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Bulk configuration options. */
+/** Defines a \&quot;bulk\&quot; request in the SCIM service provider&#39;s configuration. */
 
 public class ScimServiceProviderConfigBulkFeature: Codable {
 

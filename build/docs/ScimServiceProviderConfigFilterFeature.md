@@ -2,7 +2,7 @@
 title: ScimServiceProviderConfigFilterFeature
 ---
 ## ScimServiceProviderConfigFilterFeature
-\&quot;filter\&quot; configuration options.
+Defines a \&quot;filter\&quot; request in the SCIM service provider&#39;s configuration.
 
 ## Properties
 

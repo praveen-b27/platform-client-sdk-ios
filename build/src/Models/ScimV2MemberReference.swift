@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM Members of Group Reference */
+/** Defines a reference to SCIM group members. */
 
 public class ScimV2MemberReference: Codable {
 

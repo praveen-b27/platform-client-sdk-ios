@@ -2,7 +2,7 @@
 title: ScimConfigResourceTypesListResponse
 ---
 ## ScimConfigResourceTypesListResponse
-SCIM Resource Types list response
+Defines a response for a list of SCIM resource types.
 
 ## Properties
 

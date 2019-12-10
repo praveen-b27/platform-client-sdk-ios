@@ -16,14 +16,14 @@ public class ResponseEntityList: Codable {
     public var pageSize: Int?
     public var pageNumber: Int?
     public var total: Int64?
-    public var selfUri: String?
     public var firstUri: String?
+    public var selfUri: String?
     public var nextUri: String?
     public var lastUri: String?
     public var previousUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, selfUri: String?, firstUri: String?, nextUri: String?, lastUri: String?, previousUri: String?, pageCount: Int?) {
+    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, nextUri: String?, lastUri: String?, previousUri: String?, pageCount: Int?) {
         
         self.entities = entities
         
@@ -33,9 +33,9 @@ public class ResponseEntityList: Codable {
         
         self.total = total
         
-        self.selfUri = selfUri
-        
         self.firstUri = firstUri
+        
+        self.selfUri = selfUri
         
         self.nextUri = nextUri
         

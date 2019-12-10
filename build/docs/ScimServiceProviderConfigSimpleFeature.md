@@ -2,7 +2,7 @@
 title: ScimServiceProviderConfigSimpleFeature
 ---
 ## ScimServiceProviderConfigSimpleFeature
-Configuration options.
+Defines a request in the SCIM service provider&#39;s configuration.
 
 ## Properties
 

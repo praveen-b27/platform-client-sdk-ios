@@ -26,10 +26,10 @@ public class EvaluationQuestion: Codable {
     public var visibilityCondition: VisibilityCondition?
     /** Options from which to choose an answer for this question. Only used by Multiple Choice type questions. */
     public var answerOptions: [AnswerOption]?
-    public var isCritical: Bool?
     public var isKill: Bool?
+    public var isCritical: Bool?
 
-    public init(_id: String?, text: String?, helpText: String?, type: ModelType?, naEnabled: Bool?, commentsRequired: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, isCritical: Bool?, isKill: Bool?) {
+    public init(_id: String?, text: String?, helpText: String?, type: ModelType?, naEnabled: Bool?, commentsRequired: Bool?, visibilityCondition: VisibilityCondition?, answerOptions: [AnswerOption]?, isKill: Bool?, isCritical: Bool?) {
         
         self._id = _id
         
@@ -47,9 +47,9 @@ public class EvaluationQuestion: Codable {
         
         self.answerOptions = answerOptions
         
-        self.isCritical = isCritical
-        
         self.isKill = isKill
+        
+        self.isCritical = isCritical
         
     }
 
@@ -62,8 +62,8 @@ public class EvaluationQuestion: Codable {
         case commentsRequired
         case visibilityCondition
         case answerOptions
-        case isCritical
         case isKill
+        case isCritical
     }
 
 

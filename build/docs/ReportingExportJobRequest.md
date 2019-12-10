@@ -19,6 +19,7 @@ title: ReportingExportJobRequest
 | **hasFormatDurations** | **Bool** | Indicates if durations are formatted in hh:mm:ss format instead of ms | [optional] |
 | **hasSplitFilters** | **Bool** | Indicates if filters will be split in aggregate detail exports | [optional] |
 | **selectedColumns** | [**[SelectedColumns]**](SelectedColumns.html) | The list of ordered selected columns from the export view by the user | [optional] |
+| **hasCustomParticipantAttributes** | **Bool** | Indicates if custom participant attributes will be exported | [optional] |
 {: class="table table-striped"}
 
 

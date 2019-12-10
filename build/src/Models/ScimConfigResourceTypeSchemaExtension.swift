@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Schema extensions supported by PureCloud SCIM. */
+/** Defines a SCIM resource type&#39;s schema extension. */
 
 public class ScimConfigResourceTypeSchemaExtension: Codable {
 

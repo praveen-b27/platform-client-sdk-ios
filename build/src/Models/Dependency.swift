@@ -21,6 +21,8 @@ public class Dependency: Codable {
         case contactlist = "CONTACTLIST"
         case dataaction = "DATAACTION"
         case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"

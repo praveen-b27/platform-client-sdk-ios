@@ -16,9 +16,9 @@ public class UpdateManagementUnitRequest: Codable {
     /** The new division id for the management unit */
     public var divisionId: String?
     /** Updated settings for the management unit */
-    public var settings: ManagementUnitSettings?
+    public var settings: ManagementUnitSettingsRequest?
 
-    public init(name: String?, divisionId: String?, settings: ManagementUnitSettings?) {
+    public init(name: String?, divisionId: String?, settings: ManagementUnitSettingsRequest?) {
         
         self.name = name
         

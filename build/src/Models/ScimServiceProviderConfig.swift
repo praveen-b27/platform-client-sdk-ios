@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM Provider Config for PureCloud. */
+/** Defines a SCIM service provider&#39;s configuration. */
 
 public class ScimServiceProviderConfig: Codable {
 
@@ -30,7 +30,7 @@ public class ScimServiceProviderConfig: Codable {
     public var changePassword: ScimServiceProviderConfigSimpleFeature?
     /** The list of supported authentication schemes. */
     public var authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?
-    /** Resource SCIM meta */
+    /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?
 
     public init(schemas: [String]?, documentationUri: String?, patch: ScimServiceProviderConfigSimpleFeature?, filter: ScimServiceProviderConfigFilterFeature?, etag: ScimServiceProviderConfigSimpleFeature?, sort: ScimServiceProviderConfigSimpleFeature?, bulk: ScimServiceProviderConfigBulkFeature?, changePassword: ScimServiceProviderConfigSimpleFeature?, authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?, meta: ScimMetadata?) {

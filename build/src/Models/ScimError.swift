@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM Error */
+/** Defines a SCIM error. */
 
 public class ScimError: Codable {
 
@@ -24,13 +24,13 @@ public class ScimError: Codable {
         case invalidvers = "invalidVers"
         case sensitive = "sensitive"
     }
-    /** HTTP Status Code */
+    /** The HTTP status code returned for the SCIM error. */
     public var status: String?
-    /** Optional SCIM Error Type when httpStatus is 400 error */
+    /** The type of SCIM error when httpStatus is a \&quot;400\&quot; error. */
     public var scimType: ScimType?
-    /** Optional detailed error description */
+    /** The detailed description of the SCIM error. */
     public var detail: String?
-    /** Schemas for the SCIM Error */
+    /** The list of schemas for the SCIM error. */
     public var schemas: [String]?
 
     public init(status: String?, scimType: ScimType?, detail: String?, schemas: [String]?) {

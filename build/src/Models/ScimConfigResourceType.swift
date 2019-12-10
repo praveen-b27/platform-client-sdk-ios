@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Common attributes to all SCIM resources */
+/** Defines a SCIM resource. */
 
 public class ScimConfigResourceType: Codable {
 
@@ -26,7 +26,7 @@ public class ScimConfigResourceType: Codable {
     public var schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?
     /** The HTTP-addressable endpoint of the resource type. Appears after the base URL. */
     public var endpoint: String?
-    /** Resource SCIM meta */
+    /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, schemas: [String]?, name: String?, _description: String?, schema: String?, schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?, endpoint: String?, meta: ScimMetadata?) {

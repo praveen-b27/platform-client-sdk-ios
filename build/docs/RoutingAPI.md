@@ -35,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingQueuesDivisionviews**](RoutingAPI.html#getRoutingQueuesDivisionviews) | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
 | [**getRoutingQueuesDivisionviewsAll**](RoutingAPI.html#getRoutingQueuesDivisionviewsAll) | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
 | [**getRoutingQueuesMe**](RoutingAPI.html#getRoutingQueuesMe) | Get a paged listing of queues the user is a member of. |
+| [**getRoutingSettingsContactcenter**](RoutingAPI.html#getRoutingSettingsContactcenter) | Get Contact Center Settings |
 | [**getRoutingSkill**](RoutingAPI.html#getRoutingSkill) | Get Routing Skill |
 | [**getRoutingSkills**](RoutingAPI.html#getRoutingSkills) | Get the list of routing skills. |
 | [**getRoutingSmsAddress**](RoutingAPI.html#getRoutingSmsAddress) | Get an Address by Id for SMS |
@@ -49,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
 | [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | Update the ring number OR joined status for a User in a Queue |
 | [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | Join or unjoin a set of users for a queue |
+| [**patchRoutingSettingsContactcenter**](RoutingAPI.html#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
 | [**patchUserRoutinglanguage**](RoutingAPI.html#patchUserRoutinglanguage) | Update routing language proficiency or state. |
 | [**patchUserRoutinglanguagesBulk**](RoutingAPI.html#patchUserRoutinglanguagesBulk) | Add bulk routing language to user. Max limit 50 languages |
 | [**patchUserRoutingskillsBulk**](RoutingAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
@@ -1605,6 +1607,53 @@ RoutingAPI.getRoutingQueuesMe(joined: joined, pageSize: pageSize, pageNumber: pa
 
 [**UserQueueEntityListing**](UserQueueEntityListing.html)
 
+<a name="getRoutingSettingsContactcenter"></a>
+
+# **getRoutingSettingsContactcenter**
+
+
+
+> [ContactCenterSettings](ContactCenterSettings.html) getRoutingSettingsContactcenter()
+
+Get Contact Center Settings
+
+
+
+Wraps GET /api/v2/routing/settings/contactcenter  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.getRoutingSettingsContactcenter() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSettingsContactcenter was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ContactCenterSettings**](ContactCenterSettings.html)
+
 <a name="getRoutingSkill"></a>
 
 # **getRoutingSkill**
@@ -2377,6 +2426,57 @@ RoutingAPI.patchRoutingQueueUsers(queueId: queueId, body: body) { (response, err
 ### Return type
 
 [**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
+<a name="patchRoutingSettingsContactcenter"></a>
+
+# **patchRoutingSettingsContactcenter**
+
+
+
+> Void patchRoutingSettingsContactcenter(body)
+
+Update Contact Center Settings
+
+
+
+Wraps PATCH /api/v2/routing/settings/contactcenter  
+
+Requires ANY permissions: 
+
+* routing:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactCenterSettings = new ContactCenterSettings(...) // Contact Center Settings
+
+// Code example
+RoutingAPI.patchRoutingSettingsContactcenter(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.patchRoutingSettingsContactcenter was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactCenterSettings**](ContactCenterSettings.html)| Contact Center Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="patchUserRoutinglanguage"></a>
 

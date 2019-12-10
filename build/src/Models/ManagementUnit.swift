@@ -31,7 +31,7 @@ public class ManagementUnit: Codable {
     /** The time zone for the management unit in standard Olson format */
     public var timeZone: String?
     /** The configuration settings for this management unit */
-    public var settings: ManagementUnitSettings?
+    public var settings: ManagementUnitSettingsResponse?
     /** Version info metadata for this management unit. Deprecated, use settings.metadata */
     public var metadata: WfmVersionedEntityMetadata?
     /** The version of the underlying entity.  Deprecated, use field from settings.metadata instead */
@@ -43,7 +43,7 @@ public class ManagementUnit: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettings?, metadata: WfmVersionedEntityMetadata?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
         
         self._id = _id
         

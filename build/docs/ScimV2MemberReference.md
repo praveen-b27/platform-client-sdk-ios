@@ -2,7 +2,7 @@
 title: ScimV2MemberReference
 ---
 ## ScimV2MemberReference
-SCIM Members of Group Reference
+Defines a reference to SCIM group members.
 
 ## Properties
 

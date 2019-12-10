@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Represents a SCIM V2 Patch Request (See RFC7644 for detailed usage) */
+/** Defines a SCIM PATCH request. See section 3.5.2 \&quot;Modifying with PATCH\&quot; in RFC 7644 for details. */
 
 public class ScimV2PatchRequest: Codable {
 

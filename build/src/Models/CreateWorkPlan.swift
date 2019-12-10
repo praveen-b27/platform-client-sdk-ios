@@ -12,15 +12,6 @@ import Foundation
 
 public class CreateWorkPlan: Codable {
 
-    public enum StartDayOfWeekend: String, Codable { 
-        case sunday = "Sunday"
-        case monday = "Monday"
-        case tuesday = "Tuesday"
-        case wednesday = "Wednesday"
-        case thursday = "Thursday"
-        case friday = "Friday"
-        case saturday = "Saturday"
-    }
     /** Name of this work plan */
     public var name: String?
     /** Whether the work plan is enabled for scheduling */
@@ -45,28 +36,8 @@ public class CreateWorkPlan: Codable {
     public var minimumTimeBetweenShiftsMinutes: Int?
     /** Maximum number days in a week allowed to be scheduled for this work plan */
     public var maximumDays: Int?
-    /** The day of the week for which the weekend starts, such as Saturday */
-    public var startDayOfWeekend: StartDayOfWeekend?
-    /** Minimum amount of consecutive time off per week that agents who are assigned this work plan are allowed to have off */
-    public var minimumConsecutiveTimeOffPerWeekMinutes: Int?
-    /** Whether to constrain the maximum consecutive working weekends */
-    public var constrainMaximumConsecutiveWorkingWeekends: Bool?
-    /** The maximum number of consecutive weekends that agents who are assigned to this work plan are allowed to work */
-    public var maximumConsecutiveWorkingWeekends: Int?
     /** The minimum number of days that agents assigned to a work plan must work per week */
     public var minimumWorkingDaysPerWeek: Int?
-    /** The maximum number of consecutive days that agents assigned to this work plan are allowed to work */
-    public var maximumConsecutiveWorkingDays: Int?
-    /** The time period in minutes for the duration between the start times of two consecutive working days */
-    public var minimumShiftStartDistanceMinutes: Int?
-    /** Minimum days off in the planning period */
-    public var minimumDaysOffPerPlanningPeriod: Int?
-    /** Maximum days off in the planning period */
-    public var maximumDaysOffPerPlanningPeriod: Int?
-    /** Minimum paid hours in the planning period */
-    public var minimumPaidHoursPerPlanningPeriod: Int?
-    /** Maximum paid hours in the planning period */
-    public var maximumPaidHoursPerPlanningPeriod: Int?
     /** Optional days to schedule for this work plan */
     public var optionalDays: SetWrapperDayOfWeek?
     /** Variance in minutes among start times of shifts in this work plan */
@@ -76,7 +47,7 @@ public class CreateWorkPlan: Codable {
     /** Agents in this work plan */
     public var agents: [UserReference]?
 
-    public init(name: String?, enabled: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, startDayOfWeekend: StartDayOfWeekend?, minimumConsecutiveTimeOffPerWeekMinutes: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidHoursPerPlanningPeriod: Int?, maximumPaidHoursPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [CreateWorkPlanShift]?, agents: [UserReference]?) {
+    public init(name: String?, enabled: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumWorkingDaysPerWeek: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [CreateWorkPlanShift]?, agents: [UserReference]?) {
         
         self.name = name
         
@@ -102,27 +73,7 @@ public class CreateWorkPlan: Codable {
         
         self.maximumDays = maximumDays
         
-        self.startDayOfWeekend = startDayOfWeekend
-        
-        self.minimumConsecutiveTimeOffPerWeekMinutes = minimumConsecutiveTimeOffPerWeekMinutes
-        
-        self.constrainMaximumConsecutiveWorkingWeekends = constrainMaximumConsecutiveWorkingWeekends
-        
-        self.maximumConsecutiveWorkingWeekends = maximumConsecutiveWorkingWeekends
-        
         self.minimumWorkingDaysPerWeek = minimumWorkingDaysPerWeek
-        
-        self.maximumConsecutiveWorkingDays = maximumConsecutiveWorkingDays
-        
-        self.minimumShiftStartDistanceMinutes = minimumShiftStartDistanceMinutes
-        
-        self.minimumDaysOffPerPlanningPeriod = minimumDaysOffPerPlanningPeriod
-        
-        self.maximumDaysOffPerPlanningPeriod = maximumDaysOffPerPlanningPeriod
-        
-        self.minimumPaidHoursPerPlanningPeriod = minimumPaidHoursPerPlanningPeriod
-        
-        self.maximumPaidHoursPerPlanningPeriod = maximumPaidHoursPerPlanningPeriod
         
         self.optionalDays = optionalDays
         

@@ -17,6 +17,7 @@ public class TrusteeBillingOverview: Codable {
         case freeTrialMonthToMonth = "FREE_TRIAL_MONTH_TO_MONTH"
         case prepayMonthlyCommitment = "PREPAY_MONTHLY_COMMITMENT"
         case prepay = "PREPAY"
+        case devOrgMonthToMonth = "DEV_ORG_MONTH_TO_MONTH"
         case devOrgPrepayMonthlyCommitment = "DEV_ORG_PREPAY_MONTHLY_COMMITMENT"
         case devOrgPrepay = "DEV_ORG_PREPAY"
     }

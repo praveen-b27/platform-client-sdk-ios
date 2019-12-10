@@ -2,7 +2,7 @@
 title: Photo
 ---
 ## Photo
-SCIM V2 Photo
+Defines a SCIM photo.
 
 ## Properties
 

@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM Group List Response */
+/** Defines a response for a list of SCIM groups. */
 
 public class ScimGroupListResponse: Codable {
 

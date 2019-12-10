@@ -2247,7 +2247,6 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123,
     "nexthop" : "aeiou"
   } ],
-  "publicNatIpAddress" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "lastModifiedUserId" : "aeiou",
   "lastModifiedCorrelationId" : "aeiou",
@@ -2255,6 +2254,7 @@ open class TelephonyProvidersEdgeAPI {
   "id" : "aeiou",
   "state" : "aeiou",
   "friendlyName" : "aeiou",
+  "publicNatAddressIpV4" : "aeiou",
   "commandResponses" : [ {
     "commandName" : "aeiou",
     "acknowledged" : true,
@@ -2272,6 +2272,7 @@ open class TelephonyProvidersEdgeAPI {
     },
     "correlationId" : "aeiou"
   } ],
+  "publicNatAddressIpV6" : "aeiou",
   "ifStatus" : "aeiou",
   "selfUri" : "aeiou",
   "useForCloudProxyEdgeCommunication" : true,
@@ -2433,7 +2434,6 @@ open class TelephonyProvidersEdgeAPI {
       "family" : 123,
       "nexthop" : "aeiou"
     } ],
-    "publicNatIpAddress" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "lastModifiedUserId" : "aeiou",
     "lastModifiedCorrelationId" : "aeiou",
@@ -2441,6 +2441,7 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou",
     "state" : "aeiou",
     "friendlyName" : "aeiou",
+    "publicNatAddressIpV4" : "aeiou",
     "commandResponses" : [ {
       "commandName" : "aeiou",
       "acknowledged" : true,
@@ -2458,6 +2459,7 @@ open class TelephonyProvidersEdgeAPI {
       },
       "correlationId" : "aeiou"
     } ],
+    "publicNatAddressIpV6" : "aeiou",
     "ifStatus" : "aeiou",
     "selfUri" : "aeiou",
     "useForCloudProxyEdgeCommunication" : true,
@@ -6252,7 +6254,6 @@ open class TelephonyProvidersEdgeAPI {
       "family" : 123,
       "nexthop" : "aeiou"
     } ],
-    "publicNatIpAddress" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "lastModifiedUserId" : "aeiou",
     "lastModifiedCorrelationId" : "aeiou",
@@ -6260,6 +6261,7 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou",
     "state" : "aeiou",
     "friendlyName" : "aeiou",
+    "publicNatAddressIpV4" : "aeiou",
     "commandResponses" : [ {
       "commandName" : "aeiou",
       "acknowledged" : true,
@@ -6277,6 +6279,7 @@ open class TelephonyProvidersEdgeAPI {
       },
       "correlationId" : "aeiou"
     } ],
+    "publicNatAddressIpV6" : "aeiou",
     "ifStatus" : "aeiou",
     "selfUri" : "aeiou",
     "useForCloudProxyEdgeCommunication" : true,
@@ -10925,7 +10928,6 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123,
     "nexthop" : "aeiou"
   } ],
-  "publicNatIpAddress" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "lastModifiedUserId" : "aeiou",
   "lastModifiedCorrelationId" : "aeiou",
@@ -10933,6 +10935,7 @@ open class TelephonyProvidersEdgeAPI {
   "id" : "aeiou",
   "state" : "aeiou",
   "friendlyName" : "aeiou",
+  "publicNatAddressIpV4" : "aeiou",
   "commandResponses" : [ {
     "commandName" : "aeiou",
     "acknowledged" : true,
@@ -10950,6 +10953,7 @@ open class TelephonyProvidersEdgeAPI {
     },
     "correlationId" : "aeiou"
   } ],
+  "publicNatAddressIpV6" : "aeiou",
   "ifStatus" : "aeiou",
   "selfUri" : "aeiou",
   "useForCloudProxyEdgeCommunication" : true,
@@ -13979,7 +13983,6 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123,
     "nexthop" : "aeiou"
   } ],
-  "publicNatIpAddress" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "lastModifiedUserId" : "aeiou",
   "lastModifiedCorrelationId" : "aeiou",
@@ -13987,6 +13990,7 @@ open class TelephonyProvidersEdgeAPI {
   "id" : "aeiou",
   "state" : "aeiou",
   "friendlyName" : "aeiou",
+  "publicNatAddressIpV4" : "aeiou",
   "commandResponses" : [ {
     "commandName" : "aeiou",
     "acknowledged" : true,
@@ -14004,6 +14008,7 @@ open class TelephonyProvidersEdgeAPI {
     },
     "correlationId" : "aeiou"
   } ],
+  "publicNatAddressIpV6" : "aeiou",
   "ifStatus" : "aeiou",
   "selfUri" : "aeiou",
   "useForCloudProxyEdgeCommunication" : true,

@@ -576,6 +576,7 @@ open class RecordingAPI {
       "utterance" : "aeiou"
     } ],
     "archiveMedium" : "aeiou",
+    "exportedDate" : "2000-01-23T04:56:07.000+0000",
     "media" : "aeiou",
     "path" : "aeiou",
     "outputSizeInBytes" : 123,
@@ -1357,6 +1358,7 @@ open class RecordingAPI {
     "utterance" : "aeiou"
   } ],
   "archiveMedium" : "aeiou",
+  "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
   "path" : "aeiou",
   "outputSizeInBytes" : 123,
@@ -2603,6 +2605,7 @@ open class RecordingAPI {
     "utterance" : "aeiou"
   } ],
   "archiveMedium" : "aeiou",
+  "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
   "path" : "aeiou",
   "outputSizeInBytes" : 123,
@@ -2982,6 +2985,7 @@ open class RecordingAPI {
     "utterance" : "aeiou"
   } ],
   "archiveMedium" : "aeiou",
+  "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
   "sessionId" : "aeiou",
   "path" : "aeiou",
@@ -3531,6 +3535,7 @@ open class RecordingAPI {
     "utterance" : "aeiou"
   } ],
   "archiveMedium" : "aeiou",
+  "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
   "path" : "aeiou",
   "outputSizeInBytes" : 123,
@@ -4109,6 +4114,7 @@ open class RecordingAPI {
       "utterance" : "aeiou"
     } ],
     "archiveMedium" : "aeiou",
+    "exportedDate" : "2000-01-23T04:56:07.000+0000",
     "media" : "aeiou",
     "path" : "aeiou",
     "outputSizeInBytes" : 123,
@@ -4720,6 +4726,7 @@ open class RecordingAPI {
     "utterance" : "aeiou"
   } ],
   "archiveMedium" : "aeiou",
+  "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
   "path" : "aeiou",
   "outputSizeInBytes" : 123,
@@ -5332,6 +5339,7 @@ open class RecordingAPI {
         "utterance" : "aeiou"
       } ],
       "archiveMedium" : "aeiou",
+      "exportedDate" : "2000-01-23T04:56:07.000+0000",
       "media" : "aeiou",
       "path" : "aeiou",
       "outputSizeInBytes" : 123,
@@ -11881,6 +11889,7 @@ open class RecordingAPI {
     "utterance" : "aeiou"
   } ],
   "archiveMedium" : "aeiou",
+  "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
   "path" : "aeiou",
   "outputSizeInBytes" : 123,
@@ -12786,6 +12795,7 @@ open class RecordingAPI {
     "utterance" : "aeiou"
   } ],
   "archiveMedium" : "aeiou",
+  "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
   "path" : "aeiou",
   "outputSizeInBytes" : 123,

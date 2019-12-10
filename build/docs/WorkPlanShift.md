@@ -17,8 +17,6 @@ Shift in a work plan
 | **constrainStopTime** | **Bool** | Whether the latest stop time constraint for the shift is enabled | [optional] |
 | **constrainLatestStopTime** | **Bool** | Whether the latest stop time constraint for the shift is enabled | [optional] |
 | **latestStopTimeMinutesFromMidnight** | **Int** | Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true | [optional] |
-| **constrainEarliestStopTime** | **Bool** | Whether the earliest stop time constraint for the shift is enabled | [optional] |
-| **earliestStopTimeMinutesFromMidnight** | **Int** | This is the earliest time a shift can end | [optional] |
 | **startIncrementMinutes** | **Int** | Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true | [optional] |
 | **flexiblePaidTime** | **Bool** | Whether the paid time setting for the shift is flexible | [optional] |
 | **exactPaidTimeMinutes** | **Int** | Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false | [optional] |
@@ -27,10 +25,6 @@ Shift in a work plan
 | **constrainContiguousWorkTime** | **Bool** | Whether the contiguous time constraint for the shift is enabled | [optional] |
 | **minimumContiguousWorkTimeMinutes** | **Int** | Minimum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true | [optional] |
 | **maximumContiguousWorkTimeMinutes** | **Int** | Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime == true | [optional] |
-| **synchronizeAgentsSchedules** | **Bool** | Whether synchronization for agent is enabled | [optional] |
-| **synchronizationType** | **String** | This constraint ensures that an agent starts each workday within a user-defined time threshold. Used if synchronizeAgentsSchedules == true | [optional] |
-| **constrainDayOff** | **Bool** | Whether day off rule is enabled | [optional] |
-| **dayOffRule** | **String** | The day off rule for agents to have next day off or previous day off. used if constrainDayOff = true | [optional] |
 | **activities** | [**[WorkPlanActivity]**](WorkPlanActivity.html) | Activities configured for this shift | [optional] |
 | **_id** | **String** | ID of the shift. This is required only for the case of updating an existing shift | [optional] |
 | **delete** | **Bool** | If marked true for updating an existing shift, the shift will be permanently deleted | [optional] |

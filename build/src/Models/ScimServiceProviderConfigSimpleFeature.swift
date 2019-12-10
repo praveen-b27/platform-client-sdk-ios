@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Configuration options. */
+/** Defines a request in the SCIM service provider&#39;s configuration. */
 
 public class ScimServiceProviderConfigSimpleFeature: Codable {
 

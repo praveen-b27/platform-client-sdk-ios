@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM version 2 Group */
+/** Defines a SCIM group. */
 
 public class ScimV2Group: Codable {
 
@@ -20,7 +20,7 @@ public class ScimV2Group: Codable {
     public var displayName: String?
     /** The list of members in the group. */
     public var members: [ScimV2MemberReference]?
-    /** Resource SCIM meta */
+    /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, schemas: [String]?, displayName: String?, members: [ScimV2MemberReference]?, meta: ScimMetadata?) {

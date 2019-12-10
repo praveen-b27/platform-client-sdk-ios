@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM V2 User */
+/** Defines a SCIM user. */
 
 public class ScimV2User: Codable {
 
@@ -38,9 +38,9 @@ public class ScimV2User: Codable {
     public var groups: [ScimV2GroupReference]?
     /** The list of roles assigned to the user. */
     public var roles: [String]?
-    /** SCIM enterprise user attributes */
+    /** The URI of the schema for the enterprise user. */
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
-    /** Resource SCIM meta */
+    /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [String]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, meta: ScimMetadata?) {

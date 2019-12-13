@@ -29,7 +29,7 @@ public class ScimServiceProviderConfigAuthenticationScheme: Codable {
     public var documentationUri: String?
     /** The type of authentication scheme. */
     public var type: ModelType?
-    /** Indicates the primary method of authentication. */
+    /** Indicates whether this authentication scheme is the primary method of authentication. */
     public var primary: Bool?
 
     public init(name: String?, _description: String?, specUri: String?, documentationUri: String?, type: ModelType?, primary: Bool?) {

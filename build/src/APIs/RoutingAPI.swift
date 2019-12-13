@@ -3719,6 +3719,64 @@ open class RoutingAPI {
     }
 
     
+    /**
+     
+     Get Transcription Settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSettingsTranscription(completion: @escaping ((_ data: TranscriptionSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSettingsTranscriptionWithRequestBuilder()
+        requestBuilder.execute { (response: Response<TranscriptionSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get Transcription Settings
+     
+     - GET /api/v2/routing/settings/transcription
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "transcription" : "aeiou",
+  "transcriptionConfidenceThreshold" : 123
+}}]
+
+     - returns: RequestBuilder<TranscriptionSettings> 
+     */
+    open class func getRoutingSettingsTranscriptionWithRequestBuilder() -> RequestBuilder<TranscriptionSettings> {
+        let path = "/api/v2/routing/settings/transcription"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TranscriptionSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -8218,6 +8276,66 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Queue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update Transcription Settings
+     
+     - parameter body: (body) Organization Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingSettingsTranscription(body: TranscriptionSettings, completion: @escaping ((_ data: TranscriptionSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingSettingsTranscriptionWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TranscriptionSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update Transcription Settings
+     
+     - PUT /api/v2/routing/settings/transcription
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "transcription" : "aeiou",
+  "transcriptionConfidenceThreshold" : 123
+}}]
+     
+     - parameter body: (body) Organization Settings 
+
+     - returns: RequestBuilder<TranscriptionSettings> 
+     */
+    open class func putRoutingSettingsTranscriptionWithRequestBuilder(body: TranscriptionSettings) -> RequestBuilder<TranscriptionSettings> {
+        let path = "/api/v2/routing/settings/transcription"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TranscriptionSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

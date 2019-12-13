@@ -36,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingQueuesDivisionviewsAll**](RoutingAPI.html#getRoutingQueuesDivisionviewsAll) | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
 | [**getRoutingQueuesMe**](RoutingAPI.html#getRoutingQueuesMe) | Get a paged listing of queues the user is a member of. |
 | [**getRoutingSettingsContactcenter**](RoutingAPI.html#getRoutingSettingsContactcenter) | Get Contact Center Settings |
+| [**getRoutingSettingsTranscription**](RoutingAPI.html#getRoutingSettingsTranscription) | Get Transcription Settings |
 | [**getRoutingSkill**](RoutingAPI.html#getRoutingSkill) | Get Routing Skill |
 | [**getRoutingSkills**](RoutingAPI.html#getRoutingSkills) | Get the list of routing skills. |
 | [**getRoutingSmsAddress**](RoutingAPI.html#getRoutingSmsAddress) | Get an Address by Id for SMS |
@@ -70,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingEmailDomainRoute**](RoutingAPI.html#putRoutingEmailDomainRoute) | Update a route |
 | [**putRoutingMessageRecipient**](RoutingAPI.html#putRoutingMessageRecipient) | Update a recipient |
 | [**putRoutingQueue**](RoutingAPI.html#putRoutingQueue) | Update a queue |
+| [**putRoutingSettingsTranscription**](RoutingAPI.html#putRoutingSettingsTranscription) | Update Transcription Settings |
 | [**putRoutingSmsPhonenumber**](RoutingAPI.html#putRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
 | [**putRoutingUtilization**](RoutingAPI.html#putRoutingUtilization) | Update the utilization settings. |
 | [**putRoutingWrapupcode**](RoutingAPI.html#putRoutingWrapupcode) | Update wrap-up code |
@@ -1653,6 +1655,54 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**ContactCenterSettings**](ContactCenterSettings.html)
+
+<a name="getRoutingSettingsTranscription"></a>
+
+# **getRoutingSettingsTranscription**
+
+
+
+> [TranscriptionSettings](TranscriptionSettings.html) getRoutingSettingsTranscription()
+
+Get Transcription Settings
+
+
+
+Wraps GET /api/v2/routing/settings/transcription  
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.getRoutingSettingsTranscription() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingSettingsTranscription was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 <a name="getRoutingSkill"></a>
 
@@ -3496,6 +3546,58 @@ RoutingAPI.putRoutingQueue(queueId: queueId, body: body) { (response, error) in
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="putRoutingSettingsTranscription"></a>
+
+# **putRoutingSettingsTranscription**
+
+
+
+> [TranscriptionSettings](TranscriptionSettings.html) putRoutingSettingsTranscription(body)
+
+Update Transcription Settings
+
+
+
+Wraps PUT /api/v2/routing/settings/transcription  
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TranscriptionSettings = new TranscriptionSettings(...) // Organization Settings
+
+// Code example
+RoutingAPI.putRoutingSettingsTranscription(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingSettingsTranscription was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TranscriptionSettings**](TranscriptionSettings.html)| Organization Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 <a name="putRoutingSmsPhonenumber"></a>
 

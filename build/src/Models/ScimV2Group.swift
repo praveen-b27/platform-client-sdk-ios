@@ -18,18 +18,22 @@ public class ScimV2Group: Codable {
     public var schemas: [String]?
     /** The display name of the group. */
     public var displayName: String?
+    /** The external ID of the group. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;. */
+    public var externalId: String?
     /** The list of members in the group. */
     public var members: [ScimV2MemberReference]?
     /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?
 
-    public init(_id: String?, schemas: [String]?, displayName: String?, members: [ScimV2MemberReference]?, meta: ScimMetadata?) {
+    public init(_id: String?, schemas: [String]?, displayName: String?, externalId: String?, members: [ScimV2MemberReference]?, meta: ScimMetadata?) {
         
         self._id = _id
         
         self.schemas = schemas
         
         self.displayName = displayName
+        
+        self.externalId = externalId
         
         self.members = members
         
@@ -41,6 +45,7 @@ public class ScimV2Group: Codable {
         case _id = "id"
         case schemas
         case displayName
+        case externalId
         case members
         case meta
     }

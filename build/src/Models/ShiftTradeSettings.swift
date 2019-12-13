@@ -53,10 +53,12 @@ public class ShiftTradeSettings: Codable {
     public var requiresMatchingLanguages: Bool?
     /** Whether to constrain shift trades to agents with matching skills */
     public var requiresMatchingSkills: Bool?
+    /** Whether to constrain shift trades to agents with matching planning groups */
+    public var requiresMatchingPlanningGroups: Bool?
     /** Rules that specify what to do with activity categories that are part of a shift defined in a trade */
     public var activityCategoryRules: [ShiftTradeActivityRule]?
 
-    public init(enabled: Bool?, autoReview: Bool?, allowDirectTrades: Bool?, minHoursInFuture: Int?, unequalPaid: UnequalPaid?, oneSided: OneSided?, weeklyMinPaidViolations: WeeklyMinPaidViolations?, weeklyMaxPaidViolations: WeeklyMaxPaidViolations?, requiresMatchingQueues: Bool?, requiresMatchingLanguages: Bool?, requiresMatchingSkills: Bool?, activityCategoryRules: [ShiftTradeActivityRule]?) {
+    public init(enabled: Bool?, autoReview: Bool?, allowDirectTrades: Bool?, minHoursInFuture: Int?, unequalPaid: UnequalPaid?, oneSided: OneSided?, weeklyMinPaidViolations: WeeklyMinPaidViolations?, weeklyMaxPaidViolations: WeeklyMaxPaidViolations?, requiresMatchingQueues: Bool?, requiresMatchingLanguages: Bool?, requiresMatchingSkills: Bool?, requiresMatchingPlanningGroups: Bool?, activityCategoryRules: [ShiftTradeActivityRule]?) {
         
         self.enabled = enabled
         
@@ -79,6 +81,8 @@ public class ShiftTradeSettings: Codable {
         self.requiresMatchingLanguages = requiresMatchingLanguages
         
         self.requiresMatchingSkills = requiresMatchingSkills
+        
+        self.requiresMatchingPlanningGroups = requiresMatchingPlanningGroups
         
         self.activityCategoryRules = activityCategoryRules
         

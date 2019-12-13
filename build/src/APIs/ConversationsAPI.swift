@@ -490,6 +490,105 @@ open class ConversationsAPI {
     
     /**
      
+     Delete a WhatsApp messaging integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: String, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: integrationId)
+        requestBuilder.execute { (response: Response<WhatsAppIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a WhatsApp messaging integration
+     
+     - DELETE /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activationStatusCode" : "aeiou",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "phoneNumber" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "activationErrorInfo" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) Integration ID 
+
+     - returns: RequestBuilder<WhatsAppIntegration> 
+     */
+    open class func deleteConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<WhatsAppIntegration> {
+        var path = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Get a conversation by id
      
      - parameter conversationId: (path) conversationId 
@@ -566,6 +665,7 @@ open class ConversationsAPI {
       "addressSelf" : "aeiou",
       "skipEnabled" : true,
       "journeyActionMapId" : "aeiou",
+      "remote" : "aeiou",
       "roomId" : "aeiou",
       "messageType" : "aeiou",
       "dnis" : "aeiou",
@@ -799,6 +899,7 @@ open class ConversationsAPI {
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
+        "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "dnis" : "aeiou",
@@ -1108,6 +1209,7 @@ open class ConversationsAPI {
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
+        "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "dnis" : "aeiou",
@@ -16110,6 +16212,7 @@ open class ConversationsAPI {
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
+        "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "dnis" : "aeiou",
@@ -20766,6 +20869,76 @@ open class ConversationsAPI {
     
     /**
      
+     Send an agentless outbound message
+     
+     - parameter body: (body) Create agentless outbound messaging request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsMessagesAgentless(body: SendAgentlessOutboundMessageRequest, completion: @escaping ((_ data: SendAgentlessOutboundMessageResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagesAgentlessWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SendAgentlessOutboundMessageResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Send an agentless outbound message
+     
+     - POST /api/v2/conversations/messages/agentless
+     - Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "conversationId" : "aeiou",
+  "selfUri" : "aeiou",
+  "messengerType" : "aeiou",
+  "fromAddress" : "aeiou",
+  "textBody" : "aeiou",
+  "id" : "aeiou",
+  "toAddress" : "aeiou",
+  "user" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "timestamp" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter body: (body) Create agentless outbound messaging request 
+
+     - returns: RequestBuilder<SendAgentlessOutboundMessageResponse> 
+     */
+    open class func postConversationsMessagesAgentlessWithRequestBuilder(body: SendAgentlessOutboundMessageRequest) -> RequestBuilder<SendAgentlessOutboundMessageResponse> {
+        let path = "/api/v2/conversations/messages/agentless"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SendAgentlessOutboundMessageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Create a Facebook Integration
      
      - parameter body: (body) FacebookIntegrationRequest 
@@ -20983,6 +21156,99 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TwitterIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a WhatsApp Integration
+     
+     - parameter body: (body) WhatsAppIntegrationRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsMessagingIntegrationsWhatsapp(body: WhatsAppIntegrationRequest, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<WhatsAppIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a WhatsApp Integration
+     
+     - POST /api/v2/conversations/messaging/integrations/whatsapp
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "activationStatusCode" : "aeiou",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "phoneNumber" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "activationErrorInfo" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter body: (body) WhatsAppIntegrationRequest 
+
+     - returns: RequestBuilder<WhatsAppIntegration> 
+     */
+    open class func postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: WhatsAppIntegrationRequest) -> RequestBuilder<WhatsAppIntegration> {
+        let path = "/api/v2/conversations/messaging/integrations/whatsapp"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

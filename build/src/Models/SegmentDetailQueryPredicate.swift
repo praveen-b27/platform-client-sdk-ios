@@ -79,6 +79,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case purpose = "purpose"
         case q850responsecode = "q850ResponseCode"
         case queueid = "queueId"
+        case remote = "remote"
         case recording = "recording"
         case remotenamedisplayable = "remoteNameDisplayable"
         case requestedlanguageid = "requestedLanguageId"

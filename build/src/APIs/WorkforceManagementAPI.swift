@@ -511,21 +511,22 @@ open class WorkforceManagementAPI {
       },
       "shiftTrading" : {
         "weeklyMaxPaidViolations" : "aeiou",
+        "unequalPaid" : "aeiou",
+        "requiresMatchingLanguages" : true,
+        "oneSided" : "aeiou",
+        "allowDirectTrades" : true,
+        "autoReview" : true,
+        "enabled" : true,
         "weeklyMinPaidViolations" : "aeiou",
         "requiresMatchingSkills" : true,
         "requiresMatchingQueues" : true,
-        "unequalPaid" : "aeiou",
         "minHoursInFuture" : 123,
-        "requiresMatchingLanguages" : true,
         "activityCategoryRules" : [ {
           "activityCodeIdReplacement" : "aeiou",
           "activityCategory" : "aeiou",
           "action" : "aeiou"
         } ],
-        "oneSided" : "aeiou",
-        "allowDirectTrades" : true,
-        "autoReview" : true,
-        "enabled" : true
+        "requiresMatchingPlanningGroups" : true
       },
       "adherence" : {
         "ignoredActivityCategories" : {
@@ -982,21 +983,22 @@ open class WorkforceManagementAPI {
     },
     "shiftTrading" : {
       "weeklyMaxPaidViolations" : "aeiou",
+      "unequalPaid" : "aeiou",
+      "requiresMatchingLanguages" : true,
+      "oneSided" : "aeiou",
+      "allowDirectTrades" : true,
+      "autoReview" : true,
+      "enabled" : true,
       "weeklyMinPaidViolations" : "aeiou",
       "requiresMatchingSkills" : true,
       "requiresMatchingQueues" : true,
-      "unequalPaid" : "aeiou",
       "minHoursInFuture" : 123,
-      "requiresMatchingLanguages" : true,
       "activityCategoryRules" : [ {
         "activityCodeIdReplacement" : "aeiou",
         "activityCategory" : "aeiou",
         "action" : "aeiou"
       } ],
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true
+      "requiresMatchingPlanningGroups" : true
     },
     "adherence" : {
       "ignoredActivityCategories" : {
@@ -1309,6 +1311,11 @@ open class WorkforceManagementAPI {
   },
   "id" : "aeiou",
   "workPlan" : {
+    "managementUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
     "id" : "aeiou"
   },
   "user" : {
@@ -1956,21 +1963,22 @@ open class WorkforceManagementAPI {
   },
   "shiftTrading" : {
     "weeklyMaxPaidViolations" : "aeiou",
+    "unequalPaid" : "aeiou",
+    "requiresMatchingLanguages" : true,
+    "oneSided" : "aeiou",
+    "allowDirectTrades" : true,
+    "autoReview" : true,
+    "enabled" : true,
     "weeklyMinPaidViolations" : "aeiou",
     "requiresMatchingSkills" : true,
     "requiresMatchingQueues" : true,
-    "unequalPaid" : "aeiou",
     "minHoursInFuture" : 123,
-    "requiresMatchingLanguages" : true,
     "activityCategoryRules" : [ {
       "activityCodeIdReplacement" : "aeiou",
       "activityCategory" : "aeiou",
       "action" : "aeiou"
     } ],
-    "oneSided" : "aeiou",
-    "allowDirectTrades" : true,
-    "autoReview" : true,
-    "enabled" : true
+    "requiresMatchingPlanningGroups" : true
   },
   "adherence" : {
     "ignoredActivityCategories" : {
@@ -4387,21 +4395,22 @@ open class WorkforceManagementAPI {
       },
       "shiftTrading" : {
         "weeklyMaxPaidViolations" : "aeiou",
+        "unequalPaid" : "aeiou",
+        "requiresMatchingLanguages" : true,
+        "oneSided" : "aeiou",
+        "allowDirectTrades" : true,
+        "autoReview" : true,
+        "enabled" : true,
         "weeklyMinPaidViolations" : "aeiou",
         "requiresMatchingSkills" : true,
         "requiresMatchingQueues" : true,
-        "unequalPaid" : "aeiou",
         "minHoursInFuture" : 123,
-        "requiresMatchingLanguages" : true,
         "activityCategoryRules" : [ {
           "activityCodeIdReplacement" : "aeiou",
           "activityCategory" : "aeiou",
           "action" : "aeiou"
         } ],
-        "oneSided" : "aeiou",
-        "allowDirectTrades" : true,
-        "autoReview" : true,
-        "enabled" : true
+        "requiresMatchingPlanningGroups" : true
       },
       "adherence" : {
         "ignoredActivityCategories" : {
@@ -4547,21 +4556,22 @@ open class WorkforceManagementAPI {
       },
       "shiftTrading" : {
         "weeklyMaxPaidViolations" : "aeiou",
+        "unequalPaid" : "aeiou",
+        "requiresMatchingLanguages" : true,
+        "oneSided" : "aeiou",
+        "allowDirectTrades" : true,
+        "autoReview" : true,
+        "enabled" : true,
         "weeklyMinPaidViolations" : "aeiou",
         "requiresMatchingSkills" : true,
         "requiresMatchingQueues" : true,
-        "unequalPaid" : "aeiou",
         "minHoursInFuture" : 123,
-        "requiresMatchingLanguages" : true,
         "activityCategoryRules" : [ {
           "activityCodeIdReplacement" : "aeiou",
           "activityCategory" : "aeiou",
           "action" : "aeiou"
         } ],
-        "oneSided" : "aeiou",
-        "allowDirectTrades" : true,
-        "autoReview" : true,
-        "enabled" : true
+        "requiresMatchingPlanningGroups" : true
       },
       "adherence" : {
         "ignoredActivityCategories" : {
@@ -5600,21 +5610,22 @@ open class WorkforceManagementAPI {
     },
     "shiftTrading" : {
       "weeklyMaxPaidViolations" : "aeiou",
+      "unequalPaid" : "aeiou",
+      "requiresMatchingLanguages" : true,
+      "oneSided" : "aeiou",
+      "allowDirectTrades" : true,
+      "autoReview" : true,
+      "enabled" : true,
       "weeklyMinPaidViolations" : "aeiou",
       "requiresMatchingSkills" : true,
       "requiresMatchingQueues" : true,
-      "unequalPaid" : "aeiou",
       "minHoursInFuture" : 123,
-      "requiresMatchingLanguages" : true,
       "activityCategoryRules" : [ {
         "activityCodeIdReplacement" : "aeiou",
         "activityCategory" : "aeiou",
         "action" : "aeiou"
       } ],
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true
+      "requiresMatchingPlanningGroups" : true
     },
     "adherence" : {
       "ignoredActivityCategories" : {
@@ -5999,21 +6010,22 @@ open class WorkforceManagementAPI {
   },
   "shiftTrading" : {
     "weeklyMaxPaidViolations" : "aeiou",
+    "unequalPaid" : "aeiou",
+    "requiresMatchingLanguages" : true,
+    "oneSided" : "aeiou",
+    "allowDirectTrades" : true,
+    "autoReview" : true,
+    "enabled" : true,
     "weeklyMinPaidViolations" : "aeiou",
     "requiresMatchingSkills" : true,
     "requiresMatchingQueues" : true,
-    "unequalPaid" : "aeiou",
     "minHoursInFuture" : 123,
-    "requiresMatchingLanguages" : true,
     "activityCategoryRules" : [ {
       "activityCodeIdReplacement" : "aeiou",
       "activityCategory" : "aeiou",
       "action" : "aeiou"
     } ],
-    "oneSided" : "aeiou",
-    "allowDirectTrades" : true,
-    "autoReview" : true,
-    "enabled" : true
+    "requiresMatchingPlanningGroups" : true
   },
   "adherence" : {
     "ignoredActivityCategories" : {
@@ -7200,6 +7212,116 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Query published schedules for given given time range for set of users
+     
+     - parameter muId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(muId: String, body: BuSearchAgentSchedulesRequest? = nil, completion: @escaping ((_ data: UserScheduleContainer?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: muId, body: body)
+        requestBuilder.execute { (response: Response<UserScheduleContainer>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query published schedules for given given time range for set of users
+     
+     - POST /api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "managementUnitTimeZone" : "aeiou",
+  "publishedSchedules" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "aeiou"
+  } ],
+  "userSchedules" : {
+    "key" : {
+      "fullDayTimeOffMarkers" : [ {
+        "activityCodeId" : "aeiou",
+        "isPaid" : true,
+        "lengthInMinutes" : 123,
+        "description" : "aeiou",
+        "managementUnitDate" : "aeiou",
+        "delete" : true
+      } ],
+      "metadata" : {
+        "modifiedBy" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "workPlanId" : "aeiou",
+      "shifts" : [ {
+        "lengthInMinutes" : 123,
+        "activities" : [ {
+          "activityCodeId" : "aeiou",
+          "lengthInMinutes" : 123,
+          "timeOffRequestId" : "aeiou",
+          "description" : "aeiou",
+          "isDstFallback" : true,
+          "countsAsPaidTime" : true,
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        } ],
+        "weekSchedule" : "",
+        "id" : "aeiou",
+        "delete" : true,
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "manuallyEdited" : true
+      } ],
+      "delete" : true
+    }
+  }
+}}]
+     
+     - parameter muId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<UserScheduleContainer> 
+     */
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: String, body: BuSearchAgentSchedulesRequest? = nil) -> RequestBuilder<UserScheduleContainer> {
+        var path = "/api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search"
+        let muIdPreEscape = "\(muId)"
+        let muIdPostEscape = muIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{muId}", with: muIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -10181,21 +10303,22 @@ open class WorkforceManagementAPI {
     },
     "shiftTrading" : {
       "weeklyMaxPaidViolations" : "aeiou",
+      "unequalPaid" : "aeiou",
+      "requiresMatchingLanguages" : true,
+      "oneSided" : "aeiou",
+      "allowDirectTrades" : true,
+      "autoReview" : true,
+      "enabled" : true,
       "weeklyMinPaidViolations" : "aeiou",
       "requiresMatchingSkills" : true,
       "requiresMatchingQueues" : true,
-      "unequalPaid" : "aeiou",
       "minHoursInFuture" : 123,
-      "requiresMatchingLanguages" : true,
       "activityCategoryRules" : [ {
         "activityCodeIdReplacement" : "aeiou",
         "activityCategory" : "aeiou",
         "action" : "aeiou"
       } ],
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true
+      "requiresMatchingPlanningGroups" : true
     },
     "adherence" : {
       "ignoredActivityCategories" : {

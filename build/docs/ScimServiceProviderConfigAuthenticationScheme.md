@@ -13,7 +13,7 @@ Defines an authentication scheme in the SCIM service provider&#39;s configuratio
 | **specUri** | **String** | The HTTP-addressable URL that points to the authentication scheme&#39;s specification. | [optional] |
 | **documentationUri** | **String** | The HTTP-addressable URL that points to the authentication scheme&#39;s usage documentation. | [optional] |
 | **type** | **String** | The type of authentication scheme. | |
-| **primary** | **Bool** | Indicates the primary method of authentication. | [optional] |
+| **primary** | **Bool** | Indicates whether this authentication scheme is the primary method of authentication. | [optional] |
 {: class="table table-striped"}
 
 

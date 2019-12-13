@@ -57,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementTimeoffrequest) | Update a time off request for the current user |
 | [**postWorkforcemanagementAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistorical) | Request a historical adherence report for users across management units |
 | [**postWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitActivitycodes) | Create a new activity code |
+| [**postWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitAgentschedulesSearch) | Query published schedules for given given time range for set of users |
 | [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
 | [**postWorkforcemanagementManagementunitIntraday**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitIntraday) | Get intraday data for the given date for the requested queueIds |
 | [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
@@ -978,7 +979,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/schedul
 
 Requires ANY permissions: 
 
-* wfm:schedule:generate
+* wfm:schedule:edit
 
 ### Example
 
@@ -2398,7 +2399,7 @@ Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/sched
 
 Requires ANY permissions: 
 
-* wfm:schedule:generate
+* wfm:schedule:edit
 
 ### Example
 
@@ -2883,6 +2884,61 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitActivitycodes(muId: 
 ### Return type
 
 [**ActivityCode**](ActivityCode.html)
+
+<a name="postWorkforcemanagementManagementunitAgentschedulesSearch"></a>
+
+# **postWorkforcemanagementManagementunitAgentschedulesSearch**
+
+
+
+> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitAgentschedulesSearch(muId, body)
+
+Query published schedules for given given time range for set of users
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search  
+
+Requires ANY permissions: 
+
+* wfm:publishedSchedule:view
+* wfm:schedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let muId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(muId: muId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **muId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserScheduleContainer**](UserScheduleContainer.html)
 
 <a name="postWorkforcemanagementManagementunitHistoricaladherencequery"></a>
 
@@ -3395,7 +3451,7 @@ Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/
 
 Requires ANY permissions: 
 
-* wfm:schedule:edit
+* wfm:schedule:generate
 
 ### Example
 

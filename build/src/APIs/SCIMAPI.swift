@@ -17,6 +17,69 @@ open class SCIMAPI {
     
     /**
      
+     Delete a group.
+     
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteScimGroup(groupId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteScimGroupWithRequestBuilder(groupId: groupId, ifMatch: ifMatch)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a group.
+     
+     - DELETE /api/v2/scim/groups/{groupId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteScimGroupWithRequestBuilder(groupId: String, ifMatch: String? = nil) -> RequestBuilder<Void> {
+        var path = "/api/v2/scim/groups/{groupId}"
+        let groupIdPreEscape = "\(groupId)"
+        let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "If-Match": ifMatch
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
      Delete a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
@@ -77,6 +140,69 @@ open class SCIMAPI {
         let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
 
         let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Delete a group.
+     
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteScimV2Group(groupId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteScimV2GroupWithRequestBuilder(groupId: groupId, ifMatch: ifMatch)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a group.
+     
+     - DELETE /api/v2/scim/v2/groups/{groupId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteScimV2GroupWithRequestBuilder(groupId: String, ifMatch: String? = nil) -> RequestBuilder<Void> {
+        var path = "/api/v2/scim/v2/groups/{groupId}"
+        let groupIdPreEscape = "\(groupId)"
+        let groupIdPostEscape = groupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{groupId}", with: groupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "If-Match": ifMatch
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
     }
@@ -206,6 +332,7 @@ open class SCIMAPI {
     "value" : "aeiou",
     "$ref" : "aeiou"
   } ],
+  "externalId" : "aeiou",
   "id" : "aeiou"
 }}]
      
@@ -300,6 +427,7 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     } ],
+    "externalId" : "aeiou",
     "id" : "aeiou"
   } ]
 }}]
@@ -1030,6 +1158,7 @@ open class SCIMAPI {
     "value" : "aeiou",
     "$ref" : "aeiou"
   } ],
+  "externalId" : "aeiou",
   "id" : "aeiou"
 }}]
      
@@ -1124,6 +1253,7 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     } ],
+    "externalId" : "aeiou",
     "id" : "aeiou"
   } ]
 }}]
@@ -1857,6 +1987,7 @@ open class SCIMAPI {
     "value" : "aeiou",
     "$ref" : "aeiou"
   } ],
+  "externalId" : "aeiou",
   "id" : "aeiou"
 }}]
      
@@ -2059,6 +2190,7 @@ open class SCIMAPI {
     "value" : "aeiou",
     "$ref" : "aeiou"
   } ],
+  "externalId" : "aeiou",
   "id" : "aeiou"
 }}]
      
@@ -2209,6 +2341,79 @@ open class SCIMAPI {
     
     /**
      
+     The information used to create a group.
+     
+     - parameter body: (body) The information used to create a group. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postScimGroups(body: ScimV2Group, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
+        let requestBuilder = postScimGroupsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ScimV2Group>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     The information used to create a group.
+     
+     - POST /api/v2/scim/groups
+     - PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
+  "schemas" : [ "aeiou" ],
+  "members" : [ {
+    "type" : "aeiou",
+    "value" : "aeiou",
+    "$ref" : "aeiou"
+  } ],
+  "externalId" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter body: (body) The information used to create a group. 
+
+     - returns: RequestBuilder<ScimV2Group> 
+     */
+    open class func postScimGroupsWithRequestBuilder(body: ScimV2Group) -> RequestBuilder<ScimV2Group> {
+        let path = "/api/v2/scim/groups"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Create a user
      
      - parameter body: (body) The information used to create a user. 
@@ -2300,6 +2505,79 @@ open class SCIMAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     The information used to create a group.
+     
+     - parameter body: (body) The information used to create a group. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postScimV2Groups(body: ScimV2Group, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
+        let requestBuilder = postScimV2GroupsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ScimV2Group>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     The information used to create a group.
+     
+     - POST /api/v2/scim/v2/groups
+     - PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
+  "schemas" : [ "aeiou" ],
+  "members" : [ {
+    "type" : "aeiou",
+    "value" : "aeiou",
+    "$ref" : "aeiou"
+  } ],
+  "externalId" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter body: (body) The information used to create a group. 
+
+     - returns: RequestBuilder<ScimV2Group> 
+     */
+    open class func postScimV2GroupsWithRequestBuilder(body: ScimV2Group) -> RequestBuilder<ScimV2Group> {
+        let path = "/api/v2/scim/v2/groups"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -2461,6 +2739,7 @@ open class SCIMAPI {
     "value" : "aeiou",
     "$ref" : "aeiou"
   } ],
+  "externalId" : "aeiou",
   "id" : "aeiou"
 }}]
      
@@ -2663,6 +2942,7 @@ open class SCIMAPI {
     "value" : "aeiou",
     "$ref" : "aeiou"
   } ],
+  "externalId" : "aeiou",
   "id" : "aeiou"
 }}]
      

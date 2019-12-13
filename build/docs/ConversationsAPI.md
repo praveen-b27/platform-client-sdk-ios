@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsFacebookIntegrationId) | Delete a Facebook messaging integration |
 | [**deleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsLineIntegrationId) | Delete a LINE messenger integration |
 | [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete a Twitter messaging integration |
+| [**deleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsWhatsappIntegrationId) | Delete a WhatsApp messaging integration |
 | [**getAnalyticsConversationDetails**](ConversationsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
 | [**getAnalyticsConversationsDetails**](ConversationsAPI.html#getAnalyticsConversationsDetails) | Gets multiple conversations by id |
 | [**getAnalyticsConversationsDetailsJob**](ConversationsAPI.html#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
@@ -128,9 +129,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageMessagesBulk**](ConversationsAPI.html#postConversationsMessageMessagesBulk) | Get messages in batch |
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI.html#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsMessages**](ConversationsAPI.html#postConversationsMessages) | Create an outbound messaging conversation. |
+| [**postConversationsMessagesAgentless**](ConversationsAPI.html#postConversationsMessagesAgentless) | Send an agentless outbound message |
 | [**postConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#postConversationsMessagingIntegrationsFacebook) | Create a Facebook Integration |
 | [**postConversationsMessagingIntegrationsLine**](ConversationsAPI.html#postConversationsMessagingIntegrationsLine) | Create a LINE messenger Integration |
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
+| [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI.html#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**putConversationsCallParticipantCommunicationUuidata**](ConversationsAPI.html#putConversationsCallParticipantCommunicationUuidata) | Set uuiData to be sent on future commands. |
 | [**putConversationsEmailMessagesDraft**](ConversationsAPI.html#putConversationsEmailMessagesDraft) | Update conversation draft reply |
@@ -550,6 +553,58 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsTwitterIntegrationId(in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="deleteConversationsMessagingIntegrationsWhatsappIntegrationId"></a>
+
+# **deleteConversationsMessagingIntegrationsWhatsappIntegrationId**
+
+
+
+> [WhatsAppIntegration](WhatsAppIntegration.html) deleteConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId)
+
+Delete a WhatsApp messaging integration
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}  
+
+Requires ANY permissions: 
+
+* messaging:integration:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.deleteConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.deleteConversationsMessagingIntegrationsWhatsappIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
 
 <a name="getAnalyticsConversationDetails"></a>
 
@@ -6569,6 +6624,58 @@ ConversationsAPI.postConversationsMessages(body: body) { (response, error) in
 
 [**MessageConversation**](MessageConversation.html)
 
+<a name="postConversationsMessagesAgentless"></a>
+
+# **postConversationsMessagesAgentless**
+
+
+
+> [SendAgentlessOutboundMessageResponse](SendAgentlessOutboundMessageResponse.html) postConversationsMessagesAgentless(body)
+
+Send an agentless outbound message
+
+Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+
+Wraps POST /api/v2/conversations/messages/agentless  
+
+Requires ANY permissions: 
+
+* conversation:message:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SendAgentlessOutboundMessageRequest = new SendAgentlessOutboundMessageRequest(...) // Create agentless outbound messaging request
+
+// Code example
+ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagesAgentless was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest.html)| Create agentless outbound messaging request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse.html)
+
 <a name="postConversationsMessagingIntegrationsFacebook"></a>
 
 # **postConversationsMessagingIntegrationsFacebook**
@@ -6724,6 +6831,58 @@ ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body) { (re
 ### Return type
 
 [**TwitterIntegration**](TwitterIntegration.html)
+
+<a name="postConversationsMessagingIntegrationsWhatsapp"></a>
+
+# **postConversationsMessagingIntegrationsWhatsapp**
+
+
+
+> [WhatsAppIntegration](WhatsAppIntegration.html) postConversationsMessagingIntegrationsWhatsapp(body)
+
+Create a WhatsApp Integration
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/whatsapp  
+
+Requires ANY permissions: 
+
+* messaging:whatsappIntegration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: WhatsAppIntegrationRequest = new WhatsAppIntegrationRequest(...) // WhatsAppIntegrationRequest
+
+// Code example
+ConversationsAPI.postConversationsMessagingIntegrationsWhatsapp(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagingIntegrationsWhatsapp was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest.html)| WhatsAppIntegrationRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WhatsAppIntegration**](WhatsAppIntegration.html)
 
 <a name="putConversationParticipantFlaggedreason"></a>
 

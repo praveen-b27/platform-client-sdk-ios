@@ -58,6 +58,7 @@ public class FlowAggregationQuery: Codable {
         case provider = "provider"
         case purpose = "purpose"
         case queueid = "queueId"
+        case remote = "remote"
         case requestedlanguageid = "requestedLanguageId"
         case requestedroutingskillid = "requestedRoutingSkillId"
         case roomid = "roomId"

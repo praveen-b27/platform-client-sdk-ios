@@ -8,8 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteOauthClient**](OAuthAPI.html#deleteOauthClient) | Delete OAuth Client |
+| [**getOauthAuthorization**](OAuthAPI.html#getOauthAuthorization) | Get a client that is authorized by the resource owner |
+| [**getOauthAuthorizations**](OAuthAPI.html#getOauthAuthorizations) | List clients that are authorized by the resource owner |
 | [**getOauthClient**](OAuthAPI.html#getOauthClient) | Get OAuth Client |
 | [**getOauthClients**](OAuthAPI.html#getOauthClients) | The list of OAuth clients |
+| [**getOauthScope**](OAuthAPI.html#getOauthScope) | An OAuth scope |
+| [**getOauthScopes**](OAuthAPI.html#getOauthScopes) | The list of OAuth scopes |
 | [**postOauthClientSecret**](OAuthAPI.html#postOauthClientSecret) | Regenerate Client Secret |
 | [**postOauthClients**](OAuthAPI.html#postOauthClients) | Create OAuth client |
 | [**putOauthClient**](OAuthAPI.html#putOauthClient) | Update OAuth Client |
@@ -65,6 +69,106 @@ OAuthAPI.deleteOauthClient(clientId: clientId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="getOauthAuthorization"></a>
+
+# **getOauthAuthorization**
+
+
+
+> [OAuthAuthorization](OAuthAuthorization.html) getOauthAuthorization(clientId)
+
+Get a client that is authorized by the resource owner
+
+
+
+Wraps GET /api/v2/oauth/authorizations/{clientId}  
+
+Requires ANY permissions: 
+
+* oauth:client:authorize
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let clientId: String = "" // The ID of client
+
+// Code example
+OAuthAPI.getOauthAuthorization(clientId: clientId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OAuthAPI.getOauthAuthorization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **clientId** | **String**| The ID of client | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OAuthAuthorization**](OAuthAuthorization.html)
+
+<a name="getOauthAuthorizations"></a>
+
+# **getOauthAuthorizations**
+
+
+
+> [OAuthAuthorizationListing](OAuthAuthorizationListing.html) getOauthAuthorizations()
+
+List clients that are authorized by the resource owner
+
+
+
+Wraps GET /api/v2/oauth/authorizations  
+
+Requires ANY permissions: 
+
+* oauth:client:authorize
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OAuthAPI.getOauthAuthorizations() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OAuthAPI.getOauthAuthorizations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**OAuthAuthorizationListing**](OAuthAuthorizationListing.html)
 
 <a name="getOauthClient"></a>
 
@@ -165,6 +269,110 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**OAuthClientEntityListing**](OAuthClientEntityListing.html)
+
+<a name="getOauthScope"></a>
+
+# **getOauthScope**
+
+
+
+> [OAuthScope](OAuthScope.html) getOauthScope(scopeId, acceptLanguage)
+
+An OAuth scope
+
+
+
+Wraps GET /api/v2/oauth/scopes/{scopeId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let scopeId: String = "" // Scope ID
+let acceptLanguage: String = "en-us" // The language with which to display the scope description.
+
+// Code example
+OAuthAPI.getOauthScope(scopeId: scopeId, acceptLanguage: acceptLanguage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OAuthAPI.getOauthScope was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scopeId** | **String**| Scope ID | |
+| **acceptLanguage** | **String**| The language with which to display the scope description. | [optional] [default to en-us] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OAuthScope**](OAuthScope.html)
+
+<a name="getOauthScopes"></a>
+
+# **getOauthScopes**
+
+
+
+> [OAuthScopeListing](OAuthScopeListing.html) getOauthScopes(acceptLanguage)
+
+The list of OAuth scopes
+
+
+
+Wraps GET /api/v2/oauth/scopes  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let acceptLanguage: String = "en-us" // The language with which to display the scope descriptions.
+
+// Code example
+OAuthAPI.getOauthScopes(acceptLanguage: acceptLanguage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OAuthAPI.getOauthScopes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **acceptLanguage** | **String**| The language with which to display the scope descriptions. | [optional] [default to en-us] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OAuthScopeListing**](OAuthScopeListing.html)
 
 <a name="postOauthClientSecret"></a>
 

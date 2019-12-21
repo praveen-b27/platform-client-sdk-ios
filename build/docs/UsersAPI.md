@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteAnalyticsUsersDetailsJob**](UsersAPI.html#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
 | [**deleteAuthorizationSubjectDivisionRole**](UsersAPI.html#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
 | [**deleteUser**](UsersAPI.html#deleteUser) | Delete user |
 | [**deleteUserRoles**](UsersAPI.html#deleteUserRoles) | Removes all the roles from the user. |
@@ -14,6 +15,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserRoutingskill**](UsersAPI.html#deleteUserRoutingskill) | Remove routing skill from user |
 | [**deleteUserStationAssociatedstation**](UsersAPI.html#deleteUserStationAssociatedstation) | Clear associated station |
 | [**deleteUserStationDefaultstation**](UsersAPI.html#deleteUserStationDefaultstation) | Clear default station |
+| [**getAnalyticsUsersDetailsJob**](UsersAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
+| [**getAnalyticsUsersDetailsJobResults**](UsersAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAuthorizationDivisionspermittedMe**](UsersAPI.html#getAuthorizationDivisionspermittedMe) | Returns whether or not current user can perform the specified action(s). |
 | [**getAuthorizationDivisionspermittedSubjectId**](UsersAPI.html#getAuthorizationDivisionspermittedSubjectId) | Returns whether or not specified user can perform the specified action(s). |
 | [**getAuthorizationSubject**](UsersAPI.html#getAuthorizationSubject) | Returns a listing of roles and permissions for a user. |
@@ -50,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserRoutingskillsBulk**](UsersAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
 | [**patchUsersBulk**](UsersAPI.html#patchUsersBulk) | Update bulk acd autoanswer on users |
 | [**postAnalyticsUsersAggregatesQuery**](UsersAPI.html#postAnalyticsUsersAggregatesQuery) | Query for user aggregates |
+| [**postAnalyticsUsersDetailsJobs**](UsersAPI.html#postAnalyticsUsersDetailsJobs) | Query for user details asynchronously |
 | [**postAnalyticsUsersDetailsQuery**](UsersAPI.html#postAnalyticsUsersDetailsQuery) | Query for user details |
 | [**postAnalyticsUsersObservationsQuery**](UsersAPI.html#postAnalyticsUsersObservationsQuery) | Query for user observations |
 | [**postAuthorizationSubjectBulkadd**](UsersAPI.html#postAuthorizationSubjectBulkadd) | Bulk-grant roles and divisions to a subject. |
@@ -72,6 +76,57 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUserStationAssociatedstationStationId**](UsersAPI.html#putUserStationAssociatedstationStationId) | Set associated station |
 | [**putUserStationDefaultstationStationId**](UsersAPI.html#putUserStationDefaultstationStationId) | Set default station |
 {: class="table-striped"}
+
+<a name="deleteAnalyticsUsersDetailsJob"></a>
+
+# **deleteAnalyticsUsersDetailsJob**
+
+
+
+> Void deleteAnalyticsUsersDetailsJob(jobId)
+
+Delete/cancel an async request
+
+
+
+Wraps DELETE /api/v2/analytics/users/details/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+UsersAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteAnalyticsUsersDetailsJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteAuthorizationSubjectDivisionRole"></a>
 
@@ -439,6 +494,112 @@ UsersAPI.deleteUserStationDefaultstation(userId: userId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="getAnalyticsUsersDetailsJob"></a>
+
+# **getAnalyticsUsersDetailsJob**
+
+
+
+> [AsyncQueryStatus](AsyncQueryStatus.html) getAnalyticsUsersDetailsJob(jobId)
+
+Get status for async query for user details
+
+
+
+Wraps GET /api/v2/analytics/users/details/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+UsersAPI.getAnalyticsUsersDetailsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getAnalyticsUsersDetailsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getAnalyticsUsersDetailsJobResults"></a>
+
+# **getAnalyticsUsersDetailsJobResults**
+
+
+
+> [AnalyticsUserDetailsAsyncQueryResponse](AnalyticsUserDetailsAsyncQueryResponse.html) getAnalyticsUsersDetailsJobResults(jobId, cursor)
+
+Fetch a page of results for an async query
+
+
+
+Wraps GET /api/v2/analytics/users/details/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
+
+// Code example
+UsersAPI.getAnalyticsUsersDetailsJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getAnalyticsUsersDetailsJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html)
 
 <a name="getAuthorizationDivisionspermittedMe"></a>
 
@@ -2388,6 +2549,58 @@ UsersAPI.postAnalyticsUsersAggregatesQuery(body: body) { (response, error) in
 ### Return type
 
 [**UserAggregateQueryResponse**](UserAggregateQueryResponse.html)
+
+<a name="postAnalyticsUsersDetailsJobs"></a>
+
+# **postAnalyticsUsersDetailsJobs**
+
+
+
+> [AsyncQueryResponse](AsyncQueryResponse.html) postAnalyticsUsersDetailsJobs(body)
+
+Query for user details asynchronously
+
+
+
+Wraps POST /api/v2/analytics/users/details/jobs  
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AsyncUserDetailsQuery = new AsyncUserDetailsQuery(...) // query
+
+// Code example
+UsersAPI.postAnalyticsUsersDetailsJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postAnalyticsUsersDetailsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AsyncUserDetailsQuery**](AsyncUserDetailsQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
 
 <a name="postAnalyticsUsersDetailsQuery"></a>
 

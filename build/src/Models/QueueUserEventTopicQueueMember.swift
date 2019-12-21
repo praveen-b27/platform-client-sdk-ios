@@ -11,32 +11,24 @@ import Foundation
 
 public class QueueUserEventTopicQueueMember: Codable {
 
-    public var _id: String?
-    public var user: QueueUserEventTopicUserReference?
-    public var queueId: String?
+    public var memberId: String?
+    public var name: String?
+    public var ringNumber: Int?
+    public var type: String?
     public var joined: Bool?
-    public var additionalProperties: JSON?
 
-    public init(_id: String?, user: QueueUserEventTopicUserReference?, queueId: String?, joined: Bool?, additionalProperties: JSON?) {
+    public init(memberId: String?, name: String?, ringNumber: Int?, type: String?, joined: Bool?) {
         
-        self._id = _id
+        self.memberId = memberId
         
-        self.user = user
+        self.name = name
         
-        self.queueId = queueId
+        self.ringNumber = ringNumber
+        
+        self.type = type
         
         self.joined = joined
         
-        self.additionalProperties = additionalProperties
-        
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case user
-        case queueId
-        case joined
-        case additionalProperties
     }
 
 

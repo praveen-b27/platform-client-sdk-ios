@@ -4452,11 +4452,11 @@ open class WorkforceManagementAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query)  (optional)
@@ -4613,11 +4613,11 @@ open class WorkforceManagementAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)

@@ -1,16 +1,13 @@
 ---
-title: TimeZone
+title: WfmBuScheduleRunTopicUserReference
 ---
-## TimeZone
+## WfmBuScheduleRunTopicUserReference
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **displayName** | **String** |  | [optional] |
 | **_id** | **String** |  | [optional] |
-| **rawOffset** | **Int** |  | [optional] |
-| **dstsavings** | **Int** |  | [optional] |
 {: class="table table-striped"}
 
 

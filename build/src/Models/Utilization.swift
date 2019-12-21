@@ -11,7 +11,7 @@ import Foundation
 
 public class Utilization: Codable {
 
-    /** Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression */
+    /** Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message. */
     public var utilization: [String:OrgMediaUtilization]?
 
     public init(utilization: [String:OrgMediaUtilization]?) {

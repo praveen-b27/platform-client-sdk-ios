@@ -19,8 +19,8 @@ Defines a period of time to perform a specific action.  Each schedule must be as
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modifiedByApp** | **String** | The application that last modified the resource. | [optional] |
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
-| **start** | **String** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | [optional] |
-| **end** | **String** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | [optional] |
+| **start** | **String** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
+| **end** | **String** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
 | **rrule** | **String** | An iCal Recurrence Rule (RRULE) string. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

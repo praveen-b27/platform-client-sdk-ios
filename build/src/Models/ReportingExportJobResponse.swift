@@ -84,8 +84,8 @@ public class ReportingExportJobResponse: Codable {
     public var name: String?
     /** The current status of the export request */
     public var status: Status?
-    /** The requested timezone of the exported data */
-    public var timeZone: TimeZone?
+    /** The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
+    public var timeZone: String?
     /** The requested format of the exported data */
     public var exportFormat: ExportFormat?
     /** The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
@@ -121,7 +121,7 @@ public class ReportingExportJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, status: Status?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, selfUri: String?) {
         
         self._id = _id
         

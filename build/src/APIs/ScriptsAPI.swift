@@ -385,11 +385,11 @@ open class ScriptsAPI {
     "publishedDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -531,11 +531,11 @@ open class ScriptsAPI {
     "publishedDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)

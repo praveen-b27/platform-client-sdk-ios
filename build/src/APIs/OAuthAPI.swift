@@ -70,6 +70,191 @@ open class OAuthAPI {
     
     /**
      
+     Get a client that is authorized by the resource owner
+     
+     - parameter clientId: (path) The ID of client 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOauthAuthorization(clientId: String, completion: @escaping ((_ data: OAuthAuthorization?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthAuthorizationWithRequestBuilder(clientId: clientId)
+        requestBuilder.execute { (response: Response<OAuthAuthorization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a client that is authorized by the resource owner
+     
+     - GET /api/v2/oauth/authorizations/{clientId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "resourceOwner" : "",
+  "scope" : [ "aeiou" ],
+  "selfUri" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "registeredRedirectUri" : [ "aeiou" ],
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "secret" : "aeiou",
+    "authorizedGrantType" : "aeiou",
+    "roleIds" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "accessTokenValiditySeconds" : 123456789,
+    "scope" : [ "aeiou" ],
+    "name" : "aeiou",
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "roleDivisions" : [ {
+      "roleId" : "aeiou",
+      "divisionId" : "aeiou"
+    } ]
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : ""
+}}]
+     
+     - parameter clientId: (path) The ID of client 
+
+     - returns: RequestBuilder<OAuthAuthorization> 
+     */
+    open class func getOauthAuthorizationWithRequestBuilder(clientId: String) -> RequestBuilder<OAuthAuthorization> {
+        var path = "/api/v2/oauth/authorizations/{clientId}"
+        let clientIdPreEscape = "\(clientId)"
+        let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OAuthAuthorization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     List clients that are authorized by the resource owner
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOauthAuthorizations(completion: @escaping ((_ data: OAuthAuthorizationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthAuthorizationsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<OAuthAuthorizationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     List clients that are authorized by the resource owner
+     
+     - GET /api/v2/oauth/authorizations
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
+    "resourceOwner" : "",
+    "scope" : [ "aeiou" ],
+    "selfUri" : "aeiou",
+    "client" : {
+      "selfUri" : "aeiou",
+      "registeredRedirectUri" : [ "aeiou" ],
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "secret" : "aeiou",
+      "authorizedGrantType" : "aeiou",
+      "roleIds" : [ "aeiou" ],
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "accessTokenValiditySeconds" : 123456789,
+      "scope" : [ "aeiou" ],
+      "name" : "aeiou",
+      "modifiedBy" : "",
+      "id" : "aeiou",
+      "roleDivisions" : [ {
+        "roleId" : "aeiou",
+        "divisionId" : "aeiou"
+      } ]
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : ""
+  } ],
+  "selfUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<OAuthAuthorizationListing> 
+     */
+    open class func getOauthAuthorizationsWithRequestBuilder() -> RequestBuilder<OAuthAuthorizationListing> {
+        let path = "/api/v2/oauth/authorizations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OAuthAuthorizationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Get OAuth Client
      
      - parameter clientId: (path) Client ID 
@@ -213,11 +398,11 @@ open class OAuthAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthClientEntityListing> 
@@ -237,6 +422,152 @@ open class OAuthAPI {
         let requestBuilder: RequestBuilder<OAuthClientEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     An OAuth scope
+     
+     - parameter scopeId: (path) Scope ID 
+     - parameter acceptLanguage: (header) The language with which to display the scope description. (optional, default to en-us)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOauthScope(scopeId: String, acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthScope?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthScopeWithRequestBuilder(scopeId: scopeId, acceptLanguage: acceptLanguage)
+        requestBuilder.execute { (response: Response<OAuthScope>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     An OAuth scope
+     
+     - GET /api/v2/oauth/scopes/{scopeId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter scopeId: (path) Scope ID 
+     - parameter acceptLanguage: (header) The language with which to display the scope description. (optional, default to en-us)
+
+     - returns: RequestBuilder<OAuthScope> 
+     */
+    open class func getOauthScopeWithRequestBuilder(scopeId: String, acceptLanguage: String? = nil) -> RequestBuilder<OAuthScope> {
+        var path = "/api/v2/oauth/scopes/{scopeId}"
+        let scopeIdPreEscape = "\(scopeId)"
+        let scopeIdPostEscape = scopeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scopeId}", with: scopeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "Accept-Language": acceptLanguage
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+
+        let requestBuilder: RequestBuilder<OAuthScope>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+    }
+
+    
+    
+    
+    /**
+     
+     The list of OAuth scopes
+     
+     - parameter acceptLanguage: (header) The language with which to display the scope descriptions. (optional, default to en-us)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOauthScopes(acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthScopeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthScopesWithRequestBuilder(acceptLanguage: acceptLanguage)
+        requestBuilder.execute { (response: Response<OAuthScopeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     The list of OAuth scopes
+     
+     - GET /api/v2/oauth/scopes
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "selfUri" : "aeiou"
+}}]
+     
+     - parameter acceptLanguage: (header) The language with which to display the scope descriptions. (optional, default to en-us)
+
+     - returns: RequestBuilder<OAuthScopeListing> 
+     */
+    open class func getOauthScopesWithRequestBuilder(acceptLanguage: String? = nil) -> RequestBuilder<OAuthScopeListing> {
+        let path = "/api/v2/oauth/scopes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "Accept-Language": acceptLanguage
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
+
+        let requestBuilder: RequestBuilder<OAuthScopeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
     }
 
     

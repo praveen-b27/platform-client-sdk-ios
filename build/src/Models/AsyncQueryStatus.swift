@@ -12,6 +12,7 @@ import Foundation
 public class AsyncQueryStatus: Codable {
 
     public enum State: String, Codable { 
+        case queued = "QUEUED"
         case pending = "PENDING"
         case failed = "FAILED"
         case cancelled = "CANCELLED"

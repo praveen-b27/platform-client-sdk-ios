@@ -222,11 +222,11 @@ open class ObjectsAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)

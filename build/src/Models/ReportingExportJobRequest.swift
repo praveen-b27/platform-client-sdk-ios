@@ -59,8 +59,8 @@ public class ReportingExportJobRequest: Codable {
     }
     /** The user supplied name of the export request */
     public var name: String?
-    /** The requested timezone of the exported data */
-    public var timeZone: TimeZone?
+    /** The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
+    public var timeZone: String?
     /** The requested format of the exported data */
     public var exportFormat: ExportFormat?
     /** The time period used to limit the the exported data. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
@@ -84,7 +84,7 @@ public class ReportingExportJobRequest: Codable {
     /** Indicates if custom participant attributes will be exported */
     public var hasCustomParticipantAttributes: Bool?
 
-    public init(name: String?, timeZone: TimeZone?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?) {
+    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?) {
         
         self.name = name
         

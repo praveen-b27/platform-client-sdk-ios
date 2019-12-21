@@ -13,6 +13,61 @@ open class UsersAPI {
     
     
     
+    /**
+     
+     Delete/cancel an async request
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAnalyticsUsersDetailsJob(jobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAnalyticsUsersDetailsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete/cancel an async request
+     
+     - DELETE /api/v2/analytics/users/details/jobs/{jobId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteAnalyticsUsersDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/analytics/users/details/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -429,6 +484,165 @@ open class UsersAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get status for async query for user details
+     
+     - parameter jobId: (path) jobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsUsersDetailsJob(jobId: String, completion: @escaping ((_ data: AsyncQueryStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsUsersDetailsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AsyncQueryStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get status for async query for user details
+     
+     - GET /api/v2/analytics/users/details/jobs/{jobId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorMessage" : "aeiou",
+  "submissionDate" : "2000-01-23T04:56:07.000+0000",
+  "completionDate" : "2000-01-23T04:56:07.000+0000",
+  "state" : "aeiou",
+  "expirationDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter jobId: (path) jobId 
+
+     - returns: RequestBuilder<AsyncQueryStatus> 
+     */
+    open class func getAnalyticsUsersDetailsJobWithRequestBuilder(jobId: String) -> RequestBuilder<AsyncQueryStatus> {
+        var path = "/api/v2/analytics/users/details/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncQueryStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Fetch a page of results for an async query
+     
+     - parameter jobId: (path) jobId 
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsUsersDetailsJobResults(jobId: String, cursor: String? = nil, completion: @escaping ((_ data: AnalyticsUserDetailsAsyncQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: jobId, cursor: cursor)
+        requestBuilder.execute { (response: Response<AnalyticsUserDetailsAsyncQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Fetch a page of results for an async query
+     
+     - GET /api/v2/analytics/users/details/jobs/{jobId}/results
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursor" : "aeiou",
+  "userDetails" : [ {
+    "primaryPresence" : [ {
+      "durationMilliseconds" : 123456789,
+      "systemPresence" : "aeiou",
+      "startTime" : "2000-01-23T04:56:07.000+0000",
+      "endTime" : "2000-01-23T04:56:07.000+0000",
+      "organizationPresenceId" : "aeiou"
+    } ],
+    "routingStatus" : [ {
+      "durationMilliseconds" : 123456789,
+      "startTime" : "2000-01-23T04:56:07.000+0000",
+      "endTime" : "2000-01-23T04:56:07.000+0000",
+      "routingStatus" : "aeiou"
+    } ],
+    "userId" : "aeiou"
+  } ]
+}}]
+     
+     - parameter jobId: (path) jobId 
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+
+     - returns: RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> 
+     */
+    open class func getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil) -> RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> {
+        var path = "/api/v2/analytics/users/details/jobs/{jobId}/results"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "cursor": cursor
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
     
@@ -1208,11 +1422,11 @@ open class UsersAPI {
     "version" : 123456789
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2895,11 +3109,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -3938,11 +4152,11 @@ open class UsersAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4141,11 +4355,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4249,11 +4463,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5338,11 +5552,11 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5712,11 +5926,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7836,11 +8050,11 @@ open class UsersAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8002,11 +8216,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8084,11 +8298,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8394,11 +8608,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter body: (body) Users 
@@ -8503,6 +8717,65 @@ open class UsersAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Query for user details asynchronously
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsUsersDetailsJobs(body: AsyncUserDetailsQuery, completion: @escaping ((_ data: AsyncQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsUsersDetailsJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AsyncQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for user details asynchronously
+     
+     - POST /api/v2/analytics/users/details/jobs
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "jobId" : "aeiou"
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<AsyncQueryResponse> 
+     */
+    open class func postAnalyticsUsersDetailsJobsWithRequestBuilder(body: AsyncUserDetailsQuery) -> RequestBuilder<AsyncQueryResponse> {
+        let path = "/api/v2/analytics/users/details/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -10710,11 +10983,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

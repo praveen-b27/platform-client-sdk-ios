@@ -41,7 +41,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRecordingLocalkeysSettings**](RecordingAPI.html#postRecordingLocalkeysSettings) | create settings for local key creation |
 | [**postRecordingMediaretentionpolicies**](RecordingAPI.html#postRecordingMediaretentionpolicies) | Create media retention policy |
 | [**postRecordingRecordingkeys**](RecordingAPI.html#postRecordingRecordingkeys) | Create encryption key |
-| [**postRecordingsDeletionprotection**](RecordingAPI.html#postRecordingsDeletionprotection) | Get a list of conversations with protected recordings |
 | [**putConversationRecording**](RecordingAPI.html#putConversationRecording) | Updates the retention records on a recording. |
 | [**putConversationRecordingAnnotation**](RecordingAPI.html#putConversationRecordingAnnotation) | Update annotation |
 | [**putOrphanrecording**](RecordingAPI.html#putOrphanrecording) | Updates an orphan recording to a regular recording with retention values |
@@ -50,7 +49,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRecordingMediaretentionpolicy**](RecordingAPI.html#putRecordingMediaretentionpolicy) | Update a media retention policy |
 | [**putRecordingRecordingkeysRotationschedule**](RecordingAPI.html#putRecordingRecordingkeysRotationschedule) | Update key rotation schedule |
 | [**putRecordingSettings**](RecordingAPI.html#putRecordingSettings) | Update the Recording Settings for the Organization |
-| [**putRecordingsDeletionprotection**](RecordingAPI.html#putRecordingsDeletionprotection) | Apply or revoke recording protection for conversations |
 {: class="table-striped"}
 
 <a name="deleteConversationRecordingAnnotation"></a>
@@ -1886,57 +1884,6 @@ This endpoint does not require any parameters.
 
 [**EncryptionKey**](EncryptionKey.html)
 
-<a name="postRecordingsDeletionprotection"></a>
-
-# **postRecordingsDeletionprotection**
-
-
-
-> [[AddressableEntityRef]](AddressableEntityRef.html) postRecordingsDeletionprotection(body)
-
-Get a list of conversations with protected recordings
-
-
-
-Wraps POST /api/v2/recordings/deletionprotection  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: ConversationDeletionProtectionQuery = new ConversationDeletionProtectionQuery(...) // conversationIds
-
-// Code example
-RecordingAPI.postRecordingsDeletionprotection(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("RecordingAPI.postRecordingsDeletionprotection was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)| conversationIds | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**[AddressableEntityRef]**](AddressableEntityRef.html)
-
 <a name="putConversationRecording"></a>
 
 # **putConversationRecording**
@@ -2372,58 +2319,4 @@ RecordingAPI.putRecordingSettings(body: body) { (response, error) in
 ### Return type
 
 [**RecordingSettings**](RecordingSettings.html)
-
-<a name="putRecordingsDeletionprotection"></a>
-
-# **putRecordingsDeletionprotection**
-
-
-
-> Void putRecordingsDeletionprotection(protect, body)
-
-Apply or revoke recording protection for conversations
-
-
-
-Wraps PUT /api/v2/recordings/deletionprotection  
-
-Requires ANY permissions: 
-
-* recording:deletionProtection:apply
-* recording:deletionProtection:revoke
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let protect: Bool = true // Check for apply, uncheck for revoke (each action requires the respective permission)
-let body: ConversationDeletionProtectionQuery = new ConversationDeletionProtectionQuery(...) // 
-
-// Code example
-RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("RecordingAPI.putRecordingsDeletionprotection was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **protect** | **Bool**| Check for apply, uncheck for revoke (each action requires the respective permission) | [optional] [default to true] |
-| **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery.html)|  | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
 

@@ -14,22 +14,22 @@ public class Salesforce: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var certificate: String?
     public var issuerURI: String?
+    public var certificate: String?
     public var ssoTargetURI: String?
     public var disabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, issuerURI: String?, certificate: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
-        self.certificate = certificate
-        
         self.issuerURI = issuerURI
+        
+        self.certificate = certificate
         
         self.ssoTargetURI = ssoTargetURI
         
@@ -42,8 +42,8 @@ public class Salesforce: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
-        case certificate
         case issuerURI
+        case certificate
         case ssoTargetURI
         case disabled
         case selfUri

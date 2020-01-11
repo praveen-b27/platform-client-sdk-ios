@@ -1114,11 +1114,11 @@ open class AnalyticsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ReportingExportJobListing> 
@@ -1204,11 +1204,11 @@ open class AnalyticsAPI {
     "availableLocales" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1541,11 +1541,11 @@ open class AnalyticsAPI {
     "runStatus" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter scheduleId: (path) Schedule ID 
@@ -1816,11 +1816,11 @@ open class AnalyticsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -2020,14 +2020,12 @@ open class AnalyticsAPI {
   "cursor" : "aeiou",
   "userDetails" : [ {
     "primaryPresence" : [ {
-      "durationMilliseconds" : 123456789,
       "systemPresence" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "organizationPresenceId" : "aeiou"
     } ],
     "routingStatus" : [ {
-      "durationMilliseconds" : 123456789,
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "routingStatus" : "aeiou"
@@ -3496,14 +3494,12 @@ open class AnalyticsAPI {
      - examples: [{contentType=application/json, example={
   "userDetails" : [ {
     "primaryPresence" : [ {
-      "durationMilliseconds" : 123456789,
       "systemPresence" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "organizationPresenceId" : "aeiou"
     } ],
     "routingStatus" : [ {
-      "durationMilliseconds" : 123456789,
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "routingStatus" : "aeiou"

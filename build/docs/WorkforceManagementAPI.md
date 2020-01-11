@@ -2891,7 +2891,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitActivitycodes(muId: 
 
 
 
-> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitAgentschedulesSearch(muId, body)
+> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitAgentschedulesSearch(muId, body, forceAsync, forceDownloadService)
 
 Query published schedules for given given time range for set of users
 
@@ -2914,9 +2914,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let muId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(muId: muId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2933,6 +2935,8 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 | ------------- | ------------- | ------------- | ------------- |
 | **muId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
+| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
 {: class="table-striped"}
 
 

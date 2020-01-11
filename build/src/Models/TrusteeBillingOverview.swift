@@ -25,7 +25,7 @@ public class TrusteeBillingOverview: Codable {
     public var _id: String?
     public var name: String?
     /** Organization */
-    public var organization: Entity?
+    public var organization: NamedEntity?
     /** The currency type. */
     public var currency: String?
     /** The charge short names for products enabled during the specified period. */
@@ -54,7 +54,7 @@ public class TrusteeBillingOverview: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, organization: Entity?, currency: String?, enabledProducts: [String]?, subscriptionType: SubscriptionType?, rampPeriodStartDate: Date?, rampPeriodEndDate: Date?, billingPeriodStartDate: Date?, billingPeriodEndDate: Date?, usages: [SubscriptionOverviewUsage]?, contractAmendmentDate: Date?, contractEffectiveDate: Date?, contractEndDate: Date?, minimumMonthlyAmount: String?, inRampPeriod: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, organization: NamedEntity?, currency: String?, enabledProducts: [String]?, subscriptionType: SubscriptionType?, rampPeriodStartDate: Date?, rampPeriodEndDate: Date?, billingPeriodStartDate: Date?, billingPeriodEndDate: Date?, usages: [SubscriptionOverviewUsage]?, contractAmendmentDate: Date?, contractEffectiveDate: Date?, contractEndDate: Date?, minimumMonthlyAmount: String?, inRampPeriod: Bool?, selfUri: String?) {
         
         self._id = _id
         

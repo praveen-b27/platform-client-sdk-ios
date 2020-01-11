@@ -149,6 +149,7 @@ open class BillingAPI {
   "subscriptionType" : "aeiou",
   "rampPeriodEndDate" : "2000-01-23T04:56:07.000+0000",
   "organization" : {
+    "name" : "aeiou",
     "id" : "aeiou"
   },
   "name" : "aeiou",

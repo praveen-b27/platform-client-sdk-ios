@@ -24,6 +24,9 @@ public class Metabase: Codable {
         case externalByocPbx = "EXTERNAL_BYOC_PBX"
         case station = "STATION"
         case tie = "TIE"
+        case tieDirect = "TIE_DIRECT"
+        case tieIndirect = "TIE_INDIRECT"
+        case tieCloudProxy = "TIE_CLOUD_PROXY"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

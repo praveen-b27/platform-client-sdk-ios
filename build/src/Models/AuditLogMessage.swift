@@ -29,6 +29,7 @@ public class AuditLogMessage: Codable {
         case memberUpdate = "MemberUpdate"
         case memberRemove = "MemberRemove"
         case read = "Read"
+        case readAll = "ReadAll"
         case execute = "Execute"
         case publish = "Publish"
     }

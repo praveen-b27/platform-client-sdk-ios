@@ -390,7 +390,7 @@ open class NotificationsAPI {
      Create a new channel
      
      - POST /api/v2/notifications/channels
-     - There is a limit of 20 channels per user/app combination. Creating a 21st channel will remove the channel with oldest last used date.
+     - There is a limit of 20 channels per user/app combination. Creating a 21st channel will remove the channel with oldest last used date. Channels without an active connection will be removed first.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

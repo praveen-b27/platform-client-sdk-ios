@@ -599,14 +599,12 @@ open class UsersAPI {
   "cursor" : "aeiou",
   "userDetails" : [ {
     "primaryPresence" : [ {
-      "durationMilliseconds" : 123456789,
       "systemPresence" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "organizationPresenceId" : "aeiou"
     } ],
     "routingStatus" : [ {
-      "durationMilliseconds" : 123456789,
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "routingStatus" : "aeiou"
@@ -1422,11 +1420,11 @@ open class UsersAPI {
     "version" : 123456789
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3109,11 +3107,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4152,11 +4150,11 @@ open class UsersAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4355,11 +4353,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4463,11 +4461,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5552,11 +5550,11 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5926,11 +5924,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8050,11 +8048,11 @@ open class UsersAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8216,11 +8214,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8298,11 +8296,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8608,11 +8606,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter body: (body) Users 
@@ -8820,14 +8818,12 @@ open class UsersAPI {
      - examples: [{contentType=application/json, example={
   "userDetails" : [ {
     "primaryPresence" : [ {
-      "durationMilliseconds" : 123456789,
       "systemPresence" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "organizationPresenceId" : "aeiou"
     } ],
     "routingStatus" : [ {
-      "durationMilliseconds" : 123456789,
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "routingStatus" : "aeiou"
@@ -10983,11 +10979,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

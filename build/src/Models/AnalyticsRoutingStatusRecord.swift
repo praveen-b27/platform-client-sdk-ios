@@ -24,18 +24,14 @@ public class AnalyticsRoutingStatusRecord: Codable {
     public var endTime: Date?
     /** The user&#39;s ACD routing status */
     public var routingStatus: RoutingStatus?
-    /** The duration of the status (in milliseconds) */
-    public var durationMilliseconds: Int64?
 
-    public init(startTime: Date?, endTime: Date?, routingStatus: RoutingStatus?, durationMilliseconds: Int64?) {
+    public init(startTime: Date?, endTime: Date?, routingStatus: RoutingStatus?) {
         
         self.startTime = startTime
         
         self.endTime = endTime
         
         self.routingStatus = routingStatus
-        
-        self.durationMilliseconds = durationMilliseconds
         
     }
 

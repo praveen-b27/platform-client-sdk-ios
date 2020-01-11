@@ -23,8 +23,9 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
     public var timeOffRequest: WfmUserNotificationTopicTimeOffRequestNotification?
     public var agentNotification: Bool?
     public var otherNotificationIdsInGroup: [String]?
+    public var markedAsRead: Bool?
 
-    public init(_id: String?, mutableGroupId: String?, timestamp: Date?, type: ModelType?, shiftTrade: WfmUserNotificationTopicShiftTradeNotification?, timeOffRequest: WfmUserNotificationTopicTimeOffRequestNotification?, agentNotification: Bool?, otherNotificationIdsInGroup: [String]?) {
+    public init(_id: String?, mutableGroupId: String?, timestamp: Date?, type: ModelType?, shiftTrade: WfmUserNotificationTopicShiftTradeNotification?, timeOffRequest: WfmUserNotificationTopicTimeOffRequestNotification?, agentNotification: Bool?, otherNotificationIdsInGroup: [String]?, markedAsRead: Bool?) {
         
         self._id = _id
         
@@ -42,6 +43,8 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
         
         self.otherNotificationIdsInGroup = otherNotificationIdsInGroup
         
+        self.markedAsRead = markedAsRead
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -53,6 +56,7 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
         case timeOffRequest
         case agentNotification
         case otherNotificationIdsInGroup
+        case markedAsRead
     }
 
 

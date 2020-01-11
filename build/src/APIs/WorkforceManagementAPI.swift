@@ -4452,11 +4452,11 @@ open class WorkforceManagementAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query)  (optional)
@@ -4613,11 +4613,11 @@ open class WorkforceManagementAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -7221,16 +7221,22 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    
+    
     /**
      
      Query published schedules for given given time range for set of users
      
      - parameter muId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(muId: String, body: BuSearchAgentSchedulesRequest? = nil, completion: @escaping ((_ data: UserScheduleContainer?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: muId, body: body)
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(muId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: UserScheduleContainer?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: muId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
         requestBuilder.execute { (response: Response<UserScheduleContainer>?, error) -> Void in
             do {
                 if let e = error {
@@ -7306,10 +7312,12 @@ open class WorkforceManagementAPI {
      
      - parameter muId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
 
      - returns: RequestBuilder<UserScheduleContainer> 
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: String, body: BuSearchAgentSchedulesRequest? = nil) -> RequestBuilder<UserScheduleContainer> {
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<UserScheduleContainer> {
         var path = "/api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search"
         let muIdPreEscape = "\(muId)"
         let muIdPostEscape = muIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7319,7 +7327,14 @@ open class WorkforceManagementAPI {
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceAsync": forceAsync, 
+            
+            "forceDownloadService": forceDownloadService
+            
+        ])
 
         let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

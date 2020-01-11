@@ -31,10 +31,8 @@ public class AnalyticsUserPresenceRecord: Codable {
     public var systemPresence: SystemPresence?
     /** The identifier for the user&#39;s organization presence */
     public var organizationPresenceId: String?
-    /** The duration of the status (in milliseconds) */
-    public var durationMilliseconds: Int64?
 
-    public init(startTime: Date?, endTime: Date?, systemPresence: SystemPresence?, organizationPresenceId: String?, durationMilliseconds: Int64?) {
+    public init(startTime: Date?, endTime: Date?, systemPresence: SystemPresence?, organizationPresenceId: String?) {
         
         self.startTime = startTime
         
@@ -43,8 +41,6 @@ public class AnalyticsUserPresenceRecord: Codable {
         self.systemPresence = systemPresence
         
         self.organizationPresenceId = organizationPresenceId
-        
-        self.durationMilliseconds = durationMilliseconds
         
     }
 

@@ -25,8 +25,8 @@ public class ArrayNode: Codable {
     public var nodeType: NodeType?
     public var float: Bool?
     public var number: Bool?
-    public var object: Bool?
     public var boolean: Bool?
+    public var object: Bool?
     public var valueNode: Bool?
     public var containerNode: Bool?
     public var missingNode: Bool?
@@ -44,7 +44,7 @@ public class ArrayNode: Codable {
     public var array: Bool?
     public var null: Bool?
 
-    public init(nodeType: NodeType?, float: Bool?, number: Bool?, object: Bool?, boolean: Bool?, valueNode: Bool?, containerNode: Bool?, missingNode: Bool?, pojo: Bool?, floatingPointNumber: Bool?, integralNumber: Bool?, short: Bool?, int: Bool?, long: Bool?, double: Bool?, bigDecimal: Bool?, bigInteger: Bool?, textual: Bool?, binary: Bool?, array: Bool?, null: Bool?) {
+    public init(nodeType: NodeType?, float: Bool?, number: Bool?, boolean: Bool?, object: Bool?, valueNode: Bool?, containerNode: Bool?, missingNode: Bool?, pojo: Bool?, floatingPointNumber: Bool?, integralNumber: Bool?, short: Bool?, int: Bool?, long: Bool?, double: Bool?, bigDecimal: Bool?, bigInteger: Bool?, textual: Bool?, binary: Bool?, array: Bool?, null: Bool?) {
         
         self.nodeType = nodeType
         
@@ -52,9 +52,9 @@ public class ArrayNode: Codable {
         
         self.number = number
         
-        self.object = object
-        
         self.boolean = boolean
+        
+        self.object = object
         
         self.valueNode = valueNode
         

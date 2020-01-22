@@ -11,31 +11,23 @@ import Foundation
 
 public class WfmBuScheduleRunTopicBuSchedulingRunProgressNotification: Codable {
 
-    public enum State: String, Codable { 
-        case _none = "None"
-        case queued = "Queued"
-        case scheduling = "Scheduling"
-        case canceled = "Canceled"
-        case failed = "Failed"
+    public enum Status: String, Codable { 
+        case processing = "Processing"
         case complete = "Complete"
+        case canceled = "Canceled"
+        case error = "Error"
     }
+    public var status: Status?
     public var operationId: String?
-    public var state: State?
-    public var percentComplete: Double?
-    public var intradayRescheduling: Bool?
-    public var run: WfmBuScheduleRunTopicBuScheduleRun?
+    public var result: WfmBuScheduleRunTopicBuScheduleRun?
 
-    public init(operationId: String?, state: State?, percentComplete: Double?, intradayRescheduling: Bool?, run: WfmBuScheduleRunTopicBuScheduleRun?) {
+    public init(status: Status?, operationId: String?, result: WfmBuScheduleRunTopicBuScheduleRun?) {
+        
+        self.status = status
         
         self.operationId = operationId
         
-        self.state = state
-        
-        self.percentComplete = percentComplete
-        
-        self.intradayRescheduling = intradayRescheduling
-        
-        self.run = run
+        self.result = result
         
     }
 

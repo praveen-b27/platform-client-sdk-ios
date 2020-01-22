@@ -668,6 +668,7 @@ open class ConversationsAPI {
       "remote" : "aeiou",
       "roomId" : "aeiou",
       "messageType" : "aeiou",
+      "mediaCount" : 123,
       "dnis" : "aeiou",
       "videoRoomId" : "aeiou",
       "flow" : {
@@ -902,6 +903,7 @@ open class ConversationsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
         "flow" : {
@@ -1212,6 +1214,7 @@ open class ConversationsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
         "flow" : {
@@ -16215,6 +16218,7 @@ open class ConversationsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
         "flow" : {

@@ -126,8 +126,10 @@ public class AnalyticsSession: Codable {
     public var provider: String?
     /** Name, phone number, or email address of the remote party. */
     public var remote: String?
+    /** Count of any media (images, files, etc) included in this session */
+    public var mediaCount: Int?
 
-    public init(mediaType: MediaType?, sessionId: String?, addressOther: String?, addressSelf: String?, addressFrom: String?, addressTo: String?, messageType: MessageType?, ani: String?, direction: Direction?, dnis: String?, sessionDnis: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, dispositionAnalyzer: String?, dispositionName: String?, edgeId: String?, remoteNameDisplayable: String?, roomId: String?, monitoredSessionId: String?, monitoredParticipantId: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Date?, scriptId: String?, peerId: String?, skipEnabled: Bool?, timeoutSeconds: Int?, cobrowseRole: String?, cobrowseRoomId: String?, mediaBridgeId: String?, screenShareAddressSelf: String?, sharingScreen: Bool?, screenShareRoomId: String?, videoRoomId: String?, videoAddressSelf: String?, segments: [AnalyticsConversationSegment]?, metrics: [AnalyticsSessionMetric]?, flow: AnalyticsFlow?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, recording: Bool?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: String?, protocolCallId: String?, provider: String?, remote: String?) {
+    public init(mediaType: MediaType?, sessionId: String?, addressOther: String?, addressSelf: String?, addressFrom: String?, addressTo: String?, messageType: MessageType?, ani: String?, direction: Direction?, dnis: String?, sessionDnis: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, dispositionAnalyzer: String?, dispositionName: String?, edgeId: String?, remoteNameDisplayable: String?, roomId: String?, monitoredSessionId: String?, monitoredParticipantId: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Date?, scriptId: String?, peerId: String?, skipEnabled: Bool?, timeoutSeconds: Int?, cobrowseRole: String?, cobrowseRoomId: String?, mediaBridgeId: String?, screenShareAddressSelf: String?, sharingScreen: Bool?, screenShareRoomId: String?, videoRoomId: String?, videoAddressSelf: String?, segments: [AnalyticsConversationSegment]?, metrics: [AnalyticsSessionMetric]?, flow: AnalyticsFlow?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, recording: Bool?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: String?, protocolCallId: String?, provider: String?, remote: String?, mediaCount: Int?) {
         
         self.mediaType = mediaType
         
@@ -230,6 +232,8 @@ public class AnalyticsSession: Codable {
         self.provider = provider
         
         self.remote = remote
+        
+        self.mediaCount = mediaCount
         
     }
 

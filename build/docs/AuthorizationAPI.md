@@ -52,7 +52,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-> Void deleteAuthorizationDivision(divisionId)
+> Void deleteAuthorizationDivision(divisionId, force)
 
 Delete a division.
 
@@ -73,9 +73,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
+let force: Bool = false // Force delete this division as well as the grants and objects associated with it
 
 // Code example
-AuthorizationAPI.deleteAuthorizationDivision(divisionId: divisionId) { (error) in
+AuthorizationAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -90,6 +91,7 @@ AuthorizationAPI.deleteAuthorizationDivision(divisionId: divisionId) { (error) i
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
+| **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -525,7 +527,7 @@ AuthorizationAPI.getAuthorizationDivisionspermittedMe(permission: permission, na
 
 # **getAuthorizationDivisionspermittedSubjectId**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [[AuthzDivision]](AuthzDivision.html) getAuthorizationDivisionspermittedSubjectId(subjectId, permission, name)
 

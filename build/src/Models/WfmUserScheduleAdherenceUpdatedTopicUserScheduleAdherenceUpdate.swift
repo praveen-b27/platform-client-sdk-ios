@@ -41,8 +41,9 @@ public class WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate: Co
     public var presenceUpdateTime: Date?
     public var activeQueues: [WfmUserScheduleAdherenceUpdatedTopicQueueReference]?
     public var activeQueuesModifiedTime: Date?
+    public var removedFromManagementUnit: Bool?
 
-    public init(user: WfmUserScheduleAdherenceUpdatedTopicUserReference?, managementUnitId: String?, scheduledActivityCategory: String?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTopicQueueReference]?, activeQueuesModifiedTime: Date?) {
+    public init(user: WfmUserScheduleAdherenceUpdatedTopicUserReference?, managementUnitId: String?, scheduledActivityCategory: String?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
         
         self.user = user
         
@@ -71,6 +72,8 @@ public class WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate: Co
         self.activeQueues = activeQueues
         
         self.activeQueuesModifiedTime = activeQueuesModifiedTime
+        
+        self.removedFromManagementUnit = removedFromManagementUnit
         
     }
 

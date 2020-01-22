@@ -13,15 +13,18 @@ open class AuthorizationAPI {
     
     
     
+    
+    
     /**
      
      Delete a division.
      
      - parameter divisionId: (path) Division ID 
+     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteAuthorizationDivision(divisionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteAuthorizationDivisionWithRequestBuilder(divisionId: divisionId)
+    open class func deleteAuthorizationDivision(divisionId: String, force: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAuthorizationDivisionWithRequestBuilder(divisionId: divisionId, force: force)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -42,10 +45,11 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      
      - parameter divisionId: (path) Division ID 
+     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional, default to false)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteAuthorizationDivisionWithRequestBuilder(divisionId: String) -> RequestBuilder<Void> {
+    open class func deleteAuthorizationDivisionWithRequestBuilder(divisionId: String, force: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/api/v2/authorization/divisions/{divisionId}"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -58,7 +62,12 @@ open class AuthorizationAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "force": force
+            
+        ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

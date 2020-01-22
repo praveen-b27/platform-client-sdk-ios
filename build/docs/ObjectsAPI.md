@@ -23,7 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-> Void deleteAuthorizationDivision(divisionId)
+> Void deleteAuthorizationDivision(divisionId, force)
 
 Delete a division.
 
@@ -44,9 +44,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
+let force: Bool = false // Force delete this division as well as the grants and objects associated with it
 
 // Code example
-ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId) { (error) in
+ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -61,6 +62,7 @@ ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
+| **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
 {: class="table-striped"}
 
 

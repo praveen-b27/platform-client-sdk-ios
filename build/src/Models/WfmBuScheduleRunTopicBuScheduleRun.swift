@@ -11,22 +11,39 @@ import Foundation
 
 public class WfmBuScheduleRunTopicBuScheduleRun: Codable {
 
+    public enum State: String, Codable { 
+        case _none = "None"
+        case queued = "Queued"
+        case scheduling = "Scheduling"
+        case canceled = "Canceled"
+        case failed = "Failed"
+        case complete = "Complete"
+    }
     public var _id: String?
+    public var percentComplete: Double?
+    public var intradayRescheduling: Bool?
+    public var state: State?
     public var weekCount: Int?
     public var schedule: WfmBuScheduleRunTopicBuScheduleReference?
-    public var schedulingCanceledByUser: WfmBuScheduleRunTopicUserReference?
+    public var schedulingCanceledBy: WfmBuScheduleRunTopicUserReference?
     public var schedulingCompletedTime: String?
     public var messageCount: Int?
 
-    public init(_id: String?, weekCount: Int?, schedule: WfmBuScheduleRunTopicBuScheduleReference?, schedulingCanceledByUser: WfmBuScheduleRunTopicUserReference?, schedulingCompletedTime: String?, messageCount: Int?) {
+    public init(_id: String?, percentComplete: Double?, intradayRescheduling: Bool?, state: State?, weekCount: Int?, schedule: WfmBuScheduleRunTopicBuScheduleReference?, schedulingCanceledBy: WfmBuScheduleRunTopicUserReference?, schedulingCompletedTime: String?, messageCount: Int?) {
         
         self._id = _id
+        
+        self.percentComplete = percentComplete
+        
+        self.intradayRescheduling = intradayRescheduling
+        
+        self.state = state
         
         self.weekCount = weekCount
         
         self.schedule = schedule
         
-        self.schedulingCanceledByUser = schedulingCanceledByUser
+        self.schedulingCanceledBy = schedulingCanceledBy
         
         self.schedulingCompletedTime = schedulingCompletedTime
         
@@ -36,9 +53,12 @@ public class WfmBuScheduleRunTopicBuScheduleRun: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case percentComplete
+        case intradayRescheduling
+        case state
         case weekCount
         case schedule
-        case schedulingCanceledByUser
+        case schedulingCanceledBy
         case schedulingCompletedTime
         case messageCount
     }

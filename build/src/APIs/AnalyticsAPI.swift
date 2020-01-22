@@ -259,6 +259,7 @@ open class AnalyticsAPI {
       "remote" : "aeiou",
       "roomId" : "aeiou",
       "messageType" : "aeiou",
+      "mediaCount" : 123,
       "dnis" : "aeiou",
       "videoRoomId" : "aeiou",
       "flow" : {
@@ -493,6 +494,7 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
         "flow" : {
@@ -803,6 +805,7 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
         "flow" : {
@@ -2365,6 +2368,7 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
         "flow" : {

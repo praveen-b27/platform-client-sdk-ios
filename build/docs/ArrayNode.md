@@ -10,8 +10,8 @@ title: ArrayNode
 | **nodeType** | **String** |  | [optional] |
 | **float** | **Bool** |  | [optional] |
 | **number** | **Bool** |  | [optional] |
-| **object** | **Bool** |  | [optional] |
 | **boolean** | **Bool** |  | [optional] |
+| **object** | **Bool** |  | [optional] |
 | **valueNode** | **Bool** |  | [optional] |
 | **containerNode** | **Bool** |  | [optional] |
 | **missingNode** | **Bool** |  | [optional] |

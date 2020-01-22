@@ -96,10 +96,12 @@ public class UserScheduleAdherence: Codable {
     public var activeQueues: [QueueReference]?
     /** Time when the list of active queues for this user was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var activeQueuesModifiedTime: Date?
+    /** For notification purposes. Used to indicate that a user was removed from the management unit */
+    public var removedFromManagementUnit: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: User?, managementUnit: ManagementUnit?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: User?, managementUnit: ManagementUnit?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -133,6 +135,8 @@ public class UserScheduleAdherence: Codable {
         
         self.activeQueuesModifiedTime = activeQueuesModifiedTime
         
+        self.removedFromManagementUnit = removedFromManagementUnit
+        
         self.selfUri = selfUri
         
     }
@@ -154,6 +158,7 @@ public class UserScheduleAdherence: Codable {
         case presenceUpdateTime
         case activeQueues
         case activeQueuesModifiedTime
+        case removedFromManagementUnit
         case selfUri
     }
 

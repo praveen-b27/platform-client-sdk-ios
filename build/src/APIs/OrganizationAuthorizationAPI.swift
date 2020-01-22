@@ -5519,6 +5519,106 @@ open class OrganizationAuthorizationAPI {
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
      - parameter trusteeUserId: (path) Trustee User Id 
+     - parameter body: (body) Set of roles with corresponding divisions to apply 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putOrgauthorizationTrusteeUserRoledivisions(trusteeOrgId: String, trusteeUserId: String, body: RoleDivisionGrants, completion: @escaping ((_ data: UserAuthorization?,_ error: Error?) -> Void)) {
+        let requestBuilder = putOrgauthorizationTrusteeUserRoledivisionsWithRequestBuilder(trusteeOrgId: trusteeOrgId, trusteeUserId: trusteeUserId, body: body)
+        requestBuilder.execute { (response: Response<UserAuthorization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update Trustee User Roles
+     
+     - PUT /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "unusedRoles" : [ "" ],
+  "permissions" : [ "aeiou" ],
+  "permissionPolicies" : [ {
+    "policyDescription" : "aeiou",
+    "resourceConditionNode" : {
+      "operands" : [ {
+        "type" : "aeiou",
+        "value" : "aeiou"
+      } ],
+      "variableName" : "aeiou",
+      "conjunction" : "aeiou",
+      "terms" : [ "" ],
+      "operator" : "aeiou"
+    },
+    "actionSetKey" : "aeiou",
+    "namedResources" : [ "aeiou" ],
+    "policyName" : "aeiou",
+    "entityName" : "aeiou",
+    "domain" : "aeiou",
+    "allowConditions" : true,
+    "id" : "aeiou",
+    "resourceCondition" : "aeiou",
+    "actionSet" : [ "aeiou" ]
+  } ],
+  "roles" : [ {
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter trusteeOrgId: (path) Trustee Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
+     - parameter body: (body) Set of roles with corresponding divisions to apply 
+
+     - returns: RequestBuilder<UserAuthorization> 
+     */
+    open class func putOrgauthorizationTrusteeUserRoledivisionsWithRequestBuilder(trusteeOrgId: String, trusteeUserId: String, body: RoleDivisionGrants) -> RequestBuilder<UserAuthorization> {
+        var path = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions"
+        let trusteeOrgIdPreEscape = "\(trusteeOrgId)"
+        let trusteeOrgIdPostEscape = trusteeOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeOrgId}", with: trusteeOrgIdPostEscape, options: .literal, range: nil)
+        let trusteeUserIdPreEscape = "\(trusteeUserId)"
+        let trusteeUserIdPostEscape = trusteeUserIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeUserId}", with: trusteeUserIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserAuthorization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Update Trustee User Roles
+     
+     - parameter trusteeOrgId: (path) Trustee Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
      - parameter body: (body) List of roles 
      - parameter completion: completion handler to receive the data and the error objects
      */

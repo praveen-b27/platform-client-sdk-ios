@@ -489,6 +489,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
+  "removedFromManagementUnit" : true,
   "organizationSecondaryPresenceId" : "aeiou",
   "impact" : "aeiou",
   "selfUri" : "aeiou",
@@ -4317,6 +4318,7 @@ open class WorkforceManagementAPI {
         case businessUnits = "BusinessUnits"
         case historicalAdherence = "HistoricalAdherence"
         case intradayMonitoring = "IntradayMonitoring"
+        case buIntradayMonitoring = "BuIntradayMonitoring"
         case managementUnits = "ManagementUnits"
         case realTimeAdherence = "RealTimeAdherence"
         case schedules = "Schedules"

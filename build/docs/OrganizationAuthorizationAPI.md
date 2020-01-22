@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOrgauthorizationTrusteesAudits**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteesAudits) | Get Org Trustee Audits |
 | [**postOrgauthorizationTrustorAudits**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrustorAudits) | Get Org Trustor Audits |
 | [**putOrgauthorizationTrustee**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustee) | Update Org Trust |
+| [**putOrgauthorizationTrusteeUserRoledivisions**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeUserRoledivisions) | Update Trustee User Roles |
 | [**putOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeUserRoles) | Update Trustee User Roles |
 | [**putOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustorUser) | Add a Trustee user to the trust. |
 {: class="table-striped"}
@@ -1164,6 +1165,62 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrustee(trusteeOrgId: trusteeOrg
 ### Return type
 
 [**Trustee**](Trustee.html)
+
+<a name="putOrgauthorizationTrusteeUserRoledivisions"></a>
+
+# **putOrgauthorizationTrusteeUserRoledivisions**
+
+
+
+> [UserAuthorization](UserAuthorization.html) putOrgauthorizationTrusteeUserRoledivisions(trusteeOrgId, trusteeUserId, body)
+
+Update Trustee User Roles
+
+
+
+Wraps PUT /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions  
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let trusteeOrgId: String = "" // Trustee Organization Id
+let trusteeUserId: String = "" // Trustee User Id
+let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Set of roles with corresponding divisions to apply
+
+// Code example
+OrganizationAuthorizationAPI.putOrgauthorizationTrusteeUserRoledivisions(trusteeOrgId: trusteeOrgId, trusteeUserId: trusteeUserId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAuthorizationAPI.putOrgauthorizationTrusteeUserRoledivisions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trusteeOrgId** | **String**| Trustee Organization Id | |
+| **trusteeUserId** | **String**| Trustee User Id | |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Set of roles with corresponding divisions to apply | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserAuthorization**](UserAuthorization.html)
 
 <a name="putOrgauthorizationTrusteeUserRoles"></a>
 

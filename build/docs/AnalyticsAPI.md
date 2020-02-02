@@ -203,7 +203,7 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 
 
-> [AnalyticsConversation](AnalyticsConversation.html) getAnalyticsConversationDetails(conversationId)
+> [AnalyticsConversationWithoutAttributes](AnalyticsConversationWithoutAttributes.html) getAnalyticsConversationDetails(conversationId)
 
 Get a conversation by id
 
@@ -247,7 +247,7 @@ AnalyticsAPI.getAnalyticsConversationDetails(conversationId: conversationId) { (
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.html)
+[**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html)
 
 <a name="getAnalyticsConversationsDetails"></a>
 
@@ -255,7 +255,7 @@ AnalyticsAPI.getAnalyticsConversationDetails(conversationId: conversationId) { (
 
 
 
-> [AnalyticsConversationMultiGetResponse](AnalyticsConversationMultiGetResponse.html) getAnalyticsConversationsDetails(_id)
+> [AnalyticsConversationWithoutAttributesMultiGetResponse](AnalyticsConversationWithoutAttributesMultiGetResponse.html) getAnalyticsConversationsDetails(_id)
 
 Gets multiple conversations by id
 
@@ -299,7 +299,7 @@ AnalyticsAPI.getAnalyticsConversationsDetails(_id: _id) { (response, error) in
 
 ### Return type
 
-[**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
 
 <a name="getAnalyticsConversationsDetailsJob"></a>
 

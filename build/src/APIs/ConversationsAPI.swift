@@ -594,9 +594,9 @@ open class ConversationsAPI {
      - parameter conversationId: (path) conversationId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsConversationDetails(conversationId: String, completion: @escaping ((_ data: AnalyticsConversation?,_ error: Error?) -> Void)) {
+    open class func getAnalyticsConversationDetails(conversationId: String, completion: @escaping ((_ data: AnalyticsConversationWithoutAttributes?,_ error: Error?) -> Void)) {
         let requestBuilder = getAnalyticsConversationDetailsWithRequestBuilder(conversationId: conversationId)
-        requestBuilder.execute { (response: Response<AnalyticsConversation>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AnalyticsConversationWithoutAttributes>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -656,6 +656,7 @@ open class ConversationsAPI {
   } ],
   "conversationEnd" : "2000-01-23T04:56:07.000+0000",
   "originatingDirection" : "aeiou",
+  "divisionIds" : [ "aeiou" ],
   "participants" : [ {
     "participantId" : "aeiou",
     "sessions" : [ {
@@ -783,22 +784,18 @@ open class ConversationsAPI {
     } ],
     "externalContactId" : "aeiou",
     "purpose" : "aeiou",
-    "attributes" : {
-      "key" : "aeiou"
-    },
     "externalOrganizationId" : "aeiou",
     "participantName" : "aeiou",
     "userId" : "aeiou",
     "flaggedReason" : "aeiou"
-  } ],
-  "divisionIds" : [ "aeiou" ]
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
 
-     - returns: RequestBuilder<AnalyticsConversation> 
+     - returns: RequestBuilder<AnalyticsConversationWithoutAttributes> 
      */
-    open class func getAnalyticsConversationDetailsWithRequestBuilder(conversationId: String) -> RequestBuilder<AnalyticsConversation> {
+    open class func getAnalyticsConversationDetailsWithRequestBuilder(conversationId: String) -> RequestBuilder<AnalyticsConversationWithoutAttributes> {
         var path = "/api/v2/analytics/conversations/{conversationId}/details"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -813,7 +810,7 @@ open class ConversationsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AnalyticsConversation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -828,9 +825,9 @@ open class ConversationsAPI {
      - parameter _id: (query) Comma-separated conversation ids (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsConversationsDetails(_id: [String]? = nil, completion: @escaping ((_ data: AnalyticsConversationMultiGetResponse?,_ error: Error?) -> Void)) {
+    open class func getAnalyticsConversationsDetails(_id: [String]? = nil, completion: @escaping ((_ data: AnalyticsConversationWithoutAttributesMultiGetResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getAnalyticsConversationsDetailsWithRequestBuilder(_id: _id)
-        requestBuilder.execute { (response: Response<AnalyticsConversationMultiGetResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AnalyticsConversationWithoutAttributesMultiGetResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -891,6 +888,7 @@ open class ConversationsAPI {
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
     "originatingDirection" : "aeiou",
+    "divisionIds" : [ "aeiou" ],
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
@@ -1018,23 +1016,19 @@ open class ConversationsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
-      "attributes" : {
-        "key" : "aeiou"
-      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ],
-    "divisionIds" : [ "aeiou" ]
+    } ]
   } ]
 }}]
      
      - parameter _id: (query) Comma-separated conversation ids (optional)
 
-     - returns: RequestBuilder<AnalyticsConversationMultiGetResponse> 
+     - returns: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> 
      */
-    open class func getAnalyticsConversationsDetailsWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<AnalyticsConversationMultiGetResponse> {
+    open class func getAnalyticsConversationsDetailsWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> {
         let path = "/api/v2/analytics/conversations/details"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1051,7 +1045,7 @@ open class ConversationsAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<AnalyticsConversationMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1202,6 +1196,7 @@ open class ConversationsAPI {
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
     "originatingDirection" : "aeiou",
+    "divisionIds" : [ "aeiou" ],
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
@@ -1336,8 +1331,7 @@ open class ConversationsAPI {
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ],
-    "divisionIds" : [ "aeiou" ]
+    } ]
   } ]
 }}]
      
@@ -1867,6 +1861,9 @@ open class ConversationsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -3076,6 +3073,9 @@ open class ConversationsAPI {
             "source" : "aeiou",
             "message" : "aeiou",
             "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
           },
           "email" : "aeiou",
           "images" : [ {
@@ -4723,6 +4723,7 @@ open class ConversationsAPI {
               "state" : "aeiou",
               "department" : "aeiou",
               "presence" : "",
+              "lastTokenIssued" : "",
               "email" : "aeiou",
               "images" : [ "" ],
               "manager" : "",
@@ -4884,6 +4885,9 @@ open class ConversationsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -7679,6 +7683,9 @@ open class ConversationsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -9800,6 +9807,9 @@ open class ConversationsAPI {
           "message" : "aeiou",
           "primary" : true
         },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        },
         "email" : "aeiou",
         "images" : [ {
           "imageUri" : "aeiou",
@@ -10947,6 +10957,9 @@ open class ConversationsAPI {
           "message" : "aeiou",
           "primary" : true
         },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        },
         "email" : "aeiou",
         "images" : [ {
           "imageUri" : "aeiou",
@@ -12020,6 +12033,9 @@ open class ConversationsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -13095,6 +13111,9 @@ open class ConversationsAPI {
           "message" : "aeiou",
           "primary" : true
         },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        },
         "email" : "aeiou",
         "images" : [ {
           "imageUri" : "aeiou",
@@ -14168,6 +14187,9 @@ open class ConversationsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -15243,6 +15265,9 @@ open class ConversationsAPI {
           "message" : "aeiou",
           "primary" : true
         },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        },
         "email" : "aeiou",
         "images" : [ {
           "imageUri" : "aeiou",
@@ -16206,6 +16231,7 @@ open class ConversationsAPI {
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
     "originatingDirection" : "aeiou",
+    "divisionIds" : [ "aeiou" ],
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
@@ -16340,8 +16366,7 @@ open class ConversationsAPI {
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ],
-    "divisionIds" : [ "aeiou" ]
+    } ]
   } ],
   "aggregations" : [ {
     "metric" : "aeiou",
@@ -17209,6 +17234,9 @@ open class ConversationsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -18277,6 +18305,9 @@ open class ConversationsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -20012,6 +20043,9 @@ open class ConversationsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -20424,6 +20458,9 @@ open class ConversationsAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {

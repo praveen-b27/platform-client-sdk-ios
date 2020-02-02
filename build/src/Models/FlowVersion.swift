@@ -23,16 +23,19 @@ public class FlowVersion: Codable {
     public var configurationVersion: String?
     public var type: ModelType?
     public var secure: Bool?
+    public var debug: Bool?
     public var createdBy: User?
     public var createdByClient: DomainEntityRef?
     public var configurationUri: String?
     public var dateCreated: Int64?
     public var generationId: String?
     public var publishResultUri: String?
+    public var inputSchema: JsonSchemaDocument?
+    public var outputSchema: JsonSchemaDocument?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, selfUri: String?) {
         
         self._id = _id
         
@@ -46,6 +49,8 @@ public class FlowVersion: Codable {
         
         self.secure = secure
         
+        self.debug = debug
+        
         self.createdBy = createdBy
         
         self.createdByClient = createdByClient
@@ -58,6 +63,10 @@ public class FlowVersion: Codable {
         
         self.publishResultUri = publishResultUri
         
+        self.inputSchema = inputSchema
+        
+        self.outputSchema = outputSchema
+        
         self.selfUri = selfUri
         
     }
@@ -69,12 +78,15 @@ public class FlowVersion: Codable {
         case configurationVersion
         case type
         case secure
+        case debug
         case createdBy
         case createdByClient
         case configurationUri
         case dateCreated
         case generationId
         case publishResultUri
+        case inputSchema
+        case outputSchema
         case selfUri
     }
 

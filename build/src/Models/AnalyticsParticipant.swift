@@ -37,8 +37,6 @@ public class AnalyticsParticipant: Codable {
     public var participantId: String?
     /** A human readable name identifying the participant */
     public var participantName: String?
-    /** List of attributes associated to this participant */
-    public var attributes: [String:String]?
     /** If a user, then this will be the unique identifier for the user */
     public var userId: String?
     /** The participant&#39;s purpose */
@@ -51,14 +49,14 @@ public class AnalyticsParticipant: Codable {
     public var flaggedReason: FlaggedReason?
     /** List of sessions associated to this participant */
     public var sessions: [AnalyticsSession]?
+    /** List of attributes associated to this participant */
+    public var attributes: [String:String]?
 
-    public init(participantId: String?, participantName: String?, attributes: [String:String]?, userId: String?, purpose: Purpose?, externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, sessions: [AnalyticsSession]?) {
+    public init(participantId: String?, participantName: String?, userId: String?, purpose: Purpose?, externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, sessions: [AnalyticsSession]?, attributes: [String:String]?) {
         
         self.participantId = participantId
         
         self.participantName = participantName
-        
-        self.attributes = attributes
         
         self.userId = userId
         
@@ -71,6 +69,8 @@ public class AnalyticsParticipant: Codable {
         self.flaggedReason = flaggedReason
         
         self.sessions = sessions
+        
+        self.attributes = attributes
         
     }
 

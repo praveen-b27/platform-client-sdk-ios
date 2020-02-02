@@ -15,9 +15,8 @@ title: JsonNode
 | **valueNode** | **Bool** |  | [optional] |
 | **containerNode** | **Bool** |  | [optional] |
 | **missingNode** | **Bool** |  | [optional] |
-| **pojo** | **Bool** |  | [optional] |
-| **floatingPointNumber** | **Bool** |  | [optional] |
 | **integralNumber** | **Bool** |  | [optional] |
+| **floatingPointNumber** | **Bool** |  | [optional] |
 | **short** | **Bool** |  | [optional] |
 | **int** | **Bool** |  | [optional] |
 | **long** | **Bool** |  | [optional] |
@@ -26,6 +25,7 @@ title: JsonNode
 | **bigInteger** | **Bool** |  | [optional] |
 | **textual** | **Bool** |  | [optional] |
 | **binary** | **Bool** |  | [optional] |
+| **pojo** | **Bool** |  | [optional] |
 | **array** | **Bool** |  | [optional] |
 | **null** | **Bool** |  | [optional] |
 {: class="table table-striped"}

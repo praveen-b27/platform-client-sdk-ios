@@ -484,6 +484,7 @@ open class ExternalContactsAPI {
         "state" : "aeiou",
         "department" : "aeiou",
         "presence" : "",
+        "lastTokenIssued" : "",
         "email" : "aeiou",
         "images" : [ "" ],
         "manager" : {
@@ -566,6 +567,9 @@ open class ExternalContactsAPI {
             "source" : "aeiou",
             "message" : "aeiou",
             "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
           },
           "email" : "aeiou",
           "images" : [ {
@@ -953,6 +957,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -1297,6 +1304,9 @@ open class ExternalContactsAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -1651,6 +1661,7 @@ open class ExternalContactsAPI {
           "state" : "aeiou",
           "department" : "aeiou",
           "presence" : "",
+          "lastTokenIssued" : "",
           "email" : "aeiou",
           "images" : [ "" ],
           "manager" : {
@@ -1733,6 +1744,9 @@ open class ExternalContactsAPI {
               "source" : "aeiou",
               "message" : "aeiou",
               "primary" : true
+            },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
             },
             "email" : "aeiou",
             "images" : [ {
@@ -2111,6 +2125,7 @@ open class ExternalContactsAPI {
       "state" : "aeiou",
       "department" : "aeiou",
       "presence" : "",
+      "lastTokenIssued" : "",
       "email" : "aeiou",
       "images" : [ "" ],
       "manager" : {
@@ -2193,6 +2208,9 @@ open class ExternalContactsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -2572,6 +2590,7 @@ open class ExternalContactsAPI {
           "state" : "aeiou",
           "department" : "aeiou",
           "presence" : "",
+          "lastTokenIssued" : "",
           "email" : "aeiou",
           "images" : [ "" ],
           "manager" : {
@@ -2654,6 +2673,9 @@ open class ExternalContactsAPI {
               "source" : "aeiou",
               "message" : "aeiou",
               "primary" : true
+            },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
             },
             "email" : "aeiou",
             "images" : [ {
@@ -3060,6 +3082,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -3404,6 +3429,9 @@ open class ExternalContactsAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -3764,6 +3792,9 @@ open class ExternalContactsAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -3979,6 +4010,7 @@ open class ExternalContactsAPI {
           "state" : "aeiou",
           "department" : "aeiou",
           "presence" : "",
+          "lastTokenIssued" : "",
           "email" : "aeiou",
           "images" : [ "" ],
           "manager" : "",
@@ -4203,6 +4235,7 @@ open class ExternalContactsAPI {
         "state" : "aeiou",
         "department" : "aeiou",
         "presence" : "",
+        "lastTokenIssued" : "",
         "email" : "aeiou",
         "images" : [ "" ],
         "manager" : {
@@ -4285,6 +4318,9 @@ open class ExternalContactsAPI {
             "source" : "aeiou",
             "message" : "aeiou",
             "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
           },
           "email" : "aeiou",
           "images" : [ {
@@ -4672,6 +4708,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -4887,6 +4926,7 @@ open class ExternalContactsAPI {
         "state" : "aeiou",
         "department" : "aeiou",
         "presence" : "",
+        "lastTokenIssued" : "",
         "email" : "aeiou",
         "images" : [ "" ],
         "manager" : "",
@@ -5098,6 +5138,7 @@ open class ExternalContactsAPI {
           "state" : "aeiou",
           "department" : "aeiou",
           "presence" : "",
+          "lastTokenIssued" : "",
           "email" : "aeiou",
           "images" : [ "" ],
           "manager" : {
@@ -5180,6 +5221,9 @@ open class ExternalContactsAPI {
               "source" : "aeiou",
               "message" : "aeiou",
               "primary" : true
+            },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
             },
             "email" : "aeiou",
             "images" : [ {
@@ -5558,6 +5602,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -5865,6 +5912,7 @@ open class ExternalContactsAPI {
         "state" : "aeiou",
         "department" : "aeiou",
         "presence" : "",
+        "lastTokenIssued" : "",
         "email" : "aeiou",
         "images" : [ "" ],
         "manager" : {
@@ -5947,6 +5995,9 @@ open class ExternalContactsAPI {
             "source" : "aeiou",
             "message" : "aeiou",
             "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
           },
           "email" : "aeiou",
           "images" : [ {
@@ -6313,6 +6364,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -6601,6 +6655,7 @@ open class ExternalContactsAPI {
       "state" : "aeiou",
       "department" : "aeiou",
       "presence" : "",
+      "lastTokenIssued" : "",
       "email" : "aeiou",
       "images" : [ "" ],
       "manager" : {
@@ -6683,6 +6738,9 @@ open class ExternalContactsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -7029,6 +7087,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -7244,6 +7305,7 @@ open class ExternalContactsAPI {
         "state" : "aeiou",
         "department" : "aeiou",
         "presence" : "",
+        "lastTokenIssued" : "",
         "email" : "aeiou",
         "images" : [ "" ],
         "manager" : "",
@@ -7435,6 +7497,7 @@ open class ExternalContactsAPI {
         "state" : "aeiou",
         "department" : "aeiou",
         "presence" : "",
+        "lastTokenIssued" : "",
         "email" : "aeiou",
         "images" : [ "" ],
         "manager" : {
@@ -7517,6 +7580,9 @@ open class ExternalContactsAPI {
             "source" : "aeiou",
             "message" : "aeiou",
             "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
           },
           "email" : "aeiou",
           "images" : [ {
@@ -7890,6 +7956,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -8241,6 +8310,7 @@ open class ExternalContactsAPI {
       "state" : "aeiou",
       "department" : "aeiou",
       "presence" : "",
+      "lastTokenIssued" : "",
       "email" : "aeiou",
       "images" : [ "" ],
       "manager" : {
@@ -8323,6 +8393,9 @@ open class ExternalContactsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -8676,6 +8749,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -8971,6 +9047,7 @@ open class ExternalContactsAPI {
       "state" : "aeiou",
       "department" : "aeiou",
       "presence" : "",
+      "lastTokenIssued" : "",
       "email" : "aeiou",
       "images" : [ "" ],
       "manager" : {
@@ -9053,6 +9130,9 @@ open class ExternalContactsAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -9412,6 +9492,9 @@ open class ExternalContactsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -9627,6 +9710,7 @@ open class ExternalContactsAPI {
         "state" : "aeiou",
         "department" : "aeiou",
         "presence" : "",
+        "lastTokenIssued" : "",
         "email" : "aeiou",
         "images" : [ "" ],
         "manager" : "",

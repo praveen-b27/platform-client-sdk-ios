@@ -142,6 +142,9 @@ open class QualityAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -1584,6 +1587,9 @@ open class QualityAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -2212,6 +2218,9 @@ open class QualityAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -2586,6 +2595,9 @@ open class QualityAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -3496,6 +3508,9 @@ open class QualityAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -4303,7 +4318,7 @@ open class QualityAPI {
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter recordingId: (query) id of the recording (optional)
-     - parameter entityType: (query) entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)
+     - parameter entityType: (query) entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to Recording)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getQualityConversationAudits(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, recordingId: String? = nil, entityType: String? = nil, completion: @escaping ((_ data: QualityAuditPage?,_ error: Error?) -> Void)) {
@@ -4435,6 +4450,9 @@ open class QualityAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -4615,7 +4633,7 @@ open class QualityAPI {
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter recordingId: (query) id of the recording (optional)
-     - parameter entityType: (query) entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)
+     - parameter entityType: (query) entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to Recording)
 
      - returns: RequestBuilder<QualityAuditPage> 
      */
@@ -5353,6 +5371,9 @@ open class QualityAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -6113,6 +6134,9 @@ open class QualityAPI {
             "source" : "aeiou",
             "message" : "aeiou",
             "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
           },
           "email" : "aeiou",
           "images" : [ {
@@ -7238,6 +7262,9 @@ open class QualityAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -7642,6 +7669,9 @@ open class QualityAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -9624,6 +9654,9 @@ open class QualityAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -10090,6 +10123,9 @@ open class QualityAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -11645,6 +11681,9 @@ open class QualityAPI {
             "message" : "aeiou",
             "primary" : true
           },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
+          },
           "email" : "aeiou",
           "images" : [ {
             "imageUri" : "aeiou",
@@ -12576,6 +12615,9 @@ open class QualityAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -14013,6 +14055,9 @@ open class QualityAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -14851,6 +14896,9 @@ open class QualityAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -15600,6 +15648,9 @@ open class QualityAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -15980,6 +16031,9 @@ open class QualityAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -17418,6 +17472,9 @@ open class QualityAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -18197,6 +18254,9 @@ open class QualityAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {

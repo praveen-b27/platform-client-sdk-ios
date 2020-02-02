@@ -26,8 +26,16 @@ title: ViewFilter
 | **outboundCampaignIds** | **[String]** | The outbound campaign ids are used to filter the view | [optional] |
 | **outboundContactListIds** | **[String]** | The outbound contact list ids are used to filter the view | [optional] |
 | **contactIds** | **[String]** | The contact ids are used to filter the view | [optional] |
+| **externalContactIds** | **[String]** | The external contact ids are used to filter the view | [optional] |
+| **externalOrgIds** | **[String]** | The external org ids are used to filter the view | [optional] |
 | **aniList** | **[String]** | The ani list ids are used to filter the view | [optional] |
 | **durationsMilliseconds** | [**[NumericRange]**](NumericRange.html) | The durations in milliseconds used to filter the view | [optional] |
+| **acdDurationsMilliseconds** | [**[NumericRange]**](NumericRange.html) | The acd durations in milliseconds used to filter the view | [optional] |
+| **talkDurationsMilliseconds** | [**[NumericRange]**](NumericRange.html) | The talk durations in milliseconds used to filter the view | [optional] |
+| **acwDurationsMilliseconds** | [**[NumericRange]**](NumericRange.html) | The acw durations in milliseconds used to filter the view | [optional] |
+| **handleDurationsMilliseconds** | [**[NumericRange]**](NumericRange.html) | The handle durations in milliseconds used to filter the view | [optional] |
+| **holdDurationsMilliseconds** | [**[NumericRange]**](NumericRange.html) | The hold durations in milliseconds used to filter the view | [optional] |
+| **abandonDurationsMilliseconds** | [**[NumericRange]**](NumericRange.html) | The abandon durations in milliseconds used to filter the view | [optional] |
 | **evaluationScore** | [**NumericRange**](NumericRange.html) | The evaluationScore is used to filter the view | [optional] |
 | **evaluationCriticalScore** | [**NumericRange**](NumericRange.html) | The evaluationCriticalScore is used to filter the view | [optional] |
 | **evaluationFormIds** | **[String]** | The evaluation form ids are used to filter the view | [optional] |

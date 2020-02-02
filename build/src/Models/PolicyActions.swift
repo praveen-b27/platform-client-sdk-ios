@@ -25,8 +25,10 @@ public class PolicyActions: Codable {
     public var retentionDuration: RetentionDuration?
     public var initiateScreenRecording: InitiateScreenRecording?
     public var mediaTranscriptions: [MediaTranscription]?
+    /** Policy action for exporting recordings using an integration to 3rd party s3. */
+    public var integrationExport: IntegrationExport?
 
-    public init(retainRecording: Bool?, deleteRecording: Bool?, alwaysDelete: Bool?, assignEvaluations: [EvaluationAssignment]?, assignMeteredEvaluations: [MeteredEvaluationAssignment]?, assignMeteredAssignmentByAgent: [MeteredAssignmentByAgent]?, assignCalibrations: [CalibrationAssignment]?, assignSurveys: [SurveyAssignment]?, retentionDuration: RetentionDuration?, initiateScreenRecording: InitiateScreenRecording?, mediaTranscriptions: [MediaTranscription]?) {
+    public init(retainRecording: Bool?, deleteRecording: Bool?, alwaysDelete: Bool?, assignEvaluations: [EvaluationAssignment]?, assignMeteredEvaluations: [MeteredEvaluationAssignment]?, assignMeteredAssignmentByAgent: [MeteredAssignmentByAgent]?, assignCalibrations: [CalibrationAssignment]?, assignSurveys: [SurveyAssignment]?, retentionDuration: RetentionDuration?, initiateScreenRecording: InitiateScreenRecording?, mediaTranscriptions: [MediaTranscription]?, integrationExport: IntegrationExport?) {
         
         self.retainRecording = retainRecording
         
@@ -49,6 +51,8 @@ public class PolicyActions: Codable {
         self.initiateScreenRecording = initiateScreenRecording
         
         self.mediaTranscriptions = mediaTranscriptions
+        
+        self.integrationExport = integrationExport
         
     }
 

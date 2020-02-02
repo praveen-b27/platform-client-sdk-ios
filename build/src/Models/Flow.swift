@@ -46,12 +46,13 @@ public class Flow: Codable {
     /** json schema describing the outputs for the flow */
     public var outputSchema: JSON?
     public var checkedInVersion: FlowVersion?
+    public var debugVersion: FlowVersion?
     public var publishedBy: User?
     public var currentOperation: Operation?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, selfUri: String?) {
         
         self._id = _id
         
@@ -83,6 +84,8 @@ public class Flow: Codable {
         
         self.checkedInVersion = checkedInVersion
         
+        self.debugVersion = debugVersion
+        
         self.publishedBy = publishedBy
         
         self.currentOperation = currentOperation
@@ -107,6 +110,7 @@ public class Flow: Codable {
         case inputSchema
         case outputSchema
         case checkedInVersion
+        case debugVersion
         case publishedBy
         case currentOperation
         case selfUri

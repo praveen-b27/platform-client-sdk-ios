@@ -67,9 +67,10 @@ public class TrustUser: Codable {
     public var acdAutoAnswer: Bool?
     /** preferred language by the user */
     public var languagePreference: String?
+    public var lastTokenIssued: OAuthLastTokenIssued?
     public var trustUserDetails: TrustUserDetails?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, trustUserDetails: TrustUserDetails?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, trustUserDetails: TrustUserDetails?) {
         
         self._id = _id
         
@@ -133,6 +134,8 @@ public class TrustUser: Codable {
         
         self.languagePreference = languagePreference
         
+        self.lastTokenIssued = lastTokenIssued
+        
         self.trustUserDetails = trustUserDetails
         
     }
@@ -169,6 +172,7 @@ public class TrustUser: Codable {
         case languages
         case acdAutoAnswer
         case languagePreference
+        case lastTokenIssued
         case trustUserDetails
     }
 

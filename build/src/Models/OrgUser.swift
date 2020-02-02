@@ -67,9 +67,10 @@ public class OrgUser: Codable {
     public var acdAutoAnswer: Bool?
     /** preferred language by the user */
     public var languagePreference: String?
+    public var lastTokenIssued: OAuthLastTokenIssued?
     public var organization: Organization?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, organization: Organization?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, organization: Organization?) {
         
         self._id = _id
         
@@ -133,6 +134,8 @@ public class OrgUser: Codable {
         
         self.languagePreference = languagePreference
         
+        self.lastTokenIssued = lastTokenIssued
+        
         self.organization = organization
         
     }
@@ -169,6 +172,7 @@ public class OrgUser: Codable {
         case languages
         case acdAutoAnswer
         case languagePreference
+        case lastTokenIssued
         case organization
     }
 

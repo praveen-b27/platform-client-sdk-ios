@@ -14,7 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingQueueWrapupcode**](RoutingAPI.html#deleteRoutingQueueWrapupcode) | Delete a wrap-up code from a queue |
 | [**deleteRoutingSkill**](RoutingAPI.html#deleteRoutingSkill) | Delete Routing Skill |
 | [**deleteRoutingSmsPhonenumber**](RoutingAPI.html#deleteRoutingSmsPhonenumber) | Delete a phone number provisioned for SMS. |
-| [**deleteRoutingUtilization**](RoutingAPI.html#deleteRoutingUtilization) | Delete utilization settings and revert to system defaults. |
+| [**deleteRoutingUtilization**](RoutingAPI.html#deleteRoutingUtilization) | Delete the organization-wide max utilization settings and revert to the system default. |
 | [**deleteRoutingWrapupcode**](RoutingAPI.html#deleteRoutingWrapupcode) | Delete wrap-up code |
 | [**deleteUserRoutinglanguage**](RoutingAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
 | [**deleteUserRoutingskill**](RoutingAPI.html#deleteUserRoutingskill) | Remove routing skill from user |
@@ -44,14 +44,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSmsAvailablephonenumbers**](RoutingAPI.html#getRoutingSmsAvailablephonenumbers) | Get a list of available phone numbers for SMS provisioning. |
 | [**getRoutingSmsPhonenumber**](RoutingAPI.html#getRoutingSmsPhonenumber) | Get a phone number provisioned for SMS. |
 | [**getRoutingSmsPhonenumbers**](RoutingAPI.html#getRoutingSmsPhonenumbers) | Get a list of provisioned phone numbers. |
-| [**getRoutingUtilization**](RoutingAPI.html#getRoutingUtilization) | Get the utilization settings. |
+| [**getRoutingUtilization**](RoutingAPI.html#getRoutingUtilization) | Get the organization-wide max utilization settings. |
 | [**getRoutingWrapupcode**](RoutingAPI.html#getRoutingWrapupcode) | Get details about this wrap-up code. |
 | [**getRoutingWrapupcodes**](RoutingAPI.html#getRoutingWrapupcodes) | Get list of wrapup codes. |
+| [**getUserQueues**](RoutingAPI.html#getUserQueues) | Get queues for user |
 | [**getUserRoutinglanguages**](RoutingAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
 | [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | Update the ring number OR joined status for a User in a Queue |
 | [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | Join or unjoin a set of users for a queue |
 | [**patchRoutingSettingsContactcenter**](RoutingAPI.html#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
+| [**patchUserQueue**](RoutingAPI.html#patchUserQueue) | Join or unjoin a queue for a user |
+| [**patchUserQueues**](RoutingAPI.html#patchUserQueues) | Join or unjoin a set of queues for a user |
 | [**patchUserRoutinglanguage**](RoutingAPI.html#patchUserRoutinglanguage) | Update routing language proficiency or state. |
 | [**patchUserRoutinglanguagesBulk**](RoutingAPI.html#patchUserRoutinglanguagesBulk) | Add bulk routing language to user. Max limit 50 languages |
 | [**patchUserRoutingskillsBulk**](RoutingAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
@@ -73,7 +76,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingQueue**](RoutingAPI.html#putRoutingQueue) | Update a queue |
 | [**putRoutingSettingsTranscription**](RoutingAPI.html#putRoutingSettingsTranscription) | Update Transcription Settings |
 | [**putRoutingSmsPhonenumber**](RoutingAPI.html#putRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
-| [**putRoutingUtilization**](RoutingAPI.html#putRoutingUtilization) | Update the utilization settings. |
+| [**putRoutingUtilization**](RoutingAPI.html#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingWrapupcode**](RoutingAPI.html#putRoutingWrapupcode) | Update wrap-up code |
 | [**putUserRoutingskill**](RoutingAPI.html#putUserRoutingskill) | Update routing skill proficiency or state. |
 | [**putUserRoutingskillsBulk**](RoutingAPI.html#putUserRoutingskillsBulk) | Replace all routing skills assigned to a user |
@@ -452,7 +455,7 @@ RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
 
 > Void deleteRoutingUtilization()
 
-Delete utilization settings and revert to system defaults.
+Delete the organization-wide max utilization settings and revert to the system default.
 
 
 
@@ -1295,7 +1298,7 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageSize: pageSize, pageNumber
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), authorizationUnusedroles ("authorization.unusedRoles"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 | **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
@@ -2102,7 +2105,7 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 
 > [Utilization](Utilization.html) getRoutingUtilization()
 
-Get the utilization settings.
+Get the organization-wide max utilization settings.
 
 
 
@@ -2252,6 +2255,67 @@ RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sor
 ### Return type
 
 [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
+
+<a name="getUserQueues"></a>
+
+# **getUserQueues**
+
+
+
+> [UserQueueEntityListing](UserQueueEntityListing.html) getUserQueues(userId, pageSize, pageNumber, joined, divisionId)
+
+Get queues for user
+
+
+
+Wraps GET /api/v2/users/{userId}/queues  
+
+Requires ANY permissions: 
+
+* routing:queue:view
+* routing:queue:join
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let joined: Bool = true // Is joined to the queue
+let divisionId: [String] = [""] // Division ID(s)
+
+// Code example
+RoutingAPI.getUserQueues(userId: userId, pageSize: pageSize, pageNumber: pageNumber, joined: joined, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getUserQueues was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **joined** | **Bool**| Is joined to the queue | [optional] [default to true] |
+| **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserQueueEntityListing**](UserQueueEntityListing.html)
 
 <a name="getUserRoutinglanguages"></a>
 
@@ -2527,6 +2591,118 @@ RoutingAPI.patchRoutingSettingsContactcenter(body: body) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="patchUserQueue"></a>
+
+# **patchUserQueue**
+
+
+
+> [UserQueue](UserQueue.html) patchUserQueue(queueId, userId, body)
+
+Join or unjoin a queue for a user
+
+
+
+Wraps PATCH /api/v2/users/{userId}/queues/{queueId}  
+
+Requires ANY permissions: 
+
+* routing:queue:join
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let userId: String = "" // User ID
+let body: UserQueue = new UserQueue(...) // Queue Member
+
+// Code example
+RoutingAPI.patchUserQueue(queueId: queueId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchUserQueue was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **userId** | **String**| User ID | |
+| **body** | [**UserQueue**](UserQueue.html)| Queue Member | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserQueue**](UserQueue.html)
+
+<a name="patchUserQueues"></a>
+
+# **patchUserQueues**
+
+
+
+> [UserQueueEntityListing](UserQueueEntityListing.html) patchUserQueues(userId, body, divisionId)
+
+Join or unjoin a set of queues for a user
+
+
+
+Wraps PATCH /api/v2/users/{userId}/queues  
+
+Requires ANY permissions: 
+
+* routing:queue:join
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: [UserQueue] = [new UserQueue(...)] // User Queues
+let divisionId: [String] = [""] // Division ID(s)
+
+// Code example
+RoutingAPI.patchUserQueues(userId: userId, body: body, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchUserQueues was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**[UserQueue]**](UserQueue.html)| User Queues | |
+| **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserQueueEntityListing**](UserQueueEntityListing.html)
 
 <a name="patchUserRoutinglanguage"></a>
 
@@ -3661,7 +3837,7 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (respons
 
 > [Utilization](Utilization.html) putRoutingUtilization(body)
 
-Update the utilization settings.
+Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
 
 
 

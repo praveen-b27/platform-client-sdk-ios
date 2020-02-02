@@ -1379,6 +1379,9 @@ open class ContentManagementAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -1790,6 +1793,9 @@ open class ContentManagementAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -2142,6 +2148,9 @@ open class ContentManagementAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -3122,6 +3131,9 @@ open class ContentManagementAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -3469,6 +3481,9 @@ open class ContentManagementAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -4785,6 +4800,9 @@ open class ContentManagementAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -5431,6 +5449,9 @@ open class ContentManagementAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {

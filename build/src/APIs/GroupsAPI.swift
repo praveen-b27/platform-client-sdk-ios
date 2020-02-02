@@ -375,6 +375,9 @@ open class GroupsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ "" ],
     "manager" : "",
@@ -663,6 +666,9 @@ open class GroupsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -873,6 +879,7 @@ open class GroupsAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
@@ -1013,6 +1020,9 @@ open class GroupsAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -1455,6 +1465,9 @@ open class GroupsAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ "" ],
       "manager" : "",
@@ -1788,6 +1801,9 @@ open class GroupsAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ "" ],
@@ -2267,6 +2283,9 @@ open class GroupsAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ "" ],
     "manager" : "",
@@ -2571,6 +2590,9 @@ open class GroupsAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ "" ],
       "manager" : "",
@@ -2869,6 +2891,9 @@ open class GroupsAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ "" ],

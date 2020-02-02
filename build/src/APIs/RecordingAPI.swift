@@ -230,6 +230,7 @@ open class RecordingAPI {
               "state" : "aeiou",
               "department" : "aeiou",
               "presence" : "",
+              "lastTokenIssued" : "",
               "email" : "aeiou",
               "images" : [ "" ],
               "manager" : "",
@@ -418,6 +419,9 @@ open class RecordingAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -1012,6 +1016,7 @@ open class RecordingAPI {
             "state" : "aeiou",
             "department" : "aeiou",
             "presence" : "",
+            "lastTokenIssued" : "",
             "email" : "aeiou",
             "images" : [ "" ],
             "manager" : "",
@@ -1200,6 +1205,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -1596,6 +1604,9 @@ open class RecordingAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -1931,6 +1942,9 @@ open class RecordingAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -2259,6 +2273,7 @@ open class RecordingAPI {
             "state" : "aeiou",
             "department" : "aeiou",
             "presence" : "",
+            "lastTokenIssued" : "",
             "email" : "aeiou",
             "images" : [ "" ],
             "manager" : "",
@@ -2447,6 +2462,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -2828,6 +2846,9 @@ open class RecordingAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -3189,6 +3210,7 @@ open class RecordingAPI {
             "state" : "aeiou",
             "department" : "aeiou",
             "presence" : "",
+            "lastTokenIssued" : "",
             "email" : "aeiou",
             "images" : [ "" ],
             "manager" : "",
@@ -3377,6 +3399,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -3768,6 +3793,7 @@ open class RecordingAPI {
               "state" : "aeiou",
               "department" : "aeiou",
               "presence" : "",
+              "lastTokenIssued" : "",
               "email" : "aeiou",
               "images" : [ "" ],
               "manager" : "",
@@ -3956,6 +3982,9 @@ open class RecordingAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -4380,6 +4409,7 @@ open class RecordingAPI {
             "state" : "aeiou",
             "department" : "aeiou",
             "presence" : "",
+            "lastTokenIssued" : "",
             "email" : "aeiou",
             "images" : [ "" ],
             "manager" : "",
@@ -4568,6 +4598,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -4993,6 +5026,7 @@ open class RecordingAPI {
                 "state" : "aeiou",
                 "department" : "aeiou",
                 "presence" : "",
+                "lastTokenIssued" : "",
                 "email" : "aeiou",
                 "images" : [ "" ],
                 "manager" : "",
@@ -5181,6 +5215,9 @@ open class RecordingAPI {
             "source" : "aeiou",
             "message" : "aeiou",
             "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
           },
           "email" : "aeiou",
           "images" : [ {
@@ -6490,6 +6527,9 @@ open class RecordingAPI {
                 "message" : "aeiou",
                 "primary" : true
               },
+              "lastTokenIssued" : {
+                "dateIssued" : "2000-01-23T04:56:07.000+0000"
+              },
               "email" : "aeiou",
               "images" : [ {
                 "imageUri" : "aeiou",
@@ -6694,7 +6734,11 @@ open class RecordingAPI {
                 "naEnabled" : true
               } ]
             }
-          } ]
+          } ],
+          "integrationExport" : {
+            "shouldExportScreenRecordings" : true,
+            "integration" : ""
+          }
         }
       }
     },
@@ -7157,6 +7201,9 @@ open class RecordingAPI {
               "message" : "aeiou",
               "primary" : true
             },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
+            },
             "email" : "aeiou",
             "images" : [ {
               "imageUri" : "aeiou",
@@ -7361,7 +7408,11 @@ open class RecordingAPI {
               "naEnabled" : true
             } ]
           }
-        } ]
+        } ],
+        "integrationExport" : {
+          "shouldExportScreenRecordings" : true,
+          "integration" : ""
+        }
       }
     }
   },
@@ -7565,6 +7616,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -8020,6 +8074,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -9149,6 +9206,9 @@ open class RecordingAPI {
               "message" : "aeiou",
               "primary" : true
             },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
+            },
             "email" : "aeiou",
             "images" : [ {
               "imageUri" : "aeiou",
@@ -9353,7 +9413,11 @@ open class RecordingAPI {
               "naEnabled" : true
             } ]
           }
-        } ]
+        } ],
+        "integrationExport" : {
+          "shouldExportScreenRecordings" : true,
+          "integration" : ""
+        }
       }
     }
   },
@@ -9618,6 +9682,9 @@ open class RecordingAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -10161,6 +10228,9 @@ open class RecordingAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -10765,6 +10835,9 @@ open class RecordingAPI {
               "message" : "aeiou",
               "primary" : true
             },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
+            },
             "email" : "aeiou",
             "images" : [ {
               "imageUri" : "aeiou",
@@ -10969,7 +11042,11 @@ open class RecordingAPI {
               "naEnabled" : true
             } ]
           }
-        } ]
+        } ],
+        "integrationExport" : {
+          "shouldExportScreenRecordings" : true,
+          "integration" : ""
+        }
       }
     }
   },
@@ -11157,6 +11234,9 @@ open class RecordingAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -11483,6 +11563,7 @@ open class RecordingAPI {
             "state" : "aeiou",
             "department" : "aeiou",
             "presence" : "",
+            "lastTokenIssued" : "",
             "email" : "aeiou",
             "images" : [ "" ],
             "manager" : "",
@@ -11671,6 +11752,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -12056,6 +12140,9 @@ open class RecordingAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -12389,6 +12476,7 @@ open class RecordingAPI {
             "state" : "aeiou",
             "department" : "aeiou",
             "presence" : "",
+            "lastTokenIssued" : "",
             "email" : "aeiou",
             "images" : [ "" ],
             "manager" : "",
@@ -12577,6 +12665,9 @@ open class RecordingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -13416,6 +13507,9 @@ open class RecordingAPI {
               "message" : "aeiou",
               "primary" : true
             },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
+            },
             "email" : "aeiou",
             "images" : [ {
               "imageUri" : "aeiou",
@@ -13620,7 +13714,11 @@ open class RecordingAPI {
               "naEnabled" : true
             } ]
           }
-        } ]
+        } ],
+        "integrationExport" : {
+          "shouldExportScreenRecordings" : true,
+          "integration" : ""
+        }
       }
     }
   },

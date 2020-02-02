@@ -185,9 +185,9 @@ open class AnalyticsAPI {
      - parameter conversationId: (path) conversationId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsConversationDetails(conversationId: String, completion: @escaping ((_ data: AnalyticsConversation?,_ error: Error?) -> Void)) {
+    open class func getAnalyticsConversationDetails(conversationId: String, completion: @escaping ((_ data: AnalyticsConversationWithoutAttributes?,_ error: Error?) -> Void)) {
         let requestBuilder = getAnalyticsConversationDetailsWithRequestBuilder(conversationId: conversationId)
-        requestBuilder.execute { (response: Response<AnalyticsConversation>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AnalyticsConversationWithoutAttributes>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -247,6 +247,7 @@ open class AnalyticsAPI {
   } ],
   "conversationEnd" : "2000-01-23T04:56:07.000+0000",
   "originatingDirection" : "aeiou",
+  "divisionIds" : [ "aeiou" ],
   "participants" : [ {
     "participantId" : "aeiou",
     "sessions" : [ {
@@ -374,22 +375,18 @@ open class AnalyticsAPI {
     } ],
     "externalContactId" : "aeiou",
     "purpose" : "aeiou",
-    "attributes" : {
-      "key" : "aeiou"
-    },
     "externalOrganizationId" : "aeiou",
     "participantName" : "aeiou",
     "userId" : "aeiou",
     "flaggedReason" : "aeiou"
-  } ],
-  "divisionIds" : [ "aeiou" ]
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
 
-     - returns: RequestBuilder<AnalyticsConversation> 
+     - returns: RequestBuilder<AnalyticsConversationWithoutAttributes> 
      */
-    open class func getAnalyticsConversationDetailsWithRequestBuilder(conversationId: String) -> RequestBuilder<AnalyticsConversation> {
+    open class func getAnalyticsConversationDetailsWithRequestBuilder(conversationId: String) -> RequestBuilder<AnalyticsConversationWithoutAttributes> {
         var path = "/api/v2/analytics/conversations/{conversationId}/details"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -404,7 +401,7 @@ open class AnalyticsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<AnalyticsConversation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -419,9 +416,9 @@ open class AnalyticsAPI {
      - parameter _id: (query) Comma-separated conversation ids (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsConversationsDetails(_id: [String]? = nil, completion: @escaping ((_ data: AnalyticsConversationMultiGetResponse?,_ error: Error?) -> Void)) {
+    open class func getAnalyticsConversationsDetails(_id: [String]? = nil, completion: @escaping ((_ data: AnalyticsConversationWithoutAttributesMultiGetResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getAnalyticsConversationsDetailsWithRequestBuilder(_id: _id)
-        requestBuilder.execute { (response: Response<AnalyticsConversationMultiGetResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<AnalyticsConversationWithoutAttributesMultiGetResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -482,6 +479,7 @@ open class AnalyticsAPI {
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
     "originatingDirection" : "aeiou",
+    "divisionIds" : [ "aeiou" ],
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
@@ -609,23 +607,19 @@ open class AnalyticsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
-      "attributes" : {
-        "key" : "aeiou"
-      },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ],
-    "divisionIds" : [ "aeiou" ]
+    } ]
   } ]
 }}]
      
      - parameter _id: (query) Comma-separated conversation ids (optional)
 
-     - returns: RequestBuilder<AnalyticsConversationMultiGetResponse> 
+     - returns: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> 
      */
-    open class func getAnalyticsConversationsDetailsWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<AnalyticsConversationMultiGetResponse> {
+    open class func getAnalyticsConversationsDetailsWithRequestBuilder(_id: [String]? = nil) -> RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> {
         let path = "/api/v2/analytics/conversations/details"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -642,7 +636,7 @@ open class AnalyticsAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<AnalyticsConversationMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -793,6 +787,7 @@ open class AnalyticsAPI {
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
     "originatingDirection" : "aeiou",
+    "divisionIds" : [ "aeiou" ],
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
@@ -927,8 +922,7 @@ open class AnalyticsAPI {
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ],
-    "divisionIds" : [ "aeiou" ]
+    } ]
   } ]
 }}]
      
@@ -1013,6 +1007,7 @@ open class AnalyticsAPI {
       "sessionDnisList" : [ "aeiou" ],
       "transferred" : true,
       "surveyQuestionGroupScore" : "",
+      "abandonDurationsMilliseconds" : [ "" ],
       "waitingDurationSortOrder" : "aeiou",
       "messageTypes" : [ "aeiou" ],
       "surveyPromoterScore" : "",
@@ -1025,6 +1020,7 @@ open class AnalyticsAPI {
       "skillIds" : [ "aeiou" ],
       "evaluatorIds" : [ "aeiou" ],
       "evaluatedAgentIds" : [ "aeiou" ],
+      "acdDurationsMilliseconds" : [ "" ],
       "flowEntryReasons" : [ "aeiou" ],
       "groupIds" : [ "aeiou" ],
       "surveyFormIds" : [ "aeiou" ],
@@ -1036,6 +1032,7 @@ open class AnalyticsAPI {
       "originatingDirections" : [ "aeiou" ],
       "agentDurationSortOrder" : "aeiou",
       "isConsulted" : true,
+      "externalOrgIds" : [ "aeiou" ],
       "languageIds" : [ "aeiou" ],
       "agentName" : "aeiou",
       "addressTos" : [ "aeiou" ],
@@ -1056,17 +1053,21 @@ open class AnalyticsAPI {
         "isWaiting" : true,
         "filterWrapUpNotes" : true,
         "isPreferred" : true,
+        "isMonitored" : true,
         "isActive" : true,
         "isScreenshare" : true,
         "matchAll" : true,
         "isFlagged" : true
       },
+      "holdDurationsMilliseconds" : [ "" ],
       "isCampaign" : true,
       "promoterScores" : [ "" ],
       "sipCallIds" : [ "aeiou" ],
+      "handleDurationsMilliseconds" : [ "" ],
       "flowOutcomeIds" : [ "aeiou" ],
       "flowOutcomeValues" : [ "aeiou" ],
       "flowDestinationTypes" : [ "aeiou" ],
+      "talkDurationsMilliseconds" : [ "" ],
       "durationsMilliseconds" : [ {
         "lt" : 1.3579000000000001069366817318950779736042022705078125,
         "gte" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1085,6 +1086,7 @@ open class AnalyticsAPI {
       "surveyStatuses" : [ "aeiou" ],
       "userIds" : [ "aeiou" ],
       "skillsList" : [ "aeiou" ],
+      "acwDurationsMilliseconds" : [ "" ],
       "languageList" : [ "aeiou" ],
       "isBlindTransferred" : true,
       "flowDisconnectReasons" : [ "aeiou" ],
@@ -1096,6 +1098,7 @@ open class AnalyticsAPI {
       "mediaTypes" : [ "aeiou" ],
       "hasJourneyVisitId" : true,
       "statusList" : [ "aeiou" ],
+      "externalContactIds" : [ "aeiou" ],
       "dnisList" : [ "aeiou" ],
       "flowEntryTypes" : [ "aeiou" ],
       "oauthClientIds" : [ "aeiou" ]
@@ -2356,6 +2359,7 @@ open class AnalyticsAPI {
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
     "originatingDirection" : "aeiou",
+    "divisionIds" : [ "aeiou" ],
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
@@ -2490,8 +2494,7 @@ open class AnalyticsAPI {
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ],
-    "divisionIds" : [ "aeiou" ]
+    } ]
   } ],
   "aggregations" : [ {
     "metric" : "aeiou",
@@ -2948,6 +2951,7 @@ open class AnalyticsAPI {
     "sessionDnisList" : [ "aeiou" ],
     "transferred" : true,
     "surveyQuestionGroupScore" : "",
+    "abandonDurationsMilliseconds" : [ "" ],
     "waitingDurationSortOrder" : "aeiou",
     "messageTypes" : [ "aeiou" ],
     "surveyPromoterScore" : "",
@@ -2960,6 +2964,7 @@ open class AnalyticsAPI {
     "skillIds" : [ "aeiou" ],
     "evaluatorIds" : [ "aeiou" ],
     "evaluatedAgentIds" : [ "aeiou" ],
+    "acdDurationsMilliseconds" : [ "" ],
     "flowEntryReasons" : [ "aeiou" ],
     "groupIds" : [ "aeiou" ],
     "surveyFormIds" : [ "aeiou" ],
@@ -2971,6 +2976,7 @@ open class AnalyticsAPI {
     "originatingDirections" : [ "aeiou" ],
     "agentDurationSortOrder" : "aeiou",
     "isConsulted" : true,
+    "externalOrgIds" : [ "aeiou" ],
     "languageIds" : [ "aeiou" ],
     "agentName" : "aeiou",
     "addressTos" : [ "aeiou" ],
@@ -2991,17 +2997,21 @@ open class AnalyticsAPI {
       "isWaiting" : true,
       "filterWrapUpNotes" : true,
       "isPreferred" : true,
+      "isMonitored" : true,
       "isActive" : true,
       "isScreenshare" : true,
       "matchAll" : true,
       "isFlagged" : true
     },
+    "holdDurationsMilliseconds" : [ "" ],
     "isCampaign" : true,
     "promoterScores" : [ "" ],
     "sipCallIds" : [ "aeiou" ],
+    "handleDurationsMilliseconds" : [ "" ],
     "flowOutcomeIds" : [ "aeiou" ],
     "flowOutcomeValues" : [ "aeiou" ],
     "flowDestinationTypes" : [ "aeiou" ],
+    "talkDurationsMilliseconds" : [ "" ],
     "durationsMilliseconds" : [ {
       "lt" : 1.3579000000000001069366817318950779736042022705078125,
       "gte" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3020,6 +3030,7 @@ open class AnalyticsAPI {
     "surveyStatuses" : [ "aeiou" ],
     "userIds" : [ "aeiou" ],
     "skillsList" : [ "aeiou" ],
+    "acwDurationsMilliseconds" : [ "" ],
     "languageList" : [ "aeiou" ],
     "isBlindTransferred" : true,
     "flowDisconnectReasons" : [ "aeiou" ],
@@ -3031,6 +3042,7 @@ open class AnalyticsAPI {
     "mediaTypes" : [ "aeiou" ],
     "hasJourneyVisitId" : true,
     "statusList" : [ "aeiou" ],
+    "externalContactIds" : [ "aeiou" ],
     "dnisList" : [ "aeiou" ],
     "flowEntryTypes" : [ "aeiou" ],
     "oauthClientIds" : [ "aeiou" ]

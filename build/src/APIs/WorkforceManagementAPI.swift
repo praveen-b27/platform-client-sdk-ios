@@ -663,6 +663,9 @@ open class WorkforceManagementAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -2227,6 +2230,9 @@ open class WorkforceManagementAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -2558,6 +2564,9 @@ open class WorkforceManagementAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -2904,6 +2913,9 @@ open class WorkforceManagementAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -3218,6 +3230,9 @@ open class WorkforceManagementAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -5039,6 +5054,9 @@ open class WorkforceManagementAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -5369,6 +5387,9 @@ open class WorkforceManagementAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -6237,6 +6258,9 @@ open class WorkforceManagementAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -6895,6 +6919,9 @@ open class WorkforceManagementAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -7112,6 +7139,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "downloadUrls" : [ "aeiou" ],
   "downloadUrl" : "aeiou",
   "queryState" : "aeiou",
   "id" : "aeiou"
@@ -7384,6 +7412,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "downloadUrls" : [ "aeiou" ],
   "downloadUrl" : "aeiou",
   "queryState" : "aeiou",
   "id" : "aeiou"
@@ -7953,6 +7982,9 @@ open class WorkforceManagementAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -8283,6 +8315,9 @@ open class WorkforceManagementAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -8610,6 +8645,9 @@ open class WorkforceManagementAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -10705,6 +10743,9 @@ open class WorkforceManagementAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {

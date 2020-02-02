@@ -444,6 +444,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -995,6 +998,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -1720,6 +1726,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -3719,6 +3728,9 @@ open class ArchitectAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -4119,6 +4131,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -4678,6 +4693,9 @@ open class ArchitectAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -5593,6 +5611,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -6276,6 +6297,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -6430,6 +6454,7 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "debugVersion" : "",
   "lockedClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -6442,6 +6467,20 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "type" : "aeiou",
@@ -6702,6 +6741,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -7029,6 +7071,20 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "generationId" : "aeiou",
+  "debug" : true,
+  "outputSchema" : "",
+  "inputSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
   "createdByClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -7125,6 +7181,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -7450,6 +7509,20 @@ open class ArchitectAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -7546,6 +7619,9 @@ open class ArchitectAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -7960,6 +8036,9 @@ open class ArchitectAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -8114,6 +8193,7 @@ open class ArchitectAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "debugVersion" : "",
     "lockedClient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -8126,6 +8206,20 @@ open class ArchitectAPI {
     },
     "publishedVersion" : {
       "generationId" : "aeiou",
+      "debug" : true,
+      "outputSchema" : "",
+      "inputSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "type" : "aeiou",
@@ -8969,6 +9063,9 @@ open class ArchitectAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -9322,6 +9419,9 @@ open class ArchitectAPI {
           "source" : "aeiou",
           "message" : "aeiou",
           "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
         },
         "email" : "aeiou",
         "images" : [ {
@@ -9886,6 +9986,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -10289,6 +10392,9 @@ open class ArchitectAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -10780,6 +10886,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -11090,6 +11199,20 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "generationId" : "aeiou",
+  "debug" : true,
+  "outputSchema" : "",
+  "inputSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
   "createdByClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -11186,6 +11309,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -11499,6 +11625,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -11653,6 +11782,7 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "debugVersion" : "",
   "lockedClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -11665,6 +11795,20 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "type" : "aeiou",
@@ -11857,6 +12001,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -12178,6 +12325,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -12332,6 +12482,7 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "debugVersion" : "",
   "lockedClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -12344,6 +12495,20 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "type" : "aeiou",
@@ -12540,6 +12705,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -12694,6 +12862,7 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "debugVersion" : "",
   "lockedClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -12706,6 +12875,20 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "type" : "aeiou",
@@ -12909,6 +13092,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {
@@ -13233,6 +13419,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -13387,6 +13576,7 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "debugVersion" : "",
   "lockedClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13399,6 +13589,20 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "type" : "aeiou",
@@ -13595,6 +13799,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -13749,6 +13956,7 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "debugVersion" : "",
   "lockedClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13761,6 +13969,20 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "type" : "aeiou",
@@ -14102,6 +14324,9 @@ open class ArchitectAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -14600,6 +14825,9 @@ open class ArchitectAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -15282,6 +15510,9 @@ open class ArchitectAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -15436,6 +15667,7 @@ open class ArchitectAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "debugVersion" : "",
   "lockedClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -15448,6 +15680,20 @@ open class ArchitectAPI {
   },
   "publishedVersion" : {
     "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "type" : "aeiou",
@@ -15815,6 +16061,9 @@ open class ArchitectAPI {
       "source" : "aeiou",
       "message" : "aeiou",
       "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
     },
     "email" : "aeiou",
     "images" : [ {

@@ -671,7 +671,7 @@ let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let recordingId: String = "" // id of the recording
-let entityType: String = "RECORDING" // entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording
+let entityType: String = "Recording" // entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording
 
 // Code example
 QualityAPI.getQualityConversationAudits(conversationId: conversationId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, recordingId: recordingId, entityType: entityType) { (response, error) in
@@ -697,7 +697,7 @@ QualityAPI.getQualityConversationAudits(conversationId: conversationId, pageSize
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **recordingId** | **String**| id of the recording | [optional] |
-| **entityType** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to RECORDING] |
+| **entityType** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to Recording] |
 {: class="table-striped"}
 
 

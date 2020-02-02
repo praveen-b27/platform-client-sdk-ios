@@ -428,7 +428,7 @@ open class RoutingAPI {
     
     /**
      
-     Delete utilization settings and revert to system defaults.
+     Delete the organization-wide max utilization settings and revert to the system default.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -445,7 +445,7 @@ open class RoutingAPI {
 
     /**
      
-     Delete utilization settings and revert to system defaults.
+     Delete the organization-wide max utilization settings and revert to the system default.
      
      - DELETE /api/v2/routing/utilization
      - 
@@ -1317,6 +1317,9 @@ open class RoutingAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -1471,6 +1474,7 @@ open class RoutingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "debugVersion" : "",
     "lockedClient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1483,6 +1487,20 @@ open class RoutingAPI {
     },
     "publishedVersion" : {
       "generationId" : "aeiou",
+      "debug" : true,
+      "outputSchema" : "",
+      "inputSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "type" : "aeiou",
@@ -1706,6 +1724,9 @@ open class RoutingAPI {
           "message" : "aeiou",
           "primary" : true
         },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        },
         "email" : "aeiou",
         "images" : [ {
           "imageUri" : "aeiou",
@@ -1860,6 +1881,7 @@ open class RoutingAPI {
           "longitude" : 1.3579000000000001069366817318950779736042022705078125
         }
       },
+      "debugVersion" : "",
       "lockedClient" : {
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1872,6 +1894,20 @@ open class RoutingAPI {
       },
       "publishedVersion" : {
         "generationId" : "aeiou",
+        "debug" : true,
+        "outputSchema" : "",
+        "inputSchema" : {
+          "$schema" : "aeiou",
+          "description" : "aeiou",
+          "id" : "aeiou",
+          "additionalProperties" : "{}",
+          "title" : "aeiou",
+          "type" : "aeiou",
+          "required" : [ "aeiou" ],
+          "properties" : {
+            "key" : "{}"
+          }
+        },
         "createdByClient" : "",
         "selfUri" : "aeiou",
         "type" : "aeiou",
@@ -2295,6 +2331,7 @@ open class RoutingAPI {
         case geolocation = "geolocation"
         case station = "station"
         case authorization = "authorization"
+        case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case profileskills = "profileSkills"
         case certifications = "certifications"
@@ -2463,6 +2500,9 @@ open class RoutingAPI {
         "source" : "aeiou",
         "message" : "aeiou",
         "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
       },
       "email" : "aeiou",
       "images" : [ {
@@ -4387,6 +4427,9 @@ open class RoutingAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -4750,6 +4793,9 @@ open class RoutingAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -4960,7 +5006,7 @@ open class RoutingAPI {
     
     /**
      
-     Get the utilization settings.
+     Get the organization-wide max utilization settings.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4984,7 +5030,7 @@ open class RoutingAPI {
 
     /**
      
-     Get the utilization settings.
+     Get the organization-wide max utilization settings.
      
      - GET /api/v2/routing/utilization
      - 
@@ -5195,6 +5241,216 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<WrapupCodeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get queues for user
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter joined: (query) Is joined to the queue (optional, default to true)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserQueues(userId: String, pageSize: Int? = nil, pageNumber: Int? = nil, joined: Bool? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: UserQueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserQueuesWithRequestBuilder(userId: userId, pageSize: pageSize, pageNumber: pageNumber, joined: joined, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<UserQueueEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get queues for user
+     
+     - GET /api/v2/users/{userId}/queues
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "callingPartyName" : "aeiou",
+    "acwSettings" : {
+      "timeoutMs" : 123,
+      "wrapupPrompt" : "aeiou"
+    },
+    "joined" : true,
+    "memberCount" : 123,
+    "mediaSettings" : {
+      "key" : {
+        "alertingTimeoutSeconds" : 123,
+        "serviceLevel" : {
+          "percentage" : 1.3579000000000001069366817318950779736042022705078125,
+          "durationMs" : 123456789
+        }
+      }
+    },
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "whisperPrompt" : "",
+    "outboundEmailAddress" : {
+      "route" : {
+        "replyEmailAddress" : "",
+        "selfUri" : "aeiou",
+        "pattern" : "aeiou",
+        "language" : "",
+        "autoBcc" : [ {
+          "name" : "aeiou",
+          "email" : "aeiou"
+        } ],
+        "priority" : 123,
+        "fromEmail" : "aeiou",
+        "skills" : [ "" ],
+        "name" : "aeiou",
+        "fromName" : "aeiou",
+        "id" : "aeiou",
+        "queue" : "",
+        "flow" : "",
+        "spamFlow" : ""
+      },
+      "domain" : ""
+    },
+    "bullseye" : {
+      "rings" : [ {
+        "expansionCriteria" : [ {
+          "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+          "type" : "aeiou"
+        } ],
+        "actions" : {
+          "skillsToRemove" : [ {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          } ]
+        }
+      } ]
+    },
+    "skillEvaluationMethod" : "aeiou",
+    "defaultScripts" : {
+      "key" : {
+        "variables" : "{}",
+        "selfUri" : "aeiou",
+        "customActions" : "{}",
+        "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "features" : "{}",
+        "versionId" : "aeiou",
+        "createdDate" : "2000-01-23T04:56:07.000+0000",
+        "pages" : [ {
+          "versionId" : "aeiou",
+          "createdDate" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "rootContainer" : {
+            "key" : "{}"
+          },
+          "properties" : {
+            "key" : "{}"
+          }
+        } ],
+        "startPageName" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "startPageId" : "aeiou",
+        "id" : "aeiou",
+        "publishedDate" : "2000-01-23T04:56:07.000+0000"
+      }
+    },
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "queueFlow" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "outboundMessagingAddresses" : {
+      "smsAddress" : ""
+    },
+    "createdBy" : "aeiou",
+    "callingPartyNumber" : "aeiou",
+    "name" : "aeiou",
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter joined: (query) Is joined to the queue (optional, default to true)
+     - parameter divisionId: (query) Division ID(s) (optional)
+
+     - returns: RequestBuilder<UserQueueEntityListing> 
+     */
+    open class func getUserQueuesWithRequestBuilder(userId: String, pageSize: Int? = nil, pageNumber: Int? = nil, joined: Bool? = nil, divisionId: [String]? = nil) -> RequestBuilder<UserQueueEntityListing> {
+        var path = "/api/v2/users/{userId}/queues"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "joined": joined, 
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<UserQueueEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -5550,6 +5806,9 @@ open class RoutingAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -5869,6 +6128,9 @@ open class RoutingAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -6100,6 +6362,379 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Join or unjoin a queue for a user
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter userId: (path) User ID 
+     - parameter body: (body) Queue Member 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchUserQueue(queueId: String, userId: String, body: UserQueue, completion: @escaping ((_ data: UserQueue?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchUserQueueWithRequestBuilder(queueId: queueId, userId: userId, body: body)
+        requestBuilder.execute { (response: Response<UserQueue>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Join or unjoin a queue for a user
+     
+     - PATCH /api/v2/users/{userId}/queues/{queueId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callingPartyName" : "aeiou",
+  "acwSettings" : {
+    "timeoutMs" : 123,
+    "wrapupPrompt" : "aeiou"
+  },
+  "joined" : true,
+  "memberCount" : 123,
+  "mediaSettings" : {
+    "key" : {
+      "alertingTimeoutSeconds" : 123,
+      "serviceLevel" : {
+        "percentage" : 1.3579000000000001069366817318950779736042022705078125,
+        "durationMs" : 123456789
+      }
+    }
+  },
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "whisperPrompt" : "",
+  "outboundEmailAddress" : {
+    "route" : {
+      "replyEmailAddress" : "",
+      "selfUri" : "aeiou",
+      "pattern" : "aeiou",
+      "language" : "",
+      "autoBcc" : [ {
+        "name" : "aeiou",
+        "email" : "aeiou"
+      } ],
+      "priority" : 123,
+      "fromEmail" : "aeiou",
+      "skills" : [ "" ],
+      "name" : "aeiou",
+      "fromName" : "aeiou",
+      "id" : "aeiou",
+      "queue" : "",
+      "flow" : "",
+      "spamFlow" : ""
+    },
+    "domain" : ""
+  },
+  "bullseye" : {
+    "rings" : [ {
+      "expansionCriteria" : [ {
+        "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+        "type" : "aeiou"
+      } ],
+      "actions" : {
+        "skillsToRemove" : [ {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      }
+    } ]
+  },
+  "skillEvaluationMethod" : "aeiou",
+  "defaultScripts" : {
+    "key" : {
+      "variables" : "{}",
+      "selfUri" : "aeiou",
+      "customActions" : "{}",
+      "versionDate" : "2000-01-23T04:56:07.000+0000",
+      "features" : "{}",
+      "versionId" : "aeiou",
+      "createdDate" : "2000-01-23T04:56:07.000+0000",
+      "pages" : [ {
+        "versionId" : "aeiou",
+        "createdDate" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "rootContainer" : {
+          "key" : "{}"
+        },
+        "properties" : {
+          "key" : "{}"
+        }
+      } ],
+      "startPageName" : "aeiou",
+      "name" : "aeiou",
+      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+      "startPageId" : "aeiou",
+      "id" : "aeiou",
+      "publishedDate" : "2000-01-23T04:56:07.000+0000"
+    }
+  },
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "queueFlow" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "outboundMessagingAddresses" : {
+    "smsAddress" : ""
+  },
+  "createdBy" : "aeiou",
+  "callingPartyNumber" : "aeiou",
+  "name" : "aeiou",
+  "modifiedBy" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter userId: (path) User ID 
+     - parameter body: (body) Queue Member 
+
+     - returns: RequestBuilder<UserQueue> 
+     */
+    open class func patchUserQueueWithRequestBuilder(queueId: String, userId: String, body: UserQueue) -> RequestBuilder<UserQueue> {
+        var path = "/api/v2/users/{userId}/queues/{queueId}"
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserQueue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Join or unjoin a set of queues for a user
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) User Queues 
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchUserQueues(userId: String, body: [UserQueue], divisionId: [String]? = nil, completion: @escaping ((_ data: UserQueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchUserQueuesWithRequestBuilder(userId: userId, body: body, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<UserQueueEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Join or unjoin a set of queues for a user
+     
+     - PATCH /api/v2/users/{userId}/queues
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "callingPartyName" : "aeiou",
+    "acwSettings" : {
+      "timeoutMs" : 123,
+      "wrapupPrompt" : "aeiou"
+    },
+    "joined" : true,
+    "memberCount" : 123,
+    "mediaSettings" : {
+      "key" : {
+        "alertingTimeoutSeconds" : 123,
+        "serviceLevel" : {
+          "percentage" : 1.3579000000000001069366817318950779736042022705078125,
+          "durationMs" : 123456789
+        }
+      }
+    },
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "whisperPrompt" : "",
+    "outboundEmailAddress" : {
+      "route" : {
+        "replyEmailAddress" : "",
+        "selfUri" : "aeiou",
+        "pattern" : "aeiou",
+        "language" : "",
+        "autoBcc" : [ {
+          "name" : "aeiou",
+          "email" : "aeiou"
+        } ],
+        "priority" : 123,
+        "fromEmail" : "aeiou",
+        "skills" : [ "" ],
+        "name" : "aeiou",
+        "fromName" : "aeiou",
+        "id" : "aeiou",
+        "queue" : "",
+        "flow" : "",
+        "spamFlow" : ""
+      },
+      "domain" : ""
+    },
+    "bullseye" : {
+      "rings" : [ {
+        "expansionCriteria" : [ {
+          "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+          "type" : "aeiou"
+        } ],
+        "actions" : {
+          "skillsToRemove" : [ {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          } ]
+        }
+      } ]
+    },
+    "skillEvaluationMethod" : "aeiou",
+    "defaultScripts" : {
+      "key" : {
+        "variables" : "{}",
+        "selfUri" : "aeiou",
+        "customActions" : "{}",
+        "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "features" : "{}",
+        "versionId" : "aeiou",
+        "createdDate" : "2000-01-23T04:56:07.000+0000",
+        "pages" : [ {
+          "versionId" : "aeiou",
+          "createdDate" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "rootContainer" : {
+            "key" : "{}"
+          },
+          "properties" : {
+            "key" : "{}"
+          }
+        } ],
+        "startPageName" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "startPageId" : "aeiou",
+        "id" : "aeiou",
+        "publishedDate" : "2000-01-23T04:56:07.000+0000"
+      }
+    },
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "queueFlow" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "outboundMessagingAddresses" : {
+      "smsAddress" : ""
+    },
+    "createdBy" : "aeiou",
+    "callingPartyNumber" : "aeiou",
+    "name" : "aeiou",
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) User Queues 
+     - parameter divisionId: (query) Division ID(s) (optional)
+
+     - returns: RequestBuilder<UserQueueEntityListing> 
+     */
+    open class func patchUserQueuesWithRequestBuilder(userId: String, body: [UserQueue], divisionId: [String]? = nil) -> RequestBuilder<UserQueueEntityListing> {
+        var path = "/api/v2/users/{userId}/queues"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<UserQueueEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -7253,6 +7888,9 @@ open class RoutingAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -7879,6 +8517,9 @@ open class RoutingAPI {
         "message" : "aeiou",
         "primary" : true
       },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
       "email" : "aeiou",
       "images" : [ {
         "imageUri" : "aeiou",
@@ -8033,6 +8674,7 @@ open class RoutingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "debugVersion" : "",
     "lockedClient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -8045,6 +8687,20 @@ open class RoutingAPI {
     },
     "publishedVersion" : {
       "generationId" : "aeiou",
+      "debug" : true,
+      "outputSchema" : "",
+      "inputSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "type" : "aeiou",
@@ -8489,6 +9145,9 @@ open class RoutingAPI {
       "message" : "aeiou",
       "primary" : true
     },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
     "email" : "aeiou",
     "images" : [ {
       "imageUri" : "aeiou",
@@ -8678,7 +9337,7 @@ open class RoutingAPI {
     
     /**
      
-     Update the utilization settings.
+     Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
      
      - parameter body: (body) utilization 
      - parameter completion: completion handler to receive the data and the error objects
@@ -8703,7 +9362,7 @@ open class RoutingAPI {
 
     /**
      
-     Update the utilization settings.
+     Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
      
      - PUT /api/v2/routing/utilization
      - 

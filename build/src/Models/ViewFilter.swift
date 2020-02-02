@@ -126,10 +126,26 @@ public class ViewFilter: Codable {
     public var outboundContactListIds: [String]?
     /** The contact ids are used to filter the view */
     public var contactIds: [String]?
+    /** The external contact ids are used to filter the view */
+    public var externalContactIds: [String]?
+    /** The external org ids are used to filter the view */
+    public var externalOrgIds: [String]?
     /** The ani list ids are used to filter the view */
     public var aniList: [String]?
     /** The durations in milliseconds used to filter the view */
     public var durationsMilliseconds: [NumericRange]?
+    /** The acd durations in milliseconds used to filter the view */
+    public var acdDurationsMilliseconds: [NumericRange]?
+    /** The talk durations in milliseconds used to filter the view */
+    public var talkDurationsMilliseconds: [NumericRange]?
+    /** The acw durations in milliseconds used to filter the view */
+    public var acwDurationsMilliseconds: [NumericRange]?
+    /** The handle durations in milliseconds used to filter the view */
+    public var handleDurationsMilliseconds: [NumericRange]?
+    /** The hold durations in milliseconds used to filter the view */
+    public var holdDurationsMilliseconds: [NumericRange]?
+    /** The abandon durations in milliseconds used to filter the view */
+    public var abandonDurationsMilliseconds: [NumericRange]?
     /** The evaluationScore is used to filter the view */
     public var evaluationScore: NumericRange?
     /** The evaluationCriticalScore is used to filter the view */
@@ -235,7 +251,7 @@ public class ViewFilter: Codable {
     /** A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]) */
     public var apiOperations: [String]?
 
-    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, showSecondaryStatus: Bool?, agentDurationSortOrder: AgentDurationSortOrder?, waitingDurationSortOrder: WaitingDurationSortOrder?, interactingDurationSortOrder: InteractingDurationSortOrder?, agentName: String?, skillsList: [String]?, languageList: [String]?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, statusList: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, oauthClientIds: [String]?, apiOperations: [String]?) {
+    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, showSecondaryStatus: Bool?, agentDurationSortOrder: AgentDurationSortOrder?, waitingDurationSortOrder: WaitingDurationSortOrder?, interactingDurationSortOrder: InteractingDurationSortOrder?, agentName: String?, skillsList: [String]?, languageList: [String]?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, statusList: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, oauthClientIds: [String]?, apiOperations: [String]?) {
         
         self.mediaTypes = mediaTypes
         
@@ -275,9 +291,25 @@ public class ViewFilter: Codable {
         
         self.contactIds = contactIds
         
+        self.externalContactIds = externalContactIds
+        
+        self.externalOrgIds = externalOrgIds
+        
         self.aniList = aniList
         
         self.durationsMilliseconds = durationsMilliseconds
+        
+        self.acdDurationsMilliseconds = acdDurationsMilliseconds
+        
+        self.talkDurationsMilliseconds = talkDurationsMilliseconds
+        
+        self.acwDurationsMilliseconds = acwDurationsMilliseconds
+        
+        self.handleDurationsMilliseconds = handleDurationsMilliseconds
+        
+        self.holdDurationsMilliseconds = holdDurationsMilliseconds
+        
+        self.abandonDurationsMilliseconds = abandonDurationsMilliseconds
         
         self.evaluationScore = evaluationScore
         

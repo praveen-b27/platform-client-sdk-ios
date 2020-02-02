@@ -27,12 +27,14 @@ public class ConversationProperties: Codable {
     public var isVoicemail: Bool?
     /** Indicates filtering for flagged */
     public var isFlagged: Bool?
+    /** Indicates filtering for monitored */
+    public var isMonitored: Bool?
     /** Indicates filtering for WrapUpNotes */
     public var filterWrapUpNotes: Bool?
     /** Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic */
     public var matchAll: Bool?
 
-    public init(isWaiting: Bool?, isActive: Bool?, isAcd: Bool?, isPreferred: Bool?, isScreenshare: Bool?, isCobrowse: Bool?, isVoicemail: Bool?, isFlagged: Bool?, filterWrapUpNotes: Bool?, matchAll: Bool?) {
+    public init(isWaiting: Bool?, isActive: Bool?, isAcd: Bool?, isPreferred: Bool?, isScreenshare: Bool?, isCobrowse: Bool?, isVoicemail: Bool?, isFlagged: Bool?, isMonitored: Bool?, filterWrapUpNotes: Bool?, matchAll: Bool?) {
         
         self.isWaiting = isWaiting
         
@@ -49,6 +51,8 @@ public class ConversationProperties: Codable {
         self.isVoicemail = isVoicemail
         
         self.isFlagged = isFlagged
+        
+        self.isMonitored = isMonitored
         
         self.filterWrapUpNotes = filterWrapUpNotes
         

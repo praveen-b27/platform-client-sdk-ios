@@ -612,7 +612,7 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsWhatsappIntegrationId(i
 
 
 
-> [AnalyticsConversation](AnalyticsConversation.html) getAnalyticsConversationDetails(conversationId)
+> [AnalyticsConversationWithoutAttributes](AnalyticsConversationWithoutAttributes.html) getAnalyticsConversationDetails(conversationId)
 
 Get a conversation by id
 
@@ -656,7 +656,7 @@ ConversationsAPI.getAnalyticsConversationDetails(conversationId: conversationId)
 
 ### Return type
 
-[**AnalyticsConversation**](AnalyticsConversation.html)
+[**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes.html)
 
 <a name="getAnalyticsConversationsDetails"></a>
 
@@ -664,7 +664,7 @@ ConversationsAPI.getAnalyticsConversationDetails(conversationId: conversationId)
 
 
 
-> [AnalyticsConversationMultiGetResponse](AnalyticsConversationMultiGetResponse.html) getAnalyticsConversationsDetails(_id)
+> [AnalyticsConversationWithoutAttributesMultiGetResponse](AnalyticsConversationWithoutAttributesMultiGetResponse.html) getAnalyticsConversationsDetails(_id)
 
 Gets multiple conversations by id
 
@@ -708,7 +708,7 @@ ConversationsAPI.getAnalyticsConversationsDetails(_id: _id) { (response, error) 
 
 ### Return type
 
-[**AnalyticsConversationMultiGetResponse**](AnalyticsConversationMultiGetResponse.html)
+[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
 
 <a name="getAnalyticsConversationsDetailsJob"></a>
 

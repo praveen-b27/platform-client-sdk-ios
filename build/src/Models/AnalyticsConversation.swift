@@ -27,16 +27,16 @@ public class AnalyticsConversation: Codable {
     public var mediaStatsMinConversationRFactor: Double?
     /** The original direction of the conversation */
     public var originatingDirection: OriginatingDirection?
-    /** Participants in the conversation */
-    public var participants: [AnalyticsParticipant]?
     /** Evaluations tied to this conversation */
     public var evaluations: [AnalyticsEvaluation]?
     /** Surveys tied to this conversation */
     public var surveys: [AnalyticsSurvey]?
     /** Identifiers of divisions associated with this conversation */
     public var divisionIds: [String]?
+    /** Participants in the conversation */
+    public var participants: [AnalyticsParticipant]?
 
-    public init(conversationId: String?, conversationStart: Date?, conversationEnd: Date?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, participants: [AnalyticsParticipant]?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, divisionIds: [String]?) {
+    public init(conversationId: String?, conversationStart: Date?, conversationEnd: Date?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, divisionIds: [String]?, participants: [AnalyticsParticipant]?) {
         
         self.conversationId = conversationId
         
@@ -50,13 +50,13 @@ public class AnalyticsConversation: Codable {
         
         self.originatingDirection = originatingDirection
         
-        self.participants = participants
-        
         self.evaluations = evaluations
         
         self.surveys = surveys
         
         self.divisionIds = divisionIds
+        
+        self.participants = participants
         
     }
 

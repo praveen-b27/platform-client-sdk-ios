@@ -19,16 +19,20 @@ public class WfmHistoricalAdherenceResponse: Codable {
     }
     /** The query ID to listen for */
     public var _id: String?
-    /** The uri to query to GET the results of the Historical Adherence query. This will return unpopulated but will be populated in the notification */
+    /** Deprecated. Use downloadUrls instead. */
     public var downloadUrl: String?
+    /** The uri list to GET the results of the Historical Adherence query. For notification purposes only */
+    public var downloadUrls: [String]?
     /** The state of the adherence query */
     public var queryState: QueryState?
 
-    public init(_id: String?, downloadUrl: String?, queryState: QueryState?) {
+    public init(_id: String?, downloadUrl: String?, downloadUrls: [String]?, queryState: QueryState?) {
         
         self._id = _id
         
         self.downloadUrl = downloadUrl
+        
+        self.downloadUrls = downloadUrls
         
         self.queryState = queryState
         
@@ -37,6 +41,7 @@ public class WfmHistoricalAdherenceResponse: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case downloadUrl
+        case downloadUrls
         case queryState
     }
 

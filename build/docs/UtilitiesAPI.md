@@ -11,7 +11,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIpranges**](UtilitiesAPI.html#getIpranges) | Get public ip address ranges for PureCloud |
 | [**getTimezones**](UtilitiesAPI.html#getTimezones) | Get time zones list |
 | [**postCertificateDetails**](UtilitiesAPI.html#postCertificateDetails) | Returns the information about an X509 PEM encoded certificate or certificate chain. |
-| [**postGmscTokens**](UtilitiesAPI.html#postGmscTokens) | Generate a JWT for use with common cloud. |
 {: class="table-striped"}
 
 <a name="getDate"></a>
@@ -211,51 +210,4 @@ UtilitiesAPI.postCertificateDetails(body: body) { (response, error) in
 ### Return type
 
 [**ParsedCertificate**](ParsedCertificate.html)
-
-<a name="postGmscTokens"></a>
-
-# **postGmscTokens**
-
-
-
-> [Token](Token.html) postGmscTokens()
-
-Generate a JWT for use with common cloud.
-
-
-
-Wraps POST /api/v2/gmsc/tokens  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-
-// Code example
-UtilitiesAPI.postGmscTokens() { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("UtilitiesAPI.postGmscTokens was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not require any parameters.
-
-
-
-### Return type
-
-[**Token**](Token.html)
 

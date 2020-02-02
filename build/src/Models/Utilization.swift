@@ -11,10 +11,10 @@ import Foundation
 
 public class Utilization: Codable {
 
-    /** Map of media types to utilization settings.  Valid media types include call, callback, chat, email, and message. */
-    public var utilization: [String:OrgMediaUtilization]?
+    /** Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message. */
+    public var utilization: [String:MediaUtilization]?
 
-    public init(utilization: [String:OrgMediaUtilization]?) {
+    public init(utilization: [String:MediaUtilization]?) {
         
         self.utilization = utilization
         

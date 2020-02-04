@@ -6474,7 +6474,7 @@ ConversationsAPI.postConversationsMessageCommunicationMessagesMedia(conversation
 
 Get messages in batch
 
-
+The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\&quot;a3069a33b-bbb1-4703-9d68-061d9e9db96e\&quot;, \&quot;55bc6be3-078c-4a49-a4e6-1e05776ed7e8\&quot;]
 
 Wraps POST /api/v2/conversations/messages/{conversationId}/messages/bulk  
 
@@ -6490,7 +6490,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let conversationId: String = "" // conversationId
+let conversationId: String = "" // 
 let body: [String] = [new [String](...)] // messageIds
 
 // Code example
@@ -6509,7 +6509,7 @@ ConversationsAPI.postConversationsMessageMessagesBulk(conversationId: conversati
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| conversationId | |
+| **conversationId** | **String**|  | |
 | **body** | **[String]**| messageIds | [optional] |
 {: class="table-striped"}
 

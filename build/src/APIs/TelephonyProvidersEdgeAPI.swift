@@ -1526,6 +1526,270 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticNslookup(edgeId: String, completion: @escaping ((_ data: EdgeNetworkDiagnosticResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: edgeId)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnosticResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "diagnostics" : "aeiou",
+  "commandCorrelationId" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnosticResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticPing(edgeId: String, completion: @escaping ((_ data: EdgeNetworkDiagnosticResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: edgeId)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnosticResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "diagnostics" : "aeiou",
+  "commandCorrelationId" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnosticResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticRoute(edgeId: String, completion: @escaping ((_ data: EdgeNetworkDiagnosticResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: edgeId)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnosticResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "diagnostics" : "aeiou",
+  "commandCorrelationId" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnosticResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticTracepath(edgeId: String, completion: @escaping ((_ data: EdgeNetworkDiagnosticResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: edgeId)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnosticResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get networking-related information from an Edge for a target IP or host.
+     
+     - GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "diagnostics" : "aeiou",
+  "commandCorrelationId" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnosticResponse> 
+     */
+    open class func getTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: String) -> RequestBuilder<EdgeNetworkDiagnosticResponse> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnosticResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**
@@ -10838,6 +11102,274 @@ open class TelephonyProvidersEdgeAPI {
         let requestBuilder: RequestBuilder<TrunkRecordingEnabledCount>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticNslookup(edgeId: String, body: EdgeNetworkDiagnosticRequest, completion: @escaping ((_ data: EdgeNetworkDiagnostic?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: edgeId, body: body)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnostic>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnostic> 
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticNslookupWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Ping Request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticPing(edgeId: String, body: EdgeNetworkDiagnosticRequest, completion: @escaping ((_ data: EdgeNetworkDiagnostic?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: edgeId, body: body)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnostic>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Ping Request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnostic> 
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticPingWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Route request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticRoute(edgeId: String, body: EdgeNetworkDiagnosticRequest, completion: @escaping ((_ data: EdgeNetworkDiagnostic?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: edgeId, body: body)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnostic>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Route request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnostic> 
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticRouteWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticTracepath(edgeId: String, body: EdgeNetworkDiagnosticRequest, completion: @escaping ((_ data: EdgeNetworkDiagnostic?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: edgeId, body: body)
+        requestBuilder.execute { (response: Response<EdgeNetworkDiagnostic>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+     
+     - POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter edgeId: (path) Edge Id 
+     - parameter body: (body) request payload to get network diagnostic 
+
+     - returns: RequestBuilder<EdgeNetworkDiagnostic> 
+     */
+    open class func postTelephonyProvidersEdgeDiagnosticTracepathWithRequestBuilder(edgeId: String, body: EdgeNetworkDiagnosticRequest) -> RequestBuilder<EdgeNetworkDiagnostic> {
+        var path = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath"
+        let edgeIdPreEscape = "\(edgeId)"
+        let edgeIdPostEscape = edgeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{edgeId}", with: edgeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EdgeNetworkDiagnostic>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
     

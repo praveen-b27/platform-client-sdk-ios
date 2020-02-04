@@ -26,6 +26,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId**](TelephonyProvidersEdgeAPI.html#getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId) | Get a json schema (Deprecated) |
 | [**getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId**](TelephonyProvidersEdgeAPI.html#getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId) | Get metadata for a schema (Deprecated) |
 | [**getTelephonyProvidersEdge**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdge) | Get edge. |
+| [**getTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeDiagnosticNslookup) | Get networking-related information from an Edge for a target IP or host. |
+| [**getTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeDiagnosticPing) | Get networking-related information from an Edge for a target IP or host. |
+| [**getTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeDiagnosticRoute) | Get networking-related information from an Edge for a target IP or host. |
+| [**getTelephonyProvidersEdgeDiagnosticTracepath**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeDiagnosticTracepath) | Get networking-related information from an Edge for a target IP or host. |
 | [**getTelephonyProvidersEdgeLine**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLine) | Get line |
 | [**getTelephonyProvidersEdgeLines**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLines) | Get the list of lines. |
 | [**getTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeLogicalinterface) | Get an edge logical interface |
@@ -88,6 +92,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesTrunks**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesTrunks) | Get the list of available trunks. |
 | [**getTelephonyProvidersEdgesTrunksMetrics**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesTrunksMetrics) | Get the metrics for a list of trunks. |
 | [**getTelephonyProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesTrunkswithrecording) | Get Counts of trunks that have recording disabled or enabled |
+| [**postTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeDiagnosticNslookup) | Nslookup request command to collect networking-related information from an Edge for a target IP or host. |
+| [**postTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeDiagnosticPing) | Ping Request command to collect networking-related information from an Edge for a target IP or host. |
+| [**postTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeDiagnosticRoute) | Route request command to collect networking-related information from an Edge for a target IP or host. |
+| [**postTelephonyProvidersEdgeDiagnosticTracepath**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeDiagnosticTracepath) | Tracepath request command to collect networking-related information from an Edge for a target IP or host. |
 | [**postTelephonyProvidersEdgeLogicalinterfaces**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeLogicalinterfaces) | Create an edge logical interface. |
 | [**postTelephonyProvidersEdgeLogsJobUpload**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeLogsJobUpload) | Request that the specified fileIds be uploaded from the Edge. |
 | [**postTelephonyProvidersEdgeLogsJobs**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeLogsJobs) | Create a job to upload a list of Edge logs. |
@@ -1129,6 +1137,214 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdge(edgeId: edgeId, expand: expa
 ### Return type
 
 [**Edge**](Edge.html)
+
+<a name="getTelephonyProvidersEdgeDiagnosticNslookup"></a>
+
+# **getTelephonyProvidersEdgeDiagnosticNslookup**
+
+
+
+> [EdgeNetworkDiagnosticResponse](EdgeNetworkDiagnosticResponse.html) getTelephonyProvidersEdgeDiagnosticNslookup(edgeId)
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticNslookup(edgeId: edgeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticNslookup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+<a name="getTelephonyProvidersEdgeDiagnosticPing"></a>
+
+# **getTelephonyProvidersEdgeDiagnosticPing**
+
+
+
+> [EdgeNetworkDiagnosticResponse](EdgeNetworkDiagnosticResponse.html) getTelephonyProvidersEdgeDiagnosticPing(edgeId)
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticPing(edgeId: edgeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticPing was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+<a name="getTelephonyProvidersEdgeDiagnosticRoute"></a>
+
+# **getTelephonyProvidersEdgeDiagnosticRoute**
+
+
+
+> [EdgeNetworkDiagnosticResponse](EdgeNetworkDiagnosticResponse.html) getTelephonyProvidersEdgeDiagnosticRoute(edgeId)
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticRoute(edgeId: edgeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticRoute was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
+
+<a name="getTelephonyProvidersEdgeDiagnosticTracepath"></a>
+
+# **getTelephonyProvidersEdgeDiagnosticTracepath**
+
+
+
+> [EdgeNetworkDiagnosticResponse](EdgeNetworkDiagnosticResponse.html) getTelephonyProvidersEdgeDiagnosticTracepath(edgeId)
+
+Get networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticTracepath(edgeId: edgeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticTracepath was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
 
 <a name="getTelephonyProvidersEdgeLine"></a>
 
@@ -4549,6 +4765,222 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkswithrecording(trunkTyp
 ### Return type
 
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html)
+
+<a name="postTelephonyProvidersEdgeDiagnosticNslookup"></a>
+
+# **postTelephonyProvidersEdgeDiagnosticNslookup**
+
+
+
+> [EdgeNetworkDiagnostic](EdgeNetworkDiagnostic.html) postTelephonyProvidersEdgeDiagnosticNslookup(edgeId, body)
+
+Nslookup request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+let body: EdgeNetworkDiagnosticRequest = new EdgeNetworkDiagnosticRequest(...) // request payload to get network diagnostic
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticNslookup(edgeId: edgeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticNslookup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+<a name="postTelephonyProvidersEdgeDiagnosticPing"></a>
+
+# **postTelephonyProvidersEdgeDiagnosticPing**
+
+
+
+> [EdgeNetworkDiagnostic](EdgeNetworkDiagnostic.html) postTelephonyProvidersEdgeDiagnosticPing(edgeId, body)
+
+Ping Request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+let body: EdgeNetworkDiagnosticRequest = new EdgeNetworkDiagnosticRequest(...) // request payload to get network diagnostic
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticPing(edgeId: edgeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticPing was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+<a name="postTelephonyProvidersEdgeDiagnosticRoute"></a>
+
+# **postTelephonyProvidersEdgeDiagnosticRoute**
+
+
+
+> [EdgeNetworkDiagnostic](EdgeNetworkDiagnostic.html) postTelephonyProvidersEdgeDiagnosticRoute(edgeId, body)
+
+Route request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+let body: EdgeNetworkDiagnosticRequest = new EdgeNetworkDiagnosticRequest(...) // request payload to get network diagnostic
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticRoute(edgeId: edgeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticRoute was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
+
+<a name="postTelephonyProvidersEdgeDiagnosticTracepath"></a>
+
+# **postTelephonyProvidersEdgeDiagnosticTracepath**
+
+
+
+> [EdgeNetworkDiagnostic](EdgeNetworkDiagnostic.html) postTelephonyProvidersEdgeDiagnosticTracepath(edgeId, body)
+
+Tracepath request command to collect networking-related information from an Edge for a target IP or host.
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge Id
+let body: EdgeNetworkDiagnosticRequest = new EdgeNetworkDiagnosticRequest(...) // request payload to get network diagnostic
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticTracepath(edgeId: edgeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgeDiagnosticTracepath was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **edgeId** | **String**| Edge Id | |
+| **body** | [**EdgeNetworkDiagnosticRequest**](EdgeNetworkDiagnosticRequest.html)| request payload to get network diagnostic | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EdgeNetworkDiagnostic**](EdgeNetworkDiagnostic.html)
 
 <a name="postTelephonyProvidersEdgeLogicalinterfaces"></a>
 

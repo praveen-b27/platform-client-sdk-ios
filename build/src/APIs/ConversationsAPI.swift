@@ -20326,7 +20326,7 @@ open class ConversationsAPI {
      
      Get messages in batch
      
-     - parameter conversationId: (path) conversationId 
+     - parameter conversationId: (path)  
      - parameter body: (body) messageIds (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -20353,7 +20353,7 @@ open class ConversationsAPI {
      Get messages in batch
      
      - POST /api/v2/conversations/messages/{conversationId}/messages/bulk
-     - 
+     - The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -20635,7 +20635,7 @@ open class ConversationsAPI {
   "previousUri" : "aeiou"
 }}]
      
-     - parameter conversationId: (path) conversationId 
+     - parameter conversationId: (path)  
      - parameter body: (body) messageIds (optional)
 
      - returns: RequestBuilder<TextMessageListing> 

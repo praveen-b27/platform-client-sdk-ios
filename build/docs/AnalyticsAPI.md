@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
 | [**getAnalyticsConversationsDetailsJobResults**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsReportingExports**](AnalyticsAPI.html#getAnalyticsReportingExports) | Get all view export requests for a user |
+| [**getAnalyticsReportingExportsMetadata**](AnalyticsAPI.html#getAnalyticsReportingExportsMetadata) | Get all export metadata |
 | [**getAnalyticsReportingMetadata**](AnalyticsAPI.html#getAnalyticsReportingMetadata) | Get list of reporting metadata. |
 | [**getAnalyticsReportingReportIdMetadata**](AnalyticsAPI.html#getAnalyticsReportingReportIdMetadata) | Get a reporting metadata. |
 | [**getAnalyticsReportingReportformats**](AnalyticsAPI.html#getAnalyticsReportingReportformats) | Get a list of report formats |
@@ -454,6 +455,54 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**ReportingExportJobListing**](ReportingExportJobListing.html)
+
+<a name="getAnalyticsReportingExportsMetadata"></a>
+
+# **getAnalyticsReportingExportsMetadata**
+
+
+
+> [ReportingExportMetadataJobListing](ReportingExportMetadataJobListing.html) getAnalyticsReportingExportsMetadata()
+
+Get all export metadata
+
+
+
+Wraps GET /api/v2/analytics/reporting/exports/metadata  
+
+Requires ANY permissions: 
+
+* analytics:dataExport:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AnalyticsAPI.getAnalyticsReportingExportsMetadata() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsReportingExportsMetadata was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ReportingExportMetadataJobListing**](ReportingExportMetadataJobListing.html)
 
 <a name="getAnalyticsReportingMetadata"></a>
 

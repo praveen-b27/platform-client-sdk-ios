@@ -1511,7 +1511,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -2033,23 +2051,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -2723,7 +2726,25 @@ open class ConversationsAPI {
         } ],
         "subject" : "aeiou",
         "messagesSent" : 123,
-        "errorInfo" : "",
+        "errorInfo" : {
+          "messageWithParams" : "aeiou",
+          "code" : "aeiou",
+          "entityName" : "aeiou",
+          "entityId" : "aeiou",
+          "contextId" : "aeiou",
+          "details" : [ {
+            "fieldName" : "aeiou",
+            "entityName" : "aeiou",
+            "errorCode" : "aeiou",
+            "entityId" : "aeiou"
+          } ],
+          "messageParams" : {
+            "key" : "aeiou"
+          },
+          "message" : "aeiou",
+          "errors" : [ "" ],
+          "status" : 123
+        },
         "messageId" : "aeiou",
         "segments" : [ "" ],
         "scriptId" : "aeiou",
@@ -3245,23 +3266,8 @@ open class ConversationsAPI {
         "held" : true,
         "recording" : true,
         "errorInfo" : {
-          "messageWithParams" : "aeiou",
           "code" : "aeiou",
-          "entityName" : "aeiou",
-          "entityId" : "aeiou",
-          "contextId" : "aeiou",
-          "details" : [ {
-            "fieldName" : "aeiou",
-            "entityName" : "aeiou",
-            "errorCode" : "aeiou",
-            "entityId" : "aeiou"
-          } ],
-          "messageParams" : {
-            "key" : "aeiou"
-          },
-          "message" : "aeiou",
-          "errors" : [ "" ],
-          "status" : 123
+          "message" : "aeiou"
         },
         "segments" : [ {
           "howEnded" : "aeiou",
@@ -3509,23 +3515,8 @@ open class ConversationsAPI {
     "held" : true,
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "recording" : true,
     "alertingTimeoutMs" : 123,
@@ -3865,23 +3856,8 @@ open class ConversationsAPI {
     "held" : true,
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "callbackNumbers" : [ "aeiou" ],
     "skipEnabled" : true,
@@ -4211,23 +4187,8 @@ open class ConversationsAPI {
       "held" : true,
       "wrapupTimeoutMs" : 123,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "callbackNumbers" : [ "aeiou" ],
       "skipEnabled" : true,
@@ -4388,23 +4349,8 @@ open class ConversationsAPI {
       "held" : true,
       "wrapupTimeoutMs" : 123,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "recording" : true,
       "alertingTimeoutMs" : 123,
@@ -5304,23 +5250,8 @@ open class ConversationsAPI {
     "avatarImageUrl" : "aeiou",
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "alertingTimeoutMs" : 123,
     "roomId" : "aeiou",
@@ -5856,23 +5787,8 @@ open class ConversationsAPI {
       "avatarImageUrl" : "aeiou",
       "wrapupTimeoutMs" : 123,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "alertingTimeoutMs" : 123,
       "roomId" : "aeiou",
@@ -6023,23 +5939,8 @@ open class ConversationsAPI {
     "held" : true,
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "alertingTimeoutMs" : 123,
     "providerEventTime" : "2000-01-23T04:56:07.000+0000",
@@ -6354,23 +6255,8 @@ open class ConversationsAPI {
       "held" : true,
       "wrapupTimeoutMs" : 123,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "alertingTimeoutMs" : 123,
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
@@ -6530,23 +6416,8 @@ open class ConversationsAPI {
     "subject" : "aeiou",
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "alertingTimeoutMs" : 123,
     "conversationRoutingData" : {
@@ -7148,23 +7019,8 @@ open class ConversationsAPI {
       "subject" : "aeiou",
       "wrapupTimeoutMs" : 123,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "alertingTimeoutMs" : 123,
       "conversationRoutingData" : {
@@ -7316,23 +7172,8 @@ open class ConversationsAPI {
     "held" : true,
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "type" : "aeiou",
     "alertingTimeoutMs" : 123,
@@ -8101,23 +7942,8 @@ open class ConversationsAPI {
       "subject" : "aeiou",
       "wrapupTimeoutMs" : 123,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "alertingTimeoutMs" : 123,
       "conversationRoutingData" : {
@@ -9456,7 +9282,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -9978,23 +9822,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -10606,7 +10435,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -11128,23 +10975,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -11683,7 +11515,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -12205,23 +12055,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -12760,7 +12595,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -13282,23 +13135,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -13837,7 +13675,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -14359,23 +14215,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -14914,7 +14755,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -15436,23 +15295,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -16884,7 +16728,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -17406,23 +17268,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -17955,7 +17802,25 @@ open class ConversationsAPI {
       } ],
       "subject" : "aeiou",
       "messagesSent" : 123,
-      "errorInfo" : "",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "messageId" : "aeiou",
       "segments" : [ "" ],
       "scriptId" : "aeiou",
@@ -18477,23 +18342,8 @@ open class ConversationsAPI {
       "held" : true,
       "recording" : true,
       "errorInfo" : {
-        "messageWithParams" : "aeiou",
         "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
+        "message" : "aeiou"
       },
       "segments" : [ {
         "howEnded" : "aeiou",
@@ -19171,23 +19021,8 @@ open class ConversationsAPI {
     "avatarImageUrl" : "aeiou",
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "alertingTimeoutMs" : 123,
     "roomId" : "aeiou",
@@ -19403,23 +19238,8 @@ open class ConversationsAPI {
     "subject" : "aeiou",
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "alertingTimeoutMs" : 123,
     "conversationRoutingData" : {
@@ -19612,6 +19432,94 @@ open class ConversationsAPI {
     
     
     
+    /**
+     
+     Copy attachments from an email message to the current draft.
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter body: (body) Copy Attachment Request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsEmailMessagesDraftAttachmentsCopy(conversationId: String, body: CopyAttachmentsRequest, completion: @escaping ((_ data: EmailMessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsEmailMessagesDraftAttachmentsCopyWithRequestBuilder(conversationId: conversationId, body: body)
+        requestBuilder.execute { (response: Response<EmailMessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Copy attachments from an email message to the current draft.
+     
+     - POST /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cc" : [ "" ],
+  "bcc" : [ "" ],
+  "attachments" : [ {
+    "inlineImage" : true,
+    "contentUri" : "aeiou",
+    "name" : "aeiou",
+    "contentLength" : 123,
+    "attachmentId" : "aeiou",
+    "contentType" : "aeiou"
+  } ],
+  "subject" : "aeiou",
+  "selfUri" : "aeiou",
+  "textBody" : "aeiou",
+  "htmlBody" : "aeiou",
+  "historyIncluded" : true,
+  "name" : "aeiou",
+  "from" : "",
+  "id" : "aeiou",
+  "to" : [ {
+    "name" : "aeiou",
+    "email" : "aeiou"
+  } ],
+  "time" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter body: (body) Copy Attachment Request 
+
+     - returns: RequestBuilder<EmailMessage> 
+     */
+    open class func postConversationsEmailMessagesDraftAttachmentsCopyWithRequestBuilder(conversationId: String, body: CopyAttachmentsRequest) -> RequestBuilder<EmailMessage> {
+        var path = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
     
     
     /**
@@ -19727,23 +19635,8 @@ open class ConversationsAPI {
     "subject" : "aeiou",
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "alertingTimeoutMs" : 123,
     "conversationRoutingData" : {
@@ -20768,23 +20661,8 @@ open class ConversationsAPI {
     "held" : true,
     "wrapupTimeoutMs" : 123,
     "errorInfo" : {
-      "messageWithParams" : "aeiou",
       "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
+      "message" : "aeiou"
     },
     "type" : "aeiou",
     "alertingTimeoutMs" : 123,

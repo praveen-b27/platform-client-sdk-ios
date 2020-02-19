@@ -20,7 +20,7 @@ public class TimeOffRequestResponse: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The user associated with this time off request */
-    public var user: User?
+    public var user: UserReference?
     /** Whether this is a full day request (false means partial day) */
     public var isFullDayRequest: Bool?
     /** Whether this request has been marked as read by the agent */
@@ -38,11 +38,11 @@ public class TimeOffRequestResponse: Codable {
     /** Notes about the time off request */
     public var notes: String?
     /** The user who submitted this time off request */
-    public var submittedBy: User?
+    public var submittedBy: UserReference?
     /** The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var submittedDate: Date?
     /** The user who reviewed this time off request */
-    public var reviewedBy: User?
+    public var reviewedBy: UserReference?
     /** The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var reviewedDate: Date?
     /** The user who last modified this TimeOffRequestResponse */
@@ -54,7 +54,7 @@ public class TimeOffRequestResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, user: User?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, status: Status?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, submittedBy: User?, submittedDate: Date?, reviewedBy: User?, reviewedDate: Date?, modifiedBy: UserReference?, modifiedDate: Date?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, user: UserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, status: Status?, partialDayStartDateTimes: [Date]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, submittedBy: UserReference?, submittedDate: Date?, reviewedBy: UserReference?, reviewedDate: Date?, modifiedBy: UserReference?, modifiedDate: Date?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         
         self._id = _id
         

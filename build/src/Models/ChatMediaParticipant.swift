@@ -82,7 +82,7 @@ public class ChatMediaParticipant: Codable {
     /** A list of ad-hoc attributes for the participant. */
     public var attributes: [String:String]?
     /** If the conversation ends in error, contains additional error details. */
-    public var errorInfo: ErrorBody?
+    public var errorInfo: ErrorInfo?
     /** The Engage script that should be used by this participant. */
     public var script: DomainEntityRef?
     /** The amount of time the participant has to complete wrap-up. */
@@ -116,7 +116,7 @@ public class ChatMediaParticipant: Codable {
     /** If available, the URI to the avatar image of this communication. */
     public var avatarImageUrl: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorBody?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, roomId: String?, avatarImageUrl: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, roomId: String?, avatarImageUrl: String?) {
         
         self._id = _id
         

@@ -1009,6 +1009,7 @@ open class AnalyticsAPI {
       "surveyQuestionGroupScore" : "",
       "abandonDurationsMilliseconds" : [ "" ],
       "waitingDurationSortOrder" : "aeiou",
+      "hasMedia" : true,
       "messageTypes" : [ "aeiou" ],
       "surveyPromoterScore" : "",
       "isSurveyed" : true,
@@ -1033,6 +1034,7 @@ open class AnalyticsAPI {
       "agentDurationSortOrder" : "aeiou",
       "isConsulted" : true,
       "externalOrgIds" : [ "aeiou" ],
+      "locationIds" : [ "aeiou" ],
       "languageIds" : [ "aeiou" ],
       "agentName" : "aeiou",
       "addressTos" : [ "aeiou" ],
@@ -1045,6 +1047,7 @@ open class AnalyticsAPI {
       "directions" : [ "aeiou" ],
       "conversationIds" : [ "aeiou" ],
       "surveyNpsScore" : "",
+      "reportsTos" : [ "aeiou" ],
       "hasJourneyCustomerId" : true,
       "conversationProperties" : {
         "isAcd" : true,
@@ -1097,6 +1100,7 @@ open class AnalyticsAPI {
       "flowIds" : [ "aeiou" ],
       "mediaTypes" : [ "aeiou" ],
       "hasJourneyVisitId" : true,
+      "roleIds" : [ "aeiou" ],
       "statusList" : [ "aeiou" ],
       "externalContactIds" : [ "aeiou" ],
       "dnisList" : [ "aeiou" ],
@@ -1142,6 +1146,85 @@ open class AnalyticsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ReportingExportJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get all export metadata
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsReportingExportsMetadata(completion: @escaping ((_ data: ReportingExportMetadataJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingExportsMetadataWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ReportingExportMetadataJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get all export metadata
+     
+     - GET /api/v2/analytics/reporting/exports/metadata
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "requiredFilters" : [ "aeiou" ],
+    "supportedFilters" : [ "aeiou" ],
+    "requiredColumnIds" : [ "aeiou" ],
+    "availableColumnIds" : [ "aeiou" ],
+    "dependentColumnIds" : {
+      "key" : [ "aeiou" ]
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "viewType" : "aeiou",
+    "id" : "aeiou",
+    "dateLimitations" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<ReportingExportMetadataJobListing> 
+     */
+    open class func getAnalyticsReportingExportsMetadataWithRequestBuilder() -> RequestBuilder<ReportingExportMetadataJobListing> {
+        let path = "/api/v2/analytics/reporting/exports/metadata"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ReportingExportMetadataJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2953,6 +3036,7 @@ open class AnalyticsAPI {
     "surveyQuestionGroupScore" : "",
     "abandonDurationsMilliseconds" : [ "" ],
     "waitingDurationSortOrder" : "aeiou",
+    "hasMedia" : true,
     "messageTypes" : [ "aeiou" ],
     "surveyPromoterScore" : "",
     "isSurveyed" : true,
@@ -2977,6 +3061,7 @@ open class AnalyticsAPI {
     "agentDurationSortOrder" : "aeiou",
     "isConsulted" : true,
     "externalOrgIds" : [ "aeiou" ],
+    "locationIds" : [ "aeiou" ],
     "languageIds" : [ "aeiou" ],
     "agentName" : "aeiou",
     "addressTos" : [ "aeiou" ],
@@ -2989,6 +3074,7 @@ open class AnalyticsAPI {
     "directions" : [ "aeiou" ],
     "conversationIds" : [ "aeiou" ],
     "surveyNpsScore" : "",
+    "reportsTos" : [ "aeiou" ],
     "hasJourneyCustomerId" : true,
     "conversationProperties" : {
       "isAcd" : true,
@@ -3041,6 +3127,7 @@ open class AnalyticsAPI {
     "flowIds" : [ "aeiou" ],
     "mediaTypes" : [ "aeiou" ],
     "hasJourneyVisitId" : true,
+    "roleIds" : [ "aeiou" ],
     "statusList" : [ "aeiou" ],
     "externalContactIds" : [ "aeiou" ],
     "dnisList" : [ "aeiou" ],

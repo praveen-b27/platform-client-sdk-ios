@@ -88,6 +88,10 @@ title: ViewFilter
 | **hasJourneyVisitId** | **Bool** | Indicates filtering for Journey visit id | [optional] |
 | **oauthClientIds** | **[String]** | A list of OAuth client IDs | [optional] |
 | **apiOperations** | **[String]** | A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]) | [optional] |
+| **hasMedia** | **Bool** | Indicates filtering for presence of MMS media | [optional] |
+| **roleIds** | **[String]** | The role Ids used to filter the view | [optional] |
+| **reportsTos** | **[String]** | The report to user IDs used to filter the view | [optional] |
+| **locationIds** | **[String]** | The location Ids used to filter the view | [optional] |
 {: class="table table-striped"}
 
 

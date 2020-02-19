@@ -23,10 +23,14 @@ public class InboundDomain: Codable {
     public var mxRecordStatus: MxRecordStatus?
     /** Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email. */
     public var subDomain: Bool?
+    /** The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false. */
+    public var mailFromSettings: MailFromResult?
+    /** The custom SMTP server integration to use when sending outbound emails from this domain. */
+    public var customSMTPServer: DomainEntityRef?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, mxRecordStatus: MxRecordStatus?, subDomain: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, mxRecordStatus: MxRecordStatus?, subDomain: Bool?, mailFromSettings: MailFromResult?, customSMTPServer: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         
@@ -35,6 +39,10 @@ public class InboundDomain: Codable {
         self.mxRecordStatus = mxRecordStatus
         
         self.subDomain = subDomain
+        
+        self.mailFromSettings = mailFromSettings
+        
+        self.customSMTPServer = customSMTPServer
         
         self.selfUri = selfUri
         
@@ -45,6 +53,8 @@ public class InboundDomain: Codable {
         case name
         case mxRecordStatus
         case subDomain
+        case mailFromSettings
+        case customSMTPServer
         case selfUri
     }
 

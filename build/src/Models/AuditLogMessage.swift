@@ -32,6 +32,10 @@ public class AuditLogMessage: Codable {
         case readAll = "ReadAll"
         case execute = "Execute"
         case publish = "Publish"
+        case authorize = "Authorize"
+        case deauthorize = "Deauthorize"
+        case authenticate = "Authenticate"
+        case changePassword = "ChangePassword"
     }
     public enum EntityType: String, Codable { 
         case document = "Document"
@@ -41,6 +45,9 @@ public class AuditLogMessage: Codable {
         case voicemailUserPolicy = "VoicemailUserPolicy"
         case wrapupCode = "WrapupCode"
         case accessToken = "AccessToken"
+        case oauthclient = "OAuthClient"
+        case authOrganization = "AuthOrganization"
+        case authUser = "AuthUser"
         case bulkActions = "BulkActions"
         case feedback = "Feedback"
         case topic = "Topic"

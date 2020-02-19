@@ -25,6 +25,8 @@ public class ActivityCode: Codable {
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
+    /** The URI for this object */
+    public var selfUri: String?
     /** The name of the activity code. Default activity codes will be created with an empty name */
     public var name: String?
     /** Whether this activity code is active or has been deleted */
@@ -43,12 +45,12 @@ public class ActivityCode: Codable {
     public var agentTimeOffSelectable: Bool?
     /** Version metadata for the associated management unit&#39;s list of activity codes */
     public var metadata: WfmVersionedEntityMetadata?
-    /** The URI for this object */
-    public var selfUri: String?
 
-    public init(_id: String?, name: String?, isActive: Bool?, isDefault: Bool?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, selfUri: String?, name: String?, isActive: Bool?, isDefault: Bool?, category: Category?, lengthInMinutes: Int?, countsAsPaidTime: Bool?, countsAsWorkTime: Bool?, agentTimeOffSelectable: Bool?, metadata: WfmVersionedEntityMetadata?) {
         
         self._id = _id
+        
+        self.selfUri = selfUri
         
         self.name = name
         
@@ -68,12 +70,11 @@ public class ActivityCode: Codable {
         
         self.metadata = metadata
         
-        self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case selfUri
         case name
         case isActive
         case isDefault
@@ -83,7 +84,6 @@ public class ActivityCode: Codable {
         case countsAsWorkTime
         case agentTimeOffSelectable
         case metadata
-        case selfUri
     }
 
 

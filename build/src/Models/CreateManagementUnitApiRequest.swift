@@ -23,16 +23,18 @@ public class CreateManagementUnitApiRequest: Codable {
     }
     /** The name of the management unit */
     public var name: String?
-    /** The default time zone to use for this management unit */
+    /** The default time zone to use for this management unit.  Moving to Business Unit */
     public var timeZone: String?
-    /** The configured first day of the week for scheduling and forecasting purposes */
+    /** The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit */
     public var startDayOfWeek: StartDayOfWeek?
     /** The configuration for the management unit.  If omitted, reasonable defaults will be assigned */
     public var settings: CreateManagementUnitSettingsRequest?
     /** The id of the division to which this management unit belongs.  Defaults to home division ID */
     public var divisionId: String?
+    /** The id of the business unit to which this management unit belongs.  Required after business unit launch */
+    public var businessUnitId: String?
 
-    public init(name: String?, timeZone: String?, startDayOfWeek: StartDayOfWeek?, settings: CreateManagementUnitSettingsRequest?, divisionId: String?) {
+    public init(name: String?, timeZone: String?, startDayOfWeek: StartDayOfWeek?, settings: CreateManagementUnitSettingsRequest?, divisionId: String?, businessUnitId: String?) {
         
         self.name = name
         
@@ -43,6 +45,8 @@ public class CreateManagementUnitApiRequest: Codable {
         self.settings = settings
         
         self.divisionId = divisionId
+        
+        self.businessUnitId = businessUnitId
         
     }
 

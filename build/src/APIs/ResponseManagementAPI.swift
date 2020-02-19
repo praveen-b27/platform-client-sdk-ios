@@ -165,6 +165,7 @@ open class ResponseManagementAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "responseType" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : {
       "addresses" : [ "" ],
@@ -488,6 +489,7 @@ open class ResponseManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : {
     "addresses" : [ "" ],
@@ -819,6 +821,14 @@ open class ResponseManagementAPI {
       "key" : "{}"
     }
   },
+  "selfUri" : "aeiou",
+  "libraries" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "version" : 123,
+  "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "texts" : [ {
     "contentType" : "aeiou",
@@ -1072,15 +1082,13 @@ open class ResponseManagementAPI {
     }
   },
   "interactionType" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "libraries" : [ {
-    "selfUri" : "aeiou",
+  "messagingTemplate" : {
     "name" : "aeiou",
-    "id" : "aeiou"
-  } ],
-  "id" : "aeiou",
-  "version" : 123
+    "namespace" : "aeiou",
+    "language" : "aeiou"
+  },
+  "name" : "aeiou",
+  "id" : "aeiou"
 }}]
      
      - parameter responseId: (path) Response ID 
@@ -1181,6 +1189,14 @@ open class ResponseManagementAPI {
         "key" : "{}"
       }
     },
+    "selfUri" : "aeiou",
+    "libraries" : [ {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "version" : 123,
+    "responseType" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "texts" : [ {
       "contentType" : "aeiou",
@@ -1434,15 +1450,13 @@ open class ResponseManagementAPI {
       }
     },
     "interactionType" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "libraries" : [ {
-      "selfUri" : "aeiou",
+    "messagingTemplate" : {
       "name" : "aeiou",
-      "id" : "aeiou"
-    } ],
-    "id" : "aeiou",
-    "version" : 123
+      "namespace" : "aeiou",
+      "language" : "aeiou"
+    },
+    "name" : "aeiou",
+    "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -1525,6 +1539,7 @@ open class ResponseManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : {
     "addresses" : [ "" ],
@@ -1850,6 +1865,14 @@ open class ResponseManagementAPI {
       "key" : "{}"
     }
   },
+  "selfUri" : "aeiou",
+  "libraries" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "version" : 123,
+  "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "texts" : [ {
     "contentType" : "aeiou",
@@ -2103,15 +2126,13 @@ open class ResponseManagementAPI {
     }
   },
   "interactionType" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "libraries" : [ {
-    "selfUri" : "aeiou",
+  "messagingTemplate" : {
     "name" : "aeiou",
-    "id" : "aeiou"
-  } ],
-  "id" : "aeiou",
-  "version" : 123
+    "namespace" : "aeiou",
+    "language" : "aeiou"
+  },
+  "name" : "aeiou",
+  "id" : "aeiou"
 }}]
      
      - parameter body: (body) Response 
@@ -2193,6 +2214,14 @@ open class ResponseManagementAPI {
           "key" : "{}"
         }
       },
+      "selfUri" : "aeiou",
+      "libraries" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "version" : 123,
+      "responseType" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "texts" : [ {
         "contentType" : "aeiou",
@@ -2446,15 +2475,13 @@ open class ResponseManagementAPI {
         }
       },
       "interactionType" : "aeiou",
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "libraries" : [ {
-        "selfUri" : "aeiou",
+      "messagingTemplate" : {
         "name" : "aeiou",
-        "id" : "aeiou"
-      } ],
-      "id" : "aeiou",
-      "version" : 123
+        "namespace" : "aeiou",
+        "language" : "aeiou"
+      },
+      "name" : "aeiou",
+      "id" : "aeiou"
     } ],
     "firstUri" : "aeiou",
     "selfUri" : "aeiou",
@@ -2524,6 +2551,7 @@ open class ResponseManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : {
     "addresses" : [ "" ],
@@ -2856,6 +2884,14 @@ open class ResponseManagementAPI {
       "key" : "{}"
     }
   },
+  "selfUri" : "aeiou",
+  "libraries" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "version" : 123,
+  "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "texts" : [ {
     "contentType" : "aeiou",
@@ -3109,15 +3145,13 @@ open class ResponseManagementAPI {
     }
   },
   "interactionType" : "aeiou",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "libraries" : [ {
-    "selfUri" : "aeiou",
+  "messagingTemplate" : {
     "name" : "aeiou",
-    "id" : "aeiou"
-  } ],
-  "id" : "aeiou",
-  "version" : 123
+    "namespace" : "aeiou",
+    "language" : "aeiou"
+  },
+  "name" : "aeiou",
+  "id" : "aeiou"
 }}]
      
      - parameter responseId: (path) Response ID 

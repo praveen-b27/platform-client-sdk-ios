@@ -14,6 +14,8 @@ public class WeekSchedule: Codable {
 
     /** The globally unique identifier for the object. */
     public var _id: String?
+    /** The URI for this object */
+    public var selfUri: String?
     /** First day of this week schedule in yyyy-MM-dd format */
     public var weekDate: String?
     /** Description of the week schedule */
@@ -32,12 +34,12 @@ public class WeekSchedule: Codable {
     public var headcountForecast: HeadcountForecast?
     /** Version of agent schedules in the week schedule */
     public var agentSchedulesVersion: Int?
-    /** The URI for this object */
-    public var selfUri: String?
 
-    public init(_id: String?, weekDate: String?, _description: String?, published: Bool?, generationResults: WeekScheduleGenerationResult?, shortTermForecast: ShortTermForecastReference?, metadata: WfmVersionedEntityMetadata?, userSchedules: [String:UserSchedule]?, headcountForecast: HeadcountForecast?, agentSchedulesVersion: Int?, selfUri: String?) {
+    public init(_id: String?, selfUri: String?, weekDate: String?, _description: String?, published: Bool?, generationResults: WeekScheduleGenerationResult?, shortTermForecast: ShortTermForecastReference?, metadata: WfmVersionedEntityMetadata?, userSchedules: [String:UserSchedule]?, headcountForecast: HeadcountForecast?, agentSchedulesVersion: Int?) {
         
         self._id = _id
+        
+        self.selfUri = selfUri
         
         self.weekDate = weekDate
         
@@ -57,12 +59,11 @@ public class WeekSchedule: Codable {
         
         self.agentSchedulesVersion = agentSchedulesVersion
         
-        self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case selfUri
         case weekDate
         case _description = "description"
         case published
@@ -72,7 +73,6 @@ public class WeekSchedule: Codable {
         case userSchedules
         case headcountForecast
         case agentSchedulesVersion
-        case selfUri
     }
 
 

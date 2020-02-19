@@ -14,7 +14,7 @@ public class ManagementUnitSettingsRequest: Codable {
 
     /** Adherence settings for this management unit */
     public var adherence: AdherenceSettings?
-    /** Short term forecasting settings for this management unit */
+    /** Short term forecasting settings for this management unit.  Moving to Business Unit */
     public var shortTermForecasting: ShortTermForecastingSettings?
     /** Time off request settings for this management unit */
     public var timeOff: TimeOffRequestSettings?

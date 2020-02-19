@@ -24,7 +24,7 @@ public class WorkPlanShift: Codable {
     public var earliestStartTimeMinutesFromMidnight: Int?
     /** Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true */
     public var latestStartTimeMinutesFromMidnight: Int?
-    /** Whether the latest stop time constraint for the shift is enabled */
+    /** Whether the latest stop time constraint for the shift is enabled.  Deprecated, use constrainLatestStopTime instead */
     public var constrainStopTime: Bool?
     /** Whether the latest stop time constraint for the shift is enabled */
     public var constrainLatestStopTime: Bool?

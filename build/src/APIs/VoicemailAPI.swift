@@ -363,7 +363,25 @@ open class VoicemailAPI {
           } ],
           "subject" : "aeiou",
           "messagesSent" : 123,
-          "errorInfo" : "",
+          "errorInfo" : {
+            "messageWithParams" : "aeiou",
+            "code" : "aeiou",
+            "entityName" : "aeiou",
+            "entityId" : "aeiou",
+            "contextId" : "aeiou",
+            "details" : [ {
+              "fieldName" : "aeiou",
+              "entityName" : "aeiou",
+              "errorCode" : "aeiou",
+              "entityId" : "aeiou"
+            } ],
+            "messageParams" : {
+              "key" : "aeiou"
+            },
+            "message" : "aeiou",
+            "errors" : [ "" ],
+            "status" : 123
+          },
           "messageId" : "aeiou",
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -885,23 +903,8 @@ open class VoicemailAPI {
           "held" : true,
           "recording" : true,
           "errorInfo" : {
-            "messageWithParams" : "aeiou",
             "code" : "aeiou",
-            "entityName" : "aeiou",
-            "entityId" : "aeiou",
-            "contextId" : "aeiou",
-            "details" : [ {
-              "fieldName" : "aeiou",
-              "entityName" : "aeiou",
-              "errorCode" : "aeiou",
-              "entityId" : "aeiou"
-            } ],
-            "messageParams" : {
-              "key" : "aeiou"
-            },
-            "message" : "aeiou",
-            "errors" : [ "" ],
-            "status" : 123
+            "message" : "aeiou"
           },
           "segments" : [ {
             "howEnded" : "aeiou",
@@ -1723,7 +1726,25 @@ open class VoicemailAPI {
           } ],
           "subject" : "aeiou",
           "messagesSent" : 123,
-          "errorInfo" : "",
+          "errorInfo" : {
+            "messageWithParams" : "aeiou",
+            "code" : "aeiou",
+            "entityName" : "aeiou",
+            "entityId" : "aeiou",
+            "contextId" : "aeiou",
+            "details" : [ {
+              "fieldName" : "aeiou",
+              "entityName" : "aeiou",
+              "errorCode" : "aeiou",
+              "entityId" : "aeiou"
+            } ],
+            "messageParams" : {
+              "key" : "aeiou"
+            },
+            "message" : "aeiou",
+            "errors" : [ "" ],
+            "status" : 123
+          },
           "messageId" : "aeiou",
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -2245,23 +2266,8 @@ open class VoicemailAPI {
           "held" : true,
           "recording" : true,
           "errorInfo" : {
-            "messageWithParams" : "aeiou",
             "code" : "aeiou",
-            "entityName" : "aeiou",
-            "entityId" : "aeiou",
-            "contextId" : "aeiou",
-            "details" : [ {
-              "fieldName" : "aeiou",
-              "entityName" : "aeiou",
-              "errorCode" : "aeiou",
-              "entityId" : "aeiou"
-            } ],
-            "messageParams" : {
-              "key" : "aeiou"
-            },
-            "message" : "aeiou",
-            "errors" : [ "" ],
-            "status" : 123
+            "message" : "aeiou"
           },
           "segments" : [ {
             "howEnded" : "aeiou",
@@ -2707,7 +2713,25 @@ open class VoicemailAPI {
         } ],
         "subject" : "aeiou",
         "messagesSent" : 123,
-        "errorInfo" : "",
+        "errorInfo" : {
+          "messageWithParams" : "aeiou",
+          "code" : "aeiou",
+          "entityName" : "aeiou",
+          "entityId" : "aeiou",
+          "contextId" : "aeiou",
+          "details" : [ {
+            "fieldName" : "aeiou",
+            "entityName" : "aeiou",
+            "errorCode" : "aeiou",
+            "entityId" : "aeiou"
+          } ],
+          "messageParams" : {
+            "key" : "aeiou"
+          },
+          "message" : "aeiou",
+          "errors" : [ "" ],
+          "status" : 123
+        },
         "messageId" : "aeiou",
         "segments" : [ "" ],
         "scriptId" : "aeiou",
@@ -3229,23 +3253,8 @@ open class VoicemailAPI {
         "held" : true,
         "recording" : true,
         "errorInfo" : {
-          "messageWithParams" : "aeiou",
           "code" : "aeiou",
-          "entityName" : "aeiou",
-          "entityId" : "aeiou",
-          "contextId" : "aeiou",
-          "details" : [ {
-            "fieldName" : "aeiou",
-            "entityName" : "aeiou",
-            "errorCode" : "aeiou",
-            "entityId" : "aeiou"
-          } ],
-          "messageParams" : {
-            "key" : "aeiou"
-          },
-          "message" : "aeiou",
-          "errors" : [ "" ],
-          "status" : 123
+          "message" : "aeiou"
         },
         "segments" : [ {
           "howEnded" : "aeiou",
@@ -3717,7 +3726,25 @@ open class VoicemailAPI {
           } ],
           "subject" : "aeiou",
           "messagesSent" : 123,
-          "errorInfo" : "",
+          "errorInfo" : {
+            "messageWithParams" : "aeiou",
+            "code" : "aeiou",
+            "entityName" : "aeiou",
+            "entityId" : "aeiou",
+            "contextId" : "aeiou",
+            "details" : [ {
+              "fieldName" : "aeiou",
+              "entityName" : "aeiou",
+              "errorCode" : "aeiou",
+              "entityId" : "aeiou"
+            } ],
+            "messageParams" : {
+              "key" : "aeiou"
+            },
+            "message" : "aeiou",
+            "errors" : [ "" ],
+            "status" : 123
+          },
           "messageId" : "aeiou",
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -4239,23 +4266,8 @@ open class VoicemailAPI {
           "held" : true,
           "recording" : true,
           "errorInfo" : {
-            "messageWithParams" : "aeiou",
             "code" : "aeiou",
-            "entityName" : "aeiou",
-            "entityId" : "aeiou",
-            "contextId" : "aeiou",
-            "details" : [ {
-              "fieldName" : "aeiou",
-              "entityName" : "aeiou",
-              "errorCode" : "aeiou",
-              "entityId" : "aeiou"
-            } ],
-            "messageParams" : {
-              "key" : "aeiou"
-            },
-            "message" : "aeiou",
-            "errors" : [ "" ],
-            "status" : 123
+            "message" : "aeiou"
           },
           "segments" : [ {
             "howEnded" : "aeiou",
@@ -4705,7 +4717,25 @@ open class VoicemailAPI {
           } ],
           "subject" : "aeiou",
           "messagesSent" : 123,
-          "errorInfo" : "",
+          "errorInfo" : {
+            "messageWithParams" : "aeiou",
+            "code" : "aeiou",
+            "entityName" : "aeiou",
+            "entityId" : "aeiou",
+            "contextId" : "aeiou",
+            "details" : [ {
+              "fieldName" : "aeiou",
+              "entityName" : "aeiou",
+              "errorCode" : "aeiou",
+              "entityId" : "aeiou"
+            } ],
+            "messageParams" : {
+              "key" : "aeiou"
+            },
+            "message" : "aeiou",
+            "errors" : [ "" ],
+            "status" : 123
+          },
           "messageId" : "aeiou",
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -5227,23 +5257,8 @@ open class VoicemailAPI {
           "held" : true,
           "recording" : true,
           "errorInfo" : {
-            "messageWithParams" : "aeiou",
             "code" : "aeiou",
-            "entityName" : "aeiou",
-            "entityId" : "aeiou",
-            "contextId" : "aeiou",
-            "details" : [ {
-              "fieldName" : "aeiou",
-              "entityName" : "aeiou",
-              "errorCode" : "aeiou",
-              "entityId" : "aeiou"
-            } ],
-            "messageParams" : {
-              "key" : "aeiou"
-            },
-            "message" : "aeiou",
-            "errors" : [ "" ],
-            "status" : 123
+            "message" : "aeiou"
           },
           "segments" : [ {
             "howEnded" : "aeiou",
@@ -5633,7 +5648,25 @@ open class VoicemailAPI {
           } ],
           "subject" : "aeiou",
           "messagesSent" : 123,
-          "errorInfo" : "",
+          "errorInfo" : {
+            "messageWithParams" : "aeiou",
+            "code" : "aeiou",
+            "entityName" : "aeiou",
+            "entityId" : "aeiou",
+            "contextId" : "aeiou",
+            "details" : [ {
+              "fieldName" : "aeiou",
+              "entityName" : "aeiou",
+              "errorCode" : "aeiou",
+              "entityId" : "aeiou"
+            } ],
+            "messageParams" : {
+              "key" : "aeiou"
+            },
+            "message" : "aeiou",
+            "errors" : [ "" ],
+            "status" : 123
+          },
           "messageId" : "aeiou",
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -6155,23 +6188,8 @@ open class VoicemailAPI {
           "held" : true,
           "recording" : true,
           "errorInfo" : {
-            "messageWithParams" : "aeiou",
             "code" : "aeiou",
-            "entityName" : "aeiou",
-            "entityId" : "aeiou",
-            "contextId" : "aeiou",
-            "details" : [ {
-              "fieldName" : "aeiou",
-              "entityName" : "aeiou",
-              "errorCode" : "aeiou",
-              "entityId" : "aeiou"
-            } ],
-            "messageParams" : {
-              "key" : "aeiou"
-            },
-            "message" : "aeiou",
-            "errors" : [ "" ],
-            "status" : 123
+            "message" : "aeiou"
           },
           "segments" : [ {
             "howEnded" : "aeiou",
@@ -6986,7 +7004,25 @@ open class VoicemailAPI {
         } ],
         "subject" : "aeiou",
         "messagesSent" : 123,
-        "errorInfo" : "",
+        "errorInfo" : {
+          "messageWithParams" : "aeiou",
+          "code" : "aeiou",
+          "entityName" : "aeiou",
+          "entityId" : "aeiou",
+          "contextId" : "aeiou",
+          "details" : [ {
+            "fieldName" : "aeiou",
+            "entityName" : "aeiou",
+            "errorCode" : "aeiou",
+            "entityId" : "aeiou"
+          } ],
+          "messageParams" : {
+            "key" : "aeiou"
+          },
+          "message" : "aeiou",
+          "errors" : [ "" ],
+          "status" : 123
+        },
         "messageId" : "aeiou",
         "segments" : [ "" ],
         "scriptId" : "aeiou",
@@ -7508,23 +7544,8 @@ open class VoicemailAPI {
         "held" : true,
         "recording" : true,
         "errorInfo" : {
-          "messageWithParams" : "aeiou",
           "code" : "aeiou",
-          "entityName" : "aeiou",
-          "entityId" : "aeiou",
-          "contextId" : "aeiou",
-          "details" : [ {
-            "fieldName" : "aeiou",
-            "entityName" : "aeiou",
-            "errorCode" : "aeiou",
-            "entityId" : "aeiou"
-          } ],
-          "messageParams" : {
-            "key" : "aeiou"
-          },
-          "message" : "aeiou",
-          "errors" : [ "" ],
-          "status" : 123
+          "message" : "aeiou"
         },
         "segments" : [ {
           "howEnded" : "aeiou",
@@ -7953,7 +7974,25 @@ open class VoicemailAPI {
         } ],
         "subject" : "aeiou",
         "messagesSent" : 123,
-        "errorInfo" : "",
+        "errorInfo" : {
+          "messageWithParams" : "aeiou",
+          "code" : "aeiou",
+          "entityName" : "aeiou",
+          "entityId" : "aeiou",
+          "contextId" : "aeiou",
+          "details" : [ {
+            "fieldName" : "aeiou",
+            "entityName" : "aeiou",
+            "errorCode" : "aeiou",
+            "entityId" : "aeiou"
+          } ],
+          "messageParams" : {
+            "key" : "aeiou"
+          },
+          "message" : "aeiou",
+          "errors" : [ "" ],
+          "status" : 123
+        },
         "messageId" : "aeiou",
         "segments" : [ "" ],
         "scriptId" : "aeiou",
@@ -8475,23 +8514,8 @@ open class VoicemailAPI {
         "held" : true,
         "recording" : true,
         "errorInfo" : {
-          "messageWithParams" : "aeiou",
           "code" : "aeiou",
-          "entityName" : "aeiou",
-          "entityId" : "aeiou",
-          "contextId" : "aeiou",
-          "details" : [ {
-            "fieldName" : "aeiou",
-            "entityName" : "aeiou",
-            "errorCode" : "aeiou",
-            "entityId" : "aeiou"
-          } ],
-          "messageParams" : {
-            "key" : "aeiou"
-          },
-          "message" : "aeiou",
-          "errors" : [ "" ],
-          "status" : 123
+          "message" : "aeiou"
         },
         "segments" : [ {
           "howEnded" : "aeiou",
@@ -8856,7 +8880,25 @@ open class VoicemailAPI {
           } ],
           "subject" : "aeiou",
           "messagesSent" : 123,
-          "errorInfo" : "",
+          "errorInfo" : {
+            "messageWithParams" : "aeiou",
+            "code" : "aeiou",
+            "entityName" : "aeiou",
+            "entityId" : "aeiou",
+            "contextId" : "aeiou",
+            "details" : [ {
+              "fieldName" : "aeiou",
+              "entityName" : "aeiou",
+              "errorCode" : "aeiou",
+              "entityId" : "aeiou"
+            } ],
+            "messageParams" : {
+              "key" : "aeiou"
+            },
+            "message" : "aeiou",
+            "errors" : [ "" ],
+            "status" : 123
+          },
           "messageId" : "aeiou",
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -9378,23 +9420,8 @@ open class VoicemailAPI {
           "held" : true,
           "recording" : true,
           "errorInfo" : {
-            "messageWithParams" : "aeiou",
             "code" : "aeiou",
-            "entityName" : "aeiou",
-            "entityId" : "aeiou",
-            "contextId" : "aeiou",
-            "details" : [ {
-              "fieldName" : "aeiou",
-              "entityName" : "aeiou",
-              "errorCode" : "aeiou",
-              "entityId" : "aeiou"
-            } ],
-            "messageParams" : {
-              "key" : "aeiou"
-            },
-            "message" : "aeiou",
-            "errors" : [ "" ],
-            "status" : 123
+            "message" : "aeiou"
           },
           "segments" : [ {
             "howEnded" : "aeiou",
@@ -9754,7 +9781,25 @@ open class VoicemailAPI {
         } ],
         "subject" : "aeiou",
         "messagesSent" : 123,
-        "errorInfo" : "",
+        "errorInfo" : {
+          "messageWithParams" : "aeiou",
+          "code" : "aeiou",
+          "entityName" : "aeiou",
+          "entityId" : "aeiou",
+          "contextId" : "aeiou",
+          "details" : [ {
+            "fieldName" : "aeiou",
+            "entityName" : "aeiou",
+            "errorCode" : "aeiou",
+            "entityId" : "aeiou"
+          } ],
+          "messageParams" : {
+            "key" : "aeiou"
+          },
+          "message" : "aeiou",
+          "errors" : [ "" ],
+          "status" : 123
+        },
         "messageId" : "aeiou",
         "segments" : [ "" ],
         "scriptId" : "aeiou",
@@ -10276,23 +10321,8 @@ open class VoicemailAPI {
         "held" : true,
         "recording" : true,
         "errorInfo" : {
-          "messageWithParams" : "aeiou",
           "code" : "aeiou",
-          "entityName" : "aeiou",
-          "entityId" : "aeiou",
-          "contextId" : "aeiou",
-          "details" : [ {
-            "fieldName" : "aeiou",
-            "entityName" : "aeiou",
-            "errorCode" : "aeiou",
-            "entityId" : "aeiou"
-          } ],
-          "messageParams" : {
-            "key" : "aeiou"
-          },
-          "message" : "aeiou",
-          "errors" : [ "" ],
-          "status" : 123
+          "message" : "aeiou"
         },
         "segments" : [ {
           "howEnded" : "aeiou",

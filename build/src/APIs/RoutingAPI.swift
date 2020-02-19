@@ -316,6 +316,53 @@ open class RoutingAPI {
     }
 
     
+    /**
+     
+     Delete an organization's routing settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingSettings(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete an organization's routing settings
+     
+     - DELETE /api/v2/routing/settings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingSettingsWithRequestBuilder() -> RequestBuilder<Void> {
+        let path = "/api/v2/routing/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -689,6 +736,20 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "customSMTPServer" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "mailFromSettings" : {
+    "records" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou",
+      "value" : "aeiou"
+    } ],
+    "mailFromDomain" : "aeiou",
+    "status" : "aeiou"
+  },
   "subDomain" : true,
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -974,6 +1035,20 @@ open class RoutingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "customSMTPServer" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "mailFromSettings" : {
+      "records" : [ {
+        "name" : "aeiou",
+        "type" : "aeiou",
+        "value" : "aeiou"
+      } ],
+      "mailFromDomain" : "aeiou",
+      "status" : "aeiou"
+    },
     "subDomain" : true,
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -3697,6 +3772,63 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<UserQueueEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get an organization's routing settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingSettings(completion: @escaping ((_ data: RoutingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<RoutingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get an organization's routing settings
+     
+     - GET /api/v2/routing/settings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "resetAgentScoreOnPresenceChange" : true
+}}]
+
+     - returns: RequestBuilder<RoutingSettings> 
+     */
+    open class func getRoutingSettingsWithRequestBuilder() -> RequestBuilder<RoutingSettings> {
+        let path = "/api/v2/routing/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RoutingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -7211,6 +7343,20 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "customSMTPServer" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "mailFromSettings" : {
+    "records" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou",
+      "value" : "aeiou"
+    } ],
+    "mailFromDomain" : "aeiou",
+    "status" : "aeiou"
+  },
   "subDomain" : true,
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -8932,6 +9078,65 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Queue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update an organization's routing settings
+     
+     - parameter body: (body) Organization Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingSettings(body: RoutingSettings, completion: @escaping ((_ data: RoutingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<RoutingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update an organization's routing settings
+     
+     - PUT /api/v2/routing/settings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "resetAgentScoreOnPresenceChange" : true
+}}]
+     
+     - parameter body: (body) Organization Settings 
+
+     - returns: RequestBuilder<RoutingSettings> 
+     */
+    open class func putRoutingSettingsWithRequestBuilder(body: RoutingSettings) -> RequestBuilder<RoutingSettings> {
+        let path = "/api/v2/routing/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RoutingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

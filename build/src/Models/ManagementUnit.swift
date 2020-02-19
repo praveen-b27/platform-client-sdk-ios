@@ -26,9 +26,9 @@ public class ManagementUnit: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** Start day of week for scheduling and forecasting purposes */
+    /** Start day of week for scheduling and forecasting purposes. Moving to Business Unit */
     public var startDayOfWeek: StartDayOfWeek?
-    /** The time zone for the management unit in standard Olson format */
+    /** The time zone for the management unit in standard Olson format.  Moving to Business Unit */
     public var timeZone: String?
     /** The configuration settings for this management unit */
     public var settings: ManagementUnitSettingsResponse?

@@ -17,8 +17,10 @@ public class ShortTermForecastListItemResponse: Codable {
         case historicalWeightedAverage = "HistoricalWeightedAverage"
         case advanced = "Advanced"
     }
-    /** The id of the short term forecast */
+    /** The globally unique identifier for the object. */
     public var _id: String?
+    /** The URI for this object */
+    public var selfUri: String?
     /** The weekDate of the short term forecast in yyyy-MM-dd format */
     public var weekDate: String?
     /** The description of the short term forecast */
@@ -27,12 +29,12 @@ public class ShortTermForecastListItemResponse: Codable {
     public var creationMethod: CreationMethod?
     /** Metadata for this forecast */
     public var metadata: WfmVersionedEntityMetadata?
-    /** The URI for this object */
-    public var selfUri: String?
 
-    public init(_id: String?, weekDate: String?, _description: String?, creationMethod: CreationMethod?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, selfUri: String?, weekDate: String?, _description: String?, creationMethod: CreationMethod?, metadata: WfmVersionedEntityMetadata?) {
         
         self._id = _id
+        
+        self.selfUri = selfUri
         
         self.weekDate = weekDate
         
@@ -42,17 +44,15 @@ public class ShortTermForecastListItemResponse: Codable {
         
         self.metadata = metadata
         
-        self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case selfUri
         case weekDate
         case _description = "description"
         case creationMethod
         case metadata
-        case selfUri
     }
 
 

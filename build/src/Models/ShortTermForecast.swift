@@ -17,8 +17,10 @@ public class ShortTermForecast: Codable {
         case historicalWeightedAverage = "HistoricalWeightedAverage"
         case advanced = "Advanced"
     }
-    /** The id of the short term forecast */
+    /** The globally unique identifier for the object. */
     public var _id: String?
+    /** The URI for this object */
+    public var selfUri: String?
     /** The weekDate of the short term forecast in yyyy-MM-dd format */
     public var weekDate: String?
     /** The description of the short term forecast */
@@ -35,12 +37,12 @@ public class ShortTermForecast: Codable {
     public var modifications: ListWrapperWfmForecastModification?
     /** Forecast generation results, if applicable */
     public var generationResults: ForecastGenerationResult?
-    /** The URI for this object */
-    public var selfUri: String?
 
-    public init(_id: String?, weekDate: String?, _description: String?, creationMethod: CreationMethod?, metadata: WfmVersionedEntityMetadata?, sourceData: ListWrapperForecastSourceDayPointer?, referenceStartDate: Date?, modifications: ListWrapperWfmForecastModification?, generationResults: ForecastGenerationResult?, selfUri: String?) {
+    public init(_id: String?, selfUri: String?, weekDate: String?, _description: String?, creationMethod: CreationMethod?, metadata: WfmVersionedEntityMetadata?, sourceData: ListWrapperForecastSourceDayPointer?, referenceStartDate: Date?, modifications: ListWrapperWfmForecastModification?, generationResults: ForecastGenerationResult?) {
         
         self._id = _id
+        
+        self.selfUri = selfUri
         
         self.weekDate = weekDate
         
@@ -58,12 +60,11 @@ public class ShortTermForecast: Codable {
         
         self.generationResults = generationResults
         
-        self.selfUri = selfUri
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case selfUri
         case weekDate
         case _description = "description"
         case creationMethod
@@ -72,7 +73,6 @@ public class ShortTermForecast: Codable {
         case referenceStartDate
         case modifications
         case generationResults
-        case selfUri
     }
 
 

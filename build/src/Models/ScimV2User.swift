@@ -37,13 +37,14 @@ public class ScimV2User: Codable {
     /** The list of groups that the user is a member of. */
     public var groups: [ScimV2GroupReference]?
     /** The list of roles assigned to the user. */
-    public var roles: [String]?
+    public var roles: [ScimUserRole]?
     /** The URI of the schema for the enterprise user. */
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
+    public var urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?
     /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?
 
-    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [String]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, meta: ScimMetadata?) {
+    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?, meta: ScimMetadata?) {
         
         self._id = _id
         
@@ -73,6 +74,8 @@ public class ScimV2User: Codable {
         
         self.urnietfparamsscimschemasextensionenterprise20User = urnietfparamsscimschemasextensionenterprise20User
         
+        self.urnietfparamsscimschemasextensiongenesyspurecloud20User = urnietfparamsscimschemasextensiongenesyspurecloud20User
+        
         self.meta = meta
         
     }
@@ -92,6 +95,7 @@ public class ScimV2User: Codable {
         case groups
         case roles
         case urnietfparamsscimschemasextensionenterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnietfparamsscimschemasextensiongenesyspurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case meta
     }
 

@@ -71,7 +71,7 @@ public class CallBasic: Codable {
     public var recordingId: String?
     /** The time line of the participant&#39;s call, divided into activity segments. */
     public var segments: [Segment]?
-    public var errorInfo: ErrorBody?
+    public var errorInfo: ErrorInfo?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
     /** The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
@@ -101,7 +101,7 @@ public class CallBasic: Codable {
     /** Address and name data for a call endpoint. */
     public var other: Address?
 
-    public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?) {
+    public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?) {
         
         self.state = state
         

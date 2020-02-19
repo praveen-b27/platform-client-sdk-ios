@@ -121,6 +121,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCobrowsesessionParticipantReplace**](ConversationsAPI.html#postConversationsCobrowsesessionParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsEmailInboundmessages**](ConversationsAPI.html#postConversationsEmailInboundmessages) | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
 | [**postConversationsEmailMessages**](ConversationsAPI.html#postConversationsEmailMessages) | Send an email reply |
+| [**postConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsAPI.html#postConversationsEmailMessagesDraftAttachmentsCopy) | Copy attachments from an email message to the current draft. |
 | [**postConversationsEmailParticipantReplace**](ConversationsAPI.html#postConversationsEmailParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsEmails**](ConversationsAPI.html#postConversationsEmails) | Create an email conversation |
 | [**postConversationsFaxes**](ConversationsAPI.html#postConversationsFaxes) | Create Fax Conversation |
@@ -6190,6 +6191,59 @@ ConversationsAPI.postConversationsEmailMessages(conversationId: conversationId, 
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **body** | [**EmailMessage**](EmailMessage.html)| Reply | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailMessage**](EmailMessage.html)
+
+<a name="postConversationsEmailMessagesDraftAttachmentsCopy"></a>
+
+# **postConversationsEmailMessagesDraftAttachmentsCopy**
+
+
+
+> [EmailMessage](EmailMessage.html) postConversationsEmailMessagesDraftAttachmentsCopy(conversationId, body)
+
+Copy attachments from an email message to the current draft.
+
+
+
+Wraps POST /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let body: CopyAttachmentsRequest = new CopyAttachmentsRequest(...) // Copy Attachment Request
+
+// Code example
+ConversationsAPI.postConversationsEmailMessagesDraftAttachmentsCopy(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsEmailMessagesDraftAttachmentsCopy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **body** | [**CopyAttachmentsRequest**](CopyAttachmentsRequest.html)| Copy Attachment Request | |
 {: class="table-striped"}
 
 

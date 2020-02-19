@@ -69,7 +69,7 @@ public class UserScheduleAdherence: Codable {
     public var _id: String?
     public var name: String?
     /** The user for whom this status applies */
-    public var user: User?
+    public var user: UserReference?
     /** The management unit to which this user belongs */
     public var managementUnit: ManagementUnit?
     /** Activity for which the user is scheduled */
@@ -101,7 +101,7 @@ public class UserScheduleAdherence: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: User?, managementUnit: ManagementUnit?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: UserReference?, managementUnit: ManagementUnit?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
         
         self._id = _id
         

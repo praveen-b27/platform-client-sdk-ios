@@ -17,6 +17,9 @@ public class ModelResponse: Codable {
         case email = "email"
         case twitter = "twitter"
     }
+    public enum ResponseType: String, Codable { 
+        case messagingTemplate = "MessagingTemplate"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -36,10 +39,14 @@ public class ModelResponse: Codable {
     public var substitutions: [ResponseSubstitution]?
     /** Metadata about the text substitutions in json schema format. */
     public var substitutionsSchema: JsonSchemaDocument?
+    /** The response type represented by the response */
+    public var responseType: ResponseType?
+    /** The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate. */
+    public var messagingTemplate: MessagingTemplate?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, selfUri: String?) {
         
         self._id = _id
         
@@ -61,6 +68,10 @@ public class ModelResponse: Codable {
         
         self.substitutionsSchema = substitutionsSchema
         
+        self.responseType = responseType
+        
+        self.messagingTemplate = messagingTemplate
+        
         self.selfUri = selfUri
         
     }
@@ -76,6 +87,8 @@ public class ModelResponse: Codable {
         case interactionType
         case substitutions
         case substitutionsSchema
+        case responseType
+        case messagingTemplate
         case selfUri
     }
 

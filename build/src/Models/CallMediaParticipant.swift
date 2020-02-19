@@ -87,7 +87,7 @@ public class CallMediaParticipant: Codable {
     /** A list of ad-hoc attributes for the participant. */
     public var attributes: [String:String]?
     /** If the conversation ends in error, contains additional error details. */
-    public var errorInfo: ErrorBody?
+    public var errorInfo: ErrorInfo?
     /** The Engage script that should be used by this participant. */
     public var script: DomainEntityRef?
     /** The amount of time the participant has to complete wrap-up. */
@@ -141,7 +141,7 @@ public class CallMediaParticipant: Codable {
     /** User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567. */
     public var uuiData: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorBody?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, consultParticipantId: String?, uuiData: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, consultParticipantId: String?, uuiData: String?) {
         
         self._id = _id
         

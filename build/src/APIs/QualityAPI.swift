@@ -12094,10 +12094,10 @@ open class QualityAPI {
      
      Get a survey as an end-customer, for the purposes of scoring it.
      
-     - parameter customerSurveyUrl: (query) customerSurveyUrl (optional)
+     - parameter customerSurveyUrl: (query) customerSurveyUrl 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualitySurveysScorable(customerSurveyUrl: String? = nil, completion: @escaping ((_ data: ScorableSurvey?,_ error: Error?) -> Void)) {
+    open class func getQualitySurveysScorable(customerSurveyUrl: String, completion: @escaping ((_ data: ScorableSurvey?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualitySurveysScorableWithRequestBuilder(customerSurveyUrl: customerSurveyUrl)
         requestBuilder.execute { (response: Response<ScorableSurvey>?, error) -> Void in
             do {
@@ -12198,11 +12198,11 @@ open class QualityAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter customerSurveyUrl: (query) customerSurveyUrl (optional)
+     - parameter customerSurveyUrl: (query) customerSurveyUrl 
 
      - returns: RequestBuilder<ScorableSurvey> 
      */
-    open class func getQualitySurveysScorableWithRequestBuilder(customerSurveyUrl: String? = nil) -> RequestBuilder<ScorableSurvey> {
+    open class func getQualitySurveysScorableWithRequestBuilder(customerSurveyUrl: String) -> RequestBuilder<ScorableSurvey> {
         let path = "/api/v2/quality/surveys/scorable"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         

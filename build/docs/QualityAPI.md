@@ -2146,7 +2146,7 @@ QualityAPI.getQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl) { (re
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **customerSurveyUrl** | **String**| customerSurveyUrl | [optional] |
+| **customerSurveyUrl** | **String**| customerSurveyUrl | |
 {: class="table-striped"}
 
 

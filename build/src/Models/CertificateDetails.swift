@@ -22,10 +22,10 @@ public class CertificateDetails: Codable {
     public var issueDate: Date?
     /** True if the certificate is expired, false otherwise. */
     public var expired: Bool?
-    public var valid: Bool?
     public var signatureValid: Bool?
+    public var valid: Bool?
 
-    public init(issuer: String?, subject: String?, expirationDate: Date?, issueDate: Date?, expired: Bool?, valid: Bool?, signatureValid: Bool?) {
+    public init(issuer: String?, subject: String?, expirationDate: Date?, issueDate: Date?, expired: Bool?, signatureValid: Bool?, valid: Bool?) {
         
         self.issuer = issuer
         
@@ -37,9 +37,9 @@ public class CertificateDetails: Codable {
         
         self.expired = expired
         
-        self.valid = valid
-        
         self.signatureValid = signatureValid
+        
+        self.valid = valid
         
     }
 

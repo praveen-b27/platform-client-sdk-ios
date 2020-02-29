@@ -46,6 +46,7 @@ public class AuditLogMessage: Codable {
         case wrapupCode = "WrapupCode"
         case accessToken = "AccessToken"
         case oauthclient = "OAuthClient"
+        case oauthclientauthorization = "OAuthClientAuthorization"
         case authOrganization = "AuthOrganization"
         case authUser = "AuthUser"
         case bulkActions = "BulkActions"

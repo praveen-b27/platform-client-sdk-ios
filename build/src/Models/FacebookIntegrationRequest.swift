@@ -21,9 +21,9 @@ public class FacebookIntegrationRequest: Codable {
     public var userAccessToken: String?
     /** The page Id of a facebook page. The pageId is required when userAccessToken is provided. */
     public var pageId: String?
-    /** The app Id of a facebook app */
+    /** The app Id of a facebook app. The appId is required when a customer wants to use their own approved facebook app. */
     public var appId: String?
-    /** The app Secret of a facebook app */
+    /** The app Secret of a facebook app. The appSecret is required when appId is provided. */
     public var appSecret: String?
     /** The URI for this object */
     public var selfUri: String?

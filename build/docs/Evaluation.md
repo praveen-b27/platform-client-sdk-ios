@@ -24,6 +24,7 @@ title: Evaluation
 | **mediaType** | **[String]** | List of different communication types used in conversation. | [optional] |
 | **rescore** | **Bool** | Is only true when evaluation is re-scored. | [optional] |
 | **conversationDate** | [**Date**](Date.html) | Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **conversationEndDate** | [**Date**](Date.html) | End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **neverRelease** | **Bool** | Signifies if the evaluation is never to be released. This cannot be set true if release date is also set. | [optional] |
 | **resourceId** | **String** | Only used for email evaluations. Will be null for all other evaluations. | [optional] |
 | **resourceType** | **String** | The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. | [optional] |

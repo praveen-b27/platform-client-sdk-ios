@@ -2094,6 +2094,7 @@ open class OutboundAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+0000",
+          "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
           "name" : "aeiou",
           "id" : "aeiou",
           "rescore" : true,

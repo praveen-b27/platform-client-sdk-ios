@@ -560,16 +560,19 @@ open class UsersAPI {
     
     
     
+    
+    
     /**
      
      Fetch a page of results for an async query
      
      - parameter jobId: (path) jobId 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter pageSize: (query) The desired maximum number of results (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsUsersDetailsJobResults(jobId: String, cursor: String? = nil, completion: @escaping ((_ data: AnalyticsUserDetailsAsyncQueryResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: jobId, cursor: cursor)
+    open class func getAnalyticsUsersDetailsJobResults(jobId: String, cursor: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AnalyticsUserDetailsAsyncQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: jobId, cursor: cursor, pageSize: pageSize)
         requestBuilder.execute { (response: Response<AnalyticsUserDetailsAsyncQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -615,10 +618,11 @@ open class UsersAPI {
      
      - parameter jobId: (path) jobId 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter pageSize: (query) The desired maximum number of results (optional)
 
      - returns: RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> 
      */
-    open class func getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil) -> RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> {
+    open class func getAnalyticsUsersDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AnalyticsUserDetailsAsyncQueryResponse> {
         var path = "/api/v2/analytics/users/details/jobs/{jobId}/results"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -634,7 +638,9 @@ open class UsersAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "cursor": cursor
+            "cursor": cursor, 
+            
+            "pageSize": pageSize?.encodeToJSON()
             
         ])
 

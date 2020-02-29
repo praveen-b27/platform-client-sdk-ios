@@ -55,6 +55,8 @@ public class Evaluation: Codable {
     public var rescore: Bool?
     /** Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var conversationDate: Date?
+    /** End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var conversationEndDate: Date?
     /** Signifies if the evaluation is never to be released. This cannot be set true if release date is also set. */
     public var neverRelease: Bool?
     /** Only used for email evaluations. Will be null for all other evaluations. */
@@ -67,7 +69,7 @@ public class Evaluation: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: Conversation?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, neverRelease: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: Conversation?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -103,6 +105,8 @@ public class Evaluation: Codable {
         
         self.conversationDate = conversationDate
         
+        self.conversationEndDate = conversationEndDate
+        
         self.neverRelease = neverRelease
         
         self.resourceId = resourceId
@@ -135,6 +139,7 @@ public class Evaluation: Codable {
         case mediaType
         case rescore
         case conversationDate
+        case conversationEndDate
         case neverRelease
         case resourceId
         case resourceType

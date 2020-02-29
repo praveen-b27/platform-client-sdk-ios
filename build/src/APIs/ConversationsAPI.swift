@@ -1124,16 +1124,19 @@ open class ConversationsAPI {
     
     
     
+    
+    
     /**
      
      Fetch a page of results for an async query
      
      - parameter jobId: (path) jobId 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter pageSize: (query) The desired maximum number of results (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsConversationsDetailsJobResults(jobId: String, cursor: String? = nil, completion: @escaping ((_ data: AnalyticsConversationAsyncQueryResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: jobId, cursor: cursor)
+    open class func getAnalyticsConversationsDetailsJobResults(jobId: String, cursor: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AnalyticsConversationAsyncQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: jobId, cursor: cursor, pageSize: pageSize)
         requestBuilder.execute { (response: Response<AnalyticsConversationAsyncQueryResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -1337,10 +1340,11 @@ open class ConversationsAPI {
      
      - parameter jobId: (path) jobId 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter pageSize: (query) The desired maximum number of results (optional)
 
      - returns: RequestBuilder<AnalyticsConversationAsyncQueryResponse> 
      */
-    open class func getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil) -> RequestBuilder<AnalyticsConversationAsyncQueryResponse> {
+    open class func getAnalyticsConversationsDetailsJobResultsWithRequestBuilder(jobId: String, cursor: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AnalyticsConversationAsyncQueryResponse> {
         var path = "/api/v2/analytics/conversations/details/jobs/{jobId}/results"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1356,7 +1360,9 @@ open class ConversationsAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "cursor": cursor
+            "cursor": cursor, 
+            
+            "pageSize": pageSize?.encodeToJSON()
             
         ])
 
@@ -1616,6 +1622,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -2831,6 +2838,7 @@ open class ConversationsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+0000",
+        "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
         "name" : "aeiou",
         "id" : "aeiou",
         "rescore" : true,
@@ -9387,6 +9395,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -10540,6 +10549,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -11620,6 +11630,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -12700,6 +12711,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -13780,6 +13792,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -14860,6 +14873,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -16833,6 +16847,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,
@@ -17907,6 +17922,7 @@ open class ConversationsAPI {
       "neverRelease" : true,
       "agentHasRead" : true,
       "conversationDate" : "2000-01-23T04:56:07.000+0000",
+      "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "id" : "aeiou",
       "rescore" : true,

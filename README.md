@@ -11,7 +11,7 @@ This package's source is on github at https://github.com/MyPureCloud/platform-cl
 Reference the SDK's pod in your project's Podfile:
 
 ```
-pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '18.0.0'
+pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '19.0.0'
 ```
 
 Then install your project's dependencies:

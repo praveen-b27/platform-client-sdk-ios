@@ -360,7 +360,7 @@ AnalyticsAPI.getAnalyticsConversationsDetailsJob(jobId: jobId) { (response, erro
 
 
 
-> [AnalyticsConversationAsyncQueryResponse](AnalyticsConversationAsyncQueryResponse.html) getAnalyticsConversationsDetailsJobResults(jobId, cursor)
+> [AnalyticsConversationAsyncQueryResponse](AnalyticsConversationAsyncQueryResponse.html) getAnalyticsConversationsDetailsJobResults(jobId, cursor, pageSize)
 
 Fetch a page of results for an async query
 
@@ -382,9 +382,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let jobId: String = "" // jobId
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
+let pageSize: Int = 0 // The desired maximum number of results
 
 // Code example
-AnalyticsAPI.getAnalyticsConversationsDetailsJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+AnalyticsAPI.getAnalyticsConversationsDetailsJobResults(jobId: jobId, cursor: cursor, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -401,6 +402,7 @@ AnalyticsAPI.getAnalyticsConversationsDetailsJobResults(jobId: jobId, cursor: cu
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| jobId | |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
+| **pageSize** | **Int**| The desired maximum number of results | [optional] |
 {: class="table-striped"}
 
 
@@ -1029,7 +1031,7 @@ AnalyticsAPI.getAnalyticsUsersDetailsJob(jobId: jobId) { (response, error) in
 
 
 
-> [AnalyticsUserDetailsAsyncQueryResponse](AnalyticsUserDetailsAsyncQueryResponse.html) getAnalyticsUsersDetailsJobResults(jobId, cursor)
+> [AnalyticsUserDetailsAsyncQueryResponse](AnalyticsUserDetailsAsyncQueryResponse.html) getAnalyticsUsersDetailsJobResults(jobId, cursor, pageSize)
 
 Fetch a page of results for an async query
 
@@ -1051,9 +1053,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let jobId: String = "" // jobId
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
+let pageSize: Int = 0 // The desired maximum number of results
 
 // Code example
-AnalyticsAPI.getAnalyticsUsersDetailsJobResults(jobId: jobId, cursor: cursor) { (response, error) in
+AnalyticsAPI.getAnalyticsUsersDetailsJobResults(jobId: jobId, cursor: cursor, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1070,6 +1073,7 @@ AnalyticsAPI.getAnalyticsUsersDetailsJobResults(jobId: jobId, cursor: cursor) { 
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| jobId | |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
+| **pageSize** | **Int**| The desired maximum number of results | [optional] |
 {: class="table-striped"}
 
 

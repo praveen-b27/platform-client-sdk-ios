@@ -17,13 +17,17 @@ public class EvaluationQuestionGroupScore: Codable {
     public var markedNA: Bool?
     public var totalCriticalScore: Float?
     public var maxTotalCriticalScore: Float?
+    public var totalNonCriticalScore: Float?
+    public var maxTotalNonCriticalScore: Float?
     public var totalScoreUnweighted: Float?
     public var maxTotalScoreUnweighted: Float?
     public var totalCriticalScoreUnweighted: Float?
     public var maxTotalCriticalScoreUnweighted: Float?
+    public var totalNonCriticalScoreUnweighted: Float?
+    public var maxTotalNonCriticalScoreUnweighted: Float?
     public var questionScores: [EvaluationQuestionScore]?
 
-    public init(questionGroupId: String?, totalScore: Float?, maxTotalScore: Float?, markedNA: Bool?, totalCriticalScore: Float?, maxTotalCriticalScore: Float?, totalScoreUnweighted: Float?, maxTotalScoreUnweighted: Float?, totalCriticalScoreUnweighted: Float?, maxTotalCriticalScoreUnweighted: Float?, questionScores: [EvaluationQuestionScore]?) {
+    public init(questionGroupId: String?, totalScore: Float?, maxTotalScore: Float?, markedNA: Bool?, totalCriticalScore: Float?, maxTotalCriticalScore: Float?, totalNonCriticalScore: Float?, maxTotalNonCriticalScore: Float?, totalScoreUnweighted: Float?, maxTotalScoreUnweighted: Float?, totalCriticalScoreUnweighted: Float?, maxTotalCriticalScoreUnweighted: Float?, totalNonCriticalScoreUnweighted: Float?, maxTotalNonCriticalScoreUnweighted: Float?, questionScores: [EvaluationQuestionScore]?) {
         
         self.questionGroupId = questionGroupId
         
@@ -37,6 +41,10 @@ public class EvaluationQuestionGroupScore: Codable {
         
         self.maxTotalCriticalScore = maxTotalCriticalScore
         
+        self.totalNonCriticalScore = totalNonCriticalScore
+        
+        self.maxTotalNonCriticalScore = maxTotalNonCriticalScore
+        
         self.totalScoreUnweighted = totalScoreUnweighted
         
         self.maxTotalScoreUnweighted = maxTotalScoreUnweighted
@@ -44,6 +52,10 @@ public class EvaluationQuestionGroupScore: Codable {
         self.totalCriticalScoreUnweighted = totalCriticalScoreUnweighted
         
         self.maxTotalCriticalScoreUnweighted = maxTotalCriticalScoreUnweighted
+        
+        self.totalNonCriticalScoreUnweighted = totalNonCriticalScoreUnweighted
+        
+        self.maxTotalNonCriticalScoreUnweighted = maxTotalNonCriticalScoreUnweighted
         
         self.questionScores = questionScores
         

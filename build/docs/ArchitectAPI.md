@@ -55,6 +55,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowVersions**](ArchitectAPI.html#getFlowVersions) | Get flow version list |
 | [**getFlows**](ArchitectAPI.html#getFlows) | Get a pageable list of flows, filtered by query parameters |
 | [**getFlowsDatatable**](ArchitectAPI.html#getFlowsDatatable) | Returns a specific datatable by id |
+| [**getFlowsDatatableExportJob**](ArchitectAPI.html#getFlowsDatatableExportJob) | Returns the state information about an export job |
+| [**getFlowsDatatableImportJob**](ArchitectAPI.html#getFlowsDatatableImportJob) | Returns the state information about an import job |
+| [**getFlowsDatatableImportJobs**](ArchitectAPI.html#getFlowsDatatableImportJobs) | Get all recent import jobs |
 | [**getFlowsDatatableRow**](ArchitectAPI.html#getFlowsDatatableRow) | Returns a specific row for the datatable |
 | [**getFlowsDatatableRows**](ArchitectAPI.html#getFlowsDatatableRows) | Returns the rows for the datatable with the given id |
 | [**getFlowsDatatables**](ArchitectAPI.html#getFlowsDatatables) | Retrieve a list of datatables for the org |
@@ -79,6 +82,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postFlowsActionsPublish**](ArchitectAPI.html#postFlowsActionsPublish) | Publish flow |
 | [**postFlowsActionsRevert**](ArchitectAPI.html#postFlowsActionsRevert) | Revert flow |
 | [**postFlowsActionsUnlock**](ArchitectAPI.html#postFlowsActionsUnlock) | Unlock flow |
+| [**postFlowsDatatableExportJobs**](ArchitectAPI.html#postFlowsDatatableExportJobs) | Begin an export process for exporting all rows from a datatable |
+| [**postFlowsDatatableImportJobs**](ArchitectAPI.html#postFlowsDatatableImportJobs) | Begin an import process for importing rows into a datatable |
 | [**postFlowsDatatableRows**](ArchitectAPI.html#postFlowsDatatableRows) | Create a new row entry for the datatable. |
 | [**postFlowsDatatables**](ArchitectAPI.html#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
 | [**postFlowsOutcomes**](ArchitectAPI.html#postFlowsOutcomes) | Create a flow outcome |
@@ -2822,6 +2827,170 @@ ArchitectAPI.getFlowsDatatable(datatableId: datatableId, expand: expand) { (resp
 
 [**DataTable**](DataTable.html)
 
+<a name="getFlowsDatatableExportJob"></a>
+
+# **getFlowsDatatableExportJob**
+
+
+
+> [DataTableExportJob](DataTableExportJob.html) getFlowsDatatableExportJob(datatableId, exportJobId)
+
+Returns the state information about an export job
+
+Returns the state information about an export job.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}  
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let exportJobId: String = "" // id of export job
+
+// Code example
+ArchitectAPI.getFlowsDatatableExportJob(datatableId: datatableId, exportJobId: exportJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsDatatableExportJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+| **exportJobId** | **String**| id of export job | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataTableExportJob**](DataTableExportJob.html)
+
+<a name="getFlowsDatatableImportJob"></a>
+
+# **getFlowsDatatableImportJob**
+
+
+
+> [DataTableImportJob](DataTableImportJob.html) getFlowsDatatableImportJob(datatableId, importJobId)
+
+Returns the state information about an import job
+
+Returns the state information about an import job.
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}  
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let importJobId: String = "" // id of import job
+
+// Code example
+ArchitectAPI.getFlowsDatatableImportJob(datatableId: datatableId, importJobId: importJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsDatatableImportJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+| **importJobId** | **String**| id of import job | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
+
+<a name="getFlowsDatatableImportJobs"></a>
+
+# **getFlowsDatatableImportJobs**
+
+
+
+> [EntityListing](EntityListing.html) getFlowsDatatableImportJobs(datatableId, pageNumber, pageSize)
+
+Get all recent import jobs
+
+Get all recent import jobs
+
+Wraps GET /api/v2/flows/datatables/{datatableId}/import/jobs  
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+ArchitectAPI.getFlowsDatatableImportJobs(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsDatatableImportJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
+
 <a name="getFlowsDatatableRow"></a>
 
 # **getFlowsDatatableRow**
@@ -4128,6 +4297,112 @@ ArchitectAPI.postFlowsActionsUnlock(flow: flow) { (response, error) in
 ### Return type
 
 [**Flow**](Flow.html)
+
+<a name="postFlowsDatatableExportJobs"></a>
+
+# **postFlowsDatatableExportJobs**
+
+
+
+> [DataTableExportJob](DataTableExportJob.html) postFlowsDatatableExportJobs(datatableId)
+
+Begin an export process for exporting all rows from a datatable
+
+Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+
+Wraps POST /api/v2/flows/datatables/{datatableId}/export/jobs  
+
+Requires ANY permissions: 
+
+* architect:datatable:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+
+// Code example
+ArchitectAPI.postFlowsDatatableExportJobs(datatableId: datatableId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowsDatatableExportJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataTableExportJob**](DataTableExportJob.html)
+
+<a name="postFlowsDatatableImportJobs"></a>
+
+# **postFlowsDatatableImportJobs**
+
+
+
+> [DataTableImportJob](DataTableImportJob.html) postFlowsDatatableImportJobs(datatableId, body)
+
+Begin an import process for importing rows into a datatable
+
+Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+
+Wraps POST /api/v2/flows/datatables/{datatableId}/import/jobs  
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let body: DataTableImportJob = new DataTableImportJob(...) // import job information
+
+// Code example
+ArchitectAPI.postFlowsDatatableImportJobs(datatableId: datatableId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowsDatatableImportJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+| **body** | [**DataTableImportJob**](DataTableImportJob.html)| import job information | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob.html)
 
 <a name="postFlowsDatatableRows"></a>
 

@@ -58,6 +58,7 @@ public class ConversationAggregationQuery: Codable {
         case sessiondnis = "sessionDnis"
         case sessionid = "sessionId"
         case stationid = "stationId"
+        case teamid = "teamId"
         case userid = "userId"
         case wrapupcode = "wrapUpCode"
     }

@@ -70,6 +70,7 @@ public class FlowAggregationQuery: Codable {
         case sessionid = "sessionId"
         case startinglanguage = "startingLanguage"
         case stationid = "stationId"
+        case teamid = "teamId"
         case transfertargetaddress = "transferTargetAddress"
         case transfertargetname = "transferTargetName"
         case transfertype = "transferType"

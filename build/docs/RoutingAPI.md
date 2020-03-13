@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingSettings**](RoutingAPI.html#deleteRoutingSettings) | Delete an organization&#39;s routing settings |
 | [**deleteRoutingSkill**](RoutingAPI.html#deleteRoutingSkill) | Delete Routing Skill |
 | [**deleteRoutingSmsPhonenumber**](RoutingAPI.html#deleteRoutingSmsPhonenumber) | Delete a phone number provisioned for SMS. |
+| [**deleteRoutingUserUtilization**](RoutingAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteRoutingUtilization**](RoutingAPI.html#deleteRoutingUtilization) | Delete the organization-wide max utilization settings and revert to the system default. |
 | [**deleteRoutingWrapupcode**](RoutingAPI.html#deleteRoutingWrapupcode) | Delete wrap-up code |
 | [**deleteUserRoutinglanguage**](RoutingAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
@@ -46,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSmsAvailablephonenumbers**](RoutingAPI.html#getRoutingSmsAvailablephonenumbers) | Get a list of available phone numbers for SMS provisioning. |
 | [**getRoutingSmsPhonenumber**](RoutingAPI.html#getRoutingSmsPhonenumber) | Get a phone number provisioned for SMS. |
 | [**getRoutingSmsPhonenumbers**](RoutingAPI.html#getRoutingSmsPhonenumbers) | Get a list of provisioned phone numbers. |
+| [**getRoutingUserUtilization**](RoutingAPI.html#getRoutingUserUtilization) | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**getRoutingUtilization**](RoutingAPI.html#getRoutingUtilization) | Get the organization-wide max utilization settings. |
 | [**getRoutingWrapupcode**](RoutingAPI.html#getRoutingWrapupcode) | Get details about this wrap-up code. |
 | [**getRoutingWrapupcodes**](RoutingAPI.html#getRoutingWrapupcodes) | Get list of wrapup codes. |
@@ -79,6 +81,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingSettings**](RoutingAPI.html#putRoutingSettings) | Update an organization&#39;s routing settings |
 | [**putRoutingSettingsTranscription**](RoutingAPI.html#putRoutingSettingsTranscription) | Update Transcription Settings |
 | [**putRoutingSmsPhonenumber**](RoutingAPI.html#putRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
+| [**putRoutingUserUtilization**](RoutingAPI.html#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingUtilization**](RoutingAPI.html#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingWrapupcode**](RoutingAPI.html#putRoutingWrapupcode) | Update wrap-up code |
 | [**putUserRoutingskill**](RoutingAPI.html#putUserRoutingskill) | Update routing skill proficiency or state. |
@@ -490,6 +493,57 @@ RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingUserUtilization"></a>
+
+# **deleteRoutingUserUtilization**
+
+
+
+> Void deleteRoutingUserUtilization(userId)
+
+Delete the user&#39;s max utilization settings and revert to the organization-wide default.
+
+
+
+Wraps DELETE /api/v2/routing/users/{userId}/utilization  
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+RoutingAPI.deleteRoutingUserUtilization(userId: userId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingUserUtilization was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
 {: class="table-striped"}
 
 
@@ -2193,6 +2247,59 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 ### Return type
 
 [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html)
+
+<a name="getRoutingUserUtilization"></a>
+
+# **getRoutingUserUtilization**
+
+
+
+> [Utilization](Utilization.html) getRoutingUserUtilization(userId)
+
+Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
+
+
+
+Wraps GET /api/v2/routing/users/{userId}/utilization  
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+* routing:utilization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+RoutingAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingUserUtilization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="getRoutingUtilization"></a>
 
@@ -3977,6 +4084,60 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (respons
 ### Return type
 
 [**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+<a name="putRoutingUserUtilization"></a>
+
+# **putRoutingUserUtilization**
+
+
+
+> [Utilization](Utilization.html) putRoutingUserUtilization(userId, body)
+
+Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+
+
+
+Wraps PUT /api/v2/routing/users/{userId}/utilization  
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: Utilization = new Utilization(...) // utilization
+
+// Code example
+RoutingAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingUserUtilization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**Utilization**](Utilization.html)| utilization | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="putRoutingUtilization"></a>
 

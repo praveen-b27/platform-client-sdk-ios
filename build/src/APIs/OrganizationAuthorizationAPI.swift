@@ -631,7 +631,8 @@ open class OrganizationAuthorizationAPI {
       "name" : "aeiou",
       "id" : "aeiou",
       "state" : "aeiou",
-      "voicemailEnabled" : true
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
     "locations" : [ "" ],
@@ -1010,7 +1011,8 @@ open class OrganizationAuthorizationAPI {
       "name" : "aeiou",
       "id" : "aeiou",
       "state" : "aeiou",
-      "voicemailEnabled" : true
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
     "locations" : [ "" ],
@@ -1401,7 +1403,8 @@ open class OrganizationAuthorizationAPI {
         "name" : "aeiou",
         "id" : "aeiou",
         "state" : "aeiou",
-        "voicemailEnabled" : true
+        "voicemailEnabled" : true,
+        "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
       "locations" : [ "" ],
@@ -1906,7 +1909,8 @@ open class OrganizationAuthorizationAPI {
           "name" : "aeiou",
           "id" : "aeiou",
           "state" : "aeiou",
-          "voicemailEnabled" : true
+          "voicemailEnabled" : true,
+          "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
         "locations" : [ "" ],
@@ -2295,7 +2299,8 @@ open class OrganizationAuthorizationAPI {
         "name" : "aeiou",
         "id" : "aeiou",
         "state" : "aeiou",
-        "voicemailEnabled" : true
+        "voicemailEnabled" : true,
+        "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
       "locations" : [ "" ],
@@ -2672,7 +2677,8 @@ open class OrganizationAuthorizationAPI {
       "name" : "aeiou",
       "id" : "aeiou",
       "state" : "aeiou",
-      "voicemailEnabled" : true
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
     "locations" : [ "" ],
@@ -3063,7 +3069,8 @@ open class OrganizationAuthorizationAPI {
         "name" : "aeiou",
         "id" : "aeiou",
         "state" : "aeiou",
-        "voicemailEnabled" : true
+        "voicemailEnabled" : true,
+        "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
       "locations" : [ "" ],
@@ -3469,7 +3476,8 @@ open class OrganizationAuthorizationAPI {
           "name" : "aeiou",
           "id" : "aeiou",
           "state" : "aeiou",
-          "voicemailEnabled" : true
+          "voicemailEnabled" : true,
+          "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
         "locations" : [ "" ],
@@ -3861,7 +3869,8 @@ open class OrganizationAuthorizationAPI {
         "name" : "aeiou",
         "id" : "aeiou",
         "state" : "aeiou",
-        "voicemailEnabled" : true
+        "voicemailEnabled" : true,
+        "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
       "locations" : [ "" ],
@@ -4235,7 +4244,8 @@ open class OrganizationAuthorizationAPI {
       "name" : "aeiou",
       "id" : "aeiou",
       "state" : "aeiou",
-      "voicemailEnabled" : true
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
     "locations" : [ "" ],
@@ -4637,7 +4647,8 @@ open class OrganizationAuthorizationAPI {
         "name" : "aeiou",
         "id" : "aeiou",
         "state" : "aeiou",
-        "voicemailEnabled" : true
+        "voicemailEnabled" : true,
+        "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
       "locations" : [ "" ],
@@ -5001,7 +5012,8 @@ open class OrganizationAuthorizationAPI {
       "name" : "aeiou",
       "id" : "aeiou",
       "state" : "aeiou",
-      "voicemailEnabled" : true
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
     "locations" : [ "" ],
@@ -5528,7 +5540,8 @@ open class OrganizationAuthorizationAPI {
       "name" : "aeiou",
       "id" : "aeiou",
       "state" : "aeiou",
-      "voicemailEnabled" : true
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
     "locations" : [ "" ],
@@ -6117,7 +6130,8 @@ open class OrganizationAuthorizationAPI {
         "name" : "aeiou",
         "id" : "aeiou",
         "state" : "aeiou",
-        "voicemailEnabled" : true
+        "voicemailEnabled" : true,
+        "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
       "locations" : [ "" ],

@@ -13,10 +13,15 @@ public class AvailableTopic: Codable {
 
     public var _description: String?
     public var _id: String?
+    /** Permissions required to subscribe to the topic */
     public var requiresPermissions: [String]?
     public var schema: [String:JSON]?
+    /** True if the topic user ID is required to match the subscribing user ID */
+    public var requiresCurrentUser: Bool?
+    /** True if permissions are only required when the topic user ID does not match the subscribing user ID */
+    public var requiresCurrentUserOrPermission: Bool?
 
-    public init(_description: String?, _id: String?, requiresPermissions: [String]?, schema: [String:JSON]?) {
+    public init(_description: String?, _id: String?, requiresPermissions: [String]?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?) {
         
         self._description = _description
         
@@ -26,6 +31,10 @@ public class AvailableTopic: Codable {
         
         self.schema = schema
         
+        self.requiresCurrentUser = requiresCurrentUser
+        
+        self.requiresCurrentUserOrPermission = requiresCurrentUserOrPermission
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -33,6 +42,8 @@ public class AvailableTopic: Codable {
         case _id = "id"
         case requiresPermissions
         case schema
+        case requiresCurrentUser
+        case requiresCurrentUserOrPermission
     }
 
 

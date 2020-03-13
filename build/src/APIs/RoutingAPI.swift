@@ -473,6 +473,61 @@ open class RoutingAPI {
     }
 
     
+    
+    
+    /**
+     
+     Delete the user's max utilization settings and revert to the organization-wide default.
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingUserUtilization(userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingUserUtilizationWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete the user's max utilization settings and revert to the organization-wide default.
+     
+     - DELETE /api/v2/routing/users/{userId}/utilization
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingUserUtilizationWithRequestBuilder(userId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/routing/users/{userId}/utilization"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
     /**
      
      Delete the organization-wide max utilization settings and revert to the system default.
@@ -5136,6 +5191,77 @@ open class RoutingAPI {
     }
 
     
+    
+    
+    /**
+     
+     Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingUserUtilization(userId: String, completion: @escaping ((_ data: Utilization?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingUserUtilizationWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<Utilization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
+     
+     - GET /api/v2/routing/users/{userId}/utilization
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "utilization" : {
+    "key" : {
+      "interruptableMediaTypes" : [ "aeiou" ],
+      "includeNonAcd" : true,
+      "maximumCapacity" : 123
+    }
+  }
+}}]
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<Utilization> 
+     */
+    open class func getRoutingUserUtilizationWithRequestBuilder(userId: String) -> RequestBuilder<Utilization> {
+        var path = "/api/v2/routing/users/{userId}/utilization"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Utilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      
      Get the organization-wide max utilization settings.
@@ -9533,6 +9659,78 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SmsPhoneNumber>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) utilization 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingUserUtilization(userId: String, body: Utilization, completion: @escaping ((_ data: Utilization?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingUserUtilizationWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<Utilization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+     
+     - PUT /api/v2/routing/users/{userId}/utilization
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "utilization" : {
+    "key" : {
+      "interruptableMediaTypes" : [ "aeiou" ],
+      "includeNonAcd" : true,
+      "maximumCapacity" : 123
+    }
+  }
+}}]
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) utilization 
+
+     - returns: RequestBuilder<Utilization> 
+     */
+    open class func putRoutingUserUtilizationWithRequestBuilder(userId: String, body: Utilization) -> RequestBuilder<Utilization> {
+        var path = "/api/v2/routing/users/{userId}/utilization"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Utilization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

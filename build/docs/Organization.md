@@ -19,6 +19,7 @@ title: Organization
 | **defaultSiteId** | **String** |  | [optional] |
 | **supportURI** | **String** | Email address where support tickets are sent to. | [optional] |
 | **voicemailEnabled** | **Bool** |  | [optional] |
+| **productPlatform** | **String** | Organizations Originating Platform. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **features** | **[String:Bool]** | The state of features available for the organization. | [optional] |
 {: class="table table-striped"}

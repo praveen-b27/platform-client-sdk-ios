@@ -784,6 +784,7 @@ open class ConversationsAPI {
     } ],
     "externalContactId" : "aeiou",
     "purpose" : "aeiou",
+    "teamId" : "aeiou",
     "externalOrganizationId" : "aeiou",
     "participantName" : "aeiou",
     "userId" : "aeiou",
@@ -1016,6 +1017,7 @@ open class ConversationsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -1327,6 +1329,7 @@ open class ConversationsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "teamId" : "aeiou",
       "attributes" : {
         "key" : "aeiou"
       },
@@ -1591,17 +1594,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -1612,6 +1615,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2807,17 +2815,17 @@ open class ConversationsAPI {
         "redacted" : true,
         "selfUri" : "aeiou",
         "answers" : {
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "comments" : "aeiou",
           "agentComments" : "aeiou",
           "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionGroupScores" : [ {
-            "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+            "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+            "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "markedNA" : true,
             "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-            "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-            "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-            "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+            "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "questionScores" : [ {
               "answerId" : "aeiou",
               "failedKillQuestion" : true,
@@ -2828,6 +2836,11 @@ open class ConversationsAPI {
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+            "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+            "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+            "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+            "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+            "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -4709,7 +4722,8 @@ open class ConversationsAPI {
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "state" : "aeiou",
-                "voicemailEnabled" : true
+                "voicemailEnabled" : true,
+                "productPlatform" : "aeiou"
               },
               "name" : "aeiou",
               "locations" : [ "" ],
@@ -9364,17 +9378,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -9385,6 +9399,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10518,17 +10537,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -10539,6 +10558,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -11599,17 +11623,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -11620,6 +11644,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -12680,17 +12709,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -12701,6 +12730,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -13761,17 +13795,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -13782,6 +13816,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14842,17 +14881,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -14863,6 +14902,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16054,6 +16098,18 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "aggregations" : [ {
+    "metric" : "aeiou",
+    "count" : 123456789,
+    "type" : "aeiou",
+    "dimension" : "aeiou",
+    "results" : [ {
+      "count" : 123456789,
+      "lt" : 1.3579000000000001069366817318950779736042022705078125,
+      "gte" : 1.3579000000000001069366817318950779736042022705078125,
+      "value" : "aeiou"
+    } ]
+  } ],
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+0000",
     "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16217,25 +16273,11 @@ open class ConversationsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
-      "attributes" : {
-        "key" : "aeiou"
-      },
+      "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ]
-  } ],
-  "aggregations" : [ {
-    "metric" : "aeiou",
-    "count" : 123456789,
-    "type" : "aeiou",
-    "dimension" : "aeiou",
-    "results" : [ {
-      "count" : 123456789,
-      "lt" : 1.3579000000000001069366817318950779736042022705078125,
-      "gte" : 1.3579000000000001069366817318950779736042022705078125,
-      "value" : "aeiou"
     } ]
   } ]
 }}]
@@ -16816,17 +16858,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -16837,6 +16879,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -17891,17 +17938,17 @@ open class ConversationsAPI {
       "redacted" : true,
       "selfUri" : "aeiou",
       "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "comments" : "aeiou",
         "agentComments" : "aeiou",
         "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "questionGroupScores" : [ {
-          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "markedNA" : true,
           "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "questionScores" : [ {
             "answerId" : "aeiou",
             "failedKillQuestion" : true,
@@ -17912,6 +17959,11 @@ open class ConversationsAPI {
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,

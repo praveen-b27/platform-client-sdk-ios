@@ -102,6 +102,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case sourcesessionid = "sourceSessionId"
         case startinglanguage = "startingLanguage"
         case subject = "subject"
+        case teamid = "teamId"
         case timeoutseconds = "timeoutSeconds"
         case transfertargetaddress = "transferTargetAddress"
         case transfertargetname = "transferTargetName"

@@ -5582,9 +5582,9 @@ open class WorkforceManagementAPI {
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(muId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: UserScheduleContainer?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearch(muId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: muId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
-        requestBuilder.execute { (response: Response<UserScheduleContainer>?, error) -> Void in
+        requestBuilder.execute { (response: Response<BuAsyncAgentSchedulesSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -5610,51 +5610,52 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "managementUnitTimeZone" : "aeiou",
-  "publishedSchedules" : [ {
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "weekDate" : "aeiou"
-  } ],
-  "userSchedules" : {
-    "key" : {
+  "result" : {
+    "agentSchedules" : [ {
       "fullDayTimeOffMarkers" : [ {
         "activityCodeId" : "aeiou",
-        "isPaid" : true,
-        "lengthInMinutes" : 123,
-        "description" : "aeiou",
-        "managementUnitDate" : "aeiou",
-        "delete" : true
+        "timeOffRequestId" : "aeiou",
+        "lengthMinutes" : 123,
+        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+        "paid" : true,
+        "description" : "aeiou"
       } ],
-      "metadata" : {
-        "modifiedBy" : {
-          "selfUri" : "aeiou",
-          "id" : "aeiou"
-        },
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
-      "workPlanId" : "aeiou",
       "shifts" : [ {
-        "lengthInMinutes" : 123,
+        "schedule" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou",
+          "weekDate" : "2000-01-23T04:56:07.000+0000"
+        },
+        "lengthMinutes" : 123,
         "activities" : [ {
           "activityCodeId" : "aeiou",
-          "lengthInMinutes" : 123,
           "timeOffRequestId" : "aeiou",
+          "lengthMinutes" : 123,
+          "paid" : true,
           "description" : "aeiou",
-          "isDstFallback" : true,
-          "countsAsPaidTime" : true,
           "startDate" : "2000-01-23T04:56:07.000+0000"
         } ],
-        "weekSchedule" : "",
         "id" : "aeiou",
-        "delete" : true,
         "startDate" : "2000-01-23T04:56:07.000+0000",
         "manuallyEdited" : true
       } ],
-      "delete" : true
-    }
-  }
+      "user" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ],
+    "publishedSchedules" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000",
+      "weekCount" : 123
+    } ],
+    "businessUnitTimeZone" : "aeiou"
+  },
+  "downloadUrl" : "aeiou",
+  "operationId" : "aeiou",
+  "progress" : 123,
+  "status" : "aeiou"
 }}]
      
      - parameter muId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -5662,9 +5663,9 @@ open class WorkforceManagementAPI {
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
 
-     - returns: RequestBuilder<UserScheduleContainer> 
+     - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 
      */
-    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<UserScheduleContainer> {
+    open class func postWorkforcemanagementManagementunitAgentschedulesSearchWithRequestBuilder(muId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {
         var path = "/api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search"
         let muIdPreEscape = "\(muId)"
         let muIdPostEscape = muIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5683,7 +5684,7 @@ open class WorkforceManagementAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<UserScheduleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<BuAsyncAgentSchedulesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

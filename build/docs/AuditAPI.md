@@ -70,7 +70,7 @@ AuditAPI.getAuditsQueryTransactionId(transactionId: transactionId) { (response, 
 
 
 
-> [AuditQueryExecutionResultsResponse](AuditQueryExecutionResultsResponse.html) getAuditsQueryTransactionIdResults(transactionId, cursor, pageSize)
+> [AuditQueryExecutionResultsResponse](AuditQueryExecutionResultsResponse.html) getAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand)
 
 Get results of audit query
 
@@ -93,9 +93,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let transactionId: String = "" // Transaction ID
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
 let pageSize: Int = 25 // Page size
+let expand: [String] = [AuditAPI.Expand_getAuditsQueryTransactionIdResults.enummember.rawValue] // Which fields, if any, to expand
 
 // Code example
-AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize) { (response, error) in
+AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -113,6 +114,7 @@ AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor
 | **transactionId** | **String**| Transaction ID | |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
 {: class="table-striped"}
 
 

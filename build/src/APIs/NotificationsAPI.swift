@@ -114,7 +114,9 @@ open class NotificationsAPI {
     "schema" : {
       "key" : "{}"
     },
+    "requiresCurrentUser" : true,
     "requiresPermissions" : [ "aeiou" ],
+    "requiresCurrentUserOrPermission" : true,
     "description" : "aeiou",
     "id" : "aeiou"
   } ]

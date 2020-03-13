@@ -217,7 +217,8 @@ open class OrganizationAPI {
   "name" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
-  "voicemailEnabled" : true
+  "voicemailEnabled" : true,
+  "productPlatform" : "aeiou"
 }}]
 
      - returns: RequestBuilder<Organization> 
@@ -505,7 +506,8 @@ open class OrganizationAPI {
   "name" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
-  "voicemailEnabled" : true
+  "voicemailEnabled" : true,
+  "productPlatform" : "aeiou"
 }}]
      
      - parameter body: (body) Organization (optional)

@@ -11,15 +11,15 @@ import Foundation
 
 public class AnalyticsConversationAsyncQueryResponse: Codable {
 
-    public var conversations: [AnalyticsConversation]?
     /** Optional cursor to indicate where to resume the results */
     public var cursor: String?
+    public var conversations: [AnalyticsConversation]?
 
-    public init(conversations: [AnalyticsConversation]?, cursor: String?) {
-        
-        self.conversations = conversations
+    public init(cursor: String?, conversations: [AnalyticsConversation]?) {
         
         self.cursor = cursor
+        
+        self.conversations = conversations
         
     }
 

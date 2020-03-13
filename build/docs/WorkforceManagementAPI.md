@@ -2891,7 +2891,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitActivitycodes(muId: 
 
 
 
-> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitAgentschedulesSearch(muId, body, forceAsync, forceDownloadService)
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementManagementunitAgentschedulesSearch(muId, body, forceAsync, forceDownloadService)
 
 Query published schedules for given given time range for set of users
 
@@ -2942,7 +2942,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 
 ### Return type
 
-[**UserScheduleContainer**](UserScheduleContainer.html)
+[**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html)
 
 <a name="postWorkforcemanagementManagementunitHistoricaladherencequery"></a>
 

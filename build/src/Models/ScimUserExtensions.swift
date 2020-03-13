@@ -12,9 +12,9 @@ import Foundation
 
 public class ScimUserExtensions: Codable {
 
-    /** Routing Skills assigned to user. */
+    /** Routing Skills assigned to user. No more than 50 skills may be assigned to a user. */
     public var routingSkills: [ScimUserRoutingSkill]?
-    /** Routing Languages assigned to user */
+    /** Routing Languages assigned to user. No more than 50 languages may be assigned to a user. */
     public var routingLanguages: [ScimUserRoutingLanguage]?
 
     public init(routingSkills: [ScimUserRoutingSkill]?, routingLanguages: [ScimUserRoutingLanguage]?) {

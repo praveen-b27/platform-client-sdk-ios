@@ -78,6 +78,7 @@ public class ReportingExportJobResponse: Codable {
         case exportTypeNotImplemented = "EXPORT_TYPE_NOT_IMPLEMENTED"
         case reachedMaximumAttemptOfRetry = "REACHED_MAXIMUM_ATTEMPT_OF_RETRY"
         case failedLongRunningExport = "FAILED_LONG_RUNNING_EXPORT"
+        case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

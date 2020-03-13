@@ -47,12 +47,14 @@ public class AnalyticsParticipant: Codable {
     public var externalOrganizationId: String?
     /** Reason for which participant flagged conversation */
     public var flaggedReason: FlaggedReason?
+    /** The team id the user is a member of */
+    public var teamId: String?
     /** List of sessions associated to this participant */
     public var sessions: [AnalyticsSession]?
     /** List of attributes associated to this participant */
     public var attributes: [String:String]?
 
-    public init(participantId: String?, participantName: String?, userId: String?, purpose: Purpose?, externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, sessions: [AnalyticsSession]?, attributes: [String:String]?) {
+    public init(participantId: String?, participantName: String?, userId: String?, purpose: Purpose?, externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, teamId: String?, sessions: [AnalyticsSession]?, attributes: [String:String]?) {
         
         self.participantId = participantId
         
@@ -67,6 +69,8 @@ public class AnalyticsParticipant: Codable {
         self.externalOrganizationId = externalOrganizationId
         
         self.flaggedReason = flaggedReason
+        
+        self.teamId = teamId
         
         self.sessions = sessions
         

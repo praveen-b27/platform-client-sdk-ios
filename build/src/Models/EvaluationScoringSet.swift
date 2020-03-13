@@ -13,16 +13,19 @@ public class EvaluationScoringSet: Codable {
 
     public var totalScore: Float?
     public var totalCriticalScore: Float?
+    public var totalNonCriticalScore: Float?
     public var questionGroupScores: [EvaluationQuestionGroupScore]?
     public var anyFailedKillQuestions: Bool?
     public var comments: String?
     public var agentComments: String?
 
-    public init(totalScore: Float?, totalCriticalScore: Float?, questionGroupScores: [EvaluationQuestionGroupScore]?, anyFailedKillQuestions: Bool?, comments: String?, agentComments: String?) {
+    public init(totalScore: Float?, totalCriticalScore: Float?, totalNonCriticalScore: Float?, questionGroupScores: [EvaluationQuestionGroupScore]?, anyFailedKillQuestions: Bool?, comments: String?, agentComments: String?) {
         
         self.totalScore = totalScore
         
         self.totalCriticalScore = totalCriticalScore
+        
+        self.totalNonCriticalScore = totalNonCriticalScore
         
         self.questionGroupScores = questionGroupScores
         

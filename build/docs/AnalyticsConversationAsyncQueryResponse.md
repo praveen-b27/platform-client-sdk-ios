@@ -7,8 +7,8 @@ title: AnalyticsConversationAsyncQueryResponse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **conversations** | [**[AnalyticsConversation]**](AnalyticsConversation.html) |  | [optional] |
 | **cursor** | **String** | Optional cursor to indicate where to resume the results | [optional] |
+| **conversations** | [**[AnalyticsConversation]**](AnalyticsConversation.html) |  | [optional] |
 {: class="table table-striped"}
 
 

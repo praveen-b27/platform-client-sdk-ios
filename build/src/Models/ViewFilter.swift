@@ -36,18 +36,6 @@ public class ViewFilter: Codable {
         case facebook = "facebook"
         case whatsapp = "whatsapp"
     }
-    public enum AgentDurationSortOrder: String, Codable { 
-        case ascending = "ascending"
-        case descending = "descending"
-    }
-    public enum WaitingDurationSortOrder: String, Codable { 
-        case ascending = "ascending"
-        case descending = "descending"
-    }
-    public enum InteractingDurationSortOrder: String, Codable { 
-        case ascending = "ascending"
-        case descending = "descending"
-    }
     public enum FlowOutcomeValues: String, Codable { 
         case success = "SUCCESS"
         case failure = "FAILURE"
@@ -170,20 +158,6 @@ public class ViewFilter: Codable {
     public var surveyTotalScore: NumericRange?
     /** The survey NPS score used to filter the view */
     public var surveyNpsScore: NumericRange?
-    /** Indicates if the Secondary Status should be shown */
-    public var showSecondaryStatus: Bool?
-    /** Provides the agent duration sort order */
-    public var agentDurationSortOrder: AgentDurationSortOrder?
-    /** Provides the waiting duration sort order */
-    public var waitingDurationSortOrder: WaitingDurationSortOrder?
-    /** Provides the interacting duration sort order */
-    public var interactingDurationSortOrder: InteractingDurationSortOrder?
-    /** Displays the Agent name as provided by the user */
-    public var agentName: String?
-    /** The list of skill strings as free form text */
-    public var skillsList: [String]?
-    /** The list of language strings as free form text */
-    public var languageList: [String]?
     /** The desired range for mos values */
     public var mos: NumericRange?
     /** The survey question group score used to filter the view */
@@ -218,8 +192,6 @@ public class ViewFilter: Codable {
     public var isConsultTransferred: Bool?
     /** The list of remote participants used to filter the view */
     public var remoteParticipants: [String]?
-    /** A list of status for the configuration view */
-    public var statusList: [String]?
     /** The list of flow Ids */
     public var flowIds: [String]?
     /** A list of outcome ids of the flow */
@@ -246,10 +218,6 @@ public class ViewFilter: Codable {
     public var hasJourneyActionMapId: Bool?
     /** Indicates filtering for Journey visit id */
     public var hasJourneyVisitId: Bool?
-    /** A list of OAuth client IDs */
-    public var oauthClientIds: [String]?
-    /** A list of API operations (ex: [\&quot;GET /api/v2/users/{userId}/queues\&quot;]) */
-    public var apiOperations: [String]?
     /** Indicates filtering for presence of MMS media */
     public var hasMedia: Bool?
     /** The role Ids used to filter the view */
@@ -259,7 +227,7 @@ public class ViewFilter: Codable {
     /** The location Ids used to filter the view */
     public var locationIds: [String]?
 
-    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, showSecondaryStatus: Bool?, agentDurationSortOrder: AgentDurationSortOrder?, waitingDurationSortOrder: WaitingDurationSortOrder?, interactingDurationSortOrder: InteractingDurationSortOrder?, agentName: String?, skillsList: [String]?, languageList: [String]?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, statusList: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, oauthClientIds: [String]?, apiOperations: [String]?, hasMedia: Bool?, roleIds: [String]?, reportsTos: [String]?, locationIds: [String]?) {
+    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, hasMedia: Bool?, roleIds: [String]?, reportsTos: [String]?, locationIds: [String]?) {
         
         self.mediaTypes = mediaTypes
         
@@ -343,20 +311,6 @@ public class ViewFilter: Codable {
         
         self.surveyNpsScore = surveyNpsScore
         
-        self.showSecondaryStatus = showSecondaryStatus
-        
-        self.agentDurationSortOrder = agentDurationSortOrder
-        
-        self.waitingDurationSortOrder = waitingDurationSortOrder
-        
-        self.interactingDurationSortOrder = interactingDurationSortOrder
-        
-        self.agentName = agentName
-        
-        self.skillsList = skillsList
-        
-        self.languageList = languageList
-        
         self.mos = mos
         
         self.surveyQuestionGroupScore = surveyQuestionGroupScore
@@ -391,8 +345,6 @@ public class ViewFilter: Codable {
         
         self.remoteParticipants = remoteParticipants
         
-        self.statusList = statusList
-        
         self.flowIds = flowIds
         
         self.flowOutcomeIds = flowOutcomeIds
@@ -418,10 +370,6 @@ public class ViewFilter: Codable {
         self.hasJourneyActionMapId = hasJourneyActionMapId
         
         self.hasJourneyVisitId = hasJourneyVisitId
-        
-        self.oauthClientIds = oauthClientIds
-        
-        self.apiOperations = apiOperations
         
         self.hasMedia = hasMedia
         

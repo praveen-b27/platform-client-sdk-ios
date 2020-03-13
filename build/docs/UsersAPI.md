@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteAnalyticsUsersDetailsJob**](UsersAPI.html#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
 | [**deleteAuthorizationSubjectDivisionRole**](UsersAPI.html#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
+| [**deleteRoutingUserUtilization**](UsersAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteUser**](UsersAPI.html#deleteUser) | Delete user |
 | [**deleteUserRoles**](UsersAPI.html#deleteUserRoles) | Removes all the roles from the user. |
 | [**deleteUserRoutinglanguage**](UsersAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
@@ -17,12 +18,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserStationDefaultstation**](UsersAPI.html#deleteUserStationDefaultstation) | Clear default station |
 | [**getAnalyticsUsersDetailsJob**](UsersAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](UsersAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
-| [**getAuthorizationDivisionspermittedMe**](UsersAPI.html#getAuthorizationDivisionspermittedMe) | Returns whether or not current user can perform the specified action(s). |
-| [**getAuthorizationDivisionspermittedSubjectId**](UsersAPI.html#getAuthorizationDivisionspermittedSubjectId) | Returns whether or not specified user can perform the specified action(s). |
+| [**getAuthorizationDivisionspermittedMe**](UsersAPI.html#getAuthorizationDivisionspermittedMe) | Returns which divisions the current user has the given permission in. |
+| [**getAuthorizationDivisionspermittedPagedMe**](UsersAPI.html#getAuthorizationDivisionspermittedPagedMe) | Returns which divisions the current user has the given permission in. |
+| [**getAuthorizationDivisionspermittedPagedSubjectId**](UsersAPI.html#getAuthorizationDivisionspermittedPagedSubjectId) | Returns which divisions the specified user has the given permission in. |
+| [**getAuthorizationDivisionspermittedSubjectId**](UsersAPI.html#getAuthorizationDivisionspermittedSubjectId) | Returns which divisions the specified user has the given permission in. |
 | [**getAuthorizationSubject**](UsersAPI.html#getAuthorizationSubject) | Returns a listing of roles and permissions for a user. |
 | [**getAuthorizationSubjectsMe**](UsersAPI.html#getAuthorizationSubjectsMe) | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**getFieldconfig**](UsersAPI.html#getFieldconfig) | Fetch field config for an entity type |
 | [**getProfilesUsers**](UsersAPI.html#getProfilesUsers) | Get a user profile listing |
+| [**getRoutingUserUtilization**](UsersAPI.html#getRoutingUserUtilization) | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**getUser**](UsersAPI.html#getUser) | Get user. |
 | [**getUserAdjacents**](UsersAPI.html#getUserAdjacents) | Get adjacents |
 | [**getUserCallforwarding**](UsersAPI.html#getUserCallforwarding) | Get a user&#39;s CallForwarding |
@@ -66,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUsers**](UsersAPI.html#postUsers) | Create user |
 | [**postUsersMePassword**](UsersAPI.html#postUsersMePassword) | Change your password |
 | [**postUsersSearch**](UsersAPI.html#postUsersSearch) | Search users |
+| [**putRoutingUserUtilization**](UsersAPI.html#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putUserCallforwarding**](UsersAPI.html#putUserCallforwarding) | Update a user&#39;s CallForwarding |
 | [**putUserOutofoffice**](UsersAPI.html#putUserOutofoffice) | Update an OutOfOffice |
 | [**putUserProfileskills**](UsersAPI.html#putUserProfileskills) | Update profile skills for a user |
@@ -176,6 +181,57 @@ UsersAPI.deleteAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **divisionId** | **String**| the id of the division of the grant | |
 | **roleId** | **String**| the id of the role of the grant | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingUserUtilization"></a>
+
+# **deleteRoutingUserUtilization**
+
+
+
+> Void deleteRoutingUserUtilization(userId)
+
+Delete the user&#39;s max utilization settings and revert to the organization-wide default.
+
+
+
+Wraps DELETE /api/v2/routing/users/{userId}/utilization  
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+UsersAPI.deleteRoutingUserUtilization(userId: userId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteRoutingUserUtilization was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
 {: class="table-striped"}
 
 
@@ -607,13 +663,13 @@ UsersAPI.getAnalyticsUsersDetailsJobResults(jobId: jobId, cursor: cursor, pageSi
 
 # **getAuthorizationDivisionspermittedMe**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [[AuthzDivision]](AuthzDivision.html) getAuthorizationDivisionspermittedMe(permission, name)
 
-Returns whether or not current user can perform the specified action(s).
+Returns which divisions the current user has the given permission in.
 
-
+This route is deprecated, use authorization/divisionspermitted/paged/me instead.
 
 Wraps GET /api/v2/authorization/divisionspermitted/me  
 
@@ -656,6 +712,118 @@ UsersAPI.getAuthorizationDivisionspermittedMe(permission: permission, name: name
 
 [**[AuthzDivision]**](AuthzDivision.html)
 
+<a name="getAuthorizationDivisionspermittedPagedMe"></a>
+
+# **getAuthorizationDivisionspermittedPagedMe**
+
+
+
+> [DivsPermittedEntityListing](DivsPermittedEntityListing.html) getAuthorizationDivisionspermittedPagedMe(permission, pageNumber, pageSize)
+
+Returns which divisions the current user has the given permission in.
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/paged/me  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let permission: String = "" // The permission string, including the object to access, e.g. routing:queue:view
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+UsersAPI.getAuthorizationDivisionspermittedPagedMe(permission: permission, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getAuthorizationDivisionspermittedPagedMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view | |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
+<a name="getAuthorizationDivisionspermittedPagedSubjectId"></a>
+
+# **getAuthorizationDivisionspermittedPagedSubjectId**
+
+
+
+> [DivsPermittedEntityListing](DivsPermittedEntityListing.html) getAuthorizationDivisionspermittedPagedSubjectId(subjectId, permission, pageNumber, pageSize)
+
+Returns which divisions the specified user has the given permission in.
+
+
+
+Wraps GET /api/v2/authorization/divisionspermitted/paged/{subjectId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let permission: String = "" // The permission string, including the object to access, e.g. routing:queue:view
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+UsersAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: subjectId, permission: permission, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getAuthorizationDivisionspermittedPagedSubjectId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| Subject ID (user or group) | |
+| **permission** | **String**| The permission string, including the object to access, e.g. routing:queue:view | |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DivsPermittedEntityListing**](DivsPermittedEntityListing.html)
+
 <a name="getAuthorizationDivisionspermittedSubjectId"></a>
 
 # **getAuthorizationDivisionspermittedSubjectId**
@@ -664,9 +832,9 @@ UsersAPI.getAuthorizationDivisionspermittedMe(permission: permission, name: name
 
 > [[AuthzDivision]](AuthzDivision.html) getAuthorizationDivisionspermittedSubjectId(subjectId, permission, name)
 
-Returns whether or not specified user can perform the specified action(s).
+Returns which divisions the specified user has the given permission in.
 
-
+This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
 
 Wraps GET /api/v2/authorization/divisionspermitted/{subjectId}  
 
@@ -921,6 +1089,59 @@ UsersAPI.getProfilesUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, 
 ### Return type
 
 [**UserProfileEntityListing**](UserProfileEntityListing.html)
+
+<a name="getRoutingUserUtilization"></a>
+
+# **getRoutingUserUtilization**
+
+
+
+> [Utilization](Utilization.html) getRoutingUserUtilization(userId)
+
+Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
+
+
+
+Wraps GET /api/v2/routing/users/{userId}/utilization  
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+* routing:utilization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+UsersAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getRoutingUserUtilization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="getUser"></a>
 
@@ -3240,6 +3461,60 @@ UsersAPI.postUsersSearch(body: body) { (response, error) in
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="putRoutingUserUtilization"></a>
+
+# **putRoutingUserUtilization**
+
+
+
+> [Utilization](Utilization.html) putRoutingUserUtilization(userId, body)
+
+Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
+
+
+
+Wraps PUT /api/v2/routing/users/{userId}/utilization  
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: Utilization = new Utilization(...) // utilization
+
+// Code example
+UsersAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putRoutingUserUtilization was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**Utilization**](Utilization.html)| utilization | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Utilization**](Utilization.html)
 
 <a name="putUserCallforwarding"></a>
 

@@ -375,6 +375,7 @@ open class AnalyticsAPI {
     } ],
     "externalContactId" : "aeiou",
     "purpose" : "aeiou",
+    "teamId" : "aeiou",
     "externalOrganizationId" : "aeiou",
     "participantName" : "aeiou",
     "userId" : "aeiou",
@@ -607,6 +608,7 @@ open class AnalyticsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
@@ -918,6 +920,7 @@ open class AnalyticsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
+      "teamId" : "aeiou",
       "attributes" : {
         "key" : "aeiou"
       },
@@ -1014,12 +1017,10 @@ open class AnalyticsAPI {
       "transferred" : true,
       "surveyQuestionGroupScore" : "",
       "abandonDurationsMilliseconds" : [ "" ],
-      "waitingDurationSortOrder" : "aeiou",
       "hasMedia" : true,
       "messageTypes" : [ "aeiou" ],
       "surveyPromoterScore" : "",
       "isSurveyed" : true,
-      "showSecondaryStatus" : true,
       "divisionIds" : [ "aeiou" ],
       "mos" : "",
       "surveyTotalScore" : "",
@@ -1032,20 +1033,16 @@ open class AnalyticsAPI {
       "groupIds" : [ "aeiou" ],
       "surveyFormIds" : [ "aeiou" ],
       "flowVersions" : [ "aeiou" ],
-      "apiOperations" : [ "aeiou" ],
       "isEnded" : true,
       "abandoned" : true,
       "surveyScores" : [ "" ],
       "originatingDirections" : [ "aeiou" ],
-      "agentDurationSortOrder" : "aeiou",
       "isConsulted" : true,
       "externalOrgIds" : [ "aeiou" ],
       "locationIds" : [ "aeiou" ],
       "languageIds" : [ "aeiou" ],
-      "agentName" : "aeiou",
       "addressTos" : [ "aeiou" ],
       "addressFroms" : [ "aeiou" ],
-      "interactingDurationSortOrder" : "aeiou",
       "hasJourneyActionMapId" : true,
       "filterQueuesByUserIds" : [ "aeiou" ],
       "contactIds" : [ "aeiou" ],
@@ -1094,9 +1091,7 @@ open class AnalyticsAPI {
       "evaluationScore" : "",
       "surveyStatuses" : [ "aeiou" ],
       "userIds" : [ "aeiou" ],
-      "skillsList" : [ "aeiou" ],
       "acwDurationsMilliseconds" : [ "" ],
-      "languageList" : [ "aeiou" ],
       "isBlindTransferred" : true,
       "flowDisconnectReasons" : [ "aeiou" ],
       "outboundContactListIds" : [ "aeiou" ],
@@ -1107,11 +1102,9 @@ open class AnalyticsAPI {
       "mediaTypes" : [ "aeiou" ],
       "hasJourneyVisitId" : true,
       "roleIds" : [ "aeiou" ],
-      "statusList" : [ "aeiou" ],
       "externalContactIds" : [ "aeiou" ],
       "dnisList" : [ "aeiou" ],
-      "flowEntryTypes" : [ "aeiou" ],
-      "oauthClientIds" : [ "aeiou" ]
+      "flowEntryTypes" : [ "aeiou" ]
     },
     "selectedColumns" : [ {
       "columnOrder" : 123,
@@ -2419,6 +2412,18 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "aggregations" : [ {
+    "metric" : "aeiou",
+    "count" : 123456789,
+    "type" : "aeiou",
+    "dimension" : "aeiou",
+    "results" : [ {
+      "count" : 123456789,
+      "lt" : 1.3579000000000001069366817318950779736042022705078125,
+      "gte" : 1.3579000000000001069366817318950779736042022705078125,
+      "value" : "aeiou"
+    } ]
+  } ],
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+0000",
     "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2582,25 +2587,11 @@ open class AnalyticsAPI {
       } ],
       "externalContactId" : "aeiou",
       "purpose" : "aeiou",
-      "attributes" : {
-        "key" : "aeiou"
-      },
+      "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
-    } ]
-  } ],
-  "aggregations" : [ {
-    "metric" : "aeiou",
-    "count" : 123456789,
-    "type" : "aeiou",
-    "dimension" : "aeiou",
-    "results" : [ {
-      "count" : 123456789,
-      "lt" : 1.3579000000000001069366817318950779736042022705078125,
-      "gte" : 1.3579000000000001069366817318950779736042022705078125,
-      "value" : "aeiou"
     } ]
   } ]
 }}]
@@ -3047,12 +3038,10 @@ open class AnalyticsAPI {
     "transferred" : true,
     "surveyQuestionGroupScore" : "",
     "abandonDurationsMilliseconds" : [ "" ],
-    "waitingDurationSortOrder" : "aeiou",
     "hasMedia" : true,
     "messageTypes" : [ "aeiou" ],
     "surveyPromoterScore" : "",
     "isSurveyed" : true,
-    "showSecondaryStatus" : true,
     "divisionIds" : [ "aeiou" ],
     "mos" : "",
     "surveyTotalScore" : "",
@@ -3065,20 +3054,16 @@ open class AnalyticsAPI {
     "groupIds" : [ "aeiou" ],
     "surveyFormIds" : [ "aeiou" ],
     "flowVersions" : [ "aeiou" ],
-    "apiOperations" : [ "aeiou" ],
     "isEnded" : true,
     "abandoned" : true,
     "surveyScores" : [ "" ],
     "originatingDirections" : [ "aeiou" ],
-    "agentDurationSortOrder" : "aeiou",
     "isConsulted" : true,
     "externalOrgIds" : [ "aeiou" ],
     "locationIds" : [ "aeiou" ],
     "languageIds" : [ "aeiou" ],
-    "agentName" : "aeiou",
     "addressTos" : [ "aeiou" ],
     "addressFroms" : [ "aeiou" ],
-    "interactingDurationSortOrder" : "aeiou",
     "hasJourneyActionMapId" : true,
     "filterQueuesByUserIds" : [ "aeiou" ],
     "contactIds" : [ "aeiou" ],
@@ -3127,9 +3112,7 @@ open class AnalyticsAPI {
     "evaluationScore" : "",
     "surveyStatuses" : [ "aeiou" ],
     "userIds" : [ "aeiou" ],
-    "skillsList" : [ "aeiou" ],
     "acwDurationsMilliseconds" : [ "" ],
-    "languageList" : [ "aeiou" ],
     "isBlindTransferred" : true,
     "flowDisconnectReasons" : [ "aeiou" ],
     "outboundContactListIds" : [ "aeiou" ],
@@ -3140,11 +3123,9 @@ open class AnalyticsAPI {
     "mediaTypes" : [ "aeiou" ],
     "hasJourneyVisitId" : true,
     "roleIds" : [ "aeiou" ],
-    "statusList" : [ "aeiou" ],
     "externalContactIds" : [ "aeiou" ],
     "dnisList" : [ "aeiou" ],
-    "flowEntryTypes" : [ "aeiou" ],
-    "oauthClientIds" : [ "aeiou" ]
+    "flowEntryTypes" : [ "aeiou" ]
   },
   "selectedColumns" : [ {
     "columnOrder" : 123,

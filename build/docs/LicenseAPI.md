@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLicenseToggle**](LicenseAPI.html#getLicenseToggle) | Get PureCloud license feature toggle value. |
 | [**getLicenseUser**](LicenseAPI.html#getLicenseUser) | Get licenses for specified user. |
 | [**getLicenseUsers**](LicenseAPI.html#getLicenseUsers) | Get a page of users and their licenses |
+| [**postLicenseInfer**](LicenseAPI.html#postLicenseInfer) | Get a list of licenses inferred based on a list of roleIds |
 | [**postLicenseOrganization**](LicenseAPI.html#postLicenseOrganization) | Update the organization&#39;s license assignments in a batch. |
 | [**postLicenseToggle**](LicenseAPI.html#postLicenseToggle) | Switch PureCloud license feature toggle value. |
 | [**postLicenseUsers**](LicenseAPI.html#postLicenseUsers) | Fetch user licenses in a batch. |
@@ -273,6 +274,57 @@ LicenseAPI.getLicenseUsers(pageSize: pageSize, pageNumber: pageNumber) { (respon
 ### Return type
 
 [**UserLicensesEntityListing**](UserLicensesEntityListing.html)
+
+<a name="postLicenseInfer"></a>
+
+# **postLicenseInfer**
+
+
+
+> [String] postLicenseInfer(body)
+
+Get a list of licenses inferred based on a list of roleIds
+
+
+
+Wraps POST /api/v2/license/infer  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [String] = [new [String](...)] // The roleIds to use while inferring licenses
+
+// Code example
+LicenseAPI.postLicenseInfer(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LicenseAPI.postLicenseInfer was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | **[String]**| The roleIds to use while inferring licenses | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+**[String]**
 
 <a name="postLicenseOrganization"></a>
 

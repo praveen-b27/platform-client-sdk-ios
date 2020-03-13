@@ -8445,6 +8445,332 @@ open class ArchitectAPI {
     
     
     
+    /**
+     
+     Returns the state information about an export job
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter exportJobId: (path) id of export job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsDatatableExportJob(datatableId: String, exportJobId: String, completion: @escaping ((_ data: DataTableExportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatableExportJobWithRequestBuilder(datatableId: datatableId, exportJobId: exportJobId)
+        requestBuilder.execute { (response: Response<DataTableExportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Returns the state information about an export job
+     
+     - GET /api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}
+     - Returns the state information about an export job.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "owner" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "countRecordsProcessed" : 123,
+  "errorInformation" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "downloadURI" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter exportJobId: (path) id of export job 
+
+     - returns: RequestBuilder<DataTableExportJob> 
+     */
+    open class func getFlowsDatatableExportJobWithRequestBuilder(datatableId: String, exportJobId: String) -> RequestBuilder<DataTableExportJob> {
+        var path = "/api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}"
+        let datatableIdPreEscape = "\(datatableId)"
+        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
+        let exportJobIdPreEscape = "\(exportJobId)"
+        let exportJobIdPostEscape = exportJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportJobId}", with: exportJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataTableExportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Returns the state information about an import job
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter importJobId: (path) id of import job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsDatatableImportJob(datatableId: String, importJobId: String, completion: @escaping ((_ data: DataTableImportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatableImportJobWithRequestBuilder(datatableId: datatableId, importJobId: importJobId)
+        requestBuilder.execute { (response: Response<DataTableImportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Returns the state information about an import job
+     
+     - GET /api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}
+     - Returns the state information about an import job.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "owner" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "importMode" : "aeiou",
+  "countRecordsFailed" : 123,
+  "countRecordsUpdated" : 123,
+  "selfUri" : "aeiou",
+  "uploadURI" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "errorInformation" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "countRecordsDeleted" : 123,
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter importJobId: (path) id of import job 
+
+     - returns: RequestBuilder<DataTableImportJob> 
+     */
+    open class func getFlowsDatatableImportJobWithRequestBuilder(datatableId: String, importJobId: String) -> RequestBuilder<DataTableImportJob> {
+        var path = "/api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}"
+        let datatableIdPreEscape = "\(datatableId)"
+        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
+        let importJobIdPreEscape = "\(importJobId)"
+        let importJobIdPostEscape = importJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importJobId}", with: importJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get all recent import jobs
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsDatatableImportJobs(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatableImportJobsWithRequestBuilder(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get all recent import jobs
+     
+     - GET /api/v2/flows/datatables/{datatableId}/import/jobs
+     - Get all recent import jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "owner" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "importMode" : "aeiou",
+    "countRecordsFailed" : 123,
+    "countRecordsUpdated" : 123,
+    "selfUri" : "aeiou",
+    "uploadURI" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "errorInformation" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "countRecordsDeleted" : 123,
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "pageSize" : 123
+}}]
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+
+     - returns: RequestBuilder<EntityListing> 
+     */
+    open class func getFlowsDatatableImportJobsWithRequestBuilder(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<EntityListing> {
+        var path = "/api/v2/flows/datatables/{datatableId}/import/jobs"
+        let datatableIdPreEscape = "\(datatableId)"
+        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
     
     
     /**
@@ -14044,6 +14370,200 @@ open class ArchitectAPI {
         ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Begin an export process for exporting all rows from a datatable
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsDatatableExportJobs(datatableId: String, completion: @escaping ((_ data: DataTableExportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsDatatableExportJobsWithRequestBuilder(datatableId: datatableId)
+        requestBuilder.execute { (response: Response<DataTableExportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Begin an export process for exporting all rows from a datatable
+     
+     - POST /api/v2/flows/datatables/{datatableId}/export/jobs
+     - Create an export job for exporting rows. The caller can then poll for status of the export using the token returned in the response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "owner" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "countRecordsProcessed" : 123,
+  "errorInformation" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "downloadURI" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter datatableId: (path) id of datatable 
+
+     - returns: RequestBuilder<DataTableExportJob> 
+     */
+    open class func postFlowsDatatableExportJobsWithRequestBuilder(datatableId: String) -> RequestBuilder<DataTableExportJob> {
+        var path = "/api/v2/flows/datatables/{datatableId}/export/jobs"
+        let datatableIdPreEscape = "\(datatableId)"
+        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataTableExportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Begin an import process for importing rows into a datatable
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter body: (body) import job information 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsDatatableImportJobs(datatableId: String, body: DataTableImportJob, completion: @escaping ((_ data: DataTableImportJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsDatatableImportJobsWithRequestBuilder(datatableId: datatableId, body: body)
+        requestBuilder.execute { (response: Response<DataTableImportJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Begin an import process for importing rows into a datatable
+     
+     - POST /api/v2/flows/datatables/{datatableId}/import/jobs
+     - Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "owner" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "importMode" : "aeiou",
+  "countRecordsFailed" : 123,
+  "countRecordsUpdated" : 123,
+  "selfUri" : "aeiou",
+  "uploadURI" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "errorInformation" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "countRecordsDeleted" : 123,
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter body: (body) import job information 
+
+     - returns: RequestBuilder<DataTableImportJob> 
+     */
+    open class func postFlowsDatatableImportJobsWithRequestBuilder(datatableId: String, body: DataTableImportJob) -> RequestBuilder<DataTableImportJob> {
+        var path = "/api/v2/flows/datatables/{datatableId}/import/jobs"
+        let datatableIdPreEscape = "\(datatableId)"
+        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

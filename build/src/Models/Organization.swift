@@ -16,6 +16,14 @@ public class Organization: Codable {
         case inactive = "inactive"
         case deleted = "deleted"
     }
+    public enum ProductPlatform: String, Codable { 
+        case pureCloud = "PureCloud"
+        case pureEngage = "PureEngage"
+        case pureEngageCloud = "PureEngageCloud"
+        case pureConnect = "PureConnect"
+        case pureConnectCloud = "PureConnectCloud"
+        case unknown = "Unknown"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -35,12 +43,14 @@ public class Organization: Codable {
     /** Email address where support tickets are sent to. */
     public var supportURI: String?
     public var voicemailEnabled: Bool?
+    /** Organizations Originating Platform. */
+    public var productPlatform: ProductPlatform?
     /** The URI for this object */
     public var selfUri: String?
     /** The state of features available for the organization. */
     public var features: [String:Bool]?
 
-    public init(_id: String?, name: String?, defaultLanguage: String?, defaultCountryCode: String?, thirdPartyOrgName: String?, thirdPartyURI: String?, domain: String?, version: Int?, state: State?, defaultSiteId: String?, supportURI: String?, voicemailEnabled: Bool?, selfUri: String?, features: [String:Bool]?) {
+    public init(_id: String?, name: String?, defaultLanguage: String?, defaultCountryCode: String?, thirdPartyOrgName: String?, thirdPartyURI: String?, domain: String?, version: Int?, state: State?, defaultSiteId: String?, supportURI: String?, voicemailEnabled: Bool?, productPlatform: ProductPlatform?, selfUri: String?, features: [String:Bool]?) {
         
         self._id = _id
         
@@ -66,6 +76,8 @@ public class Organization: Codable {
         
         self.voicemailEnabled = voicemailEnabled
         
+        self.productPlatform = productPlatform
+        
         self.selfUri = selfUri
         
         self.features = features
@@ -85,6 +97,7 @@ public class Organization: Codable {
         case defaultSiteId
         case supportURI
         case voicemailEnabled
+        case productPlatform
         case selfUri
         case features
     }

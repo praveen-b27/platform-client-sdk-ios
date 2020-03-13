@@ -90,6 +90,13 @@ open class AuditAPI {
     
     
     
+    
+    public enum Expand_getAuditsQueryTransactionIdResults: String { 
+        case user = "user"
+    }
+
+    
+    
     /**
      
      Get results of audit query
@@ -97,10 +104,11 @@ open class AuditAPI {
      - parameter transactionId: (path) Transaction ID 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuditsQueryTransactionIdResults(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AuditQueryExecutionResultsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: transactionId, cursor: cursor, pageSize: pageSize)
+    open class func getAuditsQueryTransactionIdResults(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil, completion: @escaping ((_ data: AuditQueryExecutionResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand)
         requestBuilder.execute { (response: Response<AuditQueryExecutionResultsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -139,7 +147,10 @@ open class AuditAPI {
     "context" : {
       "key" : "aeiou"
     },
-    "client" : "",
+    "client" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "action" : "aeiou",
     "id" : "aeiou",
     "serviceName" : "aeiou",
@@ -153,6 +164,7 @@ open class AuditAPI {
     },
     "user" : {
       "selfUri" : "aeiou",
+      "name" : "aeiou",
       "id" : "aeiou"
     },
     "entity" : "",
@@ -165,10 +177,11 @@ open class AuditAPI {
      - parameter transactionId: (path) Transaction ID 
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<AuditQueryExecutionResultsResponse> 
      */
-    open class func getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: String, cursor: String? = nil, pageSize: Int? = nil) -> RequestBuilder<AuditQueryExecutionResultsResponse> {
+    open class func getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<AuditQueryExecutionResultsResponse> {
         var path = "/api/v2/audits/query/{transactionId}/results"
         let transactionIdPreEscape = "\(transactionId)"
         let transactionIdPostEscape = transactionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -186,7 +199,9 @@ open class AuditAPI {
             
             "cursor": cursor, 
             
-            "pageSize": pageSize?.encodeToJSON()
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "expand": expand
             
         ])
 

@@ -1104,7 +1104,8 @@ open class TelephonyProvidersEdgeAPI {
   "name" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
-  "voicemailEnabled" : true
+  "voicemailEnabled" : true,
+  "productPlatform" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 
@@ -1207,7 +1208,8 @@ open class TelephonyProvidersEdgeAPI {
   "name" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
-  "voicemailEnabled" : true
+  "voicemailEnabled" : true,
+  "productPlatform" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 

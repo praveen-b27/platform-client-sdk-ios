@@ -262,7 +262,8 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "state" : "aeiou",
-                "voicemailEnabled" : true
+                "voicemailEnabled" : true,
+                "productPlatform" : "aeiou"
               },
               "name" : "aeiou",
               "locations" : [ "" ],
@@ -1048,7 +1049,8 @@ open class RecordingAPI {
               "name" : "aeiou",
               "id" : "aeiou",
               "state" : "aeiou",
-              "voicemailEnabled" : true
+              "voicemailEnabled" : true,
+              "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
             "locations" : [ "" ],
@@ -2305,7 +2307,8 @@ open class RecordingAPI {
               "name" : "aeiou",
               "id" : "aeiou",
               "state" : "aeiou",
-              "voicemailEnabled" : true
+              "voicemailEnabled" : true,
+              "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
             "locations" : [ "" ],
@@ -3242,7 +3245,8 @@ open class RecordingAPI {
               "name" : "aeiou",
               "id" : "aeiou",
               "state" : "aeiou",
-              "voicemailEnabled" : true
+              "voicemailEnabled" : true,
+              "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
             "locations" : [ "" ],
@@ -3825,7 +3829,8 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou",
                 "state" : "aeiou",
-                "voicemailEnabled" : true
+                "voicemailEnabled" : true,
+                "productPlatform" : "aeiou"
               },
               "name" : "aeiou",
               "locations" : [ "" ],
@@ -4441,7 +4446,8 @@ open class RecordingAPI {
               "name" : "aeiou",
               "id" : "aeiou",
               "state" : "aeiou",
-              "voicemailEnabled" : true
+              "voicemailEnabled" : true,
+              "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
             "locations" : [ "" ],
@@ -5058,7 +5064,8 @@ open class RecordingAPI {
                   "name" : "aeiou",
                   "id" : "aeiou",
                   "state" : "aeiou",
-                  "voicemailEnabled" : true
+                  "voicemailEnabled" : true,
+                  "productPlatform" : "aeiou"
                 },
                 "name" : "aeiou",
                 "locations" : [ "" ],
@@ -8412,17 +8419,17 @@ open class RecordingAPI {
           "redacted" : true,
           "selfUri" : "aeiou",
           "answers" : {
+            "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "comments" : "aeiou",
             "agentComments" : "aeiou",
             "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "questionGroupScores" : [ {
-              "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+              "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
               "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+              "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
               "markedNA" : true,
               "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
-              "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-              "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
-              "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+              "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
               "questionScores" : [ {
                 "answerId" : "aeiou",
                 "failedKillQuestion" : true,
@@ -8433,6 +8440,11 @@ open class RecordingAPI {
               } ],
               "questionGroupId" : "aeiou",
               "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+              "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+              "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+              "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+              "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+              "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
               "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
             } ],
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -11599,7 +11611,8 @@ open class RecordingAPI {
               "name" : "aeiou",
               "id" : "aeiou",
               "state" : "aeiou",
-              "voicemailEnabled" : true
+              "voicemailEnabled" : true,
+              "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
             "locations" : [ "" ],
@@ -12512,7 +12525,8 @@ open class RecordingAPI {
               "name" : "aeiou",
               "id" : "aeiou",
               "state" : "aeiou",
-              "voicemailEnabled" : true
+              "voicemailEnabled" : true,
+              "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
             "locations" : [ "" ],

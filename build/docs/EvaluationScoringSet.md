@@ -9,6 +9,7 @@ title: EvaluationScoringSet
 |------------ | ------------- | ------------- | -------------|
 | **totalScore** | **Float** |  | [optional] |
 | **totalCriticalScore** | **Float** |  | [optional] |
+| **totalNonCriticalScore** | **Float** |  | [optional] |
 | **questionGroupScores** | [**[EvaluationQuestionGroupScore]**](EvaluationQuestionGroupScore.html) |  | [optional] |
 | **anyFailedKillQuestions** | **Bool** |  | [optional] |
 | **comments** | **String** |  | [optional] |

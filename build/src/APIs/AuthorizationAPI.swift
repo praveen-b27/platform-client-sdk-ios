@@ -593,7 +593,7 @@ open class AuthorizationAPI {
     
     /**
      
-     Returns whether or not current user can perform the specified action(s).
+     Returns which divisions the current user has the given permission in.
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
      - parameter name: (query) Search term to filter by division name (optional)
@@ -619,10 +619,10 @@ open class AuthorizationAPI {
 
     /**
      
-     Returns whether or not current user can perform the specified action(s).
+     Returns which divisions the current user has the given permission in.
      
      - GET /api/v2/authorization/divisionspermitted/me
-     - 
+     - This route is deprecated, use authorization/divisionspermitted/paged/me instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -675,7 +675,210 @@ open class AuthorizationAPI {
     
     /**
      
-     Returns whether or not specified user can perform the specified action(s).
+     Returns which divisions the current user has the given permission in.
+     
+     - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationDivisionspermittedPagedMe(permission: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DivsPermittedEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationDivisionspermittedPagedMeWithRequestBuilder(permission: permission, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<DivsPermittedEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Returns which divisions the current user has the given permission in.
+     
+     - GET /api/v2/authorization/divisionspermitted/paged/me
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "allDivsPermitted" : true,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "objectCounts" : {
+      "key" : 123456789
+    },
+    "id" : "aeiou",
+    "homeDivision" : true
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+
+     - returns: RequestBuilder<DivsPermittedEntityListing> 
+     */
+    open class func getAuthorizationDivisionspermittedPagedMeWithRequestBuilder(permission: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<DivsPermittedEntityListing> {
+        let path = "/api/v2/authorization/divisionspermitted/paged/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "permission": permission, 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DivsPermittedEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Returns which divisions the specified user has the given permission in.
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationDivisionspermittedPagedSubjectId(subjectId: String, permission: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DivsPermittedEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationDivisionspermittedPagedSubjectIdWithRequestBuilder(subjectId: subjectId, permission: permission, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<DivsPermittedEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Returns which divisions the specified user has the given permission in.
+     
+     - GET /api/v2/authorization/divisionspermitted/paged/{subjectId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "allDivsPermitted" : true,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "objectCounts" : {
+      "key" : 123456789
+    },
+    "id" : "aeiou",
+    "homeDivision" : true
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+
+     - returns: RequestBuilder<DivsPermittedEntityListing> 
+     */
+    open class func getAuthorizationDivisionspermittedPagedSubjectIdWithRequestBuilder(subjectId: String, permission: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<DivsPermittedEntityListing> {
+        var path = "/api/v2/authorization/divisionspermitted/paged/{subjectId}"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "permission": permission, 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DivsPermittedEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Returns which divisions the specified user has the given permission in.
      
      - parameter subjectId: (path) Subject ID (user or group) 
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -702,10 +905,10 @@ open class AuthorizationAPI {
 
     /**
      
-     Returns whether or not specified user can perform the specified action(s).
+     Returns which divisions the specified user has the given permission in.
      
      - GET /api/v2/authorization/divisionspermitted/{subjectId}
-     - 
+     - This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

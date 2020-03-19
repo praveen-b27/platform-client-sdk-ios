@@ -13,15 +13,18 @@ public class OutboundMessagingMessagingCampaignProgressEventCampaignProgress: Co
 
     public var campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?
     public var numberOfContactsCalled: Double?
+    public var numberOfContactsMessaged: Double?
     public var totalNumberOfContacts: Double?
     public var percentage: Int?
     public var additionalProperties: JSON?
 
-    public init(campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, totalNumberOfContacts: Double?, percentage: Int?, additionalProperties: JSON?) {
+    public init(campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, additionalProperties: JSON?) {
         
         self.campaign = campaign
         
         self.numberOfContactsCalled = numberOfContactsCalled
+        
+        self.numberOfContactsMessaged = numberOfContactsMessaged
         
         self.totalNumberOfContacts = totalNumberOfContacts
         

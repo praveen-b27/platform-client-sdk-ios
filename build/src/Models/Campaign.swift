@@ -17,6 +17,7 @@ public class Campaign: Codable {
         case power = "power"
         case predictive = "predictive"
         case progressive = "progressive"
+        case external = "external"
     }
     public enum CampaignStatus: String, Codable { 
         case on = "on"

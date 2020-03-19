@@ -17,7 +17,6 @@ Defines a SCIM user.
 | **title** | **String** | The user&#39;s title. | [optional] |
 | **phoneNumbers** | [**[ScimPhoneNumber]**](ScimPhoneNumber.html) | The list of the user&#39;s phone numbers. | [optional] |
 | **emails** | [**[ScimEmail]**](ScimEmail.html) | The list of the user&#39;s email addresses. | [optional] |
-| **photos** | [**[Photo]**](Photo.html) | The list of the user&#39;s photos. | [optional] |
 | **externalId** | **String** | The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;. | [optional] |
 | **groups** | [**[ScimV2GroupReference]**](ScimV2GroupReference.html) | The list of groups that the user is a member of. | [optional] |
 | **roles** | [**[ScimUserRole]**](ScimUserRole.html) | The list of roles assigned to the user. | [optional] |

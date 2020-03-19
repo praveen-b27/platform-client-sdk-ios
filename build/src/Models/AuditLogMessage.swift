@@ -17,7 +17,7 @@ public class AuditLogMessage: Codable {
         case peoplePermissions = "PeoplePermissions"
         case quality = "Quality"
         case languageUnderstanding = "LanguageUnderstanding"
-        case topicsDefinitionsService = "TopicsDefinitionsService"
+        case topicsDefinitions = "TopicsDefinitions"
     }
     public enum Action: String, Codable { 
         case create = "Create"

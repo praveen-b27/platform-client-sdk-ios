@@ -28,8 +28,6 @@ public class ScimV2CreateUser: Codable {
     public var phoneNumbers: [ScimPhoneNumber]?
     /** The list of the user&#39;s email addresses. */
     public var emails: [ScimEmail]?
-    /** The list of the user&#39;s photos. */
-    public var photos: [Photo]?
     /** The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;. */
     public var externalId: String?
     /** The list of groups that the user is a member of. */
@@ -40,7 +38,7 @@ public class ScimV2CreateUser: Codable {
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
     public var urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?
 
-    public init(schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?) {
+    public init(schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?) {
         
         self.schemas = schemas
         
@@ -57,8 +55,6 @@ public class ScimV2CreateUser: Codable {
         self.phoneNumbers = phoneNumbers
         
         self.emails = emails
-        
-        self.photos = photos
         
         self.externalId = externalId
         
@@ -81,7 +77,6 @@ public class ScimV2CreateUser: Codable {
         case title
         case phoneNumbers
         case emails
-        case photos
         case externalId
         case groups
         case roles

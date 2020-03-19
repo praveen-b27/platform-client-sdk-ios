@@ -76,6 +76,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case exportTypeNotImplemented = "EXPORT_TYPE_NOT_IMPLEMENTED"
         case reachedMaximumAttemptOfRetry = "REACHED_MAXIMUM_ATTEMPT_OF_RETRY"
         case failedLongRunningExport = "FAILED_LONG_RUNNING_EXPORT"
+        case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
     }
     public var _id: String?
     public var name: String?

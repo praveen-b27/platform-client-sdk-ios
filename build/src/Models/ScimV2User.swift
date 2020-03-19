@@ -30,8 +30,6 @@ public class ScimV2User: Codable {
     public var phoneNumbers: [ScimPhoneNumber]?
     /** The list of the user&#39;s email addresses. */
     public var emails: [ScimEmail]?
-    /** The list of the user&#39;s photos. */
-    public var photos: [Photo]?
     /** The external ID of the user. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;. */
     public var externalId: String?
     /** The list of groups that the user is a member of. */
@@ -44,7 +42,7 @@ public class ScimV2User: Codable {
     /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?
 
-    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, photos: [Photo]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?, meta: ScimMetadata?) {
+    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?, meta: ScimMetadata?) {
         
         self._id = _id
         
@@ -63,8 +61,6 @@ public class ScimV2User: Codable {
         self.phoneNumbers = phoneNumbers
         
         self.emails = emails
-        
-        self.photos = photos
         
         self.externalId = externalId
         
@@ -90,7 +86,6 @@ public class ScimV2User: Codable {
         case title
         case phoneNumbers
         case emails
-        case photos
         case externalId
         case groups
         case roles

@@ -45,9 +45,11 @@ public class ObservationValue: Codable {
     public var ani: String?
     /** Dialed number identification service (number dialed by the calling party) */
     public var dnis: String?
+    /** The team Id the user is a member of */
+    public var teamId: String?
     public var scoredAgents: [AnalyticsScoredAgent]?
 
-    public init(observationDate: Date?, conversationId: String?, sessionId: String?, requestedRoutingSkillIds: [String]?, requestedLanguageId: String?, routingPriority: Int64?, participantName: String?, userId: String?, direction: Direction?, convertedFrom: String?, convertedTo: String?, addressFrom: String?, addressTo: String?, ani: String?, dnis: String?, scoredAgents: [AnalyticsScoredAgent]?) {
+    public init(observationDate: Date?, conversationId: String?, sessionId: String?, requestedRoutingSkillIds: [String]?, requestedLanguageId: String?, routingPriority: Int64?, participantName: String?, userId: String?, direction: Direction?, convertedFrom: String?, convertedTo: String?, addressFrom: String?, addressTo: String?, ani: String?, dnis: String?, teamId: String?, scoredAgents: [AnalyticsScoredAgent]?) {
         
         self.observationDate = observationDate
         
@@ -78,6 +80,8 @@ public class ObservationValue: Codable {
         self.ani = ani
         
         self.dnis = dnis
+        
+        self.teamId = teamId
         
         self.scoredAgents = scoredAgents
         

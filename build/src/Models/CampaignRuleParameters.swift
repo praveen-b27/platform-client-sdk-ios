@@ -31,6 +31,7 @@ public class CampaignRuleParameters: Codable {
         case power = "power"
         case predictive = "predictive"
         case progressive = "progressive"
+        case external = "external"
     }
     /** The operator for comparison. Required for a CampaignRuleCondition. */
     public var _operator: Operator?

@@ -1103,10 +1103,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",
@@ -1314,10 +1310,6 @@ open class SCIMAPI {
     } ],
     "userName" : "aeiou",
     "title" : "aeiou",
-    "photos" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou"
-    } ],
     "phoneNumbers" : [ {
       "type" : "aeiou",
       "value" : "aeiou",
@@ -2235,10 +2227,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",
@@ -2446,10 +2434,6 @@ open class SCIMAPI {
     } ],
     "userName" : "aeiou",
     "title" : "aeiou",
-    "photos" : [ {
-      "type" : "aeiou",
-      "value" : "aeiou"
-    } ],
     "phoneNumbers" : [ {
       "type" : "aeiou",
       "value" : "aeiou",
@@ -2673,10 +2657,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",
@@ -2888,10 +2868,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",
@@ -3082,10 +3058,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",
@@ -3267,10 +3239,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",
@@ -3473,10 +3441,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",
@@ -3688,10 +3652,6 @@ open class SCIMAPI {
   } ],
   "userName" : "aeiou",
   "title" : "aeiou",
-  "photos" : [ {
-    "type" : "aeiou",
-    "value" : "aeiou"
-  } ],
   "phoneNumbers" : [ {
     "type" : "aeiou",
     "value" : "aeiou",

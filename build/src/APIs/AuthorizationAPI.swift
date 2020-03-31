@@ -201,61 +201,6 @@ open class AuthorizationAPI {
     
     
     
-    /**
-     
-     Removes all the roles from the user.
-     
-     - parameter userId: (path) User ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func deleteUserRoles(userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteUserRolesWithRequestBuilder(userId: userId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     
-     Removes all the roles from the user.
-     
-     - DELETE /api/v2/users/{userId}/roles
-     - 
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter userId: (path) User ID 
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func deleteUserRolesWithRequestBuilder(userId: String) -> RequestBuilder<Void> {
-        var path = "/api/v2/users/{userId}/roles"
-        let userIdPreEscape = "\(userId)"
-        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
-        let body: Data? = nil
-            
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
-    }
-
-    
-    
-    
     
     
     /**

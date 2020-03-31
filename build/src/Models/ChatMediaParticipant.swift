@@ -79,6 +79,8 @@ public class ChatMediaParticipant: Codable {
     public var user: DomainEntityRef?
     /** The PureCloud queue for this participant. */
     public var queue: DomainEntityRef?
+    /** The PureCloud team for this participant. */
+    public var team: DomainEntityRef?
     /** A list of ad-hoc attributes for the participant. */
     public var attributes: [String:String]?
     /** If the conversation ends in error, contains additional error details. */
@@ -116,7 +118,7 @@ public class ChatMediaParticipant: Codable {
     /** If available, the URI to the avatar image of this communication. */
     public var avatarImageUrl: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, roomId: String?, avatarImageUrl: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, roomId: String?, avatarImageUrl: String?) {
         
         self._id = _id
         
@@ -149,6 +151,8 @@ public class ChatMediaParticipant: Codable {
         self.user = user
         
         self.queue = queue
+        
+        self.team = team
         
         self.attributes = attributes
         
@@ -205,6 +209,7 @@ public class ChatMediaParticipant: Codable {
         case wrapupPrompt
         case user
         case queue
+        case team
         case attributes
         case errorInfo
         case script

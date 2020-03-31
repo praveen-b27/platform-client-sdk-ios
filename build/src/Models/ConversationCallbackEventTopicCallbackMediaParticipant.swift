@@ -66,6 +66,7 @@ public class ConversationCallbackEventTopicCallbackMediaParticipant: Codable {
     public var wrapupPrompt: String?
     public var user: ConversationCallbackEventTopicUriReference?
     public var queue: ConversationCallbackEventTopicUriReference?
+    public var team: ConversationCallbackEventTopicUriReference?
     public var attributes: [String:String]?
     public var errorInfo: ConversationCallbackEventTopicErrorBody?
     public var script: ConversationCallbackEventTopicUriReference?
@@ -92,7 +93,7 @@ public class ConversationCallbackEventTopicCallbackMediaParticipant: Codable {
     public var callbackScheduledTime: Date?
     public var automatedCallbackConfigId: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationCallbackEventTopicUriReference?, queue: ConversationCallbackEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationCallbackEventTopicErrorBody?, script: ConversationCallbackEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationCallbackEventTopicUriReference?, externalOrganization: ConversationCallbackEventTopicUriReference?, wrapup: ConversationCallbackEventTopicWrapup?, conversationRoutingData: ConversationCallbackEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationCallbackEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: ConversationCallbackEventTopicDialerPreview?, voicemail: ConversationCallbackEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationCallbackEventTopicUriReference?, queue: ConversationCallbackEventTopicUriReference?, team: ConversationCallbackEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationCallbackEventTopicErrorBody?, script: ConversationCallbackEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationCallbackEventTopicUriReference?, externalOrganization: ConversationCallbackEventTopicUriReference?, wrapup: ConversationCallbackEventTopicWrapup?, conversationRoutingData: ConversationCallbackEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationCallbackEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: ConversationCallbackEventTopicDialerPreview?, voicemail: ConversationCallbackEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?) {
         
         self._id = _id
         
@@ -125,6 +126,8 @@ public class ConversationCallbackEventTopicCallbackMediaParticipant: Codable {
         self.user = user
         
         self.queue = queue
+        
+        self.team = team
         
         self.attributes = attributes
         
@@ -195,6 +198,7 @@ public class ConversationCallbackEventTopicCallbackMediaParticipant: Codable {
         case wrapupPrompt
         case user
         case queue
+        case team
         case attributes
         case errorInfo
         case script

@@ -66,6 +66,7 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
     public var wrapupPrompt: String?
     public var user: QueueConversationScreenShareEventTopicUriReference?
     public var queue: QueueConversationScreenShareEventTopicUriReference?
+    public var team: QueueConversationScreenShareEventTopicUriReference?
     public var attributes: [String:String]?
     public var errorInfo: QueueConversationScreenShareEventTopicErrorBody?
     public var script: QueueConversationScreenShareEventTopicUriReference?
@@ -87,7 +88,7 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
     public var peerCount: Int?
     public var sharing: Bool?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationScreenShareEventTopicUriReference?, queue: QueueConversationScreenShareEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationScreenShareEventTopicErrorBody?, script: QueueConversationScreenShareEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationScreenShareEventTopicUriReference?, externalOrganization: QueueConversationScreenShareEventTopicUriReference?, wrapup: QueueConversationScreenShareEventTopicWrapup?, conversationRoutingData: QueueConversationScreenShareEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationScreenShareEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, context: String?, peerCount: Int?, sharing: Bool?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationScreenShareEventTopicUriReference?, queue: QueueConversationScreenShareEventTopicUriReference?, team: QueueConversationScreenShareEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationScreenShareEventTopicErrorBody?, script: QueueConversationScreenShareEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationScreenShareEventTopicUriReference?, externalOrganization: QueueConversationScreenShareEventTopicUriReference?, wrapup: QueueConversationScreenShareEventTopicWrapup?, conversationRoutingData: QueueConversationScreenShareEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationScreenShareEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, context: String?, peerCount: Int?, sharing: Bool?) {
         
         self._id = _id
         
@@ -120,6 +121,8 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
         self.user = user
         
         self.queue = queue
+        
+        self.team = team
         
         self.attributes = attributes
         
@@ -180,6 +183,7 @@ public class QueueConversationScreenShareEventTopicScreenShareMediaParticipant: 
         case wrapupPrompt
         case user
         case queue
+        case team
         case attributes
         case errorInfo
         case script

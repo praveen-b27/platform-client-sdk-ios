@@ -8700,6 +8700,7 @@ open class RecordingAPI {
             "type" : "aeiou"
           } ]
         } ],
+        "teamId" : "aeiou",
         "name" : "aeiou",
         "wrapupPrompt" : "aeiou",
         "chats" : [ {

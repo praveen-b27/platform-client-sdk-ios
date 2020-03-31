@@ -23,6 +23,7 @@ title: ConversationSocialExpressionEventTopicSocialMediaParticipant
 | **wrapupPrompt** | **String** |  | [optional] |
 | **user** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
 | **queue** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
+| **team** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
 | **errorInfo** | [**ConversationSocialExpressionEventTopicErrorBody**](ConversationSocialExpressionEventTopicErrorBody.html) |  | [optional] |
 | **script** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |

@@ -23,6 +23,7 @@ title: ConversationScreenShareEventTopicScreenShareMediaParticipant
 | **wrapupPrompt** | **String** |  | [optional] |
 | **user** | [**ConversationScreenShareEventTopicUriReference**](ConversationScreenShareEventTopicUriReference.html) |  | [optional] |
 | **queue** | [**ConversationScreenShareEventTopicUriReference**](ConversationScreenShareEventTopicUriReference.html) |  | [optional] |
+| **team** | [**ConversationScreenShareEventTopicUriReference**](ConversationScreenShareEventTopicUriReference.html) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
 | **errorInfo** | [**ConversationScreenShareEventTopicErrorBody**](ConversationScreenShareEventTopicErrorBody.html) |  | [optional] |
 | **script** | [**ConversationScreenShareEventTopicUriReference**](ConversationScreenShareEventTopicUriReference.html) |  | [optional] |

@@ -23,6 +23,7 @@ title: ConversationVideoEventTopicVideoMediaParticipant
 | **wrapupPrompt** | **String** |  | [optional] |
 | **user** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
 | **queue** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
+| **team** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
 | **errorInfo** | [**ConversationVideoEventTopicErrorBody**](ConversationVideoEventTopicErrorBody.html) |  | [optional] |
 | **script** | [**ConversationVideoEventTopicUriReference**](ConversationVideoEventTopicUriReference.html) |  | [optional] |

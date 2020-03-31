@@ -750,6 +750,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -1250,6 +1251,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -3222,6 +3224,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -4143,6 +4146,7 @@ open class QualityAPI {
             "type" : "aeiou"
           } ]
         } ],
+        "teamId" : "aeiou",
         "name" : "aeiou",
         "wrapupPrompt" : "aeiou",
         "chats" : [ {
@@ -5062,6 +5066,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -6422,6 +6427,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -6970,6 +6976,7 @@ open class QualityAPI {
             "type" : "aeiou"
           } ]
         } ],
+        "teamId" : "aeiou",
         "name" : "aeiou",
         "wrapupPrompt" : "aeiou",
         "chats" : [ {
@@ -11986,6 +11993,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -13296,6 +13304,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -13790,6 +13799,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -16735,6 +16745,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -17230,6 +17241,7 @@ open class QualityAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {

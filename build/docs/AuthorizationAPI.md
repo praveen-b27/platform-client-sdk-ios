@@ -10,7 +10,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAuthorizationDivision**](AuthorizationAPI.html#deleteAuthorizationDivision) | Delete a division. |
 | [**deleteAuthorizationRole**](AuthorizationAPI.html#deleteAuthorizationRole) | Delete an organization role. |
 | [**deleteAuthorizationSubjectDivisionRole**](AuthorizationAPI.html#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
-| [**deleteUserRoles**](AuthorizationAPI.html#deleteUserRoles) | Removes all the roles from the user. |
 | [**getAuthorizationDivision**](AuthorizationAPI.html#getAuthorizationDivision) | Returns an authorization division. |
 | [**getAuthorizationDivisions**](AuthorizationAPI.html#getAuthorizationDivisions) | Retrieve a list of all divisions defined for the organization |
 | [**getAuthorizationDivisionsHome**](AuthorizationAPI.html#getAuthorizationDivisionsHome) | Retrieve the home division for the organization. |
@@ -200,57 +199,6 @@ AuthorizationAPI.deleteAuthorizationSubjectDivisionRole(subjectId: subjectId, di
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **divisionId** | **String**| the id of the division of the grant | |
 | **roleId** | **String**| the id of the role of the grant | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteUserRoles"></a>
-
-# **deleteUserRoles**
-
-
-
-> Void deleteUserRoles(userId)
-
-Removes all the roles from the user.
-
-
-
-Wraps DELETE /api/v2/users/{userId}/roles  
-
-Requires ANY permissions: 
-
-* authorization:grant:delete
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let userId: String = "" // User ID
-
-// Code example
-AuthorizationAPI.deleteUserRoles(userId: userId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("AuthorizationAPI.deleteUserRoles was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
 {: class="table-striped"}
 
 

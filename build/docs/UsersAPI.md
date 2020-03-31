@@ -11,7 +11,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAuthorizationSubjectDivisionRole**](UsersAPI.html#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
 | [**deleteRoutingUserUtilization**](UsersAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteUser**](UsersAPI.html#deleteUser) | Delete user |
-| [**deleteUserRoles**](UsersAPI.html#deleteUserRoles) | Removes all the roles from the user. |
 | [**deleteUserRoutinglanguage**](UsersAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
 | [**deleteUserRoutingskill**](UsersAPI.html#deleteUserRoutingskill) | Remove routing skill from user |
 | [**deleteUserStationAssociatedstation**](UsersAPI.html#deleteUserStationAssociatedstation) | Clear associated station |
@@ -290,57 +289,6 @@ UsersAPI.deleteUser(userId: userId) { (response, error) in
 ### Return type
 
 [**Empty**](Empty.html)
-
-<a name="deleteUserRoles"></a>
-
-# **deleteUserRoles**
-
-
-
-> Void deleteUserRoles(userId)
-
-Removes all the roles from the user.
-
-
-
-Wraps DELETE /api/v2/users/{userId}/roles  
-
-Requires ANY permissions: 
-
-* authorization:grant:delete
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let userId: String = "" // User ID
-
-// Code example
-UsersAPI.deleteUserRoles(userId: userId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("UsersAPI.deleteUserRoles was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| User ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
 
 <a name="deleteUserRoutinglanguage"></a>
 

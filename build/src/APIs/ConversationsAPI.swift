@@ -700,6 +700,7 @@ open class ConversationsAPI {
       "protocolCallId" : "aeiou",
       "mediaType" : "aeiou",
       "monitoredSessionId" : "aeiou",
+      "flowOutType" : "aeiou",
       "outboundCampaignId" : "aeiou",
       "addressTo" : "aeiou",
       "edgeId" : "aeiou",
@@ -933,6 +934,7 @@ open class ConversationsAPI {
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
         "monitoredSessionId" : "aeiou",
+        "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
         "edgeId" : "aeiou",
@@ -1245,6 +1247,7 @@ open class ConversationsAPI {
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
         "monitoredSessionId" : "aeiou",
+        "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
         "edgeId" : "aeiou",
@@ -2113,6 +2116,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -3334,6 +3338,7 @@ open class ConversationsAPI {
           "type" : "aeiou"
         } ]
       } ],
+      "teamId" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "chats" : [ {
@@ -3608,6 +3613,7 @@ open class ConversationsAPI {
     },
     "address" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -3941,6 +3947,7 @@ open class ConversationsAPI {
       "id" : "aeiou"
     },
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -4272,6 +4279,7 @@ open class ConversationsAPI {
         "id" : "aeiou"
       },
       "externalContact" : "",
+      "team" : "",
       "externalOrganization" : "",
       "flaggedReason" : "aeiou",
       "script" : "",
@@ -4442,6 +4450,7 @@ open class ConversationsAPI {
       },
       "address" : "aeiou",
       "externalContact" : "",
+      "team" : "",
       "externalOrganization" : "",
       "flaggedReason" : "aeiou",
       "script" : "",
@@ -5329,6 +5338,7 @@ open class ConversationsAPI {
     },
     "address" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -5866,6 +5876,7 @@ open class ConversationsAPI {
       },
       "address" : "aeiou",
       "externalContact" : "",
+      "team" : "",
       "externalOrganization" : "",
       "flaggedReason" : "aeiou",
       "script" : "",
@@ -6019,6 +6030,7 @@ open class ConversationsAPI {
     },
     "address" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "viewerUrl" : "aeiou",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
@@ -6335,6 +6347,7 @@ open class ConversationsAPI {
       },
       "address" : "aeiou",
       "externalContact" : "",
+      "team" : "",
       "viewerUrl" : "aeiou",
       "externalOrganization" : "",
       "flaggedReason" : "aeiou",
@@ -6496,6 +6509,7 @@ open class ConversationsAPI {
     "messagesSent" : 123,
     "messageId" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -7099,6 +7113,7 @@ open class ConversationsAPI {
       "messagesSent" : 123,
       "messageId" : "aeiou",
       "externalContact" : "",
+      "team" : "",
       "externalOrganization" : "",
       "flaggedReason" : "aeiou",
       "script" : "",
@@ -7260,6 +7275,7 @@ open class ConversationsAPI {
     },
     "address" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -8022,6 +8038,7 @@ open class ConversationsAPI {
       "messagesSent" : 123,
       "messageId" : "aeiou",
       "externalContact" : "",
+      "team" : "",
       "externalOrganization" : "",
       "flaggedReason" : "aeiou",
       "script" : "",
@@ -9897,6 +9914,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -11056,6 +11074,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -12142,6 +12161,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -13228,6 +13248,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -14314,6 +14335,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -15400,6 +15422,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -16189,6 +16212,7 @@ open class ConversationsAPI {
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
         "monitoredSessionId" : "aeiou",
+        "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
         "edgeId" : "aeiou",
@@ -17377,6 +17401,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -18457,6 +18482,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ]
     } ],
+    "teamId" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "chats" : [ {
@@ -19146,6 +19172,7 @@ open class ConversationsAPI {
     },
     "address" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -19364,6 +19391,7 @@ open class ConversationsAPI {
     "messagesSent" : 123,
     "messageId" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -19761,6 +19789,7 @@ open class ConversationsAPI {
     "messagesSent" : 123,
     "messageId" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",
@@ -20795,6 +20824,7 @@ open class ConversationsAPI {
     },
     "address" : "aeiou",
     "externalContact" : "",
+    "team" : "",
     "externalOrganization" : "",
     "flaggedReason" : "aeiou",
     "script" : "",

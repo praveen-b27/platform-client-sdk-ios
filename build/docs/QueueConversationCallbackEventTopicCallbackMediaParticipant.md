@@ -23,6 +23,7 @@ title: QueueConversationCallbackEventTopicCallbackMediaParticipant
 | **wrapupPrompt** | **String** |  | [optional] |
 | **user** | [**QueueConversationCallbackEventTopicUriReference**](QueueConversationCallbackEventTopicUriReference.html) |  | [optional] |
 | **queue** | [**QueueConversationCallbackEventTopicUriReference**](QueueConversationCallbackEventTopicUriReference.html) |  | [optional] |
+| **team** | [**QueueConversationCallbackEventTopicUriReference**](QueueConversationCallbackEventTopicUriReference.html) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
 | **errorInfo** | [**QueueConversationCallbackEventTopicErrorBody**](QueueConversationCallbackEventTopicErrorBody.html) |  | [optional] |
 | **script** | [**QueueConversationCallbackEventTopicUriReference**](QueueConversationCallbackEventTopicUriReference.html) |  | [optional] |

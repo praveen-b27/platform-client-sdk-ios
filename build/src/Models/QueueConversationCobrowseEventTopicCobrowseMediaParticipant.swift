@@ -66,6 +66,7 @@ public class QueueConversationCobrowseEventTopicCobrowseMediaParticipant: Codabl
     public var wrapupPrompt: String?
     public var user: QueueConversationCobrowseEventTopicUriReference?
     public var queue: QueueConversationCobrowseEventTopicUriReference?
+    public var team: QueueConversationCobrowseEventTopicUriReference?
     public var attributes: [String:String]?
     public var errorInfo: QueueConversationCobrowseEventTopicErrorBody?
     public var script: QueueConversationCobrowseEventTopicUriReference?
@@ -89,7 +90,7 @@ public class QueueConversationCobrowseEventTopicCobrowseMediaParticipant: Codabl
     public var providerEventTime: Date?
     public var controlling: [String]?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCobrowseEventTopicUriReference?, queue: QueueConversationCobrowseEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCobrowseEventTopicErrorBody?, script: QueueConversationCobrowseEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationCobrowseEventTopicUriReference?, externalOrganization: QueueConversationCobrowseEventTopicUriReference?, wrapup: QueueConversationCobrowseEventTopicWrapup?, conversationRoutingData: QueueConversationCobrowseEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCobrowseEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, viewerUrl: String?, providerEventTime: Date?, controlling: [String]?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCobrowseEventTopicUriReference?, queue: QueueConversationCobrowseEventTopicUriReference?, team: QueueConversationCobrowseEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCobrowseEventTopicErrorBody?, script: QueueConversationCobrowseEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationCobrowseEventTopicUriReference?, externalOrganization: QueueConversationCobrowseEventTopicUriReference?, wrapup: QueueConversationCobrowseEventTopicWrapup?, conversationRoutingData: QueueConversationCobrowseEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCobrowseEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, cobrowseSessionId: String?, cobrowseRole: String?, viewerUrl: String?, providerEventTime: Date?, controlling: [String]?) {
         
         self._id = _id
         
@@ -122,6 +123,8 @@ public class QueueConversationCobrowseEventTopicCobrowseMediaParticipant: Codabl
         self.user = user
         
         self.queue = queue
+        
+        self.team = team
         
         self.attributes = attributes
         
@@ -186,6 +189,7 @@ public class QueueConversationCobrowseEventTopicCobrowseMediaParticipant: Codabl
         case wrapupPrompt
         case user
         case queue
+        case team
         case attributes
         case errorInfo
         case script

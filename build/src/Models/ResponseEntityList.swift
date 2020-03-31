@@ -19,11 +19,11 @@ public class ResponseEntityList: Codable {
     public var firstUri: String?
     public var selfUri: String?
     public var nextUri: String?
-    public var previousUri: String?
     public var lastUri: String?
+    public var previousUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, pageCount: Int?) {
+    public init(entities: [ModelResponse]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, nextUri: String?, lastUri: String?, previousUri: String?, pageCount: Int?) {
         
         self.entities = entities
         
@@ -39,9 +39,9 @@ public class ResponseEntityList: Codable {
         
         self.nextUri = nextUri
         
-        self.previousUri = previousUri
-        
         self.lastUri = lastUri
+        
+        self.previousUri = previousUri
         
         self.pageCount = pageCount
         

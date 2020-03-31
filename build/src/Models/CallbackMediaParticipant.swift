@@ -79,6 +79,8 @@ public class CallbackMediaParticipant: Codable {
     public var user: DomainEntityRef?
     /** The PureCloud queue for this participant. */
     public var queue: DomainEntityRef?
+    /** The PureCloud team for this participant. */
+    public var team: DomainEntityRef?
     /** A list of ad-hoc attributes for the participant. */
     public var attributes: [String:String]?
     /** If the conversation ends in error, contains additional error details. */
@@ -128,7 +130,7 @@ public class CallbackMediaParticipant: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var callbackScheduledTime: Date?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, automatedCallbackConfigId: String?, callbackScheduledTime: Date?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, automatedCallbackConfigId: String?, callbackScheduledTime: Date?) {
         
         self._id = _id
         
@@ -161,6 +163,8 @@ public class CallbackMediaParticipant: Codable {
         self.user = user
         
         self.queue = queue
+        
+        self.team = team
         
         self.attributes = attributes
         
@@ -229,6 +233,7 @@ public class CallbackMediaParticipant: Codable {
         case wrapupPrompt
         case user
         case queue
+        case team
         case attributes
         case errorInfo
         case script

@@ -66,6 +66,7 @@ public class ConversationVideoEventTopicVideoMediaParticipant: Codable {
     public var wrapupPrompt: String?
     public var user: ConversationVideoEventTopicUriReference?
     public var queue: ConversationVideoEventTopicUriReference?
+    public var team: ConversationVideoEventTopicUriReference?
     public var attributes: [String:String]?
     public var errorInfo: ConversationVideoEventTopicErrorBody?
     public var script: ConversationVideoEventTopicUriReference?
@@ -90,7 +91,7 @@ public class ConversationVideoEventTopicVideoMediaParticipant: Codable {
     public var context: String?
     public var msids: [String]?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationVideoEventTopicUriReference?, queue: ConversationVideoEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationVideoEventTopicErrorBody?, script: ConversationVideoEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationVideoEventTopicUriReference?, externalOrganization: ConversationVideoEventTopicUriReference?, wrapup: ConversationVideoEventTopicWrapup?, conversationRoutingData: ConversationVideoEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationVideoEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, context: String?, msids: [String]?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationVideoEventTopicUriReference?, queue: ConversationVideoEventTopicUriReference?, team: ConversationVideoEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationVideoEventTopicErrorBody?, script: ConversationVideoEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationVideoEventTopicUriReference?, externalOrganization: ConversationVideoEventTopicUriReference?, wrapup: ConversationVideoEventTopicWrapup?, conversationRoutingData: ConversationVideoEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationVideoEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, context: String?, msids: [String]?) {
         
         self._id = _id
         
@@ -123,6 +124,8 @@ public class ConversationVideoEventTopicVideoMediaParticipant: Codable {
         self.user = user
         
         self.queue = queue
+        
+        self.team = team
         
         self.attributes = attributes
         
@@ -189,6 +192,7 @@ public class ConversationVideoEventTopicVideoMediaParticipant: Codable {
         case wrapupPrompt
         case user
         case queue
+        case team
         case attributes
         case errorInfo
         case script

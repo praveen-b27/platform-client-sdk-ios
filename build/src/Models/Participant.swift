@@ -50,6 +50,8 @@ public class Participant: Codable {
     public var queueId: String?
     /** If present, group of users the participant represents. */
     public var groupId: String?
+    /** The team id that this participant is a member of when added to the conversation. */
+    public var teamId: String?
     /** If present, the queue name that the communication channel came in on. */
     public var queueName: String?
     /** A well known string that specifies the purpose of this participant. */
@@ -105,7 +107,7 @@ public class Participant: Codable {
     /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var endAcwTime: Date?
 
-    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, attributes: [String:String]?, calls: [Call]?, callbacks: [Callback]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?) {
+    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, attributes: [String:String]?, calls: [Call]?, callbacks: [Callback]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?) {
         
         self._id = _id
         
@@ -128,6 +130,8 @@ public class Participant: Codable {
         self.queueId = queueId
         
         self.groupId = groupId
+        
+        self.teamId = teamId
         
         self.queueName = queueName
         
@@ -207,6 +211,7 @@ public class Participant: Codable {
         case externalOrganizationId
         case queueId
         case groupId
+        case teamId
         case queueName
         case purpose
         case participantType

@@ -48,6 +48,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case flaggedreason = "flaggedReason"
         case flowid = "flowId"
         case flowname = "flowName"
+        case flowouttype = "flowOutType"
         case flowoutcome = "flowOutcome"
         case flowoutcomeendtimestamp = "flowOutcomeEndTimestamp"
         case flowoutcomeid = "flowOutcomeId"

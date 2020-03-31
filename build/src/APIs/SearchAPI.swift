@@ -2005,6 +2005,7 @@ open class SearchAPI {
             "type" : "aeiou"
           } ]
         } ],
+        "teamId" : "aeiou",
         "name" : "aeiou",
         "wrapupPrompt" : "aeiou",
         "chats" : [ {
@@ -4004,6 +4005,7 @@ open class SearchAPI {
             "type" : "aeiou"
           } ]
         } ],
+        "teamId" : "aeiou",
         "name" : "aeiou",
         "wrapupPrompt" : "aeiou",
         "chats" : [ {

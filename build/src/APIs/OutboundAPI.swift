@@ -2216,6 +2216,7 @@ open class OutboundAPI {
                 "recordingId" : "aeiou",
                 "disconnectReasons" : [ "" ]
               } ],
+              "teamId" : "aeiou",
               "name" : "aeiou",
               "wrapupPrompt" : "aeiou",
               "chats" : [ "" ],
@@ -2685,6 +2686,7 @@ open class OutboundAPI {
             "type" : "aeiou"
           } ]
         } ],
+        "teamId" : "aeiou",
         "name" : "aeiou",
         "wrapupPrompt" : "aeiou",
         "chats" : [ {

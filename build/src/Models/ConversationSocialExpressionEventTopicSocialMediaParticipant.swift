@@ -66,6 +66,7 @@ public class ConversationSocialExpressionEventTopicSocialMediaParticipant: Codab
     public var wrapupPrompt: String?
     public var user: ConversationSocialExpressionEventTopicUriReference?
     public var queue: ConversationSocialExpressionEventTopicUriReference?
+    public var team: ConversationSocialExpressionEventTopicUriReference?
     public var attributes: [String:String]?
     public var errorInfo: ConversationSocialExpressionEventTopicErrorBody?
     public var script: ConversationSocialExpressionEventTopicUriReference?
@@ -88,7 +89,7 @@ public class ConversationSocialExpressionEventTopicSocialMediaParticipant: Codab
     public var socialUserName: String?
     public var previewText: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationSocialExpressionEventTopicUriReference?, queue: ConversationSocialExpressionEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationSocialExpressionEventTopicErrorBody?, script: ConversationSocialExpressionEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationSocialExpressionEventTopicUriReference?, externalOrganization: ConversationSocialExpressionEventTopicUriReference?, wrapup: ConversationSocialExpressionEventTopicWrapup?, conversationRoutingData: ConversationSocialExpressionEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationSocialExpressionEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationSocialExpressionEventTopicUriReference?, queue: ConversationSocialExpressionEventTopicUriReference?, team: ConversationSocialExpressionEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationSocialExpressionEventTopicErrorBody?, script: ConversationSocialExpressionEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationSocialExpressionEventTopicUriReference?, externalOrganization: ConversationSocialExpressionEventTopicUriReference?, wrapup: ConversationSocialExpressionEventTopicWrapup?, conversationRoutingData: ConversationSocialExpressionEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationSocialExpressionEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?) {
         
         self._id = _id
         
@@ -121,6 +122,8 @@ public class ConversationSocialExpressionEventTopicSocialMediaParticipant: Codab
         self.user = user
         
         self.queue = queue
+        
+        self.team = team
         
         self.attributes = attributes
         
@@ -183,6 +186,7 @@ public class ConversationSocialExpressionEventTopicSocialMediaParticipant: Codab
         case wrapupPrompt
         case user
         case queue
+        case team
         case attributes
         case errorInfo
         case script

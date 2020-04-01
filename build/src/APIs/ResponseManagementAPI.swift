@@ -327,6 +327,14 @@ open class ResponseManagementAPI {
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
       },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : {
@@ -650,6 +658,14 @@ open class ResponseManagementAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -998,6 +1014,14 @@ open class ResponseManagementAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -1367,6 +1391,14 @@ open class ResponseManagementAPI {
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
       },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : {
@@ -1700,6 +1732,14 @@ open class ResponseManagementAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -2042,6 +2082,14 @@ open class ResponseManagementAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -2392,6 +2440,14 @@ open class ResponseManagementAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -2712,6 +2768,14 @@ open class ResponseManagementAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -3061,6 +3125,14 @@ open class ResponseManagementAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,

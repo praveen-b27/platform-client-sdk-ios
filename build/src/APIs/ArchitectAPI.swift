@@ -519,6 +519,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -1073,6 +1081,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -1801,6 +1817,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -3803,6 +3827,14 @@ open class ArchitectAPI {
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
       },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : {
@@ -4206,6 +4238,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -4768,6 +4808,14 @@ open class ArchitectAPI {
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
         },
         "certifications" : [ "aeiou" ],
         "version" : 123,
@@ -5686,6 +5734,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -6372,6 +6428,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -6817,6 +6881,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -7257,6 +7329,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -7695,6 +7775,14 @@ open class ArchitectAPI {
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
       },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : {
@@ -8110,6 +8198,14 @@ open class ArchitectAPI {
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
       },
       "certifications" : [ "aeiou" ],
       "version" : 123,
@@ -8691,7 +8787,46 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}" ]
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "owner" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "importMode" : "aeiou",
+    "countRecordsFailed" : 123,
+    "countRecordsUpdated" : 123,
+    "selfUri" : "aeiou",
+    "uploadURI" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "errorInformation" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "countRecordsDeleted" : 123,
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "pageSize" : 123
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9425,6 +9560,14 @@ open class ArchitectAPI {
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
       },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : {
@@ -9781,6 +9924,14 @@ open class ArchitectAPI {
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
         },
         "certifications" : [ "aeiou" ],
         "version" : 123,
@@ -10348,6 +10499,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -10754,6 +10913,14 @@ open class ArchitectAPI {
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
       },
       "certifications" : [ "aeiou" ],
       "version" : 123,
@@ -11248,6 +11415,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -11672,6 +11847,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -11986,6 +12169,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -12364,6 +12555,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -12686,6 +12885,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -13066,6 +13273,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -13455,6 +13670,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -13780,6 +14003,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -14160,6 +14391,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -14881,6 +15120,14 @@ open class ArchitectAPI {
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
       },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : {
@@ -15381,6 +15628,14 @@ open class ArchitectAPI {
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
       },
       "certifications" : [ "aeiou" ],
       "version" : 123,
@@ -16066,6 +16321,14 @@ open class ArchitectAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -16617,6 +16880,14 @@ open class ArchitectAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,

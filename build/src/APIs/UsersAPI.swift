@@ -1514,6 +1514,14 @@ open class UsersAPI {
             "interests" : [ "aeiou" ],
             "spouse" : "aeiou"
           },
+          "team" : {
+            "memberCount" : 123456789,
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "description" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou"
+          },
           "certifications" : [ "aeiou" ],
           "version" : 123,
           "outOfOffice" : "",
@@ -1765,6 +1773,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -1982,6 +1991,14 @@ open class UsersAPI {
     "interests" : [ "aeiou" ],
     "spouse" : "aeiou"
   },
+  "team" : {
+    "memberCount" : 123456789,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou"
+  },
   "certifications" : [ "aeiou" ],
   "version" : 123,
   "outOfOffice" : {
@@ -2112,6 +2129,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -2320,6 +2338,14 @@ open class UsersAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -2647,6 +2673,14 @@ open class UsersAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -2770,6 +2804,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -2978,6 +3013,14 @@ open class UsersAPI {
     "interests" : [ "aeiou" ],
     "spouse" : "aeiou"
   },
+  "team" : {
+    "memberCount" : 123456789,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou"
+  },
   "certifications" : [ "aeiou" ],
   "version" : 123,
   "outOfOffice" : {
@@ -3111,6 +3154,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -3325,6 +3369,14 @@ open class UsersAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -3780,6 +3832,14 @@ open class UsersAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : "",
@@ -3895,6 +3955,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -4083,6 +4144,14 @@ open class UsersAPI {
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
         },
         "certifications" : [ "aeiou" ],
         "version" : 123,
@@ -5071,6 +5140,14 @@ open class UsersAPI {
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
       },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : {
@@ -5198,6 +5275,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -5405,6 +5483,14 @@ open class UsersAPI {
     "biography" : "aeiou",
     "interests" : [ "aeiou" ],
     "spouse" : "aeiou"
+  },
+  "team" : {
+    "memberCount" : 123456789,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou"
   },
   "certifications" : [ "aeiou" ],
   "version" : 123,
@@ -5741,6 +5827,14 @@ open class UsersAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -5833,6 +5927,7 @@ open class UsersAPI {
         "type" : "aeiou"
       } ],
       "biography" : "",
+      "team" : "",
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : "",
@@ -5939,6 +6034,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -6166,6 +6262,14 @@ open class UsersAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -6312,6 +6416,7 @@ open class UsersAPI {
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
         case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -6379,13 +6484,10 @@ open class UsersAPI {
   "date" : {
     "currentDate" : "2000-01-23T04:56:07.000+0000"
   },
-  "favorites" : [ "" ],
   "addresses" : [ "" ],
-  "directReports" : [ "" ],
   "orgProducts" : [ {
     "id" : "aeiou"
   } ],
-  "acdAutoAnswer" : true,
   "geolocationSettings" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -6394,6 +6496,47 @@ open class UsersAPI {
     "mapboxKey" : "aeiou"
   },
   "routingStatus" : "",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "authorization" : "",
+  "skills" : [ "" ],
+  "adjacents" : {
+    "superiors" : [ "" ],
+    "siblings" : [ "" ],
+    "directReports" : [ "" ]
+  },
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "presence" : "",
+  "images" : [ "" ],
+  "locationDefinitions" : [ "" ],
+  "employerInfo" : "",
+  "conversationSummary" : "",
+  "version" : 123,
+  "languagePreference" : "aeiou",
+  "profileSkills" : [ "aeiou" ],
+  "presenceDefinitions" : [ {
+    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
+    "languageLabels" : {
+      "key" : "aeiou"
+    },
+    "systemPresence" : "aeiou",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "deactivated" : true,
+    "primary" : true
+  } ],
+  "name" : "aeiou",
+  "favorites" : [ "" ],
+  "directReports" : [ "" ],
+  "acdAutoAnswer" : true,
   "title" : "aeiou",
   "orgAuthorization" : [ {
     "default" : true,
@@ -6534,19 +6677,7 @@ open class UsersAPI {
     "defaultRoleId" : "aeiou",
     "base" : true
   } ],
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "authorization" : "",
-  "skills" : [ "" ],
   "superiors" : [ "" ],
-  "adjacents" : {
-    "superiors" : [ "" ],
-    "siblings" : [ "" ],
-    "directReports" : [ "" ]
-  },
   "station" : "",
   "trustors" : [ {
     "authorization" : {
@@ -6576,6 +6707,7 @@ open class UsersAPI {
       "groups" : [ "" ],
       "primaryContactInfo" : [ "" ],
       "biography" : "",
+      "team" : "",
       "certifications" : [ "aeiou" ],
       "version" : 123,
       "outOfOffice" : "",
@@ -6593,8 +6725,6 @@ open class UsersAPI {
     "id" : "aeiou",
     "enabled" : true
   } ],
-  "id" : "aeiou",
-  "state" : "aeiou",
   "fieldConfigs" : {
     "org" : {
       "schemaVersion" : "aeiou",
@@ -6628,11 +6758,8 @@ open class UsersAPI {
     "group" : ""
   },
   "department" : "aeiou",
-  "presence" : "",
   "lastTokenIssued" : "",
   "email" : "aeiou",
-  "images" : [ "" ],
-  "locationDefinitions" : [ "" ],
   "manager" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -6783,6 +6910,14 @@ open class UsersAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -6863,10 +6998,8 @@ open class UsersAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "employerInfo" : "",
   "languages" : [ "" ],
   "selfUri" : "aeiou",
-  "conversationSummary" : "",
   "groups" : [ "" ],
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
@@ -6876,8 +7009,8 @@ open class UsersAPI {
     "type" : "aeiou"
   } ],
   "biography" : "",
+  "team" : "",
   "certifications" : [ "aeiou" ],
-  "version" : 123,
   "token" : {
     "OAuthClient" : {
       "authorizedGrantType" : "aeiou",
@@ -6910,26 +7043,9 @@ open class UsersAPI {
     "state" : "aeiou",
     "version" : "aeiou"
   } ],
-  "languagePreference" : "aeiou",
-  "profileSkills" : [ "aeiou" ],
   "chat" : {
     "jabberId" : "aeiou"
   },
-  "presenceDefinitions" : [ {
-    "createdDate" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "",
-    "languageLabels" : {
-      "key" : "aeiou"
-    },
-    "systemPresence" : "aeiou",
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "deactivated" : true,
-    "primary" : true
-  } ],
   "organization" : {
     "defaultCountryCode" : "aeiou",
     "selfUri" : "aeiou",
@@ -6949,7 +7065,6 @@ open class UsersAPI {
     "voicemailEnabled" : true,
     "productPlatform" : "aeiou"
   },
-  "name" : "aeiou",
   "locations" : [ "" ],
   "username" : "aeiou",
   "geolocation" : ""
@@ -7189,6 +7304,14 @@ open class UsersAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -7502,6 +7625,14 @@ open class UsersAPI {
     "biography" : "aeiou",
     "interests" : [ "aeiou" ],
     "spouse" : "aeiou"
+  },
+  "team" : {
+    "memberCount" : 123456789,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou"
   },
   "certifications" : [ "aeiou" ],
   "version" : 123,
@@ -7820,6 +7951,14 @@ open class UsersAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -8866,6 +9005,14 @@ open class UsersAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -9965,6 +10112,14 @@ open class UsersAPI {
     "interests" : [ "aeiou" ],
     "spouse" : "aeiou"
   },
+  "team" : {
+    "memberCount" : 123456789,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou"
+  },
   "certifications" : [ "aeiou" ],
   "version" : 123,
   "outOfOffice" : {
@@ -10320,6 +10475,14 @@ open class UsersAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,
@@ -10708,6 +10871,14 @@ open class UsersAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -11020,6 +11191,14 @@ open class UsersAPI {
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
+    },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
     },
     "certifications" : [ "aeiou" ],
     "version" : 123,

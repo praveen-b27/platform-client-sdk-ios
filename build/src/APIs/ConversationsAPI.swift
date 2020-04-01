@@ -1973,6 +1973,14 @@ open class ConversationsAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -3194,6 +3202,14 @@ open class ConversationsAPI {
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
             "spouse" : "aeiou"
+          },
+          "team" : {
+            "memberCount" : 123456789,
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "description" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou"
           },
           "certifications" : [ "aeiou" ],
           "version" : 123,
@@ -4709,6 +4725,7 @@ open class ConversationsAPI {
               "groups" : [ "" ],
               "primaryContactInfo" : [ "" ],
               "biography" : "",
+              "team" : "",
               "certifications" : [ "aeiou" ],
               "version" : 123,
               "outOfOffice" : "",
@@ -4937,6 +4954,14 @@ open class ConversationsAPI {
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
         },
         "certifications" : [ "aeiou" ],
         "version" : 123,
@@ -7637,6 +7662,14 @@ open class ConversationsAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -9771,6 +9804,14 @@ open class ConversationsAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -10931,6 +10972,14 @@ open class ConversationsAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -12017,6 +12066,14 @@ open class ConversationsAPI {
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
         },
         "certifications" : [ "aeiou" ],
         "version" : 123,
@@ -13105,6 +13162,14 @@ open class ConversationsAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -14192,6 +14257,14 @@ open class ConversationsAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -15278,6 +15351,14 @@ open class ConversationsAPI {
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
         },
         "certifications" : [ "aeiou" ],
         "version" : 123,
@@ -17258,6 +17339,14 @@ open class ConversationsAPI {
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
         },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
         "certifications" : [ "aeiou" ],
         "version" : 123,
         "outOfOffice" : {
@@ -18338,6 +18427,14 @@ open class ConversationsAPI {
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
           "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
         },
         "certifications" : [ "aeiou" ],
         "version" : 123,
@@ -20108,6 +20205,14 @@ open class ConversationsAPI {
       "interests" : [ "aeiou" ],
       "spouse" : "aeiou"
     },
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "certifications" : [ "aeiou" ],
     "version" : 123,
     "outOfOffice" : {
@@ -20523,6 +20628,14 @@ open class ConversationsAPI {
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
         "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
       },
       "certifications" : [ "aeiou" ],
       "version" : 123,

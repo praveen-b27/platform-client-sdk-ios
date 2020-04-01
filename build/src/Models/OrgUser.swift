@@ -59,6 +59,8 @@ public class OrgUser: Codable {
     public var locations: [Location]?
     /** The groups the user is a member of */
     public var groups: [Group]?
+    /** The team the user is a member of */
+    public var team: Team?
     /** Routing (ACD) skills possessed by the user */
     public var skills: [UserRoutingSkill]?
     /** Routing (ACD) languages possessed by the user */
@@ -70,7 +72,7 @@ public class OrgUser: Codable {
     public var lastTokenIssued: OAuthLastTokenIssued?
     public var organization: Organization?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, organization: Organization?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, organization: Organization?) {
         
         self._id = _id
         
@@ -126,6 +128,8 @@ public class OrgUser: Codable {
         
         self.groups = groups
         
+        self.team = team
+        
         self.skills = skills
         
         self.languages = languages
@@ -168,6 +172,7 @@ public class OrgUser: Codable {
         case profileSkills
         case locations
         case groups
+        case team
         case skills
         case languages
         case acdAutoAnswer

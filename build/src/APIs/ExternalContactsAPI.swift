@@ -20,12 +20,19 @@ open class ExternalContactsAPI {
      - parameter contactId: (path) ExternalContact ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteExternalcontactsContact(contactId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func deleteExternalcontactsContact(contactId: String, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteExternalcontactsContactWithRequestBuilder(contactId: contactId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -40,12 +47,13 @@ open class ExternalContactsAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
      
      - parameter contactId: (path) ExternalContact ID 
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<Empty> 
      */
-    open class func deleteExternalcontactsContactWithRequestBuilder(contactId: String) -> RequestBuilder<Void> {
+    open class func deleteExternalcontactsContactWithRequestBuilder(contactId: String) -> RequestBuilder<Empty> {
         var path = "/api/v2/externalcontacts/contacts/{contactId}"
         let contactIdPreEscape = "\(contactId)"
         let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -60,7 +68,7 @@ open class ExternalContactsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
@@ -78,12 +86,19 @@ open class ExternalContactsAPI {
      - parameter noteId: (path) Note Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteExternalcontactsContactNote(contactId: String, noteId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func deleteExternalcontactsContactNote(contactId: String, noteId: String, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteExternalcontactsContactNoteWithRequestBuilder(contactId: contactId, noteId: noteId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -98,13 +113,14 @@ open class ExternalContactsAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
      
      - parameter contactId: (path) ExternalContact Id 
      - parameter noteId: (path) Note Id 
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<Empty> 
      */
-    open class func deleteExternalcontactsContactNoteWithRequestBuilder(contactId: String, noteId: String) -> RequestBuilder<Void> {
+    open class func deleteExternalcontactsContactNoteWithRequestBuilder(contactId: String, noteId: String) -> RequestBuilder<Empty> {
         var path = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}"
         let contactIdPreEscape = "\(contactId)"
         let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -122,7 +138,7 @@ open class ExternalContactsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
@@ -137,12 +153,19 @@ open class ExternalContactsAPI {
      - parameter externalOrganizationId: (path) External Organization ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteExternalcontactsOrganization(externalOrganizationId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func deleteExternalcontactsOrganization(externalOrganizationId: String, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteExternalcontactsOrganizationWithRequestBuilder(externalOrganizationId: externalOrganizationId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -157,12 +180,13 @@ open class ExternalContactsAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<Empty> 
      */
-    open class func deleteExternalcontactsOrganizationWithRequestBuilder(externalOrganizationId: String) -> RequestBuilder<Void> {
+    open class func deleteExternalcontactsOrganizationWithRequestBuilder(externalOrganizationId: String) -> RequestBuilder<Empty> {
         var path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}"
         let externalOrganizationIdPreEscape = "\(externalOrganizationId)"
         let externalOrganizationIdPostEscape = externalOrganizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -177,7 +201,7 @@ open class ExternalContactsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
@@ -195,12 +219,19 @@ open class ExternalContactsAPI {
      - parameter noteId: (path) Note Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteExternalcontactsOrganizationNote(externalOrganizationId: String, noteId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func deleteExternalcontactsOrganizationNote(externalOrganizationId: String, noteId: String, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteExternalcontactsOrganizationNoteWithRequestBuilder(externalOrganizationId: externalOrganizationId, noteId: noteId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -215,13 +246,14 @@ open class ExternalContactsAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
      
      - parameter externalOrganizationId: (path) External Organization Id 
      - parameter noteId: (path) Note Id 
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<Empty> 
      */
-    open class func deleteExternalcontactsOrganizationNoteWithRequestBuilder(externalOrganizationId: String, noteId: String) -> RequestBuilder<Void> {
+    open class func deleteExternalcontactsOrganizationNoteWithRequestBuilder(externalOrganizationId: String, noteId: String) -> RequestBuilder<Empty> {
         var path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}"
         let externalOrganizationIdPreEscape = "\(externalOrganizationId)"
         let externalOrganizationIdPostEscape = externalOrganizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -239,7 +271,7 @@ open class ExternalContactsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
@@ -309,12 +341,19 @@ open class ExternalContactsAPI {
      - parameter relationshipId: (path) Relationship Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteExternalcontactsRelationship(relationshipId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func deleteExternalcontactsRelationship(relationshipId: String, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteExternalcontactsRelationshipWithRequestBuilder(relationshipId: relationshipId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -329,12 +368,13 @@ open class ExternalContactsAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
      
      - parameter relationshipId: (path) Relationship Id 
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<Empty> 
      */
-    open class func deleteExternalcontactsRelationshipWithRequestBuilder(relationshipId: String) -> RequestBuilder<Void> {
+    open class func deleteExternalcontactsRelationshipWithRequestBuilder(relationshipId: String) -> RequestBuilder<Empty> {
         var path = "/api/v2/externalcontacts/relationships/{relationshipId}"
         let relationshipIdPreEscape = "\(relationshipId)"
         let relationshipIdPostEscape = relationshipIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -349,7 +389,7 @@ open class ExternalContactsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }

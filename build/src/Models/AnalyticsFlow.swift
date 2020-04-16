@@ -12,6 +12,7 @@ import Foundation
 public class AnalyticsFlow: Codable {
 
     public enum FlowType: String, Codable { 
+        case bot = "BOT"
         case commonmodule = "COMMONMODULE"
         case inboundcall = "INBOUNDCALL"
         case inboundchat = "INBOUNDCHAT"

@@ -125,16 +125,24 @@ open class ResponseManagementAPI {
     
     
     
+    
+    public enum MessagingTemplateFilter_getResponsemanagementLibraries: String { 
+        case whatsapp = "whatsapp"
+    }
+
+    
+    
     /**
      
      Gets a list of existing response libraries.
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter messagingTemplateFilter: (query) Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getResponsemanagementLibraries(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: LibraryEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getResponsemanagementLibrariesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize)
+    open class func getResponsemanagementLibraries(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibraries? = nil, completion: @escaping ((_ data: LibraryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getResponsemanagementLibrariesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter)
         requestBuilder.execute { (response: Response<LibraryEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -432,10 +440,11 @@ open class ResponseManagementAPI {
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter messagingTemplateFilter: (query) Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional)
 
      - returns: RequestBuilder<LibraryEntityListing> 
      */
-    open class func getResponsemanagementLibrariesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<LibraryEntityListing> {
+    open class func getResponsemanagementLibrariesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, messagingTemplateFilter: MessagingTemplateFilter_getResponsemanagementLibraries? = nil) -> RequestBuilder<LibraryEntityListing> {
         let path = "/api/v2/responsemanagement/libraries"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -450,7 +459,9 @@ open class ResponseManagementAPI {
             
             "pageNumber": pageNumber?.encodeToJSON(), 
             
-            "pageSize": pageSize?.encodeToJSON()
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "messagingTemplateFilter": messagingTemplateFilter?.rawValue
             
         ])
 
@@ -1107,9 +1118,11 @@ open class ResponseManagementAPI {
   },
   "interactionType" : "aeiou",
   "messagingTemplate" : {
-    "name" : "aeiou",
-    "namespace" : "aeiou",
-    "language" : "aeiou"
+    "whatsApp" : {
+      "name" : "aeiou",
+      "namespace" : "aeiou",
+      "language" : "aeiou"
+    }
   },
   "name" : "aeiou",
   "id" : "aeiou"
@@ -1483,9 +1496,11 @@ open class ResponseManagementAPI {
     },
     "interactionType" : "aeiou",
     "messagingTemplate" : {
-      "name" : "aeiou",
-      "namespace" : "aeiou",
-      "language" : "aeiou"
+      "whatsApp" : {
+        "name" : "aeiou",
+        "namespace" : "aeiou",
+        "language" : "aeiou"
+      }
     },
     "name" : "aeiou",
     "id" : "aeiou"
@@ -2175,9 +2190,11 @@ open class ResponseManagementAPI {
   },
   "interactionType" : "aeiou",
   "messagingTemplate" : {
-    "name" : "aeiou",
-    "namespace" : "aeiou",
-    "language" : "aeiou"
+    "whatsApp" : {
+      "name" : "aeiou",
+      "namespace" : "aeiou",
+      "language" : "aeiou"
+    }
   },
   "name" : "aeiou",
   "id" : "aeiou"
@@ -2532,9 +2549,11 @@ open class ResponseManagementAPI {
       },
       "interactionType" : "aeiou",
       "messagingTemplate" : {
-        "name" : "aeiou",
-        "namespace" : "aeiou",
-        "language" : "aeiou"
+        "whatsApp" : {
+          "name" : "aeiou",
+          "namespace" : "aeiou",
+          "language" : "aeiou"
+        }
       },
       "name" : "aeiou",
       "id" : "aeiou"
@@ -3218,9 +3237,11 @@ open class ResponseManagementAPI {
   },
   "interactionType" : "aeiou",
   "messagingTemplate" : {
-    "name" : "aeiou",
-    "namespace" : "aeiou",
-    "language" : "aeiou"
+    "whatsApp" : {
+      "name" : "aeiou",
+      "namespace" : "aeiou",
+      "language" : "aeiou"
+    }
   },
   "name" : "aeiou",
   "id" : "aeiou"

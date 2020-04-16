@@ -25,6 +25,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case quality = "Quality"
         case languageUnderstanding = "LanguageUnderstanding"
         case topicsDefinitions = "TopicsDefinitions"
+        case predictiveEngagement = "PredictiveEngagement"
     }
     /** Id of the audit query execution request. */
     public var _id: String?

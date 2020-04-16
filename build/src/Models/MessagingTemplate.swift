@@ -8,24 +8,16 @@
 import Foundation
 
 
-/** The messaging template identifies a structured message templates supported by a messaging channel. For example, WhatsApp */
+/** The messaging template identifies a structured message templates supported by a messaging channel. */
 
 public class MessagingTemplate: Codable {
 
-    /** The messaging template name. */
-    public var name: String?
-    /** The messaging template namespace. */
-    public var namespace: String?
-    /** The messaging template language. For example, &#39;en-US&#39; */
-    public var language: String?
+    /** Defines a messaging template for a WhatsApp messaging channel */
+    public var whatsApp: WhatsAppDefinition?
 
-    public init(name: String?, namespace: String?, language: String?) {
+    public init(whatsApp: WhatsAppDefinition?) {
         
-        self.name = name
-        
-        self.namespace = namespace
-        
-        self.language = language
+        self.whatsApp = whatsApp
         
     }
 

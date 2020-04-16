@@ -751,7 +751,7 @@ open class AuthorizationAPI {
      Returns which divisions the specified user has the given permission in.
      
      - GET /api/v2/authorization/divisionspermitted/paged/{subjectId}
-     - 
+     - This route is deprecated, use authorization/divisionspermitted/paged/me instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

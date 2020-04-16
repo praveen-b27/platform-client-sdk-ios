@@ -18,8 +18,8 @@ Contains information about a response.
 | **interactionType** | **String** | The interaction type for this response. | [optional] |
 | **substitutions** | [**[ResponseSubstitution]**](ResponseSubstitution.html) | Details about any text substitutions used in the texts for this response. | [optional] |
 | **substitutionsSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | Metadata about the text substitutions in json schema format. | [optional] |
-| **responseType** | **String** | The response type represented by the response | [optional] |
-| **messagingTemplate** | [**MessagingTemplate**](MessagingTemplate.html) | The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate. | [optional] |
+| **responseType** | **String** | The response type represented by the response. | [optional] |
+| **messagingTemplate** | [**MessagingTemplate**](MessagingTemplate.html) | An optional messaging template definition for responseType.MessagingTemplate. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

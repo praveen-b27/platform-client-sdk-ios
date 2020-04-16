@@ -18,6 +18,7 @@ public class AuditLogMessage: Codable {
         case quality = "Quality"
         case languageUnderstanding = "LanguageUnderstanding"
         case topicsDefinitions = "TopicsDefinitions"
+        case predictiveEngagement = "PredictiveEngagement"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -29,6 +30,9 @@ public class AuditLogMessage: Codable {
         case memberUpdate = "MemberUpdate"
         case memberRemove = "MemberRemove"
         case read = "Read"
+        case applyProtection = "ApplyProtection"
+        case revokeProtection = "RevokeProtection"
+        case updateRetention = "UpdateRetention"
         case readAll = "ReadAll"
         case execute = "Execute"
         case publish = "Publish"
@@ -53,6 +57,9 @@ public class AuditLogMessage: Codable {
         case feedback = "Feedback"
         case topic = "Topic"
         case program = "Program"
+        case segment = "Segment"
+        case outcome = "Outcome"
+        case clickstreamSettings = "ClickstreamSettings"
     }
     /** Id of the audit message. */
     public var _id: String?

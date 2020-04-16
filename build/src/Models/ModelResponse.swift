@@ -39,9 +39,9 @@ public class ModelResponse: Codable {
     public var substitutions: [ResponseSubstitution]?
     /** Metadata about the text substitutions in json schema format. */
     public var substitutionsSchema: JsonSchemaDocument?
-    /** The response type represented by the response */
+    /** The response type represented by the response. */
     public var responseType: ResponseType?
-    /** The messaging template definition. This is required when adding to a library with responseType set to MessagingTemplate. */
+    /** An optional messaging template definition for responseType.MessagingTemplate. */
     public var messagingTemplate: MessagingTemplate?
     /** The URI for this object */
     public var selfUri: String?

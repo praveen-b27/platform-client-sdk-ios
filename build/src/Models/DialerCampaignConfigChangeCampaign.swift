@@ -13,6 +13,7 @@ public class DialerCampaignConfigChangeCampaign: Codable {
 
     public enum DialingMode: String, Codable { 
         case agentless = "AGENTLESS"
+        case external = "EXTERNAL"
         case preview = "PREVIEW"
         case power = "POWER"
         case predictive = "PREDICTIVE"

@@ -126,7 +126,7 @@ ResponseManagementAPI.deleteResponsemanagementResponse(responseId: responseId) {
 
 
 
-> [LibraryEntityListing](LibraryEntityListing.html) getResponsemanagementLibraries(pageNumber, pageSize)
+> [LibraryEntityListing](LibraryEntityListing.html) getResponsemanagementLibraries(pageNumber, pageSize, messagingTemplateFilter)
 
 Gets a list of existing response libraries.
 
@@ -147,9 +147,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
+let messagingTemplateFilter: ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibraries = ResponseManagementAPI.MessagingTemplateFilter_getResponsemanagementLibraries.enummember // Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel
 
 // Code example
-ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pageSize: pageSize, messagingTemplateFilter: messagingTemplateFilter) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -166,6 +167,7 @@ ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pag
 | ------------- | ------------- | ------------- | ------------- |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **messagingTemplateFilter** | **String**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional]<br />**Values**: whatsapp ("whatsapp") |
 {: class="table-striped"}
 
 

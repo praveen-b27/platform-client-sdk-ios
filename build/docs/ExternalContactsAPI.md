@@ -45,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-> Void deleteExternalcontactsContact(contactId)
+> [Empty](Empty.html) deleteExternalcontactsContact(contactId)
 
 Delete an external contact
 
@@ -68,11 +68,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let contactId: String = "" // ExternalContact ID
 
 // Code example
-ExternalContactsAPI.deleteExternalcontactsContact(contactId: contactId) { (error) in
+ExternalContactsAPI.deleteExternalcontactsContact(contactId: contactId) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ExternalContactsAPI.deleteExternalcontactsContact was successful")
+        dump(response)
     }
 }
 ```
@@ -88,7 +89,7 @@ ExternalContactsAPI.deleteExternalcontactsContact(contactId: contactId) { (error
 
 ### Return type
 
-`nil` (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteExternalcontactsContactNote"></a>
 
@@ -96,7 +97,7 @@ ExternalContactsAPI.deleteExternalcontactsContact(contactId: contactId) { (error
 
 
 
-> Void deleteExternalcontactsContactNote(contactId, noteId)
+> [Empty](Empty.html) deleteExternalcontactsContactNote(contactId, noteId)
 
 Delete a note for an external contact
 
@@ -120,11 +121,12 @@ let contactId: String = "" // ExternalContact Id
 let noteId: String = "" // Note Id
 
 // Code example
-ExternalContactsAPI.deleteExternalcontactsContactNote(contactId: contactId, noteId: noteId) { (error) in
+ExternalContactsAPI.deleteExternalcontactsContactNote(contactId: contactId, noteId: noteId) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ExternalContactsAPI.deleteExternalcontactsContactNote was successful")
+        dump(response)
     }
 }
 ```
@@ -141,7 +143,7 @@ ExternalContactsAPI.deleteExternalcontactsContactNote(contactId: contactId, note
 
 ### Return type
 
-`nil` (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteExternalcontactsOrganization"></a>
 
@@ -149,7 +151,7 @@ ExternalContactsAPI.deleteExternalcontactsContactNote(contactId: contactId, note
 
 
 
-> Void deleteExternalcontactsOrganization(externalOrganizationId)
+> [Empty](Empty.html) deleteExternalcontactsOrganization(externalOrganizationId)
 
 Delete an external organization
 
@@ -172,11 +174,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let externalOrganizationId: String = "" // External Organization ID
 
 // Code example
-ExternalContactsAPI.deleteExternalcontactsOrganization(externalOrganizationId: externalOrganizationId) { (error) in
+ExternalContactsAPI.deleteExternalcontactsOrganization(externalOrganizationId: externalOrganizationId) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ExternalContactsAPI.deleteExternalcontactsOrganization was successful")
+        dump(response)
     }
 }
 ```
@@ -192,7 +195,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganization(externalOrganizationId: e
 
 ### Return type
 
-`nil` (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteExternalcontactsOrganizationNote"></a>
 
@@ -200,7 +203,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganization(externalOrganizationId: e
 
 
 
-> Void deleteExternalcontactsOrganizationNote(externalOrganizationId, noteId)
+> [Empty](Empty.html) deleteExternalcontactsOrganizationNote(externalOrganizationId, noteId)
 
 Delete a note for an external organization
 
@@ -224,11 +227,12 @@ let externalOrganizationId: String = "" // External Organization Id
 let noteId: String = "" // Note Id
 
 // Code example
-ExternalContactsAPI.deleteExternalcontactsOrganizationNote(externalOrganizationId: externalOrganizationId, noteId: noteId) { (error) in
+ExternalContactsAPI.deleteExternalcontactsOrganizationNote(externalOrganizationId: externalOrganizationId, noteId: noteId) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ExternalContactsAPI.deleteExternalcontactsOrganizationNote was successful")
+        dump(response)
     }
 }
 ```
@@ -245,7 +249,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganizationNote(externalOrganizationI
 
 ### Return type
 
-`nil` (empty response body)
+[**Empty**](Empty.html)
 
 <a name="deleteExternalcontactsOrganizationTrustor"></a>
 
@@ -304,7 +308,7 @@ ExternalContactsAPI.deleteExternalcontactsOrganizationTrustor(externalOrganizati
 
 
 
-> Void deleteExternalcontactsRelationship(relationshipId)
+> [Empty](Empty.html) deleteExternalcontactsRelationship(relationshipId)
 
 Delete a relationship
 
@@ -327,11 +331,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let relationshipId: String = "" // Relationship Id
 
 // Code example
-ExternalContactsAPI.deleteExternalcontactsRelationship(relationshipId: relationshipId) { (error) in
+ExternalContactsAPI.deleteExternalcontactsRelationship(relationshipId: relationshipId) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("ExternalContactsAPI.deleteExternalcontactsRelationship was successful")
+        dump(response)
     }
 }
 ```
@@ -347,7 +352,7 @@ ExternalContactsAPI.deleteExternalcontactsRelationship(relationshipId: relations
 
 ### Return type
 
-`nil` (empty response body)
+[**Empty**](Empty.html)
 
 <a name="getExternalcontactsContact"></a>
 

@@ -11,8 +11,8 @@ title: PingIdentity
 | **name** | **String** |  | [optional] |
 | **relyingPartyIdentifier** | **String** |  | [optional] |
 | **certificate** | **String** |  | [optional] |
-| **issuerURI** | **String** |  | [optional] |
 | **ssoTargetURI** | **String** |  | [optional] |
+| **issuerURI** | **String** |  | [optional] |
 | **disabled** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

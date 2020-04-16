@@ -12,6 +12,7 @@ import Foundation
 public class FlowDivisionView: Codable {
 
     public enum ModelType: String, Codable { 
+        case bot = "BOT"
         case commonmodule = "COMMONMODULE"
         case inboundcall = "INBOUNDCALL"
         case inboundchat = "INBOUNDCHAT"

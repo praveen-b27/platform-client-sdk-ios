@@ -43,6 +43,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsType**](IntegrationsAPI.html#getIntegrationsType) | Get integration type. |
 | [**getIntegrationsTypeConfigschema**](IntegrationsAPI.html#getIntegrationsTypeConfigschema) | Get properties config schema for an integration type. |
 | [**getIntegrationsTypes**](IntegrationsAPI.html#getIntegrationsTypes) | List integration types |
+| [**getIntegrationsUserapps**](IntegrationsAPI.html#getIntegrationsUserapps) | List permitted user app integrations for the logged in user |
 | [**patchIntegration**](IntegrationsAPI.html#patchIntegration) | Update an integration. |
 | [**patchIntegrationsAction**](IntegrationsAPI.html#patchIntegrationsAction) | Patch an Action |
 | [**patchIntegrationsActionDraft**](IntegrationsAPI.html#patchIntegrationsActionDraft) | Update an existing Draft |
@@ -2070,6 +2071,69 @@ IntegrationsAPI.getIntegrationsTypes(pageSize: pageSize, pageNumber: pageNumber,
 ### Return type
 
 [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+
+<a name="getIntegrationsUserapps"></a>
+
+# **getIntegrationsUserapps**
+
+
+
+> [UserAppEntityListing](UserAppEntityListing.html) getIntegrationsUserapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, appHost)
+
+List permitted user app integrations for the logged in user
+
+
+
+Wraps GET /api/v2/integrations/userapps  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // The total page size requested
+let pageNumber: Int = 1 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let appHost: String = "" // The type of UserApp to filter by
+
+// Code example
+IntegrationsAPI.getIntegrationsUserapps(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, appHost: appHost) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsUserapps was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **String**| variable name requested to sort by | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **nextPage** | **String**| next page token | [optional] |
+| **previousPage** | **String**| Previous page token | [optional] |
+| **appHost** | **String**| The type of UserApp to filter by | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserAppEntityListing**](UserAppEntityListing.html)
 
 <a name="patchIntegration"></a>
 

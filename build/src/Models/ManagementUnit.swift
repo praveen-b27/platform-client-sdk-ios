@@ -36,14 +36,14 @@ public class ManagementUnit: Codable {
     public var metadata: WfmVersionedEntityMetadata?
     /** The version of the underlying entity.  Deprecated, use field from settings.metadata instead */
     public var version: Int?
-    /** The user who last modified this entity.  Deprecated, use field from settings.metadata instead */
-    public var modifiedBy: UserReference?
     /** The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateModified: Date?
+    /** The user who last modified this entity.  Deprecated, use field from settings.metadata instead */
+    public var modifiedBy: UserReference?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, version: Int?, modifiedBy: UserReference?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
         
         self._id = _id
         
@@ -61,9 +61,9 @@ public class ManagementUnit: Codable {
         
         self.version = version
         
-        self.modifiedBy = modifiedBy
-        
         self.dateModified = dateModified
+        
+        self.modifiedBy = modifiedBy
         
         self.selfUri = selfUri
         
@@ -78,8 +78,8 @@ public class ManagementUnit: Codable {
         case settings
         case metadata
         case version
-        case modifiedBy
         case dateModified
+        case modifiedBy
         case selfUri
     }
 

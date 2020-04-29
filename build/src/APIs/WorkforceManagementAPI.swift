@@ -564,8 +564,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "timeZone" : "aeiou",
-    "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : "",
     "id" : "aeiou",
     "version" : 123
   },
@@ -801,8 +801,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "timeZone" : "aeiou",
-  "modifiedBy" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
   "id" : "aeiou",
   "version" : 123
 }}]
@@ -3760,8 +3760,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "timeZone" : "aeiou",
-    "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : "",
     "id" : "aeiou",
     "version" : 123
   } ],
@@ -3769,8 +3769,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query)  (optional)
@@ -3921,8 +3921,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "timeZone" : "aeiou",
-    "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : "",
     "id" : "aeiou",
     "version" : 123
   } ],
@@ -3930,8 +3930,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -4499,8 +4499,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "timeZone" : "aeiou",
-  "modifiedBy" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
   "id" : "aeiou",
   "version" : 123
 }}]
@@ -7947,7 +7947,7 @@ open class WorkforceManagementAPI {
      Add a management unit
      
      - POST /api/v2/workforcemanagement/managementunits
-     - 
+     - It may take a minute or two for a new management unit to be available for api operations
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -8020,8 +8020,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "timeZone" : "aeiou",
-  "modifiedBy" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
   "id" : "aeiou",
   "version" : 123
 }}]

@@ -522,17 +522,21 @@ open class WebChatAPI {
        - type: apiKey Authorization 
        - name: Guest Chat JWT
      - examples: [{contentType=application/json, example={
+  "lastName" : "aeiou",
   "role" : "aeiou",
-  "joinDate" : "2000-01-23T04:56:07.000+0000",
   "displayName" : "aeiou",
   "customFields" : {
     "key" : "aeiou"
   },
   "avatarImageUrl" : "aeiou",
+  "firstName" : "aeiou",
+  "phoneNumber" : "aeiou",
+  "joinDate" : "2000-01-23T04:56:07.000+0000",
   "leaveDate" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "state" : "aeiou",
-  "authenticatedGuest" : true
+  "authenticatedGuest" : true,
+  "email" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -614,24 +618,28 @@ open class WebChatAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "lastName" : "aeiou",
     "role" : "aeiou",
-    "joinDate" : "2000-01-23T04:56:07.000+0000",
     "displayName" : "aeiou",
     "customFields" : {
       "key" : "aeiou"
     },
     "avatarImageUrl" : "aeiou",
+    "firstName" : "aeiou",
+    "phoneNumber" : "aeiou",
+    "joinDate" : "2000-01-23T04:56:07.000+0000",
     "leaveDate" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
-    "authenticatedGuest" : true
+    "authenticatedGuest" : true,
+    "email" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -721,17 +729,21 @@ open class WebChatAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "member" : {
+      "lastName" : "aeiou",
       "role" : "aeiou",
-      "joinDate" : "2000-01-23T04:56:07.000+0000",
       "displayName" : "aeiou",
       "customFields" : {
         "key" : "aeiou"
       },
       "avatarImageUrl" : "aeiou",
+      "firstName" : "aeiou",
+      "phoneNumber" : "aeiou",
+      "joinDate" : "2000-01-23T04:56:07.000+0000",
       "leaveDate" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
-      "authenticatedGuest" : true
+      "authenticatedGuest" : true,
+      "email" : "aeiou"
     },
     "id" : "aeiou"
   },
@@ -835,17 +847,21 @@ open class WebChatAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "member" : {
+        "lastName" : "aeiou",
         "role" : "aeiou",
-        "joinDate" : "2000-01-23T04:56:07.000+0000",
         "displayName" : "aeiou",
         "customFields" : {
           "key" : "aeiou"
         },
         "avatarImageUrl" : "aeiou",
+        "firstName" : "aeiou",
+        "phoneNumber" : "aeiou",
+        "joinDate" : "2000-01-23T04:56:07.000+0000",
         "leaveDate" : "2000-01-23T04:56:07.000+0000",
         "id" : "aeiou",
         "state" : "aeiou",
-        "authenticatedGuest" : true
+        "authenticatedGuest" : true,
+        "email" : "aeiou"
       },
       "id" : "aeiou"
     },
@@ -1158,17 +1174,21 @@ open class WebChatAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "member" : {
+      "lastName" : "aeiou",
       "role" : "aeiou",
-      "joinDate" : "2000-01-23T04:56:07.000+0000",
       "displayName" : "aeiou",
       "customFields" : {
         "key" : "aeiou"
       },
       "avatarImageUrl" : "aeiou",
+      "firstName" : "aeiou",
+      "phoneNumber" : "aeiou",
+      "joinDate" : "2000-01-23T04:56:07.000+0000",
       "leaveDate" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
-      "authenticatedGuest" : true
+      "authenticatedGuest" : true,
+      "email" : "aeiou"
     },
     "id" : "aeiou"
   },
@@ -1248,17 +1268,21 @@ open class WebChatAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "member" : {
+      "lastName" : "aeiou",
       "role" : "aeiou",
-      "joinDate" : "2000-01-23T04:56:07.000+0000",
       "displayName" : "aeiou",
       "customFields" : {
         "key" : "aeiou"
       },
       "avatarImageUrl" : "aeiou",
+      "firstName" : "aeiou",
+      "phoneNumber" : "aeiou",
+      "joinDate" : "2000-01-23T04:56:07.000+0000",
       "leaveDate" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
-      "authenticatedGuest" : true
+      "authenticatedGuest" : true,
+      "email" : "aeiou"
     },
     "id" : "aeiou"
   },
@@ -1330,17 +1354,21 @@ open class WebChatAPI {
      - examples: [{contentType=application/json, example={
   "jwt" : "aeiou",
   "member" : {
+    "lastName" : "aeiou",
     "role" : "aeiou",
-    "joinDate" : "2000-01-23T04:56:07.000+0000",
     "displayName" : "aeiou",
     "customFields" : {
       "key" : "aeiou"
     },
     "avatarImageUrl" : "aeiou",
+    "firstName" : "aeiou",
+    "phoneNumber" : "aeiou",
+    "joinDate" : "2000-01-23T04:56:07.000+0000",
     "leaveDate" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
-    "authenticatedGuest" : true
+    "authenticatedGuest" : true,
+    "email" : "aeiou"
   },
   "id" : "aeiou",
   "eventStreamUri" : "aeiou"

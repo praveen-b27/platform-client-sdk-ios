@@ -20,10 +20,11 @@ public class OAuthAuthorization: Codable {
     public var dateModified: Date?
     public var createdBy: DomainEntityRef?
     public var modifiedBy: DomainEntityRef?
+    public var pending: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(client: OAuthClient?, scope: [String]?, resourceOwner: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, selfUri: String?) {
+    public init(client: OAuthClient?, scope: [String]?, resourceOwner: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, pending: Bool?, selfUri: String?) {
         
         self.client = client
         
@@ -38,6 +39,8 @@ public class OAuthAuthorization: Codable {
         self.createdBy = createdBy
         
         self.modifiedBy = modifiedBy
+        
+        self.pending = pending
         
         self.selfUri = selfUri
         

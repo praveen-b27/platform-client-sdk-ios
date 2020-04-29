@@ -969,14 +969,20 @@ open class AnalyticsAPI {
     }
 
     
+    
+    
+    
+    
     /**
      
      Get all view export requests for a user
      
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsReportingExports(completion: @escaping ((_ data: ReportingExportJobListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingExportsWithRequestBuilder()
+    open class func getAnalyticsReportingExports(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ReportingExportJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingExportsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize)
         requestBuilder.execute { (response: Response<ReportingExportJobListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1129,16 +1135,19 @@ open class AnalyticsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
 
      - returns: RequestBuilder<ReportingExportJobListing> 
      */
-    open class func getAnalyticsReportingExportsWithRequestBuilder() -> RequestBuilder<ReportingExportJobListing> {
+    open class func getAnalyticsReportingExportsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportingExportJobListing> {
         let path = "/api/v2/analytics/reporting/exports"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1148,7 +1157,14 @@ open class AnalyticsAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
 
         let requestBuilder: RequestBuilder<ReportingExportJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1208,11 +1224,11 @@ open class AnalyticsAPI {
     "dateLimitations" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -1298,11 +1314,11 @@ open class AnalyticsAPI {
     "availableLocales" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1635,11 +1651,11 @@ open class AnalyticsAPI {
     "runStatus" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter scheduleId: (path) Schedule ID 
@@ -1910,11 +1926,11 @@ open class AnalyticsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

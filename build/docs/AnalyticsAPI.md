@@ -416,7 +416,7 @@ AnalyticsAPI.getAnalyticsConversationsDetailsJobResults(jobId: jobId, cursor: cu
 
 
 
-> [ReportingExportJobListing](ReportingExportJobListing.html) getAnalyticsReportingExports()
+> [ReportingExportJobListing](ReportingExportJobListing.html) getAnalyticsReportingExports(pageNumber, pageSize)
 
 Get all view export requests for a user
 
@@ -424,7 +424,7 @@ Get all view export requests for a user
 
 Wraps GET /api/v2/analytics/reporting/exports  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:view
 
@@ -436,9 +436,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
 
 // Code example
-AnalyticsAPI.getAnalyticsReportingExports() { (response, error) in
+AnalyticsAPI.getAnalyticsReportingExports(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -450,8 +452,12 @@ AnalyticsAPI.getAnalyticsReportingExports() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+{: class="table-striped"}
 
 
 ### Return type
@@ -472,7 +478,7 @@ Get all export metadata
 
 Wraps GET /api/v2/analytics/reporting/exports/metadata  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:view
 
@@ -1513,7 +1519,7 @@ Generate a view export request
 
 Wraps POST /api/v2/analytics/reporting/exports  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * analytics:dataExport:add
 

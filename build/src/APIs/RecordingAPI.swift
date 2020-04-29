@@ -5549,11 +5549,11 @@ open class RecordingAPI {
     "providerType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -6042,11 +6042,11 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6793,11 +6793,11 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
+                "selfUri" : "aeiou",
                 "pageSize" : 123,
-                "nextUri" : "aeiou",
-                "previousUri" : "aeiou"
+                "previousUri" : "aeiou",
+                "nextUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6879,11 +6879,11 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -7475,11 +7475,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -7895,11 +7895,11 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8711,11 +8711,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -8939,11 +8939,11 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9514,11 +9514,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11167,11 +11167,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11586,6 +11586,66 @@ open class RecordingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EncryptionKey>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a list of conversations with protected recordings
+     
+     - parameter body: (body) conversationIds 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRecordingsDeletionprotection(body: ConversationDeletionProtectionQuery, completion: @escaping ((_ data: [AddressableEntityRef]?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRecordingsDeletionprotectionWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<[AddressableEntityRef]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of conversations with protected recordings
+     
+     - POST /api/v2/recordings/deletionprotection
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example=[ {
+  "selfUri" : "aeiou",
+  "id" : "aeiou"
+} ]}]
+     
+     - parameter body: (body) conversationIds 
+
+     - returns: RequestBuilder<[AddressableEntityRef]> 
+     */
+    open class func postRecordingsDeletionprotectionWithRequestBuilder(body: ConversationDeletionProtectionQuery) -> RequestBuilder<[AddressableEntityRef]> {
+        let path = "/api/v2/recordings/deletionprotection"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[AddressableEntityRef]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -13883,11 +13943,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -14108,6 +14168,64 @@ open class RecordingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Apply or revoke recording protection for conversations
+     
+     - parameter protect: (query) Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRecordingsDeletionprotection(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRecordingsDeletionprotectionWithRequestBuilder(protect: protect, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Apply or revoke recording protection for conversations
+     
+     - PUT /api/v2/recordings/deletionprotection
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter protect: (query) Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func putRecordingsDeletionprotectionWithRequestBuilder(protect: Bool? = nil, body: ConversationDeletionProtectionQuery? = nil) -> RequestBuilder<Void> {
+        let path = "/api/v2/recordings/deletionprotection"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "protect": protect
+            
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

@@ -1733,7 +1733,7 @@ This returns a simplified version of a Campaign, consisting of name and division
 
 Wraps GET /api/v2/outbound/campaigns/divisionviews/{campaignId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:campaign:search
 
@@ -1785,7 +1785,7 @@ This returns a simplified version of a Campaign, consisting of name and division
 
 Wraps GET /api/v2/outbound/campaigns/divisionviews  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:campaign:search
 
@@ -2304,7 +2304,7 @@ This returns a simplified version of a ContactList, consisting of the name, divi
 
 Wraps GET /api/v2/outbound/contactlists/divisionviews/{contactListId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:contactList:search
 
@@ -2360,7 +2360,7 @@ This return a simplified version of contact lists, consisting of the name, divis
 
 Wraps GET /api/v2/outbound/contactlists/divisionviews  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:contactList:search
 
@@ -2661,7 +2661,7 @@ This returns a simplified version of a DncList, consisting of the name, division
 
 Wraps GET /api/v2/outbound/dnclists/divisionviews/{dncListId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:dncList:search
 
@@ -2717,7 +2717,7 @@ This return a simplified version of dnc lists, consisting of the name, division,
 
 Wraps GET /api/v2/outbound/dnclists/divisionviews  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:dncList:search
 
@@ -3970,7 +3970,7 @@ let contactListId: String = "" // Contact List ID
 let body: [WritableDialerContact] = [new WritableDialerContact(...)] // Contact
 let priority: Bool = true // Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue.
 let clearSystemData: Bool = true // Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't.
-let doNotQueue: Bool = true // Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the 'priority' parameter.
+let doNotQueue: Bool = true // Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the 'priority' parameter.
 
 // Code example
 OutboundAPI.postOutboundContactlistContacts(contactListId: contactListId, body: body, priority: priority, clearSystemData: clearSystemData, doNotQueue: doNotQueue) { (response, error) in
@@ -3992,7 +3992,7 @@ OutboundAPI.postOutboundContactlistContacts(contactListId: contactListId, body: 
 | **body** | [**[WritableDialerContact]**](WritableDialerContact.html)| Contact | |
 | **priority** | **Bool**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional] |
 | **clearSystemData** | **Bool**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional] |
-| **doNotQueue** | **Bool**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts they will not be called until a campaign recycle; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. | [optional] |
+| **doNotQueue** | **Bool**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. | [optional] |
 {: class="table-striped"}
 
 

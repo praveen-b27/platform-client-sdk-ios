@@ -31,7 +31,7 @@ Delete a location
 
 Wraps DELETE /api/v2/locations/{locationId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * directory:location:delete
 
@@ -296,7 +296,7 @@ Update a location
 
 Wraps PATCH /api/v2/locations/{locationId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * directory:location:edit
 
@@ -350,7 +350,7 @@ Create a location
 
 Wraps POST /api/v2/locations  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * directory:location:add
 

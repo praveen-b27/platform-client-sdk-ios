@@ -8,6 +8,7 @@ title: AnalyticsConversationAsyncQueryResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **cursor** | **String** | Optional cursor to indicate where to resume the results | [optional] |
+| **dataAvailabilityDate** | [**Date**](Date.html) | Data available up to at least this datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **conversations** | [**[AnalyticsConversation]**](AnalyticsConversation.html) |  | [optional] |
 {: class="table table-striped"}
 

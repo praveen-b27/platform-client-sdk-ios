@@ -882,6 +882,8 @@ open class RecordingAPI {
     
     
     
+    
+    
     /**
      
      Gets a specific recording.
@@ -891,10 +893,11 @@ open class RecordingAPI {
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
+     - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationRecording(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, formatId: formatId, download: download, fileName: fileName)
+    open class func getConversationRecording(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, formatId: formatId, download: download, fileName: fileName, locale: locale)
         requestBuilder.execute { (response: Response<Recording>?, error) -> Void in
             do {
                 if let e = error {
@@ -1440,10 +1443,11 @@ open class RecordingAPI {
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
+     - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
 
      - returns: RequestBuilder<Recording> 
      */
-    open class func getConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil) -> RequestBuilder<Recording> {
+    open class func getConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
         var path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1466,7 +1470,9 @@ open class RecordingAPI {
             
             "download": download, 
             
-            "fileName": fileName
+            "fileName": fileName, 
+            
+            "locale": locale
             
         ])
 
@@ -4340,6 +4346,8 @@ open class RecordingAPI {
     
     
     
+    
+    
     /**
      
      Gets the media of a single orphan recording
@@ -4348,10 +4356,11 @@ open class RecordingAPI {
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
+     - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOrphanrecordingMedia(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOrphanrecordingMediaWithRequestBuilder(orphanId: orphanId, formatId: formatId, download: download, fileName: fileName)
+    open class func getOrphanrecordingMedia(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrphanrecordingMediaWithRequestBuilder(orphanId: orphanId, formatId: formatId, download: download, fileName: fileName, locale: locale)
         requestBuilder.execute { (response: Response<Recording>?, error) -> Void in
             do {
                 if let e = error {
@@ -4896,10 +4905,11 @@ open class RecordingAPI {
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
+     - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
 
      - returns: RequestBuilder<Recording> 
      */
-    open class func getOrphanrecordingMediaWithRequestBuilder(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil) -> RequestBuilder<Recording> {
+    open class func getOrphanrecordingMediaWithRequestBuilder(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
         var path = "/api/v2/orphanrecordings/{orphanId}/media"
         let orphanIdPreEscape = "\(orphanId)"
         let orphanIdPostEscape = orphanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4919,7 +4929,9 @@ open class RecordingAPI {
             
             "download": download, 
             
-            "fileName": fileName
+            "fileName": fileName, 
+            
+            "locale": locale
             
         ])
 
@@ -5549,11 +5561,11 @@ open class RecordingAPI {
     "providerType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -6042,11 +6054,11 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6793,11 +6805,11 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "lastUri" : "aeiou",
                 "selfUri" : "aeiou",
+                "lastUri" : "aeiou",
                 "pageSize" : 123,
-                "previousUri" : "aeiou",
-                "nextUri" : "aeiou"
+                "nextUri" : "aeiou",
+                "previousUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6879,11 +6891,11 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -7475,11 +7487,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -7895,11 +7907,11 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8396,6 +8408,7 @@ open class RecordingAPI {
           "scriptId" : "aeiou",
           "automatedCallbackConfigId" : "aeiou",
           "provider" : "aeiou",
+          "externalCampaign" : true,
           "callbackUserName" : "aeiou",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
@@ -8711,11 +8724,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -8939,11 +8952,11 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9514,11 +9527,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11167,11 +11180,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -13168,7 +13181,7 @@ open class RecordingAPI {
     
     /**
      
-     Execute the recording bulk job
+     Execute the recording bulk job.
      
      - parameter jobId: (path) jobId 
      - parameter body: (body) query 
@@ -13194,10 +13207,10 @@ open class RecordingAPI {
 
     /**
      
-     Execute the recording bulk job
+     Execute the recording bulk job.
      
      - PUT /api/v2/recording/jobs/{jobId}
-     - 
+     - A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -13943,11 +13956,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

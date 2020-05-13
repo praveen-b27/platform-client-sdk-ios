@@ -1538,11 +1538,11 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter contactId: (path) ExternalContact Id 
@@ -2043,11 +2043,11 @@ open class ExternalContactsAPI {
     "surveyOptOut" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)
@@ -2992,11 +2992,11 @@ open class ExternalContactsAPI {
     "surveyOptOut" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -3709,11 +3709,11 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization Id 
@@ -4182,11 +4182,11 @@ open class ExternalContactsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -4653,11 +4653,11 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)
@@ -9189,9 +9189,9 @@ open class ExternalContactsAPI {
      - parameter trustorId: (path) Trustor ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId: String, trustorId: String, completion: @escaping ((_ data: ExternalOrganization?,_ error: Error?) -> Void)) {
+    open class func putExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId: String, trustorId: String, completion: @escaping ((_ data: ExternalOrganizationTrustorLink?,_ error: Error?) -> Void)) {
         let requestBuilder = putExternalcontactsOrganizationTrustorTrustorIdWithRequestBuilder(externalOrganizationId: externalOrganizationId, trustorId: trustorId)
-        requestBuilder.execute { (response: Response<ExternalOrganization>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ExternalOrganizationTrustorLink>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -9217,372 +9217,19 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "address" : {
-    "address2" : "aeiou",
-    "city" : "aeiou",
-    "address1" : "aeiou",
-    "countryCode" : "aeiou",
-    "postalCode" : "aeiou",
-    "state" : "aeiou"
-  },
-  "modifyDate" : "2000-01-23T04:56:07.000+0000",
-  "companyType" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
-  "industry" : "aeiou",
-  "employeeCount" : 123456789,
-  "tickers" : [ {
-    "symbol" : "aeiou",
-    "exchange" : "aeiou"
-  } ],
-  "twitterId" : {
-    "profileUrl" : "aeiou",
-    "name" : "aeiou",
-    "verified" : true,
-    "id" : "aeiou",
-    "screenName" : "aeiou"
-  },
-  "primaryContactId" : "aeiou",
-  "tags" : [ "aeiou" ],
-  "revenue" : 123456789,
-  "phoneNumber" : {
-    "extension" : 123456789,
-    "e164" : "aeiou",
-    "acceptsSMS" : true,
-    "countryCode" : "aeiou",
-    "display" : "aeiou",
-    "userInput" : "aeiou"
-  },
-  "externalSystemUrl" : "aeiou",
-  "externalDataSources" : [ {
-    "platform" : "aeiou",
-    "url" : "aeiou"
-  } ],
-  "name" : "aeiou",
-  "faxNumber" : "",
-  "trustor" : {
-    "authorization" : {
-      "permissions" : [ "aeiou" ]
-    },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : {
-      "addresses" : [ "" ],
-      "acdAutoAnswer" : true,
-      "routingStatus" : "",
-      "title" : "aeiou",
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
-      "authorization" : "",
-      "skills" : [ "" ],
-      "station" : "",
-      "id" : "aeiou",
-      "state" : "aeiou",
-      "department" : "aeiou",
-      "presence" : "",
-      "lastTokenIssued" : "",
-      "email" : "aeiou",
-      "images" : [ "" ],
-      "manager" : {
-        "addresses" : [ "" ],
-        "acdAutoAnswer" : true,
-        "routingStatus" : {
-          "startTime" : "2000-01-23T04:56:07.000+0000",
-          "userId" : "aeiou",
-          "status" : "aeiou"
-        },
-        "title" : "aeiou",
-        "division" : "",
-        "authorization" : {
-          "unusedRoles" : [ "" ],
-          "permissions" : [ "aeiou" ],
-          "permissionPolicies" : [ {
-            "policyDescription" : "aeiou",
-            "resourceConditionNode" : {
-              "operands" : [ {
-                "type" : "aeiou",
-                "value" : "aeiou"
-              } ],
-              "variableName" : "aeiou",
-              "conjunction" : "aeiou",
-              "terms" : [ "" ],
-              "operator" : "aeiou"
-            },
-            "actionSetKey" : "aeiou",
-            "namedResources" : [ "aeiou" ],
-            "policyName" : "aeiou",
-            "entityName" : "aeiou",
-            "domain" : "aeiou",
-            "allowConditions" : true,
-            "id" : "aeiou",
-            "resourceCondition" : "aeiou",
-            "actionSet" : [ "aeiou" ]
-          } ],
-          "roles" : [ {
-            "name" : "aeiou",
-            "id" : "aeiou"
-          } ]
-        },
-        "skills" : [ {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "skillUri" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-        } ],
-        "station" : {
-          "defaultStation" : "",
-          "lastAssociatedStation" : "",
-          "associatedStation" : {
-            "associatedDate" : "2000-01-23T04:56:07.000+0000",
-            "name" : "aeiou",
-            "defaultUser" : "",
-            "id" : "aeiou",
-            "type" : "aeiou",
-            "associatedUser" : "",
-            "providerInfo" : {
-              "key" : "aeiou"
-            }
-          },
-          "effectiveStation" : ""
-        },
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "department" : "aeiou",
-        "presence" : {
-          "presenceDefinition" : {
-            "systemPresence" : "aeiou",
-            "selfUri" : "aeiou",
-            "id" : "aeiou"
-          },
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou",
-          "source" : "aeiou",
-          "message" : "aeiou",
-          "primary" : true
-        },
-        "lastTokenIssued" : {
-          "dateIssued" : "2000-01-23T04:56:07.000+0000"
-        },
-        "email" : "aeiou",
-        "images" : [ {
-          "imageUri" : "aeiou",
-          "resolution" : "aeiou"
-        } ],
-        "manager" : "",
-        "employerInfo" : {
-          "employeeType" : "aeiou",
-          "dateHire" : "aeiou",
-          "employeeId" : "aeiou",
-          "officialName" : "aeiou"
-        },
-        "languages" : [ {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou",
-          "languageUri" : "aeiou",
-          "proficiency" : 1.3579000000000001069366817318950779736042022705078125
-        } ],
-        "selfUri" : "aeiou",
-        "conversationSummary" : {
-          "call" : {
-            "enterprise" : "",
-            "contactCenter" : {
-              "acw" : 123,
-              "active" : 123
-            }
-          },
-          "socialExpression" : "",
-          "chat" : "",
-          "callback" : "",
-          "video" : "",
-          "message" : "",
-          "userId" : "aeiou",
-          "email" : ""
-        },
-        "groups" : [ {
-          "images" : [ "" ],
-          "addresses" : [ {
-            "extension" : "aeiou",
-            "address" : "aeiou",
-            "display" : "aeiou",
-            "mediaType" : "aeiou",
-            "type" : "aeiou"
-          } ],
-          "visibility" : "aeiou",
-          "memberCount" : 123456789,
-          "selfUri" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "owners" : [ "" ],
-          "type" : "aeiou",
-          "version" : 123,
-          "rulesVisible" : true,
-          "name" : "aeiou",
-          "id" : "aeiou",
-          "state" : "aeiou"
-        } ],
-        "primaryContactInfo" : [ "" ],
-        "biography" : {
-          "hobbies" : [ "aeiou" ],
-          "biography" : "aeiou",
-          "interests" : [ "aeiou" ],
-          "spouse" : "aeiou"
-        },
-        "team" : {
-          "memberCount" : 123456789,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "id" : "aeiou"
-        },
-        "certifications" : [ "aeiou" ],
-        "version" : 123,
-        "outOfOffice" : {
-          "endDate" : "2000-01-23T04:56:07.000+0000",
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "active" : true,
-          "id" : "aeiou",
-          "user" : "",
-          "startDate" : "2000-01-23T04:56:07.000+0000",
-          "indefinite" : true
-        },
-        "languagePreference" : "aeiou",
-        "profileSkills" : [ "aeiou" ],
-        "chat" : "",
-        "name" : "aeiou",
-        "locations" : [ {
-          "notes" : "aeiou",
-          "coordinates" : {
-            "key" : 1.3579000000000001069366817318950779736042022705078125
-          },
-          "locationDefinition" : "",
-          "id" : "aeiou",
-          "floorplanId" : "aeiou"
-        } ],
-        "username" : "aeiou",
-        "geolocation" : {
-          "country" : "aeiou",
-          "city" : "aeiou",
-          "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "locations" : [ {
-            "images" : "aeiou",
-            "address" : {
-              "zipcode" : "aeiou",
-              "country" : "aeiou",
-              "city" : "aeiou",
-              "street1" : "aeiou",
-              "countryName" : "aeiou",
-              "state" : "aeiou",
-              "street2" : "aeiou"
-            },
-            "notes" : "aeiou",
-            "floorplanImage" : [ "" ],
-            "addressVerificationDetails" : {
-              "dateStarted" : "2000-01-23T04:56:07.000+0000",
-              "dateFinished" : "2000-01-23T04:56:07.000+0000",
-              "service" : "smartystreets-us",
-              "status" : "aeiou"
-            },
-            "selfUri" : "aeiou",
-            "profileImage" : [ {
-              "imageUri" : "aeiou",
-              "resolution" : "aeiou"
-            } ],
-            "emergencyNumber" : {
-              "number" : "aeiou",
-              "e164" : "aeiou",
-              "type" : "aeiou"
-            },
-            "version" : 123,
-            "path" : [ "aeiou" ],
-            "addressStored" : true,
-            "name" : "aeiou",
-            "id" : "aeiou",
-            "contactUser" : {
-              "selfUri" : "aeiou",
-              "id" : "aeiou"
-            },
-            "state" : "aeiou",
-            "addressVerified" : true
-          } ],
-          "id" : "aeiou",
-          "type" : "aeiou",
-          "region" : "aeiou",
-          "primary" : true,
-          "longitude" : 1.3579000000000001069366817318950779736042022705078125
-        }
-      },
-      "employerInfo" : "",
-      "languages" : [ "" ],
-      "conversationSummary" : "",
-      "groups" : [ "" ],
-      "primaryContactInfo" : [ {
-        "extension" : "aeiou",
-        "address" : "aeiou",
-        "display" : "aeiou",
-        "mediaType" : "aeiou",
-        "type" : "aeiou"
-      } ],
-      "biography" : "",
-      "team" : "",
-      "certifications" : [ "aeiou" ],
-      "version" : 123,
-      "outOfOffice" : "",
-      "languagePreference" : "aeiou",
-      "profileSkills" : [ "aeiou" ],
-      "chat" : {
-        "jabberId" : "aeiou"
-      },
-      "organization" : {
-        "defaultCountryCode" : "aeiou",
-        "selfUri" : "aeiou",
-        "thirdPartyURI" : "aeiou",
-        "version" : 123,
-        "thirdPartyOrgName" : "aeiou",
-        "features" : {
-          "key" : true
-        },
-        "defaultLanguage" : "aeiou",
-        "defaultSiteId" : "aeiou",
-        "supportURI" : "aeiou",
-        "domain" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou",
-        "state" : "aeiou",
-        "voicemailEnabled" : true,
-        "productPlatform" : "aeiou"
-      },
-      "name" : "aeiou",
-      "locations" : [ "" ],
-      "username" : "aeiou",
-      "geolocation" : ""
-    },
-    "organization" : "",
-    "selfUri" : "aeiou",
-    "id" : "aeiou",
-    "enabled" : true
-  },
-  "websites" : [ "aeiou" ],
   "id" : "aeiou",
-  "createDate" : "2000-01-23T04:56:07.000+0000"
+  "externalOrganizationId" : "aeiou",
+  "trustorOrgId" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
      - parameter trustorId: (path) Trustor ID 
 
-     - returns: RequestBuilder<ExternalOrganization> 
+     - returns: RequestBuilder<ExternalOrganizationTrustorLink> 
      */
-    open class func putExternalcontactsOrganizationTrustorTrustorIdWithRequestBuilder(externalOrganizationId: String, trustorId: String) -> RequestBuilder<ExternalOrganization> {
+    open class func putExternalcontactsOrganizationTrustorTrustorIdWithRequestBuilder(externalOrganizationId: String, trustorId: String) -> RequestBuilder<ExternalOrganizationTrustorLink> {
         var path = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}"
         let externalOrganizationIdPreEscape = "\(externalOrganizationId)"
         let externalOrganizationIdPostEscape = externalOrganizationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9600,7 +9247,7 @@ open class ExternalContactsAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ExternalOrganization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ExternalOrganizationTrustorLink>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

@@ -1601,7 +1601,7 @@ ExternalContactsAPI.putExternalcontactsOrganizationNote(externalOrganizationId: 
 
 
 
-> [ExternalOrganization](ExternalOrganization.html) putExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId, trustorId)
+> [ExternalOrganizationTrustorLink](ExternalOrganizationTrustorLink.html) putExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId, trustorId)
 
 Links a Trustor with an External Organization
 
@@ -1647,7 +1647,7 @@ ExternalContactsAPI.putExternalcontactsOrganizationTrustorTrustorId(externalOrga
 
 ### Return type
 
-[**ExternalOrganization**](ExternalOrganization.html)
+[**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink.html)
 
 <a name="putExternalcontactsRelationship"></a>
 

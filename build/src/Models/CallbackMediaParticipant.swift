@@ -121,7 +121,9 @@ public class CallbackMediaParticipant: Codable {
     public var callbackNumbers: [String]?
     /** The name of the callback target. */
     public var callbackUserName: String?
-    /** If true, the callback can be skipped */
+    /** True if the call for the callback uses external dialing. */
+    public var externalCampaign: Bool?
+    /** If true, the callback can be skipped. */
     public var skipEnabled: Bool?
     /** Duration in seconds before the callback will be auto-dialed. */
     public var timeoutSeconds: Int?
@@ -130,7 +132,7 @@ public class CallbackMediaParticipant: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var callbackScheduledTime: Date?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, automatedCallbackConfigId: String?, callbackScheduledTime: Date?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, automatedCallbackConfigId: String?, callbackScheduledTime: Date?) {
         
         self._id = _id
         
@@ -206,6 +208,8 @@ public class CallbackMediaParticipant: Codable {
         
         self.callbackUserName = callbackUserName
         
+        self.externalCampaign = externalCampaign
+        
         self.skipEnabled = skipEnabled
         
         self.timeoutSeconds = timeoutSeconds
@@ -254,6 +258,7 @@ public class CallbackMediaParticipant: Codable {
         case voicemail
         case callbackNumbers
         case callbackUserName
+        case externalCampaign
         case skipEnabled
         case timeoutSeconds
         case automatedCallbackConfigId

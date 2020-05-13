@@ -23,8 +23,8 @@ public class ShiftTradeResponse: Codable {
     public var _id: String?
     /** The start week date of the associated schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var weekDate: Date?
-    /** The ID of the associated schedule */
-    public var schedule: WeekScheduleReference?
+    /** A reference to the associated schedule */
+    public var schedule: BuScheduleReferenceForMuRoute?
     /** The state of this shift trade */
     public var state: State?
     /** The user who initiated this trade */
@@ -55,7 +55,7 @@ public class ShiftTradeResponse: Codable {
     /** Version data for this trade */
     public var metadata: WfmVersionedEntityMetadata?
 
-    public init(_id: String?, weekDate: Date?, schedule: WeekScheduleReference?, state: State?, initiatingUser: UserReference?, initiatingShiftId: String?, initiatingShiftStart: Date?, initiatingShiftEnd: Date?, receivingUser: UserReference?, receivingShiftId: String?, receivingShiftStart: Date?, receivingShiftEnd: Date?, expiration: Date?, oneSided: Bool?, acceptableIntervals: [String]?, reviewedBy: UserReference?, reviewedDate: Date?, metadata: WfmVersionedEntityMetadata?) {
+    public init(_id: String?, weekDate: Date?, schedule: BuScheduleReferenceForMuRoute?, state: State?, initiatingUser: UserReference?, initiatingShiftId: String?, initiatingShiftStart: Date?, initiatingShiftEnd: Date?, receivingUser: UserReference?, receivingShiftId: String?, receivingShiftStart: Date?, receivingShiftEnd: Date?, expiration: Date?, oneSided: Bool?, acceptableIntervals: [String]?, reviewedBy: UserReference?, reviewedDate: Date?, metadata: WfmVersionedEntityMetadata?) {
         
         self._id = _id
         

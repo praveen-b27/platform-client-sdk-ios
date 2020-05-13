@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postDocumentationGknSearch**](SearchAPI.html#postDocumentationGknSearch) | Search gkn documentation |
 | [**postDocumentationSearch**](SearchAPI.html#postDocumentationSearch) | Search documentation |
 | [**postGroupsSearch**](SearchAPI.html#postGroupsSearch) | Search groups |
+| [**postKnowledgeKnowledgebaseSearch**](SearchAPI.html#postKnowledgeKnowledgebaseSearch) | Search Documents |
 | [**postLocationsSearch**](SearchAPI.html#postLocationsSearch) | Search locations |
 | [**postSearch**](SearchAPI.html#postSearch) | Search resources. |
 | [**postSearchSuggest**](SearchAPI.html#postSearchSuggest) | Suggest resources. |
@@ -601,6 +602,60 @@ SearchAPI.postGroupsSearch(body: body) { (response, error) in
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
+
+<a name="postKnowledgeKnowledgebaseSearch"></a>
+
+# **postKnowledgeKnowledgebaseSearch**
+
+
+
+> [KnowledgeSearchResponse](KnowledgeSearchResponse.html) postKnowledgeKnowledgebaseSearch(knowledgeBaseId, body)
+
+Search Documents
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search  
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: KnowledgeSearchRequest = new KnowledgeSearchRequest(...) // 
+
+// Code example
+SearchAPI.postKnowledgeKnowledgebaseSearch(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.postKnowledgeKnowledgebaseSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**KnowledgeSearchRequest**](KnowledgeSearchRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeSearchResponse**](KnowledgeSearchResponse.html)
 
 <a name="postLocationsSearch"></a>
 

@@ -54,6 +54,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserQueues**](RoutingAPI.html#getUserQueues) | Get queues for user |
 | [**getUserRoutinglanguages**](RoutingAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
+| [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | Update the ring number OR joined status for a User in a Queue |
 | [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | Join or unjoin a set of users for a queue |
 | [**patchRoutingSettingsContactcenter**](RoutingAPI.html#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
@@ -64,6 +65,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserRoutingskillsBulk**](RoutingAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
 | [**postAnalyticsQueuesObservationsQuery**](RoutingAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
 | [**postRoutingEmailDomainRoutes**](RoutingAPI.html#postRoutingEmailDomainRoutes) | Create a route |
+| [**postRoutingEmailDomainTestconnection**](RoutingAPI.html#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this domain |
 | [**postRoutingEmailDomains**](RoutingAPI.html#postRoutingEmailDomains) | Create a domain |
 | [**postRoutingLanguages**](RoutingAPI.html#postRoutingLanguages) | Create Language |
 | [**postRoutingQueueUsers**](RoutingAPI.html#postRoutingQueueUsers) | Bulk add or delete up to 100 queue members |
@@ -2635,6 +2637,60 @@ RoutingAPI.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: 
 
 [**UserSkillEntityListing**](UserSkillEntityListing.html)
 
+<a name="patchRoutingEmailDomain"></a>
+
+# **patchRoutingEmailDomain**
+
+
+
+> [InboundDomain](InboundDomain.html) patchRoutingEmailDomain(domainId, body)
+
+Update domain settings
+
+
+
+Wraps PATCH /api/v2/routing/email/domains/{domainId}  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+let body: InboundDomainPatchRequest = new InboundDomainPatchRequest(...) // Domain settings
+
+// Code example
+RoutingAPI.patchRoutingEmailDomain(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingEmailDomain was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+| **body** | [**InboundDomainPatchRequest**](InboundDomainPatchRequest.html)| Domain settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InboundDomain**](InboundDomain.html)
+
 <a name="patchRoutingQueueUser"></a>
 
 # **patchRoutingQueueUser**
@@ -3179,6 +3235,60 @@ RoutingAPI.postRoutingEmailDomainRoutes(domainName: domainName, body: body) { (r
 ### Return type
 
 [**InboundRoute**](InboundRoute.html)
+
+<a name="postRoutingEmailDomainTestconnection"></a>
+
+# **postRoutingEmailDomainTestconnection**
+
+
+
+> [TestMessage](TestMessage.html) postRoutingEmailDomainTestconnection(domainId, body)
+
+Tests the custom SMTP server integration connection set on this domain
+
+The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+
+Wraps POST /api/v2/routing/email/domains/{domainId}/testconnection  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+let body: TestMessage = new TestMessage(...) // TestMessage
+
+// Code example
+RoutingAPI.postRoutingEmailDomainTestconnection(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingEmailDomainTestconnection was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+| **body** | [**TestMessage**](TestMessage.html)| TestMessage | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TestMessage**](TestMessage.html)
 
 <a name="postRoutingEmailDomains"></a>
 

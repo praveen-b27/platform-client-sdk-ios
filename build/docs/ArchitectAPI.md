@@ -959,7 +959,7 @@ ArchitectAPI.getArchitectDependencytrackingConsumedresources(_id: _id, version: 
 
 
 
-> [ConsumingResourcesEntityListing](ConsumingResourcesEntityListing.html) getArchitectDependencytrackingConsumingresources(_id, objectType, resourceType, pageNumber, pageSize, flowFilter)
+> [ConsumingResourcesEntityListing](ConsumingResourcesEntityListing.html) getArchitectDependencytrackingConsumingresources(_id, objectType, resourceType, version, pageNumber, pageSize, flowFilter)
 
 Get resources that consume a given Dependency Tracking object
 
@@ -982,12 +982,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let _id: String = "" // Consumed object ID
 let objectType: ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumingresources = ArchitectAPI.ObjectType_getArchitectDependencytrackingConsumingresources.enummember // Consumed object type
 let resourceType: [String] = [ArchitectAPI.ResourceType_getArchitectDependencytrackingConsumingresources.enummember.rawValue] // Types of consuming resources to show.  Only versioned types are allowed here.
+let version: String = "" // Object version
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
 let flowFilter: ArchitectAPI.FlowFilter_getArchitectDependencytrackingConsumingresources = ArchitectAPI.FlowFilter_getArchitectDependencytrackingConsumingresources.enummember // Show only checkedIn or published flows
 
 // Code example
-ArchitectAPI.getArchitectDependencytrackingConsumingresources(_id: _id, objectType: objectType, resourceType: resourceType, pageNumber: pageNumber, pageSize: pageSize, flowFilter: flowFilter) { (response, error) in
+ArchitectAPI.getArchitectDependencytrackingConsumingresources(_id: _id, objectType: objectType, resourceType: resourceType, version: version, pageNumber: pageNumber, pageSize: pageSize, flowFilter: flowFilter) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1005,6 +1006,7 @@ ArchitectAPI.getArchitectDependencytrackingConsumingresources(_id: _id, objectTy
 | **_id** | **String**| Consumed object ID | |
 | **objectType** | **String**| Consumed object type |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **resourceType** | [**[String]**](String.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **version** | **String**| Object version | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **flowFilter** | **String**| Show only checkedIn or published flows | [optional]<br />**Values**: checkedin ("checkedIn"), published ("published") |
@@ -1085,7 +1087,7 @@ ArchitectAPI.getArchitectDependencytrackingDeletedresourceconsumers(name: name, 
 
 
 
-> [DependencyObject](DependencyObject.html) getArchitectDependencytrackingObject(_id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType)
+> [DependencyObject](DependencyObject.html) getArchitectDependencytrackingObject(_id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType, consumedResourceRequest)
 
 Get a Dependency Tracking object
 
@@ -1112,9 +1114,10 @@ let consumedResources: Bool = true // Include resources this item consumes
 let consumingResources: Bool = true // Include resources that consume this item
 let consumedResourceType: [String] = [ArchitectAPI.ConsumedResourceType_getArchitectDependencytrackingObject.enummember.rawValue] // Types of consumed resources to return, if consumed resources are requested
 let consumingResourceType: [String] = [ArchitectAPI.ConsumingResourceType_getArchitectDependencytrackingObject.enummember.rawValue] // Types of consuming resources to return, if consuming resources are requested
+let consumedResourceRequest: Bool = true // Indicate that this is going to look up a consumed resource object
 
 // Code example
-ArchitectAPI.getArchitectDependencytrackingObject(_id: _id, version: version, objectType: objectType, consumedResources: consumedResources, consumingResources: consumingResources, consumedResourceType: consumedResourceType, consumingResourceType: consumingResourceType) { (response, error) in
+ArchitectAPI.getArchitectDependencytrackingObject(_id: _id, version: version, objectType: objectType, consumedResources: consumedResources, consumingResources: consumingResources, consumedResourceType: consumedResourceType, consumingResourceType: consumingResourceType, consumedResourceRequest: consumedResourceRequest) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1136,6 +1139,7 @@ ArchitectAPI.getArchitectDependencytrackingObject(_id: _id, version: version, ob
 | **consumingResources** | **Bool**| Include resources that consume this item | [optional] |
 | **consumedResourceType** | [**[String]**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **consumingResourceType** | [**[String]**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **consumedResourceRequest** | **Bool**| Indicate that this is going to look up a consumed resource object | [optional] |
 {: class="table-striped"}
 
 

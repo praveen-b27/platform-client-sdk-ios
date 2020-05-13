@@ -759,6 +759,7 @@ open class AnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "cursor" : "aeiou",
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000",
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+0000",
     "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1135,11 +1136,11 @@ open class AnalyticsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1224,11 +1225,11 @@ open class AnalyticsAPI {
     "dateLimitations" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -1314,11 +1315,11 @@ open class AnalyticsAPI {
     "availableLocales" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1651,11 +1652,11 @@ open class AnalyticsAPI {
     "runStatus" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter scheduleId: (path) Schedule ID 
@@ -1926,11 +1927,11 @@ open class AnalyticsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -2131,6 +2132,7 @@ open class AnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "cursor" : "aeiou",
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000",
   "userDetails" : [ {
     "primaryPresence" : [ {
       "systemPresence" : "aeiou",

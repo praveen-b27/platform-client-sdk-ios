@@ -45,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationRecording**](RecordingAPI.html#putConversationRecording) | Updates the retention records on a recording. |
 | [**putConversationRecordingAnnotation**](RecordingAPI.html#putConversationRecordingAnnotation) | Update annotation |
 | [**putOrphanrecording**](RecordingAPI.html#putOrphanrecording) | Updates an orphan recording to a regular recording with retention values |
-| [**putRecordingJob**](RecordingAPI.html#putRecordingJob) | Execute the recording bulk job |
+| [**putRecordingJob**](RecordingAPI.html#putRecordingJob) | Execute the recording bulk job. |
 | [**putRecordingLocalkeysSetting**](RecordingAPI.html#putRecordingLocalkeysSetting) | Update the local encryption settings |
 | [**putRecordingMediaretentionpolicy**](RecordingAPI.html#putRecordingMediaretentionpolicy) | Update a media retention policy |
 | [**putRecordingRecordingkeysRotationschedule**](RecordingAPI.html#putRecordingRecordingkeysRotationschedule) | Update key rotation schedule |
@@ -319,7 +319,7 @@ RecordingAPI.deleteRecordingMediaretentionpolicy(policyId: policyId) { (error) i
 
 
 
-> [Recording](Recording.html) getConversationRecording(conversationId, recordingId, formatId, download, fileName)
+> [Recording](Recording.html) getConversationRecording(conversationId, recordingId, formatId, download, fileName, locale)
 
 Gets a specific recording.
 
@@ -344,9 +344,10 @@ let recordingId: String = "" // Recording ID
 let formatId: RecordingAPI.FormatId_getConversationRecording = RecordingAPI.FormatId_getConversationRecording.enummember // The desired media format.
 let download: Bool = false // requesting a download format of the recording
 let fileName: String = "" // the name of the downloaded fileName
+let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
 
 // Code example
-RecordingAPI.getConversationRecording(conversationId: conversationId, recordingId: recordingId, formatId: formatId, download: download, fileName: fileName) { (response, error) in
+RecordingAPI.getConversationRecording(conversationId: conversationId, recordingId: recordingId, formatId: formatId, download: download, fileName: fileName, locale: locale) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -366,6 +367,7 @@ RecordingAPI.getConversationRecording(conversationId: conversationId, recordingI
 | **formatId** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 | **download** | **Bool**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
+| **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
 {: class="table-striped"}
 
 
@@ -702,7 +704,7 @@ RecordingAPI.getOrphanrecording(orphanId: orphanId) { (response, error) in
 
 
 
-> [Recording](Recording.html) getOrphanrecordingMedia(orphanId, formatId, download, fileName)
+> [Recording](Recording.html) getOrphanrecordingMedia(orphanId, formatId, download, fileName, locale)
 
 Gets the media of a single orphan recording
 
@@ -726,9 +728,10 @@ let orphanId: String = "" // Orphan ID
 let formatId: RecordingAPI.FormatId_getOrphanrecordingMedia = RecordingAPI.FormatId_getOrphanrecordingMedia.enummember // The desired media format.
 let download: Bool = false // requesting a download format of the recording
 let fileName: String = "" // the name of the downloaded fileName
+let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
 
 // Code example
-RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, download: download, fileName: fileName) { (response, error) in
+RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, download: download, fileName: fileName, locale: locale) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -747,6 +750,7 @@ RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, dow
 | **formatId** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 | **download** | **Bool**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
+| **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
 {: class="table-striped"}
 
 
@@ -2115,15 +2119,17 @@ RecordingAPI.putOrphanrecording(orphanId: orphanId, body: body) { (response, err
 
 > [RecordingJob](RecordingJob.html) putRecordingJob(jobId, body)
 
-Execute the recording bulk job
+Execute the recording bulk job.
 
-
+A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording&#39;s retention.
 
 Wraps PUT /api/v2/recording/jobs/{jobId}  
 
 Requires ALL permissions: 
 
 * recording:job:edit
+* recording:recording:editRetention
+* recording:screenRecording:editRetention
 
 ### Example
 

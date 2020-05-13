@@ -20,12 +20,16 @@ public class TranscriptionSettings: Codable {
     public var transcription: Transcription?
     /** Configure confidence threshold. The possible values are from 1 to 100. */
     public var transcriptionConfidenceThreshold: Int?
+    /** Setting to enable/disable content search */
+    public var contentSearchEnabled: Bool?
 
-    public init(transcription: Transcription?, transcriptionConfidenceThreshold: Int?) {
+    public init(transcription: Transcription?, transcriptionConfidenceThreshold: Int?, contentSearchEnabled: Bool?) {
         
         self.transcription = transcription
         
         self.transcriptionConfidenceThreshold = transcriptionConfidenceThreshold
+        
+        self.contentSearchEnabled = contentSearchEnabled
         
     }
 

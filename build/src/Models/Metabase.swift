@@ -22,6 +22,8 @@ public class Metabase: Codable {
         case externalPcvAws = "EXTERNAL_PCV_AWS"
         case externalByocCarrier = "EXTERNAL_BYOC_CARRIER"
         case externalByocPbx = "EXTERNAL_BYOC_PBX"
+        case stationCdm = "STATION_CDM"
+        case stationCdmWebrtc = "STATION_CDM_WEBRTC"
         case station = "STATION"
         case tie = "TIE"
         case tieDirect = "TIE_DIRECT"

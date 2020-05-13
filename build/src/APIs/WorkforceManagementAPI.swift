@@ -15,6 +15,495 @@ open class WorkforceManagementAPI {
     
     /**
      
+     Delete business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunit(businessUnitId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete business unit
+     
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}
+     - A business unit cannot be deleted if it contains one or more management units
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Deletes an activity code
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter acId: (path) The ID of the activity code to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitActivitycode(buId: String, acId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(buId: buId, acId: acId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Deletes an activity code
+     
+     - DELETE /api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter acId: (path) The ID of the activity code to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(buId: String, acId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}"
+        let buIdPreEscape = "\(buId)"
+        let buIdPostEscape = buIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{buId}", with: buIdPostEscape, options: .literal, range: nil)
+        let acIdPreEscape = "\(acId)"
+        let acIdPostEscape = acIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{acId}", with: acIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Deletes the planning group
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter planningGroupId: (path) The ID of a planning group to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitPlanninggroup(businessUnitId: String, planningGroupId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: businessUnitId, planningGroupId: planningGroupId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Deletes the planning group
+     
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter planningGroupId: (path) The ID of a planning group to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let planningGroupIdPreEscape = "\(planningGroupId)"
+        let planningGroupIdPostEscape = planningGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{planningGroupId}", with: planningGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Cancel a scheduling run
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitSchedulingRun(businessUnitId: String, runId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: businessUnitId, runId: runId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Cancel a scheduling run
+     
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let runIdPreEscape = "\(runId)"
+        let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Delete a service goal template
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter serviceGoalTemplateId: (path) The ID of the service goal template to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: String, serviceGoalTemplateId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a service goal template
+     
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter serviceGoalTemplateId: (path) The ID of the service goal template to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let serviceGoalTemplateIdPreEscape = "\(serviceGoalTemplateId)"
+        let serviceGoalTemplateIdPostEscape = serviceGoalTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{serviceGoalTemplateId}", with: serviceGoalTemplateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Delete a schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitWeekSchedule(businessUnitId: String, weekId: Date, scheduleId: String, completion: @escaping ((_ data: BuAsyncScheduleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId)
+        requestBuilder.execute { (response: Response<BuAsyncScheduleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a schedule
+     
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "managementUnits" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "agentCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "agents" : [ "" ]
+    } ],
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "generationResults" : {
+      "messageCount" : 123,
+      "failed" : true,
+      "runId" : "aeiou"
+    },
+    "id" : "aeiou",
+    "published" : true,
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "weekCount" : 123
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+
+     - returns: RequestBuilder<BuAsyncScheduleResponse> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<BuAsyncScheduleResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAsyncScheduleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Delete a short term forecast
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: String, weekDateId: Date, forecastId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a short term forecast
+     
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}
+     - Must not be tied to any schedules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete management unit
      
      - parameter muId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -686,6 +1175,2506 @@ open class WorkforceManagementAPI {
     
     
     
+    public enum Expand_getWorkforcemanagementBusinessunit: String { 
+        case settings = "settings"
+        case settingsTimezone = "settings.timeZone"
+        case settingsStartdayofweek = "settings.startDayOfWeek"
+        case settingsShorttermforecasting = "settings.shortTermForecasting"
+    }
+
+    
+    
+    /**
+     
+     Get business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter expand: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunit(businessUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: BusinessUnit?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, expand: expand)
+        requestBuilder.execute { (response: Response<BusinessUnit>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get business unit
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}
+     - Expanding \"settings\" will retrieve all settings.  All other expands will retrieve only the requested settings field(s).
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "settings" : {
+    "startDayOfWeek" : "aeiou",
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "timeZone" : "aeiou",
+    "shortTermForecasting" : {
+      "defaultHistoryWeeks" : 123
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter expand: (query)  (optional)
+
+     - returns: RequestBuilder<BusinessUnit> 
+     */
+    open class func getWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, expand: [String]? = nil) -> RequestBuilder<BusinessUnit> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get an activity code
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter acId: (path) The ID of the activity code to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivitycode(buId: String, acId: String, completion: @escaping ((_ data: BusinessUnitActivityCode?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(buId: buId, acId: acId)
+        requestBuilder.execute { (response: Response<BusinessUnitActivityCode>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get an activity code
+     
+     - GET /api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "lengthInMinutes" : 123,
+  "defaultCode" : true,
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "countsAsWorkTime" : true,
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "active" : true,
+  "id" : "aeiou",
+  "countsAsPaidTime" : true,
+  "agentTimeOffSelectable" : true,
+  "category" : "aeiou"
+}}]
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter acId: (path) The ID of the activity code to fetch 
+
+     - returns: RequestBuilder<BusinessUnitActivityCode> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(buId: String, acId: String) -> RequestBuilder<BusinessUnitActivityCode> {
+        var path = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}"
+        let buIdPreEscape = "\(buId)"
+        let buIdPostEscape = buIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{buId}", with: buIdPostEscape, options: .literal, range: nil)
+        let acIdPreEscape = "\(acId)"
+        let acIdPostEscape = acIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{acId}", with: acIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get activity codes
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivitycodes(buId: String, completion: @escaping ((_ data: BusinessUnitActivityCodeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(buId: buId)
+        requestBuilder.execute { (response: Response<BusinessUnitActivityCodeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get activity codes
+     
+     - GET /api/v2/workforcemanagement/businessunits/{buId}/activitycodes
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "lengthInMinutes" : 123,
+    "defaultCode" : true,
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "countsAsWorkTime" : true,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "active" : true,
+    "id" : "aeiou",
+    "countsAsPaidTime" : true,
+    "agentTimeOffSelectable" : true,
+    "category" : "aeiou"
+  } ]
+}}]
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+
+     - returns: RequestBuilder<BusinessUnitActivityCodeListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(buId: String) -> RequestBuilder<BusinessUnitActivityCodeListing> {
+        var path = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes"
+        let buIdPreEscape = "\(buId)"
+        let buIdPostEscape = buIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{buId}", with: buIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BusinessUnitActivityCodeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get intraday planning groups for the given date
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter date: (query) yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitIntradayPlanninggroups(businessUnitId: String, date: Date, completion: @escaping ((_ data: WfmIntradayPlanningGroupListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitIntradayPlanninggroupsWithRequestBuilder(businessUnitId: businessUnitId, date: date)
+        requestBuilder.execute { (response: Response<WfmIntradayPlanningGroupListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get intraday planning groups for the given date
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "noDataReason" : "aeiou",
+  "entities" : [ {
+    "serviceGoalTemplate" : {
+      "abandonRate" : {
+        "percent" : 123
+      },
+      "averageSpeedOfAnswer" : {
+        "seconds" : 123
+      },
+      "serviceLevel" : {
+        "seconds" : 123,
+        "percent" : 123
+      }
+    },
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "routePaths" : [ {
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "mediaType" : "aeiou",
+      "language" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "queue" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ]
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter date: (query) yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+
+     - returns: RequestBuilder<WfmIntradayPlanningGroupListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitIntradayPlanninggroupsWithRequestBuilder(businessUnitId: String, date: Date) -> RequestBuilder<WfmIntradayPlanningGroupListing> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "date": date.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<WfmIntradayPlanningGroupListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Feature_getWorkforcemanagementBusinessunitManagementunits: String { 
+        case agentSchedule = "AgentSchedule"
+        case agentTimeOffRequest = "AgentTimeOffRequest"
+        case activityCodes = "ActivityCodes"
+        case agents = "Agents"
+        case businessUnitActivityCodes = "BusinessUnitActivityCodes"
+        case businessUnits = "BusinessUnits"
+        case historicalAdherence = "HistoricalAdherence"
+        case intradayMonitoring = "IntradayMonitoring"
+        case buIntradayMonitoring = "BuIntradayMonitoring"
+        case managementUnits = "ManagementUnits"
+        case realTimeAdherence = "RealTimeAdherence"
+        case schedules = "Schedules"
+        case buSchedules = "BuSchedules"
+        case serviceGoalGroups = "ServiceGoalGroups"
+        case serviceGoalTemplates = "ServiceGoalTemplates"
+        case planningGroups = "PlanningGroups"
+        case shiftTrading = "ShiftTrading"
+        case shortTermForecasts = "ShortTermForecasts"
+        case buShortTermForecasts = "BuShortTermForecasts"
+        case timeOffRequests = "TimeOffRequests"
+        case workPlans = "WorkPlans"
+    }
+
+    
+    
+    
+    
+    /**
+     
+     Get all authorized management units in the business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter feature: (query)  (optional)
+     - parameter divisionId: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitManagementunits(businessUnitId: String, feature: Feature_getWorkforcemanagementBusinessunitManagementunits? = nil, divisionId: String? = nil, completion: @escaping ((_ data: ManagementUnitListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitManagementunitsWithRequestBuilder(businessUnitId: businessUnitId, feature: feature, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<ManagementUnitListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get all authorized management units in the business unit
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "startDayOfWeek" : "aeiou",
+    "settings" : {
+      "metadata" : {
+        "modifiedBy" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "shiftTrading" : {
+        "weeklyMaxPaidViolations" : "aeiou",
+        "unequalPaid" : "aeiou",
+        "requiresMatchingLanguages" : true,
+        "oneSided" : "aeiou",
+        "allowDirectTrades" : true,
+        "autoReview" : true,
+        "enabled" : true,
+        "weeklyMinPaidViolations" : "aeiou",
+        "requiresMatchingSkills" : true,
+        "requiresMatchingQueues" : true,
+        "minHoursInFuture" : 123,
+        "activityCategoryRules" : [ {
+          "activityCodeIdReplacement" : "aeiou",
+          "activityCategory" : "aeiou",
+          "action" : "aeiou"
+        } ],
+        "requiresMatchingPlanningGroups" : true
+      },
+      "adherence" : {
+        "ignoredActivityCategories" : {
+          "values" : [ "aeiou" ]
+        },
+        "nonOnQueueActivitiesEquivalent" : true,
+        "adherenceTargetPercent" : 123,
+        "adherenceExceptionThresholdSeconds" : 123,
+        "trackOnQueueActivity" : true,
+        "severeAlertThresholdMinutes" : 123
+      },
+      "scheduling" : {
+        "maxOccupancyPercentForDeferredWork" : 123,
+        "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+        "shrinkageOverrides" : {
+          "values" : [ {
+            "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+            "intervalIndex" : 123
+          } ],
+          "clear" : true
+        }
+      },
+      "timeOff" : {
+        "submissionEarliestDaysFromNow" : 123,
+        "submissionRangeEnforced" : true,
+        "submissionLatestDaysFromNow" : 123
+      },
+      "shortTermForecasting" : {
+        "defaultHistoryWeeks" : 123
+      }
+    },
+    "metadata" : "",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "timeZone" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "version" : 123
+  } ],
+  "firstUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter feature: (query)  (optional)
+     - parameter divisionId: (query)  (optional)
+
+     - returns: RequestBuilder<ManagementUnitListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitManagementunitsWithRequestBuilder(businessUnitId: String, feature: Feature_getWorkforcemanagementBusinessunitManagementunits? = nil, divisionId: String? = nil) -> RequestBuilder<ManagementUnitListing> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "feature": feature?.rawValue, 
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ManagementUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a planning group
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter planningGroupId: (path) The ID of a planning group to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitPlanninggroup(businessUnitId: String, planningGroupId: String, completion: @escaping ((_ data: PlanningGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: businessUnitId, planningGroupId: planningGroupId)
+        requestBuilder.execute { (response: Response<PlanningGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a planning group
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "serviceGoalTemplate" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "routePaths" : [ {
+    "skills" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "mediaType" : "aeiou",
+    "language" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "queue" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter planningGroupId: (path) The ID of a planning group to fetch 
+
+     - returns: RequestBuilder<PlanningGroup> 
+     */
+    open class func getWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String) -> RequestBuilder<PlanningGroup> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let planningGroupIdPreEscape = "\(planningGroupId)"
+        let planningGroupIdPostEscape = planningGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{planningGroupId}", with: planningGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PlanningGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Gets list of planning groups
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitPlanninggroups(businessUnitId: String, completion: @escaping ((_ data: PlanningGroupList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<PlanningGroupList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Gets list of planning groups
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "serviceGoalTemplate" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "routePaths" : [ {
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "mediaType" : "aeiou",
+      "language" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "queue" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ]
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+
+     - returns: RequestBuilder<PlanningGroupList> 
+     */
+    open class func getWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<PlanningGroupList> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PlanningGroupList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a scheduling run
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulingRun(businessUnitId: String, runId: String, completion: @escaping ((_ data: BuScheduleRun?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: businessUnitId, runId: runId)
+        requestBuilder.execute { (response: Response<BuScheduleRun>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a scheduling run
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "messageCount" : 123,
+  "targetWeek" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
+  "schedulerRunId" : "aeiou",
+  "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
+  "weekCount" : 123,
+  "schedule" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "schedulingCanceledBy" : "",
+  "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
+  "intradayRescheduling" : true,
+  "scheduleDescription" : "aeiou",
+  "reschedulingOptions" : {
+    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "activityCodeIds" : [ "aeiou" ],
+    "managementUnits" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "applied" : true
+    } ],
+    "doNotChangeManuallyEditedShifts" : true,
+    "doNotChangeDailyPaidTime" : true,
+    "doNotChangeShiftStartTimes" : true,
+    "existingSchedule" : "",
+    "agentCount" : 123,
+    "startDate" : "2000-01-23T04:56:07.000+0000",
+    "doNotChangeWeeklyPaidTime" : true
+  },
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
+  "schedulingStartedBy" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+
+     - returns: RequestBuilder<BuScheduleRun> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String) -> RequestBuilder<BuScheduleRun> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let runIdPreEscape = "\(runId)"
+        let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuScheduleRun>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getWorkforcemanagementBusinessunitSchedulingRunResult: String { 
+        case headcountforecast = "headcountForecast"
+        case generationresults = "generationResults"
+        case agentschedules = "agentSchedules"
+    }
+
+    
+    
+    /**
+     
+     Get the result of a rescheduling operation
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+     - parameter managementUnitIds: (query) The IDs of the management units for which to fetch the reschedule results 
+     - parameter expand: (query) The fields to expand. Omitting will return an empty response 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulingRunResult(businessUnitId: String, runId: String, managementUnitIds: [String], expand: [String], completion: @escaping ((_ data: BuRescheduleResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulingRunResultWithRequestBuilder(businessUnitId: businessUnitId, runId: runId, managementUnitIds: managementUnitIds, expand: expand)
+        requestBuilder.execute { (response: Response<BuRescheduleResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the result of a rescheduling operation
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headcountForecast" : {
+    "entities" : [ {
+      "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "planningGroup" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ],
+    "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "generationResultsDownloadUrl" : "aeiou",
+  "agentSchedules" : [ {
+    "downloadResult" : {
+      "agentSchedules" : [ {
+        "fullDayTimeOffMarkers" : [ {
+          "activityCodeId" : "aeiou",
+          "timeOffRequestId" : "aeiou",
+          "lengthMinutes" : 123,
+          "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+          "paid" : true,
+          "description" : "aeiou"
+        } ],
+        "shifts" : [ {
+          "schedule" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou",
+            "weekDate" : "2000-01-23T04:56:07.000+0000"
+          },
+          "lengthMinutes" : 123,
+          "activities" : [ {
+            "activityCodeId" : "aeiou",
+            "timeOffRequestId" : "aeiou",
+            "lengthMinutes" : 123,
+            "paid" : true,
+            "description" : "aeiou",
+            "startDate" : "2000-01-23T04:56:07.000+0000"
+          } ],
+          "id" : "aeiou",
+          "startDate" : "2000-01-23T04:56:07.000+0000",
+          "manuallyEdited" : true
+        } ],
+        "workPlan" : {
+          "managementUnit" : "",
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "user" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        }
+      } ]
+    },
+    "managementUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "downloadUrl" : "aeiou"
+  } ],
+  "generationResults" : {
+    "messageCount" : 123,
+    "messages" : [ {
+      "arguments" : [ {
+        "type" : "aeiou",
+        "value" : "aeiou"
+      } ],
+      "type" : "aeiou"
+    } ],
+    "failed" : true,
+    "runId" : "aeiou"
+  },
+  "headcountForecastDownloadUrl" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+     - parameter managementUnitIds: (query) The IDs of the management units for which to fetch the reschedule results 
+     - parameter expand: (query) The fields to expand. Omitting will return an empty response 
+
+     - returns: RequestBuilder<BuRescheduleResult> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulingRunResultWithRequestBuilder(businessUnitId: String, runId: String, managementUnitIds: [String], expand: [String]) -> RequestBuilder<BuRescheduleResult> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let runIdPreEscape = "\(runId)"
+        let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "managementUnitIds": managementUnitIds, 
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BuRescheduleResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get the list of scheduling runs
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulingRuns(businessUnitId: String, completion: @escaping ((_ data: BuScheduleRunListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitSchedulingRunsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<BuScheduleRunListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the list of scheduling runs
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "messageCount" : 123,
+    "targetWeek" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
+    "schedulerRunId" : "aeiou",
+    "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
+    "weekCount" : 123,
+    "schedule" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "schedulingCanceledBy" : "",
+    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
+    "intradayRescheduling" : true,
+    "scheduleDescription" : "aeiou",
+    "reschedulingOptions" : {
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "activityCodeIds" : [ "aeiou" ],
+      "managementUnits" : [ {
+        "managementUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "applied" : true
+      } ],
+      "doNotChangeManuallyEditedShifts" : true,
+      "doNotChangeDailyPaidTime" : true,
+      "doNotChangeShiftStartTimes" : true,
+      "existingSchedule" : "",
+      "agentCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "doNotChangeWeeklyPaidTime" : true
+    },
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
+    "schedulingStartedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<BuScheduleRunListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitSchedulingRunsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<BuScheduleRunListing> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuScheduleRunListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a service goal template
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter serviceGoalTemplateId: (path) The ID of a service goal template to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: String, serviceGoalTemplateId: String, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId)
+        requestBuilder.execute { (response: Response<ServiceGoalTemplate>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a service goal template
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "abandonRate" : {
+    "include" : true,
+    "percent" : 123
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "averageSpeedOfAnswer" : {
+    "include" : true,
+    "seconds" : 123
+  },
+  "id" : "aeiou",
+  "serviceLevel" : {
+    "include" : true,
+    "seconds" : 123,
+    "percent" : 123
+  }
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter serviceGoalTemplateId: (path) The ID of a service goal template to fetch 
+
+     - returns: RequestBuilder<ServiceGoalTemplate> 
+     */
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String) -> RequestBuilder<ServiceGoalTemplate> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let serviceGoalTemplateIdPreEscape = "\(serviceGoalTemplateId)"
+        let serviceGoalTemplateIdPostEscape = serviceGoalTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{serviceGoalTemplateId}", with: serviceGoalTemplateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ServiceGoalTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Gets list of service goal templates
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: String, completion: @escaping ((_ data: ServiceGoalTemplateList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<ServiceGoalTemplateList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Gets list of service goal templates
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "abandonRate" : {
+      "include" : true,
+      "percent" : 123
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "averageSpeedOfAnswer" : {
+      "include" : true,
+      "seconds" : 123
+    },
+    "id" : "aeiou",
+    "serviceLevel" : {
+      "include" : true,
+      "seconds" : 123,
+      "percent" : 123
+    }
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+
+     - returns: RequestBuilder<ServiceGoalTemplateList> 
+     */
+    open class func getWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String) -> RequestBuilder<ServiceGoalTemplateList> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ServiceGoalTemplateList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId: String, weekId: Date, scheduleId: String, completion: @escaping ((_ data: BuScheduleMetadata?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId)
+        requestBuilder.execute { (response: Response<BuScheduleMetadata>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "managementUnits" : [ {
+    "managementUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "agentCount" : 123,
+    "startDate" : "2000-01-23T04:56:07.000+0000",
+    "agents" : [ "" ]
+  } ],
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "generationResults" : {
+    "messageCount" : 123,
+    "failed" : true,
+    "runId" : "aeiou"
+  },
+  "id" : "aeiou",
+  "published" : true,
+  "weekDate" : "2000-01-23T04:56:07.000+0000",
+  "shortTermForecast" : {
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "weekCount" : 123
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+
+     - returns: RequestBuilder<BuScheduleMetadata> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<BuScheduleMetadata> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuScheduleMetadata>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get the generation results for a generated schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekScheduleGenerationresults(businessUnitId: String, weekId: Date, scheduleId: String, completion: @escaping ((_ data: ScheduleGenerationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId)
+        requestBuilder.execute { (response: Response<ScheduleGenerationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the generation results for a generated schedule
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "messageCount" : 123,
+  "messages" : [ {
+    "arguments" : [ {
+      "type" : "aeiou",
+      "value" : "aeiou"
+    } ],
+    "type" : "aeiou"
+  } ],
+  "failed" : true,
+  "runId" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+
+     - returns: RequestBuilder<ScheduleGenerationResult> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekScheduleGenerationresultsWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<ScheduleGenerationResult> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleGenerationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get the headcount forecast by planning group for the schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter forceDownload: (query) Whether to force the result to come via download url.  For testing purposes only (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast(businessUnitId: String, weekId: Date, scheduleId: String, forceDownload: Bool? = nil, completion: @escaping ((_ data: BuHeadcountForecastResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, forceDownload: forceDownload)
+        requestBuilder.execute { (response: Response<BuHeadcountForecastResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the headcount forecast by planning group for the schedule
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "entities" : [ {
+      "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "planningGroup" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ],
+    "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "downloadUrl" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter forceDownload: (query) Whether to force the result to come via download url.  For testing purposes only (optional)
+
+     - returns: RequestBuilder<BuHeadcountForecastResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecastWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, forceDownload: Bool? = nil) -> RequestBuilder<BuHeadcountForecastResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceDownload": forceDownload
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BuHeadcountForecastResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getWorkforcemanagementBusinessunitWeekSchedules: String { 
+        case forecastDescription = "forecast.description"
+    }
+
+    
+    
+    /**
+     
+     Get the list of week schedules for the specified week
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules 
+     - parameter includeOnlyPublished: (query) includeOnlyPublished (optional)
+     - parameter expand: (query) expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil, completion: @escaping ((_ data: BuScheduleListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, includeOnlyPublished: includeOnlyPublished, expand: expand)
+        requestBuilder.execute { (response: Response<BuScheduleListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the list of week schedules for the specified week
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules
+     - Use \"recent\" for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "generationResults" : {
+      "messageCount" : 123,
+      "failed" : true,
+      "runId" : "aeiou"
+    },
+    "id" : "aeiou",
+    "published" : true,
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "weekCount" : 123
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules 
+     - parameter includeOnlyPublished: (query) includeOnlyPublished (optional)
+     - parameter expand: (query) expand (optional)
+
+     - returns: RequestBuilder<BuScheduleListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: String, includeOnlyPublished: Bool? = nil, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedules? = nil) -> RequestBuilder<BuScheduleListing> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "includeOnlyPublished": includeOnlyPublished, 
+            
+            "expand": expand?.rawValue
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BuScheduleListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getWorkforcemanagementBusinessunitWeekShorttermforecast: String { 
+        case planninggroups = "planningGroups"
+        case generationresults = "generationResults"
+    }
+
+    
+    
+    /**
+     
+     Get a short term forecast
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter expand: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: String, weekDateId: Date, forecastId: String, expand: [String]? = nil, completion: @escaping ((_ data: BuShortTermForecast?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, expand: expand)
+        requestBuilder.execute { (response: Response<BuShortTermForecast>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a short term forecast
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "legacy" : true,
+  "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "timeZone" : "aeiou",
+  "sourceDays" : [ {
+    "date" : "aeiou",
+    "dataKey" : "aeiou",
+    "fileName" : "aeiou",
+    "dayOfWeek" : "aeiou",
+    "weight" : 123
+  } ],
+  "weekCount" : 123,
+  "creationMethod" : "aeiou",
+  "planningGroupsVersion" : 123,
+  "planningGroups" : {
+    "entities" : [ {
+      "serviceGoalTemplate" : {
+        "abandonRate" : {
+          "percent" : 123
+        },
+        "averageSpeedOfAnswer" : {
+          "seconds" : 123
+        },
+        "serviceLevel" : {
+          "seconds" : 123,
+          "percent" : 123
+        }
+      },
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "routePaths" : [ {
+        "skills" : [ {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        } ],
+        "mediaType" : "aeiou",
+        "language" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "queue" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        }
+      } ]
+    } ]
+  },
+  "generationResults" : {
+    "planningGroupResults" : [ {
+      "planningGroupId" : "aeiou",
+      "metricResults" : [ {
+        "metric" : "aeiou",
+        "forecastingMethod" : "aeiou"
+      } ]
+    } ]
+  },
+  "id" : "aeiou",
+  "weekDate" : "2000-01-23T04:56:07.000+0000",
+  "modifications" : [ {
+    "startIntervalIndex" : 123,
+    "legacyMetric" : "aeiou",
+    "displayGranularity" : "aeiou",
+    "endIntervalIndex" : 123,
+    "metric" : "aeiou",
+    "granularity" : "aeiou",
+    "values" : [ {
+      "intervalIndex" : 123,
+      "value" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "type" : "aeiou",
+    "planningGroupIds" : [ "aeiou" ],
+    "value" : 1.3579000000000001069366817318950779736042022705078125,
+    "enabled" : true
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter expand: (query)  (optional)
+
+     - returns: RequestBuilder<BuShortTermForecast> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, expand: [String]? = nil) -> RequestBuilder<BuShortTermForecast> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BuShortTermForecast>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get the result of a short term forecast calculation
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter weekNumber: (query) The week number to fetch (for multi-week forecasts) (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastData(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumber: Int? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuForecastResultResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastDataWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, weekNumber: weekNumber, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<BuForecastResultResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the result of a short term forecast calculation
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data
+     - Includes modifications unless you pass the doNotApplyModifications query parameter
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
+    "planningGroups" : [ {
+      "averageHandleTimeSecondsPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "planningGroupId" : "aeiou",
+      "offeredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ]
+    } ],
+    "weekCount" : 123,
+    "weekNumber" : 123
+  },
+  "downloadUrl" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter weekNumber: (query) The week number to fetch (for multi-week forecasts) (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<BuForecastResultResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastDataWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, weekNumber: Int? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuForecastResultResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "weekNumber": weekNumber?.encodeToJSON(), 
+            
+            "forceDownloadService": forceDownloadService
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BuForecastResultResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Gets the forecast generation results
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults(businessUnitId: String, weekDateId: Date, forecastId: String, completion: @escaping ((_ data: BuForecastGenerationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId)
+        requestBuilder.execute { (response: Response<BuForecastGenerationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Gets the forecast generation results
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "planningGroupResults" : [ {
+    "planningGroupId" : "aeiou",
+    "metricResults" : [ {
+      "metric" : "aeiou",
+      "forecastingMethod" : "aeiou"
+    } ]
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+
+     - returns: RequestBuilder<BuForecastGenerationResult> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<BuForecastGenerationResult> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuForecastGenerationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Gets the forecast planning group snapshot
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups(businessUnitId: String, weekDateId: Date, forecastId: String, completion: @escaping ((_ data: ForecastPlanningGroupsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId)
+        requestBuilder.execute { (response: Response<ForecastPlanningGroupsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Gets the forecast planning group snapshot
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "serviceGoalTemplate" : {
+      "abandonRate" : {
+        "percent" : 123
+      },
+      "averageSpeedOfAnswer" : {
+        "seconds" : 123
+      },
+      "serviceLevel" : {
+        "seconds" : 123,
+        "percent" : 123
+      }
+    },
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "routePaths" : [ {
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "mediaType" : "aeiou",
+      "language" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "queue" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ]
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+
+     - returns: RequestBuilder<ForecastPlanningGroupsResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String) -> RequestBuilder<ForecastPlanningGroupsResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ForecastPlanningGroupsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get short term forecasts
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecasts(businessUnitId: String, weekDateId: String, completion: @escaping ((_ data: BuShortTermForecastListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastsWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId)
+        requestBuilder.execute { (response: Response<BuShortTermForecastListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get short term forecasts
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts
+     - Use \"recent\" for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "legacy" : true,
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "weekCount" : 123,
+    "creationMethod" : "aeiou"
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts 
+
+     - returns: RequestBuilder<BuShortTermForecastListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastsWithRequestBuilder(businessUnitId: String, weekDateId: String) -> RequestBuilder<BuShortTermForecastListing> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuShortTermForecastListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    public enum Feature_getWorkforcemanagementBusinessunits: String { 
+        case agentSchedule = "AgentSchedule"
+        case agentTimeOffRequest = "AgentTimeOffRequest"
+        case activityCodes = "ActivityCodes"
+        case agents = "Agents"
+        case businessUnitActivityCodes = "BusinessUnitActivityCodes"
+        case businessUnits = "BusinessUnits"
+        case historicalAdherence = "HistoricalAdherence"
+        case intradayMonitoring = "IntradayMonitoring"
+        case buIntradayMonitoring = "BuIntradayMonitoring"
+        case managementUnits = "ManagementUnits"
+        case realTimeAdherence = "RealTimeAdherence"
+        case schedules = "Schedules"
+        case buSchedules = "BuSchedules"
+        case serviceGoalGroups = "ServiceGoalGroups"
+        case serviceGoalTemplates = "ServiceGoalTemplates"
+        case planningGroups = "PlanningGroups"
+        case shiftTrading = "ShiftTrading"
+        case shortTermForecasts = "ShortTermForecasts"
+        case buShortTermForecasts = "BuShortTermForecasts"
+        case timeOffRequests = "TimeOffRequests"
+        case workPlans = "WorkPlans"
+    }
+
+    
+    
+    
+    
+    /**
+     
+     Get business units
+     
+     - parameter feature: (query)  (optional)
+     - parameter divisionId: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunits(feature: Feature_getWorkforcemanagementBusinessunits? = nil, divisionId: String? = nil, completion: @escaping ((_ data: BusinessUnitListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitsWithRequestBuilder(feature: feature, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<BusinessUnitListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get business units
+     
+     - GET /api/v2/workforcemanagement/businessunits
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "authorized" : true,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter feature: (query)  (optional)
+     - parameter divisionId: (query)  (optional)
+
+     - returns: RequestBuilder<BusinessUnitListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitsWithRequestBuilder(feature: Feature_getWorkforcemanagementBusinessunits? = nil, divisionId: String? = nil) -> RequestBuilder<BusinessUnitListing> {
+        let path = "/api/v2/workforcemanagement/businessunits"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "feature": feature?.rawValue, 
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BusinessUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get business units across divisions
+     
+     - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return business units in all divisions (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitsDivisionviews(divisionId: [String]? = nil, completion: @escaping ((_ data: BusinessUnitListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitsDivisionviewsWithRequestBuilder(divisionId: divisionId)
+        requestBuilder.execute { (response: Response<BusinessUnitListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get business units across divisions
+     
+     - GET /api/v2/workforcemanagement/businessunits/divisionviews
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "authorized" : true,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return business units in all divisions (optional)
+
+     - returns: RequestBuilder<BusinessUnitListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitsDivisionviewsWithRequestBuilder(divisionId: [String]? = nil) -> RequestBuilder<BusinessUnitListing> {
+        let path = "/api/v2/workforcemanagement/businessunits/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BusinessUnitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
     public enum Expand_getWorkforcemanagementManagementunit: String { 
         case settings = "settings"
         case settingsAdherence = "settings.adherence"
@@ -1020,6 +4009,176 @@ open class WorkforceManagementAPI {
     
     /**
      
+     Get a list of user schedule adherence records for the requested management unit
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunitAdherence(managementUnitId: String, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: UserScheduleAdherenceListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitAdherenceWithRequestBuilder(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<UserScheduleAdherenceListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of user schedule adherence records for the requested management unit
+     
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "removedFromManagementUnit" : true,
+    "organizationSecondaryPresenceId" : "aeiou",
+    "impact" : "aeiou",
+    "selfUri" : "aeiou",
+    "adherenceState" : "aeiou",
+    "routingStatus" : "aeiou",
+    "presenceUpdateTime" : "2000-01-23T04:56:07.000+0000",
+    "isOutOfOffice" : true,
+    "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+0000",
+    "managementUnit" : {
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "startDayOfWeek" : "aeiou",
+      "settings" : {
+        "metadata" : {
+          "modifiedBy" : "",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "version" : 123
+        },
+        "shiftTrading" : {
+          "weeklyMaxPaidViolations" : "aeiou",
+          "unequalPaid" : "aeiou",
+          "requiresMatchingLanguages" : true,
+          "oneSided" : "aeiou",
+          "allowDirectTrades" : true,
+          "autoReview" : true,
+          "enabled" : true,
+          "weeklyMinPaidViolations" : "aeiou",
+          "requiresMatchingSkills" : true,
+          "requiresMatchingQueues" : true,
+          "minHoursInFuture" : 123,
+          "activityCategoryRules" : [ {
+            "activityCodeIdReplacement" : "aeiou",
+            "activityCategory" : "aeiou",
+            "action" : "aeiou"
+          } ],
+          "requiresMatchingPlanningGroups" : true
+        },
+        "adherence" : {
+          "ignoredActivityCategories" : {
+            "values" : [ "aeiou" ]
+          },
+          "nonOnQueueActivitiesEquivalent" : true,
+          "adherenceTargetPercent" : 123,
+          "adherenceExceptionThresholdSeconds" : 123,
+          "trackOnQueueActivity" : true,
+          "severeAlertThresholdMinutes" : 123
+        },
+        "scheduling" : {
+          "maxOccupancyPercentForDeferredWork" : 123,
+          "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+          "shrinkageOverrides" : {
+            "values" : [ {
+              "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+              "intervalIndex" : 123
+            } ],
+            "clear" : true
+          }
+        },
+        "timeOff" : {
+          "submissionEarliestDaysFromNow" : 123,
+          "submissionRangeEnforced" : true,
+          "submissionLatestDaysFromNow" : 123
+        },
+        "shortTermForecasting" : {
+          "defaultHistoryWeeks" : 123
+        }
+      },
+      "metadata" : "",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "timeZone" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "modifiedBy" : "",
+      "id" : "aeiou",
+      "version" : 123
+    },
+    "timeOfAdherenceChange" : "2000-01-23T04:56:07.000+0000",
+    "systemPresence" : "aeiou",
+    "name" : "aeiou",
+    "actualActivityCategory" : "aeiou",
+    "scheduledActivityCategory" : "aeiou",
+    "activeQueues" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "id" : "aeiou",
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
+  "downloadUrl" : "aeiou"
+}}]
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<UserScheduleAdherenceListing> 
+     */
+    open class func getWorkforcemanagementManagementunitAdherenceWithRequestBuilder(managementUnitId: String, forceDownloadService: Bool? = nil) -> RequestBuilder<UserScheduleAdherenceListing> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceDownloadService": forceDownloadService
+            
+        ])
+
+        let requestBuilder: RequestBuilder<UserScheduleAdherenceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
      Get data for agent in the management unit
      
      - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -1116,6 +4275,112 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmAgent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Gets all the shift trades for a given agent
+     
+     - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter agentId: (path) The agent id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunitAgentShifttrades(managementUnitId: String, agentId: String, completion: @escaping ((_ data: ShiftTradeListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitAgentShifttradesWithRequestBuilder(managementUnitId: managementUnitId, agentId: agentId)
+        requestBuilder.execute { (response: Response<ShiftTradeListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Gets all the shift trades for a given agent
+     
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : {
+      "modifiedBy" : "",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+    "receivingShiftId" : "aeiou",
+    "receivingUser" : "",
+    "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+    "oneSided" : true,
+    "reviewedBy" : "",
+    "initiatingUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "schedule" : {
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+    "acceptableIntervals" : [ "aeiou" ],
+    "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
+    "expiration" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
+    "initiatingShiftId" : "aeiou"
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter agentId: (path) The agent id 
+
+     - returns: RequestBuilder<ShiftTradeListResponse> 
+     */
+    open class func getWorkforcemanagementManagementunitAgentShifttradesWithRequestBuilder(managementUnitId: String, agentId: String) -> RequestBuilder<ShiftTradeListResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -3117,6 +6382,147 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     
+     Gets all the shift trades for a given week
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional, default to true)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil, completion: @escaping ((_ data: WeekShiftTradeListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, evaluateMatches: evaluateMatches)
+        requestBuilder.execute { (response: Response<WeekShiftTradeListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Gets all the shift trades for a given week
+     
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "trade" : {
+      "metadata" : {
+        "modifiedBy" : "",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+      "receivingShiftId" : "aeiou",
+      "receivingUser" : "",
+      "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+      "oneSided" : true,
+      "reviewedBy" : "",
+      "initiatingUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "schedule" : {
+        "businessUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "weekDate" : "2000-01-23T04:56:07.000+0000"
+      },
+      "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+      "acceptableIntervals" : [ "aeiou" ],
+      "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
+      "expiration" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000",
+      "reviewedDate" : "2000-01-23T04:56:07.000+0000",
+      "initiatingShiftId" : "aeiou"
+    },
+    "matchReview" : {
+      "receivingUser" : "",
+      "violations" : [ {
+        "type" : "aeiou",
+        "params" : {
+          "key" : "aeiou"
+        }
+      } ],
+      "adminReviewViolations" : [ "" ],
+      "initiatingUser" : {
+        "postTradeNewShift" : {
+          "activities" : [ {
+            "activityCodeId" : "aeiou",
+            "lengthMinutes" : 123,
+            "countsAsPaidTime" : true,
+            "startDate" : "2000-01-23T04:56:07.000+0000"
+          } ]
+        },
+        "weeklyMaximumPaidMinutes" : 123,
+        "weeklyMinimumPaidMinutes" : 123,
+        "preTradeSchedulePaidMinutes" : 123,
+        "postTradeSchedulePaidMinutes" : 123
+      }
+    }
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional, default to true)
+
+     - returns: RequestBuilder<WeekShiftTradeListResponse> 
+     */
+    open class func getWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, evaluateMatches: Bool? = nil) -> RequestBuilder<WeekShiftTradeListResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "evaluateMatches": evaluateMatches
+            
+        ])
+
+        let requestBuilder: RequestBuilder<WeekShiftTradeListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
     
     
     /**
@@ -3769,8 +7175,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query)  (optional)
@@ -3930,8 +7336,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -4170,9 +7576,13 @@ open class WorkforceManagementAPI {
       "id" : "aeiou"
     },
     "schedule" : {
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "id" : "aeiou",
-      "weekDate" : "aeiou"
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
     },
     "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
     "acceptableIntervals" : [ "aeiou" ],
@@ -4388,6 +7798,445 @@ open class WorkforceManagementAPI {
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunit(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnit?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BusinessUnit>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update business unit
+     
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "settings" : {
+    "startDayOfWeek" : "aeiou",
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "timeZone" : "aeiou",
+    "shortTermForecasting" : {
+      "defaultHistoryWeeks" : 123
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BusinessUnit> 
+     */
+    open class func patchWorkforcemanagementBusinessunitWithRequestBuilder(businessUnitId: String, body: UpdateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Update an activity code
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter acId: (path) The ID of the activity code to update 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitActivitycode(buId: String, acId: String, body: UpdateActivityCodeRequest? = nil, completion: @escaping ((_ data: BusinessUnitActivityCode?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(buId: buId, acId: acId, body: body)
+        requestBuilder.execute { (response: Response<BusinessUnitActivityCode>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update an activity code
+     
+     - PATCH /api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "lengthInMinutes" : 123,
+  "defaultCode" : true,
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "countsAsWorkTime" : true,
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "active" : true,
+  "id" : "aeiou",
+  "countsAsPaidTime" : true,
+  "agentTimeOffSelectable" : true,
+  "category" : "aeiou"
+}}]
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter acId: (path) The ID of the activity code to update 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BusinessUnitActivityCode> 
+     */
+    open class func patchWorkforcemanagementBusinessunitActivitycodeWithRequestBuilder(buId: String, acId: String, body: UpdateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {
+        var path = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}"
+        let buIdPreEscape = "\(buId)"
+        let buIdPostEscape = buIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{buId}", with: buIdPostEscape, options: .literal, range: nil)
+        let acIdPreEscape = "\(acId)"
+        let acIdPostEscape = acIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{acId}", with: acIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Updates the planning group
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter planningGroupId: (path) The ID of a planning group to update 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitPlanninggroup(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest? = nil, completion: @escaping ((_ data: PlanningGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: businessUnitId, planningGroupId: planningGroupId, body: body)
+        requestBuilder.execute { (response: Response<PlanningGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Updates the planning group
+     
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "serviceGoalTemplate" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "routePaths" : [ {
+    "skills" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "mediaType" : "aeiou",
+    "language" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "queue" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter planningGroupId: (path) The ID of a planning group to update 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<PlanningGroup> 
+     */
+    open class func patchWorkforcemanagementBusinessunitPlanninggroupWithRequestBuilder(businessUnitId: String, planningGroupId: String, body: UpdatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let planningGroupIdPreEscape = "\(planningGroupId)"
+        let planningGroupIdPostEscape = planningGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{planningGroupId}", with: planningGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PlanningGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Mark a schedule run as applied
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulingRun(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: businessUnitId, runId: runId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Mark a schedule run as applied
+     
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter runId: (path) The ID of the schedule run 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func patchWorkforcemanagementBusinessunitSchedulingRunWithRequestBuilder(businessUnitId: String, runId: String, body: PatchBuScheduleRunRequest? = nil) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let runIdPreEscape = "\(runId)"
+        let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Updates a service goal template
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter serviceGoalTemplateId: (path) The ID of a service goal template to update 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate? = nil, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId, body: body)
+        requestBuilder.execute { (response: Response<ServiceGoalTemplate>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Updates a service goal template
+     
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "abandonRate" : {
+    "include" : true,
+    "percent" : 123
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "averageSpeedOfAnswer" : {
+    "include" : true,
+    "seconds" : 123
+  },
+  "id" : "aeiou",
+  "serviceLevel" : {
+    "include" : true,
+    "seconds" : 123,
+    "percent" : 123
+  }
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter serviceGoalTemplateId: (path) The ID of a service goal template to update 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<ServiceGoalTemplate> 
+     */
+    open class func patchWorkforcemanagementBusinessunitServicegoaltemplateWithRequestBuilder(businessUnitId: String, serviceGoalTemplateId: String, body: UpdateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let serviceGoalTemplateIdPreEscape = "\(serviceGoalTemplateId)"
+        let serviceGoalTemplateIdPostEscape = serviceGoalTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{serviceGoalTemplateId}", with: serviceGoalTemplateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ServiceGoalTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     
@@ -5206,6 +9055,118 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     
+     Updates a shift trade. This route can only be called by the initiating agent
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId: String, weekDateId: Date, body: PatchShiftTradeRequest, tradeId: String, completion: @escaping ((_ data: ShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitWeekShifttradeWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, tradeId: tradeId)
+        requestBuilder.execute { (response: Response<ShiftTradeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Updates a shift trade. This route can only be called by the initiating agent
+     
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : "",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+  "receivingShiftId" : "aeiou",
+  "receivingUser" : "",
+  "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+  "oneSided" : true,
+  "reviewedBy" : "",
+  "initiatingUser" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "schedule" : {
+    "businessUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+  "acceptableIntervals" : [ "aeiou" ],
+  "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
+  "expiration" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "weekDate" : "2000-01-23T04:56:07.000+0000",
+  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
+  "initiatingShiftId" : "aeiou"
+}}]
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter tradeId: (path) The ID of the shift trade to update 
+
+     - returns: RequestBuilder<ShiftTradeResponse> 
+     */
+    open class func patchWorkforcemanagementManagementunitWeekShifttradeWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: PatchShiftTradeRequest, tradeId: String) -> RequestBuilder<ShiftTradeResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
     /**
      
      Update a work plan
@@ -5492,6 +9453,1653 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WfmHistoricalAdherenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get published schedule for the current user
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAgentschedulesMine(body: BuGetCurrentAgentScheduleRequest? = nil, completion: @escaping ((_ data: BuCurrentAgentScheduleSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BuCurrentAgentScheduleSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get published schedule for the current user
+     
+     - POST /api/v2/workforcemanagement/agentschedules/mine
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "agentSchedules" : [ {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "aeiou",
+      "timeOffRequestId" : "aeiou",
+      "lengthMinutes" : 123,
+      "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+      "paid" : true,
+      "description" : "aeiou"
+    } ],
+    "shifts" : [ {
+      "schedule" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "weekDate" : "2000-01-23T04:56:07.000+0000"
+      },
+      "lengthMinutes" : 123,
+      "activities" : [ {
+        "activityCodeId" : "aeiou",
+        "timeOffRequestId" : "aeiou",
+        "lengthMinutes" : 123,
+        "paid" : true,
+        "description" : "aeiou",
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      } ],
+      "id" : "aeiou",
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "manuallyEdited" : true
+    } ],
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
+  "publishedSchedules" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "weekCount" : 123
+  } ],
+  "updates" : [ {
+    "type" : "aeiou",
+    "shiftStartDates" : [ "2000-01-23T04:56:07.000+0000" ]
+  } ],
+  "businessUnitTimeZone" : "aeiou",
+  "startDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BuCurrentAgentScheduleSearchResponse> 
+     */
+    open class func postWorkforcemanagementAgentschedulesMineWithRequestBuilder(body: BuGetCurrentAgentScheduleRequest? = nil) -> RequestBuilder<BuCurrentAgentScheduleSearchResponse> {
+        let path = "/api/v2/workforcemanagement/agentschedules/mine"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuCurrentAgentScheduleSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Create a new activity code
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivitycodes(buId: String, body: CreateActivityCodeRequest? = nil, completion: @escaping ((_ data: BusinessUnitActivityCode?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(buId: buId, body: body)
+        requestBuilder.execute { (response: Response<BusinessUnitActivityCode>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a new activity code
+     
+     - POST /api/v2/workforcemanagement/businessunits/{buId}/activitycodes
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "lengthInMinutes" : 123,
+  "defaultCode" : true,
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "countsAsWorkTime" : true,
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "active" : true,
+  "id" : "aeiou",
+  "countsAsPaidTime" : true,
+  "agentTimeOffSelectable" : true,
+  "category" : "aeiou"
+}}]
+     
+     - parameter buId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BusinessUnitActivityCode> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivitycodesWithRequestBuilder(buId: String, body: CreateActivityCodeRequest? = nil) -> RequestBuilder<BusinessUnitActivityCode> {
+        var path = "/api/v2/workforcemanagement/businessunits/{buId}/activitycodes"
+        let buIdPreEscape = "\(buId)"
+        let buIdPostEscape = buIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{buId}", with: buIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Search published schedules
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<BuAsyncAgentSchedulesSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Search published schedules
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "agentSchedules" : [ {
+      "fullDayTimeOffMarkers" : [ {
+        "activityCodeId" : "aeiou",
+        "timeOffRequestId" : "aeiou",
+        "lengthMinutes" : 123,
+        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+        "paid" : true,
+        "description" : "aeiou"
+      } ],
+      "shifts" : [ {
+        "schedule" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou",
+          "weekDate" : "2000-01-23T04:56:07.000+0000"
+        },
+        "lengthMinutes" : 123,
+        "activities" : [ {
+          "activityCodeId" : "aeiou",
+          "timeOffRequestId" : "aeiou",
+          "lengthMinutes" : 123,
+          "paid" : true,
+          "description" : "aeiou",
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        } ],
+        "id" : "aeiou",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "manuallyEdited" : true
+      } ],
+      "user" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ],
+    "publishedSchedules" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000",
+      "weekCount" : 123
+    } ],
+    "businessUnitTimeZone" : "aeiou"
+  },
+  "downloadUrl" : "aeiou",
+  "operationId" : "aeiou",
+  "progress" : 123,
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<BuAsyncAgentSchedulesSearchResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitAgentschedulesSearchWithRequestBuilder(businessUnitId: String, body: BuSearchAgentSchedulesRequest? = nil, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesSearchResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceAsync": forceAsync, 
+            
+            "forceDownloadService": forceDownloadService
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BuAsyncAgentSchedulesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get intraday data for the given date for the requested planningGroupIds
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitIntraday(businessUnitId: String, forceAsync: Bool? = nil, body: IntradayPlanningGroupRequest? = nil, completion: @escaping ((_ data: AsyncIntradayResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: businessUnitId, forceAsync: forceAsync, body: body)
+        requestBuilder.execute { (response: Response<AsyncIntradayResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get intraday data for the given date for the requested planningGroupIds
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "schedule" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "noDataReason" : "aeiou",
+    "intradayDataGroupings" : [ {
+      "forecastDataPerInterval" : [ "" ],
+      "scheduleDataPerInterval" : [ "" ],
+      "performancePredictionDataPerInterval" : [ "" ],
+      "mediaType" : "aeiou",
+      "forecastDataSummary" : {
+        "averageHandleTimeSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+        "offered" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "scheduleDataSummary" : {
+        "onQueueTimeSeconds" : 123456789
+      },
+      "performancePredictionDataSummary" : {
+        "serviceLevelPercent" : 1.3579000000000001069366817318950779736042022705078125,
+        "occupancyPercent" : 1.3579000000000001069366817318950779736042022705078125,
+        "averageSpeedOfAnswerSeconds" : 1.3579000000000001069366817318950779736042022705078125
+      }
+    } ],
+    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "categories" : [ "aeiou" ],
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "startDate" : "2000-01-23T04:56:07.000+0000",
+    "intervalLengthMinutes" : 123
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<AsyncIntradayResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitIntradayWithRequestBuilder(businessUnitId: String, forceAsync: Bool? = nil, body: IntradayPlanningGroupRequest? = nil) -> RequestBuilder<AsyncIntradayResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceAsync": forceAsync
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AsyncIntradayResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Adds a new planning group
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitPlanninggroups(businessUnitId: String, body: CreatePlanningGroupRequest? = nil, completion: @escaping ((_ data: PlanningGroup?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<PlanningGroup>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Adds a new planning group
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "serviceGoalTemplate" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "routePaths" : [ {
+    "skills" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "mediaType" : "aeiou",
+    "language" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "queue" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<PlanningGroup> 
+     */
+    open class func postWorkforcemanagementBusinessunitPlanninggroupsWithRequestBuilder(businessUnitId: String, body: CreatePlanningGroupRequest? = nil) -> RequestBuilder<PlanningGroup> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PlanningGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Adds a new service goal template
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId: String, body: CreateServiceGoalTemplate? = nil, completion: @escaping ((_ data: ServiceGoalTemplate?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<ServiceGoalTemplate>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Adds a new service goal template
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "abandonRate" : {
+    "include" : true,
+    "percent" : 123
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "averageSpeedOfAnswer" : {
+    "include" : true,
+    "seconds" : 123
+  },
+  "id" : "aeiou",
+  "serviceLevel" : {
+    "include" : true,
+    "seconds" : 123,
+    "percent" : 123
+  }
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<ServiceGoalTemplate> 
+     */
+    open class func postWorkforcemanagementBusinessunitServicegoaltemplatesWithRequestBuilder(businessUnitId: String, body: CreateServiceGoalTemplate? = nil) -> RequestBuilder<ServiceGoalTemplate> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ServiceGoalTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Loads agent schedule data from the schedule. Used in combination with the metadata route
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery(businessUnitId: String, weekId: Date, scheduleId: String, body: BuQueryAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuAsyncAgentSchedulesQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<BuAsyncAgentSchedulesQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Loads agent schedule data from the schedule. Used in combination with the metadata route
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "agentSchedules" : [ {
+      "fullDayTimeOffMarkers" : [ {
+        "activityCodeId" : "aeiou",
+        "timeOffRequestId" : "aeiou",
+        "lengthMinutes" : 123,
+        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+        "paid" : true,
+        "description" : "aeiou"
+      } ],
+      "metadata" : {
+        "modifiedBy" : "",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "shifts" : [ {
+        "schedule" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou",
+          "weekDate" : "2000-01-23T04:56:07.000+0000"
+        },
+        "lengthMinutes" : 123,
+        "activities" : [ {
+          "activityCodeId" : "aeiou",
+          "timeOffRequestId" : "aeiou",
+          "lengthMinutes" : 123,
+          "paid" : true,
+          "description" : "aeiou",
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        } ],
+        "id" : "aeiou",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "manuallyEdited" : true
+      } ],
+      "workPlan" : {
+        "managementUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "user" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ]
+  },
+  "downloadUrl" : "aeiou",
+  "operationId" : "aeiou",
+  "progress" : 123,
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<BuAsyncAgentSchedulesQueryResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQueryWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuQueryAgentSchedulesRequest, forceAsync: Bool? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuAsyncAgentSchedulesQueryResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceAsync": forceAsync, 
+            
+            "forceDownloadService": forceDownloadService
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BuAsyncAgentSchedulesQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Copy a schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule to copy 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleCopy(businessUnitId: String, weekId: Date, scheduleId: String, body: BuCopyScheduleRequest, completion: @escaping ((_ data: BuAsyncScheduleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekScheduleCopyWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
+        requestBuilder.execute { (response: Response<BuAsyncScheduleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Copy a schedule
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "managementUnits" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "agentCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "agents" : [ "" ]
+    } ],
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "generationResults" : {
+      "messageCount" : 123,
+      "failed" : true,
+      "runId" : "aeiou"
+    },
+    "id" : "aeiou",
+    "published" : true,
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "weekCount" : 123
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule to copy 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuAsyncScheduleResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleCopyWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuCopyScheduleRequest) -> RequestBuilder<BuAsyncScheduleResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAsyncScheduleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Start a rescheduling run
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleReschedule(businessUnitId: String, weekId: Date, scheduleId: String, body: BuRescheduleRequest, completion: @escaping ((_ data: BuAsyncScheduleRunResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekScheduleRescheduleWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
+        requestBuilder.execute { (response: Response<BuAsyncScheduleRunResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Start a rescheduling run
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "messageCount" : 123,
+    "targetWeek" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
+    "schedulerRunId" : "aeiou",
+    "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
+    "weekCount" : 123,
+    "schedule" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "schedulingCanceledBy" : "",
+    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
+    "intradayRescheduling" : true,
+    "scheduleDescription" : "aeiou",
+    "reschedulingOptions" : {
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "activityCodeIds" : [ "aeiou" ],
+      "managementUnits" : [ {
+        "managementUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "applied" : true
+      } ],
+      "doNotChangeManuallyEditedShifts" : true,
+      "doNotChangeDailyPaidTime" : true,
+      "doNotChangeShiftStartTimes" : true,
+      "existingSchedule" : "",
+      "agentCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "doNotChangeWeeklyPaidTime" : true
+    },
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
+    "schedulingStartedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuAsyncScheduleRunResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleRescheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: BuRescheduleRequest) -> RequestBuilder<BuAsyncScheduleRunResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAsyncScheduleRunResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Create a blank schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedules(businessUnitId: String, weekId: Date, body: BuCreateBlankScheduleRequest, completion: @escaping ((_ data: BuScheduleMetadata?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, body: body)
+        requestBuilder.execute { (response: Response<BuScheduleMetadata>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a blank schedule
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "managementUnits" : [ {
+    "managementUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "agentCount" : 123,
+    "startDate" : "2000-01-23T04:56:07.000+0000",
+    "agents" : [ "" ]
+  } ],
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "generationResults" : {
+    "messageCount" : 123,
+    "failed" : true,
+    "runId" : "aeiou"
+  },
+  "id" : "aeiou",
+  "published" : true,
+  "weekDate" : "2000-01-23T04:56:07.000+0000",
+  "shortTermForecast" : {
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "weekCount" : 123
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuScheduleMetadata> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesWithRequestBuilder(businessUnitId: String, weekId: Date, body: BuCreateBlankScheduleRequest) -> RequestBuilder<BuScheduleMetadata> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuScheduleMetadata>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Generate a schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesGenerate(businessUnitId: String, weekId: Date, body: BuGenerateScheduleRequest, completion: @escaping ((_ data: BuAsyncScheduleRunResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulesGenerateWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, body: body)
+        requestBuilder.execute { (response: Response<BuAsyncScheduleRunResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Generate a schedule
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "messageCount" : 123,
+    "targetWeek" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "schedulingStartTime" : "2000-01-23T04:56:07.000+0000",
+    "schedulerRunId" : "aeiou",
+    "percentComplete" : 1.3579000000000001069366817318950779736042022705078125,
+    "weekCount" : 123,
+    "schedule" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "schedulingCanceledBy" : "",
+    "schedulingCompletedTime" : "2000-01-23T04:56:07.000+0000",
+    "intradayRescheduling" : true,
+    "scheduleDescription" : "aeiou",
+    "reschedulingOptions" : {
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "activityCodeIds" : [ "aeiou" ],
+      "managementUnits" : [ {
+        "managementUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "applied" : true
+      } ],
+      "doNotChangeManuallyEditedShifts" : true,
+      "doNotChangeDailyPaidTime" : true,
+      "doNotChangeShiftStartTimes" : true,
+      "existingSchedule" : "",
+      "agentCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "doNotChangeWeeklyPaidTime" : true
+    },
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "reschedulingResultExpiration" : "2000-01-23T04:56:07.000+0000",
+    "schedulingStartedBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuAsyncScheduleRunResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesGenerateWithRequestBuilder(businessUnitId: String, weekId: Date, body: BuGenerateScheduleRequest) -> RequestBuilder<BuAsyncScheduleRunResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAsyncScheduleRunResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Copy a short term forecast
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast to copy 
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastCopy(businessUnitId: String, weekDateId: Date, forecastId: String, body: CopyBuForecastRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: AsyncForecastOperationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<AsyncForecastOperationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Copy a short term forecast
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "legacy" : true,
+    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "timeZone" : "aeiou",
+    "sourceDays" : [ {
+      "date" : "aeiou",
+      "dataKey" : "aeiou",
+      "fileName" : "aeiou",
+      "dayOfWeek" : "aeiou",
+      "weight" : 123
+    } ],
+    "weekCount" : 123,
+    "creationMethod" : "aeiou",
+    "planningGroupsVersion" : 123,
+    "planningGroups" : {
+      "entities" : [ {
+        "serviceGoalTemplate" : {
+          "abandonRate" : {
+            "percent" : 123
+          },
+          "averageSpeedOfAnswer" : {
+            "seconds" : 123
+          },
+          "serviceLevel" : {
+            "seconds" : 123,
+            "percent" : 123
+          }
+        },
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "routePaths" : [ {
+          "skills" : [ {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          } ],
+          "mediaType" : "aeiou",
+          "language" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "queue" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          }
+        } ]
+      } ]
+    },
+    "generationResults" : {
+      "planningGroupResults" : [ {
+        "planningGroupId" : "aeiou",
+        "metricResults" : [ {
+          "metric" : "aeiou",
+          "forecastingMethod" : "aeiou"
+        } ]
+      } ]
+    },
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "modifications" : [ {
+      "startIntervalIndex" : 123,
+      "legacyMetric" : "aeiou",
+      "displayGranularity" : "aeiou",
+      "endIntervalIndex" : 123,
+      "metric" : "aeiou",
+      "granularity" : "aeiou",
+      "values" : [ {
+        "intervalIndex" : 123,
+        "value" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "type" : "aeiou",
+      "planningGroupIds" : [ "aeiou" ],
+      "value" : 1.3579000000000001069366817318950779736042022705078125,
+      "enabled" : true
+    } ]
+  },
+  "operationId" : "aeiou",
+  "progress" : 123,
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast to copy 
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<AsyncForecastOperationResult> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastCopyWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, body: CopyBuForecastRequest, forceAsync: Bool? = nil) -> RequestBuilder<AsyncForecastOperationResult> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceAsync": forceAsync
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AsyncForecastOperationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Generate a short term forecast
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body)  
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate(businessUnitId: String, weekDateId: Date, body: GenerateBuForecastRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: AsyncForecastOperationResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<AsyncForecastOperationResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Generate a short term forecast
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "legacy" : true,
+    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "timeZone" : "aeiou",
+    "sourceDays" : [ {
+      "date" : "aeiou",
+      "dataKey" : "aeiou",
+      "fileName" : "aeiou",
+      "dayOfWeek" : "aeiou",
+      "weight" : 123
+    } ],
+    "weekCount" : 123,
+    "creationMethod" : "aeiou",
+    "planningGroupsVersion" : 123,
+    "planningGroups" : {
+      "entities" : [ {
+        "serviceGoalTemplate" : {
+          "abandonRate" : {
+            "percent" : 123
+          },
+          "averageSpeedOfAnswer" : {
+            "seconds" : 123
+          },
+          "serviceLevel" : {
+            "seconds" : 123,
+            "percent" : 123
+          }
+        },
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "routePaths" : [ {
+          "skills" : [ {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          } ],
+          "mediaType" : "aeiou",
+          "language" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "queue" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          }
+        } ]
+      } ]
+    },
+    "generationResults" : {
+      "planningGroupResults" : [ {
+        "planningGroupId" : "aeiou",
+        "metricResults" : [ {
+          "metric" : "aeiou",
+          "forecastingMethod" : "aeiou"
+        } ]
+      } ]
+    },
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "modifications" : [ {
+      "startIntervalIndex" : 123,
+      "legacyMetric" : "aeiou",
+      "displayGranularity" : "aeiou",
+      "endIntervalIndex" : 123,
+      "metric" : "aeiou",
+      "granularity" : "aeiou",
+      "values" : [ {
+        "intervalIndex" : 123,
+        "value" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "type" : "aeiou",
+      "planningGroupIds" : [ "aeiou" ],
+      "value" : 1.3579000000000001069366817318950779736042022705078125,
+      "enabled" : true
+    } ]
+  },
+  "operationId" : "aeiou",
+  "progress" : 123,
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body)  
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<AsyncForecastOperationResult> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: GenerateBuForecastRequest, forceAsync: Bool? = nil) -> RequestBuilder<AsyncForecastOperationResult> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceAsync": forceAsync
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AsyncForecastOperationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Add a new business unit
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunits(body: CreateBusinessUnitRequest? = nil, completion: @escaping ((_ data: BusinessUnit?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BusinessUnit>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Add a new business unit
+     
+     - POST /api/v2/workforcemanagement/businessunits
+     - It may take a minute or two for a new business unit to be available for api operations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "settings" : {
+    "startDayOfWeek" : "aeiou",
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "timeZone" : "aeiou",
+    "shortTermForecasting" : {
+      "defaultHistoryWeeks" : 123
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BusinessUnit> 
+     */
+    open class func postWorkforcemanagementBusinessunitsWithRequestBuilder(body: CreateBusinessUnitRequest? = nil) -> RequestBuilder<BusinessUnit> {
+        let path = "/api/v2/workforcemanagement/businessunits"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -7093,6 +12701,450 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PartialUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Matches a shift trade. This route can only be called by the receiving agent
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter tradeId: (path) The ID of the shift trade to update 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId: String, weekDateId: Date, body: MatchShiftTradeRequest, tradeId: String, completion: @escaping ((_ data: MatchShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradeMatchWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, tradeId: tradeId)
+        requestBuilder.execute { (response: Response<MatchShiftTradeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Matches a shift trade. This route can only be called by the receiving agent
+     
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "trade" : {
+    "metadata" : {
+      "modifiedBy" : "",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+    "receivingShiftId" : "aeiou",
+    "receivingUser" : "",
+    "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+    "oneSided" : true,
+    "reviewedBy" : "",
+    "initiatingUser" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "schedule" : {
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+    "acceptableIntervals" : [ "aeiou" ],
+    "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
+    "expiration" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "reviewedDate" : "2000-01-23T04:56:07.000+0000",
+    "initiatingShiftId" : "aeiou"
+  },
+  "violations" : [ {
+    "type" : "aeiou",
+    "params" : {
+      "key" : "aeiou"
+    }
+  } ],
+  "adminReviewViolations" : [ "" ]
+}}]
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter tradeId: (path) The ID of the shift trade to update 
+
+     - returns: RequestBuilder<MatchShiftTradeResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttradeMatchWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: MatchShiftTradeRequest, tradeId: String) -> RequestBuilder<MatchShiftTradeResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MatchShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Adds a shift trade
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttrades(managementUnitId: String, weekDateId: Date, body: AddShiftTradeRequest, completion: @escaping ((_ data: ShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body)
+        requestBuilder.execute { (response: Response<ShiftTradeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Adds a shift trade
+     
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : "",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+  "receivingShiftId" : "aeiou",
+  "receivingUser" : "",
+  "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+  "oneSided" : true,
+  "reviewedBy" : "",
+  "initiatingUser" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "schedule" : {
+    "businessUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+  "acceptableIntervals" : [ "aeiou" ],
+  "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
+  "expiration" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "weekDate" : "2000-01-23T04:56:07.000+0000",
+  "reviewedDate" : "2000-01-23T04:56:07.000+0000",
+  "initiatingShiftId" : "aeiou"
+}}]
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ShiftTradeResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttradesWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: AddShiftTradeRequest) -> RequestBuilder<ShiftTradeResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Searches for potential shift trade matches for the current agent
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest, completion: @escaping ((_ data: SearchShiftTradesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body)
+        requestBuilder.execute { (response: Response<SearchShiftTradesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Searches for potential shift trade matches for the current agent
+     
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "trades" : [ {
+    "preview" : {
+      "activities" : [ {
+        "activityCodeId" : "aeiou",
+        "lengthMinutes" : 123,
+        "countsAsPaidTime" : true,
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      } ]
+    },
+    "trade" : {
+      "metadata" : {
+        "modifiedBy" : "",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "receivingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+      "receivingShiftId" : "aeiou",
+      "receivingUser" : "",
+      "receivingShiftStart" : "2000-01-23T04:56:07.000+0000",
+      "oneSided" : true,
+      "reviewedBy" : "",
+      "initiatingUser" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "schedule" : {
+        "businessUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "weekDate" : "2000-01-23T04:56:07.000+0000"
+      },
+      "initiatingShiftEnd" : "2000-01-23T04:56:07.000+0000",
+      "acceptableIntervals" : [ "aeiou" ],
+      "initiatingShiftStart" : "2000-01-23T04:56:07.000+0000",
+      "expiration" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000",
+      "reviewedDate" : "2000-01-23T04:56:07.000+0000",
+      "initiatingShiftId" : "aeiou"
+    },
+    "matchingReceivingShiftIds" : [ "aeiou" ]
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<SearchShiftTradesResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttradesSearchWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: SearchShiftTradesRequest) -> RequestBuilder<SearchShiftTradesResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SearchShiftTradesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Updates the state of a batch of shift trades
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttradesStateBulk(managementUnitId: String, weekDateId: Date, body: BulkShiftTradeStateUpdateRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: BulkUpdateShiftTradeStateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWeekShifttradesStateBulkWithRequestBuilder(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<BulkUpdateShiftTradeStateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Updates the state of a batch of shift trades
+     
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk
+     - Admin functionality is not supported with \"mine\".
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "entities" : [ {
+      "metadata" : {
+        "modifiedBy" : "",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "failureReason" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "reviewedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "reviewedDate" : "2000-01-23T04:56:07.000+0000"
+    } ]
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<BulkUpdateShiftTradeStateResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitWeekShifttradesStateBulkWithRequestBuilder(managementUnitId: String, weekDateId: Date, body: BulkShiftTradeStateUpdateRequest, forceAsync: Bool? = nil) -> RequestBuilder<BulkUpdateShiftTradeStateResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceAsync": forceAsync
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BulkUpdateShiftTradeStateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

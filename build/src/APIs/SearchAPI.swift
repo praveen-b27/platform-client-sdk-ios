@@ -1359,6 +1359,7 @@ open class SearchAPI {
           "scriptId" : "aeiou",
           "automatedCallbackConfigId" : "aeiou",
           "provider" : "aeiou",
+          "externalCampaign" : true,
           "callbackUserName" : "aeiou",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
@@ -1677,11 +1678,11 @@ open class SearchAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -2656,6 +2657,111 @@ open class SearchAPI {
     
     
     
+    
+    
+    /**
+     
+     Search Documents
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseSearch(knowledgeBaseId: String, body: KnowledgeSearchRequest? = nil, completion: @escaping ((_ data: KnowledgeSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseSearchWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Search Documents
+     
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "searchId" : "aeiou",
+  "pageSize" : 123,
+  "results" : [ {
+    "externalUrl" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "knowledgeBase" : "",
+    "faq" : {
+      "question" : "aeiou",
+      "answer" : "aeiou",
+      "alternatives" : [ "aeiou" ]
+    },
+    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "categories" : [ {
+      "knowledgeBase" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "coreLanguage" : "en-us",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "languageCode" : "aeiou"
+    } ],
+    "languageCode" : "aeiou",
+    "type" : "aeiou"
+  } ]
+}}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeSearchResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseSearchWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeSearchRequest? = nil) -> RequestBuilder<KnowledgeSearchResponse> {
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Search locations
@@ -3383,6 +3489,7 @@ open class SearchAPI {
           "scriptId" : "aeiou",
           "automatedCallbackConfigId" : "aeiou",
           "provider" : "aeiou",
+          "externalCampaign" : true,
           "callbackUserName" : "aeiou",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
@@ -3701,11 +3808,11 @@ open class SearchAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

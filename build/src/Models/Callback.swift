@@ -68,6 +68,8 @@ public class Callback: Codable {
     public var callbackUserName: String?
     /** The UUID of the script to use. */
     public var scriptId: String?
+    /** True if the call for the callback uses external dialing. */
+    public var externalCampaign: Bool?
     /** True if the ability to skip a callback should be enabled. */
     public var skipEnabled: Bool?
     /** The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled. */
@@ -87,7 +89,7 @@ public class Callback: Codable {
     /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
 
-    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?) {
+    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?) {
         
         self.state = state
         
@@ -112,6 +114,8 @@ public class Callback: Codable {
         self.callbackUserName = callbackUserName
         
         self.scriptId = scriptId
+        
+        self.externalCampaign = externalCampaign
         
         self.skipEnabled = skipEnabled
         
@@ -146,6 +150,7 @@ public class Callback: Codable {
         case callbackNumbers
         case callbackUserName
         case scriptId
+        case externalCampaign
         case skipEnabled
         case timeoutSeconds
         case startAlertingTime

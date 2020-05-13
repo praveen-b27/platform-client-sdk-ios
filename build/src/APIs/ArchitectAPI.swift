@@ -1561,11 +1561,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2102,11 +2102,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2258,6 +2258,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     public enum FlowFilter_getArchitectDependencytrackingConsumingresources: String { 
         case checkedin = "checkedIn"
         case published = "published"
@@ -2272,13 +2274,14 @@ open class ArchitectAPI {
      - parameter _id: (query) Consumed object ID 
      - parameter objectType: (query) Consumed object type 
      - parameter resourceType: (query) Types of consuming resources to show.  Only versioned types are allowed here. (optional)
+     - parameter version: (query) Object version (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter flowFilter: (query) Show only checkedIn or published flows (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectDependencytrackingConsumingresources(_id: String, objectType: ObjectType_getArchitectDependencytrackingConsumingresources, resourceType: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, flowFilter: FlowFilter_getArchitectDependencytrackingConsumingresources? = nil, completion: @escaping ((_ data: ConsumingResourcesEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectDependencytrackingConsumingresourcesWithRequestBuilder(_id: _id, objectType: objectType, resourceType: resourceType, pageNumber: pageNumber, pageSize: pageSize, flowFilter: flowFilter)
+    open class func getArchitectDependencytrackingConsumingresources(_id: String, objectType: ObjectType_getArchitectDependencytrackingConsumingresources, resourceType: [String]? = nil, version: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, flowFilter: FlowFilter_getArchitectDependencytrackingConsumingresources? = nil, completion: @escaping ((_ data: ConsumingResourcesEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectDependencytrackingConsumingresourcesWithRequestBuilder(_id: _id, objectType: objectType, resourceType: resourceType, version: version, pageNumber: pageNumber, pageSize: pageSize, flowFilter: flowFilter)
         requestBuilder.execute { (response: Response<ConsumingResourcesEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2319,23 +2322,24 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
      - parameter objectType: (query) Consumed object type 
      - parameter resourceType: (query) Types of consuming resources to show.  Only versioned types are allowed here. (optional)
+     - parameter version: (query) Object version (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter flowFilter: (query) Show only checkedIn or published flows (optional)
 
      - returns: RequestBuilder<ConsumingResourcesEntityListing> 
      */
-    open class func getArchitectDependencytrackingConsumingresourcesWithRequestBuilder(_id: String, objectType: ObjectType_getArchitectDependencytrackingConsumingresources, resourceType: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, flowFilter: FlowFilter_getArchitectDependencytrackingConsumingresources? = nil) -> RequestBuilder<ConsumingResourcesEntityListing> {
+    open class func getArchitectDependencytrackingConsumingresourcesWithRequestBuilder(_id: String, objectType: ObjectType_getArchitectDependencytrackingConsumingresources, resourceType: [String]? = nil, version: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, flowFilter: FlowFilter_getArchitectDependencytrackingConsumingresources? = nil) -> RequestBuilder<ConsumingResourcesEntityListing> {
         let path = "/api/v2/architect/dependencytracking/consumingresources"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2353,6 +2357,8 @@ open class ArchitectAPI {
             "objectType": objectType.rawValue, 
             
             "resourceType": resourceType, 
+            
+            "version": version, 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
             
@@ -2550,11 +2556,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -2760,6 +2766,8 @@ open class ArchitectAPI {
 
     
     
+    
+    
     /**
      
      Get a Dependency Tracking object
@@ -2771,10 +2779,11 @@ open class ArchitectAPI {
      - parameter consumingResources: (query) Include resources that consume this item (optional)
      - parameter consumedResourceType: (query) Types of consumed resources to return, if consumed resources are requested (optional)
      - parameter consumingResourceType: (query) Types of consuming resources to return, if consuming resources are requested (optional)
+     - parameter consumedResourceRequest: (query) Indicate that this is going to look up a consumed resource object (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectDependencytrackingObject(_id: String, version: String? = nil, objectType: ObjectType_getArchitectDependencytrackingObject? = nil, consumedResources: Bool? = nil, consumingResources: Bool? = nil, consumedResourceType: [String]? = nil, consumingResourceType: [String]? = nil, completion: @escaping ((_ data: DependencyObject?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectDependencytrackingObjectWithRequestBuilder(_id: _id, version: version, objectType: objectType, consumedResources: consumedResources, consumingResources: consumingResources, consumedResourceType: consumedResourceType, consumingResourceType: consumingResourceType)
+    open class func getArchitectDependencytrackingObject(_id: String, version: String? = nil, objectType: ObjectType_getArchitectDependencytrackingObject? = nil, consumedResources: Bool? = nil, consumingResources: Bool? = nil, consumedResourceType: [String]? = nil, consumingResourceType: [String]? = nil, consumedResourceRequest: Bool? = nil, completion: @escaping ((_ data: DependencyObject?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectDependencytrackingObjectWithRequestBuilder(_id: _id, version: version, objectType: objectType, consumedResources: consumedResources, consumingResources: consumingResources, consumedResourceType: consumedResourceType, consumingResourceType: consumingResourceType, consumedResourceRequest: consumedResourceRequest)
         requestBuilder.execute { (response: Response<DependencyObject>?, error) -> Void in
             do {
                 if let e = error {
@@ -2829,10 +2838,11 @@ open class ArchitectAPI {
      - parameter consumingResources: (query) Include resources that consume this item (optional)
      - parameter consumedResourceType: (query) Types of consumed resources to return, if consumed resources are requested (optional)
      - parameter consumingResourceType: (query) Types of consuming resources to return, if consuming resources are requested (optional)
+     - parameter consumedResourceRequest: (query) Indicate that this is going to look up a consumed resource object (optional)
 
      - returns: RequestBuilder<DependencyObject> 
      */
-    open class func getArchitectDependencytrackingObjectWithRequestBuilder(_id: String, version: String? = nil, objectType: ObjectType_getArchitectDependencytrackingObject? = nil, consumedResources: Bool? = nil, consumingResources: Bool? = nil, consumedResourceType: [String]? = nil, consumingResourceType: [String]? = nil) -> RequestBuilder<DependencyObject> {
+    open class func getArchitectDependencytrackingObjectWithRequestBuilder(_id: String, version: String? = nil, objectType: ObjectType_getArchitectDependencytrackingObject? = nil, consumedResources: Bool? = nil, consumingResources: Bool? = nil, consumedResourceType: [String]? = nil, consumingResourceType: [String]? = nil, consumedResourceRequest: Bool? = nil) -> RequestBuilder<DependencyObject> {
         let path = "/api/v2/architect/dependencytracking/object"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2857,7 +2867,9 @@ open class ArchitectAPI {
             
             "consumedResourceType": consumedResourceType, 
             
-            "consumingResourceType": consumingResourceType
+            "consumingResourceType": consumingResourceType, 
+            
+            "consumedResourceRequest": consumedResourceRequest
             
         ])
 
@@ -2985,11 +2997,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3195,11 +3207,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3405,11 +3417,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3612,11 +3624,11 @@ open class ArchitectAPI {
     "closedHoursFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4577,11 +4589,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -4972,11 +4984,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5262,11 +5274,11 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5378,11 +5390,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6080,11 +6092,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6210,11 +6222,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -7912,11 +7924,11 @@ open class ArchitectAPI {
     "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -8398,11 +8410,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -8830,7 +8842,46 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}" ]
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "owner" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "importMode" : "aeiou",
+    "countRecordsFailed" : 123,
+    "countRecordsUpdated" : 123,
+    "selfUri" : "aeiou",
+    "uploadURI" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "errorInformation" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "countRecordsDeleted" : 123,
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "pageSize" : 123
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9001,11 +9052,11 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9127,11 +9178,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -9287,11 +9338,11 @@ open class ArchitectAPI {
     "type" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -10034,11 +10085,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

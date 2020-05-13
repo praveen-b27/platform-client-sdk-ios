@@ -600,6 +600,7 @@ open class UsersAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "cursor" : "aeiou",
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000",
   "userDetails" : [ {
     "primaryPresence" : [ {
       "systemPresence" : "aeiou",
@@ -788,11 +789,11 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -889,11 +890,11 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -928,93 +929,6 @@ open class UsersAPI {
         ])
 
         let requestBuilder: RequestBuilder<DivsPermittedEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    /**
-     
-     Returns which divisions the specified user has the given permission in.
-     
-     - parameter subjectId: (path) Subject ID (user or group) 
-     - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
-     - parameter name: (query) Search term to filter by division name (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAuthorizationDivisionspermittedSubjectId(subjectId: String, permission: String, name: String? = nil, completion: @escaping ((_ data: [AuthzDivision]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationDivisionspermittedSubjectIdWithRequestBuilder(subjectId: subjectId, permission: permission, name: name)
-        requestBuilder.execute { (response: Response<[AuthzDivision]>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     
-     Returns which divisions the specified user has the given permission in.
-     
-     - GET /api/v2/authorization/divisionspermitted/{subjectId}
-     - This route is deprecated, use authorization/divisionspermitted/paged/{subjectId} instead.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ {
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "description" : "aeiou",
-  "objectCounts" : {
-    "key" : 123456789
-  },
-  "id" : "aeiou",
-  "homeDivision" : true
-} ]}]
-     
-     - parameter subjectId: (path) Subject ID (user or group) 
-     - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
-     - parameter name: (query) Search term to filter by division name (optional)
-
-     - returns: RequestBuilder<[AuthzDivision]> 
-     */
-    open class func getAuthorizationDivisionspermittedSubjectIdWithRequestBuilder(subjectId: String, permission: String, name: String? = nil) -> RequestBuilder<[AuthzDivision]> {
-        var path = "/api/v2/authorization/divisionspermitted/{subjectId}"
-        let subjectIdPreEscape = "\(subjectId)"
-        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
-        let body: Data? = nil
-            
-        
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "name": name, 
-            
-            "permission": permission
-            
-        ])
-
-        let requestBuilder: RequestBuilder<[AuthzDivision]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1640,11 +1554,11 @@ open class UsersAPI {
     "version" : 123456789
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3461,11 +3375,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4528,11 +4442,11 @@ open class UsersAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4731,11 +4645,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4839,11 +4753,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5966,11 +5880,11 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6353,11 +6267,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8528,11 +8442,11 @@ open class UsersAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8694,11 +8608,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8776,11 +8690,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9097,11 +9011,11 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter body: (body) Users 
@@ -11587,11 +11501,11 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

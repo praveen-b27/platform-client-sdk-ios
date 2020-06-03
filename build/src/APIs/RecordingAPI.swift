@@ -8396,6 +8396,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
           "voicemail" : {
             "uploadStatus" : "aeiou",
@@ -8432,6 +8433,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "videoMuted" : true,
           "peerCount" : 123,
           "msids" : [ "aeiou" ],
@@ -8451,6 +8453,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "cobrowseRole" : "aeiou",
           "cobrowseSessionId" : "aeiou",
           "viewerUrl" : "aeiou",
@@ -8469,6 +8472,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -8814,6 +8818,7 @@ open class RecordingAPI {
           "muted" : true,
           "direction" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "scriptId" : "aeiou",
           "recordingState" : "aeiou",
           "self" : {
@@ -8839,6 +8844,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "held" : true,
           "avatarImageUrl" : "aeiou",
           "roomId" : "aeiou",
@@ -8874,6 +8880,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "held" : true,
           "errorInfo" : "",
           "type" : "aeiou",
@@ -8914,6 +8921,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "held" : true,
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -8937,15 +8945,16 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
           "peerCount" : 123,
+          "sharing" : true,
+          "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
-          "id" : "aeiou",
-          "sharing" : true,
-          "segments" : [ "" ]
+          "id" : "aeiou"
         } ]
       } ],
       "maxParticipants" : 123

@@ -28,6 +28,7 @@ title: Email
 | **messageId** | **String** | A globally unique identifier for the stored content of this communication. | [optional] |
 | **draftAttachments** | [**[Attachment]**](Attachment.html) | A list of uploaded attachments on the email draft. | [optional] |
 | **spam** | **Bool** | Indicates if the inbound email was marked as spam. | [optional] |
+| **wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
 {: class="table table-striped"}
 
 

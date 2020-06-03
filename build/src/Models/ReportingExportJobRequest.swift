@@ -83,8 +83,10 @@ public class ReportingExportJobRequest: Codable {
     public var selectedColumns: [SelectedColumns]?
     /** Indicates if custom participant attributes will be exported */
     public var hasCustomParticipantAttributes: Bool?
+    /** The list of email recipients for the exports */
+    public var recipientEmails: [String]?
 
-    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?) {
+    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?) {
         
         self.name = name
         
@@ -111,6 +113,8 @@ public class ReportingExportJobRequest: Codable {
         self.selectedColumns = selectedColumns
         
         self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
+        
+        self.recipientEmails = recipientEmails
         
     }
 

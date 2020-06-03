@@ -36,7 +36,7 @@ title: Edge
 | **statusCode** | **String** | The current status of the Edge. | [optional] |
 | **edgeGroup** | [**EdgeGroup**](EdgeGroup.html) |  | [optional] |
 | **site** | [**Site**](Site.html) | The Site to which the Edge is assigned. | [optional] |
-| **softwareStatus** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) |  | [optional] |
+| **softwareStatus** | [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) | Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge. | [optional] |
 | **onlineStatus** | **String** |  | [optional] |
 | **serialNumber** | **String** |  | [optional] |
 | **physicalEdge** | **Bool** |  | [optional] |

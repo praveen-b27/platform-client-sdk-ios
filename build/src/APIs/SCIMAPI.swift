@@ -995,7 +995,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -1010,6 +1011,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -1028,7 +1030,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -1043,6 +1046,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -1057,7 +1061,7 @@ open class SCIMAPI {
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1114,7 +1118,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",
@@ -1143,7 +1148,7 @@ open class SCIMAPI {
 }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
@@ -1196,7 +1201,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -1211,6 +1217,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -1229,7 +1236,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -1244,6 +1252,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -1259,7 +1268,7 @@ open class SCIMAPI {
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1321,7 +1330,8 @@ open class SCIMAPI {
         "value" : "aeiou",
         "$ref" : "aeiou"
       },
-      "department" : "aeiou"
+      "department" : "aeiou",
+      "employeeNumber" : "aeiou"
     },
     "emails" : [ {
       "type" : "aeiou",
@@ -1352,7 +1362,7 @@ open class SCIMAPI {
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
 
@@ -2119,7 +2129,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -2134,6 +2145,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -2152,7 +2164,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -2167,6 +2180,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -2181,7 +2195,7 @@ open class SCIMAPI {
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -2238,7 +2252,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",
@@ -2267,7 +2282,7 @@ open class SCIMAPI {
 }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
@@ -2320,7 +2335,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -2335,6 +2351,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -2353,7 +2370,8 @@ open class SCIMAPI {
         case phonenumbers = "phoneNumbers"
         case emails = "emails"
         case groups = "groups"
-        case rolesurnIetfParamsScimSchemasCore20UserId = "rolesurn:ietf:params:scim:schemas:core:2.0:User:id"
+        case roles = "roles"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
         case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
         case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
         case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
@@ -2368,6 +2386,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
         case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
@@ -2383,7 +2402,7 @@ open class SCIMAPI {
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -2445,7 +2464,8 @@ open class SCIMAPI {
         "value" : "aeiou",
         "$ref" : "aeiou"
       },
-      "department" : "aeiou"
+      "department" : "aeiou",
+      "employeeNumber" : "aeiou"
     },
     "emails" : [ {
       "type" : "aeiou",
@@ -2476,7 +2496,7 @@ open class SCIMAPI {
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
      - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes ant the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
      - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
 
@@ -2668,7 +2688,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",
@@ -2879,7 +2900,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",
@@ -3069,7 +3091,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",
@@ -3250,7 +3273,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",
@@ -3452,7 +3476,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",
@@ -3663,7 +3688,8 @@ open class SCIMAPI {
       "value" : "aeiou",
       "$ref" : "aeiou"
     },
-    "department" : "aeiou"
+    "department" : "aeiou",
+    "employeeNumber" : "aeiou"
   },
   "emails" : [ {
     "type" : "aeiou",

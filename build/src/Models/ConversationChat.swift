@@ -72,8 +72,10 @@ public class ConversationChat: Codable {
     public var avatarImageUrl: String?
     /** A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). */
     public var journeyContext: JourneyContext?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
 
-    public init(state: State?, _id: String?, roomId: String?, recordingId: String?, segments: [Segment]?, held: Bool?, direction: Direction?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, avatarImageUrl: String?, journeyContext: JourneyContext?) {
+    public init(state: State?, _id: String?, roomId: String?, recordingId: String?, segments: [Segment]?, held: Bool?, direction: Direction?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, avatarImageUrl: String?, journeyContext: JourneyContext?, wrapup: Wrapup?) {
         
         self.state = state
         
@@ -109,6 +111,8 @@ public class ConversationChat: Codable {
         
         self.journeyContext = journeyContext
         
+        self.wrapup = wrapup
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -129,6 +133,7 @@ public class ConversationChat: Codable {
         case peerId
         case avatarImageUrl
         case journeyContext
+        case wrapup
     }
 
 

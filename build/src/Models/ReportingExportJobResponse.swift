@@ -119,10 +119,14 @@ public class ReportingExportJobResponse: Codable {
     public var selectedColumns: [SelectedColumns]?
     /** Indicates if custom participant attributes will be exported */
     public var hasCustomParticipantAttributes: Bool?
+    /** The list of email recipients for the exports */
+    public var recipientEmails: [String]?
+    /** The status of individual email addresses as a map */
+    public var emailStatuses: [String:String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, selfUri: String?) {
         
         self._id = _id
         
@@ -164,6 +168,10 @@ public class ReportingExportJobResponse: Codable {
         
         self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
         
+        self.recipientEmails = recipientEmails
+        
+        self.emailStatuses = emailStatuses
+        
         self.selfUri = selfUri
         
     }
@@ -189,6 +197,8 @@ public class ReportingExportJobResponse: Codable {
         case hasSplitFilters
         case selectedColumns
         case hasCustomParticipantAttributes
+        case recipientEmails
+        case emailStatuses
         case selfUri
     }
 

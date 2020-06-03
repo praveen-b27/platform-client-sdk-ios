@@ -8842,46 +8842,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
-  "entities" : [ {
-    "owner" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "importMode" : "aeiou",
-    "countRecordsFailed" : 123,
-    "countRecordsUpdated" : 123,
-    "selfUri" : "aeiou",
-    "uploadURI" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "errorInformation" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    },
-    "countRecordsDeleted" : 123,
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  } ],
-  "pageSize" : 123
+  "entities" : [ "{}" ]
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9319,6 +9280,277 @@ open class ArchitectAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
+    "publishedVersion" : {
+      "generationId" : "aeiou",
+      "debug" : true,
+      "outputSchema" : "",
+      "inputSchema" : "",
+      "createdByClient" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "type" : "aeiou",
+      "secure" : true,
+      "configurationUri" : "aeiou",
+      "configurationVersion" : "aeiou",
+      "dateCreated" : 123456789,
+      "publishResultUri" : "aeiou",
+      "createdBy" : {
+        "addresses" : [ "" ],
+        "acdAutoAnswer" : true,
+        "routingStatus" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "userId" : "aeiou",
+          "status" : "aeiou"
+        },
+        "title" : "aeiou",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "authorization" : {
+          "unusedRoles" : [ "" ],
+          "permissions" : [ "aeiou" ],
+          "permissionPolicies" : [ {
+            "policyDescription" : "aeiou",
+            "resourceConditionNode" : {
+              "operands" : [ {
+                "type" : "aeiou",
+                "value" : "aeiou"
+              } ],
+              "variableName" : "aeiou",
+              "conjunction" : "aeiou",
+              "terms" : [ "" ],
+              "operator" : "aeiou"
+            },
+            "actionSetKey" : "aeiou",
+            "namedResources" : [ "aeiou" ],
+            "policyName" : "aeiou",
+            "entityName" : "aeiou",
+            "domain" : "aeiou",
+            "allowConditions" : true,
+            "id" : "aeiou",
+            "resourceCondition" : "aeiou",
+            "actionSet" : [ "aeiou" ]
+          } ],
+          "roles" : [ {
+            "name" : "aeiou",
+            "id" : "aeiou"
+          } ]
+        },
+        "skills" : [ {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "skillUri" : "aeiou",
+          "id" : "aeiou",
+          "state" : "aeiou",
+          "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "station" : {
+          "defaultStation" : "",
+          "lastAssociatedStation" : "",
+          "associatedStation" : {
+            "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "name" : "aeiou",
+            "defaultUser" : "",
+            "id" : "aeiou",
+            "type" : "aeiou",
+            "associatedUser" : "",
+            "providerInfo" : {
+              "key" : "aeiou"
+            }
+          },
+          "effectiveStation" : ""
+        },
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "department" : "aeiou",
+        "presence" : {
+          "presenceDefinition" : {
+            "systemPresence" : "aeiou",
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "source" : "aeiou",
+          "message" : "aeiou",
+          "primary" : true
+        },
+        "lastTokenIssued" : {
+          "dateIssued" : "2000-01-23T04:56:07.000+0000"
+        },
+        "email" : "aeiou",
+        "images" : [ {
+          "imageUri" : "aeiou",
+          "resolution" : "aeiou"
+        } ],
+        "manager" : "",
+        "employerInfo" : {
+          "employeeType" : "aeiou",
+          "dateHire" : "aeiou",
+          "employeeId" : "aeiou",
+          "officialName" : "aeiou"
+        },
+        "languages" : [ {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "state" : "aeiou",
+          "languageUri" : "aeiou",
+          "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "selfUri" : "aeiou",
+        "conversationSummary" : {
+          "call" : {
+            "enterprise" : "",
+            "contactCenter" : {
+              "acw" : 123,
+              "active" : 123
+            }
+          },
+          "socialExpression" : "",
+          "chat" : "",
+          "callback" : "",
+          "video" : "",
+          "message" : "",
+          "userId" : "aeiou",
+          "email" : ""
+        },
+        "groups" : [ {
+          "images" : [ "" ],
+          "addresses" : [ {
+            "extension" : "aeiou",
+            "address" : "aeiou",
+            "display" : "aeiou",
+            "mediaType" : "aeiou",
+            "type" : "aeiou"
+          } ],
+          "visibility" : "aeiou",
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "owners" : [ "" ],
+          "type" : "aeiou",
+          "version" : 123,
+          "rulesVisible" : true,
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "state" : "aeiou"
+        } ],
+        "primaryContactInfo" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "biography" : {
+          "hobbies" : [ "aeiou" ],
+          "biography" : "aeiou",
+          "interests" : [ "aeiou" ],
+          "spouse" : "aeiou"
+        },
+        "team" : {
+          "memberCount" : 123456789,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou"
+        },
+        "certifications" : [ "aeiou" ],
+        "version" : 123,
+        "outOfOffice" : {
+          "endDate" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "active" : true,
+          "id" : "aeiou",
+          "user" : "",
+          "startDate" : "2000-01-23T04:56:07.000+0000",
+          "indefinite" : true
+        },
+        "languagePreference" : "aeiou",
+        "profileSkills" : [ "aeiou" ],
+        "chat" : {
+          "jabberId" : "aeiou"
+        },
+        "name" : "aeiou",
+        "locations" : [ {
+          "notes" : "aeiou",
+          "coordinates" : {
+            "key" : 1.3579000000000001069366817318950779736042022705078125
+          },
+          "locationDefinition" : "",
+          "id" : "aeiou",
+          "floorplanId" : "aeiou"
+        } ],
+        "username" : "aeiou",
+        "geolocation" : {
+          "country" : "aeiou",
+          "city" : "aeiou",
+          "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "locations" : [ {
+            "images" : "aeiou",
+            "address" : {
+              "zipcode" : "aeiou",
+              "country" : "aeiou",
+              "city" : "aeiou",
+              "street1" : "aeiou",
+              "countryName" : "aeiou",
+              "state" : "aeiou",
+              "street2" : "aeiou"
+            },
+            "notes" : "aeiou",
+            "floorplanImage" : [ "" ],
+            "addressVerificationDetails" : {
+              "dateStarted" : "2000-01-23T04:56:07.000+0000",
+              "dateFinished" : "2000-01-23T04:56:07.000+0000",
+              "service" : "smartystreets-us",
+              "status" : "aeiou"
+            },
+            "selfUri" : "aeiou",
+            "profileImage" : [ {
+              "imageUri" : "aeiou",
+              "resolution" : "aeiou"
+            } ],
+            "emergencyNumber" : {
+              "number" : "aeiou",
+              "e164" : "aeiou",
+              "type" : "aeiou"
+            },
+            "version" : 123,
+            "path" : [ "aeiou" ],
+            "addressStored" : true,
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "contactUser" : {
+              "selfUri" : "aeiou",
+              "id" : "aeiou"
+            },
+            "state" : "aeiou",
+            "addressVerified" : true
+          } ],
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "region" : "aeiou",
+          "primary" : true,
+          "longitude" : 1.3579000000000001069366817318950779736042022705078125
+        }
+      },
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "commitVersion" : "aeiou"
+    },
     "outputSchema" : "",
     "inputSchema" : {
       "$schema" : "aeiou",
@@ -9335,7 +9567,8 @@ open class ArchitectAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou"
+    "type" : "aeiou",
+    "debugVersion" : ""
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",

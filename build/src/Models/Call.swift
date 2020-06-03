@@ -100,8 +100,10 @@ public class Call: Codable {
     public var _self: Address?
     /** Address and name data for a call endpoint. */
     public var other: Address?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
 
-    public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?) {
+    public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?) {
         
         self.state = state
         
@@ -153,6 +155,8 @@ public class Call: Codable {
         
         self.other = other
         
+        self.wrapup = wrapup
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -181,6 +185,7 @@ public class Call: Codable {
         case uuiData
         case _self = "self"
         case other
+        case wrapup
     }
 
 

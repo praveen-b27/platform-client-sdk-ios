@@ -88,8 +88,10 @@ public class Message: Codable {
     public var fromAddress: Address?
     /** The messages sent on this communication channel. */
     public var messages: [MessageDetails]?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
 
-    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?) {
+    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, wrapup: Wrapup?) {
         
         self.state = state
         
@@ -133,6 +135,8 @@ public class Message: Codable {
         
         self.messages = messages
         
+        self.wrapup = wrapup
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -157,6 +161,7 @@ public class Message: Codable {
         case toAddress
         case fromAddress
         case messages
+        case wrapup
     }
 
 

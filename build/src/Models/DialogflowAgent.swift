@@ -16,14 +16,16 @@ public class DialogflowAgent: Codable {
     public var name: String?
     /** The project this Dialogflow agent belongs to */
     public var project: DialogflowProject?
-    /** The target languages of the Dialogflow agent */
+    /** The supported languages of the Dialogflow agent */
     public var languages: [String]?
-    /** An array of Intents associated with this bot alias */
+    /** An array of Intents associated with this agent */
     public var intents: [DialogflowIntent]?
+    /** Available environments for this agent */
+    public var environments: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, project: DialogflowProject?, languages: [String]?, intents: [DialogflowIntent]?, selfUri: String?) {
+    public init(_id: String?, name: String?, project: DialogflowProject?, languages: [String]?, intents: [DialogflowIntent]?, environments: [String]?, selfUri: String?) {
         
         self._id = _id
         
@@ -35,6 +37,8 @@ public class DialogflowAgent: Codable {
         
         self.intents = intents
         
+        self.environments = environments
+        
         self.selfUri = selfUri
         
     }
@@ -45,6 +49,7 @@ public class DialogflowAgent: Codable {
         case project
         case languages
         case intents
+        case environments
         case selfUri
     }
 

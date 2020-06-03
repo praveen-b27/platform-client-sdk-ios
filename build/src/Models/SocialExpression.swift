@@ -73,8 +73,10 @@ public class SocialExpression: Codable {
     public var scriptId: String?
     /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
 
-    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, segments: [Segment]?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?) {
+    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, segments: [Segment]?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, wrapup: Wrapup?) {
         
         self.state = state
         
@@ -110,6 +112,8 @@ public class SocialExpression: Codable {
         
         self.peerId = peerId
         
+        self.wrapup = wrapup
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -130,6 +134,7 @@ public class SocialExpression: Codable {
         case provider
         case scriptId
         case peerId
+        case wrapup
     }
 
 

@@ -63,8 +63,10 @@ public class Screenshare: Codable {
     public var peerId: String?
     /** The time line of the participant&#39;s call, divided into activity segments. */
     public var segments: [Segment]?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
 
-    public init(state: State?, _id: String?, context: String?, sharing: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, segments: [Segment]?) {
+    public init(state: State?, _id: String?, context: String?, sharing: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, segments: [Segment]?, wrapup: Wrapup?) {
         
         self.state = state
         
@@ -90,6 +92,8 @@ public class Screenshare: Codable {
         
         self.segments = segments
         
+        self.wrapup = wrapup
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -105,6 +109,7 @@ public class Screenshare: Codable {
         case provider
         case peerId
         case segments
+        case wrapup
     }
 
 

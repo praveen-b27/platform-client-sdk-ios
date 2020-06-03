@@ -19,6 +19,7 @@ title: QueueConversationSocialExpressionEventTopicCallback
 | **callbackUserName** | **String** |  | [optional] |
 | **scriptId** | **String** |  | [optional] |
 | **peerId** | **String** |  | [optional] |
+| **externalCampaign** | **Bool** |  | [optional] |
 | **skipEnabled** | **Bool** |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **timeoutSeconds** | **Int** |  | [optional] |

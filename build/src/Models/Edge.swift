@@ -91,6 +91,7 @@ public class Edge: Codable {
     public var edgeGroup: EdgeGroup?
     /** The Site to which the Edge is assigned. */
     public var site: Site?
+    /** Details about an in-progress or recently in-progress Edge software upgrade. This node appears only if a software upgrade was recently initiated for this Edge. */
     public var softwareStatus: DomainEdgeSoftwareUpdateDto?
     public var onlineStatus: OnlineStatus?
     public var serialNumber: String?

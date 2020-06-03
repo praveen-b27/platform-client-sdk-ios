@@ -89,11 +89,12 @@ public class QueueConversationCallbackEventTopicCallbackMediaParticipant: Codabl
     public var callbackNumbers: [String]?
     public var callbackUserName: String?
     public var skipEnabled: Bool?
+    public var externalCampaign: Bool?
     public var timeoutSeconds: Int?
     public var callbackScheduledTime: Date?
     public var automatedCallbackConfigId: String?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallbackEventTopicUriReference?, queue: QueueConversationCallbackEventTopicUriReference?, team: QueueConversationCallbackEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallbackEventTopicErrorBody?, script: QueueConversationCallbackEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationCallbackEventTopicUriReference?, externalOrganization: QueueConversationCallbackEventTopicUriReference?, wrapup: QueueConversationCallbackEventTopicWrapup?, conversationRoutingData: QueueConversationCallbackEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallbackEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: QueueConversationCallbackEventTopicDialerPreview?, voicemail: QueueConversationCallbackEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, timeoutSeconds: Int?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: QueueConversationCallbackEventTopicUriReference?, queue: QueueConversationCallbackEventTopicUriReference?, team: QueueConversationCallbackEventTopicUriReference?, attributes: [String:String]?, errorInfo: QueueConversationCallbackEventTopicErrorBody?, script: QueueConversationCallbackEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: QueueConversationCallbackEventTopicUriReference?, externalOrganization: QueueConversationCallbackEventTopicUriReference?, wrapup: QueueConversationCallbackEventTopicWrapup?, conversationRoutingData: QueueConversationCallbackEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: QueueConversationCallbackEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, outboundPreview: QueueConversationCallbackEventTopicDialerPreview?, voicemail: QueueConversationCallbackEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, skipEnabled: Bool?, externalCampaign: Bool?, timeoutSeconds: Int?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?) {
         
         self._id = _id
         
@@ -173,6 +174,8 @@ public class QueueConversationCallbackEventTopicCallbackMediaParticipant: Codabl
         
         self.skipEnabled = skipEnabled
         
+        self.externalCampaign = externalCampaign
+        
         self.timeoutSeconds = timeoutSeconds
         
         self.callbackScheduledTime = callbackScheduledTime
@@ -221,6 +224,7 @@ public class QueueConversationCallbackEventTopicCallbackMediaParticipant: Codabl
         case callbackNumbers
         case callbackUserName
         case skipEnabled
+        case externalCampaign
         case timeoutSeconds
         case callbackScheduledTime
         case automatedCallbackConfigId

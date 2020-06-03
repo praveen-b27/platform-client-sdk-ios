@@ -36,10 +36,14 @@ public class FlowDivisionView: Codable {
     public var inputSchema: JsonSchemaDocument?
     /** json schema describing the outputs for the flow */
     public var outputSchema: JsonSchemaDocument?
+    /** published version information if there is a published version */
+    public var publishedVersion: FlowVersion?
+    /** debug version information if there is a debug version */
+    public var debugVersion: FlowVersion?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, publishedVersion: FlowVersion?, debugVersion: FlowVersion?, selfUri: String?) {
         
         self._id = _id
         
@@ -53,6 +57,10 @@ public class FlowDivisionView: Codable {
         
         self.outputSchema = outputSchema
         
+        self.publishedVersion = publishedVersion
+        
+        self.debugVersion = debugVersion
+        
         self.selfUri = selfUri
         
     }
@@ -64,6 +72,8 @@ public class FlowDivisionView: Codable {
         case type
         case inputSchema
         case outputSchema
+        case publishedVersion
+        case debugVersion
         case selfUri
     }
 

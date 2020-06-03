@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingQueueWrapupcode**](RoutingAPI.html#deleteRoutingQueueWrapupcode) | Delete a wrap-up code from a queue |
 | [**deleteRoutingSettings**](RoutingAPI.html#deleteRoutingSettings) | Delete an organization&#39;s routing settings |
 | [**deleteRoutingSkill**](RoutingAPI.html#deleteRoutingSkill) | Delete Routing Skill |
+| [**deleteRoutingSmsAddress**](RoutingAPI.html#deleteRoutingSmsAddress) | Delete an Address by Id for SMS |
 | [**deleteRoutingSmsPhonenumber**](RoutingAPI.html#deleteRoutingSmsPhonenumber) | Delete a phone number provisioned for SMS. |
 | [**deleteRoutingUserUtilization**](RoutingAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteRoutingUtilization**](RoutingAPI.html#deleteRoutingUtilization) | Delete the organization-wide max utilization settings and revert to the system default. |
@@ -444,6 +445,57 @@ RoutingAPI.deleteRoutingSkill(skillId: skillId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **skillId** | **String**| Skill ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingSmsAddress"></a>
+
+# **deleteRoutingSmsAddress**
+
+
+
+> Void deleteRoutingSmsAddress(addressId)
+
+Delete an Address by Id for SMS
+
+
+
+Wraps DELETE /api/v2/routing/sms/addresses/{addressId}  
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let addressId: String = "" // Address ID
+
+// Code example
+RoutingAPI.deleteRoutingSmsAddress(addressId: addressId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingSmsAddress was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **addressId** | **String**| Address ID | |
 {: class="table-striped"}
 
 

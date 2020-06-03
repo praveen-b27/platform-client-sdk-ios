@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteExternalcontactsContact**](ExternalContactsAPI.html#deleteExternalcontactsContact) | Delete an external contact |
 | [**deleteExternalcontactsContactNote**](ExternalContactsAPI.html#deleteExternalcontactsContactNote) | Delete a note for an external contact |
+| [**deleteExternalcontactsContactsSchema**](ExternalContactsAPI.html#deleteExternalcontactsContactsSchema) | Delete a schema |
 | [**deleteExternalcontactsOrganization**](ExternalContactsAPI.html#deleteExternalcontactsOrganization) | Delete an external organization |
 | [**deleteExternalcontactsOrganizationNote**](ExternalContactsAPI.html#deleteExternalcontactsOrganizationNote) | Delete a note for an external organization |
 | [**deleteExternalcontactsOrganizationTrustor**](ExternalContactsAPI.html#deleteExternalcontactsOrganizationTrustor) | Unlink the Trustor for this External Organization |
@@ -17,25 +18,37 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsContactNote**](ExternalContactsAPI.html#getExternalcontactsContactNote) | Fetch a note for an external contact |
 | [**getExternalcontactsContactNotes**](ExternalContactsAPI.html#getExternalcontactsContactNotes) | List notes for an external contact |
 | [**getExternalcontactsContacts**](ExternalContactsAPI.html#getExternalcontactsContacts) | Search for external contacts |
+| [**getExternalcontactsContactsSchema**](ExternalContactsAPI.html#getExternalcontactsContactsSchema) | Get a schema |
+| [**getExternalcontactsContactsSchemaVersion**](ExternalContactsAPI.html#getExternalcontactsContactsSchemaVersion) | Get a specific version of a schema |
+| [**getExternalcontactsContactsSchemaVersions**](ExternalContactsAPI.html#getExternalcontactsContactsSchemaVersions) | Get all versions of an external contact&#39;s schema |
+| [**getExternalcontactsContactsSchemas**](ExternalContactsAPI.html#getExternalcontactsContactsSchemas) | Get a list of schemas. |
 | [**getExternalcontactsOrganization**](ExternalContactsAPI.html#getExternalcontactsOrganization) | Fetch an external organization |
 | [**getExternalcontactsOrganizationContacts**](ExternalContactsAPI.html#getExternalcontactsOrganizationContacts) | Search for external contacts in an external organization |
 | [**getExternalcontactsOrganizationNote**](ExternalContactsAPI.html#getExternalcontactsOrganizationNote) | Fetch a note for an external organization |
 | [**getExternalcontactsOrganizationNotes**](ExternalContactsAPI.html#getExternalcontactsOrganizationNotes) | List notes for an external organization |
 | [**getExternalcontactsOrganizationRelationships**](ExternalContactsAPI.html#getExternalcontactsOrganizationRelationships) | Fetch a relationship for an external organization |
 | [**getExternalcontactsOrganizations**](ExternalContactsAPI.html#getExternalcontactsOrganizations) | Search for external organizations |
+| [**getExternalcontactsOrganizationsSchema**](ExternalContactsAPI.html#getExternalcontactsOrganizationsSchema) | Get a schema |
+| [**getExternalcontactsOrganizationsSchemaVersion**](ExternalContactsAPI.html#getExternalcontactsOrganizationsSchemaVersion) | Get a specific version of a schema |
+| [**getExternalcontactsOrganizationsSchemaVersions**](ExternalContactsAPI.html#getExternalcontactsOrganizationsSchemaVersions) | Get all versions of an external organization&#39;s schema |
+| [**getExternalcontactsOrganizationsSchemas**](ExternalContactsAPI.html#getExternalcontactsOrganizationsSchemas) | Get a list of schemas. |
 | [**getExternalcontactsRelationship**](ExternalContactsAPI.html#getExternalcontactsRelationship) | Fetch a relationship |
 | [**getExternalcontactsReversewhitepageslookup**](ExternalContactsAPI.html#getExternalcontactsReversewhitepageslookup) | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. |
 | [**postExternalcontactsContactNotes**](ExternalContactsAPI.html#postExternalcontactsContactNotes) | Create a note for an external contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI.html#postExternalcontactsContacts) | Create an external contact |
+| [**postExternalcontactsContactsSchemas**](ExternalContactsAPI.html#postExternalcontactsContactsSchemas) | Create a schema |
 | [**postExternalcontactsOrganizationNotes**](ExternalContactsAPI.html#postExternalcontactsOrganizationNotes) | Create a note for an external organization |
 | [**postExternalcontactsOrganizations**](ExternalContactsAPI.html#postExternalcontactsOrganizations) | Create an external organization |
+| [**postExternalcontactsOrganizationsSchemas**](ExternalContactsAPI.html#postExternalcontactsOrganizationsSchemas) | Create a schema |
 | [**postExternalcontactsRelationships**](ExternalContactsAPI.html#postExternalcontactsRelationships) | Create a relationship |
 | [**putExternalcontactsContact**](ExternalContactsAPI.html#putExternalcontactsContact) | Update an external contact |
 | [**putExternalcontactsContactNote**](ExternalContactsAPI.html#putExternalcontactsContactNote) | Update a note for an external contact |
+| [**putExternalcontactsContactsSchema**](ExternalContactsAPI.html#putExternalcontactsContactsSchema) | Update a schema |
 | [**putExternalcontactsConversation**](ExternalContactsAPI.html#putExternalcontactsConversation) | Associate an external contact with a conversation |
 | [**putExternalcontactsOrganization**](ExternalContactsAPI.html#putExternalcontactsOrganization) | Update an external organization |
 | [**putExternalcontactsOrganizationNote**](ExternalContactsAPI.html#putExternalcontactsOrganizationNote) | Update a note for an external organization |
 | [**putExternalcontactsOrganizationTrustorTrustorId**](ExternalContactsAPI.html#putExternalcontactsOrganizationTrustorTrustorId) | Links a Trustor with an External Organization |
+| [**putExternalcontactsOrganizationsSchema**](ExternalContactsAPI.html#putExternalcontactsOrganizationsSchema) | Update a schema |
 | [**putExternalcontactsRelationship**](ExternalContactsAPI.html#putExternalcontactsRelationship) | Update a relationship |
 {: class="table-striped"}
 
@@ -144,6 +157,57 @@ ExternalContactsAPI.deleteExternalcontactsContactNote(contactId: contactId, note
 ### Return type
 
 [**Empty**](Empty.html)
+
+<a name="deleteExternalcontactsContactsSchema"></a>
+
+# **deleteExternalcontactsContactsSchema**
+
+
+
+> Void deleteExternalcontactsContactsSchema(schemaId)
+
+Delete a schema
+
+
+
+Wraps DELETE /api/v2/externalcontacts/contacts/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+ExternalContactsAPI.deleteExternalcontactsContactsSchema(schemaId: schemaId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ExternalContactsAPI.deleteExternalcontactsContactsSchema was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteExternalcontactsOrganization"></a>
 
@@ -585,6 +649,212 @@ ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: 
 
 [**ContactListing**](ContactListing.html)
 
+<a name="getExternalcontactsContactsSchema"></a>
+
+# **getExternalcontactsContactsSchema**
+
+
+
+> [DataSchema](DataSchema.html) getExternalcontactsContactsSchema(schemaId)
+
+Get a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsSchema(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+<a name="getExternalcontactsContactsSchemaVersion"></a>
+
+# **getExternalcontactsContactsSchemaVersion**
+
+
+
+> [DataSchema](DataSchema.html) getExternalcontactsContactsSchemaVersion(schemaId, versionId)
+
+Get a specific version of a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let versionId: String = "" // Schema version
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsSchemaVersion(schemaId: schemaId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsSchemaVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **versionId** | **String**| Schema version | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+<a name="getExternalcontactsContactsSchemaVersions"></a>
+
+# **getExternalcontactsContactsSchemaVersions**
+
+
+
+> [DataSchema](DataSchema.html) getExternalcontactsContactsSchemaVersions(schemaId)
+
+Get all versions of an external contact&#39;s schema
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsSchemaVersions(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsSchemaVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+<a name="getExternalcontactsContactsSchemas"></a>
+
+# **getExternalcontactsContactsSchemas**
+
+
+
+> [DataSchemaListing](DataSchemaListing.html) getExternalcontactsContactsSchemas()
+
+Get a list of schemas.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsSchemas() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**DataSchemaListing**](DataSchemaListing.html)
+
 <a name="getExternalcontactsOrganization"></a>
 
 # **getExternalcontactsOrganization**
@@ -947,6 +1217,212 @@ ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNum
 
 [**ExternalOrganizationListing**](ExternalOrganizationListing.html)
 
+<a name="getExternalcontactsOrganizationsSchema"></a>
+
+# **getExternalcontactsOrganizationsSchema**
+
+
+
+> [DataSchema](DataSchema.html) getExternalcontactsOrganizationsSchema(schemaId)
+
+Get a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationsSchema(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationsSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+<a name="getExternalcontactsOrganizationsSchemaVersion"></a>
+
+# **getExternalcontactsOrganizationsSchemaVersion**
+
+
+
+> [DataSchema](DataSchema.html) getExternalcontactsOrganizationsSchemaVersion(schemaId, versionId)
+
+Get a specific version of a schema
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let versionId: String = "" // Schema version
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationsSchemaVersion(schemaId: schemaId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationsSchemaVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **versionId** | **String**| Schema version | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+<a name="getExternalcontactsOrganizationsSchemaVersions"></a>
+
+# **getExternalcontactsOrganizationsSchemaVersions**
+
+
+
+> [DataSchema](DataSchema.html) getExternalcontactsOrganizationsSchemaVersions(schemaId)
+
+Get all versions of an external organization&#39;s schema
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationsSchemaVersions(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationsSchemaVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
+<a name="getExternalcontactsOrganizationsSchemas"></a>
+
+# **getExternalcontactsOrganizationsSchemas**
+
+
+
+> [DataSchemaListing](DataSchemaListing.html) getExternalcontactsOrganizationsSchemas()
+
+Get a list of schemas.
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationsSchemas() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationsSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**DataSchemaListing**](DataSchemaListing.html)
+
 <a name="getExternalcontactsRelationship"></a>
 
 # **getExternalcontactsRelationship**
@@ -1161,6 +1637,58 @@ ExternalContactsAPI.postExternalcontactsContacts(body: body) { (response, error)
 
 [**ExternalContact**](ExternalContact.html)
 
+<a name="postExternalcontactsContactsSchemas"></a>
+
+# **postExternalcontactsContactsSchemas**
+
+
+
+> [DataSchema](DataSchema.html) postExternalcontactsContactsSchemas(body)
+
+Create a schema
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/schemas  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DataSchema = new DataSchema(...) // Schema
+
+// Code example
+ExternalContactsAPI.postExternalcontactsContactsSchemas(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsContactsSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DataSchema**](DataSchema.html)| Schema | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
 <a name="postExternalcontactsOrganizationNotes"></a>
 
 # **postExternalcontactsOrganizationNotes**
@@ -1268,6 +1796,58 @@ ExternalContactsAPI.postExternalcontactsOrganizations(body: body) { (response, e
 ### Return type
 
 [**ExternalOrganization**](ExternalOrganization.html)
+
+<a name="postExternalcontactsOrganizationsSchemas"></a>
+
+# **postExternalcontactsOrganizationsSchemas**
+
+
+
+> [DataSchema](DataSchema.html) postExternalcontactsOrganizationsSchemas(body)
+
+Create a schema
+
+
+
+Wraps POST /api/v2/externalcontacts/organizations/schemas  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DataSchema = new DataSchema(...) // Schema
+
+// Code example
+ExternalContactsAPI.postExternalcontactsOrganizationsSchemas(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsOrganizationsSchemas was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DataSchema**](DataSchema.html)| Schema | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
 
 <a name="postExternalcontactsRelationships"></a>
 
@@ -1430,6 +2010,60 @@ ExternalContactsAPI.putExternalcontactsContactNote(contactId: contactId, noteId:
 ### Return type
 
 [**Note**](Note.html)
+
+<a name="putExternalcontactsContactsSchema"></a>
+
+# **putExternalcontactsContactsSchema**
+
+
+
+> [DataSchema](DataSchema.html) putExternalcontactsContactsSchema(schemaId, body)
+
+Update a schema
+
+
+
+Wraps PUT /api/v2/externalcontacts/contacts/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let body: DataSchema = new DataSchema(...) // Data Schema
+
+// Code example
+ExternalContactsAPI.putExternalcontactsContactsSchema(schemaId: schemaId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.putExternalcontactsContactsSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **body** | [**DataSchema**](DataSchema.html)| Data Schema | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
 
 <a name="putExternalcontactsConversation"></a>
 
@@ -1648,6 +2282,60 @@ ExternalContactsAPI.putExternalcontactsOrganizationTrustorTrustorId(externalOrga
 ### Return type
 
 [**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink.html)
+
+<a name="putExternalcontactsOrganizationsSchema"></a>
+
+# **putExternalcontactsOrganizationsSchema**
+
+
+
+> [DataSchema](DataSchema.html) putExternalcontactsOrganizationsSchema(schemaId, body)
+
+Update a schema
+
+
+
+Wraps PUT /api/v2/externalcontacts/organizations/schemas/{schemaId}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+let body: DataSchema = new DataSchema(...) // Data Schema
+
+// Code example
+ExternalContactsAPI.putExternalcontactsOrganizationsSchema(schemaId: schemaId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.putExternalcontactsOrganizationsSchema was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **schemaId** | **String**| Schema ID | |
+| **body** | [**DataSchema**](DataSchema.html)| Data Schema | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
 
 <a name="putExternalcontactsRelationship"></a>
 

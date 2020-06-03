@@ -3194,6 +3194,7 @@ open class IntegrationsAPI {
     }
   } ],
   "languages" : [ "aeiou" ],
+  "environments" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "project" : {

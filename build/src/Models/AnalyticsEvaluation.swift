@@ -33,10 +33,10 @@ public class AnalyticsEvaluation: Codable {
     public var rescored: Bool?
     /** Whether this evaluation has been deleted */
     public var deleted: Bool?
-    public var oTotalScore: Int64?
     public var oTotalCriticalScore: Int64?
+    public var oTotalScore: Int64?
 
-    public init(evaluationId: String?, evaluatorId: String?, userId: String?, eventTime: Date?, queueId: String?, formId: String?, contextId: String?, formName: String?, calibrationId: String?, rescored: Bool?, deleted: Bool?, oTotalScore: Int64?, oTotalCriticalScore: Int64?) {
+    public init(evaluationId: String?, evaluatorId: String?, userId: String?, eventTime: Date?, queueId: String?, formId: String?, contextId: String?, formName: String?, calibrationId: String?, rescored: Bool?, deleted: Bool?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
         
         self.evaluationId = evaluationId
         
@@ -60,9 +60,9 @@ public class AnalyticsEvaluation: Codable {
         
         self.deleted = deleted
         
-        self.oTotalScore = oTotalScore
-        
         self.oTotalCriticalScore = oTotalCriticalScore
+        
+        self.oTotalScore = oTotalScore
         
     }
 

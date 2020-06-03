@@ -148,6 +148,61 @@ open class ExternalContactsAPI {
     
     /**
      
+     Delete a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteExternalcontactsContactsSchema(schemaId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteExternalcontactsContactsSchemaWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a schema
+     
+     - DELETE /api/v2/externalcontacts/contacts/schemas/{schemaId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteExternalcontactsContactsSchemaWithRequestBuilder(schemaId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete an external organization
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -2084,6 +2139,361 @@ open class ExternalContactsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ContactListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsSchema(schemaId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsSchemaWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a schema
+     
+     - GET /api/v2/externalcontacts/contacts/schemas/{schemaId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getExternalcontactsContactsSchemaWithRequestBuilder(schemaId: String) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a specific version of a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsSchemaVersion(schemaId: String, versionId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsSchemaVersionWithRequestBuilder(schemaId: schemaId, versionId: versionId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a specific version of a schema
+     
+     - GET /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getExternalcontactsContactsSchemaVersionWithRequestBuilder(schemaId: String, versionId: String) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get all versions of an external contact's schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsSchemaVersions(schemaId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsSchemaVersionsWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get all versions of an external contact's schema
+     
+     - GET /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getExternalcontactsContactsSchemaVersionsWithRequestBuilder(schemaId: String) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get a list of schemas.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsSchemas(completion: @escaping ((_ data: DataSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsSchemasWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of schemas.
+     
+     - GET /api/v2/externalcontacts/contacts/schemas
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "jsonSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "appliesTo" : [ "aeiou" ],
+    "id" : "aeiou",
+    "version" : 123,
+    "enabled" : true
+  } ],
+  "selfUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<DataSchemaListing> 
+     */
+    open class func getExternalcontactsContactsSchemasWithRequestBuilder() -> RequestBuilder<DataSchemaListing> {
+        let path = "/api/v2/externalcontacts/contacts/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -4707,6 +5117,361 @@ open class ExternalContactsAPI {
     
     
     
+    /**
+     
+     Get a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsSchema(schemaId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsSchemaWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a schema
+     
+     - GET /api/v2/externalcontacts/organizations/schemas/{schemaId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getExternalcontactsOrganizationsSchemaWithRequestBuilder(schemaId: String) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a specific version of a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsSchemaVersion(schemaId: String, versionId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsSchemaVersionWithRequestBuilder(schemaId: schemaId, versionId: versionId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a specific version of a schema
+     
+     - GET /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter versionId: (path) Schema version 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getExternalcontactsOrganizationsSchemaVersionWithRequestBuilder(schemaId: String, versionId: String) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get all versions of an external organization's schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsSchemaVersions(schemaId: String, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsSchemaVersionsWithRequestBuilder(schemaId: schemaId)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get all versions of an external organization's schema
+     
+     - GET /api/v2/externalcontacts/organizations/schemas/{schemaId}/versions
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func getExternalcontactsOrganizationsSchemaVersionsWithRequestBuilder(schemaId: String) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get a list of schemas.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsOrganizationsSchemas(completion: @escaping ((_ data: DataSchemaListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsOrganizationsSchemasWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataSchemaListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of schemas.
+     
+     - GET /api/v2/externalcontacts/organizations/schemas
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "jsonSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "appliesTo" : [ "aeiou" ],
+    "id" : "aeiou",
+    "version" : 123,
+    "enabled" : true
+  } ],
+  "selfUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<DataSchemaListing> 
+     */
+    open class func getExternalcontactsOrganizationsSchemasWithRequestBuilder() -> RequestBuilder<DataSchemaListing> {
+        let path = "/api/v2/externalcontacts/organizations/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     public enum Expand_getExternalcontactsRelationship: String { 
         case externaldatasources = "externalDataSources"
@@ -6409,6 +7174,88 @@ open class ExternalContactsAPI {
     
     
     
+    /**
+     
+     Create a schema
+     
+     - parameter body: (body) Schema 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsContactsSchemas(body: DataSchema, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsContactsSchemasWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a schema
+     
+     - POST /api/v2/externalcontacts/contacts/schemas
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter body: (body) Schema 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func postExternalcontactsContactsSchemasWithRequestBuilder(body: DataSchema) -> RequestBuilder<DataSchema> {
+        let path = "/api/v2/externalcontacts/contacts/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**
@@ -7143,6 +7990,88 @@ open class ExternalContactsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalOrganization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a schema
+     
+     - parameter body: (body) Schema 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsOrganizationsSchemas(body: DataSchema, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsOrganizationsSchemasWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a schema
+     
+     - POST /api/v2/externalcontacts/organizations/schemas
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter body: (body) Schema 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func postExternalcontactsOrganizationsSchemasWithRequestBuilder(body: DataSchema) -> RequestBuilder<DataSchema> {
+        let path = "/api/v2/externalcontacts/organizations/schemas"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -8372,6 +9301,95 @@ open class ExternalContactsAPI {
     
     /**
      
+     Update a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Data Schema 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsContactsSchema(schemaId: String, body: DataSchema, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsContactsSchemaWithRequestBuilder(schemaId: schemaId, body: body)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a schema
+     
+     - PUT /api/v2/externalcontacts/contacts/schemas/{schemaId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Data Schema 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func putExternalcontactsContactsSchemaWithRequestBuilder(schemaId: String, body: DataSchema) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/contacts/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
      Associate an external contact with a conversation
      
      - parameter conversationId: (path) Conversation ID 
@@ -9248,6 +10266,95 @@ open class ExternalContactsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalOrganizationTrustorLink>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update a schema
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Data Schema 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsOrganizationsSchema(schemaId: String, body: DataSchema, completion: @escaping ((_ data: DataSchema?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsOrganizationsSchemaWithRequestBuilder(schemaId: schemaId, body: body)
+        requestBuilder.execute { (response: Response<DataSchema>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a schema
+     
+     - PUT /api/v2/externalcontacts/organizations/schemas/{schemaId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "jsonSchema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "appliesTo" : [ "aeiou" ],
+  "id" : "aeiou",
+  "version" : 123,
+  "enabled" : true
+}}]
+     
+     - parameter schemaId: (path) Schema ID 
+     - parameter body: (body) Data Schema 
+
+     - returns: RequestBuilder<DataSchema> 
+     */
+    open class func putExternalcontactsOrganizationsSchemaWithRequestBuilder(schemaId: String, body: DataSchema) -> RequestBuilder<DataSchema> {
+        var path = "/api/v2/externalcontacts/organizations/schemas/{schemaId}"
+        let schemaIdPreEscape = "\(schemaId)"
+        let schemaIdPostEscape = schemaIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{schemaId}", with: schemaIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

@@ -88,8 +88,10 @@ public class Callback: Codable {
     public var provider: String?
     /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
 
-    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?) {
+    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?) {
         
         self.state = state
         
@@ -135,6 +137,8 @@ public class Callback: Codable {
         
         self.peerId = peerId
         
+        self.wrapup = wrapup
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -160,6 +164,7 @@ public class Callback: Codable {
         case automatedCallbackConfigId
         case provider
         case peerId
+        case wrapup
     }
 
 

@@ -15,11 +15,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekSchedule) | Delete a schedule |
 | [**deleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekShorttermforecast) | Delete a short term forecast |
 | [**deleteWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunit) | Delete management unit |
-| [**deleteWorkforcemanagementManagementunitActivitycode**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitActivitycode) | Deletes an activity code |
-| [**deleteWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitSchedulingRun) | Cancel a schedule run |
-| [**deleteWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitServicegoalgroup) | Delete a service goal group |
-| [**deleteWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWeekSchedule) | Delete a schedule |
-| [**deleteWorkforcemanagementManagementunitWeekShorttermforecast**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWeekShorttermforecast) | Delete a short term forecast |
+| [**deleteWorkforcemanagementManagementunitActivitycode**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitActivitycode) | Deprecated/Gone: Use the new business unit activity code resources |
+| [**deleteWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitSchedulingRun) | Gone.  Scheduling has moved under business units |
+| [**deleteWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitServicegoalgroup) | Gone. Replaced with service goal templates and planning groups under business units |
+| [**deleteWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWeekSchedule) | Gone.  Scheduling has moved under business units |
+| [**deleteWorkforcemanagementManagementunitWeekShorttermforecast**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWeekShorttermforecast) | Gone. Use equivalent business unit resource instead |
 | [**deleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplan) | Delete a work plan |
 | [**getWorkforcemanagementAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
 | [**getWorkforcemanagementAdhocmodelingjob**](WorkforceManagementAPI.html#getWorkforcemanagementAdhocmodelingjob) | Get status of the modeling job |
@@ -52,24 +52,24 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementManagementunitAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAdherence) | Get a list of user schedule adherence records for the requested management unit |
 | [**getWorkforcemanagementManagementunitAgent**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAgent) | Get data for agent in the management unit |
 | [**getWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAgentShifttrades) | Gets all the shift trades for a given agent |
-| [**getWorkforcemanagementManagementunitIntradayQueues**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitIntradayQueues) | Get intraday queues for the given date |
-| [**getWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSchedulingRun) | Gets the status for a specific scheduling run |
-| [**getWorkforcemanagementManagementunitSchedulingRunResult**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSchedulingRunResult) | Gets the result of a specific scheduling run |
-| [**getWorkforcemanagementManagementunitSchedulingRuns**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSchedulingRuns) | Get the status of all the ongoing schedule runs |
-| [**getWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitServicegoalgroup) | Get a service goal group |
-| [**getWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitServicegoalgroups) | Get service goal groups |
-| [**getWorkforcemanagementManagementunitSettings**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSettings) | Get the settings for the requested management unit. Deprecated, use the GET management unit route instead |
+| [**getWorkforcemanagementManagementunitIntradayQueues**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitIntradayQueues) | Gone.  Moved under business units |
+| [**getWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSchedulingRun) | Gone.  Scheduling has moved under business units |
+| [**getWorkforcemanagementManagementunitSchedulingRunResult**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSchedulingRunResult) | Gone.  Scheduling has moved under business units |
+| [**getWorkforcemanagementManagementunitSchedulingRuns**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSchedulingRuns) | Gone.  Scheduling has moved under business units |
+| [**getWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitServicegoalgroup) | Gone. Replaced with service goal templates and planning groups under business units |
+| [**getWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitServicegoalgroups) | Gone. Replaced with service goal templates and planning groups under business units |
+| [**getWorkforcemanagementManagementunitSettings**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitSettings) | Gone. Get management unit settings via expand parameters on the GET management unit |
 | [**getWorkforcemanagementManagementunitShifttradesMatched**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitShifttradesMatched) | Gets a summary of all shift trades in the matched state |
 | [**getWorkforcemanagementManagementunitShifttradesUsers**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitShifttradesUsers) | Gets list of users available for whom you can send direct shift trade requests |
 | [**getWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitUserTimeoffrequest) | Get a time off request |
 | [**getWorkforcemanagementManagementunitUserTimeoffrequests**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitUserTimeoffrequests) | Get a list of time off requests for a given user |
 | [**getWorkforcemanagementManagementunitUsers**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitUsers) | Get users in the management unit |
-| [**getWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekSchedule) | Get a week schedule |
-| [**getWorkforcemanagementManagementunitWeekScheduleGenerationresults**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekScheduleGenerationresults) | Get week schedule generation results |
-| [**getWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekSchedules) | Get the list of schedules in a week in management unit |
+| [**getWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekSchedule) | Deprecated.  Use the equivalent business unit resource instead. Get a week schedule |
+| [**getWorkforcemanagementManagementunitWeekScheduleGenerationresults**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekScheduleGenerationresults) | Gone.  Scheduling has moved under business units |
+| [**getWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekSchedules) | Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit |
 | [**getWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekShifttrades) | Gets all the shift trades for a given week |
-| [**getWorkforcemanagementManagementunitWeekShorttermforecastFinal**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekShorttermforecastFinal) | Get the final result of a short term forecast calculation with modifications applied |
-| [**getWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekShorttermforecasts) | Get short term forecasts |
+| [**getWorkforcemanagementManagementunitWeekShorttermforecastFinal**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekShorttermforecastFinal) | Gone. Use equivalent business unit resource instead |
+| [**getWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekShorttermforecasts) | Gone. Use equivalent business unit resource instead |
 | [**getWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWorkplan) | Get a work plan |
 | [**getWorkforcemanagementManagementunitWorkplans**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWorkplans) | Get work plans |
 | [**getWorkforcemanagementManagementunits**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunits) | Get management units |
@@ -85,12 +85,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
 | [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
 | [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunit) | Update the requested management unit |
-| [**patchWorkforcemanagementManagementunitActivitycode**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitActivitycode) | Update an activity code |
-| [**patchWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitSchedulingRun) | Marks a specific scheduling run as applied, allowing a new rescheduling run to be started |
-| [**patchWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitServicegoalgroup) | Update a service goal group |
-| [**patchWorkforcemanagementManagementunitSettings**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitSettings) | Update the settings for the requested management unit |
+| [**patchWorkforcemanagementManagementunitActivitycode**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitActivitycode) | Deprecated/Gone: Use the new business unit activity code resources |
+| [**patchWorkforcemanagementManagementunitSchedulingRun**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitSchedulingRun) | Gone.  Scheduling has moved under business units |
+| [**patchWorkforcemanagementManagementunitServicegoalgroup**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitServicegoalgroup) | Gone. Replaced with service goal templates and planning groups under business units |
+| [**patchWorkforcemanagementManagementunitSettings**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitSettings) | Gone. Update settings by PATCHing the management unit |
 | [**patchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitUserTimeoffrequest) | Update a time off request |
-| [**patchWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWeekSchedule) | Update a week schedule |
+| [**patchWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWeekSchedule) | Gone.  Scheduling has moved under business units |
 | [**patchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWeekShifttrade) | Updates a shift trade. This route can only be called by the initiating agent |
 | [**patchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWorkplan) | Update a work plan |
 | [**patchWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementTimeoffrequest) | Update a time off request for the current user |
@@ -109,29 +109,29 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastCopy) | Copy a short term forecast |
 | [**postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate) | Generate a short term forecast |
 | [**postWorkforcemanagementBusinessunits**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunits) | Add a new business unit |
-| [**postWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitActivitycodes) | Create a new activity code |
+| [**postWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitActivitycodes) | Deprecated/Gone: Use the new business unit activity code resources |
 | [**postWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitAgentschedulesSearch) | Query published schedules for given given time range for set of users |
 | [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
-| [**postWorkforcemanagementManagementunitIntraday**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitIntraday) | Get intraday data for the given date for the requested queueIds |
+| [**postWorkforcemanagementManagementunitIntraday**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitIntraday) | Gone.  Moved under business units |
 | [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
 | [**postWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitSchedulesSearch) | Query published schedules for given given time range for set of users |
-| [**postWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitServicegoalgroups) | Create a new service goal group |
+| [**postWorkforcemanagementManagementunitServicegoalgroups**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitServicegoalgroups) | Gone. Replaced with service goal templates and planning groups under business units |
 | [**postWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequests) | Create a new time off request |
-| [**postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails) | Gets a list of time off requests from lookup ids |
+| [**postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails) | Gone.  All data is now returned in the query route |
 | [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Gets the lookup ids to fetch the specified set of requests |
-| [**postWorkforcemanagementManagementunitWeekScheduleCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekScheduleCopy) | Copy a week schedule |
-| [**postWorkforcemanagementManagementunitWeekScheduleReschedule**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekScheduleReschedule) | Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied |
-| [**postWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekSchedules) | Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500 |
-| [**postWorkforcemanagementManagementunitWeekSchedulesGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekSchedulesGenerate) | Generate a week schedule |
-| [**postWorkforcemanagementManagementunitWeekSchedulesPartialupload**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekSchedulesPartialupload) | Partial upload of user schedules where activity count is greater than 17500 |
+| [**postWorkforcemanagementManagementunitWeekScheduleCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekScheduleCopy) | Gone.  Scheduling has moved under business units |
+| [**postWorkforcemanagementManagementunitWeekScheduleReschedule**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekScheduleReschedule) | Gone.  Scheduling has moved under business units |
+| [**postWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekSchedules) | Gone.  Scheduling has moved under business units |
+| [**postWorkforcemanagementManagementunitWeekSchedulesGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekSchedulesGenerate) | Gone.  Scheduling has moved under business units |
+| [**postWorkforcemanagementManagementunitWeekSchedulesPartialupload**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekSchedulesPartialupload) | Gone.  Scheduling has moved under business units |
 | [**postWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradeMatch) | Matches a shift trade. This route can only be called by the receiving agent |
 | [**postWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttrades) | Adds a shift trade |
 | [**postWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradesSearch) | Searches for potential shift trade matches for the current agent |
 | [**postWorkforcemanagementManagementunitWeekShifttradesStateBulk**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradesStateBulk) | Updates the state of a batch of shift trades |
-| [**postWorkforcemanagementManagementunitWeekShorttermforecastCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastCopy) | Copy a short term forecast |
-| [**postWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecasts) | Import a short term forecast |
-| [**postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate) | Generate a short term forecast |
-| [**postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload) | Import a short term forecast |
+| [**postWorkforcemanagementManagementunitWeekShorttermforecastCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastCopy) | Gone. Use equivalent business unit resource instead |
+| [**postWorkforcemanagementManagementunitWeekShorttermforecasts**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecasts) | Gone. Use equivalent business unit resource instead |
+| [**postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate) | Gone. Use equivalent business unit resource instead |
+| [**postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload) | Gone. Use equivalent business unit resource instead |
 | [**postWorkforcemanagementManagementunitWorkplanCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplanCopy) | Create a copy of work plan |
 | [**postWorkforcemanagementManagementunitWorkplans**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplans) | Create a new work plan |
 | [**postWorkforcemanagementManagementunits**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunits) | Add a management unit |
@@ -573,15 +573,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunit(muId: muId) { (er
 
 > Void deleteWorkforcemanagementManagementunitActivitycode(muId, acId)
 
-Deletes an activity code
+Deprecated/Gone: Use the new business unit activity code resources
 
 
 
 Wraps DELETE /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:activityCode:delete
 
 ### Example
 
@@ -626,15 +625,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitActivitycode(muId:
 
 > Void deleteWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId)
 
-Cancel a schedule run
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 
@@ -644,7 +642,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit.
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit.
 let runId: String = "" // The ID of the schedule run
 
 // Code example
@@ -662,7 +660,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitSchedulingRun(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit. | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit. | |
 | **runId** | **String**| The ID of the schedule run | |
 {: class="table-striped"}
 
@@ -679,15 +677,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitSchedulingRun(mana
 
 > Void deleteWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId)
 
-Delete a service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
 Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:delete
 
 ### Example
 
@@ -697,8 +694,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let serviceGoalGroupId: String = "" // The ID of the service goal group to delete
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let serviceGoalGroupId: String = "" // Gone. The ID of the service goal group to delete
 
 // Code example
 WorkforceManagementAPI.deleteWorkforcemanagementManagementunitServicegoalgroup(managementUnitId: managementUnitId, serviceGoalGroupId: serviceGoalGroupId) { (error) in
@@ -715,8 +712,8 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitServicegoalgroup(m
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **serviceGoalGroupId** | **String**| The ID of the service goal group to delete | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **serviceGoalGroupId** | **String**| Gone. The ID of the service goal group to delete | |
 {: class="table-striped"}
 
 
@@ -732,15 +729,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitServicegoalgroup(m
 
 > Void deleteWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId)
 
-Delete a schedule
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:delete
 
 ### Example
 
@@ -752,7 +748,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let scheduleId: String = "" // The ID of theschedule to delete
+let scheduleId: String = "" // Gone/deprecated. The ID of the schedule to delete
 
 // Code example
 WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWeekSchedule(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId) { (error) in
@@ -771,7 +767,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWeekSchedule(manag
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **scheduleId** | **String**| The ID of theschedule to delete | |
+| **scheduleId** | **String**| Gone/deprecated. The ID of the schedule to delete | |
 {: class="table-striped"}
 
 
@@ -787,15 +783,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWeekSchedule(manag
 
 > Void deleteWorkforcemanagementManagementunitWeekShorttermforecast(managementUnitId, weekDateId, forecastId)
 
-Delete a short term forecast
+Gone. Use equivalent business unit resource instead
 
-Must not be tied to any schedules
+
 
 Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:delete
 
 ### Example
 
@@ -805,9 +800,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format
-let forecastId: String = "" // The ID of the forecast
+let managementUnitId: String = "" // (Deprecated/gone): The id of the management unit.
+let weekDateId: String = "" // (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
+let forecastId: String = "" // (Gone/Deprecated): The ID of the forecast
 
 // Code example
 WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWeekShorttermforecast(managementUnitId: managementUnitId, weekDateId: weekDateId, forecastId: forecastId) { (error) in
@@ -824,9 +819,9 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWeekShorttermforec
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format | |
-| **forecastId** | **String**| The ID of the forecast | |
+| **managementUnitId** | **String**| (Deprecated/gone): The id of the management unit. | |
+| **weekDateId** | **String**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format | |
+| **forecastId** | **String**| (Gone/Deprecated): The ID of the forecast | |
 {: class="table-striped"}
 
 
@@ -2779,17 +2774,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgentShifttrades(mana
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [WfmIntradayQueueListing](WfmIntradayQueueListing.html) getWorkforcemanagementManagementunitIntradayQueues(muId, date)
+> Void getWorkforcemanagementManagementunitIntradayQueues(muId)
 
-Get intraday queues for the given date
+Gone.  Moved under business units
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/intraday/queues  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:intraday:view
 
 ### Example
 
@@ -2800,15 +2794,13 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let muId: String = "" // The management unit ID of the management unit
-let date: String = "" // yyyy-MM-dd date string interpreted in the configured management unit time zone
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitIntradayQueues(muId: muId, date: date) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitIntradayQueues(muId: muId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitIntradayQueues was successful")
-        dump(response)
     }
 }
 ```
@@ -2819,13 +2811,12 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitIntradayQueues(muId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **muId** | **String**| The management unit ID of the management unit | |
-| **date** | **String**| yyyy-MM-dd date string interpreted in the configured management unit time zone | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**WfmIntradayQueueListing**](WfmIntradayQueueListing.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitSchedulingRun"></a>
 
@@ -2833,17 +2824,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitIntradayQueues(muId: 
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [SchedulingRunResponse](SchedulingRunResponse.html) getWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId)
+> Void getWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId)
 
-Gets the status for a specific scheduling run
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 
@@ -2853,16 +2843,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit.
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit.
 let runId: String = "" // The ID of the schedule run
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRun(managementUnitId: managementUnitId, runId: runId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRun(managementUnitId: managementUnitId, runId: runId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRun was successful")
-        dump(response)
     }
 }
 ```
@@ -2872,14 +2861,14 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRun(managem
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit. | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit. | |
 | **runId** | **String**| The ID of the schedule run | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**SchedulingRunResponse**](SchedulingRunResponse.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitSchedulingRunResult"></a>
 
@@ -2887,17 +2876,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRun(managem
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [RescheduleResult](RescheduleResult.html) getWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId, runId)
+> Void getWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId, runId)
 
-Gets the result of a specific scheduling run
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}/result  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:edit
 
 ### Example
 
@@ -2907,16 +2895,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit.
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit.
 let runId: String = "" // The ID of the schedule run
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId: managementUnitId, runId: runId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRunResult(managementUnitId: managementUnitId, runId: runId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRunResult was successful")
-        dump(response)
     }
 }
 ```
@@ -2926,14 +2913,14 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRunResult(m
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit. | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit. | |
 | **runId** | **String**| The ID of the schedule run | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**RescheduleResult**](RescheduleResult.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitSchedulingRuns"></a>
 
@@ -2941,17 +2928,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRunResult(m
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [SchedulingRunListResponse](SchedulingRunListResponse.html) getWorkforcemanagementManagementunitSchedulingRuns(managementUnitId)
+> Void getWorkforcemanagementManagementunitSchedulingRuns(managementUnitId)
 
-Get the status of all the ongoing schedule runs
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 
@@ -2961,15 +2947,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit.
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRuns(managementUnitId: managementUnitId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRuns(managementUnitId: managementUnitId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRuns was successful")
-        dump(response)
     }
 }
 ```
@@ -2979,13 +2964,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRuns(manage
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit. | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit. | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**SchedulingRunListResponse**](SchedulingRunListResponse.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitServicegoalgroup"></a>
 
@@ -2993,17 +2978,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSchedulingRuns(manage
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ServiceGoalGroup](ServiceGoalGroup.html) getWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId)
+> Void getWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId)
 
-Get a service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:view
 
 ### Example
 
@@ -3013,16 +2997,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let serviceGoalGroupId: String = "" // The ID of the service goal group to fetch
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let serviceGoalGroupId: String = "" // Gone.  The ID of the service goal group to fetch
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroup(managementUnitId: managementUnitId, serviceGoalGroupId: serviceGoalGroupId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroup(managementUnitId: managementUnitId, serviceGoalGroupId: serviceGoalGroupId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroup was successful")
-        dump(response)
     }
 }
 ```
@@ -3032,14 +3015,14 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroup(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **serviceGoalGroupId** | **String**| The ID of the service goal group to fetch | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **serviceGoalGroupId** | **String**| Gone.  The ID of the service goal group to fetch | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ServiceGoalGroup**](ServiceGoalGroup.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitServicegoalgroups"></a>
 
@@ -3047,18 +3030,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroup(mana
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ServiceGoalGroupList](ServiceGoalGroupList.html) getWorkforcemanagementManagementunitServicegoalgroups(managementUnitId)
+> Void getWorkforcemanagementManagementunitServicegoalgroups(managementUnitId)
 
-Get service goal groups
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:view
-* wfm:shortTermForecast:view
 
 ### Example
 
@@ -3068,15 +3049,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroups(managementUnitId: managementUnitId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroups(managementUnitId: managementUnitId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroups was successful")
-        dump(response)
     }
 }
 ```
@@ -3086,13 +3066,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroups(man
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ServiceGoalGroupList**](ServiceGoalGroupList.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitSettings"></a>
 
@@ -3100,17 +3080,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitServicegoalgroups(man
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ManagementUnitSettingsResponse](ManagementUnitSettingsResponse.html) getWorkforcemanagementManagementunitSettings(muId)
+> Void getWorkforcemanagementManagementunitSettings(muId)
 
-Get the settings for the requested management unit. Deprecated, use the GET management unit route instead
+Gone. Get management unit settings via expand parameters on the GET management unit
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/settings  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:managementUnit:view
 
 ### Example
 
@@ -3123,12 +3102,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitSettings(muId: muId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitSettings(muId: muId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitSettings was successful")
-        dump(response)
     }
 }
 ```
@@ -3144,7 +3122,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitSettings(muId: muId) 
 
 ### Return type
 
-[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitShifttradesMatched"></a>
 
@@ -3429,7 +3407,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(muId: muId) { (
 
 > [WeekScheduleResponse](WeekScheduleResponse.html) getWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, expand, forceDownloadService)
 
-Get a week schedule
+Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
 
 
 
@@ -3488,18 +3466,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedule(manageme
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [WeekScheduleGenerationResult](WeekScheduleGenerationResult.html) getWorkforcemanagementManagementunitWeekScheduleGenerationresults(managementUnitId, weekId, scheduleId)
+> Void getWorkforcemanagementManagementunitWeekScheduleGenerationresults(managementUnitId, weekId, scheduleId)
 
-Get week schedule generation results
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:publishedSchedule:view
-* wfm:schedule:view
 
 ### Example
 
@@ -3511,15 +3487,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let scheduleId: String = "" // The ID of the schedule to fetch generation results
+let scheduleId: String = "" // Gone/deprecated. The ID of the schedule to fetch generation results
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekScheduleGenerationresults(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekScheduleGenerationresults(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekScheduleGenerationresults was successful")
-        dump(response)
     }
 }
 ```
@@ -3531,13 +3506,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekScheduleGeneratio
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **scheduleId** | **String**| The ID of the schedule to fetch generation results | |
+| **scheduleId** | **String**| Gone/deprecated. The ID of the schedule to fetch generation results | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**WeekScheduleGenerationResult**](WeekScheduleGenerationResult.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitWeekSchedules"></a>
 
@@ -3547,7 +3522,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekScheduleGeneratio
 
 > [WeekScheduleListResponse](WeekScheduleListResponse.html) getWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate)
 
-Get the list of schedules in a week in management unit
+Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
 
 
 
@@ -3663,17 +3638,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(manag
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ForecastResultResponse](ForecastResultResponse.html) getWorkforcemanagementManagementunitWeekShorttermforecastFinal(managementUnitId, weekDateId, forecastId, forceDownloadService)
+> Void getWorkforcemanagementManagementunitWeekShorttermforecastFinal(managementUnitId, weekDateId, forecastId)
 
-Get the final result of a short term forecast calculation with modifications applied
+Gone. Use equivalent business unit resource instead
 
 
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/final  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:view
 
 ### Example
 
@@ -3683,18 +3657,16 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format
-let forecastId: String = "" // The ID of the forecast
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+let managementUnitId: String = "" // (Deprecated/gone): The id of the management unit.
+let weekDateId: String = "" // (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
+let forecastId: String = "" // (Gone/Deprecated): The ID of the forecast
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecastFinal(managementUnitId: managementUnitId, weekDateId: weekDateId, forecastId: forecastId, forceDownloadService: forceDownloadService) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecastFinal(managementUnitId: managementUnitId, weekDateId: weekDateId, forecastId: forecastId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecastFinal was successful")
-        dump(response)
     }
 }
 ```
@@ -3704,16 +3676,15 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecast
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format | |
-| **forecastId** | **String**| The ID of the forecast | |
-| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
+| **managementUnitId** | **String**| (Deprecated/gone): The id of the management unit. | |
+| **weekDateId** | **String**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format | |
+| **forecastId** | **String**| (Gone/Deprecated): The ID of the forecast | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ForecastResultResponse**](ForecastResultResponse.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitWeekShorttermforecasts"></a>
 
@@ -3721,18 +3692,16 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecast
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ShortTermForecastListResponse](ShortTermForecastListResponse.html) getWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId)
+> Void getWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId)
 
-Get short term forecasts
+Gone. Use equivalent business unit resource instead
 
-Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date
+
 
 Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
-* wfm:shortTermForecast:view
 
 ### Example
 
@@ -3742,16 +3711,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format
+let managementUnitId: String = "" // (Deprecated/gone): The id of the management unit.
+let weekDateId: String = "" // (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId: managementUnitId, weekDateId: weekDateId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId: managementUnitId, weekDateId: weekDateId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecasts was successful")
-        dump(response)
     }
 }
 ```
@@ -3761,14 +3729,14 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShorttermforecast
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format | |
+| **managementUnitId** | **String**| (Deprecated/gone): The id of the management unit. | |
+| **weekDateId** | **String**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ShortTermForecastListResponse**](ShortTermForecastListResponse.html)
+`nil` (empty response body)
 
 <a name="getWorkforcemanagementManagementunitWorkplan"></a>
 
@@ -4585,17 +4553,16 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunit(muId: muId, body: 
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ActivityCode](ActivityCode.html) patchWorkforcemanagementManagementunitActivitycode(muId, acId, body)
+> Void patchWorkforcemanagementManagementunitActivitycode(muId, acId, body)
 
-Update an activity code
+Deprecated/Gone: Use the new business unit activity code resources
 
 
 
 Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}/activitycodes/{acId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:activityCode:edit
 
 ### Example
 
@@ -4610,12 +4577,11 @@ let acId: String = "" // The ID of the activity code to update
 let body: UpdateActivityCodeRequest = new UpdateActivityCodeRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitActivitycode(muId: muId, acId: acId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitActivitycode(muId: muId, acId: acId, body: body) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitActivitycode was successful")
-        dump(response)
     }
 }
 ```
@@ -4633,7 +4599,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitActivitycode(muId: 
 
 ### Return type
 
-[**ActivityCode**](ActivityCode.html)
+`nil` (empty response body)
 
 <a name="patchWorkforcemanagementManagementunitSchedulingRun"></a>
 
@@ -4641,17 +4607,16 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitActivitycode(muId: 
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [RescheduleResult](RescheduleResult.html) patchWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId, body)
+> Void patchWorkforcemanagementManagementunitSchedulingRun(managementUnitId, runId, body)
 
-Marks a specific scheduling run as applied, allowing a new rescheduling run to be started
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/scheduling/runs/{runId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:edit
 
 ### Example
 
@@ -4661,17 +4626,16 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit.
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit.
 let runId: String = "" // The ID of the schedule run
 let body: UpdateSchedulingRunRequest = new UpdateSchedulingRunRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitSchedulingRun(managementUnitId: managementUnitId, runId: runId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitSchedulingRun(managementUnitId: managementUnitId, runId: runId, body: body) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitSchedulingRun was successful")
-        dump(response)
     }
 }
 ```
@@ -4681,7 +4645,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitSchedulingRun(manag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit. | |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit. | |
 | **runId** | **String**| The ID of the schedule run | |
 | **body** | [**UpdateSchedulingRunRequest**](UpdateSchedulingRunRequest.html)| body | [optional] |
 {: class="table-striped"}
@@ -4689,7 +4653,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitSchedulingRun(manag
 
 ### Return type
 
-[**RescheduleResult**](RescheduleResult.html)
+`nil` (empty response body)
 
 <a name="patchWorkforcemanagementManagementunitServicegoalgroup"></a>
 
@@ -4697,17 +4661,16 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitSchedulingRun(manag
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ServiceGoalGroup](ServiceGoalGroup.html) patchWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId, body)
+> Void patchWorkforcemanagementManagementunitServicegoalgroup(managementUnitId, serviceGoalGroupId)
 
-Update a service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
 Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups/{serviceGoalGroupId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:edit
 
 ### Example
 
@@ -4717,17 +4680,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let serviceGoalGroupId: String = "" // The ID of the service goal group to update
-let body: ServiceGoalGroup = new ServiceGoalGroup(...) // body
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let serviceGoalGroupId: String = "" // Gone. The ID of the service goal group to update
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitServicegoalgroup(managementUnitId: managementUnitId, serviceGoalGroupId: serviceGoalGroupId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitServicegoalgroup(managementUnitId: managementUnitId, serviceGoalGroupId: serviceGoalGroupId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitServicegoalgroup was successful")
-        dump(response)
     }
 }
 ```
@@ -4737,15 +4698,14 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitServicegoalgroup(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **serviceGoalGroupId** | **String**| The ID of the service goal group to update | |
-| **body** | [**ServiceGoalGroup**](ServiceGoalGroup.html)| body | [optional] |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **serviceGoalGroupId** | **String**| Gone. The ID of the service goal group to update | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ServiceGoalGroup**](ServiceGoalGroup.html)
+`nil` (empty response body)
 
 <a name="patchWorkforcemanagementManagementunitSettings"></a>
 
@@ -4753,17 +4713,16 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitServicegoalgroup(ma
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ManagementUnitSettingsResponse](ManagementUnitSettingsResponse.html) patchWorkforcemanagementManagementunitSettings(muId, body)
+> Void patchWorkforcemanagementManagementunitSettings(muId)
 
-Update the settings for the requested management unit
+Gone. Update settings by PATCHing the management unit
 
 
 
 Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}/settings  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:managementUnit:edit
 
 ### Example
 
@@ -4774,15 +4733,13 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: ManagementUnitSettingsRequest = new ManagementUnitSettingsRequest(...) // config
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitSettings(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitSettings(muId: muId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitSettings was successful")
-        dump(response)
     }
 }
 ```
@@ -4793,13 +4750,12 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitSettings(muId: muId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**ManagementUnitSettingsRequest**](ManagementUnitSettingsRequest.html)| config | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html)
+`nil` (empty response body)
 
 <a name="patchWorkforcemanagementManagementunitUserTimeoffrequest"></a>
 
@@ -4865,17 +4821,16 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [AsyncWeekScheduleResponse](AsyncWeekScheduleResponse.html) patchWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body)
+> Void patchWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId)
 
-Update a week schedule
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:edit
 
 ### Example
 
@@ -4887,18 +4842,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let scheduleId: String = "" // The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
-let body: UpdateWeekScheduleRequest = new UpdateWeekScheduleRequest(...) // body
+let scheduleId: String = "" // Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekSchedule(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekSchedule(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekSchedule was successful")
-        dump(response)
     }
 }
 ```
@@ -4910,16 +4861,13 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekSchedule(manage
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **scheduleId** | **String**| The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500 | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
-| **body** | [**UpdateWeekScheduleRequest**](UpdateWeekScheduleRequest.html)| body | [optional] |
+| **scheduleId** | **String**| Gone/deprecated. The ID of the schedule to update. Use partial uploads of user schedules if activity count in schedule is greater than 17500 | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+`nil` (empty response body)
 
 <a name="patchWorkforcemanagementManagementunitWeekShifttrade"></a>
 
@@ -5937,17 +5885,16 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (respo
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ActivityCode](ActivityCode.html) postWorkforcemanagementManagementunitActivitycodes(muId, body)
+> Void postWorkforcemanagementManagementunitActivitycodes(muId)
 
-Create a new activity code
+Deprecated/Gone: Use the new business unit activity code resources
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/activitycodes  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:activityCode:add
 
 ### Example
 
@@ -5958,15 +5905,13 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: CreateActivityCodeRequest = new CreateActivityCodeRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitActivitycodes(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitActivitycodes(muId: muId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitActivitycodes was successful")
-        dump(response)
     }
 }
 ```
@@ -5977,13 +5922,12 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitActivitycodes(muId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ActivityCode**](ActivityCode.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitAgentschedulesSearch"></a>
 
@@ -6104,17 +6048,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherenceq
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [IntradayResponse](IntradayResponse.html) postWorkforcemanagementManagementunitIntraday(muId, body)
+> Void postWorkforcemanagementManagementunitIntraday(muId)
 
-Get intraday data for the given date for the requested queueIds
+Gone.  Moved under business units
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/intraday  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:intraday:view
 
 ### Example
 
@@ -6125,15 +6068,13 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let muId: String = "" // The management unit ID of the management unit
-let body: IntradayQueryDataCommand = new IntradayQueryDataCommand(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitIntraday(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitIntraday(muId: muId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitIntraday was successful")
-        dump(response)
     }
 }
 ```
@@ -6144,13 +6085,12 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitIntraday(muId: muId,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **muId** | **String**| The management unit ID of the management unit | |
-| **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**IntradayResponse**](IntradayResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitMove"></a>
 
@@ -6267,17 +6207,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(muId
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ServiceGoalGroup](ServiceGoalGroup.html) postWorkforcemanagementManagementunitServicegoalgroups(managementUnitId, body)
+> Void postWorkforcemanagementManagementunitServicegoalgroups(managementUnitId)
 
-Create a new service goal group
+Gone. Replaced with service goal templates and planning groups under business units
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/servicegoalgroups  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:serviceGoalGroup:add
 
 ### Example
 
@@ -6287,16 +6226,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: CreateServiceGoalGroupRequest = new CreateServiceGoalGroupRequest(...) // body
+let managementUnitId: String = "" // (Deprecated/gone): The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitServicegoalgroups(managementUnitId: managementUnitId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitServicegoalgroups(managementUnitId: managementUnitId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitServicegoalgroups was successful")
-        dump(response)
     }
 }
 ```
@@ -6306,14 +6243,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitServicegoalgroups(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**CreateServiceGoalGroupRequest**](CreateServiceGoalGroupRequest.html)| body | [optional] |
+| **managementUnitId** | **String**| (Deprecated/gone): The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ServiceGoalGroup**](ServiceGoalGroup.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitTimeoffrequests"></a>
 
@@ -6375,17 +6311,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(muId
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [TimeOffRequestEntityList](TimeOffRequestEntityList.html) postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails(muId, body)
+> Void postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails(muId, body)
 
-Gets a list of time off requests from lookup ids
+Gone.  All data is now returned in the query route
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/fetchdetails  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:timeOffRequest:view
 
 ### Example
 
@@ -6396,15 +6331,14 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let muId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: TimeOffRequestLookupList = new TimeOffRequestLookupList(...) // body
+let body: TimeOffRequestListing = new TimeOffRequestListing(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails(muId: muId, body: body) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsFetchdetails was successful")
-        dump(response)
     }
 }
 ```
@@ -6415,13 +6349,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsFetch
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **muId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**TimeOffRequestLookupList**](TimeOffRequestLookupList.html)| body | [optional] |
+| **body** | [**TimeOffRequestListing**](TimeOffRequestListing.html)| body | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffRequestEntityList**](TimeOffRequestEntityList.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitTimeoffrequestsQuery"></a>
 
@@ -6429,7 +6363,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsFetch
 
 
 
-> [TimeOffRequestLookupList](TimeOffRequestLookupList.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(muId, body)
+> [TimeOffRequestListing](TimeOffRequestListing.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(muId, body)
 
 Gets the lookup ids to fetch the specified set of requests
 
@@ -6475,7 +6409,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 
 ### Return type
 
-[**TimeOffRequestLookupList**](TimeOffRequestLookupList.html)
+[**TimeOffRequestListing**](TimeOffRequestListing.html)
 
 <a name="postWorkforcemanagementManagementunitWeekScheduleCopy"></a>
 
@@ -6483,17 +6417,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [AsyncWeekScheduleResponse](AsyncWeekScheduleResponse.html) postWorkforcemanagementManagementunitWeekScheduleCopy(managementUnitId, weekId, scheduleId, forceAsync, forceDownloadService, body)
+> Void postWorkforcemanagementManagementunitWeekScheduleCopy(managementUnitId, weekId, scheduleId)
 
-Copy a week schedule
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:add
 
 ### Example
 
@@ -6505,18 +6438,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let scheduleId: String = "" // The ID of the schedule to copy from
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
-let body: CopyWeekScheduleRequest = new CopyWeekScheduleRequest(...) // body
+let scheduleId: String = "" // Gone/deprecated. The ID of the schedule to copy from
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleCopy(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleCopy(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleCopy was successful")
-        dump(response)
     }
 }
 ```
@@ -6528,16 +6457,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleCopy(man
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **scheduleId** | **String**| The ID of the schedule to copy from | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
-| **body** | [**CopyWeekScheduleRequest**](CopyWeekScheduleRequest.html)| body | [optional] |
+| **scheduleId** | **String**| Gone/deprecated. The ID of the schedule to copy from | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekScheduleReschedule"></a>
 
@@ -6545,17 +6471,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleCopy(man
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [AsyncWeekScheduleResponse](AsyncWeekScheduleResponse.html) postWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId, weekId, scheduleId, body)
+> Void postWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId, weekId, scheduleId)
 
-Start a scheduling run to compute the reschedule. When the scheduling run finishes, a client can get the reschedule changes and then the client can apply them to the schedule, save the schedule, and mark the scheduling run as applied
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:generate
 
 ### Example
 
@@ -6567,16 +6492,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let scheduleId: String = "" // The ID of the schedule to re-optimize
-let body: RescheduleRequest = new RescheduleRequest(...) // body
+let scheduleId: String = "" // Gone/deprecated. The ID of the schedule to re-optimize
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleReschedule(managementUnitId: managementUnitId, weekId: weekId, scheduleId: scheduleId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleReschedule was successful")
-        dump(response)
     }
 }
 ```
@@ -6588,14 +6511,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleReschedu
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **scheduleId** | **String**| The ID of the schedule to re-optimize | |
-| **body** | [**RescheduleRequest**](RescheduleRequest.html)| body | [optional] |
+| **scheduleId** | **String**| Gone/deprecated. The ID of the schedule to re-optimize | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekSchedules"></a>
 
@@ -6603,17 +6525,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekScheduleReschedu
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [AsyncWeekScheduleResponse](AsyncWeekScheduleResponse.html) postWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, forceAsync, forceDownloadService, body)
+> Void postWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId)
 
-Add a schedule for a week in management unit using imported data. Use partial uploads of user schedules if activity count in schedule is greater than 17500
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:add
 
 ### Example
 
@@ -6625,17 +6546,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
-let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
-let body: ImportWeekScheduleRequest = new ImportWeekScheduleRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedules(managementUnitId: managementUnitId, weekId: weekId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedules(managementUnitId: managementUnitId, weekId: weekId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedules was successful")
-        dump(response)
     }
 }
 ```
@@ -6647,15 +6564,12 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedules(manage
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
-| **body** | [**ImportWeekScheduleRequest**](ImportWeekScheduleRequest.html)| body | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**AsyncWeekScheduleResponse**](AsyncWeekScheduleResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekSchedulesGenerate"></a>
 
@@ -6663,9 +6577,9 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedules(manage
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [GenerateWeekScheduleResponse](GenerateWeekScheduleResponse.html) postWorkforcemanagementManagementunitWeekSchedulesGenerate(managementUnitId, weekId, body)
+> Void postWorkforcemanagementManagementunitWeekSchedulesGenerate(managementUnitId, weekId)
 
-Generate a week schedule
+Gone.  Scheduling has moved under business units
 
 
 
@@ -6685,15 +6599,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let body: GenerateWeekScheduleRequest = new GenerateWeekScheduleRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesGenerate(managementUnitId: managementUnitId, weekId: weekId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesGenerate(managementUnitId: managementUnitId, weekId: weekId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesGenerate was successful")
-        dump(response)
     }
 }
 ```
@@ -6705,13 +6617,12 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesGenerat
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **body** | [**GenerateWeekScheduleRequest**](GenerateWeekScheduleRequest.html)| body | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**GenerateWeekScheduleResponse**](GenerateWeekScheduleResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekSchedulesPartialupload"></a>
 
@@ -6719,18 +6630,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesGenerat
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [PartialUploadResponse](PartialUploadResponse.html) postWorkforcemanagementManagementunitWeekSchedulesPartialupload(managementUnitId, weekId, body)
+> Void postWorkforcemanagementManagementunitWeekSchedulesPartialupload(managementUnitId, weekId)
 
-Partial upload of user schedules where activity count is greater than 17500
+Gone.  Scheduling has moved under business units
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/partialupload  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:schedule:add
-* wfm:schedule:edit
 
 ### Example
 
@@ -6742,15 +6651,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
-let body: UserSchedulesPartialUploadRequest = new UserSchedulesPartialUploadRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesPartialupload(managementUnitId: managementUnitId, weekId: weekId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesPartialupload(managementUnitId: managementUnitId, weekId: weekId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesPartialupload was successful")
-        dump(response)
     }
 }
 ```
@@ -6762,13 +6669,12 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekSchedulesPartial
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format. | |
-| **body** | [**UserSchedulesPartialUploadRequest**](UserSchedulesPartialUploadRequest.html)| body | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**PartialUploadResponse**](PartialUploadResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekShifttradeMatch"></a>
 
@@ -7005,17 +6911,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesState
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ShortTermForecastResponse](ShortTermForecastResponse.html) postWorkforcemanagementManagementunitWeekShorttermforecastCopy(managementUnitId, weekDateId, forecastId, body, forceAsync)
+> Void postWorkforcemanagementManagementunitWeekShorttermforecastCopy(managementUnitId, weekDateId, forecastId)
 
-Copy a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 
@@ -7025,19 +6930,16 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format
-let forecastId: String = "" // The ID of the forecast to copy
-let body: CopyShortTermForecastRequest = new CopyShortTermForecastRequest(...) // body
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+let managementUnitId: String = "" // (Deprecated/gone): The id of the management unit.
+let weekDateId: String = "" // (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
+let forecastId: String = "" // (Gone/Deprecated): The ID of the forecast
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastCopy(managementUnitId: managementUnitId, weekDateId: weekDateId, forecastId: forecastId, body: body, forceAsync: forceAsync) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastCopy(managementUnitId: managementUnitId, weekDateId: weekDateId, forecastId: forecastId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastCopy was successful")
-        dump(response)
     }
 }
 ```
@@ -7047,17 +6949,15 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecas
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format | |
-| **forecastId** | **String**| The ID of the forecast to copy | |
-| **body** | [**CopyShortTermForecastRequest**](CopyShortTermForecastRequest.html)| body | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
+| **managementUnitId** | **String**| (Deprecated/gone): The id of the management unit. | |
+| **weekDateId** | **String**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format | |
+| **forecastId** | **String**| (Gone/Deprecated): The ID of the forecast | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ShortTermForecastResponse**](ShortTermForecastResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekShorttermforecasts"></a>
 
@@ -7065,17 +6965,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecas
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ShortTermForecastResponse](ShortTermForecastResponse.html) postWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId, body, forceAsync)
+> Void postWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId, weekDateId)
 
-Import a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 
@@ -7085,18 +6984,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format
-let body: ImportShortTermForecastRequest = new ImportShortTermForecastRequest(...) // body
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+let managementUnitId: String = "" // (Deprecated/gone): The id of the management unit.
+let weekDateId: String = "" // (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, forceAsync: forceAsync) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecasts(managementUnitId: managementUnitId, weekDateId: weekDateId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecasts was successful")
-        dump(response)
     }
 }
 ```
@@ -7106,16 +7002,14 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecas
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format | |
-| **body** | [**ImportShortTermForecastRequest**](ImportShortTermForecastRequest.html)| body | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
+| **managementUnitId** | **String**| (Deprecated/gone): The id of the management unit. | |
+| **weekDateId** | **String**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**ShortTermForecastResponse**](ShortTermForecastResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate"></a>
 
@@ -7123,17 +7017,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecas
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [GenerateShortTermForecastResponse](GenerateShortTermForecastResponse.html) postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate(managementUnitId, weekDateId, body, forceAsync)
+> Void postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate(managementUnitId, weekDateId)
 
-Generate a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/generate  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 
@@ -7143,18 +7036,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format
-let body: GenerateShortTermForecastRequest = new GenerateShortTermForecastRequest(...) // 
-let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+let managementUnitId: String = "" // (Deprecated/gone): The id of the management unit.
+let weekDateId: String = "" // (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body, forceAsync: forceAsync) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate(managementUnitId: managementUnitId, weekDateId: weekDateId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate was successful")
-        dump(response)
     }
 }
 ```
@@ -7164,16 +7054,14 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecas
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format | |
-| **body** | [**GenerateShortTermForecastRequest**](GenerateShortTermForecastRequest.html)|  | |
-| **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
+| **managementUnitId** | **String**| (Deprecated/gone): The id of the management unit. | |
+| **weekDateId** | **String**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**GenerateShortTermForecastResponse**](GenerateShortTermForecastResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload"></a>
 
@@ -7181,17 +7069,16 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecas
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [PartialUploadResponse](PartialUploadResponse.html) postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload(managementUnitId, weekDateId, body)
+> Void postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload(managementUnitId, weekDateId)
 
-Import a short term forecast
+Gone. Use equivalent business unit resource instead
 
 
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shorttermforecasts/partialupload  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* wfm:shortTermForecast:add
 
 ### Example
 
@@ -7201,17 +7088,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format
-let body: RouteGroupList = new RouteGroupList(...) // body
+let managementUnitId: String = "" // (Deprecated/gone): The id of the management unit.
+let weekDateId: String = "" // (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload(managementUnitId: managementUnitId, weekDateId: weekDateId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload was successful")
-        dump(response)
     }
 }
 ```
@@ -7221,15 +7106,14 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShorttermforecas
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format | |
-| **body** | [**RouteGroupList**](RouteGroupList.html)| body | |
+| **managementUnitId** | **String**| (Deprecated/gone): The id of the management unit. | |
+| **weekDateId** | **String**| (Deprecated/gone): The week start date of the forecast in yyyy-MM-dd format | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**PartialUploadResponse**](PartialUploadResponse.html)
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitWorkplanCopy"></a>
 

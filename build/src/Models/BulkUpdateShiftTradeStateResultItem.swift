@@ -21,9 +21,11 @@ public class BulkUpdateShiftTradeStateResultItem: Codable {
     }
     public enum FailureReason: String, Codable { 
         case initiatingAgentScheduleNotFound = "InitiatingAgentScheduleNotFound"
+        case initiatingAgentShiftHasExternalActivities = "InitiatingAgentShiftHasExternalActivities"
         case initiatingAgentShiftNotFound = "InitiatingAgentShiftNotFound"
         case receivingAgentNotFound = "ReceivingAgentNotFound"
         case receivingAgentScheduleNotFound = "ReceivingAgentScheduleNotFound"
+        case receivingAgentShiftHasExternalActivities = "ReceivingAgentShiftHasExternalActivities"
         case receivingAgentShiftNotFound = "ReceivingAgentShiftNotFound"
         case scheduleNotPublished = "ScheduleNotPublished"
         case transitionNotAllowed = "TransitionNotAllowed"

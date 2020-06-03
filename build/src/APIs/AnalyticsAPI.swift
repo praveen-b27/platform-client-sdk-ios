@@ -1123,6 +1123,9 @@ open class AnalyticsAPI {
       "columnOrder" : 123,
       "columnName" : "aeiou"
     } ],
+    "emailStatuses" : {
+      "key" : "aeiou"
+    },
     "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
     "hasSplitFilters" : true,
     "name" : "aeiou",
@@ -1131,6 +1134,7 @@ open class AnalyticsAPI {
     "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "hasCustomParticipantAttributes" : true,
+    "recipientEmails" : [ "aeiou" ],
     "hasFormatDurations" : true,
     "exportFormat" : "aeiou",
     "status" : "aeiou"
@@ -3161,6 +3165,9 @@ open class AnalyticsAPI {
     "columnOrder" : 123,
     "columnName" : "aeiou"
   } ],
+  "emailStatuses" : {
+    "key" : "aeiou"
+  },
   "percentageComplete" : 1.3579000000000001069366817318950779736042022705078125,
   "hasSplitFilters" : true,
   "name" : "aeiou",
@@ -3169,6 +3176,7 @@ open class AnalyticsAPI {
   "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "hasCustomParticipantAttributes" : true,
+  "recipientEmails" : [ "aeiou" ],
   "hasFormatDurations" : true,
   "exportFormat" : "aeiou",
   "status" : "aeiou"

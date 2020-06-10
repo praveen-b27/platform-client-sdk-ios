@@ -20,6 +20,7 @@ title: ConversationEventTopicChat
 | **connectedTime** | [**Date**](Date.html) |  | [optional] |
 | **disconnectedTime** | [**Date**](Date.html) |  | [optional] |
 | **journeyContext** | [**ConversationEventTopicJourneyContext**](ConversationEventTopicJourneyContext.html) |  | [optional] |
+| **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

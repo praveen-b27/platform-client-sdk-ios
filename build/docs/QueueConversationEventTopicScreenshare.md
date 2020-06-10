@@ -18,6 +18,7 @@ title: QueueConversationEventTopicScreenshare
 | **disconnectType** | **String** |  | [optional] |
 | **connectedTime** | [**Date**](Date.html) |  | [optional] |
 | **disconnectedTime** | [**Date**](Date.html) |  | [optional] |
+| **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

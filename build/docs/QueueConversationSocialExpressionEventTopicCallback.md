@@ -27,6 +27,7 @@ title: QueueConversationSocialExpressionEventTopicCallback
 | **disconnectedTime** | [**Date**](Date.html) |  | [optional] |
 | **callbackScheduledTime** | [**Date**](Date.html) |  | [optional] |
 | **automatedCallbackConfigId** | **String** |  | [optional] |
+| **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

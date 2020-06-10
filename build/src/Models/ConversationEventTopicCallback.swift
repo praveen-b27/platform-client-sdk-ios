@@ -65,9 +65,10 @@ public class ConversationEventTopicCallback: Codable {
     public var disconnectedTime: Date?
     public var callbackScheduledTime: Date?
     public var automatedCallbackConfigId: String?
+    public var wrapup: ConversationEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: ConversationEventTopicDialerPreview?, voicemail: ConversationEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: ConversationEventTopicDialerPreview?, voicemail: ConversationEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: ConversationEventTopicWrapup?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -109,6 +110,8 @@ public class ConversationEventTopicCallback: Codable {
         
         self.automatedCallbackConfigId = automatedCallbackConfigId
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -134,6 +137,7 @@ public class ConversationEventTopicCallback: Codable {
         case disconnectedTime
         case callbackScheduledTime
         case automatedCallbackConfigId
+        case wrapup
         case additionalProperties
     }
 

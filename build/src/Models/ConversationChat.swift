@@ -37,6 +37,7 @@ public class ConversationChat: Codable {
         case peer = "peer"
         case other = "other"
         case uncallable = "uncallable"
+        case timeout = "timeout"
     }
     /** The connection state of this communication. */
     public var state: State?

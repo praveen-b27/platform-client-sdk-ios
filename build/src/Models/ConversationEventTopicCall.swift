@@ -73,9 +73,10 @@ public class ConversationEventTopicCall: Codable {
     public var disconnectReasons: [ConversationEventTopicDisconnectReason]?
     public var faxStatus: ConversationEventTopicFaxStatus?
     public var uuiData: String?
+    public var wrapup: ConversationEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, wrapup: ConversationEventTopicWrapup?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -121,6 +122,8 @@ public class ConversationEventTopicCall: Codable {
         
         self.uuiData = uuiData
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -148,6 +151,7 @@ public class ConversationEventTopicCall: Codable {
         case disconnectReasons
         case faxStatus
         case uuiData
+        case wrapup
         case additionalProperties
     }
 

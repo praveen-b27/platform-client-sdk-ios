@@ -52,9 +52,10 @@ public class QueueConversationVideoEventTopicCobrowse: Codable {
     public var providerEventTime: Date?
     public var connectedTime: Date?
     public var disconnectedTime: Date?
+    public var wrapup: QueueConversationVideoEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(state: State?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationVideoEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, additionalProperties: JSON?) {
+    public init(state: State?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationVideoEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationVideoEventTopicWrapup?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -86,6 +87,8 @@ public class QueueConversationVideoEventTopicCobrowse: Codable {
         
         self.disconnectedTime = disconnectedTime
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -106,6 +109,7 @@ public class QueueConversationVideoEventTopicCobrowse: Codable {
         case providerEventTime
         case connectedTime
         case disconnectedTime
+        case wrapup
         case additionalProperties
     }
 

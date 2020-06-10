@@ -25,6 +25,7 @@ title: QueueConversationSocialExpressionEventTopicEmail
 | **direction** | **String** |  | [optional] |
 | **draftAttachments** | [**[QueueConversationSocialExpressionEventTopicAttachment]**](QueueConversationSocialExpressionEventTopicAttachment.html) |  | [optional] |
 | **spam** | **Bool** |  | [optional] |
+| **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

@@ -73,9 +73,10 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
     public var disconnectReasons: [QueueConversationSocialExpressionEventTopicDisconnectReason]?
     public var faxStatus: QueueConversationSocialExpressionEventTopicFaxStatus?
     public var uuiData: String?
+    public var wrapup: QueueConversationSocialExpressionEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, other: QueueConversationSocialExpressionEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationSocialExpressionEventTopicDisconnectReason]?, faxStatus: QueueConversationSocialExpressionEventTopicFaxStatus?, uuiData: String?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationSocialExpressionEventTopicAddress?, other: QueueConversationSocialExpressionEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationSocialExpressionEventTopicDisconnectReason]?, faxStatus: QueueConversationSocialExpressionEventTopicFaxStatus?, uuiData: String?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -121,6 +122,8 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
         
         self.uuiData = uuiData
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -148,6 +151,7 @@ public class QueueConversationSocialExpressionEventTopicCall: Codable {
         case disconnectReasons
         case faxStatus
         case uuiData
+        case wrapup
         case additionalProperties
     }
 

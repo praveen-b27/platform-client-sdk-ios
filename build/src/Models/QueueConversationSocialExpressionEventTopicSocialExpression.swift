@@ -54,9 +54,10 @@ public class QueueConversationSocialExpressionEventTopicSocialExpression: Codabl
     public var startHoldTime: Date?
     public var connectedTime: Date?
     public var disconnectedTime: Date?
+    public var wrapup: QueueConversationSocialExpressionEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, held: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, held: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -88,6 +89,8 @@ public class QueueConversationSocialExpressionEventTopicSocialExpression: Codabl
         
         self.disconnectedTime = disconnectedTime
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -108,6 +111,7 @@ public class QueueConversationSocialExpressionEventTopicSocialExpression: Codabl
         case startHoldTime
         case connectedTime
         case disconnectedTime
+        case wrapup
         case additionalProperties
     }
 

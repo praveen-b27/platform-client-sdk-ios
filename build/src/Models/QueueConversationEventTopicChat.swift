@@ -52,9 +52,10 @@ public class QueueConversationEventTopicChat: Codable {
     public var connectedTime: Date?
     public var disconnectedTime: Date?
     public var journeyContext: QueueConversationEventTopicJourneyContext?
+    public var wrapup: QueueConversationEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationEventTopicJourneyContext?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -82,6 +83,8 @@ public class QueueConversationEventTopicChat: Codable {
         
         self.journeyContext = journeyContext
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -100,6 +103,7 @@ public class QueueConversationEventTopicChat: Codable {
         case connectedTime
         case disconnectedTime
         case journeyContext
+        case wrapup
         case additionalProperties
     }
 

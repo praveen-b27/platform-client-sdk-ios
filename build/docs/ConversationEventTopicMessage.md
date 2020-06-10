@@ -24,6 +24,7 @@ title: ConversationEventTopicMessage
 | **type** | **String** |  | [optional] |
 | **recipientCountry** | **String** |  | [optional] |
 | **recipientType** | **String** |  | [optional] |
+| **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

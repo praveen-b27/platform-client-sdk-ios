@@ -73,9 +73,10 @@ public class QueueConversationEventTopicCall: Codable {
     public var disconnectReasons: [QueueConversationEventTopicDisconnectReason]?
     public var faxStatus: QueueConversationEventTopicFaxStatus?
     public var uuiData: String?
+    public var wrapup: QueueConversationEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, wrapup: QueueConversationEventTopicWrapup?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -121,6 +122,8 @@ public class QueueConversationEventTopicCall: Codable {
         
         self.uuiData = uuiData
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -148,6 +151,7 @@ public class QueueConversationEventTopicCall: Codable {
         case disconnectReasons
         case faxStatus
         case uuiData
+        case wrapup
         case additionalProperties
     }
 

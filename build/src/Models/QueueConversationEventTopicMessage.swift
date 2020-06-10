@@ -62,9 +62,10 @@ public class QueueConversationEventTopicMessage: Codable {
     public var type: ModelType?
     public var recipientCountry: String?
     public var recipientType: String?
+    public var wrapup: QueueConversationEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: QueueConversationEventTopicWrapup?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -100,6 +101,8 @@ public class QueueConversationEventTopicMessage: Codable {
         
         self.recipientType = recipientType
         
+        self.wrapup = wrapup
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -122,6 +125,7 @@ public class QueueConversationEventTopicMessage: Codable {
         case type
         case recipientCountry
         case recipientType
+        case wrapup
         case additionalProperties
     }
 

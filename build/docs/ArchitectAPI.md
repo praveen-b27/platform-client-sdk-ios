@@ -62,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsDatatableRows**](ArchitectAPI.html#getFlowsDatatableRows) | Returns the rows for the datatable with the given id |
 | [**getFlowsDatatables**](ArchitectAPI.html#getFlowsDatatables) | Retrieve a list of datatables for the org |
 | [**getFlowsDivisionviews**](ArchitectAPI.html#getFlowsDivisionviews) | Get a pageable list of basic flow information objects filterable by query parameters. |
+| [**getFlowsExecution**](ArchitectAPI.html#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
 | [**getFlowsOutcome**](ArchitectAPI.html#getFlowsOutcome) | Get a flow outcome |
 | [**getFlowsOutcomes**](ArchitectAPI.html#getFlowsOutcomes) | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**postArchitectDependencytrackingBuild**](ArchitectAPI.html#postArchitectDependencytrackingBuild) | Rebuild Dependency Tracking data for an organization |
@@ -86,6 +87,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postFlowsDatatableImportJobs**](ArchitectAPI.html#postFlowsDatatableImportJobs) | Begin an import process for importing rows into a datatable |
 | [**postFlowsDatatableRows**](ArchitectAPI.html#postFlowsDatatableRows) | Create a new row entry for the datatable. |
 | [**postFlowsDatatables**](ArchitectAPI.html#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
+| [**postFlowsExecutions**](ArchitectAPI.html#postFlowsExecutions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
 | [**postFlowsOutcomes**](ArchitectAPI.html#postFlowsOutcomes) | Create a flow outcome |
 | [**putArchitectEmergencygroup**](ArchitectAPI.html#putArchitectEmergencygroup) | Updates a emergency group by ID |
 | [**putArchitectIvr**](ArchitectAPI.html#putArchitectIvr) | Update an IVR Config. |
@@ -3243,6 +3245,58 @@ ArchitectAPI.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize:
 
 [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html)
 
+<a name="getFlowsExecution"></a>
+
+# **getFlowsExecution**
+
+
+
+> [FlowRuntimeExecution](FlowRuntimeExecution.html) getFlowsExecution(flowExecutionId)
+
+Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
+
+
+
+Wraps GET /api/v2/flows/executions/{flowExecutionId}  
+
+Requires ANY permissions: 
+
+* architect:flowExecution:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowExecutionId: String = "" // flow execution ID
+
+// Code example
+ArchitectAPI.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsExecution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowExecutionId** | **String**| flow execution ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowRuntimeExecution**](FlowRuntimeExecution.html)
+
 <a name="getFlowsOutcome"></a>
 
 # **getFlowsOutcome**
@@ -4513,6 +4567,58 @@ ArchitectAPI.postFlowsDatatables(body: body) { (response, error) in
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+<a name="postFlowsExecutions"></a>
+
+# **postFlowsExecutions**
+
+
+
+> [FlowExecutionLaunchResponse](FlowExecutionLaunchResponse.html) postFlowsExecutions(flowLaunchRequest)
+
+Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
+
+The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+
+Wraps POST /api/v2/flows/executions  
+
+Requires ANY permissions: 
+
+* architect:flow:launch
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowLaunchRequest: FlowExecutionLaunchRequest = new FlowExecutionLaunchRequest(...) // 
+
+// Code example
+ArchitectAPI.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowsExecutions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowLaunchRequest** | [**FlowExecutionLaunchRequest**](FlowExecutionLaunchRequest.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
 
 <a name="postFlowsOutcomes"></a>
 

@@ -28,6 +28,7 @@ public class FlowAggregationQuery: Codable {
         case entryreason = "entryReason"
         case entrytype = "entryType"
         case exitreason = "exitReason"
+        case externalcontactid = "externalContactId"
         case externalmediacount = "externalMediaCount"
         case externalorganizationid = "externalOrganizationId"
         case flaggedreason = "flaggedReason"

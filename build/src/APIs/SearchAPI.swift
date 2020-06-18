@@ -1626,6 +1626,11 @@ open class SearchAPI {
                 }
               } ]
             },
+            "routingRules" : [ {
+              "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+              "threshold" : 123,
+              "operator" : "aeiou"
+            } ],
             "skillEvaluationMethod" : "aeiou",
             "defaultScripts" : {
               "key" : {
@@ -1685,8 +1690,8 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -3765,6 +3770,11 @@ open class SearchAPI {
                 }
               } ]
             },
+            "routingRules" : [ {
+              "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+              "threshold" : 123,
+              "operator" : "aeiou"
+            } ],
             "skillEvaluationMethod" : "aeiou",
             "defaultScripts" : {
               "key" : {
@@ -3824,8 +3834,8 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteIdentityprovidersAdfs**](IdentityProviderAPI.html#deleteIdentityprovidersAdfs) | Delete ADFS Identity Provider |
 | [**deleteIdentityprovidersCic**](IdentityProviderAPI.html#deleteIdentityprovidersCic) | Delete Customer Interaction Center (CIC) Identity Provider |
+| [**deleteIdentityprovidersGeneric**](IdentityProviderAPI.html#deleteIdentityprovidersGeneric) | Delete Generic SAML Identity Provider |
 | [**deleteIdentityprovidersGsuite**](IdentityProviderAPI.html#deleteIdentityprovidersGsuite) | Delete G Suite Identity Provider |
 | [**deleteIdentityprovidersIdentitynow**](IdentityProviderAPI.html#deleteIdentityprovidersIdentitynow) | Delete IdentityNow Provider |
 | [**deleteIdentityprovidersOkta**](IdentityProviderAPI.html#deleteIdentityprovidersOkta) | Delete Okta Identity Provider |
@@ -20,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIdentityproviders**](IdentityProviderAPI.html#getIdentityproviders) | The list of identity providers |
 | [**getIdentityprovidersAdfs**](IdentityProviderAPI.html#getIdentityprovidersAdfs) | Get ADFS Identity Provider |
 | [**getIdentityprovidersCic**](IdentityProviderAPI.html#getIdentityprovidersCic) | Get Customer Interaction Center (CIC) Identity Provider |
+| [**getIdentityprovidersGeneric**](IdentityProviderAPI.html#getIdentityprovidersGeneric) | Get Generic SAML Identity Provider |
 | [**getIdentityprovidersGsuite**](IdentityProviderAPI.html#getIdentityprovidersGsuite) | Get G Suite Identity Provider |
 | [**getIdentityprovidersIdentitynow**](IdentityProviderAPI.html#getIdentityprovidersIdentitynow) | Get IdentityNow Provider |
 | [**getIdentityprovidersOkta**](IdentityProviderAPI.html#getIdentityprovidersOkta) | Get Okta Identity Provider |
@@ -30,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIdentityprovidersSalesforce**](IdentityProviderAPI.html#getIdentityprovidersSalesforce) | Get Salesforce Identity Provider |
 | [**putIdentityprovidersAdfs**](IdentityProviderAPI.html#putIdentityprovidersAdfs) | Update/Create ADFS Identity Provider |
 | [**putIdentityprovidersCic**](IdentityProviderAPI.html#putIdentityprovidersCic) | Update/Create Customer Interaction Center (CIC) Identity Provider |
+| [**putIdentityprovidersGeneric**](IdentityProviderAPI.html#putIdentityprovidersGeneric) | Update/Create Generic SAML Identity Provider |
 | [**putIdentityprovidersGsuite**](IdentityProviderAPI.html#putIdentityprovidersGsuite) | Update/Create G Suite Identity Provider |
 | [**putIdentityprovidersIdentitynow**](IdentityProviderAPI.html#putIdentityprovidersIdentitynow) | Update/Create IdentityNow Provider |
 | [**putIdentityprovidersOkta**](IdentityProviderAPI.html#putIdentityprovidersOkta) | Update/Create Okta Identity Provider |
@@ -121,6 +124,54 @@ IdentityProviderAPI.deleteIdentityprovidersCic() { (response, error) in
         dump(error)
     } else if let response = response {
         print("IdentityProviderAPI.deleteIdentityprovidersCic was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**Empty**](Empty.html)
+
+<a name="deleteIdentityprovidersGeneric"></a>
+
+# **deleteIdentityprovidersGeneric**
+
+
+
+> [Empty](Empty.html) deleteIdentityprovidersGeneric()
+
+Delete Generic SAML Identity Provider
+
+
+
+Wraps DELETE /api/v2/identityproviders/generic  
+
+Requires ANY permissions: 
+
+* sso:provider:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+IdentityProviderAPI.deleteIdentityprovidersGeneric() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IdentityProviderAPI.deleteIdentityprovidersGeneric was successful")
         dump(response)
     }
 }
@@ -664,6 +715,54 @@ This endpoint does not require any parameters.
 
 [**CustomerInteractionCenter**](CustomerInteractionCenter.html)
 
+<a name="getIdentityprovidersGeneric"></a>
+
+# **getIdentityprovidersGeneric**
+
+
+
+> [GenericSAML](GenericSAML.html) getIdentityprovidersGeneric()
+
+Get Generic SAML Identity Provider
+
+
+
+Wraps GET /api/v2/identityproviders/generic  
+
+Requires ANY permissions: 
+
+* sso:provider:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+IdentityProviderAPI.getIdentityprovidersGeneric() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IdentityProviderAPI.getIdentityprovidersGeneric was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**GenericSAML**](GenericSAML.html)
+
 <a name="getIdentityprovidersGsuite"></a>
 
 # **getIdentityprovidersGsuite**
@@ -1147,6 +1246,59 @@ IdentityProviderAPI.putIdentityprovidersCic(body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter.html)| Provider | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OAuthProvider**](OAuthProvider.html)
+
+<a name="putIdentityprovidersGeneric"></a>
+
+# **putIdentityprovidersGeneric**
+
+
+
+> [OAuthProvider](OAuthProvider.html) putIdentityprovidersGeneric(body)
+
+Update/Create Generic SAML Identity Provider
+
+
+
+Wraps PUT /api/v2/identityproviders/generic  
+
+Requires ANY permissions: 
+
+* sso:provider:add
+* sso:provider:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: GenericSAML = new GenericSAML(...) // Provider
+
+// Code example
+IdentityProviderAPI.putIdentityprovidersGeneric(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IdentityProviderAPI.putIdentityprovidersGeneric was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**GenericSAML**](GenericSAML.html)| Provider | |
 {: class="table-striped"}
 
 

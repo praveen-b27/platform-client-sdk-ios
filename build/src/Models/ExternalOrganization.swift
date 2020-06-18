@@ -34,12 +34,16 @@ public class ExternalOrganization: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var createDate: Date?
     public var trustor: Trustor?
+    /** The schema defining custom fields for this contact */
+    public var schema: DataSchema?
+    /** Custom fields defined in the schema referenced by schemaId and schemaVersion. */
+    public var customFields: [String:JSON]?
     /** Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. */
     public var externalDataSources: [ExternalDataSource]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, companyType: String?, industry: String?, primaryContactId: String?, address: ContactAddress?, phoneNumber: PhoneNumber?, faxNumber: PhoneNumber?, employeeCount: Int64?, revenue: Int64?, tags: [String]?, websites: [String]?, tickers: [Ticker]?, twitterId: TwitterId?, externalSystemUrl: String?, modifyDate: Date?, createDate: Date?, trustor: Trustor?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
+    public init(_id: String?, name: String?, companyType: String?, industry: String?, primaryContactId: String?, address: ContactAddress?, phoneNumber: PhoneNumber?, faxNumber: PhoneNumber?, employeeCount: Int64?, revenue: Int64?, tags: [String]?, websites: [String]?, tickers: [Ticker]?, twitterId: TwitterId?, externalSystemUrl: String?, modifyDate: Date?, createDate: Date?, trustor: Trustor?, schema: DataSchema?, customFields: [String:JSON]?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
         
         self._id = _id
         
@@ -77,6 +81,10 @@ public class ExternalOrganization: Codable {
         
         self.trustor = trustor
         
+        self.schema = schema
+        
+        self.customFields = customFields
+        
         self.externalDataSources = externalDataSources
         
         self.selfUri = selfUri
@@ -102,6 +110,8 @@ public class ExternalOrganization: Codable {
         case modifyDate
         case createDate
         case trustor
+        case schema
+        case customFields
         case externalDataSources
         case selfUri
     }

@@ -9,10 +9,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**getFieldconfig**](OrganizationAPI.html#getFieldconfig) | Fetch field config for an entity type |
 | [**getOrganizationsEmbeddedintegration**](OrganizationAPI.html#getOrganizationsEmbeddedintegration) | Get the list of domains that will be allowed to embed PureCloud applications |
+| [**getOrganizationsIpaddressauthentication**](OrganizationAPI.html#getOrganizationsIpaddressauthentication) | Get organization IP address whitelist settings |
 | [**getOrganizationsMe**](OrganizationAPI.html#getOrganizationsMe) | Get organization. |
 | [**getOrganizationsWhitelist**](OrganizationAPI.html#getOrganizationsWhitelist) | Use PUT /api/v2/organizations/embeddedintegration instead |
 | [**patchOrganizationsFeature**](OrganizationAPI.html#patchOrganizationsFeature) | Update organization |
 | [**putOrganizationsEmbeddedintegration**](OrganizationAPI.html#putOrganizationsEmbeddedintegration) | Update the list of domains that will be allowed to embed PureCloud applications |
+| [**putOrganizationsIpaddressauthentication**](OrganizationAPI.html#putOrganizationsIpaddressauthentication) | Update organization IP address whitelist settings |
 | [**putOrganizationsMe**](OrganizationAPI.html#putOrganizationsMe) | Update organization. |
 | [**putOrganizationsWhitelist**](OrganizationAPI.html#putOrganizationsWhitelist) | Use PUT /api/v2/organizations/embeddedintegration instead |
 {: class="table-striped"}
@@ -114,6 +116,54 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EmbeddedIntegration**](EmbeddedIntegration.html)
+
+<a name="getOrganizationsIpaddressauthentication"></a>
+
+# **getOrganizationsIpaddressauthentication**
+
+
+
+> [IpAddressAuthentication](IpAddressAuthentication.html) getOrganizationsIpaddressauthentication()
+
+Get organization IP address whitelist settings
+
+
+
+Wraps GET /api/v2/organizations/ipaddressauthentication  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OrganizationAPI.getOrganizationsIpaddressauthentication() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsIpaddressauthentication was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**IpAddressAuthentication**](IpAddressAuthentication.html)
 
 <a name="getOrganizationsMe"></a>
 
@@ -314,6 +364,58 @@ OrganizationAPI.putOrganizationsEmbeddedintegration(body: body) { (response, err
 ### Return type
 
 [**EmbeddedIntegration**](EmbeddedIntegration.html)
+
+<a name="putOrganizationsIpaddressauthentication"></a>
+
+# **putOrganizationsIpaddressauthentication**
+
+
+
+> [IpAddressAuthentication](IpAddressAuthentication.html) putOrganizationsIpaddressauthentication(body)
+
+Update organization IP address whitelist settings
+
+
+
+Wraps PUT /api/v2/organizations/ipaddressauthentication  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: IpAddressAuthentication = new IpAddressAuthentication(...) // IP address Whitelist settings
+
+// Code example
+OrganizationAPI.putOrganizationsIpaddressauthentication(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.putOrganizationsIpaddressauthentication was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**IpAddressAuthentication**](IpAddressAuthentication.html)| IP address Whitelist settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**IpAddressAuthentication**](IpAddressAuthentication.html)
 
 <a name="putOrganizationsMe"></a>
 

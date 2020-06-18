@@ -7,10 +7,59 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**getAuditsQueryServicemapping**](AuditAPI.html#getAuditsQueryServicemapping) | Get service mapping information used in audits. |
 | [**getAuditsQueryTransactionId**](AuditAPI.html#getAuditsQueryTransactionId) | Get status of audit query execution |
 | [**getAuditsQueryTransactionIdResults**](AuditAPI.html#getAuditsQueryTransactionIdResults) | Get results of audit query |
 | [**postAuditsQuery**](AuditAPI.html#postAuditsQuery) | Create audit query execution |
 {: class="table-striped"}
+
+<a name="getAuditsQueryServicemapping"></a>
+
+# **getAuditsQueryServicemapping**
+
+
+
+> [AuditQueryServiceMapping](AuditQueryServiceMapping.html) getAuditsQueryServicemapping()
+
+Get service mapping information used in audits.
+
+
+
+Wraps GET /api/v2/audits/query/servicemapping  
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AuditAPI.getAuditsQueryServicemapping() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuditAPI.getAuditsQueryServicemapping was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AuditQueryServiceMapping**](AuditQueryServiceMapping.html)
 
 <a name="getAuditsQueryTransactionId"></a>
 

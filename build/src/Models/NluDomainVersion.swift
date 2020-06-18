@@ -18,6 +18,12 @@ public class NluDomainVersion: Codable {
         case error = "Error"
         case unknown = "Unknown"
     }
+    public enum EvaluationStatus: String, Codable { 
+        case unevaluated = "Unevaluated"
+        case evaluating = "Evaluating"
+        case evaluated = "Evaluated"
+        case error = "Error"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The NLU domain of the version. */
@@ -36,6 +42,8 @@ public class NluDomainVersion: Codable {
     public var datePublished: Date?
     /** The training status of the NLU domain version. */
     public var trainingStatus: TrainingStatus?
+    /** The evaluation status of the NLU domain version. */
+    public var evaluationStatus: EvaluationStatus?
     /** The intents defined for this NLU domain version. */
     public var intents: [IntentDefinition]?
     /** The entity types defined for this NLU domain version. */
@@ -43,7 +51,7 @@ public class NluDomainVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, domain: NluDomain?, _description: String?, language: String?, dateCreated: Date?, dateModified: Date?, dateTrained: Date?, datePublished: Date?, trainingStatus: TrainingStatus?, intents: [IntentDefinition]?, entityTypes: [NamedEntityTypeDefinition]?, selfUri: String?) {
+    public init(_id: String?, domain: NluDomain?, _description: String?, language: String?, dateCreated: Date?, dateModified: Date?, dateTrained: Date?, datePublished: Date?, trainingStatus: TrainingStatus?, evaluationStatus: EvaluationStatus?, intents: [IntentDefinition]?, entityTypes: [NamedEntityTypeDefinition]?, selfUri: String?) {
         
         self._id = _id
         
@@ -63,6 +71,8 @@ public class NluDomainVersion: Codable {
         
         self.trainingStatus = trainingStatus
         
+        self.evaluationStatus = evaluationStatus
+        
         self.intents = intents
         
         self.entityTypes = entityTypes
@@ -81,6 +91,7 @@ public class NluDomainVersion: Codable {
         case dateTrained
         case datePublished
         case trainingStatus
+        case evaluationStatus
         case intents
         case entityTypes
         case selfUri

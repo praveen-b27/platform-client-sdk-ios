@@ -11,6 +11,8 @@ import Foundation
 
 public class KnowledgeSearchResponse: Codable {
 
+    /** Search Id */
+    public var searchId: String?
     /** Total number of records returned */
     public var total: Int?
     /** Number of pages returned in the result calculated according to the pageSize and the total */
@@ -19,12 +21,12 @@ public class KnowledgeSearchResponse: Codable {
     public var pageSize: Int?
     /** Current page number for the returned records */
     public var pageNumber: Int?
-    /** ID of the Search Response */
-    public var searchId: String?
     /** Results associated to the search response */
     public var results: [KnowledgeSearchDocument]?
 
-    public init(total: Int?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, searchId: String?, results: [KnowledgeSearchDocument]?) {
+    public init(searchId: String?, total: Int?, pageCount: Int?, pageSize: Int?, pageNumber: Int?, results: [KnowledgeSearchDocument]?) {
+        
+        self.searchId = searchId
         
         self.total = total
         
@@ -33,8 +35,6 @@ public class KnowledgeSearchResponse: Codable {
         self.pageSize = pageSize
         
         self.pageNumber = pageNumber
-        
-        self.searchId = searchId
         
         self.results = results
         

@@ -1564,8 +1564,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2105,8 +2105,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2325,8 +2325,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2559,8 +2559,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3000,8 +3000,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3210,8 +3210,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3420,8 +3420,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3627,8 +3627,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4592,8 +4592,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -4987,8 +4987,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5277,8 +5277,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5393,8 +5393,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6095,8 +6095,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6225,8 +6225,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -7927,8 +7927,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -8413,8 +8413,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -8842,7 +8842,46 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}" ]
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "owner" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "importMode" : "aeiou",
+    "countRecordsFailed" : 123,
+    "countRecordsUpdated" : 123,
+    "selfUri" : "aeiou",
+    "uploadURI" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "errorInformation" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "countRecordsDeleted" : 123,
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "pageSize" : 123
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9016,8 +9055,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9142,8 +9181,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -9574,8 +9613,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9633,6 +9672,382 @@ open class ArchitectAPI {
         ])
 
         let requestBuilder: RequestBuilder<FlowDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+     
+     - parameter flowExecutionId: (path) flow execution ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsExecution(flowExecutionId: String, completion: @escaping ((_ data: FlowRuntimeExecution?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsExecutionWithRequestBuilder(flowExecutionId: flowExecutionId)
+        requestBuilder.execute { (response: Response<FlowRuntimeExecution>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a flow execution's details. Flow execution details are available for several days after the flow is started.
+     
+     - GET /api/v2/flows/executions/{flowExecutionId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "outputData" : {
+    "key" : "{}"
+  },
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "flowVersion" : {
+    "generationId" : "aeiou",
+    "debug" : true,
+    "outputSchema" : "",
+    "inputSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "createdByClient" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "secure" : true,
+    "configurationUri" : "aeiou",
+    "configurationVersion" : "aeiou",
+    "dateCreated" : 123456789,
+    "publishResultUri" : "aeiou",
+    "createdBy" : {
+      "addresses" : [ "" ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "userId" : "aeiou",
+        "status" : "aeiou"
+      },
+      "title" : "aeiou",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "authorization" : {
+        "unusedRoles" : [ "" ],
+        "permissions" : [ "aeiou" ],
+        "permissionPolicies" : [ {
+          "policyDescription" : "aeiou",
+          "resourceConditionNode" : {
+            "operands" : [ {
+              "type" : "aeiou",
+              "value" : "aeiou"
+            } ],
+            "variableName" : "aeiou",
+            "conjunction" : "aeiou",
+            "terms" : [ "" ],
+            "operator" : "aeiou"
+          },
+          "actionSetKey" : "aeiou",
+          "namedResources" : [ "aeiou" ],
+          "policyName" : "aeiou",
+          "entityName" : "aeiou",
+          "domain" : "aeiou",
+          "allowConditions" : true,
+          "id" : "aeiou",
+          "resourceCondition" : "aeiou",
+          "actionSet" : [ "aeiou" ]
+        } ],
+        "roles" : [ {
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      },
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "skillUri" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "station" : {
+        "defaultStation" : "",
+        "lastAssociatedStation" : "",
+        "associatedStation" : {
+          "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "name" : "aeiou",
+          "defaultUser" : "",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "associatedUser" : "",
+          "providerInfo" : {
+            "key" : "aeiou"
+          }
+        },
+        "effectiveStation" : ""
+      },
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "department" : "aeiou",
+      "presence" : {
+        "presenceDefinition" : {
+          "systemPresence" : "aeiou",
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "source" : "aeiou",
+        "message" : "aeiou",
+        "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
+      "email" : "aeiou",
+      "images" : [ {
+        "imageUri" : "aeiou",
+        "resolution" : "aeiou"
+      } ],
+      "manager" : "",
+      "employerInfo" : {
+        "employeeType" : "aeiou",
+        "dateHire" : "aeiou",
+        "employeeId" : "aeiou",
+        "officialName" : "aeiou"
+      },
+      "languages" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "languageUri" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "selfUri" : "aeiou",
+      "conversationSummary" : {
+        "call" : {
+          "enterprise" : "",
+          "contactCenter" : {
+            "acw" : 123,
+            "active" : 123
+          }
+        },
+        "socialExpression" : "",
+        "chat" : "",
+        "callback" : "",
+        "video" : "",
+        "message" : "",
+        "userId" : "aeiou",
+        "email" : ""
+      },
+      "groups" : [ {
+        "images" : [ "" ],
+        "addresses" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "visibility" : "aeiou",
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "owners" : [ "" ],
+        "type" : "aeiou",
+        "version" : 123,
+        "rulesVisible" : true,
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "aeiou",
+        "address" : "aeiou",
+        "display" : "aeiou",
+        "mediaType" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "biography" : {
+        "hobbies" : [ "aeiou" ],
+        "biography" : "aeiou",
+        "interests" : [ "aeiou" ],
+        "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
+      "certifications" : [ "aeiou" ],
+      "version" : 123,
+      "outOfOffice" : {
+        "endDate" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "active" : true,
+        "id" : "aeiou",
+        "user" : "",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "indefinite" : true
+      },
+      "languagePreference" : "aeiou",
+      "profileSkills" : [ "aeiou" ],
+      "chat" : {
+        "jabberId" : "aeiou"
+      },
+      "name" : "aeiou",
+      "locations" : [ {
+        "notes" : "aeiou",
+        "coordinates" : {
+          "key" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "locationDefinition" : "",
+        "id" : "aeiou",
+        "floorplanId" : "aeiou"
+      } ],
+      "username" : "aeiou",
+      "geolocation" : {
+        "country" : "aeiou",
+        "city" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "locations" : [ {
+          "images" : "aeiou",
+          "address" : {
+            "zipcode" : "aeiou",
+            "country" : "aeiou",
+            "city" : "aeiou",
+            "street1" : "aeiou",
+            "countryName" : "aeiou",
+            "state" : "aeiou",
+            "street2" : "aeiou"
+          },
+          "notes" : "aeiou",
+          "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
+          "selfUri" : "aeiou",
+          "profileImage" : [ {
+            "imageUri" : "aeiou",
+            "resolution" : "aeiou"
+          } ],
+          "emergencyNumber" : {
+            "number" : "aeiou",
+            "e164" : "aeiou",
+            "type" : "aeiou"
+          },
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "addressStored" : true,
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
+        } ],
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "region" : "aeiou",
+        "primary" : true,
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      }
+    },
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "commitVersion" : "aeiou"
+  },
+  "id" : "aeiou",
+  "dateLaunched" : "2000-01-23T04:56:07.000+0000",
+  "flowErrorInfo" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "completionReason" : "aeiou",
+  "conversation" : "",
+  "status" : "aeiou"
+}}]
+     
+     - parameter flowExecutionId: (path) flow execution ID 
+
+     - returns: RequestBuilder<FlowRuntimeExecution> 
+     */
+    open class func getFlowsExecutionWithRequestBuilder(flowExecutionId: String) -> RequestBuilder<FlowRuntimeExecution> {
+        var path = "/api/v2/flows/executions/{flowExecutionId}"
+        let flowExecutionIdPreEscape = "\(flowExecutionId)"
+        let flowExecutionIdPostEscape = flowExecutionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowExecutionId}", with: flowExecutionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FlowRuntimeExecution>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -10321,8 +10736,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -15193,6 +15608,72 @@ open class ArchitectAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataTable>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+     
+     - parameter flowLaunchRequest: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsExecutions(flowLaunchRequest: FlowExecutionLaunchRequest, completion: @escaping ((_ data: FlowExecutionLaunchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsExecutionsWithRequestBuilder(flowLaunchRequest: flowLaunchRequest)
+        requestBuilder.execute { (response: Response<FlowExecutionLaunchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
+     
+     - POST /api/v2/flows/executions
+     - The launch is asynchronous, it returns as soon as the flow starts. You can use the returned ID to query its status if you need.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "flowVersion" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "id" : "aeiou"
+}}]
+     
+     - parameter flowLaunchRequest: (body)  
+
+     - returns: RequestBuilder<FlowExecutionLaunchResponse> 
+     */
+    open class func postFlowsExecutionsWithRequestBuilder(flowLaunchRequest: FlowExecutionLaunchRequest) -> RequestBuilder<FlowExecutionLaunchResponse> {
+        let path = "/api/v2/flows/executions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: flowLaunchRequest)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FlowExecutionLaunchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

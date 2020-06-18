@@ -11,10 +11,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOauthAuthorization**](OAuthAPI.html#getOauthAuthorization) | Get a client that is authorized by the resource owner |
 | [**getOauthAuthorizations**](OAuthAPI.html#getOauthAuthorizations) | List clients that are authorized by the resource owner |
 | [**getOauthClient**](OAuthAPI.html#getOauthClient) | Get OAuth Client |
+| [**getOauthClientUsageQueryResult**](OAuthAPI.html#getOauthClientUsageQueryResult) | Get the results of a usage query |
+| [**getOauthClientUsageSummary**](OAuthAPI.html#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
 | [**getOauthClients**](OAuthAPI.html#getOauthClients) | The list of OAuth clients |
 | [**getOauthScope**](OAuthAPI.html#getOauthScope) | An OAuth scope |
 | [**getOauthScopes**](OAuthAPI.html#getOauthScopes) | The list of OAuth scopes |
 | [**postOauthClientSecret**](OAuthAPI.html#postOauthClientSecret) | Regenerate Client Secret |
+| [**postOauthClientUsageQuery**](OAuthAPI.html#postOauthClientUsageQuery) | Query for OAuth client API usage |
 | [**postOauthClients**](OAuthAPI.html#postOauthClients) | Create OAuth client |
 | [**putOauthClient**](OAuthAPI.html#putOauthClient) | Update OAuth Client |
 {: class="table-striped"}
@@ -222,6 +225,114 @@ OAuthAPI.getOauthClient(clientId: clientId) { (response, error) in
 
 [**OAuthClient**](OAuthClient.html)
 
+<a name="getOauthClientUsageQueryResult"></a>
+
+# **getOauthClientUsageQueryResult**
+
+
+
+> [ApiUsageQueryResult](ApiUsageQueryResult.html) getOauthClientUsageQueryResult(executionId, clientId)
+
+Get the results of a usage query
+
+
+
+Wraps GET /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}  
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let executionId: String = "" // ID of the query execution
+let clientId: String = "" // Client ID
+
+// Code example
+OAuthAPI.getOauthClientUsageQueryResult(executionId: executionId, clientId: clientId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OAuthAPI.getOauthClientUsageQueryResult was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **executionId** | **String**| ID of the query execution | |
+| **clientId** | **String**| Client ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
+
+<a name="getOauthClientUsageSummary"></a>
+
+# **getOauthClientUsageSummary**
+
+
+
+> [UsageExecutionResult](UsageExecutionResult.html) getOauthClientUsageSummary(clientId, days)
+
+Get a summary of OAuth client API usage
+
+After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+Wraps GET /api/v2/oauth/clients/{clientId}/usage/summary  
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let clientId: String = "" // Client ID
+let days: String = "7" // Previous number of days to query
+
+// Code example
+OAuthAPI.getOauthClientUsageSummary(clientId: clientId, days: days) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OAuthAPI.getOauthClientUsageSummary was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **clientId** | **String**| Client ID | |
+| **days** | **String**| Previous number of days to query | [optional] [default to 7] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UsageExecutionResult**](UsageExecutionResult.html)
+
 <a name="getOauthClients"></a>
 
 # **getOauthClients**
@@ -425,6 +536,60 @@ OAuthAPI.postOauthClientSecret(clientId: clientId) { (response, error) in
 ### Return type
 
 [**OAuthClient**](OAuthClient.html)
+
+<a name="postOauthClientUsageQuery"></a>
+
+# **postOauthClientUsageQuery**
+
+
+
+> [UsageExecutionResult](UsageExecutionResult.html) postOauthClientUsageQuery(clientId, body)
+
+Query for OAuth client API usage
+
+After calling this method, you will then need to poll for the query results based on the returned execution Id
+
+Wraps POST /api/v2/oauth/clients/{clientId}/usage/query  
+
+Requires ANY permissions: 
+
+* oauth:client:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let clientId: String = "" // Client ID
+let body: ApiUsageQuery = new ApiUsageQuery(...) // Query
+
+// Code example
+OAuthAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OAuthAPI.postOauthClientUsageQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **clientId** | **String**| Client ID | |
+| **body** | [**ApiUsageQuery**](ApiUsageQuery.html)| Query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UsageExecutionResult**](UsageExecutionResult.html)
 
 <a name="postOauthClients"></a>
 

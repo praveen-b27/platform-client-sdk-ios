@@ -39,8 +39,10 @@ public class AuditQueryExecutionStatusResponse: Codable {
     public var serviceName: ServiceName?
     /** Filters for the audit query. */
     public var filters: [AuditQueryFilter]?
+    /** Sort parameter for the audit query. */
+    public var sort: [AuditQuerySort]?
 
-    public init(_id: String?, state: State?, startDate: Date?, interval: String?, serviceName: ServiceName?, filters: [AuditQueryFilter]?) {
+    public init(_id: String?, state: State?, startDate: Date?, interval: String?, serviceName: ServiceName?, filters: [AuditQueryFilter]?, sort: [AuditQuerySort]?) {
         
         self._id = _id
         
@@ -54,6 +56,8 @@ public class AuditQueryExecutionStatusResponse: Codable {
         
         self.filters = filters
         
+        self.sort = sort
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -63,6 +67,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case interval
         case serviceName
         case filters
+        case sort
     }
 
 

@@ -11,6 +11,69 @@ import Foundation
 
 open class AuditAPI {
     
+    /**
+     
+     Get service mapping information used in audits.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuditsQueryServicemapping(completion: @escaping ((_ data: AuditQueryServiceMapping?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuditsQueryServicemappingWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AuditQueryServiceMapping>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get service mapping information used in audits.
+     
+     - GET /api/v2/audits/query/servicemapping
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "services" : [ {
+    "entities" : [ {
+      "name" : "aeiou",
+      "actions" : [ "aeiou" ]
+    } ],
+    "name" : "aeiou"
+  } ]
+}}]
+
+     - returns: RequestBuilder<AuditQueryServiceMapping> 
+     */
+    open class func getAuditsQueryServicemappingWithRequestBuilder() -> RequestBuilder<AuditQueryServiceMapping> {
+        let path = "/api/v2/audits/query/servicemapping"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuditQueryServiceMapping>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -54,6 +117,10 @@ open class AuditAPI {
   "filters" : [ {
     "property" : "aeiou",
     "value" : "aeiou"
+  } ],
+  "sort" : [ {
+    "sortOrder" : "aeiou",
+    "name" : "aeiou"
   } ],
   "serviceName" : "aeiou",
   "startDate" : "2000-01-23T04:56:07.000+0000"
@@ -254,6 +321,10 @@ open class AuditAPI {
   "filters" : [ {
     "property" : "aeiou",
     "value" : "aeiou"
+  } ],
+  "sort" : [ {
+    "sortOrder" : "aeiou",
+    "name" : "aeiou"
   } ],
   "serviceName" : "aeiou",
   "startDate" : "2000-01-23T04:56:07.000+0000"

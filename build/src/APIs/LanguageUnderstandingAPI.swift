@@ -172,7 +172,6 @@ open class LanguageUnderstandingAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "draftVersion" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -188,14 +187,15 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "domain" : "",
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "domain" : "",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -208,7 +208,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -336,7 +337,6 @@ open class LanguageUnderstandingAPI {
     "id" : "aeiou",
     "text" : "aeiou",
     "version" : {
-      "datePublished" : "2000-01-23T04:56:07.000+0000",
       "intents" : [ {
         "utterances" : [ {
           "segments" : [ {
@@ -352,6 +352,13 @@ open class LanguageUnderstandingAPI {
           "entityName" : "aeiou"
         } ]
       } ],
+      "dateTrained" : "2000-01-23T04:56:07.000+0000",
+      "trainingStatus" : "aeiou",
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "language" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "datePublished" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "domain" : {
         "lastPublishedVersion" : "",
@@ -362,12 +369,6 @@ open class LanguageUnderstandingAPI {
         "id" : "aeiou",
         "draftVersion" : ""
       },
-      "dateTrained" : "2000-01-23T04:56:07.000+0000",
-      "trainingStatus" : "aeiou",
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "language" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
       "entityTypes" : [ {
         "name" : "aeiou",
         "description" : "aeiou",
@@ -380,15 +381,16 @@ open class LanguageUnderstandingAPI {
           } ]
         }
       } ],
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "evaluationStatus" : "aeiou"
     }
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -513,7 +515,6 @@ open class LanguageUnderstandingAPI {
   "id" : "aeiou",
   "text" : "aeiou",
   "version" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -529,6 +530,13 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+0000",
+    "trainingStatus" : "aeiou",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "language" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
       "lastPublishedVersion" : "",
@@ -539,12 +547,6 @@ open class LanguageUnderstandingAPI {
       "id" : "aeiou",
       "draftVersion" : ""
     },
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -557,7 +559,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -639,7 +642,6 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
   "intents" : [ {
     "utterances" : [ {
       "segments" : [ {
@@ -655,6 +657,13 @@ open class LanguageUnderstandingAPI {
       "entityName" : "aeiou"
     } ]
   } ],
+  "dateTrained" : "2000-01-23T04:56:07.000+0000",
+  "trainingStatus" : "aeiou",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "language" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "domain" : {
     "lastPublishedVersion" : "",
@@ -665,12 +674,6 @@ open class LanguageUnderstandingAPI {
     "id" : "aeiou",
     "draftVersion" : ""
   },
-  "dateTrained" : "2000-01-23T04:56:07.000+0000",
-  "trainingStatus" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "entityTypes" : [ {
     "name" : "aeiou",
     "description" : "aeiou",
@@ -683,7 +686,8 @@ open class LanguageUnderstandingAPI {
       } ]
     }
   } ],
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "evaluationStatus" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -775,7 +779,6 @@ open class LanguageUnderstandingAPI {
     "name" : "aeiou"
   } ],
   "version" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -791,6 +794,13 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+0000",
+    "trainingStatus" : "aeiou",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "language" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
       "lastPublishedVersion" : "",
@@ -801,12 +811,6 @@ open class LanguageUnderstandingAPI {
       "id" : "aeiou",
       "draftVersion" : ""
     },
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -819,7 +823,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -902,7 +907,6 @@ open class LanguageUnderstandingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -918,6 +922,13 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+0000",
+    "trainingStatus" : "aeiou",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "language" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
       "lastPublishedVersion" : "",
@@ -928,12 +939,6 @@ open class LanguageUnderstandingAPI {
       "id" : "aeiou",
       "draftVersion" : ""
     },
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -946,14 +951,15 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1044,7 +1050,6 @@ open class LanguageUnderstandingAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "draftVersion" : {
-      "datePublished" : "2000-01-23T04:56:07.000+0000",
       "intents" : [ {
         "utterances" : [ {
           "segments" : [ {
@@ -1060,14 +1065,15 @@ open class LanguageUnderstandingAPI {
           "entityName" : "aeiou"
         } ]
       } ],
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
-      "domain" : "",
       "dateTrained" : "2000-01-23T04:56:07.000+0000",
       "trainingStatus" : "aeiou",
       "selfUri" : "aeiou",
       "description" : "aeiou",
       "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "datePublished" : "2000-01-23T04:56:07.000+0000",
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "domain" : "",
       "entityTypes" : [ {
         "name" : "aeiou",
         "description" : "aeiou",
@@ -1080,15 +1086,16 @@ open class LanguageUnderstandingAPI {
           } ]
         }
       } ],
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "evaluationStatus" : "aeiou"
     }
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1168,7 +1175,6 @@ open class LanguageUnderstandingAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "draftVersion" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -1184,14 +1190,15 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "domain" : "",
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "domain" : "",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1204,7 +1211,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -1290,7 +1298,6 @@ open class LanguageUnderstandingAPI {
   "id" : "aeiou",
   "text" : "aeiou",
   "version" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -1306,6 +1313,13 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+0000",
+    "trainingStatus" : "aeiou",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "language" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
       "lastPublishedVersion" : "",
@@ -1316,12 +1330,6 @@ open class LanguageUnderstandingAPI {
       "id" : "aeiou",
       "draftVersion" : ""
     },
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1334,7 +1342,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -1427,7 +1436,6 @@ open class LanguageUnderstandingAPI {
     "text" : "aeiou"
   },
   "version" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -1443,6 +1451,13 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+0000",
+    "trainingStatus" : "aeiou",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "language" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
       "lastPublishedVersion" : "",
@@ -1453,12 +1468,6 @@ open class LanguageUnderstandingAPI {
       "id" : "aeiou",
       "draftVersion" : ""
     },
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1471,7 +1480,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -1542,7 +1552,6 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
   "intents" : [ {
     "utterances" : [ {
       "segments" : [ {
@@ -1558,6 +1567,13 @@ open class LanguageUnderstandingAPI {
       "entityName" : "aeiou"
     } ]
   } ],
+  "dateTrained" : "2000-01-23T04:56:07.000+0000",
+  "trainingStatus" : "aeiou",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "language" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "domain" : {
     "lastPublishedVersion" : "",
@@ -1568,12 +1584,6 @@ open class LanguageUnderstandingAPI {
     "id" : "aeiou",
     "draftVersion" : ""
   },
-  "dateTrained" : "2000-01-23T04:56:07.000+0000",
-  "trainingStatus" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "entityTypes" : [ {
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1586,7 +1596,8 @@ open class LanguageUnderstandingAPI {
       } ]
     }
   } ],
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "evaluationStatus" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1660,7 +1671,6 @@ open class LanguageUnderstandingAPI {
      - examples: [{contentType=application/json, example={
   "message" : "aeiou",
   "version" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -1676,6 +1686,13 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
+    "dateTrained" : "2000-01-23T04:56:07.000+0000",
+    "trainingStatus" : "aeiou",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "language" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
       "lastPublishedVersion" : "",
@@ -1686,12 +1703,6 @@ open class LanguageUnderstandingAPI {
       "id" : "aeiou",
       "draftVersion" : ""
     },
-    "dateTrained" : "2000-01-23T04:56:07.000+0000",
-    "trainingStatus" : "aeiou",
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "language" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1704,7 +1715,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -1781,7 +1793,6 @@ open class LanguageUnderstandingAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "draftVersion" : {
-    "datePublished" : "2000-01-23T04:56:07.000+0000",
     "intents" : [ {
       "utterances" : [ {
         "segments" : [ {
@@ -1797,14 +1808,15 @@ open class LanguageUnderstandingAPI {
         "entityName" : "aeiou"
       } ]
     } ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "domain" : "",
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "datePublished" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "domain" : "",
     "entityTypes" : [ {
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1817,7 +1829,8 @@ open class LanguageUnderstandingAPI {
         } ]
       }
     } ],
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "evaluationStatus" : "aeiou"
   }
 }}]
      
@@ -1883,7 +1896,6 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "datePublished" : "2000-01-23T04:56:07.000+0000",
   "intents" : [ {
     "utterances" : [ {
       "segments" : [ {
@@ -1899,6 +1911,13 @@ open class LanguageUnderstandingAPI {
       "entityName" : "aeiou"
     } ]
   } ],
+  "dateTrained" : "2000-01-23T04:56:07.000+0000",
+  "trainingStatus" : "aeiou",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "language" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "domain" : {
     "lastPublishedVersion" : "",
@@ -1909,12 +1928,6 @@ open class LanguageUnderstandingAPI {
     "id" : "aeiou",
     "draftVersion" : ""
   },
-  "dateTrained" : "2000-01-23T04:56:07.000+0000",
-  "trainingStatus" : "aeiou",
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "language" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "entityTypes" : [ {
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1927,7 +1940,8 @@ open class LanguageUnderstandingAPI {
       } ]
     }
   } ],
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "evaluationStatus" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 

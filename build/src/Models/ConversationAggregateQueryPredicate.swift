@@ -29,6 +29,7 @@ public class ConversationAggregateQueryPredicate: Codable {
         case divisionid = "divisionId"
         case dnis = "dnis"
         case edgeid = "edgeId"
+        case externalcontactid = "externalContactId"
         case externalmediacount = "externalMediaCount"
         case externalorganizationid = "externalOrganizationId"
         case flaggedreason = "flaggedReason"

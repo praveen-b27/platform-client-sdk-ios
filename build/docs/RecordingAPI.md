@@ -319,7 +319,7 @@ RecordingAPI.deleteRecordingMediaretentionpolicy(policyId: policyId) { (error) i
 
 
 
-> [Recording](Recording.html) getConversationRecording(conversationId, recordingId, formatId, download, fileName, locale)
+> [Recording](Recording.html) getConversationRecording(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale)
 
 Gets a specific recording.
 
@@ -342,12 +342,15 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let conversationId: String = "" // Conversation ID
 let recordingId: String = "" // Recording ID
 let formatId: RecordingAPI.FormatId_getConversationRecording = RecordingAPI.FormatId_getConversationRecording.enummember // The desired media format.
+let emailFormatId: RecordingAPI.EmailFormatId_getConversationRecording = RecordingAPI.EmailFormatId_getConversationRecording.enummember // The desired media format when downloading an email recording.
+let chatFormatId: RecordingAPI.ChatFormatId_getConversationRecording = RecordingAPI.ChatFormatId_getConversationRecording.enummember // The desired media format when downloading a chat recording.
+let messageFormatId: RecordingAPI.MessageFormatId_getConversationRecording = RecordingAPI.MessageFormatId_getConversationRecording.enummember // The desired media format when downloading a message recording.
 let download: Bool = false // requesting a download format of the recording
 let fileName: String = "" // the name of the downloaded fileName
 let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
 
 // Code example
-RecordingAPI.getConversationRecording(conversationId: conversationId, recordingId: recordingId, formatId: formatId, download: download, fileName: fileName, locale: locale) { (response, error) in
+RecordingAPI.getConversationRecording(conversationId: conversationId, recordingId: recordingId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -365,6 +368,9 @@ RecordingAPI.getConversationRecording(conversationId: conversationId, recordingI
 | **conversationId** | **String**| Conversation ID | |
 | **recordingId** | **String**| Recording ID | |
 | **formatId** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **emailFormatId** | **String**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: eml ("EML"), _none ("NONE") |
+| **chatFormatId** | **String**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
+| **messageFormatId** | **String**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
 | **download** | **Bool**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
 | **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
@@ -704,7 +710,7 @@ RecordingAPI.getOrphanrecording(orphanId: orphanId) { (response, error) in
 
 
 
-> [Recording](Recording.html) getOrphanrecordingMedia(orphanId, formatId, download, fileName, locale)
+> [Recording](Recording.html) getOrphanrecordingMedia(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale)
 
 Gets the media of a single orphan recording
 
@@ -726,12 +732,15 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let orphanId: String = "" // Orphan ID
 let formatId: RecordingAPI.FormatId_getOrphanrecordingMedia = RecordingAPI.FormatId_getOrphanrecordingMedia.enummember // The desired media format.
+let emailFormatId: RecordingAPI.EmailFormatId_getOrphanrecordingMedia = RecordingAPI.EmailFormatId_getOrphanrecordingMedia.enummember // The desired media format when downloading an email recording.
+let chatFormatId: RecordingAPI.ChatFormatId_getOrphanrecordingMedia = RecordingAPI.ChatFormatId_getOrphanrecordingMedia.enummember // The desired media format when downloading a chat recording.
+let messageFormatId: RecordingAPI.MessageFormatId_getOrphanrecordingMedia = RecordingAPI.MessageFormatId_getOrphanrecordingMedia.enummember // The desired media format when downloading a message recording.
 let download: Bool = false // requesting a download format of the recording
 let fileName: String = "" // the name of the downloaded fileName
 let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
 
 // Code example
-RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, download: download, fileName: fileName, locale: locale) { (response, error) in
+RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -748,6 +757,9 @@ RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, dow
 | ------------- | ------------- | ------------- | ------------- |
 | **orphanId** | **String**| Orphan ID | |
 | **formatId** | **String**| The desired media format. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **emailFormatId** | **String**| The desired media format when downloading an email recording. | [optional] [default to EML]<br />**Values**: eml ("EML"), _none ("NONE") |
+| **chatFormatId** | **String**| The desired media format when downloading a chat recording. | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
+| **messageFormatId** | **String**| The desired media format when downloading a message recording. | [optional] [default to ZIP]<br />**Values**: zip ("ZIP"), _none ("NONE") |
 | **download** | **Bool**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
 | **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |

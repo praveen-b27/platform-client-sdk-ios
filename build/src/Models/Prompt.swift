@@ -16,7 +16,9 @@ public class Prompt: Codable {
     /** The prompt name. */
     public var name: String?
     public var _description: String?
+    /** List of resources associated with this prompt */
     public var resources: [PromptAsset]?
+    /** Current prompt operation status */
     public var currentOperation: Operation?
     /** The URI for this object */
     public var selfUri: String?

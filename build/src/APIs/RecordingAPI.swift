@@ -151,8 +151,12 @@ open class RecordingAPI {
       "messageText" : "aeiou",
       "fromUser" : "",
       "fromExternalContact" : {
+        "schema" : "",
         "lastName" : "aeiou",
         "workEmail" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "title" : "aeiou",
         "twitterId" : {
           "profileUrl" : "aeiou",
@@ -190,9 +194,34 @@ open class RecordingAPI {
           } ]
         },
         "externalOrganization" : {
+          "schema" : {
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
+            "createdBy" : "",
+            "jsonSchema" : {
+              "$schema" : "aeiou",
+              "description" : "aeiou",
+              "id" : "aeiou",
+              "additionalProperties" : "{}",
+              "title" : "aeiou",
+              "type" : "aeiou",
+              "required" : [ "aeiou" ],
+              "properties" : {
+                "key" : "{}"
+              }
+            },
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "appliesTo" : [ "aeiou" ],
+            "id" : "aeiou",
+            "version" : 123,
+            "enabled" : true
+          },
           "address" : "",
           "modifyDate" : "2000-01-23T04:56:07.000+0000",
           "companyType" : "aeiou",
+          "customFields" : {
+            "key" : "{}"
+          },
           "selfUri" : "aeiou",
           "industry" : "aeiou",
           "employeeCount" : 123456789,
@@ -879,6 +908,30 @@ open class RecordingAPI {
     
     
     
+    public enum EmailFormatId_getConversationRecording: String { 
+        case eml = "EML"
+        case _none = "NONE"
+    }
+
+    
+    
+    
+    public enum ChatFormatId_getConversationRecording: String { 
+        case zip = "ZIP"
+        case _none = "NONE"
+    }
+
+    
+    
+    
+    public enum MessageFormatId_getConversationRecording: String { 
+        case zip = "ZIP"
+        case _none = "NONE"
+    }
+
+    
+    
+    
     
     
     
@@ -891,13 +944,16 @@ open class RecordingAPI {
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
+     - parameter emailFormatId: (query) The desired media format when downloading an email recording. (optional, default to EML)
+     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. (optional, default to ZIP)
+     - parameter messageFormatId: (query) The desired media format when downloading a message recording. (optional, default to ZIP)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationRecording(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, formatId: formatId, download: download, fileName: fileName, locale: locale)
+    open class func getConversationRecording(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, emailFormatId: EmailFormatId_getConversationRecording? = nil, chatFormatId: ChatFormatId_getConversationRecording? = nil, messageFormatId: MessageFormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale)
         requestBuilder.execute { (response: Response<Recording>?, error) -> Void in
             do {
                 if let e = error {
@@ -950,8 +1006,12 @@ open class RecordingAPI {
     "messageText" : "aeiou",
     "fromUser" : "",
     "fromExternalContact" : {
+      "schema" : "",
       "lastName" : "aeiou",
       "workEmail" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "title" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
@@ -989,9 +1049,38 @@ open class RecordingAPI {
         } ]
       },
       "externalOrganization" : {
+        "schema" : {
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "createdBy" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
+          "jsonSchema" : {
+            "$schema" : "aeiou",
+            "description" : "aeiou",
+            "id" : "aeiou",
+            "additionalProperties" : "{}",
+            "title" : "aeiou",
+            "type" : "aeiou",
+            "required" : [ "aeiou" ],
+            "properties" : {
+              "key" : "{}"
+            }
+          },
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "appliesTo" : [ "aeiou" ],
+          "id" : "aeiou",
+          "version" : 123,
+          "enabled" : true
+        },
         "address" : "",
         "modifyDate" : "2000-01-23T04:56:07.000+0000",
         "companyType" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "selfUri" : "aeiou",
         "industry" : "aeiou",
         "employeeCount" : 123456789,
@@ -1441,13 +1530,16 @@ open class RecordingAPI {
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
+     - parameter emailFormatId: (query) The desired media format when downloading an email recording. (optional, default to EML)
+     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. (optional, default to ZIP)
+     - parameter messageFormatId: (query) The desired media format when downloading a message recording. (optional, default to ZIP)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
 
      - returns: RequestBuilder<Recording> 
      */
-    open class func getConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
+    open class func getConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, emailFormatId: EmailFormatId_getConversationRecording? = nil, chatFormatId: ChatFormatId_getConversationRecording? = nil, messageFormatId: MessageFormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
         var path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1467,6 +1559,12 @@ open class RecordingAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
             "formatId": formatId?.rawValue, 
+            
+            "emailFormatId": emailFormatId?.rawValue, 
+            
+            "chatFormatId": chatFormatId?.rawValue, 
+            
+            "messageFormatId": messageFormatId?.rawValue, 
             
             "download": download, 
             
@@ -2236,8 +2334,12 @@ open class RecordingAPI {
     "messageText" : "aeiou",
     "fromUser" : "",
     "fromExternalContact" : {
+      "schema" : "",
       "lastName" : "aeiou",
       "workEmail" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "title" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
@@ -2275,9 +2377,38 @@ open class RecordingAPI {
         } ]
       },
       "externalOrganization" : {
+        "schema" : {
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "createdBy" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
+          "jsonSchema" : {
+            "$schema" : "aeiou",
+            "description" : "aeiou",
+            "id" : "aeiou",
+            "additionalProperties" : "{}",
+            "title" : "aeiou",
+            "type" : "aeiou",
+            "required" : [ "aeiou" ],
+            "properties" : {
+              "key" : "{}"
+            }
+          },
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "appliesTo" : [ "aeiou" ],
+          "id" : "aeiou",
+          "version" : 123,
+          "enabled" : true
+        },
         "address" : "",
         "modifyDate" : "2000-01-23T04:56:07.000+0000",
         "companyType" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "selfUri" : "aeiou",
         "industry" : "aeiou",
         "employeeCount" : 123456789,
@@ -3191,8 +3322,12 @@ open class RecordingAPI {
     "messageText" : "aeiou",
     "fromUser" : "",
     "fromExternalContact" : {
+      "schema" : "",
       "lastName" : "aeiou",
       "workEmail" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "title" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
@@ -3230,9 +3365,38 @@ open class RecordingAPI {
         } ]
       },
       "externalOrganization" : {
+        "schema" : {
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "createdBy" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
+          "jsonSchema" : {
+            "$schema" : "aeiou",
+            "description" : "aeiou",
+            "id" : "aeiou",
+            "additionalProperties" : "{}",
+            "title" : "aeiou",
+            "type" : "aeiou",
+            "required" : [ "aeiou" ],
+            "properties" : {
+              "key" : "{}"
+            }
+          },
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "appliesTo" : [ "aeiou" ],
+          "id" : "aeiou",
+          "version" : 123,
+          "enabled" : true
+        },
         "address" : "",
         "modifyDate" : "2000-01-23T04:56:07.000+0000",
         "companyType" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "selfUri" : "aeiou",
         "industry" : "aeiou",
         "employeeCount" : 123456789,
@@ -3784,8 +3948,12 @@ open class RecordingAPI {
       "messageText" : "aeiou",
       "fromUser" : "",
       "fromExternalContact" : {
+        "schema" : "",
         "lastName" : "aeiou",
         "workEmail" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "title" : "aeiou",
         "twitterId" : {
           "profileUrl" : "aeiou",
@@ -3823,9 +3991,34 @@ open class RecordingAPI {
           } ]
         },
         "externalOrganization" : {
+          "schema" : {
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
+            "createdBy" : "",
+            "jsonSchema" : {
+              "$schema" : "aeiou",
+              "description" : "aeiou",
+              "id" : "aeiou",
+              "additionalProperties" : "{}",
+              "title" : "aeiou",
+              "type" : "aeiou",
+              "required" : [ "aeiou" ],
+              "properties" : {
+                "key" : "{}"
+              }
+            },
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "appliesTo" : [ "aeiou" ],
+            "id" : "aeiou",
+            "version" : 123,
+            "enabled" : true
+          },
           "address" : "",
           "modifyDate" : "2000-01-23T04:56:07.000+0000",
           "companyType" : "aeiou",
+          "customFields" : {
+            "key" : "{}"
+          },
           "selfUri" : "aeiou",
           "industry" : "aeiou",
           "employeeCount" : 123456789,
@@ -4343,6 +4536,30 @@ open class RecordingAPI {
     
     
     
+    public enum EmailFormatId_getOrphanrecordingMedia: String { 
+        case eml = "EML"
+        case _none = "NONE"
+    }
+
+    
+    
+    
+    public enum ChatFormatId_getOrphanrecordingMedia: String { 
+        case zip = "ZIP"
+        case _none = "NONE"
+    }
+
+    
+    
+    
+    public enum MessageFormatId_getOrphanrecordingMedia: String { 
+        case zip = "ZIP"
+        case _none = "NONE"
+    }
+
+    
+    
+    
     
     
     
@@ -4354,13 +4571,16 @@ open class RecordingAPI {
      
      - parameter orphanId: (path) Orphan ID 
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
+     - parameter emailFormatId: (query) The desired media format when downloading an email recording. (optional, default to EML)
+     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. (optional, default to ZIP)
+     - parameter messageFormatId: (query) The desired media format when downloading a message recording. (optional, default to ZIP)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOrphanrecordingMedia(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOrphanrecordingMediaWithRequestBuilder(orphanId: orphanId, formatId: formatId, download: download, fileName: fileName, locale: locale)
+    open class func getOrphanrecordingMedia(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, emailFormatId: EmailFormatId_getOrphanrecordingMedia? = nil, chatFormatId: ChatFormatId_getOrphanrecordingMedia? = nil, messageFormatId: MessageFormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrphanrecordingMediaWithRequestBuilder(orphanId: orphanId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale)
         requestBuilder.execute { (response: Response<Recording>?, error) -> Void in
             do {
                 if let e = error {
@@ -4413,8 +4633,12 @@ open class RecordingAPI {
     "messageText" : "aeiou",
     "fromUser" : "",
     "fromExternalContact" : {
+      "schema" : "",
       "lastName" : "aeiou",
       "workEmail" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "title" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
@@ -4452,9 +4676,38 @@ open class RecordingAPI {
         } ]
       },
       "externalOrganization" : {
+        "schema" : {
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "createdBy" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
+          "jsonSchema" : {
+            "$schema" : "aeiou",
+            "description" : "aeiou",
+            "id" : "aeiou",
+            "additionalProperties" : "{}",
+            "title" : "aeiou",
+            "type" : "aeiou",
+            "required" : [ "aeiou" ],
+            "properties" : {
+              "key" : "{}"
+            }
+          },
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "appliesTo" : [ "aeiou" ],
+          "id" : "aeiou",
+          "version" : 123,
+          "enabled" : true
+        },
         "address" : "",
         "modifyDate" : "2000-01-23T04:56:07.000+0000",
         "companyType" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "selfUri" : "aeiou",
         "industry" : "aeiou",
         "employeeCount" : 123456789,
@@ -4903,13 +5156,16 @@ open class RecordingAPI {
      
      - parameter orphanId: (path) Orphan ID 
      - parameter formatId: (query) The desired media format. (optional, default to WEBM)
+     - parameter emailFormatId: (query) The desired media format when downloading an email recording. (optional, default to EML)
+     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. (optional, default to ZIP)
+     - parameter messageFormatId: (query) The desired media format when downloading a message recording. (optional, default to ZIP)
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
 
      - returns: RequestBuilder<Recording> 
      */
-    open class func getOrphanrecordingMediaWithRequestBuilder(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
+    open class func getOrphanrecordingMediaWithRequestBuilder(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, emailFormatId: EmailFormatId_getOrphanrecordingMedia? = nil, chatFormatId: ChatFormatId_getOrphanrecordingMedia? = nil, messageFormatId: MessageFormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
         var path = "/api/v2/orphanrecordings/{orphanId}/media"
         let orphanIdPreEscape = "\(orphanId)"
         let orphanIdPostEscape = orphanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4926,6 +5182,12 @@ open class RecordingAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
             "formatId": formatId?.rawValue, 
+            
+            "emailFormatId": emailFormatId?.rawValue, 
+            
+            "chatFormatId": chatFormatId?.rawValue, 
+            
+            "messageFormatId": messageFormatId?.rawValue, 
             
             "download": download, 
             
@@ -5043,8 +5305,12 @@ open class RecordingAPI {
         "messageText" : "aeiou",
         "fromUser" : "",
         "fromExternalContact" : {
+          "schema" : "",
           "lastName" : "aeiou",
           "workEmail" : "aeiou",
+          "customFields" : {
+            "key" : "{}"
+          },
           "title" : "aeiou",
           "twitterId" : {
             "profileUrl" : "aeiou",
@@ -5082,9 +5348,34 @@ open class RecordingAPI {
             } ]
           },
           "externalOrganization" : {
+            "schema" : {
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
+              "createdBy" : "",
+              "jsonSchema" : {
+                "$schema" : "aeiou",
+                "description" : "aeiou",
+                "id" : "aeiou",
+                "additionalProperties" : "{}",
+                "title" : "aeiou",
+                "type" : "aeiou",
+                "required" : [ "aeiou" ],
+                "properties" : {
+                  "key" : "{}"
+                }
+              },
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "appliesTo" : [ "aeiou" ],
+              "id" : "aeiou",
+              "version" : 123,
+              "enabled" : true
+            },
             "address" : "",
             "modifyDate" : "2000-01-23T04:56:07.000+0000",
             "companyType" : "aeiou",
+            "customFields" : {
+              "key" : "{}"
+            },
             "selfUri" : "aeiou",
             "industry" : "aeiou",
             "employeeCount" : 123456789,
@@ -5564,8 +5855,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -6057,8 +6348,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6436,6 +6727,11 @@ open class RecordingAPI {
                 }
               } ]
             },
+            "routingRules" : [ {
+              "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+              "threshold" : 123,
+              "operator" : "aeiou"
+            } ],
             "skillEvaluationMethod" : "aeiou",
             "defaultScripts" : {
               "key" : {
@@ -6808,8 +7104,8 @@ open class RecordingAPI {
                 "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
                 "pageSize" : 123,
-                "nextUri" : "aeiou",
-                "previousUri" : "aeiou"
+                "previousUri" : "aeiou",
+                "nextUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6894,8 +7190,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -7118,6 +7414,11 @@ open class RecordingAPI {
               }
             } ]
           },
+          "routingRules" : [ {
+            "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+            "threshold" : 123,
+            "operator" : "aeiou"
+          } ],
           "skillEvaluationMethod" : "aeiou",
           "defaultScripts" : {
             "key" : {
@@ -7490,8 +7791,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -7910,8 +8211,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8672,6 +8973,11 @@ open class RecordingAPI {
                 }
               } ]
             },
+            "routingRules" : [ {
+              "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+              "threshold" : 123,
+              "operator" : "aeiou"
+            } ],
             "skillEvaluationMethod" : "aeiou",
             "defaultScripts" : {
               "key" : {
@@ -8731,8 +9037,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -8964,8 +9270,8 @@ open class RecordingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9167,6 +9473,11 @@ open class RecordingAPI {
               }
             } ]
           },
+          "routingRules" : [ {
+            "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+            "threshold" : 123,
+            "operator" : "aeiou"
+          } ],
           "skillEvaluationMethod" : "aeiou",
           "defaultScripts" : {
             "key" : {
@@ -9539,8 +9850,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -10820,6 +11131,11 @@ open class RecordingAPI {
               }
             } ]
           },
+          "routingRules" : [ {
+            "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+            "threshold" : 123,
+            "operator" : "aeiou"
+          } ],
           "skillEvaluationMethod" : "aeiou",
           "defaultScripts" : {
             "key" : {
@@ -11192,8 +11508,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11742,8 +12058,12 @@ open class RecordingAPI {
     "messageText" : "aeiou",
     "fromUser" : "",
     "fromExternalContact" : {
+      "schema" : "",
       "lastName" : "aeiou",
       "workEmail" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "title" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
@@ -11781,9 +12101,38 @@ open class RecordingAPI {
         } ]
       },
       "externalOrganization" : {
+        "schema" : {
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "createdBy" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
+          "jsonSchema" : {
+            "$schema" : "aeiou",
+            "description" : "aeiou",
+            "id" : "aeiou",
+            "additionalProperties" : "{}",
+            "title" : "aeiou",
+            "type" : "aeiou",
+            "required" : [ "aeiou" ],
+            "properties" : {
+              "key" : "{}"
+            }
+          },
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "appliesTo" : [ "aeiou" ],
+          "id" : "aeiou",
+          "version" : 123,
+          "enabled" : true
+        },
         "address" : "",
         "modifyDate" : "2000-01-23T04:56:07.000+0000",
         "companyType" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "selfUri" : "aeiou",
         "industry" : "aeiou",
         "employeeCount" : 123456789,
@@ -12673,8 +13022,12 @@ open class RecordingAPI {
     "messageText" : "aeiou",
     "fromUser" : "",
     "fromExternalContact" : {
+      "schema" : "",
       "lastName" : "aeiou",
       "workEmail" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "title" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
@@ -12712,9 +13065,38 @@ open class RecordingAPI {
         } ]
       },
       "externalOrganization" : {
+        "schema" : {
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "createdBy" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
+          "jsonSchema" : {
+            "$schema" : "aeiou",
+            "description" : "aeiou",
+            "id" : "aeiou",
+            "additionalProperties" : "{}",
+            "title" : "aeiou",
+            "type" : "aeiou",
+            "required" : [ "aeiou" ],
+            "properties" : {
+              "key" : "{}"
+            }
+          },
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "appliesTo" : [ "aeiou" ],
+          "id" : "aeiou",
+          "version" : 123,
+          "enabled" : true
+        },
         "address" : "",
         "modifyDate" : "2000-01-23T04:56:07.000+0000",
         "companyType" : "aeiou",
+        "customFields" : {
+          "key" : "{}"
+        },
         "selfUri" : "aeiou",
         "industry" : "aeiou",
         "employeeCount" : 123456789,
@@ -13596,6 +13978,11 @@ open class RecordingAPI {
               }
             } ]
           },
+          "routingRules" : [ {
+            "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+            "threshold" : 123,
+            "operator" : "aeiou"
+          } ],
           "skillEvaluationMethod" : "aeiou",
           "defaultScripts" : {
             "key" : {
@@ -13968,8 +14355,8 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

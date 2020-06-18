@@ -437,6 +437,11 @@ open class UserRecordingsAPI {
               }
             } ]
           },
+          "routingRules" : [ {
+            "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+            "threshold" : 123,
+            "operator" : "aeiou"
+          } ],
           "skillEvaluationMethod" : "aeiou",
           "defaultScripts" : {
             "key" : {
@@ -492,8 +497,8 @@ open class UserRecordingsAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -1469,6 +1474,11 @@ open class UserRecordingsAPI {
                 }
               } ]
             },
+            "routingRules" : [ {
+              "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+              "threshold" : 123,
+              "operator" : "aeiou"
+            } ],
             "skillEvaluationMethod" : "aeiou",
             "defaultScripts" : {
               "key" : {
@@ -1524,8 +1534,8 @@ open class UserRecordingsAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -2003,8 +2013,8 @@ open class UserRecordingsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2473,6 +2483,11 @@ open class UserRecordingsAPI {
               }
             } ]
           },
+          "routingRules" : [ {
+            "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
+            "threshold" : 123,
+            "operator" : "aeiou"
+          } ],
           "skillEvaluationMethod" : "aeiou",
           "defaultScripts" : {
             "key" : {
@@ -2528,8 +2543,8 @@ open class UserRecordingsAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",

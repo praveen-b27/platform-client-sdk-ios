@@ -35,6 +35,8 @@ public class Queue: Codable {
     public var memberCount: Int?
     /** The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM */
     public var mediaSettings: [String:MediaSetting]?
+    /** The routing rules for the queue, used for routing to known or preferred agents. */
+    public var routingRules: [RoutingRule]?
     /** The bulls-eye settings for the queue. */
     public var bullseye: Bullseye?
     /** The ACW settings for the queue. */
@@ -59,7 +61,7 @@ public class Queue: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, selfUri: String?) {
         
         self._id = _id
         
@@ -80,6 +82,8 @@ public class Queue: Codable {
         self.memberCount = memberCount
         
         self.mediaSettings = mediaSettings
+        
+        self.routingRules = routingRules
         
         self.bullseye = bullseye
         
@@ -118,6 +122,7 @@ public class Queue: Codable {
         case createdBy
         case memberCount
         case mediaSettings
+        case routingRules
         case bullseye
         case acwSettings
         case skillEvaluationMethod

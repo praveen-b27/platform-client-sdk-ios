@@ -496,8 +496,12 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "schema" : "",
   "lastName" : "aeiou",
   "workEmail" : "aeiou",
+  "customFields" : {
+    "key" : "{}"
+  },
   "title" : "aeiou",
   "twitterId" : {
     "profileUrl" : "aeiou",
@@ -535,9 +539,38 @@ open class ExternalContactsAPI {
     } ]
   },
   "externalOrganization" : {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
     "address" : "",
     "modifyDate" : "2000-01-23T04:56:07.000+0000",
     "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "selfUri" : "aeiou",
     "industry" : "aeiou",
     "employeeCount" : 123456789,
@@ -1596,8 +1629,8 @@ open class ExternalContactsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter contactId: (path) ExternalContact Id 
@@ -1699,8 +1732,12 @@ open class ExternalContactsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "schema" : "",
     "lastName" : "aeiou",
     "workEmail" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "title" : "aeiou",
     "twitterId" : {
       "profileUrl" : "aeiou",
@@ -1738,9 +1775,38 @@ open class ExternalContactsAPI {
       } ]
     },
     "externalOrganization" : {
+      "schema" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "jsonSchema" : {
+          "$schema" : "aeiou",
+          "description" : "aeiou",
+          "id" : "aeiou",
+          "additionalProperties" : "{}",
+          "title" : "aeiou",
+          "type" : "aeiou",
+          "required" : [ "aeiou" ],
+          "properties" : {
+            "key" : "{}"
+          }
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "appliesTo" : [ "aeiou" ],
+        "id" : "aeiou",
+        "version" : 123,
+        "enabled" : true
+      },
       "address" : "",
       "modifyDate" : "2000-01-23T04:56:07.000+0000",
       "companyType" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "selfUri" : "aeiou",
       "industry" : "aeiou",
       "employeeCount" : 123456789,
@@ -2101,8 +2167,8 @@ open class ExternalContactsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)
@@ -2547,6 +2613,32 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "schema" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "jsonSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "appliesTo" : [ "aeiou" ],
+    "id" : "aeiou",
+    "version" : 123,
+    "enabled" : true
+  },
   "address" : {
     "address2" : "aeiou",
     "city" : "aeiou",
@@ -2557,6 +2649,9 @@ open class ExternalContactsAPI {
   },
   "modifyDate" : "2000-01-23T04:56:07.000+0000",
   "companyType" : "aeiou",
+  "customFields" : {
+    "key" : "{}"
+  },
   "selfUri" : "aeiou",
   "industry" : "aeiou",
   "employeeCount" : 123456789,
@@ -3003,8 +3098,12 @@ open class ExternalContactsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "schema" : "",
     "lastName" : "aeiou",
     "workEmail" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "title" : "aeiou",
     "twitterId" : {
       "profileUrl" : "aeiou",
@@ -3042,9 +3141,38 @@ open class ExternalContactsAPI {
       } ]
     },
     "externalOrganization" : {
+      "schema" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "jsonSchema" : {
+          "$schema" : "aeiou",
+          "description" : "aeiou",
+          "id" : "aeiou",
+          "additionalProperties" : "{}",
+          "title" : "aeiou",
+          "type" : "aeiou",
+          "required" : [ "aeiou" ],
+          "properties" : {
+            "key" : "{}"
+          }
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "appliesTo" : [ "aeiou" ],
+        "id" : "aeiou",
+        "version" : 123,
+        "enabled" : true
+      },
       "address" : "",
       "modifyDate" : "2000-01-23T04:56:07.000+0000",
       "companyType" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "selfUri" : "aeiou",
       "industry" : "aeiou",
       "employeeCount" : 123456789,
@@ -3405,8 +3533,8 @@ open class ExternalContactsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -4122,8 +4250,8 @@ open class ExternalContactsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization Id 
@@ -4480,6 +4608,32 @@ open class ExternalContactsAPI {
       }
     },
     "externalOrganization" : {
+      "schema" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "jsonSchema" : {
+          "$schema" : "aeiou",
+          "description" : "aeiou",
+          "id" : "aeiou",
+          "additionalProperties" : "{}",
+          "title" : "aeiou",
+          "type" : "aeiou",
+          "required" : [ "aeiou" ],
+          "properties" : {
+            "key" : "{}"
+          }
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "appliesTo" : [ "aeiou" ],
+        "id" : "aeiou",
+        "version" : 123,
+        "enabled" : true
+      },
       "address" : {
         "address2" : "aeiou",
         "city" : "aeiou",
@@ -4490,6 +4644,9 @@ open class ExternalContactsAPI {
       },
       "modifyDate" : "2000-01-23T04:56:07.000+0000",
       "companyType" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "selfUri" : "aeiou",
       "industry" : "aeiou",
       "employeeCount" : 123456789,
@@ -4595,8 +4752,8 @@ open class ExternalContactsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -4703,6 +4860,32 @@ open class ExternalContactsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
     "address" : {
       "address2" : "aeiou",
       "city" : "aeiou",
@@ -4713,6 +4896,9 @@ open class ExternalContactsAPI {
     },
     "modifyDate" : "2000-01-23T04:56:07.000+0000",
     "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "selfUri" : "aeiou",
     "industry" : "aeiou",
     "employeeCount" : 123456789,
@@ -5066,8 +5252,8 @@ open class ExternalContactsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)
@@ -5771,6 +5957,32 @@ open class ExternalContactsAPI {
     }
   },
   "externalOrganization" : {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
     "address" : {
       "address2" : "aeiou",
       "city" : "aeiou",
@@ -5781,6 +5993,9 @@ open class ExternalContactsAPI {
     },
     "modifyDate" : "2000-01-23T04:56:07.000+0000",
     "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "selfUri" : "aeiou",
     "industry" : "aeiou",
     "employeeCount" : 123456789,
@@ -5962,8 +6177,12 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "externalOrganizations" : [ "" ],
   "contacts" : [ {
+    "schema" : "",
     "lastName" : "aeiou",
     "workEmail" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "title" : "aeiou",
     "twitterId" : {
       "profileUrl" : "aeiou",
@@ -6001,9 +6220,38 @@ open class ExternalContactsAPI {
       } ]
     },
     "externalOrganization" : {
+      "schema" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "jsonSchema" : {
+          "$schema" : "aeiou",
+          "description" : "aeiou",
+          "id" : "aeiou",
+          "additionalProperties" : "{}",
+          "title" : "aeiou",
+          "type" : "aeiou",
+          "required" : [ "aeiou" ],
+          "properties" : {
+            "key" : "{}"
+          }
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "appliesTo" : [ "aeiou" ],
+        "id" : "aeiou",
+        "version" : 123,
+        "enabled" : true
+      },
       "address" : "",
       "modifyDate" : "2000-01-23T04:56:07.000+0000",
       "companyType" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
       "selfUri" : "aeiou",
       "industry" : "aeiou",
       "employeeCount" : 123456789,
@@ -6754,8 +7002,12 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "schema" : "",
   "lastName" : "aeiou",
   "workEmail" : "aeiou",
+  "customFields" : {
+    "key" : "{}"
+  },
   "title" : "aeiou",
   "twitterId" : {
     "profileUrl" : "aeiou",
@@ -6793,9 +7045,38 @@ open class ExternalContactsAPI {
     } ]
   },
   "externalOrganization" : {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
     "address" : "",
     "modifyDate" : "2000-01-23T04:56:07.000+0000",
     "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "selfUri" : "aeiou",
     "industry" : "aeiou",
     "employeeCount" : 123456789,
@@ -7616,6 +7897,32 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "schema" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "jsonSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "appliesTo" : [ "aeiou" ],
+    "id" : "aeiou",
+    "version" : 123,
+    "enabled" : true
+  },
   "address" : {
     "address2" : "aeiou",
     "city" : "aeiou",
@@ -7626,6 +7933,9 @@ open class ExternalContactsAPI {
   },
   "modifyDate" : "2000-01-23T04:56:07.000+0000",
   "companyType" : "aeiou",
+  "customFields" : {
+    "key" : "{}"
+  },
   "selfUri" : "aeiou",
   "industry" : "aeiou",
   "employeeCount" : 123456789,
@@ -8370,6 +8680,32 @@ open class ExternalContactsAPI {
     }
   },
   "externalOrganization" : {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
     "address" : {
       "address2" : "aeiou",
       "city" : "aeiou",
@@ -8380,6 +8716,9 @@ open class ExternalContactsAPI {
     },
     "modifyDate" : "2000-01-23T04:56:07.000+0000",
     "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "selfUri" : "aeiou",
     "industry" : "aeiou",
     "employeeCount" : 123456789,
@@ -8541,8 +8880,12 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "schema" : "",
   "lastName" : "aeiou",
   "workEmail" : "aeiou",
+  "customFields" : {
+    "key" : "{}"
+  },
   "title" : "aeiou",
   "twitterId" : {
     "profileUrl" : "aeiou",
@@ -8580,9 +8923,38 @@ open class ExternalContactsAPI {
     } ]
   },
   "externalOrganization" : {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
     "address" : "",
     "modifyDate" : "2000-01-23T04:56:07.000+0000",
     "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "selfUri" : "aeiou",
     "industry" : "aeiou",
     "employeeCount" : 123456789,
@@ -9480,6 +9852,32 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "schema" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "jsonSchema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "appliesTo" : [ "aeiou" ],
+    "id" : "aeiou",
+    "version" : 123,
+    "enabled" : true
+  },
   "address" : {
     "address2" : "aeiou",
     "city" : "aeiou",
@@ -9490,6 +9888,9 @@ open class ExternalContactsAPI {
   },
   "modifyDate" : "2000-01-23T04:56:07.000+0000",
   "companyType" : "aeiou",
+  "customFields" : {
+    "key" : "{}"
+  },
   "selfUri" : "aeiou",
   "industry" : "aeiou",
   "employeeCount" : 123456789,
@@ -10656,6 +11057,32 @@ open class ExternalContactsAPI {
     }
   },
   "externalOrganization" : {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
     "address" : {
       "address2" : "aeiou",
       "city" : "aeiou",
@@ -10666,6 +11093,9 @@ open class ExternalContactsAPI {
     },
     "modifyDate" : "2000-01-23T04:56:07.000+0000",
     "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
     "selfUri" : "aeiou",
     "industry" : "aeiou",
     "employeeCount" : 123456789,

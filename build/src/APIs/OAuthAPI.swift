@@ -339,6 +339,168 @@ open class OAuthAPI {
     }
 
     
+    
+    
+    
+    
+    /**
+     
+     Get the results of a usage query
+     
+     - parameter executionId: (path) ID of the query execution 
+     - parameter clientId: (path) Client ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOauthClientUsageQueryResult(executionId: String, clientId: String, completion: @escaping ((_ data: ApiUsageQueryResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthClientUsageQueryResultWithRequestBuilder(executionId: executionId, clientId: clientId)
+        requestBuilder.execute { (response: Response<ApiUsageQueryResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the results of a usage query
+     
+     - GET /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryStatus" : "aeiou",
+  "results" : [ {
+    "date" : "2000-01-23T04:56:07.000+0000",
+    "clientId" : "aeiou",
+    "clientName" : "aeiou",
+    "templateUri" : "aeiou",
+    "requests" : 123456789,
+    "httpMethod" : "aeiou",
+    "userId" : "aeiou",
+    "organizationId" : "aeiou",
+    "status429" : 123456789,
+    "status400" : 123456789,
+    "status500" : 123456789,
+    "status200" : 123456789,
+    "status300" : 123456789
+  } ]
+}}]
+     
+     - parameter executionId: (path) ID of the query execution 
+     - parameter clientId: (path) Client ID 
+
+     - returns: RequestBuilder<ApiUsageQueryResult> 
+     */
+    open class func getOauthClientUsageQueryResultWithRequestBuilder(executionId: String, clientId: String) -> RequestBuilder<ApiUsageQueryResult> {
+        var path = "/api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}"
+        let executionIdPreEscape = "\(executionId)"
+        let executionIdPostEscape = executionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{executionId}", with: executionIdPostEscape, options: .literal, range: nil)
+        let clientIdPreEscape = "\(clientId)"
+        let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ApiUsageQueryResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a summary of OAuth client API usage
+     
+     - parameter clientId: (path) Client ID 
+     - parameter days: (query) Previous number of days to query (optional, default to 7)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOauthClientUsageSummary(clientId: String, days: String? = nil, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthClientUsageSummaryWithRequestBuilder(clientId: clientId, days: days)
+        requestBuilder.execute { (response: Response<UsageExecutionResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a summary of OAuth client API usage
+     
+     - GET /api/v2/oauth/clients/{clientId}/usage/summary
+     - After calling this method, you will then need to poll for the query results based on the returned execution Id
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "executionId" : "aeiou",
+  "resultsUri" : "aeiou"
+}}]
+     
+     - parameter clientId: (path) Client ID 
+     - parameter days: (query) Previous number of days to query (optional, default to 7)
+
+     - returns: RequestBuilder<UsageExecutionResult> 
+     */
+    open class func getOauthClientUsageSummaryWithRequestBuilder(clientId: String, days: String? = nil) -> RequestBuilder<UsageExecutionResult> {
+        var path = "/api/v2/oauth/clients/{clientId}/usage/summary"
+        let clientIdPreEscape = "\(clientId)"
+        let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "days": days
+            
+        ])
+
+        let requestBuilder: RequestBuilder<UsageExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      
      The list of OAuth clients
@@ -403,8 +565,8 @@ open class OAuthAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthClientEntityListing> 
@@ -654,6 +816,73 @@ open class OAuthAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OAuthClient>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Query for OAuth client API usage
+     
+     - parameter clientId: (path) Client ID 
+     - parameter body: (body) Query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postOauthClientUsageQuery(clientId: String, body: ApiUsageQuery, completion: @escaping ((_ data: UsageExecutionResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOauthClientUsageQueryWithRequestBuilder(clientId: clientId, body: body)
+        requestBuilder.execute { (response: Response<UsageExecutionResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for OAuth client API usage
+     
+     - POST /api/v2/oauth/clients/{clientId}/usage/query
+     - After calling this method, you will then need to poll for the query results based on the returned execution Id
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "executionId" : "aeiou",
+  "resultsUri" : "aeiou"
+}}]
+     
+     - parameter clientId: (path) Client ID 
+     - parameter body: (body) Query 
+
+     - returns: RequestBuilder<UsageExecutionResult> 
+     */
+    open class func postOauthClientUsageQueryWithRequestBuilder(clientId: String, body: ApiUsageQuery) -> RequestBuilder<UsageExecutionResult> {
+        var path = "/api/v2/oauth/clients/{clientId}/usage/query"
+        let clientIdPreEscape = "\(clientId)"
+        let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{clientId}", with: clientIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UsageExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

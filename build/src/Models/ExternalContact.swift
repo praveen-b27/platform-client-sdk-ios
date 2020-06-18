@@ -40,12 +40,16 @@ public class ExternalContact: Codable {
     public var surveyOptOut: Bool?
     /** A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace. */
     public var externalSystemUrl: String?
+    /** The schema defining custom fields for this contact */
+    public var schema: DataSchema?
+    /** Custom fields defined in the schema referenced by schemaId and schemaVersion. */
+    public var customFields: [String:JSON]?
     /** Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. */
     public var externalDataSources: [ExternalDataSource]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: PhoneNumber?, cellPhone: PhoneNumber?, homePhone: PhoneNumber?, otherPhone: PhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ContactAddress?, twitterId: TwitterId?, lineId: LineId?, whatsAppId: WhatsAppId?, facebookId: FacebookId?, modifyDate: Date?, createDate: Date?, externalOrganization: ExternalOrganization?, surveyOptOut: Bool?, externalSystemUrl: String?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
+    public init(_id: String?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: PhoneNumber?, cellPhone: PhoneNumber?, homePhone: PhoneNumber?, otherPhone: PhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ContactAddress?, twitterId: TwitterId?, lineId: LineId?, whatsAppId: WhatsAppId?, facebookId: FacebookId?, modifyDate: Date?, createDate: Date?, externalOrganization: ExternalOrganization?, surveyOptOut: Bool?, externalSystemUrl: String?, schema: DataSchema?, customFields: [String:JSON]?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
         
         self._id = _id
         
@@ -93,6 +97,10 @@ public class ExternalContact: Codable {
         
         self.externalSystemUrl = externalSystemUrl
         
+        self.schema = schema
+        
+        self.customFields = customFields
+        
         self.externalDataSources = externalDataSources
         
         self.selfUri = selfUri
@@ -123,6 +131,8 @@ public class ExternalContact: Codable {
         case externalOrganization
         case surveyOptOut
         case externalSystemUrl
+        case schema
+        case customFields
         case externalDataSources
         case selfUri
     }

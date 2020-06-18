@@ -123,6 +123,61 @@ open class IdentityProviderAPI {
     
     /**
      
+     Delete Generic SAML Identity Provider
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteIdentityprovidersGeneric(completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteIdentityprovidersGenericWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete Generic SAML Identity Provider
+     
+     - DELETE /api/v2/identityproviders/generic
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
+
+     - returns: RequestBuilder<Empty> 
+     */
+    open class func deleteIdentityprovidersGenericWithRequestBuilder() -> RequestBuilder<Empty> {
+        let path = "/api/v2/identityproviders/generic"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    /**
+     
      Delete G Suite Identity Provider
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -608,8 +663,8 @@ open class IdentityProviderAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthProviderEntityListing> 
@@ -754,6 +809,72 @@ open class IdentityProviderAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CustomerInteractionCenter>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get Generic SAML Identity Provider
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIdentityprovidersGeneric(completion: @escaping ((_ data: GenericSAML?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIdentityprovidersGenericWithRequestBuilder()
+        requestBuilder.execute { (response: Response<GenericSAML>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get Generic SAML Identity Provider
+     
+     - GET /api/v2/identityproviders/generic
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "relyingPartyIdentifier" : "aeiou",
+  "issuerURI" : "aeiou",
+  "logoImageData" : "aeiou",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "certificate" : "aeiou",
+  "ssoTargetURI" : "aeiou",
+  "disabled" : true,
+  "id" : "aeiou",
+  "endpointCompression" : true
+}}]
+
+     - returns: RequestBuilder<GenericSAML> 
+     */
+    open class func getIdentityprovidersGenericWithRequestBuilder() -> RequestBuilder<GenericSAML> {
+        let path = "/api/v2/identityproviders/generic"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GenericSAML>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1375,6 +1496,68 @@ open class IdentityProviderAPI {
      */
     open class func putIdentityprovidersCicWithRequestBuilder(body: CustomerInteractionCenter) -> RequestBuilder<OAuthProvider> {
         let path = "/api/v2/identityproviders/cic"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OAuthProvider>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update/Create Generic SAML Identity Provider
+     
+     - parameter body: (body) Provider 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putIdentityprovidersGeneric(body: GenericSAML, completion: @escaping ((_ data: OAuthProvider?,_ error: Error?) -> Void)) {
+        let requestBuilder = putIdentityprovidersGenericWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OAuthProvider>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update/Create Generic SAML Identity Provider
+     
+     - PUT /api/v2/identityproviders/generic
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "disabled" : true,
+  "id" : "aeiou"
+}}]
+     
+     - parameter body: (body) Provider 
+
+     - returns: RequestBuilder<OAuthProvider> 
+     */
+    open class func putIdentityprovidersGenericWithRequestBuilder(body: GenericSAML) -> RequestBuilder<OAuthProvider> {
+        let path = "/api/v2/identityproviders/generic"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

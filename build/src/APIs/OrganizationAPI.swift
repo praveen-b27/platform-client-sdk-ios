@@ -170,6 +170,63 @@ open class OrganizationAPI {
     
     /**
      
+     Get organization IP address whitelist settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsIpaddressauthentication(completion: @escaping ((_ data: IpAddressAuthentication?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsIpaddressauthenticationWithRequestBuilder()
+        requestBuilder.execute { (response: Response<IpAddressAuthentication>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get organization IP address whitelist settings
+     
+     - GET /api/v2/organizations/ipaddressauthentication
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "networkWhitelist" : [ "aeiou" ]
+}}]
+
+     - returns: RequestBuilder<IpAddressAuthentication> 
+     */
+    open class func getOrganizationsIpaddressauthenticationWithRequestBuilder() -> RequestBuilder<IpAddressAuthentication> {
+        let path = "/api/v2/organizations/ipaddressauthentication"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IpAddressAuthentication>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
      Get organization.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -449,6 +506,65 @@ open class OrganizationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmbeddedIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update organization IP address whitelist settings
+     
+     - parameter body: (body) IP address Whitelist settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putOrganizationsIpaddressauthentication(body: IpAddressAuthentication, completion: @escaping ((_ data: IpAddressAuthentication?,_ error: Error?) -> Void)) {
+        let requestBuilder = putOrganizationsIpaddressauthenticationWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<IpAddressAuthentication>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update organization IP address whitelist settings
+     
+     - PUT /api/v2/organizations/ipaddressauthentication
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "networkWhitelist" : [ "aeiou" ]
+}}]
+     
+     - parameter body: (body) IP address Whitelist settings 
+
+     - returns: RequestBuilder<IpAddressAuthentication> 
+     */
+    open class func putOrganizationsIpaddressauthenticationWithRequestBuilder(body: IpAddressAuthentication) -> RequestBuilder<IpAddressAuthentication> {
+        let path = "/api/v2/organizations/ipaddressauthentication"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IpAddressAuthentication>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

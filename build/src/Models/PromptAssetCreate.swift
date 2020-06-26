@@ -11,6 +11,12 @@ import Foundation
 
 public class PromptAssetCreate: Codable {
 
+    public enum UploadStatus: String, Codable { 
+        case created = "created"
+        case uploaded = "uploaded"
+        case transcoded = "transcoded"
+        case transcodefailed = "transcodeFailed"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -25,7 +31,7 @@ public class PromptAssetCreate: Codable {
     /** Text of the resource */
     public var text: String?
     /** Audio upload status */
-    public var uploadStatus: String?
+    public var uploadStatus: UploadStatus?
     /** Upload URI for the resource audio */
     public var uploadUri: String?
     /** Whether or not this resource locale is the default for the language */
@@ -35,7 +41,7 @@ public class PromptAssetCreate: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, promptId: String?, language: String?, mediaUri: String?, ttsString: String?, text: String?, uploadStatus: String?, uploadUri: String?, languageDefault: Bool?, tags: [String:[String]]?, durationSeconds: Double?, selfUri: String?) {
+    public init(_id: String?, name: String?, promptId: String?, language: String?, mediaUri: String?, ttsString: String?, text: String?, uploadStatus: UploadStatus?, uploadUri: String?, languageDefault: Bool?, tags: [String:[String]]?, durationSeconds: Double?, selfUri: String?) {
         
         self._id = _id
         

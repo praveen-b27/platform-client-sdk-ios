@@ -26,6 +26,7 @@ public class CoachingNotification: Codable {
         case scheduled = "Scheduled"
         case inProgress = "InProgress"
         case completed = "Completed"
+        case invalidSchedule = "InvalidSchedule"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

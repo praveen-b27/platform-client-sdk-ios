@@ -20,6 +20,7 @@ public class EventMessage: Codable {
         case campaignSetDialingModeError = "CAMPAIGN_SET_DIALING_MODE_ERROR"
         case campaignStopped = "CAMPAIGN_STOPPED"
         case campaignThrottled = "CAMPAIGN_THROTTLED"
+        case campaignQueueMembersLimitExceeded = "CAMPAIGN_QUEUE_MEMBERS_LIMIT_EXCEEDED"
         case invalidCallableTimeZone = "INVALID_CALLABLE_TIME_ZONE"
         case callbackCreationInvalidNumber = "CALLBACK_CREATION_INVALID_NUMBER"
         case callRuleInvalidContactColumn = "CALL_RULE_INVALID_CONTACT_COLUMN"

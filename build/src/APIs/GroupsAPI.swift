@@ -843,8 +843,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter groupId: (path) Group ID 
@@ -1207,8 +1207,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter groupId: (path) Group ID 
@@ -1286,7 +1286,7 @@ open class GroupsAPI {
      Get group profile
      
      - GET /api/v2/groups/{groupId}/profile
-     - 
+     - This api is deprecated. Use /api/v2/groups instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1642,8 +1642,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2062,7 +2062,7 @@ open class GroupsAPI {
      Get group profile listing
      
      - GET /api/v2/profiles/groups
-     - 
+     - This api is deprecated. Use /api/v2/groups instead.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2082,8 +2082,8 @@ open class GroupsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)

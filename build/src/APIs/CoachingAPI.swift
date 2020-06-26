@@ -363,8 +363,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -509,6 +509,7 @@ open class CoachingAPI {
         case scheduled = "Scheduled"
         case inProgress = "InProgress"
         case completed = "Completed"
+        case invalidSchedule = "InvalidSchedule"
     }
 
     
@@ -597,8 +598,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
@@ -744,8 +745,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter interval: (query) Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)
@@ -937,8 +938,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

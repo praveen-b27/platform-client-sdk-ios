@@ -343,13 +343,13 @@ GroupsAPI.getGroupMembers(groupId: groupId, pageSize: pageSize, pageNumber: page
 
 # **getGroupProfile**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [GroupProfile](GroupProfile.html) getGroupProfile(groupId, fields)
 
 Get group profile
 
-
+This api is deprecated. Use /api/v2/groups instead
 
 Wraps GET /api/v2/groups/{groupId}/profile  
 
@@ -508,13 +508,13 @@ GroupsAPI.getGroupsSearch(q64: q64, expand: expand) { (response, error) in
 
 # **getProfilesGroups**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [GroupProfileEntityListing](GroupProfileEntityListing.html) getProfilesGroups(pageSize, pageNumber, _id, sortOrder)
 
 Get group profile listing
 
-
+This api is deprecated. Use /api/v2/groups instead.
 
 Wraps GET /api/v2/profiles/groups  
 

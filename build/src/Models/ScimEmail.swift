@@ -16,7 +16,7 @@ public class ScimEmail: Codable {
         case work = "work"
         case other = "other"
     }
-    /** The email address. */
+    /** The email address. Note value for type &#39;other&#39;is immutable. */
     public var value: String?
     /** The type of email address. */
     public var type: ModelType?

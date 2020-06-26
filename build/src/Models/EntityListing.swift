@@ -11,23 +11,11 @@ import Foundation
 
 public class EntityListing: Codable {
 
-    public var entities: [DataTableImportJob]?
-    public var pageSize: Int?
-    public var pageNumber: Int?
-    public var total: Int64?
-    public var pageCount: Int?
+    public var entities: [JSON]?
 
-    public init(entities: [DataTableImportJob]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?) {
+    public init(entities: [JSON]?) {
         
         self.entities = entities
-        
-        self.pageSize = pageSize
-        
-        self.pageNumber = pageNumber
-        
-        self.total = total
-        
-        self.pageCount = pageCount
         
     }
 

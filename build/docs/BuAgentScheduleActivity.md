@@ -13,6 +13,8 @@ title: BuAgentScheduleActivity
 | **activityCodeId** | **String** | The ID of the activity code associated with this activity | [optional] |
 | **paid** | **Bool** | Whether this activity is paid | [optional] |
 | **timeOffRequestId** | **String** | The ID of the time off request associated with this activity, if applicable | [optional] |
+| **externalActivityId** | **String** | The ID of the external activity associated with this activity, if applicable | [optional] |
+| **externalActivityType** | **String** | The type of the external activity associated with this activity, if applicable | [optional] |
 {: class="table table-striped"}
 
 

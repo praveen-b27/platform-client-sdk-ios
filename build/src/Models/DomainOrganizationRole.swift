@@ -23,12 +23,12 @@ public class DomainOrganizationRole: Codable {
     public var userCount: Int?
     /** Optional unless patch operation. */
     public var roleNeedsUpdate: Bool?
-    public var base: Bool?
     public var _default: Bool?
+    public var base: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, defaultRoleId: String?, permissions: [String]?, unusedPermissions: [String]?, permissionPolicies: [DomainPermissionPolicy]?, userCount: Int?, roleNeedsUpdate: Bool?, base: Bool?, _default: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, defaultRoleId: String?, permissions: [String]?, unusedPermissions: [String]?, permissionPolicies: [DomainPermissionPolicy]?, userCount: Int?, roleNeedsUpdate: Bool?, _default: Bool?, base: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -48,9 +48,9 @@ public class DomainOrganizationRole: Codable {
         
         self.roleNeedsUpdate = roleNeedsUpdate
         
-        self.base = base
-        
         self._default = _default
+        
+        self.base = base
         
         self.selfUri = selfUri
         
@@ -66,8 +66,8 @@ public class DomainOrganizationRole: Codable {
         case permissionPolicies
         case userCount
         case roleNeedsUpdate
-        case base
         case _default = "default"
+        case base
         case selfUri
     }
 

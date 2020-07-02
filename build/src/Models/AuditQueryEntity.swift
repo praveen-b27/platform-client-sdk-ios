@@ -30,6 +30,7 @@ public class AuditQueryEntity: Codable {
         case segment = "Segment"
         case outcome = "Outcome"
         case clickstreamSettings = "ClickstreamSettings"
+        case schedule = "Schedule"
     }
     public enum Actions: String, Codable { 
         case create = "Create"
@@ -47,6 +48,7 @@ public class AuditQueryEntity: Codable {
         case readAll = "ReadAll"
         case execute = "Execute"
         case publish = "Publish"
+        case unpublish = "Unpublish"
         case authorize = "Authorize"
         case deauthorize = "Deauthorize"
         case authenticate = "Authenticate"

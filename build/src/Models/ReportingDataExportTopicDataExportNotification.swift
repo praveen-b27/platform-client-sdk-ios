@@ -89,8 +89,9 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
     public var createdDateTime: Date?
     public var modifiedDateTime: Date?
     public var percentageComplete: Double?
+    public var emailStatuses: [String:String]?
 
-    public init(_id: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?) {
+    public init(_id: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?) {
         
         self._id = _id
         
@@ -114,6 +115,8 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         
         self.percentageComplete = percentageComplete
         
+        self.emailStatuses = emailStatuses
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -128,6 +131,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case createdDateTime
         case modifiedDateTime
         case percentageComplete
+        case emailStatuses
     }
 
 

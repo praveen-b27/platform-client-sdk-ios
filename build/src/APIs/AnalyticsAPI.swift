@@ -1028,6 +1028,7 @@ open class AnalyticsAPI {
       "surveyQuestionGroupScore" : "",
       "abandonDurationsMilliseconds" : [ "" ],
       "hasMedia" : true,
+      "callbackNumberList" : [ "aeiou" ],
       "messageTypes" : [ "aeiou" ],
       "surveyPromoterScore" : "",
       "isSurveyed" : true,
@@ -1084,6 +1085,7 @@ open class AnalyticsAPI {
       "flowOutcomeIds" : [ "aeiou" ],
       "flowOutcomeValues" : [ "aeiou" ],
       "flowDestinationTypes" : [ "aeiou" ],
+      "callbackInterval" : "aeiou",
       "talkDurationsMilliseconds" : [ "" ],
       "durationsMilliseconds" : [ {
         "lt" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3070,6 +3072,7 @@ open class AnalyticsAPI {
     "surveyQuestionGroupScore" : "",
     "abandonDurationsMilliseconds" : [ "" ],
     "hasMedia" : true,
+    "callbackNumberList" : [ "aeiou" ],
     "messageTypes" : [ "aeiou" ],
     "surveyPromoterScore" : "",
     "isSurveyed" : true,
@@ -3126,6 +3129,7 @@ open class AnalyticsAPI {
     "flowOutcomeIds" : [ "aeiou" ],
     "flowOutcomeValues" : [ "aeiou" ],
     "flowDestinationTypes" : [ "aeiou" ],
+    "callbackInterval" : "aeiou",
     "talkDurationsMilliseconds" : [ "" ],
     "durationsMilliseconds" : [ {
       "lt" : 1.3579000000000001069366817318950779736042022705078125,

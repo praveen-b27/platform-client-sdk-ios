@@ -23,8 +23,10 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
     public var note: String?
     public var deleted: Bool?
     public var modifiedByUserId: String?
+    public var copiedTo: [VoicemailMessagesTopicVoicemailCopyRecord]?
+    public var copiedFrom: VoicemailMessagesTopicVoicemailCopyRecord?
 
-    public init(_id: String?, read: Bool?, audioRecordingDurationSeconds: Int?, audioRecordingSizeBytes: Int?, createdDate: Date?, modifiedDate: Date?, callerAddress: String?, callerName: String?, action: String?, note: String?, deleted: Bool?, modifiedByUserId: String?) {
+    public init(_id: String?, read: Bool?, audioRecordingDurationSeconds: Int?, audioRecordingSizeBytes: Int?, createdDate: Date?, modifiedDate: Date?, callerAddress: String?, callerName: String?, action: String?, note: String?, deleted: Bool?, modifiedByUserId: String?, copiedTo: [VoicemailMessagesTopicVoicemailCopyRecord]?, copiedFrom: VoicemailMessagesTopicVoicemailCopyRecord?) {
         
         self._id = _id
         
@@ -50,6 +52,10 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
         
         self.modifiedByUserId = modifiedByUserId
         
+        self.copiedTo = copiedTo
+        
+        self.copiedFrom = copiedFrom
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -65,6 +71,8 @@ public class VoicemailMessagesTopicVoicemailMessage: Codable {
         case note
         case deleted
         case modifiedByUserId
+        case copiedTo
+        case copiedFrom
     }
 
 

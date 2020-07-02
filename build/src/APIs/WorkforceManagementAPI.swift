@@ -1562,7 +1562,7 @@ open class WorkforceManagementAPI {
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case activityCodes = "ActivityCodes"
         case agents = "Agents"
-        case businessUnitActivityCodes = "BusinessUnitActivityCodes"
+        case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case historicalAdherence = "HistoricalAdherence"
         case intradayMonitoring = "IntradayMonitoring"
@@ -2135,8 +2135,10 @@ open class WorkforceManagementAPI {
           "lengthMinutes" : 123,
           "activities" : [ {
             "activityCodeId" : "aeiou",
+            "externalActivityType" : "aeiou",
             "timeOffRequestId" : "aeiou",
             "lengthMinutes" : 123,
+            "externalActivityId" : "aeiou",
             "paid" : true,
             "description" : "aeiou",
             "startDate" : "2000-01-23T04:56:07.000+0000"
@@ -3493,7 +3495,7 @@ open class WorkforceManagementAPI {
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case activityCodes = "ActivityCodes"
         case agents = "Agents"
-        case businessUnitActivityCodes = "BusinessUnitActivityCodes"
+        case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case historicalAdherence = "HistoricalAdherence"
         case intradayMonitoring = "IntradayMonitoring"
@@ -6666,7 +6668,7 @@ open class WorkforceManagementAPI {
         case agentTimeOffRequest = "AgentTimeOffRequest"
         case activityCodes = "ActivityCodes"
         case agents = "Agents"
-        case businessUnitActivityCodes = "BusinessUnitActivityCodes"
+        case buActivityCodes = "BuActivityCodes"
         case businessUnits = "BusinessUnits"
         case historicalAdherence = "HistoricalAdherence"
         case intradayMonitoring = "IntradayMonitoring"
@@ -8892,8 +8894,10 @@ open class WorkforceManagementAPI {
       "lengthMinutes" : 123,
       "activities" : [ {
         "activityCodeId" : "aeiou",
+        "externalActivityType" : "aeiou",
         "timeOffRequestId" : "aeiou",
         "lengthMinutes" : 123,
+        "externalActivityId" : "aeiou",
         "paid" : true,
         "description" : "aeiou",
         "startDate" : "2000-01-23T04:56:07.000+0000"
@@ -9088,8 +9092,10 @@ open class WorkforceManagementAPI {
         "lengthMinutes" : 123,
         "activities" : [ {
           "activityCodeId" : "aeiou",
+          "externalActivityType" : "aeiou",
           "timeOffRequestId" : "aeiou",
           "lengthMinutes" : 123,
+          "externalActivityId" : "aeiou",
           "paid" : true,
           "description" : "aeiou",
           "startDate" : "2000-01-23T04:56:07.000+0000"
@@ -9521,8 +9527,10 @@ open class WorkforceManagementAPI {
         "lengthMinutes" : 123,
         "activities" : [ {
           "activityCodeId" : "aeiou",
+          "externalActivityType" : "aeiou",
           "timeOffRequestId" : "aeiou",
           "lengthMinutes" : 123,
+          "externalActivityId" : "aeiou",
           "paid" : true,
           "description" : "aeiou",
           "startDate" : "2000-01-23T04:56:07.000+0000"
@@ -10603,8 +10611,10 @@ open class WorkforceManagementAPI {
         "lengthMinutes" : 123,
         "activities" : [ {
           "activityCodeId" : "aeiou",
+          "externalActivityType" : "aeiou",
           "timeOffRequestId" : "aeiou",
           "lengthMinutes" : 123,
+          "externalActivityId" : "aeiou",
           "paid" : true,
           "description" : "aeiou",
           "startDate" : "2000-01-23T04:56:07.000+0000"

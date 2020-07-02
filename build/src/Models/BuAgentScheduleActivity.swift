@@ -11,6 +11,9 @@ import Foundation
 
 public class BuAgentScheduleActivity: Codable {
 
+    public enum ExternalActivityType: String, Codable { 
+        case coaching = "Coaching"
+    }
     /** The start date/time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var startDate: Date?
     /** The length of this activity in minutes */
@@ -23,8 +26,12 @@ public class BuAgentScheduleActivity: Codable {
     public var paid: Bool?
     /** The ID of the time off request associated with this activity, if applicable */
     public var timeOffRequestId: String?
+    /** The ID of the external activity associated with this activity, if applicable */
+    public var externalActivityId: String?
+    /** The type of the external activity associated with this activity, if applicable */
+    public var externalActivityType: ExternalActivityType?
 
-    public init(startDate: Date?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, paid: Bool?, timeOffRequestId: String?) {
+    public init(startDate: Date?, lengthMinutes: Int?, _description: String?, activityCodeId: String?, paid: Bool?, timeOffRequestId: String?, externalActivityId: String?, externalActivityType: ExternalActivityType?) {
         
         self.startDate = startDate
         
@@ -38,6 +45,10 @@ public class BuAgentScheduleActivity: Codable {
         
         self.timeOffRequestId = timeOffRequestId
         
+        self.externalActivityId = externalActivityId
+        
+        self.externalActivityType = externalActivityType
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -47,6 +58,8 @@ public class BuAgentScheduleActivity: Codable {
         case activityCodeId
         case paid
         case timeOffRequestId
+        case externalActivityId
+        case externalActivityType
     }
 
 

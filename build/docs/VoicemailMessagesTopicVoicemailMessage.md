@@ -19,6 +19,8 @@ title: VoicemailMessagesTopicVoicemailMessage
 | **note** | **String** |  | [optional] |
 | **deleted** | **Bool** |  | [optional] |
 | **modifiedByUserId** | **String** |  | [optional] |
+| **copiedTo** | [**[VoicemailMessagesTopicVoicemailCopyRecord]**](VoicemailMessagesTopicVoicemailCopyRecord.html) |  | [optional] |
+| **copiedFrom** | [**VoicemailMessagesTopicVoicemailCopyRecord**](VoicemailMessagesTopicVoicemailCopyRecord.html) |  | [optional] |
 {: class="table table-striped"}
 
 

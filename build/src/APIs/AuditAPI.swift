@@ -348,4 +348,114 @@ open class AuditAPI {
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Expand_postAuditsQueryRealtime: String { 
+        case user = "user"
+    }
+
+    
+    
+    /**
+     
+     This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+     
+     - parameter body: (body) query 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuditsQueryRealtime(body: AuditRealtimeQueryRequest, expand: [String]? = nil, completion: @escaping ((_ data: AuditRealtimeQueryResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuditsQueryRealtimeWithRequestBuilder(body: body, expand: expand)
+        requestBuilder.execute { (response: Response<AuditRealtimeQueryResultsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+     
+     - POST /api/v2/audits/query/realtime
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "remoteIp" : [ "aeiou" ],
+    "propertyChanges" : [ {
+      "property" : "aeiou",
+      "newValues" : [ "aeiou" ],
+      "oldValues" : [ "aeiou" ]
+    } ],
+    "entityType" : "aeiou",
+    "context" : {
+      "key" : "aeiou"
+    },
+    "client" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "action" : "aeiou",
+    "id" : "aeiou",
+    "serviceName" : "aeiou",
+    "message" : {
+      "messageWithParams" : "aeiou",
+      "localizableMessageCode" : "aeiou",
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou"
+    },
+    "user" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "entity" : "",
+    "eventDate" : "2000-01-23T04:56:07.000+0000"
+  } ],
+  "pageSize" : 123
+}}]
+     
+     - parameter body: (body) query 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<AuditRealtimeQueryResultsResponse> 
+     */
+    open class func postAuditsQueryRealtimeWithRequestBuilder(body: AuditRealtimeQueryRequest, expand: [String]? = nil) -> RequestBuilder<AuditRealtimeQueryResultsResponse> {
+        let path = "/api/v2/audits/query/realtime"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AuditRealtimeQueryResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
 }

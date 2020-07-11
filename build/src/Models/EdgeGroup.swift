@@ -40,6 +40,8 @@ public class EdgeGroup: Codable {
     public var createdByApp: String?
     /** Is this edge group being managed remotely. */
     public var managed: Bool?
+    /** Is this edge group hybrid. */
+    public var hybrid: Bool?
     /** A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. */
     public var edgeTrunkBaseAssignment: TrunkBaseAssignment?
     /** Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. */
@@ -47,7 +49,7 @@ public class EdgeGroup: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, managed: Bool?, edgeTrunkBaseAssignment: TrunkBaseAssignment?, phoneTrunkBases: [TrunkBase]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, managed: Bool?, hybrid: Bool?, edgeTrunkBaseAssignment: TrunkBaseAssignment?, phoneTrunkBases: [TrunkBase]?, selfUri: String?) {
         
         self._id = _id
         
@@ -73,6 +75,8 @@ public class EdgeGroup: Codable {
         
         self.managed = managed
         
+        self.hybrid = hybrid
+        
         self.edgeTrunkBaseAssignment = edgeTrunkBaseAssignment
         
         self.phoneTrunkBases = phoneTrunkBases
@@ -94,6 +98,7 @@ public class EdgeGroup: Codable {
         case modifiedByApp
         case createdByApp
         case managed
+        case hybrid
         case edgeTrunkBaseAssignment
         case phoneTrunkBases
         case selfUri

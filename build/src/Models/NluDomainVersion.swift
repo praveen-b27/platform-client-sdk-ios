@@ -32,6 +32,8 @@ public class NluDomainVersion: Codable {
     public var _description: String?
     /** The language that the NLU domain version supports. */
     public var language: String?
+    /** Whether this NLU domain version has been published. */
+    public var published: Bool?
     /** The date when the NLU domain version was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateCreated: Date?
     /** The date when the NLU domain version was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
@@ -51,7 +53,7 @@ public class NluDomainVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, domain: NluDomain?, _description: String?, language: String?, dateCreated: Date?, dateModified: Date?, dateTrained: Date?, datePublished: Date?, trainingStatus: TrainingStatus?, evaluationStatus: EvaluationStatus?, intents: [IntentDefinition]?, entityTypes: [NamedEntityTypeDefinition]?, selfUri: String?) {
+    public init(_id: String?, domain: NluDomain?, _description: String?, language: String?, published: Bool?, dateCreated: Date?, dateModified: Date?, dateTrained: Date?, datePublished: Date?, trainingStatus: TrainingStatus?, evaluationStatus: EvaluationStatus?, intents: [IntentDefinition]?, entityTypes: [NamedEntityTypeDefinition]?, selfUri: String?) {
         
         self._id = _id
         
@@ -60,6 +62,8 @@ public class NluDomainVersion: Codable {
         self._description = _description
         
         self.language = language
+        
+        self.published = published
         
         self.dateCreated = dateCreated
         
@@ -86,6 +90,7 @@ public class NluDomainVersion: Codable {
         case domain
         case _description = "description"
         case language
+        case published
         case dateCreated
         case dateModified
         case dateTrained

@@ -130,6 +130,68 @@ open class LanguageUnderstandingAPI {
     
     
     
+    
+    
+    /**
+     
+     Delete an NLU Domain Version
+     
+     - parameter domainId: (path) ID of the NLU domain. 
+     - parameter domainVersionId: (path) ID of the NLU domain version. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteLanguageunderstandingDomainVersion(domainId: String, domainVersionId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteLanguageunderstandingDomainVersionWithRequestBuilder(domainId: domainId, domainVersionId: domainVersionId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete an NLU Domain Version
+     
+     - DELETE /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter domainId: (path) ID of the NLU domain. 
+     - parameter domainVersionId: (path) ID of the NLU domain version. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let domainVersionIdPreEscape = "\(domainVersionId)"
+        let domainVersionIdPostEscape = domainVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainVersionId}", with: domainVersionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Find an NLU Domain.
@@ -193,6 +255,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : "",
@@ -358,6 +421,7 @@ open class LanguageUnderstandingAPI {
       "description" : "aeiou",
       "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "published" : true,
       "datePublished" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "domain" : {
@@ -536,6 +600,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
@@ -663,6 +728,7 @@ open class LanguageUnderstandingAPI {
   "description" : "aeiou",
   "language" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "published" : true,
   "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "domain" : {
@@ -800,6 +866,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
@@ -928,6 +995,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
@@ -1071,6 +1139,7 @@ open class LanguageUnderstandingAPI {
       "description" : "aeiou",
       "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "published" : true,
       "datePublished" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "domain" : "",
@@ -1137,10 +1206,10 @@ open class LanguageUnderstandingAPI {
      Update an NLU Domain.
      
      - parameter domainId: (path) ID of the NLU domain. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The updated NLU Domain. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchLanguageunderstandingDomain(domainId: String, body: NluDomain? = nil, completion: @escaping ((_ data: NluDomain?,_ error: Error?) -> Void)) {
+    open class func patchLanguageunderstandingDomain(domainId: String, body: NluDomain, completion: @escaping ((_ data: NluDomain?,_ error: Error?) -> Void)) {
         let requestBuilder = patchLanguageunderstandingDomainWithRequestBuilder(domainId: domainId, body: body)
         requestBuilder.execute { (response: Response<NluDomain>?, error) -> Void in
             do {
@@ -1196,6 +1265,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : "",
@@ -1217,11 +1287,11 @@ open class LanguageUnderstandingAPI {
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The updated NLU Domain. 
 
      - returns: RequestBuilder<NluDomain> 
      */
-    open class func patchLanguageunderstandingDomainWithRequestBuilder(domainId: String, body: NluDomain? = nil) -> RequestBuilder<NluDomain> {
+    open class func patchLanguageunderstandingDomainWithRequestBuilder(domainId: String, body: NluDomain) -> RequestBuilder<NluDomain> {
         var path = "/api/v2/languageunderstanding/domains/{domainId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1248,10 +1318,10 @@ open class LanguageUnderstandingAPI {
      Create feedback for the NLU Domain Version.
      
      - parameter domainId: (path) ID of the NLU domain. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The Feedback to create. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLanguageunderstandingDomainFeedback(domainId: String, body: NluFeedbackRequest? = nil, completion: @escaping ((_ data: NluFeedbackResponse?,_ error: Error?) -> Void)) {
+    open class func postLanguageunderstandingDomainFeedback(domainId: String, body: NluFeedbackRequest, completion: @escaping ((_ data: NluFeedbackResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: domainId, body: body)
         requestBuilder.execute { (response: Response<NluFeedbackResponse>?, error) -> Void in
             do {
@@ -1319,6 +1389,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
@@ -1348,11 +1419,11 @@ open class LanguageUnderstandingAPI {
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The Feedback to create. 
 
      - returns: RequestBuilder<NluFeedbackResponse> 
      */
-    open class func postLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, body: NluFeedbackRequest? = nil) -> RequestBuilder<NluFeedbackResponse> {
+    open class func postLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, body: NluFeedbackRequest) -> RequestBuilder<NluFeedbackResponse> {
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1382,10 +1453,10 @@ open class LanguageUnderstandingAPI {
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The input data to perform detection on. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLanguageunderstandingDomainVersionDetect(domainId: String, domainVersionId: String, body: NluDetectionRequest? = nil, completion: @escaping ((_ data: NluDetectionResponse?,_ error: Error?) -> Void)) {
+    open class func postLanguageunderstandingDomainVersionDetect(domainId: String, domainVersionId: String, body: NluDetectionRequest, completion: @escaping ((_ data: NluDetectionResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postLanguageunderstandingDomainVersionDetectWithRequestBuilder(domainId: domainId, domainVersionId: domainVersionId, body: body)
         requestBuilder.execute { (response: Response<NluDetectionResponse>?, error) -> Void in
             do {
@@ -1457,6 +1528,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
@@ -1487,11 +1559,11 @@ open class LanguageUnderstandingAPI {
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The input data to perform detection on. 
 
      - returns: RequestBuilder<NluDetectionResponse> 
      */
-    open class func postLanguageunderstandingDomainVersionDetectWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDetectionRequest? = nil) -> RequestBuilder<NluDetectionResponse> {
+    open class func postLanguageunderstandingDomainVersionDetectWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDetectionRequest) -> RequestBuilder<NluDetectionResponse> {
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1573,6 +1645,7 @@ open class LanguageUnderstandingAPI {
   "description" : "aeiou",
   "language" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "published" : true,
   "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "domain" : {
@@ -1692,6 +1765,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : {
@@ -1751,14 +1825,126 @@ open class LanguageUnderstandingAPI {
     
     
     
+    
+    
+    /**
+     
+     Create an NLU Domain Version.
+     
+     - parameter domainId: (path) ID of the NLU domain. 
+     - parameter body: (body) The NLU Domain Version to create. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingDomainVersions(domainId: String, body: NluDomainVersion, completion: @escaping ((_ data: NluDomainVersion?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: domainId, body: body)
+        requestBuilder.execute { (response: Response<NluDomainVersion>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create an NLU Domain Version.
+     
+     - POST /api/v2/languageunderstanding/domains/{domainId}/versions
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intents" : [ {
+    "utterances" : [ {
+      "segments" : [ {
+        "text" : "aeiou",
+        "entity" : {
+          "name" : "aeiou"
+        }
+      } ]
+    } ],
+    "name" : "aeiou",
+    "entityTypeBindings" : [ {
+      "entityType" : "aeiou",
+      "entityName" : "aeiou"
+    } ]
+  } ],
+  "dateTrained" : "2000-01-23T04:56:07.000+0000",
+  "trainingStatus" : "aeiou",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "language" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "published" : true,
+  "datePublished" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "domain" : {
+    "lastPublishedVersion" : "",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "draftVersion" : ""
+  },
+  "entityTypes" : [ {
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "mechanism" : {
+      "restricted" : true,
+      "type" : "aeiou",
+      "items" : [ {
+        "synonyms" : [ "aeiou" ],
+        "value" : "aeiou"
+      } ]
+    }
+  } ],
+  "id" : "aeiou",
+  "evaluationStatus" : "aeiou"
+}}]
+     
+     - parameter domainId: (path) ID of the NLU domain. 
+     - parameter body: (body) The NLU Domain Version to create. 
+
+     - returns: RequestBuilder<NluDomainVersion> 
+     */
+    open class func postLanguageunderstandingDomainVersionsWithRequestBuilder(domainId: String, body: NluDomainVersion) -> RequestBuilder<NluDomainVersion> {
+        var path = "/api/v2/languageunderstanding/domains/{domainId}/versions"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<NluDomainVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Create an NLU Domain.
      
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The NLU Domain to create. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLanguageunderstandingDomains(body: NluDomain? = nil, completion: @escaping ((_ data: NluDomain?,_ error: Error?) -> Void)) {
+    open class func postLanguageunderstandingDomains(body: NluDomain, completion: @escaping ((_ data: NluDomain?,_ error: Error?) -> Void)) {
         let requestBuilder = postLanguageunderstandingDomainsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<NluDomain>?, error) -> Void in
             do {
@@ -1814,6 +2000,7 @@ open class LanguageUnderstandingAPI {
     "description" : "aeiou",
     "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "domain" : "",
@@ -1834,11 +2021,11 @@ open class LanguageUnderstandingAPI {
   }
 }}]
      
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The NLU Domain to create. 
 
      - returns: RequestBuilder<NluDomain> 
      */
-    open class func postLanguageunderstandingDomainsWithRequestBuilder(body: NluDomain? = nil) -> RequestBuilder<NluDomain> {
+    open class func postLanguageunderstandingDomainsWithRequestBuilder(body: NluDomain) -> RequestBuilder<NluDomain> {
         let path = "/api/v2/languageunderstanding/domains"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1865,10 +2052,10 @@ open class LanguageUnderstandingAPI {
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The updated NLU Domain Version. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putLanguageunderstandingDomainVersion(domainId: String, domainVersionId: String, body: NluDomainVersion? = nil, completion: @escaping ((_ data: NluDomainVersion?,_ error: Error?) -> Void)) {
+    open class func putLanguageunderstandingDomainVersion(domainId: String, domainVersionId: String, body: NluDomainVersion, completion: @escaping ((_ data: NluDomainVersion?,_ error: Error?) -> Void)) {
         let requestBuilder = putLanguageunderstandingDomainVersionWithRequestBuilder(domainId: domainId, domainVersionId: domainVersionId, body: body)
         requestBuilder.execute { (response: Response<NluDomainVersion>?, error) -> Void in
             do {
@@ -1917,6 +2104,7 @@ open class LanguageUnderstandingAPI {
   "description" : "aeiou",
   "language" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "published" : true,
   "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "domain" : {
@@ -1946,11 +2134,11 @@ open class LanguageUnderstandingAPI {
      
      - parameter domainId: (path) ID of the NLU domain. 
      - parameter domainVersionId: (path) ID of the NLU domain version. 
-     - parameter body: (body)  (optional)
+     - parameter body: (body) The updated NLU Domain Version. 
 
      - returns: RequestBuilder<NluDomainVersion> 
      */
-    open class func putLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDomainVersion? = nil) -> RequestBuilder<NluDomainVersion> {
+    open class func putLanguageunderstandingDomainVersionWithRequestBuilder(domainId: String, domainVersionId: String, body: NluDomainVersion) -> RequestBuilder<NluDomainVersion> {
         var path = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

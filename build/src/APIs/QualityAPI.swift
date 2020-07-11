@@ -5785,13 +5785,7 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example=[ {
   "agent" : "",
   "surveyForm" : {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -5804,11 +5798,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -9019,13 +9017,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "headerImageUrl" : "aeiou",
   "footer" : "aeiou",
-  "selfUri" : "aeiou",
-  "contextId" : "aeiou",
-  "language" : "aeiou",
-  "published" : true,
-  "headerImageId" : "aeiou",
   "publishedVersions" : {
     "total" : 123456789,
     "pageCount" : 123,
@@ -9038,11 +9030,15 @@ open class QualityAPI {
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
   },
+  "selfUri" : "aeiou",
   "name" : "aeiou",
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "header" : "aeiou",
   "disabled" : true,
+  "contextId" : "aeiou",
+  "language" : "aeiou",
   "id" : "aeiou",
+  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : "",
     "name" : "aeiou",
@@ -9142,13 +9138,7 @@ open class QualityAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -9161,11 +9151,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -9296,13 +9290,7 @@ open class QualityAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -9315,11 +9303,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -9443,13 +9435,7 @@ open class QualityAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -9462,11 +9448,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -9572,13 +9562,7 @@ open class QualityAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -9591,11 +9575,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -11172,13 +11160,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "headerImageUrl" : "aeiou",
   "footer" : "aeiou",
-  "selfUri" : "aeiou",
-  "contextId" : "aeiou",
-  "language" : "aeiou",
-  "published" : true,
-  "headerImageId" : "aeiou",
   "publishedVersions" : {
     "total" : 123456789,
     "pageCount" : 123,
@@ -11191,11 +11173,15 @@ open class QualityAPI {
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
   },
+  "selfUri" : "aeiou",
   "name" : "aeiou",
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "header" : "aeiou",
   "disabled" : true,
+  "contextId" : "aeiou",
+  "language" : "aeiou",
   "id" : "aeiou",
+  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : "",
     "name" : "aeiou",
@@ -11298,13 +11284,7 @@ open class QualityAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -11317,11 +11297,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -11431,13 +11415,7 @@ open class QualityAPI {
      - examples: [{contentType=application/json, example={
   "agent" : "",
   "surveyForm" : {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -11450,11 +11428,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -12413,13 +12395,7 @@ open class QualityAPI {
      - 
      - examples: [{contentType=application/json, example={
   "surveyForm" : {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -12432,11 +12408,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",
@@ -12555,13 +12535,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "headerImageUrl" : "aeiou",
   "footer" : "aeiou",
-  "selfUri" : "aeiou",
-  "contextId" : "aeiou",
-  "language" : "aeiou",
-  "published" : true,
-  "headerImageId" : "aeiou",
   "publishedVersions" : {
     "total" : 123456789,
     "pageCount" : 123,
@@ -12574,11 +12548,15 @@ open class QualityAPI {
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
   },
+  "selfUri" : "aeiou",
   "name" : "aeiou",
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "header" : "aeiou",
   "disabled" : true,
+  "contextId" : "aeiou",
+  "language" : "aeiou",
   "id" : "aeiou",
+  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : "",
     "name" : "aeiou",
@@ -14959,13 +14937,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "headerImageUrl" : "aeiou",
   "footer" : "aeiou",
-  "selfUri" : "aeiou",
-  "contextId" : "aeiou",
-  "language" : "aeiou",
-  "published" : true,
-  "headerImageId" : "aeiou",
   "publishedVersions" : {
     "total" : 123456789,
     "pageCount" : 123,
@@ -14978,11 +14950,15 @@ open class QualityAPI {
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
   },
+  "selfUri" : "aeiou",
   "name" : "aeiou",
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "header" : "aeiou",
   "disabled" : true,
+  "contextId" : "aeiou",
+  "language" : "aeiou",
   "id" : "aeiou",
+  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : "",
     "name" : "aeiou",
@@ -15727,13 +15703,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "headerImageUrl" : "aeiou",
   "footer" : "aeiou",
-  "selfUri" : "aeiou",
-  "contextId" : "aeiou",
-  "language" : "aeiou",
-  "published" : true,
-  "headerImageId" : "aeiou",
   "publishedVersions" : {
     "total" : 123456789,
     "pageCount" : 123,
@@ -15746,11 +15716,15 @@ open class QualityAPI {
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
   },
+  "selfUri" : "aeiou",
   "name" : "aeiou",
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "header" : "aeiou",
   "disabled" : true,
+  "contextId" : "aeiou",
+  "language" : "aeiou",
   "id" : "aeiou",
+  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : "",
     "name" : "aeiou",
@@ -18406,13 +18380,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "headerImageUrl" : "aeiou",
   "footer" : "aeiou",
-  "selfUri" : "aeiou",
-  "contextId" : "aeiou",
-  "language" : "aeiou",
-  "published" : true,
-  "headerImageId" : "aeiou",
   "publishedVersions" : {
     "total" : 123456789,
     "pageCount" : 123,
@@ -18425,11 +18393,15 @@ open class QualityAPI {
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
   },
+  "selfUri" : "aeiou",
   "name" : "aeiou",
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "header" : "aeiou",
   "disabled" : true,
+  "contextId" : "aeiou",
+  "language" : "aeiou",
   "id" : "aeiou",
+  "published" : true,
   "questionGroups" : [ {
     "visibilityCondition" : "",
     "name" : "aeiou",
@@ -18965,13 +18937,7 @@ open class QualityAPI {
      - 
      - examples: [{contentType=application/json, example={
   "surveyForm" : {
-    "headerImageUrl" : "aeiou",
     "footer" : "aeiou",
-    "selfUri" : "aeiou",
-    "contextId" : "aeiou",
-    "language" : "aeiou",
-    "published" : true,
-    "headerImageId" : "aeiou",
     "publishedVersions" : {
       "total" : 123456789,
       "pageCount" : 123,
@@ -18984,11 +18950,15 @@ open class QualityAPI {
       "nextUri" : "aeiou",
       "previousUri" : "aeiou"
     },
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "header" : "aeiou",
     "disabled" : true,
+    "contextId" : "aeiou",
+    "language" : "aeiou",
     "id" : "aeiou",
+    "published" : true,
     "questionGroups" : [ {
       "visibilityCondition" : "",
       "name" : "aeiou",

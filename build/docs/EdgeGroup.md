@@ -19,6 +19,7 @@ title: EdgeGroup
 | **modifiedByApp** | **String** | The application that last modified the resource. | [optional] |
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
 | **managed** | **Bool** | Is this edge group being managed remotely. | [optional] |
+| **hybrid** | **Bool** | Is this edge group hybrid. | [optional] |
 | **edgeTrunkBaseAssignment** | [**TrunkBaseAssignment**](TrunkBaseAssignment.html) | A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. | |
 | **phoneTrunkBases** | [**[TrunkBase]**](TrunkBase.html) | Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. | |
 | **selfUri** | **String** | The URI for this object | [optional] |

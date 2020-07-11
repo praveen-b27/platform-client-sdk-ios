@@ -25,10 +25,6 @@ public class SurveyForm: Codable {
     public var contextId: String?
     /** Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW */
     public var language: String?
-    /** Id of the header image appearing at the top of the form. */
-    public var headerImageId: String?
-    /** Temporary URL for accessing header image */
-    public var headerImageUrl: String?
     /** Markdown text for the top of the form. */
     public var header: String?
     /** Markdown text for the bottom of the form. */
@@ -40,7 +36,7 @@ public class SurveyForm: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, disabled: Bool?, contextId: String?, language: String?, headerImageId: String?, headerImageUrl: String?, header: String?, footer: String?, questionGroups: [SurveyQuestionGroup]?, publishedVersions: DomainEntityListingSurveyForm?, selfUri: String?) {
+    public init(_id: String?, name: String?, modifiedDate: Date?, published: Bool?, disabled: Bool?, contextId: String?, language: String?, header: String?, footer: String?, questionGroups: [SurveyQuestionGroup]?, publishedVersions: DomainEntityListingSurveyForm?, selfUri: String?) {
         
         self._id = _id
         
@@ -55,10 +51,6 @@ public class SurveyForm: Codable {
         self.contextId = contextId
         
         self.language = language
-        
-        self.headerImageId = headerImageId
-        
-        self.headerImageUrl = headerImageUrl
         
         self.header = header
         
@@ -80,8 +72,6 @@ public class SurveyForm: Codable {
         case disabled
         case contextId
         case language
-        case headerImageId
-        case headerImageUrl
         case header
         case footer
         case questionGroups

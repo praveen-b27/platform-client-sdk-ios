@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteLanguageunderstandingDomain**](LanguageUnderstandingAPI.html#deleteLanguageunderstandingDomain) | Delete an NLU Domain. |
 | [**deleteLanguageunderstandingDomainFeedbackFeedbackId**](LanguageUnderstandingAPI.html#deleteLanguageunderstandingDomainFeedbackFeedbackId) | Delete the feedback on the NLU Domain Version. |
+| [**deleteLanguageunderstandingDomainVersion**](LanguageUnderstandingAPI.html#deleteLanguageunderstandingDomainVersion) | Delete an NLU Domain Version |
 | [**getLanguageunderstandingDomain**](LanguageUnderstandingAPI.html#getLanguageunderstandingDomain) | Find an NLU Domain. |
 | [**getLanguageunderstandingDomainFeedback**](LanguageUnderstandingAPI.html#getLanguageunderstandingDomainFeedback) | Get all feedback in the given NLU Domain Version. |
 | [**getLanguageunderstandingDomainFeedbackFeedbackId**](LanguageUnderstandingAPI.html#getLanguageunderstandingDomainFeedbackFeedbackId) | Find a Feedback |
@@ -21,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postLanguageunderstandingDomainVersionDetect**](LanguageUnderstandingAPI.html#postLanguageunderstandingDomainVersionDetect) | Detect intent, entities, etc. in the submitted text using the specified NLU domain version. |
 | [**postLanguageunderstandingDomainVersionPublish**](LanguageUnderstandingAPI.html#postLanguageunderstandingDomainVersionPublish) | Publish the draft NLU Domain Version. |
 | [**postLanguageunderstandingDomainVersionTrain**](LanguageUnderstandingAPI.html#postLanguageunderstandingDomainVersionTrain) | Train the draft NLU Domain Version. |
+| [**postLanguageunderstandingDomainVersions**](LanguageUnderstandingAPI.html#postLanguageunderstandingDomainVersions) | Create an NLU Domain Version. |
 | [**postLanguageunderstandingDomains**](LanguageUnderstandingAPI.html#postLanguageunderstandingDomains) | Create an NLU Domain. |
 | [**putLanguageunderstandingDomainVersion**](LanguageUnderstandingAPI.html#putLanguageunderstandingDomainVersion) | Update an NLU Domain Version. |
 {: class="table-striped"}
@@ -124,6 +126,60 @@ LanguageUnderstandingAPI.deleteLanguageunderstandingDomainFeedbackFeedbackId(dom
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
 | **feedbackId** | **String**| ID of the Feedback | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteLanguageunderstandingDomainVersion"></a>
+
+# **deleteLanguageunderstandingDomainVersion**
+
+
+
+> Void deleteLanguageunderstandingDomainVersion(domainId, domainVersionId)
+
+Delete an NLU Domain Version
+
+
+
+Wraps DELETE /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}  
+
+Requires ANY permissions: 
+
+* languageUnderstanding:nluDomainVersion:delete
+* dialog:botVersion:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // ID of the NLU domain.
+let domainVersionId: String = "" // ID of the NLU domain version.
+
+// Code example
+LanguageUnderstandingAPI.deleteLanguageunderstandingDomainVersion(domainId: domainId, domainVersionId: domainVersionId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("LanguageUnderstandingAPI.deleteLanguageunderstandingDomainVersion was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| ID of the NLU domain. | |
+| **domainVersionId** | **String**| ID of the NLU domain version. | |
 {: class="table-striped"}
 
 
@@ -564,7 +620,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // ID of the NLU domain.
-let body: NluDomain = new NluDomain(...) // 
+let body: NluDomain = new NluDomain(...) // The updated NLU Domain.
 
 // Code example
 LanguageUnderstandingAPI.patchLanguageunderstandingDomain(domainId: domainId, body: body) { (response, error) in
@@ -583,7 +639,7 @@ LanguageUnderstandingAPI.patchLanguageunderstandingDomain(domainId: domainId, bo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
-| **body** | [**NluDomain**](NluDomain.html)|  | [optional] |
+| **body** | [**NluDomain**](NluDomain.html)| The updated NLU Domain. | |
 {: class="table-striped"}
 
 
@@ -619,7 +675,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // ID of the NLU domain.
-let body: NluFeedbackRequest = new NluFeedbackRequest(...) // 
+let body: NluFeedbackRequest = new NluFeedbackRequest(...) // The Feedback to create.
 
 // Code example
 LanguageUnderstandingAPI.postLanguageunderstandingDomainFeedback(domainId: domainId, body: body) { (response, error) in
@@ -638,7 +694,7 @@ LanguageUnderstandingAPI.postLanguageunderstandingDomainFeedback(domainId: domai
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
-| **body** | [**NluFeedbackRequest**](NluFeedbackRequest.html)|  | [optional] |
+| **body** | [**NluFeedbackRequest**](NluFeedbackRequest.html)| The Feedback to create. | |
 {: class="table-striped"}
 
 
@@ -675,7 +731,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // ID of the NLU domain.
 let domainVersionId: String = "" // ID of the NLU domain version.
-let body: NluDetectionRequest = new NluDetectionRequest(...) // 
+let body: NluDetectionRequest = new NluDetectionRequest(...) // The input data to perform detection on.
 
 // Code example
 LanguageUnderstandingAPI.postLanguageunderstandingDomainVersionDetect(domainId: domainId, domainVersionId: domainVersionId, body: body) { (response, error) in
@@ -695,7 +751,7 @@ LanguageUnderstandingAPI.postLanguageunderstandingDomainVersionDetect(domainId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
 | **domainVersionId** | **String**| ID of the NLU domain version. | |
-| **body** | [**NluDetectionRequest**](NluDetectionRequest.html)|  | [optional] |
+| **body** | [**NluDetectionRequest**](NluDetectionRequest.html)| The input data to perform detection on. | |
 {: class="table-striped"}
 
 
@@ -813,6 +869,61 @@ LanguageUnderstandingAPI.postLanguageunderstandingDomainVersionTrain(domainId: d
 
 [**NluDomainVersionTrainingResponse**](NluDomainVersionTrainingResponse.html)
 
+<a name="postLanguageunderstandingDomainVersions"></a>
+
+# **postLanguageunderstandingDomainVersions**
+
+
+
+> [NluDomainVersion](NluDomainVersion.html) postLanguageunderstandingDomainVersions(domainId, body)
+
+Create an NLU Domain Version.
+
+
+
+Wraps POST /api/v2/languageunderstanding/domains/{domainId}/versions  
+
+Requires ANY permissions: 
+
+* languageUnderstanding:nluDomainVersion:add
+* dialog:botVersion:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // ID of the NLU domain.
+let body: NluDomainVersion = new NluDomainVersion(...) // The NLU Domain Version to create.
+
+// Code example
+LanguageUnderstandingAPI.postLanguageunderstandingDomainVersions(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.postLanguageunderstandingDomainVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| ID of the NLU domain. | |
+| **body** | [**NluDomainVersion**](NluDomainVersion.html)| The NLU Domain Version to create. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**NluDomainVersion**](NluDomainVersion.html)
+
 <a name="postLanguageunderstandingDomains"></a>
 
 # **postLanguageunderstandingDomains**
@@ -840,7 +951,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: NluDomain = new NluDomain(...) // 
+let body: NluDomain = new NluDomain(...) // The NLU Domain to create.
 
 // Code example
 LanguageUnderstandingAPI.postLanguageunderstandingDomains(body: body) { (response, error) in
@@ -858,7 +969,7 @@ LanguageUnderstandingAPI.postLanguageunderstandingDomains(body: body) { (respons
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**NluDomain**](NluDomain.html)|  | [optional] |
+| **body** | [**NluDomain**](NluDomain.html)| The NLU Domain to create. | |
 {: class="table-striped"}
 
 
@@ -895,7 +1006,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let domainId: String = "" // ID of the NLU domain.
 let domainVersionId: String = "" // ID of the NLU domain version.
-let body: NluDomainVersion = new NluDomainVersion(...) // 
+let body: NluDomainVersion = new NluDomainVersion(...) // The updated NLU Domain Version.
 
 // Code example
 LanguageUnderstandingAPI.putLanguageunderstandingDomainVersion(domainId: domainId, domainVersionId: domainVersionId, body: body) { (response, error) in
@@ -915,7 +1026,7 @@ LanguageUnderstandingAPI.putLanguageunderstandingDomainVersion(domainId: domainI
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
 | **domainVersionId** | **String**| ID of the NLU domain version. | |
-| **body** | [**NluDomainVersion**](NluDomainVersion.html)|  | [optional] |
+| **body** | [**NluDomainVersion**](NluDomainVersion.html)| The updated NLU Domain Version. | |
 {: class="table-striped"}
 
 

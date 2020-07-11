@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAuditsQueryTransactionId**](AuditAPI.html#getAuditsQueryTransactionId) | Get status of audit query execution |
 | [**getAuditsQueryTransactionIdResults**](AuditAPI.html#getAuditsQueryTransactionIdResults) | Get results of audit query |
 | [**postAuditsQuery**](AuditAPI.html#postAuditsQuery) | Create audit query execution |
+| [**postAuditsQueryRealtime**](AuditAPI.html#postAuditsQueryRealtime) | This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. |
 {: class="table-striped"}
 
 <a name="getAuditsQueryServicemapping"></a>
@@ -222,4 +223,58 @@ AuditAPI.postAuditsQuery(body: body) { (response, error) in
 ### Return type
 
 [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse.html)
+
+<a name="postAuditsQueryRealtime"></a>
+
+# **postAuditsQueryRealtime**
+
+
+
+> [AuditRealtimeQueryResultsResponse](AuditRealtimeQueryResultsResponse.html) postAuditsQueryRealtime(body, expand)
+
+This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+
+
+
+Wraps POST /api/v2/audits/query/realtime  
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AuditRealtimeQueryRequest = new AuditRealtimeQueryRequest(...) // query
+let expand: [String] = [AuditAPI.Expand_postAuditsQueryRealtime.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+AuditAPI.postAuditsQueryRealtime(body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuditAPI.postAuditsQueryRealtime was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AuditRealtimeQueryRequest**](AuditRealtimeQueryRequest.html)| query | |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html)
 

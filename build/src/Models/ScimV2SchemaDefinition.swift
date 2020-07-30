@@ -8,17 +8,17 @@
 import Foundation
 
 
-/** A SCIM schema definition. */
+/** Defines a SCIM schema. */
 
 public class ScimV2SchemaDefinition: Codable {
 
-    /** The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;Mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;Returned\&quot; is set to \&quot;always\&quot;. */
+    /** The ID of the SCIM resource. Set by the service provider. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readOnly\&quot;. \&quot;returned\&quot; is set to \&quot;always\&quot;. */
     public var _id: String?
-    /** Schema name. */
+    /** The name of the schema. */
     public var name: String?
-    /** Schema description. */
+    /** The description of the schema. */
     public var _description: String?
-    /** A complex type that defines service provider attributes and their qualities. */
+    /** The list of service provider attributes. */
     public var attributes: [ScimV2SchemaAttribute]?
     /** The metadata of the SCIM resource. */
     public var meta: ScimMetadata?

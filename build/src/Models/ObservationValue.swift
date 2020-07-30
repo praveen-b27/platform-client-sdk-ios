@@ -15,6 +15,22 @@ public class ObservationValue: Codable {
         case inbound = "inbound"
         case outbound = "outbound"
     }
+    public enum RequestedRoutings: String, Codable { 
+        case predictive = "Predictive"
+        case preferred = "Preferred"
+        case manual = "Manual"
+        case last = "Last"
+        case bullseye = "Bullseye"
+        case standard = "Standard"
+    }
+    public enum UsedRouting: String, Codable { 
+        case predictive = "Predictive"
+        case preferred = "Preferred"
+        case manual = "Manual"
+        case last = "Last"
+        case bullseye = "Bullseye"
+        case standard = "Standard"
+    }
     /** The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var observationDate: Date?
     /** Unique identifier for the conversation */
@@ -45,11 +61,15 @@ public class ObservationValue: Codable {
     public var ani: String?
     /** Dialed number identification service (number dialed by the calling party) */
     public var dnis: String?
-    /** The team Id the user is a member of */
+    /** The team id the user is a member of */
     public var teamId: String?
+    /** All routing types for requested/attempted routing methods */
+    public var requestedRoutings: [RequestedRoutings]?
+    /** Complete routing method */
+    public var usedRouting: UsedRouting?
     public var scoredAgents: [AnalyticsScoredAgent]?
 
-    public init(observationDate: Date?, conversationId: String?, sessionId: String?, requestedRoutingSkillIds: [String]?, requestedLanguageId: String?, routingPriority: Int64?, participantName: String?, userId: String?, direction: Direction?, convertedFrom: String?, convertedTo: String?, addressFrom: String?, addressTo: String?, ani: String?, dnis: String?, teamId: String?, scoredAgents: [AnalyticsScoredAgent]?) {
+    public init(observationDate: Date?, conversationId: String?, sessionId: String?, requestedRoutingSkillIds: [String]?, requestedLanguageId: String?, routingPriority: Int64?, participantName: String?, userId: String?, direction: Direction?, convertedFrom: String?, convertedTo: String?, addressFrom: String?, addressTo: String?, ani: String?, dnis: String?, teamId: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, scoredAgents: [AnalyticsScoredAgent]?) {
         
         self.observationDate = observationDate
         
@@ -82,6 +102,10 @@ public class ObservationValue: Codable {
         self.dnis = dnis
         
         self.teamId = teamId
+        
+        self.requestedRoutings = requestedRoutings
+        
+        self.usedRouting = usedRouting
         
         self.scoredAgents = scoredAgents
         

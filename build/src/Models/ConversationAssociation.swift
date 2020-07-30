@@ -22,7 +22,7 @@ public class ConversationAssociation: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
     }
-    /** External Contact ID */
+    /** An external contact ID.  If not supplied, implies the conversation should be disassociated with any external contact. */
     public var externalContactId: String?
     /** Conversation ID */
     public var conversationId: String?

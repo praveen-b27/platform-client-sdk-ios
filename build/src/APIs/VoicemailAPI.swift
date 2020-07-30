@@ -2575,6 +2575,7 @@ open class VoicemailAPI {
      - examples: [{contentType=application/json, example={
   "alertTimeoutSeconds" : 123,
   "pin" : "aeiou",
+  "sendEmailNotifications" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "enabled" : true
 }}]
@@ -6614,6 +6615,7 @@ open class VoicemailAPI {
      - examples: [{contentType=application/json, example={
   "alertTimeoutSeconds" : 123,
   "pin" : "aeiou",
+  "sendEmailNotifications" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "enabled" : true
 }}]
@@ -7004,6 +7006,7 @@ open class VoicemailAPI {
      - examples: [{contentType=application/json, example={
   "alertTimeoutSeconds" : 123,
   "pin" : "aeiou",
+  "sendEmailNotifications" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "enabled" : true
 }}]
@@ -8003,6 +8006,7 @@ open class VoicemailAPI {
      - examples: [{contentType=application/json, example={
   "alertTimeoutSeconds" : 123,
   "pin" : "aeiou",
+  "sendEmailNotifications" : true,
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "enabled" : true
 }}]

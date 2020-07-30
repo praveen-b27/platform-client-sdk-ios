@@ -20,12 +20,19 @@ open class CoachingAPI {
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteCoachingAppointment(appointmentId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func deleteCoachingAppointment(appointmentId: String, completion: @escaping ((_ data: CoachingAppointmentReference?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteCoachingAppointmentWithRequestBuilder(appointmentId: appointmentId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<CoachingAppointmentReference>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -40,12 +47,16 @@ open class CoachingAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "id" : "aeiou"
+}}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<CoachingAppointmentReference> 
      */
-    open class func deleteCoachingAppointmentWithRequestBuilder(appointmentId: String) -> RequestBuilder<Void> {
+    open class func deleteCoachingAppointmentWithRequestBuilder(appointmentId: String) -> RequestBuilder<CoachingAppointmentReference> {
         var path = "/api/v2/coaching/appointments/{appointmentId}"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -60,7 +71,7 @@ open class CoachingAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<CoachingAppointmentReference>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
@@ -529,7 +540,7 @@ open class CoachingAPI {
      Get appointments for users and optional date range
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
-     - parameter interval: (query) Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)
+     - parameter interval: (query) Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
@@ -603,7 +614,7 @@ open class CoachingAPI {
 }}]
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
-     - parameter interval: (query) Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)
+     - parameter interval: (query) Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
@@ -676,7 +687,7 @@ open class CoachingAPI {
      
      Get my appointments for a given date range
      
-     - parameter interval: (query) Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)
+     - parameter interval: (query) Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
@@ -749,7 +760,7 @@ open class CoachingAPI {
   "previousUri" : "aeiou"
 }}]
      
-     - parameter interval: (query) Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)
+     - parameter interval: (query) Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter statuses: (query) Appointment Statuses to filter by (optional)

@@ -19,6 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundContactlistfilter**](OutboundAPI.html#deleteOutboundContactlistfilter) | Delete Contact List Filter |
 | [**deleteOutboundContactlists**](OutboundAPI.html#deleteOutboundContactlists) | Delete multiple contact lists. |
 | [**deleteOutboundDnclist**](OutboundAPI.html#deleteOutboundDnclist) | Delete dialer DNC list |
+| [**deleteOutboundMessagingcampaign**](OutboundAPI.html#deleteOutboundMessagingcampaign) | Delete an Outbound Messaging Campaign |
 | [**deleteOutboundRuleset**](OutboundAPI.html#deleteOutboundRuleset) | Delete a Rule set. |
 | [**deleteOutboundSchedulesCampaign**](OutboundAPI.html#deleteOutboundSchedulesCampaign) | Delete a dialer campaign schedule. |
 | [**deleteOutboundSchedulesSequence**](OutboundAPI.html#deleteOutboundSchedulesSequence) | Delete a dialer sequence schedule. |
@@ -37,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundCampaignrule**](OutboundAPI.html#getOutboundCampaignrule) | Get Campaign Rule |
 | [**getOutboundCampaignrules**](OutboundAPI.html#getOutboundCampaignrules) | Query Campaign Rule list |
 | [**getOutboundCampaigns**](OutboundAPI.html#getOutboundCampaigns) | Query a list of dialer campaigns. |
+| [**getOutboundCampaignsAll**](OutboundAPI.html#getOutboundCampaignsAll) | Query across all types of campaigns by division |
+| [**getOutboundCampaignsAllDivisionviews**](OutboundAPI.html#getOutboundCampaignsAllDivisionviews) | Query across all types of campaigns |
 | [**getOutboundCampaignsDivisionview**](OutboundAPI.html#getOutboundCampaignsDivisionview) | Get a basic Campaign information object |
 | [**getOutboundCampaignsDivisionviews**](OutboundAPI.html#getOutboundCampaignsDivisionviews) | Query a list of basic Campaign information objects |
 | [**getOutboundContactlist**](OutboundAPI.html#getOutboundContactlist) | Get a dialer contact list. |
@@ -57,6 +60,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundDnclistsDivisionviews**](OutboundAPI.html#getOutboundDnclistsDivisionviews) | Query a list of simplified dnc list objects. |
 | [**getOutboundEvent**](OutboundAPI.html#getOutboundEvent) | Get Dialer Event |
 | [**getOutboundEvents**](OutboundAPI.html#getOutboundEvents) | Query Event Logs |
+| [**getOutboundMessagingcampaign**](OutboundAPI.html#getOutboundMessagingcampaign) | Get an Outbound Messaging Campaign |
+| [**getOutboundMessagingcampaignProgress**](OutboundAPI.html#getOutboundMessagingcampaignProgress) | Get messaging campaign&#39;s progress |
+| [**getOutboundMessagingcampaigns**](OutboundAPI.html#getOutboundMessagingcampaigns) | Query a list of Messaging Campaigns |
+| [**getOutboundMessagingcampaignsDivisionview**](OutboundAPI.html#getOutboundMessagingcampaignsDivisionview) | Get a basic Messaging Campaign information object |
+| [**getOutboundMessagingcampaignsDivisionviews**](OutboundAPI.html#getOutboundMessagingcampaignsDivisionviews) | Query a list of basic Messaging Campaign information objects |
 | [**getOutboundRuleset**](OutboundAPI.html#getOutboundRuleset) | Get a Rule Set by ID. |
 | [**getOutboundRulesets**](OutboundAPI.html#getOutboundRulesets) | Query a list of Rule Sets. |
 | [**getOutboundSchedulesCampaign**](OutboundAPI.html#getOutboundSchedulesCampaign) | Get a dialer campaign schedule. |
@@ -87,6 +95,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundDnclistExport**](OutboundAPI.html#postOutboundDnclistExport) | Initiate the export of a dnc list. |
 | [**postOutboundDnclistPhonenumbers**](OutboundAPI.html#postOutboundDnclistPhonenumbers) | Add phone numbers to a Dialer DNC list. |
 | [**postOutboundDnclists**](OutboundAPI.html#postOutboundDnclists) | Create dialer DNC list |
+| [**postOutboundMessagingcampaigns**](OutboundAPI.html#postOutboundMessagingcampaigns) | Create a Messaging Campaign |
+| [**postOutboundMessagingcampaignsProgress**](OutboundAPI.html#postOutboundMessagingcampaignsProgress) | Get progress for a list of messaging campaigns |
 | [**postOutboundRulesets**](OutboundAPI.html#postOutboundRulesets) | Create a Dialer Call Analysis Response Set. |
 | [**postOutboundSequences**](OutboundAPI.html#postOutboundSequences) | Create a new campaign sequence. |
 | [**putOutboundAttemptlimit**](OutboundAPI.html#putOutboundAttemptlimit) | Update attempt limits |
@@ -99,6 +109,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putOutboundContactlistContact**](OutboundAPI.html#putOutboundContactlistContact) | Update a contact. |
 | [**putOutboundContactlistfilter**](OutboundAPI.html#putOutboundContactlistfilter) | Update Contact List Filter |
 | [**putOutboundDnclist**](OutboundAPI.html#putOutboundDnclist) | Update dialer DNC list |
+| [**putOutboundMessagingcampaign**](OutboundAPI.html#putOutboundMessagingcampaign) | Update an Outbound Messaging Campaign |
 | [**putOutboundRuleset**](OutboundAPI.html#putOutboundRuleset) | Update a RuleSet. |
 | [**putOutboundSchedulesCampaign**](OutboundAPI.html#putOutboundSchedulesCampaign) | Update a new campaign schedule. |
 | [**putOutboundSchedulesSequence**](OutboundAPI.html#putOutboundSchedulesSequence) | Update a new sequence schedule. |
@@ -723,6 +734,58 @@ OutboundAPI.deleteOutboundDnclist(dncListId: dncListId) { (error) in
 
 `nil` (empty response body)
 
+<a name="deleteOutboundMessagingcampaign"></a>
+
+# **deleteOutboundMessagingcampaign**
+
+
+
+> [MessagingCampaign](MessagingCampaign.html) deleteOutboundMessagingcampaign(messagingCampaignId)
+
+Delete an Outbound Messaging Campaign
+
+
+
+Wraps DELETE /api/v2/outbound/messagingcampaigns/{messagingCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:campaign:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.deleteOutboundMessagingcampaign(messagingCampaignId: messagingCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.deleteOutboundMessagingcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
 <a name="deleteOutboundRuleset"></a>
 
 # **deleteOutboundRuleset**
@@ -985,7 +1048,7 @@ OutboundAPI.getOutboundAttemptlimit(attemptLimitsId: attemptLimitsId) { (respons
 
 
 
-> [AttemptLimitsEntityListing](AttemptLimitsEntityListing.html) getOutboundAttemptlimits(pageSize, pageNumber, filterType, name, sortBy, sortOrder)
+> [AttemptLimitsEntityListing](AttemptLimitsEntityListing.html) getOutboundAttemptlimits(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
 
 Query attempt limits list
 
@@ -1007,13 +1070,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundAttemptlimits = OutboundAPI.FilterType_getOutboundAttemptlimits.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundAttemptlimits = OutboundAPI.SortOrder_getOutboundAttemptlimits.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundAttemptlimits(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundAttemptlimits(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1030,6 +1094,7 @@ OutboundAPI.getOutboundAttemptlimits(pageSize: pageSize, pageNumber: pageNumber,
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
@@ -1099,7 +1164,7 @@ OutboundAPI.getOutboundCallabletimeset(callableTimeSetId: callableTimeSetId) { (
 
 
 
-> [CallableTimeSetEntityListing](CallableTimeSetEntityListing.html) getOutboundCallabletimesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder)
+> [CallableTimeSetEntityListing](CallableTimeSetEntityListing.html) getOutboundCallabletimesets(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
 
 Query callable time set list
 
@@ -1121,13 +1186,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundCallabletimesets = OutboundAPI.FilterType_getOutboundCallabletimesets.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundCallabletimesets = OutboundAPI.SortOrder_getOutboundCallabletimesets.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundCallabletimesets(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundCallabletimesets(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1144,6 +1210,7 @@ OutboundAPI.getOutboundCallabletimesets(pageSize: pageSize, pageNumber: pageNumb
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
@@ -1213,7 +1280,7 @@ OutboundAPI.getOutboundCallanalysisresponseset(callAnalysisSetId: callAnalysisSe
 
 
 
-> [ResponseSetEntityListing](ResponseSetEntityListing.html) getOutboundCallanalysisresponsesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder)
+> [ResponseSetEntityListing](ResponseSetEntityListing.html) getOutboundCallanalysisresponsesets(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
 
 Query a list of dialer call analysis response sets.
 
@@ -1235,13 +1302,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundCallanalysisresponsesets = OutboundAPI.FilterType_getOutboundCallanalysisresponsesets.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundCallanalysisresponsesets = OutboundAPI.SortOrder_getOutboundCallanalysisresponsesets.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundCallanalysisresponsesets(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundCallanalysisresponsesets(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1258,6 +1326,7 @@ OutboundAPI.getOutboundCallanalysisresponsesets(pageSize: pageSize, pageNumber: 
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
@@ -1587,7 +1656,7 @@ OutboundAPI.getOutboundCampaignrule(campaignRuleId: campaignRuleId) { (response,
 
 
 
-> [CampaignRuleEntityListing](CampaignRuleEntityListing.html) getOutboundCampaignrules(pageSize, pageNumber, filterType, name, sortBy, sortOrder)
+> [CampaignRuleEntityListing](CampaignRuleEntityListing.html) getOutboundCampaignrules(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
 
 Query Campaign Rule list
 
@@ -1609,13 +1678,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundCampaignrules = OutboundAPI.FilterType_getOutboundCampaignrules.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundCampaignrules = OutboundAPI.SortOrder_getOutboundCampaignrules.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundCampaignrules(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundCampaignrules(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1632,6 +1702,7 @@ OutboundAPI.getOutboundCampaignrules(pageSize: pageSize, pageNumber: pageNumber,
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
@@ -1718,6 +1789,136 @@ OutboundAPI.getOutboundCampaigns(pageSize: pageSize, pageNumber: pageNumber, fil
 ### Return type
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
+
+<a name="getOutboundCampaignsAll"></a>
+
+# **getOutboundCampaignsAll**
+
+
+
+> [CommonCampaignEntityListing](CommonCampaignEntityListing.html) getOutboundCampaignsAll(pageSize, pageNumber, _id, name, divisionId, mediaType, sortOrder)
+
+Query across all types of campaigns by division
+
+
+
+Wraps GET /api/v2/outbound/campaigns/all  
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
+* outbound:messagingCampaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let _id: [String] = [""] // Campaign ID(s)
+let name: String = "" // Campaign name(s)
+let divisionId: [String] = [""] // Division ID(s)
+let mediaType: [String] = [OutboundAPI.MediaType_getOutboundCampaignsAll.enummember.rawValue] // Media type(s)
+let sortOrder: OutboundAPI.SortOrder_getOutboundCampaignsAll = OutboundAPI.SortOrder_getOutboundCampaignsAll.enummember // Sort order
+
+// Code example
+OutboundAPI.getOutboundCampaignsAll(pageSize: pageSize, pageNumber: pageNumber, _id: _id, name: name, divisionId: divisionId, mediaType: mediaType, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundCampaignsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **_id** | [**[String]**](String.html)| Campaign ID(s) | [optional] |
+| **name** | **String**| Campaign name(s) | [optional] |
+| **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
+| **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: sms ("sms"), voice ("voice") |
+| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CommonCampaignEntityListing**](CommonCampaignEntityListing.html)
+
+<a name="getOutboundCampaignsAllDivisionviews"></a>
+
+# **getOutboundCampaignsAllDivisionviews**
+
+
+
+> [CommonCampaignDivisionViewEntityListing](CommonCampaignDivisionViewEntityListing.html) getOutboundCampaignsAllDivisionviews(pageSize, pageNumber, _id, name, divisionId, mediaType, sortOrder)
+
+Query across all types of campaigns
+
+
+
+Wraps GET /api/v2/outbound/campaigns/all/divisionviews  
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+* outbound:messagingCampaign:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let _id: [String] = [""] // Campaign ID(s)
+let name: String = "" // Campaign name(s)
+let divisionId: [String] = [""] // Division ID(s)
+let mediaType: [String] = [OutboundAPI.MediaType_getOutboundCampaignsAllDivisionviews.enummember.rawValue] // Media type(s)
+let sortOrder: OutboundAPI.SortOrder_getOutboundCampaignsAllDivisionviews = OutboundAPI.SortOrder_getOutboundCampaignsAllDivisionviews.enummember // Sort order
+
+// Code example
+OutboundAPI.getOutboundCampaignsAllDivisionviews(pageSize: pageSize, pageNumber: pageNumber, _id: _id, name: name, divisionId: divisionId, mediaType: mediaType, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundCampaignsAllDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **_id** | [**[String]**](String.html)| Campaign ID(s) | [optional] |
+| **name** | **String**| Campaign name(s) | [optional] |
+| **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
+| **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: sms ("sms"), voice ("voice") |
+| **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CommonCampaignDivisionViewEntityListing**](CommonCampaignDivisionViewEntityListing.html)
 
 <a name="getOutboundCampaignsDivisionview"></a>
 
@@ -2162,7 +2363,7 @@ OutboundAPI.getOutboundContactlistfilter(contactListFilterId: contactListFilterI
 
 
 
-> [ContactListFilterEntityListing](ContactListFilterEntityListing.html) getOutboundContactlistfilters(pageSize, pageNumber, filterType, name, sortBy, sortOrder, contactListId)
+> [ContactListFilterEntityListing](ContactListFilterEntityListing.html) getOutboundContactlistfilters(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListId)
 
 Query Contact list filters
 
@@ -2184,6 +2385,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundContactlistfilters = OutboundAPI.FilterType_getOutboundContactlistfilters.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
@@ -2191,7 +2393,7 @@ let sortOrder: OutboundAPI.SortOrder_getOutboundContactlistfilters = OutboundAPI
 let contactListId: String = "" // Contact List ID
 
 // Code example
-OutboundAPI.getOutboundContactlistfilters(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListId: contactListId) { (response, error) in
+OutboundAPI.getOutboundContactlistfilters(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListId: contactListId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2208,6 +2410,7 @@ OutboundAPI.getOutboundContactlistfilters(pageSize: pageSize, pageNumber: pageNu
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
@@ -2226,7 +2429,7 @@ OutboundAPI.getOutboundContactlistfilters(pageSize: pageSize, pageNumber: pageNu
 
 
 
-> [ContactListEntityListing](ContactListEntityListing.html) getOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, _id, divisionId, sortBy, sortOrder)
+> [ContactListEntityListing](ContactListEntityListing.html) getOutboundContactlists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, _id, divisionId, sortBy, sortOrder)
 
 Query a list of contact lists.
 
@@ -2250,6 +2453,7 @@ let includeImportStatus: Bool = false // Include import status
 let includeSize: Bool = false // Include size
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundContactlists = OutboundAPI.FilterType_getOutboundContactlists.enummember // Filter type
 let name: String = "" // Name
 let _id: [String] = [""] // id
@@ -2258,7 +2462,7 @@ let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundContactlists = OutboundAPI.SortOrder_getOutboundContactlists.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundContactlists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, _id: _id, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundContactlists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, _id: _id, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2277,6 +2481,7 @@ OutboundAPI.getOutboundContactlists(includeImportStatus: includeImportStatus, in
 | **includeSize** | **Bool**| Include size | [optional] [default to false] |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| id | [optional] |
@@ -2583,7 +2788,7 @@ OutboundAPI.getOutboundDnclistImportstatus(dncListId: dncListId) { (response, er
 
 
 
-> [DncListEntityListing](DncListEntityListing.html) getOutboundDnclists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, dncSourceType, divisionId, sortBy, sortOrder)
+> [DncListEntityListing](DncListEntityListing.html) getOutboundDnclists(includeImportStatus, includeSize, pageSize, pageNumber, allowEmptyResult, filterType, name, dncSourceType, divisionId, sortBy, sortOrder)
 
 Query dialer DNC lists
 
@@ -2607,6 +2812,7 @@ let includeImportStatus: Bool = false // Import status
 let includeSize: Bool = false // Include size
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundDnclists = OutboundAPI.FilterType_getOutboundDnclists.enummember // Filter type
 let name: String = "" // Name
 let dncSourceType: OutboundAPI.DncSourceType_getOutboundDnclists = OutboundAPI.DncSourceType_getOutboundDnclists.enummember // DncSourceType
@@ -2615,7 +2821,7 @@ let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundDnclists = OutboundAPI.SortOrder_getOutboundDnclists.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundDnclists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, dncSourceType: dncSourceType, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundDnclists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, dncSourceType: dncSourceType, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2634,6 +2840,7 @@ OutboundAPI.getOutboundDnclists(includeImportStatus: includeImportStatus, includ
 | **includeSize** | **Bool**| Include size | [optional] [default to false] |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), dncCom ("dnc.com"), gryphon ("gryphon") |
@@ -2887,6 +3094,294 @@ OutboundAPI.getOutboundEvents(pageSize: pageSize, pageNumber: pageNumber, filter
 
 [**DialerEventEntityListing**](DialerEventEntityListing.html)
 
+<a name="getOutboundMessagingcampaign"></a>
+
+# **getOutboundMessagingcampaign**
+
+
+
+> [MessagingCampaign](MessagingCampaign.html) getOutboundMessagingcampaign(messagingCampaignId)
+
+Get an Outbound Messaging Campaign
+
+
+
+Wraps GET /api/v2/outbound/messagingcampaigns/{messagingCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.getOutboundMessagingcampaign(messagingCampaignId: messagingCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundMessagingcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
+<a name="getOutboundMessagingcampaignProgress"></a>
+
+# **getOutboundMessagingcampaignProgress**
+
+
+
+> [CampaignProgress](CampaignProgress.html) getOutboundMessagingcampaignProgress(messagingCampaignId)
+
+Get messaging campaign&#39;s progress
+
+
+
+Wraps GET /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.getOutboundMessagingcampaignProgress(messagingCampaignId: messagingCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundMessagingcampaignProgress was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CampaignProgress**](CampaignProgress.html)
+
+<a name="getOutboundMessagingcampaigns"></a>
+
+# **getOutboundMessagingcampaigns**
+
+
+
+> [MessagingCampaignEntityListing](MessagingCampaignEntityListing.html) getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id)
+
+Query a list of Messaging Campaigns
+
+
+
+Wraps GET /api/v2/outbound/messagingcampaigns  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 1 // Page number
+let sortBy: OutboundAPI.SortBy_getOutboundMessagingcampaigns = OutboundAPI.SortBy_getOutboundMessagingcampaigns.enummember // The field to sort by
+let sortOrder: OutboundAPI.SortOrder_getOutboundMessagingcampaigns = OutboundAPI.SortOrder_getOutboundMessagingcampaigns.enummember // The direction to sort
+let name: String = "" // Name
+let contactListId: String = "" // Contact List ID
+let divisionId: [String] = [""] // Division ID(s)
+let type: OutboundAPI.ModelType_getOutboundMessagingcampaigns = OutboundAPI.ModelType_getOutboundMessagingcampaigns.enummember // Campaign Type
+let senderSmsPhoneNumber: String = "" // Sender SMS Phone Number
+let _id: [String] = [""] // A list of messaging campaign ids to bulk fetch
+
+// Code example
+OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundMessagingcampaigns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortBy** | **String**| The field to sort by | [optional] [default to name]<br />**Values**: campaignstatus ("campaignStatus"), name ("name"), type ("type") |
+| **sortOrder** | **String**| The direction to sort | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **name** | **String**| Name | [optional] |
+| **contactListId** | **String**| Contact List ID | [optional] |
+| **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
+| **type** | **String**| Campaign Type | [optional]<br />**Values**: sms ("SMS") |
+| **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
+| **_id** | [**[String]**](String.html)| A list of messaging campaign ids to bulk fetch | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignEntityListing**](MessagingCampaignEntityListing.html)
+
+<a name="getOutboundMessagingcampaignsDivisionview"></a>
+
+# **getOutboundMessagingcampaignsDivisionview**
+
+
+
+> [MessagingCampaignDivisionView](MessagingCampaignDivisionView.html) getOutboundMessagingcampaignsDivisionview(messagingCampaignId)
+
+Get a basic Messaging Campaign information object
+
+This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+
+Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}  
+
+Requires ALL permissions: 
+
+* outbound:messagingCampaign:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.getOutboundMessagingcampaignsDivisionview(messagingCampaignId: messagingCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundMessagingcampaignsDivisionview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignDivisionView**](MessagingCampaignDivisionView.html)
+
+<a name="getOutboundMessagingcampaignsDivisionviews"></a>
+
+# **getOutboundMessagingcampaignsDivisionviews**
+
+
+
+> [MessagingCampaignDivisionViewEntityListing](MessagingCampaignDivisionViewEntityListing.html) getOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, _id, senderSmsPhoneNumber)
+
+Query a list of basic Messaging Campaign information objects
+
+This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+
+Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews  
+
+Requires ALL permissions: 
+
+* outbound:messagingCampaign:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 1 // Page number
+let sortOrder: OutboundAPI.SortOrder_getOutboundMessagingcampaignsDivisionviews = OutboundAPI.SortOrder_getOutboundMessagingcampaignsDivisionviews.enummember // The direction to sort
+let name: String = "" // Name
+let _id: [String] = [""] // id
+let senderSmsPhoneNumber: String = "" // Sender SMS Phone Number
+
+// Code example
+OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundMessagingcampaignsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortOrder** | **String**| The direction to sort | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **name** | **String**| Name | [optional] |
+| **_id** | [**[String]**](String.html)| id | [optional] |
+| **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing.html)
+
 <a name="getOutboundRuleset"></a>
 
 # **getOutboundRuleset**
@@ -2945,7 +3440,7 @@ OutboundAPI.getOutboundRuleset(ruleSetId: ruleSetId) { (response, error) in
 
 
 
-> [RuleSetEntityListing](RuleSetEntityListing.html) getOutboundRulesets(pageSize, pageNumber, filterType, name, sortBy, sortOrder)
+> [RuleSetEntityListing](RuleSetEntityListing.html) getOutboundRulesets(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
 
 Query a list of Rule Sets.
 
@@ -2967,13 +3462,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundRulesets = OutboundAPI.FilterType_getOutboundRulesets.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundRulesets = OutboundAPI.SortOrder_getOutboundRulesets.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundRulesets(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundRulesets(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2990,6 +3486,7 @@ OutboundAPI.getOutboundRulesets(pageSize: pageSize, pageNumber: pageNumber, filt
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
@@ -3259,7 +3756,7 @@ OutboundAPI.getOutboundSequence(sequenceId: sequenceId) { (response, error) in
 
 
 
-> [CampaignSequenceEntityListing](CampaignSequenceEntityListing.html) getOutboundSequences(pageSize, pageNumber, filterType, name, sortBy, sortOrder)
+> [CampaignSequenceEntityListing](CampaignSequenceEntityListing.html) getOutboundSequences(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder)
 
 Query a list of dialer campaign sequences.
 
@@ -3281,13 +3778,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
 let filterType: OutboundAPI.FilterType_getOutboundSequences = OutboundAPI.FilterType_getOutboundSequences.enummember // Filter type
 let name: String = "" // Name
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundSequences = OutboundAPI.SortOrder_getOutboundSequences.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundSequences(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundSequences(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3304,6 +3802,7 @@ OutboundAPI.getOutboundSequences(pageSize: pageSize, pageNumber: pageNumber, fil
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **Bool**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
@@ -4472,6 +4971,110 @@ OutboundAPI.postOutboundDnclists(body: body) { (response, error) in
 
 [**DncList**](DncList.html)
 
+<a name="postOutboundMessagingcampaigns"></a>
+
+# **postOutboundMessagingcampaigns**
+
+
+
+> [MessagingCampaign](MessagingCampaign.html) postOutboundMessagingcampaigns(body)
+
+Create a Messaging Campaign
+
+
+
+Wraps POST /api/v2/outbound/messagingcampaigns  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: MessagingCampaign = new MessagingCampaign(...) // Messaging Campaign
+
+// Code example
+OutboundAPI.postOutboundMessagingcampaigns(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundMessagingcampaigns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**MessagingCampaign**](MessagingCampaign.html)| Messaging Campaign | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
+
+<a name="postOutboundMessagingcampaignsProgress"></a>
+
+# **postOutboundMessagingcampaignsProgress**
+
+
+
+> [[CampaignProgress]](CampaignProgress.html) postOutboundMessagingcampaignsProgress(body)
+
+Get progress for a list of messaging campaigns
+
+
+
+Wraps POST /api/v2/outbound/messagingcampaigns/progress  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [String] = [new [String](...)] // Messaging Campaign IDs
+
+// Code example
+OutboundAPI.postOutboundMessagingcampaignsProgress(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundMessagingcampaignsProgress was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | **[String]**| Messaging Campaign IDs | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**[CampaignProgress]**](CampaignProgress.html)
+
 <a name="postOutboundRulesets"></a>
 
 # **postOutboundRulesets**
@@ -5118,6 +5721,60 @@ OutboundAPI.putOutboundDnclist(dncListId: dncListId, body: body) { (response, er
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="putOutboundMessagingcampaign"></a>
+
+# **putOutboundMessagingcampaign**
+
+
+
+> [MessagingCampaign](MessagingCampaign.html) putOutboundMessagingcampaign(messagingCampaignId, body)
+
+Update an Outbound Messaging Campaign
+
+
+
+Wraps PUT /api/v2/outbound/messagingcampaigns/{messagingCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+let body: MessagingCampaign = new MessagingCampaign(...) // MessagingCampaign
+
+// Code example
+OutboundAPI.putOutboundMessagingcampaign(messagingCampaignId: messagingCampaignId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.putOutboundMessagingcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+| **body** | [**MessagingCampaign**](MessagingCampaign.html)| MessagingCampaign | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaign**](MessagingCampaign.html)
 
 <a name="putOutboundRuleset"></a>
 

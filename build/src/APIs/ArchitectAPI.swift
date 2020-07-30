@@ -1370,6 +1370,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1424,6 +1425,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1474,6 +1476,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1974,6 +1977,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2024,6 +2028,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2183,6 +2188,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2233,6 +2239,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2406,6 +2413,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2466,6 +2474,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2642,6 +2651,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2696,6 +2706,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2746,6 +2757,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3066,6 +3078,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3118,6 +3131,7 @@ open class ArchitectAPI {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -5209,6 +5223,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Get a list of schedule groups.
@@ -5218,10 +5234,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter name: (query) Name of the Schedule Group to filter by. (optional)
+     - parameter scheduleIds: (query) A comma-delimited list of Schedule IDs to filter by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectSchedulegroups(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, completion: @escaping ((_ data: ScheduleGroupEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectSchedulegroupsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name)
+    open class func getArchitectSchedulegroups(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, scheduleIds: String? = nil, completion: @escaping ((_ data: ScheduleGroupEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectSchedulegroupsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, scheduleIds: scheduleIds)
         requestBuilder.execute { (response: Response<ScheduleGroupEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5286,10 +5303,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter name: (query) Name of the Schedule Group to filter by. (optional)
+     - parameter scheduleIds: (query) A comma-delimited list of Schedule IDs to filter by. (optional)
 
      - returns: RequestBuilder<ScheduleGroupEntityListing> 
      */
-    open class func getArchitectSchedulegroupsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil) -> RequestBuilder<ScheduleGroupEntityListing> {
+    open class func getArchitectSchedulegroupsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, scheduleIds: String? = nil) -> RequestBuilder<ScheduleGroupEntityListing> {
         let path = "/api/v2/architect/schedulegroups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5310,7 +5328,9 @@ open class ArchitectAPI {
             
             "sortOrder": sortOrder, 
             
-            "name": name
+            "name": name, 
+            
+            "scheduleIds": scheduleIds
             
         ])
 

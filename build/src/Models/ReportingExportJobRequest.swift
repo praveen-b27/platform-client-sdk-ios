@@ -79,6 +79,10 @@ public class ReportingExportJobRequest: Codable {
     public var hasFormatDurations: Bool?
     /** Indicates if filters will be split in aggregate detail exports */
     public var hasSplitFilters: Bool?
+    /** Excludes empty rows from the exports */
+    public var excludeEmptyRows: Bool?
+    /** Indicates if media type will be split in aggregate detail exports */
+    public var hasSplitByMedia: Bool?
     /** The list of ordered selected columns from the export view by the user */
     public var selectedColumns: [SelectedColumns]?
     /** Indicates if custom participant attributes will be exported */
@@ -86,7 +90,7 @@ public class ReportingExportJobRequest: Codable {
     /** The list of email recipients for the exports */
     public var recipientEmails: [String]?
 
-    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?) {
+    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?) {
         
         self.name = name
         
@@ -109,6 +113,10 @@ public class ReportingExportJobRequest: Codable {
         self.hasFormatDurations = hasFormatDurations
         
         self.hasSplitFilters = hasSplitFilters
+        
+        self.excludeEmptyRows = excludeEmptyRows
+        
+        self.hasSplitByMedia = hasSplitByMedia
         
         self.selectedColumns = selectedColumns
         

@@ -19,8 +19,10 @@ public class VoicemailUserPolicy: Codable {
     public var pin: String?
     /** The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var modifiedDate: Date?
+    /** Whether email notifications are sent to the user when a new voicemail is received */
+    public var sendEmailNotifications: Bool?
 
-    public init(enabled: Bool?, alertTimeoutSeconds: Int?, pin: String?, modifiedDate: Date?) {
+    public init(enabled: Bool?, alertTimeoutSeconds: Int?, pin: String?, modifiedDate: Date?, sendEmailNotifications: Bool?) {
         
         self.enabled = enabled
         
@@ -29,6 +31,8 @@ public class VoicemailUserPolicy: Codable {
         self.pin = pin
         
         self.modifiedDate = modifiedDate
+        
+        self.sendEmailNotifications = sendEmailNotifications
         
     }
 

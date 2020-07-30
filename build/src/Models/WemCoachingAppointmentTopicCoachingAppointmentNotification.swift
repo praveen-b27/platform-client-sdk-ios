@@ -15,11 +15,13 @@ public class WemCoachingAppointmentTopicCoachingAppointmentNotification: Codable
         case scheduled = "Scheduled"
         case inProgress = "InProgress"
         case completed = "Completed"
+        case invalidSchedule = "InvalidSchedule"
     }
     public enum ChangeType: String, Codable { 
         case create = "Create"
         case update = "Update"
         case delete = "Delete"
+        case invalidate = "Invalidate"
     }
     public var _id: String?
     public var name: String?

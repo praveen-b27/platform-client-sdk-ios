@@ -251,6 +251,7 @@ open class AnalyticsAPI {
   "participants" : [ {
     "participantId" : "aeiou",
     "sessions" : [ {
+      "usedRouting" : "aeiou",
       "monitoredParticipantId" : "aeiou",
       "cobrowseRole" : "aeiou",
       "videoAddressSelf" : "aeiou",
@@ -260,6 +261,7 @@ open class AnalyticsAPI {
       "remote" : "aeiou",
       "roomId" : "aeiou",
       "messageType" : "aeiou",
+      "requestedRoutings" : [ "aeiou" ],
       "mediaCount" : 123,
       "dnis" : "aeiou",
       "videoRoomId" : "aeiou",
@@ -360,6 +362,7 @@ open class AnalyticsAPI {
       "journeyActionId" : "aeiou",
       "dispositionName" : "disposition.classification.callable.machine",
       "scriptId" : "aeiou",
+      "selectedAgentId" : "aeiou",
       "mediaEndpointStats" : [ {
         "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
         "underrunPackets" : 123456789,
@@ -372,6 +375,7 @@ open class AnalyticsAPI {
         "invalidPackets" : 123456789,
         "discardedPackets" : 123456789
       } ],
+      "selectedAgentRank" : 123,
       "outboundContactListId" : "aeiou"
     } ],
     "externalContactId" : "aeiou",
@@ -485,6 +489,7 @@ open class AnalyticsAPI {
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
+        "usedRouting" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
@@ -494,6 +499,7 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
@@ -594,6 +600,7 @@ open class AnalyticsAPI {
         "journeyActionId" : "aeiou",
         "dispositionName" : "disposition.classification.callable.machine",
         "scriptId" : "aeiou",
+        "selectedAgentId" : "aeiou",
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
@@ -606,6 +613,7 @@ open class AnalyticsAPI {
           "invalidPackets" : 123456789,
           "discardedPackets" : 123456789
         } ],
+        "selectedAgentRank" : 123,
         "outboundContactListId" : "aeiou"
       } ],
       "externalContactId" : "aeiou",
@@ -799,6 +807,7 @@ open class AnalyticsAPI {
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
+        "usedRouting" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
@@ -808,6 +817,7 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
@@ -908,6 +918,7 @@ open class AnalyticsAPI {
         "journeyActionId" : "aeiou",
         "dispositionName" : "disposition.classification.callable.machine",
         "scriptId" : "aeiou",
+        "selectedAgentId" : "aeiou",
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
@@ -920,6 +931,7 @@ open class AnalyticsAPI {
           "invalidPackets" : 123456789,
           "discardedPackets" : 123456789
         } ],
+        "selectedAgentRank" : 123,
         "outboundContactListId" : "aeiou"
       } ],
       "externalContactId" : "aeiou",
@@ -1014,14 +1026,20 @@ open class AnalyticsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "downloadUrl" : "aeiou",
+    "createdDateTime" : "2000-01-23T04:56:07.000+0000",
+    "hasSplitByMedia" : true,
+    "locale" : "aeiou",
+    "excludeEmptyRows" : true,
+    "exportErrorMessagesType" : "aeiou",
+    "enabled" : true,
+    "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "hasFormatDurations" : true,
     "period" : "aeiou",
     "read" : true,
     "selfUri" : "aeiou",
-    "downloadUrl" : "aeiou",
     "timeZone" : "aeiou",
-    "createdDateTime" : "2000-01-23T04:56:07.000+0000",
-    "locale" : "aeiou",
-    "exportErrorMessagesType" : "aeiou",
     "filter" : {
       "sessionDnisList" : [ "aeiou" ],
       "transferred" : true,
@@ -1133,11 +1151,8 @@ open class AnalyticsAPI {
     "name" : "aeiou",
     "viewType" : "aeiou",
     "interval" : "aeiou",
-    "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
     "hasCustomParticipantAttributes" : true,
     "recipientEmails" : [ "aeiou" ],
-    "hasFormatDurations" : true,
     "exportFormat" : "aeiou",
     "status" : "aeiou"
   } ],
@@ -2493,6 +2508,7 @@ open class AnalyticsAPI {
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
+        "usedRouting" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
@@ -2502,6 +2518,7 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
         "videoRoomId" : "aeiou",
@@ -2602,6 +2619,7 @@ open class AnalyticsAPI {
         "journeyActionId" : "aeiou",
         "dispositionName" : "disposition.classification.callable.machine",
         "scriptId" : "aeiou",
+        "selectedAgentId" : "aeiou",
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
@@ -2614,6 +2632,7 @@ open class AnalyticsAPI {
           "invalidPackets" : 123456789,
           "discardedPackets" : 123456789
         } ],
+        "selectedAgentRank" : 123,
         "outboundContactListId" : "aeiou"
       } ],
       "externalContactId" : "aeiou",
@@ -2869,6 +2888,7 @@ open class AnalyticsAPI {
       },
       "qualifier" : "aeiou",
       "observations" : [ {
+        "usedRouting" : "aeiou",
         "routingPriority" : 123456789,
         "conversationId" : "aeiou",
         "convertedTo" : "aeiou",
@@ -2878,6 +2898,7 @@ open class AnalyticsAPI {
         "addressTo" : "aeiou",
         "observationDate" : "2000-01-23T04:56:07.000+0000",
         "teamId" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
         "convertedFrom" : "aeiou",
         "dnis" : "aeiou",
         "scoredAgents" : [ {
@@ -2973,6 +2994,7 @@ open class AnalyticsAPI {
       },
       "qualifier" : "aeiou",
       "observations" : [ {
+        "usedRouting" : "aeiou",
         "routingPriority" : 123456789,
         "conversationId" : "aeiou",
         "convertedTo" : "aeiou",
@@ -2982,6 +3004,7 @@ open class AnalyticsAPI {
         "addressTo" : "aeiou",
         "observationDate" : "2000-01-23T04:56:07.000+0000",
         "teamId" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
         "convertedFrom" : "aeiou",
         "dnis" : "aeiou",
         "scoredAgents" : [ {
@@ -3058,14 +3081,20 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "downloadUrl" : "aeiou",
+  "createdDateTime" : "2000-01-23T04:56:07.000+0000",
+  "hasSplitByMedia" : true,
+  "locale" : "aeiou",
+  "excludeEmptyRows" : true,
+  "exportErrorMessagesType" : "aeiou",
+  "enabled" : true,
+  "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "hasFormatDurations" : true,
   "period" : "aeiou",
   "read" : true,
   "selfUri" : "aeiou",
-  "downloadUrl" : "aeiou",
   "timeZone" : "aeiou",
-  "createdDateTime" : "2000-01-23T04:56:07.000+0000",
-  "locale" : "aeiou",
-  "exportErrorMessagesType" : "aeiou",
   "filter" : {
     "sessionDnisList" : [ "aeiou" ],
     "transferred" : true,
@@ -3177,11 +3206,8 @@ open class AnalyticsAPI {
   "name" : "aeiou",
   "viewType" : "aeiou",
   "interval" : "aeiou",
-  "modifiedDateTime" : "2000-01-23T04:56:07.000+0000",
-  "id" : "aeiou",
   "hasCustomParticipantAttributes" : true,
   "recipientEmails" : [ "aeiou" ],
-  "hasFormatDurations" : true,
   "exportFormat" : "aeiou",
   "status" : "aeiou"
 }}]
@@ -3730,6 +3756,7 @@ open class AnalyticsAPI {
       },
       "qualifier" : "aeiou",
       "observations" : [ {
+        "usedRouting" : "aeiou",
         "routingPriority" : 123456789,
         "conversationId" : "aeiou",
         "convertedTo" : "aeiou",
@@ -3739,6 +3766,7 @@ open class AnalyticsAPI {
         "addressTo" : "aeiou",
         "observationDate" : "2000-01-23T04:56:07.000+0000",
         "teamId" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
         "convertedFrom" : "aeiou",
         "dnis" : "aeiou",
         "scoredAgents" : [ {

@@ -8813,6 +8813,53 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "downloadResult" : {
+    "lookupIdToSecondaryPresenceId" : {
+      "key" : "aeiou"
+    },
+    "data" : [ {
+      "actuals" : [ {
+        "startOffsetSeconds" : 123,
+        "actualActivityCategory" : "aeiou",
+        "endOffsetSeconds" : 123
+      } ],
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "impact" : "aeiou",
+      "dayMetrics" : [ {
+        "exceptionDurationSecs" : 123,
+        "impactSeconds" : 123,
+        "conformanceScheduleSecs" : 123,
+        "adherenceScheduleSecs" : 123,
+        "exceptionCount" : 123,
+        "conformanceActualSecs" : 123,
+        "actualLengthSecs" : 123,
+        "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+        "dayStartOffsetSecs" : 123,
+        "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+        "scheduleLengthSecs" : 123
+      } ],
+      "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+      "userId" : "aeiou",
+      "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "exceptionInfo" : [ {
+        "secondaryPresenceLookupId" : "aeiou",
+        "scheduledActivityCodeId" : "aeiou",
+        "startOffsetSeconds" : 123,
+        "systemPresence" : "aeiou",
+        "impact" : "aeiou",
+        "actualActivityCategory" : "aeiou",
+        "endOffsetSeconds" : 123,
+        "scheduledActivityCategory" : "aeiou",
+        "routingStatus" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "userId" : "aeiou",
+          "status" : "aeiou"
+        }
+      } ]
+    } ],
+    "entityId" : "aeiou"
+  },
   "downloadUrls" : [ "aeiou" ],
   "downloadUrl" : "aeiou",
   "queryState" : "aeiou",
@@ -10714,6 +10761,53 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "downloadResult" : {
+    "lookupIdToSecondaryPresenceId" : {
+      "key" : "aeiou"
+    },
+    "data" : [ {
+      "actuals" : [ {
+        "startOffsetSeconds" : 123,
+        "actualActivityCategory" : "aeiou",
+        "endOffsetSeconds" : 123
+      } ],
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "impact" : "aeiou",
+      "dayMetrics" : [ {
+        "exceptionDurationSecs" : 123,
+        "impactSeconds" : 123,
+        "conformanceScheduleSecs" : 123,
+        "adherenceScheduleSecs" : 123,
+        "exceptionCount" : 123,
+        "conformanceActualSecs" : 123,
+        "actualLengthSecs" : 123,
+        "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+        "dayStartOffsetSecs" : 123,
+        "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+        "scheduleLengthSecs" : 123
+      } ],
+      "conformancePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+      "userId" : "aeiou",
+      "adherencePercentage" : 1.3579000000000001069366817318950779736042022705078125,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "exceptionInfo" : [ {
+        "secondaryPresenceLookupId" : "aeiou",
+        "scheduledActivityCodeId" : "aeiou",
+        "startOffsetSeconds" : 123,
+        "systemPresence" : "aeiou",
+        "impact" : "aeiou",
+        "actualActivityCategory" : "aeiou",
+        "endOffsetSeconds" : 123,
+        "scheduledActivityCategory" : "aeiou",
+        "routingStatus" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "userId" : "aeiou",
+          "status" : "aeiou"
+        }
+      } ]
+    } ],
+    "entityId" : "aeiou"
+  },
   "downloadUrls" : [ "aeiou" ],
   "downloadUrl" : "aeiou",
   "queryState" : "aeiou",

@@ -8,7 +8,7 @@ Defines a user role.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **value** | **String** | Purecloud user role name | [optional] |
+| **value** | **String** | The role of the Genesys Cloud user. | [optional] |
 {: class="table table-striped"}
 
 

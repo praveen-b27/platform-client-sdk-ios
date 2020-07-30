@@ -149,6 +149,7 @@ open class FlowsAPI {
       },
       "qualifier" : "aeiou",
       "observations" : [ {
+        "usedRouting" : "aeiou",
         "routingPriority" : 123456789,
         "conversationId" : "aeiou",
         "convertedTo" : "aeiou",
@@ -158,6 +159,7 @@ open class FlowsAPI {
         "addressTo" : "aeiou",
         "observationDate" : "2000-01-23T04:56:07.000+0000",
         "teamId" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
         "convertedFrom" : "aeiou",
         "dnis" : "aeiou",
         "scoredAgents" : [ {

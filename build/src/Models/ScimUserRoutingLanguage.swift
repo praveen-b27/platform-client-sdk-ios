@@ -8,13 +8,13 @@
 import Foundation
 
 
-/** Routing language assigned to user. */
+/** The routing language assigned to a user. */
 
 public class ScimUserRoutingLanguage: Codable {
 
-    /** Case-sensitive name identifying a language configured in routing languages. */
+    /** The case-sensitive name of a routing language configured in Genesys Cloud. */
     public var name: String?
-    /** Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular language. It is used when a queue is set to \&quot;Best available language\&quot; mode to allow acd interactions to target agents with higher proficiency ratings. */
+    /** A rating from 0.0 to 5.0 that indicates how fluent an agent is in a particular language. ACD interactions are routed to agents with higher proficiency ratings. */
     public var proficiency: Double?
 
     public init(name: String?, proficiency: Double?) {

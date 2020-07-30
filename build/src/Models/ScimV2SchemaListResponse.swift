@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** SCIM Resource Types list response */
+/** Defines the list response for SCIM resource types. */
 
 public class ScimV2SchemaListResponse: Codable {
 
@@ -18,7 +18,7 @@ public class ScimV2SchemaListResponse: Codable {
     public var startIndex: Int64?
     /** The number of resources returned per page. */
     public var itemsPerPage: Int64?
-    /** Resources */
+    /** The list of requested resources. */
     public var resources: [ScimV2SchemaDefinition]?
     /** The list of supported schemas. */
     public var schemas: [String]?

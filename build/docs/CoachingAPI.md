@@ -31,7 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 
-> Void deleteCoachingAppointment(appointmentId)
+> [CoachingAppointmentReference](CoachingAppointmentReference.html) deleteCoachingAppointment(appointmentId)
 
 Delete an existing appointment
 
@@ -54,11 +54,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let appointmentId: String = "" // The ID of the coaching appointment.
 
 // Code example
-CoachingAPI.deleteCoachingAppointment(appointmentId: appointmentId) { (error) in
+CoachingAPI.deleteCoachingAppointment(appointmentId: appointmentId) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("CoachingAPI.deleteCoachingAppointment was successful")
+        dump(response)
     }
 }
 ```
@@ -74,7 +75,7 @@ CoachingAPI.deleteCoachingAppointment(appointmentId: appointmentId) { (error) in
 
 ### Return type
 
-`nil` (empty response body)
+[**CoachingAppointmentReference**](CoachingAppointmentReference.html)
 
 <a name="deleteCoachingAppointmentAnnotation"></a>
 
@@ -377,7 +378,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userIds: [String] = [""] // The user IDs for which to retrieve appointments
-let interval: String = "" // Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
+let interval: String = "" // Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
 let statuses: [String] = [CoachingAPI.Statuses_getCoachingAppointments.enummember.rawValue] // Appointment Statuses to filter by
@@ -401,7 +402,7 @@ CoachingAPI.getCoachingAppointments(userIds: userIds, interval: interval, pageNu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userIds** | [**[String]**](String.html)| The user IDs for which to retrieve appointments | |
-| **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional] |
+| **interval** | **String**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **statuses** | [**[String]**](String.html)| Appointment Statuses to filter by | [optional]<br />**Values**: scheduled ("Scheduled"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
@@ -439,7 +440,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let interval: String = "" // Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
+let interval: String = "" // Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
 let statuses: [String] = [CoachingAPI.Statuses_getCoachingAppointmentsMe.enummember.rawValue] // Appointment Statuses to filter by
@@ -462,7 +463,7 @@ CoachingAPI.getCoachingAppointmentsMe(interval: interval, pageNumber: pageNumber
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **interval** | **String**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional] |
+| **interval** | **String**| Interval to filter data by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **statuses** | [**[String]**](String.html)| Appointment Statuses to filter by | [optional]<br />**Values**: scheduled ("Scheduled"), inProgress ("InProgress"), completed ("Completed") |

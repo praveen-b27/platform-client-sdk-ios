@@ -8,9 +8,9 @@ title: KnowledgeSearchRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **query** | **String** | Input query to search content in the knowledge base | |
-| **pageSize** | **Int** | Page size of the returned results | |
-| **pageNumber** | **Int** | Page number of the returned results | |
-| **documentType** | **String** | Document type to be used while searching | |
+| **pageSize** | **Int** | Page size of the returned results | [optional] |
+| **pageNumber** | **Int** | Page number of the returned results | [optional] |
+| **documentType** | **String** | Document type to be used while searching | [optional] |
 | **languageCode** | **String** | query search for specific languageCode | |
 | **searchOnDraftDocuments** | **Bool** | If true the search query will be executed on draft documents, else it will be on active documents | [optional] |
 {: class="table table-striped"}

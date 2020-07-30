@@ -13,6 +13,8 @@ public class EventMessage: Codable {
 
     public enum Code: String, Codable { 
         case approachingContactLimit = "APPROACHING_CONTACT_LIMIT"
+        case approachingDncListPhoneNumberLimit = "APPROACHING_DNC_LIST_PHONE_NUMBER_LIMIT"
+        case approachingDncOrganizationPhoneNumberLimit = "APPROACHING_DNC_ORGANIZATION_PHONE_NUMBER_LIMIT"
         case approachingEntityLimit = "APPROACHING_ENTITY_LIMIT"
         case automaticTimeZoneZipCodeInvalid = "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID"
         case campaignStartError = "CAMPAIGN_START_ERROR"

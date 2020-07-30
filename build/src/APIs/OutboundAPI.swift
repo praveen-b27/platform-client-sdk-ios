@@ -749,6 +749,104 @@ open class OutboundAPI {
     
     /**
      
+     Delete an Outbound Messaging Campaign
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteOutboundMessagingcampaign(messagingCampaignId: String, completion: @escaping ((_ data: MessagingCampaign?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteOutboundMessagingcampaignWithRequestBuilder(messagingCampaignId: messagingCampaignId)
+        requestBuilder.execute { (response: Response<MessagingCampaign>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete an Outbound Messaging Campaign
+     
+     - DELETE /api/v2/outbound/messagingcampaigns/{messagingCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callableTimeSet" : "",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "dncLists" : [ "" ],
+  "messagesPerMinute" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "alwaysRunning" : true,
+  "contactList" : "",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "smsConfig" : {
+    "senderSmsPhoneNumber" : {
+      "phoneNumber" : "aeiou",
+      "selfUri" : "aeiou"
+    },
+    "messageColumn" : "aeiou",
+    "phoneColumn" : "aeiou"
+  },
+  "contactSorts" : [ {
+    "fieldName" : "aeiou",
+    "numeric" : true,
+    "direction" : "aeiou"
+  } ],
+  "name" : "aeiou",
+  "campaignStatus" : "aeiou",
+  "id" : "aeiou",
+  "errors" : [ {
+    "details" : "aeiou",
+    "error" : "aeiou"
+  } ]
+}}]
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+
+     - returns: RequestBuilder<MessagingCampaign> 
+     */
+    open class func deleteOutboundMessagingcampaignWithRequestBuilder(messagingCampaignId: String) -> RequestBuilder<MessagingCampaign> {
+        var path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaign>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete a Rule set.
      
      - parameter ruleSetId: (path) Rule Set ID 
@@ -1050,6 +1148,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundAttemptlimits: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -1083,14 +1183,15 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundAttemptlimits(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundAttemptlimits? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundAttemptlimits? = nil, completion: @escaping ((_ data: AttemptLimitsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundAttemptlimitsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundAttemptlimits(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundAttemptlimits? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundAttemptlimits? = nil, completion: @escaping ((_ data: AttemptLimitsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundAttemptlimitsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<AttemptLimitsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1148,6 +1249,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -1155,7 +1257,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<AttemptLimitsEntityListing> 
      */
-    open class func getOutboundAttemptlimitsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundAttemptlimits? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundAttemptlimits? = nil) -> RequestBuilder<AttemptLimitsEntityListing> {
+    open class func getOutboundAttemptlimitsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundAttemptlimits? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundAttemptlimits? = nil) -> RequestBuilder<AttemptLimitsEntityListing> {
         let path = "/api/v2/outbound/attemptlimits"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1171,6 +1273,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -1271,6 +1375,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundCallabletimesets: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -1304,14 +1410,15 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundCallabletimesets(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundCallabletimesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallabletimesets? = nil, completion: @escaping ((_ data: CallableTimeSetEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundCallabletimesetsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundCallabletimesets(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundCallabletimesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallabletimesets? = nil, completion: @escaping ((_ data: CallableTimeSetEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundCallabletimesetsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<CallableTimeSetEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1367,6 +1474,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -1374,7 +1482,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<CallableTimeSetEntityListing> 
      */
-    open class func getOutboundCallabletimesetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundCallabletimesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallabletimesets? = nil) -> RequestBuilder<CallableTimeSetEntityListing> {
+    open class func getOutboundCallabletimesetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundCallabletimesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallabletimesets? = nil) -> RequestBuilder<CallableTimeSetEntityListing> {
         let path = "/api/v2/outbound/callabletimesets"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1390,6 +1498,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -1489,6 +1599,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundCallanalysisresponsesets: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -1522,14 +1634,15 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundCallanalysisresponsesets(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundCallanalysisresponsesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallanalysisresponsesets? = nil, completion: @escaping ((_ data: ResponseSetEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundCallanalysisresponsesetsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundCallanalysisresponsesets(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundCallanalysisresponsesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallanalysisresponsesets? = nil, completion: @escaping ((_ data: ResponseSetEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundCallanalysisresponsesetsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<ResponseSetEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1584,6 +1697,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -1591,7 +1705,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<ResponseSetEntityListing> 
      */
-    open class func getOutboundCallanalysisresponsesetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundCallanalysisresponsesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallanalysisresponsesets? = nil) -> RequestBuilder<ResponseSetEntityListing> {
+    open class func getOutboundCallanalysisresponsesetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundCallanalysisresponsesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCallanalysisresponsesets? = nil) -> RequestBuilder<ResponseSetEntityListing> {
         let path = "/api/v2/outbound/callanalysisresponsesets"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1607,6 +1721,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -3119,6 +3235,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundCampaignrules: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -3152,14 +3270,15 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundCampaignrules(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundCampaignrules? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCampaignrules? = nil, completion: @escaping ((_ data: CampaignRuleEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundCampaignrulesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundCampaignrules(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundCampaignrules? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCampaignrules? = nil, completion: @escaping ((_ data: CampaignRuleEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundCampaignrulesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<CampaignRuleEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -3237,6 +3356,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -3244,7 +3364,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<CampaignRuleEntityListing> 
      */
-    open class func getOutboundCampaignrulesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundCampaignrules? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCampaignrules? = nil) -> RequestBuilder<CampaignRuleEntityListing> {
+    open class func getOutboundCampaignrulesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundCampaignrules? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundCampaignrules? = nil) -> RequestBuilder<CampaignRuleEntityListing> {
         let path = "/api/v2/outbound/campaignrules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -3260,6 +3380,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -3488,6 +3610,274 @@ open class OutboundAPI {
         ])
 
         let requestBuilder: RequestBuilder<CampaignEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum MediaType_getOutboundCampaignsAll: String { 
+        case sms = "sms"
+        case voice = "voice"
+    }
+
+    
+    
+    
+    public enum SortOrder_getOutboundCampaignsAll: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    
+    
+    /**
+     
+     Query across all types of campaigns by division
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter _id: (query) Campaign ID(s) (optional)
+     - parameter name: (query) Campaign name(s) (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter mediaType: (query) Media type(s) (optional)
+     - parameter sortOrder: (query) Sort order (optional, default to a)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundCampaignsAll(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, mediaType: [String]? = nil, sortOrder: SortOrder_getOutboundCampaignsAll? = nil, completion: @escaping ((_ data: CommonCampaignEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundCampaignsAllWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, name: name, divisionId: divisionId, mediaType: mediaType, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<CommonCampaignEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query across all types of campaigns by division
+     
+     - GET /api/v2/outbound/campaigns/all
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "mediaType" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter _id: (query) Campaign ID(s) (optional)
+     - parameter name: (query) Campaign name(s) (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter mediaType: (query) Media type(s) (optional)
+     - parameter sortOrder: (query) Sort order (optional, default to a)
+
+     - returns: RequestBuilder<CommonCampaignEntityListing> 
+     */
+    open class func getOutboundCampaignsAllWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, mediaType: [String]? = nil, sortOrder: SortOrder_getOutboundCampaignsAll? = nil) -> RequestBuilder<CommonCampaignEntityListing> {
+        let path = "/api/v2/outbound/campaigns/all"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "id": _id, 
+            
+            "name": name, 
+            
+            "divisionId": divisionId, 
+            
+            "mediaType": mediaType, 
+            
+            "sortOrder": sortOrder?.rawValue
+            
+        ])
+
+        let requestBuilder: RequestBuilder<CommonCampaignEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum MediaType_getOutboundCampaignsAllDivisionviews: String { 
+        case sms = "sms"
+        case voice = "voice"
+    }
+
+    
+    
+    
+    public enum SortOrder_getOutboundCampaignsAllDivisionviews: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    
+    
+    /**
+     
+     Query across all types of campaigns
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter _id: (query) Campaign ID(s) (optional)
+     - parameter name: (query) Campaign name(s) (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter mediaType: (query) Media type(s) (optional)
+     - parameter sortOrder: (query) Sort order (optional, default to a)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundCampaignsAllDivisionviews(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, mediaType: [String]? = nil, sortOrder: SortOrder_getOutboundCampaignsAllDivisionviews? = nil, completion: @escaping ((_ data: CommonCampaignDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundCampaignsAllDivisionviewsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, name: name, divisionId: divisionId, mediaType: mediaType, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<CommonCampaignDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query across all types of campaigns
+     
+     - GET /api/v2/outbound/campaigns/all/divisionviews
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "mediaType" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter _id: (query) Campaign ID(s) (optional)
+     - parameter name: (query) Campaign name(s) (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter mediaType: (query) Media type(s) (optional)
+     - parameter sortOrder: (query) Sort order (optional, default to a)
+
+     - returns: RequestBuilder<CommonCampaignDivisionViewEntityListing> 
+     */
+    open class func getOutboundCampaignsAllDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, mediaType: [String]? = nil, sortOrder: SortOrder_getOutboundCampaignsAllDivisionviews? = nil) -> RequestBuilder<CommonCampaignDivisionViewEntityListing> {
+        let path = "/api/v2/outbound/campaigns/all/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "id": _id, 
+            
+            "name": name, 
+            
+            "divisionId": divisionId, 
+            
+            "mediaType": mediaType, 
+            
+            "sortOrder": sortOrder?.rawValue
+            
+        ])
+
+        let requestBuilder: RequestBuilder<CommonCampaignDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -4234,6 +4624,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundContactlistfilters: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -4269,6 +4661,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -4276,8 +4669,8 @@ open class OutboundAPI {
      - parameter contactListId: (query) Contact List ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundContactlistfilters(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundContactlistfilters? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlistfilters? = nil, contactListId: String? = nil, completion: @escaping ((_ data: ContactListFilterEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundContactlistfiltersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListId: contactListId)
+    open class func getOutboundContactlistfilters(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlistfilters? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlistfilters? = nil, contactListId: String? = nil, completion: @escaping ((_ data: ContactListFilterEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundContactlistfiltersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder, contactListId: contactListId)
         requestBuilder.execute { (response: Response<ContactListFilterEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4348,6 +4741,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -4356,7 +4750,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<ContactListFilterEntityListing> 
      */
-    open class func getOutboundContactlistfiltersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundContactlistfilters? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlistfilters? = nil, contactListId: String? = nil) -> RequestBuilder<ContactListFilterEntityListing> {
+    open class func getOutboundContactlistfiltersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlistfilters? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlistfilters? = nil, contactListId: String? = nil) -> RequestBuilder<ContactListFilterEntityListing> {
         let path = "/api/v2/outbound/contactlistfilters"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4372,6 +4766,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -4390,6 +4786,8 @@ open class OutboundAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
+    
     
     
     
@@ -4439,6 +4837,7 @@ open class OutboundAPI {
      - parameter includeSize: (query) Include size (optional, default to false)
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter _id: (query) id (optional)
@@ -4447,8 +4846,8 @@ open class OutboundAPI {
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundContactlists(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil, completion: @escaping ((_ data: ContactListEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundContactlistsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, _id: _id, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundContactlists(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil, completion: @escaping ((_ data: ContactListEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundContactlistsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, _id: _id, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<ContactListEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4522,6 +4921,7 @@ open class OutboundAPI {
      - parameter includeSize: (query) Include size (optional, default to false)
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter _id: (query) id (optional)
@@ -4531,7 +4931,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<ContactListEntityListing> 
      */
-    open class func getOutboundContactlistsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil) -> RequestBuilder<ContactListEntityListing> {
+    open class func getOutboundContactlistsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundContactlists? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundContactlists? = nil) -> RequestBuilder<ContactListEntityListing> {
         let path = "/api/v2/outbound/contactlists"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4551,6 +4951,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -5095,6 +5497,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundDnclists: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -5141,6 +5545,7 @@ open class OutboundAPI {
      - parameter includeSize: (query) Include size (optional, default to false)
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter dncSourceType: (query) DncSourceType (optional)
@@ -5149,8 +5554,8 @@ open class OutboundAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundDnclists(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundDnclists? = nil, name: String? = nil, dncSourceType: DncSourceType_getOutboundDnclists? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclists? = nil, completion: @escaping ((_ data: DncListEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundDnclistsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, dncSourceType: dncSourceType, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundDnclists(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundDnclists? = nil, name: String? = nil, dncSourceType: DncSourceType_getOutboundDnclists? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclists? = nil, completion: @escaping ((_ data: DncListEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundDnclistsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, dncSourceType: dncSourceType, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<DncListEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5217,6 +5622,7 @@ open class OutboundAPI {
      - parameter includeSize: (query) Include size (optional, default to false)
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter dncSourceType: (query) DncSourceType (optional)
@@ -5226,7 +5632,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<DncListEntityListing> 
      */
-    open class func getOutboundDnclistsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundDnclists? = nil, name: String? = nil, dncSourceType: DncSourceType_getOutboundDnclists? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclists? = nil) -> RequestBuilder<DncListEntityListing> {
+    open class func getOutboundDnclistsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundDnclists? = nil, name: String? = nil, dncSourceType: DncSourceType_getOutboundDnclists? = nil, divisionId: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclists? = nil) -> RequestBuilder<DncListEntityListing> {
         let path = "/api/v2/outbound/dnclists"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5246,6 +5652,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -5770,6 +6178,554 @@ open class OutboundAPI {
     
     /**
      
+     Get an Outbound Messaging Campaign
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundMessagingcampaign(messagingCampaignId: String, completion: @escaping ((_ data: MessagingCampaign?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundMessagingcampaignWithRequestBuilder(messagingCampaignId: messagingCampaignId)
+        requestBuilder.execute { (response: Response<MessagingCampaign>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get an Outbound Messaging Campaign
+     
+     - GET /api/v2/outbound/messagingcampaigns/{messagingCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callableTimeSet" : "",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "dncLists" : [ "" ],
+  "messagesPerMinute" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "alwaysRunning" : true,
+  "contactList" : "",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "smsConfig" : {
+    "senderSmsPhoneNumber" : {
+      "phoneNumber" : "aeiou",
+      "selfUri" : "aeiou"
+    },
+    "messageColumn" : "aeiou",
+    "phoneColumn" : "aeiou"
+  },
+  "contactSorts" : [ {
+    "fieldName" : "aeiou",
+    "numeric" : true,
+    "direction" : "aeiou"
+  } ],
+  "name" : "aeiou",
+  "campaignStatus" : "aeiou",
+  "id" : "aeiou",
+  "errors" : [ {
+    "details" : "aeiou",
+    "error" : "aeiou"
+  } ]
+}}]
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+
+     - returns: RequestBuilder<MessagingCampaign> 
+     */
+    open class func getOutboundMessagingcampaignWithRequestBuilder(messagingCampaignId: String) -> RequestBuilder<MessagingCampaign> {
+        var path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaign>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get messaging campaign's progress
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundMessagingcampaignProgress(messagingCampaignId: String, completion: @escaping ((_ data: CampaignProgress?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundMessagingcampaignProgressWithRequestBuilder(messagingCampaignId: messagingCampaignId)
+        requestBuilder.execute { (response: Response<CampaignProgress>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get messaging campaign's progress
+     
+     - GET /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "contactList" : "",
+  "numberOfContactsCalled" : 123456789,
+  "numberOfContactsMessaged" : 123456789,
+  "totalNumberOfContacts" : 123456789,
+  "percentage" : 123456789,
+  "campaign" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+
+     - returns: RequestBuilder<CampaignProgress> 
+     */
+    open class func getOutboundMessagingcampaignProgressWithRequestBuilder(messagingCampaignId: String) -> RequestBuilder<CampaignProgress> {
+        var path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CampaignProgress>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum SortBy_getOutboundMessagingcampaigns: String { 
+        case campaignstatus = "campaignStatus"
+        case name = "name"
+        case type = "type"
+    }
+
+    
+    
+    
+    public enum SortOrder_getOutboundMessagingcampaigns: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum ModelType_getOutboundMessagingcampaigns: String { 
+        case sms = "SMS"
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Query a list of Messaging Campaigns
+     
+     - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortBy: (query) The field to sort by (optional, default to name)
+     - parameter sortOrder: (query) The direction to sort (optional, default to ascending)
+     - parameter name: (query) Name (optional)
+     - parameter contactListId: (query) Contact List ID (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter type: (query) Campaign Type (optional)
+     - parameter senderSmsPhoneNumber: (query) Sender SMS Phone Number (optional)
+     - parameter _id: (query) A list of messaging campaign ids to bulk fetch (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundMessagingcampaigns(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getOutboundMessagingcampaigns? = nil, sortOrder: SortOrder_getOutboundMessagingcampaigns? = nil, name: String? = nil, contactListId: String? = nil, divisionId: [String]? = nil, type: ModelType_getOutboundMessagingcampaigns? = nil, senderSmsPhoneNumber: String? = nil, _id: [String]? = nil, completion: @escaping ((_ data: MessagingCampaignEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundMessagingcampaignsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id)
+        requestBuilder.execute { (response: Response<MessagingCampaignEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query a list of Messaging Campaigns
+     
+     - GET /api/v2/outbound/messagingcampaigns
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "callableTimeSet" : "",
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "dncLists" : [ "" ],
+    "messagesPerMinute" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "alwaysRunning" : true,
+    "contactList" : "",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "smsConfig" : {
+      "senderSmsPhoneNumber" : {
+        "phoneNumber" : "aeiou",
+        "selfUri" : "aeiou"
+      },
+      "messageColumn" : "aeiou",
+      "phoneColumn" : "aeiou"
+    },
+    "contactSorts" : [ {
+      "fieldName" : "aeiou",
+      "numeric" : true,
+      "direction" : "aeiou"
+    } ],
+    "name" : "aeiou",
+    "campaignStatus" : "aeiou",
+    "id" : "aeiou",
+    "errors" : [ {
+      "details" : "aeiou",
+      "error" : "aeiou"
+    } ]
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortBy: (query) The field to sort by (optional, default to name)
+     - parameter sortOrder: (query) The direction to sort (optional, default to ascending)
+     - parameter name: (query) Name (optional)
+     - parameter contactListId: (query) Contact List ID (optional)
+     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter type: (query) Campaign Type (optional)
+     - parameter senderSmsPhoneNumber: (query) Sender SMS Phone Number (optional)
+     - parameter _id: (query) A list of messaging campaign ids to bulk fetch (optional)
+
+     - returns: RequestBuilder<MessagingCampaignEntityListing> 
+     */
+    open class func getOutboundMessagingcampaignsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getOutboundMessagingcampaigns? = nil, sortOrder: SortOrder_getOutboundMessagingcampaigns? = nil, name: String? = nil, contactListId: String? = nil, divisionId: [String]? = nil, type: ModelType_getOutboundMessagingcampaigns? = nil, senderSmsPhoneNumber: String? = nil, _id: [String]? = nil) -> RequestBuilder<MessagingCampaignEntityListing> {
+        let path = "/api/v2/outbound/messagingcampaigns"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortBy": sortBy?.rawValue, 
+            
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "name": name, 
+            
+            "contactListId": contactListId, 
+            
+            "divisionId": divisionId, 
+            
+            "type": type?.rawValue, 
+            
+            "senderSmsPhoneNumber": senderSmsPhoneNumber, 
+            
+            "id": _id
+            
+        ])
+
+        let requestBuilder: RequestBuilder<MessagingCampaignEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a basic Messaging Campaign information object
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundMessagingcampaignsDivisionview(messagingCampaignId: String, completion: @escaping ((_ data: MessagingCampaignDivisionView?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundMessagingcampaignsDivisionviewWithRequestBuilder(messagingCampaignId: messagingCampaignId)
+        requestBuilder.execute { (response: Response<MessagingCampaignDivisionView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a basic Messaging Campaign information object
+     
+     - GET /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}
+     - This returns a simplified version of a Messaging Campaign, consisting of id, name, and division.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+
+     - returns: RequestBuilder<MessagingCampaignDivisionView> 
+     */
+    open class func getOutboundMessagingcampaignsDivisionviewWithRequestBuilder(messagingCampaignId: String) -> RequestBuilder<MessagingCampaignDivisionView> {
+        var path = "/api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaignDivisionView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getOutboundMessagingcampaignsDivisionviews: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Query a list of basic Messaging Campaign information objects
+     
+     - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) The direction to sort (optional, default to a)
+     - parameter name: (query) Name (optional)
+     - parameter _id: (query) id (optional)
+     - parameter senderSmsPhoneNumber: (query) Sender SMS Phone Number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundMessagingcampaignsDivisionviews(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getOutboundMessagingcampaignsDivisionviews? = nil, name: String? = nil, _id: [String]? = nil, senderSmsPhoneNumber: String? = nil, completion: @escaping ((_ data: MessagingCampaignDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundMessagingcampaignsDivisionviewsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber)
+        requestBuilder.execute { (response: Response<MessagingCampaignDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query a list of basic Messaging Campaign information objects
+     
+     - GET /api/v2/outbound/messagingcampaigns/divisionviews
+     - This returns a listing of simplified Messaging Campaigns, each consisting of id, name, and division.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) The direction to sort (optional, default to a)
+     - parameter name: (query) Name (optional)
+     - parameter _id: (query) id (optional)
+     - parameter senderSmsPhoneNumber: (query) Sender SMS Phone Number (optional)
+
+     - returns: RequestBuilder<MessagingCampaignDivisionViewEntityListing> 
+     */
+    open class func getOutboundMessagingcampaignsDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getOutboundMessagingcampaignsDivisionviews? = nil, name: String? = nil, _id: [String]? = nil, senderSmsPhoneNumber: String? = nil) -> RequestBuilder<MessagingCampaignDivisionViewEntityListing> {
+        let path = "/api/v2/outbound/messagingcampaigns/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "name": name, 
+            
+            "id": _id, 
+            
+            "senderSmsPhoneNumber": senderSmsPhoneNumber
+            
+        ])
+
+        let requestBuilder: RequestBuilder<MessagingCampaignDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Get a Rule Set by ID.
      
      - parameter ruleSetId: (path) Rule Set ID 
@@ -5872,6 +6828,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundRulesets: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -5905,14 +6863,15 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundRulesets(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundRulesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundRulesets? = nil, completion: @escaping ((_ data: RuleSetEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundRulesetsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundRulesets(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundRulesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundRulesets? = nil, completion: @escaping ((_ data: RuleSetEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundRulesetsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<RuleSetEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5991,6 +6950,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -5998,7 +6958,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<RuleSetEntityListing> 
      */
-    open class func getOutboundRulesetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundRulesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundRulesets? = nil) -> RequestBuilder<RuleSetEntityListing> {
+    open class func getOutboundRulesetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundRulesets? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundRulesets? = nil) -> RequestBuilder<RuleSetEntityListing> {
         let path = "/api/v2/outbound/rulesets"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6014,6 +6974,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -6419,6 +7381,8 @@ open class OutboundAPI {
     
     
     
+    
+    
     public enum FilterType_getOutboundSequences: String { 
         case equals = "Equals"
         case regEx = "RegEx"
@@ -6452,14 +7416,15 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundSequences(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundSequences? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundSequences? = nil, completion: @escaping ((_ data: CampaignSequenceEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundSequencesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundSequences(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundSequences? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundSequences? = nil, completion: @escaping ((_ data: CampaignSequenceEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundSequencesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<CampaignSequenceEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6516,6 +7481,7 @@ open class OutboundAPI {
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter allowEmptyResult: (query) Whether to return an empty page when there are no results for that page (optional, default to false)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
      - parameter sortBy: (query) Sort by (optional)
@@ -6523,7 +7489,7 @@ open class OutboundAPI {
 
      - returns: RequestBuilder<CampaignSequenceEntityListing> 
      */
-    open class func getOutboundSequencesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundSequences? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundSequences? = nil) -> RequestBuilder<CampaignSequenceEntityListing> {
+    open class func getOutboundSequencesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, allowEmptyResult: Bool? = nil, filterType: FilterType_getOutboundSequences? = nil, name: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundSequences? = nil) -> RequestBuilder<CampaignSequenceEntityListing> {
         let path = "/api/v2/outbound/sequences"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6539,6 +7505,8 @@ open class OutboundAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "allowEmptyResult": allowEmptyResult, 
             
             "filterType": filterType?.rawValue, 
             
@@ -8276,6 +9244,166 @@ open class OutboundAPI {
     
     /**
      
+     Create a Messaging Campaign
+     
+     - parameter body: (body) Messaging Campaign 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postOutboundMessagingcampaigns(body: MessagingCampaign, completion: @escaping ((_ data: MessagingCampaign?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOutboundMessagingcampaignsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<MessagingCampaign>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a Messaging Campaign
+     
+     - POST /api/v2/outbound/messagingcampaigns
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callableTimeSet" : "",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "dncLists" : [ "" ],
+  "messagesPerMinute" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "alwaysRunning" : true,
+  "contactList" : "",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "smsConfig" : {
+    "senderSmsPhoneNumber" : {
+      "phoneNumber" : "aeiou",
+      "selfUri" : "aeiou"
+    },
+    "messageColumn" : "aeiou",
+    "phoneColumn" : "aeiou"
+  },
+  "contactSorts" : [ {
+    "fieldName" : "aeiou",
+    "numeric" : true,
+    "direction" : "aeiou"
+  } ],
+  "name" : "aeiou",
+  "campaignStatus" : "aeiou",
+  "id" : "aeiou",
+  "errors" : [ {
+    "details" : "aeiou",
+    "error" : "aeiou"
+  } ]
+}}]
+     
+     - parameter body: (body) Messaging Campaign 
+
+     - returns: RequestBuilder<MessagingCampaign> 
+     */
+    open class func postOutboundMessagingcampaignsWithRequestBuilder(body: MessagingCampaign) -> RequestBuilder<MessagingCampaign> {
+        let path = "/api/v2/outbound/messagingcampaigns"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaign>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get progress for a list of messaging campaigns
+     
+     - parameter body: (body) Messaging Campaign IDs 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postOutboundMessagingcampaignsProgress(body: [String], completion: @escaping ((_ data: [CampaignProgress]?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOutboundMessagingcampaignsProgressWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<[CampaignProgress]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get progress for a list of messaging campaigns
+     
+     - POST /api/v2/outbound/messagingcampaigns/progress
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example=[ {
+  "contactList" : "",
+  "numberOfContactsCalled" : 123456789,
+  "numberOfContactsMessaged" : 123456789,
+  "totalNumberOfContacts" : 123456789,
+  "percentage" : 123456789,
+  "campaign" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  }
+} ]}]
+     
+     - parameter body: (body) Messaging Campaign IDs 
+
+     - returns: RequestBuilder<[CampaignProgress]> 
+     */
+    open class func postOutboundMessagingcampaignsProgressWithRequestBuilder(body: [String]) -> RequestBuilder<[CampaignProgress]> {
+        let path = "/api/v2/outbound/messagingcampaigns/progress"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[CampaignProgress]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Create a Dialer Call Analysis Response Set.
      
      - parameter body: (body) RuleSet 
@@ -9331,6 +10459,105 @@ open class OutboundAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DncList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update an Outbound Messaging Campaign
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+     - parameter body: (body) MessagingCampaign 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putOutboundMessagingcampaign(messagingCampaignId: String, body: MessagingCampaign, completion: @escaping ((_ data: MessagingCampaign?,_ error: Error?) -> Void)) {
+        let requestBuilder = putOutboundMessagingcampaignWithRequestBuilder(messagingCampaignId: messagingCampaignId, body: body)
+        requestBuilder.execute { (response: Response<MessagingCampaign>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update an Outbound Messaging Campaign
+     
+     - PUT /api/v2/outbound/messagingcampaigns/{messagingCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callableTimeSet" : "",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "dncLists" : [ "" ],
+  "messagesPerMinute" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "alwaysRunning" : true,
+  "contactList" : "",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "smsConfig" : {
+    "senderSmsPhoneNumber" : {
+      "phoneNumber" : "aeiou",
+      "selfUri" : "aeiou"
+    },
+    "messageColumn" : "aeiou",
+    "phoneColumn" : "aeiou"
+  },
+  "contactSorts" : [ {
+    "fieldName" : "aeiou",
+    "numeric" : true,
+    "direction" : "aeiou"
+  } ],
+  "name" : "aeiou",
+  "campaignStatus" : "aeiou",
+  "id" : "aeiou",
+  "errors" : [ {
+    "details" : "aeiou",
+    "error" : "aeiou"
+  } ]
+}}]
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+     - parameter body: (body) MessagingCampaign 
+
+     - returns: RequestBuilder<MessagingCampaign> 
+     */
+    open class func putOutboundMessagingcampaignWithRequestBuilder(messagingCampaignId: String, body: MessagingCampaign) -> RequestBuilder<MessagingCampaign> {
+        var path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaign>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

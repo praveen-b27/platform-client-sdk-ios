@@ -48,6 +48,7 @@ public class ConversationEventTopicMessage: Codable {
     public var _id: String?
     public var state: State?
     public var held: Bool?
+    public var errorInfo: ConversationEventTopicErrorDetails?
     public var provider: String?
     public var scriptId: String?
     public var peerId: String?
@@ -65,13 +66,15 @@ public class ConversationEventTopicMessage: Codable {
     public var wrapup: ConversationEventTopicWrapup?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: ConversationEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: ConversationEventTopicWrapup?, additionalProperties: JSON?) {
         
         self._id = _id
         
         self.state = state
         
         self.held = held
+        
+        self.errorInfo = errorInfo
         
         self.provider = provider
         
@@ -111,6 +114,7 @@ public class ConversationEventTopicMessage: Codable {
         case _id = "id"
         case state
         case held
+        case errorInfo
         case provider
         case scriptId
         case peerId

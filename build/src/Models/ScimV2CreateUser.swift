@@ -16,11 +16,11 @@ public class ScimV2CreateUser: Codable {
     public var schemas: [String]?
     /** Indicates whether the user&#39;s administrative status is active. */
     public var active: Bool?
-    /** The user&#39;s PureCloud email address. Must be unique. */
+    /** The user&#39;s Genesys Cloud email address. Must be unique. */
     public var userName: String?
     /** The display name of the user. */
     public var displayName: String?
-    /** The new password for the PureCloud user. Does not return an existing password. */
+    /** The new password for the Genesys Cloud user. Does not return an existing password. */
     public var password: String?
     /** The user&#39;s title. */
     public var title: String?
@@ -36,6 +36,7 @@ public class ScimV2CreateUser: Codable {
     public var roles: [ScimUserRole]?
     /** The URI of the schema for the enterprise user. */
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
+    /** The URI of the schema for the Genesys Cloud user. */
     public var urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?
 
     public init(schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?) {

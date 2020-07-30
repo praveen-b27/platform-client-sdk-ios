@@ -20,7 +20,7 @@ public class UserRoutingSkill: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** Proficiency is a rating from 0.0 to 5.0 on how competent an agent is for a particular skill. It is used when a queue is set to \&quot;Best available skills\&quot; mode to allow acd interactions to target agents with higher proficiency ratings. */
+    /** A rating from 0.0 to 5.0 that indicates how adept an agent is at a particular skill. When \&quot;Best available skills\&quot; is enabled for a queue in Genesys Cloud, ACD interactions in that queue are routed to agents with higher proficiency ratings. */
     public var proficiency: Double?
     /** Activate or deactivate this routing skill. */
     public var state: State?

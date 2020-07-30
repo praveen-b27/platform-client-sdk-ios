@@ -17,10 +17,10 @@ open class SCIMAPI {
     
     /**
      
-     Delete a group.
+     Delete a group
      
-     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteScimGroup(groupId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -36,7 +36,7 @@ open class SCIMAPI {
 
     /**
      
-     Delete a group.
+     Delete a group
      
      - DELETE /api/v2/scim/groups/{groupId}
      - 
@@ -44,8 +44,8 @@ open class SCIMAPI {
        - type: oauth2
        - name: PureCloud OAuth
      
-     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -151,10 +151,10 @@ open class SCIMAPI {
     
     /**
      
-     Delete a group.
+     Delete a group
      
-     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteScimV2Group(groupId: String, ifMatch: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -170,7 +170,7 @@ open class SCIMAPI {
 
     /**
      
-     Delete a group.
+     Delete a group
      
      - DELETE /api/v2/scim/v2/groups/{groupId}
      - 
@@ -178,8 +178,8 @@ open class SCIMAPI {
        - type: oauth2
        - name: PureCloud OAuth
      
-     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
-     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
+     - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups. 
+     - parameter ifMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -316,8 +316,8 @@ open class SCIMAPI {
      Get a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -367,8 +367,8 @@ open class SCIMAPI {
 }}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/groups. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
@@ -444,10 +444,10 @@ open class SCIMAPI {
      Get a list of groups
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
-     - parameter filter: (query) Filters results. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimGroups(startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, filter: String? = nil, completion: @escaping ((_ data: ScimGroupListResponse?,_ error: Error?) -> Void)) {
@@ -502,10 +502,10 @@ open class SCIMAPI {
 }}]
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
-     - parameter filter: (query) Filters results. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. (optional)
 
      - returns: RequestBuilder<ScimGroupListResponse> 
      */
@@ -722,9 +722,9 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM schema by id
+     Get a SCIM schema
      
-     - parameter schemaId: (path) The ID of a schema. 
+     - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/schemas. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimSchema(schemaId: SchemaId_getScimSchema, completion: @escaping ((_ data: ScimConfigResourceType?,_ error: Error?) -> Void)) {
@@ -747,7 +747,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM schema by id
+     Get a SCIM schema
      
      - GET /api/v2/scim/schemas/{schemaId}
      - 
@@ -773,7 +773,7 @@ open class SCIMAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter schemaId: (path) The ID of a schema. 
+     - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/schemas. 
 
      - returns: RequestBuilder<ScimConfigResourceType> 
      */
@@ -802,9 +802,9 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM schemas
+     Get a list of SCIM schemas
      
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+     - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimSchemas(filter: String? = nil, completion: @escaping ((_ data: ScimConfigResourceTypesListResponse?,_ error: Error?) -> Void)) {
@@ -827,7 +827,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM schemas
+     Get a list of SCIM schemas
      
      - GET /api/v2/scim/schemas
      - 
@@ -859,7 +859,7 @@ open class SCIMAPI {
   } ]
 }}]
      
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+     - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
 
      - returns: RequestBuilder<ScimConfigResourceTypesListResponse> 
      */
@@ -1061,8 +1061,8 @@ open class SCIMAPI {
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1148,8 +1148,8 @@ open class SCIMAPI {
 }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
@@ -1267,9 +1267,9 @@ open class SCIMAPI {
      Get a list of users
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1296,7 +1296,7 @@ open class SCIMAPI {
      Get a list of users
      
      - GET /api/v2/scim/users
-     - To return all active users, do not use a filter parameter. To return inactive users, set \"filter\" to \"active eq false\". By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \"attributes\" to \"id,active\" or \"excludeAttributes\" to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
+     - To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1361,9 +1361,9 @@ open class SCIMAPI {
 }}]
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
 
      - returns: RequestBuilder<ScimUserListResponse> 
@@ -1436,9 +1436,9 @@ open class SCIMAPI {
      Get a group
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
-     - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimV2Group(groupId: String, attributes: [String]? = nil, excludedAttributes: [String]? = nil, ifNoneMatch: String? = nil, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
@@ -1487,9 +1487,9 @@ open class SCIMAPI {
 }}]
      
      - parameter groupId: (path) The ID of a group. Returned with GET /api/v2/scim/v2/groups. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
-     - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter ifNoneMatch: (header) TThe ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
      - returns: RequestBuilder<ScimV2Group> 
      */
@@ -1563,11 +1563,11 @@ open class SCIMAPI {
      
      Get a list of groups
      
-     - parameter filter: (query) Filters results. 
+     - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimV2Groups(filter: String, startIndex: Int? = nil, count: Int? = nil, attributes: [String]? = nil, excludedAttributes: [String]? = nil, completion: @escaping ((_ data: ScimGroupListResponse?,_ error: Error?) -> Void)) {
@@ -1621,11 +1621,11 @@ open class SCIMAPI {
   } ]
 }}]
      
-     - parameter filter: (query) Filters results. 
+     - parameter filter: (query) Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. 
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;active&#39;, and &#39;meta attributes . Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The&#39;id&#39;, &#39;active&#39;, and &#39;meta&#39;  attributes will always be present in the output. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Always returns the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
 
      - returns: RequestBuilder<ScimGroupListResponse> 
      */
@@ -1842,9 +1842,9 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM schema by id
+     Get a SCIM schema
      
-     - parameter schemaId: (path) The ID of a schema. 
+     - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/v2/schemas. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimV2Schema(schemaId: SchemaId_getScimV2Schema, completion: @escaping ((_ data: ScimV2SchemaDefinition?,_ error: Error?) -> Void)) {
@@ -1867,7 +1867,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM schema by id
+     Get a SCIM schema
      
      - GET /api/v2/scim/v2/schemas/{schemaId}
      - 
@@ -1900,7 +1900,7 @@ open class SCIMAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter schemaId: (path) The ID of a schema. 
+     - parameter schemaId: (path) The ID of a schema. Returned with GET /api/v2/scim/v2/schemas. 
 
      - returns: RequestBuilder<ScimV2SchemaDefinition> 
      */
@@ -1929,9 +1929,9 @@ open class SCIMAPI {
     
     /**
      
-     Get the SCIM schemas
+     Get a list of SCIM schemas
      
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+     - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getScimV2Schemas(filter: String? = nil, completion: @escaping ((_ data: ScimV2SchemaListResponse?,_ error: Error?) -> Void)) {
@@ -1954,7 +1954,7 @@ open class SCIMAPI {
 
     /**
      
-     Get the SCIM schemas
+     Get a list of SCIM schemas
      
      - GET /api/v2/scim/v2/schemas
      - 
@@ -1993,7 +1993,7 @@ open class SCIMAPI {
   } ]
 }}]
      
-     - parameter filter: (query) Filtered results are invalid and will result in a 403 (Unauthorized) return. (optional)
+     - parameter filter: (query) Filtered results are invalid and return 403 Unauthorized. (optional)
 
      - returns: RequestBuilder<ScimV2SchemaListResponse> 
      */
@@ -2195,8 +2195,8 @@ open class SCIMAPI {
      Get a user
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2282,8 +2282,8 @@ open class SCIMAPI {
 }}]
      
      - parameter userId: (path) The ID of a user. Returned with GET /api/v2/scim/v2/users. 
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter ifNoneMatch: (header) The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. (optional)
 
      - returns: RequestBuilder<ScimV2User> 
@@ -2401,9 +2401,9 @@ open class SCIMAPI {
      Get a list of users
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2430,7 +2430,7 @@ open class SCIMAPI {
      Get a list of users
      
      - GET /api/v2/scim/v2/users
-     - To return all active users, do not use a filter parameter. To return inactive users, set \"filter\" to \"active eq false\". By default, returns SCIM attributes externalId, enterprise-user:manager, and roles. To exclude these attributes, set \"attributes\" to \"id,active\" or \"excludeAttributes\" to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
+     - To return all active users, do not use the filter parameter. To return inactive users, set the filter parameter to \"active eq false\". By default, returns SCIM attributes \"externalId\", \"enterprise-user:manager\", and \"roles\". To exclude these attributes, set the attributes parameter to \"id,active\" or the excludeAttributes parameter to \"externalId,roles,urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division\".
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2495,9 +2495,9 @@ open class SCIMAPI {
 }}]
      
      - parameter startIndex: (query) The 1-based index of the first query result. (optional, default to 1)
-     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. (optional, default to 25)
-     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, and &#39;meta&#39; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. (optional)
-     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. The &#39;id&#39;, &#39;userName&#39;, &#39;active&#39;, &#39;meta&#39; attributes  will always be present in output. (optional)
+     - parameter count: (query) The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. Note that a page size over 25 will likely cause a 429 error by exceeding internal resource limits. Page sizes over 25 will require using excludedAttributes and includeAttributes query parameters to exclude secondary lookup values -- (i.e. externalId, roles, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills) (optional, default to 25)
+     - parameter attributes: (query) Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
+     - parameter excludedAttributes: (query) Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive additional calls for the default attributes. (optional)
      - parameter filter: (query) Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;. (optional)
 
      - returns: RequestBuilder<ScimUserListResponse> 
@@ -2961,7 +2961,7 @@ open class SCIMAPI {
     
     /**
      
-     The information used to create a group.
+     Creates a group
      
      - parameter body: (body) The information used to create a group. 
      - parameter completion: completion handler to receive the data and the error objects
@@ -2986,10 +2986,10 @@ open class SCIMAPI {
 
     /**
      
-     The information used to create a group.
+     Creates a group
      
      - POST /api/v2/scim/groups
-     - PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+     - Creates a Genesys Cloud group with group visibility set to \"public\" and rules visibility set to \"true\". Auto-creates an \"externalId\". \"externalId\" is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3143,9 +3143,9 @@ open class SCIMAPI {
     
     /**
      
-     The information used to create a group.
+     Create a group
      
-     - parameter body: (body) The information used to create a group. 
+     - parameter body: (body) Creates a group. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func postScimV2Groups(body: ScimV2Group, completion: @escaping ((_ data: ScimV2Group?,_ error: Error?) -> Void)) {
@@ -3168,10 +3168,10 @@ open class SCIMAPI {
 
     /**
      
-     The information used to create a group.
+     Create a group
      
      - POST /api/v2/scim/v2/groups
-     - PureCloud group will be created as \"Official\" group with visibility set \"Public\", and rules visibility True. Will auto-create an external ID if one is not provided on create. External ID is used to determine if delete should be allowed.
+     - Creates an \"official\" Genesys Cloud group with group visibility set to \"public\" and rules visibility set to \"true\". Auto-creates an \"externalId\". \"externalId\" is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3193,7 +3193,7 @@ open class SCIMAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter body: (body) The information used to create a group. 
+     - parameter body: (body) Creates a group. 
 
      - returns: RequestBuilder<ScimV2Group> 
      */

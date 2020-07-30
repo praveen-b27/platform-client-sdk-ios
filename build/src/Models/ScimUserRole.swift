@@ -12,7 +12,7 @@ import Foundation
 
 public class ScimUserRole: Codable {
 
-    /** Purecloud user role name */
+    /** The role of the Genesys Cloud user. */
     public var value: String?
 
     public init(value: String?) {

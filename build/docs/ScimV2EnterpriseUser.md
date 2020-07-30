@@ -2,7 +2,7 @@
 title: ScimV2EnterpriseUser
 ---
 ## ScimV2EnterpriseUser
-Defines an SCIM enterprise user.
+Defines a SCIM enterprise user.
 
 ## Properties
 

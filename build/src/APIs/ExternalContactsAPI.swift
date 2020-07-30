@@ -9762,7 +9762,7 @@ open class ExternalContactsAPI {
     
     /**
      
-     Associate an external contact with a conversation
+     Associate/disassociate an external contact with a conversation
      
      - parameter conversationId: (path) Conversation ID 
      - parameter body: (body) ConversationAssociation 
@@ -9781,10 +9781,10 @@ open class ExternalContactsAPI {
 
     /**
      
-     Associate an external contact with a conversation
+     Associate/disassociate an external contact with a conversation
      
      - PUT /api/v2/externalcontacts/conversations/{conversationId}
-     - 
+     - To associate, supply a value for the externalContactId.  To disassociate, do not include the property at all.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

@@ -10,6 +10,7 @@ title: QueueConversationSocialExpressionEventTopicMessage
 | **_id** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **held** | **Bool** |  | [optional] |
+| **errorInfo** | [**QueueConversationSocialExpressionEventTopicErrorDetails**](QueueConversationSocialExpressionEventTopicErrorDetails.html) |  | [optional] |
 | **provider** | **String** |  | [optional] |
 | **scriptId** | **String** |  | [optional] |
 | **peerId** | **String** |  | [optional] |

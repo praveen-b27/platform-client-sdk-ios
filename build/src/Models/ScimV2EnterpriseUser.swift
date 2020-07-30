@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Defines an SCIM enterprise user. */
+/** Defines a SCIM enterprise user. */
 
 public class ScimV2EnterpriseUser: Codable {
 

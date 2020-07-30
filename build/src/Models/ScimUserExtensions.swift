@@ -8,13 +8,13 @@
 import Foundation
 
 
-/** SCIM PureCloud extensions of user. */
+/** Defines a SCIM Genesys Cloud user. */
 
 public class ScimUserExtensions: Codable {
 
-    /** Routing Skills assigned to user. No more than 50 skills may be assigned to a user. */
+    /** The list of routing skills assigned to a user. Maximum 50 skills. */
     public var routingSkills: [ScimUserRoutingSkill]?
-    /** Routing Languages assigned to user. No more than 50 languages may be assigned to a user. */
+    /** The list of routing languages assigned to a user. Maximum 50 languages. */
     public var routingLanguages: [ScimUserRoutingLanguage]?
 
     public init(routingSkills: [ScimUserRoutingSkill]?, routingLanguages: [ScimUserRoutingLanguage]?) {

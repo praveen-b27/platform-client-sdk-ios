@@ -97,6 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessageParticipant**](ConversationsAPI.html#patchConversationsMessageParticipant) | Update conversation participant |
 | [**patchConversationsMessageParticipantAttributes**](ConversationsAPI.html#patchConversationsMessageParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsMessageParticipantCommunication**](ConversationsAPI.html#patchConversationsMessageParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
+| [**patchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsFacebookIntegrationId) | Update Facebook messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Activate a WhatsApp messaging integration. |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](ConversationsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
@@ -4914,6 +4915,60 @@ ConversationsAPI.patchConversationsMessageParticipantCommunication(conversationI
 ### Return type
 
 [**Empty**](Empty.html)
+
+<a name="patchConversationsMessagingIntegrationsFacebookIntegrationId"></a>
+
+# **patchConversationsMessagingIntegrationsFacebookIntegrationId**
+
+
+
+> [FacebookIntegration](FacebookIntegration.html) patchConversationsMessagingIntegrationsFacebookIntegrationId(integrationId, body)
+
+Update Facebook messaging integration
+
+
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/facebook/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: FacebookIntegrationUpdateRequest = new FacebookIntegrationUpdateRequest(...) // FacebookIntegrationUpdateRequest
+
+// Code example
+ConversationsAPI.patchConversationsMessagingIntegrationsFacebookIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingIntegrationsFacebookIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**FacebookIntegrationUpdateRequest**](FacebookIntegrationUpdateRequest.html)| FacebookIntegrationUpdateRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FacebookIntegration**](FacebookIntegration.html)
 
 <a name="patchConversationsMessagingIntegrationsWhatsappIntegrationId"></a>
 

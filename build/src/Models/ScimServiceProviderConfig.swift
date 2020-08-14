@@ -30,10 +30,8 @@ public class ScimServiceProviderConfig: Codable {
     public var changePassword: ScimServiceProviderConfigSimpleFeature?
     /** The list of supported authentication schemes. */
     public var authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?
-    /** The metadata of the SCIM resource. */
-    public var meta: ScimMetadata?
 
-    public init(schemas: [String]?, documentationUri: String?, patch: ScimServiceProviderConfigSimpleFeature?, filter: ScimServiceProviderConfigFilterFeature?, etag: ScimServiceProviderConfigSimpleFeature?, sort: ScimServiceProviderConfigSimpleFeature?, bulk: ScimServiceProviderConfigBulkFeature?, changePassword: ScimServiceProviderConfigSimpleFeature?, authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?, meta: ScimMetadata?) {
+    public init(schemas: [String]?, documentationUri: String?, patch: ScimServiceProviderConfigSimpleFeature?, filter: ScimServiceProviderConfigFilterFeature?, etag: ScimServiceProviderConfigSimpleFeature?, sort: ScimServiceProviderConfigSimpleFeature?, bulk: ScimServiceProviderConfigBulkFeature?, changePassword: ScimServiceProviderConfigSimpleFeature?, authenticationSchemes: [ScimServiceProviderConfigAuthenticationScheme]?) {
         
         self.schemas = schemas
         
@@ -52,8 +50,6 @@ public class ScimServiceProviderConfig: Codable {
         self.changePassword = changePassword
         
         self.authenticationSchemes = authenticationSchemes
-        
-        self.meta = meta
         
     }
 

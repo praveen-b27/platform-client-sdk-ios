@@ -26,6 +26,7 @@ title: QueueConversationVideoEventTopicEmail
 | **draftAttachments** | [**[QueueConversationVideoEventTopicAttachment]**](QueueConversationVideoEventTopicAttachment.html) |  | [optional] |
 | **spam** | **Bool** |  | [optional] |
 | **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
+| **afterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

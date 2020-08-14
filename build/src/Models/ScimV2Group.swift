@@ -22,10 +22,8 @@ public class ScimV2Group: Codable {
     public var externalId: String?
     /** The list of members in the group. */
     public var members: [ScimV2MemberReference]?
-    /** The metadata of the SCIM resource. */
-    public var meta: ScimMetadata?
 
-    public init(_id: String?, schemas: [String]?, displayName: String?, externalId: String?, members: [ScimV2MemberReference]?, meta: ScimMetadata?) {
+    public init(_id: String?, schemas: [String]?, displayName: String?, externalId: String?, members: [ScimV2MemberReference]?) {
         
         self._id = _id
         
@@ -37,8 +35,6 @@ public class ScimV2Group: Codable {
         
         self.members = members
         
-        self.meta = meta
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -47,7 +43,6 @@ public class ScimV2Group: Codable {
         case displayName
         case externalId
         case members
-        case meta
     }
 
 

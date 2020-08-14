@@ -207,11 +207,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -355,6 +363,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -385,6 +394,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -404,6 +414,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -451,6 +462,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -732,6 +744,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -800,6 +817,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -821,6 +839,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -859,6 +878,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -883,6 +903,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -1078,6 +1099,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1108,6 +1130,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -1127,6 +1150,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1174,6 +1198,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -1243,6 +1268,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -1311,6 +1341,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -1332,6 +1363,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -1370,6 +1402,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1394,6 +1427,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -1710,11 +1744,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -2165,7 +2207,7 @@ open class QualityAPI {
      - parameter group: (query) group id (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [JSON]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityAgentsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group)
         requestBuilder.execute { (response: Response<AgentActivityEntityListing>?, error) -> Void in
             do {
@@ -2349,11 +2391,19 @@ open class QualityAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -2491,7 +2541,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<AgentActivityEntityListing> 
      */
-    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil) -> RequestBuilder<AgentActivityEntityListing> {
+    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [JSON]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil) -> RequestBuilder<AgentActivityEntityListing> {
         let path = "/api/v2/quality/agents/activity"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2735,11 +2785,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -2883,6 +2941,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2913,6 +2972,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -2932,6 +2992,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2979,6 +3040,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3260,6 +3322,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3328,6 +3395,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3349,6 +3417,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -3387,6 +3456,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3411,6 +3481,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3492,7 +3563,7 @@ open class QualityAPI {
      - parameter endTime: (query) end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityCalibrations(calibratorId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, startTime: Date? = nil, endTime: Date? = nil, completion: @escaping ((_ data: CalibrationEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityCalibrations(calibratorId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, startTime: Date? = nil, endTime: Date? = nil, completion: @escaping ((_ data: CalibrationEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityCalibrationsWithRequestBuilder(calibratorId: calibratorId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, startTime: startTime, endTime: endTime)
         requestBuilder.execute { (response: Response<CalibrationEntityListing>?, error) -> Void in
             do {
@@ -3680,11 +3751,19 @@ open class QualityAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -3828,6 +3907,7 @@ open class QualityAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3858,6 +3938,7 @@ open class QualityAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -3877,6 +3958,7 @@ open class QualityAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3924,6 +4006,7 @@ open class QualityAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4205,6 +4288,11 @@ open class QualityAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4273,6 +4361,7 @@ open class QualityAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4294,6 +4383,7 @@ open class QualityAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -4332,6 +4422,7 @@ open class QualityAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -4356,6 +4447,7 @@ open class QualityAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4387,7 +4479,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<CalibrationEntityListing> 
      */
-    open class func getQualityCalibrationsWithRequestBuilder(calibratorId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, startTime: Date? = nil, endTime: Date? = nil) -> RequestBuilder<CalibrationEntityListing> {
+    open class func getQualityCalibrationsWithRequestBuilder(calibratorId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, startTime: Date? = nil, endTime: Date? = nil) -> RequestBuilder<CalibrationEntityListing> {
         let path = "/api/v2/quality/calibrations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4461,7 +4553,7 @@ open class QualityAPI {
      - parameter entityType: (query) entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to Recording)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityConversationAudits(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, recordingId: String? = nil, entityType: String? = nil, completion: @escaping ((_ data: QualityAuditPage?,_ error: Error?) -> Void)) {
+    open class func getQualityConversationAudits(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, recordingId: String? = nil, entityType: String? = nil, completion: @escaping ((_ data: QualityAuditPage?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityConversationAuditsWithRequestBuilder(conversationId: conversationId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, recordingId: recordingId, entityType: entityType)
         requestBuilder.execute { (response: Response<QualityAuditPage>?, error) -> Void in
             do {
@@ -4656,11 +4748,19 @@ open class QualityAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -4785,7 +4885,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<QualityAuditPage> 
      */
-    open class func getQualityConversationAuditsWithRequestBuilder(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, recordingId: String? = nil, entityType: String? = nil) -> RequestBuilder<QualityAuditPage> {
+    open class func getQualityConversationAuditsWithRequestBuilder(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, recordingId: String? = nil, entityType: String? = nil) -> RequestBuilder<QualityAuditPage> {
         var path = "/api/v2/quality/conversations/{conversationId}/audits"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4978,6 +5078,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5008,6 +5109,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -5027,6 +5129,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5074,6 +5177,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -5143,6 +5247,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -5211,6 +5320,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -5232,6 +5342,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -5270,6 +5381,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5294,6 +5406,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -5610,11 +5723,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -5895,6 +6016,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5925,6 +6047,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -5944,6 +6067,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5991,6 +6115,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -6413,11 +6538,19 @@ open class QualityAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -6538,6 +6671,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -6606,6 +6744,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -6627,6 +6766,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -6665,6 +6805,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -6689,6 +6830,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -6790,7 +6932,7 @@ open class QualityAPI {
      - parameter sortOrder: (query) sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [JSON]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, queueId: queueId, startTime: startTime, endTime: endTime, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<EvaluationEntityListing>?, error) -> Void in
             do {
@@ -6932,6 +7074,7 @@ open class QualityAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -6962,6 +7105,7 @@ open class QualityAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -6981,6 +7125,7 @@ open class QualityAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -7028,6 +7173,7 @@ open class QualityAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -7097,6 +7243,11 @@ open class QualityAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -7165,6 +7316,7 @@ open class QualityAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -7186,6 +7338,7 @@ open class QualityAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -7224,6 +7377,7 @@ open class QualityAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -7248,6 +7402,7 @@ open class QualityAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -7564,11 +7719,19 @@ open class QualityAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -7693,7 +7856,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<EvaluationEntityListing> 
      */
-    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {
+    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, evaluatorUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, evaluationState: [JSON]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {
         let path = "/api/v2/quality/evaluations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -7789,7 +7952,7 @@ open class QualityAPI {
      - parameter group: (query) group id (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityEvaluatorsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [String]? = nil, group: String? = nil, completion: @escaping ((_ data: EvaluatorActivityEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityEvaluatorsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [JSON]? = nil, group: String? = nil, completion: @escaping ((_ data: EvaluatorActivityEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityEvaluatorsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, name: name, permission: permission, group: group)
         requestBuilder.execute { (response: Response<EvaluatorActivityEntityListing>?, error) -> Void in
             do {
@@ -7980,11 +8143,19 @@ open class QualityAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -8103,7 +8274,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<EvaluatorActivityEntityListing> 
      */
-    open class func getQualityEvaluatorsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [String]? = nil, group: String? = nil) -> RequestBuilder<EvaluatorActivityEntityListing> {
+    open class func getQualityEvaluatorsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, name: String? = nil, permission: [JSON]? = nil, group: String? = nil) -> RequestBuilder<EvaluatorActivityEntityListing> {
         let path = "/api/v2/quality/evaluators/activity"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -9967,11 +10138,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -10136,7 +10315,7 @@ open class QualityAPI {
      - parameter _operator: (query) If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityKeywordsets(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, queueId: String? = nil, agentId: String? = nil, _operator: Operator_getQualityKeywordsets? = nil, completion: @escaping ((_ data: KeywordSetEntityListing?,_ error: Error?) -> Void)) {
+    open class func getQualityKeywordsets(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, queueId: String? = nil, agentId: String? = nil, _operator: Operator_getQualityKeywordsets? = nil, completion: @escaping ((_ data: KeywordSetEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getQualityKeywordsetsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, queueId: queueId, agentId: agentId, _operator: _operator)
         requestBuilder.execute { (response: Response<KeywordSetEntityListing>?, error) -> Void in
             do {
@@ -10450,11 +10629,19 @@ open class QualityAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -10572,7 +10759,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<KeywordSetEntityListing> 
      */
-    open class func getQualityKeywordsetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, queueId: String? = nil, agentId: String? = nil, _operator: Operator_getQualityKeywordsets? = nil) -> RequestBuilder<KeywordSetEntityListing> {
+    open class func getQualityKeywordsetsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, queueId: String? = nil, agentId: String? = nil, _operator: Operator_getQualityKeywordsets? = nil) -> RequestBuilder<KeywordSetEntityListing> {
         let path = "/api/v2/quality/keywordsets"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -11525,6 +11712,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -11555,6 +11743,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -11574,6 +11763,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -11621,6 +11811,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -12043,11 +12234,19 @@ open class QualityAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -12168,6 +12367,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -12236,6 +12440,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -12257,6 +12462,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -12295,6 +12501,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -12319,6 +12526,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -12973,11 +13181,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -13121,6 +13337,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13151,6 +13368,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -13170,6 +13388,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13217,6 +13436,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -13498,6 +13718,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -13566,6 +13791,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -13587,6 +13813,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -13625,6 +13852,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13649,6 +13877,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -13838,6 +14067,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13868,6 +14098,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -13887,6 +14118,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13934,6 +14166,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -14003,6 +14236,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -14071,6 +14309,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -14092,6 +14331,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -14130,6 +14370,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -14154,6 +14395,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -14470,11 +14712,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -15327,11 +15577,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -16090,11 +16348,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -16482,11 +16748,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -16630,6 +16904,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -16660,6 +16935,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -16679,6 +16955,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -16726,6 +17003,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17007,6 +17285,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17075,6 +17358,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17096,6 +17380,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -17134,6 +17419,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17158,6 +17444,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17348,6 +17635,7 @@ open class QualityAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17378,6 +17666,7 @@ open class QualityAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -17397,6 +17686,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17444,6 +17734,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17513,6 +17804,11 @@ open class QualityAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17581,6 +17877,7 @@ open class QualityAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17602,6 +17899,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -17640,6 +17938,7 @@ open class QualityAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17664,6 +17963,7 @@ open class QualityAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -17980,11 +18280,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -18774,11 +19082,19 @@ open class QualityAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],

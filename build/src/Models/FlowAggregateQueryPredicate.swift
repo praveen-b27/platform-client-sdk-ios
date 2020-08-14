@@ -19,6 +19,7 @@ public class FlowAggregateQueryPredicate: Codable {
     public enum Dimension: String, Codable { 
         case addressfrom = "addressFrom"
         case addressto = "addressTo"
+        case agentassistantid = "agentAssistantId"
         case agentscore = "agentScore"
         case ani = "ani"
         case conversationid = "conversationId"

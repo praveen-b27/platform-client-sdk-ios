@@ -34,6 +34,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsOrganizationsSchemas**](ExternalContactsAPI.html#getExternalcontactsOrganizationsSchemas) | Get a list of schemas. |
 | [**getExternalcontactsRelationship**](ExternalContactsAPI.html#getExternalcontactsRelationship) | Fetch a relationship |
 | [**getExternalcontactsReversewhitepageslookup**](ExternalContactsAPI.html#getExternalcontactsReversewhitepageslookup) | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. |
+| [**getExternalcontactsScanContacts**](ExternalContactsAPI.html#getExternalcontactsScanContacts) | Scan for external contacts using paging |
+| [**getExternalcontactsScanNotes**](ExternalContactsAPI.html#getExternalcontactsScanNotes) | Scan for notes using paging |
+| [**getExternalcontactsScanOrganizations**](ExternalContactsAPI.html#getExternalcontactsScanOrganizations) | Scan for external organizations using paging |
+| [**getExternalcontactsScanRelationships**](ExternalContactsAPI.html#getExternalcontactsScanRelationships) | Scan for relationships |
 | [**postExternalcontactsContactNotes**](ExternalContactsAPI.html#postExternalcontactsContactNotes) | Create a note for an external contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI.html#postExternalcontactsContacts) | Create an external contact |
 | [**postExternalcontactsContactsSchemas**](ExternalContactsAPI.html#postExternalcontactsContactsSchemas) | Create a schema |
@@ -1531,6 +1535,222 @@ ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookup
 
 [**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult.html)
 
+<a name="getExternalcontactsScanContacts"></a>
+
+# **getExternalcontactsScanContacts**
+
+
+
+> [CursorContactListing](CursorContactListing.html) getExternalcontactsScanContacts(limit, cursor)
+
+Scan for external contacts using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/contacts  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100)
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanContacts(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanContacts was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of contacts per page; must be between 10 and 200, default is 100) | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CursorContactListing**](CursorContactListing.html)
+
+<a name="getExternalcontactsScanNotes"></a>
+
+# **getExternalcontactsScanNotes**
+
+
+
+> [CursorNoteListing](CursorNoteListing.html) getExternalcontactsScanNotes(limit, cursor)
+
+Scan for notes using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/notes  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100)
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanNotes(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanNotes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of notes per page; must be between 10 and 200, default is 100) | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CursorNoteListing**](CursorNoteListing.html)
+
+<a name="getExternalcontactsScanOrganizations"></a>
+
+# **getExternalcontactsScanOrganizations**
+
+
+
+> [CursorOrganizationListing](CursorOrganizationListing.html) getExternalcontactsScanOrganizations(limit, cursor)
+
+Scan for external organizations using paging
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/organizations  
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100)
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanOrganizations(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanOrganizations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of organizations per page; must be between 10 and 200, default is 100) | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CursorOrganizationListing**](CursorOrganizationListing.html)
+
+<a name="getExternalcontactsScanRelationships"></a>
+
+# **getExternalcontactsScanRelationships**
+
+
+
+> [CursorRelationshipListing](CursorRelationshipListing.html) getExternalcontactsScanRelationships(limit, cursor)
+
+Scan for relationships
+
+
+
+Wraps GET /api/v2/externalcontacts/scan/relationships  
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100)
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+ExternalContactsAPI.getExternalcontactsScanRelationships(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsScanRelationships was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Int**| The number of relationships per page; must be between 10 and 200, default is 100) | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CursorRelationshipListing**](CursorRelationshipListing.html)
+
 <a name="postExternalcontactsContactNotes"></a>
 
 # **postExternalcontactsContactNotes**
@@ -2071,7 +2291,7 @@ ExternalContactsAPI.putExternalcontactsContactsSchema(schemaId: schemaId, body: 
 
 
 
-> Void putExternalcontactsConversation(conversationId, body)
+> Void putExternalcontactsConversation(body, conversationId)
 
 Associate/disassociate an external contact with a conversation
 
@@ -2091,11 +2311,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let conversationId: String = "" // Conversation ID
 let body: ConversationAssociation = new ConversationAssociation(...) // ConversationAssociation
+let conversationId: String = "" // Conversation ID
 
 // Code example
-ExternalContactsAPI.putExternalcontactsConversation(conversationId: conversationId, body: body) { (error) in
+ExternalContactsAPI.putExternalcontactsConversation(body: body, conversationId: conversationId) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -2109,8 +2329,8 @@ ExternalContactsAPI.putExternalcontactsConversation(conversationId: conversation
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| Conversation ID | |
 | **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation | |
+| **conversationId** | **String**| Conversation ID | |
 {: class="table-striped"}
 
 

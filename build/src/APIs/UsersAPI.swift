@@ -1244,6 +1244,14 @@ open class UsersAPI {
 
     
     
+    
+    public enum IntegrationPresenceSource_getProfilesUsers: String { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
+
+    
+    
     /**
      
      Get a user profile listing
@@ -1254,10 +1262,11 @@ open class UsersAPI {
      - parameter jid: (query) jid (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getProfilesUsers(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jid: [String]? = nil, sortOrder: SortOrder_getProfilesUsers? = nil, expand: [String]? = nil, completion: @escaping ((_ data: UserProfileEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getProfilesUsersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jid: jid, sortOrder: sortOrder, expand: expand)
+    open class func getProfilesUsers(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jid: [String]? = nil, sortOrder: SortOrder_getProfilesUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getProfilesUsers? = nil, completion: @escaping ((_ data: UserProfileEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getProfilesUsersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jid: jid, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource)
         requestBuilder.execute { (response: Response<UserProfileEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1418,11 +1427,19 @@ open class UsersAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -1567,10 +1584,11 @@ open class UsersAPI {
      - parameter jid: (query) jid (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)
 
      - returns: RequestBuilder<UserProfileEntityListing> 
      */
-    open class func getProfilesUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jid: [String]? = nil, sortOrder: SortOrder_getProfilesUsers? = nil, expand: [String]? = nil) -> RequestBuilder<UserProfileEntityListing> {
+    open class func getProfilesUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jid: [String]? = nil, sortOrder: SortOrder_getProfilesUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getProfilesUsers? = nil) -> RequestBuilder<UserProfileEntityListing> {
         let path = "/api/v2/profiles/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1593,7 +1611,9 @@ open class UsersAPI {
             
             "sortOrder": sortOrder?.rawValue, 
             
-            "expand": expand
+            "expand": expand, 
+            
+            "integrationPresenceSource": integrationPresenceSource?.rawValue
             
         ])
 
@@ -1702,6 +1722,14 @@ open class UsersAPI {
     
     
     
+    public enum IntegrationPresenceSource_getUser: String { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
+
+    
+    
+    
     public enum State_getUser: String { 
         case active = "active"
         case deleted = "deleted"
@@ -1715,11 +1743,12 @@ open class UsersAPI {
      
      - parameter userId: (path) User ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
      - parameter state: (query) Search for a user with this state (optional, default to active)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUser(userId: String, expand: [String]? = nil, state: State_getUser? = nil, completion: @escaping ((_ data: User?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUserWithRequestBuilder(userId: userId, expand: expand, state: state)
+    open class func getUser(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUser? = nil, state: State_getUser? = nil, completion: @escaping ((_ data: User?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserWithRequestBuilder(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state)
         requestBuilder.execute { (response: Response<User>?, error) -> Void in
             do {
                 if let e = error {
@@ -1895,11 +1924,19 @@ open class UsersAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],
   "biography" : {
+    "education" : [ {
+      "notes" : "aeiou",
+      "school" : "aeiou",
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "dateEnd" : "2000-01-23T04:56:07.000+0000",
+      "fieldOfStudy" : "aeiou"
+    } ],
     "hobbies" : [ "aeiou" ],
     "biography" : "aeiou",
     "interests" : [ "aeiou" ],
@@ -1998,11 +2035,12 @@ open class UsersAPI {
      
      - parameter userId: (path) User ID 
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
      - parameter state: (query) Search for a user with this state (optional, default to active)
 
      - returns: RequestBuilder<User> 
      */
-    open class func getUserWithRequestBuilder(userId: String, expand: [String]? = nil, state: State_getUser? = nil) -> RequestBuilder<User> {
+    open class func getUserWithRequestBuilder(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUser? = nil, state: State_getUser? = nil) -> RequestBuilder<User> {
         var path = "/api/v2/users/{userId}"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2019,6 +2057,8 @@ open class UsersAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
             "expand": expand, 
+            
+            "integrationPresenceSource": integrationPresenceSource?.rawValue, 
             
             "state": state?.rawValue
             
@@ -2243,11 +2283,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -2577,11 +2625,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -2917,11 +2973,19 @@ open class UsersAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],
   "biography" : {
+    "education" : [ {
+      "notes" : "aeiou",
+      "school" : "aeiou",
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "dateEnd" : "2000-01-23T04:56:07.000+0000",
+      "fieldOfStudy" : "aeiou"
+    } ],
     "hobbies" : [ "aeiou" ],
     "biography" : "aeiou",
     "interests" : [ "aeiou" ],
@@ -3274,11 +3338,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -3736,11 +3808,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -3874,16 +3954,25 @@ open class UsersAPI {
 
     
     
+    
+    public enum IntegrationPresenceSource_getUserProfile: String { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
+
+    
+    
     /**
      
      Get user profile
      
      - parameter userId: (path) userId 
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUserProfile(userId: String, expand: [String]? = nil, completion: @escaping ((_ data: UserProfile?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUserProfileWithRequestBuilder(userId: userId, expand: expand)
+    open class func getUserProfile(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUserProfile? = nil, completion: @escaping ((_ data: UserProfile?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserProfileWithRequestBuilder(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource)
         requestBuilder.execute { (response: Response<UserProfile>?, error) -> Void in
             do {
                 if let e = error {
@@ -4040,11 +4129,19 @@ open class UsersAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -4178,10 +4275,11 @@ open class UsersAPI {
      
      - parameter userId: (path) userId 
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
 
      - returns: RequestBuilder<UserProfile> 
      */
-    open class func getUserProfileWithRequestBuilder(userId: String, expand: [String]? = nil) -> RequestBuilder<UserProfile> {
+    open class func getUserProfileWithRequestBuilder(userId: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUserProfile? = nil) -> RequestBuilder<UserProfile> {
         var path = "/api/v2/users/{userId}/profile"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4197,7 +4295,9 @@ open class UsersAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "expand": expand
+            "expand": expand, 
+            
+            "integrationPresenceSource": integrationPresenceSource?.rawValue
             
         ])
 
@@ -5040,11 +5140,19 @@ open class UsersAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -5384,11 +5492,19 @@ open class UsersAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],
   "biography" : {
+    "education" : [ {
+      "notes" : "aeiou",
+      "school" : "aeiou",
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "dateEnd" : "2000-01-23T04:56:07.000+0000",
+      "fieldOfStudy" : "aeiou"
+    } ],
     "hobbies" : [ "aeiou" ],
     "biography" : "aeiou",
     "interests" : [ "aeiou" ],
@@ -5732,6 +5848,13 @@ open class UsersAPI {
         } ],
         "primaryContactInfo" : [ "" ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -5832,6 +5955,7 @@ open class UsersAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -5959,6 +6083,14 @@ open class UsersAPI {
     
     
     
+    public enum IntegrationPresenceSource_getUsers: String { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
+
+    
+    
+    
     public enum State_getUsers: String { 
         case active = "active"
         case inactive = "inactive"
@@ -5978,11 +6110,12 @@ open class UsersAPI {
      - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)
      - parameter state: (query) Only list users of this state (optional, default to active)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsers(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, state: State_getUsers? = nil, completion: @escaping ((_ data: UserEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, state: state)
+    open class func getUsers(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsers? = nil, state: State_getUsers? = nil, completion: @escaping ((_ data: UserEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state)
         requestBuilder.execute { (response: Response<UserEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6162,11 +6295,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -6276,11 +6417,12 @@ open class UsersAPI {
      - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)
      - parameter state: (query) Only list users of this state (optional, default to active)
 
      - returns: RequestBuilder<UserEntityListing> 
      */
-    open class func getUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, state: State_getUsers? = nil) -> RequestBuilder<UserEntityListing> {
+    open class func getUsersWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, _id: [String]? = nil, jabberId: [String]? = nil, sortOrder: SortOrder_getUsers? = nil, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsers? = nil, state: State_getUsers? = nil) -> RequestBuilder<UserEntityListing> {
         let path = "/api/v2/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6304,6 +6446,8 @@ open class UsersAPI {
             "sortOrder": sortOrder?.rawValue, 
             
             "expand": expand, 
+            
+            "integrationPresenceSource": integrationPresenceSource?.rawValue, 
             
             "state": state?.rawValue
             
@@ -6356,15 +6500,24 @@ open class UsersAPI {
 
     
     
+    
+    public enum IntegrationPresenceSource_getUsersMe: String { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
+
+    
+    
     /**
      
      Get current user details.
      
      - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter integrationPresenceSource: (query) Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersMe(expand: [String]? = nil, completion: @escaping ((_ data: UserMe?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersMeWithRequestBuilder(expand: expand)
+    open class func getUsersMe(expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersMe? = nil, completion: @escaping ((_ data: UserMe?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersMeWithRequestBuilder(expand: expand, integrationPresenceSource: integrationPresenceSource)
         requestBuilder.execute { (response: Response<UserMe>?, error) -> Void in
             do {
                 if let e = error {
@@ -6820,6 +6973,13 @@ open class UsersAPI {
     } ],
     "primaryContactInfo" : [ "" ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -6919,6 +7079,7 @@ open class UsersAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
@@ -6937,6 +7098,7 @@ open class UsersAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "modifiedBy" : "",
       "id" : "aeiou",
+      "state" : "aeiou",
       "roleDivisions" : [ {
         "roleId" : "aeiou",
         "divisionId" : "aeiou"
@@ -6986,10 +7148,11 @@ open class UsersAPI {
 }}]
      
      - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter integrationPresenceSource: (query) Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)
 
      - returns: RequestBuilder<UserMe> 
      */
-    open class func getUsersMeWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<UserMe> {
+    open class func getUsersMeWithRequestBuilder(expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersMe? = nil) -> RequestBuilder<UserMe> {
         let path = "/api/v2/users/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -7002,7 +7165,9 @@ open class UsersAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "expand": expand
+            "expand": expand, 
+            
+            "integrationPresenceSource": integrationPresenceSource?.rawValue
             
         ])
 
@@ -7016,16 +7181,25 @@ open class UsersAPI {
     
     
     
+    
+    public enum IntegrationPresenceSource_getUsersSearch: String { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
+
+    
+    
     /**
      
      Search users using the q64 value returned from a previous search
      
      - parameter q64: (query) q64 
      - parameter expand: (query) expand (optional)
+     - parameter integrationPresenceSource: (query) integrationPresenceSource (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersSearch(q64: String, expand: [String]? = nil, completion: @escaping ((_ data: UsersSearchResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersSearchWithRequestBuilder(q64: q64, expand: expand)
+    open class func getUsersSearch(q64: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersSearch? = nil, completion: @escaping ((_ data: UsersSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersSearchWithRequestBuilder(q64: q64, expand: expand, integrationPresenceSource: integrationPresenceSource)
         requestBuilder.execute { (response: Response<UsersSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -7210,11 +7384,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -7314,10 +7496,11 @@ open class UsersAPI {
      
      - parameter q64: (query) q64 
      - parameter expand: (query) expand (optional)
+     - parameter integrationPresenceSource: (query) integrationPresenceSource (optional)
 
      - returns: RequestBuilder<UsersSearchResponse> 
      */
-    open class func getUsersSearchWithRequestBuilder(q64: String, expand: [String]? = nil) -> RequestBuilder<UsersSearchResponse> {
+    open class func getUsersSearchWithRequestBuilder(q64: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersSearch? = nil) -> RequestBuilder<UsersSearchResponse> {
         let path = "/api/v2/users/search"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -7332,7 +7515,9 @@ open class UsersAPI {
             
             "q64": q64, 
             
-            "expand": expand
+            "expand": expand, 
+            
+            "integrationPresenceSource": integrationPresenceSource?.rawValue
             
         ])
 
@@ -7531,11 +7716,19 @@ open class UsersAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],
   "biography" : {
+    "education" : [ {
+      "notes" : "aeiou",
+      "school" : "aeiou",
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "dateEnd" : "2000-01-23T04:56:07.000+0000",
+      "fieldOfStudy" : "aeiou"
+    } ],
     "hobbies" : [ "aeiou" ],
     "biography" : "aeiou",
     "interests" : [ "aeiou" ],
@@ -7857,11 +8050,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -8921,11 +9122,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -10029,11 +10238,19 @@ open class UsersAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],
   "biography" : {
+    "education" : [ {
+      "notes" : "aeiou",
+      "school" : "aeiou",
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "dateEnd" : "2000-01-23T04:56:07.000+0000",
+      "fieldOfStudy" : "aeiou"
+    } ],
     "hobbies" : [ "aeiou" ],
     "biography" : "aeiou",
     "interests" : [ "aeiou" ],
@@ -10393,11 +10610,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -10788,11 +11013,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -11109,11 +11342,19 @@ open class UsersAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],

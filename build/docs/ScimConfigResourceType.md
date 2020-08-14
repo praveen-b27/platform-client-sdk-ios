@@ -15,7 +15,6 @@ Defines a SCIM resource.
 | **schema** | **String** | The URI of the primary or base schema for the resource type. | [optional] |
 | **schemaExtensions** | [**[ScimConfigResourceTypeSchemaExtension]**](ScimConfigResourceTypeSchemaExtension.html) | The list of schema extensions for the resource type. | [optional] |
 | **endpoint** | **String** | The HTTP-addressable endpoint of the resource type. Appears after the base URL. | [optional] |
-| **meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. | [optional] |
 {: class="table table-striped"}
 
 

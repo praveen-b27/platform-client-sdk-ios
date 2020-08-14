@@ -54,9 +54,10 @@ public class QueueConversationVideoEventTopicVideo: Codable {
     public var disconnectedTime: Date?
     public var msids: [String]?
     public var wrapup: QueueConversationVideoEventTopicWrapup?
+    public var afterCallWork: QueueConversationVideoEventTopicAfterCallWork?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _self: QueueConversationVideoEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: QueueConversationVideoEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(state: State?, _self: QueueConversationVideoEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -88,6 +89,8 @@ public class QueueConversationVideoEventTopicVideo: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -108,6 +111,7 @@ public class QueueConversationVideoEventTopicVideo: Codable {
         case disconnectedTime
         case msids
         case wrapup
+        case afterCallWork
         case additionalProperties
     }
 

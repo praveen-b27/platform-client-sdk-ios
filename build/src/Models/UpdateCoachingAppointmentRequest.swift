@@ -12,6 +12,12 @@ import Foundation
 
 public class UpdateCoachingAppointmentRequest: Codable {
 
+    public enum Status: String, Codable { 
+        case scheduled = "Scheduled"
+        case inProgress = "InProgress"
+        case completed = "Completed"
+        case invalidSchedule = "InvalidSchedule"
+    }
     /** The name of coaching appointment. */
     public var name: String?
     /** The description of coaching appointment. */
@@ -24,8 +30,10 @@ public class UpdateCoachingAppointmentRequest: Codable {
     public var conversationIds: [String]?
     /** IDs of documents associated with this coaching appointment. */
     public var documentIds: [String]?
+    /** The status of the coaching appointment. */
+    public var status: Status?
 
-    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, conversationIds: [String]?, documentIds: [String]?) {
+    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, conversationIds: [String]?, documentIds: [String]?, status: Status?) {
         
         self.name = name
         
@@ -39,6 +47,8 @@ public class UpdateCoachingAppointmentRequest: Codable {
         
         self.documentIds = documentIds
         
+        self.status = status
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -48,6 +58,7 @@ public class UpdateCoachingAppointmentRequest: Codable {
         case lengthInMinutes
         case conversationIds
         case documentIds
+        case status
     }
 
 

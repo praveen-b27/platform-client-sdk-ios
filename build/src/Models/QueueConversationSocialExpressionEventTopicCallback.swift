@@ -66,9 +66,10 @@ public class QueueConversationSocialExpressionEventTopicCallback: Codable {
     public var callbackScheduledTime: Date?
     public var automatedCallbackConfigId: String?
     public var wrapup: QueueConversationSocialExpressionEventTopicWrapup?
+    public var afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationSocialExpressionEventTopicDialerPreview?, voicemail: QueueConversationSocialExpressionEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationSocialExpressionEventTopicDialerPreview?, voicemail: QueueConversationSocialExpressionEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -112,6 +113,8 @@ public class QueueConversationSocialExpressionEventTopicCallback: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -138,6 +141,7 @@ public class QueueConversationSocialExpressionEventTopicCallback: Codable {
         case callbackScheduledTime
         case automatedCallbackConfigId
         case wrapup
+        case afterCallWork
         case additionalProperties
     }
 

@@ -791,6 +791,7 @@ open class ConversationsAPI {
     "purpose" : "aeiou",
     "teamId" : "aeiou",
     "externalOrganizationId" : "aeiou",
+    "agentAssistantIds" : [ "aeiou" ],
     "participantName" : "aeiou",
     "userId" : "aeiou",
     "flaggedReason" : "aeiou"
@@ -1029,6 +1030,7 @@ open class ConversationsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
+      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -1350,6 +1352,7 @@ open class ConversationsAPI {
         "key" : "aeiou"
       },
       "externalOrganizationId" : "aeiou",
+      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -1468,6 +1471,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1498,6 +1502,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -1517,6 +1522,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1564,6 +1570,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -1986,11 +1993,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -2111,6 +2126,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -2179,6 +2199,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -2200,6 +2221,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -2238,6 +2260,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2262,6 +2285,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -2713,6 +2737,7 @@ open class ConversationsAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2743,6 +2768,7 @@ open class ConversationsAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -2762,6 +2788,7 @@ open class ConversationsAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2809,6 +2836,7 @@ open class ConversationsAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3231,11 +3259,19 @@ open class ConversationsAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -3356,6 +3392,11 @@ open class ConversationsAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3424,6 +3465,7 @@ open class ConversationsAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3445,6 +3487,7 @@ open class ConversationsAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -3483,6 +3526,7 @@ open class ConversationsAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3507,6 +3551,7 @@ open class ConversationsAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -5019,11 +5064,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -7739,11 +7792,19 @@ open class ConversationsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -9430,6 +9491,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -9460,6 +9522,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -9479,6 +9542,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -9526,6 +9590,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -9948,11 +10013,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -10073,6 +10146,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -10141,6 +10219,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -10162,6 +10241,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -10200,6 +10280,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -10224,6 +10305,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -10613,6 +10695,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -10643,6 +10726,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -10662,6 +10746,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -10709,6 +10794,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -11131,11 +11217,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -11256,6 +11350,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -11324,6 +11423,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -11345,6 +11445,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -11383,6 +11484,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -11407,6 +11509,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -11723,6 +11826,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -11753,6 +11857,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -11772,6 +11877,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -11819,6 +11925,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -12241,11 +12348,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -12366,6 +12481,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -12434,6 +12554,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -12455,6 +12576,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -12493,6 +12615,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -12517,6 +12640,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -12833,6 +12957,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -12863,6 +12988,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -12882,6 +13008,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -12929,6 +13056,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -13351,11 +13479,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -13476,6 +13612,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -13544,6 +13685,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -13565,6 +13707,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -13603,6 +13746,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13627,6 +13771,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -13943,6 +14088,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -13973,6 +14119,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -13992,6 +14139,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -14039,6 +14187,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -14461,11 +14610,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -14586,6 +14743,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -14654,6 +14816,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -14675,6 +14838,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -14713,6 +14877,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -14737,6 +14902,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -15053,6 +15219,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -15083,6 +15250,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -15102,6 +15270,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -15149,6 +15318,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -15571,11 +15741,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -15696,6 +15874,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -15764,6 +15947,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -15785,6 +15969,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -15823,6 +16008,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -15847,6 +16033,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -16078,6 +16265,87 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update Facebook messaging integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) FacebookIntegrationUpdateRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchConversationsMessagingIntegrationsFacebookIntegrationId(integrationId: String, body: FacebookIntegrationUpdateRequest, completion: @escaping ((_ data: FacebookIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchConversationsMessagingIntegrationsFacebookIntegrationIdWithRequestBuilder(integrationId: integrationId, body: body)
+        requestBuilder.execute { (response: Response<FacebookIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update Facebook messaging integration
+     
+     - PATCH /api/v2/conversations/messaging/integrations/facebook/{integrationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "appId" : "aeiou",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "pageId" : "aeiou",
+  "version" : 123,
+  "status" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) FacebookIntegrationUpdateRequest 
+
+     - returns: RequestBuilder<FacebookIntegration> 
+     */
+    open class func patchConversationsMessagingIntegrationsFacebookIntegrationIdWithRequestBuilder(integrationId: String, body: FacebookIntegrationUpdateRequest) -> RequestBuilder<FacebookIntegration> {
+        var path = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FacebookIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -16618,6 +16886,7 @@ open class ConversationsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
+      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -17059,6 +17328,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17089,6 +17359,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -17108,6 +17379,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17155,6 +17427,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -17577,11 +17850,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -17702,6 +17983,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -17770,6 +18056,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -17791,6 +18078,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -17829,6 +18117,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -17853,6 +18142,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -18163,6 +18453,7 @@ open class ConversationsAPI {
       "provider" : "aeiou",
       "externalCampaign" : true,
       "callbackUserName" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "timeoutSeconds" : 123,
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -18193,6 +18484,7 @@ open class ConversationsAPI {
       "sharingScreen" : true,
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "self" : "",
@@ -18212,6 +18504,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "providerEventTime" : "2000-01-23T04:56:07.000+0000",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "self" : "",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -18259,6 +18552,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "scriptId" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -18681,11 +18975,19 @@ open class ConversationsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -18806,6 +19108,11 @@ open class ConversationsAPI {
         "type" : "aeiou"
       } ],
       "provider" : "aeiou",
+      "afterCallWork" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "endTime" : "2000-01-23T04:56:07.000+0000",
+        "state" : "aeiou"
+      },
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -18874,6 +19181,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         }
       },
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -18895,6 +19203,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "messages" : [ {
@@ -18933,6 +19242,7 @@ open class ConversationsAPI {
       "scriptId" : "aeiou",
       "socialMediaHub" : "aeiou",
       "provider" : "aeiou",
+      "afterCallWork" : "",
       "socialMediaId" : "aeiou",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -18957,6 +19267,7 @@ open class ConversationsAPI {
       "segments" : [ "" ],
       "provider" : "aeiou",
       "context" : "aeiou",
+      "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
@@ -20471,11 +20782,19 @@ open class ConversationsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -20895,11 +21214,19 @@ open class ConversationsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],

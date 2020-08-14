@@ -26,8 +26,9 @@ public class PhoneCapabilities: Codable {
     public var noRebalance: Bool?
     public var noCloudProvisioning: Bool?
     public var mediaCodecs: [MediaCodecs]?
+    public var cdm: Bool?
 
-    public init(provisions: Bool?, registers: Bool?, dualRegisters: Bool?, hardwareIdType: String?, allowReboot: Bool?, noRebalance: Bool?, noCloudProvisioning: Bool?, mediaCodecs: [MediaCodecs]?) {
+    public init(provisions: Bool?, registers: Bool?, dualRegisters: Bool?, hardwareIdType: String?, allowReboot: Bool?, noRebalance: Bool?, noCloudProvisioning: Bool?, mediaCodecs: [MediaCodecs]?, cdm: Bool?) {
         
         self.provisions = provisions
         
@@ -44,6 +45,8 @@ public class PhoneCapabilities: Codable {
         self.noCloudProvisioning = noCloudProvisioning
         
         self.mediaCodecs = mediaCodecs
+        
+        self.cdm = cdm
         
     }
 

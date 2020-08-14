@@ -34,6 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsEvaluationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
 | [**postAnalyticsFlowsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsFlowsAggregatesQuery) | Query for flow aggregates |
 | [**postAnalyticsFlowsObservationsQuery**](AnalyticsAPI.html#postAnalyticsFlowsObservationsQuery) | Query for flow observations |
+| [**postAnalyticsJourneysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
 | [**postAnalyticsReportingExports**](AnalyticsAPI.html#postAnalyticsReportingExports) | Generate a view export request |
 | [**postAnalyticsReportingScheduleRunreport**](AnalyticsAPI.html#postAnalyticsReportingScheduleRunreport) | Place a scheduled report immediately into the reporting queue |
@@ -1453,6 +1454,58 @@ AnalyticsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error)
 
 [**FlowObservationQueryResponse**](FlowObservationQueryResponse.html)
 
+<a name="postAnalyticsJourneysAggregatesQuery"></a>
+
+# **postAnalyticsJourneysAggregatesQuery**
+
+
+
+> [JourneyAggregateQueryResponse](JourneyAggregateQueryResponse.html) postAnalyticsJourneysAggregatesQuery(body)
+
+Query for journey aggregates
+
+
+
+Wraps POST /api/v2/analytics/journeys/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:journeyAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: JourneyAggregationQuery = new JourneyAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsJourneysAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsJourneysAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**JourneyAggregationQuery**](JourneyAggregationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse.html)
+
 <a name="postAnalyticsQueuesObservationsQuery"></a>
 
 # **postAnalyticsQueuesObservationsQuery**
@@ -1515,7 +1568,7 @@ AnalyticsAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error
 
 Generate a view export request
 
-
+This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
 
 Wraps POST /api/v2/analytics/reporting/exports  
 

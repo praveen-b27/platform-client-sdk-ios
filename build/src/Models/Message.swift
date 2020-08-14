@@ -90,8 +90,10 @@ public class Message: Codable {
     public var messages: [MessageDetails]?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
 
-    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, wrapup: Wrapup?) {
+    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, wrapup: Wrapup?, afterCallWork: AfterCallWork?) {
         
         self.state = state
         
@@ -137,6 +139,8 @@ public class Message: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -162,6 +166,7 @@ public class Message: Codable {
         case fromAddress
         case messages
         case wrapup
+        case afterCallWork
     }
 
 

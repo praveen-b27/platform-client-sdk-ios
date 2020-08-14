@@ -151,11 +151,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let objectCount: Bool = false // Include the count of objects contained in the division
-let _id: [String] = [""] // Optionally request specific divisions by their IDs
+let _id: [JSON] = [new JSON(...)] // Optionally request specific divisions by their IDs
 let name: String = "" // Search term to filter by division name
 
 // Code example
@@ -177,11 +177,11 @@ ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber,
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **objectCount** | **Bool**| Include the count of objects contained in the division | [optional] [default to false] |
-| **_id** | [**[String]**](String.html)| Optionally request specific divisions by their IDs | [optional] |
+| **_id** | [**[JSON]**](JSON.html)| Optionally request specific divisions by their IDs | [optional] |
 | **name** | **String**| Search term to filter by division name | [optional] |
 {: class="table-striped"}
 

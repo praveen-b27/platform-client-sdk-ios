@@ -74,9 +74,10 @@ public class ConversationEventTopicCall: Codable {
     public var faxStatus: ConversationEventTopicFaxStatus?
     public var uuiData: String?
     public var wrapup: ConversationEventTopicWrapup?
+    public var afterCallWork: ConversationEventTopicAfterCallWork?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, wrapup: ConversationEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -124,6 +125,8 @@ public class ConversationEventTopicCall: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -152,6 +155,7 @@ public class ConversationEventTopicCall: Codable {
         case faxStatus
         case uuiData
         case wrapup
+        case afterCallWork
         case additionalProperties
     }
 

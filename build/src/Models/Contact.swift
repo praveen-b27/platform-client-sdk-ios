@@ -34,8 +34,9 @@ public class Contact: Codable {
     public var type: ModelType?
     /** Use internal extension instead of address. Mutually exclusive with the address field. */
     public var _extension: String?
+    public var countryCode: String?
 
-    public init(address: String?, display: String?, mediaType: MediaType?, type: ModelType?, _extension: String?) {
+    public init(address: String?, display: String?, mediaType: MediaType?, type: ModelType?, _extension: String?, countryCode: String?) {
         
         self.address = address
         
@@ -47,6 +48,8 @@ public class Contact: Codable {
         
         self._extension = _extension
         
+        self.countryCode = countryCode
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -55,6 +58,7 @@ public class Contact: Codable {
         case mediaType
         case type
         case _extension = "extension"
+        case countryCode
     }
 
 

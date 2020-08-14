@@ -71,8 +71,10 @@ public class Video: Codable {
     public var _self: Address?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
 
-    public init(state: State?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?) {
+    public init(state: State?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?) {
         
         self.state = state
         
@@ -106,6 +108,8 @@ public class Video: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -125,6 +129,7 @@ public class Video: Codable {
         case msids
         case _self = "self"
         case wrapup
+        case afterCallWork
     }
 
 

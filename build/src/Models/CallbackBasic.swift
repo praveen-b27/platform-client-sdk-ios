@@ -90,8 +90,10 @@ public class CallbackBasic: Codable {
     public var peerId: String?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
 
-    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?) {
+    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?) {
         
         self.state = state
         
@@ -139,6 +141,8 @@ public class CallbackBasic: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -165,6 +169,7 @@ public class CallbackBasic: Codable {
         case provider
         case peerId
         case wrapup
+        case afterCallWork
     }
 
 

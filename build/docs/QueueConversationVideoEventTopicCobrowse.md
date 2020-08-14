@@ -23,6 +23,7 @@ title: QueueConversationVideoEventTopicCobrowse
 | **connectedTime** | [**Date**](Date.html) |  | [optional] |
 | **disconnectedTime** | [**Date**](Date.html) |  | [optional] |
 | **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
+| **afterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

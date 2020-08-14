@@ -18,6 +18,11 @@ public class OrgOAuthClient: Codable {
         case password = "PASSWORD"
         case clientCredentials = "CLIENT_CREDENTIALS"
     }
+    public enum State: String, Codable { 
+        case active = "active"
+        case disabled = "disabled"
+        case inactive = "inactive"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the OAuth client. */
@@ -36,10 +41,12 @@ public class OrgOAuthClient: Codable {
     public var scope: [String]?
     /** Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant */
     public var roleDivisions: [RoleDivision]?
+    /** The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted. */
+    public var state: State?
     /** The  oauth client&#39;s organization. */
     public var organization: NamedEntity?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, organization: NamedEntity?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, organization: NamedEntity?) {
         
         self._id = _id
         
@@ -59,6 +66,8 @@ public class OrgOAuthClient: Codable {
         
         self.roleDivisions = roleDivisions
         
+        self.state = state
+        
         self.organization = organization
         
     }
@@ -73,6 +82,7 @@ public class OrgOAuthClient: Codable {
         case authorizedGrantType
         case scope
         case roleDivisions
+        case state
         case organization
     }
 

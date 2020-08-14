@@ -16,6 +16,10 @@ public class UserSearchRequest: Codable {
         case desc = "DESC"
         case score = "SCORE"
     }
+    public enum IntegrationPresenceSource: String, Codable { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
     /** The sort order for results */
     public var sortOrder: SortOrder?
     /** The field in the resource that you want to sort the results by */
@@ -29,8 +33,10 @@ public class UserSearchRequest: Codable {
     /** Provides more details about a specified resource */
     public var expand: [String]?
     public var query: [UserSearchCriteria]?
+    /** Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. */
+    public var integrationPresenceSource: IntegrationPresenceSource?
 
-    public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, expand: [String]?, query: [UserSearchCriteria]?) {
+    public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, expand: [String]?, query: [UserSearchCriteria]?, integrationPresenceSource: IntegrationPresenceSource?) {
         
         self.sortOrder = sortOrder
         
@@ -45,6 +51,8 @@ public class UserSearchRequest: Codable {
         self.expand = expand
         
         self.query = query
+        
+        self.integrationPresenceSource = integrationPresenceSource
         
     }
 

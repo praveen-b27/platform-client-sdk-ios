@@ -372,11 +372,19 @@ open class SearchAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -922,16 +930,25 @@ open class SearchAPI {
     
     
     
+    
+    public enum IntegrationPresenceSource_getUsersSearch: String { 
+        case microsoftTeams = "MicrosoftTeams"
+        case zoomPhone = "ZoomPhone"
+    }
+
+    
+    
     /**
      
      Search users using the q64 value returned from a previous search
      
      - parameter q64: (query) q64 
      - parameter expand: (query) expand (optional)
+     - parameter integrationPresenceSource: (query) integrationPresenceSource (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersSearch(q64: String, expand: [String]? = nil, completion: @escaping ((_ data: UsersSearchResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsersSearchWithRequestBuilder(q64: q64, expand: expand)
+    open class func getUsersSearch(q64: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersSearch? = nil, completion: @escaping ((_ data: UsersSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersSearchWithRequestBuilder(q64: q64, expand: expand, integrationPresenceSource: integrationPresenceSource)
         requestBuilder.execute { (response: Response<UsersSearchResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -1116,11 +1133,19 @@ open class SearchAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -1220,10 +1245,11 @@ open class SearchAPI {
      
      - parameter q64: (query) q64 
      - parameter expand: (query) expand (optional)
+     - parameter integrationPresenceSource: (query) integrationPresenceSource (optional)
 
      - returns: RequestBuilder<UsersSearchResponse> 
      */
-    open class func getUsersSearchWithRequestBuilder(q64: String, expand: [String]? = nil) -> RequestBuilder<UsersSearchResponse> {
+    open class func getUsersSearchWithRequestBuilder(q64: String, expand: [String]? = nil, integrationPresenceSource: IntegrationPresenceSource_getUsersSearch? = nil) -> RequestBuilder<UsersSearchResponse> {
         let path = "/api/v2/users/search"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1238,7 +1264,9 @@ open class SearchAPI {
             
             "q64": q64, 
             
-            "expand": expand
+            "expand": expand, 
+            
+            "integrationPresenceSource": integrationPresenceSource?.rawValue
             
         ])
 
@@ -1362,6 +1390,7 @@ open class SearchAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1392,6 +1421,7 @@ open class SearchAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -1411,6 +1441,7 @@ open class SearchAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1458,6 +1489,7 @@ open class SearchAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -1880,11 +1912,19 @@ open class SearchAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -2005,6 +2045,11 @@ open class SearchAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2073,6 +2118,7 @@ open class SearchAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2094,6 +2140,7 @@ open class SearchAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -2132,6 +2179,7 @@ open class SearchAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2156,6 +2204,7 @@ open class SearchAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2541,11 +2590,19 @@ open class SearchAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -3274,11 +3331,19 @@ open class SearchAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -3506,6 +3571,7 @@ open class SearchAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3536,6 +3602,7 @@ open class SearchAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -3555,6 +3622,7 @@ open class SearchAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3602,6 +3670,7 @@ open class SearchAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4024,11 +4093,19 @@ open class SearchAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -4149,6 +4226,11 @@ open class SearchAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4217,6 +4299,7 @@ open class SearchAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4238,6 +4321,7 @@ open class SearchAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -4276,6 +4360,7 @@ open class SearchAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -4300,6 +4385,7 @@ open class SearchAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",

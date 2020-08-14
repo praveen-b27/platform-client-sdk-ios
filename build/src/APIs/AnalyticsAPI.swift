@@ -382,6 +382,7 @@ open class AnalyticsAPI {
     "purpose" : "aeiou",
     "teamId" : "aeiou",
     "externalOrganizationId" : "aeiou",
+    "agentAssistantIds" : [ "aeiou" ],
     "participantName" : "aeiou",
     "userId" : "aeiou",
     "flaggedReason" : "aeiou"
@@ -620,6 +621,7 @@ open class AnalyticsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
+      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -941,6 +943,7 @@ open class AnalyticsAPI {
         "key" : "aeiou"
       },
       "externalOrganizationId" : "aeiou",
+      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -2639,6 +2642,7 @@ open class AnalyticsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
+      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -2942,6 +2946,91 @@ open class AnalyticsAPI {
     
     /**
      
+     Query for journey aggregates
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsJourneysAggregatesQuery(body: JourneyAggregationQuery, completion: @escaping ((_ data: JourneyAggregateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsJourneysAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<JourneyAggregateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for journey aggregates
+     
+     - POST /api/v2/analytics/journeys/aggregates/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "aeiou",
+      "metrics" : [ {
+        "metric" : "aeiou",
+        "stats" : {
+          "current" : 1.3579000000000001069366817318950779736042022705078125,
+          "min" : 1.3579000000000001069366817318950779736042022705078125,
+          "max" : 1.3579000000000001069366817318950779736042022705078125,
+          "count" : 123456789,
+          "sum" : 1.3579000000000001069366817318950779736042022705078125,
+          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
+          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
+          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
+          "target" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "qualifier" : "aeiou"
+      } ],
+      "views" : [ {
+        "stats" : "",
+        "name" : "aeiou"
+      } ]
+    } ],
+    "group" : {
+      "key" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<JourneyAggregateQueryResponse> 
+     */
+    open class func postAnalyticsJourneysAggregatesQueryWithRequestBuilder(body: JourneyAggregationQuery) -> RequestBuilder<JourneyAggregateQueryResponse> {
+        let path = "/api/v2/analytics/journeys/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Query for queue observations
      
      - parameter body: (body) query 
@@ -3076,7 +3165,7 @@ open class AnalyticsAPI {
      Generate a view export request
      
      - POST /api/v2/analytics/reporting/exports
-     - 
+     - This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

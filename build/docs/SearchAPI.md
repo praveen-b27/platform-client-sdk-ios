@@ -350,7 +350,7 @@ SearchAPI.getSearchSuggest(q64: q64, expand: expand, profile: profile) { (respon
 
 
 
-> [UsersSearchResponse](UsersSearchResponse.html) getUsersSearch(q64, expand)
+> [UsersSearchResponse](UsersSearchResponse.html) getUsersSearch(q64, expand, integrationPresenceSource)
 
 Search users using the q64 value returned from a previous search
 
@@ -371,9 +371,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let q64: String = "" // q64
 let expand: [String] = [""] // expand
+let integrationPresenceSource: SearchAPI.IntegrationPresenceSource_getUsersSearch = SearchAPI.IntegrationPresenceSource_getUsersSearch.enummember // integrationPresenceSource
 
 // Code example
-SearchAPI.getUsersSearch(q64: q64, expand: expand) { (response, error) in
+SearchAPI.getUsersSearch(q64: q64, expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -390,6 +391,7 @@ SearchAPI.getUsersSearch(q64: q64, expand: expand) { (response, error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
 | **expand** | [**[String]**](String.html)| expand | [optional] |
+| **integrationPresenceSource** | **String**| integrationPresenceSource | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 {: class="table-striped"}
 
 

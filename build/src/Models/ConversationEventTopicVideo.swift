@@ -54,9 +54,10 @@ public class ConversationEventTopicVideo: Codable {
     public var disconnectedTime: Date?
     public var msids: [String]?
     public var wrapup: ConversationEventTopicWrapup?
+    public var afterCallWork: ConversationEventTopicAfterCallWork?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: ConversationEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(state: State?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -88,6 +89,8 @@ public class ConversationEventTopicVideo: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -108,6 +111,7 @@ public class ConversationEventTopicVideo: Codable {
         case disconnectedTime
         case msids
         case wrapup
+        case afterCallWork
         case additionalProperties
     }
 

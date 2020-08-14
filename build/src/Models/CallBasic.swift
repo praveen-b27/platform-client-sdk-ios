@@ -102,8 +102,10 @@ public class CallBasic: Codable {
     public var other: Address?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
 
-    public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?) {
+    public init(state: State?, _id: String?, direction: Direction?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, recordingId: String?, segments: [Segment]?, errorInfo: ErrorInfo?, disconnectType: DisconnectType?, startHoldTime: Date?, documentId: String?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [DisconnectReason]?, faxStatus: FaxStatus?, provider: String?, scriptId: String?, peerId: String?, uuiData: String?, _self: Address?, other: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?) {
         
         self.state = state
         
@@ -157,6 +159,8 @@ public class CallBasic: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -186,6 +190,7 @@ public class CallBasic: Codable {
         case _self = "self"
         case other
         case wrapup
+        case afterCallWork
     }
 
 

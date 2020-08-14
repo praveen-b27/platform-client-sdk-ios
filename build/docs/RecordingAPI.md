@@ -799,7 +799,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let hasConversation: Bool = false // Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
@@ -824,7 +824,7 @@ RecordingAPI.getOrphanrecordings(pageSize: pageSize, pageNumber: pageNumber, sor
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **hasConversation** | **Bool**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
@@ -1130,7 +1130,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let name: String = "" // the policy name - used for filtering results in searches.
@@ -1157,7 +1157,7 @@ RecordingAPI.getRecordingMediaretentionpolicies(pageSize: pageSize, pageNumber: 
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **name** | **String**| the policy name - used for filtering results in searches. | [optional] |

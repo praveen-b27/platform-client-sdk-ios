@@ -510,6 +510,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -610,6 +617,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -899,6 +907,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -999,6 +1014,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -1272,6 +1288,13 @@ open class OrganizationAuthorizationAPI {
     } ],
     "primaryContactInfo" : [ "" ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -1372,6 +1395,7 @@ open class OrganizationAuthorizationAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
@@ -1788,6 +1812,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -1888,6 +1919,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -2216,6 +2248,13 @@ open class OrganizationAuthorizationAPI {
         } ],
         "primaryContactInfo" : [ "" ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -2316,6 +2355,7 @@ open class OrganizationAuthorizationAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -2603,6 +2643,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -2703,6 +2750,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -2976,6 +3024,13 @@ open class OrganizationAuthorizationAPI {
     } ],
     "primaryContactInfo" : [ "" ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -3076,6 +3131,7 @@ open class OrganizationAuthorizationAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
@@ -3393,6 +3449,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -3493,6 +3556,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -3824,6 +3888,13 @@ open class OrganizationAuthorizationAPI {
         } ],
         "primaryContactInfo" : [ "" ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -3924,6 +3995,7 @@ open class OrganizationAuthorizationAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -4208,6 +4280,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -4308,6 +4387,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -4592,6 +4672,13 @@ open class OrganizationAuthorizationAPI {
     } ],
     "primaryContactInfo" : [ "" ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -4692,6 +4779,7 @@ open class OrganizationAuthorizationAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
@@ -4995,6 +5083,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -5095,6 +5190,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -5532,6 +5628,13 @@ open class OrganizationAuthorizationAPI {
       } ],
       "primaryContactInfo" : [ "" ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -5632,6 +5735,7 @@ open class OrganizationAuthorizationAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -6103,6 +6207,13 @@ open class OrganizationAuthorizationAPI {
     } ],
     "primaryContactInfo" : [ "" ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -6203,6 +6314,7 @@ open class OrganizationAuthorizationAPI {
   "primaryContactInfo" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"

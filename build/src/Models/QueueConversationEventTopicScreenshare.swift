@@ -51,9 +51,10 @@ public class QueueConversationEventTopicScreenshare: Codable {
     public var connectedTime: Date?
     public var disconnectedTime: Date?
     public var wrapup: QueueConversationEventTopicWrapup?
+    public var afterCallWork: QueueConversationEventTopicAfterCallWork?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _self: QueueConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(state: State?, _self: QueueConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -79,6 +80,8 @@ public class QueueConversationEventTopicScreenshare: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -96,6 +99,7 @@ public class QueueConversationEventTopicScreenshare: Codable {
         case connectedTime
         case disconnectedTime
         case wrapup
+        case afterCallWork
         case additionalProperties
     }
 

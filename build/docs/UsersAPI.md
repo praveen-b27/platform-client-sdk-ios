@@ -927,7 +927,7 @@ UsersAPI.getFieldconfig(type: type) { (response, error) in
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [UserProfileEntityListing](UserProfileEntityListing.html) getProfilesUsers(pageSize, pageNumber, _id, jid, sortOrder, expand)
+> [UserProfileEntityListing](UserProfileEntityListing.html) getProfilesUsers(pageSize, pageNumber, _id, jid, sortOrder, expand, integrationPresenceSource)
 
 Get a user profile listing
 
@@ -952,9 +952,10 @@ let _id: [String] = [""] // id
 let jid: [String] = [""] // jid
 let sortOrder: UsersAPI.SortOrder_getProfilesUsers = UsersAPI.SortOrder_getProfilesUsers.enummember // Ascending or descending sort order
 let expand: [String] = [UsersAPI.Expand_getProfilesUsers.enummember.rawValue] // Which fields, if any, to expand
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getProfilesUsers = UsersAPI.IntegrationPresenceSource_getProfilesUsers.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\".
 
 // Code example
-UsersAPI.getProfilesUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jid: jid, sortOrder: sortOrder, expand: expand) { (response, error) in
+UsersAPI.getProfilesUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jid: jid, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -975,6 +976,7 @@ UsersAPI.getProfilesUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, 
 | **jid** | [**[String]**](String.html)| jid | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 {: class="table-striped"}
 
 
@@ -1041,7 +1043,7 @@ UsersAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
 
 
 
-> [User](User.html) getUser(userId, expand, state)
+> [User](User.html) getUser(userId, expand, integrationPresenceSource, state)
 
 Get user.
 
@@ -1062,10 +1064,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // User ID
 let expand: [String] = [UsersAPI.Expand_getUser.enummember.rawValue] // Which fields, if any, to expand
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUser = UsersAPI.IntegrationPresenceSource_getUser.enummember // Gets an integration presence for a user instead of their default.
 let state: UsersAPI.State_getUser = UsersAPI.State_getUser.enummember // Search for a user with this state
 
 // Code example
-UsersAPI.getUser(userId: userId, expand: expand, state: state) { (response, error) in
+UsersAPI.getUser(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1082,6 +1085,7 @@ UsersAPI.getUser(userId: userId, expand: expand, state: state) { (response, erro
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for a user instead of their default. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 | **state** | **String**| Search for a user with this state | [optional] [default to active]<br />**Values**: active ("active"), deleted ("deleted") |
 {: class="table-striped"}
 
@@ -1416,7 +1420,7 @@ UsersAPI.getUserOutofoffice(userId: userId) { (response, error) in
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [UserProfile](UserProfile.html) getUserProfile(userId, expand)
+> [UserProfile](UserProfile.html) getUserProfile(userId, expand, integrationPresenceSource)
 
 Get user profile
 
@@ -1437,9 +1441,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // userId
 let expand: [String] = [UsersAPI.Expand_getUserProfile.enummember.rawValue] // Which fields, if any, to expand
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUserProfile = UsersAPI.IntegrationPresenceSource_getUserProfile.enummember // Gets an integration presence for a user instead of their default.
 
 // Code example
-UsersAPI.getUserProfile(userId: userId, expand: expand) { (response, error) in
+UsersAPI.getUserProfile(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1456,6 +1461,7 @@ UsersAPI.getUserProfile(userId: userId, expand: expand) { (response, error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| userId | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for a user instead of their default. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 {: class="table-striped"}
 
 
@@ -1959,7 +1965,7 @@ UsersAPI.getUserTrustors(userId: userId, pageSize: pageSize, pageNumber: pageNum
 
 
 
-> [UserEntityListing](UserEntityListing.html) getUsers(pageSize, pageNumber, _id, jabberId, sortOrder, expand, state)
+> [UserEntityListing](UserEntityListing.html) getUsers(pageSize, pageNumber, _id, jabberId, sortOrder, expand, integrationPresenceSource, state)
 
 Get the list of available users.
 
@@ -1984,10 +1990,11 @@ let _id: [String] = [""] // A list of user IDs to fetch by bulk
 let jabberId: [String] = [""] // A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
 let sortOrder: UsersAPI.SortOrder_getUsers = UsersAPI.SortOrder_getUsers.enummember // Ascending or descending sort order
 let expand: [String] = [UsersAPI.Expand_getUsers.enummember.rawValue] // Which fields, if any, to expand
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsers = UsersAPI.IntegrationPresenceSource_getUsers.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.
 let state: UsersAPI.State_getUsers = UsersAPI.State_getUsers.enummember // Only list users of this state
 
 // Code example
-UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, state: state) { (response, error) in
+UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId: jabberId, sortOrder: sortOrder, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2008,6 +2015,7 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 | **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 | **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active ("active"), inactive ("inactive"), deleted ("deleted"), any ("any") |
 {: class="table-striped"}
 
@@ -2022,7 +2030,7 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 
 
 
-> [UserMe](UserMe.html) getUsersMe(expand)
+> [UserMe](UserMe.html) getUsersMe(expand, integrationPresenceSource)
 
 Get current user details.
 
@@ -2042,9 +2050,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let expand: [String] = [UsersAPI.Expand_getUsersMe.enummember.rawValue] // Which fields, if any, to expand.
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsersMe = UsersAPI.IntegrationPresenceSource_getUsersMe.enummember // Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\".
 
 // Code example
-UsersAPI.getUsersMe(expand: expand) { (response, error) in
+UsersAPI.getUsersMe(expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2060,6 +2069,7 @@ UsersAPI.getUsersMe(expand: expand) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), date ("date"), geolocationsettings ("geolocationsettings"), organization ("organization"), presencedefinitions ("presencedefinitions"), locationdefinitions ("locationdefinitions"), orgauthorization ("orgauthorization"), orgproducts ("orgproducts"), favorites ("favorites"), superiors ("superiors"), directreports ("directreports"), adjacents ("adjacents"), routingskills ("routingskills"), routinglanguages ("routinglanguages"), fieldconfigs ("fieldconfigs"), token ("token"), trustors ("trustors") |
+| **integrationPresenceSource** | **String**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 {: class="table-striped"}
 
 
@@ -2073,7 +2083,7 @@ UsersAPI.getUsersMe(expand: expand) { (response, error) in
 
 
 
-> [UsersSearchResponse](UsersSearchResponse.html) getUsersSearch(q64, expand)
+> [UsersSearchResponse](UsersSearchResponse.html) getUsersSearch(q64, expand, integrationPresenceSource)
 
 Search users using the q64 value returned from a previous search
 
@@ -2094,9 +2104,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let q64: String = "" // q64
 let expand: [String] = [""] // expand
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsersSearch = UsersAPI.IntegrationPresenceSource_getUsersSearch.enummember // integrationPresenceSource
 
 // Code example
-UsersAPI.getUsersSearch(q64: q64, expand: expand) { (response, error) in
+UsersAPI.getUsersSearch(q64: q64, expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2113,6 +2124,7 @@ UsersAPI.getUsersSearch(q64: q64, expand: expand) { (response, error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
 | **expand** | [**[String]**](String.html)| expand | [optional] |
+| **integrationPresenceSource** | **String**| integrationPresenceSource | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone") |
 {: class="table-striped"}
 
 

@@ -55,9 +55,10 @@ public class ConversationEventTopicSocialExpression: Codable {
     public var connectedTime: Date?
     public var disconnectedTime: Date?
     public var wrapup: ConversationEventTopicWrapup?
+    public var afterCallWork: ConversationEventTopicAfterCallWork?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, held: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, held: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -91,6 +92,8 @@ public class ConversationEventTopicSocialExpression: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -112,6 +115,7 @@ public class ConversationEventTopicSocialExpression: Codable {
         case connectedTime
         case disconnectedTime
         case wrapup
+        case afterCallWork
         case additionalProperties
     }
 

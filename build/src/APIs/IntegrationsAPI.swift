@@ -354,7 +354,7 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegration(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: Integration?,_ error: Error?) -> Void)) {
+    open class func getIntegration(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: Integration?,_ error: Error?) -> Void)) {
         let requestBuilder = getIntegrationWithRequestBuilder(integrationId: integrationId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
         requestBuilder.execute { (response: Response<Integration>?, error) -> Void in
             do {
@@ -481,7 +481,7 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<Integration> 
      */
-    open class func getIntegrationWithRequestBuilder(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<Integration> {
+    open class func getIntegrationWithRequestBuilder(integrationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<Integration> {
         var path = "/api/v2/integrations/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -628,7 +628,7 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrations(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: IntegrationEntityListing?,_ error: Error?) -> Void)) {
+    open class func getIntegrations(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: IntegrationEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getIntegrationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
         requestBuilder.execute { (response: Response<IntegrationEntityListing>?, error) -> Void in
             do {
@@ -765,7 +765,7 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<IntegrationEntityListing> 
      */
-    open class func getIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationEntityListing> {
+    open class func getIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationEntityListing> {
         let path = "/api/v2/integrations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1697,7 +1697,7 @@ open class IntegrationsAPI {
      - parameter pageNumber: (query) The page number requested (optional, default to 1)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter sortBy: (query) Root level field name to sort on. (optional)
+     - parameter sortBy: (query) Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
      - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1743,7 +1743,7 @@ open class IntegrationsAPI {
      - parameter pageNumber: (query) The page number requested (optional, default to 1)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter sortBy: (query) Root level field name to sort on. (optional)
+     - parameter sortBy: (query) Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
      - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
 
@@ -2011,7 +2011,7 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsClientapps(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: ClientAppEntityListing?,_ error: Error?) -> Void)) {
+    open class func getIntegrationsClientapps(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: ClientAppEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getIntegrationsClientappsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
         requestBuilder.execute { (response: Response<ClientAppEntityListing>?, error) -> Void in
             do {
@@ -2161,7 +2161,7 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<ClientAppEntityListing> 
      */
-    open class func getIntegrationsClientappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<ClientAppEntityListing> {
+    open class func getIntegrationsClientappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<ClientAppEntityListing> {
         let path = "/api/v2/integrations/clientapps"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -2662,11 +2662,19 @@ open class IntegrationsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -3019,11 +3027,19 @@ open class IntegrationsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -4318,7 +4334,7 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsTypes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: IntegrationTypeEntityListing?,_ error: Error?) -> Void)) {
+    open class func getIntegrationsTypes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: IntegrationTypeEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getIntegrationsTypesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
         requestBuilder.execute { (response: Response<IntegrationTypeEntityListing>?, error) -> Void in
             do {
@@ -4405,7 +4421,7 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<IntegrationTypeEntityListing> 
      */
-    open class func getIntegrationsTypesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationTypeEntityListing> {
+    open class func getIntegrationsTypesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<IntegrationTypeEntityListing> {
         let path = "/api/v2/integrations/types"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4465,7 +4481,7 @@ open class IntegrationsAPI {
      - parameter appHost: (query) The type of UserApp to filter by (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsUserapps(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, appHost: String? = nil, completion: @escaping ((_ data: UserAppEntityListing?,_ error: Error?) -> Void)) {
+    open class func getIntegrationsUserapps(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, appHost: String? = nil, completion: @escaping ((_ data: UserAppEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getIntegrationsUserappsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, appHost: appHost)
         requestBuilder.execute { (response: Response<UserAppEntityListing>?, error) -> Void in
             do {
@@ -4598,7 +4614,7 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<UserAppEntityListing> 
      */
-    open class func getIntegrationsUserappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, appHost: String? = nil) -> RequestBuilder<UserAppEntityListing> {
+    open class func getIntegrationsUserappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, appHost: String? = nil) -> RequestBuilder<UserAppEntityListing> {
         let path = "/api/v2/integrations/userapps"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4663,7 +4679,7 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchIntegration(integrationId: String, body: Integration? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: Integration?,_ error: Error?) -> Void)) {
+    open class func patchIntegration(integrationId: String, body: Integration? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: Integration?,_ error: Error?) -> Void)) {
         let requestBuilder = patchIntegrationWithRequestBuilder(integrationId: integrationId, body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
         requestBuilder.execute { (response: Response<Integration>?, error) -> Void in
             do {
@@ -4791,7 +4807,7 @@ open class IntegrationsAPI {
 
      - returns: RequestBuilder<Integration> 
      */
-    open class func patchIntegrationWithRequestBuilder(integrationId: String, body: Integration? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<Integration> {
+    open class func patchIntegrationWithRequestBuilder(integrationId: String, body: Integration? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<Integration> {
         var path = "/api/v2/integrations/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

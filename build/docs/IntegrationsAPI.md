@@ -294,7 +294,7 @@ let integrationId: String = "" // Integration Id
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 
@@ -318,7 +318,7 @@ IntegrationsAPI.getIntegration(integrationId: integrationId, pageSize: pageSize,
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 {: class="table-striped"}
@@ -407,7 +407,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 
@@ -430,7 +430,7 @@ IntegrationsAPI.getIntegrations(pageSize: pageSize, pageNumber: pageNumber, sort
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 {: class="table-striped"}
@@ -928,7 +928,7 @@ let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let sortBy: String = "" // Root level field name to sort on.
+let sortBy: String = "" // Root level field name to sort on.  Only 'name' is supported on this endpoint.
 let sortOrder: IntegrationsAPI.SortOrder_getIntegrationsActionsCategories = IntegrationsAPI.SortOrder_getIntegrationsActionsCategories.enummember // Direction to sort 'sortBy' field.
 let secure: IntegrationsAPI.Secure_getIntegrationsActionsCategories = IntegrationsAPI.Secure_getIntegrationsActionsCategories.enummember // Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
 
@@ -952,7 +952,7 @@ IntegrationsAPI.getIntegrationsActionsCategories(pageSize: pageSize, pageNumber:
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **sortBy** | **String**| Root level field name to sort on. | [optional] |
+| **sortBy** | **String**| Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. | [optional] |
 | **sortOrder** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: asc ("ASC"), desc ("DESC") |
 | **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
@@ -1061,7 +1061,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 
@@ -1084,7 +1084,7 @@ IntegrationsAPI.getIntegrationsClientapps(pageSize: pageSize, pageNumber: pageNu
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 {: class="table-striped"}
@@ -2039,7 +2039,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 
@@ -2062,7 +2062,7 @@ IntegrationsAPI.getIntegrationsTypes(pageSize: pageSize, pageNumber: pageNumber,
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 {: class="table-striped"}
@@ -2100,7 +2100,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let appHost: String = "" // The type of UserApp to filter by
@@ -2124,7 +2124,7 @@ IntegrationsAPI.getIntegrationsUserapps(pageSize: pageSize, pageNumber: pageNumb
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **appHost** | **String**| The type of UserApp to filter by | [optional] |
@@ -2165,7 +2165,7 @@ let body: Integration = new Integration(...) // Integration Update
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
+let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 
@@ -2190,7 +2190,7 @@ IntegrationsAPI.patchIntegration(integrationId: integrationId, body: body, pageS
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 {: class="table-striped"}

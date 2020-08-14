@@ -128,6 +128,7 @@ open class OAuthAPI {
     "name" : "aeiou",
     "modifiedBy" : "",
     "id" : "aeiou",
+    "state" : "aeiou",
     "roleDivisions" : [ {
       "roleId" : "aeiou",
       "divisionId" : "aeiou"
@@ -222,6 +223,7 @@ open class OAuthAPI {
       "name" : "aeiou",
       "modifiedBy" : "",
       "id" : "aeiou",
+      "state" : "aeiou",
       "roleDivisions" : [ {
         "roleId" : "aeiou",
         "divisionId" : "aeiou"
@@ -308,6 +310,7 @@ open class OAuthAPI {
   "name" : "aeiou",
   "modifiedBy" : "",
   "id" : "aeiou",
+  "state" : "aeiou",
   "roleDivisions" : [ {
     "roleId" : "aeiou",
     "divisionId" : "aeiou"
@@ -556,6 +559,7 @@ open class OAuthAPI {
     "name" : "aeiou",
     "modifiedBy" : "",
     "id" : "aeiou",
+    "state" : "aeiou",
     "roleDivisions" : [ {
       "roleId" : "aeiou",
       "divisionId" : "aeiou"
@@ -790,6 +794,7 @@ open class OAuthAPI {
   "name" : "aeiou",
   "modifiedBy" : "",
   "id" : "aeiou",
+  "state" : "aeiou",
   "roleDivisions" : [ {
     "roleId" : "aeiou",
     "divisionId" : "aeiou"
@@ -943,6 +948,7 @@ open class OAuthAPI {
   "name" : "aeiou",
   "modifiedBy" : "",
   "id" : "aeiou",
+  "state" : "aeiou",
   "roleDivisions" : [ {
     "roleId" : "aeiou",
     "divisionId" : "aeiou"
@@ -1026,6 +1032,7 @@ open class OAuthAPI {
   "name" : "aeiou",
   "modifiedBy" : "",
   "id" : "aeiou",
+  "state" : "aeiou",
   "roleDivisions" : [ {
     "roleId" : "aeiou",
     "divisionId" : "aeiou"

@@ -18,6 +18,11 @@ public class OAuthClientRequest: Codable {
         case password = "PASSWORD"
         case clientCredentials = "CLIENT_CREDENTIALS"
     }
+    public enum State: String, Codable { 
+        case active = "active"
+        case disabled = "disabled"
+        case inactive = "inactive"
+    }
     /** The name of the OAuth client. */
     public var name: String?
     /** The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied. */
@@ -33,8 +38,10 @@ public class OAuthClientRequest: Codable {
     public var scope: [String]?
     /** Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant */
     public var roleDivisions: [RoleDivision]?
+    /** The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted. */
+    public var state: State?
 
-    public init(name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, roleIds: [String]?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?) {
+    public init(name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, roleIds: [String]?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?) {
         
         self.name = name
         
@@ -52,6 +59,8 @@ public class OAuthClientRequest: Codable {
         
         self.roleDivisions = roleDivisions
         
+        self.state = state
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -63,6 +72,7 @@ public class OAuthClientRequest: Codable {
         case authorizedGrantType
         case scope
         case roleDivisions
+        case state
     }
 
 

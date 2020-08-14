@@ -2317,7 +2317,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpool(didPoolId: didPoolId
 
 
 
-> [DIDPoolEntityListing](DIDPoolEntityListing.html) getTelephonyProvidersEdgesDidpools(pageSize, pageNumber, sortBy)
+> [DIDPoolEntityListing](DIDPoolEntityListing.html) getTelephonyProvidersEdgesDidpools(pageSize, pageNumber, sortBy, _id)
 
 Get a listing of DID Pools
 
@@ -2340,9 +2340,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
 let sortBy: String = "number" // Sort by
+let _id: [String] = [""] // Filter by a specific list of ID's
 
 // Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpools(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy) { (response, error) in
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpools(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, _id: _id) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2360,6 +2361,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpools(pageSize: pageSize,
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortBy** | **String**| Sort by | [optional] [default to number] |
+| **_id** | [**[String]**](String.html)| Filter by a specific list of ID&#39;s | [optional] |
 {: class="table-striped"}
 
 
@@ -2373,7 +2375,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpools(pageSize: pageSize,
 
 
 
-> [DIDEntityListing](DIDEntityListing.html) getTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId)
+> [DIDEntityListing](DIDEntityListing.html) getTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId, _id)
 
 Get a listing of DIDs
 
@@ -2400,9 +2402,10 @@ let sortOrder: String = "ASC" // Sort order
 let phoneNumber: String = "" // Filter by phoneNumber
 let ownerId: String = "" // Filter by the owner of a phone number
 let didPoolId: String = "" // Filter by the DID Pool assignment
+let _id: [String] = [""] // Filter by a specific list of ID's
 
 // Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDids(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, phoneNumber: phoneNumber, ownerId: ownerId, didPoolId: didPoolId) { (response, error) in
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDids(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, phoneNumber: phoneNumber, ownerId: ownerId, didPoolId: didPoolId, _id: _id) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2424,6 +2427,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDids(pageSize: pageSize, pag
 | **phoneNumber** | **String**| Filter by phoneNumber | [optional] |
 | **ownerId** | **String**| Filter by the owner of a phone number | [optional] |
 | **didPoolId** | **String**| Filter by the DID Pool assignment | [optional] |
+| **_id** | [**[String]**](String.html)| Filter by a specific list of ID&#39;s | [optional] |
 {: class="table-striped"}
 
 

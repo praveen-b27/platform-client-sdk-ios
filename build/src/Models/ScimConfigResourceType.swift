@@ -26,10 +26,8 @@ public class ScimConfigResourceType: Codable {
     public var schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?
     /** The HTTP-addressable endpoint of the resource type. Appears after the base URL. */
     public var endpoint: String?
-    /** The metadata of the SCIM resource. */
-    public var meta: ScimMetadata?
 
-    public init(_id: String?, schemas: [String]?, name: String?, _description: String?, schema: String?, schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?, endpoint: String?, meta: ScimMetadata?) {
+    public init(_id: String?, schemas: [String]?, name: String?, _description: String?, schema: String?, schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?, endpoint: String?) {
         
         self._id = _id
         
@@ -45,8 +43,6 @@ public class ScimConfigResourceType: Codable {
         
         self.endpoint = endpoint
         
-        self.meta = meta
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -57,7 +53,6 @@ public class ScimConfigResourceType: Codable {
         case schema
         case schemaExtensions
         case endpoint
-        case meta
     }
 
 

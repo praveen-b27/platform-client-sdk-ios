@@ -64,9 +64,10 @@ public class QueueConversationEventTopicMessage: Codable {
     public var recipientCountry: String?
     public var recipientType: String?
     public var wrapup: QueueConversationEventTopicWrapup?
+    public var afterCallWork: QueueConversationEventTopicAfterCallWork?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: QueueConversationEventTopicWrapup?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -106,6 +107,8 @@ public class QueueConversationEventTopicMessage: Codable {
         
         self.wrapup = wrapup
         
+        self.afterCallWork = afterCallWork
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -130,6 +133,7 @@ public class QueueConversationEventTopicMessage: Codable {
         case recipientCountry
         case recipientType
         case wrapup
+        case afterCallWork
         case additionalProperties
     }
 

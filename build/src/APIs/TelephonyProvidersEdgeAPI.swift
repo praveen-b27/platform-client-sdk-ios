@@ -1412,6 +1412,7 @@ open class TelephonyProvidersEdgeAPI {
     "addresses" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -1948,6 +1949,7 @@ open class TelephonyProvidersEdgeAPI {
       "addresses" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -2260,6 +2262,7 @@ open class TelephonyProvidersEdgeAPI {
         "addresses" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -3767,6 +3770,7 @@ open class TelephonyProvidersEdgeAPI {
       "addresses" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -4309,6 +4313,8 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    
+    
     /**
      
      Get a listing of DID Pools
@@ -4316,10 +4322,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to number)
+     - parameter _id: (query) Filter by a specific list of ID&#39;s (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTelephonyProvidersEdgesDidpools(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, completion: @escaping ((_ data: DIDPoolEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesDidpoolsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy)
+    open class func getTelephonyProvidersEdgesDidpools(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, _id: [String]? = nil, completion: @escaping ((_ data: DIDPoolEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesDidpoolsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, _id: _id)
         requestBuilder.execute { (response: Response<DIDPoolEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4378,10 +4385,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to number)
+     - parameter _id: (query) Filter by a specific list of ID&#39;s (optional)
 
      - returns: RequestBuilder<DIDPoolEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesDidpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil) -> RequestBuilder<DIDPoolEntityListing> {
+    open class func getTelephonyProvidersEdgesDidpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, _id: [String]? = nil) -> RequestBuilder<DIDPoolEntityListing> {
         let path = "/api/v2/telephony/providers/edges/didpools"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4398,7 +4406,9 @@ open class TelephonyProvidersEdgeAPI {
             
             "pageNumber": pageNumber?.encodeToJSON(), 
             
-            "sortBy": sortBy
+            "sortBy": sortBy, 
+            
+            "id": _id
             
         ])
 
@@ -4407,6 +4417,8 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
+    
     
     
     
@@ -4433,10 +4445,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter phoneNumber: (query) Filter by phoneNumber (optional)
      - parameter ownerId: (query) Filter by the owner of a phone number (optional)
      - parameter didPoolId: (query) Filter by the DID Pool assignment (optional)
+     - parameter _id: (query) Filter by a specific list of ID&#39;s (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTelephonyProvidersEdgesDids(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, phoneNumber: String? = nil, ownerId: String? = nil, didPoolId: String? = nil, completion: @escaping ((_ data: DIDEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesDidsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, phoneNumber: phoneNumber, ownerId: ownerId, didPoolId: didPoolId)
+    open class func getTelephonyProvidersEdgesDids(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, phoneNumber: String? = nil, ownerId: String? = nil, didPoolId: String? = nil, _id: [String]? = nil, completion: @escaping ((_ data: DIDEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesDidsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, phoneNumber: phoneNumber, ownerId: ownerId, didPoolId: didPoolId, _id: _id)
         requestBuilder.execute { (response: Response<DIDEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4503,10 +4516,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter phoneNumber: (query) Filter by phoneNumber (optional)
      - parameter ownerId: (query) Filter by the owner of a phone number (optional)
      - parameter didPoolId: (query) Filter by the DID Pool assignment (optional)
+     - parameter _id: (query) Filter by a specific list of ID&#39;s (optional)
 
      - returns: RequestBuilder<DIDEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesDidsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, phoneNumber: String? = nil, ownerId: String? = nil, didPoolId: String? = nil) -> RequestBuilder<DIDEntityListing> {
+    open class func getTelephonyProvidersEdgesDidsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, phoneNumber: String? = nil, ownerId: String? = nil, didPoolId: String? = nil, _id: [String]? = nil) -> RequestBuilder<DIDEntityListing> {
         let path = "/api/v2/telephony/providers/edges/dids"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4531,7 +4545,9 @@ open class TelephonyProvidersEdgeAPI {
             
             "owner.id": ownerId, 
             
-            "didPool.id": didPoolId
+            "didPool.id": didPoolId, 
+            
+            "id": _id
             
         ])
 
@@ -5513,6 +5529,7 @@ open class TelephonyProvidersEdgeAPI {
       "addresses" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -6017,6 +6034,7 @@ open class TelephonyProvidersEdgeAPI {
         "addresses" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -6316,6 +6334,7 @@ open class TelephonyProvidersEdgeAPI {
       "addresses" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -6773,6 +6792,7 @@ open class TelephonyProvidersEdgeAPI {
     "addresses" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -7065,6 +7085,7 @@ open class TelephonyProvidersEdgeAPI {
       "addresses" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -7479,6 +7500,7 @@ open class TelephonyProvidersEdgeAPI {
         "addresses" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -7577,6 +7599,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -7697,6 +7720,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -7834,6 +7858,7 @@ open class TelephonyProvidersEdgeAPI {
       "dualRegisters" : true,
       "allowReboot" : true,
       "mediaCodecs" : [ "aeiou" ],
+      "cdm" : true,
       "noRebalance" : true
     },
     "selfUri" : "aeiou",
@@ -8066,6 +8091,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -8367,6 +8393,7 @@ open class TelephonyProvidersEdgeAPI {
           "addresses" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
@@ -8465,6 +8492,7 @@ open class TelephonyProvidersEdgeAPI {
       "dualRegisters" : true,
       "allowReboot" : true,
       "mediaCodecs" : [ "aeiou" ],
+      "cdm" : true,
       "noRebalance" : true
     },
     "selfUri" : "aeiou",
@@ -8758,6 +8786,7 @@ open class TelephonyProvidersEdgeAPI {
         "addresses" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -8856,6 +8885,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -9075,6 +9105,7 @@ open class TelephonyProvidersEdgeAPI {
   "addresses" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
@@ -9827,6 +9858,7 @@ open class TelephonyProvidersEdgeAPI {
     "addresses" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -12116,6 +12148,7 @@ open class TelephonyProvidersEdgeAPI {
     "addresses" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -12660,6 +12693,7 @@ open class TelephonyProvidersEdgeAPI {
     "addresses" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -12977,6 +13011,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -13205,6 +13240,7 @@ open class TelephonyProvidersEdgeAPI {
         "addresses" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -13303,6 +13339,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -13606,6 +13643,7 @@ open class TelephonyProvidersEdgeAPI {
   "addresses" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"
@@ -14037,6 +14075,7 @@ open class TelephonyProvidersEdgeAPI {
     "addresses" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -14304,6 +14343,7 @@ open class TelephonyProvidersEdgeAPI {
       "addresses" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -15294,6 +15334,7 @@ open class TelephonyProvidersEdgeAPI {
     "addresses" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
@@ -15685,6 +15726,7 @@ open class TelephonyProvidersEdgeAPI {
         "addresses" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -15783,6 +15825,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -15904,6 +15947,7 @@ open class TelephonyProvidersEdgeAPI {
     "dualRegisters" : true,
     "allowReboot" : true,
     "mediaCodecs" : [ "aeiou" ],
+    "cdm" : true,
     "noRebalance" : true
   },
   "selfUri" : "aeiou",
@@ -16017,6 +16061,7 @@ open class TelephonyProvidersEdgeAPI {
   "addresses" : [ {
     "extension" : "aeiou",
     "address" : "aeiou",
+    "countryCode" : "aeiou",
     "display" : "aeiou",
     "mediaType" : "aeiou",
     "type" : "aeiou"

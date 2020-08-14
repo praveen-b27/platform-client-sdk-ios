@@ -11,6 +11,11 @@ import Foundation
 
 public class OAuthClientListing: Codable {
 
+    public enum State: String, Codable { 
+        case active = "active"
+        case disabled = "disabled"
+        case inactive = "inactive"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the OAuth client. */
@@ -36,10 +41,12 @@ public class OAuthClientListing: Codable {
     public var scope: [String]?
     /** Set of roles and their corresponding divisions associated with this client. Roles and divisions only apply to clients using the client_credential grant */
     public var roleDivisions: [RoleDivision]?
+    /** The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted. */
+    public var state: State?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, secret: String?, roleIds: [String]?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, scope: [String]?, roleDivisions: [RoleDivision]?, selfUri: String?) {
+    public init(_id: String?, name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, secret: String?, roleIds: [String]?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, selfUri: String?) {
         
         self._id = _id
         
@@ -67,6 +74,8 @@ public class OAuthClientListing: Codable {
         
         self.roleDivisions = roleDivisions
         
+        self.state = state
+        
         self.selfUri = selfUri
         
     }
@@ -85,6 +94,7 @@ public class OAuthClientListing: Codable {
         case modifiedBy
         case scope
         case roleDivisions
+        case state
         case selfUri
     }
 

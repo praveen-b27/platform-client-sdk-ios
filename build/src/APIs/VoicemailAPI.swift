@@ -295,6 +295,7 @@ open class VoicemailAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -325,6 +326,7 @@ open class VoicemailAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -344,6 +346,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -391,6 +394,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -813,11 +817,19 @@ open class VoicemailAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -938,6 +950,11 @@ open class VoicemailAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -1006,6 +1023,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -1027,6 +1045,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -1065,6 +1084,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1089,6 +1109,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -1329,11 +1350,19 @@ open class VoicemailAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -1696,6 +1725,7 @@ open class VoicemailAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1726,6 +1756,7 @@ open class VoicemailAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -1745,6 +1776,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -1792,6 +1824,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2214,11 +2247,19 @@ open class VoicemailAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -2339,6 +2380,11 @@ open class VoicemailAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2407,6 +2453,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2428,6 +2475,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -2466,6 +2514,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2490,6 +2539,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2714,6 +2764,7 @@ open class VoicemailAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2744,6 +2795,7 @@ open class VoicemailAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -2763,6 +2815,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2810,6 +2863,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3232,11 +3286,19 @@ open class VoicemailAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -3357,6 +3419,11 @@ open class VoicemailAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3425,6 +3492,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3446,6 +3514,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -3484,6 +3553,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3508,6 +3578,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -3757,6 +3828,7 @@ open class VoicemailAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3787,6 +3859,7 @@ open class VoicemailAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -3806,6 +3879,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -3853,6 +3927,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4275,11 +4350,19 @@ open class VoicemailAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -4400,6 +4483,11 @@ open class VoicemailAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4468,6 +4556,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4489,6 +4578,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -4527,6 +4617,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -4551,6 +4642,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -4778,6 +4870,7 @@ open class VoicemailAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -4808,6 +4901,7 @@ open class VoicemailAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -4827,6 +4921,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -4874,6 +4969,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -5296,11 +5392,19 @@ open class VoicemailAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -5421,6 +5525,11 @@ open class VoicemailAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -5489,6 +5598,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -5510,6 +5620,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -5548,6 +5659,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5572,6 +5684,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -5739,6 +5852,7 @@ open class VoicemailAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5769,6 +5883,7 @@ open class VoicemailAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -5788,6 +5903,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -5835,6 +5951,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -6257,11 +6374,19 @@ open class VoicemailAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -6382,6 +6507,11 @@ open class VoicemailAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -6450,6 +6580,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -6471,6 +6602,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -6509,6 +6641,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -6533,6 +6666,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -6835,11 +6969,19 @@ open class VoicemailAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -7135,6 +7277,7 @@ open class VoicemailAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -7165,6 +7308,7 @@ open class VoicemailAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -7184,6 +7328,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -7231,6 +7376,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -7653,11 +7799,19 @@ open class VoicemailAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -7778,6 +7932,11 @@ open class VoicemailAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -7846,6 +8005,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -7867,6 +8027,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -7905,6 +8066,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -7929,6 +8091,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -8136,6 +8299,7 @@ open class VoicemailAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -8166,6 +8330,7 @@ open class VoicemailAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -8185,6 +8350,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -8232,6 +8398,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -8654,11 +8821,19 @@ open class VoicemailAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -8779,6 +8954,11 @@ open class VoicemailAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -8847,6 +9027,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -8868,6 +9049,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -8906,6 +9088,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -8930,6 +9113,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -9072,6 +9256,7 @@ open class VoicemailAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -9102,6 +9287,7 @@ open class VoicemailAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -9121,6 +9307,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -9168,6 +9355,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -9590,11 +9778,19 @@ open class VoicemailAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -9715,6 +9911,11 @@ open class VoicemailAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -9783,6 +9984,7 @@ open class VoicemailAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -9804,6 +10006,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -9842,6 +10045,7 @@ open class VoicemailAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -9866,6 +10070,7 @@ open class VoicemailAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -10003,6 +10208,7 @@ open class VoicemailAPI {
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -10033,6 +10239,7 @@ open class VoicemailAPI {
         "sharingScreen" : true,
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "self" : "",
@@ -10052,6 +10259,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "self" : "",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -10099,6 +10307,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -10521,11 +10730,19 @@ open class VoicemailAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -10646,6 +10863,11 @@ open class VoicemailAPI {
           "type" : "aeiou"
         } ],
         "provider" : "aeiou",
+        "afterCallWork" : {
+          "startTime" : "2000-01-23T04:56:07.000+0000",
+          "endTime" : "2000-01-23T04:56:07.000+0000",
+          "state" : "aeiou"
+        },
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -10714,6 +10936,7 @@ open class VoicemailAPI {
             "id" : "aeiou"
           }
         },
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
@@ -10735,6 +10958,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "messages" : [ {
@@ -10773,6 +10997,7 @@ open class VoicemailAPI {
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
         "provider" : "aeiou",
+        "afterCallWork" : "",
         "socialMediaId" : "aeiou",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -10797,6 +11022,7 @@ open class VoicemailAPI {
         "segments" : [ "" ],
         "provider" : "aeiou",
         "context" : "aeiou",
+        "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",

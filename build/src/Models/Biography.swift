@@ -16,8 +16,10 @@ public class Biography: Codable {
     public var interests: [String]?
     public var hobbies: [String]?
     public var spouse: String?
+    /** User education details */
+    public var education: [Education]?
 
-    public init(biography: String?, interests: [String]?, hobbies: [String]?, spouse: String?) {
+    public init(biography: String?, interests: [String]?, hobbies: [String]?, spouse: String?, education: [Education]?) {
         
         self.biography = biography
         
@@ -26,6 +28,8 @@ public class Biography: Codable {
         self.hobbies = hobbies
         
         self.spouse = spouse
+        
+        self.education = education
         
     }
 

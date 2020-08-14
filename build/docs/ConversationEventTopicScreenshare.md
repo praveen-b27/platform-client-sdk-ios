@@ -19,6 +19,7 @@ title: ConversationEventTopicScreenshare
 | **connectedTime** | [**Date**](Date.html) |  | [optional] |
 | **disconnectedTime** | [**Date**](Date.html) |  | [optional] |
 | **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
+| **afterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

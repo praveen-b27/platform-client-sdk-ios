@@ -22,6 +22,7 @@ title: ConversationEventTopicVideo
 | **disconnectedTime** | [**Date**](Date.html) |  | [optional] |
 | **msids** | **[String]** |  | [optional] |
 | **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
+| **afterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

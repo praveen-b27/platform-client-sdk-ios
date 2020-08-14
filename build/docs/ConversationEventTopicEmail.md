@@ -26,6 +26,7 @@ title: ConversationEventTopicEmail
 | **draftAttachments** | [**[ConversationEventTopicAttachment]**](ConversationEventTopicAttachment.html) |  | [optional] |
 | **spam** | **Bool** |  | [optional] |
 | **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
+| **afterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

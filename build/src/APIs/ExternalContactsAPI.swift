@@ -760,6 +760,13 @@ open class ExternalContactsAPI {
           } ],
           "primaryContactInfo" : [ "" ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -860,6 +867,7 @@ open class ExternalContactsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -1160,11 +1168,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -1516,11 +1532,19 @@ open class ExternalContactsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -1996,6 +2020,13 @@ open class ExternalContactsAPI {
             } ],
             "primaryContactInfo" : [ "" ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -2096,6 +2127,7 @@ open class ExternalContactsAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
@@ -2854,6 +2886,13 @@ open class ExternalContactsAPI {
         } ],
         "primaryContactInfo" : [ "" ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -2954,6 +2993,7 @@ open class ExternalContactsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -3362,6 +3402,13 @@ open class ExternalContactsAPI {
             } ],
             "primaryContactInfo" : [ "" ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -3462,6 +3509,7 @@ open class ExternalContactsAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
@@ -3781,11 +3829,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -4137,11 +4193,19 @@ open class ExternalContactsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -4507,11 +4571,19 @@ open class ExternalContactsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
       "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
         "hobbies" : [ "aeiou" ],
         "biography" : "aeiou",
         "interests" : [ "aeiou" ],
@@ -5101,6 +5173,13 @@ open class ExternalContactsAPI {
           } ],
           "primaryContactInfo" : [ "" ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -5201,6 +5280,7 @@ open class ExternalContactsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -5856,11 +5936,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -6441,6 +6529,13 @@ open class ExternalContactsAPI {
             } ],
             "primaryContactInfo" : [ "" ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -6541,6 +6636,7 @@ open class ExternalContactsAPI {
           "primaryContactInfo" : [ {
             "extension" : "aeiou",
             "address" : "aeiou",
+            "countryCode" : "aeiou",
             "display" : "aeiou",
             "mediaType" : "aeiou",
             "type" : "aeiou"
@@ -6635,6 +6731,1818 @@ open class ExternalContactsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ReverseWhitepagesLookupResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Scan for external contacts using paging
+     
+     - parameter limit: (query) The number of contacts per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsScanContacts(limit: Int? = nil, cursor: String? = nil, completion: @escaping ((_ data: CursorContactListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsScanContactsWithRequestBuilder(limit: limit, cursor: cursor)
+        requestBuilder.execute { (response: Response<CursorContactListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Scan for external contacts using paging
+     
+     - GET /api/v2/externalcontacts/scan/contacts
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "schema" : "",
+    "lastName" : "aeiou",
+    "workEmail" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
+    "title" : "aeiou",
+    "twitterId" : {
+      "profileUrl" : "aeiou",
+      "name" : "aeiou",
+      "verified" : true,
+      "id" : "aeiou",
+      "screenName" : "aeiou"
+    },
+    "personalEmail" : "aeiou",
+    "externalSystemUrl" : "aeiou",
+    "id" : "aeiou",
+    "otherEmail" : "aeiou",
+    "createDate" : "2000-01-23T04:56:07.000+0000",
+    "address" : {
+      "address2" : "aeiou",
+      "city" : "aeiou",
+      "address1" : "aeiou",
+      "countryCode" : "aeiou",
+      "postalCode" : "aeiou",
+      "state" : "aeiou"
+    },
+    "modifyDate" : "2000-01-23T04:56:07.000+0000",
+    "homePhone" : "",
+    "facebookId" : {
+      "displayName" : "aeiou",
+      "ids" : [ {
+        "scopedId" : "aeiou"
+      } ]
+    },
+    "selfUri" : "aeiou",
+    "lineId" : {
+      "displayName" : "aeiou",
+      "ids" : [ {
+        "userId" : "aeiou"
+      } ]
+    },
+    "externalOrganization" : {
+      "schema" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "jsonSchema" : {
+          "$schema" : "aeiou",
+          "description" : "aeiou",
+          "id" : "aeiou",
+          "additionalProperties" : "{}",
+          "title" : "aeiou",
+          "type" : "aeiou",
+          "required" : [ "aeiou" ],
+          "properties" : {
+            "key" : "{}"
+          }
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "appliesTo" : [ "aeiou" ],
+        "id" : "aeiou",
+        "version" : 123,
+        "enabled" : true
+      },
+      "address" : "",
+      "modifyDate" : "2000-01-23T04:56:07.000+0000",
+      "companyType" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
+      "selfUri" : "aeiou",
+      "industry" : "aeiou",
+      "employeeCount" : 123456789,
+      "tickers" : [ {
+        "symbol" : "aeiou",
+        "exchange" : "aeiou"
+      } ],
+      "twitterId" : "",
+      "primaryContactId" : "aeiou",
+      "tags" : [ "aeiou" ],
+      "revenue" : 123456789,
+      "phoneNumber" : "",
+      "externalSystemUrl" : "aeiou",
+      "externalDataSources" : [ {
+        "platform" : "aeiou",
+        "url" : "aeiou"
+      } ],
+      "name" : "aeiou",
+      "faxNumber" : "",
+      "trustor" : {
+        "authorization" : {
+          "permissions" : [ "aeiou" ]
+        },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "addresses" : [ "" ],
+          "acdAutoAnswer" : true,
+          "routingStatus" : "",
+          "title" : "aeiou",
+          "division" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
+          "authorization" : "",
+          "skills" : [ "" ],
+          "station" : "",
+          "id" : "aeiou",
+          "state" : "aeiou",
+          "department" : "aeiou",
+          "presence" : "",
+          "lastTokenIssued" : "",
+          "email" : "aeiou",
+          "images" : [ "" ],
+          "manager" : {
+            "addresses" : [ "" ],
+            "acdAutoAnswer" : true,
+            "routingStatus" : {
+              "startTime" : "2000-01-23T04:56:07.000+0000",
+              "userId" : "aeiou",
+              "status" : "aeiou"
+            },
+            "title" : "aeiou",
+            "division" : "",
+            "authorization" : {
+              "unusedRoles" : [ "" ],
+              "permissions" : [ "aeiou" ],
+              "permissionPolicies" : [ {
+                "policyDescription" : "aeiou",
+                "resourceConditionNode" : {
+                  "operands" : [ {
+                    "type" : "aeiou",
+                    "value" : "aeiou"
+                  } ],
+                  "variableName" : "aeiou",
+                  "conjunction" : "aeiou",
+                  "terms" : [ "" ],
+                  "operator" : "aeiou"
+                },
+                "actionSetKey" : "aeiou",
+                "namedResources" : [ "aeiou" ],
+                "policyName" : "aeiou",
+                "entityName" : "aeiou",
+                "domain" : "aeiou",
+                "allowConditions" : true,
+                "id" : "aeiou",
+                "resourceCondition" : "aeiou",
+                "actionSet" : [ "aeiou" ]
+              } ],
+              "roles" : [ {
+                "name" : "aeiou",
+                "id" : "aeiou"
+              } ]
+            },
+            "skills" : [ {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "skillUri" : "aeiou",
+              "id" : "aeiou",
+              "state" : "aeiou",
+              "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+            } ],
+            "station" : {
+              "defaultStation" : "",
+              "lastAssociatedStation" : "",
+              "associatedStation" : {
+                "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "name" : "aeiou",
+                "defaultUser" : "",
+                "id" : "aeiou",
+                "type" : "aeiou",
+                "associatedUser" : "",
+                "providerInfo" : {
+                  "key" : "aeiou"
+                }
+              },
+              "effectiveStation" : ""
+            },
+            "id" : "aeiou",
+            "state" : "aeiou",
+            "department" : "aeiou",
+            "presence" : {
+              "presenceDefinition" : {
+                "systemPresence" : "aeiou",
+                "selfUri" : "aeiou",
+                "id" : "aeiou"
+              },
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+              "id" : "aeiou",
+              "source" : "aeiou",
+              "message" : "aeiou",
+              "primary" : true
+            },
+            "lastTokenIssued" : {
+              "dateIssued" : "2000-01-23T04:56:07.000+0000"
+            },
+            "email" : "aeiou",
+            "images" : [ {
+              "imageUri" : "aeiou",
+              "resolution" : "aeiou"
+            } ],
+            "manager" : "",
+            "employerInfo" : {
+              "employeeType" : "aeiou",
+              "dateHire" : "aeiou",
+              "employeeId" : "aeiou",
+              "officialName" : "aeiou"
+            },
+            "languages" : [ {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "state" : "aeiou",
+              "languageUri" : "aeiou",
+              "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+            } ],
+            "selfUri" : "aeiou",
+            "conversationSummary" : {
+              "call" : {
+                "enterprise" : "",
+                "contactCenter" : {
+                  "acw" : 123,
+                  "active" : 123
+                }
+              },
+              "socialExpression" : "",
+              "chat" : "",
+              "callback" : "",
+              "video" : "",
+              "message" : "",
+              "userId" : "aeiou",
+              "email" : ""
+            },
+            "groups" : [ {
+              "images" : [ "" ],
+              "addresses" : [ {
+                "extension" : "aeiou",
+                "address" : "aeiou",
+                "display" : "aeiou",
+                "mediaType" : "aeiou",
+                "type" : "aeiou"
+              } ],
+              "visibility" : "aeiou",
+              "memberCount" : 123456789,
+              "selfUri" : "aeiou",
+              "description" : "aeiou",
+              "dateModified" : "2000-01-23T04:56:07.000+0000",
+              "owners" : [ "" ],
+              "type" : "aeiou",
+              "version" : 123,
+              "rulesVisible" : true,
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "state" : "aeiou"
+            } ],
+            "primaryContactInfo" : [ "" ],
+            "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
+              "hobbies" : [ "aeiou" ],
+              "biography" : "aeiou",
+              "interests" : [ "aeiou" ],
+              "spouse" : "aeiou"
+            },
+            "team" : {
+              "memberCount" : 123456789,
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "description" : "aeiou",
+              "dateModified" : "2000-01-23T04:56:07.000+0000",
+              "id" : "aeiou"
+            },
+            "certifications" : [ "aeiou" ],
+            "version" : 123,
+            "outOfOffice" : {
+              "endDate" : "2000-01-23T04:56:07.000+0000",
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "active" : true,
+              "id" : "aeiou",
+              "user" : "",
+              "startDate" : "2000-01-23T04:56:07.000+0000",
+              "indefinite" : true
+            },
+            "languagePreference" : "aeiou",
+            "profileSkills" : [ "aeiou" ],
+            "chat" : "",
+            "name" : "aeiou",
+            "locations" : [ {
+              "notes" : "aeiou",
+              "coordinates" : {
+                "key" : 1.3579000000000001069366817318950779736042022705078125
+              },
+              "locationDefinition" : "",
+              "id" : "aeiou",
+              "floorplanId" : "aeiou"
+            } ],
+            "username" : "aeiou",
+            "geolocation" : {
+              "country" : "aeiou",
+              "city" : "aeiou",
+              "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "locations" : [ {
+                "images" : "aeiou",
+                "address" : {
+                  "zipcode" : "aeiou",
+                  "country" : "aeiou",
+                  "city" : "aeiou",
+                  "street1" : "aeiou",
+                  "countryName" : "aeiou",
+                  "state" : "aeiou",
+                  "street2" : "aeiou"
+                },
+                "notes" : "aeiou",
+                "floorplanImage" : [ "" ],
+                "addressVerificationDetails" : {
+                  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                  "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                  "service" : "smartystreets-us",
+                  "status" : "aeiou"
+                },
+                "selfUri" : "aeiou",
+                "profileImage" : [ {
+                  "imageUri" : "aeiou",
+                  "resolution" : "aeiou"
+                } ],
+                "emergencyNumber" : {
+                  "number" : "aeiou",
+                  "e164" : "aeiou",
+                  "type" : "aeiou"
+                },
+                "version" : 123,
+                "path" : [ "aeiou" ],
+                "addressStored" : true,
+                "name" : "aeiou",
+                "id" : "aeiou",
+                "contactUser" : {
+                  "selfUri" : "aeiou",
+                  "id" : "aeiou"
+                },
+                "state" : "aeiou",
+                "addressVerified" : true
+              } ],
+              "id" : "aeiou",
+              "type" : "aeiou",
+              "region" : "aeiou",
+              "primary" : true,
+              "longitude" : 1.3579000000000001069366817318950779736042022705078125
+            }
+          },
+          "employerInfo" : "",
+          "languages" : [ "" ],
+          "conversationSummary" : "",
+          "groups" : [ "" ],
+          "primaryContactInfo" : [ {
+            "extension" : "aeiou",
+            "address" : "aeiou",
+            "countryCode" : "aeiou",
+            "display" : "aeiou",
+            "mediaType" : "aeiou",
+            "type" : "aeiou"
+          } ],
+          "biography" : "",
+          "team" : "",
+          "certifications" : [ "aeiou" ],
+          "version" : 123,
+          "outOfOffice" : "",
+          "languagePreference" : "aeiou",
+          "profileSkills" : [ "aeiou" ],
+          "chat" : {
+            "jabberId" : "aeiou"
+          },
+          "organization" : {
+            "defaultCountryCode" : "aeiou",
+            "selfUri" : "aeiou",
+            "thirdPartyURI" : "aeiou",
+            "version" : 123,
+            "thirdPartyOrgName" : "aeiou",
+            "features" : {
+              "key" : true
+            },
+            "defaultLanguage" : "aeiou",
+            "defaultSiteId" : "aeiou",
+            "supportURI" : "aeiou",
+            "domain" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "state" : "aeiou",
+            "voicemailEnabled" : true,
+            "productPlatform" : "aeiou"
+          },
+          "name" : "aeiou",
+          "locations" : [ "" ],
+          "username" : "aeiou",
+          "geolocation" : ""
+        },
+        "organization" : "",
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "enabled" : true
+      },
+      "websites" : [ "aeiou" ],
+      "id" : "aeiou",
+      "createDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "firstName" : "aeiou",
+    "otherPhone" : "",
+    "whatsAppId" : {
+      "phoneNumber" : "",
+      "displayName" : "aeiou"
+    },
+    "externalDataSources" : [ "" ],
+    "middleName" : "aeiou",
+    "workPhone" : {
+      "extension" : 123456789,
+      "e164" : "aeiou",
+      "acceptsSMS" : true,
+      "countryCode" : "aeiou",
+      "display" : "aeiou",
+      "userInput" : "aeiou"
+    },
+    "salutation" : "aeiou",
+    "cellPhone" : "",
+    "surveyOptOut" : true
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter limit: (query) The number of contacts per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+
+     - returns: RequestBuilder<CursorContactListing> 
+     */
+    open class func getExternalcontactsScanContactsWithRequestBuilder(limit: Int? = nil, cursor: String? = nil) -> RequestBuilder<CursorContactListing> {
+        let path = "/api/v2/externalcontacts/scan/contacts"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "limit": limit?.encodeToJSON(), 
+            
+            "cursor": cursor
+            
+        ])
+
+        let requestBuilder: RequestBuilder<CursorContactListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Scan for notes using paging
+     
+     - parameter limit: (query) The number of notes per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsScanNotes(limit: Int? = nil, cursor: String? = nil, completion: @escaping ((_ data: CursorNoteListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsScanNotesWithRequestBuilder(limit: limit, cursor: cursor)
+        requestBuilder.execute { (response: Response<CursorNoteListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Scan for notes using paging
+     
+     - GET /api/v2/externalcontacts/scan/notes
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "noteText" : "aeiou",
+    "modifyDate" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "addresses" : [ "" ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "userId" : "aeiou",
+        "status" : "aeiou"
+      },
+      "title" : "aeiou",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "authorization" : {
+        "unusedRoles" : [ "" ],
+        "permissions" : [ "aeiou" ],
+        "permissionPolicies" : [ {
+          "policyDescription" : "aeiou",
+          "resourceConditionNode" : {
+            "operands" : [ {
+              "type" : "aeiou",
+              "value" : "aeiou"
+            } ],
+            "variableName" : "aeiou",
+            "conjunction" : "aeiou",
+            "terms" : [ "" ],
+            "operator" : "aeiou"
+          },
+          "actionSetKey" : "aeiou",
+          "namedResources" : [ "aeiou" ],
+          "policyName" : "aeiou",
+          "entityName" : "aeiou",
+          "domain" : "aeiou",
+          "allowConditions" : true,
+          "id" : "aeiou",
+          "resourceCondition" : "aeiou",
+          "actionSet" : [ "aeiou" ]
+        } ],
+        "roles" : [ {
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      },
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "skillUri" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "station" : {
+        "defaultStation" : "",
+        "lastAssociatedStation" : "",
+        "associatedStation" : {
+          "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "name" : "aeiou",
+          "defaultUser" : "",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "associatedUser" : "",
+          "providerInfo" : {
+            "key" : "aeiou"
+          }
+        },
+        "effectiveStation" : ""
+      },
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "department" : "aeiou",
+      "presence" : {
+        "presenceDefinition" : {
+          "systemPresence" : "aeiou",
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "source" : "aeiou",
+        "message" : "aeiou",
+        "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
+      "email" : "aeiou",
+      "images" : [ {
+        "imageUri" : "aeiou",
+        "resolution" : "aeiou"
+      } ],
+      "manager" : "",
+      "employerInfo" : {
+        "employeeType" : "aeiou",
+        "dateHire" : "aeiou",
+        "employeeId" : "aeiou",
+        "officialName" : "aeiou"
+      },
+      "languages" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "languageUri" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "selfUri" : "aeiou",
+      "conversationSummary" : {
+        "call" : {
+          "enterprise" : "",
+          "contactCenter" : {
+            "acw" : 123,
+            "active" : 123
+          }
+        },
+        "socialExpression" : "",
+        "chat" : "",
+        "callback" : "",
+        "video" : "",
+        "message" : "",
+        "userId" : "aeiou",
+        "email" : ""
+      },
+      "groups" : [ {
+        "images" : [ "" ],
+        "addresses" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "visibility" : "aeiou",
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "owners" : [ "" ],
+        "type" : "aeiou",
+        "version" : 123,
+        "rulesVisible" : true,
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "aeiou",
+        "address" : "aeiou",
+        "countryCode" : "aeiou",
+        "display" : "aeiou",
+        "mediaType" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
+        "hobbies" : [ "aeiou" ],
+        "biography" : "aeiou",
+        "interests" : [ "aeiou" ],
+        "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
+      "certifications" : [ "aeiou" ],
+      "version" : 123,
+      "outOfOffice" : {
+        "endDate" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "active" : true,
+        "id" : "aeiou",
+        "user" : "",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "indefinite" : true
+      },
+      "languagePreference" : "aeiou",
+      "profileSkills" : [ "aeiou" ],
+      "chat" : {
+        "jabberId" : "aeiou"
+      },
+      "name" : "aeiou",
+      "locations" : [ {
+        "notes" : "aeiou",
+        "coordinates" : {
+          "key" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "locationDefinition" : "",
+        "id" : "aeiou",
+        "floorplanId" : "aeiou"
+      } ],
+      "username" : "aeiou",
+      "geolocation" : {
+        "country" : "aeiou",
+        "city" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "locations" : [ {
+          "images" : "aeiou",
+          "address" : {
+            "zipcode" : "aeiou",
+            "country" : "aeiou",
+            "city" : "aeiou",
+            "street1" : "aeiou",
+            "countryName" : "aeiou",
+            "state" : "aeiou",
+            "street2" : "aeiou"
+          },
+          "notes" : "aeiou",
+          "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
+          "selfUri" : "aeiou",
+          "profileImage" : [ {
+            "imageUri" : "aeiou",
+            "resolution" : "aeiou"
+          } ],
+          "emergencyNumber" : {
+            "number" : "aeiou",
+            "e164" : "aeiou",
+            "type" : "aeiou"
+          },
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "addressStored" : true,
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
+        } ],
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "region" : "aeiou",
+        "primary" : true,
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      }
+    },
+    "externalDataSources" : [ {
+      "platform" : "aeiou",
+      "url" : "aeiou"
+    } ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "createDate" : "2000-01-23T04:56:07.000+0000"
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter limit: (query) The number of notes per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+
+     - returns: RequestBuilder<CursorNoteListing> 
+     */
+    open class func getExternalcontactsScanNotesWithRequestBuilder(limit: Int? = nil, cursor: String? = nil) -> RequestBuilder<CursorNoteListing> {
+        let path = "/api/v2/externalcontacts/scan/notes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "limit": limit?.encodeToJSON(), 
+            
+            "cursor": cursor
+            
+        ])
+
+        let requestBuilder: RequestBuilder<CursorNoteListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Scan for external organizations using paging
+     
+     - parameter limit: (query) The number of organizations per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsScanOrganizations(limit: Int? = nil, cursor: String? = nil, completion: @escaping ((_ data: CursorOrganizationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsScanOrganizationsWithRequestBuilder(limit: limit, cursor: cursor)
+        requestBuilder.execute { (response: Response<CursorOrganizationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Scan for external organizations using paging
+     
+     - GET /api/v2/externalcontacts/scan/organizations
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "schema" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "jsonSchema" : {
+        "$schema" : "aeiou",
+        "description" : "aeiou",
+        "id" : "aeiou",
+        "additionalProperties" : "{}",
+        "title" : "aeiou",
+        "type" : "aeiou",
+        "required" : [ "aeiou" ],
+        "properties" : {
+          "key" : "{}"
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "appliesTo" : [ "aeiou" ],
+      "id" : "aeiou",
+      "version" : 123,
+      "enabled" : true
+    },
+    "address" : {
+      "address2" : "aeiou",
+      "city" : "aeiou",
+      "address1" : "aeiou",
+      "countryCode" : "aeiou",
+      "postalCode" : "aeiou",
+      "state" : "aeiou"
+    },
+    "modifyDate" : "2000-01-23T04:56:07.000+0000",
+    "companyType" : "aeiou",
+    "customFields" : {
+      "key" : "{}"
+    },
+    "selfUri" : "aeiou",
+    "industry" : "aeiou",
+    "employeeCount" : 123456789,
+    "tickers" : [ {
+      "symbol" : "aeiou",
+      "exchange" : "aeiou"
+    } ],
+    "twitterId" : {
+      "profileUrl" : "aeiou",
+      "name" : "aeiou",
+      "verified" : true,
+      "id" : "aeiou",
+      "screenName" : "aeiou"
+    },
+    "primaryContactId" : "aeiou",
+    "tags" : [ "aeiou" ],
+    "revenue" : 123456789,
+    "phoneNumber" : {
+      "extension" : 123456789,
+      "e164" : "aeiou",
+      "acceptsSMS" : true,
+      "countryCode" : "aeiou",
+      "display" : "aeiou",
+      "userInput" : "aeiou"
+    },
+    "externalSystemUrl" : "aeiou",
+    "externalDataSources" : [ {
+      "platform" : "aeiou",
+      "url" : "aeiou"
+    } ],
+    "name" : "aeiou",
+    "faxNumber" : "",
+    "trustor" : {
+      "authorization" : {
+        "permissions" : [ "aeiou" ]
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : {
+        "addresses" : [ "" ],
+        "acdAutoAnswer" : true,
+        "routingStatus" : "",
+        "title" : "aeiou",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "authorization" : "",
+        "skills" : [ "" ],
+        "station" : "",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "department" : "aeiou",
+        "presence" : "",
+        "lastTokenIssued" : "",
+        "email" : "aeiou",
+        "images" : [ "" ],
+        "manager" : {
+          "addresses" : [ "" ],
+          "acdAutoAnswer" : true,
+          "routingStatus" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "userId" : "aeiou",
+            "status" : "aeiou"
+          },
+          "title" : "aeiou",
+          "division" : "",
+          "authorization" : {
+            "unusedRoles" : [ "" ],
+            "permissions" : [ "aeiou" ],
+            "permissionPolicies" : [ {
+              "policyDescription" : "aeiou",
+              "resourceConditionNode" : {
+                "operands" : [ {
+                  "type" : "aeiou",
+                  "value" : "aeiou"
+                } ],
+                "variableName" : "aeiou",
+                "conjunction" : "aeiou",
+                "terms" : [ "" ],
+                "operator" : "aeiou"
+              },
+              "actionSetKey" : "aeiou",
+              "namedResources" : [ "aeiou" ],
+              "policyName" : "aeiou",
+              "entityName" : "aeiou",
+              "domain" : "aeiou",
+              "allowConditions" : true,
+              "id" : "aeiou",
+              "resourceCondition" : "aeiou",
+              "actionSet" : [ "aeiou" ]
+            } ],
+            "roles" : [ {
+              "name" : "aeiou",
+              "id" : "aeiou"
+            } ]
+          },
+          "skills" : [ {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "skillUri" : "aeiou",
+            "id" : "aeiou",
+            "state" : "aeiou",
+            "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "station" : {
+            "defaultStation" : "",
+            "lastAssociatedStation" : "",
+            "associatedStation" : {
+              "associatedDate" : "2000-01-23T04:56:07.000+0000",
+              "name" : "aeiou",
+              "defaultUser" : "",
+              "id" : "aeiou",
+              "type" : "aeiou",
+              "associatedUser" : "",
+              "providerInfo" : {
+                "key" : "aeiou"
+              }
+            },
+            "effectiveStation" : ""
+          },
+          "id" : "aeiou",
+          "state" : "aeiou",
+          "department" : "aeiou",
+          "presence" : {
+            "presenceDefinition" : {
+              "systemPresence" : "aeiou",
+              "selfUri" : "aeiou",
+              "id" : "aeiou"
+            },
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou",
+            "source" : "aeiou",
+            "message" : "aeiou",
+            "primary" : true
+          },
+          "lastTokenIssued" : {
+            "dateIssued" : "2000-01-23T04:56:07.000+0000"
+          },
+          "email" : "aeiou",
+          "images" : [ {
+            "imageUri" : "aeiou",
+            "resolution" : "aeiou"
+          } ],
+          "manager" : "",
+          "employerInfo" : {
+            "employeeType" : "aeiou",
+            "dateHire" : "aeiou",
+            "employeeId" : "aeiou",
+            "officialName" : "aeiou"
+          },
+          "languages" : [ {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "state" : "aeiou",
+            "languageUri" : "aeiou",
+            "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "selfUri" : "aeiou",
+          "conversationSummary" : {
+            "call" : {
+              "enterprise" : "",
+              "contactCenter" : {
+                "acw" : 123,
+                "active" : 123
+              }
+            },
+            "socialExpression" : "",
+            "chat" : "",
+            "callback" : "",
+            "video" : "",
+            "message" : "",
+            "userId" : "aeiou",
+            "email" : ""
+          },
+          "groups" : [ {
+            "images" : [ "" ],
+            "addresses" : [ {
+              "extension" : "aeiou",
+              "address" : "aeiou",
+              "display" : "aeiou",
+              "mediaType" : "aeiou",
+              "type" : "aeiou"
+            } ],
+            "visibility" : "aeiou",
+            "memberCount" : 123456789,
+            "selfUri" : "aeiou",
+            "description" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "owners" : [ "" ],
+            "type" : "aeiou",
+            "version" : 123,
+            "rulesVisible" : true,
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "state" : "aeiou"
+          } ],
+          "primaryContactInfo" : [ "" ],
+          "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
+            "hobbies" : [ "aeiou" ],
+            "biography" : "aeiou",
+            "interests" : [ "aeiou" ],
+            "spouse" : "aeiou"
+          },
+          "team" : {
+            "memberCount" : 123456789,
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "description" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou"
+          },
+          "certifications" : [ "aeiou" ],
+          "version" : 123,
+          "outOfOffice" : {
+            "endDate" : "2000-01-23T04:56:07.000+0000",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "active" : true,
+            "id" : "aeiou",
+            "user" : "",
+            "startDate" : "2000-01-23T04:56:07.000+0000",
+            "indefinite" : true
+          },
+          "languagePreference" : "aeiou",
+          "profileSkills" : [ "aeiou" ],
+          "chat" : "",
+          "name" : "aeiou",
+          "locations" : [ {
+            "notes" : "aeiou",
+            "coordinates" : {
+              "key" : 1.3579000000000001069366817318950779736042022705078125
+            },
+            "locationDefinition" : "",
+            "id" : "aeiou",
+            "floorplanId" : "aeiou"
+          } ],
+          "username" : "aeiou",
+          "geolocation" : {
+            "country" : "aeiou",
+            "city" : "aeiou",
+            "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "locations" : [ {
+              "images" : "aeiou",
+              "address" : {
+                "zipcode" : "aeiou",
+                "country" : "aeiou",
+                "city" : "aeiou",
+                "street1" : "aeiou",
+                "countryName" : "aeiou",
+                "state" : "aeiou",
+                "street2" : "aeiou"
+              },
+              "notes" : "aeiou",
+              "floorplanImage" : [ "" ],
+              "addressVerificationDetails" : {
+                "dateStarted" : "2000-01-23T04:56:07.000+0000",
+                "dateFinished" : "2000-01-23T04:56:07.000+0000",
+                "service" : "smartystreets-us",
+                "status" : "aeiou"
+              },
+              "selfUri" : "aeiou",
+              "profileImage" : [ {
+                "imageUri" : "aeiou",
+                "resolution" : "aeiou"
+              } ],
+              "emergencyNumber" : {
+                "number" : "aeiou",
+                "e164" : "aeiou",
+                "type" : "aeiou"
+              },
+              "version" : 123,
+              "path" : [ "aeiou" ],
+              "addressStored" : true,
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "contactUser" : {
+                "selfUri" : "aeiou",
+                "id" : "aeiou"
+              },
+              "state" : "aeiou",
+              "addressVerified" : true
+            } ],
+            "id" : "aeiou",
+            "type" : "aeiou",
+            "region" : "aeiou",
+            "primary" : true,
+            "longitude" : 1.3579000000000001069366817318950779736042022705078125
+          }
+        },
+        "employerInfo" : "",
+        "languages" : [ "" ],
+        "conversationSummary" : "",
+        "groups" : [ "" ],
+        "primaryContactInfo" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "countryCode" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "biography" : "",
+        "team" : "",
+        "certifications" : [ "aeiou" ],
+        "version" : 123,
+        "outOfOffice" : "",
+        "languagePreference" : "aeiou",
+        "profileSkills" : [ "aeiou" ],
+        "chat" : {
+          "jabberId" : "aeiou"
+        },
+        "organization" : {
+          "defaultCountryCode" : "aeiou",
+          "selfUri" : "aeiou",
+          "thirdPartyURI" : "aeiou",
+          "version" : 123,
+          "thirdPartyOrgName" : "aeiou",
+          "features" : {
+            "key" : true
+          },
+          "defaultLanguage" : "aeiou",
+          "defaultSiteId" : "aeiou",
+          "supportURI" : "aeiou",
+          "domain" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "state" : "aeiou",
+          "voicemailEnabled" : true,
+          "productPlatform" : "aeiou"
+        },
+        "name" : "aeiou",
+        "locations" : [ "" ],
+        "username" : "aeiou",
+        "geolocation" : ""
+      },
+      "organization" : "",
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "enabled" : true
+    },
+    "websites" : [ "aeiou" ],
+    "id" : "aeiou",
+    "createDate" : "2000-01-23T04:56:07.000+0000"
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter limit: (query) The number of organizations per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+
+     - returns: RequestBuilder<CursorOrganizationListing> 
+     */
+    open class func getExternalcontactsScanOrganizationsWithRequestBuilder(limit: Int? = nil, cursor: String? = nil) -> RequestBuilder<CursorOrganizationListing> {
+        let path = "/api/v2/externalcontacts/scan/organizations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "limit": limit?.encodeToJSON(), 
+            
+            "cursor": cursor
+            
+        ])
+
+        let requestBuilder: RequestBuilder<CursorOrganizationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Scan for relationships
+     
+     - parameter limit: (query) The number of relationships per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsScanRelationships(limit: Int? = nil, cursor: String? = nil, completion: @escaping ((_ data: CursorRelationshipListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsScanRelationshipsWithRequestBuilder(limit: limit, cursor: cursor)
+        requestBuilder.execute { (response: Response<CursorRelationshipListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Scan for relationships
+     
+     - GET /api/v2/externalcontacts/scan/relationships
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "externalDataSources" : [ "" ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "relationship" : "aeiou",
+    "user" : {
+      "addresses" : [ "" ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "userId" : "aeiou",
+        "status" : "aeiou"
+      },
+      "title" : "aeiou",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "authorization" : {
+        "unusedRoles" : [ "" ],
+        "permissions" : [ "aeiou" ],
+        "permissionPolicies" : [ {
+          "policyDescription" : "aeiou",
+          "resourceConditionNode" : {
+            "operands" : [ {
+              "type" : "aeiou",
+              "value" : "aeiou"
+            } ],
+            "variableName" : "aeiou",
+            "conjunction" : "aeiou",
+            "terms" : [ "" ],
+            "operator" : "aeiou"
+          },
+          "actionSetKey" : "aeiou",
+          "namedResources" : [ "aeiou" ],
+          "policyName" : "aeiou",
+          "entityName" : "aeiou",
+          "domain" : "aeiou",
+          "allowConditions" : true,
+          "id" : "aeiou",
+          "resourceCondition" : "aeiou",
+          "actionSet" : [ "aeiou" ]
+        } ],
+        "roles" : [ {
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      },
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "skillUri" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "station" : {
+        "defaultStation" : "",
+        "lastAssociatedStation" : "",
+        "associatedStation" : {
+          "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "name" : "aeiou",
+          "defaultUser" : "",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "associatedUser" : "",
+          "providerInfo" : {
+            "key" : "aeiou"
+          }
+        },
+        "effectiveStation" : ""
+      },
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "department" : "aeiou",
+      "presence" : {
+        "presenceDefinition" : {
+          "systemPresence" : "aeiou",
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "source" : "aeiou",
+        "message" : "aeiou",
+        "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
+      "email" : "aeiou",
+      "images" : [ {
+        "imageUri" : "aeiou",
+        "resolution" : "aeiou"
+      } ],
+      "manager" : "",
+      "employerInfo" : {
+        "employeeType" : "aeiou",
+        "dateHire" : "aeiou",
+        "employeeId" : "aeiou",
+        "officialName" : "aeiou"
+      },
+      "languages" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "languageUri" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "selfUri" : "aeiou",
+      "conversationSummary" : {
+        "call" : {
+          "enterprise" : "",
+          "contactCenter" : {
+            "acw" : 123,
+            "active" : 123
+          }
+        },
+        "socialExpression" : "",
+        "chat" : "",
+        "callback" : "",
+        "video" : "",
+        "message" : "",
+        "userId" : "aeiou",
+        "email" : ""
+      },
+      "groups" : [ {
+        "images" : [ "" ],
+        "addresses" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "visibility" : "aeiou",
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "owners" : [ "" ],
+        "type" : "aeiou",
+        "version" : 123,
+        "rulesVisible" : true,
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "aeiou",
+        "address" : "aeiou",
+        "countryCode" : "aeiou",
+        "display" : "aeiou",
+        "mediaType" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
+        "hobbies" : [ "aeiou" ],
+        "biography" : "aeiou",
+        "interests" : [ "aeiou" ],
+        "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
+      "certifications" : [ "aeiou" ],
+      "version" : 123,
+      "outOfOffice" : {
+        "endDate" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "active" : true,
+        "id" : "aeiou",
+        "user" : "",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "indefinite" : true
+      },
+      "languagePreference" : "aeiou",
+      "profileSkills" : [ "aeiou" ],
+      "chat" : {
+        "jabberId" : "aeiou"
+      },
+      "name" : "aeiou",
+      "locations" : [ {
+        "notes" : "aeiou",
+        "coordinates" : {
+          "key" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "locationDefinition" : "",
+        "id" : "aeiou",
+        "floorplanId" : "aeiou"
+      } ],
+      "username" : "aeiou",
+      "geolocation" : {
+        "country" : "aeiou",
+        "city" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "locations" : [ {
+          "images" : "aeiou",
+          "address" : {
+            "zipcode" : "aeiou",
+            "country" : "aeiou",
+            "city" : "aeiou",
+            "street1" : "aeiou",
+            "countryName" : "aeiou",
+            "state" : "aeiou",
+            "street2" : "aeiou"
+          },
+          "notes" : "aeiou",
+          "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
+          "selfUri" : "aeiou",
+          "profileImage" : [ {
+            "imageUri" : "aeiou",
+            "resolution" : "aeiou"
+          } ],
+          "emergencyNumber" : {
+            "number" : "aeiou",
+            "e164" : "aeiou",
+            "type" : "aeiou"
+          },
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "addressStored" : true,
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
+        } ],
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "region" : "aeiou",
+        "primary" : true,
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      }
+    },
+    "externalOrganization" : {
+      "schema" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "jsonSchema" : {
+          "$schema" : "aeiou",
+          "description" : "aeiou",
+          "id" : "aeiou",
+          "additionalProperties" : "{}",
+          "title" : "aeiou",
+          "type" : "aeiou",
+          "required" : [ "aeiou" ],
+          "properties" : {
+            "key" : "{}"
+          }
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "appliesTo" : [ "aeiou" ],
+        "id" : "aeiou",
+        "version" : 123,
+        "enabled" : true
+      },
+      "address" : {
+        "address2" : "aeiou",
+        "city" : "aeiou",
+        "address1" : "aeiou",
+        "countryCode" : "aeiou",
+        "postalCode" : "aeiou",
+        "state" : "aeiou"
+      },
+      "modifyDate" : "2000-01-23T04:56:07.000+0000",
+      "companyType" : "aeiou",
+      "customFields" : {
+        "key" : "{}"
+      },
+      "selfUri" : "aeiou",
+      "industry" : "aeiou",
+      "employeeCount" : 123456789,
+      "tickers" : [ {
+        "symbol" : "aeiou",
+        "exchange" : "aeiou"
+      } ],
+      "twitterId" : {
+        "profileUrl" : "aeiou",
+        "name" : "aeiou",
+        "verified" : true,
+        "id" : "aeiou",
+        "screenName" : "aeiou"
+      },
+      "primaryContactId" : "aeiou",
+      "tags" : [ "aeiou" ],
+      "revenue" : 123456789,
+      "phoneNumber" : {
+        "extension" : 123456789,
+        "e164" : "aeiou",
+        "acceptsSMS" : true,
+        "countryCode" : "aeiou",
+        "display" : "aeiou",
+        "userInput" : "aeiou"
+      },
+      "externalSystemUrl" : "aeiou",
+      "externalDataSources" : [ {
+        "platform" : "aeiou",
+        "url" : "aeiou"
+      } ],
+      "name" : "aeiou",
+      "faxNumber" : "",
+      "trustor" : {
+        "authorization" : {
+          "permissions" : [ "aeiou" ]
+        },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : {
+          "addresses" : [ "" ],
+          "acdAutoAnswer" : true,
+          "routingStatus" : "",
+          "title" : "aeiou",
+          "division" : "",
+          "authorization" : "",
+          "skills" : [ "" ],
+          "station" : "",
+          "id" : "aeiou",
+          "state" : "aeiou",
+          "department" : "aeiou",
+          "presence" : "",
+          "lastTokenIssued" : "",
+          "email" : "aeiou",
+          "images" : [ "" ],
+          "manager" : "",
+          "employerInfo" : "",
+          "languages" : [ "" ],
+          "conversationSummary" : "",
+          "groups" : [ "" ],
+          "primaryContactInfo" : [ "" ],
+          "biography" : "",
+          "team" : "",
+          "certifications" : [ "aeiou" ],
+          "version" : 123,
+          "outOfOffice" : "",
+          "languagePreference" : "aeiou",
+          "profileSkills" : [ "aeiou" ],
+          "chat" : "",
+          "organization" : {
+            "defaultCountryCode" : "aeiou",
+            "selfUri" : "aeiou",
+            "thirdPartyURI" : "aeiou",
+            "version" : 123,
+            "thirdPartyOrgName" : "aeiou",
+            "features" : {
+              "key" : true
+            },
+            "defaultLanguage" : "aeiou",
+            "defaultSiteId" : "aeiou",
+            "supportURI" : "aeiou",
+            "domain" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "state" : "aeiou",
+            "voicemailEnabled" : true,
+            "productPlatform" : "aeiou"
+          },
+          "name" : "aeiou",
+          "locations" : [ "" ],
+          "username" : "aeiou",
+          "geolocation" : ""
+        },
+        "organization" : "",
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "enabled" : true
+      },
+      "websites" : [ "aeiou" ],
+      "id" : "aeiou",
+      "createDate" : "2000-01-23T04:56:07.000+0000"
+    }
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter limit: (query) The number of relationships per page; must be between 10 and 200, default is 100) (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+
+     - returns: RequestBuilder<CursorRelationshipListing> 
+     */
+    open class func getExternalcontactsScanRelationshipsWithRequestBuilder(limit: Int? = nil, cursor: String? = nil) -> RequestBuilder<CursorRelationshipListing> {
+        let path = "/api/v2/externalcontacts/scan/relationships"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "limit": limit?.encodeToJSON(), 
+            
+            "cursor": cursor
+            
+        ])
+
+        let requestBuilder: RequestBuilder<CursorRelationshipListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -6832,11 +8740,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -7266,6 +9182,13 @@ open class ExternalContactsAPI {
           } ],
           "primaryContactInfo" : [ "" ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -7366,6 +9289,7 @@ open class ExternalContactsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -7727,11 +9651,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -8138,6 +10070,13 @@ open class ExternalContactsAPI {
         } ],
         "primaryContactInfo" : [ "" ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -8238,6 +10177,7 @@ open class ExternalContactsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -8579,11 +10519,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -9144,6 +11092,13 @@ open class ExternalContactsAPI {
           } ],
           "primaryContactInfo" : [ "" ],
           "biography" : {
+            "education" : [ {
+              "notes" : "aeiou",
+              "school" : "aeiou",
+              "dateStart" : "2000-01-23T04:56:07.000+0000",
+              "dateEnd" : "2000-01-23T04:56:07.000+0000",
+              "fieldOfStudy" : "aeiou"
+            } ],
             "hobbies" : [ "aeiou" ],
             "biography" : "aeiou",
             "interests" : [ "aeiou" ],
@@ -9244,6 +11199,7 @@ open class ExternalContactsAPI {
         "primaryContactInfo" : [ {
           "extension" : "aeiou",
           "address" : "aeiou",
+          "countryCode" : "aeiou",
           "display" : "aeiou",
           "mediaType" : "aeiou",
           "type" : "aeiou"
@@ -9530,11 +11486,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -9764,12 +11728,12 @@ open class ExternalContactsAPI {
      
      Associate/disassociate an external contact with a conversation
      
-     - parameter conversationId: (path) Conversation ID 
      - parameter body: (body) ConversationAssociation 
+     - parameter conversationId: (path) Conversation ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putExternalcontactsConversation(conversationId: String, body: ConversationAssociation, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = putExternalcontactsConversationWithRequestBuilder(conversationId: conversationId, body: body)
+    open class func putExternalcontactsConversation(body: ConversationAssociation, conversationId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsConversationWithRequestBuilder(body: body, conversationId: conversationId)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -9789,12 +11753,12 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      
-     - parameter conversationId: (path) Conversation ID 
      - parameter body: (body) ConversationAssociation 
+     - parameter conversationId: (path) Conversation ID 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func putExternalcontactsConversationWithRequestBuilder(conversationId: String, body: ConversationAssociation) -> RequestBuilder<Void> {
+    open class func putExternalcontactsConversationWithRequestBuilder(body: ConversationAssociation, conversationId: String) -> RequestBuilder<Void> {
         var path = "/api/v2/externalcontacts/conversations/{conversationId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -10093,6 +12057,13 @@ open class ExternalContactsAPI {
         } ],
         "primaryContactInfo" : [ "" ],
         "biography" : {
+          "education" : [ {
+            "notes" : "aeiou",
+            "school" : "aeiou",
+            "dateStart" : "2000-01-23T04:56:07.000+0000",
+            "dateEnd" : "2000-01-23T04:56:07.000+0000",
+            "fieldOfStudy" : "aeiou"
+          } ],
           "hobbies" : [ "aeiou" ],
           "biography" : "aeiou",
           "interests" : [ "aeiou" ],
@@ -10193,6 +12164,7 @@ open class ExternalContactsAPI {
       "primaryContactInfo" : [ {
         "extension" : "aeiou",
         "address" : "aeiou",
+        "countryCode" : "aeiou",
         "display" : "aeiou",
         "mediaType" : "aeiou",
         "type" : "aeiou"
@@ -10459,11 +12431,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],
@@ -10956,11 +12936,19 @@ open class ExternalContactsAPI {
     "primaryContactInfo" : [ {
       "extension" : "aeiou",
       "address" : "aeiou",
+      "countryCode" : "aeiou",
       "display" : "aeiou",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
     "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
       "hobbies" : [ "aeiou" ],
       "biography" : "aeiou",
       "interests" : [ "aeiou" ],

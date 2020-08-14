@@ -14,6 +14,7 @@ public class FlowAggregationQuery: Codable {
     public enum GroupBy: String, Codable { 
         case addressfrom = "addressFrom"
         case addressto = "addressTo"
+        case agentassistantid = "agentAssistantId"
         case agentscore = "agentScore"
         case ani = "ani"
         case conversationid = "conversationId"

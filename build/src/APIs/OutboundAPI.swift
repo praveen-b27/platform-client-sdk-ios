@@ -2037,6 +2037,7 @@ open class OutboundAPI {
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2067,6 +2068,7 @@ open class OutboundAPI {
           "sharingScreen" : true,
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "self" : "",
@@ -2086,6 +2088,7 @@ open class OutboundAPI {
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "self" : "",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2133,6 +2136,7 @@ open class OutboundAPI {
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2277,6 +2281,7 @@ open class OutboundAPI {
                 "provider" : "aeiou",
                 "externalCampaign" : true,
                 "callbackUserName" : "aeiou",
+                "afterCallWork" : "",
                 "disconnectType" : "aeiou",
                 "timeoutSeconds" : 123,
                 "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2322,6 +2327,7 @@ open class OutboundAPI {
                 "errorInfo" : "",
                 "segments" : [ "" ],
                 "provider" : "aeiou",
+                "afterCallWork" : "",
                 "disconnectType" : "aeiou",
                 "connectedTime" : "2000-01-23T04:56:07.000+0000",
                 "state" : "aeiou",
@@ -2662,11 +2668,19 @@ open class OutboundAPI {
             "primaryContactInfo" : [ {
               "extension" : "aeiou",
               "address" : "aeiou",
+              "countryCode" : "aeiou",
               "display" : "aeiou",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
             "biography" : {
+              "education" : [ {
+                "notes" : "aeiou",
+                "school" : "aeiou",
+                "dateStart" : "2000-01-23T04:56:07.000+0000",
+                "dateEnd" : "2000-01-23T04:56:07.000+0000",
+                "fieldOfStudy" : "aeiou"
+              } ],
               "hobbies" : [ "aeiou" ],
               "biography" : "aeiou",
               "interests" : [ "aeiou" ],
@@ -2787,6 +2801,11 @@ open class OutboundAPI {
             "type" : "aeiou"
           } ],
           "provider" : "aeiou",
+          "afterCallWork" : {
+            "startTime" : "2000-01-23T04:56:07.000+0000",
+            "endTime" : "2000-01-23T04:56:07.000+0000",
+            "state" : "aeiou"
+          },
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2855,6 +2874,7 @@ open class OutboundAPI {
               "id" : "aeiou"
             }
           },
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
@@ -2876,6 +2896,7 @@ open class OutboundAPI {
           "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "messages" : [ {
@@ -2914,6 +2935,7 @@ open class OutboundAPI {
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
           "provider" : "aeiou",
+          "afterCallWork" : "",
           "socialMediaId" : "aeiou",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
@@ -2938,6 +2960,7 @@ open class OutboundAPI {
           "segments" : [ "" ],
           "provider" : "aeiou",
           "context" : "aeiou",
+          "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",

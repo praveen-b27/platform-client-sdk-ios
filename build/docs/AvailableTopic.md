@@ -13,6 +13,7 @@ title: AvailableTopic
 | **schema** | [**[String:JSON]**](JSON.html) |  | [optional] |
 | **requiresCurrentUser** | **Bool** | True if the topic user ID is required to match the subscribing user ID | [optional] |
 | **requiresCurrentUserOrPermission** | **Bool** | True if permissions are only required when the topic user ID does not match the subscribing user ID | [optional] |
+| **transports** | **[String]** | Transports that support events for the topic | [optional] |
 {: class="table table-striped"}
 
 

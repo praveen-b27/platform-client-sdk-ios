@@ -461,12 +461,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
+let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let startTime: Date = new Date(...) // Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
 let endTime: Date = new Date(...) // End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-let agentUserId: [JSON] = [new JSON(...)] // user id of agent requested
+let agentUserId: [String] = [""] // user id of agent requested
 let evaluatorUserId: String = "" // user id of the evaluator
 let name: String = "" // name
 let group: String = "" // group id
@@ -490,12 +490,12 @@ QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, 
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **startTime** | **Date**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **endTime** | **Date**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **agentUserId** | [**[JSON]**](JSON.html)| user id of agent requested | [optional] |
+| **agentUserId** | [**[String]**](String.html)| user id of agent requested | [optional] |
 | **evaluatorUserId** | **String**| user id of the evaluator | [optional] |
 | **name** | **String**| name | [optional] |
 | **group** | **String**| group id | [optional] |
@@ -592,7 +592,7 @@ let calibratorId: String = "" // user id of calibrator
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
+let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let conversationId: String = "" // conversation id
@@ -619,7 +619,7 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversation id | [optional] |
@@ -667,7 +667,7 @@ let conversationId: String = "" // Conversation ID
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
+let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let recordingId: String = "" // id of the recording
@@ -693,7 +693,7 @@ QualityAPI.getQualityConversationAudits(conversationId: conversationId, pageSize
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **recordingId** | **String**| id of the recording | [optional] |
@@ -842,7 +842,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
+let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let conversationId: String = "" // conversationId specified
@@ -851,7 +851,7 @@ let evaluatorUserId: String = "" // evaluator user id
 let queueId: String = "" // queue id
 let startTime: String = "" // start time of the evaluation query
 let endTime: String = "" // end time of the evaluation query
-let evaluationState: [JSON] = [new JSON(...)] // 
+let evaluationState: [String] = [""] // 
 let isReleased: Bool = true // the evaluation has been released
 let agentHasRead: Bool = true // agent has the evaluation
 let expandAnswerTotalScores: Bool = true // get the total scores for evaluations
@@ -877,7 +877,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversationId specified | [optional] |
@@ -886,7 +886,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **queueId** | **String**| queue id | [optional] |
 | **startTime** | **String**| start time of the evaluation query | [optional] |
 | **endTime** | **String**| end time of the evaluation query | [optional] |
-| **evaluationState** | [**[JSON]**](JSON.html)|  | [optional] |
+| **evaluationState** | [**[String]**](String.html)|  | [optional] |
 | **isReleased** | **Bool**| the evaluation has been released | [optional] |
 | **agentHasRead** | **Bool**| agent has the evaluation | [optional] |
 | **expandAnswerTotalScores** | **Bool**| get the total scores for evaluations | [optional] |
@@ -928,13 +928,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
+let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let startTime: Date = new Date(...) // The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
 let endTime: Date = new Date(...) // The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
 let name: String = "" // Evaluator name
-let permission: [JSON] = [new JSON(...)] // permission strings
+let permission: [String] = [""] // permission strings
 let group: String = "" // group id
 
 // Code example
@@ -956,13 +956,13 @@ QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumb
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **startTime** | **Date**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **endTime** | **Date**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **name** | **String**| Evaluator name | [optional] |
-| **permission** | [**[JSON]**](JSON.html)| permission strings | [optional] |
+| **permission** | [**[String]**](String.html)| permission strings | [optional] |
 | **group** | **String**| group id | [optional] |
 {: class="table-striped"}
 
@@ -1680,7 +1680,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let sortBy: String = "" // variable name requested to sort by
-let expand: [JSON] = [new JSON(...)] // variable name requested by expand list
+let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let name: String = "" // the keyword set name - used for filtering results in searches.
@@ -1707,7 +1707,7 @@ QualityAPI.getQualityKeywordsets(pageSize: pageSize, pageNumber: pageNumber, sor
 | **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[JSON]**](JSON.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **name** | **String**| the keyword set name - used for filtering results in searches. | [optional] |

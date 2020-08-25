@@ -295,7 +295,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domain
 | ------------- | ------------- | ------------- | ------------- |
 | **domainId** | **String**| ID of the NLU domain. | |
 | **intentName** | **String**| The top intent name to retrieve feedback for. | [optional] |
-| **assessment** | **String**| The top assessment to retrieve feedback for. | [optional]<br />**Values**: incorrect ("Incorrect"), correct ("Correct"), unknown ("Unknown") |
+| **assessment** | **String**| The top assessment to retrieve feedback for. | [optional]<br />**Values**: incorrect ("Incorrect"), correct ("Correct"), unknown ("Unknown"), disabled ("Disabled") |
 | **dateStart** | **Date**| Begin of time window as ISO-8601 date. | [optional] |
 | **dateEnd** | **Date**| End of time window as ISO-8601 date. | [optional] |
 | **includeDeleted** | **Bool**| Whether to include soft-deleted items in the result. | [optional] |

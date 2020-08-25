@@ -310,6 +310,7 @@ open class LanguageUnderstandingAPI {
         case incorrect = "Incorrect"
         case correct = "Correct"
         case unknown = "Unknown"
+        case disabled = "Disabled"
     }
 
     

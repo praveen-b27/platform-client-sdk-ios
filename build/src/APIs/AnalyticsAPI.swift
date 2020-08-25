@@ -382,7 +382,6 @@ open class AnalyticsAPI {
     "purpose" : "aeiou",
     "teamId" : "aeiou",
     "externalOrganizationId" : "aeiou",
-    "agentAssistantIds" : [ "aeiou" ],
     "participantName" : "aeiou",
     "userId" : "aeiou",
     "flaggedReason" : "aeiou"
@@ -621,7 +620,6 @@ open class AnalyticsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
-      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -943,7 +941,6 @@ open class AnalyticsAPI {
         "key" : "aeiou"
       },
       "externalOrganizationId" : "aeiou",
-      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -1107,6 +1104,7 @@ open class AnalyticsAPI {
       "flowOutcomeValues" : [ "aeiou" ],
       "flowDestinationTypes" : [ "aeiou" ],
       "callbackInterval" : "aeiou",
+      "usedRoutingTypes" : [ "aeiou" ],
       "talkDurationsMilliseconds" : [ "" ],
       "durationsMilliseconds" : [ {
         "lt" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1130,6 +1128,7 @@ open class AnalyticsAPI {
       "flowDisconnectReasons" : [ "aeiou" ],
       "outboundContactListIds" : [ "aeiou" ],
       "answered" : true,
+      "requestedRoutingTypes" : [ "aeiou" ],
       "filterUsersByQueueIds" : [ "aeiou" ],
       "evaluationCriticalScore" : "",
       "queueIds" : [ "aeiou" ],
@@ -2642,7 +2641,6 @@ open class AnalyticsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
-      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -3248,6 +3246,7 @@ open class AnalyticsAPI {
     "flowOutcomeValues" : [ "aeiou" ],
     "flowDestinationTypes" : [ "aeiou" ],
     "callbackInterval" : "aeiou",
+    "usedRoutingTypes" : [ "aeiou" ],
     "talkDurationsMilliseconds" : [ "" ],
     "durationsMilliseconds" : [ {
       "lt" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3271,6 +3270,7 @@ open class AnalyticsAPI {
     "flowDisconnectReasons" : [ "aeiou" ],
     "outboundContactListIds" : [ "aeiou" ],
     "answered" : true,
+    "requestedRoutingTypes" : [ "aeiou" ],
     "filterUsersByQueueIds" : [ "aeiou" ],
     "evaluationCriticalScore" : "",
     "queueIds" : [ "aeiou" ],

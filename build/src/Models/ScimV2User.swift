@@ -40,8 +40,10 @@ public class ScimV2User: Codable {
     public var urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?
     /** The URI of the schema for the Genesys Cloud user. */
     public var urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?
+    /** The metadata of the SCIM resource. */
+    public var meta: ScimMetadata?
 
-    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?) {
+    public init(_id: String?, schemas: [String]?, active: Bool?, userName: String?, displayName: String?, password: String?, title: String?, phoneNumbers: [ScimPhoneNumber]?, emails: [ScimEmail]?, externalId: String?, groups: [ScimV2GroupReference]?, roles: [ScimUserRole]?, urnietfparamsscimschemasextensionenterprise20User: ScimV2EnterpriseUser?, urnietfparamsscimschemasextensiongenesyspurecloud20User: ScimUserExtensions?, meta: ScimMetadata?) {
         
         self._id = _id
         
@@ -71,6 +73,8 @@ public class ScimV2User: Codable {
         
         self.urnietfparamsscimschemasextensiongenesyspurecloud20User = urnietfparamsscimschemasextensiongenesyspurecloud20User
         
+        self.meta = meta
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -88,6 +92,7 @@ public class ScimV2User: Codable {
         case roles
         case urnietfparamsscimschemasextensionenterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
         case urnietfparamsscimschemasextensiongenesyspurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case meta
     }
 
 

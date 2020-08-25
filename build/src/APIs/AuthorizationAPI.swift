@@ -313,7 +313,7 @@ open class AuthorizationAPI {
      - parameter name: (query) Search term to filter by division name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationDivisions(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [JSON]? = nil, name: String? = nil, completion: @escaping ((_ data: AuthzDivisionEntityListing?,_ error: Error?) -> Void)) {
+    open class func getAuthorizationDivisions(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [String]? = nil, name: String? = nil, completion: @escaping ((_ data: AuthzDivisionEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getAuthorizationDivisionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, objectCount: objectCount, _id: _id, name: name)
         requestBuilder.execute { (response: Response<AuthzDivisionEntityListing>?, error) -> Void in
             do {
@@ -374,7 +374,7 @@ open class AuthorizationAPI {
 
      - returns: RequestBuilder<AuthzDivisionEntityListing> 
      */
-    open class func getAuthorizationDivisionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [JSON]? = nil, name: String? = nil) -> RequestBuilder<AuthzDivisionEntityListing> {
+    open class func getAuthorizationDivisionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, objectCount: Bool? = nil, _id: [String]? = nil, name: String? = nil) -> RequestBuilder<AuthzDivisionEntityListing> {
         let path = "/api/v2/authorization/divisions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1955,7 +1955,7 @@ open class AuthorizationAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationRoleSubjectgrants(roleId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: SubjectDivisionGrantsEntityListing?,_ error: Error?) -> Void)) {
+    open class func getAuthorizationRoleSubjectgrants(roleId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: SubjectDivisionGrantsEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getAuthorizationRoleSubjectgrantsWithRequestBuilder(roleId: roleId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
         requestBuilder.execute { (response: Response<SubjectDivisionGrantsEntityListing>?, error) -> Void in
             do {
@@ -2015,7 +2015,7 @@ open class AuthorizationAPI {
 
      - returns: RequestBuilder<SubjectDivisionGrantsEntityListing> 
      */
-    open class func getAuthorizationRoleSubjectgrantsWithRequestBuilder(roleId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<SubjectDivisionGrantsEntityListing> {
+    open class func getAuthorizationRoleSubjectgrantsWithRequestBuilder(roleId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<SubjectDivisionGrantsEntityListing> {
         var path = "/api/v2/authorization/roles/{roleId}/subjectgrants"
         let roleIdPreEscape = "\(roleId)"
         let roleIdPostEscape = roleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2436,7 +2436,7 @@ open class AuthorizationAPI {
      - parameter _id: (query) id (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationRoles(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, permission: [JSON]? = nil, defaultRoleId: [JSON]? = nil, userCount: Bool? = nil, _id: [String]? = nil, completion: @escaping ((_ data: OrganizationRoleEntityListing?,_ error: Error?) -> Void)) {
+    open class func getAuthorizationRoles(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, permission: [String]? = nil, defaultRoleId: [String]? = nil, userCount: Bool? = nil, _id: [String]? = nil, completion: @escaping ((_ data: OrganizationRoleEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getAuthorizationRolesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, permission: permission, defaultRoleId: defaultRoleId, userCount: userCount, _id: _id)
         requestBuilder.execute { (response: Response<OrganizationRoleEntityListing>?, error) -> Void in
             do {
@@ -2890,7 +2890,7 @@ open class AuthorizationAPI {
 
      - returns: RequestBuilder<OrganizationRoleEntityListing> 
      */
-    open class func getAuthorizationRolesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, permission: [JSON]? = nil, defaultRoleId: [JSON]? = nil, userCount: Bool? = nil, _id: [String]? = nil) -> RequestBuilder<OrganizationRoleEntityListing> {
+    open class func getAuthorizationRolesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, permission: [String]? = nil, defaultRoleId: [String]? = nil, userCount: Bool? = nil, _id: [String]? = nil) -> RequestBuilder<OrganizationRoleEntityListing> {
         let path = "/api/v2/authorization/roles"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         

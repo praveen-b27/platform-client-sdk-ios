@@ -11,6 +11,11 @@ import Foundation
 
 public class AvailableTopic: Codable {
 
+    public enum Transports: String, Codable { 
+        case all = "All"
+        case websocket = "Websocket"
+        case eventBridge = "EventBridge"
+    }
     public var _description: String?
     public var _id: String?
     /** Permissions required to subscribe to the topic */
@@ -20,8 +25,10 @@ public class AvailableTopic: Codable {
     public var requiresCurrentUser: Bool?
     /** True if permissions are only required when the topic user ID does not match the subscribing user ID */
     public var requiresCurrentUserOrPermission: Bool?
+    /** Transports that support events for the topic */
+    public var transports: [Transports]?
 
-    public init(_description: String?, _id: String?, requiresPermissions: [String]?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?) {
+    public init(_description: String?, _id: String?, requiresPermissions: [String]?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?) {
         
         self._description = _description
         
@@ -35,6 +42,8 @@ public class AvailableTopic: Codable {
         
         self.requiresCurrentUserOrPermission = requiresCurrentUserOrPermission
         
+        self.transports = transports
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -44,6 +53,7 @@ public class AvailableTopic: Codable {
         case schema
         case requiresCurrentUser
         case requiresCurrentUserOrPermission
+        case transports
     }
 
 

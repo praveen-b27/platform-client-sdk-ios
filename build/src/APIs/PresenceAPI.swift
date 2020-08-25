@@ -948,7 +948,7 @@ open class PresenceAPI {
      Get a user's Microsoft Teams presence.
      
      - GET /api/v2/users/{userId}/presences/microsoftteams
-     - Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to GenesysCloud presence with additional activity details in the message field. This presence source is read-only.
+     - Gets the presence for a Microsoft Teams user.  This will return the Microsoft Teams presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1246,7 +1246,7 @@ open class PresenceAPI {
     
     /**
      
-     Get a user's GenesysCloud presence.
+     Get a user's Genesys Cloud presence.
      
      - parameter userId: (path) user Id 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1271,10 +1271,10 @@ open class PresenceAPI {
 
     /**
      
-     Get a user's GenesysCloud presence.
+     Get a user's Genesys Cloud presence.
      
      - GET /api/v2/users/{userId}/presences/purecloud
-     - Get the default GenesysCloud user presence source PURECLOUD
+     - Get the default Genesys Cloud user presence source PURECLOUD
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -1408,7 +1408,7 @@ open class PresenceAPI {
     
     /**
      
-     Patch a GenesysCloud user's presence
+     Patch a Genesys Cloud user's presence
      
      - parameter userId: (path) user Id 
      - parameter body: (body) User presence 
@@ -1434,7 +1434,7 @@ open class PresenceAPI {
 
     /**
      
-     Patch a GenesysCloud user's presence
+     Patch a Genesys Cloud user's presence
      
      - PATCH /api/v2/users/{userId}/presences/purecloud
      - The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the PURECLOUD source as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.

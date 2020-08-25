@@ -362,6 +362,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -502,6 +508,12 @@ open class SCIMAPI {
   "schemas" : [ "aeiou" ],
   "Resources" : [ {
     "displayName" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "schemas" : [ "aeiou" ],
     "members" : [ {
       "type" : "aeiou",
@@ -600,6 +612,12 @@ open class SCIMAPI {
      - examples: [{contentType=application/json, example={
   "schema" : "aeiou",
   "endpoint" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "name" : "aeiou",
   "description" : "aeiou",
@@ -676,6 +694,12 @@ open class SCIMAPI {
   "Resources" : [ {
     "schema" : "aeiou",
     "endpoint" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "schemas" : [ "aeiou" ],
     "name" : "aeiou",
     "description" : "aeiou",
@@ -755,6 +779,12 @@ open class SCIMAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "name" : "aeiou",
   "description" : "aeiou",
   "attributes" : [ {
@@ -841,6 +871,12 @@ open class SCIMAPI {
   "itemsPerPage" : 123456789,
   "schemas" : [ "aeiou" ],
   "Resources" : [ {
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "name" : "aeiou",
     "description" : "aeiou",
     "attributes" : [ {
@@ -941,6 +977,12 @@ open class SCIMAPI {
     "type" : "aeiou",
     "primary" : true
   } ],
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "etag" : "",
   "sort" : "",
@@ -1137,6 +1179,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -1361,6 +1409,12 @@ open class SCIMAPI {
       "primary" : true
     } ],
     "password" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "schemas" : [ "aeiou" ],
     "id" : "aeiou",
     "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -1502,6 +1556,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -1642,6 +1702,12 @@ open class SCIMAPI {
   "schemas" : [ "aeiou" ],
   "Resources" : [ {
     "displayName" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "schemas" : [ "aeiou" ],
     "members" : [ {
       "type" : "aeiou",
@@ -1740,6 +1806,12 @@ open class SCIMAPI {
      - examples: [{contentType=application/json, example={
   "schema" : "aeiou",
   "endpoint" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "name" : "aeiou",
   "description" : "aeiou",
@@ -1816,6 +1888,12 @@ open class SCIMAPI {
   "Resources" : [ {
     "schema" : "aeiou",
     "endpoint" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "schemas" : [ "aeiou" ],
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1895,6 +1973,12 @@ open class SCIMAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "name" : "aeiou",
   "description" : "aeiou",
   "attributes" : [ {
@@ -1981,6 +2065,12 @@ open class SCIMAPI {
   "itemsPerPage" : 123456789,
   "schemas" : [ "aeiou" ],
   "Resources" : [ {
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "name" : "aeiou",
     "description" : "aeiou",
     "attributes" : [ {
@@ -2081,6 +2171,12 @@ open class SCIMAPI {
     "type" : "aeiou",
     "primary" : true
   } ],
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "etag" : "",
   "sort" : "",
@@ -2277,6 +2373,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -2501,6 +2603,12 @@ open class SCIMAPI {
       "primary" : true
     } ],
     "password" : "aeiou",
+    "meta" : {
+      "location" : "aeiou",
+      "lastModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : "aeiou",
+      "resourceType" : "aeiou"
+    },
     "schemas" : [ "aeiou" ],
     "id" : "aeiou",
     "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -2603,6 +2711,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -2717,6 +2831,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -2807,6 +2927,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -2921,6 +3047,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -3005,6 +3137,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -3104,6 +3242,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -3179,6 +3323,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -3278,6 +3428,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -3359,6 +3515,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -3473,6 +3635,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {
@@ -3563,6 +3731,12 @@ open class SCIMAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "displayName" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "members" : [ {
     "type" : "aeiou",
@@ -3677,6 +3851,12 @@ open class SCIMAPI {
     "primary" : true
   } ],
   "password" : "aeiou",
+  "meta" : {
+    "location" : "aeiou",
+    "lastModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : "aeiou",
+    "resourceType" : "aeiou"
+  },
   "schemas" : [ "aeiou" ],
   "id" : "aeiou",
   "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User" : {

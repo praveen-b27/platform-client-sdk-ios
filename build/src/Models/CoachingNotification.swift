@@ -47,11 +47,11 @@ public class CoachingNotification: Codable {
     /** The user of this notification */
     public var user: UserReference?
     /** The appointment */
-    public var appointment: CoachingAppointmentReference?
+    public var appointment: CoachingAppointmentResponse?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, markedAsRead: Bool?, actionType: ActionType?, relationship: Relationship?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, user: UserReference?, appointment: CoachingAppointmentReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, markedAsRead: Bool?, actionType: ActionType?, relationship: Relationship?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, user: UserReference?, appointment: CoachingAppointmentResponse?, selfUri: String?) {
         
         self._id = _id
         

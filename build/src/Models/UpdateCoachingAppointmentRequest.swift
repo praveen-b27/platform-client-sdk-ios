@@ -22,7 +22,7 @@ public class UpdateCoachingAppointmentRequest: Codable {
     public var name: String?
     /** The description of coaching appointment. */
     public var _description: String?
-    /** The date/time the coaching appointment starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the coaching appointment starts. Times will be rounded down to the minute. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateStart: Date?
     /** The duration of coaching appointment in minutes. */
     public var lengthInMinutes: Int?

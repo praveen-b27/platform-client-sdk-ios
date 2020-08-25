@@ -13,6 +13,7 @@ Defines a SCIM group.
 | **displayName** | **String** | The display name of the group. | |
 | **externalId** | **String** | The external ID of the group. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;. | [optional] |
 | **members** | [**[ScimV2MemberReference]**](ScimV2MemberReference.html) | The list of members in the group. | [optional] |
+| **meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. | [optional] |
 {: class="table table-striped"}
 
 

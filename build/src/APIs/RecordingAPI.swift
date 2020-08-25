@@ -673,6 +673,7 @@ open class RecordingAPI {
     "exportDate" : "2000-01-23T04:56:07.000+0000",
     "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
     "name" : "aeiou",
+    "recordingFileRole" : "aeiou",
     "endTime" : "aeiou"
   },
   "mediaType" : "aeiou",
@@ -1540,6 +1541,7 @@ open class RecordingAPI {
   "exportDate" : "2000-01-23T04:56:07.000+0000",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
+  "recordingFileRole" : "aeiou",
   "endTime" : "aeiou"
 }}]
      
@@ -2312,9 +2314,9 @@ open class RecordingAPI {
      - parameter conversationId: (path) Conversation ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationRecordingmetadata(conversationId: String, completion: @escaping ((_ data: [Recording]?,_ error: Error?) -> Void)) {
+    open class func getConversationRecordingmetadata(conversationId: String, completion: @escaping ((_ data: [RecordingMetadata]?,_ error: Error?) -> Void)) {
         let requestBuilder = getConversationRecordingmetadataWithRequestBuilder(conversationId: conversationId)
-        requestBuilder.execute { (response: Response<[Recording]>?, error) -> Void in
+        requestBuilder.execute { (response: Response<[RecordingMetadata]>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -2341,229 +2343,8 @@ open class RecordingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
   "maxAllowedRestorationsForOrg" : 123,
-  "emailTranscript" : [ {
-    "cc" : [ "" ],
-    "htmlBody" : "aeiou",
-    "bcc" : [ "" ],
-    "attachments" : [ {
-      "contentPath" : "aeiou",
-      "name" : "aeiou",
-      "contentLength" : 123,
-      "attachmentId" : "aeiou",
-      "contentType" : "aeiou"
-    } ],
-    "subject" : "aeiou",
-    "textBody" : "aeiou",
-    "from" : "",
-    "id" : "aeiou",
-    "to" : [ {
-      "name" : "aeiou",
-      "email" : "aeiou"
-    } ],
-    "time" : "2000-01-23T04:56:07.000+0000"
-  } ],
-  "messagingTranscript" : [ {
-    "messageText" : "aeiou",
-    "fromUser" : "",
-    "fromExternalContact" : {
-      "schema" : "",
-      "lastName" : "aeiou",
-      "workEmail" : "aeiou",
-      "customFields" : {
-        "key" : "{}"
-      },
-      "title" : "aeiou",
-      "twitterId" : {
-        "profileUrl" : "aeiou",
-        "name" : "aeiou",
-        "verified" : true,
-        "id" : "aeiou",
-        "screenName" : "aeiou"
-      },
-      "personalEmail" : "aeiou",
-      "externalSystemUrl" : "aeiou",
-      "id" : "aeiou",
-      "otherEmail" : "aeiou",
-      "createDate" : "2000-01-23T04:56:07.000+0000",
-      "address" : {
-        "address2" : "aeiou",
-        "city" : "aeiou",
-        "address1" : "aeiou",
-        "countryCode" : "aeiou",
-        "postalCode" : "aeiou",
-        "state" : "aeiou"
-      },
-      "modifyDate" : "2000-01-23T04:56:07.000+0000",
-      "homePhone" : "",
-      "facebookId" : {
-        "displayName" : "aeiou",
-        "ids" : [ {
-          "scopedId" : "aeiou"
-        } ]
-      },
-      "selfUri" : "aeiou",
-      "lineId" : {
-        "displayName" : "aeiou",
-        "ids" : [ {
-          "userId" : "aeiou"
-        } ]
-      },
-      "externalOrganization" : {
-        "schema" : {
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
-          "jsonSchema" : {
-            "$schema" : "aeiou",
-            "description" : "aeiou",
-            "id" : "aeiou",
-            "additionalProperties" : "{}",
-            "title" : "aeiou",
-            "type" : "aeiou",
-            "required" : [ "aeiou" ],
-            "properties" : {
-              "key" : "{}"
-            }
-          },
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "appliesTo" : [ "aeiou" ],
-          "id" : "aeiou",
-          "version" : 123,
-          "enabled" : true
-        },
-        "address" : "",
-        "modifyDate" : "2000-01-23T04:56:07.000+0000",
-        "companyType" : "aeiou",
-        "customFields" : {
-          "key" : "{}"
-        },
-        "selfUri" : "aeiou",
-        "industry" : "aeiou",
-        "employeeCount" : 123456789,
-        "tickers" : [ {
-          "symbol" : "aeiou",
-          "exchange" : "aeiou"
-        } ],
-        "twitterId" : "",
-        "primaryContactId" : "aeiou",
-        "tags" : [ "aeiou" ],
-        "revenue" : 123456789,
-        "phoneNumber" : "",
-        "externalSystemUrl" : "aeiou",
-        "externalDataSources" : [ {
-          "platform" : "aeiou",
-          "url" : "aeiou"
-        } ],
-        "name" : "aeiou",
-        "faxNumber" : "",
-        "trustor" : {
-          "authorization" : {
-            "permissions" : [ "aeiou" ]
-          },
-          "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "createdBy" : {
-            "addresses" : [ "" ],
-            "acdAutoAnswer" : true,
-            "routingStatus" : "",
-            "title" : "aeiou",
-            "division" : "",
-            "authorization" : "",
-            "skills" : [ "" ],
-            "station" : "",
-            "id" : "aeiou",
-            "state" : "aeiou",
-            "department" : "aeiou",
-            "presence" : "",
-            "lastTokenIssued" : "",
-            "email" : "aeiou",
-            "images" : [ "" ],
-            "manager" : "",
-            "employerInfo" : "",
-            "languages" : [ "" ],
-            "conversationSummary" : "",
-            "groups" : [ "" ],
-            "primaryContactInfo" : [ "" ],
-            "biography" : "",
-            "team" : "",
-            "certifications" : [ "aeiou" ],
-            "version" : 123,
-            "outOfOffice" : "",
-            "languagePreference" : "aeiou",
-            "profileSkills" : [ "aeiou" ],
-            "chat" : "",
-            "organization" : {
-              "defaultCountryCode" : "aeiou",
-              "selfUri" : "aeiou",
-              "thirdPartyURI" : "aeiou",
-              "version" : 123,
-              "thirdPartyOrgName" : "aeiou",
-              "features" : {
-                "key" : true
-              },
-              "defaultLanguage" : "aeiou",
-              "defaultSiteId" : "aeiou",
-              "supportURI" : "aeiou",
-              "domain" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou",
-              "state" : "aeiou",
-              "voicemailEnabled" : true,
-              "productPlatform" : "aeiou"
-            },
-            "name" : "aeiou",
-            "locations" : [ "" ],
-            "username" : "aeiou",
-            "geolocation" : ""
-          },
-          "organization" : "",
-          "selfUri" : "aeiou",
-          "id" : "aeiou",
-          "enabled" : true
-        },
-        "websites" : [ "aeiou" ],
-        "id" : "aeiou",
-        "createDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "firstName" : "aeiou",
-      "otherPhone" : "",
-      "whatsAppId" : {
-        "phoneNumber" : "",
-        "displayName" : "aeiou"
-      },
-      "externalDataSources" : [ "" ],
-      "middleName" : "aeiou",
-      "workPhone" : {
-        "extension" : 123456789,
-        "e164" : "aeiou",
-        "acceptsSMS" : true,
-        "countryCode" : "aeiou",
-        "display" : "aeiou",
-        "userInput" : "aeiou"
-      },
-      "salutation" : "aeiou",
-      "cellPhone" : "",
-      "surveyOptOut" : true
-    },
-    "from" : "aeiou",
-    "to" : "aeiou",
-    "id" : "aeiou",
-    "messageMediaAttachments" : [ {
-      "name" : "aeiou",
-      "mediaType" : "aeiou",
-      "contentLength" : 123456789,
-      "id" : "aeiou",
-      "url" : "aeiou"
-    } ],
-    "messageStickerAttachments" : [ {
-      "id" : "aeiou",
-      "url" : "aeiou"
-    } ],
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
-  } ],
+  "conversationId" : "aeiou",
+  "selfUri" : "aeiou",
   "annotations" : [ {
     "timeEnd" : "aeiou",
     "keywordName" : "aeiou",
@@ -2848,58 +2629,25 @@ open class RecordingAPI {
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",
   "media" : "aeiou",
-  "path" : "aeiou",
-  "outputSizeInBytes" : 123,
-  "transcript" : [ {
-    "bodyType" : "aeiou",
-    "utc" : "aeiou",
-    "chat" : "aeiou",
-    "senderCommunicationId" : "aeiou",
-    "from" : "aeiou",
-    "id" : "aeiou",
-    "to" : "aeiou",
-    "body" : "aeiou",
-    "message" : "aeiou",
-    "type" : "aeiou",
-    "participantPurpose" : "aeiou",
-    "user" : {
-      "images" : [ "" ],
-      "displayName" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou",
-      "username" : "aeiou"
-    }
-  } ],
-  "fileState" : "aeiou",
-  "archiveDate" : "2000-01-23T04:56:07.000+0000",
-  "estimatedTranscodeTimeMs" : 123456789,
-  "outputDurationMs" : 123,
-  "startTime" : "aeiou",
-  "id" : "aeiou",
-  "remainingRestorationsAllowedForOrg" : 123,
-  "mediaUris" : {
-    "key" : {
-      "mediaUri" : "aeiou",
-      "waveformData" : [ 1.3579000000000001069366817318950779736042022705078125 ]
-    }
-  },
-  "deleteDate" : "2000-01-23T04:56:07.000+0000",
-  "actualTranscodeTimeMs" : 123456789,
-  "conversationId" : "aeiou",
-  "selfUri" : "aeiou",
   "sessionId" : "aeiou",
-  "users" : [ "" ],
+  "path" : "aeiou",
   "exportDate" : "2000-01-23T04:56:07.000+0000",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
+  "fileState" : "aeiou",
+  "archiveDate" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
-  "endTime" : "aeiou"
+  "startTime" : "aeiou",
+  "id" : "aeiou",
+  "endTime" : "aeiou",
+  "remainingRestorationsAllowedForOrg" : 123,
+  "deleteDate" : "2000-01-23T04:56:07.000+0000"
 } ]}]
      
      - parameter conversationId: (path) Conversation ID 
 
-     - returns: RequestBuilder<[Recording]> 
+     - returns: RequestBuilder<[RecordingMetadata]> 
      */
-    open class func getConversationRecordingmetadataWithRequestBuilder(conversationId: String) -> RequestBuilder<[Recording]> {
+    open class func getConversationRecordingmetadataWithRequestBuilder(conversationId: String) -> RequestBuilder<[RecordingMetadata]> {
         var path = "/api/v2/conversations/{conversationId}/recordingmetadata"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2914,7 +2662,7 @@ open class RecordingAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<[Recording]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[RecordingMetadata]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -3896,6 +3644,7 @@ open class RecordingAPI {
   "exportDate" : "2000-01-23T04:56:07.000+0000",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
+  "recordingFileRole" : "aeiou",
   "endTime" : "aeiou"
 } ]}]
      
@@ -4526,6 +4275,7 @@ open class RecordingAPI {
     "exportDate" : "2000-01-23T04:56:07.000+0000",
     "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
     "name" : "aeiou",
+    "recordingFileRole" : "aeiou",
     "endTime" : "aeiou"
   },
   "mediaType" : "aeiou",
@@ -5223,6 +4973,7 @@ open class RecordingAPI {
   "exportDate" : "2000-01-23T04:56:07.000+0000",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
+  "recordingFileRole" : "aeiou",
   "endTime" : "aeiou"
 }}]
      
@@ -5311,7 +5062,7 @@ open class RecordingAPI {
      - parameter media: (query) Filter resulting orphans based on their media type (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOrphanrecordings(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, hasConversation: Bool? = nil, media: Media_getOrphanrecordings? = nil, completion: @escaping ((_ data: OrphanRecordingListing?,_ error: Error?) -> Void)) {
+    open class func getOrphanrecordings(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, hasConversation: Bool? = nil, media: Media_getOrphanrecordings? = nil, completion: @escaping ((_ data: OrphanRecordingListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getOrphanrecordingsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, hasConversation: hasConversation, media: media)
         requestBuilder.execute { (response: Response<OrphanRecordingListing>?, error) -> Void in
             do {
@@ -5899,6 +5650,7 @@ open class RecordingAPI {
       "exportDate" : "2000-01-23T04:56:07.000+0000",
       "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
+      "recordingFileRole" : "aeiou",
       "endTime" : "aeiou"
     },
     "mediaType" : "aeiou",
@@ -5950,7 +5702,7 @@ open class RecordingAPI {
 
      - returns: RequestBuilder<OrphanRecordingListing> 
      */
-    open class func getOrphanrecordingsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, hasConversation: Bool? = nil, media: Media_getOrphanrecordings? = nil) -> RequestBuilder<OrphanRecordingListing> {
+    open class func getOrphanrecordingsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, hasConversation: Bool? = nil, media: Media_getOrphanrecordings? = nil) -> RequestBuilder<OrphanRecordingListing> {
         let path = "/api/v2/orphanrecordings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6646,7 +6398,7 @@ open class RecordingAPI {
      - parameter hasErrors: (query) provides a way to fetch all policies with errors or policies that do not have errors (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRecordingMediaretentionpolicies(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, completion: @escaping ((_ data: PolicyEntityListing?,_ error: Error?) -> Void)) {
+    open class func getRecordingMediaretentionpolicies(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, completion: @escaping ((_ data: PolicyEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getRecordingMediaretentionpoliciesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors)
         requestBuilder.execute { (response: Response<PolicyEntityListing>?, error) -> Void in
             do {
@@ -7295,7 +7047,7 @@ open class RecordingAPI {
 
      - returns: RequestBuilder<PolicyEntityListing> 
      */
-    open class func getRecordingMediaretentionpoliciesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [JSON]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil) -> RequestBuilder<PolicyEntityListing> {
+    open class func getRecordingMediaretentionpoliciesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil) -> RequestBuilder<PolicyEntityListing> {
         let path = "/api/v2/recording/mediaretentionpolicies"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -12749,6 +12501,7 @@ open class RecordingAPI {
   "exportDate" : "2000-01-23T04:56:07.000+0000",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
+  "recordingFileRole" : "aeiou",
   "endTime" : "aeiou"
 }}]
      
@@ -13729,6 +13482,7 @@ open class RecordingAPI {
   "exportDate" : "2000-01-23T04:56:07.000+0000",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
+  "recordingFileRole" : "aeiou",
   "endTime" : "aeiou"
 }}]
      

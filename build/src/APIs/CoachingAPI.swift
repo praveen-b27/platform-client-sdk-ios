@@ -804,15 +804,23 @@ open class CoachingAPI {
     
     
     
+    
+    public enum Expand_getCoachingNotification: String { 
+        case appointment = "appointment"
+    }
+
+    
+    
     /**
      
      Get an existing notification
      
      - parameter notificationId: (path) The ID of the notification. 
+     - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCoachingNotification(notificationId: String, completion: @escaping ((_ data: CoachingNotification?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCoachingNotificationWithRequestBuilder(notificationId: notificationId)
+    open class func getCoachingNotification(notificationId: String, expand: [String]? = nil, completion: @escaping ((_ data: CoachingNotification?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCoachingNotificationWithRequestBuilder(notificationId: notificationId, expand: expand)
         requestBuilder.execute { (response: Response<CoachingNotification>?, error) -> Void in
             do {
                 if let e = error {
@@ -846,8 +854,27 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "appointment" : {
+    "documents" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "attendees" : [ "" ],
     "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "conversations" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "facilitator" : "",
+    "lengthInMinutes" : 123,
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
+    "name" : "aeiou",
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "status" : "aeiou"
   },
   "id" : "aeiou",
   "relationship" : "aeiou",
@@ -859,10 +886,11 @@ open class CoachingAPI {
 }}]
      
      - parameter notificationId: (path) The ID of the notification. 
+     - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
 
      - returns: RequestBuilder<CoachingNotification> 
      */
-    open class func getCoachingNotificationWithRequestBuilder(notificationId: String) -> RequestBuilder<CoachingNotification> {
+    open class func getCoachingNotificationWithRequestBuilder(notificationId: String, expand: [String]? = nil) -> RequestBuilder<CoachingNotification> {
         var path = "/api/v2/coaching/notifications/{notificationId}"
         let notificationIdPreEscape = "\(notificationId)"
         let notificationIdPostEscape = notificationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -875,7 +903,12 @@ open class CoachingAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
 
         let requestBuilder: RequestBuilder<CoachingNotification>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -887,16 +920,24 @@ open class CoachingAPI {
     
     
     
+    
+    public enum Expand_getCoachingNotifications: String { 
+        case appointment = "appointment"
+    }
+
+    
+    
     /**
      
      Retrieve the list of your notifications.
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCoachingNotifications(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: CoachingNotificationList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCoachingNotificationsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize)
+    open class func getCoachingNotifications(pageNumber: Int? = nil, pageSize: Int? = nil, expand: [String]? = nil, completion: @escaping ((_ data: CoachingNotificationList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCoachingNotificationsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, expand: expand)
         requestBuilder.execute { (response: Response<CoachingNotificationList>?, error) -> Void in
             do {
                 if let e = error {
@@ -934,8 +975,27 @@ open class CoachingAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "appointment" : {
+      "documents" : [ {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "attendees" : [ "" ],
       "selfUri" : "aeiou",
-      "id" : "aeiou"
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "conversations" : [ {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "facilitator" : "",
+      "lengthInMinutes" : 123,
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
+      "name" : "aeiou",
+      "modifiedBy" : "",
+      "id" : "aeiou",
+      "status" : "aeiou"
     },
     "id" : "aeiou",
     "relationship" : "aeiou",
@@ -955,10 +1015,11 @@ open class CoachingAPI {
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
 
      - returns: RequestBuilder<CoachingNotificationList> 
      */
-    open class func getCoachingNotificationsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CoachingNotificationList> {
+    open class func getCoachingNotificationsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<CoachingNotificationList> {
         let path = "/api/v2/coaching/notifications"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -973,7 +1034,9 @@ open class CoachingAPI {
             
             "pageNumber": pageNumber?.encodeToJSON(), 
             
-            "pageSize": pageSize?.encodeToJSON()
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "expand": expand
             
         ])
 
@@ -1278,8 +1341,27 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "appointment" : {
+    "documents" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "attendees" : [ "" ],
     "selfUri" : "aeiou",
-    "id" : "aeiou"
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "conversations" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "facilitator" : "",
+    "lengthInMinutes" : 123,
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
+    "name" : "aeiou",
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "status" : "aeiou"
   },
   "id" : "aeiou",
   "relationship" : "aeiou",

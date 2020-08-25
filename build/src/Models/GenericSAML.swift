@@ -14,8 +14,8 @@ public class GenericSAML: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var logoImageData: String?
     public var relyingPartyIdentifier: String?
+    public var logoImageData: String?
     public var endpointCompression: Bool?
     public var certificate: String?
     public var issuerURI: String?
@@ -24,15 +24,15 @@ public class GenericSAML: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, logoImageData: String?, relyingPartyIdentifier: String?, endpointCompression: Bool?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, relyingPartyIdentifier: String?, logoImageData: String?, endpointCompression: Bool?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
-        self.logoImageData = logoImageData
-        
         self.relyingPartyIdentifier = relyingPartyIdentifier
+        
+        self.logoImageData = logoImageData
         
         self.endpointCompression = endpointCompression
         
@@ -51,8 +51,8 @@ public class GenericSAML: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
-        case logoImageData
         case relyingPartyIdentifier
+        case logoImageData
         case endpointCompression
         case certificate
         case issuerURI

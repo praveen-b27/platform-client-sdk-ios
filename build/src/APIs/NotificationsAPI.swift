@@ -71,6 +71,7 @@ open class NotificationsAPI {
         case _description = "description"
         case requirespermissions = "requiresPermissions"
         case schema = "schema"
+        case transports = "transports"
     }
 
     
@@ -114,6 +115,7 @@ open class NotificationsAPI {
     "schema" : {
       "key" : "{}"
     },
+    "transports" : [ "aeiou" ],
     "requiresCurrentUser" : true,
     "requiresPermissions" : [ "aeiou" ],
     "requiresCurrentUserOrPermission" : true,

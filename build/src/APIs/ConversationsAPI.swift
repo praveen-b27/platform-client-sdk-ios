@@ -791,7 +791,6 @@ open class ConversationsAPI {
     "purpose" : "aeiou",
     "teamId" : "aeiou",
     "externalOrganizationId" : "aeiou",
-    "agentAssistantIds" : [ "aeiou" ],
     "participantName" : "aeiou",
     "userId" : "aeiou",
     "flaggedReason" : "aeiou"
@@ -1030,7 +1029,6 @@ open class ConversationsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
-      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -1352,7 +1350,6 @@ open class ConversationsAPI {
         "key" : "aeiou"
       },
       "externalOrganizationId" : "aeiou",
-      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"
@@ -16886,7 +16883,6 @@ open class ConversationsAPI {
       "purpose" : "aeiou",
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
-      "agentAssistantIds" : [ "aeiou" ],
       "participantName" : "aeiou",
       "userId" : "aeiou",
       "flaggedReason" : "aeiou"

@@ -15,6 +15,7 @@ public class IntentFeedback: Codable {
         case incorrect = "Incorrect"
         case correct = "Correct"
         case unknown = "Unknown"
+        case disabled = "Disabled"
     }
     /** The name of the detected intent. */
     public var name: String?

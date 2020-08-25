@@ -20,6 +20,7 @@ public class ScheduleGenerationMessage: Codable {
         case workPlanNotFound = "WorkPlanNotFound"
         case agentWithoutCapability = "AgentWithoutCapability"
         case noNeedDays = "NoNeedDays"
+        case unableToProduceAgentSchedule = "UnableToProduceAgentSchedule"
         case unableToScheduleMaxConsecutiveWorkingDays = "UnableToScheduleMaxConsecutiveWorkingDays"
         case unableToScheduleMaxConsecutiveWorkingWeekends = "UnableToScheduleMaxConsecutiveWorkingWeekends"
         case unableToScheduleMaxWeeklyPaidTime = "UnableToScheduleMaxWeeklyPaidTime"

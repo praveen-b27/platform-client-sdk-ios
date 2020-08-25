@@ -482,7 +482,7 @@ CoachingAPI.getCoachingAppointmentsMe(interval: interval, pageNumber: pageNumber
 
 
 
-> [CoachingNotification](CoachingNotification.html) getCoachingNotification(notificationId)
+> [CoachingNotification](CoachingNotification.html) getCoachingNotification(notificationId, expand)
 
 Get an existing notification
 
@@ -503,9 +503,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let notificationId: String = "" // The ID of the notification.
+let expand: [String] = [CoachingAPI.Expand_getCoachingNotification.enummember.rawValue] // Indicates a field in the response which should be expanded.
 
 // Code example
-CoachingAPI.getCoachingNotification(notificationId: notificationId) { (response, error) in
+CoachingAPI.getCoachingNotification(notificationId: notificationId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -521,6 +522,7 @@ CoachingAPI.getCoachingNotification(notificationId: notificationId) { (response,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **notificationId** | **String**| The ID of the notification. | |
+| **expand** | [**[String]**](String.html)| Indicates a field in the response which should be expanded. | [optional]<br />**Values**: appointment ("appointment") |
 {: class="table-striped"}
 
 
@@ -534,7 +536,7 @@ CoachingAPI.getCoachingNotification(notificationId: notificationId) { (response,
 
 
 
-> [CoachingNotificationList](CoachingNotificationList.html) getCoachingNotifications(pageNumber, pageSize)
+> [CoachingNotificationList](CoachingNotificationList.html) getCoachingNotifications(pageNumber, pageSize, expand)
 
 Retrieve the list of your notifications.
 
@@ -555,9 +557,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
+let expand: [String] = [CoachingAPI.Expand_getCoachingNotifications.enummember.rawValue] // Indicates a field in the response which should be expanded.
 
 // Code example
-CoachingAPI.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+CoachingAPI.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -574,6 +577,7 @@ CoachingAPI.getCoachingNotifications(pageNumber: pageNumber, pageSize: pageSize)
 | ------------- | ------------- | ------------- | ------------- |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **expand** | [**[String]**](String.html)| Indicates a field in the response which should be expanded. | [optional]<br />**Values**: appointment ("appointment") |
 {: class="table-striped"}
 
 

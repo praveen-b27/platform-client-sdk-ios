@@ -2308,7 +2308,7 @@ Join or unjoin a queue for a user
 
 Wraps PATCH /api/v2/users/{userId}/queues/{queueId}  
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * routing:queue:join
 

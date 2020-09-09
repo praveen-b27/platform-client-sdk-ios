@@ -35,6 +35,7 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         case uncallable = "UNCALLABLE"
     }
     public enum ModelType: String, Codable { 
+        case unknown = "UNKNOWN"
         case sms = "SMS"
         case twitter = "TWITTER"
         case facebook = "FACEBOOK"
@@ -44,6 +45,7 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         case whatsapp = "WHATSAPP"
         case telegram = "TELEGRAM"
         case kakao = "KAKAO"
+        case webmessaging = "WEBMESSAGING"
     }
     public var _id: String?
     public var state: State?

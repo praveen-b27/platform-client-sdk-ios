@@ -16,6 +16,7 @@ public class AcwSettings: Codable {
         case _optional = "OPTIONAL"
         case mandatoryTimeout = "MANDATORY_TIMEOUT"
         case mandatoryForcedTimeout = "MANDATORY_FORCED_TIMEOUT"
+        case agentRequested = "AGENT_REQUESTED"
     }
     /** This field controls how the UI prompts the agent for a wrapup. */
     public var wrapupPrompt: WrapupPrompt?

@@ -43,10 +43,12 @@ public class OrgOAuthClient: Codable {
     public var roleDivisions: [RoleDivision]?
     /** The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted. */
     public var state: State?
+    /** The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var dateToDelete: Date?
     /** The  oauth client&#39;s organization. */
     public var organization: NamedEntity?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, organization: NamedEntity?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, dateToDelete: Date?, organization: NamedEntity?) {
         
         self._id = _id
         
@@ -68,6 +70,8 @@ public class OrgOAuthClient: Codable {
         
         self.state = state
         
+        self.dateToDelete = dateToDelete
+        
         self.organization = organization
         
     }
@@ -83,6 +87,7 @@ public class OrgOAuthClient: Codable {
         case scope
         case roleDivisions
         case state
+        case dateToDelete
         case organization
     }
 

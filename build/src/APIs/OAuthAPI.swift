@@ -110,6 +110,7 @@ open class OAuthAPI {
   "pending" : true,
   "selfUri" : "aeiou",
   "client" : {
+    "dateToDelete" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "registeredRedirectUri" : [ "aeiou" ],
     "description" : "aeiou",
@@ -205,6 +206,7 @@ open class OAuthAPI {
     "pending" : true,
     "selfUri" : "aeiou",
     "client" : {
+      "dateToDelete" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "registeredRedirectUri" : [ "aeiou" ],
       "description" : "aeiou",
@@ -292,6 +294,7 @@ open class OAuthAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "registeredRedirectUri" : [ "aeiou" ],
   "description" : "aeiou",
@@ -542,6 +545,7 @@ open class OAuthAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "dateToDelete" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "registeredRedirectUri" : [ "aeiou" ],
     "description" : "aeiou",
@@ -776,6 +780,7 @@ open class OAuthAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "registeredRedirectUri" : [ "aeiou" ],
   "description" : "aeiou",
@@ -930,6 +935,7 @@ open class OAuthAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "registeredRedirectUri" : [ "aeiou" ],
   "description" : "aeiou",
@@ -1014,6 +1020,7 @@ open class OAuthAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateToDelete" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "registeredRedirectUri" : [ "aeiou" ],
   "description" : "aeiou",

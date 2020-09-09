@@ -52,10 +52,12 @@ public class OAuthClient: Codable {
     public var roleDivisions: [RoleDivision]?
     /** The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted. */
     public var state: State?
+    /** The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    public var dateToDelete: Date?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, secret: String?, roleIds: [String]?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, selfUri: String?) {
+    public init(_id: String?, name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, secret: String?, roleIds: [String]?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, dateToDelete: Date?, selfUri: String?) {
         
         self._id = _id
         
@@ -87,6 +89,8 @@ public class OAuthClient: Codable {
         
         self.state = state
         
+        self.dateToDelete = dateToDelete
+        
         self.selfUri = selfUri
         
     }
@@ -107,6 +111,7 @@ public class OAuthClient: Codable {
         case scope
         case roleDivisions
         case state
+        case dateToDelete
         case selfUri
     }
 

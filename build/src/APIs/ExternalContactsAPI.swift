@@ -12617,10 +12617,9 @@ open class ExternalContactsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "selfUri" : "aeiou",
-  "id" : "aeiou",
   "externalOrganizationId" : "aeiou",
-  "trustorOrgId" : "aeiou"
+  "trustorOrgId" : "aeiou",
+  "externalOrganizationUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 

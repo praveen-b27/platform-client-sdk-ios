@@ -149,6 +149,7 @@ open class TokensAPI {
      - examples: [{contentType=application/json, example={
   "OAuthClient" : {
     "authorizedGrantType" : "aeiou",
+    "dateToDelete" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : {
       "selfUri" : "aeiou",

@@ -35,8 +35,10 @@ public class UserSearchRequest: Codable {
     public var query: [UserSearchCriteria]?
     /** Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. */
     public var integrationPresenceSource: IntegrationPresenceSource?
+    /** Enforce view permission on request */
+    public var enforcePermissions: Bool?
 
-    public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, expand: [String]?, query: [UserSearchCriteria]?, integrationPresenceSource: IntegrationPresenceSource?) {
+    public init(sortOrder: SortOrder?, sortBy: String?, pageSize: Int?, pageNumber: Int?, sort: [SearchSort]?, expand: [String]?, query: [UserSearchCriteria]?, integrationPresenceSource: IntegrationPresenceSource?, enforcePermissions: Bool?) {
         
         self.sortOrder = sortOrder
         
@@ -53,6 +55,8 @@ public class UserSearchRequest: Codable {
         self.query = query
         
         self.integrationPresenceSource = integrationPresenceSource
+        
+        self.enforcePermissions = enforcePermissions
         
     }
 

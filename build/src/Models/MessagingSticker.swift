@@ -17,6 +17,7 @@ public class MessagingSticker: Codable {
         case twitter = "twitter"
         case line = "line"
         case whatsapp = "whatsapp"
+        case webmessaging = "webmessaging"
     }
     public enum StickerType: String, Codable { 
         case standard = "standard"

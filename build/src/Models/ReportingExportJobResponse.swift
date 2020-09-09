@@ -83,6 +83,8 @@ public class ReportingExportJobResponse: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
+    /** The unique run id of the export schedule execute */
+    public var runId: String?
     /** The current status of the export request */
     public var status: Status?
     /** The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
@@ -131,11 +133,13 @@ public class ReportingExportJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, enabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, enabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.runId = runId
         
         self.status = status
         
@@ -190,6 +194,7 @@ public class ReportingExportJobResponse: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case runId
         case status
         case timeZone
         case exportFormat

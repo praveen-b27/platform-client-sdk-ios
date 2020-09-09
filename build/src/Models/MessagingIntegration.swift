@@ -26,6 +26,7 @@ public class MessagingIntegration: Codable {
         case twitter = "twitter"
         case line = "line"
         case whatsapp = "whatsapp"
+        case webmessaging = "webmessaging"
     }
     /** A unique Integration Id */
     public var _id: String?

@@ -1774,6 +1774,7 @@ open class RoutingAPI {
         case twitter = "twitter"
         case line = "line"
         case whatsapp = "whatsapp"
+        case webmessaging = "webmessaging"
     }
 
     

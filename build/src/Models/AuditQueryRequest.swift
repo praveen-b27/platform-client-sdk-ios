@@ -20,6 +20,7 @@ public class AuditQueryRequest: Codable {
         case topicsDefinitions = "TopicsDefinitions"
         case predictiveEngagement = "PredictiveEngagement"
         case workforceManagement = "WorkforceManagement"
+        case triggers = "Triggers"
     }
     /** Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?

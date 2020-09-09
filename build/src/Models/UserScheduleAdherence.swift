@@ -72,6 +72,8 @@ public class UserScheduleAdherence: Codable {
     public var user: UserReference?
     /** The management unit to which this user belongs */
     public var managementUnit: ManagementUnit?
+    /** The team to which this user belongs */
+    public var team: Team?
     /** Activity for which the user is scheduled */
     public var scheduledActivityCategory: ScheduledActivityCategory?
     /** Actual underlying system presence value */
@@ -101,7 +103,7 @@ public class UserScheduleAdherence: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: UserReference?, managementUnit: ManagementUnit?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: UserReference?, managementUnit: ManagementUnit?, team: Team?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -110,6 +112,8 @@ public class UserScheduleAdherence: Codable {
         self.user = user
         
         self.managementUnit = managementUnit
+        
+        self.team = team
         
         self.scheduledActivityCategory = scheduledActivityCategory
         
@@ -146,6 +150,7 @@ public class UserScheduleAdherence: Codable {
         case name
         case user
         case managementUnit
+        case team
         case scheduledActivityCategory
         case systemPresence
         case organizationSecondaryPresenceId

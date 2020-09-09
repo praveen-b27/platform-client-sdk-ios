@@ -28,8 +28,8 @@ public class JourneyAggregateQueryPredicate: Codable {
         case journeydevicetype = "journeyDeviceType"
         case journeyoutcomeid = "journeyOutcomeId"
         case journeysegmentid = "journeySegmentId"
-        case journeysessiontype = "journeySessionType"
         case journeysegmentscope = "journeySegmentScope"
+        case journeysessiontype = "journeySessionType"
     }
     public enum Operator: String, Codable { 
         case matches = "matches"

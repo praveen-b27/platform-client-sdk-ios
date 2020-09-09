@@ -11,7 +11,7 @@ import Foundation
 
 public class WfmScheduleReference: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** The ID of the WFM schedule */
     public var _id: String?
     /** A reference to a Workforce Management Business Unit */
     public var businessUnit: WfmBusinessUnitReference?

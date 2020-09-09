@@ -17,6 +17,8 @@ public class EventMessage: Codable {
         case approachingDncOrganizationPhoneNumberLimit = "APPROACHING_DNC_ORGANIZATION_PHONE_NUMBER_LIMIT"
         case approachingEntityLimit = "APPROACHING_ENTITY_LIMIT"
         case automaticTimeZoneZipCodeInvalid = "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID"
+        case campaignContentTemplateSubstitutionMismatch = "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
+        case campaignMessageCharacterLimitExceeded = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
         case campaignStartError = "CAMPAIGN_START_ERROR"
         case campaignRuleStartError = "CAMPAIGN_RULE_START_ERROR"
         case campaignSetDialingModeError = "CAMPAIGN_SET_DIALING_MODE_ERROR"

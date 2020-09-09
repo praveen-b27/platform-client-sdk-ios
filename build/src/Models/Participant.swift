@@ -14,6 +14,7 @@ public class Participant: Codable {
     public enum WrapupPrompt: String, Codable { 
         case mandatory = "mandatory"
         case _optional = "optional"
+        case agentrequested = "agentRequested"
         case timeout = "timeout"
         case forcedtimeout = "forcedTimeout"
     }

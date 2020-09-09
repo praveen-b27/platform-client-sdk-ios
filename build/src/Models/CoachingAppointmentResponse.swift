@@ -46,10 +46,12 @@ public class CoachingAppointmentResponse: Codable {
     public var conversations: [ConversationReference]?
     /** The list of documents associated with coaching appointment. */
     public var documents: [DocumentReference]?
+    /** Whether the appointment is overdue. */
+    public var isOverdue: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: UserReference?, attendees: [UserReference]?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, conversations: [ConversationReference]?, documents: [DocumentReference]?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: UserReference?, attendees: [UserReference]?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, conversations: [ConversationReference]?, documents: [DocumentReference]?, isOverdue: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -79,6 +81,8 @@ public class CoachingAppointmentResponse: Codable {
         
         self.documents = documents
         
+        self.isOverdue = isOverdue
+        
         self.selfUri = selfUri
         
     }
@@ -98,6 +102,7 @@ public class CoachingAppointmentResponse: Codable {
         case dateModified
         case conversations
         case documents
+        case isOverdue
         case selfUri
     }
 

@@ -23,8 +23,8 @@ public class JourneyAggregationQuery: Codable {
         case journeydevicetype = "journeyDeviceType"
         case journeyoutcomeid = "journeyOutcomeId"
         case journeysegmentid = "journeySegmentId"
-        case journeysessiontype = "journeySessionType"
         case journeysegmentscope = "journeySegmentScope"
+        case journeysessiontype = "journeySessionType"
     }
     public enum Metrics: String, Codable { 
         case njourneyoutcomesachieved = "nJourneyOutcomesAchieved"

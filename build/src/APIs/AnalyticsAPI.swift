@@ -255,6 +255,10 @@ open class AnalyticsAPI {
       "monitoredParticipantId" : "aeiou",
       "cobrowseRole" : "aeiou",
       "videoAddressSelf" : "aeiou",
+      "proposedAgents" : [ {
+        "proposedAgentId" : "aeiou",
+        "agentRank" : 123
+      } ],
       "addressSelf" : "aeiou",
       "skipEnabled" : true,
       "journeyActionMapId" : "aeiou",
@@ -306,6 +310,7 @@ open class AnalyticsAPI {
       "mediaBridgeId" : "aeiou",
       "journeyActionMapVersion" : "aeiou",
       "screenShareRoomId" : "aeiou",
+      "agentAssistantId" : "aeiou",
       "outboundContactId" : "aeiou",
       "peerId" : "aeiou",
       "remoteNameDisplayable" : "aeiou",
@@ -493,6 +498,10 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "proposedAgents" : [ {
+          "proposedAgentId" : "aeiou",
+          "agentRank" : 123
+        } ],
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
@@ -544,6 +553,7 @@ open class AnalyticsAPI {
         "mediaBridgeId" : "aeiou",
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -811,6 +821,10 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "proposedAgents" : [ {
+          "proposedAgentId" : "aeiou",
+          "agentRank" : 123
+        } ],
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
@@ -862,6 +876,7 @@ open class AnalyticsAPI {
         "mediaBridgeId" : "aeiou",
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -1153,6 +1168,7 @@ open class AnalyticsAPI {
     "name" : "aeiou",
     "viewType" : "aeiou",
     "interval" : "aeiou",
+    "runId" : "aeiou",
     "hasCustomParticipantAttributes" : true,
     "recipientEmails" : [ "aeiou" ],
     "exportFormat" : "aeiou",
@@ -2514,6 +2530,10 @@ open class AnalyticsAPI {
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "proposedAgents" : [ {
+          "proposedAgentId" : "aeiou",
+          "agentRank" : 123
+        } ],
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
@@ -2565,6 +2585,7 @@ open class AnalyticsAPI {
         "mediaBridgeId" : "aeiou",
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -3295,6 +3316,7 @@ open class AnalyticsAPI {
   "name" : "aeiou",
   "viewType" : "aeiou",
   "interval" : "aeiou",
+  "runId" : "aeiou",
   "hasCustomParticipantAttributes" : true,
   "recipientEmails" : [ "aeiou" ],
   "exportFormat" : "aeiou",

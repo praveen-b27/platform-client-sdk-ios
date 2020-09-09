@@ -79,6 +79,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
     }
     public var _id: String?
+    public var runId: String?
     public var name: String?
     public var status: Status?
     public var exportFormat: ExportFormat?
@@ -91,9 +92,11 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
     public var percentageComplete: Double?
     public var emailStatuses: [String:String]?
 
-    public init(_id: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?) {
+    public init(_id: String?, runId: String?, name: String?, status: Status?, exportFormat: ExportFormat?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, percentageComplete: Double?, emailStatuses: [String:String]?) {
         
         self._id = _id
+        
+        self.runId = runId
         
         self.name = name
         
@@ -121,6 +124,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case runId
         case name
         case status
         case exportFormat

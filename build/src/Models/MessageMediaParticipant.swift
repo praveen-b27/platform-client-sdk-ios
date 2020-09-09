@@ -48,6 +48,7 @@ public class MessageMediaParticipant: Codable {
         case general = "general"
     }
     public enum ModelType: String, Codable { 
+        case unknown = "unknown"
         case sms = "sms"
         case twitter = "twitter"
         case facebook = "facebook"
@@ -55,6 +56,7 @@ public class MessageMediaParticipant: Codable {
         case whatsapp = "whatsapp"
         case telegram = "telegram"
         case kakao = "kakao"
+        case webmessaging = "webmessaging"
     }
     /** The unique participant ID. */
     public var _id: String?

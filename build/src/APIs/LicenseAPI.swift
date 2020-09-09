@@ -53,9 +53,7 @@ open class LicenseAPI {
     "id" : "aeiou"
   } ],
   "permissions" : {
-    "name" : "aeiou",
-    "ids" : [ "aeiou" ],
-    "id" : "aeiou"
+    "ids" : [ "aeiou" ]
   },
   "selfUri" : "aeiou",
   "description" : "aeiou",
@@ -127,9 +125,7 @@ open class LicenseAPI {
     "id" : "aeiou"
   } ],
   "permissions" : {
-    "name" : "aeiou",
-    "ids" : [ "aeiou" ],
-    "id" : "aeiou"
+    "ids" : [ "aeiou" ]
   },
   "selfUri" : "aeiou",
   "description" : "aeiou",
@@ -266,9 +262,7 @@ open class LicenseAPI {
       "id" : "aeiou"
     } ],
     "permissions" : {
-      "name" : "aeiou",
-      "ids" : [ "aeiou" ],
-      "id" : "aeiou"
+      "ids" : [ "aeiou" ]
     },
     "selfUri" : "aeiou",
     "description" : "aeiou",

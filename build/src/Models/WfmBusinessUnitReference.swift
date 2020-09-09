@@ -11,7 +11,7 @@ import Foundation
 
 public class WfmBusinessUnitReference: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** The ID of the business unit */
     public var _id: String?
     /** The URI for this object */
     public var selfUri: String?

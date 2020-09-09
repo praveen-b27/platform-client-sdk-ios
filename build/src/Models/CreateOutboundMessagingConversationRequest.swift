@@ -17,6 +17,7 @@ public class CreateOutboundMessagingConversationRequest: Codable {
         case twitter = "twitter"
         case line = "line"
         case whatsapp = "whatsapp"
+        case webmessaging = "webmessaging"
     }
     /** The ID of the queue to be associated with the message. This will determine the fromAddress of the message. */
     public var queueId: String?

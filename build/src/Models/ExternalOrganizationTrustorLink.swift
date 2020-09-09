@@ -11,20 +11,16 @@ import Foundation
 
 public class ExternalOrganizationTrustorLink: Codable {
 
-    /** The globally unique identifier for the object. */
-    public var _id: String?
     /** The id of a PureCloud External Organization entity in the External Contacts system that will be used to represent the trustor org */
     public var externalOrganizationId: String?
     /** The id of a PureCloud organization that has granted trust to this PureCloud organization */
     public var trustorOrgId: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var dateCreated: Date?
-    /** The URI for this object */
-    public var selfUri: String?
+    /** The URI for the External Organization that is linked to the trustor org */
+    public var externalOrganizationUri: String?
 
-    public init(_id: String?, externalOrganizationId: String?, trustorOrgId: String?, dateCreated: Date?, selfUri: String?) {
-        
-        self._id = _id
+    public init(externalOrganizationId: String?, trustorOrgId: String?, dateCreated: Date?, externalOrganizationUri: String?) {
         
         self.externalOrganizationId = externalOrganizationId
         
@@ -32,16 +28,8 @@ public class ExternalOrganizationTrustorLink: Codable {
         
         self.dateCreated = dateCreated
         
-        self.selfUri = selfUri
+        self.externalOrganizationUri = externalOrganizationUri
         
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case externalOrganizationId
-        case trustorOrgId
-        case dateCreated
-        case selfUri
     }
 
 

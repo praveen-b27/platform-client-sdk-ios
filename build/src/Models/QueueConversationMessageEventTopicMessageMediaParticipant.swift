@@ -51,6 +51,7 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         case general = "general"
     }
     public enum ModelType: String, Codable { 
+        case unknown = "UNKNOWN"
         case sms = "SMS"
         case twitter = "TWITTER"
         case facebook = "FACEBOOK"
@@ -60,6 +61,7 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         case whatsapp = "WHATSAPP"
         case telegram = "TELEGRAM"
         case kakao = "KAKAO"
+        case webmessaging = "WEBMESSAGING"
     }
     public var _id: String?
     public var name: String?

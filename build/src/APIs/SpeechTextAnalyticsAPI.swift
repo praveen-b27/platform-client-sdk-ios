@@ -13,6 +13,76 @@ open class SpeechTextAnalyticsAPI {
     
     
     
+    /**
+     
+     Get Speech and Text Analytics for a specific conversation
+     
+     - parameter conversationId: (path) Conversation Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsConversation(conversationId: String, completion: @escaping ((_ data: ConversationMetrics?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsConversationWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<ConversationMetrics>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get Speech and Text Analytics for a specific conversation
+     
+     - GET /api/v2/speechandtextanalytics/conversations/{conversationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sentimentScore" : 1.3579000000000001069366817318950779736042022705078125,
+  "sentimentTrend" : 1.3579000000000001069366817318950779736042022705078125,
+  "conversation" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter conversationId: (path) Conversation Id 
+
+     - returns: RequestBuilder<ConversationMetrics> 
+     */
+    open class func getSpeechandtextanalyticsConversationWithRequestBuilder(conversationId: String) -> RequestBuilder<ConversationMetrics> {
+        var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConversationMetrics>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**

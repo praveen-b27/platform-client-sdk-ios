@@ -194,6 +194,7 @@ open class CoachingAPI {
   },
   "lengthInMinutes" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "isOverdue" : true,
   "dateStart" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
@@ -535,6 +536,26 @@ open class CoachingAPI {
 
     
     
+    
+    public enum Relationships_getCoachingAppointments: String { 
+        case creator = "Creator"
+        case facilitator = "Facilitator"
+        case attendee = "Attendee"
+    }
+
+    
+    
+    
+    
+    
+    public enum Overdue_getCoachingAppointments: String { 
+        case any = "Any"
+        case _true = "True"
+        case _false = "False"
+    }
+
+    
+    
     /**
      
      Get appointments for users and optional date range
@@ -546,10 +567,13 @@ open class CoachingAPI {
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
+     - parameter relationships: (query) Relationships to filter by (optional)
+     - parameter completionInterval: (query) Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Overdue status to filter by (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCoachingAppointments(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCoachingAppointmentsWithRequestBuilder(userIds: userIds, interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder)
+    open class func getCoachingAppointments(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCoachingAppointmentsWithRequestBuilder(userIds: userIds, interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue)
         requestBuilder.execute { (response: Response<CoachingAppointmentResponseList>?, error) -> Void in
             do {
                 if let e = error {
@@ -598,6 +622,7 @@ open class CoachingAPI {
     },
     "lengthInMinutes" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
@@ -620,10 +645,13 @@ open class CoachingAPI {
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
+     - parameter relationships: (query) Relationships to filter by (optional)
+     - parameter completionInterval: (query) Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Overdue status to filter by (optional)
 
      - returns: RequestBuilder<CoachingAppointmentResponseList> 
      */
-    open class func getCoachingAppointmentsWithRequestBuilder(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
+    open class func getCoachingAppointmentsWithRequestBuilder(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
         let path = "/api/v2/coaching/appointments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -648,7 +676,13 @@ open class CoachingAPI {
             
             "facilitatorIds": facilitatorIds, 
             
-            "sortOrder": sortOrder?.rawValue
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "relationships": relationships, 
+            
+            "completionInterval": completionInterval, 
+            
+            "overdue": overdue?.rawValue
             
         ])
 
@@ -683,6 +717,26 @@ open class CoachingAPI {
 
     
     
+    
+    public enum Relationships_getCoachingAppointmentsMe: String { 
+        case creator = "Creator"
+        case facilitator = "Facilitator"
+        case attendee = "Attendee"
+    }
+
+    
+    
+    
+    
+    
+    public enum Overdue_getCoachingAppointmentsMe: String { 
+        case any = "Any"
+        case _true = "True"
+        case _false = "False"
+    }
+
+    
+    
     /**
      
      Get my appointments for a given date range
@@ -693,10 +747,13 @@ open class CoachingAPI {
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
+     - parameter relationships: (query) Relationships to filter by (optional)
+     - parameter completionInterval: (query) Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Overdue status to filter by (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCoachingAppointmentsMe(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCoachingAppointmentsMeWithRequestBuilder(interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder)
+    open class func getCoachingAppointmentsMe(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCoachingAppointmentsMeWithRequestBuilder(interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue)
         requestBuilder.execute { (response: Response<CoachingAppointmentResponseList>?, error) -> Void in
             do {
                 if let e = error {
@@ -745,6 +802,7 @@ open class CoachingAPI {
     },
     "lengthInMinutes" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
@@ -766,10 +824,13 @@ open class CoachingAPI {
      - parameter statuses: (query) Appointment Statuses to filter by (optional)
      - parameter facilitatorIds: (query) The facilitator IDs for which to retrieve appointments (optional)
      - parameter sortOrder: (query) Sort (by due date) either Asc or Desc (optional)
+     - parameter relationships: (query) Relationships to filter by (optional)
+     - parameter completionInterval: (query) Appointment completion start and end to filter by. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Overdue status to filter by (optional)
 
      - returns: RequestBuilder<CoachingAppointmentResponseList> 
      */
-    open class func getCoachingAppointmentsMeWithRequestBuilder(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
+    open class func getCoachingAppointmentsMeWithRequestBuilder(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
         let path = "/api/v2/coaching/appointments/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -792,7 +853,13 @@ open class CoachingAPI {
             
             "facilitatorIds": facilitatorIds, 
             
-            "sortOrder": sortOrder?.rawValue
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "relationships": relationships, 
+            
+            "completionInterval": completionInterval, 
+            
+            "overdue": overdue?.rawValue
             
         ])
 
@@ -869,6 +936,7 @@ open class CoachingAPI {
     "facilitator" : "",
     "lengthInMinutes" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
@@ -990,6 +1058,7 @@ open class CoachingAPI {
       "facilitator" : "",
       "lengthInMinutes" : 123,
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "isOverdue" : true,
       "dateStart" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "",
       "name" : "aeiou",
@@ -1104,6 +1173,7 @@ open class CoachingAPI {
   },
   "lengthInMinutes" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "isOverdue" : true,
   "dateStart" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
@@ -1356,6 +1426,7 @@ open class CoachingAPI {
     "facilitator" : "",
     "lengthInMinutes" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
@@ -1527,6 +1598,7 @@ open class CoachingAPI {
   },
   "lengthInMinutes" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "isOverdue" : true,
   "dateStart" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
@@ -1549,6 +1621,78 @@ open class CoachingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAppointmentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve aggregated appointment data
+     
+     - parameter body: (body) Aggregate Request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postCoachingAppointmentsAggregatesQuery(body: CoachingAppointmentAggregateRequest, completion: @escaping ((_ data: CoachingAppointmentAggregateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postCoachingAppointmentsAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CoachingAppointmentAggregateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve aggregated appointment data
+     
+     - POST /api/v2/coaching/appointments/aggregates/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "aeiou",
+      "metrics" : [ {
+        "metric" : "aeiou",
+        "stats" : {
+          "count" : 123
+        }
+      } ]
+    } ],
+    "group" : {
+      "key" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter body: (body) Aggregate Request 
+
+     - returns: RequestBuilder<CoachingAppointmentAggregateResponse> 
+     */
+    open class func postCoachingAppointmentsAggregatesQueryWithRequestBuilder(body: CoachingAppointmentAggregateRequest) -> RequestBuilder<CoachingAppointmentAggregateResponse> {
+        let path = "/api/v2/coaching/appointments/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CoachingAppointmentAggregateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

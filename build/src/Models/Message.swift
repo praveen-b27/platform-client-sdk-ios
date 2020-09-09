@@ -39,6 +39,7 @@ public class Message: Codable {
         case uncallable = "uncallable"
     }
     public enum ModelType: String, Codable { 
+        case unknown = "unknown"
         case sms = "sms"
         case twitter = "twitter"
         case facebook = "facebook"
@@ -46,6 +47,7 @@ public class Message: Codable {
         case whatsapp = "whatsapp"
         case telegram = "telegram"
         case kakao = "kakao"
+        case webmessaging = "webmessaging"
     }
     /** The connection state of this communication. */
     public var state: State?

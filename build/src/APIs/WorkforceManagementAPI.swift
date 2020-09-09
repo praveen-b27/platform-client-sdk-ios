@@ -983,6 +983,14 @@ open class WorkforceManagementAPI {
   "impact" : "aeiou",
   "selfUri" : "aeiou",
   "adherenceState" : "aeiou",
+  "team" : {
+    "memberCount" : 123456789,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou"
+  },
   "routingStatus" : "aeiou",
   "presenceUpdateTime" : "2000-01-23T04:56:07.000+0000",
   "isOutOfOffice" : true,
@@ -4051,6 +4059,14 @@ open class WorkforceManagementAPI {
     "impact" : "aeiou",
     "selfUri" : "aeiou",
     "adherenceState" : "aeiou",
+    "team" : {
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
     "routingStatus" : "aeiou",
     "presenceUpdateTime" : "2000-01-23T04:56:07.000+0000",
     "isOutOfOffice" : true,
@@ -9614,7 +9630,8 @@ open class WorkforceManagementAPI {
         "selfUri" : "aeiou",
         "id" : "aeiou"
       }
-    } ]
+    } ],
+    "businessUnitTimeZone" : "aeiou"
   },
   "downloadUrl" : "aeiou",
   "operationId" : "aeiou",

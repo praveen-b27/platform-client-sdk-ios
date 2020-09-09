@@ -37,8 +37,9 @@ public class WemCoachingAppointmentTopicCoachingAppointmentNotification: Codable
     public var conversations: [WemCoachingAppointmentTopicCoachingAppointmentConversation]?
     public var documents: [WemCoachingAppointmentTopicCoachingAppointmentDocument]?
     public var changeType: ChangeType?
+    public var dateCompleted: Date?
 
-    public init(_id: String?, name: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: WemCoachingAppointmentTopicUserReference?, attendees: [WemCoachingAppointmentTopicUserReference]?, createdBy: WemCoachingAppointmentTopicUserReference?, dateCreated: Date?, modifiedBy: WemCoachingAppointmentTopicUserReference?, dateModified: Date?, conversations: [WemCoachingAppointmentTopicCoachingAppointmentConversation]?, documents: [WemCoachingAppointmentTopicCoachingAppointmentDocument]?, changeType: ChangeType?) {
+    public init(_id: String?, name: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: WemCoachingAppointmentTopicUserReference?, attendees: [WemCoachingAppointmentTopicUserReference]?, createdBy: WemCoachingAppointmentTopicUserReference?, dateCreated: Date?, modifiedBy: WemCoachingAppointmentTopicUserReference?, dateModified: Date?, conversations: [WemCoachingAppointmentTopicCoachingAppointmentConversation]?, documents: [WemCoachingAppointmentTopicCoachingAppointmentDocument]?, changeType: ChangeType?, dateCompleted: Date?) {
         
         self._id = _id
         
@@ -68,6 +69,8 @@ public class WemCoachingAppointmentTopicCoachingAppointmentNotification: Codable
         
         self.changeType = changeType
         
+        self.dateCompleted = dateCompleted
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -85,6 +88,7 @@ public class WemCoachingAppointmentTopicCoachingAppointmentNotification: Codable
         case conversations
         case documents
         case changeType
+        case dateCompleted
     }
 
 

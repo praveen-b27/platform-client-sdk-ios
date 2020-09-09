@@ -29,6 +29,7 @@ public class WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate: Co
     }
     public var user: WfmUserScheduleAdherenceUpdatedTopicUserReference?
     public var managementUnitId: String?
+    public var team: WfmUserScheduleAdherenceUpdatedTopicUriReference?
     public var scheduledActivityCategory: String?
     public var systemPresence: String?
     public var organizationSecondaryPresenceId: String?
@@ -43,11 +44,13 @@ public class WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate: Co
     public var activeQueuesModifiedTime: Date?
     public var removedFromManagementUnit: Bool?
 
-    public init(user: WfmUserScheduleAdherenceUpdatedTopicUserReference?, managementUnitId: String?, scheduledActivityCategory: String?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
+    public init(user: WfmUserScheduleAdherenceUpdatedTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedTopicUriReference?, scheduledActivityCategory: String?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
         
         self.user = user
         
         self.managementUnitId = managementUnitId
+        
+        self.team = team
         
         self.scheduledActivityCategory = scheduledActivityCategory
         

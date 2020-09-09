@@ -664,6 +664,10 @@ open class ConversationsAPI {
       "monitoredParticipantId" : "aeiou",
       "cobrowseRole" : "aeiou",
       "videoAddressSelf" : "aeiou",
+      "proposedAgents" : [ {
+        "proposedAgentId" : "aeiou",
+        "agentRank" : 123
+      } ],
       "addressSelf" : "aeiou",
       "skipEnabled" : true,
       "journeyActionMapId" : "aeiou",
@@ -715,6 +719,7 @@ open class ConversationsAPI {
       "mediaBridgeId" : "aeiou",
       "journeyActionMapVersion" : "aeiou",
       "screenShareRoomId" : "aeiou",
+      "agentAssistantId" : "aeiou",
       "outboundContactId" : "aeiou",
       "peerId" : "aeiou",
       "remoteNameDisplayable" : "aeiou",
@@ -902,6 +907,10 @@ open class ConversationsAPI {
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "proposedAgents" : [ {
+          "proposedAgentId" : "aeiou",
+          "agentRank" : 123
+        } ],
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
@@ -953,6 +962,7 @@ open class ConversationsAPI {
         "mediaBridgeId" : "aeiou",
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -1220,6 +1230,10 @@ open class ConversationsAPI {
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "proposedAgents" : [ {
+          "proposedAgentId" : "aeiou",
+          "agentRank" : 123
+        } ],
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
@@ -1271,6 +1285,7 @@ open class ConversationsAPI {
         "mediaBridgeId" : "aeiou",
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -16756,6 +16771,10 @@ open class ConversationsAPI {
         "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "proposedAgents" : [ {
+          "proposedAgentId" : "aeiou",
+          "agentRank" : 123
+        } ],
         "addressSelf" : "aeiou",
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
@@ -16807,6 +16826,7 @@ open class ConversationsAPI {
         "mediaBridgeId" : "aeiou",
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",

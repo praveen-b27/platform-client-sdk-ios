@@ -7,12 +7,61 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**getAuditsQueryRealtimeServicemapping**](AuditAPI.html#getAuditsQueryRealtimeServicemapping) | Get service mapping information used in audits. |
 | [**getAuditsQueryServicemapping**](AuditAPI.html#getAuditsQueryServicemapping) | Get service mapping information used in audits. |
 | [**getAuditsQueryTransactionId**](AuditAPI.html#getAuditsQueryTransactionId) | Get status of audit query execution |
 | [**getAuditsQueryTransactionIdResults**](AuditAPI.html#getAuditsQueryTransactionIdResults) | Get results of audit query |
 | [**postAuditsQuery**](AuditAPI.html#postAuditsQuery) | Create audit query execution |
 | [**postAuditsQueryRealtime**](AuditAPI.html#postAuditsQueryRealtime) | This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits. |
 {: class="table-striped"}
+
+<a name="getAuditsQueryRealtimeServicemapping"></a>
+
+# **getAuditsQueryRealtimeServicemapping**
+
+
+
+> [AuditQueryServiceMapping](AuditQueryServiceMapping.html) getAuditsQueryRealtimeServicemapping()
+
+Get service mapping information used in audits.
+
+
+
+Wraps GET /api/v2/audits/query/realtime/servicemapping  
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AuditAPI.getAuditsQueryRealtimeServicemapping() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuditAPI.getAuditsQueryRealtimeServicemapping was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AuditQueryServiceMapping**](AuditQueryServiceMapping.html)
 
 <a name="getAuditsQueryServicemapping"></a>
 

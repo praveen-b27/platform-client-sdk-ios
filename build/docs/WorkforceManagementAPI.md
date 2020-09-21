@@ -1049,6 +1049,12 @@ Requires ANY permissions:
 * wfm:workPlan:delete
 * wfm:workPlan:edit
 * wfm:workPlan:view
+* wfm:workPlanRotation:add
+* wfm:workPlanRotation:delete
+* wfm:workPlanRotation:edit
+* wfm:workPlanRotation:view
+* coaching:appointment:add
+* coaching:appointment:edit
 
 ### Example
 
@@ -1337,7 +1343,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalGroups ("ServiceGoalGroups"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlans ("WorkPlans") |
+| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalGroups ("ServiceGoalGroups"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**|  | [optional] |
 {: class="table-striped"}
 
@@ -2295,7 +2301,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunits(feature: feature, div
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalGroups ("ServiceGoalGroups"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlans ("WorkPlans") |
+| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalGroups ("ServiceGoalGroups"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**|  | [optional] |
 {: class="table-striped"}
 
@@ -2423,6 +2429,10 @@ Requires ANY permissions:
 * wfm:workPlan:delete
 * wfm:workPlan:edit
 * wfm:workPlan:view
+* wfm:workPlanRotation:add
+* wfm:workPlanRotation:delete
+* wfm:workPlanRotation:edit
+* wfm:workPlanRotation:view
 
 ### Example
 
@@ -2665,7 +2675,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAdherence(managementU
 
 
 
-> [WfmAgent](WfmAgent.html) getWorkforcemanagementManagementunitAgent(managementUnitId, agentId)
+> [WfmAgent](WfmAgent.html) getWorkforcemanagementManagementunitAgent(managementUnitId, agentId, excludeCapabilities)
 
 Get data for agent in the management unit
 
@@ -2687,9 +2697,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The id of the management unit, or 'mine' for the management unit of the logged-in user.
 let agentId: String = "" // The agent id
+let excludeCapabilities: Bool = true // Excludes all capabilities of the agent such as queues, languages, and skills
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitId: managementUnitId, agentId: agentId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitId: managementUnitId, agentId: agentId, excludeCapabilities: excludeCapabilities) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2706,6 +2717,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitI
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
+| **excludeCapabilities** | **Bool**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional] |
 {: class="table-striped"}
 
 
@@ -3363,6 +3375,7 @@ Requires ANY permissions:
 * wfm:realtimeAdherence:view
 * wfm:schedule:view
 * wfm:timeOffRequest:view
+* wfm:workPlanRotation:view
 * wfm:workPlan:view
 
 ### Example
@@ -3754,6 +3767,7 @@ Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workpla
 
 Requires ANY permissions: 
 
+* wfm:workPlanRotation:view
 * wfm:workPlan:view
 * wfm:schedule:edit
 
@@ -3812,6 +3826,7 @@ Requires ANY permissions:
 * wfm:agent:view
 * wfm:publishedSchedule:view
 * wfm:schedule:view
+* wfm:workPlanRotation:view
 * wfm:workPlan:view
 
 ### Example
@@ -3900,7 +3915,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunits(pageSize: pageSize,
 | **pageSize** | **Int**|  | [optional] |
 | **pageNumber** | **Int**|  | [optional] |
 | **expand** | **String**|  | [optional]<br />**Values**: details ("details") |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalGroups ("ServiceGoalGroups"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlans ("WorkPlans") |
+| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalGroups ("ServiceGoalGroups"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**|  | [optional] |
 {: class="table-striped"}
 

@@ -54,9 +54,10 @@ public class QueueConversationVideoEventTopicChat: Codable {
     public var journeyContext: QueueConversationVideoEventTopicJourneyContext?
     public var wrapup: QueueConversationVideoEventTopicWrapup?
     public var afterCallWork: QueueConversationVideoEventTopicAfterCallWork?
+    public var afterCallWorkRequired: Bool?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, provider: String?, scriptId: String?, peerId: String?, roomId: String?, avatarImageUrl: String?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -88,6 +89,8 @@ public class QueueConversationVideoEventTopicChat: Codable {
         
         self.afterCallWork = afterCallWork
         
+        self.afterCallWorkRequired = afterCallWorkRequired
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -108,6 +111,7 @@ public class QueueConversationVideoEventTopicChat: Codable {
         case journeyContext
         case wrapup
         case afterCallWork
+        case afterCallWorkRequired
         case additionalProperties
     }
 

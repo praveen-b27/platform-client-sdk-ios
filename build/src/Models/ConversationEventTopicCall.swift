@@ -75,9 +75,11 @@ public class ConversationEventTopicCall: Codable {
     public var uuiData: String?
     public var wrapup: ConversationEventTopicWrapup?
     public var afterCallWork: ConversationEventTopicAfterCallWork?
+    public var afterCallWorkRequired: Bool?
+    public var agentAssistantId: String?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: ConversationEventTopicAddress?, other: ConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [ConversationEventTopicDisconnectReason]?, faxStatus: ConversationEventTopicFaxStatus?, uuiData: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -127,6 +129,10 @@ public class ConversationEventTopicCall: Codable {
         
         self.afterCallWork = afterCallWork
         
+        self.afterCallWorkRequired = afterCallWorkRequired
+        
+        self.agentAssistantId = agentAssistantId
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -156,6 +162,8 @@ public class ConversationEventTopicCall: Codable {
         case uuiData
         case wrapup
         case afterCallWork
+        case afterCallWorkRequired
+        case agentAssistantId
         case additionalProperties
     }
 

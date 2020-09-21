@@ -54,9 +54,10 @@ public class QueueConversationEventTopicCobrowse: Codable {
     public var disconnectedTime: Date?
     public var wrapup: QueueConversationEventTopicWrapup?
     public var afterCallWork: QueueConversationEventTopicAfterCallWork?
+    public var afterCallWorkRequired: Bool?
     public var additionalProperties: JSON?
 
-    public init(state: State?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, additionalProperties: JSON?) {
+    public init(state: State?, disconnectType: DisconnectType?, _id: String?, _self: QueueConversationEventTopicAddress?, roomId: String?, cobrowseSessionId: String?, cobrowseRole: String?, controlling: [String]?, viewerUrl: String?, provider: String?, scriptId: String?, peerId: String?, providerEventTime: Date?, connectedTime: Date?, disconnectedTime: Date?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -92,6 +93,8 @@ public class QueueConversationEventTopicCobrowse: Codable {
         
         self.afterCallWork = afterCallWork
         
+        self.afterCallWorkRequired = afterCallWorkRequired
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -114,6 +117,7 @@ public class QueueConversationEventTopicCobrowse: Codable {
         case disconnectedTime
         case wrapup
         case afterCallWork
+        case afterCallWorkRequired
         case additionalProperties
     }
 

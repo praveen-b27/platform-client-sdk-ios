@@ -23,6 +23,8 @@ title: UserQueue
 | **skillEvaluationMethod** | **String** | The skill evaluation method to use when routing conversations. | [optional] |
 | **queueFlow** | [**DomainEntityRef**](DomainEntityRef.html) | The in-queue flow to use for conversations waiting in queue. | [optional] |
 | **whisperPrompt** | [**DomainEntityRef**](DomainEntityRef.html) | The prompt used for whisper on the queue, if configured. | [optional] |
+| **enableTranscription** | **Bool** | Indicates whether voice transcription is enabled for this queue. | [optional] |
+| **enableManualAssignment** | **Bool** | Indicates whether manual assignment is enabled for this queue. | [optional] |
 | **callingPartyName** | **String** | The name to use for caller identification for outbound calls from this queue. | [optional] |
 | **callingPartyNumber** | **String** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
 | **defaultScripts** | [**[String:Script]**](Script.html) | The default script Ids for the communication types. | [optional] |

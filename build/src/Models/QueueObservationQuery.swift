@@ -13,6 +13,7 @@ public class QueueObservationQuery: Codable {
 
     public enum Metrics: String, Codable { 
         case oactiveusers = "oActiveUsers"
+        case oalerting = "oAlerting"
         case ointeracting = "oInteracting"
         case omemberusers = "oMemberUsers"
         case ooffqueueusers = "oOffQueueUsers"
@@ -23,6 +24,7 @@ public class QueueObservationQuery: Codable {
     }
     public enum DetailMetrics: String, Codable { 
         case oactiveusers = "oActiveUsers"
+        case oalerting = "oAlerting"
         case ointeracting = "oInteracting"
         case omemberusers = "oMemberUsers"
         case ooffqueueusers = "oOffQueueUsers"

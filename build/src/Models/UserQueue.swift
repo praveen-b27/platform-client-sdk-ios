@@ -47,6 +47,10 @@ public class UserQueue: Codable {
     public var queueFlow: DomainEntityRef?
     /** The prompt used for whisper on the queue, if configured. */
     public var whisperPrompt: DomainEntityRef?
+    /** Indicates whether voice transcription is enabled for this queue. */
+    public var enableTranscription: Bool?
+    /** Indicates whether manual assignment is enabled for this queue. */
+    public var enableManualAssignment: Bool?
     /** The name to use for caller identification for outbound calls from this queue. */
     public var callingPartyName: String?
     /** The phone number to use for caller identification for outbound calls from this queue. */
@@ -60,7 +64,7 @@ public class UserQueue: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, joined: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, joined: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -93,6 +97,10 @@ public class UserQueue: Codable {
         self.queueFlow = queueFlow
         
         self.whisperPrompt = whisperPrompt
+        
+        self.enableTranscription = enableTranscription
+        
+        self.enableManualAssignment = enableManualAssignment
         
         self.callingPartyName = callingPartyName
         
@@ -127,6 +135,8 @@ public class UserQueue: Codable {
         case skillEvaluationMethod
         case queueFlow
         case whisperPrompt
+        case enableTranscription
+        case enableManualAssignment
         case callingPartyName
         case callingPartyNumber
         case defaultScripts

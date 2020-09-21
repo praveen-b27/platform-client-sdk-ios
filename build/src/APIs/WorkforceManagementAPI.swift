@@ -1568,6 +1568,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementBusinessunitManagementunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case coaching = "Coaching"
         case activityCodes = "ActivityCodes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
@@ -1586,6 +1587,7 @@ open class WorkforceManagementAPI {
         case shortTermForecasts = "ShortTermForecasts"
         case buShortTermForecasts = "BuShortTermForecasts"
         case timeOffRequests = "TimeOffRequests"
+        case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
 
@@ -2163,7 +2165,8 @@ open class WorkforceManagementAPI {
         "user" : {
           "selfUri" : "aeiou",
           "id" : "aeiou"
-        }
+        },
+        "workPlansPerWeek" : [ "" ]
       } ]
     },
     "managementUnit" : {
@@ -3501,6 +3504,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementBusinessunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case coaching = "Coaching"
         case activityCodes = "ActivityCodes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
@@ -3519,6 +3523,7 @@ open class WorkforceManagementAPI {
         case shortTermForecasts = "ShortTermForecasts"
         case buShortTermForecasts = "BuShortTermForecasts"
         case timeOffRequests = "TimeOffRequests"
+        case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
 
@@ -4195,16 +4200,19 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
     /**
      
      Get data for agent in the management unit
      
      - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
+     - parameter excludeCapabilities: (query) Excludes all capabilities of the agent such as queues, languages, and skills (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitAgent(managementUnitId: String, agentId: String, completion: @escaping ((_ data: WfmAgent?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: managementUnitId, agentId: agentId)
+    open class func getWorkforcemanagementManagementunitAgent(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil, completion: @escaping ((_ data: WfmAgent?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: managementUnitId, agentId: agentId, excludeCapabilities: excludeCapabilities)
         requestBuilder.execute { (response: Response<WfmAgent>?, error) -> Void in
             do {
                 if let e = error {
@@ -4250,9 +4258,6 @@ open class WorkforceManagementAPI {
     "id" : "aeiou"
   } ],
   "selfUri" : "aeiou",
-  "timeZone" : {
-    "id" : "aeiou"
-  },
   "id" : "aeiou",
   "workPlan" : {
     "managementUnit" : {
@@ -4266,15 +4271,20 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
+  "workPlanRotation" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
   "acceptDirectShiftTrades" : true
 }}]
      
      - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
+     - parameter excludeCapabilities: (query) Excludes all capabilities of the agent such as queues, languages, and skills (optional)
 
      - returns: RequestBuilder<WfmAgent> 
      */
-    open class func getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: String, agentId: String) -> RequestBuilder<WfmAgent> {
+    open class func getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil) -> RequestBuilder<WfmAgent> {
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4290,7 +4300,12 @@ open class WorkforceManagementAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "excludeCapabilities": excludeCapabilities
+            
+        ])
 
         let requestBuilder: RequestBuilder<WfmAgent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -6698,6 +6713,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementManagementunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case coaching = "Coaching"
         case activityCodes = "ActivityCodes"
         case agents = "Agents"
         case buActivityCodes = "BuActivityCodes"
@@ -6716,6 +6732,7 @@ open class WorkforceManagementAPI {
         case shortTermForecasts = "ShortTermForecasts"
         case buShortTermForecasts = "BuShortTermForecasts"
         case timeOffRequests = "TimeOffRequests"
+        case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
 
@@ -9629,7 +9646,8 @@ open class WorkforceManagementAPI {
       "user" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
-      }
+      },
+      "workPlansPerWeek" : [ "" ]
     } ],
     "businessUnitTimeZone" : "aeiou"
   },

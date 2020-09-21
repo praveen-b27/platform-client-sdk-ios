@@ -73,8 +73,10 @@ public class Video: Codable {
     public var wrapup: Wrapup?
     /** After-call work for the communication. */
     public var afterCallWork: AfterCallWork?
+    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
+    public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?) {
+    public init(state: State?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
         
         self.state = state
         
@@ -110,6 +112,8 @@ public class Video: Codable {
         
         self.afterCallWork = afterCallWork
         
+        self.afterCallWorkRequired = afterCallWorkRequired
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -130,6 +134,7 @@ public class Video: Codable {
         case _self = "self"
         case wrapup
         case afterCallWork
+        case afterCallWorkRequired
     }
 
 

@@ -103,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsConversationsAggregatesQuery**](ConversationsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](ConversationsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
+| [**postConversationAssign**](ConversationsAPI.html#postConversationAssign) | Attempts to manually assign a specified conversation to a specified agent.  Ignores bullseye ring, PAR score, skills, and languages. |
 | [**postConversationDisconnect**](ConversationsAPI.html#postConversationDisconnect) | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**postConversationParticipantCallbacks**](ConversationsAPI.html#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
 | [**postConversationParticipantDigits**](ConversationsAPI.html#postConversationParticipantDigits) | Sends DTMF to the participant |
@@ -5233,6 +5234,69 @@ ConversationsAPI.postAnalyticsConversationsDetailsQuery(body: body) { (response,
 ### Return type
 
 [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html)
+
+<a name="postConversationAssign"></a>
+
+# **postConversationAssign**
+
+
+
+> String postConversationAssign(conversationId, body)
+
+Attempts to manually assign a specified conversation to a specified agent.  Ignores bullseye ring, PAR score, skills, and languages.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/assign  
+
+Requires ANY permissions: 
+
+* conversation:call:pull
+* conversation:call:assign
+* conversation:callback:pull
+* conversation:callback:assign
+* conversation:webchat:pull
+* conversation:webchat:assign
+* conversation:email:pull
+* conversation:email:assign
+* conversation:message:pull
+* conversation:message:assign
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: ConversationUser = new ConversationUser(...) // Targeted user
+
+// Code example
+ConversationsAPI.postConversationAssign(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationAssign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**ConversationUser**](ConversationUser.html)| Targeted user | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
 
 <a name="postConversationDisconnect"></a>
 

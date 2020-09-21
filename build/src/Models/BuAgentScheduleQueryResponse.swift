@@ -19,10 +19,12 @@ public class BuAgentScheduleQueryResponse: Codable {
     public var fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?
     /** The work plan for this user */
     public var workPlan: WorkPlanReference?
+    /** The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week */
+    public var workPlansPerWeek: [WorkPlanReference]?
     /** Versioned entity metadata for this agent schedule */
     public var metadata: WfmVersionedEntityMetadata?
 
-    public init(user: UserReference?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?, workPlan: WorkPlanReference?, metadata: WfmVersionedEntityMetadata?) {
+    public init(user: UserReference?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?, workPlan: WorkPlanReference?, workPlansPerWeek: [WorkPlanReference]?, metadata: WfmVersionedEntityMetadata?) {
         
         self.user = user
         
@@ -31,6 +33,8 @@ public class BuAgentScheduleQueryResponse: Codable {
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
         
         self.workPlan = workPlan
+        
+        self.workPlansPerWeek = workPlansPerWeek
         
         self.metadata = metadata
         

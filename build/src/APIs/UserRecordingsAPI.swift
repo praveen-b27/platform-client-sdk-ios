@@ -157,29 +157,21 @@ open class UserRecordingsAPI {
       "callbacks" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-        "voicemail" : {
-          "uploadStatus" : "aeiou",
-          "id" : "aeiou"
-        },
         "held" : true,
+        "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "aeiou" ],
         "skipEnabled" : true,
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "automatedCallbackConfigId" : "aeiou",
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
-        "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou",
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
         "dialerPreview" : {
           "contactId" : "aeiou",
           "campaignId" : "aeiou",
@@ -190,7 +182,16 @@ open class UserRecordingsAPI {
           "contactListId" : "aeiou",
           "id" : "aeiou"
         },
-        "direction" : "aeiou"
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "voicemail" : {
+          "uploadStatus" : "aeiou",
+          "id" : "aeiou"
+        },
+        "scriptId" : "aeiou",
+        "timeoutSeconds" : 123,
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -200,6 +201,7 @@ open class UserRecordingsAPI {
         "videoMuted" : true,
         "peerCount" : 123,
         "msids" : [ "aeiou" ],
+        "afterCallWorkRequired" : true,
         "audioMuted" : true,
         "sharingScreen" : true,
         "provider" : "aeiou",
@@ -220,6 +222,7 @@ open class UserRecordingsAPI {
         "wrapup" : "",
         "cobrowseRole" : "aeiou",
         "cobrowseSessionId" : "aeiou",
+        "afterCallWorkRequired" : true,
         "viewerUrl" : "aeiou",
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
@@ -249,6 +252,7 @@ open class UserRecordingsAPI {
         } ],
         "subject" : "aeiou",
         "messagesSent" : 123,
+        "afterCallWorkRequired" : true,
         "errorInfo" : {
           "messageWithParams" : "aeiou",
           "code" : "aeiou",
@@ -384,12 +388,6 @@ open class UserRecordingsAPI {
         },
         "conversation" : "",
         "queue" : {
-          "callingPartyName" : "aeiou",
-          "acwSettings" : {
-            "timeoutMs" : 123,
-            "wrapupPrompt" : "aeiou"
-          },
-          "memberCount" : 123,
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 123,
@@ -399,48 +397,9 @@ open class UserRecordingsAPI {
               }
             }
           },
-          "selfUri" : "aeiou",
+          "enableManualAssignment" : true,
           "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
           "autoAnswerOnly" : true,
-          "whisperPrompt" : "",
-          "outboundEmailAddress" : {
-            "route" : {
-              "replyEmailAddress" : "",
-              "selfUri" : "aeiou",
-              "pattern" : "aeiou",
-              "language" : "",
-              "autoBcc" : [ {
-                "name" : "aeiou",
-                "email" : "aeiou"
-              } ],
-              "priority" : 123,
-              "fromEmail" : "aeiou",
-              "skills" : [ "" ],
-              "name" : "aeiou",
-              "fromName" : "aeiou",
-              "id" : "aeiou",
-              "queue" : "",
-              "flow" : "",
-              "spamFlow" : ""
-            },
-            "domain" : ""
-          },
-          "bullseye" : {
-            "rings" : [ {
-              "expansionCriteria" : [ {
-                "threshold" : 1.3579000000000001069366817318950779736042022705078125,
-                "type" : "aeiou"
-              } ],
-              "actions" : {
-                "skillsToRemove" : [ {
-                  "selfUri" : "aeiou",
-                  "name" : "aeiou",
-                  "id" : "aeiou"
-                } ]
-              }
-            } ]
-          },
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
             "threshold" : 123,
@@ -481,14 +440,61 @@ open class UserRecordingsAPI {
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
+          "callingPartyNumber" : "aeiou",
+          "modifiedBy" : "aeiou",
+          "id" : "aeiou",
+          "callingPartyName" : "aeiou",
+          "acwSettings" : {
+            "timeoutMs" : 123,
+            "wrapupPrompt" : "aeiou"
+          },
+          "memberCount" : 123,
+          "selfUri" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "whisperPrompt" : "",
+          "enableTranscription" : true,
+          "outboundEmailAddress" : {
+            "route" : {
+              "replyEmailAddress" : "",
+              "selfUri" : "aeiou",
+              "pattern" : "aeiou",
+              "language" : "",
+              "autoBcc" : [ {
+                "name" : "aeiou",
+                "email" : "aeiou"
+              } ],
+              "priority" : 123,
+              "fromEmail" : "aeiou",
+              "skills" : [ "" ],
+              "name" : "aeiou",
+              "fromName" : "aeiou",
+              "id" : "aeiou",
+              "queue" : "",
+              "flow" : "",
+              "spamFlow" : ""
+            },
+            "domain" : ""
+          },
+          "bullseye" : {
+            "rings" : [ {
+              "expansionCriteria" : [ {
+                "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+                "type" : "aeiou"
+              } ],
+              "actions" : {
+                "skillsToRemove" : [ {
+                  "selfUri" : "aeiou",
+                  "name" : "aeiou",
+                  "id" : "aeiou"
+                } ]
+              }
+            } ]
+          },
           "outboundMessagingAddresses" : {
             "smsAddress" : ""
           },
           "createdBy" : "aeiou",
-          "callingPartyNumber" : "aeiou",
-          "name" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "id" : "aeiou"
+          "name" : "aeiou"
         },
         "isScoringIndex" : true,
         "evaluationForm" : {
@@ -811,6 +817,7 @@ open class UserRecordingsAPI {
         "other" : "",
         "confined" : true,
         "held" : true,
+        "afterCallWorkRequired" : true,
         "recording" : true,
         "errorInfo" : {
           "code" : "aeiou",
@@ -860,6 +867,7 @@ open class UserRecordingsAPI {
         "documentId" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
         "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "disconnectReasons" : [ {
           "code" : 123,
           "phrase" : "aeiou",
@@ -876,6 +884,7 @@ open class UserRecordingsAPI {
         "wrapup" : "",
         "held" : true,
         "avatarImageUrl" : "aeiou",
+        "afterCallWorkRequired" : true,
         "roomId" : "aeiou",
         "segments" : [ "" ],
         "scriptId" : "aeiou",
@@ -912,6 +921,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : "",
         "held" : true,
+        "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
@@ -954,6 +964,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : "",
         "held" : true,
+        "afterCallWorkRequired" : true,
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
@@ -979,6 +990,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : "",
         "peerCount" : 123,
+        "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ "" ],
         "provider" : "aeiou",
@@ -1215,29 +1227,21 @@ open class UserRecordingsAPI {
         "callbacks" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-          "wrapup" : "",
           "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-          "voicemail" : {
-            "uploadStatus" : "aeiou",
-            "id" : "aeiou"
-          },
           "held" : true,
+          "afterCallWorkRequired" : true,
           "callbackNumbers" : [ "aeiou" ],
           "skipEnabled" : true,
           "segments" : [ "" ],
-          "scriptId" : "aeiou",
           "automatedCallbackConfigId" : "aeiou",
           "provider" : "aeiou",
           "externalCampaign" : true,
           "callbackUserName" : "aeiou",
           "afterCallWork" : "",
           "disconnectType" : "aeiou",
-          "timeoutSeconds" : 123,
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou",
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
           "dialerPreview" : {
             "contactId" : "aeiou",
             "campaignId" : "aeiou",
@@ -1248,7 +1252,16 @@ open class UserRecordingsAPI {
             "contactListId" : "aeiou",
             "id" : "aeiou"
           },
-          "direction" : "aeiou"
+          "direction" : "aeiou",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
+          "voicemail" : {
+            "uploadStatus" : "aeiou",
+            "id" : "aeiou"
+          },
+          "scriptId" : "aeiou",
+          "timeoutSeconds" : 123,
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1258,6 +1271,7 @@ open class UserRecordingsAPI {
           "videoMuted" : true,
           "peerCount" : 123,
           "msids" : [ "aeiou" ],
+          "afterCallWorkRequired" : true,
           "audioMuted" : true,
           "sharingScreen" : true,
           "provider" : "aeiou",
@@ -1278,6 +1292,7 @@ open class UserRecordingsAPI {
           "wrapup" : "",
           "cobrowseRole" : "aeiou",
           "cobrowseSessionId" : "aeiou",
+          "afterCallWorkRequired" : true,
           "viewerUrl" : "aeiou",
           "segments" : [ "" ],
           "providerEventTime" : "2000-01-23T04:56:07.000+0000",
@@ -1307,6 +1322,7 @@ open class UserRecordingsAPI {
           } ],
           "subject" : "aeiou",
           "messagesSent" : 123,
+          "afterCallWorkRequired" : true,
           "errorInfo" : {
             "messageWithParams" : "aeiou",
             "code" : "aeiou",
@@ -1442,12 +1458,6 @@ open class UserRecordingsAPI {
           },
           "conversation" : "",
           "queue" : {
-            "callingPartyName" : "aeiou",
-            "acwSettings" : {
-              "timeoutMs" : 123,
-              "wrapupPrompt" : "aeiou"
-            },
-            "memberCount" : 123,
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 123,
@@ -1457,48 +1467,9 @@ open class UserRecordingsAPI {
                 }
               }
             },
-            "selfUri" : "aeiou",
+            "enableManualAssignment" : true,
             "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
             "autoAnswerOnly" : true,
-            "whisperPrompt" : "",
-            "outboundEmailAddress" : {
-              "route" : {
-                "replyEmailAddress" : "",
-                "selfUri" : "aeiou",
-                "pattern" : "aeiou",
-                "language" : "",
-                "autoBcc" : [ {
-                  "name" : "aeiou",
-                  "email" : "aeiou"
-                } ],
-                "priority" : 123,
-                "fromEmail" : "aeiou",
-                "skills" : [ "" ],
-                "name" : "aeiou",
-                "fromName" : "aeiou",
-                "id" : "aeiou",
-                "queue" : "",
-                "flow" : "",
-                "spamFlow" : ""
-              },
-              "domain" : ""
-            },
-            "bullseye" : {
-              "rings" : [ {
-                "expansionCriteria" : [ {
-                  "threshold" : 1.3579000000000001069366817318950779736042022705078125,
-                  "type" : "aeiou"
-                } ],
-                "actions" : {
-                  "skillsToRemove" : [ {
-                    "selfUri" : "aeiou",
-                    "name" : "aeiou",
-                    "id" : "aeiou"
-                  } ]
-                }
-              } ]
-            },
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
               "threshold" : 123,
@@ -1539,14 +1510,61 @@ open class UserRecordingsAPI {
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "queueFlow" : "",
+            "callingPartyNumber" : "aeiou",
+            "modifiedBy" : "aeiou",
+            "id" : "aeiou",
+            "callingPartyName" : "aeiou",
+            "acwSettings" : {
+              "timeoutMs" : 123,
+              "wrapupPrompt" : "aeiou"
+            },
+            "memberCount" : 123,
+            "selfUri" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "whisperPrompt" : "",
+            "enableTranscription" : true,
+            "outboundEmailAddress" : {
+              "route" : {
+                "replyEmailAddress" : "",
+                "selfUri" : "aeiou",
+                "pattern" : "aeiou",
+                "language" : "",
+                "autoBcc" : [ {
+                  "name" : "aeiou",
+                  "email" : "aeiou"
+                } ],
+                "priority" : 123,
+                "fromEmail" : "aeiou",
+                "skills" : [ "" ],
+                "name" : "aeiou",
+                "fromName" : "aeiou",
+                "id" : "aeiou",
+                "queue" : "",
+                "flow" : "",
+                "spamFlow" : ""
+              },
+              "domain" : ""
+            },
+            "bullseye" : {
+              "rings" : [ {
+                "expansionCriteria" : [ {
+                  "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+                  "type" : "aeiou"
+                } ],
+                "actions" : {
+                  "skillsToRemove" : [ {
+                    "selfUri" : "aeiou",
+                    "name" : "aeiou",
+                    "id" : "aeiou"
+                  } ]
+                }
+              } ]
+            },
             "outboundMessagingAddresses" : {
               "smsAddress" : ""
             },
             "createdBy" : "aeiou",
-            "callingPartyNumber" : "aeiou",
-            "name" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "id" : "aeiou"
+            "name" : "aeiou"
           },
           "isScoringIndex" : true,
           "evaluationForm" : {
@@ -1869,6 +1887,7 @@ open class UserRecordingsAPI {
           "other" : "",
           "confined" : true,
           "held" : true,
+          "afterCallWorkRequired" : true,
           "recording" : true,
           "errorInfo" : {
             "code" : "aeiou",
@@ -1918,6 +1937,7 @@ open class UserRecordingsAPI {
           "documentId" : "aeiou",
           "startHoldTime" : "2000-01-23T04:56:07.000+0000",
           "recordingId" : "aeiou",
+          "agentAssistantId" : "aeiou",
           "disconnectReasons" : [ {
             "code" : 123,
             "phrase" : "aeiou",
@@ -1934,6 +1954,7 @@ open class UserRecordingsAPI {
           "wrapup" : "",
           "held" : true,
           "avatarImageUrl" : "aeiou",
+          "afterCallWorkRequired" : true,
           "roomId" : "aeiou",
           "segments" : [ "" ],
           "scriptId" : "aeiou",
@@ -1970,6 +1991,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
           "wrapup" : "",
           "held" : true,
+          "afterCallWorkRequired" : true,
           "errorInfo" : "",
           "type" : "aeiou",
           "toAddress" : "",
@@ -2012,6 +2034,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
           "wrapup" : "",
           "held" : true,
+          "afterCallWorkRequired" : true,
           "segments" : [ "" ],
           "scriptId" : "aeiou",
           "socialMediaHub" : "aeiou",
@@ -2037,6 +2060,7 @@ open class UserRecordingsAPI {
           "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
           "wrapup" : "",
           "peerCount" : 123,
+          "afterCallWorkRequired" : true,
           "sharing" : true,
           "segments" : [ "" ],
           "provider" : "aeiou",
@@ -2245,29 +2269,21 @@ open class UserRecordingsAPI {
       "callbacks" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-        "voicemail" : {
-          "uploadStatus" : "aeiou",
-          "id" : "aeiou"
-        },
         "held" : true,
+        "afterCallWorkRequired" : true,
         "callbackNumbers" : [ "aeiou" ],
         "skipEnabled" : true,
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "automatedCallbackConfigId" : "aeiou",
         "provider" : "aeiou",
         "externalCampaign" : true,
         "callbackUserName" : "aeiou",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
-        "timeoutSeconds" : 123,
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou",
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
         "dialerPreview" : {
           "contactId" : "aeiou",
           "campaignId" : "aeiou",
@@ -2278,7 +2294,16 @@ open class UserRecordingsAPI {
           "contactListId" : "aeiou",
           "id" : "aeiou"
         },
-        "direction" : "aeiou"
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "voicemail" : {
+          "uploadStatus" : "aeiou",
+          "id" : "aeiou"
+        },
+        "scriptId" : "aeiou",
+        "timeoutSeconds" : 123,
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -2288,6 +2313,7 @@ open class UserRecordingsAPI {
         "videoMuted" : true,
         "peerCount" : 123,
         "msids" : [ "aeiou" ],
+        "afterCallWorkRequired" : true,
         "audioMuted" : true,
         "sharingScreen" : true,
         "provider" : "aeiou",
@@ -2308,6 +2334,7 @@ open class UserRecordingsAPI {
         "wrapup" : "",
         "cobrowseRole" : "aeiou",
         "cobrowseSessionId" : "aeiou",
+        "afterCallWorkRequired" : true,
         "viewerUrl" : "aeiou",
         "segments" : [ "" ],
         "providerEventTime" : "2000-01-23T04:56:07.000+0000",
@@ -2337,6 +2364,7 @@ open class UserRecordingsAPI {
         } ],
         "subject" : "aeiou",
         "messagesSent" : 123,
+        "afterCallWorkRequired" : true,
         "errorInfo" : {
           "messageWithParams" : "aeiou",
           "code" : "aeiou",
@@ -2472,12 +2500,6 @@ open class UserRecordingsAPI {
         },
         "conversation" : "",
         "queue" : {
-          "callingPartyName" : "aeiou",
-          "acwSettings" : {
-            "timeoutMs" : 123,
-            "wrapupPrompt" : "aeiou"
-          },
-          "memberCount" : 123,
           "mediaSettings" : {
             "key" : {
               "alertingTimeoutSeconds" : 123,
@@ -2487,48 +2509,9 @@ open class UserRecordingsAPI {
               }
             }
           },
-          "selfUri" : "aeiou",
+          "enableManualAssignment" : true,
           "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
           "autoAnswerOnly" : true,
-          "whisperPrompt" : "",
-          "outboundEmailAddress" : {
-            "route" : {
-              "replyEmailAddress" : "",
-              "selfUri" : "aeiou",
-              "pattern" : "aeiou",
-              "language" : "",
-              "autoBcc" : [ {
-                "name" : "aeiou",
-                "email" : "aeiou"
-              } ],
-              "priority" : 123,
-              "fromEmail" : "aeiou",
-              "skills" : [ "" ],
-              "name" : "aeiou",
-              "fromName" : "aeiou",
-              "id" : "aeiou",
-              "queue" : "",
-              "flow" : "",
-              "spamFlow" : ""
-            },
-            "domain" : ""
-          },
-          "bullseye" : {
-            "rings" : [ {
-              "expansionCriteria" : [ {
-                "threshold" : 1.3579000000000001069366817318950779736042022705078125,
-                "type" : "aeiou"
-              } ],
-              "actions" : {
-                "skillsToRemove" : [ {
-                  "selfUri" : "aeiou",
-                  "name" : "aeiou",
-                  "id" : "aeiou"
-                } ]
-              }
-            } ]
-          },
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
             "threshold" : 123,
@@ -2569,14 +2552,61 @@ open class UserRecordingsAPI {
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
+          "callingPartyNumber" : "aeiou",
+          "modifiedBy" : "aeiou",
+          "id" : "aeiou",
+          "callingPartyName" : "aeiou",
+          "acwSettings" : {
+            "timeoutMs" : 123,
+            "wrapupPrompt" : "aeiou"
+          },
+          "memberCount" : 123,
+          "selfUri" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "whisperPrompt" : "",
+          "enableTranscription" : true,
+          "outboundEmailAddress" : {
+            "route" : {
+              "replyEmailAddress" : "",
+              "selfUri" : "aeiou",
+              "pattern" : "aeiou",
+              "language" : "",
+              "autoBcc" : [ {
+                "name" : "aeiou",
+                "email" : "aeiou"
+              } ],
+              "priority" : 123,
+              "fromEmail" : "aeiou",
+              "skills" : [ "" ],
+              "name" : "aeiou",
+              "fromName" : "aeiou",
+              "id" : "aeiou",
+              "queue" : "",
+              "flow" : "",
+              "spamFlow" : ""
+            },
+            "domain" : ""
+          },
+          "bullseye" : {
+            "rings" : [ {
+              "expansionCriteria" : [ {
+                "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+                "type" : "aeiou"
+              } ],
+              "actions" : {
+                "skillsToRemove" : [ {
+                  "selfUri" : "aeiou",
+                  "name" : "aeiou",
+                  "id" : "aeiou"
+                } ]
+              }
+            } ]
+          },
           "outboundMessagingAddresses" : {
             "smsAddress" : ""
           },
           "createdBy" : "aeiou",
-          "callingPartyNumber" : "aeiou",
-          "name" : "aeiou",
-          "modifiedBy" : "aeiou",
-          "id" : "aeiou"
+          "name" : "aeiou"
         },
         "isScoringIndex" : true,
         "evaluationForm" : {
@@ -2899,6 +2929,7 @@ open class UserRecordingsAPI {
         "other" : "",
         "confined" : true,
         "held" : true,
+        "afterCallWorkRequired" : true,
         "recording" : true,
         "errorInfo" : {
           "code" : "aeiou",
@@ -2948,6 +2979,7 @@ open class UserRecordingsAPI {
         "documentId" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
         "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou",
         "disconnectReasons" : [ {
           "code" : 123,
           "phrase" : "aeiou",
@@ -2964,6 +2996,7 @@ open class UserRecordingsAPI {
         "wrapup" : "",
         "held" : true,
         "avatarImageUrl" : "aeiou",
+        "afterCallWorkRequired" : true,
         "roomId" : "aeiou",
         "segments" : [ "" ],
         "scriptId" : "aeiou",
@@ -3000,6 +3033,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : "",
         "held" : true,
+        "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
@@ -3042,6 +3076,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : "",
         "held" : true,
+        "afterCallWorkRequired" : true,
         "segments" : [ "" ],
         "scriptId" : "aeiou",
         "socialMediaHub" : "aeiou",
@@ -3067,6 +3102,7 @@ open class UserRecordingsAPI {
         "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
         "wrapup" : "",
         "peerCount" : 123,
+        "afterCallWorkRequired" : true,
         "sharing" : true,
         "segments" : [ "" ],
         "provider" : "aeiou",

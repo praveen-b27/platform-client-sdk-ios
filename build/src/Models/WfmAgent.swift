@@ -16,26 +16,26 @@ public class WfmAgent: Codable {
     public var _id: String?
     /** The user associated with this data */
     public var user: UserReference?
-    /** The work plan associated with this agent */
+    /** The work plan associated with this agent, if applicable */
     public var workPlan: WorkPlanReference?
-    /** The time zone for this agent. Defaults to the time zone of the management unit to which the agent belongs */
-    public var timeZone: WfmTimeZone?
+    /** The work plan rotation associated with this agent, if applicable */
+    public var workPlanRotation: WorkPlanRotationReference?
     /** Whether the agent accepts direct shift trade requests */
     public var acceptDirectShiftTrades: Bool?
-    /** Metadata for this agent */
-    public var metadata: WfmVersionedEntityMetadata?
-    /** List of queues to which the agent belongs and which are defined in the service goal groups in this management unit */
+    /** List of queues to which this agent is capable of handling */
     public var queues: [QueueReference]?
-    /** The list of languages */
+    /** The list of languages this agent is capable of handling */
     public var languages: [LanguageReference]?
-    /** The list of skills */
+    /** The list of skills this agent is capable of handling */
     public var skills: [RoutingSkillReference]?
     /** Whether the agent has the permission to be included in schedule generation */
     public var schedulable: Bool?
+    /** Metadata for this agent */
+    public var metadata: WfmVersionedEntityMetadata?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, user: UserReference?, workPlan: WorkPlanReference?, timeZone: WfmTimeZone?, acceptDirectShiftTrades: Bool?, metadata: WfmVersionedEntityMetadata?, queues: [QueueReference]?, languages: [LanguageReference]?, skills: [RoutingSkillReference]?, schedulable: Bool?, selfUri: String?) {
+    public init(_id: String?, user: UserReference?, workPlan: WorkPlanReference?, workPlanRotation: WorkPlanRotationReference?, acceptDirectShiftTrades: Bool?, queues: [QueueReference]?, languages: [LanguageReference]?, skills: [RoutingSkillReference]?, schedulable: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         
         self._id = _id
         
@@ -43,11 +43,9 @@ public class WfmAgent: Codable {
         
         self.workPlan = workPlan
         
-        self.timeZone = timeZone
+        self.workPlanRotation = workPlanRotation
         
         self.acceptDirectShiftTrades = acceptDirectShiftTrades
-        
-        self.metadata = metadata
         
         self.queues = queues
         
@@ -57,6 +55,8 @@ public class WfmAgent: Codable {
         
         self.schedulable = schedulable
         
+        self.metadata = metadata
+        
         self.selfUri = selfUri
         
     }
@@ -65,13 +65,13 @@ public class WfmAgent: Codable {
         case _id = "id"
         case user
         case workPlan
-        case timeZone
+        case workPlanRotation
         case acceptDirectShiftTrades
-        case metadata
         case queues
         case languages
         case skills
         case schedulable
+        case metadata
         case selfUri
     }
 

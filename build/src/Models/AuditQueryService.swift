@@ -21,6 +21,7 @@ public class AuditQueryService: Codable {
         case predictiveEngagement = "PredictiveEngagement"
         case workforceManagement = "WorkforceManagement"
         case triggers = "Triggers"
+        case responseManagement = "ResponseManagement"
     }
     /** Name of the Service */
     public var name: Name?

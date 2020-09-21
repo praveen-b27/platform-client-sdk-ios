@@ -19,8 +19,10 @@ public class BuAgentScheduleRescheduleResponse: Codable {
     public var fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?
     /** The work plan for this user */
     public var workPlan: WorkPlanReference?
+    /** The work plans per week for this user from the work plan rotation. Null values in the list denotes that user is not part of any work plan for that week */
+    public var workPlansPerWeek: [WorkPlanReference]?
 
-    public init(user: UserReference?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?, workPlan: WorkPlanReference?) {
+    public init(user: UserReference?, shifts: [BuAgentScheduleShift]?, fullDayTimeOffMarkers: [BuFullDayTimeOffMarker]?, workPlan: WorkPlanReference?, workPlansPerWeek: [WorkPlanReference]?) {
         
         self.user = user
         
@@ -29,6 +31,8 @@ public class BuAgentScheduleRescheduleResponse: Codable {
         self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
         
         self.workPlan = workPlan
+        
+        self.workPlansPerWeek = workPlansPerWeek
         
     }
 

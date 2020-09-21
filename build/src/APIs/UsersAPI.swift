@@ -4423,13 +4423,6 @@ open class UsersAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "callingPartyName" : "aeiou",
-    "acwSettings" : {
-      "timeoutMs" : 123,
-      "wrapupPrompt" : "aeiou"
-    },
-    "joined" : true,
-    "memberCount" : 123,
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 123,
@@ -4439,47 +4432,8 @@ open class UsersAPI {
         }
       }
     },
-    "selfUri" : "aeiou",
+    "enableManualAssignment" : true,
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "whisperPrompt" : "",
-    "outboundEmailAddress" : {
-      "route" : {
-        "replyEmailAddress" : "",
-        "selfUri" : "aeiou",
-        "pattern" : "aeiou",
-        "language" : "",
-        "autoBcc" : [ {
-          "name" : "aeiou",
-          "email" : "aeiou"
-        } ],
-        "priority" : 123,
-        "fromEmail" : "aeiou",
-        "skills" : [ "" ],
-        "name" : "aeiou",
-        "fromName" : "aeiou",
-        "id" : "aeiou",
-        "queue" : "",
-        "flow" : "",
-        "spamFlow" : ""
-      },
-      "domain" : ""
-    },
-    "bullseye" : {
-      "rings" : [ {
-        "expansionCriteria" : [ {
-          "threshold" : 1.3579000000000001069366817318950779736042022705078125,
-          "type" : "aeiou"
-        } ],
-        "actions" : {
-          "skillsToRemove" : [ {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          } ]
-        }
-      } ]
-    },
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
       "threshold" : 123,
@@ -4528,14 +4482,62 @@ open class UsersAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
+    "callingPartyNumber" : "aeiou",
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "callingPartyName" : "aeiou",
+    "acwSettings" : {
+      "timeoutMs" : 123,
+      "wrapupPrompt" : "aeiou"
+    },
+    "joined" : true,
+    "memberCount" : 123,
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "whisperPrompt" : "",
+    "enableTranscription" : true,
+    "outboundEmailAddress" : {
+      "route" : {
+        "replyEmailAddress" : "",
+        "selfUri" : "aeiou",
+        "pattern" : "aeiou",
+        "language" : "",
+        "autoBcc" : [ {
+          "name" : "aeiou",
+          "email" : "aeiou"
+        } ],
+        "priority" : 123,
+        "fromEmail" : "aeiou",
+        "skills" : [ "" ],
+        "name" : "aeiou",
+        "fromName" : "aeiou",
+        "id" : "aeiou",
+        "queue" : "",
+        "flow" : "",
+        "spamFlow" : ""
+      },
+      "domain" : ""
+    },
+    "bullseye" : {
+      "rings" : [ {
+        "expansionCriteria" : [ {
+          "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+          "type" : "aeiou"
+        } ],
+        "actions" : {
+          "skillsToRemove" : [ {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          } ]
+        }
+      } ]
+    },
     "outboundMessagingAddresses" : {
       "smsAddress" : ""
     },
     "createdBy" : "aeiou",
-    "callingPartyNumber" : "aeiou",
-    "name" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou"
+    "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -6614,12 +6616,6 @@ open class UsersAPI {
           "user" : "",
           "value" : "aeiou",
           "queue" : {
-            "callingPartyName" : "aeiou",
-            "acwSettings" : {
-              "timeoutMs" : 123,
-              "wrapupPrompt" : "aeiou"
-            },
-            "memberCount" : 123,
             "mediaSettings" : {
               "key" : {
                 "alertingTimeoutSeconds" : 123,
@@ -6629,48 +6625,9 @@ open class UsersAPI {
                 }
               }
             },
-            "selfUri" : "aeiou",
+            "enableManualAssignment" : true,
             "description" : "aeiou",
-            "dateModified" : "2000-01-23T04:56:07.000+0000",
             "autoAnswerOnly" : true,
-            "whisperPrompt" : "",
-            "outboundEmailAddress" : {
-              "route" : {
-                "replyEmailAddress" : "",
-                "selfUri" : "aeiou",
-                "pattern" : "aeiou",
-                "language" : "",
-                "autoBcc" : [ {
-                  "name" : "aeiou",
-                  "email" : "aeiou"
-                } ],
-                "priority" : 123,
-                "fromEmail" : "aeiou",
-                "skills" : [ "" ],
-                "name" : "aeiou",
-                "fromName" : "aeiou",
-                "id" : "aeiou",
-                "queue" : "",
-                "flow" : "",
-                "spamFlow" : ""
-              },
-              "domain" : ""
-            },
-            "bullseye" : {
-              "rings" : [ {
-                "expansionCriteria" : [ {
-                  "threshold" : 1.3579000000000001069366817318950779736042022705078125,
-                  "type" : "aeiou"
-                } ],
-                "actions" : {
-                  "skillsToRemove" : [ {
-                    "selfUri" : "aeiou",
-                    "name" : "aeiou",
-                    "id" : "aeiou"
-                  } ]
-                }
-              } ]
-            },
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
               "threshold" : 123,
@@ -6715,14 +6672,61 @@ open class UsersAPI {
               "name" : "aeiou",
               "id" : "aeiou"
             },
+            "callingPartyNumber" : "aeiou",
+            "modifiedBy" : "aeiou",
+            "id" : "aeiou",
+            "callingPartyName" : "aeiou",
+            "acwSettings" : {
+              "timeoutMs" : 123,
+              "wrapupPrompt" : "aeiou"
+            },
+            "memberCount" : 123,
+            "selfUri" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "whisperPrompt" : "",
+            "enableTranscription" : true,
+            "outboundEmailAddress" : {
+              "route" : {
+                "replyEmailAddress" : "",
+                "selfUri" : "aeiou",
+                "pattern" : "aeiou",
+                "language" : "",
+                "autoBcc" : [ {
+                  "name" : "aeiou",
+                  "email" : "aeiou"
+                } ],
+                "priority" : 123,
+                "fromEmail" : "aeiou",
+                "skills" : [ "" ],
+                "name" : "aeiou",
+                "fromName" : "aeiou",
+                "id" : "aeiou",
+                "queue" : "",
+                "flow" : "",
+                "spamFlow" : ""
+              },
+              "domain" : ""
+            },
+            "bullseye" : {
+              "rings" : [ {
+                "expansionCriteria" : [ {
+                  "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+                  "type" : "aeiou"
+                } ],
+                "actions" : {
+                  "skillsToRemove" : [ {
+                    "selfUri" : "aeiou",
+                    "name" : "aeiou",
+                    "id" : "aeiou"
+                  } ]
+                }
+              } ]
+            },
             "outboundMessagingAddresses" : {
               "smsAddress" : ""
             },
             "createdBy" : "aeiou",
-            "callingPartyNumber" : "aeiou",
-            "name" : "aeiou",
-            "modifiedBy" : "aeiou",
-            "id" : "aeiou"
+            "name" : "aeiou"
           }
         } ],
         "variableName" : "aeiou",
@@ -8351,13 +8355,6 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "callingPartyName" : "aeiou",
-  "acwSettings" : {
-    "timeoutMs" : 123,
-    "wrapupPrompt" : "aeiou"
-  },
-  "joined" : true,
-  "memberCount" : 123,
   "mediaSettings" : {
     "key" : {
       "alertingTimeoutSeconds" : 123,
@@ -8367,47 +8364,8 @@ open class UsersAPI {
       }
     }
   },
-  "selfUri" : "aeiou",
+  "enableManualAssignment" : true,
   "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "whisperPrompt" : "",
-  "outboundEmailAddress" : {
-    "route" : {
-      "replyEmailAddress" : "",
-      "selfUri" : "aeiou",
-      "pattern" : "aeiou",
-      "language" : "",
-      "autoBcc" : [ {
-        "name" : "aeiou",
-        "email" : "aeiou"
-      } ],
-      "priority" : 123,
-      "fromEmail" : "aeiou",
-      "skills" : [ "" ],
-      "name" : "aeiou",
-      "fromName" : "aeiou",
-      "id" : "aeiou",
-      "queue" : "",
-      "flow" : "",
-      "spamFlow" : ""
-    },
-    "domain" : ""
-  },
-  "bullseye" : {
-    "rings" : [ {
-      "expansionCriteria" : [ {
-        "threshold" : 1.3579000000000001069366817318950779736042022705078125,
-        "type" : "aeiou"
-      } ],
-      "actions" : {
-        "skillsToRemove" : [ {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        } ]
-      }
-    } ]
-  },
   "routingRules" : [ {
     "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
     "threshold" : 123,
@@ -8456,14 +8414,62 @@ open class UsersAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
+  "callingPartyNumber" : "aeiou",
+  "modifiedBy" : "aeiou",
+  "id" : "aeiou",
+  "callingPartyName" : "aeiou",
+  "acwSettings" : {
+    "timeoutMs" : 123,
+    "wrapupPrompt" : "aeiou"
+  },
+  "joined" : true,
+  "memberCount" : 123,
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "whisperPrompt" : "",
+  "enableTranscription" : true,
+  "outboundEmailAddress" : {
+    "route" : {
+      "replyEmailAddress" : "",
+      "selfUri" : "aeiou",
+      "pattern" : "aeiou",
+      "language" : "",
+      "autoBcc" : [ {
+        "name" : "aeiou",
+        "email" : "aeiou"
+      } ],
+      "priority" : 123,
+      "fromEmail" : "aeiou",
+      "skills" : [ "" ],
+      "name" : "aeiou",
+      "fromName" : "aeiou",
+      "id" : "aeiou",
+      "queue" : "",
+      "flow" : "",
+      "spamFlow" : ""
+    },
+    "domain" : ""
+  },
+  "bullseye" : {
+    "rings" : [ {
+      "expansionCriteria" : [ {
+        "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+        "type" : "aeiou"
+      } ],
+      "actions" : {
+        "skillsToRemove" : [ {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      }
+    } ]
+  },
   "outboundMessagingAddresses" : {
     "smsAddress" : ""
   },
   "createdBy" : "aeiou",
-  "callingPartyNumber" : "aeiou",
-  "name" : "aeiou",
-  "modifiedBy" : "aeiou",
-  "id" : "aeiou"
+  "name" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -8540,13 +8546,6 @@ open class UsersAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "callingPartyName" : "aeiou",
-    "acwSettings" : {
-      "timeoutMs" : 123,
-      "wrapupPrompt" : "aeiou"
-    },
-    "joined" : true,
-    "memberCount" : 123,
     "mediaSettings" : {
       "key" : {
         "alertingTimeoutSeconds" : 123,
@@ -8556,47 +8555,8 @@ open class UsersAPI {
         }
       }
     },
-    "selfUri" : "aeiou",
+    "enableManualAssignment" : true,
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "whisperPrompt" : "",
-    "outboundEmailAddress" : {
-      "route" : {
-        "replyEmailAddress" : "",
-        "selfUri" : "aeiou",
-        "pattern" : "aeiou",
-        "language" : "",
-        "autoBcc" : [ {
-          "name" : "aeiou",
-          "email" : "aeiou"
-        } ],
-        "priority" : 123,
-        "fromEmail" : "aeiou",
-        "skills" : [ "" ],
-        "name" : "aeiou",
-        "fromName" : "aeiou",
-        "id" : "aeiou",
-        "queue" : "",
-        "flow" : "",
-        "spamFlow" : ""
-      },
-      "domain" : ""
-    },
-    "bullseye" : {
-      "rings" : [ {
-        "expansionCriteria" : [ {
-          "threshold" : 1.3579000000000001069366817318950779736042022705078125,
-          "type" : "aeiou"
-        } ],
-        "actions" : {
-          "skillsToRemove" : [ {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          } ]
-        }
-      } ]
-    },
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
       "threshold" : 123,
@@ -8645,14 +8605,62 @@ open class UsersAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
+    "callingPartyNumber" : "aeiou",
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "callingPartyName" : "aeiou",
+    "acwSettings" : {
+      "timeoutMs" : 123,
+      "wrapupPrompt" : "aeiou"
+    },
+    "joined" : true,
+    "memberCount" : 123,
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "whisperPrompt" : "",
+    "enableTranscription" : true,
+    "outboundEmailAddress" : {
+      "route" : {
+        "replyEmailAddress" : "",
+        "selfUri" : "aeiou",
+        "pattern" : "aeiou",
+        "language" : "",
+        "autoBcc" : [ {
+          "name" : "aeiou",
+          "email" : "aeiou"
+        } ],
+        "priority" : 123,
+        "fromEmail" : "aeiou",
+        "skills" : [ "" ],
+        "name" : "aeiou",
+        "fromName" : "aeiou",
+        "id" : "aeiou",
+        "queue" : "",
+        "flow" : "",
+        "spamFlow" : ""
+      },
+      "domain" : ""
+    },
+    "bullseye" : {
+      "rings" : [ {
+        "expansionCriteria" : [ {
+          "threshold" : 1.3579000000000001069366817318950779736042022705078125,
+          "type" : "aeiou"
+        } ],
+        "actions" : {
+          "skillsToRemove" : [ {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          } ]
+        }
+      } ]
+    },
     "outboundMessagingAddresses" : {
       "smsAddress" : ""
     },
     "createdBy" : "aeiou",
-    "callingPartyNumber" : "aeiou",
-    "name" : "aeiou",
-    "modifiedBy" : "aeiou",
-    "id" : "aeiou"
+    "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",

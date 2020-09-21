@@ -12,8 +12,11 @@ title: ArrayNode
 | **number** | **Bool** |  | [optional] |
 | **boolean** | **Bool** |  | [optional] |
 | **object** | **Bool** |  | [optional] |
-| **floatingPointNumber** | **Bool** |  | [optional] |
+| **valueNode** | **Bool** |  | [optional] |
 | **pojo** | **Bool** |  | [optional] |
+| **containerNode** | **Bool** |  | [optional] |
+| **missingNode** | **Bool** |  | [optional] |
+| **floatingPointNumber** | **Bool** |  | [optional] |
 | **integralNumber** | **Bool** |  | [optional] |
 | **short** | **Bool** |  | [optional] |
 | **int** | **Bool** |  | [optional] |
@@ -23,9 +26,6 @@ title: ArrayNode
 | **bigInteger** | **Bool** |  | [optional] |
 | **textual** | **Bool** |  | [optional] |
 | **binary** | **Bool** |  | [optional] |
-| **valueNode** | **Bool** |  | [optional] |
-| **containerNode** | **Bool** |  | [optional] |
-| **missingNode** | **Bool** |  | [optional] |
 | **array** | **Bool** |  | [optional] |
 | **null** | **Bool** |  | [optional] |
 {: class="table table-striped"}

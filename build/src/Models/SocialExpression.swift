@@ -77,8 +77,10 @@ public class SocialExpression: Codable {
     public var wrapup: Wrapup?
     /** After-call work for the communication. */
     public var afterCallWork: AfterCallWork?
+    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
+    public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, segments: [Segment]?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?) {
+    public init(state: State?, _id: String?, socialMediaId: String?, socialMediaHub: String?, socialUserName: String?, previewText: String?, recordingId: String?, segments: [Segment]?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, scriptId: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
         
         self.state = state
         
@@ -118,6 +120,8 @@ public class SocialExpression: Codable {
         
         self.afterCallWork = afterCallWork
         
+        self.afterCallWorkRequired = afterCallWorkRequired
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -140,6 +144,7 @@ public class SocialExpression: Codable {
         case peerId
         case wrapup
         case afterCallWork
+        case afterCallWorkRequired
     }
 
 

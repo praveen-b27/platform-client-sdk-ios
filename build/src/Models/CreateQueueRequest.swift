@@ -50,6 +50,10 @@ public class CreateQueueRequest: Codable {
     public var whisperPrompt: DomainEntityRef?
     /** Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. */
     public var autoAnswerOnly: Bool?
+    /** Indicates whether voice transcription is enabled for this queue. */
+    public var enableTranscription: Bool?
+    /** Indicates whether manual assignment is enabled for this queue. */
+    public var enableManualAssignment: Bool?
     /** The name to use for caller identification for outbound calls from this queue. */
     public var callingPartyName: String?
     /** The phone number to use for caller identification for outbound calls from this queue. */
@@ -64,7 +68,7 @@ public class CreateQueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, sourceQueueId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, sourceQueueId: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -100,6 +104,10 @@ public class CreateQueueRequest: Codable {
         
         self.autoAnswerOnly = autoAnswerOnly
         
+        self.enableTranscription = enableTranscription
+        
+        self.enableManualAssignment = enableManualAssignment
+        
         self.callingPartyName = callingPartyName
         
         self.callingPartyNumber = callingPartyNumber
@@ -134,6 +142,8 @@ public class CreateQueueRequest: Codable {
         case queueFlow
         case whisperPrompt
         case autoAnswerOnly
+        case enableTranscription
+        case enableManualAssignment
         case callingPartyName
         case callingPartyNumber
         case defaultScripts

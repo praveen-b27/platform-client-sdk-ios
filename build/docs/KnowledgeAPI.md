@@ -130,7 +130,7 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId
 | ------------- | ------------- | ------------- | ------------- |
 | **categoryId** | **String**| Category ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 {: class="table-striped"}
 
 
@@ -186,7 +186,7 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageDocument(documentId: documentId
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 {: class="table-striped"}
 
 
@@ -296,7 +296,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowle
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. | [optional] |
@@ -356,7 +356,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId, k
 | ------------- | ------------- | ------------- | ------------- |
 | **categoryId** | **String**| Category ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 {: class="table-striped"}
 
 
@@ -412,7 +412,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, k
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 {: class="table-striped"}
 
 
@@ -471,7 +471,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowled
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. | [optional] |
@@ -531,7 +531,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTraining(knowledgeBaseId: knowledg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **trainingId** | **String**| Training ID | |
 {: class="table-striped"}
 
@@ -590,7 +590,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. | [optional] |
@@ -763,7 +763,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageCategory(categoryId: categoryId,
 | ------------- | ------------- | ------------- | ------------- |
 | **categoryId** | **String**| Category ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  | |
 {: class="table-striped"}
 
@@ -821,7 +821,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocument(documentId: documentId,
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  | |
 {: class="table-striped"}
 
@@ -877,7 +877,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowl
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **body** | [**[KnowledgeDocumentBulkRequest]**](KnowledgeDocumentBulkRequest.html)|  | |
 {: class="table-striped"}
 
@@ -933,7 +933,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowl
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  | |
 {: class="table-striped"}
 
@@ -989,7 +989,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowle
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  | |
 {: class="table-striped"}
 
@@ -1045,7 +1045,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageTrainingPromote(knowledgeBaseId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **trainingId** | **String**| Training ID | |
 {: class="table-striped"}
 
@@ -1100,7 +1100,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowle
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US") |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 {: class="table-striped"}
 
 

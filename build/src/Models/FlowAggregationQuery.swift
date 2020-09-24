@@ -35,6 +35,7 @@ public class FlowAggregationQuery: Codable {
         case externalorganizationid = "externalOrganizationId"
         case flaggedreason = "flaggedReason"
         case flowid = "flowId"
+        case flowmilestoneid = "flowMilestoneId"
         case flowname = "flowName"
         case flowouttype = "flowOutType"
         case flowoutcome = "flowOutcome"
@@ -87,9 +88,11 @@ public class FlowAggregationQuery: Codable {
     }
     public enum Metrics: String, Codable { 
         case nflow = "nFlow"
+        case nflowmilestone = "nFlowMilestone"
         case nflowoutcome = "nFlowOutcome"
         case nflowoutcomefailed = "nFlowOutcomeFailed"
         case oflow = "oFlow"
+        case oflowmilestone = "oFlowMilestone"
         case tflow = "tFlow"
         case tflowdisconnect = "tFlowDisconnect"
         case tflowexit = "tFlowExit"

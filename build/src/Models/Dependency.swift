@@ -29,6 +29,7 @@ public class Dependency: Codable {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"

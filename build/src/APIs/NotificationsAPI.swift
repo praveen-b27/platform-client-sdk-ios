@@ -72,6 +72,7 @@ open class NotificationsAPI {
         case requirespermissions = "requiresPermissions"
         case schema = "schema"
         case transports = "transports"
+        case publicapitemplateuripaths = "publicApiTemplateUriPaths"
     }
 
     
@@ -120,7 +121,8 @@ open class NotificationsAPI {
     "requiresPermissions" : [ "aeiou" ],
     "requiresCurrentUserOrPermission" : true,
     "description" : "aeiou",
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "publicApiTemplateUriPaths" : [ "aeiou" ]
   } ]
 }}]
      

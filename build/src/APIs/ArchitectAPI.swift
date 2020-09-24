@@ -1352,6 +1352,69 @@ open class ArchitectAPI {
     
     
     
+    /**
+     
+     Delete a flow milestone.
+     
+     - parameter milestoneId: (path) flow milestone ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteFlowsMilestone(milestoneId: String, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteFlowsMilestoneWithRequestBuilder(milestoneId: milestoneId)
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a flow milestone.
+     
+     - DELETE /api/v2/flows/milestones/{milestoneId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
+     
+     - parameter milestoneId: (path) flow milestone ID 
+
+     - returns: RequestBuilder<Empty> 
+     */
+    open class func deleteFlowsMilestoneWithRequestBuilder(milestoneId: String) -> RequestBuilder<Empty> {
+        var path = "/api/v2/flows/milestones/{milestoneId}"
+        let milestoneIdPreEscape = "\(milestoneId)"
+        let milestoneIdPostEscape = milestoneIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{milestoneId}", with: milestoneIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -1375,6 +1438,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -1430,6 +1494,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -1481,6 +1546,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -1990,6 +2056,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2041,6 +2108,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2201,6 +2269,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2252,6 +2321,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2426,6 +2496,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2487,6 +2558,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2664,6 +2736,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2719,6 +2792,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -2770,6 +2844,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -3091,6 +3166,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -3144,6 +3220,7 @@ open class ArchitectAPI {
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
         case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case group = "GROUP"
         case inboundcallflow = "INBOUNDCALLFLOW"
@@ -8958,7 +9035,46 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}" ]
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "owner" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "importMode" : "aeiou",
+    "countRecordsFailed" : 123,
+    "countRecordsUpdated" : 123,
+    "selfUri" : "aeiou",
+    "uploadURI" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "errorInformation" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "countRecordsDeleted" : 123,
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "pageSize" : 123
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -10141,6 +10257,197 @@ open class ArchitectAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowRuntimeExecution>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a flow milestone
+     
+     - parameter milestoneId: (path) flow milestone ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsMilestone(milestoneId: String, completion: @escaping ((_ data: FlowMilestone?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsMilestoneWithRequestBuilder(milestoneId: milestoneId)
+        requestBuilder.execute { (response: Response<FlowMilestone>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a flow milestone
+     
+     - GET /api/v2/flows/milestones/{milestoneId}
+     - Returns a specified flow milestone
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter milestoneId: (path) flow milestone ID 
+
+     - returns: RequestBuilder<FlowMilestone> 
+     */
+    open class func getFlowsMilestoneWithRequestBuilder(milestoneId: String) -> RequestBuilder<FlowMilestone> {
+        var path = "/api/v2/flows/milestones/{milestoneId}"
+        let milestoneIdPreEscape = "\(milestoneId)"
+        let milestoneIdPostEscape = milestoneIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{milestoneId}", with: milestoneIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FlowMilestone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get a pageable list of flow milestones, filtered by query parameters
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter _description: (query) Description (optional)
+     - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsMilestones(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, completion: @escaping ((_ data: FlowMilestoneListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsMilestonesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription)
+        requestBuilder.execute { (response: Response<FlowMilestoneListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a pageable list of flow milestones, filtered by query parameters
+     
+     - GET /api/v2/flows/milestones
+     - Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter _description: (query) Description (optional)
+     - parameter nameOrDescription: (query) Name or description (optional)
+
+     - returns: RequestBuilder<FlowMilestoneListing> 
+     */
+    open class func getFlowsMilestonesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil) -> RequestBuilder<FlowMilestoneListing> {
+        let path = "/api/v2/flows/milestones"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortBy": sortBy, 
+            
+            "sortOrder": sortOrder, 
+            
+            "id": _id, 
+            
+            "name": name, 
+            
+            "description": _description, 
+            
+            "nameOrDescription": nameOrDescription
+            
+        ])
+
+        let requestBuilder: RequestBuilder<FlowMilestoneListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -15880,6 +16187,68 @@ open class ArchitectAPI {
     
     /**
      
+     Create a flow milestone
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsMilestones(body: FlowMilestone? = nil, completion: @escaping ((_ data: FlowMilestone?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsMilestonesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<FlowMilestone>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a flow milestone
+     
+     - POST /api/v2/flows/milestones
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<FlowMilestone> 
+     */
+    open class func postFlowsMilestonesWithRequestBuilder(body: FlowMilestone? = nil) -> RequestBuilder<FlowMilestone> {
+        let path = "/api/v2/flows/milestones"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FlowMilestone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Create a flow outcome
      
      - parameter body: (body)  (optional)
@@ -17654,6 +18023,75 @@ open class ArchitectAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Updates a flow milestone
+     
+     - parameter milestoneId: (path) flow milestone ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putFlowsMilestone(milestoneId: String, body: FlowMilestone? = nil, completion: @escaping ((_ data: FlowMilestone?,_ error: Error?) -> Void)) {
+        let requestBuilder = putFlowsMilestoneWithRequestBuilder(milestoneId: milestoneId, body: body)
+        requestBuilder.execute { (response: Response<FlowMilestone>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Updates a flow milestone
+     
+     - PUT /api/v2/flows/milestones/{milestoneId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter milestoneId: (path) flow milestone ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<FlowMilestone> 
+     */
+    open class func putFlowsMilestoneWithRequestBuilder(milestoneId: String, body: FlowMilestone? = nil) -> RequestBuilder<FlowMilestone> {
+        var path = "/api/v2/flows/milestones/{milestoneId}"
+        let milestoneIdPreEscape = "\(milestoneId)"
+        let milestoneIdPostEscape = milestoneIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{milestoneId}", with: milestoneIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FlowMilestone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

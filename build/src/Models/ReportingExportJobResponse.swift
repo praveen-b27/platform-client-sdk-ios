@@ -79,6 +79,7 @@ public class ReportingExportJobResponse: Codable {
         case reachedMaximumAttemptOfRetry = "REACHED_MAXIMUM_ATTEMPT_OF_RETRY"
         case failedLongRunningExport = "FAILED_LONG_RUNNING_EXPORT"
         case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
+        case failedAsExportFileSizeIsGreaterThan10mb = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
@@ -129,11 +130,13 @@ public class ReportingExportJobResponse: Codable {
     public var recipientEmails: [String]?
     /** The status of individual email addresses as a map */
     public var emailStatuses: [String:String]?
+    /** The optional error message in case the export fail to email */
+    public var emailErrorDescription: String?
     public var enabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, enabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, enabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -185,6 +188,8 @@ public class ReportingExportJobResponse: Codable {
         
         self.emailStatuses = emailStatuses
         
+        self.emailErrorDescription = emailErrorDescription
+        
         self.enabled = enabled
         
         self.selfUri = selfUri
@@ -217,6 +222,7 @@ public class ReportingExportJobResponse: Codable {
         case hasCustomParticipantAttributes
         case recipientEmails
         case emailStatuses
+        case emailErrorDescription
         case enabled
         case selfUri
     }

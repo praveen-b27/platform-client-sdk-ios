@@ -32,6 +32,7 @@ title: ReportingExportJobResponse
 | **hasCustomParticipantAttributes** | **Bool** | Indicates if custom participant attributes will be exported | [optional] |
 | **recipientEmails** | **[String]** | The list of email recipients for the exports | [optional] |
 | **emailStatuses** | **[String:String]** | The status of individual email addresses as a map | [optional] |
+| **emailErrorDescription** | **String** | The optional error message in case the export fail to email | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

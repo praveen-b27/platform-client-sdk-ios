@@ -40,6 +40,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case externalorganizationid = "externalOrganizationId"
         case flaggedreason = "flaggedReason"
         case flowid = "flowId"
+        case flowmilestoneid = "flowMilestoneId"
         case flowname = "flowName"
         case flowouttype = "flowOutType"
         case flowoutcome = "flowOutcome"

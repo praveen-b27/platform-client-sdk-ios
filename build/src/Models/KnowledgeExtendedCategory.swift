@@ -13,6 +13,7 @@ public class KnowledgeExtendedCategory: Codable {
 
     public enum LanguageCode: String, Codable { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

@@ -89,6 +89,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -188,6 +189,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocument: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -372,6 +374,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageCategories: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -498,6 +501,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -608,6 +612,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocument: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -721,6 +726,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -867,6 +873,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTraining: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -969,6 +976,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -1266,6 +1274,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -1377,6 +1386,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocument: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -1491,6 +1501,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -1605,6 +1616,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageCategories: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -1709,6 +1721,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -1818,6 +1831,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     
@@ -1920,6 +1934,7 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings: String { 
         case enUs = "en-US"
+        case deDe = "de-DE"
     }
 
     

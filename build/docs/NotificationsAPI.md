@@ -109,7 +109,7 @@ NotificationsAPI.getNotificationsAvailabletopics(expand: expand) { (response, er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: _description ("description"), requirespermissions ("requiresPermissions"), schema ("schema"), transports ("transports") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: _description ("description"), requirespermissions ("requiresPermissions"), schema ("schema"), transports ("transports"), publicapitemplateuripaths ("publicApiTemplateUriPaths") |
 {: class="table-striped"}
 
 

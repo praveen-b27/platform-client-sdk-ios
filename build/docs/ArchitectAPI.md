@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteFlows**](ArchitectAPI.html#deleteFlows) | Batch-delete a list of flows |
 | [**deleteFlowsDatatable**](ArchitectAPI.html#deleteFlowsDatatable) | deletes a specific datatable by id |
 | [**deleteFlowsDatatableRow**](ArchitectAPI.html#deleteFlowsDatatableRow) | Delete a row entry |
+| [**deleteFlowsMilestone**](ArchitectAPI.html#deleteFlowsMilestone) | Delete a flow milestone. |
 | [**getArchitectDependencytracking**](ArchitectAPI.html#getArchitectDependencytracking) | Get Dependency Tracking objects that have a given display name |
 | [**getArchitectDependencytrackingBuild**](ArchitectAPI.html#getArchitectDependencytrackingBuild) | Get Dependency Tracking build status for an organization |
 | [**getArchitectDependencytrackingConsumedresources**](ArchitectAPI.html#getArchitectDependencytrackingConsumedresources) | Get resources that are consumed by a given Dependency Tracking object |
@@ -63,6 +64,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsDatatables**](ArchitectAPI.html#getFlowsDatatables) | Retrieve a list of datatables for the org |
 | [**getFlowsDivisionviews**](ArchitectAPI.html#getFlowsDivisionviews) | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**getFlowsExecution**](ArchitectAPI.html#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**getFlowsMilestone**](ArchitectAPI.html#getFlowsMilestone) | Get a flow milestone |
+| [**getFlowsMilestones**](ArchitectAPI.html#getFlowsMilestones) | Get a pageable list of flow milestones, filtered by query parameters |
 | [**getFlowsOutcome**](ArchitectAPI.html#getFlowsOutcome) | Get a flow outcome |
 | [**getFlowsOutcomes**](ArchitectAPI.html#getFlowsOutcomes) | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**postArchitectDependencytrackingBuild**](ArchitectAPI.html#postArchitectDependencytrackingBuild) | Rebuild Dependency Tracking data for an organization |
@@ -88,6 +91,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postFlowsDatatableRows**](ArchitectAPI.html#postFlowsDatatableRows) | Create a new row entry for the datatable. |
 | [**postFlowsDatatables**](ArchitectAPI.html#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
 | [**postFlowsExecutions**](ArchitectAPI.html#postFlowsExecutions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**postFlowsMilestones**](ArchitectAPI.html#postFlowsMilestones) | Create a flow milestone |
 | [**postFlowsOutcomes**](ArchitectAPI.html#postFlowsOutcomes) | Create a flow outcome |
 | [**putArchitectEmergencygroup**](ArchitectAPI.html#putArchitectEmergencygroup) | Updates a emergency group by ID |
 | [**putArchitectIvr**](ArchitectAPI.html#putArchitectIvr) | Update an IVR Config. |
@@ -99,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putFlow**](ArchitectAPI.html#putFlow) | Update flow |
 | [**putFlowsDatatable**](ArchitectAPI.html#putFlowsDatatable) | Updates a specific datatable by id |
 | [**putFlowsDatatableRow**](ArchitectAPI.html#putFlowsDatatableRow) | Update a row entry |
+| [**putFlowsMilestone**](ArchitectAPI.html#putFlowsMilestone) | Updates a flow milestone |
 | [**putFlowsOutcome**](ArchitectAPI.html#putFlowsOutcome) | Updates a flow outcome |
 {: class="table-striped"}
 
@@ -783,6 +788,58 @@ ArchitectAPI.deleteFlowsDatatableRow(datatableId: datatableId, rowId: rowId) { (
 
 `nil` (empty response body)
 
+<a name="deleteFlowsMilestone"></a>
+
+# **deleteFlowsMilestone**
+
+
+
+> [Empty](Empty.html) deleteFlowsMilestone(milestoneId)
+
+Delete a flow milestone.
+
+
+
+Wraps DELETE /api/v2/flows/milestones/{milestoneId}  
+
+Requires ALL permissions: 
+
+* architect:flowMilestone:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let milestoneId: String = "" // flow milestone ID
+
+// Code example
+ArchitectAPI.deleteFlowsMilestone(milestoneId: milestoneId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.deleteFlowsMilestone was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **milestoneId** | **String**| flow milestone ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Empty**](Empty.html)
+
 <a name="getArchitectDependencytracking"></a>
 
 # **getArchitectDependencytracking**
@@ -837,11 +894,11 @@ ArchitectAPI.getArchitectDependencytracking(name: name, pageNumber: pageNumber, 
 | **name** | **String**| Object name to search for | |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **consumedResources** | **Bool**| Include resources each result item consumes | [optional] |
 | **consumingResources** | **Bool**| Include resources that consume each result item | [optional] |
-| **consumedResourceType** | [**[String]**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
-| **consumingResourceType** | [**[String]**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **consumedResourceType** | [**[String]**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **consumingResourceType** | [**[String]**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 {: class="table-striped"}
 
 
@@ -948,8 +1005,8 @@ ArchitectAPI.getArchitectDependencytrackingConsumedresources(_id: _id, version: 
 | ------------- | ------------- | ------------- | ------------- |
 | **_id** | **String**| Consuming object ID | |
 | **version** | **String**| Consuming object version | |
-| **objectType** | **String**| Consuming object type.  Only versioned types are allowed here. |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
-| **resourceType** | [**[String]**](String.html)| Types of consumed resources to show | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **objectType** | **String**| Consuming object type.  Only versioned types are allowed here. |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **resourceType** | [**[String]**](String.html)| Types of consumed resources to show | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 {: class="table-striped"}
@@ -1010,8 +1067,8 @@ ArchitectAPI.getArchitectDependencytrackingConsumingresources(_id: _id, objectTy
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **_id** | **String**| Consumed object ID | |
-| **objectType** | **String**| Consumed object type |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
-| **resourceType** | [**[String]**](String.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **objectType** | **String**| Consumed object type |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **resourceType** | [**[String]**](String.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **version** | **String**| Object version | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
@@ -1074,10 +1131,10 @@ ArchitectAPI.getArchitectDependencytrackingDeletedresourceconsumers(name: name, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Name to search for | [optional] |
-| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **flowFilter** | **String**| Show only checkedIn or published flows | [optional]<br />**Values**: checkedin ("checkedIn"), published ("published") |
 | **consumedResources** | **Bool**| Return consumed resources? | [optional] [default to false] |
-| **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 {: class="table-striped"}
@@ -1140,11 +1197,11 @@ ArchitectAPI.getArchitectDependencytrackingObject(_id: _id, version: version, ob
 | ------------- | ------------- | ------------- | ------------- |
 | **_id** | **String**| Object ID | |
 | **version** | **String**| Object version | [optional] |
-| **objectType** | **String**| Object type | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **objectType** | **String**| Object type | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **consumedResources** | **Bool**| Include resources this item consumes | [optional] |
 | **consumingResources** | **Bool**| Include resources that consume this item | [optional] |
-| **consumedResourceType** | [**[String]**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
-| **consumingResourceType** | [**[String]**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **consumedResourceType** | [**[String]**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **consumingResourceType** | [**[String]**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **consumedResourceRequest** | **Bool**| Indicate that this is going to look up a consumed resource object | [optional] |
 {: class="table-striped"}
 
@@ -1309,9 +1366,9 @@ ArchitectAPI.getArchitectDependencytrackingUpdatedresourceconsumers(name: name, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Name to search for | [optional] |
-| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **consumedResources** | **Bool**| Return consumed resources? | [optional] [default to false] |
-| **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
+| **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), group ("GROUP"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), ivrconfiguration ("IVRCONFIGURATION"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), nludomain ("NLUDOMAIN"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), widget ("WIDGET"), workflow ("WORKFLOW") |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 {: class="table-striped"}
@@ -3311,6 +3368,124 @@ ArchitectAPI.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, er
 
 [**FlowRuntimeExecution**](FlowRuntimeExecution.html)
 
+<a name="getFlowsMilestone"></a>
+
+# **getFlowsMilestone**
+
+
+
+> [FlowMilestone](FlowMilestone.html) getFlowsMilestone(milestoneId)
+
+Get a flow milestone
+
+Returns a specified flow milestone
+
+Wraps GET /api/v2/flows/milestones/{milestoneId}  
+
+Requires ALL permissions: 
+
+* architect:flowMilestone:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let milestoneId: String = "" // flow milestone ID
+
+// Code example
+ArchitectAPI.getFlowsMilestone(milestoneId: milestoneId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsMilestone was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **milestoneId** | **String**| flow milestone ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowMilestone**](FlowMilestone.html)
+
+<a name="getFlowsMilestones"></a>
+
+# **getFlowsMilestones**
+
+
+
+> [FlowMilestoneListing](FlowMilestoneListing.html) getFlowsMilestones(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription)
+
+Get a pageable list of flow milestones, filtered by query parameters
+
+Multiple IDs can be specified, in which case all matching flow milestones will be returned, and no other parameters will be evaluated.
+
+Wraps GET /api/v2/flows/milestones  
+
+Requires ALL permissions: 
+
+* architect:flowMilestone:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: String = "id" // Sort by
+let sortOrder: String = "asc" // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let _description: String = "" // Description
+let nameOrDescription: String = "" // Name or description
+
+// Code example
+ArchitectAPI.getFlowsMilestones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsMilestones was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **sortBy** | **String**| Sort by | [optional] [default to id] |
+| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **name** | **String**| Name | [optional] |
+| **_description** | **String**| Description | [optional] |
+| **nameOrDescription** | **String**| Name or description | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowMilestoneListing**](FlowMilestoneListing.html)
+
 <a name="getFlowsOutcome"></a>
 
 # **getFlowsOutcome**
@@ -4638,6 +4813,58 @@ ArchitectAPI.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (respon
 
 [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
 
+<a name="postFlowsMilestones"></a>
+
+# **postFlowsMilestones**
+
+
+
+> [FlowMilestone](FlowMilestone.html) postFlowsMilestones(body)
+
+Create a flow milestone
+
+
+
+Wraps POST /api/v2/flows/milestones  
+
+Requires ALL permissions: 
+
+* architect:flowMilestone:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FlowMilestone = new FlowMilestone(...) // 
+
+// Code example
+ArchitectAPI.postFlowsMilestones(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowsMilestones was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FlowMilestone**](FlowMilestone.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowMilestone**](FlowMilestone.html)
+
 <a name="postFlowsOutcomes"></a>
 
 # **postFlowsOutcomes**
@@ -5241,6 +5468,60 @@ ArchitectAPI.putFlowsDatatableRow(datatableId: datatableId, rowId: rowId, body: 
 ### Return type
 
 [**[String:JSON]**](JSON.html)
+
+<a name="putFlowsMilestone"></a>
+
+# **putFlowsMilestone**
+
+
+
+> [FlowMilestone](FlowMilestone.html) putFlowsMilestone(milestoneId, body)
+
+Updates a flow milestone
+
+
+
+Wraps PUT /api/v2/flows/milestones/{milestoneId}  
+
+Requires ALL permissions: 
+
+* architect:flowMilestone:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let milestoneId: String = "" // flow milestone ID
+let body: FlowMilestone = new FlowMilestone(...) // 
+
+// Code example
+ArchitectAPI.putFlowsMilestone(milestoneId: milestoneId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.putFlowsMilestone was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **milestoneId** | **String**| flow milestone ID | |
+| **body** | [**FlowMilestone**](FlowMilestone.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowMilestone**](FlowMilestone.html)
 
 <a name="putFlowsOutcome"></a>
 

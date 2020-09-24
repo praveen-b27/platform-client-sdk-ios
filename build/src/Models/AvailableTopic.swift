@@ -27,8 +27,9 @@ public class AvailableTopic: Codable {
     public var requiresCurrentUserOrPermission: Bool?
     /** Transports that support events for the topic */
     public var transports: [Transports]?
+    public var publicApiTemplateUriPaths: [String]?
 
-    public init(_description: String?, _id: String?, requiresPermissions: [String]?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?) {
+    public init(_description: String?, _id: String?, requiresPermissions: [String]?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?, publicApiTemplateUriPaths: [String]?) {
         
         self._description = _description
         
@@ -44,6 +45,8 @@ public class AvailableTopic: Codable {
         
         self.transports = transports
         
+        self.publicApiTemplateUriPaths = publicApiTemplateUriPaths
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -54,6 +57,7 @@ public class AvailableTopic: Codable {
         case requiresCurrentUser
         case requiresCurrentUserOrPermission
         case transports
+        case publicApiTemplateUriPaths
     }
 
 

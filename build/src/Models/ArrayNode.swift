@@ -27,24 +27,24 @@ public class ArrayNode: Codable {
     public var number: Bool?
     public var boolean: Bool?
     public var object: Bool?
-    public var valueNode: Bool?
-    public var pojo: Bool?
+    public var floatingPointNumber: Bool?
     public var containerNode: Bool?
     public var missingNode: Bool?
-    public var floatingPointNumber: Bool?
+    public var binary: Bool?
+    public var pojo: Bool?
     public var integralNumber: Bool?
-    public var short: Bool?
     public var int: Bool?
     public var long: Bool?
     public var double: Bool?
     public var bigDecimal: Bool?
     public var bigInteger: Bool?
     public var textual: Bool?
-    public var binary: Bool?
+    public var short: Bool?
+    public var valueNode: Bool?
     public var array: Bool?
     public var null: Bool?
 
-    public init(nodeType: NodeType?, float: Bool?, number: Bool?, boolean: Bool?, object: Bool?, valueNode: Bool?, pojo: Bool?, containerNode: Bool?, missingNode: Bool?, floatingPointNumber: Bool?, integralNumber: Bool?, short: Bool?, int: Bool?, long: Bool?, double: Bool?, bigDecimal: Bool?, bigInteger: Bool?, textual: Bool?, binary: Bool?, array: Bool?, null: Bool?) {
+    public init(nodeType: NodeType?, float: Bool?, number: Bool?, boolean: Bool?, object: Bool?, floatingPointNumber: Bool?, containerNode: Bool?, missingNode: Bool?, binary: Bool?, pojo: Bool?, integralNumber: Bool?, int: Bool?, long: Bool?, double: Bool?, bigDecimal: Bool?, bigInteger: Bool?, textual: Bool?, short: Bool?, valueNode: Bool?, array: Bool?, null: Bool?) {
         
         self.nodeType = nodeType
         
@@ -56,19 +56,17 @@ public class ArrayNode: Codable {
         
         self.object = object
         
-        self.valueNode = valueNode
-        
-        self.pojo = pojo
+        self.floatingPointNumber = floatingPointNumber
         
         self.containerNode = containerNode
         
         self.missingNode = missingNode
         
-        self.floatingPointNumber = floatingPointNumber
+        self.binary = binary
+        
+        self.pojo = pojo
         
         self.integralNumber = integralNumber
-        
-        self.short = short
         
         self.int = int
         
@@ -82,7 +80,9 @@ public class ArrayNode: Codable {
         
         self.textual = textual
         
-        self.binary = binary
+        self.short = short
+        
+        self.valueNode = valueNode
         
         self.array = array
         

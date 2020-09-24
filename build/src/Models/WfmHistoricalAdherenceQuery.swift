@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Query to request a historical adherence report from Workforce Management Service */
 
 public class WfmHistoricalAdherenceQuery: Codable {
 
@@ -16,14 +15,16 @@ public class WfmHistoricalAdherenceQuery: Codable {
     public var startDate: Date?
     /** End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time */
     public var endDate: Date?
-    /** The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence */
+    /** The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence */
     public var timeZone: String?
-    /** The userIds to report on. If null or not set, adherence will be computed for all the users in management unit */
+    /** The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds. Note: Only one of [teamIds, userIds] can be requested */
     public var userIds: [String]?
+    /** The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested */
+    public var teamIds: [String]?
     /** Whether user exceptions should be returned as part of the results */
     public var includeExceptions: Bool?
 
-    public init(startDate: Date?, endDate: Date?, timeZone: String?, userIds: [String]?, includeExceptions: Bool?) {
+    public init(startDate: Date?, endDate: Date?, timeZone: String?, userIds: [String]?, teamIds: [String]?, includeExceptions: Bool?) {
         
         self.startDate = startDate
         
@@ -32,6 +33,8 @@ public class WfmHistoricalAdherenceQuery: Codable {
         self.timeZone = timeZone
         
         self.userIds = userIds
+        
+        self.teamIds = teamIds
         
         self.includeExceptions = includeExceptions
         

@@ -49,6 +49,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "faqCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -133,6 +134,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -246,6 +248,7 @@ open class KnowledgeAPI {
   "categories" : [ {
     "knowledgeBase" : {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "faqCount" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
@@ -336,6 +339,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "faqCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -430,6 +434,7 @@ open class KnowledgeAPI {
   "entities" : [ {
     "knowledgeBase" : {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "faqCount" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
@@ -555,6 +560,7 @@ open class KnowledgeAPI {
   },
   "knowledgeBase" : {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -669,6 +675,7 @@ open class KnowledgeAPI {
   "categories" : [ {
     "knowledgeBase" : {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "faqCount" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
@@ -798,6 +805,7 @@ open class KnowledgeAPI {
     "categories" : [ {
       "knowledgeBase" : {
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "faqCount" : 123,
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
@@ -919,6 +927,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1032,6 +1041,7 @@ open class KnowledgeAPI {
   "entities" : [ {
     "knowledgeBase" : {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "faqCount" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1107,6 +1117,8 @@ open class KnowledgeAPI {
     
     
     
+    
+    
     /**
      
      Get knowledge bases
@@ -1115,10 +1127,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Name of the KnowledgeBase to filter. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebases(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: KnowledgeBaseListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebasesWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize)
+    open class func getKnowledgeKnowledgebases(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, completion: @escaping ((_ data: KnowledgeBaseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebasesWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, name: name)
         requestBuilder.execute { (response: Response<KnowledgeBaseListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1147,6 +1160,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1163,10 +1177,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Name of the KnowledgeBase to filter. (optional)
 
      - returns: RequestBuilder<KnowledgeBaseListing> 
      */
-    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil) -> RequestBuilder<KnowledgeBaseListing> {
+    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil) -> RequestBuilder<KnowledgeBaseListing> {
         let path = "/api/v2/knowledge/knowledgebases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1185,7 +1200,9 @@ open class KnowledgeAPI {
             
             "limit": limit, 
             
-            "pageSize": pageSize
+            "pageSize": pageSize, 
+            
+            "name": name
             
         ])
 
@@ -1236,6 +1253,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "faqCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -1331,6 +1349,7 @@ open class KnowledgeAPI {
   },
   "knowledgeBase" : {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1446,6 +1465,7 @@ open class KnowledgeAPI {
   "categories" : [ {
     "knowledgeBase" : {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "faqCount" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1561,6 +1581,7 @@ open class KnowledgeAPI {
     "categories" : [ {
       "knowledgeBase" : {
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "faqCount" : 123,
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
@@ -1672,6 +1693,7 @@ open class KnowledgeAPI {
   },
   "knowledgeBase" : {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1780,6 +1802,7 @@ open class KnowledgeAPI {
   "categories" : [ {
     "knowledgeBase" : {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "faqCount" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1877,6 +1900,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1977,6 +2001,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -2087,6 +2112,7 @@ open class KnowledgeAPI {
     "categories" : [ {
       "knowledgeBase" : {
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "faqCount" : 123,
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
@@ -2168,6 +2194,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "faqCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",

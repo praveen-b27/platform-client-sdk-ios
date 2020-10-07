@@ -997,6 +997,63 @@ open class AnalyticsAPI {
     }
 
     
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsConversationsDetailsJobsAvailability(completion: @escaping ((_ data: DataAvailabilityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsConversationsDetailsJobsAvailabilityWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataAvailabilityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - GET /api/v2/analytics/conversations/details/jobs/availability
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+
+     - returns: RequestBuilder<DataAvailabilityResponse> 
+     */
+    open class func getAnalyticsConversationsDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {
+        let path = "/api/v2/analytics/conversations/details/jobs/availability"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataAvailabilityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     
@@ -1041,6 +1098,7 @@ open class AnalyticsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "hasSummaryRow" : true,
     "downloadUrl" : "aeiou",
     "createdDateTime" : "2000-01-23T04:56:07.000+0000",
     "hasSplitByMedia" : true,
@@ -1055,6 +1113,7 @@ open class AnalyticsAPI {
     "read" : true,
     "selfUri" : "aeiou",
     "timeZone" : "aeiou",
+    "csvDelimiter" : "aeiou",
     "filter" : {
       "sessionDnisList" : [ "aeiou" ],
       "transferred" : true,
@@ -2224,6 +2283,63 @@ open class AnalyticsAPI {
     }
 
     
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsUsersDetailsJobsAvailability(completion: @escaping ((_ data: DataAvailabilityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsUsersDetailsJobsAvailabilityWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataAvailabilityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - GET /api/v2/analytics/users/details/jobs/availability
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+
+     - returns: RequestBuilder<DataAvailabilityResponse> 
+     */
+    open class func getAnalyticsUsersDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {
+        let path = "/api/v2/analytics/users/details/jobs/availability"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataAvailabilityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     
@@ -3191,6 +3307,7 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "hasSummaryRow" : true,
   "downloadUrl" : "aeiou",
   "createdDateTime" : "2000-01-23T04:56:07.000+0000",
   "hasSplitByMedia" : true,
@@ -3205,6 +3322,7 @@ open class AnalyticsAPI {
   "read" : true,
   "selfUri" : "aeiou",
   "timeZone" : "aeiou",
+  "csvDelimiter" : "aeiou",
   "filter" : {
     "sessionDnisList" : [ "aeiou" ],
     "transferred" : true,
@@ -3582,6 +3700,91 @@ open class AnalyticsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Query for transcript aggregates
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsTranscriptsAggregatesQuery(body: TranscriptAggregationQuery, completion: @escaping ((_ data: TranscriptAggregateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsTranscriptsAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TranscriptAggregateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for transcript aggregates
+     
+     - POST /api/v2/analytics/transcripts/aggregates/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "aeiou",
+      "metrics" : [ {
+        "metric" : "aeiou",
+        "stats" : {
+          "current" : 1.3579000000000001069366817318950779736042022705078125,
+          "min" : 1.3579000000000001069366817318950779736042022705078125,
+          "max" : 1.3579000000000001069366817318950779736042022705078125,
+          "count" : 123456789,
+          "sum" : 1.3579000000000001069366817318950779736042022705078125,
+          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
+          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
+          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
+          "target" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "qualifier" : "aeiou"
+      } ],
+      "views" : [ {
+        "stats" : "",
+        "name" : "aeiou"
+      } ]
+    } ],
+    "group" : {
+      "key" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<TranscriptAggregateQueryResponse> 
+     */
+    open class func postAnalyticsTranscriptsAggregatesQueryWithRequestBuilder(body: TranscriptAggregationQuery) -> RequestBuilder<TranscriptAggregateQueryResponse> {
+        let path = "/api/v2/analytics/transcripts/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TranscriptAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

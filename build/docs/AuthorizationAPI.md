@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAuthorizationRole**](AuthorizationAPI.html#deleteAuthorizationRole) | Delete an organization role. |
 | [**deleteAuthorizationSubjectDivisionRole**](AuthorizationAPI.html#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
 | [**getAuthorizationDivision**](AuthorizationAPI.html#getAuthorizationDivision) | Returns an authorization division. |
+| [**getAuthorizationDivisionGrants**](AuthorizationAPI.html#getAuthorizationDivisionGrants) | Gets all grants for a given division. |
 | [**getAuthorizationDivisions**](AuthorizationAPI.html#getAuthorizationDivisions) | Retrieve a list of all divisions defined for the organization |
 | [**getAuthorizationDivisionsHome**](AuthorizationAPI.html#getAuthorizationDivisionsHome) | Retrieve the home division for the organization. |
 | [**getAuthorizationDivisionsLimit**](AuthorizationAPI.html#getAuthorizationDivisionsLimit) | Returns the maximum allowed number of divisions. |
@@ -257,6 +258,62 @@ AuthorizationAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: o
 ### Return type
 
 [**AuthzDivision**](AuthzDivision.html)
+
+<a name="getAuthorizationDivisionGrants"></a>
+
+# **getAuthorizationDivisionGrants**
+
+
+
+> [AuthzDivisionGrantEntityListing](AuthzDivisionGrantEntityListing.html) getAuthorizationDivisionGrants(divisionId, pageNumber, pageSize)
+
+Gets all grants for a given division.
+
+
+
+Wraps GET /api/v2/authorization/divisions/{divisionId}/grants  
+
+Requires ANY permissions: 
+
+* authorization:grant:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let divisionId: String = "" // Division ID
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+AuthorizationAPI.getAuthorizationDivisionGrants(divisionId: divisionId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationDivisionGrants was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **divisionId** | **String**| Division ID | |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AuthzDivisionGrantEntityListing**](AuthzDivisionGrantEntityListing.html)
 
 <a name="getAuthorizationDivisions"></a>
 

@@ -1406,6 +1406,63 @@ open class ConversationsAPI {
     }
 
     
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsConversationsDetailsJobsAvailability(completion: @escaping ((_ data: DataAvailabilityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsConversationsDetailsJobsAvailabilityWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataAvailabilityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - GET /api/v2/analytics/conversations/details/jobs/availability
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+
+     - returns: RequestBuilder<DataAvailabilityResponse> 
+     */
+    open class func getAnalyticsConversationsDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {
+        let path = "/api/v2/analytics/conversations/details/jobs/availability"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataAvailabilityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -2125,6 +2182,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -3403,6 +3461,7 @@ open class ConversationsAPI {
       "consultParticipantId" : "aeiou",
       "screenRecordingState" : "aeiou",
       "queueName" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "calls" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
@@ -10171,6 +10230,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -11387,6 +11447,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -12530,6 +12591,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -13673,6 +13735,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -14816,6 +14879,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -15959,6 +16023,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -18148,6 +18213,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
@@ -19285,6 +19351,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "screenRecordingState" : "aeiou",
     "queueName" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "calls" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",

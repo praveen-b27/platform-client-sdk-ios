@@ -1408,6 +1408,7 @@ open class TelephonyProvidersEdgeAPI {
   "currentVersion" : "aeiou",
   "proxy" : "aeiou",
   "site" : {
+    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -1945,6 +1946,7 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
+      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -2258,6 +2260,7 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
+        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -3766,6 +3769,7 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
+      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -5525,6 +5529,7 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
+      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -6030,6 +6035,7 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
+        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -6330,6 +6336,7 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
+      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -6788,6 +6795,7 @@ open class TelephonyProvidersEdgeAPI {
   "version" : 123,
   "enabled" : true,
   "site" : {
+    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -7081,6 +7089,7 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123,
     "enabled" : true,
     "site" : {
+      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -7496,6 +7505,7 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
+        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -8389,6 +8399,7 @@ open class TelephonyProvidersEdgeAPI {
         "currentVersion" : "aeiou",
         "proxy" : "aeiou",
         "site" : {
+          "coreSite" : true,
           "primarySites" : [ "" ],
           "addresses" : [ {
             "extension" : "aeiou",
@@ -8782,6 +8793,7 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
+        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -9097,6 +9109,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "coreSite" : true,
   "primarySites" : [ {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9850,6 +9863,7 @@ open class TelephonyProvidersEdgeAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "coreSite" : true,
     "primarySites" : [ {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -12144,6 +12158,7 @@ open class TelephonyProvidersEdgeAPI {
   "currentVersion" : "aeiou",
   "proxy" : "aeiou",
   "site" : {
+    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -12689,6 +12704,7 @@ open class TelephonyProvidersEdgeAPI {
   "version" : 123,
   "enabled" : true,
   "site" : {
+    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -13236,6 +13252,7 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
+        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -13635,6 +13652,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "coreSite" : true,
   "primarySites" : [ {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -14071,6 +14089,7 @@ open class TelephonyProvidersEdgeAPI {
   "currentVersion" : "aeiou",
   "proxy" : "aeiou",
   "site" : {
+    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -14339,6 +14358,7 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
+      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -15330,6 +15350,7 @@ open class TelephonyProvidersEdgeAPI {
   "version" : 123,
   "enabled" : true,
   "site" : {
+    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -15722,6 +15743,7 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
+        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -16053,6 +16075,7 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "coreSite" : true,
   "primarySites" : [ {
     "selfUri" : "aeiou",
     "name" : "aeiou",

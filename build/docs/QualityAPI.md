@@ -46,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchQualityFormsSurvey**](QualityAPI.html#patchQualityFormsSurvey) | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
 | [**postAnalyticsEvaluationsAggregatesQuery**](QualityAPI.html#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
 | [**postAnalyticsSurveysAggregatesQuery**](QualityAPI.html#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
+| [**postAnalyticsTranscriptsAggregatesQuery**](QualityAPI.html#postAnalyticsTranscriptsAggregatesQuery) | Query for transcript aggregates |
 | [**postQualityCalibrations**](QualityAPI.html#postQualityCalibrations) | Create a calibration |
 | [**postQualityConversationEvaluations**](QualityAPI.html#postQualityConversationEvaluations) | Create an evaluation |
 | [**postQualityEvaluationsScoring**](QualityAPI.html#postQualityEvaluationsScoring) | Score evaluation |
@@ -2311,6 +2312,58 @@ QualityAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error) i
 ### Return type
 
 [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
+
+<a name="postAnalyticsTranscriptsAggregatesQuery"></a>
+
+# **postAnalyticsTranscriptsAggregatesQuery**
+
+
+
+> [TranscriptAggregateQueryResponse](TranscriptAggregateQueryResponse.html) postAnalyticsTranscriptsAggregatesQuery(body)
+
+Query for transcript aggregates
+
+
+
+Wraps POST /api/v2/analytics/transcripts/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:speechAndTextAnalyticsAggregates:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TranscriptAggregationQuery = new TranscriptAggregationQuery(...) // query
+
+// Code example
+QualityAPI.postAnalyticsTranscriptsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.postAnalyticsTranscriptsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TranscriptAggregationQuery**](TranscriptAggregationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TranscriptAggregateQueryResponse**](TranscriptAggregateQueryResponse.html)
 
 <a name="postQualityCalibrations"></a>
 

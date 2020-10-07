@@ -81,6 +81,10 @@ public class ReportingExportJobResponse: Codable {
         case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
         case failedAsExportFileSizeIsGreaterThan10mb = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
     }
+    public enum CsvDelimiter: String, Codable { 
+        case semicolon = "SEMICOLON"
+        case comma = "COMMA"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -122,6 +126,10 @@ public class ReportingExportJobResponse: Codable {
     public var excludeEmptyRows: Bool?
     /** Indicates if media type will be split in aggregate detail exports */
     public var hasSplitByMedia: Bool?
+    /** Indicates if summary row needs to be present in exports */
+    public var hasSummaryRow: Bool?
+    /** The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request */
+    public var csvDelimiter: CsvDelimiter?
     /** The list of ordered selected columns from the export view by the user */
     public var selectedColumns: [SelectedColumns]?
     /** Indicates if custom participant attributes will be exported */
@@ -136,7 +144,7 @@ public class ReportingExportJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, enabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, runId: String?, status: Status?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, downloadUrl: String?, viewType: ViewType?, exportErrorMessagesType: ExportErrorMessagesType?, period: String?, filter: ViewFilter?, read: Bool?, createdDateTime: Date?, modifiedDateTime: Date?, locale: String?, percentageComplete: Double?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?, emailStatuses: [String:String]?, emailErrorDescription: String?, enabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -180,6 +188,10 @@ public class ReportingExportJobResponse: Codable {
         
         self.hasSplitByMedia = hasSplitByMedia
         
+        self.hasSummaryRow = hasSummaryRow
+        
+        self.csvDelimiter = csvDelimiter
+        
         self.selectedColumns = selectedColumns
         
         self.hasCustomParticipantAttributes = hasCustomParticipantAttributes
@@ -218,6 +230,8 @@ public class ReportingExportJobResponse: Codable {
         case hasSplitFilters
         case excludeEmptyRows
         case hasSplitByMedia
+        case hasSummaryRow
+        case csvDelimiter
         case selectedColumns
         case hasCustomParticipantAttributes
         case recipientEmails

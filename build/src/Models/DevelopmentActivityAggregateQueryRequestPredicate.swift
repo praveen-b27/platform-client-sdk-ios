@@ -18,7 +18,7 @@ public class DevelopmentActivityAggregateQueryRequestPredicate: Codable {
     }
     /** Each predicates specifies a dimension. */
     public var dimension: Dimension?
-    /** Corresponding value for dimensions in predicates */
+    /** Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, Coaching */
     public var value: String?
 
     public init(dimension: Dimension?, value: String?) {

@@ -22,7 +22,7 @@ public class ScimV2User: Codable {
     public var userName: String?
     /** The display name of the user. */
     public var displayName: String?
-    /** The new password for the Genesys Cloud user. Does not return an existing password. */
+    /** The new password for the Genesys Cloud user. Does not return an existing password. When creating a user if a password is not supplied a password will be randomly generated which is 40 characters in length and will contain five characters from each of the password policy groups. */
     public var password: String?
     /** The user&#39;s title. */
     public var title: String?

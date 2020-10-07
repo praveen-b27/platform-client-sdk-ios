@@ -608,7 +608,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 
 
 
-> [KnowledgeBaseListing](KnowledgeBaseListing.html) getKnowledgeKnowledgebases(before, after, limit, pageSize)
+> [KnowledgeBaseListing](KnowledgeBaseListing.html) getKnowledgeKnowledgebases(before, after, limit, pageSize, name)
 
 Get knowledge bases
 
@@ -632,9 +632,10 @@ let before: String = "" // The cursor that points to the start of the set of ent
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let limit: String = "" // Number of entities to return. Maximum of 200.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let name: String = "" // Name of the KnowledgeBase to filter.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -653,6 +654,7 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **name** | **String**| Name of the KnowledgeBase to filter. | [optional] |
 {: class="table-striped"}
 
 

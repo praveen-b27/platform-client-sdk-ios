@@ -52,10 +52,12 @@ public class Site: Codable {
     public var managed: Bool?
     /** Network Time Protocol settings for the site */
     public var ntpSettings: NTPSettings?
+    /** The core site */
+    public var coreSite: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, coreSite: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -101,6 +103,8 @@ public class Site: Codable {
         
         self.ntpSettings = ntpSettings
         
+        self.coreSite = coreSite
+        
         self.selfUri = selfUri
         
     }
@@ -128,6 +132,7 @@ public class Site: Codable {
         case location
         case managed
         case ntpSettings
+        case coreSite
         case selfUri
     }
 

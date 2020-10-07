@@ -17,6 +17,23 @@ public class PostTextRequest: Codable {
         case messaging = "Messaging"
         case webchat = "Webchat"
     }
+    public enum MessagingPlatformType: String, Codable { 
+        case phone = "Phone"
+        case sms = "SMS"
+        case genesysWebWidget = "GenesysWebWidget"
+        case facebookMessenger = "FacebookMessenger"
+        case weChat = "WeChat"
+        case whatsapp = "Whatsapp"
+        case appleBusinessChat = "AppleBusinessChat"
+        case telegram = "Telegram"
+        case slack = "Slack"
+        case signal = "Signal"
+        case line = "Line"
+        case discord = "Discord"
+        case twitterDirectMessage = "TwitterDirectMessage"
+        case other = "Other"
+        case unknown = "Unknown"
+    }
     /** ID of the bot to send the text to. */
     public var botId: String?
     /** Alias/Version of the bot */
@@ -35,10 +52,12 @@ public class PostTextRequest: Codable {
     public var botChannels: [BotChannels]?
     /** Id for tracking the activity - this will be returned in the response */
     public var botCorrelationId: String?
+    /** If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics */
+    public var messagingPlatformType: MessagingPlatformType?
     public var amazonLexRequest: AmazonLexRequest?
     public var googleDialogflow: GoogleDialogflowCustomSettings?
 
-    public init(botId: String?, botAlias: String?, integrationId: String?, botSessionId: String?, postTextMessage: PostTextMessage?, languageCode: String?, botSessionTimeoutMinutes: Int?, botChannels: [BotChannels]?, botCorrelationId: String?, amazonLexRequest: AmazonLexRequest?, googleDialogflow: GoogleDialogflowCustomSettings?) {
+    public init(botId: String?, botAlias: String?, integrationId: String?, botSessionId: String?, postTextMessage: PostTextMessage?, languageCode: String?, botSessionTimeoutMinutes: Int?, botChannels: [BotChannels]?, botCorrelationId: String?, messagingPlatformType: MessagingPlatformType?, amazonLexRequest: AmazonLexRequest?, googleDialogflow: GoogleDialogflowCustomSettings?) {
         
         self.botId = botId
         
@@ -57,6 +76,8 @@ public class PostTextRequest: Codable {
         self.botChannels = botChannels
         
         self.botCorrelationId = botCorrelationId
+        
+        self.messagingPlatformType = messagingPlatformType
         
         self.amazonLexRequest = amazonLexRequest
         

@@ -13,14 +13,18 @@ public class BuQueryAgentSchedulesRequest: Codable {
 
     /** The ID of the management unit to query */
     public var managementUnitId: String?
-    /** The IDs of the users to query.  Omit to query all user schedules in the management unit */
+    /** The IDs of the users to query.  Omit to query all user schedules in the management unit. Note: Only one of [teamIds, userIds] can be requested */
     public var userIds: [String]?
+    /** The teamIds to report on. If null or not set, results will be queried for requested users if applicable or otherwise all users in the management unit. Note: Only one of [teamIds, userIds] can be requested */
+    public var teamIds: [String]?
 
-    public init(managementUnitId: String?, userIds: [String]?) {
+    public init(managementUnitId: String?, userIds: [String]?, teamIds: [String]?) {
         
         self.managementUnitId = managementUnitId
         
         self.userIds = userIds
+        
+        self.teamIds = teamIds
         
     }
 

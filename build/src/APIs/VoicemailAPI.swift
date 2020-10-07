@@ -937,6 +937,7 @@ open class VoicemailAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
@@ -2379,6 +2380,7 @@ open class VoicemailAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
@@ -3430,6 +3432,7 @@ open class VoicemailAPI {
       "consultParticipantId" : "aeiou",
       "screenRecordingState" : "aeiou",
       "queueName" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "calls" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
@@ -4506,6 +4509,7 @@ open class VoicemailAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
@@ -5560,6 +5564,7 @@ open class VoicemailAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
@@ -6554,6 +6559,7 @@ open class VoicemailAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
@@ -7991,6 +7997,7 @@ open class VoicemailAPI {
       "consultParticipantId" : "aeiou",
       "screenRecordingState" : "aeiou",
       "queueName" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "calls" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
@@ -9025,6 +9032,7 @@ open class VoicemailAPI {
       "consultParticipantId" : "aeiou",
       "screenRecordingState" : "aeiou",
       "queueName" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "calls" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
@@ -9994,6 +10002,7 @@ open class VoicemailAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
@@ -10958,6 +10967,7 @@ open class VoicemailAPI {
       "consultParticipantId" : "aeiou",
       "screenRecordingState" : "aeiou",
       "queueName" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "calls" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",

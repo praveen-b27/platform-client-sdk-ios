@@ -651,6 +651,63 @@ open class UsersAPI {
     }
 
     
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsUsersDetailsJobsAvailability(completion: @escaping ((_ data: DataAvailabilityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsUsersDetailsJobsAvailabilityWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataAvailabilityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Lookup the datalake availability date and time
+     
+     - GET /api/v2/analytics/users/details/jobs/availability
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dataAvailabilityDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+
+     - returns: RequestBuilder<DataAvailabilityResponse> 
+     */
+    open class func getAnalyticsUsersDetailsJobsAvailabilityWithRequestBuilder() -> RequestBuilder<DataAvailabilityResponse> {
+        let path = "/api/v2/analytics/users/details/jobs/availability"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataAvailabilityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     
@@ -7114,7 +7171,13 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "homeOrganization" : "",
-    "authorizedScope" : [ "aeiou" ]
+    "authorizedScope" : [ "aeiou" ],
+    "clonedUser" : {
+      "organization" : {
+        "id" : "aeiou"
+      },
+      "id" : "aeiou"
+    }
   },
   "outOfOffice" : "",
   "routingSkills" : [ {

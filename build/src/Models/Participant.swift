@@ -87,6 +87,8 @@ public class Participant: Codable {
     public var alertingTimeoutMs: Int?
     /** If this participant is a monitor, then this will be the id of the participant that is being monitored. */
     public var monitoredParticipantId: String?
+    /** If this participant is a coach, then this will be the id of the participant that is being coached. */
+    public var coachedParticipantId: String?
     /** Additional participant attributes */
     public var attributes: [String:String]?
     public var calls: [Call]?
@@ -108,7 +110,7 @@ public class Participant: Codable {
     /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var endAcwTime: Date?
 
-    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, attributes: [String:String]?, calls: [Call]?, callbacks: [Callback]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?) {
+    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [Call]?, callbacks: [Callback]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?) {
         
         self._id = _id
         
@@ -167,6 +169,8 @@ public class Participant: Codable {
         self.alertingTimeoutMs = alertingTimeoutMs
         
         self.monitoredParticipantId = monitoredParticipantId
+        
+        self.coachedParticipantId = coachedParticipantId
         
         self.attributes = attributes
         
@@ -230,6 +234,7 @@ public class Participant: Codable {
         case conversationRoutingData
         case alertingTimeoutMs
         case monitoredParticipantId
+        case coachedParticipantId
         case attributes
         case calls
         case callbacks

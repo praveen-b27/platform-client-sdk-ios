@@ -2526,6 +2526,13 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum Expand_getWorkforcemanagementBusinessunitWeekSchedule: String { 
+        case managementunitsAgents = "managementUnits.agents"
+    }
+
+    
+    
     /**
      
      Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
@@ -2533,10 +2540,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter scheduleId: (path) The ID of the schedule 
+     - parameter expand: (query) expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId: String, weekId: Date, scheduleId: String, completion: @escaping ((_ data: BuScheduleMetadata?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId)
+    open class func getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId: String, weekId: Date, scheduleId: String, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedule? = nil, completion: @escaping ((_ data: BuScheduleMetadata?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, expand: expand)
         requestBuilder.execute { (response: Response<BuScheduleMetadata>?, error) -> Void in
             do {
                 if let e = error {
@@ -2603,10 +2611,11 @@ open class WorkforceManagementAPI {
      - parameter businessUnitId: (path) The ID of the business unit 
      - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter scheduleId: (path) The ID of the schedule 
+     - parameter expand: (query) expand (optional)
 
      - returns: RequestBuilder<BuScheduleMetadata> 
      */
-    open class func getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String) -> RequestBuilder<BuScheduleMetadata> {
+    open class func getWorkforcemanagementBusinessunitWeekScheduleWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, expand: Expand_getWorkforcemanagementBusinessunitWeekSchedule? = nil) -> RequestBuilder<BuScheduleMetadata> {
         var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}"
         let businessUnitIdPreEscape = "\(businessUnitId)"
         let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2625,7 +2634,12 @@ open class WorkforceManagementAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue
+            
+        ])
 
         let requestBuilder: RequestBuilder<BuScheduleMetadata>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -12582,6 +12596,120 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_postWorkforcemanagementManagementunitWorkplanValidate: String { 
+        case messages = "messages"
+    }
+
+    
+    
+    /**
+     
+     Validate Work Plan
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanId: (path) The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. 
+     - parameter body: (body) body (optional)
+     - parameter expand: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: String, workPlanId: String, body: WorkPlanValidationRequest? = nil, expand: [String]? = nil, completion: @escaping ((_ data: ValidateWorkPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, expand: expand)
+        requestBuilder.execute { (response: Response<ValidateWorkPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Validate Work Plan
+     
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "valid" : true,
+  "messages" : {
+    "violationMessages" : [ {
+      "arguments" : [ {
+        "type" : "aeiou",
+        "value" : "aeiou"
+      } ],
+      "type" : "aeiou"
+    } ],
+    "constraintConflictMessage" : {
+      "conflictedConstraintMessages" : [ {
+        "arguments" : [ "" ],
+        "type" : "aeiou"
+      } ],
+      "message" : {
+        "arguments" : [ "" ],
+        "type" : "aeiou"
+      }
+    }
+  },
+  "workPlan" : {
+    "managementUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanId: (path) The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. 
+     - parameter body: (body) body (optional)
+     - parameter expand: (query)  (optional)
+
+     - returns: RequestBuilder<ValidateWorkPlanResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitWorkplanValidateWithRequestBuilder(managementUnitId: String, workPlanId: String, body: WorkPlanValidationRequest? = nil, expand: [String]? = nil) -> RequestBuilder<ValidateWorkPlanResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let workPlanIdPreEscape = "\(workPlanId)"
+        let workPlanIdPostEscape = workPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workPlanId}", with: workPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ValidateWorkPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

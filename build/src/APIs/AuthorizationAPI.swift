@@ -286,6 +286,116 @@ open class AuthorizationAPI {
     
     
     
+    /**
+     
+     Gets all grants for a given division.
+     
+     - parameter divisionId: (path) Division ID 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationDivisionGrants(divisionId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AuthzDivisionGrantEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationDivisionGrantsWithRequestBuilder(divisionId: divisionId, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<AuthzDivisionGrantEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Gets all grants for a given division.
+     
+     - GET /api/v2/authorization/divisions/{divisionId}/grants
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "objectCounts" : {
+        "key" : 123456789
+      },
+      "id" : "aeiou",
+      "homeDivision" : true
+    },
+    "grantMadeAt" : "2000-01-23T04:56:07.000+0000",
+    "role" : {
+      "default" : true,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "policies" : [ {
+        "condition" : "aeiou",
+        "entityName" : "aeiou",
+        "domain" : "aeiou",
+        "actions" : [ "aeiou" ]
+      } ],
+      "description" : "aeiou",
+      "id" : "aeiou"
+    },
+    "subjectId" : "aeiou"
+  } ],
+  "pageSize" : 123
+}}]
+     
+     - parameter divisionId: (path) Division ID 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+
+     - returns: RequestBuilder<AuthzDivisionGrantEntityListing> 
+     */
+    open class func getAuthorizationDivisionGrantsWithRequestBuilder(divisionId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<AuthzDivisionGrantEntityListing> {
+        var path = "/api/v2/authorization/divisions/{divisionId}/grants"
+        let divisionIdPreEscape = "\(divisionId)"
+        let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{divisionId}", with: divisionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AuthzDivisionGrantEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
     
     
     

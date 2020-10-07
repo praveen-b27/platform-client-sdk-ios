@@ -133,6 +133,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastsGenerate) | Gone. Use equivalent business unit resource instead |
 | [**postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShorttermforecastsPartialupload) | Gone. Use equivalent business unit resource instead |
 | [**postWorkforcemanagementManagementunitWorkplanCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplanCopy) | Create a copy of work plan |
+| [**postWorkforcemanagementManagementunitWorkplanValidate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplanValidate) | Validate Work Plan |
 | [**postWorkforcemanagementManagementunitWorkplans**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplans) | Create a new work plan |
 | [**postWorkforcemanagementManagementunits**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunits) | Add a management unit |
 | [**postWorkforcemanagementNotificationsUpdate**](WorkforceManagementAPI.html#postWorkforcemanagementNotificationsUpdate) | Mark a list of notifications as read or unread |
@@ -1744,7 +1745,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplates(bu
 
 
 
-> [BuScheduleMetadata](BuScheduleMetadata.html) getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId)
+> [BuScheduleMetadata](BuScheduleMetadata.html) getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId, expand)
 
 Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
 
@@ -1768,9 +1769,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let businessUnitId: String = "" // The ID of the business unit
 let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let scheduleId: String = "" // The ID of the schedule
+let expand: WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekSchedule = WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekSchedule.enummember // expand
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1788,6 +1790,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedule(businessUn
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
+| **expand** | **String**| expand | [optional]<br />**Values**: managementunitsAgents ("managementUnits.agents") |
 {: class="table-striped"}
 
 
@@ -7185,6 +7188,65 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanCopy(managem
 ### Return type
 
 [**WorkPlan**](WorkPlan.html)
+
+<a name="postWorkforcemanagementManagementunitWorkplanValidate"></a>
+
+# **postWorkforcemanagementManagementunitWorkplanValidate**
+
+
+
+> [ValidateWorkPlanResponse](ValidateWorkPlanResponse.html) postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, body, expand)
+
+Validate Work Plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate  
+
+Requires ANY permissions: 
+
+* wfm:workPlan:add
+* wfm:workPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let workPlanId: String = "" // The ID of the work plan to validate. For new work plan, use the word 'new' for the ID.
+let body: WorkPlanValidationRequest = new WorkPlanValidationRequest(...) // body
+let expand: [String] = [WorkforceManagementAPI.Expand_postWorkforcemanagementManagementunitWorkplanValidate.enummember.rawValue] // 
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **workPlanId** | **String**| The ID of the work plan to validate. For new work plan, use the word &#39;new&#39; for the ID. | |
+| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest.html)| body | [optional] |
+| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: messages ("messages") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ValidateWorkPlanResponse**](ValidateWorkPlanResponse.html)
 
 <a name="postWorkforcemanagementManagementunitWorkplans"></a>
 

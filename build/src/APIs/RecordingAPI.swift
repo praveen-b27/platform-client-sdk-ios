@@ -117,13 +117,9 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "recoveredTime" : "2000-01-23T04:56:07.000+0000",
-  "fileState" : "aeiou",
+  "sourceOrphaningId" : "aeiou",
   "orphanStatus" : "aeiou",
   "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "mediaSizeBytes" : 123456789,
-  "createdTime" : "2000-01-23T04:56:07.000+0000",
   "recording" : {
     "maxAllowedRestorationsForOrg" : 123,
     "emailTranscript" : [ {
@@ -677,6 +673,12 @@ open class RecordingAPI {
     "endTime" : "aeiou"
   },
   "mediaType" : "aeiou",
+  "providerType" : "aeiou",
+  "recoveredTime" : "2000-01-23T04:56:07.000+0000",
+  "fileState" : "aeiou",
+  "name" : "aeiou",
+  "mediaSizeBytes" : 123456789,
+  "createdTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "providerEndpoint" : {
     "schema" : {
@@ -703,8 +705,7 @@ open class RecordingAPI {
     "properties" : {
       "key" : "{}"
     }
-  },
-  "providerType" : "aeiou"
+  }
 }}]
      
      - parameter orphanId: (path) Orphan ID 
@@ -3719,13 +3720,9 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "recoveredTime" : "2000-01-23T04:56:07.000+0000",
-  "fileState" : "aeiou",
+  "sourceOrphaningId" : "aeiou",
   "orphanStatus" : "aeiou",
   "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "mediaSizeBytes" : 123456789,
-  "createdTime" : "2000-01-23T04:56:07.000+0000",
   "recording" : {
     "maxAllowedRestorationsForOrg" : 123,
     "emailTranscript" : [ {
@@ -4279,6 +4276,12 @@ open class RecordingAPI {
     "endTime" : "aeiou"
   },
   "mediaType" : "aeiou",
+  "providerType" : "aeiou",
+  "recoveredTime" : "2000-01-23T04:56:07.000+0000",
+  "fileState" : "aeiou",
+  "name" : "aeiou",
+  "mediaSizeBytes" : 123456789,
+  "createdTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "providerEndpoint" : {
     "schema" : {
@@ -4305,8 +4308,7 @@ open class RecordingAPI {
     "properties" : {
       "key" : "{}"
     }
-  },
-  "providerType" : "aeiou"
+  }
 }}]
      
      - parameter orphanId: (path) Orphan ID 
@@ -5094,13 +5096,9 @@ open class RecordingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "recoveredTime" : "2000-01-23T04:56:07.000+0000",
-    "fileState" : "aeiou",
+    "sourceOrphaningId" : "aeiou",
     "orphanStatus" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "mediaSizeBytes" : 123456789,
-    "createdTime" : "2000-01-23T04:56:07.000+0000",
     "recording" : {
       "maxAllowedRestorationsForOrg" : 123,
       "emailTranscript" : [ {
@@ -5654,6 +5652,12 @@ open class RecordingAPI {
       "endTime" : "aeiou"
     },
     "mediaType" : "aeiou",
+    "providerType" : "aeiou",
+    "recoveredTime" : "2000-01-23T04:56:07.000+0000",
+    "fileState" : "aeiou",
+    "name" : "aeiou",
+    "mediaSizeBytes" : 123456789,
+    "createdTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "providerEndpoint" : {
       "schema" : {
@@ -5680,8 +5684,7 @@ open class RecordingAPI {
       "properties" : {
         "key" : "{}"
       }
-    },
-    "providerType" : "aeiou"
+    }
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -8965,6 +8968,7 @@ open class RecordingAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",

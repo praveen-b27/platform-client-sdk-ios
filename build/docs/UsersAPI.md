@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserStationDefaultstation**](UsersAPI.html#deleteUserStationDefaultstation) | Clear default station |
 | [**getAnalyticsUsersDetailsJob**](UsersAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](UsersAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
+| [**getAnalyticsUsersDetailsJobsAvailability**](UsersAPI.html#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
 | [**getAuthorizationDivisionspermittedMe**](UsersAPI.html#getAuthorizationDivisionspermittedMe) | Returns which divisions the current user has the given permission in. |
 | [**getAuthorizationDivisionspermittedPagedMe**](UsersAPI.html#getAuthorizationDivisionspermittedPagedMe) | Returns which divisions the current user has the given permission in. |
 | [**getAuthorizationDivisionspermittedPagedSubjectId**](UsersAPI.html#getAuthorizationDivisionspermittedPagedSubjectId) | Returns which divisions the specified user has the given permission in. |
@@ -605,6 +606,54 @@ UsersAPI.getAnalyticsUsersDetailsJobResults(jobId: jobId, cursor: cursor, pageSi
 ### Return type
 
 [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse.html)
+
+<a name="getAnalyticsUsersDetailsJobsAvailability"></a>
+
+# **getAnalyticsUsersDetailsJobsAvailability**
+
+
+
+> [DataAvailabilityResponse](DataAvailabilityResponse.html) getAnalyticsUsersDetailsJobsAvailability()
+
+Lookup the datalake availability date and time
+
+
+
+Wraps GET /api/v2/analytics/users/details/jobs/availability  
+
+Requires ANY permissions: 
+
+* analytics:userDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.getAnalyticsUsersDetailsJobsAvailability() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getAnalyticsUsersDetailsJobsAvailability was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**DataAvailabilityResponse**](DataAvailabilityResponse.html)
 
 <a name="getAuthorizationDivisionspermittedMe"></a>
 

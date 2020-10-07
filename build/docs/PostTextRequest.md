@@ -16,6 +16,7 @@ title: PostTextRequest
 | **botSessionTimeoutMinutes** | **Int** | Override timeout for the bot session. This should be greater than 10 minutes. | [optional] |
 | **botChannels** | **[String]** | The channels this bot is utilizing | [optional] |
 | **botCorrelationId** | **String** | Id for tracking the activity - this will be returned in the response | [optional] |
+| **messagingPlatformType** | **String** | If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics | [optional] |
 | **amazonLexRequest** | [**AmazonLexRequest**](AmazonLexRequest.html) |  | [optional] |
 | **googleDialogflow** | [**GoogleDialogflowCustomSettings**](GoogleDialogflowCustomSettings.html) |  | [optional] |
 {: class="table table-striped"}

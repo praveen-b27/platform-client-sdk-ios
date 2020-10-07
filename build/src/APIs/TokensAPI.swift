@@ -173,7 +173,13 @@ open class TokensAPI {
     "id" : "aeiou"
   },
   "homeOrganization" : "",
-  "authorizedScope" : [ "aeiou" ]
+  "authorizedScope" : [ "aeiou" ],
+  "clonedUser" : {
+    "organization" : {
+      "id" : "aeiou"
+    },
+    "id" : "aeiou"
+  }
 }}]
 
      - returns: RequestBuilder<TokenInfo> 

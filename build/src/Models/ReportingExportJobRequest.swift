@@ -57,6 +57,10 @@ public class ReportingExportJobRequest: Codable {
         case flowDestinationDetailView = "FLOW_DESTINATION_DETAIL_VIEW"
         case apiUsageView = "API_USAGE_VIEW"
     }
+    public enum CsvDelimiter: String, Codable { 
+        case semicolon = "SEMICOLON"
+        case comma = "COMMA"
+    }
     /** The user supplied name of the export request */
     public var name: String?
     /** The requested timezone of the exported data. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London */
@@ -83,6 +87,10 @@ public class ReportingExportJobRequest: Codable {
     public var excludeEmptyRows: Bool?
     /** Indicates if media type will be split in aggregate detail exports */
     public var hasSplitByMedia: Bool?
+    /** Indicates if summary row needs to be present in exports */
+    public var hasSummaryRow: Bool?
+    /** The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request */
+    public var csvDelimiter: CsvDelimiter?
     /** The list of ordered selected columns from the export view by the user */
     public var selectedColumns: [SelectedColumns]?
     /** Indicates if custom participant attributes will be exported */
@@ -90,7 +98,7 @@ public class ReportingExportJobRequest: Codable {
     /** The list of email recipients for the exports */
     public var recipientEmails: [String]?
 
-    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?) {
+    public init(name: String?, timeZone: String?, exportFormat: ExportFormat?, interval: String?, period: String?, viewType: ViewType?, filter: ViewFilter?, read: Bool?, locale: String?, hasFormatDurations: Bool?, hasSplitFilters: Bool?, excludeEmptyRows: Bool?, hasSplitByMedia: Bool?, hasSummaryRow: Bool?, csvDelimiter: CsvDelimiter?, selectedColumns: [SelectedColumns]?, hasCustomParticipantAttributes: Bool?, recipientEmails: [String]?) {
         
         self.name = name
         
@@ -117,6 +125,10 @@ public class ReportingExportJobRequest: Codable {
         self.excludeEmptyRows = excludeEmptyRows
         
         self.hasSplitByMedia = hasSplitByMedia
+        
+        self.hasSummaryRow = hasSummaryRow
+        
+        self.csvDelimiter = csvDelimiter
         
         self.selectedColumns = selectedColumns
         

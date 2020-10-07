@@ -2032,6 +2032,7 @@ open class SearchAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
@@ -2800,6 +2801,7 @@ open class SearchAPI {
     "categories" : [ {
       "knowledgeBase" : {
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "faqCount" : 123,
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
@@ -4225,6 +4227,7 @@ open class SearchAPI {
         "consultParticipantId" : "aeiou",
         "screenRecordingState" : "aeiou",
         "queueName" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "calls" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",

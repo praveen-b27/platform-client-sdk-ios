@@ -17,6 +17,7 @@ public class Organization: Codable {
         case deleted = "deleted"
     }
     public enum ProductPlatform: String, Codable { 
+        case genesysCloud = "GenesysCloud"
         case pureCloud = "PureCloud"
         case pureEngage = "PureEngage"
         case pureEngageCloud = "PureEngageCloud"

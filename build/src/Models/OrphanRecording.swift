@@ -53,10 +53,12 @@ public class OrphanRecording: Codable {
     public var recording: Recording?
     /** The status of the orphaned recording&#39;s conversation. */
     public var orphanStatus: OrphanStatus?
+    /** An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with */
+    public var sourceOrphaningId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, createdTime: Date?, recoveredTime: Date?, providerType: ProviderType?, mediaSizeBytes: Int64?, mediaType: MediaType?, fileState: FileState?, providerEndpoint: Endpoint?, recording: Recording?, orphanStatus: OrphanStatus?, selfUri: String?) {
+    public init(_id: String?, name: String?, createdTime: Date?, recoveredTime: Date?, providerType: ProviderType?, mediaSizeBytes: Int64?, mediaType: MediaType?, fileState: FileState?, providerEndpoint: Endpoint?, recording: Recording?, orphanStatus: OrphanStatus?, sourceOrphaningId: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -80,6 +82,8 @@ public class OrphanRecording: Codable {
         
         self.orphanStatus = orphanStatus
         
+        self.sourceOrphaningId = sourceOrphaningId
+        
         self.selfUri = selfUri
         
     }
@@ -96,6 +100,7 @@ public class OrphanRecording: Codable {
         case providerEndpoint
         case recording
         case orphanStatus
+        case sourceOrphaningId
         case selfUri
     }
 

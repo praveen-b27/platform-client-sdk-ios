@@ -89,7 +89,7 @@ public class AuditLogMessage: Codable {
     /** Action that took place. */
     public var action: Action?
     /** Entity that was impacted. */
-    public var entity: AddressableEntityRef?
+    public var entity: DomainEntityRef?
     /** Type of the entity that was impacted. */
     public var entityType: EntityType?
     /** List of properties that were changed and changes made to those properties. */
@@ -97,7 +97,7 @@ public class AuditLogMessage: Codable {
     /** Additional context for this message. */
     public var context: [String:String]?
 
-    public init(_id: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: AddressableEntityRef?, entityType: EntityType?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
+    public init(_id: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
         
         self._id = _id
         

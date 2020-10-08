@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSearchSuggest**](SearchAPI.html#getSearchSuggest) | Suggest resources using the q64 value returned from a previous suggest query. |
 | [**getUsersSearch**](SearchAPI.html#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**getVoicemailSearch**](SearchAPI.html#getVoicemailSearch) | Search voicemails using the q64 value returned from a previous search |
+| [**postAnalyticsConversationsTranscriptsQuery**](SearchAPI.html#postAnalyticsConversationsTranscriptsQuery) | Search resources. |
 | [**postDocumentationGknSearch**](SearchAPI.html#postDocumentationGknSearch) | Search gkn documentation |
 | [**postDocumentationSearch**](SearchAPI.html#postDocumentationSearch) | Search documentation |
 | [**postGroupsSearch**](SearchAPI.html#postGroupsSearch) | Search groups |
@@ -451,6 +452,58 @@ SearchAPI.getVoicemailSearch(q64: q64, expand: expand) { (response, error) in
 ### Return type
 
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html)
+
+<a name="postAnalyticsConversationsTranscriptsQuery"></a>
+
+# **postAnalyticsConversationsTranscriptsQuery**
+
+
+
+> [AnalyticsConversationWithoutAttributesMultiGetResponse](AnalyticsConversationWithoutAttributesMultiGetResponse.html) postAnalyticsConversationsTranscriptsQuery(body)
+
+Search resources.
+
+
+
+Wraps POST /api/v2/analytics/conversations/transcripts/query  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TranscriptConversationDetailSearchRequest = new TranscriptConversationDetailSearchRequest(...) // Search request options
+
+// Code example
+SearchAPI.postAnalyticsConversationsTranscriptsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.postAnalyticsConversationsTranscriptsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TranscriptConversationDetailSearchRequest**](TranscriptConversationDetailSearchRequest.html)| Search request options | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
 
 <a name="postDocumentationGknSearch"></a>
 

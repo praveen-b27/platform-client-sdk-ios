@@ -61,6 +61,7 @@ public class EventMessage: Codable {
         case importListNoLongerExists = "IMPORT_LIST_NO_LONGER_EXISTS"
         case importFailedContactZipCodeColumnValueInvalid = "IMPORT_FAILED_CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID"
         case importTooManyColumns = "IMPORT_TOO_MANY_COLUMNS"
+        case importTooManyExtraColumns = "IMPORT_TOO_MANY_EXTRA_COLUMNS"
         case organizationHasNoDomainSet = "ORGANIZATION_HAS_NO_DOMAIN_SET"
         case recycleCampaign = "RECYCLE_CAMPAIGN"
     }

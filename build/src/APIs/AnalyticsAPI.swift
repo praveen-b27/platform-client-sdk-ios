@@ -2810,6 +2810,244 @@ open class AnalyticsAPI {
     
     /**
      
+     Search resources.
+     
+     - parameter body: (body) Search request options 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsConversationsTranscriptsQuery(body: TranscriptConversationDetailSearchRequest, completion: @escaping ((_ data: AnalyticsConversationWithoutAttributesMultiGetResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsConversationsTranscriptsQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AnalyticsConversationWithoutAttributesMultiGetResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Search resources.
+     
+     - POST /api/v2/analytics/conversations/transcripts/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "conversations" : [ {
+    "conversationStart" : "2000-01-23T04:56:07.000+0000",
+    "mediaStatsMinConversationMos" : 1.3579000000000001069366817318950779736042022705078125,
+    "evaluations" : [ {
+      "formId" : "aeiou",
+      "queueId" : "aeiou",
+      "oTotalScore" : 123456789,
+      "oTotalCriticalScore" : 123456789,
+      "contextId" : "aeiou",
+      "userId" : "aeiou",
+      "evaluationId" : "aeiou",
+      "deleted" : true,
+      "formName" : "aeiou",
+      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "rescored" : true,
+      "evaluatorId" : "aeiou",
+      "calibrationId" : "aeiou"
+    } ],
+    "conversationId" : "aeiou",
+    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
+    "surveys" : [ {
+      "queueId" : "aeiou",
+      "surveyStatus" : "aeiou",
+      "oSurveyTotalScore" : 123456789,
+      "surveyId" : "aeiou",
+      "surveyFormName" : "aeiou",
+      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "surveyFormId" : "aeiou",
+      "surveyFormContextId" : "aeiou",
+      "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
+      "userId" : "aeiou",
+      "surveyPromoterScore" : 123
+    } ],
+    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "originatingDirection" : "aeiou",
+    "divisionIds" : [ "aeiou" ],
+    "participants" : [ {
+      "participantId" : "aeiou",
+      "sessions" : [ {
+        "usedRouting" : "aeiou",
+        "monitoredParticipantId" : "aeiou",
+        "cobrowseRole" : "aeiou",
+        "videoAddressSelf" : "aeiou",
+        "proposedAgents" : [ {
+          "proposedAgentId" : "aeiou",
+          "agentRank" : 123
+        } ],
+        "addressSelf" : "aeiou",
+        "skipEnabled" : true,
+        "journeyActionMapId" : "aeiou",
+        "remote" : "aeiou",
+        "roomId" : "aeiou",
+        "messageType" : "aeiou",
+        "requestedRoutings" : [ "aeiou" ],
+        "mediaCount" : 123,
+        "dnis" : "aeiou",
+        "videoRoomId" : "aeiou",
+        "flow" : {
+          "entryType" : "aeiou",
+          "issuedCallback" : true,
+          "exitReason" : "aeiou",
+          "transferTargetName" : "aeiou",
+          "flowVersion" : "aeiou",
+          "flowName" : "aeiou",
+          "transferTargetAddress" : "aeiou",
+          "outcomes" : [ {
+            "flowOutcomeId" : "aeiou",
+            "flowOutcome" : "aeiou",
+            "flowOutcomeStartTimestamp" : "2000-01-23T04:56:07.000+0000",
+            "flowOutcomeValue" : "aeiou",
+            "flowOutcomeEndTimestamp" : "2000-01-23T04:56:07.000+0000"
+          } ],
+          "transferType" : "aeiou",
+          "entryReason" : "aeiou",
+          "endingLanguage" : "aeiou",
+          "flowId" : "aeiou",
+          "startingLanguage" : "aeiou",
+          "flowType" : "aeiou"
+        },
+        "dispositionAnalyzer" : "aeiou",
+        "addressOther" : "aeiou",
+        "cobrowseRoomId" : "aeiou",
+        "protocolCallId" : "aeiou",
+        "mediaType" : "aeiou",
+        "monitoredSessionId" : "aeiou",
+        "flowOutType" : "aeiou",
+        "outboundCampaignId" : "aeiou",
+        "addressTo" : "aeiou",
+        "edgeId" : "aeiou",
+        "timeoutSeconds" : 123,
+        "metrics" : [ {
+          "name" : "aeiou",
+          "emitDate" : "2000-01-23T04:56:07.000+0000",
+          "value" : 123456789
+        } ],
+        "mediaBridgeId" : "aeiou",
+        "journeyActionMapVersion" : "aeiou",
+        "screenShareRoomId" : "aeiou",
+        "agentAssistantId" : "aeiou",
+        "outboundContactId" : "aeiou",
+        "peerId" : "aeiou",
+        "remoteNameDisplayable" : "aeiou",
+        "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "callbackNumbers" : [ "aeiou" ],
+        "recording" : true,
+        "screenShareAddressSelf" : "aeiou",
+        "sharingScreen" : true,
+        "sessionDnis" : "aeiou",
+        "segments" : [ {
+          "queueId" : "aeiou",
+          "conference" : true,
+          "subject" : "aeiou",
+          "sourceConversationId" : "aeiou",
+          "groupId" : "aeiou",
+          "errorCode" : "aeiou",
+          "requestedRoutingSkillIds" : [ "aeiou" ],
+          "segmentEnd" : "2000-01-23T04:56:07.000+0000",
+          "wrapUpNote" : "aeiou",
+          "destinationSessionId" : "aeiou",
+          "disconnectType" : "aeiou",
+          "segmentStart" : "2000-01-23T04:56:07.000+0000",
+          "requestedRoutingUserIds" : [ "aeiou" ],
+          "scoredAgents" : [ {
+            "scoredAgentId" : "aeiou",
+            "agentScore" : 123
+          } ],
+          "videoMuted" : true,
+          "q850ResponseCodes" : [ 123456789 ],
+          "audioMuted" : true,
+          "wrapUpCode" : "aeiou",
+          "destinationConversationId" : "aeiou",
+          "wrapUpTags" : [ "aeiou" ],
+          "sourceSessionId" : "aeiou",
+          "sipResponseCodes" : [ 123456789 ],
+          "requestedLanguageId" : "aeiou",
+          "segmentType" : "aeiou",
+          "properties" : [ {
+            "propertyType" : "aeiou",
+            "property" : "aeiou",
+            "value" : "aeiou"
+          } ]
+        } ],
+        "journeyCustomerSessionIdType" : "aeiou",
+        "provider" : "aeiou",
+        "journeyCustomerIdType" : "aeiou",
+        "journeyCustomerId" : "aeiou",
+        "callbackUserName" : "aeiou",
+        "addressFrom" : "aeiou",
+        "ani" : "aeiou",
+        "direction" : "aeiou",
+        "journeyCustomerSessionId" : "aeiou",
+        "sessionId" : "aeiou",
+        "journeyActionId" : "aeiou",
+        "dispositionName" : "disposition.classification.callable.machine",
+        "scriptId" : "aeiou",
+        "selectedAgentId" : "aeiou",
+        "mediaEndpointStats" : [ {
+          "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
+          "underrunPackets" : 123456789,
+          "overrunPackets" : 123456789,
+          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxLatencyMs" : 123456789,
+          "codecs" : [ "aeiou" ],
+          "receivedPackets" : 123456789,
+          "duplicatePackets" : 123456789,
+          "invalidPackets" : 123456789,
+          "discardedPackets" : 123456789
+        } ],
+        "selectedAgentRank" : 123,
+        "outboundContactListId" : "aeiou"
+      } ],
+      "externalContactId" : "aeiou",
+      "purpose" : "aeiou",
+      "teamId" : "aeiou",
+      "externalOrganizationId" : "aeiou",
+      "participantName" : "aeiou",
+      "userId" : "aeiou",
+      "flaggedReason" : "aeiou"
+    } ]
+  } ]
+}}]
+     
+     - parameter body: (body) Search request options 
+
+     - returns: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> 
+     */
+    open class func postAnalyticsConversationsTranscriptsQueryWithRequestBuilder(body: TranscriptConversationDetailSearchRequest) -> RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse> {
+        let path = "/api/v2/analytics/conversations/transcripts/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Query for evaluation aggregates
      
      - parameter body: (body) query 

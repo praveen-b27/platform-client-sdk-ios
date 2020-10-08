@@ -22,7 +22,7 @@ public class CoachingAppointmentAggregateRequest: Codable {
     public enum GroupBy: String, Codable { 
         case attendeeid = "attendeeId"
     }
-    /** Interval to aggregate across. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
+    /** Interval to aggregate across. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?
     /** A list of metrics to aggregate.  If omitted, all metrics are returned. */
     public var metrics: [Metrics]?

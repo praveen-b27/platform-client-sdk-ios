@@ -52,6 +52,7 @@ public class ReportingExportMetadataJobResponse: Codable {
         case flowDestinationSummaryView = "FLOW_DESTINATION_SUMMARY_VIEW"
         case flowDestinationDetailView = "FLOW_DESTINATION_DETAIL_VIEW"
         case apiUsageView = "API_USAGE_VIEW"
+        case scheduledCallbacksView = "SCHEDULED_CALLBACKS_VIEW"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

@@ -745,8 +745,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -885,8 +885,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -3256,8 +3256,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -3355,8 +3355,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },

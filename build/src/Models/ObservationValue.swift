@@ -31,7 +31,7 @@ public class ObservationValue: Codable {
         case bullseye = "Bullseye"
         case standard = "Standard"
     }
-    /** The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var observationDate: Date?
     /** Unique identifier for the conversation */
     public var conversationId: String?

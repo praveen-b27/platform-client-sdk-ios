@@ -30,6 +30,7 @@ title: ConversationEventTopicParticipant
 | **conversationRoutingData** | [**ConversationEventTopicConversationRoutingData**](ConversationEventTopicConversationRoutingData.html) |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **monitoredParticipantId** | **String** |  | [optional] |
+| **coachedParticipantId** | **String** |  | [optional] |
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |

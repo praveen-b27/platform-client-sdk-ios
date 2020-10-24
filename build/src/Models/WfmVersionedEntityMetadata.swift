@@ -16,7 +16,7 @@ public class WfmVersionedEntityMetadata: Codable {
     public var version: Int?
     /** The user who last modified the associated entity */
     public var modifiedBy: UserReference?
-    /** The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the associated entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
 
     public init(version: Int?, modifiedBy: UserReference?, dateModified: Date?) {

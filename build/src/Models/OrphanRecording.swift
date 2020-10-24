@@ -41,9 +41,9 @@ public class OrphanRecording: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdTime: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var recoveredTime: Date?
     public var providerType: ProviderType?
     public var mediaSizeBytes: Int64?

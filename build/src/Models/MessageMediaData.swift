@@ -11,11 +11,6 @@ import Foundation
 
 public class MessageMediaData: Codable {
 
-    public enum MediaType: String, Codable { 
-        case imagePng = "image/png"
-        case imageJpeg = "image/jpeg"
-        case imageGif = "image/gif"
-    }
     public enum Status: String, Codable { 
         case uploading = "uploading"
         case valid = "valid"
@@ -26,8 +21,8 @@ public class MessageMediaData: Codable {
     public var name: String?
     /** The location of the media, useful for retrieving it */
     public var url: String?
-    /** The optional internet media type of the the media object.  If null then the media type should be dictated by the url. */
-    public var mediaType: MediaType?
+    /** The detected internet media type of the the media object.  If null then the media type should be dictated by the url. */
+    public var mediaType: String?
     /** The optional content length of the the media object, in bytes. */
     public var contentLengthBytes: Int?
     /** The URL returned to upload an attachment */
@@ -37,7 +32,7 @@ public class MessageMediaData: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, url: String?, mediaType: MediaType?, contentLengthBytes: Int?, uploadUrl: String?, status: Status?, selfUri: String?) {
+    public init(_id: String?, name: String?, url: String?, mediaType: String?, contentLengthBytes: Int?, uploadUrl: String?, status: Status?, selfUri: String?) {
         
         self._id = _id
         

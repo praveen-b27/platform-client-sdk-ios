@@ -13,7 +13,7 @@ title: SendAgentlessOutboundMessageResponse
 | **toAddress** | **String** | The recipient of the text message. | [optional] |
 | **messengerType** | **String** | Type of text messenger. | [optional] |
 | **textBody** | **String** | The body of the text message. | [optional] |
-| **timestamp** | [**Date**](Date.html) | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **timestamp** | [**Date**](Date.html) | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **user** | [**AddressableEntityRef**](AddressableEntityRef.html) | Details of the user created the job | [optional] |
 {: class="table table-striped"}

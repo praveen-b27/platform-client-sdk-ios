@@ -15,7 +15,7 @@ public class SurveyForm: Codable {
     public var _id: String?
     /** The survey form name */
     public var name: String?
-    /** Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     /** Is this form published */
     public var published: Bool?

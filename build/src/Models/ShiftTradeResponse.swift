@@ -31,26 +31,26 @@ public class ShiftTradeResponse: Codable {
     public var initiatingUser: UserReference?
     /** The ID of the shift offered for trade by the initiating user */
     public var initiatingShiftId: String?
-    /** The start date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var initiatingShiftStart: Date?
-    /** The end date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The end date/time of the shift being offered for trade. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var initiatingShiftEnd: Date?
     /** The user matching the trade, or if the state is not Matched, the user to whom the trade request was sent */
     public var receivingUser: UserReference?
     /** The ID of the shift being exchanged for the initiating shift, null if the receiving user is picking up a shift */
     public var receivingShiftId: String?
-    /** The start date/time of the receiving shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start date/time of the receiving shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var receivingShiftStart: Date?
-    /** The end date/time of the receiving shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The end date/time of the receiving shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var receivingShiftEnd: Date?
-    /** When this shift trade offer will expire if not matched or approved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** When this shift trade offer will expire if not matched or approved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var expiration: Date?
     /** Whether this is a one-sided shift trade (e.g. the initiating user is not asking for a shift in return) */
     public var oneSided: Bool?
     public var acceptableIntervals: [String]?
     /** The user who reviewed this shift trade */
     public var reviewedBy: UserReference?
-    /** The timestamp when this shift trade was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this shift trade was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var reviewedDate: Date?
     /** Version data for this trade */
     public var metadata: WfmVersionedEntityMetadata?

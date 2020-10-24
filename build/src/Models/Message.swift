@@ -64,13 +64,13 @@ public class Message: Codable {
     public var errorInfo: ErrorBody?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
-    /** The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp the message was placed on hold in the cloud clock if the message is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startHoldTime: Date?
-    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startAlertingTime: Date?
-    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var connectedTime: Date?
-    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var disconnectedTime: Date?
     /** The source provider for the message. */
     public var provider: String?
@@ -90,6 +90,8 @@ public class Message: Codable {
     public var fromAddress: Address?
     /** The messages sent on this communication channel. */
     public var messages: [MessageDetails]?
+    /** A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). */
+    public var journeyContext: JourneyContext?
     /** Call wrap up or disposition data. */
     public var wrapup: Wrapup?
     /** After-call work for the communication. */
@@ -97,7 +99,7 @@ public class Message: Codable {
     /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
         
         self.state = state
         
@@ -141,6 +143,8 @@ public class Message: Codable {
         
         self.messages = messages
         
+        self.journeyContext = journeyContext
+        
         self.wrapup = wrapup
         
         self.afterCallWork = afterCallWork
@@ -171,6 +175,7 @@ public class Message: Codable {
         case toAddress
         case fromAddress
         case messages
+        case journeyContext
         case wrapup
         case afterCallWork
         case afterCallWorkRequired

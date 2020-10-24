@@ -26,7 +26,7 @@ public class CallHistoryConversation: Codable {
     public var wentToVoicemail: Bool?
     /** Did the user not answer this conversation */
     public var missedCall: Bool?
-    /** The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time the user joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startTime: Date?
     /** Was this conversation a conference */
     public var wasConference: Bool?

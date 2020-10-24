@@ -465,8 +465,8 @@ let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let startTime: Date = new Date(...) // Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-let endTime: Date = new Date(...) // End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+let startTime: Date = new Date(...) // Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let endTime: Date = new Date(...) // End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
 let agentUserId: [String] = [""] // user id of agent requested
 let evaluatorUserId: String = "" // user id of the evaluator
 let name: String = "" // name
@@ -494,8 +494,8 @@ QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, 
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **startTime** | **Date**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **endTime** | **Date**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **startTime** | **Date**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **endTime** | **Date**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **agentUserId** | [**[String]**](String.html)| user id of agent requested | [optional] |
 | **evaluatorUserId** | **String**| user id of the evaluator | [optional] |
 | **name** | **String**| name | [optional] |
@@ -597,8 +597,8 @@ let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let conversationId: String = "" // conversation id
-let startTime: Date = new Date(...) // Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-let endTime: Date = new Date(...) // end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+let startTime: Date = new Date(...) // Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let endTime: Date = new Date(...) // end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
 
 // Code example
 QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, startTime: startTime, endTime: endTime) { (response, error) in
@@ -624,8 +624,8 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversation id | [optional] |
-| **startTime** | **Date**| Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **endTime** | **Date**| end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **startTime** | **Date**| Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **endTime** | **Date**| end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table-striped"}
 
 
@@ -932,8 +932,8 @@ let sortBy: String = "" // variable name requested to sort by
 let expand: [String] = [""] // variable name requested by expand list
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let startTime: Date = new Date(...) // The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-let endTime: Date = new Date(...) // The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+let startTime: Date = new Date(...) // The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let endTime: Date = new Date(...) // The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
 let name: String = "" // Evaluator name
 let permission: [String] = [""] // permission strings
 let group: String = "" // group id
@@ -960,8 +960,8 @@ QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumb
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **startTime** | **Date**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **endTime** | **Date**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **startTime** | **Date**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **endTime** | **Date**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **name** | **String**| Evaluator name | [optional] |
 | **permission** | [**[String]**](String.html)| permission strings | [optional] |
 | **group** | **String**| group id | [optional] |

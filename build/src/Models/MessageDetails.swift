@@ -28,7 +28,7 @@ public class MessageDetails: Codable {
     public var messageStatus: MessageStatus?
     /** The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits. */
     public var messageSegmentCount: Int?
-    /** The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var messageTime: Date?
     /** The media (images, files, etc) associated with this message, if any */
     public var media: [MessageMedia]?

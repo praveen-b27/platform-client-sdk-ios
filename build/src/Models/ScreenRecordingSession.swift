@@ -18,7 +18,7 @@ public class ScreenRecordingSession: Codable {
     /** The id of the communication that is being recorded on the conversation */
     public var communicationId: String?
     public var conversation: Conversation?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startTime: Date?
     /** The URI for this object */
     public var selfUri: String?

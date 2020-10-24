@@ -18,10 +18,10 @@ public class Attribute: Codable {
     public var version: Int?
     public var _description: String?
     public var createdBy: DomainEntityRef?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     public var modifiedBy: DomainEntityRef?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The URI for this object */
     public var selfUri: String?

@@ -29,9 +29,9 @@ public class DataTableImportJob: Codable {
     public var owner: AddressableEntityRef?
     /** The status of the import job */
     public var status: Status?
-    /** The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp of when the import began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp of when the import stopped (either successfully or unsuccessfully). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
     /** The URL of the location at which the caller can upload the file to be imported */
     public var uploadURI: String?

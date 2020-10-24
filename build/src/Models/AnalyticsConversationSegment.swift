@@ -47,9 +47,9 @@ public class AnalyticsConversationSegment: Codable {
         case uploading = "uploading"
         case sharing = "sharing"
     }
-    /** The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var segmentStart: Date?
-    /** The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var segmentEnd: Date?
     /** Queue identifier */
     public var queueId: String?

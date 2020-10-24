@@ -15,7 +15,7 @@ public class ExternalOrganizationTrustorLink: Codable {
     public var externalOrganizationId: String?
     /** The id of a PureCloud organization that has granted trust to this PureCloud organization */
     public var trustorOrgId: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The URI for the External Organization that is linked to the trustor org */
     public var externalOrganizationUri: String?

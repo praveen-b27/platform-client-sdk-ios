@@ -17,9 +17,9 @@ public class AnalyticsConversation: Codable {
     }
     /** Unique identifier for the conversation */
     public var conversationId: String?
-    /** Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conversationStart: Date?
-    /** Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conversationEnd: Date?
     /** The lowest estimated average MOS among all the audio streams belonging to this conversation */
     public var mediaStatsMinConversationMos: Double?

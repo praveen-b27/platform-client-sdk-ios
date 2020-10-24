@@ -30,7 +30,7 @@ public class GroupCreate: Codable {
     /** The group name. */
     public var name: String?
     public var _description: String?
-    /** Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** Number of members. */
     public var memberCount: Int64?

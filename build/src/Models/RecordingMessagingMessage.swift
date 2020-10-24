@@ -15,7 +15,7 @@ public class RecordingMessagingMessage: Codable {
     public var fromUser: User?
     public var fromExternalContact: ExternalContact?
     public var to: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     public var _id: String?
     public var messageText: String?

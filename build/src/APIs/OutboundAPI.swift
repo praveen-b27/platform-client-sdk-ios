@@ -2900,20 +2900,25 @@ open class OutboundAPI {
         "messages" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-          "wrapup" : "",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : "",
           "type" : "aeiou",
           "toAddress" : "",
           "segments" : [ "" ],
-          "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "journeyContext" : "",
           "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
+          "fromAddress" : "",
+          "state" : "aeiou",
+          "id" : "aeiou",
+          "direction" : "aeiou",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
+          "scriptId" : "aeiou",
           "messages" : [ {
             "messageStatus" : "aeiou",
             "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -2933,12 +2938,8 @@ open class OutboundAPI {
             "messageSegmentCount" : 123
           } ],
           "recipientCountry" : "aeiou",
-          "fromAddress" : "",
-          "state" : "aeiou",
-          "id" : "aeiou",
           "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-          "recordingId" : "aeiou",
-          "direction" : "aeiou"
+          "recordingId" : "aeiou"
         } ],
         "socialExpressions" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",

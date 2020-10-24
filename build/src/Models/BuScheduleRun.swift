@@ -37,19 +37,19 @@ public class BuScheduleRun: Codable {
     public var schedule: BuScheduleReference?
     /** The description of the generated schedule */
     public var scheduleDescription: String?
-    /** When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** When the schedule generation run started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var schedulingStartTime: Date?
     /** The user who started the scheduling run */
     public var schedulingStartedBy: UserReference?
     /** The user who canceled the scheduling run, if applicable */
     public var schedulingCanceledBy: UserReference?
-    /** When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var schedulingCompletedTime: Date?
     /** The number of schedule generation messages for this schedule generation run */
     public var messageCount: Int?
     /** Rescheduling options for this run.  Null unless intradayRescheduling is true */
     public var reschedulingOptions: ReschedulingOptionsRunResponse?
-    /** When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var reschedulingResultExpiration: Date?
     /** The URI for this object */
     public var selfUri: String?

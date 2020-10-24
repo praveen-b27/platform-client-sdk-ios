@@ -38,9 +38,9 @@ public class MessagingIntegration: Codable {
     public var messengerType: MessengerType?
     /** The recipient associated to the Integration. This recipient is used to associate a flow to an integration */
     public var recipient: DomainEntityRef?
-    /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** User reference that created this Integration */
     public var createdBy: DomainEntityRef?

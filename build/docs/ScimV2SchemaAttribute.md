@@ -8,7 +8,7 @@ A complex type that defines service provider attributes or subattributes and the
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **name** | **String** | The attribute&#39;s name | [optional] |
+| **name** | **String** | The name of the attribute. | [optional] |
 | **type** | **String** | The data type of the attribute. | [optional] |
 | **subAttributes** | [**[ScimV2SchemaAttribute]**](ScimV2SchemaAttribute.html) | The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;. | [optional] |
 | **multiValued** | **Bool** | Indicates whether an attribute contains multiple values. | [optional] |

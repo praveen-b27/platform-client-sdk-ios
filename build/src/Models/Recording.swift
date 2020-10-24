@@ -48,21 +48,21 @@ public class Recording: Codable {
     public var messagingTranscript: [RecordingMessagingMessage]?
     /** Represents the current file state for a recording. Examples: Uploading, Archived, etc */
     public var fileState: FileState?
-    /** The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var restoreExpirationTime: Date?
     /** The different mediaUris for the recording. Null when there is no playable media. */
     public var mediaUris: [String:MediaResult]?
     public var estimatedTranscodeTimeMs: Int64?
     public var actualTranscodeTimeMs: Int64?
-    /** The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var archiveDate: Date?
     /** The type of archive medium used. Example: CloudArchive */
     public var archiveMedium: ArchiveMedium?
-    /** The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var deleteDate: Date?
-    /** The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var exportDate: Date?
-    /** The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var exportedDate: Date?
     /** Duration of transcoded media in milliseconds */
     public var outputDurationMs: Int?

@@ -38,8 +38,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let dateStart: Date = new Date(...) // Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-let dateEnd: Date = new Date(...) // End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+let dateStart: Date = new Date(...) // Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let dateEnd: Date = new Date(...) // End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
 let callId: String = "" // unique identification of the placed call
 let toUser: String = "" // User to who the call was placed
 let fromUser: String = "" // user who placed the call
@@ -61,8 +61,8 @@ TelephonyAPI.getTelephonySiptraces(dateStart: dateStart, dateEnd: dateEnd, callI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dateStart** | **Date**| Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
-| **dateEnd** | **Date**| End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | |
+| **dateStart** | **Date**| Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **dateEnd** | **Date**| End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **callId** | **String**| unique identification of the placed call | [optional] |
 | **toUser** | **String**| User to who the call was placed | [optional] |
 | **fromUser** | **String**| user who placed the call | [optional] |

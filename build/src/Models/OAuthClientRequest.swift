@@ -40,7 +40,7 @@ public class OAuthClientRequest: Codable {
     public var roleDivisions: [RoleDivision]?
     /** The state of the OAuth client. Active: The OAuth client can be used to create access tokens. This is the default state. Disabled: Access tokens created by the client are invalid and new ones cannot be created. Inactive: Access tokens cannot be created with this OAuth client and it will be deleted. */
     public var state: State?
-    /** The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time at which this client will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateToDelete: Date?
 
     public init(name: String?, accessTokenValiditySeconds: Int64?, _description: String?, registeredRedirectUri: [String]?, roleIds: [String]?, authorizedGrantType: AuthorizedGrantType?, scope: [String]?, roleDivisions: [RoleDivision]?, state: State?, dateToDelete: Date?) {

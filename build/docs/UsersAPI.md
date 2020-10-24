@@ -44,6 +44,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserSuperiors**](UsersAPI.html#getUserSuperiors) | Get superiors |
 | [**getUserTrustors**](UsersAPI.html#getUserTrustors) | List the organizations that have authorized/trusted the user. |
 | [**getUsers**](UsersAPI.html#getUsers) | Get the list of available users. |
+| [**getUsersDevelopmentActivities**](UsersAPI.html#getUsersDevelopmentActivities) | Get list of Development Activities |
+| [**getUsersDevelopmentActivitiesMe**](UsersAPI.html#getUsersDevelopmentActivitiesMe) | Get list of Development Activities for current user |
+| [**getUsersDevelopmentActivity**](UsersAPI.html#getUsersDevelopmentActivity) | Get a Development Activity |
 | [**getUsersMe**](UsersAPI.html#getUsersMe) | Get current user details. |
 | [**getUsersSearch**](UsersAPI.html#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**patchUser**](UsersAPI.html#patchUser) | Update user |
@@ -67,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUserRoutinglanguages**](UsersAPI.html#postUserRoutinglanguages) | Add routing language to user |
 | [**postUserRoutingskills**](UsersAPI.html#postUserRoutingskills) | Add routing skill to user |
 | [**postUsers**](UsersAPI.html#postUsers) | Create user |
+| [**postUsersDevelopmentActivitiesAggregatesQuery**](UsersAPI.html#postUsersDevelopmentActivitiesAggregatesQuery) | Retrieve aggregated development activity data |
 | [**postUsersMePassword**](UsersAPI.html#postUsersMePassword) | Change your password |
 | [**postUsersSearch**](UsersAPI.html#postUsersSearch) | Search users |
 | [**putRoutingUserUtilization**](UsersAPI.html#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
@@ -1588,6 +1592,7 @@ Requires ANY permissions:
 
 * routing:queue:view
 * routing:queue:join
+* routing:queueMember:manage
 
 ### Example
 
@@ -2073,6 +2078,203 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 
 [**UserEntityListing**](UserEntityListing.html)
 
+<a name="getUsersDevelopmentActivities"></a>
+
+# **getUsersDevelopmentActivities**
+
+
+
+> [DevelopmentActivityListing](DevelopmentActivityListing.html) getUsersDevelopmentActivities(userId, moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship)
+
+Get list of Development Activities
+
+Either moduleId or userId is required. Results are filtered based on the applicable permissions.
+
+Wraps GET /api/v2/users/development/activities  
+
+Requires ANY permissions: 
+
+* learning:assignment:view
+* coaching:appointment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: [String] = [""] // Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId.
+let moduleId: String = "" // Specifies the ID of the learning module.
+let interval: String = "" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let completionInterval: String = "" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let overdue: UsersAPI.Overdue_getUsersDevelopmentActivities = UsersAPI.Overdue_getUsersDevelopmentActivities.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortOrder: UsersAPI.SortOrder_getUsersDevelopmentActivities = UsersAPI.SortOrder_getUsersDevelopmentActivities.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)
+let types: [String] = [UsersAPI.Types_getUsersDevelopmentActivities.enummember.rawValue] // Specifies the activity types.
+let statuses: [String] = [UsersAPI.Statuses_getUsersDevelopmentActivities.enummember.rawValue] // Specifies the activity statuses to filter by
+let relationship: [String] = [UsersAPI.Relationship_getUsersDevelopmentActivities.enummember.rawValue] // Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned.
+
+// Code example
+UsersAPI.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersDevelopmentActivities was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | [**[String]**](String.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. | [optional] |
+| **moduleId** | **String**| Specifies the ID of the learning module. | [optional] |
+| **interval** | **String**| Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
+| **completionInterval** | **String**| Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
+| **overdue** | **String**| Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching") |
+| **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
+| **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DevelopmentActivityListing**](DevelopmentActivityListing.html)
+
+<a name="getUsersDevelopmentActivitiesMe"></a>
+
+# **getUsersDevelopmentActivitiesMe**
+
+
+
+> [DevelopmentActivityListing](DevelopmentActivityListing.html) getUsersDevelopmentActivitiesMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship)
+
+Get list of Development Activities for current user
+
+Results are filtered based on the applicable permissions.
+
+Wraps GET /api/v2/users/development/activities/me  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // Specifies the ID of the learning module.
+let interval: String = "" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let completionInterval: String = "" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let overdue: UsersAPI.Overdue_getUsersDevelopmentActivitiesMe = UsersAPI.Overdue_getUsersDevelopmentActivitiesMe.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortOrder: UsersAPI.SortOrder_getUsersDevelopmentActivitiesMe = UsersAPI.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)
+let types: [String] = [UsersAPI.Types_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies the activity types.
+let statuses: [String] = [UsersAPI.Statuses_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies the activity statuses to filter by
+let relationship: [String] = [UsersAPI.Relationship_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned.
+
+// Code example
+UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersDevelopmentActivitiesMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **moduleId** | **String**| Specifies the ID of the learning module. | [optional] |
+| **interval** | **String**| Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
+| **completionInterval** | **String**| Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
+| **overdue** | **String**| Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching") |
+| **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
+| **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DevelopmentActivityListing**](DevelopmentActivityListing.html)
+
+<a name="getUsersDevelopmentActivity"></a>
+
+# **getUsersDevelopmentActivity**
+
+
+
+> [DevelopmentActivity](DevelopmentActivity.html) getUsersDevelopmentActivity(activityId, type)
+
+Get a Development Activity
+
+
+
+Wraps GET /api/v2/users/development/activities/{activityId}  
+
+Requires ANY permissions: 
+
+* learning:assignment:view
+* coaching:appointment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let activityId: String = "" // Specifies the activity ID, maps to either assignment or appointment ID
+let type: UsersAPI.ModelType_getUsersDevelopmentActivity = UsersAPI.ModelType_getUsersDevelopmentActivity.enummember // Specifies the activity type.
+
+// Code example
+UsersAPI.getUsersDevelopmentActivity(activityId: activityId, type: type) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersDevelopmentActivity was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **activityId** | **String**| Specifies the activity ID, maps to either assignment or appointment ID | |
+| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DevelopmentActivity**](DevelopmentActivity.html)
+
 <a name="getUsersMe"></a>
 
 # **getUsersMe**
@@ -2357,9 +2559,10 @@ Join or unjoin a queue for a user
 
 Wraps PATCH /api/v2/users/{userId}/queues/{queueId}  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:queue:join
+* routing:queueMember:manage
 
 ### Example
 
@@ -2416,6 +2619,7 @@ Wraps PATCH /api/v2/users/{userId}/queues
 Requires ANY permissions: 
 
 * routing:queue:join
+* routing:queueMember:manage
 
 ### Example
 
@@ -3313,6 +3517,59 @@ UsersAPI.postUsers(body: body) { (response, error) in
 ### Return type
 
 [**User**](User.html)
+
+<a name="postUsersDevelopmentActivitiesAggregatesQuery"></a>
+
+# **postUsersDevelopmentActivitiesAggregatesQuery**
+
+
+
+> [DevelopmentActivityAggregateResponse](DevelopmentActivityAggregateResponse.html) postUsersDevelopmentActivitiesAggregatesQuery(body)
+
+Retrieve aggregated development activity data
+
+Results are filtered based on the applicable permissions.
+
+Wraps POST /api/v2/users/development/activities/aggregates/query  
+
+Requires ANY permissions: 
+
+* learning:assignment:view
+* coaching:appointment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DevelopmentActivityAggregateParam = new DevelopmentActivityAggregateParam(...) // Aggregate Request
+
+// Code example
+UsersAPI.postUsersDevelopmentActivitiesAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postUsersDevelopmentActivitiesAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DevelopmentActivityAggregateParam**](DevelopmentActivityAggregateParam.html)| Aggregate Request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DevelopmentActivityAggregateResponse**](DevelopmentActivityAggregateResponse.html)
 
 <a name="postUsersMePassword"></a>
 

@@ -17,7 +17,7 @@ public class AddShiftTradeRequest: Codable {
     public var initiatingShiftId: String?
     /** The ID of the user to whom to send the request (for use in direct trade requests) */
     public var receivingUserId: String?
-    /** When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var expiration: Date?
     public var acceptableIntervals: [String]?
 

@@ -9,7 +9,7 @@ title: EvaluationForm
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The evaluation form name | |
-| **modifiedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **modifiedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **published** | **Bool** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
 | **questionGroups** | [**[EvaluationQuestionGroup]**](EvaluationQuestionGroup.html) | A list of question groups | |

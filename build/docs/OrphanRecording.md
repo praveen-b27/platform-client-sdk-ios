@@ -9,8 +9,8 @@ title: OrphanRecording
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **createdTime** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **recoveredTime** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **createdTime** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **recoveredTime** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **providerType** | **String** |  | [optional] |
 | **mediaSizeBytes** | **Int64** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |

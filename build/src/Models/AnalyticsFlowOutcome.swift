@@ -17,9 +17,9 @@ public class AnalyticsFlowOutcome: Codable {
     public var flowOutcomeValue: String?
     /** Colon-separated combinations of unique flow outcome identifier and value */
     public var flowOutcome: String?
-    /** Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var flowOutcomeStartTimestamp: Date?
-    /** Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var flowOutcomeEndTimestamp: Date?
 
     public init(flowOutcomeId: String?, flowOutcomeValue: String?, flowOutcome: String?, flowOutcomeStartTimestamp: Date?, flowOutcomeEndTimestamp: Date?) {

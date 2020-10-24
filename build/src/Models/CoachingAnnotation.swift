@@ -19,11 +19,11 @@ public class CoachingAnnotation: Codable {
     public var _id: String?
     /** The user who created the annotation. */
     public var createdBy: UserReference?
-    /** The date/time the annotation was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the annotation was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The last user to modify the annotation. */
     public var modifiedBy: UserReference?
-    /** The date/time the annotation was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the annotation was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The text of the annotation. */
     public var text: String?

@@ -19,7 +19,7 @@ public class NluFeedbackResponse: Codable {
     public var intents: [IntentFeedback]?
     /** The domain version of the feedback. */
     public var version: NluDomainVersion?
-    /** The date when the feedback was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date when the feedback was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The URI for this object */
     public var selfUri: String?

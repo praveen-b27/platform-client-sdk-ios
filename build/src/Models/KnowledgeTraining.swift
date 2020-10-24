@@ -26,9 +26,9 @@ public class KnowledgeTraining: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** Trigger date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Trigger date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateTriggered: Date?
-    /** Training completed date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Training completed date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
     /** Training status */
     public var status: Status?
@@ -40,7 +40,7 @@ public class KnowledgeTraining: Codable {
     public var errorMessage: String?
     /** State of the Trained Documents, which can be one of these Draft, Active, Discarded, Archived. */
     public var knowledgeDocumentsState: KnowledgeDocumentsState?
-    /** Trained Documents Promoted date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Trained Documents Promoted date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var datePromoted: Date?
     /** The URI for this object */
     public var selfUri: String?

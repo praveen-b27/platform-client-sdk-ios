@@ -21,7 +21,7 @@ public class Wrapup: Codable {
     public var tags: [String]?
     /** The length of time in seconds that the agent spent doing after call work. */
     public var durationSeconds: Int?
-    /** The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
     /** Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. */
     public var provisional: Bool?

@@ -19,7 +19,7 @@ public class AssignedWrapupCode: Codable {
     public var tags: [String]?
     /** The duration in seconds of the wrap-up segment. */
     public var durationSeconds: Int?
-    /** The timestamp when the wrap-up segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when the wrap-up segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
 
     public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {

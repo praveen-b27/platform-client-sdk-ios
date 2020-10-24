@@ -25,9 +25,9 @@ public class KnowledgeExtendedCategory: Codable {
     public var knowledgeBase: KnowledgeBase?
     /** Actual language of the category */
     public var languageCode: LanguageCode?
-    /** Category creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Category creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** Category last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Category last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** Category parent */
     public var parent: KnowledgeCategory?

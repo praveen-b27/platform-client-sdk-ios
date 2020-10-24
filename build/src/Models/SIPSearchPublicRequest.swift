@@ -24,9 +24,9 @@ public class SIPSearchPublicRequest: Codable {
     public var conversationId: String?
     /** Unique identification of the participant */
     public var participantId: String?
-    /** Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateStart: Date?
-    /** End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateEnd: Date?
     /** The URI for this object */
     public var selfUri: String?

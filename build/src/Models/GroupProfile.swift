@@ -21,7 +21,7 @@ public class GroupProfile: Codable {
     public var name: String?
     /** The state of the user resource */
     public var state: State?
-    /** Datetime of the last modification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Datetime of the last modification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The version of the group resource */
     public var version: Int64?

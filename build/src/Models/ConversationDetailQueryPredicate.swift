@@ -26,6 +26,7 @@ public class ConversationDetailQueryPredicate: Codable {
     }
     public enum Metric: String, Codable { 
         case nblindtransferred = "nBlindTransferred"
+        case ncobrowsesessions = "nCobrowseSessions"
         case nconnected = "nConnected"
         case nconsult = "nConsult"
         case nconsulttransferred = "nConsultTransferred"

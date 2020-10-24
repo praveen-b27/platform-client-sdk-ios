@@ -20,7 +20,7 @@ public class UserPresence: Codable {
     public var primary: Bool?
     public var presenceDefinition: PresenceDefinition?
     public var message: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     /** The URI for this object */
     public var selfUri: String?

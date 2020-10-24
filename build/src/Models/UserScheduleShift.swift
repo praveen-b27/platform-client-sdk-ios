@@ -16,7 +16,7 @@ public class UserScheduleShift: Codable {
     public var weekSchedule: WeekScheduleReference?
     /** ID of the schedule shift. This is only for the case of updating and deleting an existing shift */
     public var _id: String?
-    /** Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?
     /** Length of this shift in minutes */
     public var lengthInMinutes: Int?

@@ -64,6 +64,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case flowOutcomePerformanceIntervalDetailView = "FLOW_OUTCOME_PERFORMANCE_INTERVAL_DETAIL_VIEW"
         case flowDestinationSummaryView = "FLOW_DESTINATION_SUMMARY_VIEW"
         case flowDestinationDetailView = "FLOW_DESTINATION_DETAIL_VIEW"
+        case scheduledCallbacksView = "SCHEDULED_CALLBACKS_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

@@ -39,15 +39,15 @@ public class TimeOffRequestResponse: Codable {
     public var notes: String?
     /** The user who submitted this time off request */
     public var submittedBy: UserReference?
-    /** The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var submittedDate: Date?
     /** The user who reviewed this time off request */
     public var reviewedBy: UserReference?
-    /** The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var reviewedDate: Date?
     /** The user who last modified this TimeOffRequestResponse */
     public var modifiedBy: UserReference?
-    /** The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     /** The version metadata of the time off request */
     public var metadata: WfmVersionedEntityMetadata?

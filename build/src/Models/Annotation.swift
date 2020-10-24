@@ -29,7 +29,7 @@ public class Annotation: Codable {
     public var recordingDurationMs: Int64?
     /** User that created this annotation (if any). */
     public var user: User?
-    /** Text of annotation. Maximum character limit is 300. */
+    /** Text of annotation. */
     public var _description: String?
     /** The word or phrase which is being looked for with speech recognition. */
     public var keywordName: String?

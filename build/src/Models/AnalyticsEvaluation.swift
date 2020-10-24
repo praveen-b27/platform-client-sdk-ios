@@ -17,7 +17,7 @@ public class AnalyticsEvaluation: Codable {
     public var evaluatorId: String?
     /** Unique identifier for the user being evaluated */
     public var userId: String?
-    /** Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var eventTime: Date?
     /** Unique identifier for the queue the conversation was on */
     public var queueId: String?

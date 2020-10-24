@@ -24,7 +24,7 @@ public class IntegrationEvent: Codable {
     public var selfUri: String?
     /** Correlation ID for the event */
     public var correlationId: String?
-    /** Time the event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Time the event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     /** Indicates the severity of the event. */
     public var level: Level?

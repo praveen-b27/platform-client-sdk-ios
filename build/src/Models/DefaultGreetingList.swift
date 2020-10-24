@@ -22,10 +22,10 @@ public class DefaultGreetingList: Codable {
     public var owner: GreetingOwner?
     public var ownerType: OwnerType?
     public var greetings: [String:Greeting]?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
     public var createdBy: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     public var modifiedBy: String?
     /** The URI for this object */

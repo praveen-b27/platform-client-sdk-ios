@@ -14,9 +14,9 @@ public class CredentialInfo: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** Date the credentials were created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date the credentials were created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
-    /** Date credentials were last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date credentials were last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     /** Type of the credentials. */
     public var type: CredentialType?

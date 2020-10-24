@@ -23,7 +23,7 @@ public class DocumentationResult: Codable {
     public var excerpt: String?
     /** URL link for the documentation entity. Will be returned in responses for certain entities. */
     public var link: String?
-    /** The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modified: Date?
     /** The name of the documentation entity. Will be returned in responses for certain entities. */
     public var name: String?

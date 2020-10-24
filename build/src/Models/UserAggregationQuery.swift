@@ -35,7 +35,7 @@ public class UserAggregationQuery: Codable {
     public var groupBy: [GroupBy]?
     /** Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters */
     public var filter: UserAggregateQueryFilter?
-    /** Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *). */
+    /** Behaves like a SQL SELECT clause. Only named metrics will be retrieved. */
     public var metrics: [Metrics]?
     /** Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) */
     public var flattenMultivaluedDimensions: Bool?

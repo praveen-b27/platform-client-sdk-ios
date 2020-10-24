@@ -24,11 +24,11 @@ public class DevelopmentActivity: Codable {
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** Date that activity was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date that activity was completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
     /** User that created activity */
     public var createdBy: UserReference?
-    /** Date activity was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date activity was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The URI for this object */
     public var selfUri: String?
@@ -38,7 +38,7 @@ public class DevelopmentActivity: Codable {
     public var type: ModelType?
     /** The status of the activity */
     public var status: Status?
-    /** Due date for completion of the activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Due date for completion of the activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateDue: Date?
     /** Facilitator of the activity */
     public var facilitator: UserReference?

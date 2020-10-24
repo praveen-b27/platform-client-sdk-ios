@@ -19,7 +19,7 @@ public class LineStatus: Codable {
     public var addressOfRecord: String?
     /** The addresses used to contact the line. */
     public var contactAddresses: [String]?
-    /** The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var reachableStateTime: Date?
 
     public init(_id: String?, reachable: Bool?, addressOfRecord: String?, contactAddresses: [String]?, reachableStateTime: Date?) {

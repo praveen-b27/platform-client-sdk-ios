@@ -19,15 +19,15 @@ title: Recording
 | **emailTranscript** | [**[RecordingEmailMessage]**](RecordingEmailMessage.html) | Represents an email transcript | [optional] |
 | **messagingTranscript** | [**[RecordingMessagingMessage]**](RecordingMessagingMessage.html) | Represents a messaging transcript | [optional] |
 | **fileState** | **String** | Represents the current file state for a recording. Examples: Uploading, Archived, etc | [optional] |
-| **restoreExpirationTime** | [**Date**](Date.html) | The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **restoreExpirationTime** | [**Date**](Date.html) | The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **mediaUris** | [**[String:MediaResult]**](MediaResult.html) | The different mediaUris for the recording. Null when there is no playable media. | [optional] |
 | **estimatedTranscodeTimeMs** | **Int64** |  | [optional] |
 | **actualTranscodeTimeMs** | **Int64** |  | [optional] |
-| **archiveDate** | [**Date**](Date.html) | The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **archiveDate** | [**Date**](Date.html) | The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **archiveMedium** | **String** | The type of archive medium used. Example: CloudArchive | [optional] |
-| **deleteDate** | [**Date**](Date.html) | The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **exportDate** | [**Date**](Date.html) | The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **exportedDate** | [**Date**](Date.html) | The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **deleteDate** | [**Date**](Date.html) | The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **exportDate** | [**Date**](Date.html) | The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **exportedDate** | [**Date**](Date.html) | The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **outputDurationMs** | **Int** | Duration of transcoded media in milliseconds | [optional] |
 | **outputSizeInBytes** | **Int** | Size of transcoded media in bytes. 0 if there is no transcoded media. | [optional] |
 | **maxAllowedRestorationsForOrg** | **Int** | How many archive restorations the organization is allowed to have. | [optional] |

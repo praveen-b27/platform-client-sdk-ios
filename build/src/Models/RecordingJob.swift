@@ -25,7 +25,7 @@ public class RecordingJob: Codable {
     public var state: State?
     /** Original query of the job. */
     public var recordingJobsQuery: RecordingJobsQuery?
-    /** Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** Total number of conversations affected. */
     public var totalConversations: Int?

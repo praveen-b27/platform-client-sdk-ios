@@ -15,7 +15,7 @@ public class AnalyticsSessionMetric: Codable {
     public var name: String?
     /** The metric value */
     public var value: Int64?
-    /** Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var emitDate: Date?
 
     public init(name: String?, value: Int64?, emitDate: Date?) {

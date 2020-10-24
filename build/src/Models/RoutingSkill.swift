@@ -20,7 +20,7 @@ public class RoutingSkill: Codable {
     public var _id: String?
     /** The name of the skill. */
     public var name: String?
-    /** Date last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The current state for this skill. */
     public var state: State?

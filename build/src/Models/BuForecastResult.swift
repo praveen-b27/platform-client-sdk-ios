@@ -11,7 +11,7 @@ import Foundation
 
 public class BuForecastResult: Codable {
 
-    /** The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var referenceStartDate: Date?
     /** The forecast data broken up by planning group */
     public var planningGroups: [ForecastPlanningGroupData]?

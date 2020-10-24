@@ -28,6 +28,11 @@ public class WhatsAppIntegration: Codable {
         case confirmationFailed = "ConfirmationFailed"
         case resendCode = "ResendCode"
     }
+    public enum CreateStatus: String, Codable { 
+        case initiated = "Initiated"
+        case completed = "Completed"
+        case error = "Error"
+    }
     /** A unique Integration Id. */
     public var _id: String?
     /** The name of the WhatsApp integration. */
@@ -38,9 +43,9 @@ public class WhatsAppIntegration: Codable {
     public var status: Status?
     /** The recipient associated to the WhatsApp Integration. This recipient is used to associate a flow to an integration */
     public var recipient: DomainEntityRef?
-    /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** Date this Integration was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date this Integration was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** User reference that created this Integration */
     public var createdBy: DomainEntityRef?
@@ -52,10 +57,14 @@ public class WhatsAppIntegration: Codable {
     public var activationStatusCode: ActivationStatusCode?
     /** The error information of WhatsApp Integration activation process */
     public var activationErrorInfo: ErrorBody?
+    /** Status of asynchronous create operation */
+    public var createStatus: CreateStatus?
+    /** Error information returned, if createStatus is set to Error */
+    public var createError: ErrorBody?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, status: Status?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, activationStatusCode: ActivationStatusCode?, activationErrorInfo: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, phoneNumber: String?, status: Status?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, activationStatusCode: ActivationStatusCode?, activationErrorInfo: ErrorBody?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
@@ -81,6 +90,10 @@ public class WhatsAppIntegration: Codable {
         
         self.activationErrorInfo = activationErrorInfo
         
+        self.createStatus = createStatus
+        
+        self.createError = createError
+        
         self.selfUri = selfUri
         
     }
@@ -98,6 +111,8 @@ public class WhatsAppIntegration: Codable {
         case version
         case activationStatusCode
         case activationErrorInfo
+        case createStatus
+        case createError
         case selfUri
     }
 

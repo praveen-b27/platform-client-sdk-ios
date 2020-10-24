@@ -17,9 +17,9 @@ public class BuCurrentAgentScheduleSearchResponse: Codable {
     public var businessUnitTimeZone: String?
     /** References to all published week schedules overlapping the start/end date query parameters */
     public var publishedSchedules: [BuAgentSchedulePublishedScheduleReference]?
-    /** The start date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?
-    /** The end date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The end date of the schedules. Only populated on notifications. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endDate: Date?
     /** The list of updates for the schedule. Only used in notifications */
     public var updates: [BuAgentScheduleUpdate]?

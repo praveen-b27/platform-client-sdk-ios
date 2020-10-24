@@ -18,9 +18,9 @@ public class BillingUsageReport: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?
-    /** The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endDate: Date?
     /** Generation status of report */
     public var status: Status?

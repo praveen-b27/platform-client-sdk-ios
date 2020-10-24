@@ -12,7 +12,7 @@ import Foundation
 
 public class ScimGenesysUserExternalId: Codable {
 
-    /** Authority, or scope, of the external id.  Allows multiple external ids to be defined and should represent the source of the external identifier */
+    /** Authority, or scope, of \&quot;externalId\&quot;. Allows multiple external identifiers to be defined. Represents the source of the external identifier. */
     public var authority: String?
     /** Identifier of the user in an external system. */
     public var value: String?

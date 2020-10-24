@@ -22,7 +22,7 @@ public class Calibration: Codable {
     public var averageScore: Int?
     public var highScore: Int?
     public var lowScore: Int?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
     public var evaluations: [Evaluation]?
     public var evaluators: [User]?

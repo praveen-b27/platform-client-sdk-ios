@@ -75,9 +75,9 @@ public class InteractionStatsAlert: Codable {
     public var ruleId: String?
     /** Indicates if the alert has been read. */
     public var unread: Bool?
-    /** The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?
-    /** The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endDate: Date?
     /** The ids of users who were notified of alarm state change. */
     public var notificationUsers: [User]?

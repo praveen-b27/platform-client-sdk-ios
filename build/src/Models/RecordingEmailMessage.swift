@@ -20,7 +20,7 @@ public class RecordingEmailMessage: Codable {
     public var from: EmailAddress?
     public var subject: String?
     public var attachments: [EmailAttachment]?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var time: Date?
 
     public init(htmlBody: String?, textBody: String?, _id: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, subject: String?, attachments: [EmailAttachment]?, time: Date?) {

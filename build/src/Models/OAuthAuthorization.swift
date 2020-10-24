@@ -14,9 +14,9 @@ public class OAuthAuthorization: Codable {
     public var client: OAuthClient?
     public var scope: [String]?
     public var resourceOwner: DomainEntityRef?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     public var createdBy: DomainEntityRef?
     public var modifiedBy: DomainEntityRef?

@@ -24,7 +24,7 @@ public class CoachingAppointmentResponse: Codable {
     public var name: String?
     /** The description of coaching appointment */
     public var _description: String?
-    /** The date/time the coaching appointment starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the coaching appointment starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateStart: Date?
     /** The duration of coaching appointment in minutes */
     public var lengthInMinutes: Int?
@@ -36,11 +36,11 @@ public class CoachingAppointmentResponse: Codable {
     public var attendees: [UserReference]?
     /** The user who created the coaching appointment */
     public var createdBy: UserReference?
-    /** The date/time the coaching appointment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the coaching appointment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The last user to modify the coaching appointment */
     public var modifiedBy: UserReference?
-    /** The date/time the coaching appointment was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date/time the coaching appointment was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The list of conversations associated with coaching appointment. */
     public var conversations: [ConversationReference]?

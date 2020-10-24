@@ -38,9 +38,9 @@ public class WebChatMemberInfo: Codable {
     public var avatarImageUrl: String?
     /** The role of the member, one of [agent, customer, acd, workflow] */
     public var role: Role?
-    /** The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time the member joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var joinDate: Date?
-    /** The time the member left the conversation, or null if the member is still active in the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time the member left the conversation, or null if the member is still active in the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var leaveDate: Date?
     /** If true, the guest member is an authenticated guest. */
     public var authenticatedGuest: Bool?

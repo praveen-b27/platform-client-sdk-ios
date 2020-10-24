@@ -30,7 +30,7 @@ public class Survey: Codable {
     public var status: Status?
     public var queue: QueueReference?
     public var answers: SurveyScoringSet?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var completedDate: Date?
     /** Additional information about what happened when the survey is in Error status. */
     public var surveyErrorDetails: SurveyErrorDetails?

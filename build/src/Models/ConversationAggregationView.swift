@@ -13,6 +13,7 @@ public class ConversationAggregationView: Codable {
 
     public enum Target: String, Codable { 
         case nblindtransferred = "nBlindTransferred"
+        case ncobrowsesessions = "nCobrowseSessions"
         case nconnected = "nConnected"
         case nconsult = "nConsult"
         case nconsulttransferred = "nConsultTransferred"

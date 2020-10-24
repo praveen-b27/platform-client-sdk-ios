@@ -9,8 +9,8 @@ title: OutboundSettings
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **dateModified** | [**Date**](Date.html) | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **dateCreated** | [**Date**](Date.html) | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date.html) | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 | **maxCallsPerAgent** | **Int** | The maximum number of calls that can be placed per agent on any campaign | [optional] |
 | **maxConfigurableCallsPerAgent** | **Int** | The maximum number of calls that can be configured to be placed per agent on any campaign | [optional] |

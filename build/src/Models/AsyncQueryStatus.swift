@@ -23,11 +23,11 @@ public class AsyncQueryStatus: Codable {
     public var state: State?
     /** The error associated with the current query, if the state is FAILED */
     public var errorMessage: String?
-    /** The time at which results for this query will expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time at which results for this query will expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var expirationDate: Date?
-    /** The time at which the query was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time at which the query was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var submissionDate: Date?
-    /** The time at which the query completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time at which the query completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var completionDate: Date?
 
     public init(state: State?, errorMessage: String?, expirationDate: Date?, submissionDate: Date?, completionDate: Date?) {

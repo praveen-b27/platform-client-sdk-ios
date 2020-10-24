@@ -10,7 +10,7 @@ title: Group
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The group name. | |
 | **_description** | **String** |  | [optional] |
-| **dateModified** | [**Date**](Date.html) | Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **dateModified** | [**Date**](Date.html) | Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **memberCount** | **Int64** | Number of members. | [optional] |
 | **state** | **String** | Active, inactive, or deleted state. | [optional] |
 | **version** | **Int** | Current version for this resource. | [optional] |

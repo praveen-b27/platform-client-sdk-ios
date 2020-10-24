@@ -1408,7 +1408,6 @@ open class TelephonyProvidersEdgeAPI {
   "currentVersion" : "aeiou",
   "proxy" : "aeiou",
   "site" : {
-    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -1419,24 +1418,27 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "aeiou"
     } ],
     "secondaryEdges" : [ "" ],
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ "" ],
+    "managed" : true,
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "coreSite" : true,
+    "selfUri" : "aeiou",
+    "edges" : [ "" ],
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "mediaRegionsUseLatencyBased" : true,
     "ntpSettings" : {
       "servers" : [ "aeiou" ]
     },
     "createdBy" : "aeiou",
-    "managed" : true,
     "secondarySites" : [ "" ],
     "name" : "aeiou",
     "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
     "location" : {
       "images" : "aeiou",
       "address" : {
@@ -1478,8 +1480,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "addressVerified" : true
     },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "mediaModel" : "aeiou",
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -1946,7 +1947,6 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
-      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -1957,24 +1957,27 @@ open class TelephonyProvidersEdgeAPI {
         "type" : "aeiou"
       } ],
       "secondaryEdges" : [ "" ],
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
       "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
+      "managed" : true,
+      "modifiedBy" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "coreSite" : true,
+      "selfUri" : "aeiou",
+      "edges" : [ "" ],
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123,
+      "mediaRegionsUseLatencyBased" : true,
       "ntpSettings" : {
         "servers" : [ "aeiou" ]
       },
       "createdBy" : "aeiou",
-      "managed" : true,
       "secondarySites" : [ "" ],
       "name" : "aeiou",
       "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
       "location" : {
         "images" : "aeiou",
         "address" : {
@@ -2016,8 +2019,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "addressVerified" : true
       },
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "mediaModel" : "aeiou",
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -2260,7 +2262,6 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
-        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -2271,24 +2272,27 @@ open class TelephonyProvidersEdgeAPI {
           "type" : "aeiou"
         } ],
         "secondaryEdges" : [ "" ],
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
         "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
+        "managed" : true,
+        "modifiedBy" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "coreSite" : true,
+        "selfUri" : "aeiou",
+        "edges" : [ "" ],
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123,
+        "mediaRegionsUseLatencyBased" : true,
         "ntpSettings" : {
           "servers" : [ "aeiou" ]
         },
         "createdBy" : "aeiou",
-        "managed" : true,
         "secondarySites" : [ "" ],
         "name" : "aeiou",
         "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
         "location" : {
           "images" : "aeiou",
           "address" : {
@@ -2330,8 +2334,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "addressVerified" : true
         },
-        "id" : "aeiou",
-        "state" : "aeiou",
+        "mediaModel" : "aeiou",
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -3769,7 +3772,6 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
-      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -3780,24 +3782,27 @@ open class TelephonyProvidersEdgeAPI {
         "type" : "aeiou"
       } ],
       "secondaryEdges" : [ "" ],
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
       "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
+      "managed" : true,
+      "modifiedBy" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "coreSite" : true,
+      "selfUri" : "aeiou",
+      "edges" : [ "" ],
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123,
+      "mediaRegionsUseLatencyBased" : true,
       "ntpSettings" : {
         "servers" : [ "aeiou" ]
       },
       "createdBy" : "aeiou",
-      "managed" : true,
       "secondarySites" : [ "" ],
       "name" : "aeiou",
       "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
       "location" : {
         "images" : "aeiou",
         "address" : {
@@ -3839,8 +3844,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "addressVerified" : true
       },
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "mediaModel" : "aeiou",
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -5529,7 +5533,6 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
-      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -5540,24 +5543,27 @@ open class TelephonyProvidersEdgeAPI {
         "type" : "aeiou"
       } ],
       "secondaryEdges" : [ "" ],
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
       "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
+      "managed" : true,
+      "modifiedBy" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "coreSite" : true,
+      "selfUri" : "aeiou",
+      "edges" : [ "" ],
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123,
+      "mediaRegionsUseLatencyBased" : true,
       "ntpSettings" : {
         "servers" : [ "aeiou" ]
       },
       "createdBy" : "aeiou",
-      "managed" : true,
       "secondarySites" : [ "" ],
       "name" : "aeiou",
       "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
       "location" : {
         "images" : "aeiou",
         "address" : {
@@ -5599,8 +5605,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "addressVerified" : true
       },
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "mediaModel" : "aeiou",
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -6035,7 +6040,6 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
-        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -6046,24 +6050,27 @@ open class TelephonyProvidersEdgeAPI {
           "type" : "aeiou"
         } ],
         "secondaryEdges" : [ "" ],
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
         "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
+        "managed" : true,
+        "modifiedBy" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "coreSite" : true,
+        "selfUri" : "aeiou",
+        "edges" : [ "" ],
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123,
+        "mediaRegionsUseLatencyBased" : true,
         "ntpSettings" : {
           "servers" : [ "aeiou" ]
         },
         "createdBy" : "aeiou",
-        "managed" : true,
         "secondarySites" : [ "" ],
         "name" : "aeiou",
         "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
         "location" : {
           "images" : "aeiou",
           "address" : {
@@ -6105,8 +6112,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "addressVerified" : true
         },
-        "id" : "aeiou",
-        "state" : "aeiou",
+        "mediaModel" : "aeiou",
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -6336,7 +6342,6 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
-      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -6347,24 +6352,27 @@ open class TelephonyProvidersEdgeAPI {
         "type" : "aeiou"
       } ],
       "secondaryEdges" : [ "" ],
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
       "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
+      "managed" : true,
+      "modifiedBy" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "coreSite" : true,
+      "selfUri" : "aeiou",
+      "edges" : [ "" ],
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123,
+      "mediaRegionsUseLatencyBased" : true,
       "ntpSettings" : {
         "servers" : [ "aeiou" ]
       },
       "createdBy" : "aeiou",
-      "managed" : true,
       "secondarySites" : [ "" ],
       "name" : "aeiou",
       "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
       "location" : {
         "images" : "aeiou",
         "address" : {
@@ -6406,8 +6414,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "addressVerified" : true
       },
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "mediaModel" : "aeiou",
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -6795,7 +6802,6 @@ open class TelephonyProvidersEdgeAPI {
   "version" : 123,
   "enabled" : true,
   "site" : {
-    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -6806,13 +6812,8 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "aeiou"
     } ],
     "secondaryEdges" : [ "" ],
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -6925,15 +6926,23 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "aeiou",
       "statusCode" : "aeiou"
     } ],
+    "managed" : true,
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "coreSite" : true,
+    "selfUri" : "aeiou",
+    "edges" : [ "" ],
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "mediaRegionsUseLatencyBased" : true,
     "ntpSettings" : {
       "servers" : [ "aeiou" ]
     },
     "createdBy" : "aeiou",
-    "managed" : true,
     "secondarySites" : [ "" ],
     "name" : "aeiou",
     "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
     "location" : {
       "images" : "aeiou",
       "address" : {
@@ -6975,8 +6984,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "addressVerified" : true
     },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "mediaModel" : "aeiou",
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -7089,7 +7097,6 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123,
     "enabled" : true,
     "site" : {
-      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -7100,13 +7107,8 @@ open class TelephonyProvidersEdgeAPI {
         "type" : "aeiou"
       } ],
       "secondaryEdges" : [ "" ],
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
       "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ {
         "softwareStatus" : {
@@ -7219,15 +7221,23 @@ open class TelephonyProvidersEdgeAPI {
         "softwareVersion" : "aeiou",
         "statusCode" : "aeiou"
       } ],
+      "managed" : true,
+      "modifiedBy" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "coreSite" : true,
+      "selfUri" : "aeiou",
+      "edges" : [ "" ],
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123,
+      "mediaRegionsUseLatencyBased" : true,
       "ntpSettings" : {
         "servers" : [ "aeiou" ]
       },
       "createdBy" : "aeiou",
-      "managed" : true,
       "secondarySites" : [ "" ],
       "name" : "aeiou",
       "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
       "location" : {
         "images" : "aeiou",
         "address" : {
@@ -7269,8 +7279,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "addressVerified" : true
       },
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "mediaModel" : "aeiou",
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -7505,7 +7514,6 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
-        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -7516,24 +7524,27 @@ open class TelephonyProvidersEdgeAPI {
           "type" : "aeiou"
         } ],
         "secondaryEdges" : [ "" ],
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
         "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
+        "managed" : true,
+        "modifiedBy" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "coreSite" : true,
+        "selfUri" : "aeiou",
+        "edges" : [ "" ],
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123,
+        "mediaRegionsUseLatencyBased" : true,
         "ntpSettings" : {
           "servers" : [ "aeiou" ]
         },
         "createdBy" : "aeiou",
-        "managed" : true,
         "secondarySites" : [ "" ],
         "name" : "aeiou",
         "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
         "location" : {
           "images" : "aeiou",
           "address" : {
@@ -7575,8 +7586,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "addressVerified" : true
         },
-        "id" : "aeiou",
-        "state" : "aeiou",
+        "mediaModel" : "aeiou",
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -8399,7 +8409,6 @@ open class TelephonyProvidersEdgeAPI {
         "currentVersion" : "aeiou",
         "proxy" : "aeiou",
         "site" : {
-          "coreSite" : true,
           "primarySites" : [ "" ],
           "addresses" : [ {
             "extension" : "aeiou",
@@ -8410,24 +8419,27 @@ open class TelephonyProvidersEdgeAPI {
             "type" : "aeiou"
           } ],
           "secondaryEdges" : [ "" ],
-          "selfUri" : "aeiou",
-          "edges" : [ "" ],
           "description" : "aeiou",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
           "createdByApp" : "aeiou",
-          "version" : 123,
-          "mediaRegionsUseLatencyBased" : true,
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "primaryEdges" : [ "" ],
+          "managed" : true,
+          "modifiedBy" : "aeiou",
+          "id" : "aeiou",
+          "state" : "aeiou",
+          "coreSite" : true,
+          "selfUri" : "aeiou",
+          "edges" : [ "" ],
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "version" : 123,
+          "mediaRegionsUseLatencyBased" : true,
           "ntpSettings" : {
             "servers" : [ "aeiou" ]
           },
           "createdBy" : "aeiou",
-          "managed" : true,
           "secondarySites" : [ "" ],
           "name" : "aeiou",
           "modifiedByApp" : "aeiou",
-          "modifiedBy" : "aeiou",
           "location" : {
             "images" : "aeiou",
             "address" : {
@@ -8469,8 +8481,7 @@ open class TelephonyProvidersEdgeAPI {
             "state" : "aeiou",
             "addressVerified" : true
           },
-          "id" : "aeiou",
-          "state" : "aeiou",
+          "mediaModel" : "aeiou",
           "edgeAutoUpdateConfig" : {
             "rrule" : "aeiou",
             "start" : "aeiou",
@@ -8793,7 +8804,6 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
-        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -8804,24 +8814,27 @@ open class TelephonyProvidersEdgeAPI {
           "type" : "aeiou"
         } ],
         "secondaryEdges" : [ "" ],
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
         "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
+        "managed" : true,
+        "modifiedBy" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "coreSite" : true,
+        "selfUri" : "aeiou",
+        "edges" : [ "" ],
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123,
+        "mediaRegionsUseLatencyBased" : true,
         "ntpSettings" : {
           "servers" : [ "aeiou" ]
         },
         "createdBy" : "aeiou",
-        "managed" : true,
         "secondarySites" : [ "" ],
         "name" : "aeiou",
         "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
         "location" : {
           "images" : "aeiou",
           "address" : {
@@ -8863,8 +8876,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "addressVerified" : true
         },
-        "id" : "aeiou",
-        "state" : "aeiou",
+        "mediaModel" : "aeiou",
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -9109,7 +9121,6 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "coreSite" : true,
   "primarySites" : [ {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9124,13 +9135,8 @@ open class TelephonyProvidersEdgeAPI {
     "type" : "aeiou"
   } ],
   "secondaryEdges" : [ "" ],
-  "selfUri" : "aeiou",
-  "edges" : [ "" ],
   "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
-  "version" : 123,
-  "mediaRegionsUseLatencyBased" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "primaryEdges" : [ {
     "softwareStatus" : {
@@ -9243,15 +9249,23 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "aeiou",
     "statusCode" : "aeiou"
   } ],
+  "managed" : true,
+  "modifiedBy" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "coreSite" : true,
+  "selfUri" : "aeiou",
+  "edges" : [ "" ],
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "mediaRegionsUseLatencyBased" : true,
   "ntpSettings" : {
     "servers" : [ "aeiou" ]
   },
   "createdBy" : "aeiou",
-  "managed" : true,
   "secondarySites" : [ "" ],
   "name" : "aeiou",
   "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
   "location" : {
     "images" : "aeiou",
     "address" : {
@@ -9293,8 +9307,7 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou",
     "addressVerified" : true
   },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "mediaModel" : "aeiou",
   "edgeAutoUpdateConfig" : {
     "rrule" : "aeiou",
     "start" : "aeiou",
@@ -9863,7 +9876,6 @@ open class TelephonyProvidersEdgeAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "coreSite" : true,
     "primarySites" : [ {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -9878,13 +9890,8 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "aeiou"
     } ],
     "secondaryEdges" : [ "" ],
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -9997,15 +10004,23 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "aeiou",
       "statusCode" : "aeiou"
     } ],
+    "managed" : true,
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "coreSite" : true,
+    "selfUri" : "aeiou",
+    "edges" : [ "" ],
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "mediaRegionsUseLatencyBased" : true,
     "ntpSettings" : {
       "servers" : [ "aeiou" ]
     },
     "createdBy" : "aeiou",
-    "managed" : true,
     "secondarySites" : [ "" ],
     "name" : "aeiou",
     "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
     "location" : {
       "images" : "aeiou",
       "address" : {
@@ -10047,8 +10062,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "addressVerified" : true
     },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "mediaModel" : "aeiou",
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -12158,7 +12172,6 @@ open class TelephonyProvidersEdgeAPI {
   "currentVersion" : "aeiou",
   "proxy" : "aeiou",
   "site" : {
-    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -12169,24 +12182,27 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "aeiou"
     } ],
     "secondaryEdges" : [ "" ],
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ "" ],
+    "managed" : true,
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "coreSite" : true,
+    "selfUri" : "aeiou",
+    "edges" : [ "" ],
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "mediaRegionsUseLatencyBased" : true,
     "ntpSettings" : {
       "servers" : [ "aeiou" ]
     },
     "createdBy" : "aeiou",
-    "managed" : true,
     "secondarySites" : [ "" ],
     "name" : "aeiou",
     "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
     "location" : {
       "images" : "aeiou",
       "address" : {
@@ -12228,8 +12244,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "addressVerified" : true
     },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "mediaModel" : "aeiou",
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -12704,7 +12719,6 @@ open class TelephonyProvidersEdgeAPI {
   "version" : 123,
   "enabled" : true,
   "site" : {
-    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -12715,13 +12729,8 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "aeiou"
     } ],
     "secondaryEdges" : [ "" ],
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -12834,15 +12843,23 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "aeiou",
       "statusCode" : "aeiou"
     } ],
+    "managed" : true,
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "coreSite" : true,
+    "selfUri" : "aeiou",
+    "edges" : [ "" ],
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "mediaRegionsUseLatencyBased" : true,
     "ntpSettings" : {
       "servers" : [ "aeiou" ]
     },
     "createdBy" : "aeiou",
-    "managed" : true,
     "secondarySites" : [ "" ],
     "name" : "aeiou",
     "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
     "location" : {
       "images" : "aeiou",
       "address" : {
@@ -12884,8 +12901,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "addressVerified" : true
     },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "mediaModel" : "aeiou",
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -13252,7 +13268,6 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
-        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -13263,24 +13278,27 @@ open class TelephonyProvidersEdgeAPI {
           "type" : "aeiou"
         } ],
         "secondaryEdges" : [ "" ],
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
         "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
+        "managed" : true,
+        "modifiedBy" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "coreSite" : true,
+        "selfUri" : "aeiou",
+        "edges" : [ "" ],
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123,
+        "mediaRegionsUseLatencyBased" : true,
         "ntpSettings" : {
           "servers" : [ "aeiou" ]
         },
         "createdBy" : "aeiou",
-        "managed" : true,
         "secondarySites" : [ "" ],
         "name" : "aeiou",
         "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
         "location" : {
           "images" : "aeiou",
           "address" : {
@@ -13322,8 +13340,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "addressVerified" : true
         },
-        "id" : "aeiou",
-        "state" : "aeiou",
+        "mediaModel" : "aeiou",
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -13652,7 +13669,6 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "coreSite" : true,
   "primarySites" : [ {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13667,13 +13683,8 @@ open class TelephonyProvidersEdgeAPI {
     "type" : "aeiou"
   } ],
   "secondaryEdges" : [ "" ],
-  "selfUri" : "aeiou",
-  "edges" : [ "" ],
   "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
-  "version" : 123,
-  "mediaRegionsUseLatencyBased" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "primaryEdges" : [ {
     "softwareStatus" : {
@@ -13786,15 +13797,23 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "aeiou",
     "statusCode" : "aeiou"
   } ],
+  "managed" : true,
+  "modifiedBy" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "coreSite" : true,
+  "selfUri" : "aeiou",
+  "edges" : [ "" ],
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "mediaRegionsUseLatencyBased" : true,
   "ntpSettings" : {
     "servers" : [ "aeiou" ]
   },
   "createdBy" : "aeiou",
-  "managed" : true,
   "secondarySites" : [ "" ],
   "name" : "aeiou",
   "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
   "location" : {
     "images" : "aeiou",
     "address" : {
@@ -13836,8 +13855,7 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou",
     "addressVerified" : true
   },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "mediaModel" : "aeiou",
   "edgeAutoUpdateConfig" : {
     "rrule" : "aeiou",
     "start" : "aeiou",
@@ -14089,7 +14107,6 @@ open class TelephonyProvidersEdgeAPI {
   "currentVersion" : "aeiou",
   "proxy" : "aeiou",
   "site" : {
-    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -14100,24 +14117,27 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "aeiou"
     } ],
     "secondaryEdges" : [ "" ],
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ "" ],
+    "managed" : true,
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "coreSite" : true,
+    "selfUri" : "aeiou",
+    "edges" : [ "" ],
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "mediaRegionsUseLatencyBased" : true,
     "ntpSettings" : {
       "servers" : [ "aeiou" ]
     },
     "createdBy" : "aeiou",
-    "managed" : true,
     "secondarySites" : [ "" ],
     "name" : "aeiou",
     "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
     "location" : {
       "images" : "aeiou",
       "address" : {
@@ -14159,8 +14179,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "addressVerified" : true
     },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "mediaModel" : "aeiou",
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -14358,7 +14377,6 @@ open class TelephonyProvidersEdgeAPI {
     "currentVersion" : "aeiou",
     "proxy" : "aeiou",
     "site" : {
-      "coreSite" : true,
       "primarySites" : [ "" ],
       "addresses" : [ {
         "extension" : "aeiou",
@@ -14369,24 +14387,27 @@ open class TelephonyProvidersEdgeAPI {
         "type" : "aeiou"
       } ],
       "secondaryEdges" : [ "" ],
-      "selfUri" : "aeiou",
-      "edges" : [ "" ],
       "description" : "aeiou",
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
-      "version" : 123,
-      "mediaRegionsUseLatencyBased" : true,
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
+      "managed" : true,
+      "modifiedBy" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "coreSite" : true,
+      "selfUri" : "aeiou",
+      "edges" : [ "" ],
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123,
+      "mediaRegionsUseLatencyBased" : true,
       "ntpSettings" : {
         "servers" : [ "aeiou" ]
       },
       "createdBy" : "aeiou",
-      "managed" : true,
       "secondarySites" : [ "" ],
       "name" : "aeiou",
       "modifiedByApp" : "aeiou",
-      "modifiedBy" : "aeiou",
       "location" : {
         "images" : "aeiou",
         "address" : {
@@ -14428,8 +14449,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "addressVerified" : true
       },
-      "id" : "aeiou",
-      "state" : "aeiou",
+      "mediaModel" : "aeiou",
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -15350,7 +15370,6 @@ open class TelephonyProvidersEdgeAPI {
   "version" : 123,
   "enabled" : true,
   "site" : {
-    "coreSite" : true,
     "primarySites" : [ "" ],
     "addresses" : [ {
       "extension" : "aeiou",
@@ -15361,13 +15380,8 @@ open class TelephonyProvidersEdgeAPI {
       "type" : "aeiou"
     } ],
     "secondaryEdges" : [ "" ],
-    "selfUri" : "aeiou",
-    "edges" : [ "" ],
     "description" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
-    "version" : 123,
-    "mediaRegionsUseLatencyBased" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -15480,15 +15494,23 @@ open class TelephonyProvidersEdgeAPI {
       "softwareVersion" : "aeiou",
       "statusCode" : "aeiou"
     } ],
+    "managed" : true,
+    "modifiedBy" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "coreSite" : true,
+    "selfUri" : "aeiou",
+    "edges" : [ "" ],
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "mediaRegionsUseLatencyBased" : true,
     "ntpSettings" : {
       "servers" : [ "aeiou" ]
     },
     "createdBy" : "aeiou",
-    "managed" : true,
     "secondarySites" : [ "" ],
     "name" : "aeiou",
     "modifiedByApp" : "aeiou",
-    "modifiedBy" : "aeiou",
     "location" : {
       "images" : "aeiou",
       "address" : {
@@ -15530,8 +15552,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "addressVerified" : true
     },
-    "id" : "aeiou",
-    "state" : "aeiou",
+    "mediaModel" : "aeiou",
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -15743,7 +15764,6 @@ open class TelephonyProvidersEdgeAPI {
       "currentVersion" : "aeiou",
       "proxy" : "aeiou",
       "site" : {
-        "coreSite" : true,
         "primarySites" : [ "" ],
         "addresses" : [ {
           "extension" : "aeiou",
@@ -15754,24 +15774,27 @@ open class TelephonyProvidersEdgeAPI {
           "type" : "aeiou"
         } ],
         "secondaryEdges" : [ "" ],
-        "selfUri" : "aeiou",
-        "edges" : [ "" ],
         "description" : "aeiou",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
-        "version" : 123,
-        "mediaRegionsUseLatencyBased" : true,
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
+        "managed" : true,
+        "modifiedBy" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "coreSite" : true,
+        "selfUri" : "aeiou",
+        "edges" : [ "" ],
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123,
+        "mediaRegionsUseLatencyBased" : true,
         "ntpSettings" : {
           "servers" : [ "aeiou" ]
         },
         "createdBy" : "aeiou",
-        "managed" : true,
         "secondarySites" : [ "" ],
         "name" : "aeiou",
         "modifiedByApp" : "aeiou",
-        "modifiedBy" : "aeiou",
         "location" : {
           "images" : "aeiou",
           "address" : {
@@ -15813,8 +15836,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "addressVerified" : true
         },
-        "id" : "aeiou",
-        "state" : "aeiou",
+        "mediaModel" : "aeiou",
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -16075,7 +16097,6 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "coreSite" : true,
   "primarySites" : [ {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -16090,13 +16111,8 @@ open class TelephonyProvidersEdgeAPI {
     "type" : "aeiou"
   } ],
   "secondaryEdges" : [ "" ],
-  "selfUri" : "aeiou",
-  "edges" : [ "" ],
   "description" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
-  "version" : 123,
-  "mediaRegionsUseLatencyBased" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "primaryEdges" : [ {
     "softwareStatus" : {
@@ -16209,15 +16225,23 @@ open class TelephonyProvidersEdgeAPI {
     "softwareVersion" : "aeiou",
     "statusCode" : "aeiou"
   } ],
+  "managed" : true,
+  "modifiedBy" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "coreSite" : true,
+  "selfUri" : "aeiou",
+  "edges" : [ "" ],
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "mediaRegionsUseLatencyBased" : true,
   "ntpSettings" : {
     "servers" : [ "aeiou" ]
   },
   "createdBy" : "aeiou",
-  "managed" : true,
   "secondarySites" : [ "" ],
   "name" : "aeiou",
   "modifiedByApp" : "aeiou",
-  "modifiedBy" : "aeiou",
   "location" : {
     "images" : "aeiou",
     "address" : {
@@ -16259,8 +16283,7 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou",
     "addressVerified" : true
   },
-  "id" : "aeiou",
-  "state" : "aeiou",
+  "mediaModel" : "aeiou",
   "edgeAutoUpdateConfig" : {
     "rrule" : "aeiou",
     "start" : "aeiou",

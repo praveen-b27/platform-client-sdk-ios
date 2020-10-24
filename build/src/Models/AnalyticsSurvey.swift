@@ -19,7 +19,7 @@ public class AnalyticsSurvey: Codable {
     public var surveyFormName: String?
     /** Unique identifier for the survey form, regardless of version */
     public var surveyFormContextId: String?
-    /** Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Specifies when a survey occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var eventTime: Date?
     /** A unique identifier of the PureCloud user */
     public var userId: String?
@@ -29,7 +29,7 @@ public class AnalyticsSurvey: Codable {
     public var surveyStatus: String?
     /** Promoter score of the survey */
     public var surveyPromoterScore: Int?
-    /** Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Completion date/time of the survey. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var surveyCompletedDate: Date?
     public var oSurveyTotalScore: Int64?
 

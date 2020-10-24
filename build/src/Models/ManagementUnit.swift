@@ -36,7 +36,7 @@ public class ManagementUnit: Codable {
     public var metadata: WfmVersionedEntityMetadata?
     /** The version of the underlying entity.  Deprecated, use field from settings.metadata instead */
     public var version: Int?
-    /** The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The user who last modified this entity.  Deprecated, use field from settings.metadata instead */
     public var modifiedBy: UserReference?

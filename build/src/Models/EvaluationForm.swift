@@ -15,7 +15,7 @@ public class EvaluationForm: Codable {
     public var _id: String?
     /** The evaluation form name */
     public var name: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     public var published: Bool?
     public var contextId: String?

@@ -14,7 +14,7 @@ public class HomerRecord: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** metadata associated to the SIP calls. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var date: Date?
     /** metadata associated to the SIP calls */
     public var milliTs: String?

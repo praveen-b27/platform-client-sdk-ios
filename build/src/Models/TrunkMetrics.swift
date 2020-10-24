@@ -11,7 +11,7 @@ import Foundation
 
 public class TrunkMetrics: Codable {
 
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var eventTime: Date?
     public var logicalInterface: DomainEntityRef?
     public var trunk: DomainEntityRef?

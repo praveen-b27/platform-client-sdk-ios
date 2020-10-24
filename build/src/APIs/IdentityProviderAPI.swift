@@ -849,6 +849,7 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
+  "nameIdentifierFormat" : "aeiou",
   "issuerURI" : "aeiou",
   "logoImageData" : "aeiou",
   "selfUri" : "aeiou",

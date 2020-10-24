@@ -20,9 +20,9 @@ public class LocationAddressVerificationDetails: Codable {
     }
     /** Status of address verification process */
     public var status: Status?
-    /** Finished time of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Finished time of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateFinished: Date?
-    /** Time started of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Time started of address verification process. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateStarted: Date?
     /** Third party service used for address verification */
     public var service: String?

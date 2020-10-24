@@ -15,7 +15,7 @@ public class TrustRequest: Codable {
     public var _id: String?
     /** User who created this request. */
     public var createdBy: OrgUser?
-    /** Date request was created. There is a 48 hour expiration on all requests. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date request was created. There is a 48 hour expiration on all requests. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** Trustee organization who generated this request. */
     public var trustee: Organization?

@@ -12,7 +12,7 @@ Defines a SCIM schema.
 | **name** | **String** | The name of the schema. | [optional] |
 | **_description** | **String** | The description of the schema. | [optional] |
 | **attributes** | [**[ScimV2SchemaAttribute]**](ScimV2SchemaAttribute.html) | The list of service provider attributes. | [optional] |
-| **meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. Only location and resourceType are set for Schema resources. | [optional] |
+| **meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;Schema\&quot; resources. | [optional] |
 {: class="table table-striped"}
 
 

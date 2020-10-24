@@ -525,7 +525,9 @@ open class ConversationsAPI {
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
   "selfUri" : "aeiou",
+  "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
   "version" : 123,
   "phoneNumber" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -769,6 +771,7 @@ open class ConversationsAPI {
       "journeyCustomerId" : "aeiou",
       "callbackUserName" : "aeiou",
       "addressFrom" : "aeiou",
+      "flowInType" : "aeiou",
       "ani" : "aeiou",
       "direction" : "aeiou",
       "journeyCustomerSessionId" : "aeiou",
@@ -1012,6 +1015,7 @@ open class ConversationsAPI {
         "journeyCustomerId" : "aeiou",
         "callbackUserName" : "aeiou",
         "addressFrom" : "aeiou",
+        "flowInType" : "aeiou",
         "ani" : "aeiou",
         "direction" : "aeiou",
         "journeyCustomerSessionId" : "aeiou",
@@ -1335,6 +1339,7 @@ open class ConversationsAPI {
         "journeyCustomerId" : "aeiou",
         "callbackUserName" : "aeiou",
         "addressFrom" : "aeiou",
+        "flowInType" : "aeiou",
         "ani" : "aeiou",
         "direction" : "aeiou",
         "journeyCustomerSessionId" : "aeiou",
@@ -2290,20 +2295,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -2323,12 +2333,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -3569,20 +3575,25 @@ open class ConversationsAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -3602,12 +3613,8 @@ open class ConversationsAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -8564,21 +8571,41 @@ open class ConversationsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "selfUri" : "aeiou",
+    "createError" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "pageId" : "aeiou",
+    "createStatus" : "aeiou",
+    "version" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "appId" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "modifiedBy" : "",
     "id" : "aeiou",
-    "pageId" : "aeiou",
-    "version" : 123,
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
@@ -8656,21 +8683,41 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "pageId" : "aeiou",
+  "createStatus" : "aeiou",
+  "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "appId" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "",
   "id" : "aeiou",
-  "pageId" : "aeiou",
-  "version" : 123,
   "status" : "aeiou"
 }}]
      
@@ -8744,19 +8791,39 @@ open class ConversationsAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "webhookUri" : "aeiou",
+    "selfUri" : "aeiou",
+    "createError" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "createStatus" : "aeiou",
+    "version" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "modifiedBy" : "",
     "id" : "aeiou",
-    "version" : 123,
     "channelId" : "aeiou",
     "status" : "aeiou"
   } ],
@@ -8836,19 +8903,39 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "webhookUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
+  "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "",
   "id" : "aeiou",
-  "version" : 123,
   "channelId" : "aeiou",
   "status" : "aeiou"
 }}]
@@ -8924,7 +9011,27 @@ open class ConversationsAPI {
   "entities" : [ {
     "accessTokenKey" : "aeiou",
     "selfUri" : "aeiou",
+    "createError" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "createStatus" : "aeiou",
     "userId" : "aeiou",
     "version" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -9020,7 +9127,27 @@ open class ConversationsAPI {
      - examples: [{contentType=application/json, example={
   "accessTokenKey" : "aeiou",
   "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
   "userId" : "aeiou",
   "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -9111,7 +9238,9 @@ open class ConversationsAPI {
   "entities" : [ {
     "activationStatusCode" : "aeiou",
     "selfUri" : "aeiou",
+    "createError" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "createStatus" : "aeiou",
     "version" : 123,
     "phoneNumber" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -9222,7 +9351,9 @@ open class ConversationsAPI {
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
   "selfUri" : "aeiou",
+  "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
   "version" : 123,
   "phoneNumber" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -10338,20 +10469,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -10371,12 +10507,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -11555,20 +11687,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -11588,12 +11725,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -12699,20 +12832,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -12732,12 +12870,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -13843,20 +13977,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -13876,12 +14015,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -14987,20 +15122,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -15020,12 +15160,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -16131,20 +16267,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -16164,12 +16305,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -16485,21 +16622,41 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "pageId" : "aeiou",
+  "createStatus" : "aeiou",
+  "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "appId" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "",
   "id" : "aeiou",
-  "pageId" : "aeiou",
-  "version" : 123,
   "status" : "aeiou"
 }}]
      
@@ -16568,7 +16725,9 @@ open class ConversationsAPI {
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
   "selfUri" : "aeiou",
+  "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
   "version" : 123,
   "phoneNumber" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -17039,6 +17198,7 @@ open class ConversationsAPI {
         "journeyCustomerId" : "aeiou",
         "callbackUserName" : "aeiou",
         "addressFrom" : "aeiou",
+        "flowInType" : "aeiou",
         "ani" : "aeiou",
         "direction" : "aeiou",
         "journeyCustomerSessionId" : "aeiou",
@@ -18321,20 +18481,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -18354,12 +18519,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -19459,20 +19620,25 @@ open class ConversationsAPI {
     "messages" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
       "peerId" : "aeiou",
-      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-      "wrapup" : "",
       "held" : true,
       "afterCallWorkRequired" : true,
       "errorInfo" : "",
       "type" : "aeiou",
       "toAddress" : "",
       "segments" : [ "" ],
-      "scriptId" : "aeiou",
       "recipientType" : "aeiou",
       "provider" : "aeiou",
+      "journeyContext" : "",
       "afterCallWork" : "",
       "disconnectType" : "aeiou",
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
+      "fromAddress" : "",
+      "state" : "aeiou",
+      "id" : "aeiou",
+      "direction" : "aeiou",
+      "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+      "wrapup" : "",
+      "scriptId" : "aeiou",
       "messages" : [ {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -19492,12 +19658,8 @@ open class ConversationsAPI {
         "messageSegmentCount" : 123
       } ],
       "recipientCountry" : "aeiou",
-      "fromAddress" : "",
-      "state" : "aeiou",
-      "id" : "aeiou",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-      "recordingId" : "aeiou",
-      "direction" : "aeiou"
+      "recordingId" : "aeiou"
     } ],
     "socialExpressions" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -20884,7 +21046,7 @@ open class ConversationsAPI {
      Send message
      
      - POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages
-     - 
+     - Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -21939,15 +22101,18 @@ open class ConversationsAPI {
     
     
     
+    
+    
     /**
      
      Create a Facebook Integration
      
      - parameter body: (body) FacebookIntegrationRequest 
+     - parameter async: (query) Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsFacebook(body: FacebookIntegrationRequest, completion: @escaping ((_ data: FacebookIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: body)
+    open class func postConversationsMessagingIntegrationsFacebook(body: FacebookIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: FacebookIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: body, async: async)
         requestBuilder.execute { (response: Response<FacebookIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -21974,36 +22139,62 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "pageId" : "aeiou",
+  "createStatus" : "aeiou",
+  "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "appId" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "",
   "id" : "aeiou",
-  "pageId" : "aeiou",
-  "version" : 123,
   "status" : "aeiou"
 }}]
      
      - parameter body: (body) FacebookIntegrationRequest 
+     - parameter async: (query) Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<FacebookIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: FacebookIntegrationRequest) -> RequestBuilder<FacebookIntegration> {
+    open class func postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: FacebookIntegrationRequest, async: Bool? = nil) -> RequestBuilder<FacebookIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/facebook"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "async": async
+            
+        ])
 
         let requestBuilder: RequestBuilder<FacebookIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -22013,15 +22204,18 @@ open class ConversationsAPI {
     
     
     
+    
+    
     /**
      
      Create a LINE messenger Integration
      
      - parameter body: (body) LineIntegrationRequest 
+     - parameter async: (query) Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsLine(body: LineIntegrationRequest, completion: @escaping ((_ data: LineIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsLineWithRequestBuilder(body: body)
+    open class func postConversationsMessagingIntegrationsLine(body: LineIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: LineIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsLineWithRequestBuilder(body: body, async: async)
         requestBuilder.execute { (response: Response<LineIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -22049,35 +22243,61 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "webhookUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
+  "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "",
   "id" : "aeiou",
-  "version" : 123,
   "channelId" : "aeiou",
   "status" : "aeiou"
 }}]
      
      - parameter body: (body) LineIntegrationRequest 
+     - parameter async: (query) Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<LineIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsLineWithRequestBuilder(body: LineIntegrationRequest) -> RequestBuilder<LineIntegration> {
+    open class func postConversationsMessagingIntegrationsLineWithRequestBuilder(body: LineIntegrationRequest, async: Bool? = nil) -> RequestBuilder<LineIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/line"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "async": async
+            
+        ])
 
         let requestBuilder: RequestBuilder<LineIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -22087,15 +22307,18 @@ open class ConversationsAPI {
     
     
     
+    
+    
     /**
      
      Create a Twitter Integration
      
      - parameter body: (body) TwitterIntegrationRequest 
+     - parameter async: (query) Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsTwitter(body: TwitterIntegrationRequest, completion: @escaping ((_ data: TwitterIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: body)
+    open class func postConversationsMessagingIntegrationsTwitter(body: TwitterIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: TwitterIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: body, async: async)
         requestBuilder.execute { (response: Response<TwitterIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -22124,7 +22347,27 @@ open class ConversationsAPI {
      - examples: [{contentType=application/json, example={
   "accessTokenKey" : "aeiou",
   "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
   "userId" : "aeiou",
   "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -22145,17 +22388,23 @@ open class ConversationsAPI {
 }}]
      
      - parameter body: (body) TwitterIntegrationRequest 
+     - parameter async: (query) Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<TwitterIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: TwitterIntegrationRequest) -> RequestBuilder<TwitterIntegration> {
+    open class func postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: TwitterIntegrationRequest, async: Bool? = nil) -> RequestBuilder<TwitterIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/twitter"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "async": async
+            
+        ])
 
         let requestBuilder: RequestBuilder<TwitterIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -22165,15 +22414,18 @@ open class ConversationsAPI {
     
     
     
+    
+    
     /**
      
      Create a WhatsApp Integration
      
      - parameter body: (body) WhatsAppIntegrationRequest 
+     - parameter async: (query) Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsWhatsapp(body: WhatsAppIntegrationRequest, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: body)
+    open class func postConversationsMessagingIntegrationsWhatsapp(body: WhatsAppIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: body, async: async)
         requestBuilder.execute { (response: Response<WhatsAppIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -22202,7 +22454,9 @@ open class ConversationsAPI {
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
   "selfUri" : "aeiou",
+  "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
   "version" : 123,
   "phoneNumber" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -22238,17 +22492,23 @@ open class ConversationsAPI {
 }}]
      
      - parameter body: (body) WhatsAppIntegrationRequest 
+     - parameter async: (query) Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<WhatsAppIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: WhatsAppIntegrationRequest) -> RequestBuilder<WhatsAppIntegration> {
+    open class func postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: WhatsAppIntegrationRequest, async: Bool? = nil) -> RequestBuilder<WhatsAppIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/whatsapp"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "async": async
+            
+        ])
 
         let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -22525,19 +22785,39 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "webhookUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
+  "version" : 123,
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "",
   "id" : "aeiou",
-  "version" : 123,
   "channelId" : "aeiou",
   "status" : "aeiou"
 }}]

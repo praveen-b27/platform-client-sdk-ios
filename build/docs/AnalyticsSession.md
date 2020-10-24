@@ -30,7 +30,7 @@ title: AnalyticsSession
 | **monitoredParticipantId** | **String** |  | [optional] |
 | **callbackUserName** | **String** | The name of the user requesting a call back | [optional] |
 | **callbackNumbers** | **[String]** | List of numbers to callback | [optional] |
-| **callbackScheduledTime** | [**Date**](Date.html) | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **callbackScheduledTime** | [**Date**](Date.html) | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **scriptId** | **String** | A unique identifier for a script | [optional] |
 | **peerId** | **String** | A unique identifier for a peer | [optional] |
 | **skipEnabled** | **Bool** | (Dialer) Whether the agent can skip the dialer contact | [optional] |
@@ -59,6 +59,7 @@ title: AnalyticsSession
 | **provider** | **String** | The source provider for the communication | [optional] |
 | **remote** | **String** | Name, phone number, or email address of the remote party. | [optional] |
 | **mediaCount** | **Int** | Count of any media (images, files, etc) included in this session | [optional] |
+| **flowInType** | **String** | Type of flow in that occurred, e.g. acd, ivr, etc. | [optional] |
 | **flowOutType** | **String** | Type of flow out that occurred, e.g. voicemail, callback, or acd | [optional] |
 | **requestedRoutings** | **[String]** | All routing types for requested/attempted routing methods. | [optional] |
 | **usedRouting** | **String** | Complete routing method | [optional] |

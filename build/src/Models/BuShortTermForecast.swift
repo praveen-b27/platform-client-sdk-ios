@@ -31,7 +31,7 @@ public class BuShortTermForecast: Codable {
     public var legacy: Bool?
     /** Metadata for this forecast */
     public var metadata: WfmVersionedEntityMetadata?
-    /** The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var referenceStartDate: Date?
     /** The source day pointers for this forecast */
     public var sourceDays: [ForecastSourceDayPointer]?

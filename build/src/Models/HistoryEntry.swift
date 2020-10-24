@@ -29,7 +29,7 @@ public class HistoryEntry: Codable {
     public var action: Action?
     /** For actions performed not on the item itself, but on a sub-item, this field identifies the sub-item by name.  For example, for actions performed on prompt resources, this will be the prompt resource name. */
     public var resource: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     /** User associated with this entry. */
     public var user: User?

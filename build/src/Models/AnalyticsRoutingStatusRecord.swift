@@ -18,9 +18,9 @@ public class AnalyticsRoutingStatusRecord: Codable {
         case notResponding = "NOT_RESPONDING"
         case communicating = "COMMUNICATING"
     }
-    /** The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startTime: Date?
-    /** The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
     /** The user&#39;s ACD routing status */
     public var routingStatus: RoutingStatus?

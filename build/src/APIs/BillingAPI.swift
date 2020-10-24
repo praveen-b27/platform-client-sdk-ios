@@ -19,8 +19,8 @@ open class BillingAPI {
      
      Get a report of the billable license usages
      
-     - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
-     - parameter endDate: (query) The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
+     - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
+     - parameter endDate: (query) The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getBillingReportsBillableusage(startDate: Date, endDate: Date, completion: @escaping ((_ data: BillingUsageReport?,_ error: Error?) -> Void)) {
@@ -67,8 +67,8 @@ open class BillingAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
-     - parameter endDate: (query) The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
+     - parameter startDate: (query) The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
+     - parameter endDate: (query) The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
 
      - returns: RequestBuilder<BillingUsageReport> 
      */

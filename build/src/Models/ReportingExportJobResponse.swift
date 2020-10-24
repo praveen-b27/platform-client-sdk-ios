@@ -111,9 +111,9 @@ public class ReportingExportJobResponse: Codable {
     public var filter: ViewFilter?
     /** Indicates if the request has been marked as read */
     public var read: Bool?
-    /** The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The created date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDateTime: Date?
-    /** The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The last modified date/time of the request. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDateTime: Date?
     /** The locale use for localization of the exported data, i.e. en-us, es-mx   */
     public var locale: String?

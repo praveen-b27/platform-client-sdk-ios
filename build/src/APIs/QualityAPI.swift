@@ -839,20 +839,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -872,12 +877,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1374,20 +1375,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -1407,12 +1413,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -2225,8 +2227,8 @@ open class QualityAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter startTime: (query) Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
-     - parameter endTime: (query) End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
+     - parameter startTime: (query) Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
      - parameter agentUserId: (query) user id of agent requested (optional)
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)
@@ -2558,8 +2560,8 @@ open class QualityAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter startTime: (query) Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
-     - parameter endTime: (query) End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
+     - parameter startTime: (query) Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
      - parameter agentUserId: (query) user id of agent requested (optional)
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)
@@ -3443,20 +3445,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -3476,12 +3483,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -3598,8 +3601,8 @@ open class QualityAPI {
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversation id (optional)
-     - parameter startTime: (query) Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
-     - parameter endTime: (query) end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
+     - parameter startTime: (query) Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getQualityCalibrations(calibratorId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, startTime: Date? = nil, endTime: Date? = nil, completion: @escaping ((_ data: CalibrationEntityListing?,_ error: Error?) -> Void)) {
@@ -4422,20 +4425,25 @@ open class QualityAPI {
         "messages" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-          "wrapup" : "",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : "",
           "type" : "aeiou",
           "toAddress" : "",
           "segments" : [ "" ],
-          "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "journeyContext" : "",
           "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
+          "fromAddress" : "",
+          "state" : "aeiou",
+          "id" : "aeiou",
+          "direction" : "aeiou",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
+          "scriptId" : "aeiou",
           "messages" : [ {
             "messageStatus" : "aeiou",
             "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -4455,12 +4463,8 @@ open class QualityAPI {
             "messageSegmentCount" : 123
           } ],
           "recipientCountry" : "aeiou",
-          "fromAddress" : "",
-          "state" : "aeiou",
-          "id" : "aeiou",
           "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-          "recordingId" : "aeiou",
-          "direction" : "aeiou"
+          "recordingId" : "aeiou"
         } ],
         "socialExpressions" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -4526,8 +4530,8 @@ open class QualityAPI {
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversation id (optional)
-     - parameter startTime: (query) Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
-     - parameter endTime: (query) end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
+     - parameter startTime: (query) Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
 
      - returns: RequestBuilder<CalibrationEntityListing> 
      */
@@ -5392,20 +5396,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -5425,12 +5434,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -6831,20 +6836,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -6864,12 +6874,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -7414,20 +7420,25 @@ open class QualityAPI {
         "messages" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
-          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-          "wrapup" : "",
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : "",
           "type" : "aeiou",
           "toAddress" : "",
           "segments" : [ "" ],
-          "scriptId" : "aeiou",
           "recipientType" : "aeiou",
           "provider" : "aeiou",
+          "journeyContext" : "",
           "afterCallWork" : "",
           "disconnectType" : "aeiou",
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
+          "fromAddress" : "",
+          "state" : "aeiou",
+          "id" : "aeiou",
+          "direction" : "aeiou",
+          "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+          "wrapup" : "",
+          "scriptId" : "aeiou",
           "messages" : [ {
             "messageStatus" : "aeiou",
             "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -7447,12 +7458,8 @@ open class QualityAPI {
             "messageSegmentCount" : 123
           } ],
           "recipientCountry" : "aeiou",
-          "fromAddress" : "",
-          "state" : "aeiou",
-          "id" : "aeiou",
           "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-          "recordingId" : "aeiou",
-          "direction" : "aeiou"
+          "recordingId" : "aeiou"
         } ],
         "socialExpressions" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -8036,8 +8043,8 @@ open class QualityAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter startTime: (query) The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
-     - parameter endTime: (query) The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
+     - parameter startTime: (query) The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
      - parameter name: (query) Evaluator name (optional)
      - parameter permission: (query) permission strings (optional)
      - parameter group: (query) group id (optional)
@@ -8357,8 +8364,8 @@ open class QualityAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter startTime: (query) The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
-     - parameter endTime: (query) The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)
+     - parameter startTime: (query) The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
      - parameter name: (query) Evaluator name (optional)
      - parameter permission: (query) permission strings (optional)
      - parameter group: (query) group id (optional)
@@ -12557,20 +12564,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -12590,12 +12602,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -14006,20 +14014,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -14039,12 +14052,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -14535,20 +14544,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -14568,12 +14582,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -17603,20 +17613,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -17636,12 +17651,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -18133,20 +18144,25 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
-        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-        "wrapup" : "",
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
         "type" : "aeiou",
         "toAddress" : "",
         "segments" : [ "" ],
-        "scriptId" : "aeiou",
         "recipientType" : "aeiou",
         "provider" : "aeiou",
+        "journeyContext" : "",
         "afterCallWork" : "",
         "disconnectType" : "aeiou",
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
+        "fromAddress" : "",
+        "state" : "aeiou",
+        "id" : "aeiou",
+        "direction" : "aeiou",
+        "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
+        "wrapup" : "",
+        "scriptId" : "aeiou",
         "messages" : [ {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
@@ -18166,12 +18182,8 @@ open class QualityAPI {
           "messageSegmentCount" : 123
         } ],
         "recipientCountry" : "aeiou",
-        "fromAddress" : "",
-        "state" : "aeiou",
-        "id" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou",
-        "direction" : "aeiou"
+        "recordingId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",

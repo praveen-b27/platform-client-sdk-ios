@@ -21,11 +21,11 @@ public class ScimMetadata: Codable {
     }
     /** The type of SCIM resource. */
     public var resourceType: ResourceType?
-    /** The last time that the resource was modified. Date time is represented as an ISO-8601 string, for example, yyyy-MM-ddTHH:mm:ss.SSSZ. Not present on Schema and ResourceType resource. */
+    /** The last time that the resource was modified. Date time is represented as an \&quot;ISO-8601 string\&quot;, for example, yyyy-MM-ddTHH:mm:ss.SSSZ. Not included with \&quot;Schema\&quot; and \&quot;ResourceType\&quot; resources. */
     public var lastModified: Date?
     /** The URI of the resource. */
     public var location: String?
-    /** The version of the resource. Matches the ETag HTTP response header. Not present on Schema and ResourceType resources. */
+    /** The version of the resource. Matches the ETag HTTP response header. Not included with \&quot;Schema\&quot; and \&quot;ResourceType\&quot; resources. */
     public var version: String?
 
     public init(resourceType: ResourceType?, lastModified: Date?, location: String?, version: String?) {

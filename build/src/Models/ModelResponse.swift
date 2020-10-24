@@ -32,7 +32,7 @@ public class ModelResponse: Codable {
     public var texts: [ResponseText]?
     /** User that created the response */
     public var createdBy: User?
-    /** The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The interaction type for this response. */
     public var interactionType: InteractionType?

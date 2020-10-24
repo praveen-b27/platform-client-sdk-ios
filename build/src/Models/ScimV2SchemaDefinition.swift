@@ -20,7 +20,7 @@ public class ScimV2SchemaDefinition: Codable {
     public var _description: String?
     /** The list of service provider attributes. */
     public var attributes: [ScimV2SchemaAttribute]?
-    /** The metadata of the SCIM resource. Only location and resourceType are set for Schema resources. */
+    /** The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;Schema\&quot; resources. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, name: String?, _description: String?, attributes: [ScimV2SchemaAttribute]?, meta: ScimMetadata?) {

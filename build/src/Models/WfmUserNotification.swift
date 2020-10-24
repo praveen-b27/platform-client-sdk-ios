@@ -19,7 +19,7 @@ public class WfmUserNotification: Codable {
     public var _id: String?
     /** The group ID of the notification (mutable, may change  on update) */
     public var mutableGroupId: String?
-    /** The timestamp for this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp for this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     /** The type of this notification */
     public var type: ModelType?

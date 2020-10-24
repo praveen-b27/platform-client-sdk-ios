@@ -23,7 +23,7 @@ public class TestMessage: Codable {
     public var textBody: String?
     /** The html body of the email message */
     public var htmlBody: String?
-    /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var time: Date?
 
     public init(_id: String?, to: [EmailAddress]?, from: EmailAddress?, subject: String?, textBody: String?, htmlBody: String?, time: Date?) {

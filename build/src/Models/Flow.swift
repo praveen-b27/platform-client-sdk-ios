@@ -50,10 +50,12 @@ public class Flow: Codable {
     public var debugVersion: FlowVersion?
     public var publishedBy: User?
     public var currentOperation: Operation?
+    /** Information about the NLU domain version for the flow */
+    public var nluInfo: NluInfo?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, nluInfo: NluInfo?, selfUri: String?) {
         
         self._id = _id
         
@@ -91,6 +93,8 @@ public class Flow: Codable {
         
         self.currentOperation = currentOperation
         
+        self.nluInfo = nluInfo
+        
         self.selfUri = selfUri
         
     }
@@ -114,6 +118,7 @@ public class Flow: Codable {
         case debugVersion
         case publishedBy
         case currentOperation
+        case nluInfo
         case selfUri
     }
 

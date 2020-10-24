@@ -25,7 +25,7 @@ public class IntegrationStatusInfo: Codable {
     public var effective: String?
     /** Localizable status details for the integration. */
     public var detail: MessageInfo?
-    /** Date and time (in UTC) when the integration status (i.e. the code field) was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date and time (in UTC) when the integration status (i.e. the code field) was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var lastUpdated: Date?
 
     public init(code: Code?, effective: String?, detail: MessageInfo?, lastUpdated: Date?) {

@@ -44,7 +44,7 @@ public class ScimV2SchemaAttribute: Codable {
         case external = "EXTERNAL"
         case uri = "URI"
     }
-    /** The attribute&#39;s name */
+    /** The name of the attribute. */
     public var name: String?
     /** The data type of the attribute. */
     public var type: ModelType?

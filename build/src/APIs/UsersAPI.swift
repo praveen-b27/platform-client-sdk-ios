@@ -6519,6 +6519,466 @@ open class UsersAPI {
 
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Overdue_getUsersDevelopmentActivities: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getUsersDevelopmentActivities: String { 
+        case asc = "Asc"
+        case desc = "Desc"
+    }
+
+    
+    
+    
+    public enum Types_getUsersDevelopmentActivities: String { 
+        case informational = "Informational"
+        case coaching = "Coaching"
+    }
+
+    
+    
+    
+    public enum Statuses_getUsersDevelopmentActivities: String { 
+        case planned = "Planned"
+        case inProgress = "InProgress"
+        case completed = "Completed"
+        case invalidSchedule = "InvalidSchedule"
+    }
+
+    
+    
+    
+    public enum Relationship_getUsersDevelopmentActivities: String { 
+        case creator = "Creator"
+        case facilitator = "Facilitator"
+        case attendee = "Attendee"
+    }
+
+    
+    
+    /**
+     
+     Get list of Development Activities
+     
+     - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
+     - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
+     - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
+     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersDevelopmentActivities(userId: [String]? = nil, moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivities? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivities? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersDevelopmentActivitiesWithRequestBuilder(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship)
+        requestBuilder.execute { (response: Response<DevelopmentActivityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get list of Development Activities
+     
+     - GET /api/v2/users/development/activities
+     - Either moduleId or userId is required. Results are filtered based on the applicable permissions.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "dateDue" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "isOverdue" : true,
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "attendees" : [ "" ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "type" : "aeiou",
+    "status" : "aeiou",
+    "facilitator" : ""
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
+     - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
+     - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
+     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+
+     - returns: RequestBuilder<DevelopmentActivityListing> 
+     */
+    open class func getUsersDevelopmentActivitiesWithRequestBuilder(userId: [String]? = nil, moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivities? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivities? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil) -> RequestBuilder<DevelopmentActivityListing> {
+        let path = "/api/v2/users/development/activities"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "userId": userId, 
+            
+            "moduleId": moduleId, 
+            
+            "interval": interval, 
+            
+            "completionInterval": completionInterval, 
+            
+            "overdue": overdue?.rawValue, 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "types": types, 
+            
+            "statuses": statuses, 
+            
+            "relationship": relationship
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DevelopmentActivityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Overdue_getUsersDevelopmentActivitiesMe: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum SortOrder_getUsersDevelopmentActivitiesMe: String { 
+        case asc = "Asc"
+        case desc = "Desc"
+    }
+
+    
+    
+    
+    public enum Types_getUsersDevelopmentActivitiesMe: String { 
+        case informational = "Informational"
+        case coaching = "Coaching"
+    }
+
+    
+    
+    
+    public enum Statuses_getUsersDevelopmentActivitiesMe: String { 
+        case planned = "Planned"
+        case inProgress = "InProgress"
+        case completed = "Completed"
+        case invalidSchedule = "InvalidSchedule"
+    }
+
+    
+    
+    
+    public enum Relationship_getUsersDevelopmentActivitiesMe: String { 
+        case creator = "Creator"
+        case facilitator = "Facilitator"
+        case attendee = "Attendee"
+    }
+
+    
+    
+    /**
+     
+     Get list of Development Activities for current user
+     
+     - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
+     - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
+     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersDevelopmentActivitiesMe(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivitiesMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivitiesMe? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersDevelopmentActivitiesMeWithRequestBuilder(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship)
+        requestBuilder.execute { (response: Response<DevelopmentActivityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get list of Development Activities for current user
+     
+     - GET /api/v2/users/development/activities/me
+     - Results are filtered based on the applicable permissions.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "dateDue" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "isOverdue" : true,
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "attendees" : [ "" ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "type" : "aeiou",
+    "status" : "aeiou",
+    "facilitator" : ""
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
+     - parameter interval: (query) Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter completionInterval: (query) Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter overdue: (query) Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
+     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+
+     - returns: RequestBuilder<DevelopmentActivityListing> 
+     */
+    open class func getUsersDevelopmentActivitiesMeWithRequestBuilder(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivitiesMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivitiesMe? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil) -> RequestBuilder<DevelopmentActivityListing> {
+        let path = "/api/v2/users/development/activities/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "moduleId": moduleId, 
+            
+            "interval": interval, 
+            
+            "completionInterval": completionInterval, 
+            
+            "overdue": overdue?.rawValue, 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "types": types, 
+            
+            "statuses": statuses, 
+            
+            "relationship": relationship
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DevelopmentActivityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum ModelType_getUsersDevelopmentActivity: String { 
+        case informational = "Informational"
+        case coaching = "Coaching"
+    }
+
+    
+    
+    /**
+     
+     Get a Development Activity
+     
+     - parameter activityId: (path) Specifies the activity ID, maps to either assignment or appointment ID 
+     - parameter type: (query) Specifies the activity type. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersDevelopmentActivity(activityId: String, type: ModelType_getUsersDevelopmentActivity, completion: @escaping ((_ data: DevelopmentActivity?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersDevelopmentActivityWithRequestBuilder(activityId: activityId, type: type)
+        requestBuilder.execute { (response: Response<DevelopmentActivity>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a Development Activity
+     
+     - GET /api/v2/users/development/activities/{activityId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateDue" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "isOverdue" : true,
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+  "attendees" : [ "" ],
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "type" : "aeiou",
+  "status" : "aeiou",
+  "facilitator" : ""
+}}]
+     
+     - parameter activityId: (path) Specifies the activity ID, maps to either assignment or appointment ID 
+     - parameter type: (query) Specifies the activity type. 
+
+     - returns: RequestBuilder<DevelopmentActivity> 
+     */
+    open class func getUsersDevelopmentActivityWithRequestBuilder(activityId: String, type: ModelType_getUsersDevelopmentActivity) -> RequestBuilder<DevelopmentActivity> {
+        var path = "/api/v2/users/development/activities/{activityId}"
+        let activityIdPreEscape = "\(activityId)"
+        let activityIdPostEscape = activityIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityId}", with: activityIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "type": type.rawValue
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DevelopmentActivity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
     public enum Expand_getUsersMe: String { 
         case routingstatus = "routingStatus"
         case presence = "presence"
@@ -10433,6 +10893,78 @@ open class UsersAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve aggregated development activity data
+     
+     - parameter body: (body) Aggregate Request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersDevelopmentActivitiesAggregatesQuery(body: DevelopmentActivityAggregateParam, completion: @escaping ((_ data: DevelopmentActivityAggregateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsersDevelopmentActivitiesAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DevelopmentActivityAggregateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve aggregated development activity data
+     
+     - POST /api/v2/users/development/activities/aggregates/query
+     - Results are filtered based on the applicable permissions.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "aeiou",
+      "metrics" : [ {
+        "metric" : "aeiou",
+        "stats" : {
+          "count" : 123
+        }
+      } ]
+    } ],
+    "group" : {
+      "key" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter body: (body) Aggregate Request 
+
+     - returns: RequestBuilder<DevelopmentActivityAggregateResponse> 
+     */
+    open class func postUsersDevelopmentActivitiesAggregatesQueryWithRequestBuilder(body: DevelopmentActivityAggregateParam) -> RequestBuilder<DevelopmentActivityAggregateResponse> {
+        let path = "/api/v2/users/development/activities/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DevelopmentActivityAggregateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

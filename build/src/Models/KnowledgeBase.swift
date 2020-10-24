@@ -22,9 +22,9 @@ public class KnowledgeBase: Codable {
     public var _description: String?
     /** Core language for knowledge base in which initial content must be created first */
     public var coreLanguage: CoreLanguage?
-    /** Knowledge base creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Knowledge base creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** Knowledge base last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Knowledge base last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The count representing the number of documents of type FAQ per KnowledgeBase */
     public var faqCount: Int?

@@ -12,20 +12,20 @@ title: JsonNode
 | **number** | **Bool** |  | [optional] |
 | **boolean** | **Bool** |  | [optional] |
 | **object** | **Bool** |  | [optional] |
-| **missingNode** | **Bool** |  | [optional] |
-| **binary** | **Bool** |  | [optional] |
-| **pojo** | **Bool** |  | [optional] |
+| **floatingPointNumber** | **Bool** |  | [optional] |
+| **integralNumber** | **Bool** |  | [optional] |
 | **short** | **Bool** |  | [optional] |
 | **int** | **Bool** |  | [optional] |
 | **long** | **Bool** |  | [optional] |
-| **integralNumber** | **Bool** |  | [optional] |
-| **floatingPointNumber** | **Bool** |  | [optional] |
 | **double** | **Bool** |  | [optional] |
 | **bigDecimal** | **Bool** |  | [optional] |
 | **bigInteger** | **Bool** |  | [optional] |
 | **textual** | **Bool** |  | [optional] |
-| **containerNode** | **Bool** |  | [optional] |
+| **binary** | **Bool** |  | [optional] |
 | **valueNode** | **Bool** |  | [optional] |
+| **containerNode** | **Bool** |  | [optional] |
+| **missingNode** | **Bool** |  | [optional] |
+| **pojo** | **Bool** |  | [optional] |
 | **array** | **Bool** |  | [optional] |
 | **null** | **Bool** |  | [optional] |
 {: class="table table-striped"}

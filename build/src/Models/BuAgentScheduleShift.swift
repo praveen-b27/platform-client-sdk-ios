@@ -13,7 +13,7 @@ public class BuAgentScheduleShift: Codable {
 
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** The start date of this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start date of this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?
     /** The length of this shift in minutes */
     public var lengthMinutes: Int?

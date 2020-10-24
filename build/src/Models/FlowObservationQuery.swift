@@ -19,7 +19,7 @@ public class FlowObservationQuery: Codable {
     }
     /** Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters */
     public var filter: FlowObservationQueryFilter?
-    /** Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *). */
+    /** Behaves like a SQL SELECT clause. Only named metrics will be retrieved. */
     public var metrics: [Metrics]?
     /** Metrics for which to include additional detailed observations */
     public var detailMetrics: [DetailMetrics]?

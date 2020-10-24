@@ -16,6 +16,10 @@ public class Site: Codable {
         case inactive = "inactive"
         case deleted = "deleted"
     }
+    public enum MediaModel: String, Codable { 
+        case premises = "Premises"
+        case cloud = "Cloud"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the entity. */
@@ -24,9 +28,9 @@ public class Site: Codable {
     public var _description: String?
     /** The current version of the resource. */
     public var version: Int?
-    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
-    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** The ID of the user that last modified the resource. */
     public var modifiedBy: String?
@@ -52,12 +56,14 @@ public class Site: Codable {
     public var managed: Bool?
     /** Network Time Protocol settings for the site */
     public var ntpSettings: NTPSettings?
+    /** Media model for the site */
+    public var mediaModel: MediaModel?
     /** The core site */
     public var coreSite: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, coreSite: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, mediaModel: MediaModel?, coreSite: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -103,6 +109,8 @@ public class Site: Codable {
         
         self.ntpSettings = ntpSettings
         
+        self.mediaModel = mediaModel
+        
         self.coreSite = coreSite
         
         self.selfUri = selfUri
@@ -132,6 +140,7 @@ public class Site: Codable {
         case location
         case managed
         case ntpSettings
+        case mediaModel
         case coreSite
         case selfUri
     }

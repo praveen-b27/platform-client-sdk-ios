@@ -17,11 +17,13 @@ title: TwitterIntegration
 | **tier** | **String** | The type of twitter account to be used for the integration | |
 | **envName** | **String** | The Twitter environment name, e.g.: env-beta (required for premium tier) | [optional] |
 | **recipient** | [**DomainEntityRef**](DomainEntityRef.html) | The recipient associated to the Twitter Integration. This recipient is used to associate a flow to an integration | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **dateCreated** | [**Date**](Date.html) | Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date.html) | Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **createdBy** | [**DomainEntityRef**](DomainEntityRef.html) | User reference that created this Integration | [optional] |
 | **modifiedBy** | [**DomainEntityRef**](DomainEntityRef.html) | User reference that last modified this Integration | [optional] |
 | **version** | **Int** | Version number required for updates. | |
+| **createStatus** | **String** | Status of asynchronous create operation | [optional] |
+| **createError** | [**ErrorBody**](ErrorBody.html) | Error information returned, if createStatus is set to Error | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

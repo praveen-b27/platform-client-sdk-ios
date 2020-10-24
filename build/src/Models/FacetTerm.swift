@@ -16,7 +16,7 @@ public class FacetTerm: Codable {
     public var _id: String?
     public var name: String?
     public var count: Int64?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var time: Date?
 
     public init(term: String?, key: Int64?, _id: String?, name: String?, count: Int64?, time: Date?) {

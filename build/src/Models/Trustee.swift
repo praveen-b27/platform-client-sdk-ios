@@ -15,7 +15,7 @@ public class Trustee: Codable {
     public var _id: String?
     /** If disabled no trustee user will have access, even if they were previously added. */
     public var enabled: Bool?
-    /** Date Trust was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date Trust was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** User that created trust. */
     public var createdBy: OrgUser?

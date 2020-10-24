@@ -17,7 +17,7 @@ public class Team: Codable {
     public var name: String?
     /** Team information. */
     public var _description: String?
-    /** Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** Number of members in a team */
     public var memberCount: Int64?

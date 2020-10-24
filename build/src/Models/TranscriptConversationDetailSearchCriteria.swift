@@ -20,6 +20,7 @@ public class TranscriptConversationDetailSearchCriteria: Codable {
         case exact = "EXACT"
         case exactPhrase = "EXACT_PHRASE"
         case phrase = "PHRASE"
+        case dateRange = "DATE_RANGE"
     }
     /** The end value of the range. This field is used for range search types. */
     public var endValue: String?

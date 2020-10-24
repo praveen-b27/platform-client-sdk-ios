@@ -12,9 +12,9 @@ title: Attribute
 | **version** | **Int** |  | [optional] |
 | **_description** | **String** |  | [optional] |
 | **createdBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **modifiedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

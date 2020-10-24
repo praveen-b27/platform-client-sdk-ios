@@ -11,20 +11,31 @@ import Foundation
 
 public class GenericSAML: Codable {
 
+    public enum NameIdentifierFormat: String, Codable { 
+        case urnOasisNamesTcSaml11NameidFormatUnspecified = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+        case urnOasisNamesTcSaml11NameidFormatEmailaddress = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+        case urnOasisNamesTcSaml11NameidFormatX509subjectname = "urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName"
+        case urnOasisNamesTcSaml11NameidFormatWindowsdomainqualifiedname = "urn:oasis:names:tc:SAML:1.1:nameid-format:WindowsDomainQualifiedName"
+        case urnOasisNamesTcSaml20NameidFormatKerberos = "urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos"
+        case urnOasisNamesTcSaml20NameidFormatEntity = "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"
+        case urnOasisNamesTcSaml20NameidFormatPersistent = "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
+        case urnOasisNamesTcSaml20NameidFormatTransient = "urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
     public var logoImageData: String?
-    public var endpointCompression: Bool?
     public var relyingPartyIdentifier: String?
+    public var endpointCompression: Bool?
+    public var nameIdentifierFormat: NameIdentifierFormat?
     public var certificate: String?
-    public var issuerURI: String?
     public var ssoTargetURI: String?
+    public var issuerURI: String?
     public var disabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, logoImageData: String?, endpointCompression: Bool?, relyingPartyIdentifier: String?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, logoImageData: String?, relyingPartyIdentifier: String?, endpointCompression: Bool?, nameIdentifierFormat: NameIdentifierFormat?, certificate: String?, ssoTargetURI: String?, issuerURI: String?, disabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -32,15 +43,17 @@ public class GenericSAML: Codable {
         
         self.logoImageData = logoImageData
         
+        self.relyingPartyIdentifier = relyingPartyIdentifier
+        
         self.endpointCompression = endpointCompression
         
-        self.relyingPartyIdentifier = relyingPartyIdentifier
+        self.nameIdentifierFormat = nameIdentifierFormat
         
         self.certificate = certificate
         
-        self.issuerURI = issuerURI
-        
         self.ssoTargetURI = ssoTargetURI
+        
+        self.issuerURI = issuerURI
         
         self.disabled = disabled
         
@@ -52,11 +65,12 @@ public class GenericSAML: Codable {
         case _id = "id"
         case name
         case logoImageData
-        case endpointCompression
         case relyingPartyIdentifier
+        case endpointCompression
+        case nameIdentifierFormat
         case certificate
-        case issuerURI
         case ssoTargetURI
+        case issuerURI
         case disabled
         case selfUri
     }

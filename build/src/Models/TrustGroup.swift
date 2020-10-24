@@ -30,7 +30,7 @@ public class TrustGroup: Codable {
     /** The group name. */
     public var name: String?
     public var _description: String?
-    /** Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** Number of members. */
     public var memberCount: Int64?
@@ -48,7 +48,7 @@ public class TrustGroup: Codable {
     public var visibility: Visibility?
     /** Owners of the group */
     public var owners: [User]?
-    /** The date on which the trusted group was added. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date on which the trusted group was added. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The user that added trusted group. */
     public var createdBy: OrgUser?

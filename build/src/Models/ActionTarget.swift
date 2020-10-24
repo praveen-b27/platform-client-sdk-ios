@@ -40,9 +40,9 @@ public class ActionTarget: Codable {
     public var serviceLevel: ServiceLevel?
     /** The URI for this object */
     public var selfUri: String?
-    /** The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
-    /** The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
     public init(_id: String?, name: String?, userData: [KeyValue]?, supportedMediaTypes: [SupportedMediaTypes]?, state: State?, _description: String?, serviceLevel: ServiceLevel?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {

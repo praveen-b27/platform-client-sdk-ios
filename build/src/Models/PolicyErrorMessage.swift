@@ -17,7 +17,7 @@ public class PolicyErrorMessage: Codable {
     public var errorCode: String?
     public var correlationId: String?
     public var userParams: [UserParam]?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var insertDate: Date?
 
     public init(statusCode: Int?, userMessage: JSON?, userParamsMessage: String?, errorCode: String?, correlationId: String?, userParams: [UserParam]?, insertDate: Date?) {

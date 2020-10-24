@@ -36,7 +36,7 @@ public class EventLog: Codable {
     public var name: String?
     public var errorEntity: DomainEntityRef?
     public var relatedEntity: DomainEntityRef?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     public var level: Level?
     public var category: Category?

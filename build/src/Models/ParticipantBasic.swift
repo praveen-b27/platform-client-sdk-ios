@@ -31,11 +31,11 @@ public class ParticipantBasic: Codable {
     }
     /** A globally unique identifier for this conversation. */
     public var _id: String?
-    /** The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startTime: Date?
-    /** The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endTime: Date?
-    /** The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var connectedTime: Date?
     /** A human readable name identifying the participant. */
     public var name: String?
@@ -105,9 +105,9 @@ public class ParticipantBasic: Codable {
     public var screenRecordingState: ScreenRecordingState?
     /** The reason specifying why participant flagged the conversation. */
     public var flaggedReason: FlaggedReason?
-    /** The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startAcwTime: Date?
-    /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endAcwTime: Date?
 
     public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?) {

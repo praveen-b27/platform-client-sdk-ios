@@ -1416,6 +1416,7 @@ open class RoutingAPI {
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "active" : true,
+    "nluInfo" : "",
     "type" : "aeiou",
     "lockedUser" : {
       "addresses" : [ "" ],
@@ -1704,6 +1705,11 @@ open class RoutingAPI {
       },
       "createdByClient" : "",
       "selfUri" : "aeiou",
+      "nluInfo" : {
+        "intents" : [ {
+          "name" : "aeiou"
+        } ]
+      },
       "type" : "aeiou",
       "secure" : true,
       "configurationUri" : "aeiou",
@@ -1840,6 +1846,7 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "description" : "aeiou",
       "active" : true,
+      "nluInfo" : "",
       "type" : "aeiou",
       "lockedUser" : {
         "addresses" : [ "" ],
@@ -2128,6 +2135,11 @@ open class RoutingAPI {
         },
         "createdByClient" : "",
         "selfUri" : "aeiou",
+        "nluInfo" : {
+          "intents" : [ {
+            "name" : "aeiou"
+          } ]
+        },
         "type" : "aeiou",
         "secure" : true,
         "configurationUri" : "aeiou",
@@ -9114,6 +9126,7 @@ open class RoutingAPI {
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "active" : true,
+    "nluInfo" : "",
     "type" : "aeiou",
     "lockedUser" : {
       "addresses" : [ "" ],
@@ -9402,6 +9415,11 @@ open class RoutingAPI {
       },
       "createdByClient" : "",
       "selfUri" : "aeiou",
+      "nluInfo" : {
+        "intents" : [ {
+          "name" : "aeiou"
+        } ]
+      },
       "type" : "aeiou",
       "secure" : true,
       "configurationUri" : "aeiou",

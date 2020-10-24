@@ -12,7 +12,7 @@ import Foundation
 public class EdgeMetrics: Codable {
 
     public var edge: DomainEntityRef?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var eventTime: Date?
     public var upTimeMsec: Int64?
     public var processors: [EdgeMetricsProcessor]?

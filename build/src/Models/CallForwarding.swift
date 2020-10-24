@@ -28,7 +28,7 @@ public class CallForwarding: Codable {
     public var calls: [CallRoute]?
     /** The type of voicemail to use with the callForwarding configuration */
     public var voicemail: Voicemail?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
     /** The URI for this object */
     public var selfUri: String?

@@ -16,7 +16,7 @@ public class Coretype: Codable {
     public var name: String?
     /** A positive integer denoting the core type&#39;s version */
     public var version: Int?
-    /** The date the core type was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the core type was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The core type&#39;s built-in schema */
     public var schema: Schema?

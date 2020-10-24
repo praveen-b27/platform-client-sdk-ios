@@ -32,10 +32,12 @@ public class FlowVersion: Codable {
     public var publishResultUri: String?
     public var inputSchema: JsonSchemaDocument?
     public var outputSchema: JsonSchemaDocument?
+    /** Information about the NLU domain version for the flow version */
+    public var nluInfo: NluInfo?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, selfUri: String?) {
+    public init(_id: String?, name: String?, commitVersion: String?, configurationVersion: String?, type: ModelType?, secure: Bool?, debug: Bool?, createdBy: User?, createdByClient: DomainEntityRef?, configurationUri: String?, dateCreated: Int64?, generationId: String?, publishResultUri: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, nluInfo: NluInfo?, selfUri: String?) {
         
         self._id = _id
         
@@ -67,6 +69,8 @@ public class FlowVersion: Codable {
         
         self.outputSchema = outputSchema
         
+        self.nluInfo = nluInfo
+        
         self.selfUri = selfUri
         
     }
@@ -87,6 +91,7 @@ public class FlowVersion: Codable {
         case publishResultUri
         case inputSchema
         case outputSchema
+        case nluInfo
         case selfUri
     }
 

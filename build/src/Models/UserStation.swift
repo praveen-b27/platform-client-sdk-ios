@@ -16,7 +16,7 @@ public class UserStation: Codable {
     public var name: String?
     public var type: String?
     public var associatedUser: User?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var associatedDate: Date?
     public var defaultUser: User?
     /** Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; } */

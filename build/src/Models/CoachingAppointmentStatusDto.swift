@@ -20,7 +20,7 @@ public class CoachingAppointmentStatusDto: Codable {
     public var appointment: CoachingAppointmentReference?
     /** User who updated the status */
     public var createdBy: UserReference?
-    /** Creation time of the status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Creation time of the status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** The status of the coaching appointment */
     public var status: Status?

@@ -29,11 +29,11 @@ public class ShiftTradeNotification: Codable {
     public var newState: NewState?
     /** The user who initiated the shift trade */
     public var initiatingUser: UserReference?
-    /** The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var initiatingShiftDate: Date?
     /** The user on the receiving side of this shift trade (null if not matched) */
     public var receivingUser: UserReference?
-    /** The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start date and time of the receiving shift (null if not matched or if one-sided. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var receivingShiftDate: Date?
 
     public init(weekDate: String?, tradeId: String?, oneSided: Bool?, newState: NewState?, initiatingUser: UserReference?, initiatingShiftDate: Date?, receivingUser: UserReference?, receivingShiftDate: Date?) {

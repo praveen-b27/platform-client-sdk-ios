@@ -35,6 +35,7 @@ public class ConversationAggregateQueryPredicate: Codable {
         case externalmediacount = "externalMediaCount"
         case externalorganizationid = "externalOrganizationId"
         case flaggedreason = "flaggedReason"
+        case flowintype = "flowInType"
         case flowouttype = "flowOutType"
         case groupid = "groupId"
         case interactiontype = "interactionType"

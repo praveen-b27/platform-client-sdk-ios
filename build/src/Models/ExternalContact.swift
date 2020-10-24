@@ -32,9 +32,9 @@ public class ExternalContact: Codable {
     public var lineId: LineId?
     public var whatsAppId: WhatsAppId?
     public var facebookId: FacebookId?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifyDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createDate: Date?
     public var externalOrganization: ExternalOrganization?
     public var surveyOptOut: Bool?

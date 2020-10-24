@@ -26,7 +26,7 @@ public class ScimConfigResourceType: Codable {
     public var schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?
     /** The HTTP-addressable endpoint of the resource type. Appears after the base URL. */
     public var endpoint: String?
-    /** The metadata of the SCIM resource. Only location and resourceType are set for ResourceType resources. */
+    /** The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources. */
     public var meta: ScimMetadata?
 
     public init(_id: String?, schemas: [String]?, name: String?, _description: String?, schema: String?, schemaExtensions: [ScimConfigResourceTypeSchemaExtension]?, endpoint: String?, meta: ScimMetadata?) {

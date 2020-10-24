@@ -35,7 +35,7 @@ public class ApiUsageRow: Codable {
     public var status429: Int64?
     /** Total number of requests */
     public var requests: Int64?
-    /** Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date of requests, based on granularity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var date: Date?
 
     public init(clientId: String?, clientName: String?, organizationId: String?, userId: String?, templateUri: String?, httpMethod: String?, status200: Int64?, status300: Int64?, status400: Int64?, status500: Int64?, status429: Int64?, requests: Int64?, date: Date?) {

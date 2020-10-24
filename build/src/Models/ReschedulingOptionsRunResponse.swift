@@ -13,9 +13,9 @@ public class ReschedulingOptionsRunResponse: Codable {
 
     /** The existing schedule to which this reschedule run applies */
     public var existingSchedule: BuScheduleReference?
-    /** The start date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?
-    /** The end date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The end date of the period to reschedule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endDate: Date?
     /** Per-management unit rescheduling options */
     public var managementUnits: [ReschedulingManagementUnitResponse]?

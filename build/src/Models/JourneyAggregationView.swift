@@ -13,6 +13,7 @@ public class JourneyAggregationView: Codable {
 
     public enum Target: String, Codable { 
         case njourneyoutcomesachieved = "nJourneyOutcomesAchieved"
+        case njourneyoutcomesattributed = "nJourneyOutcomesAttributed"
         case njourneysegmentsassigned = "nJourneySegmentsAssigned"
         case njourneysessions = "nJourneySessions"
         case nwebactionsabandoned = "nWebActionsAbandoned"

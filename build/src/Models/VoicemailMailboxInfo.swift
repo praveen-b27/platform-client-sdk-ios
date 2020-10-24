@@ -19,9 +19,9 @@ public class VoicemailMailboxInfo: Codable {
     public var unreadCount: Int?
     /** The total number of voicemail messages marked as deleted */
     public var deletedCount: Int?
-    /** The date of the oldest voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date of the oldest voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
-    /** The date of the most recent voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date of the most recent voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
     public init(usageSizeBytes: Int64?, totalCount: Int?, unreadCount: Int?, deletedCount: Int?, createdDate: Date?, modifiedDate: Date?) {

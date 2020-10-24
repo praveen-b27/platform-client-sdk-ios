@@ -16,7 +16,7 @@ public class ScimUserExtensions: Codable {
     public var routingSkills: [ScimUserRoutingSkill]?
     /** The list of routing languages assigned to a user. Maximum 50 languages. */
     public var routingLanguages: [ScimUserRoutingLanguage]?
-    /** External Identifiers assigned to user. SCIM External ID will be visible here with authority prefix &#39;x-pc:scimv2:v1&#39; but will be immutable. */
+    /** The list of external identifiers assigned to user. Always includes an immutable SCIM authority prefixed with \&quot;x-pc:scimv2:v1\&quot;. */
     public var externalIds: [ScimGenesysUserExternalId]?
 
     public init(routingSkills: [ScimUserRoutingSkill]?, routingLanguages: [ScimUserRoutingLanguage]?, externalIds: [ScimGenesysUserExternalId]?) {

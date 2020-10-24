@@ -31,7 +31,7 @@ public class SendAgentlessOutboundMessageResponse: Codable {
     public var messengerType: MessengerType?
     /** The body of the text message. */
     public var textBody: String?
-    /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     /** The URI for this object */
     public var selfUri: String?

@@ -87,7 +87,7 @@ public class AnalyticsSession: Codable {
     public var callbackUserName: String?
     /** List of numbers to callback */
     public var callbackNumbers: [String]?
-    /** Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var callbackScheduledTime: Date?
     /** A unique identifier for a script */
     public var scriptId: String?
@@ -144,6 +144,8 @@ public class AnalyticsSession: Codable {
     public var remote: String?
     /** Count of any media (images, files, etc) included in this session */
     public var mediaCount: Int?
+    /** Type of flow in that occurred, e.g. acd, ivr, etc. */
+    public var flowInType: String?
     /** Type of flow out that occurred, e.g. voicemail, callback, or acd */
     public var flowOutType: String?
     /** All routing types for requested/attempted routing methods. */
@@ -159,7 +161,7 @@ public class AnalyticsSession: Codable {
     /** Proposed agents */
     public var proposedAgents: [AnalyticsProposedAgent]?
 
-    public init(mediaType: MediaType?, sessionId: String?, addressOther: String?, addressSelf: String?, addressFrom: String?, addressTo: String?, messageType: MessageType?, ani: String?, direction: Direction?, dnis: String?, sessionDnis: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, dispositionAnalyzer: String?, dispositionName: String?, edgeId: String?, remoteNameDisplayable: String?, roomId: String?, monitoredSessionId: String?, monitoredParticipantId: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Date?, scriptId: String?, peerId: String?, skipEnabled: Bool?, timeoutSeconds: Int?, cobrowseRole: String?, cobrowseRoomId: String?, mediaBridgeId: String?, screenShareAddressSelf: String?, sharingScreen: Bool?, screenShareRoomId: String?, videoRoomId: String?, videoAddressSelf: String?, segments: [AnalyticsConversationSegment]?, metrics: [AnalyticsSessionMetric]?, flow: AnalyticsFlow?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, recording: Bool?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: String?, protocolCallId: String?, provider: String?, remote: String?, mediaCount: Int?, flowOutType: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, selectedAgentId: String?, selectedAgentRank: Int?, agentAssistantId: String?, proposedAgents: [AnalyticsProposedAgent]?) {
+    public init(mediaType: MediaType?, sessionId: String?, addressOther: String?, addressSelf: String?, addressFrom: String?, addressTo: String?, messageType: MessageType?, ani: String?, direction: Direction?, dnis: String?, sessionDnis: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, dispositionAnalyzer: String?, dispositionName: String?, edgeId: String?, remoteNameDisplayable: String?, roomId: String?, monitoredSessionId: String?, monitoredParticipantId: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Date?, scriptId: String?, peerId: String?, skipEnabled: Bool?, timeoutSeconds: Int?, cobrowseRole: String?, cobrowseRoomId: String?, mediaBridgeId: String?, screenShareAddressSelf: String?, sharingScreen: Bool?, screenShareRoomId: String?, videoRoomId: String?, videoAddressSelf: String?, segments: [AnalyticsConversationSegment]?, metrics: [AnalyticsSessionMetric]?, flow: AnalyticsFlow?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, recording: Bool?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: String?, protocolCallId: String?, provider: String?, remote: String?, mediaCount: Int?, flowInType: String?, flowOutType: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, selectedAgentId: String?, selectedAgentRank: Int?, agentAssistantId: String?, proposedAgents: [AnalyticsProposedAgent]?) {
         
         self.mediaType = mediaType
         
@@ -264,6 +266,8 @@ public class AnalyticsSession: Codable {
         self.remote = remote
         
         self.mediaCount = mediaCount
+        
+        self.flowInType = flowInType
         
         self.flowOutType = flowOutType
         

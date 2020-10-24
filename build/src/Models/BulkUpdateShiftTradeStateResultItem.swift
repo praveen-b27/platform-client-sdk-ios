@@ -36,7 +36,7 @@ public class BulkUpdateShiftTradeStateResultItem: Codable {
     public var state: State?
     /** The user who reviewed the request, if applicable */
     public var reviewedBy: UserReference?
-    /** The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the request was reviewed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var reviewedDate: Date?
     /** The reason the update failed, if applicable */
     public var failureReason: FailureReason?

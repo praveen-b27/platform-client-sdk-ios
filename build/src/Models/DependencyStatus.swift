@@ -26,9 +26,9 @@ public class DependencyStatus: Codable {
     /** OAuth client that initiated the build. */
     public var client: DomainEntityRef?
     public var buildId: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateStarted: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
     public var status: Status?
     public var failedObjects: [FailedObject]?

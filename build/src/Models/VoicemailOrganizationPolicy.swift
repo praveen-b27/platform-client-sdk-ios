@@ -23,7 +23,7 @@ public class VoicemailOrganizationPolicy: Codable {
     public var pinRequired: Bool?
     /** Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting. */
     public var sendEmailNotifications: Bool?
-    /** The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
     public init(enabled: Bool?, alertTimeoutSeconds: Int?, pinConfiguration: PINConfiguration?, voicemailExtension: String?, pinRequired: Bool?, sendEmailNotifications: Bool?, modifiedDate: Date?) {

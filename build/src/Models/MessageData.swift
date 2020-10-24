@@ -37,7 +37,7 @@ public class MessageData: Codable {
     public var name: String?
     /** The unique identifier of the message from provider */
     public var providerMessageId: String?
-    /** The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     /** The sender of the text message. */
     public var fromAddress: String?

@@ -11,7 +11,7 @@ import Foundation
 
 public class ProvisionInfo: Codable {
 
-    /** The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var time: Date?
     /** The source of the provisioning */
     public var source: String?

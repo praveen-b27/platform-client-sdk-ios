@@ -82,7 +82,7 @@ public class AuditLogMessage: Codable {
     public var remoteIp: [String]?
     /** Name of the service that logged this audit message. */
     public var serviceName: ServiceName?
-    /** Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var eventDate: Date?
     /** Message describing the event being audited. */
     public var message: MessageInfo?

@@ -11,7 +11,7 @@ import Foundation
 
 public class FacebookAppCredentials: Codable {
 
-    /** Genesys Facebook App Id */
+    /** Genesys Cloud Facebook App Id */
     public var _id: String?
 
     public init(_id: String?) {

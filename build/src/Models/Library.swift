@@ -23,7 +23,7 @@ public class Library: Codable {
     public var version: Int?
     /** User that created the library. */
     public var createdBy: User?
-    /** The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** This value is deprecated. Responses representing message templates may be added to any library. */
     public var responseType: ResponseType?

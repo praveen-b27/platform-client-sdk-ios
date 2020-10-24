@@ -34,7 +34,7 @@ public class GDPRRequest: Codable {
     public var replacementTerms: [ReplacementTerm]?
     /** The type of GDPR request */
     public var requestType: RequestType?
-    /** When the request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** When the request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
     /** The status of the request */
     public var status: Status?

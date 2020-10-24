@@ -26,11 +26,11 @@ public class FlowRuntimeExecution: Codable {
     public var name: String?
     /** The Version of the flow definition of the flow execution. */
     public var flowVersion: FlowVersion?
-    /** The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time the flow was launched. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateLaunched: Date?
     /** The flow&#39;s running status, which indicates whether the flow is running normally or completed, etc. */
     public var status: Status?
-    /** The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time the flow completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
     /** The completion reason set at the flow completion time, if applicable. */
     public var completionReason: String?

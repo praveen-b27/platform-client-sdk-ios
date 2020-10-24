@@ -30,7 +30,7 @@ public class EmailMessage: Codable {
     public var textBody: String?
     /** The html body of the email message. */
     public var htmlBody: String?
-    /** The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var time: Date?
     /** Indicates whether the history of previous emails of the conversation is included within the email bodies of this message. */
     public var historyIncluded: Bool?

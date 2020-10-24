@@ -38,7 +38,7 @@ public class CoachingNotification: Codable {
     public var actionType: ActionType?
     /** The relationship of this user to this notification&#39;s appointment */
     public var relationship: Relationship?
-    /** The start time of the appointment relating to this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ */
+    /** The start time of the appointment relating to this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateStart: Date?
     /** The duration of the appointment on this notification */
     public var lengthInMinutes: Int?

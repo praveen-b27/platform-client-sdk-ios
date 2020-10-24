@@ -27,8 +27,8 @@ open class TelephonyAPI {
      
      Fetch SIP metadata
      
-     - parameter dateStart: (query) Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
-     - parameter dateEnd: (query) End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
+     - parameter dateStart: (query) Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
+     - parameter dateEnd: (query) End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
      - parameter callId: (query) unique identification of the placed call (optional)
      - parameter toUser: (query) User to who the call was placed (optional)
      - parameter fromUser: (query) user who placed the call (optional)
@@ -125,8 +125,8 @@ open class TelephonyAPI {
   "sid" : "aeiou"
 }}]
      
-     - parameter dateStart: (query) Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
-     - parameter dateEnd: (query) End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ 
+     - parameter dateStart: (query) Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
+     - parameter dateEnd: (query) End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z 
      - parameter callId: (query) unique identification of the placed call (optional)
      - parameter toUser: (query) User to who the call was placed (optional)
      - parameter fromUser: (query) user who placed the call (optional)

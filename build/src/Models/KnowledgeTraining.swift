@@ -25,16 +25,15 @@ public class KnowledgeTraining: Codable {
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
-    public var name: String?
     /** Trigger date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateTriggered: Date?
     /** Training completed date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCompleted: Date?
-    /** Training status */
+    /** Training status. */
     public var status: Status?
-    /** Actual language of the Training */
+    /** Language of the documents that are trained. */
     public var languageCode: String?
-    /** Knowledge base which Training does belong to */
+    /** Knowledge Base that the training belongs to. */
     public var knowledgeBase: KnowledgeBase?
     /** Any error message during the Training or Promote action. */
     public var errorMessage: String?
@@ -45,11 +44,9 @@ public class KnowledgeTraining: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateTriggered: Date?, dateCompleted: Date?, status: Status?, languageCode: String?, knowledgeBase: KnowledgeBase?, errorMessage: String?, knowledgeDocumentsState: KnowledgeDocumentsState?, datePromoted: Date?, selfUri: String?) {
+    public init(_id: String?, dateTriggered: Date?, dateCompleted: Date?, status: Status?, languageCode: String?, knowledgeBase: KnowledgeBase?, errorMessage: String?, knowledgeDocumentsState: KnowledgeDocumentsState?, datePromoted: Date?, selfUri: String?) {
         
         self._id = _id
-        
-        self.name = name
         
         self.dateTriggered = dateTriggered
         
@@ -73,7 +70,6 @@ public class KnowledgeTraining: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
-        case name
         case dateTriggered
         case dateCompleted
         case status

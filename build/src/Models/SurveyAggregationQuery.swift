@@ -31,6 +31,7 @@ public class SurveyAggregationQuery: Codable {
         case surveyquestiongroupid = "surveyQuestionGroupId"
         case surveyquestionid = "surveyQuestionId"
         case surveystatus = "surveyStatus"
+        case teamid = "teamId"
         case userid = "userId"
         case wrapupcode = "wrapUpCode"
     }

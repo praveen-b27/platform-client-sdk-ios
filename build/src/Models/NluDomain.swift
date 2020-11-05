@@ -15,6 +15,8 @@ public class NluDomain: Codable {
     public var _id: String?
     /** The name of the NLU domain. */
     public var name: String?
+    /** The ISO 639-1 language code of the NLU domain, e.g. `en`. */
+    public var language: String?
     /** The draft version of that NLU domain. */
     public var draftVersion: NluDomainVersion?
     /** The last published version of that NLU domain. */
@@ -26,11 +28,13 @@ public class NluDomain: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, draftVersion: NluDomainVersion?, lastPublishedVersion: NluDomainVersion?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, language: String?, draftVersion: NluDomainVersion?, lastPublishedVersion: NluDomainVersion?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.language = language
         
         self.draftVersion = draftVersion
         
@@ -47,6 +51,7 @@ public class NluDomain: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case language
         case draftVersion
         case lastPublishedVersion
         case dateCreated

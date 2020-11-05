@@ -23,8 +23,10 @@ public class ContentQuickReply: Codable {
     public var image: String?
     /** Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text. */
     public var action: Action?
+    /** Payload content for the quick reply. */
+    public var payload: String?
 
-    public init(_id: String?, text: String?, image: String?, action: Action?) {
+    public init(_id: String?, text: String?, image: String?, action: Action?, payload: String?) {
         
         self._id = _id
         
@@ -34,6 +36,8 @@ public class ContentQuickReply: Codable {
         
         self.action = action
         
+        self.payload = payload
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -41,6 +45,7 @@ public class ContentQuickReply: Codable {
         case text
         case image
         case action
+        case payload
     }
 
 

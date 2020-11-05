@@ -14,9 +14,9 @@ public class ButtonComponent: Codable {
 
     /** An ID assigned to this component */
     public var _id: String?
-    /** Text to show inside the button */
+    /** Deprecated - Use title instead */
     public var text: String?
-    /** Tooltip text to show when hovering over the button */
+    /** Text to show inside the button */
     public var title: String?
     /** User actions available on the content. All actions are optional and all actions are executed simultaneously. */
     public var actions: ContentActions?

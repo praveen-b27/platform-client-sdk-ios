@@ -929,16 +929,28 @@ open class AuthorizationAPI {
     
     
     
+    
+    public enum QueryType_getAuthorizationPermissions: String { 
+        case domain = "domain"
+        case permission = "permission"
+    }
+
+    
+    
+    
+    
     /**
      
      Get all permissions.
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter queryType: (query) Query filter type (optional)
+     - parameter query: (query) Comma-separated list of permissions or domains to query (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationPermissions(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: PermissionCollectionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationPermissionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+    open class func getAuthorizationPermissions(pageSize: Int? = nil, pageNumber: Int? = nil, queryType: QueryType_getAuthorizationPermissions? = nil, query: String? = nil, completion: @escaping ((_ data: PermissionCollectionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationPermissionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, queryType: queryType, query: query)
         requestBuilder.execute { (response: Response<PermissionCollectionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -994,10 +1006,12 @@ open class AuthorizationAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter queryType: (query) Query filter type (optional)
+     - parameter query: (query) Comma-separated list of permissions or domains to query (optional)
 
      - returns: RequestBuilder<PermissionCollectionEntityListing> 
      */
-    open class func getAuthorizationPermissionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<PermissionCollectionEntityListing> {
+    open class func getAuthorizationPermissionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, queryType: QueryType_getAuthorizationPermissions? = nil, query: String? = nil) -> RequestBuilder<PermissionCollectionEntityListing> {
         let path = "/api/v2/authorization/permissions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1012,7 +1026,11 @@ open class AuthorizationAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "queryType": queryType?.rawValue, 
+            
+            "query": query
             
         ])
 

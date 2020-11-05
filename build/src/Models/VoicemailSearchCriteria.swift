@@ -40,10 +40,12 @@ public class VoicemailSearchCriteria: Codable {
     public var _operator: Operator?
     /** Groups multiple conditions */
     public var group: [VoicemailSearchCriteria]?
+    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX. */
+    public var dateFormat: String?
     /** Search Type */
     public var type: ModelType?
 
-    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [VoicemailSearchCriteria]?, type: ModelType?) {
+    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [VoicemailSearchCriteria]?, dateFormat: String?, type: ModelType?) {
         
         self.endValue = endValue
         
@@ -59,6 +61,8 @@ public class VoicemailSearchCriteria: Codable {
         
         self.group = group
         
+        self.dateFormat = dateFormat
+        
         self.type = type
         
     }
@@ -71,6 +75,7 @@ public class VoicemailSearchCriteria: Codable {
         case value
         case _operator = "operator"
         case group
+        case dateFormat
         case type
     }
 

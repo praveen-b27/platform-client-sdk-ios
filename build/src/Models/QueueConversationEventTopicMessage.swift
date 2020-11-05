@@ -65,12 +65,13 @@ public class QueueConversationEventTopicMessage: Codable {
     public var type: ModelType?
     public var recipientCountry: String?
     public var recipientType: String?
+    public var journeyContext: QueueConversationEventTopicJourneyContext?
     public var wrapup: QueueConversationEventTopicWrapup?
     public var afterCallWork: QueueConversationEventTopicAfterCallWork?
     public var afterCallWorkRequired: Bool?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -108,6 +109,8 @@ public class QueueConversationEventTopicMessage: Codable {
         
         self.recipientType = recipientType
         
+        self.journeyContext = journeyContext
+        
         self.wrapup = wrapup
         
         self.afterCallWork = afterCallWork
@@ -137,6 +140,7 @@ public class QueueConversationEventTopicMessage: Codable {
         case type
         case recipientCountry
         case recipientType
+        case journeyContext
         case wrapup
         case afterCallWork
         case afterCallWorkRequired

@@ -41,10 +41,12 @@ public class DocumentationSearchCriteria: Codable {
     public var _operator: Operator?
     /** Groups multiple conditions */
     public var group: [DocumentationSearchCriteria]?
+    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX. */
+    public var dateFormat: String?
     /** Search Type */
     public var type: ModelType?
 
-    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [DocumentationSearchCriteria]?, type: ModelType?) {
+    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [DocumentationSearchCriteria]?, dateFormat: String?, type: ModelType?) {
         
         self.endValue = endValue
         
@@ -60,6 +62,8 @@ public class DocumentationSearchCriteria: Codable {
         
         self.group = group
         
+        self.dateFormat = dateFormat
+        
         self.type = type
         
     }
@@ -72,6 +76,7 @@ public class DocumentationSearchCriteria: Codable {
         case value
         case _operator = "operator"
         case group
+        case dateFormat
         case type
     }
 

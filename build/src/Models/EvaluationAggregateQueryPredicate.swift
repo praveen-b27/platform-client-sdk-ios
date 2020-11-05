@@ -28,6 +28,7 @@ public class EvaluationAggregateQueryPredicate: Codable {
         case queueid = "queueId"
         case rescind = "rescind"
         case rescored = "rescored"
+        case teamid = "teamId"
         case userid = "userId"
     }
     public enum Operator: String, Codable { 

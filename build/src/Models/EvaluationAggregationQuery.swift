@@ -23,6 +23,7 @@ public class EvaluationAggregationQuery: Codable {
         case queueid = "queueId"
         case rescind = "rescind"
         case rescored = "rescored"
+        case teamid = "teamId"
         case userid = "userId"
     }
     public enum Metrics: String, Codable { 

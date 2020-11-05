@@ -86,6 +86,7 @@ open class TextbotsAPI {
       },
       "quickReply" : {
         "image" : "aeiou",
+        "payload" : "aeiou",
         "action" : "aeiou",
         "id" : "aeiou",
         "text" : "aeiou"

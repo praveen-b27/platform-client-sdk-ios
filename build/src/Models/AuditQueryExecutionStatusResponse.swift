@@ -19,6 +19,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case cancelled = "Cancelled"
     }
     public enum ServiceName: String, Codable { 
+        case architect = "Architect"
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
         case peoplePermissions = "PeoplePermissions"
@@ -29,6 +30,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case workforceManagement = "WorkforceManagement"
         case triggers = "Triggers"
         case responseManagement = "ResponseManagement"
+        case groups = "Groups"
     }
     /** Id of the audit query execution request. */
     public var _id: String?

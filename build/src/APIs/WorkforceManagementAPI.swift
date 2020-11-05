@@ -619,6 +619,68 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     
+     Delete a work plan rotation
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to be deleted 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementManagementunitWorkplanrotation(managementUnitId: String, workPlanRotationId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: managementUnitId, workPlanRotationId: workPlanRotationId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a work plan rotation
+     
+     - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to be deleted 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let workPlanRotationIdPreEscape = "\(workPlanRotationId)"
+        let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Get a list of UserScheduleAdherence records for the requested users
@@ -5541,6 +5603,221 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    /**
+     
+     Get a work plan rotation
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunitWorkplanrotation(managementUnitId: String, workPlanRotationId: String, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: managementUnitId, workPlanRotationId: workPlanRotationId)
+        requestBuilder.execute { (response: Response<WorkPlanRotationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a work plan rotation
+     
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : "",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "dateRange" : {
+    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
+    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "pattern" : {
+    "workPlans" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ]
+  },
+  "id" : "aeiou",
+  "agentCount" : 123,
+  "enabled" : true,
+  "agents" : [ {
+    "dateRange" : "",
+    "position" : 123,
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to fetch 
+
+     - returns: RequestBuilder<WorkPlanRotationResponse> 
+     */
+    open class func getWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String) -> RequestBuilder<WorkPlanRotationResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let workPlanRotationIdPreEscape = "\(workPlanRotationId)"
+        let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanRotationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Expand_getWorkforcemanagementManagementunitWorkplanrotations: String { 
+        case agents = "agents"
+    }
+
+    
+    
+    /**
+     
+     Get work plan rotations
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter expand: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunitWorkplanrotations(managementUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: WorkPlanRotationListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: managementUnitId, expand: expand)
+        requestBuilder.execute { (response: Response<WorkPlanRotationListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get work plan rotations
+     
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : {
+      "modifiedBy" : "",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "dateRange" : {
+      "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
+      "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "pattern" : {
+      "workPlans" : [ {
+        "managementUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ]
+    },
+    "id" : "aeiou",
+    "agentCount" : 123,
+    "enabled" : true,
+    "agents" : [ {
+      "dateRange" : "",
+      "position" : 123,
+      "user" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    } ]
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter expand: (query)  (optional)
+
+     - returns: RequestBuilder<WorkPlanRotationListResponse> 
+     */
+    open class func getWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<WorkPlanRotationListResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<WorkPlanRotationListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
     public enum Expand_getWorkforcemanagementManagementunitWorkplans: String { 
         case agentcount = "agentCount"
         case details = "details"
@@ -7413,6 +7690,110 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Update a work plan rotation
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to update 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunitWorkplanrotation(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest? = nil, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: managementUnitId, workPlanRotationId: workPlanRotationId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanRotationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a work plan rotation
+     
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : "",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "dateRange" : {
+    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
+    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "pattern" : {
+    "workPlans" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ]
+  },
+  "id" : "aeiou",
+  "agentCount" : 123,
+  "enabled" : true,
+  "agents" : [ {
+    "dateRange" : "",
+    "position" : 123,
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to update 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WorkPlanRotationResponse> 
+     */
+    open class func patchWorkforcemanagementManagementunitWorkplanrotationWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: UpdateWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let workPlanRotationIdPreEscape = "\(workPlanRotationId)"
+        let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanRotationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -10579,6 +10960,207 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<ValidateWorkPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Create a copy of work plan rotation
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to create a copy 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitWorkplanrotationCopy(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest? = nil, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplanrotationCopyWithRequestBuilder(managementUnitId: managementUnitId, workPlanRotationId: workPlanRotationId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanRotationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a copy of work plan rotation
+     
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : "",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "dateRange" : {
+    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
+    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "pattern" : {
+    "workPlans" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ]
+  },
+  "id" : "aeiou",
+  "agentCount" : 123,
+  "enabled" : true,
+  "agents" : [ {
+    "dateRange" : "",
+    "position" : 123,
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter workPlanRotationId: (path) The ID of the work plan rotation to create a copy 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WorkPlanRotationResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitWorkplanrotationCopyWithRequestBuilder(managementUnitId: String, workPlanRotationId: String, body: CopyWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let workPlanRotationIdPreEscape = "\(workPlanRotationId)"
+        let workPlanRotationIdPostEscape = workPlanRotationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{workPlanRotationId}", with: workPlanRotationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanRotationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Create a new work plan rotation
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitWorkplanrotations(managementUnitId: String, body: AddWorkPlanRotationRequest? = nil, completion: @escaping ((_ data: WorkPlanRotationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanRotationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a new work plan rotation
+     
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : {
+    "modifiedBy" : "",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123
+  },
+  "dateRange" : {
+    "startBusinessUnitDate" : "2000-01-23T04:56:07.000+0000",
+    "endBusinessUnitDate" : "2000-01-23T04:56:07.000+0000"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "pattern" : {
+    "workPlans" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ]
+  },
+  "id" : "aeiou",
+  "agentCount" : 123,
+  "enabled" : true,
+  "agents" : [ {
+    "dateRange" : "",
+    "position" : 123,
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WorkPlanRotationResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitWorkplanrotationsWithRequestBuilder(managementUnitId: String, body: AddWorkPlanRotationRequest? = nil) -> RequestBuilder<WorkPlanRotationResponse> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanRotationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

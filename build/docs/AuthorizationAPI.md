@@ -647,7 +647,7 @@ AuthorizationAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: sub
 
 
 
-> [PermissionCollectionEntityListing](PermissionCollectionEntityListing.html) getAuthorizationPermissions(pageSize, pageNumber)
+> [PermissionCollectionEntityListing](PermissionCollectionEntityListing.html) getAuthorizationPermissions(pageSize, pageNumber, queryType, query)
 
 Get all permissions.
 
@@ -668,9 +668,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let queryType: AuthorizationAPI.QueryType_getAuthorizationPermissions = AuthorizationAPI.QueryType_getAuthorizationPermissions.enummember // Query filter type
+let query: String = "" // Comma-separated list of permissions or domains to query
 
 // Code example
-AuthorizationAPI.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+AuthorizationAPI.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pageNumber, queryType: queryType, query: query) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -687,6 +689,8 @@ AuthorizationAPI.getAuthorizationPermissions(pageSize: pageSize, pageNumber: pag
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **queryType** | **String**| Query filter type | [optional]<br />**Values**: domain ("domain"), permission ("permission") |
+| **query** | **String**| Comma-separated list of permissions or domains to query | [optional] |
 {: class="table-striped"}
 
 

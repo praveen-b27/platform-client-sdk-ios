@@ -33,10 +33,12 @@ public class GKNDocumentationSearchCriteria: Codable {
     public var _operator: Operator?
     /** Groups multiple conditions */
     public var group: [GKNDocumentationSearchCriteria]?
+    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX. */
+    public var dateFormat: String?
     /** Search Type */
     public var type: ModelType?
 
-    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [GKNDocumentationSearchCriteria]?, type: ModelType?) {
+    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [GKNDocumentationSearchCriteria]?, dateFormat: String?, type: ModelType?) {
         
         self.endValue = endValue
         
@@ -52,6 +54,8 @@ public class GKNDocumentationSearchCriteria: Codable {
         
         self.group = group
         
+        self.dateFormat = dateFormat
+        
         self.type = type
         
     }
@@ -64,6 +68,7 @@ public class GKNDocumentationSearchCriteria: Codable {
         case value
         case _operator = "operator"
         case group
+        case dateFormat
         case type
     }
 

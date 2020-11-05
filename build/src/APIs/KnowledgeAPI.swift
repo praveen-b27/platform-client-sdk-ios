@@ -48,6 +48,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "faqCount" : 123,
   "selfUri" : "aeiou",
@@ -133,6 +134,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -247,6 +249,7 @@ open class KnowledgeAPI {
   "id" : "aeiou",
   "categories" : [ {
     "knowledgeBase" : {
+      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "faqCount" : 123,
       "selfUri" : "aeiou",
@@ -338,6 +341,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "faqCount" : 123,
   "selfUri" : "aeiou",
@@ -433,6 +437,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "knowledgeBase" : {
+      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "faqCount" : 123,
       "selfUri" : "aeiou",
@@ -559,6 +564,7 @@ open class KnowledgeAPI {
     "languageCode" : "aeiou"
   },
   "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -674,6 +680,7 @@ open class KnowledgeAPI {
   "id" : "aeiou",
   "categories" : [ {
     "knowledgeBase" : {
+      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "faqCount" : 123,
       "selfUri" : "aeiou",
@@ -804,6 +811,7 @@ open class KnowledgeAPI {
     "id" : "aeiou",
     "categories" : [ {
       "knowledgeBase" : {
+        "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "faqCount" : 123,
         "selfUri" : "aeiou",
@@ -926,6 +934,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -939,7 +948,6 @@ open class KnowledgeAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
   "datePromoted" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
-  "name" : "aeiou",
   "errorMessage" : "aeiou",
   "id" : "aeiou",
   "languageCode" : "aeiou",
@@ -998,9 +1006,19 @@ open class KnowledgeAPI {
     
     
     
+    
+    public enum KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings: String { 
+        case draft = "Draft"
+        case active = "Active"
+        case discarded = "Discarded"
+        case archived = "Archived"
+    }
+
+    
+    
     /**
      
-     Get All trainings information for a knowledgebase
+     Get all trainings information for a knowledgebase
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
      - parameter languageCode: (path) Language code, format: iso2-LOCALE 
@@ -1008,10 +1026,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter knowledgeDocumentsState: (query) Return the training with the specified state of the trained documents. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: TrainingListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize)
+    open class func getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, knowledgeDocumentsState: KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings? = nil, completion: @escaping ((_ data: TrainingListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, knowledgeDocumentsState: knowledgeDocumentsState)
         requestBuilder.execute { (response: Response<TrainingListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1030,7 +1049,7 @@ open class KnowledgeAPI {
 
     /**
      
-     Get All trainings information for a knowledgebase
+     Get all trainings information for a knowledgebase
      
      - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings
      - 
@@ -1040,6 +1059,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "knowledgeBase" : {
+      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "faqCount" : 123,
       "selfUri" : "aeiou",
@@ -1053,7 +1073,6 @@ open class KnowledgeAPI {
     "dateCompleted" : "2000-01-23T04:56:07.000+0000",
     "datePromoted" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
     "errorMessage" : "aeiou",
     "id" : "aeiou",
     "languageCode" : "aeiou",
@@ -1071,10 +1090,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter knowledgeDocumentsState: (query) Return the training with the specified state of the trained documents. (optional)
 
      - returns: RequestBuilder<TrainingListing> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil) -> RequestBuilder<TrainingListing> {
+    open class func getKnowledgeKnowledgebaseLanguageTrainingsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, knowledgeDocumentsState: KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings? = nil) -> RequestBuilder<TrainingListing> {
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1099,7 +1119,9 @@ open class KnowledgeAPI {
             
             "limit": limit, 
             
-            "pageSize": pageSize
+            "pageSize": pageSize, 
+            
+            "knowledgeDocumentsState": knowledgeDocumentsState?.rawValue
             
         ])
 
@@ -1159,6 +1181,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -1252,6 +1275,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "faqCount" : 123,
   "selfUri" : "aeiou",
@@ -1348,6 +1372,7 @@ open class KnowledgeAPI {
     "languageCode" : "aeiou"
   },
   "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -1464,6 +1489,7 @@ open class KnowledgeAPI {
   "id" : "aeiou",
   "categories" : [ {
     "knowledgeBase" : {
+      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "faqCount" : 123,
       "selfUri" : "aeiou",
@@ -1580,6 +1606,7 @@ open class KnowledgeAPI {
     "id" : "aeiou",
     "categories" : [ {
       "knowledgeBase" : {
+        "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "faqCount" : 123,
         "selfUri" : "aeiou",
@@ -1692,6 +1719,7 @@ open class KnowledgeAPI {
     "languageCode" : "aeiou"
   },
   "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -1801,6 +1829,7 @@ open class KnowledgeAPI {
   "id" : "aeiou",
   "categories" : [ {
     "knowledgeBase" : {
+      "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "faqCount" : 123,
       "selfUri" : "aeiou",
@@ -1899,6 +1928,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -1912,7 +1942,6 @@ open class KnowledgeAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
   "datePromoted" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
-  "name" : "aeiou",
   "errorMessage" : "aeiou",
   "id" : "aeiou",
   "languageCode" : "aeiou",
@@ -2000,6 +2029,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "faqCount" : 123,
     "selfUri" : "aeiou",
@@ -2013,7 +2043,6 @@ open class KnowledgeAPI {
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
   "datePromoted" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
-  "name" : "aeiou",
   "errorMessage" : "aeiou",
   "id" : "aeiou",
   "languageCode" : "aeiou",
@@ -2111,6 +2140,7 @@ open class KnowledgeAPI {
     "id" : "aeiou",
     "categories" : [ {
       "knowledgeBase" : {
+        "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "faqCount" : 123,
         "selfUri" : "aeiou",
@@ -2193,6 +2223,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "faqCount" : 123,
   "selfUri" : "aeiou",

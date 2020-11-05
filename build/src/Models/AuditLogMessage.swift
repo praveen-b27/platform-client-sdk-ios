@@ -12,6 +12,7 @@ import Foundation
 public class AuditLogMessage: Codable {
 
     public enum ServiceName: String, Codable { 
+        case architect = "Architect"
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
         case peoplePermissions = "PeoplePermissions"
@@ -22,6 +23,7 @@ public class AuditLogMessage: Codable {
         case workforceManagement = "WorkforceManagement"
         case triggers = "Triggers"
         case responseManagement = "ResponseManagement"
+        case groups = "Groups"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -29,6 +31,7 @@ public class AuditLogMessage: Codable {
         case update = "Update"
         case delete = "Delete"
         case download = "Download"
+        case upload = "Upload"
         case memberAdd = "MemberAdd"
         case memberUpdate = "MemberUpdate"
         case memberRemove = "MemberRemove"
@@ -40,6 +43,14 @@ public class AuditLogMessage: Codable {
         case execute = "Execute"
         case publish = "Publish"
         case unpublish = "Unpublish"
+        case activate = "Activate"
+        case checkin = "Checkin"
+        case checkout = "Checkout"
+        case deactivate = "Deactivate"
+        case debug = "Debug"
+        case save = "Save"
+        case revert = "Revert"
+        case transcode = "Transcode"
         case enable = "Enable"
         case disable = "Disable"
         case authorize = "Authorize"
@@ -71,6 +82,13 @@ public class AuditLogMessage: Codable {
         case schedule = "Schedule"
         case trigger = "Trigger"
         case response = "Response"
+        case dependencyTrackingBuild = "DependencyTrackingBuild"
+        case flow = "Flow"
+        case prompt = "Prompt"
+        case promptResource = "PromptResource"
+        case flowOutcome = "FlowOutcome"
+        case flowMilestone = "FlowMilestone"
+        case team = "Team"
     }
     /** Id of the audit message. */
     public var _id: String?

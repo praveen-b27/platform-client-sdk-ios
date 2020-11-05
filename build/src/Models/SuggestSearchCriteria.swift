@@ -30,8 +30,10 @@ public class SuggestSearchCriteria: Codable {
     public var _operator: Operator?
     /** Groups multiple conditions */
     public var group: [SuggestSearchCriteria]?
+    /** Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX. */
+    public var dateFormat: String?
 
-    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [SuggestSearchCriteria]?) {
+    public init(endValue: String?, values: [String]?, startValue: String?, fields: [String]?, value: String?, _operator: Operator?, group: [SuggestSearchCriteria]?, dateFormat: String?) {
         
         self.endValue = endValue
         
@@ -47,6 +49,8 @@ public class SuggestSearchCriteria: Codable {
         
         self.group = group
         
+        self.dateFormat = dateFormat
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -57,6 +61,7 @@ public class SuggestSearchCriteria: Codable {
         case value
         case _operator = "operator"
         case group
+        case dateFormat
     }
 
 

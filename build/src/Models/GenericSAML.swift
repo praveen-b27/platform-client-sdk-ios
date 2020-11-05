@@ -29,13 +29,13 @@ public class GenericSAML: Codable {
     public var endpointCompression: Bool?
     public var nameIdentifierFormat: NameIdentifierFormat?
     public var certificate: String?
-    public var ssoTargetURI: String?
     public var issuerURI: String?
+    public var ssoTargetURI: String?
     public var disabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, logoImageData: String?, relyingPartyIdentifier: String?, endpointCompression: Bool?, nameIdentifierFormat: NameIdentifierFormat?, certificate: String?, ssoTargetURI: String?, issuerURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, logoImageData: String?, relyingPartyIdentifier: String?, endpointCompression: Bool?, nameIdentifierFormat: NameIdentifierFormat?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -51,9 +51,9 @@ public class GenericSAML: Codable {
         
         self.certificate = certificate
         
-        self.ssoTargetURI = ssoTargetURI
-        
         self.issuerURI = issuerURI
+        
+        self.ssoTargetURI = ssoTargetURI
         
         self.disabled = disabled
         
@@ -69,8 +69,8 @@ public class GenericSAML: Codable {
         case endpointCompression
         case nameIdentifierFormat
         case certificate
-        case ssoTargetURI
         case issuerURI
+        case ssoTargetURI
         case disabled
         case selfUri
     }

@@ -65,12 +65,13 @@ public class ConversationEventTopicMessage: Codable {
     public var type: ModelType?
     public var recipientCountry: String?
     public var recipientType: String?
+    public var journeyContext: ConversationEventTopicJourneyContext?
     public var wrapup: ConversationEventTopicWrapup?
     public var afterCallWork: ConversationEventTopicAfterCallWork?
     public var afterCallWorkRequired: Bool?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -108,6 +109,8 @@ public class ConversationEventTopicMessage: Codable {
         
         self.recipientType = recipientType
         
+        self.journeyContext = journeyContext
+        
         self.wrapup = wrapup
         
         self.afterCallWork = afterCallWork
@@ -137,6 +140,7 @@ public class ConversationEventTopicMessage: Codable {
         case type
         case recipientCountry
         case recipientType
+        case journeyContext
         case wrapup
         case afterCallWork
         case afterCallWorkRequired

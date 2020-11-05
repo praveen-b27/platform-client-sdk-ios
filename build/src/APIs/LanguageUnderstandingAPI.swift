@@ -231,6 +231,7 @@ open class LanguageUnderstandingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "language" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "draftVersion" : {
@@ -430,6 +431,7 @@ open class LanguageUnderstandingAPI {
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "selfUri" : "aeiou",
         "name" : "aeiou",
+        "language" : "aeiou",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "id" : "aeiou",
         "draftVersion" : ""
@@ -609,6 +611,7 @@ open class LanguageUnderstandingAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "draftVersion" : ""
@@ -737,6 +740,7 @@ open class LanguageUnderstandingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "draftVersion" : ""
@@ -875,6 +879,7 @@ open class LanguageUnderstandingAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "draftVersion" : ""
@@ -1004,6 +1009,7 @@ open class LanguageUnderstandingAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "draftVersion" : ""
@@ -1116,6 +1122,7 @@ open class LanguageUnderstandingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "draftVersion" : {
@@ -1242,6 +1249,7 @@ open class LanguageUnderstandingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "language" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "draftVersion" : {
@@ -1398,6 +1406,7 @@ open class LanguageUnderstandingAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "draftVersion" : ""
@@ -1537,6 +1546,7 @@ open class LanguageUnderstandingAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "draftVersion" : ""
@@ -1654,6 +1664,7 @@ open class LanguageUnderstandingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "draftVersion" : ""
@@ -1774,6 +1785,7 @@ open class LanguageUnderstandingAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "language" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "draftVersion" : ""
@@ -1893,6 +1905,7 @@ open class LanguageUnderstandingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "draftVersion" : ""
@@ -1977,6 +1990,7 @@ open class LanguageUnderstandingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "language" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "draftVersion" : {
@@ -2113,6 +2127,7 @@ open class LanguageUnderstandingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "language" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "draftVersion" : ""

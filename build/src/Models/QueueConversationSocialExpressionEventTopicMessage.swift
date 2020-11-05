@@ -65,12 +65,13 @@ public class QueueConversationSocialExpressionEventTopicMessage: Codable {
     public var type: ModelType?
     public var recipientCountry: String?
     public var recipientType: String?
+    public var journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?
     public var wrapup: QueueConversationSocialExpressionEventTopicWrapup?
     public var afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?
     public var afterCallWorkRequired: Bool?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationSocialExpressionEventTopicAddress?, fromAddress: QueueConversationSocialExpressionEventTopicAddress?, messages: [QueueConversationSocialExpressionEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationSocialExpressionEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationSocialExpressionEventTopicAddress?, fromAddress: QueueConversationSocialExpressionEventTopicAddress?, messages: [QueueConversationSocialExpressionEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationSocialExpressionEventTopicJourneyContext?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -108,6 +109,8 @@ public class QueueConversationSocialExpressionEventTopicMessage: Codable {
         
         self.recipientType = recipientType
         
+        self.journeyContext = journeyContext
+        
         self.wrapup = wrapup
         
         self.afterCallWork = afterCallWork
@@ -137,6 +140,7 @@ public class QueueConversationSocialExpressionEventTopicMessage: Codable {
         case type
         case recipientCountry
         case recipientType
+        case journeyContext
         case wrapup
         case afterCallWork
         case afterCallWorkRequired

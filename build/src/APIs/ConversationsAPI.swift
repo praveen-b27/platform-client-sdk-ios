@@ -722,6 +722,7 @@ open class ConversationsAPI {
       "journeyActionMapVersion" : "aeiou",
       "screenShareRoomId" : "aeiou",
       "agentAssistantId" : "aeiou",
+      "assignerId" : "aeiou",
       "outboundContactId" : "aeiou",
       "peerId" : "aeiou",
       "remoteNameDisplayable" : "aeiou",
@@ -780,6 +781,7 @@ open class ConversationsAPI {
       "dispositionName" : "disposition.classification.callable.machine",
       "scriptId" : "aeiou",
       "selectedAgentId" : "aeiou",
+      "acwSkipped" : true,
       "mediaEndpointStats" : [ {
         "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
         "underrunPackets" : 123456789,
@@ -966,6 +968,7 @@ open class ConversationsAPI {
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -1024,6 +1027,7 @@ open class ConversationsAPI {
         "dispositionName" : "disposition.classification.callable.machine",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
@@ -1290,6 +1294,7 @@ open class ConversationsAPI {
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -1348,6 +1353,7 @@ open class ConversationsAPI {
         "dispositionName" : "disposition.classification.callable.machine",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
@@ -17149,6 +17155,7 @@ open class ConversationsAPI {
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -17207,6 +17214,7 @@ open class ConversationsAPI {
         "dispositionName" : "disposition.classification.callable.machine",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,

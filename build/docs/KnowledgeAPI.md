@@ -16,7 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageDocument) | Get document |
 | [**getKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageDocuments) | Get documents |
 | [**getKnowledgeKnowledgebaseLanguageTraining**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageTraining) | Get training detail |
-| [**getKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageTrainings) | Get All trainings information for a knowledgebase |
+| [**getKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageTrainings) | Get all trainings information for a knowledgebase |
 | [**getKnowledgeKnowledgebases**](KnowledgeAPI.html#getKnowledgeKnowledgebases) | Get knowledge bases |
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI.html#patchKnowledgeKnowledgebase) | Update knowledge base |
 | [**patchKnowledgeKnowledgebaseLanguageCategory**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageCategory) | Update category |
@@ -546,9 +546,9 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTraining(knowledgeBaseId: knowledg
 
 
 
-> [TrainingListing](TrainingListing.html) getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId, languageCode, before, after, limit, pageSize)
+> [TrainingListing](TrainingListing.html) getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId, languageCode, before, after, limit, pageSize, knowledgeDocumentsState)
 
-Get All trainings information for a knowledgebase
+Get all trainings information for a knowledgebase
 
 
 
@@ -572,9 +572,10 @@ let before: String = "" // The cursor that points to the start of the set of ent
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let limit: String = "" // Number of entities to return. Maximum of 200.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let knowledgeDocumentsState: KnowledgeAPI.KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings = KnowledgeAPI.KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings.enummember // Return the training with the specified state of the trained documents.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, knowledgeDocumentsState: knowledgeDocumentsState) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -595,6 +596,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **knowledgeDocumentsState** | **String**| Return the training with the specified state of the trained documents. | [optional]<br />**Values**: draft ("Draft"), active ("Active"), discarded ("Discarded"), archived ("Archived") |
 {: class="table-striped"}
 
 

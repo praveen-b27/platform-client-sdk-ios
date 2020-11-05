@@ -745,8 +745,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -885,8 +885,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -2398,6 +2398,7 @@ open class SearchAPI {
         "journeyActionMapVersion" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
@@ -2456,6 +2457,7 @@ open class SearchAPI {
         "dispositionName" : "disposition.classification.callable.machine",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
@@ -3040,6 +3042,7 @@ open class SearchAPI {
     "id" : "aeiou",
     "categories" : [ {
       "knowledgeBase" : {
+        "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "faqCount" : 123,
         "selfUri" : "aeiou",
@@ -3258,8 +3261,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -3357,8 +3360,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "short" : true,
     "containerNode" : true,
+    "short" : true,
     "bigDecimal" : true,
     "object" : true
   },

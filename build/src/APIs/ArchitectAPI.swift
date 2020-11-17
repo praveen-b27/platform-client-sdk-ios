@@ -6774,6 +6774,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : "",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -6800,6 +6804,7 @@ open class ArchitectAPI {
   },
   "system" : true,
   "deleted" : true,
+  "supportedLanguages" : [ "" ],
   "name" : "aeiou",
   "checkedInVersion" : "",
   "id" : "aeiou"
@@ -7403,6 +7408,10 @@ open class ArchitectAPI {
   "configurationVersion" : "aeiou",
   "dateCreated" : 123456789,
   "publishResultUri" : "aeiou",
+  "supportedLanguages" : [ {
+    "isDefault" : true,
+    "language" : "aeiou"
+  } ],
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -7862,6 +7871,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : {
       "addresses" : [ "" ],
       "acdAutoAnswer" : true,
@@ -8594,6 +8607,10 @@ open class ArchitectAPI {
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
+      "supportedLanguages" : [ {
+        "isDefault" : true,
+        "language" : "aeiou"
+      } ],
       "createdBy" : "",
       "name" : "aeiou",
       "id" : "aeiou",
@@ -8620,6 +8637,7 @@ open class ArchitectAPI {
     },
     "system" : true,
     "deleted" : true,
+    "supportedLanguages" : [ "" ],
     "name" : "aeiou",
     "checkedInVersion" : "",
     "id" : "aeiou"
@@ -9517,6 +9535,10 @@ open class ArchitectAPI {
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
+      "supportedLanguages" : [ {
+        "isDefault" : true,
+        "language" : "aeiou"
+      } ],
       "createdBy" : {
         "addresses" : [ "" ],
         "acdAutoAnswer" : true,
@@ -9942,6 +9964,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : {
       "addresses" : [ "" ],
       "acdAutoAnswer" : true,
@@ -12829,6 +12855,10 @@ open class ArchitectAPI {
   "configurationVersion" : "aeiou",
   "dateCreated" : 123456789,
   "publishResultUri" : "aeiou",
+  "supportedLanguages" : [ {
+    "isDefault" : true,
+    "language" : "aeiou"
+  } ],
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -13459,6 +13489,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : "",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -13485,6 +13519,7 @@ open class ArchitectAPI {
   },
   "system" : true,
   "deleted" : true,
+  "supportedLanguages" : [ "" ],
   "name" : "aeiou",
   "checkedInVersion" : "",
   "id" : "aeiou"
@@ -14197,6 +14232,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : "",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -14223,6 +14262,7 @@ open class ArchitectAPI {
   },
   "system" : true,
   "deleted" : true,
+  "supportedLanguages" : [ "" ],
   "name" : "aeiou",
   "checkedInVersion" : "",
   "id" : "aeiou"
@@ -14599,6 +14639,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : "",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -14625,6 +14669,7 @@ open class ArchitectAPI {
   },
   "system" : true,
   "deleted" : true,
+  "supportedLanguages" : [ "" ],
   "name" : "aeiou",
   "checkedInVersion" : "",
   "id" : "aeiou"
@@ -15351,6 +15396,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : "",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -15377,6 +15426,7 @@ open class ArchitectAPI {
   },
   "system" : true,
   "deleted" : true,
+  "supportedLanguages" : [ "" ],
   "name" : "aeiou",
   "checkedInVersion" : "",
   "id" : "aeiou"
@@ -15753,6 +15803,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : "",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -15779,6 +15833,7 @@ open class ArchitectAPI {
   },
   "system" : true,
   "deleted" : true,
+  "supportedLanguages" : [ "" ],
   "name" : "aeiou",
   "checkedInVersion" : "",
   "id" : "aeiou"
@@ -17840,6 +17895,10 @@ open class ArchitectAPI {
     "configurationVersion" : "aeiou",
     "dateCreated" : 123456789,
     "publishResultUri" : "aeiou",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "createdBy" : "",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -17866,6 +17925,7 @@ open class ArchitectAPI {
   },
   "system" : true,
   "deleted" : true,
+  "supportedLanguages" : [ "" ],
   "name" : "aeiou",
   "checkedInVersion" : "",
   "id" : "aeiou"

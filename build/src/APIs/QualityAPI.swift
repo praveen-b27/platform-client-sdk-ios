@@ -8950,6 +8950,8 @@ open class QualityAPI {
     
     
     
+    
+    
     /**
      
      Gets all the revisions for a specific evaluation.
@@ -8957,10 +8959,11 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityFormsEvaluationVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityFormsEvaluationVersionsWithRequestBuilder(formId: formId, pageSize: pageSize, pageNumber: pageNumber)
+    open class func getQualityFormsEvaluationVersions(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationFormEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityFormsEvaluationVersionsWithRequestBuilder(formId: formId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<EvaluationFormEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -9051,10 +9054,11 @@ open class QualityAPI {
      - parameter formId: (path) Form ID 
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
 
      - returns: RequestBuilder<EvaluationFormEntityListing> 
      */
-    open class func getQualityFormsEvaluationVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<EvaluationFormEntityListing> {
+    open class func getQualityFormsEvaluationVersionsWithRequestBuilder(formId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationFormEntityListing> {
         var path = "/api/v2/quality/forms/evaluations/{formId}/versions"
         let formIdPreEscape = "\(formId)"
         let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9072,7 +9076,9 @@ open class QualityAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder
             
         ])
 

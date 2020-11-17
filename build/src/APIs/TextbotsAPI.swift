@@ -91,6 +91,11 @@ open class TextbotsAPI {
         "id" : "aeiou",
         "text" : "aeiou"
       },
+      "postback" : {
+        "payload" : "aeiou",
+        "id" : "aeiou",
+        "text" : "aeiou"
+      },
       "attachment" : {
         "filename" : "aeiou",
         "sha256" : "aeiou",
@@ -107,6 +112,10 @@ open class TextbotsAPI {
         "url" : "aeiou",
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       },
+      "reactions" : [ {
+        "reactionType" : "aeiou",
+        "count" : 123
+      } ],
       "list" : {
         "submitLabel" : "aeiou",
         "components" : [ {
@@ -146,6 +155,14 @@ open class TextbotsAPI {
           },
           "url" : "aeiou"
         }
+      },
+      "mention" : {
+        "image" : "aeiou",
+        "firstName" : "aeiou",
+        "lastName" : "aeiou",
+        "nickname" : "aeiou",
+        "id" : "aeiou",
+        "email" : "aeiou"
       }
     } ]
   } ],

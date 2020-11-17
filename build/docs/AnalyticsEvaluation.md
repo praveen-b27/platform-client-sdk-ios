@@ -18,8 +18,8 @@ title: AnalyticsEvaluation
 | **calibrationId** | **String** | The calibration id used for the purpose of training evaluators | [optional] |
 | **rescored** | **Bool** | Whether this evaluation has ever been rescored | [optional] |
 | **deleted** | **Bool** | Whether this evaluation has been deleted | [optional] |
-| **oTotalScore** | **Int64** |  | [optional] |
 | **oTotalCriticalScore** | **Int64** |  | [optional] |
+| **oTotalScore** | **Int64** |  | [optional] |
 {: class="table table-striped"}
 
 

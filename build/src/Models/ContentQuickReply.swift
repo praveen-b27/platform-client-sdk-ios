@@ -19,33 +19,33 @@ public class ContentQuickReply: Codable {
     public var _id: String?
     /** Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. */
     public var text: String?
+    /** Content of the textback payload after clicking a quick reply */
+    public var payload: String?
     /** Image associated with quick reply */
     public var image: String?
     /** Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text. */
     public var action: Action?
-    /** Payload content for the quick reply. */
-    public var payload: String?
 
-    public init(_id: String?, text: String?, image: String?, action: Action?, payload: String?) {
+    public init(_id: String?, text: String?, payload: String?, image: String?, action: Action?) {
         
         self._id = _id
         
         self.text = text
         
+        self.payload = payload
+        
         self.image = image
         
         self.action = action
-        
-        self.payload = payload
         
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case text
+        case payload
         case image
         case action
-        case payload
     }
 
 

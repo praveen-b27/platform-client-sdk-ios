@@ -7556,6 +7556,13 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum ValidationMode_patchWorkforcemanagementManagementunitWorkplan: String { 
+        case ignore = "Ignore"
+    }
+
+    
+    
     /**
      
      Update a work plan
@@ -7563,10 +7570,11 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to update 
      - parameter body: (body) body (optional)
+     - parameter validationMode: (query) Allows to update work plan even if validation result is invalid (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, body: WorkPlan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body)
+    open class func patchWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, body: WorkPlan? = nil, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, validationMode: validationMode)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
                 if let e = error {
@@ -7671,10 +7679,11 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to update 
      - parameter body: (body) body (optional)
+     - parameter validationMode: (query) Allows to update work plan even if validation result is invalid (optional)
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, body: WorkPlan? = nil) -> RequestBuilder<WorkPlan> {
+    open class func patchWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, body: WorkPlan? = nil, validationMode: ValidationMode_patchWorkforcemanagementManagementunitWorkplan? = nil) -> RequestBuilder<WorkPlan> {
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7687,7 +7696,12 @@ open class WorkforceManagementAPI {
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "validationMode": validationMode?.rawValue
+            
+        ])
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -10905,6 +10919,7 @@ open class WorkforceManagementAPI {
   "valid" : true,
   "messages" : {
     "violationMessages" : [ {
+      "severity" : "aeiou",
       "arguments" : [ {
         "type" : "aeiou",
         "value" : "aeiou"
@@ -11170,16 +11185,24 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum ValidationMode_postWorkforcemanagementManagementunitWorkplans: String { 
+        case ignore = "Ignore"
+    }
+
+    
+    
     /**
      
      Create a new work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
+     - parameter validationMode: (query) Allows to create work plan even if the validation result is invalid (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementManagementunitWorkplans(managementUnitId: String, body: CreateWorkPlan? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
-        let requestBuilder = postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+    open class func postWorkforcemanagementManagementunitWorkplans(managementUnitId: String, body: CreateWorkPlan? = nil, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, body: body, validationMode: validationMode)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
                 if let e = error {
@@ -11283,10 +11306,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
+     - parameter validationMode: (query) Allows to create work plan even if the validation result is invalid (optional)
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, body: CreateWorkPlan? = nil) -> RequestBuilder<WorkPlan> {
+    open class func postWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, body: CreateWorkPlan? = nil, validationMode: ValidationMode_postWorkforcemanagementManagementunitWorkplans? = nil) -> RequestBuilder<WorkPlan> {
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11296,7 +11320,12 @@ open class WorkforceManagementAPI {
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "validationMode": validationMode?.rawValue
+            
+        ])
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

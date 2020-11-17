@@ -1716,6 +1716,10 @@ open class RoutingAPI {
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
+      "supportedLanguages" : [ {
+        "isDefault" : true,
+        "language" : "aeiou"
+      } ],
       "createdBy" : "",
       "name" : "aeiou",
       "id" : "aeiou",
@@ -1742,6 +1746,7 @@ open class RoutingAPI {
     },
     "system" : true,
     "deleted" : true,
+    "supportedLanguages" : [ "" ],
     "name" : "aeiou",
     "checkedInVersion" : "",
     "id" : "aeiou"
@@ -2146,6 +2151,10 @@ open class RoutingAPI {
         "configurationVersion" : "aeiou",
         "dateCreated" : 123456789,
         "publishResultUri" : "aeiou",
+        "supportedLanguages" : [ {
+          "isDefault" : true,
+          "language" : "aeiou"
+        } ],
         "createdBy" : "",
         "name" : "aeiou",
         "id" : "aeiou",
@@ -2172,6 +2181,7 @@ open class RoutingAPI {
       },
       "system" : true,
       "deleted" : true,
+      "supportedLanguages" : [ "" ],
       "name" : "aeiou",
       "checkedInVersion" : "",
       "id" : "aeiou"
@@ -9426,6 +9436,10 @@ open class RoutingAPI {
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
+      "supportedLanguages" : [ {
+        "isDefault" : true,
+        "language" : "aeiou"
+      } ],
       "createdBy" : "",
       "name" : "aeiou",
       "id" : "aeiou",
@@ -9452,6 +9466,7 @@ open class RoutingAPI {
     },
     "system" : true,
     "deleted" : true,
+    "supportedLanguages" : [ "" ],
     "name" : "aeiou",
     "checkedInVersion" : "",
     "id" : "aeiou"

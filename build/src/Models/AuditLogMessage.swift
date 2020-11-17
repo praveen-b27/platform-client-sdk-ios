@@ -24,6 +24,7 @@ public class AuditLogMessage: Codable {
         case triggers = "Triggers"
         case responseManagement = "ResponseManagement"
         case groups = "Groups"
+        case telephony = "Telephony"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -80,6 +81,9 @@ public class AuditLogMessage: Codable {
         case eventType = "EventType"
         case clickstreamSettings = "ClickstreamSettings"
         case schedule = "Schedule"
+        case scheduleGroup = "ScheduleGroup"
+        case emergencyGroup = "EmergencyGroup"
+        case ivr = "IVR"
         case trigger = "Trigger"
         case response = "Response"
         case dependencyTrackingBuild = "DependencyTrackingBuild"
@@ -89,6 +93,21 @@ public class AuditLogMessage: Codable {
         case flowOutcome = "FlowOutcome"
         case flowMilestone = "FlowMilestone"
         case team = "Team"
+        case edge = "Edge"
+        case edgeGroup = "EdgeGroup"
+        case trunk = "Trunk"
+        case trunkBase = "TrunkBase"
+        case did = "DID"
+        case didpool = "DIDPool"
+        case _extension = "Extension"
+        case extensionPool = "ExtensionPool"
+        case phone = "Phone"
+        case phoneBase = "PhoneBase"
+        case line = "Line"
+        case lineBase = "LineBase"
+        case outboundRoute = "OutboundRoute"
+        case numberPlan = "NumberPlan"
+        case site = "Site"
     }
     /** Id of the audit message. */
     public var _id: String?

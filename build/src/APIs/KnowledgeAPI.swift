@@ -755,6 +755,8 @@ open class KnowledgeAPI {
     
     
     
+    
+    
     /**
      
      Get documents
@@ -766,10 +768,11 @@ open class KnowledgeAPI {
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter categories: (query) Filter by categories ids, comma separated values expected. (optional)
+     - parameter title: (query) Filter by document title. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, completion: @escaping ((_ data: DocumentListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, categories: categories)
+    open class func getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil, completion: @escaping ((_ data: DocumentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, categories: categories, title: title)
         requestBuilder.execute { (response: Response<DocumentListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -844,10 +847,11 @@ open class KnowledgeAPI {
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter categories: (query) Filter by categories ids, comma separated values expected. (optional)
+     - parameter title: (query) Filter by document title. (optional)
 
      - returns: RequestBuilder<DocumentListing> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil) -> RequestBuilder<DocumentListing> {
+    open class func getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil) -> RequestBuilder<DocumentListing> {
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -874,7 +878,9 @@ open class KnowledgeAPI {
             
             "pageSize": pageSize, 
             
-            "categories": categories
+            "categories": categories, 
+            
+            "title": title
             
         ])
 

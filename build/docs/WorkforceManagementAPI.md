@@ -3987,7 +3987,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(mana
 
 
 
-> [WorkPlan](WorkPlan.html) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body)
+> [WorkPlan](WorkPlan.html) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, body, validationMode)
 
 Update a work plan
 
@@ -4010,9 +4010,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let workPlanId: String = "" // The ID of the work plan to update
 let body: WorkPlan = new WorkPlan(...) // body
+let validationMode: WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan = WorkforceManagementAPI.ValidationMode_patchWorkforcemanagementManagementunitWorkplan.enummember // Allows to update work plan even if validation result is invalid
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(managementUnitId: managementUnitId, workPlanId: workPlanId, body: body, validationMode: validationMode) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4030,6 +4031,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(management
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to update | |
 | **body** | [**WorkPlan**](WorkPlan.html)| body | [optional] |
+| **validationMode** | **String**| Allows to update work plan even if validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
 {: class="table-striped"}
 
 
@@ -5779,7 +5781,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotations(ma
 
 
 
-> [WorkPlan](WorkPlan.html) postWorkforcemanagementManagementunitWorkplans(managementUnitId, body)
+> [WorkPlan](WorkPlan.html) postWorkforcemanagementManagementunitWorkplans(managementUnitId, body, validationMode)
 
 Create a new work plan
 
@@ -5801,9 +5803,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: CreateWorkPlan = new CreateWorkPlan(...) // body
+let validationMode: WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans = WorkforceManagementAPI.ValidationMode_postWorkforcemanagementManagementunitWorkplans.enummember // Allows to create work plan even if the validation result is invalid
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, body: body, validationMode: validationMode) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5820,6 +5823,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(management
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**CreateWorkPlan**](CreateWorkPlan.html)| body | [optional] |
+| **validationMode** | **String**| Allows to create work plan even if the validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
 {: class="table-striped"}
 
 

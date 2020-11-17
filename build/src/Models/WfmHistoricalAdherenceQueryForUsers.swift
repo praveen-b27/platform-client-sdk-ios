@@ -17,14 +17,12 @@ public class WfmHistoricalAdherenceQueryForUsers: Codable {
     public var endDate: Date?
     /** The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence */
     public var timeZone: String?
-    /** The userIds to report on. Note: Only one of [teamIds, userIds] can be requested */
+    /** The userIds to report on */
     public var userIds: [String]?
-    /** The teamIds to report on. Note: Only one of [teamIds, userIds] can be requested */
-    public var teamIds: [String]?
     /** Whether user exceptions should be returned as part of the results */
     public var includeExceptions: Bool?
 
-    public init(startDate: Date?, endDate: Date?, timeZone: String?, userIds: [String]?, teamIds: [String]?, includeExceptions: Bool?) {
+    public init(startDate: Date?, endDate: Date?, timeZone: String?, userIds: [String]?, includeExceptions: Bool?) {
         
         self.startDate = startDate
         
@@ -33,8 +31,6 @@ public class WfmHistoricalAdherenceQueryForUsers: Codable {
         self.timeZone = timeZone
         
         self.userIds = userIds
-        
-        self.teamIds = teamIds
         
         self.includeExceptions = includeExceptions
         

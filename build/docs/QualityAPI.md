@@ -1204,7 +1204,7 @@ QualityAPI.getQualityFormsEvaluation(formId: formId) { (response, error) in
 
 
 
-> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityFormsEvaluationVersions(formId, pageSize, pageNumber)
+> [EvaluationFormEntityListing](EvaluationFormEntityListing.html) getQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder)
 
 Gets all the revisions for a specific evaluation.
 
@@ -1227,9 +1227,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let formId: String = "" // Form ID
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let sortOrder: String = "asc" // Sort order
 
 // Code example
-QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1247,6 +1248,7 @@ QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize,
 | **formId** | **String**| Form ID | |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
 {: class="table-striped"}
 
 

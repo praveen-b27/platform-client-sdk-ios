@@ -15,14 +15,14 @@ public class ADFS: Codable {
     public var _id: String?
     public var name: String?
     public var relyingPartyIdentifier: String?
-    public var certificate: String?
     public var issuerURI: String?
+    public var certificate: String?
     public var ssoTargetURI: String?
     public var disabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, relyingPartyIdentifier: String?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, relyingPartyIdentifier: String?, issuerURI: String?, certificate: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -30,9 +30,9 @@ public class ADFS: Codable {
         
         self.relyingPartyIdentifier = relyingPartyIdentifier
         
-        self.certificate = certificate
-        
         self.issuerURI = issuerURI
+        
+        self.certificate = certificate
         
         self.ssoTargetURI = ssoTargetURI
         
@@ -46,8 +46,8 @@ public class ADFS: Codable {
         case _id = "id"
         case name
         case relyingPartyIdentifier
-        case certificate
         case issuerURI
+        case certificate
         case ssoTargetURI
         case disabled
         case selfUri

@@ -19,6 +19,9 @@ public class MessageContent: Codable {
         case notification = "Notification"
         case genericTemplate = "GenericTemplate"
         case listTemplate = "ListTemplate"
+        case postback = "Postback"
+        case reactions = "Reactions"
+        case mention = "Mention"
     }
     /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
     public var contentType: ContentType?
@@ -34,8 +37,14 @@ public class MessageContent: Codable {
     public var list: ContentList?
     /** Template notification object */
     public var template: ContentNotificationTemplate?
+    /** A list of reactions */
+    public var reactions: [ContentReaction]?
+    /** This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform */
+    public var mention: MessagingRecipient?
+    /** The postback object result of a user clicking in a button */
+    public var postback: ContentPostback?
 
-    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?) {
+    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?) {
         
         self.contentType = contentType
         
@@ -50,6 +59,12 @@ public class MessageContent: Codable {
         self.list = list
         
         self.template = template
+        
+        self.reactions = reactions
+        
+        self.mention = mention
+        
+        self.postback = postback
         
     }
 

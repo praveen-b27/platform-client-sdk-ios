@@ -50,12 +50,14 @@ public class Flow: Codable {
     public var debugVersion: FlowVersion?
     public var publishedBy: User?
     public var currentOperation: Operation?
-    /** Information about the NLU domain version for the flow */
+    /** Information about the natural language understanding configuration for the published version of the flow */
     public var nluInfo: NluInfo?
+    /** List of supported languages for the published version of the flow. */
+    public var supportedLanguages: [SupportedLanguage]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, nluInfo: NluInfo?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, selfUri: String?) {
         
         self._id = _id
         
@@ -95,6 +97,8 @@ public class Flow: Codable {
         
         self.nluInfo = nluInfo
         
+        self.supportedLanguages = supportedLanguages
+        
         self.selfUri = selfUri
         
     }
@@ -119,6 +123,7 @@ public class Flow: Codable {
         case publishedBy
         case currentOperation
         case nluInfo
+        case supportedLanguages
         case selfUri
     }
 

@@ -15,14 +15,14 @@ public class IdentityNow: Codable {
     public var _id: String?
     public var name: String?
     public var relyingPartyIdentifier: String?
-    public var issuerURI: String?
     public var certificate: String?
     public var ssoTargetURI: String?
+    public var issuerURI: String?
     public var disabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, relyingPartyIdentifier: String?, issuerURI: String?, certificate: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, relyingPartyIdentifier: String?, certificate: String?, ssoTargetURI: String?, issuerURI: String?, disabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -30,11 +30,11 @@ public class IdentityNow: Codable {
         
         self.relyingPartyIdentifier = relyingPartyIdentifier
         
-        self.issuerURI = issuerURI
-        
         self.certificate = certificate
         
         self.ssoTargetURI = ssoTargetURI
+        
+        self.issuerURI = issuerURI
         
         self.disabled = disabled
         
@@ -46,9 +46,9 @@ public class IdentityNow: Codable {
         case _id = "id"
         case name
         case relyingPartyIdentifier
-        case issuerURI
         case certificate
         case ssoTargetURI
+        case issuerURI
         case disabled
         case selfUri
     }

@@ -395,6 +395,8 @@ open class KnowledgeAPI {
     
     
     
+    
+    
     /**
      
      Get categories
@@ -405,10 +407,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategories, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, completion: @escaping ((_ data: CategoryListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize)
+    open class func getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategories, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, completion: @escaping ((_ data: CategoryListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, name: name)
         requestBuilder.execute { (response: Response<CategoryListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -466,10 +469,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter name: (query) Filter to return the categories that starts with the given category name. (optional)
 
      - returns: RequestBuilder<CategoryListing> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategories, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil) -> RequestBuilder<CategoryListing> {
+    open class func getKnowledgeKnowledgebaseLanguageCategoriesWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageCategories, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil) -> RequestBuilder<CategoryListing> {
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -494,7 +498,9 @@ open class KnowledgeAPI {
             
             "limit": limit, 
             
-            "pageSize": pageSize
+            "pageSize": pageSize, 
+            
+            "name": name
             
         ])
 

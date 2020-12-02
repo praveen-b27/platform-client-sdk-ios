@@ -198,6 +198,7 @@ open class OAuthAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "total" : 123456789,
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
@@ -573,8 +574,8 @@ open class OAuthAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthClientEntityListing> 
@@ -709,6 +710,7 @@ open class OAuthAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "total" : 123456789,
   "entities" : [ {
     "selfUri" : "aeiou",
     "description" : "aeiou",

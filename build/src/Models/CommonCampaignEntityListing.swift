@@ -17,12 +17,12 @@ public class CommonCampaignEntityListing: Codable {
     public var total: Int64?
     public var firstUri: String?
     public var selfUri: String?
-    public var nextUri: String?
     public var previousUri: String?
     public var lastUri: String?
+    public var nextUri: String?
     public var pageCount: Int?
 
-    public init(entities: [CommonCampaign]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, pageCount: Int?) {
+    public init(entities: [CommonCampaign]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, previousUri: String?, lastUri: String?, nextUri: String?, pageCount: Int?) {
         
         self.entities = entities
         
@@ -36,11 +36,11 @@ public class CommonCampaignEntityListing: Codable {
         
         self.selfUri = selfUri
         
-        self.nextUri = nextUri
-        
         self.previousUri = previousUri
         
         self.lastUri = lastUri
+        
+        self.nextUri = nextUri
         
         self.pageCount = pageCount
         

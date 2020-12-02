@@ -16,7 +16,6 @@ public class UpdateCoachingAppointmentRequest: Codable {
         case scheduled = "Scheduled"
         case inProgress = "InProgress"
         case completed = "Completed"
-        case invalidSchedule = "InvalidSchedule"
     }
     /** The name of coaching appointment. */
     public var name: String?

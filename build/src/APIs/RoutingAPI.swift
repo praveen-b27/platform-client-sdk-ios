@@ -1066,8 +1066,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter domainName: (path) email domain 
@@ -1169,8 +1169,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
@@ -1320,8 +1320,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2191,8 +2191,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter messengerType: (query) Messenger Type (optional)
@@ -2928,8 +2928,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -3052,8 +3052,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -3266,8 +3266,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3505,8 +3505,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 100] (optional, default to 25)
@@ -3738,8 +3738,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 500] (optional, default to 25)
@@ -3951,8 +3951,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter joined: (query) Joined (optional)
@@ -4298,8 +4298,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4469,8 +4469,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5343,8 +5343,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
@@ -5604,6 +5604,14 @@ open class RoutingAPI {
     
     
     
+    public enum SortOrder_getRoutingWrapupcodes: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    
+    
+    
     
     /**
      
@@ -5612,11 +5620,12 @@ open class RoutingAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
      - parameter name: (query) Name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingWrapupcodes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, name: String? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingWrapupcodesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name)
+    open class func getRoutingWrapupcodes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingWrapupcodesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name)
         requestBuilder.execute { (response: Response<WrapupCodeEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5659,18 +5668,19 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
      - parameter name: (query) Name (optional)
 
      - returns: RequestBuilder<WrapupCodeEntityListing> 
      */
-    open class func getRoutingWrapupcodesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, name: String? = nil) -> RequestBuilder<WrapupCodeEntityListing> {
+    open class func getRoutingWrapupcodesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil) -> RequestBuilder<WrapupCodeEntityListing> {
         let path = "/api/v2/routing/wrapupcodes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5688,6 +5698,8 @@ open class RoutingAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             
             "sortBy": sortBy?.rawValue, 
+            
+            "sortOrder": sortOrder?.rawValue, 
             
             "name": name
             
@@ -5872,8 +5884,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -5983,8 +5995,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6091,8 +6103,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6867,8 +6879,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -7297,8 +7309,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7463,8 +7475,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7545,8 +7557,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -10490,8 +10502,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

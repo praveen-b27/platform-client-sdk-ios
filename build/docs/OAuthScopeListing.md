@@ -7,6 +7,7 @@ title: OAuthScopeListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **total** | **Int64** |  | [optional] |
 | **entities** | [**[OAuthScope]**](OAuthScope.html) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 {: class="table table-striped"}

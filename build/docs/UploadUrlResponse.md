@@ -7,7 +7,8 @@ title: UploadUrlResponse
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **url** | **String** | Presigned url to PUT the file to | [optional] |
+| **url** | **String** | Presigned URL to PUT the file to | [optional] |
+| **uploadKey** | **String** | Key that identifies the file in the storage including the file name | [optional] |
 | **headers** | **[String:String]** | Required headers when uploading a file through PUT request to the URL | [optional] |
 {: class="table table-striped"}
 

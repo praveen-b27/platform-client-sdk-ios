@@ -49,6 +49,7 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "supportedMediaTypes" : [ "aeiou" ],
+  "shortAbandonThreshold" : 123,
   "userData" : [ {
     "value" : "aeiou",
     "key" : "aeiou"
@@ -136,6 +137,7 @@ open class JourneyAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "supportedMediaTypes" : [ "aeiou" ],
+    "shortAbandonThreshold" : 123,
     "userData" : [ {
       "value" : "aeiou",
       "key" : "aeiou"
@@ -156,8 +158,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -231,6 +233,7 @@ open class JourneyAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "supportedMediaTypes" : [ "aeiou" ],
+  "shortAbandonThreshold" : 123,
   "userData" : [ {
     "value" : "aeiou",
     "key" : "aeiou"

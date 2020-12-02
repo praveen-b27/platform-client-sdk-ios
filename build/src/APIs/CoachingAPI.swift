@@ -375,8 +375,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -428,9 +428,9 @@ open class CoachingAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCoachingAppointmentStatuses(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: CoachingAppointmentStatusDtoList?,_ error: Error?) -> Void)) {
+    open class func getCoachingAppointmentStatuses(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: CoachingAppointmentStatusResponseList?,_ error: Error?) -> Void)) {
         let requestBuilder = getCoachingAppointmentStatusesWithRequestBuilder(appointmentId: appointmentId, pageNumber: pageNumber, pageSize: pageSize)
-        requestBuilder.execute { (response: Response<CoachingAppointmentStatusDtoList>?, error) -> Void in
+        requestBuilder.execute { (response: Response<CoachingAppointmentStatusResponseList>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -478,9 +478,9 @@ open class CoachingAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
 
-     - returns: RequestBuilder<CoachingAppointmentStatusDtoList> 
+     - returns: RequestBuilder<CoachingAppointmentStatusResponseList> 
      */
-    open class func getCoachingAppointmentStatusesWithRequestBuilder(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CoachingAppointmentStatusDtoList> {
+    open class func getCoachingAppointmentStatusesWithRequestBuilder(appointmentId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<CoachingAppointmentStatusResponseList> {
         var path = "/api/v2/coaching/appointments/{appointmentId}/statuses"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -502,7 +502,7 @@ open class CoachingAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<CoachingAppointmentStatusDtoList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<CoachingAppointmentStatusResponseList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -634,8 +634,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
@@ -814,8 +814,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter interval: (query) Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
@@ -1078,8 +1078,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1301,9 +1301,9 @@ open class CoachingAPI {
      - parameter body: (body) Updated status of the coaching appointment 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchCoachingAppointmentStatus(appointmentId: String, body: CoachingAppointmentStatusDto, completion: @escaping ((_ data: CoachingAppointmentStatusDto?,_ error: Error?) -> Void)) {
+    open class func patchCoachingAppointmentStatus(appointmentId: String, body: CoachingAppointmentStatusRequest, completion: @escaping ((_ data: CoachingAppointmentStatusResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchCoachingAppointmentStatusWithRequestBuilder(appointmentId: appointmentId, body: body)
-        requestBuilder.execute { (response: Response<CoachingAppointmentStatusDto>?, error) -> Void in
+        requestBuilder.execute { (response: Response<CoachingAppointmentStatusResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1344,9 +1344,9 @@ open class CoachingAPI {
      - parameter appointmentId: (path) The ID of the coaching appointment. 
      - parameter body: (body) Updated status of the coaching appointment 
 
-     - returns: RequestBuilder<CoachingAppointmentStatusDto> 
+     - returns: RequestBuilder<CoachingAppointmentStatusResponse> 
      */
-    open class func patchCoachingAppointmentStatusWithRequestBuilder(appointmentId: String, body: CoachingAppointmentStatusDto) -> RequestBuilder<CoachingAppointmentStatusDto> {
+    open class func patchCoachingAppointmentStatusWithRequestBuilder(appointmentId: String, body: CoachingAppointmentStatusRequest) -> RequestBuilder<CoachingAppointmentStatusResponse> {
         var path = "/api/v2/coaching/appointments/{appointmentId}/status"
         let appointmentIdPreEscape = "\(appointmentId)"
         let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1358,7 +1358,7 @@ open class CoachingAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<CoachingAppointmentStatusDto>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<CoachingAppointmentStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }

@@ -252,7 +252,7 @@ KnowledgeAPI.getKnowledgeKnowledgebase(knowledgeBaseId: knowledgeBaseId) { (resp
 
 
 
-> [CategoryListing](CategoryListing.html) getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId, languageCode, before, after, limit, pageSize)
+> [CategoryListing](CategoryListing.html) getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId, languageCode, before, after, limit, pageSize, name)
 
 Get categories
 
@@ -278,9 +278,10 @@ let before: String = "" // The cursor that points to the start of the set of ent
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let limit: String = "" // Number of entities to return. Maximum of 200.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let name: String = "" // Filter to return the categories that starts with the given category name.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, name: name) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -301,6 +302,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowle
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **name** | **String**| Filter to return the categories that starts with the given category name. | [optional] |
 {: class="table-striped"}
 
 

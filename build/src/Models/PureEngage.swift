@@ -15,14 +15,14 @@ public class PureEngage: Codable {
     public var _id: String?
     public var name: String?
     public var autoProvisionUsers: Bool?
-    public var issuerURI: String?
     public var certificate: String?
     public var ssoTargetURI: String?
+    public var issuerURI: String?
     public var disabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, autoProvisionUsers: Bool?, issuerURI: String?, certificate: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, autoProvisionUsers: Bool?, certificate: String?, ssoTargetURI: String?, issuerURI: String?, disabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -30,11 +30,11 @@ public class PureEngage: Codable {
         
         self.autoProvisionUsers = autoProvisionUsers
         
-        self.issuerURI = issuerURI
-        
         self.certificate = certificate
         
         self.ssoTargetURI = ssoTargetURI
+        
+        self.issuerURI = issuerURI
         
         self.disabled = disabled
         
@@ -46,9 +46,9 @@ public class PureEngage: Codable {
         case _id = "id"
         case name
         case autoProvisionUsers
-        case issuerURI
         case certificate
         case ssoTargetURI
+        case issuerURI
         case disabled
         case selfUri
     }

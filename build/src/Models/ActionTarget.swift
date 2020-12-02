@@ -38,6 +38,8 @@ public class ActionTarget: Codable {
     public var _description: String?
     /** Service Level of the action target. Chat offers for the target will be throttled with the aim of achieving this service level. */
     public var serviceLevel: ServiceLevel?
+    /** Indicates the non-default short abandon threshold */
+    public var shortAbandonThreshold: Int?
     /** The URI for this object */
     public var selfUri: String?
     /** The date the target was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -45,7 +47,7 @@ public class ActionTarget: Codable {
     /** The date the target was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
-    public init(_id: String?, name: String?, userData: [KeyValue]?, supportedMediaTypes: [SupportedMediaTypes]?, state: State?, _description: String?, serviceLevel: ServiceLevel?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
+    public init(_id: String?, name: String?, userData: [KeyValue]?, supportedMediaTypes: [SupportedMediaTypes]?, state: State?, _description: String?, serviceLevel: ServiceLevel?, shortAbandonThreshold: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
         
         self._id = _id
         
@@ -60,6 +62,8 @@ public class ActionTarget: Codable {
         self._description = _description
         
         self.serviceLevel = serviceLevel
+        
+        self.shortAbandonThreshold = shortAbandonThreshold
         
         self.selfUri = selfUri
         
@@ -77,6 +81,7 @@ public class ActionTarget: Codable {
         case state
         case _description = "description"
         case serviceLevel
+        case shortAbandonThreshold
         case selfUri
         case createdDate
         case modifiedDate

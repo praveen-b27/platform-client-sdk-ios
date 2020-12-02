@@ -15,7 +15,7 @@ public class NluDomain: Codable {
     public var _id: String?
     /** The name of the NLU domain. */
     public var name: String?
-    /** The ISO 639-1 language code of the NLU domain, e.g. `en`. */
+    /** The language culture of the NLU domain, e.g. `en-us`, `de-de`. */
     public var language: String?
     /** The draft version of that NLU domain. */
     public var draftVersion: NluDomainVersion?

@@ -302,7 +302,7 @@ CoachingAPI.getCoachingAppointmentAnnotations(appointmentId: appointmentId, page
 
 
 
-> [CoachingAppointmentStatusDtoList](CoachingAppointmentStatusDtoList.html) getCoachingAppointmentStatuses(appointmentId, pageNumber, pageSize)
+> [CoachingAppointmentStatusResponseList](CoachingAppointmentStatusResponseList.html) getCoachingAppointmentStatuses(appointmentId, pageNumber, pageSize)
 
 Get the list of status changes for a coaching appointment.
 
@@ -350,7 +350,7 @@ CoachingAPI.getCoachingAppointmentStatuses(appointmentId: appointmentId, pageNum
 
 ### Return type
 
-[**CoachingAppointmentStatusDtoList**](CoachingAppointmentStatusDtoList.html)
+[**CoachingAppointmentStatusResponseList**](CoachingAppointmentStatusResponseList.html)
 
 <a name="getCoachingAppointments"></a>
 
@@ -715,7 +715,7 @@ CoachingAPI.patchCoachingAppointmentAnnotation(appointmentId: appointmentId, ann
 
 
 
-> [CoachingAppointmentStatusDto](CoachingAppointmentStatusDto.html) patchCoachingAppointmentStatus(appointmentId, body)
+> [CoachingAppointmentStatusResponse](CoachingAppointmentStatusResponse.html) patchCoachingAppointmentStatus(appointmentId, body)
 
 Update the status of a coaching appointment
 
@@ -736,7 +736,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let appointmentId: String = "" // The ID of the coaching appointment.
-let body: CoachingAppointmentStatusDto = new CoachingAppointmentStatusDto(...) // Updated status of the coaching appointment
+let body: CoachingAppointmentStatusRequest = new CoachingAppointmentStatusRequest(...) // Updated status of the coaching appointment
 
 // Code example
 CoachingAPI.patchCoachingAppointmentStatus(appointmentId: appointmentId, body: body) { (response, error) in
@@ -755,13 +755,13 @@ CoachingAPI.patchCoachingAppointmentStatus(appointmentId: appointmentId, body: b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **appointmentId** | **String**| The ID of the coaching appointment. | |
-| **body** | [**CoachingAppointmentStatusDto**](CoachingAppointmentStatusDto.html)| Updated status of the coaching appointment | |
+| **body** | [**CoachingAppointmentStatusRequest**](CoachingAppointmentStatusRequest.html)| Updated status of the coaching appointment | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**CoachingAppointmentStatusDto**](CoachingAppointmentStatusDto.html)
+[**CoachingAppointmentStatusResponse**](CoachingAppointmentStatusResponse.html)
 
 <a name="patchCoachingNotification"></a>
 

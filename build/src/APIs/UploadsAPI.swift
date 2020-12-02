@@ -51,6 +51,7 @@ open class UploadsAPI {
   "headers" : {
     "key" : "aeiou"
   },
+  "uploadKey" : "aeiou",
   "url" : "aeiou"
 }}]
      

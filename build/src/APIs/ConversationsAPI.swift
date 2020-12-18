@@ -16695,7 +16695,112 @@ open class ConversationsAPI {
     
     /**
      
-     Activate a WhatsApp messaging integration.
+     Update Twitter messaging integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) TwitterIntegrationRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: String, body: TwitterIntegrationRequest, completion: @escaping ((_ data: TwitterIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchConversationsMessagingIntegrationsTwitterIntegrationIdWithRequestBuilder(integrationId: integrationId, body: body)
+        requestBuilder.execute { (response: Response<TwitterIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update Twitter messaging integration
+     
+     - PATCH /api/v2/conversations/messaging/integrations/twitter/{integrationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "accessTokenKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
+  "userId" : "aeiou",
+  "version" : 123,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "tier" : "aeiou",
+  "createdBy" : "",
+  "envName" : "aeiou",
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "consumerKey" : "aeiou",
+  "username" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) TwitterIntegrationRequest 
+
+     - returns: RequestBuilder<TwitterIntegration> 
+     */
+    open class func patchConversationsMessagingIntegrationsTwitterIntegrationIdWithRequestBuilder(integrationId: String, body: TwitterIntegrationRequest) -> RequestBuilder<TwitterIntegration> {
+        var path = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TwitterIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update or activate a WhatsApp messaging integration.
      
      - parameter integrationId: (path) Integration ID 
      - parameter body: (body) WhatsAppIntegrationUpdateRequest 
@@ -16721,7 +16826,7 @@ open class ConversationsAPI {
 
     /**
      
-     Activate a WhatsApp messaging integration.
+     Update or activate a WhatsApp messaging integration.
      
      - PATCH /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}
      - The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
@@ -16911,6 +17016,8 @@ open class ConversationsAPI {
           "max" : 1.3579000000000001069366817318950779736042022705078125,
           "count" : 123456789,
           "sum" : 1.3579000000000001069366817318950779736042022705078125,
+          "countPositive" : 123456789,
+          "countNegative" : 123456789,
           "ratio" : 1.3579000000000001069366817318950779736042022705078125,
           "numerator" : 1.3579000000000001069366817318950779736042022705078125,
           "denominator" : 1.3579000000000001069366817318950779736042022705078125,

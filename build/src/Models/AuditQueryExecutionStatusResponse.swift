@@ -23,6 +23,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
         case peoplePermissions = "PeoplePermissions"
+        case presence = "Presence"
         case quality = "Quality"
         case languageUnderstanding = "LanguageUnderstanding"
         case topicsDefinitions = "TopicsDefinitions"

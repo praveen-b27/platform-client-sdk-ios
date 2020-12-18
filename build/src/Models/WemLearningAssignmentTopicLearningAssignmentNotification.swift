@@ -15,6 +15,7 @@ public class WemLearningAssignmentTopicLearningAssignmentNotification: Codable {
         case assigned = "Assigned"
         case inProgress = "InProgress"
         case completed = "Completed"
+        case deleted = "Deleted"
     }
     public var _id: String?
     public var user: WemLearningAssignmentTopicUserReference?

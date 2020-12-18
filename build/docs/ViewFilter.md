@@ -90,6 +90,12 @@ title: ViewFilter
 | **usedRoutingTypes** | **[String]** | A list of routing types used | [optional] |
 | **requestedRoutingTypes** | **[String]** | A list of routing types requested | [optional] |
 | **hasAgentAssistId** | **Bool** | Indicates filtering for agent assist id | [optional] |
+| **transcripts** | [**[Transcripts]**](Transcripts.html) | A list of transcript contents requested | [optional] |
+| **transcriptLanguages** | **[String]** | A list of transcript languages requested | [optional] |
+| **participantPurposes** | **[String]** | A list of participant purpose requested | [optional] |
+| **showFirstQueue** | **Bool** | Indicates filtering for first queue data | [optional] |
+| **teamIds** | **[String]** | The team ids used to filter the view data | [optional] |
+| **filterUsersByTeamIds** | **[String]** | The team ids are used to fetch associated users for the view | [optional] |
 {: class="table table-striped"}
 
 

@@ -2488,7 +2488,7 @@ let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
 let sortBy: RoutingAPI.SortBy_getRoutingWrapupcodes = RoutingAPI.SortBy_getRoutingWrapupcodes.enummember // Sort by
 let sortOrder: RoutingAPI.SortOrder_getRoutingWrapupcodes = RoutingAPI.SortOrder_getRoutingWrapupcodes.enummember // Sort order
-let name: String = "" // Name
+let name: String = "" // Wrapup code's name ('Sort by' param is ignored unless this field is provided)
 
 // Code example
 RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name) { (response, error) in
@@ -2510,7 +2510,7 @@ RoutingAPI.getRoutingWrapupcodes(pageSize: pageSize, pageNumber: pageNumber, sor
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortBy** | **String**| Sort by | [optional] [default to name]<br />**Values**: name ("name"), _id ("id") |
 | **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **name** | **String**| Name | [optional] |
+| **name** | **String**| Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) | [optional] |
 {: class="table-striped"}
 
 

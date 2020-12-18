@@ -17,12 +17,16 @@ public class AuditQueryEntity: Codable {
         case recording = "Recording"
         case role = "Role"
         case voicemailUserPolicy = "VoicemailUserPolicy"
+        case userPresence = "UserPresence"
         case wrapupCode = "WrapupCode"
+        case maxOrgRoutingUtilizationCapacity = "MaxOrgRoutingUtilizationCapacity"
         case accessToken = "AccessToken"
         case oauthclient = "OAuthClient"
         case oauthclientauthorization = "OAuthClientAuthorization"
         case authOrganization = "AuthOrganization"
         case authUser = "AuthUser"
+        case organizationAuthorizationTrust = "OrganizationAuthorizationTrust"
+        case organizationAuthorizationUserTrust = "OrganizationAuthorizationUserTrust"
         case bulkActions = "BulkActions"
         case feedback = "Feedback"
         case topic = "Topic"
@@ -93,6 +97,7 @@ public class AuditQueryEntity: Codable {
         case deauthorize = "Deauthorize"
         case authenticate = "Authenticate"
         case changePassword = "ChangePassword"
+        case revoke = "Revoke"
     }
     /** Name of the Entity */
     public var name: Name?

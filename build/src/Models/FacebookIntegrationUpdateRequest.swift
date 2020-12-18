@@ -11,17 +11,37 @@ import Foundation
 
 public class FacebookIntegrationUpdateRequest: Codable {
 
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The name of the Facebook Integration */
+    public var name: String?
     /** The long-lived Page Access Token of a facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided. */
     public var pageAccessToken: String?
     /** The short-lived User Access Token of the facebook user logged into the facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided. */
     public var userAccessToken: String?
+    /** The URI for this object */
+    public var selfUri: String?
 
-    public init(pageAccessToken: String?, userAccessToken: String?) {
+    public init(_id: String?, name: String?, pageAccessToken: String?, userAccessToken: String?, selfUri: String?) {
+        
+        self._id = _id
+        
+        self.name = name
         
         self.pageAccessToken = pageAccessToken
         
         self.userAccessToken = userAccessToken
         
+        self.selfUri = selfUri
+        
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case pageAccessToken
+        case userAccessToken
+        case selfUri
     }
 
 

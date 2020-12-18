@@ -318,7 +318,7 @@ open class AuthorizationAPI {
      Gets all grants for a given division.
      
      - GET /api/v2/authorization/divisions/{divisionId}/grants
-     - 
+     - Returns all grants assigned to a given division. Maximum page size is 500.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

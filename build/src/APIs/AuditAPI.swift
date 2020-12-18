@@ -274,15 +274,6 @@ open class AuditAPI {
       "oldValues" : [ "aeiou" ]
     } ],
     "entityType" : "aeiou",
-    "context" : {
-      "key" : "aeiou"
-    },
-    "client" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "action" : "aeiou",
-    "id" : "aeiou",
     "serviceName" : "aeiou",
     "message" : {
       "messageWithParams" : "aeiou",
@@ -292,6 +283,16 @@ open class AuditAPI {
       },
       "message" : "aeiou"
     },
+    "context" : {
+      "key" : "aeiou"
+    },
+    "client" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "action" : "aeiou",
+    "userHomeOrgId" : "aeiou",
+    "id" : "aeiou",
     "user" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -468,15 +469,6 @@ open class AuditAPI {
       "oldValues" : [ "aeiou" ]
     } ],
     "entityType" : "aeiou",
-    "context" : {
-      "key" : "aeiou"
-    },
-    "client" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "action" : "aeiou",
-    "id" : "aeiou",
     "serviceName" : "aeiou",
     "message" : {
       "messageWithParams" : "aeiou",
@@ -486,6 +478,16 @@ open class AuditAPI {
       },
       "message" : "aeiou"
     },
+    "context" : {
+      "key" : "aeiou"
+    },
+    "client" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "action" : "aeiou",
+    "userHomeOrgId" : "aeiou",
+    "id" : "aeiou",
     "user" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",

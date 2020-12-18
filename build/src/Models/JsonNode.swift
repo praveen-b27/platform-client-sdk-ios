@@ -27,24 +27,24 @@ public class JsonNode: Codable {
     public var number: Bool?
     public var boolean: Bool?
     public var object: Bool?
-    public var containerNode: Bool?
     public var valueNode: Bool?
+    public var containerNode: Bool?
     public var missingNode: Bool?
-    public var binary: Bool?
     public var pojo: Bool?
-    public var short: Bool?
-    public var integralNumber: Bool?
     public var floatingPointNumber: Bool?
+    public var integralNumber: Bool?
+    public var short: Bool?
     public var int: Bool?
     public var long: Bool?
     public var double: Bool?
     public var bigDecimal: Bool?
     public var bigInteger: Bool?
     public var textual: Bool?
+    public var binary: Bool?
     public var array: Bool?
     public var null: Bool?
 
-    public init(nodeType: NodeType?, float: Bool?, number: Bool?, boolean: Bool?, object: Bool?, containerNode: Bool?, valueNode: Bool?, missingNode: Bool?, binary: Bool?, pojo: Bool?, short: Bool?, integralNumber: Bool?, floatingPointNumber: Bool?, int: Bool?, long: Bool?, double: Bool?, bigDecimal: Bool?, bigInteger: Bool?, textual: Bool?, array: Bool?, null: Bool?) {
+    public init(nodeType: NodeType?, float: Bool?, number: Bool?, boolean: Bool?, object: Bool?, valueNode: Bool?, containerNode: Bool?, missingNode: Bool?, pojo: Bool?, floatingPointNumber: Bool?, integralNumber: Bool?, short: Bool?, int: Bool?, long: Bool?, double: Bool?, bigDecimal: Bool?, bigInteger: Bool?, textual: Bool?, binary: Bool?, array: Bool?, null: Bool?) {
         
         self.nodeType = nodeType
         
@@ -56,21 +56,19 @@ public class JsonNode: Codable {
         
         self.object = object
         
-        self.containerNode = containerNode
-        
         self.valueNode = valueNode
+        
+        self.containerNode = containerNode
         
         self.missingNode = missingNode
         
-        self.binary = binary
-        
         self.pojo = pojo
         
-        self.short = short
+        self.floatingPointNumber = floatingPointNumber
         
         self.integralNumber = integralNumber
         
-        self.floatingPointNumber = floatingPointNumber
+        self.short = short
         
         self.int = int
         
@@ -83,6 +81,8 @@ public class JsonNode: Codable {
         self.bigInteger = bigInteger
         
         self.textual = textual
+        
+        self.binary = binary
         
         self.array = array
         

@@ -14,8 +14,8 @@ title: TtsVoiceEntityListing
 | **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-| **lastUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
+| **lastUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 {: class="table table-striped"}
 

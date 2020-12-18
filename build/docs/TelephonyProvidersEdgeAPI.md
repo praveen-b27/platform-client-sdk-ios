@@ -1350,7 +1350,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeDiagnosticTracepath(edgeId: e
 
 # **getTelephonyProvidersEdgeLine**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [EdgeLine](EdgeLine.html) getTelephonyProvidersEdgeLine(edgeId, lineId)
 
@@ -1404,7 +1404,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgeLine(edgeId: edgeId, lineId: 
 
 # **getTelephonyProvidersEdgeLines**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [EdgeLineEntityListing](EdgeLineEntityListing.html) getTelephonyProvidersEdgeLines(edgeId, pageSize, pageNumber)
 
@@ -6198,7 +6198,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdge(edgeId: edgeId, body: body) 
 
 # **putTelephonyProvidersEdgeLine**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [EdgeLine](EdgeLine.html) putTelephonyProvidersEdgeLine(edgeId, lineId, body)
 
@@ -6364,7 +6364,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesCertificateauthority(certifi
 
 # **putTelephonyProvidersEdgesDid**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [DID](DID.html) putTelephonyProvidersEdgesDid(didId, body)
 
@@ -6582,7 +6582,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesEdgegroupEdgetrunkbase(edgeg
 
 # **putTelephonyProvidersEdgesExtension**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [Extension](Extension.html) putTelephonyProvidersEdgesExtension(extensionId, body)
 

@@ -1424,6 +1424,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -1480,6 +1482,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -1532,6 +1536,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2042,6 +2048,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2094,6 +2102,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2255,6 +2265,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2307,6 +2319,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2482,6 +2496,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2544,6 +2560,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2722,6 +2740,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2778,6 +2798,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -2830,6 +2852,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -3152,6 +3176,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -3206,6 +3232,8 @@ open class ArchitectAPI {
         case acdlanguage = "ACDLANGUAGE"
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"
@@ -9075,46 +9103,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
-  "entities" : [ {
-    "owner" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "importMode" : "aeiou",
-    "countRecordsFailed" : 123,
-    "countRecordsUpdated" : 123,
-    "selfUri" : "aeiou",
-    "uploadURI" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "errorInformation" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    },
-    "countRecordsDeleted" : 123,
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  } ],
-  "pageSize" : 123
+  "entities" : [ "{}" ]
 }}]
      
      - parameter datatableId: (path) id of datatable 

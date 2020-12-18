@@ -16,6 +16,7 @@ public class AuditLogMessage: Codable {
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
         case peoplePermissions = "PeoplePermissions"
+        case presence = "Presence"
         case quality = "Quality"
         case languageUnderstanding = "LanguageUnderstanding"
         case topicsDefinitions = "TopicsDefinitions"
@@ -58,6 +59,7 @@ public class AuditLogMessage: Codable {
         case deauthorize = "Deauthorize"
         case authenticate = "Authenticate"
         case changePassword = "ChangePassword"
+        case revoke = "Revoke"
     }
     public enum EntityType: String, Codable { 
         case document = "Document"
@@ -65,12 +67,16 @@ public class AuditLogMessage: Codable {
         case recording = "Recording"
         case role = "Role"
         case voicemailUserPolicy = "VoicemailUserPolicy"
+        case userPresence = "UserPresence"
         case wrapupCode = "WrapupCode"
+        case maxOrgRoutingUtilizationCapacity = "MaxOrgRoutingUtilizationCapacity"
         case accessToken = "AccessToken"
         case oauthclient = "OAuthClient"
         case oauthclientauthorization = "OAuthClientAuthorization"
         case authOrganization = "AuthOrganization"
         case authUser = "AuthUser"
+        case organizationAuthorizationTrust = "OrganizationAuthorizationTrust"
+        case organizationAuthorizationUserTrust = "OrganizationAuthorizationUserTrust"
         case bulkActions = "BulkActions"
         case feedback = "Feedback"
         case topic = "Topic"
@@ -111,6 +117,8 @@ public class AuditLogMessage: Codable {
     }
     /** Id of the audit message. */
     public var _id: String?
+    /** Home Organization Id associated with this audit message. */
+    public var userHomeOrgId: String?
     /** User associated with this audit message. */
     public var user: DomainEntityRef?
     /** Client associated with this audit message. */
@@ -134,9 +142,11 @@ public class AuditLogMessage: Codable {
     /** Additional context for this message. */
     public var context: [String:String]?
 
-    public init(_id: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
+    public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
         
         self._id = _id
+        
+        self.userHomeOrgId = userHomeOrgId
         
         self.user = user
         
@@ -164,6 +174,7 @@ public class AuditLogMessage: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case userHomeOrgId
         case user
         case client
         case remoteIp

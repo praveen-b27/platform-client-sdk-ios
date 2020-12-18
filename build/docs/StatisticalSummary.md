@@ -10,6 +10,8 @@ title: StatisticalSummary
 | **max** | **Double** |  | [optional] |
 | **min** | **Double** |  | [optional] |
 | **count** | **Int64** |  | [optional] |
+| **countNegative** | **Int64** |  | [optional] |
+| **countPositive** | **Int64** |  | [optional] |
 | **sum** | **Double** |  | [optional] |
 | **current** | **Double** |  | [optional] |
 | **ratio** | **Double** |  | [optional] |

@@ -9,6 +9,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteConversationRecordingAnnotation**](RecordingAPI.html#deleteConversationRecordingAnnotation) | Delete annotation |
 | [**deleteOrphanrecording**](RecordingAPI.html#deleteOrphanrecording) | Deletes a single orphan recording |
+| [**deleteRecordingCrossplatformMediaretentionpolicies**](RecordingAPI.html#deleteRecordingCrossplatformMediaretentionpolicies) | Delete media retention policies |
+| [**deleteRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#deleteRecordingCrossplatformMediaretentionpolicy) | Delete a media retention policy |
 | [**deleteRecordingJob**](RecordingAPI.html#deleteRecordingJob) | Delete the recording bulk job |
 | [**deleteRecordingMediaretentionpolicies**](RecordingAPI.html#deleteRecordingMediaretentionpolicies) | Delete media retention policies |
 | [**deleteRecordingMediaretentionpolicy**](RecordingAPI.html#deleteRecordingMediaretentionpolicy) | Delete a media retention policy |
@@ -22,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOrphanrecordingMedia**](RecordingAPI.html#getOrphanrecordingMedia) | Gets the media of a single orphan recording |
 | [**getOrphanrecordings**](RecordingAPI.html#getOrphanrecordings) | Gets all orphan recordings |
 | [**getRecordingBatchrequest**](RecordingAPI.html#getRecordingBatchrequest) | Get the status and results for a batch request job, only the user that submitted the job may retrieve results |
+| [**getRecordingCrossplatformMediaretentionpolicies**](RecordingAPI.html#getRecordingCrossplatformMediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled. |
+| [**getRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#getRecordingCrossplatformMediaretentionpolicy) | Get a media retention policy |
 | [**getRecordingJob**](RecordingAPI.html#getRecordingJob) | Get the status of the job associated with the job id. |
 | [**getRecordingJobs**](RecordingAPI.html#getRecordingJobs) | Get the status of all jobs within the user&#39;s organization |
 | [**getRecordingLocalkeysSetting**](RecordingAPI.html#getRecordingLocalkeysSetting) | Get the local encryption settings |
@@ -32,10 +36,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingRecordingkeysRotationschedule**](RecordingAPI.html#getRecordingRecordingkeysRotationschedule) | Get key rotation schedule |
 | [**getRecordingSettings**](RecordingAPI.html#getRecordingSettings) | Get the Recording Settings for the Organization |
 | [**getRecordingsScreensessions**](RecordingAPI.html#getRecordingsScreensessions) | Retrieves a paged listing of screen recording sessions |
+| [**patchRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#patchRecordingCrossplatformMediaretentionpolicy) | Patch a media retention policy |
 | [**patchRecordingMediaretentionpolicy**](RecordingAPI.html#patchRecordingMediaretentionpolicy) | Patch a media retention policy |
 | [**patchRecordingsScreensession**](RecordingAPI.html#patchRecordingsScreensession) | Update a screen recording session |
 | [**postConversationRecordingAnnotations**](RecordingAPI.html#postConversationRecordingAnnotations) | Create annotation |
 | [**postRecordingBatchrequests**](RecordingAPI.html#postRecordingBatchrequests) | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
+| [**postRecordingCrossplatformMediaretentionpolicies**](RecordingAPI.html#postRecordingCrossplatformMediaretentionpolicies) | Create media retention policy |
 | [**postRecordingJobs**](RecordingAPI.html#postRecordingJobs) | Create a recording bulk job |
 | [**postRecordingLocalkeys**](RecordingAPI.html#postRecordingLocalkeys) | create a local recording key |
 | [**postRecordingLocalkeysSettings**](RecordingAPI.html#postRecordingLocalkeysSettings) | create settings for local key creation |
@@ -45,6 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationRecording**](RecordingAPI.html#putConversationRecording) | Updates the retention records on a recording. |
 | [**putConversationRecordingAnnotation**](RecordingAPI.html#putConversationRecordingAnnotation) | Update annotation |
 | [**putOrphanrecording**](RecordingAPI.html#putOrphanrecording) | Updates an orphan recording to a regular recording with retention values |
+| [**putRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#putRecordingCrossplatformMediaretentionpolicy) | Update a media retention policy |
 | [**putRecordingJob**](RecordingAPI.html#putRecordingJob) | Execute the recording bulk job. |
 | [**putRecordingLocalkeysSetting**](RecordingAPI.html#putRecordingLocalkeysSetting) | Update the local encryption settings |
 | [**putRecordingMediaretentionpolicy**](RecordingAPI.html#putRecordingMediaretentionpolicy) | Update a media retention policy |
@@ -159,6 +166,108 @@ RecordingAPI.deleteOrphanrecording(orphanId: orphanId) { (response, error) in
 ### Return type
 
 [**OrphanRecording**](OrphanRecording.html)
+
+<a name="deleteRecordingCrossplatformMediaretentionpolicies"></a>
+
+# **deleteRecordingCrossplatformMediaretentionpolicies**
+
+
+
+> Void deleteRecordingCrossplatformMediaretentionpolicies(ids)
+
+Delete media retention policies
+
+Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+
+Wraps DELETE /api/v2/recording/crossplatform/mediaretentionpolicies  
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let ids: String = "" // 
+
+// Code example
+RecordingAPI.deleteRecordingCrossplatformMediaretentionpolicies(ids: ids) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RecordingAPI.deleteRecordingCrossplatformMediaretentionpolicies was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ids** | **String**|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRecordingCrossplatformMediaretentionpolicy"></a>
+
+# **deleteRecordingCrossplatformMediaretentionpolicy**
+
+
+
+> Void deleteRecordingCrossplatformMediaretentionpolicy(policyId)
+
+Delete a media retention policy
+
+
+
+Wraps DELETE /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}  
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // Policy ID
+
+// Code example
+RecordingAPI.deleteRecordingCrossplatformMediaretentionpolicy(policyId: policyId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RecordingAPI.deleteRecordingCrossplatformMediaretentionpolicy was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| Policy ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteRecordingJob"></a>
 
@@ -887,6 +996,128 @@ RecordingAPI.getRecordingBatchrequest(jobId: jobId) { (response, error) in
 
 [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html)
 
+<a name="getRecordingCrossplatformMediaretentionpolicies"></a>
+
+# **getRecordingCrossplatformMediaretentionpolicies**
+
+
+
+> [PolicyEntityListing](PolicyEntityListing.html) getRecordingCrossplatformMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors)
+
+Gets media retention policy list with query options to filter on name and enabled.
+
+for a less verbose response, add summary=true to this endpoint
+
+Wraps GET /api/v2/recording/crossplatform/mediaretentionpolicies  
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // The total page size requested
+let pageNumber: Int = 1 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let name: String = "" // the policy name - used for filtering results in searches.
+let enabled: Bool = true // checks to see if policy is enabled - use enabled = true or enabled = false
+let summary: Bool = false // provides a less verbose response of policy lists.
+let hasErrors: Bool = true // provides a way to fetch all policies with errors or policies that do not have errors
+
+// Code example
+RecordingAPI.getRecordingCrossplatformMediaretentionpolicies(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.getRecordingCrossplatformMediaretentionpolicies was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **String**| variable name requested to sort by | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **nextPage** | **String**| next page token | [optional] |
+| **previousPage** | **String**| Previous page token | [optional] |
+| **name** | **String**| the policy name - used for filtering results in searches. | [optional] |
+| **enabled** | **Bool**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional] |
+| **summary** | **Bool**| provides a less verbose response of policy lists. | [optional] [default to false] |
+| **hasErrors** | **Bool**| provides a way to fetch all policies with errors or policies that do not have errors | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PolicyEntityListing**](PolicyEntityListing.html)
+
+<a name="getRecordingCrossplatformMediaretentionpolicy"></a>
+
+# **getRecordingCrossplatformMediaretentionpolicy**
+
+
+
+> [CrossPlatformPolicy](CrossPlatformPolicy.html) getRecordingCrossplatformMediaretentionpolicy(policyId)
+
+Get a media retention policy
+
+
+
+Wraps GET /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}  
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // Policy ID
+
+// Code example
+RecordingAPI.getRecordingCrossplatformMediaretentionpolicy(policyId: policyId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.getRecordingCrossplatformMediaretentionpolicy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| Policy ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+
 <a name="getRecordingJob"></a>
 
 # **getRecordingJob**
@@ -1432,6 +1663,60 @@ RecordingAPI.getRecordingsScreensessions(pageSize: pageSize, pageNumber: pageNum
 
 [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
 
+<a name="patchRecordingCrossplatformMediaretentionpolicy"></a>
+
+# **patchRecordingCrossplatformMediaretentionpolicy**
+
+
+
+> [CrossPlatformPolicy](CrossPlatformPolicy.html) patchRecordingCrossplatformMediaretentionpolicy(policyId, body)
+
+Patch a media retention policy
+
+
+
+Wraps PATCH /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}  
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // Policy ID
+let body: CrossPlatformPolicy = new CrossPlatformPolicy(...) // Policy
+
+// Code example
+RecordingAPI.patchRecordingCrossplatformMediaretentionpolicy(policyId: policyId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.patchRecordingCrossplatformMediaretentionpolicy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| Policy ID | |
+| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy.html)| Policy | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
+
 <a name="patchRecordingMediaretentionpolicy"></a>
 
 # **patchRecordingMediaretentionpolicy**
@@ -1645,6 +1930,58 @@ RecordingAPI.postRecordingBatchrequests(body: body) { (response, error) in
 ### Return type
 
 [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html)
+
+<a name="postRecordingCrossplatformMediaretentionpolicies"></a>
+
+# **postRecordingCrossplatformMediaretentionpolicies**
+
+
+
+> [CrossPlatformPolicy](CrossPlatformPolicy.html) postRecordingCrossplatformMediaretentionpolicies(body)
+
+Create media retention policy
+
+
+
+Wraps POST /api/v2/recording/crossplatform/mediaretentionpolicies  
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CrossPlatformPolicyCreate = new CrossPlatformPolicyCreate(...) // Policy
+
+// Code example
+RecordingAPI.postRecordingCrossplatformMediaretentionpolicies(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.postRecordingCrossplatformMediaretentionpolicies was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CrossPlatformPolicyCreate**](CrossPlatformPolicyCreate.html)| Policy | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
 
 <a name="postRecordingJobs"></a>
 
@@ -2122,6 +2459,60 @@ RecordingAPI.putOrphanrecording(orphanId: orphanId, body: body) { (response, err
 ### Return type
 
 [**Recording**](Recording.html)
+
+<a name="putRecordingCrossplatformMediaretentionpolicy"></a>
+
+# **putRecordingCrossplatformMediaretentionpolicy**
+
+
+
+> [CrossPlatformPolicy](CrossPlatformPolicy.html) putRecordingCrossplatformMediaretentionpolicy(policyId, body)
+
+Update a media retention policy
+
+
+
+Wraps PUT /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}  
+
+Requires ANY permissions: 
+
+* recording:crossPlatformRetentionPolicy:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // Policy ID
+let body: CrossPlatformPolicy = new CrossPlatformPolicy(...) // Policy
+
+// Code example
+RecordingAPI.putRecordingCrossplatformMediaretentionpolicy(policyId: policyId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.putRecordingCrossplatformMediaretentionpolicy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **policyId** | **String**| Policy ID | |
+| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy.html)| Policy | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CrossPlatformPolicy**](CrossPlatformPolicy.html)
 
 <a name="putRecordingJob"></a>
 

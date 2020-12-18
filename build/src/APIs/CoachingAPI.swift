@@ -549,9 +549,9 @@ open class CoachingAPI {
     
     
     public enum Overdue_getCoachingAppointments: String { 
-        case any = "Any"
         case _true = "True"
         case _false = "False"
+        case any = "Any"
     }
 
     
@@ -730,9 +730,9 @@ open class CoachingAPI {
     
     
     public enum Overdue_getCoachingAppointmentsMe: String { 
-        case any = "Any"
         case _true = "True"
         case _false = "False"
+        case any = "Any"
     }
 
     

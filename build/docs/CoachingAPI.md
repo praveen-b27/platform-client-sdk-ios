@@ -414,7 +414,7 @@ CoachingAPI.getCoachingAppointments(userIds: userIds, interval: interval, pageNu
 | **sortOrder** | **String**| Sort (by due date) either Asc or Desc | [optional]<br />**Values**: desc ("Desc"), asc ("Asc") |
 | **relationships** | [**[String]**](String.html)| Relationships to filter by | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 | **completionInterval** | **String**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **overdue** | **String**| Overdue status to filter by | [optional]<br />**Values**: any ("Any"), _true ("True"), _false ("False") |
+| **overdue** | **String**| Overdue status to filter by | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
 {: class="table-striped"}
 
 
@@ -481,7 +481,7 @@ CoachingAPI.getCoachingAppointmentsMe(interval: interval, pageNumber: pageNumber
 | **sortOrder** | **String**| Sort (by due date) either Asc or Desc | [optional]<br />**Values**: desc ("Desc"), asc ("Asc") |
 | **relationships** | [**[String]**](String.html)| Relationships to filter by | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 | **completionInterval** | **String**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **overdue** | **String**| Overdue status to filter by | [optional]<br />**Values**: any ("Any"), _true ("True"), _false ("False") |
+| **overdue** | **String**| Overdue status to filter by | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
 {: class="table-striped"}
 
 

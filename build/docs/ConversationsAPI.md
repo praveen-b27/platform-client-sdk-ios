@@ -99,7 +99,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessageParticipantAttributes**](ConversationsAPI.html#patchConversationsMessageParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsMessageParticipantCommunication**](ConversationsAPI.html#patchConversationsMessageParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
 | [**patchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsFacebookIntegrationId) | Update Facebook messaging integration |
-| [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Activate a WhatsApp messaging integration. |
+| [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
+| [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update or activate a WhatsApp messaging integration. |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](ConversationsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
@@ -5020,6 +5021,60 @@ ConversationsAPI.patchConversationsMessagingIntegrationsFacebookIntegrationId(in
 
 [**FacebookIntegration**](FacebookIntegration.html)
 
+<a name="patchConversationsMessagingIntegrationsTwitterIntegrationId"></a>
+
+# **patchConversationsMessagingIntegrationsTwitterIntegrationId**
+
+
+
+> [TwitterIntegration](TwitterIntegration.html) patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, body)
+
+Update Twitter messaging integration
+
+
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/twitter/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest
+
+// Code example
+ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest.html)| TwitterIntegrationRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration.html)
+
 <a name="patchConversationsMessagingIntegrationsWhatsappIntegrationId"></a>
 
 # **patchConversationsMessagingIntegrationsWhatsappIntegrationId**
@@ -5028,7 +5083,7 @@ ConversationsAPI.patchConversationsMessagingIntegrationsFacebookIntegrationId(in
 
 > [WhatsAppIntegration](WhatsAppIntegration.html) patchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId, body)
 
-Activate a WhatsApp messaging integration.
+Update or activate a WhatsApp messaging integration.
 
 The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
 

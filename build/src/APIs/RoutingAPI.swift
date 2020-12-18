@@ -5621,7 +5621,7 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ascending)
-     - parameter name: (query) Name (optional)
+     - parameter name: (query) Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getRoutingWrapupcodes(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingWrapupcodes? = nil, sortOrder: SortOrder_getRoutingWrapupcodes? = nil, name: String? = nil, completion: @escaping ((_ data: WrapupCodeEntityListing?,_ error: Error?) -> Void)) {
@@ -5676,7 +5676,7 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ascending)
-     - parameter name: (query) Name (optional)
+     - parameter name: (query) Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) (optional)
 
      - returns: RequestBuilder<WrapupCodeEntityListing> 
      */
@@ -7633,6 +7633,8 @@ open class RoutingAPI {
         "max" : 1.3579000000000001069366817318950779736042022705078125,
         "count" : 123456789,
         "sum" : 1.3579000000000001069366817318950779736042022705078125,
+        "countPositive" : 123456789,
+        "countNegative" : 123456789,
         "ratio" : 1.3579000000000001069366817318950779736042022705078125,
         "numerator" : 1.3579000000000001069366817318950779736042022705078125,
         "denominator" : 1.3579000000000001069366817318950779736042022705078125,

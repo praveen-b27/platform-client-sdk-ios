@@ -18,11 +18,11 @@ public class TrunkBaseEntityListing: Codable {
     public var firstUri: String?
     public var selfUri: String?
     public var previousUri: String?
-    public var lastUri: String?
     public var nextUri: String?
+    public var lastUri: String?
     public var pageCount: Int?
 
-    public init(entities: [TrunkBase]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, previousUri: String?, lastUri: String?, nextUri: String?, pageCount: Int?) {
+    public init(entities: [TrunkBase]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, previousUri: String?, nextUri: String?, lastUri: String?, pageCount: Int?) {
         
         self.entities = entities
         
@@ -38,9 +38,9 @@ public class TrunkBaseEntityListing: Codable {
         
         self.previousUri = previousUri
         
-        self.lastUri = lastUri
-        
         self.nextUri = nextUri
+        
+        self.lastUri = lastUri
         
         self.pageCount = pageCount
         

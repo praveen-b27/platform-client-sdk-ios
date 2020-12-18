@@ -66,6 +66,10 @@ public class ReportingExportJobResponse: Codable {
         case flowDestinationDetailView = "FLOW_DESTINATION_DETAIL_VIEW"
         case apiUsageView = "API_USAGE_VIEW"
         case scheduledCallbacksView = "SCHEDULED_CALLBACKS_VIEW"
+        case contentSearchView = "CONTENT_SEARCH_VIEW"
+        case landingPage = "LANDING_PAGE"
+        case dashboardSummary = "DASHBOARD_SUMMARY"
+        case dashboardDetail = "DASHBOARD_DETAIL"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

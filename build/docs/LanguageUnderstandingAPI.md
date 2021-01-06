@@ -246,7 +246,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomain(domainId: domainId) { (r
 
 
 
-> [NluFeedbackListing](NluFeedbackListing.html) getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, fields)
+> [NluFeedbackListing](NluFeedbackListing.html) getLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields)
 
 Get all feedback in the given NLU Domain Version.
 
@@ -275,10 +275,12 @@ let dateEnd: Date = new Date(...) // End of time window as ISO-8601 date.
 let includeDeleted: Bool = true // Whether to include soft-deleted items in the result.
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
+let enableCursorPagination: Bool = false // Enable Cursor Pagination
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true
 let fields: [String] = [LanguageUnderstandingAPI.Fields_getLanguageunderstandingDomainFeedback.enummember.rawValue] // Fields and properties to get, comma-separated
 
 // Code example
-LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, fields: fields) { (response, error) in
+LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -301,6 +303,8 @@ LanguageUnderstandingAPI.getLanguageunderstandingDomainFeedback(domainId: domain
 | **includeDeleted** | **Bool**| Whether to include soft-deleted items in the result. | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **enableCursorPagination** | **Bool**| Enable Cursor Pagination | [optional] [default to false] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true | [optional] |
 | **fields** | [**[String]**](String.html)| Fields and properties to get, comma-separated | [optional]<br />**Values**: version ("version"), datecreated ("dateCreated"), text ("text"), intents ("intents") |
 {: class="table-striped"}
 

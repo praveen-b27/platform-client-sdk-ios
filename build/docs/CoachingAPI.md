@@ -22,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchCoachingAppointmentStatus**](CoachingAPI.html#patchCoachingAppointmentStatus) | Update the status of a coaching appointment |
 | [**patchCoachingNotification**](CoachingAPI.html#patchCoachingNotification) | Update an existing notification. |
 | [**postCoachingAppointmentAnnotations**](CoachingAPI.html#postCoachingAppointmentAnnotations) | Create a new annotation. |
+| [**postCoachingAppointmentConversations**](CoachingAPI.html#postCoachingAppointmentConversations) | Add a conversation to an appointment |
 | [**postCoachingAppointments**](CoachingAPI.html#postCoachingAppointments) | Create a new appointment |
 | [**postCoachingAppointmentsAggregatesQuery**](CoachingAPI.html#postCoachingAppointmentsAggregatesQuery) | Retrieve aggregated appointment data |
 {: class="table-striped"}
@@ -870,6 +871,61 @@ CoachingAPI.postCoachingAppointmentAnnotations(appointmentId: appointmentId, bod
 ### Return type
 
 [**CoachingAnnotation**](CoachingAnnotation.html)
+
+<a name="postCoachingAppointmentConversations"></a>
+
+# **postCoachingAppointmentConversations**
+
+
+
+> [AddConversationResponse](AddConversationResponse.html) postCoachingAppointmentConversations(appointmentId, body)
+
+Add a conversation to an appointment
+
+Permission not required if you are the creator or facilitator of the appointment
+
+Wraps POST /api/v2/coaching/appointments/{appointmentId}/conversations  
+
+Requires ANY permissions: 
+
+* coaching:appointment:edit
+* coaching:appointmentConversation:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let appointmentId: String = "" // The ID of the coaching appointment.
+let body: AddConversationRequest = new AddConversationRequest(...) // body
+
+// Code example
+CoachingAPI.postCoachingAppointmentConversations(appointmentId: appointmentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CoachingAPI.postCoachingAppointmentConversations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **appointmentId** | **String**| The ID of the coaching appointment. | |
+| **body** | [**AddConversationRequest**](AddConversationRequest.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AddConversationResponse**](AddConversationResponse.html)
 
 <a name="postCoachingAppointments"></a>
 

@@ -327,6 +327,10 @@ open class LanguageUnderstandingAPI {
     
     
     
+    
+    
+    
+    
     public enum Fields_getLanguageunderstandingDomainFeedback: String { 
         case version = "version"
         case datecreated = "dateCreated"
@@ -348,11 +352,13 @@ open class LanguageUnderstandingAPI {
      - parameter includeDeleted: (query) Whether to include soft-deleted items in the result. (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional, default to false)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLanguageunderstandingDomainFeedback(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, fields: [String]? = nil, completion: @escaping ((_ data: NluFeedbackListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, fields: fields)
+    open class func getLanguageunderstandingDomainFeedback(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil, completion: @escaping ((_ data: NluFeedbackListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: domainId, intentName: intentName, assessment: assessment, dateStart: dateStart, dateEnd: dateEnd, includeDeleted: includeDeleted, pageNumber: pageNumber, pageSize: pageSize, enableCursorPagination: enableCursorPagination, after: after, fields: fields)
         requestBuilder.execute { (response: Response<NluFeedbackListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -456,8 +462,8 @@ open class LanguageUnderstandingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -468,11 +474,13 @@ open class LanguageUnderstandingAPI {
      - parameter includeDeleted: (query) Whether to include soft-deleted items in the result. (optional)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter enableCursorPagination: (query) Enable Cursor Pagination (optional, default to false)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
 
      - returns: RequestBuilder<NluFeedbackListing> 
      */
-    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {
+    open class func getLanguageunderstandingDomainFeedbackWithRequestBuilder(domainId: String, intentName: String? = nil, assessment: Assessment_getLanguageunderstandingDomainFeedback? = nil, dateStart: Date? = nil, dateEnd: Date? = nil, includeDeleted: Bool? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, enableCursorPagination: Bool? = nil, after: String? = nil, fields: [String]? = nil) -> RequestBuilder<NluFeedbackListing> {
         var path = "/api/v2/languageunderstanding/domains/{domainId}/feedback"
         let domainIdPreEscape = "\(domainId)"
         let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -501,6 +509,10 @@ open class LanguageUnderstandingAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             
             "pageSize": pageSize?.encodeToJSON(), 
+            
+            "enableCursorPagination": enableCursorPagination, 
+            
+            "after": after, 
             
             "fields": fields
             
@@ -1033,8 +1045,8 @@ open class LanguageUnderstandingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1171,8 +1183,8 @@ open class LanguageUnderstandingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

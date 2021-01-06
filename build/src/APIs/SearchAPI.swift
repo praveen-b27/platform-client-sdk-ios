@@ -745,8 +745,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -885,8 +885,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -1729,8 +1729,8 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -3262,8 +3262,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -3361,8 +3361,8 @@ open class SearchAPI {
     "null" : true,
     "array" : true,
     "binary" : true,
-    "containerNode" : true,
     "short" : true,
+    "containerNode" : true,
     "bigDecimal" : true,
     "object" : true
   },
@@ -4167,8 +4167,8 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

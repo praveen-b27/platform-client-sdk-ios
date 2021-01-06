@@ -375,8 +375,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter appointmentId: (path) The ID of the coaching appointment. 
@@ -634,8 +634,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userIds: (query) The user IDs for which to retrieve appointments 
@@ -814,8 +814,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter interval: (query) Interval to filter data by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
@@ -1078,8 +1078,8 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1538,6 +1538,79 @@ open class CoachingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CoachingAnnotation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Add a conversation to an appointment
+     
+     - parameter appointmentId: (path) The ID of the coaching appointment. 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postCoachingAppointmentConversations(appointmentId: String, body: AddConversationRequest, completion: @escaping ((_ data: AddConversationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postCoachingAppointmentConversationsWithRequestBuilder(appointmentId: appointmentId, body: body)
+        requestBuilder.execute { (response: Response<AddConversationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Add a conversation to an appointment
+     
+     - POST /api/v2/coaching/appointments/{appointmentId}/conversations
+     - Permission not required if you are the creator or facilitator of the appointment
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "appointment" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "conversation" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter appointmentId: (path) The ID of the coaching appointment. 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<AddConversationResponse> 
+     */
+    open class func postCoachingAppointmentConversationsWithRequestBuilder(appointmentId: String, body: AddConversationRequest) -> RequestBuilder<AddConversationResponse> {
+        var path = "/api/v2/coaching/appointments/{appointmentId}/conversations"
+        let appointmentIdPreEscape = "\(appointmentId)"
+        let appointmentIdPostEscape = appointmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{appointmentId}", with: appointmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AddConversationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

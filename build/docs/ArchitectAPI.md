@@ -121,8 +121,9 @@ Deletes a emergency group by ID
 
 Wraps DELETE /api/v2/architect/emergencygroups/{emergencyGroupId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:delete
 
 ### Example
 
@@ -171,8 +172,9 @@ Delete an IVR Config.
 
 Wraps DELETE /api/v2/architect/ivrs/{ivrId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:delete
 
 ### Example
 
@@ -432,8 +434,9 @@ Delete a schedule by id
 
 Wraps DELETE /api/v2/architect/schedules/{scheduleId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:delete
 
 ### Example
 
@@ -482,8 +485,9 @@ Deletes a schedule group by ID
 
 Wraps DELETE /api/v2/architect/schedulegroups/{scheduleGroupId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:delete
 
 ### Example
 
@@ -1384,8 +1388,9 @@ Gets a emergency group by ID
 
 Wraps GET /api/v2/architect/emergencygroups/{emergencyGroupId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:view
 
 ### Example
 
@@ -1435,8 +1440,9 @@ Get a list of emergency groups.
 
 Wraps GET /api/v2/architect/emergencygroups  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:view
 
 ### Example
 
@@ -1494,8 +1500,9 @@ Get an IVR config.
 
 Wraps GET /api/v2/architect/ivrs/{ivrId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:view
 
 ### Example
 
@@ -1545,8 +1552,9 @@ Get IVR configs.
 
 Wraps GET /api/v2/architect/ivrs  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:view
 
 ### Example
 
@@ -1894,8 +1902,9 @@ Get a schedule by ID
 
 Wraps GET /api/v2/architect/schedules/{scheduleId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:view
 
 ### Example
 
@@ -1945,8 +1954,9 @@ Gets a schedule group by ID
 
 Wraps GET /api/v2/architect/schedulegroups/{scheduleGroupId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:view
 
 ### Example
 
@@ -1996,8 +2006,9 @@ Get a list of schedule groups.
 
 Wraps GET /api/v2/architect/schedulegroups  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:view
 
 ### Example
 
@@ -2057,8 +2068,9 @@ Get a list of schedules.
 
 Wraps GET /api/v2/architect/schedules  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:view
 
 ### Example
 
@@ -3641,8 +3653,9 @@ Creates a new emergency group
 
 Wraps POST /api/v2/architect/emergencygroups  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:add
 
 ### Example
 
@@ -3692,8 +3705,9 @@ Create IVR config.
 
 Wraps POST /api/v2/architect/ivrs  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:add
 
 ### Example
 
@@ -3901,8 +3915,9 @@ Creates a new schedule group
 
 Wraps POST /api/v2/architect/schedulegroups  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:add
 
 ### Example
 
@@ -3952,8 +3967,9 @@ Create a new schedule.
 
 Wraps POST /api/v2/architect/schedules  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:add
 
 ### Example
 
@@ -4899,8 +4915,9 @@ Updates a emergency group by ID
 
 Wraps PUT /api/v2/architect/emergencygroups/{emergencyGroupId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:emergencyGroup:edit
 
 ### Example
 
@@ -4952,8 +4969,9 @@ Update an IVR Config.
 
 Wraps PUT /api/v2/architect/ivrs/{ivrId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:callRoute:edit
 
 ### Example
 
@@ -5115,8 +5133,9 @@ Update schedule by ID
 
 Wraps PUT /api/v2/architect/schedules/{scheduleId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:schedule:edit
 
 ### Example
 
@@ -5168,8 +5187,9 @@ Updates a schedule group by ID
 
 Wraps PUT /api/v2/architect/schedulegroups/{scheduleGroupId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:scheduleGroup:edit
 
 ### Example
 

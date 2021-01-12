@@ -1652,11 +1652,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2209,11 +2209,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2437,11 +2437,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2679,11 +2679,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3132,11 +3132,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3350,11 +3350,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3560,11 +3560,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3767,11 +3767,11 @@ open class ArchitectAPI {
     "closedHoursFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4748,11 +4748,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5151,11 +5151,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5444,11 +5444,11 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5563,11 +5563,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6273,11 +6273,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6403,11 +6403,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6464,7 +6464,7 @@ open class ArchitectAPI {
      Get flow
      
      - parameter flowId: (path) Flow ID 
-     - parameter deleted: (query) Include deleted flows (optional, default to false)
+     - parameter deleted: (query) Deleted flows (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFlow(flowId: String, deleted: Bool? = nil, completion: @escaping ((_ data: Flow?,_ error: Error?) -> Void)) {
@@ -6839,7 +6839,7 @@ open class ArchitectAPI {
 }}]
      
      - parameter flowId: (path) Flow ID 
-     - parameter deleted: (query) Include deleted flows (optional, default to false)
+     - parameter deleted: (query) Deleted flows (optional, default to false)
 
      - returns: RequestBuilder<Flow> 
      */
@@ -7298,7 +7298,7 @@ open class ArchitectAPI {
      Get the latest configuration for flow
      
      - parameter flowId: (path) Flow ID 
-     - parameter deleted: (query) Include deleted flows (optional, default to false)
+     - parameter deleted: (query) Deleted flows (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFlowLatestconfiguration(flowId: String, deleted: Bool? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
@@ -7331,7 +7331,7 @@ open class ArchitectAPI {
      - examples: [{contentType=application/json, example="{}"}]
      
      - parameter flowId: (path) Flow ID 
-     - parameter deleted: (query) Include deleted flows (optional, default to false)
+     - parameter deleted: (query) Deleted flows (optional, default to false)
 
      - returns: RequestBuilder<JSON> 
      */
@@ -7373,7 +7373,7 @@ open class ArchitectAPI {
      
      - parameter flowId: (path) Flow ID 
      - parameter versionId: (path) Version ID 
-     - parameter deleted: (query) Include deleted flows (optional)
+     - parameter deleted: (query) Deleted flows (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFlowVersion(flowId: String, versionId: String, deleted: String? = nil, completion: @escaping ((_ data: FlowVersion?,_ error: Error?) -> Void)) {
@@ -7705,7 +7705,7 @@ open class ArchitectAPI {
      
      - parameter flowId: (path) Flow ID 
      - parameter versionId: (path) Version ID 
-     - parameter deleted: (query) Include deleted flows (optional)
+     - parameter deleted: (query) Deleted flows (optional)
 
      - returns: RequestBuilder<FlowVersion> 
      */
@@ -7750,7 +7750,7 @@ open class ArchitectAPI {
      
      - parameter flowId: (path) Flow ID 
      - parameter versionId: (path) Version ID 
-     - parameter deleted: (query) Include deleted flows (optional)
+     - parameter deleted: (query) Deleted flows (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFlowVersionConfiguration(flowId: String, versionId: String, deleted: String? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
@@ -7784,7 +7784,7 @@ open class ArchitectAPI {
      
      - parameter flowId: (path) Flow ID 
      - parameter versionId: (path) Version ID 
-     - parameter deleted: (query) Include deleted flows (optional)
+     - parameter deleted: (query) Deleted flows (optional)
 
      - returns: RequestBuilder<JSON> 
      */
@@ -7832,7 +7832,7 @@ open class ArchitectAPI {
      - parameter flowId: (path) Flow ID 
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter deleted: (query) Include deleted flows (optional)
+     - parameter deleted: (query) Include Deleted flows (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getFlowVersions(flowId: String, pageNumber: Int? = nil, pageSize: Int? = nil, deleted: Bool? = nil, completion: @escaping ((_ data: FlowVersionEntityListing?,_ error: Error?) -> Void)) {
@@ -8166,17 +8166,17 @@ open class ArchitectAPI {
     "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter deleted: (query) Include deleted flows (optional)
+     - parameter deleted: (query) Include Deleted flows (optional)
 
      - returns: RequestBuilder<FlowVersionEntityListing> 
      */
@@ -8671,11 +8671,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9313,11 +9313,11 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9439,11 +9439,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -9888,11 +9888,11 @@ open class ArchitectAPI {
     "debugVersion" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -10484,11 +10484,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11235,11 +11235,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

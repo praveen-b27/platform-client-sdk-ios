@@ -2435,7 +2435,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
-let deleted: Bool = false // Include deleted flows
+let deleted: Bool = false // Deleted flows
 
 // Code example
 ArchitectAPI.getFlow(flowId: flowId, deleted: deleted) { (response, error) in
@@ -2454,7 +2454,7 @@ ArchitectAPI.getFlow(flowId: flowId, deleted: deleted) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **deleted** | **Bool**| Include deleted flows | [optional] [default to false] |
+| **deleted** | **Bool**| Deleted flows | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -2553,7 +2553,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
-let deleted: Bool = false // Include deleted flows
+let deleted: Bool = false // Deleted flows
 
 // Code example
 ArchitectAPI.getFlowLatestconfiguration(flowId: flowId, deleted: deleted) { (response, error) in
@@ -2572,7 +2572,7 @@ ArchitectAPI.getFlowLatestconfiguration(flowId: flowId, deleted: deleted) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **deleted** | **Bool**| Include deleted flows | [optional] [default to false] |
+| **deleted** | **Bool**| Deleted flows | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -2608,7 +2608,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
 let versionId: String = "" // Version ID
-let deleted: String = "" // Include deleted flows
+let deleted: String = "" // Deleted flows
 
 // Code example
 ArchitectAPI.getFlowVersion(flowId: flowId, versionId: versionId, deleted: deleted) { (response, error) in
@@ -2628,7 +2628,7 @@ ArchitectAPI.getFlowVersion(flowId: flowId, versionId: versionId, deleted: delet
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
 | **versionId** | **String**| Version ID | |
-| **deleted** | **String**| Include deleted flows | [optional] |
+| **deleted** | **String**| Deleted flows | [optional] |
 {: class="table-striped"}
 
 
@@ -2664,7 +2664,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let flowId: String = "" // Flow ID
 let versionId: String = "" // Version ID
-let deleted: String = "" // Include deleted flows
+let deleted: String = "" // Deleted flows
 
 // Code example
 ArchitectAPI.getFlowVersionConfiguration(flowId: flowId, versionId: versionId, deleted: deleted) { (response, error) in
@@ -2684,7 +2684,7 @@ ArchitectAPI.getFlowVersionConfiguration(flowId: flowId, versionId: versionId, d
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
 | **versionId** | **String**| Version ID | |
-| **deleted** | **String**| Include deleted flows | [optional] |
+| **deleted** | **String**| Deleted flows | [optional] |
 {: class="table-striped"}
 
 
@@ -2721,7 +2721,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let flowId: String = "" // Flow ID
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
-let deleted: Bool = true // Include deleted flows
+let deleted: Bool = true // Include Deleted flows
 
 // Code example
 ArchitectAPI.getFlowVersions(flowId: flowId, pageNumber: pageNumber, pageSize: pageSize, deleted: deleted) { (response, error) in
@@ -2742,7 +2742,7 @@ ArchitectAPI.getFlowVersions(flowId: flowId, pageNumber: pageNumber, pageSize: p
 | **flowId** | **String**| Flow ID | |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **deleted** | **Bool**| Include deleted flows | [optional] |
+| **deleted** | **Bool**| Include Deleted flows | [optional] |
 {: class="table-striped"}
 
 

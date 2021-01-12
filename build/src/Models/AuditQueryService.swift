@@ -26,6 +26,7 @@ public class AuditQueryService: Codable {
         case responseManagement = "ResponseManagement"
         case groups = "Groups"
         case telephony = "Telephony"
+        case outbound = "Outbound"
     }
     /** Name of the Service */
     public var name: Name?

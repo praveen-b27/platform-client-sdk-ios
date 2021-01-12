@@ -57,6 +57,7 @@ public class ConversationAggregationQuery: Codable {
         case purpose = "purpose"
         case queueid = "queueId"
         case remote = "remote"
+        case reoffered = "reoffered"
         case requestedlanguageid = "requestedLanguageId"
         case requestedrouting = "requestedRouting"
         case requestedroutingskillid = "requestedRoutingSkillId"

@@ -33,6 +33,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case responseManagement = "ResponseManagement"
         case groups = "Groups"
         case telephony = "Telephony"
+        case outbound = "Outbound"
     }
     /** Id of the audit query execution request. */
     public var _id: String?

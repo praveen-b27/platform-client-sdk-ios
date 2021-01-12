@@ -1886,11 +1886,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3166,11 +3166,11 @@ open class ConversationsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3669,11 +3669,11 @@ open class ConversationsAPI {
     "maxParticipants" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter communicationType: (query) Call or Chat communication filtering (optional)
@@ -4514,11 +4514,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallbackConversationEntityListing> 
@@ -4688,11 +4688,11 @@ open class ConversationsAPI {
     "maxParticipants" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallConversationEntityListing> 
@@ -5400,11 +5400,11 @@ open class ConversationsAPI {
     "direction" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size, maximum 50 (optional, default to 25)
@@ -6171,11 +6171,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ChatConversationEntityListing> 
@@ -6643,11 +6643,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CobrowseConversationEntityListing> 
@@ -6991,11 +6991,11 @@ open class ConversationsAPI {
     "time" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -7410,11 +7410,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<EmailConversationEntityListing> 
@@ -8351,11 +8351,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<MessageConversationEntityListing> 
@@ -8496,11 +8496,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8615,11 +8615,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8834,11 +8834,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9057,11 +9057,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9281,11 +9281,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9478,11 +9478,11 @@ open class ConversationsAPI {
     "stickerType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter messengerType: (path) Messenger Type 
@@ -10060,11 +10060,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -11278,11 +11278,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -12423,11 +12423,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -13568,11 +13568,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -14713,11 +14713,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15858,11 +15858,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -18181,11 +18181,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -18702,6 +18702,68 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Conversation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter participantId: (path) participantId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsCallParticipantCoach(conversationId: String, participantId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsCallParticipantCoachWithRequestBuilder(conversationId: conversationId, participantId: participantId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.
+     
+     - POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter participantId: (path) participantId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postConversationsCallParticipantCoachWithRequestBuilder(conversationId: String, participantId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let participantIdPreEscape = "\(participantId)"
+        let participantIdPostEscape = participantIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{participantId}", with: participantIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -19320,11 +19382,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -21880,11 +21942,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path)  

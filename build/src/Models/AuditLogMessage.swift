@@ -26,6 +26,7 @@ public class AuditLogMessage: Codable {
         case responseManagement = "ResponseManagement"
         case groups = "Groups"
         case telephony = "Telephony"
+        case outbound = "Outbound"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -60,6 +61,9 @@ public class AuditLogMessage: Codable {
         case authenticate = "Authenticate"
         case changePassword = "ChangePassword"
         case revoke = "Revoke"
+        case export = "Export"
+        case append = "Append"
+        case recycle = "Recycle"
     }
     public enum EntityType: String, Codable { 
         case document = "Document"
@@ -114,6 +118,16 @@ public class AuditLogMessage: Codable {
         case outboundRoute = "OutboundRoute"
         case numberPlan = "NumberPlan"
         case site = "Site"
+        case attemptLimits = "AttemptLimits"
+        case callableTimeSet = "CallableTimeSet"
+        case campaign = "Campaign"
+        case campaignRule = "CampaignRule"
+        case sequence = "Sequence"
+        case contactList = "ContactList"
+        case contactListFilter = "ContactListFilter"
+        case dnclist = "DNCList"
+        case callAnalysisResponseSet = "CallAnalysisResponseSet"
+        case ruleSet = "RuleSet"
     }
     /** Id of the audit message. */
     public var _id: String?

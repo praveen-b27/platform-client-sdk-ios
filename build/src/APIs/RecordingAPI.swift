@@ -5799,11 +5799,11 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -6515,11 +6515,11 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
+                "selfUri" : "aeiou",
                 "pageSize" : 123,
-                "nextUri" : "aeiou",
-                "previousUri" : "aeiou"
+                "previousUri" : "aeiou",
+                "nextUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6601,11 +6601,11 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -7191,11 +7191,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -7664,11 +7664,11 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8430,11 +8430,11 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
+                "selfUri" : "aeiou",
                 "pageSize" : 123,
-                "nextUri" : "aeiou",
-                "previousUri" : "aeiou"
+                "previousUri" : "aeiou",
+                "nextUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -8516,11 +8516,11 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9127,11 +9127,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -9555,11 +9555,11 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10399,11 +10399,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -10649,11 +10649,11 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -11218,11 +11218,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11884,11 +11884,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -12989,11 +12989,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -14206,11 +14206,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -16833,11 +16833,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -17742,11 +17742,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

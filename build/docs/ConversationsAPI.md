@@ -112,6 +112,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationParticipantReplace**](ConversationsAPI.html#postConversationParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationParticipantSecureivrsessions**](ConversationsAPI.html#postConversationParticipantSecureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
+| [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**postConversationsCallParticipantConsult**](ConversationsAPI.html#postConversationsCallParticipantConsult) | Initiate and update consult transfer |
 | [**postConversationsCallParticipantMonitor**](ConversationsAPI.html#postConversationsCallParticipantMonitor) | Listen in on the conversation from the point of view of a given participant. |
 | [**postConversationsCallParticipantReplace**](ConversationsAPI.html#postConversationsCallParticipantReplace) | Replace this participant with the specified user and/or address |
@@ -5724,6 +5725,59 @@ ConversationsAPI.postConversationsCall(conversationId: conversationId, body: bod
 ### Return type
 
 [**Conversation**](Conversation.html)
+
+<a name="postConversationsCallParticipantCoach"></a>
+
+# **postConversationsCallParticipantCoach**
+
+
+
+> Void postConversationsCallParticipantCoach(conversationId, participantId)
+
+Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach  
+
+Requires ANY permissions: 
+
+* conversation:call:coach
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantCoach(conversationId: conversationId, participantId: participantId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsCallParticipantCoach was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationsCallParticipantConsult"></a>
 

@@ -19,6 +19,7 @@ public class ConversationDetailQueryPredicate: Codable {
     public enum Dimension: String, Codable { 
         case conversationend = "conversationEnd"
         case conversationid = "conversationId"
+        case conversationstart = "conversationStart"
         case divisionid = "divisionId"
         case mediastatsminconversationmos = "mediaStatsMinConversationMos"
         case mediastatsminconversationrfactor = "mediaStatsMinConversationRFactor"

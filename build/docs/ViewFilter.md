@@ -96,6 +96,10 @@ title: ViewFilter
 | **showFirstQueue** | **Bool** | Indicates filtering for first queue data | [optional] |
 | **teamIds** | **[String]** | The team ids used to filter the view data | [optional] |
 | **filterUsersByTeamIds** | **[String]** | The team ids are used to fetch associated users for the view | [optional] |
+| **journeyActionMapIds** | **[String]** | The journey action map ids are used to fetch action maps for the associated view | [optional] |
+| **journeyOutcomeIds** | **[String]** | The journey outcome ids are used to fetch outcomes for the associated view | [optional] |
+| **journeySegmentIds** | **[String]** | The journey segment ids are used to fetch segments for the associated view | [optional] |
+| **journeyActionMapTypes** | **[String]** | The journey action map types are used to filter action map data for the associated view | [optional] |
 {: class="table table-striped"}
 
 

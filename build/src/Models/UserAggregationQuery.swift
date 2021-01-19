@@ -12,9 +12,6 @@ import Foundation
 public class UserAggregationQuery: Codable {
 
     public enum GroupBy: String, Codable { 
-        case organizationpresenceid = "organizationPresenceId"
-        case routingstatus = "routingStatus"
-        case systempresence = "systemPresence"
         case userid = "userId"
     }
     public enum Metrics: String, Codable { 

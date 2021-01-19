@@ -571,11 +571,11 @@ open class OAuthAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthClientEntityListing> 

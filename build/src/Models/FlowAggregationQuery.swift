@@ -95,7 +95,6 @@ public class FlowAggregationQuery: Codable {
         case nflowmilestone = "nFlowMilestone"
         case nflowoutcome = "nFlowOutcome"
         case nflowoutcomefailed = "nFlowOutcomeFailed"
-        case oflow = "oFlow"
         case oflowmilestone = "oFlowMilestone"
         case tflow = "tFlow"
         case tflowdisconnect = "tFlowDisconnect"

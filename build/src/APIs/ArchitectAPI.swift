@@ -1652,11 +1652,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2209,11 +2209,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2437,11 +2437,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2679,11 +2679,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3132,11 +3132,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3350,11 +3350,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3560,11 +3560,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3767,11 +3767,11 @@ open class ArchitectAPI {
     "closedHoursFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4748,11 +4748,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5151,11 +5151,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5444,11 +5444,11 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5563,11 +5563,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6273,11 +6273,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6403,11 +6403,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -8166,11 +8166,11 @@ open class ArchitectAPI {
     "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -8671,11 +8671,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9103,46 +9103,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
-  "entities" : [ {
-    "owner" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "importMode" : "aeiou",
-    "countRecordsFailed" : 123,
-    "countRecordsUpdated" : 123,
-    "selfUri" : "aeiou",
-    "uploadURI" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "errorInformation" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    },
-    "countRecordsDeleted" : 123,
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  } ],
-  "pageSize" : 123
+  "entities" : [ "{}" ]
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9313,11 +9274,11 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9439,11 +9400,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -9888,11 +9849,11 @@ open class ArchitectAPI {
     "debugVersion" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -10484,11 +10445,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11235,11 +11196,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

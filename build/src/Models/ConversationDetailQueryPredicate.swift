@@ -22,7 +22,6 @@ public class ConversationDetailQueryPredicate: Codable {
         case conversationstart = "conversationStart"
         case divisionid = "divisionId"
         case mediastatsminconversationmos = "mediaStatsMinConversationMos"
-        case mediastatsminconversationrfactor = "mediaStatsMinConversationRFactor"
         case originatingdirection = "originatingDirection"
     }
     public enum Metric: String, Codable { 

@@ -34,6 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekSchedule) | Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route |
 | [**getWorkforcemanagementBusinessunitWeekScheduleGenerationresults**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleGenerationresults) | Get the generation results for a generated schedule |
 | [**getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast) | Get the headcount forecast by planning group for the schedule |
+| [**getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent) | Loads agent&#39;s schedule history. |
 | [**getWorkforcemanagementBusinessunitWeekSchedules**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekSchedules) | Get the list of week schedules for the specified week |
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecast) | Get a short term forecast |
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecastData**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastData) | Get the result of a short term forecast calculation |
@@ -1674,6 +1675,64 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleHeadcountfo
 ### Return type
 
 [**BuHeadcountForecastResponse**](BuHeadcountForecastResponse.html)
+
+<a name="getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent"></a>
+
+# **getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent**
+
+
+
+> [BuAgentScheduleHistoryResponse](BuAgentScheduleHistoryResponse.html) getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent(businessUnitId, weekId, scheduleId, agentId)
+
+Loads agent&#39;s schedule history.
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}  
+
+Requires ANY permissions: 
+
+* wfm:schedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let scheduleId: String = "" // The ID of the schedule
+let agentId: String = "" // THe ID of the agent
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, agentId: agentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **scheduleId** | **String**| The ID of the schedule | |
+| **agentId** | **String**| THe ID of the agent | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuAgentScheduleHistoryResponse**](BuAgentScheduleHistoryResponse.html)
 
 <a name="getWorkforcemanagementBusinessunitWeekSchedules"></a>
 

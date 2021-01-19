@@ -17,9 +17,6 @@ public class UserAggregateQueryPredicate: Codable {
         case metric = "metric"
     }
     public enum Dimension: String, Codable { 
-        case organizationpresenceid = "organizationPresenceId"
-        case routingstatus = "routingStatus"
-        case systempresence = "systemPresence"
         case userid = "userId"
     }
     public enum Operator: String, Codable { 

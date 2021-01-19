@@ -22,7 +22,6 @@ public class SurveyDetailQueryPredicate: Codable {
         case surveycompleteddate = "surveyCompletedDate"
         case surveyformcontextid = "surveyFormContextId"
         case surveyformid = "surveyFormId"
-        case surveyformname = "surveyFormName"
         case surveyid = "surveyId"
         case surveypromoterscore = "surveyPromoterScore"
         case surveystatus = "surveyStatus"

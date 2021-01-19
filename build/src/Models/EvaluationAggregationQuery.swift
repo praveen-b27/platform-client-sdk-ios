@@ -21,7 +21,6 @@ public class EvaluationAggregationQuery: Codable {
         case evaluatorid = "evaluatorId"
         case formid = "formId"
         case queueid = "queueId"
-        case rescind = "rescind"
         case rescored = "rescored"
         case teamid = "teamId"
         case userid = "userId"

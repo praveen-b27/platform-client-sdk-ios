@@ -1134,6 +1134,7 @@ open class AnalyticsAPI {
       "surveyPromoterScore" : "",
       "isSurveyed" : true,
       "transcriptLanguages" : [ "aeiou" ],
+      "journeyActionMapIds" : [ "aeiou" ],
       "divisionIds" : [ "aeiou" ],
       "mos" : "",
       "surveyTotalScore" : "",
@@ -1188,6 +1189,7 @@ open class AnalyticsAPI {
         "isFlagged" : true
       },
       "showFirstQueue" : true,
+      "journeyActionMapTypes" : [ "aeiou" ],
       "holdDurationsMilliseconds" : [ "" ],
       "isCampaign" : true,
       "promoterScores" : [ "" ],
@@ -1209,7 +1211,9 @@ open class AnalyticsAPI {
       "aniList" : [ "aeiou" ],
       "wrapUpCodes" : [ "aeiou" ],
       "isConsultTransferred" : true,
+      "journeySegmentIds" : [ "aeiou" ],
       "surveyFormContextIds" : [ "aeiou" ],
+      "journeyOutcomeIds" : [ "aeiou" ],
       "languageGroups" : [ "aeiou" ],
       "outboundCampaignIds" : [ "aeiou" ],
       "evaluationFormIds" : [ "aeiou" ],
@@ -1255,11 +1259,11 @@ open class AnalyticsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1344,11 +1348,11 @@ open class AnalyticsAPI {
     "dateLimitations" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -1434,11 +1438,11 @@ open class AnalyticsAPI {
     "availableLocales" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1771,11 +1775,11 @@ open class AnalyticsAPI {
     "runStatus" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter scheduleId: (path) Schedule ID 
@@ -2046,11 +2050,11 @@ open class AnalyticsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3609,6 +3613,7 @@ open class AnalyticsAPI {
     "surveyPromoterScore" : "",
     "isSurveyed" : true,
     "transcriptLanguages" : [ "aeiou" ],
+    "journeyActionMapIds" : [ "aeiou" ],
     "divisionIds" : [ "aeiou" ],
     "mos" : "",
     "surveyTotalScore" : "",
@@ -3663,6 +3668,7 @@ open class AnalyticsAPI {
       "isFlagged" : true
     },
     "showFirstQueue" : true,
+    "journeyActionMapTypes" : [ "aeiou" ],
     "holdDurationsMilliseconds" : [ "" ],
     "isCampaign" : true,
     "promoterScores" : [ "" ],
@@ -3684,7 +3690,9 @@ open class AnalyticsAPI {
     "aniList" : [ "aeiou" ],
     "wrapUpCodes" : [ "aeiou" ],
     "isConsultTransferred" : true,
+    "journeySegmentIds" : [ "aeiou" ],
     "surveyFormContextIds" : [ "aeiou" ],
+    "journeyOutcomeIds" : [ "aeiou" ],
     "languageGroups" : [ "aeiou" ],
     "outboundCampaignIds" : [ "aeiou" ],
     "evaluationFormIds" : [ "aeiou" ],

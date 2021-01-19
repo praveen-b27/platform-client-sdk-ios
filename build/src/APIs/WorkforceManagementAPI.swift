@@ -1451,8 +1451,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -2567,6 +2567,142 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<BuHeadcountForecastResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Loads agent's schedule history.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter agentId: (path) THe ID of the agent 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent(businessUnitId: String, weekId: Date, scheduleId: String, agentId: String, completion: @escaping ((_ data: BuAgentScheduleHistoryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, agentId: agentId)
+        requestBuilder.execute { (response: Response<BuAgentScheduleHistoryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Loads agent's schedule history.
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "basePublishedSchedule" : {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "aeiou",
+      "timeOffRequestId" : "aeiou",
+      "lengthMinutes" : 123,
+      "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+      "paid" : true,
+      "description" : "aeiou"
+    } ],
+    "metadata" : {
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    },
+    "deletes" : {
+      "agentSchedule" : true,
+      "shiftIds" : [ "aeiou" ],
+      "fullDayTimeOffMarkerDates" : [ "2000-01-23T04:56:07.000+0000" ]
+    },
+    "shifts" : [ {
+      "schedule" : "",
+      "lengthMinutes" : 123,
+      "activities" : [ {
+        "activityCodeId" : "aeiou",
+        "externalActivityType" : "aeiou",
+        "timeOffRequestId" : "aeiou",
+        "lengthMinutes" : 123,
+        "externalActivityId" : "aeiou",
+        "paid" : true,
+        "description" : "aeiou",
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      } ],
+      "id" : "aeiou",
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "manuallyEdited" : true
+    } ]
+  },
+  "priorPublishedSchedules" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  } ],
+  "droppedChanges" : [ {
+    "metadata" : "",
+    "deletes" : "",
+    "shiftIds" : [ "aeiou" ],
+    "fullDayTimeOffMarkerDates" : [ "2000-01-23T04:56:07.000+0000" ]
+  } ],
+  "changes" : [ "" ]
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter agentId: (path) THe ID of the agent 
+
+     - returns: RequestBuilder<BuAgentScheduleHistoryResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, agentId: String) -> RequestBuilder<BuAgentScheduleHistoryResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAgentScheduleHistoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -6132,8 +6268,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query)  (optional)
@@ -6293,8 +6429,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)

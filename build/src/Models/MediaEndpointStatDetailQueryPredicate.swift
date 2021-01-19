@@ -23,8 +23,6 @@ public class MediaEndpointStatDetailQueryPredicate: Codable {
         case eventtime = "eventTime"
         case invalidpackets = "invalidPackets"
         case maxlatencyms = "maxLatencyMs"
-        case minmos = "minMos"
-        case minrfactor = "minRFactor"
         case overrunpackets = "overrunPackets"
         case receivedpackets = "receivedPackets"
         case underrunpackets = "underrunPackets"

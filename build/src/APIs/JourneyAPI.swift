@@ -15,6 +15,61 @@ open class JourneyAPI {
     
     /**
      
+     Delete a segment.
+     
+     - parameter segmentId: (path) ID of the segment. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneySegment(segmentId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneySegmentWithRequestBuilder(segmentId: segmentId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a segment.
+     
+     - DELETE /api/v2/journey/segments/{segmentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter segmentId: (path) ID of the segment. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneySegmentWithRequestBuilder(segmentId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/journey/segments/{segmentId}"
+        let segmentIdPreEscape = "\(segmentId)"
+        let segmentIdPostEscape = segmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{segmentId}", with: segmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Retrieve a single action target.
      
      - parameter actionTargetId: (path) ID of the action target. 
@@ -155,11 +210,11 @@ open class JourneyAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -187,6 +242,237 @@ open class JourneyAPI {
         ])
 
         let requestBuilder: RequestBuilder<ActionTargetListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a single segment.
+     
+     - parameter segmentId: (path) ID of the segment. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneySegment(segmentId: String, completion: @escaping ((_ data: JourneySegment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySegmentWithRequestBuilder(segmentId: segmentId)
+        requestBuilder.execute { (response: Response<JourneySegment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single segment.
+     
+     - GET /api/v2/journey/segments/{segmentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "color" : "aeiou",
+  "journey" : {
+    "patterns" : [ {
+      "streamType" : "aeiou",
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ],
+      "count" : 123,
+      "sessionType" : "aeiou",
+      "eventName" : "aeiou"
+    } ]
+  },
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "isActive" : true,
+  "version" : 123,
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "scope" : "aeiou",
+  "context" : {
+    "patterns" : [ {
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "entityType" : "aeiou",
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ]
+    } ]
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "shouldDisplayToAgent" : true,
+  "id" : "aeiou"
+}}]
+     
+     - parameter segmentId: (path) ID of the segment. 
+
+     - returns: RequestBuilder<JourneySegment> 
+     */
+    open class func getJourneySegmentWithRequestBuilder(segmentId: String) -> RequestBuilder<JourneySegment> {
+        var path = "/api/v2/journey/segments/{segmentId}"
+        let segmentIdPreEscape = "\(segmentId)"
+        let segmentIdPostEscape = segmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{segmentId}", with: segmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneySegment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Retrieve all segments.
+     
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySegmentsWithRequestBuilder(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive)
+        requestBuilder.execute { (response: Response<SegmentListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve all segments.
+     
+     - GET /api/v2/journey/segments
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "color" : "aeiou",
+    "journey" : {
+      "patterns" : [ {
+        "streamType" : "aeiou",
+        "criteria" : [ {
+          "shouldIgnoreCase" : true,
+          "values" : [ "aeiou" ],
+          "key" : "aeiou",
+          "operator" : "aeiou"
+        } ],
+        "count" : 123,
+        "sessionType" : "aeiou",
+        "eventName" : "aeiou"
+      } ]
+    },
+    "displayName" : "aeiou",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "isActive" : true,
+    "version" : 123,
+    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "scope" : "aeiou",
+    "context" : {
+      "patterns" : [ {
+        "criteria" : [ {
+          "shouldIgnoreCase" : true,
+          "entityType" : "aeiou",
+          "values" : [ "aeiou" ],
+          "key" : "aeiou",
+          "operator" : "aeiou"
+        } ]
+      } ]
+    },
+    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+    "shouldDisplayToAgent" : true,
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
+
+     - returns: RequestBuilder<SegmentListing> 
+     */
+    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil) -> RequestBuilder<SegmentListing> {
+        let path = "/api/v2/journey/segments"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "sortBy": sortBy, 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "isActive": isActive
+            
+        ])
+
+        let requestBuilder: RequestBuilder<SegmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -276,6 +562,107 @@ open class JourneyAPI {
     
     
     
+    
+    
+    /**
+     
+     Update a segment.
+     
+     - parameter segmentId: (path) ID of the segment. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchJourneySegment(segmentId: String, body: PatchSegment? = nil, completion: @escaping ((_ data: JourneySegment?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchJourneySegmentWithRequestBuilder(segmentId: segmentId, body: body)
+        requestBuilder.execute { (response: Response<JourneySegment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a segment.
+     
+     - PATCH /api/v2/journey/segments/{segmentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "color" : "aeiou",
+  "journey" : {
+    "patterns" : [ {
+      "streamType" : "aeiou",
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ],
+      "count" : 123,
+      "sessionType" : "aeiou",
+      "eventName" : "aeiou"
+    } ]
+  },
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "isActive" : true,
+  "version" : 123,
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "scope" : "aeiou",
+  "context" : {
+    "patterns" : [ {
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "entityType" : "aeiou",
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ]
+    } ]
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "shouldDisplayToAgent" : true,
+  "id" : "aeiou"
+}}]
+     
+     - parameter segmentId: (path) ID of the segment. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<JourneySegment> 
+     */
+    open class func patchJourneySegmentWithRequestBuilder(segmentId: String, body: PatchSegment? = nil) -> RequestBuilder<JourneySegment> {
+        var path = "/api/v2/journey/segments/{segmentId}"
+        let segmentIdPreEscape = "\(segmentId)"
+        let segmentIdPostEscape = segmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{segmentId}", with: segmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneySegment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Query for journey aggregates
@@ -356,6 +743,100 @@ open class JourneyAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a segment.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneySegments(body: JourneySegment? = nil, completion: @escaping ((_ data: JourneySegment?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneySegmentsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<JourneySegment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a segment.
+     
+     - POST /api/v2/journey/segments
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "color" : "aeiou",
+  "journey" : {
+    "patterns" : [ {
+      "streamType" : "aeiou",
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ],
+      "count" : 123,
+      "sessionType" : "aeiou",
+      "eventName" : "aeiou"
+    } ]
+  },
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "isActive" : true,
+  "version" : 123,
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "scope" : "aeiou",
+  "context" : {
+    "patterns" : [ {
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "entityType" : "aeiou",
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ]
+    } ]
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "shouldDisplayToAgent" : true,
+  "id" : "aeiou"
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<JourneySegment> 
+     */
+    open class func postJourneySegmentsWithRequestBuilder(body: JourneySegment? = nil) -> RequestBuilder<JourneySegment> {
+        let path = "/api/v2/journey/segments"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneySegment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

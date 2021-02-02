@@ -31,12 +31,14 @@ public class AnalyticsConversation: Codable {
     public var evaluations: [AnalyticsEvaluation]?
     /** Surveys tied to this conversation */
     public var surveys: [AnalyticsSurvey]?
+    /** Resolutions tied to this conversation */
+    public var resolutions: [AnalyticsResolution]?
     /** Identifiers of divisions associated with this conversation */
     public var divisionIds: [String]?
     /** Participants in the conversation */
     public var participants: [AnalyticsParticipant]?
 
-    public init(conversationId: String?, conversationStart: Date?, conversationEnd: Date?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, divisionIds: [String]?, participants: [AnalyticsParticipant]?) {
+    public init(conversationId: String?, conversationStart: Date?, conversationEnd: Date?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, divisionIds: [String]?, participants: [AnalyticsParticipant]?) {
         
         self.conversationId = conversationId
         
@@ -53,6 +55,8 @@ public class AnalyticsConversation: Codable {
         self.evaluations = evaluations
         
         self.surveys = surveys
+        
+        self.resolutions = resolutions
         
         self.divisionIds = divisionIds
         

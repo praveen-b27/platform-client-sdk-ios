@@ -305,6 +305,7 @@ open class JourneyAPI {
   "isActive" : true,
   "version" : 123,
   "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "assignmentExpirationDays" : 123,
   "scope" : "aeiou",
   "context" : {
     "patterns" : [ {
@@ -355,6 +356,8 @@ open class JourneyAPI {
     
     
     
+    
+    
     /**
      
      Retrieve all segments.
@@ -363,10 +366,11 @@ open class JourneyAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getJourneySegmentsWithRequestBuilder(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive)
+    open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySegmentsWithRequestBuilder(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds)
         requestBuilder.execute { (response: Response<SegmentListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -418,6 +422,7 @@ open class JourneyAPI {
     "isActive" : true,
     "version" : 123,
     "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "assignmentExpirationDays" : 123,
     "scope" : "aeiou",
     "context" : {
       "patterns" : [ {
@@ -446,10 +451,11 @@ open class JourneyAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request. (optional)
 
      - returns: RequestBuilder<SegmentListing> 
      */
-    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil) -> RequestBuilder<SegmentListing> {
+    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil) -> RequestBuilder<SegmentListing> {
         let path = "/api/v2/journey/segments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -468,7 +474,9 @@ open class JourneyAPI {
             
             "pageNumber": pageNumber?.encodeToJSON(), 
             
-            "isActive": isActive
+            "isActive": isActive, 
+            
+            "segmentIds": segmentIds
             
         ])
 
@@ -621,6 +629,7 @@ open class JourneyAPI {
   "isActive" : true,
   "version" : 123,
   "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "assignmentExpirationDays" : 123,
   "scope" : "aeiou",
   "context" : {
     "patterns" : [ {
@@ -806,6 +815,7 @@ open class JourneyAPI {
   "isActive" : true,
   "version" : 123,
   "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "assignmentExpirationDays" : 123,
   "scope" : "aeiou",
   "context" : {
     "patterns" : [ {

@@ -24,38 +24,41 @@ public class GenericSAML: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var logoImageData: String?
-    public var relyingPartyIdentifier: String?
-    public var endpointCompression: Bool?
-    public var nameIdentifierFormat: NameIdentifierFormat?
-    public var certificate: String?
+    public var disabled: Bool?
     public var issuerURI: String?
     public var ssoTargetURI: String?
-    public var disabled: Bool?
+    public var certificate: String?
+    public var certificates: [String]?
+    public var relyingPartyIdentifier: String?
+    public var logoImageData: String?
+    public var endpointCompression: Bool?
+    public var nameIdentifierFormat: NameIdentifierFormat?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, logoImageData: String?, relyingPartyIdentifier: String?, endpointCompression: Bool?, nameIdentifierFormat: NameIdentifierFormat?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, certificate: String?, certificates: [String]?, relyingPartyIdentifier: String?, logoImageData: String?, endpointCompression: Bool?, nameIdentifierFormat: NameIdentifierFormat?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
-        self.logoImageData = logoImageData
-        
-        self.relyingPartyIdentifier = relyingPartyIdentifier
-        
-        self.endpointCompression = endpointCompression
-        
-        self.nameIdentifierFormat = nameIdentifierFormat
-        
-        self.certificate = certificate
+        self.disabled = disabled
         
         self.issuerURI = issuerURI
         
         self.ssoTargetURI = ssoTargetURI
         
-        self.disabled = disabled
+        self.certificate = certificate
+        
+        self.certificates = certificates
+        
+        self.relyingPartyIdentifier = relyingPartyIdentifier
+        
+        self.logoImageData = logoImageData
+        
+        self.endpointCompression = endpointCompression
+        
+        self.nameIdentifierFormat = nameIdentifierFormat
         
         self.selfUri = selfUri
         
@@ -64,14 +67,15 @@ public class GenericSAML: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
-        case logoImageData
-        case relyingPartyIdentifier
-        case endpointCompression
-        case nameIdentifierFormat
-        case certificate
+        case disabled
         case issuerURI
         case ssoTargetURI
-        case disabled
+        case certificate
+        case certificates
+        case relyingPartyIdentifier
+        case logoImageData
+        case endpointCompression
+        case nameIdentifierFormat
         case selfUri
     }
 

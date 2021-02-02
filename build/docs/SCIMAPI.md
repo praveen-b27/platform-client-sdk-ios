@@ -7,9 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteScimGroup**](SCIMAPI.html#deleteScimGroup) | Delete a group |
 | [**deleteScimUser**](SCIMAPI.html#deleteScimUser) | Delete a user |
-| [**deleteScimV2Group**](SCIMAPI.html#deleteScimV2Group) | Delete a group |
 | [**deleteScimV2User**](SCIMAPI.html#deleteScimV2User) | Delete a user |
 | [**getScimGroup**](SCIMAPI.html#getScimGroup) | Get a group |
 | [**getScimGroups**](SCIMAPI.html#getScimGroups) | Get a list of groups |
@@ -33,68 +31,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchScimUser**](SCIMAPI.html#patchScimUser) | Modify a user |
 | [**patchScimV2Group**](SCIMAPI.html#patchScimV2Group) | Modify a group |
 | [**patchScimV2User**](SCIMAPI.html#patchScimV2User) | Modify a user |
-| [**postScimGroups**](SCIMAPI.html#postScimGroups) | Create a group |
 | [**postScimUsers**](SCIMAPI.html#postScimUsers) | Create a user |
-| [**postScimV2Groups**](SCIMAPI.html#postScimV2Groups) | Create a group |
 | [**postScimV2Users**](SCIMAPI.html#postScimV2Users) | Create a user |
 | [**putScimGroup**](SCIMAPI.html#putScimGroup) | Replace a group |
 | [**putScimUser**](SCIMAPI.html#putScimUser) | Replace a user |
 | [**putScimV2Group**](SCIMAPI.html#putScimV2Group) | Replace a group |
 | [**putScimV2User**](SCIMAPI.html#putScimV2User) | Replace a user |
 {: class="table-striped"}
-
-<a name="deleteScimGroup"></a>
-
-# **deleteScimGroup**
-
-
-
-> Void deleteScimGroup(groupId, ifMatch)
-
-Delete a group
-
-
-
-Wraps DELETE /api/v2/scim/groups/{groupId}  
-
-Requires ANY permissions: 
-
-* directory:group:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
-
-// Code example
-SCIMAPI.deleteScimGroup(groupId: groupId, ifMatch: ifMatch) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("SCIMAPI.deleteScimGroup was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
 
 <a name="deleteScimUser"></a>
 
@@ -149,59 +92,6 @@ SCIMAPI.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in
 ### Return type
 
 [**Empty**](Empty.html)
-
-<a name="deleteScimV2Group"></a>
-
-# **deleteScimV2Group**
-
-
-
-> Void deleteScimV2Group(groupId, ifMatch)
-
-Delete a group
-
-
-
-Wraps DELETE /api/v2/scim/v2/groups/{groupId}  
-
-Requires ANY permissions: 
-
-* directory:group:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let groupId: String = "" // The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups.
-let ifMatch: String = "" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\".
-
-// Code example
-SCIMAPI.deleteScimV2Group(groupId: groupId, ifMatch: ifMatch) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("SCIMAPI.deleteScimV2Group was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups or GET /api/v2/scim/v2/groups. | |
-| **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId} or GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
 
 <a name="deleteScimV2User"></a>
 
@@ -1461,58 +1351,6 @@ SCIMAPI.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (respons
 
 [**ScimV2User**](ScimV2User.html)
 
-<a name="postScimGroups"></a>
-
-# **postScimGroups**
-
-
-
-> [ScimV2Group](ScimV2Group.html) postScimGroups(body)
-
-Create a group
-
-Creates a Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} is allowed.
-
-Wraps POST /api/v2/scim/groups  
-
-Requires ANY permissions: 
-
-* directory:group:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: ScimV2Group = new ScimV2Group(...) // The information used to create a group.
-
-// Code example
-SCIMAPI.postScimGroups(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("SCIMAPI.postScimGroups was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to create a group. | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ScimV2Group**](ScimV2Group.html)
-
 <a name="postScimUsers"></a>
 
 # **postScimUsers**
@@ -1568,58 +1406,6 @@ SCIMAPI.postScimUsers(body: body) { (response, error) in
 ### Return type
 
 [**ScimV2User**](ScimV2User.html)
-
-<a name="postScimV2Groups"></a>
-
-# **postScimV2Groups**
-
-
-
-> [ScimV2Group](ScimV2Group.html) postScimV2Groups(body)
-
-Create a group
-
-Creates an \&quot;official\&quot; Genesys Cloud group with group visibility set to \&quot;public\&quot; and rules visibility set to \&quot;true\&quot;. Auto-creates an \&quot;externalId\&quot;. \&quot;externalId\&quot; is used to determine if DELETE /api/v2/scim/groups/{groupId} or DELETE /api/v2/scim/v2/groups/{groupId} should be allowed.
-
-Wraps POST /api/v2/scim/v2/groups  
-
-Requires ANY permissions: 
-
-* directory:group:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: ScimV2Group = new ScimV2Group(...) // The information used to create a group.
-
-// Code example
-SCIMAPI.postScimV2Groups(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("SCIMAPI.postScimV2Groups was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to create a group. | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ScimV2Group**](ScimV2Group.html)
 
 <a name="postScimV2Users"></a>
 

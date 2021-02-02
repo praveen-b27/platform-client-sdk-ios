@@ -2517,6 +2517,7 @@ open class TelephonyProvidersEdgeAPI {
   "description" : "aeiou",
   "createdByApp" : "aeiou",
   "useForInternalEdgeCommunication" : true,
+  "useForWanInterface" : true,
   "interfaceType" : "aeiou",
   "routes" : [ {
     "metric" : 123,
@@ -2704,6 +2705,7 @@ open class TelephonyProvidersEdgeAPI {
     "description" : "aeiou",
     "createdByApp" : "aeiou",
     "useForInternalEdgeCommunication" : true,
+    "useForWanInterface" : true,
     "interfaceType" : "aeiou",
     "routes" : [ {
       "metric" : 123,
@@ -6554,6 +6556,7 @@ open class TelephonyProvidersEdgeAPI {
     "description" : "aeiou",
     "createdByApp" : "aeiou",
     "useForInternalEdgeCommunication" : true,
+    "useForWanInterface" : true,
     "interfaceType" : "aeiou",
     "routes" : [ {
       "metric" : 123,
@@ -11530,6 +11533,7 @@ open class TelephonyProvidersEdgeAPI {
   "description" : "aeiou",
   "createdByApp" : "aeiou",
   "useForInternalEdgeCommunication" : true,
+  "useForWanInterface" : true,
   "interfaceType" : "aeiou",
   "routes" : [ {
     "metric" : 123,
@@ -14612,6 +14616,7 @@ open class TelephonyProvidersEdgeAPI {
   "description" : "aeiou",
   "createdByApp" : "aeiou",
   "useForInternalEdgeCommunication" : true,
+  "useForWanInterface" : true,
   "interfaceType" : "aeiou",
   "routes" : [ {
     "metric" : 123,

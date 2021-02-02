@@ -14,29 +14,32 @@ public class PureEngage: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var autoProvisionUsers: Bool?
-    public var certificate: String?
+    public var disabled: Bool?
     public var issuerURI: String?
     public var ssoTargetURI: String?
-    public var disabled: Bool?
+    public var certificate: String?
+    public var certificates: [String]?
+    public var autoProvisionUsers: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, autoProvisionUsers: Bool?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, certificate: String?, certificates: [String]?, autoProvisionUsers: Bool?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
-        self.autoProvisionUsers = autoProvisionUsers
-        
-        self.certificate = certificate
+        self.disabled = disabled
         
         self.issuerURI = issuerURI
         
         self.ssoTargetURI = ssoTargetURI
         
-        self.disabled = disabled
+        self.certificate = certificate
+        
+        self.certificates = certificates
+        
+        self.autoProvisionUsers = autoProvisionUsers
         
         self.selfUri = selfUri
         
@@ -45,11 +48,12 @@ public class PureEngage: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
-        case autoProvisionUsers
-        case certificate
+        case disabled
         case issuerURI
         case ssoTargetURI
-        case disabled
+        case certificate
+        case certificates
+        case autoProvisionUsers
         case selfUri
     }
 

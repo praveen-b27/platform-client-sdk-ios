@@ -2334,6 +2334,11 @@ open class SearchAPI {
       "surveyPromoterScore" : 123
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "resolutions" : [ {
+      "queueId" : "aeiou",
+      "getnNextContactAvoided" : 123456789,
+      "userId" : "aeiou"
+    } ],
     "originatingDirection" : "aeiou",
     "divisionIds" : [ "aeiou" ],
     "participants" : [ {
@@ -3389,6 +3394,93 @@ open class SearchAPI {
         ])
 
         let requestBuilder: RequestBuilder<JsonNodeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Search resources.
+     
+     - parameter body: (body) Search request options 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSpeechandtextanalyticsTranscriptsSearch(body: TranscriptSearchRequest, completion: @escaping ((_ data: JsonSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSpeechandtextanalyticsTranscriptsSearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<JsonSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Search resources.
+     
+     - POST /api/v2/speechandtextanalytics/transcripts/search
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "types" : [ "aeiou" ],
+  "pageNumber" : 123,
+  "pageSize" : 123,
+  "results" : {
+    "integralNumber" : true,
+    "double" : true,
+    "valueNode" : true,
+    "floatingPointNumber" : true,
+    "bigInteger" : true,
+    "nodeType" : "aeiou",
+    "float" : true,
+    "int" : true,
+    "long" : true,
+    "textual" : true,
+    "pojo" : true,
+    "missingNode" : true,
+    "number" : true,
+    "boolean" : true,
+    "null" : true,
+    "array" : true,
+    "binary" : true,
+    "containerNode" : true,
+    "short" : true,
+    "bigDecimal" : true,
+    "object" : true
+  },
+  "aggregations" : ""
+}}]
+     
+     - parameter body: (body) Search request options 
+
+     - returns: RequestBuilder<JsonSearchResponse> 
+     */
+    open class func postSpeechandtextanalyticsTranscriptsSearchWithRequestBuilder(body: TranscriptSearchRequest) -> RequestBuilder<JsonSearchResponse> {
+        let path = "/api/v2/speechandtextanalytics/transcripts/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JsonSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

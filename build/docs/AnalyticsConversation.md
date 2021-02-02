@@ -15,6 +15,7 @@ title: AnalyticsConversation
 | **originatingDirection** | **String** | The original direction of the conversation | [optional] |
 | **evaluations** | [**[AnalyticsEvaluation]**](AnalyticsEvaluation.html) | Evaluations tied to this conversation | [optional] |
 | **surveys** | [**[AnalyticsSurvey]**](AnalyticsSurvey.html) | Surveys tied to this conversation | [optional] |
+| **resolutions** | [**[AnalyticsResolution]**](AnalyticsResolution.html) | Resolutions tied to this conversation | [optional] |
 | **divisionIds** | **[String]** | Identifiers of divisions associated with this conversation | [optional] |
 | **participants** | [**[AnalyticsParticipant]**](AnalyticsParticipant.html) | Participants in the conversation | [optional] |
 {: class="table table-striped"}

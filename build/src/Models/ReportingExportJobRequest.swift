@@ -61,6 +61,12 @@ public class ReportingExportJobRequest: Codable {
         case landingPage = "LANDING_PAGE"
         case dashboardSummary = "DASHBOARD_SUMMARY"
         case dashboardDetail = "DASHBOARD_DETAIL"
+        case journeyActionMapSummaryView = "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
+        case journeyOutcomeSummaryView = "JOURNEY_OUTCOME_SUMMARY_VIEW"
+        case journeySegmentSummaryView = "JOURNEY_SEGMENT_SUMMARY_VIEW"
+        case agentDevelopmentDetailView = "AGENT_DEVELOPMENT_DETAIL_VIEW"
+        case agentDevelopmentDetailMeView = "AGENT_DEVELOPMENT_DETAIL_ME_VIEW"
+        case agentDevelopmentSummaryView = "AGENT_DEVELOPMENT_SUMMARY_VIEW"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"

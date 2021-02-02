@@ -171,13 +171,13 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunit(businessUnitId: bus
 
 
 
-> Void deleteWorkforcemanagementBusinessunitActivitycode(buId, acId)
+> Void deleteWorkforcemanagementBusinessunitActivitycode(businessUnitId, activityCodeId)
 
 Deletes an activity code
 
 
 
-Wraps DELETE /api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}  
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}  
 
 Requires ANY permissions: 
 
@@ -191,11 +191,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let buId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-let acId: String = "" // The ID of the activity code to delete
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let activityCodeId: String = "" // The ID of the activity code to delete
 
 // Code example
-WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitActivitycode(buId: buId, acId: acId) { (error) in
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitActivitycode(businessUnitId: businessUnitId, activityCodeId: activityCodeId) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -209,8 +209,8 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitActivitycode(buId: b
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **buId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
-| **acId** | **String**| The ID of the activity code to delete | |
+| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **activityCodeId** | **String**| The ID of the activity code to delete | |
 {: class="table-striped"}
 
 
@@ -494,13 +494,13 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitWeekShorttermforecas
 
 
 
-> Void deleteWorkforcemanagementManagementunit(muId)
+> Void deleteWorkforcemanagementManagementunit(managementUnitId)
 
 Delete management unit
 
 
 
-Wraps DELETE /api/v2/workforcemanagement/managementunits/{muId}  
+Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}  
 
 Requires ANY permissions: 
 
@@ -514,10 +514,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.deleteWorkforcemanagementManagementunit(muId: muId) { (error) in
+WorkforceManagementAPI.deleteWorkforcemanagementManagementunit(managementUnitId: managementUnitId) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -531,7 +531,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunit(muId: muId) { (er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -861,13 +861,13 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 
 
 
-> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) getWorkforcemanagementBusinessunitActivitycode(buId, acId)
+> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) getWorkforcemanagementBusinessunitActivitycode(businessUnitId, activityCodeId)
 
 Get an activity code
 
 
 
-Wraps GET /api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}  
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}  
 
 Requires ANY permissions: 
 
@@ -881,11 +881,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let buId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-let acId: String = "" // The ID of the activity code to fetch
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let activityCodeId: String = "" // The ID of the activity code to fetch
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycode(buId: buId, acId: acId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycode(businessUnitId: businessUnitId, activityCodeId: activityCodeId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -900,8 +900,8 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycode(buId: buId
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **buId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
-| **acId** | **String**| The ID of the activity code to fetch | |
+| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **activityCodeId** | **String**| The ID of the activity code to fetch | |
 {: class="table-striped"}
 
 
@@ -915,13 +915,13 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycode(buId: buId
 
 
 
-> [BusinessUnitActivityCodeListing](BusinessUnitActivityCodeListing.html) getWorkforcemanagementBusinessunitActivitycodes(buId)
+> [BusinessUnitActivityCodeListing](BusinessUnitActivityCodeListing.html) getWorkforcemanagementBusinessunitActivitycodes(businessUnitId)
 
 Get activity codes
 
 
 
-Wraps GET /api/v2/workforcemanagement/businessunits/{buId}/activitycodes  
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes  
 
 Requires ANY permissions: 
 
@@ -980,10 +980,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let buId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(buId: buId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -998,7 +998,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(buId: buI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **buId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -2191,13 +2191,13 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitsDivisionviews(division
 
 
 
-> [ManagementUnit](ManagementUnit.html) getWorkforcemanagementManagementunit(muId, expand)
+> [ManagementUnit](ManagementUnit.html) getWorkforcemanagementManagementunit(managementUnitId, expand)
 
 Get management unit
 
 
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{muId}  
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}  
 
 Requires ANY permissions: 
 
@@ -2265,11 +2265,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementManagementunit.enummember.rawValue] // 
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunit(muId: muId, expand: expand) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: managementUnitId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2284,7 +2284,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunit(muId: muId, expand: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsAdherence ("settings.adherence"), settingsTimeoff ("settings.timeOff"), settingsScheduling ("settings.scheduling"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsShifttrading ("settings.shiftTrading") |
 {: class="table-striped"}
 
@@ -2299,13 +2299,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunit(muId: muId, expand: 
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [ActivityCodeContainer](ActivityCodeContainer.html) getWorkforcemanagementManagementunitActivitycodes(muId)
+> [ActivityCodeContainer](ActivityCodeContainer.html) getWorkforcemanagementManagementunitActivitycodes(managementUnitId)
 
 Get activity codes
 
 
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/activitycodes  
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes  
 
 Requires ANY permissions: 
 
@@ -2358,10 +2358,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitActivitycodes(muId: muId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitActivitycodes(managementUnitId: managementUnitId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2376,7 +2376,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitActivitycodes(muId: m
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -2555,13 +2555,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgentShifttrades(mana
 
 
 
-> [ShiftTradeMatchesSummaryResponse](ShiftTradeMatchesSummaryResponse.html) getWorkforcemanagementManagementunitShifttradesMatched(muId)
+> [ShiftTradeMatchesSummaryResponse](ShiftTradeMatchesSummaryResponse.html) getWorkforcemanagementManagementunitShifttradesMatched(managementUnitId)
 
 Gets a summary of all shift trades in the matched state
 
 
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/matched  
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched  
 
 Requires ANY permissions: 
 
@@ -2576,10 +2576,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(muId: muId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(managementUnitId: managementUnitId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2594,7 +2594,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(mu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -2608,13 +2608,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(mu
 
 
 
-> [WfmUserEntityListing](WfmUserEntityListing.html) getWorkforcemanagementManagementunitShifttradesUsers(muId)
+> [WfmUserEntityListing](WfmUserEntityListing.html) getWorkforcemanagementManagementunitShifttradesUsers(managementUnitId)
 
 Gets list of users available for whom you can send direct shift trade requests
 
 
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/shifttrades/users  
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users  
 
 Requires ANY permissions: 
 
@@ -2628,10 +2628,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(muId: muId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(managementUnitId: managementUnitId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2646,7 +2646,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(muId
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -2660,13 +2660,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(muId
 
 
 
-> [TimeOffRequestResponse](TimeOffRequestResponse.html) getWorkforcemanagementManagementunitUserTimeoffrequest(muId, userId, timeOffRequestId)
+> [TimeOffRequestResponse](TimeOffRequestResponse.html) getWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId, userId, timeOffRequestId)
 
 Get a time off request
 
 
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}  
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}  
 
 Requires ANY permissions: 
 
@@ -2680,12 +2680,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
 let timeOffRequestId: String = "" // Time Off Request Id
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequest(muId: muId, userId: userId, timeOffRequestId: timeOffRequestId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId: managementUnitId, userId: userId, timeOffRequestId: timeOffRequestId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2700,7 +2700,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequest(mu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
 | **timeOffRequestId** | **String**| Time Off Request Id | |
 {: class="table-striped"}
@@ -2716,13 +2716,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequest(mu
 
 
 
-> [TimeOffRequestList](TimeOffRequestList.html) getWorkforcemanagementManagementunitUserTimeoffrequests(muId, userId, recentlyReviewed)
+> [TimeOffRequestList](TimeOffRequestList.html) getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId, recentlyReviewed)
 
 Get a list of time off requests for a given user
 
 
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests  
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests  
 
 Requires ANY permissions: 
 
@@ -2736,12 +2736,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
 let recentlyReviewed: Bool = false // Limit results to requests that have been reviewed within the preceding 30 days
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(muId: muId, userId: userId, recentlyReviewed: recentlyReviewed) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: managementUnitId, userId: userId, recentlyReviewed: recentlyReviewed) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2756,7 +2756,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(m
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
 | **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table-striped"}
@@ -2772,13 +2772,13 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(m
 
 
 
-> [WfmUserEntityListing](WfmUserEntityListing.html) getWorkforcemanagementManagementunitUsers(muId)
+> [WfmUserEntityListing](WfmUserEntityListing.html) getWorkforcemanagementManagementunitUsers(managementUnitId)
 
 Get users in the management unit
 
 
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{muId}/users  
+Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/users  
 
 Requires ANY permissions: 
 
@@ -2799,10 +2799,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(muId: muId) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(managementUnitId: managementUnitId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2817,7 +2817,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(muId: muId) { (
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3653,13 +3653,13 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: busi
 
 
 
-> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) patchWorkforcemanagementBusinessunitActivitycode(buId, acId, body)
+> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) patchWorkforcemanagementBusinessunitActivitycode(businessUnitId, activityCodeId, body)
 
 Update an activity code
 
 
 
-Wraps PATCH /api/v2/workforcemanagement/businessunits/{buId}/activitycodes/{acId}  
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}  
 
 Requires ANY permissions: 
 
@@ -3673,12 +3673,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let buId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-let acId: String = "" // The ID of the activity code to update
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let activityCodeId: String = "" // The ID of the activity code to update
 let body: UpdateActivityCodeRequest = new UpdateActivityCodeRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(buId: buId, acId: acId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(businessUnitId: businessUnitId, activityCodeId: activityCodeId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3693,8 +3693,8 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(buId: bu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **buId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
-| **acId** | **String**| The ID of the activity code to update | |
+| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **activityCodeId** | **String**| The ID of the activity code to update | |
 | **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -3876,13 +3876,13 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitServicegoaltemplate(b
 
 
 
-> [ManagementUnit](ManagementUnit.html) patchWorkforcemanagementManagementunit(muId, body)
+> [ManagementUnit](ManagementUnit.html) patchWorkforcemanagementManagementunit(managementUnitId, body)
 
 Update the requested management unit
 
 
 
-Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}  
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}  
 
 Requires ANY permissions: 
 
@@ -3896,11 +3896,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: UpdateManagementUnitRequest = new UpdateManagementUnitRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunit(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunit(managementUnitId: managementUnitId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3915,7 +3915,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunit(muId: muId, body: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -3930,13 +3930,13 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunit(muId: muId, body: 
 
 
 
-> [TimeOffRequestResponse](TimeOffRequestResponse.html) patchWorkforcemanagementManagementunitUserTimeoffrequest(muId, userId, timeOffRequestId, body)
+> [TimeOffRequestResponse](TimeOffRequestResponse.html) patchWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId, userId, timeOffRequestId, body)
 
 Update a time off request
 
 
 
-Wraps PATCH /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}  
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}  
 
 Requires ANY permissions: 
 
@@ -3950,13 +3950,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The id of the user the requested time off request belongs to
 let timeOffRequestId: String = "" // The id of the time off request to update
 let body: AdminTimeOffRequestPatch = new AdminTimeOffRequestPatch(...) // body
 
 // Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(muId: muId, userId: userId, timeOffRequestId: timeOffRequestId, body: body) { (response, error) in
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId: managementUnitId, userId: userId, timeOffRequestId: timeOffRequestId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3971,7 +3971,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **userId** | **String**| The id of the user the requested time off request belongs to | |
 | **timeOffRequestId** | **String**| The id of the time off request to update | |
 | **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch.html)| body | [optional] |
@@ -4318,13 +4318,13 @@ WorkforceManagementAPI.postWorkforcemanagementAgentschedulesMine(body: body) { (
 
 
 
-> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) postWorkforcemanagementBusinessunitActivitycodes(buId, body)
+> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) postWorkforcemanagementBusinessunitActivitycodes(businessUnitId, body)
 
 Create a new activity code
 
 
 
-Wraps POST /api/v2/workforcemanagement/businessunits/{buId}/activitycodes  
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes  
 
 Requires ANY permissions: 
 
@@ -4338,11 +4338,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let buId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
 let body: CreateActivityCodeRequest = new CreateActivityCodeRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(buId: buId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4357,7 +4357,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(buId: bu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **buId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
+| **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
 | **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5056,13 +5056,13 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (respo
 
 
 
-> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementManagementunitAgentschedulesSearch(muId, body, forceAsync, forceDownloadService)
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, body, forceAsync, forceDownloadService)
 
 Query published schedules for given given time range for set of users
 
 
 
-Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/agentschedules/search  
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search  
 
 Requires ANY permissions: 
 
@@ -5077,13 +5077,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(muId: muId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: managementUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5098,7 +5098,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
@@ -5115,13 +5115,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 
 
 
-> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) postWorkforcemanagementManagementunitHistoricaladherencequery(muId, body)
+> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) postWorkforcemanagementManagementunitHistoricaladherencequery(managementUnitId, body)
 
 Request a historical adherence report
 
 The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
 
-Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery  
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery  
 
 Requires ANY permissions: 
 
@@ -5135,11 +5135,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The management unit ID of the management unit
+let managementUnitId: String = "" // The management unit ID of the management unit
 let body: WfmHistoricalAdherenceQuery = new WfmHistoricalAdherenceQuery(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherencequery(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherencequery(managementUnitId: managementUnitId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5154,7 +5154,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherenceq
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The management unit ID of the management unit | |
+| **managementUnitId** | **String**| The management unit ID of the management unit | |
 | **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5169,13 +5169,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherenceq
 
 
 
-> [MoveManagementUnitResponse](MoveManagementUnitResponse.html) postWorkforcemanagementManagementunitMove(muId, body)
+> [MoveManagementUnitResponse](MoveManagementUnitResponse.html) postWorkforcemanagementManagementunitMove(managementUnitId, body)
 
 Move the requested management unit to a new business unit
 
 Returns status 200 if the management unit is already in the requested business unit
 
-Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/move  
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/move  
 
 Requires ANY permissions: 
 
@@ -5189,11 +5189,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: MoveManagementUnitRequest = new MoveManagementUnitRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(managementUnitId: managementUnitId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5208,7 +5208,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(muId: muId, bod
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5223,13 +5223,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(muId: muId, bod
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitSchedulesSearch(muId, body)
+> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId, body)
 
 Query published schedules for given given time range for set of users
 
 
 
-Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/schedules/search  
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search  
 
 Requires ANY permissions: 
 
@@ -5244,11 +5244,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: UserListScheduleRequestBody = new UserListScheduleRequestBody(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId: managementUnitId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5263,7 +5263,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(muId
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5278,13 +5278,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(muId
 
 
 
-> [TimeOffRequestList](TimeOffRequestList.html) postWorkforcemanagementManagementunitTimeoffrequests(muId, body)
+> [TimeOffRequestList](TimeOffRequestList.html) postWorkforcemanagementManagementunitTimeoffrequests(managementUnitId, body)
 
 Create a new time off request
 
 
 
-Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests  
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests  
 
 Requires ANY permissions: 
 
@@ -5298,11 +5298,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: CreateAdminTimeOffRequest = new CreateAdminTimeOffRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(managementUnitId: managementUnitId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5317,7 +5317,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(muId
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5332,13 +5332,13 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(muId
 
 
 
-> [TimeOffRequestListing](TimeOffRequestListing.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(muId, body)
+> [TimeOffRequestListing](TimeOffRequestListing.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, body)
 
 Gets the lookup ids to fetch the specified set of requests
 
 
 
-Wraps POST /api/v2/workforcemanagement/managementunits/{muId}/timeoffrequests/query  
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query  
 
 Requires ANY permissions: 
 
@@ -5352,11 +5352,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let muId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery(muId: muId, body: body) { (response, error) in
+WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5371,7 +5371,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **muId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody.html)| body | [optional] |
 {: class="table-striped"}
 

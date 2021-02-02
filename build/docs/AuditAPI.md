@@ -7,7 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getAuditsQueryRealtimeServicemapping**](AuditAPI.html#getAuditsQueryRealtimeServicemapping) | Get service mapping information used in audits. |
+| [**getAuditsQueryRealtimeServicemapping**](AuditAPI.html#getAuditsQueryRealtimeServicemapping) | Get service mapping information used in realtime audits. |
 | [**getAuditsQueryServicemapping**](AuditAPI.html#getAuditsQueryServicemapping) | Get service mapping information used in audits. |
 | [**getAuditsQueryTransactionId**](AuditAPI.html#getAuditsQueryTransactionId) | Get status of audit query execution |
 | [**getAuditsQueryTransactionIdResults**](AuditAPI.html#getAuditsQueryTransactionIdResults) | Get results of audit query |
@@ -23,7 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 > [AuditQueryServiceMapping](AuditQueryServiceMapping.html) getAuditsQueryRealtimeServicemapping()
 
-Get service mapping information used in audits.
+Get service mapping information used in realtime audits.
 
 
 

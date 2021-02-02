@@ -3,8 +3,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.11'
   s.swift_version = '5.0'
-  s.version = '50.0.0'
-  s.source = { :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '50.0.0' }
+  s.version = '51.0.0'
+  s.source = { :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '51.0.0' }
   s.authors = 'Genesys Developer Evangelists'
   s.social_media_url = 'https://twitter.com/PureCloud_Dev'
   s.license = 'MIT'

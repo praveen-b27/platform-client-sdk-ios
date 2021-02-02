@@ -29,6 +29,8 @@ public class PatchSegment: Codable {
     public var context: Context?
     /** The pattern of rules defining the segment. */
     public var journey: Journey?
+    /** Time, in days, from when the segment is assigned until it is automatically unassigned. */
+    public var assignmentExpirationDays: Int?
     /** The URI for this object */
     public var selfUri: String?
     /** Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -36,7 +38,7 @@ public class PatchSegment: Codable {
     /** Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
-    public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, shouldDisplayToAgent: Bool?, context: Context?, journey: Journey?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
+    public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, shouldDisplayToAgent: Bool?, context: Context?, journey: Journey?, assignmentExpirationDays: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
         
         self._id = _id
         
@@ -56,6 +58,8 @@ public class PatchSegment: Codable {
         
         self.journey = journey
         
+        self.assignmentExpirationDays = assignmentExpirationDays
+        
         self.selfUri = selfUri
         
         self.createdDate = createdDate
@@ -74,6 +78,7 @@ public class PatchSegment: Codable {
         case shouldDisplayToAgent
         case context
         case journey
+        case assignmentExpirationDays
         case selfUri
         case createdDate
         case modifiedDate

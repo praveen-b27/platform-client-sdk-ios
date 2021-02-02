@@ -7019,6 +7019,7 @@ open class UsersAPI {
         case fieldconfigs = "fieldconfigs"
         case token = "token"
         case trustors = "trustors"
+        case logcapture = "logCapture"
     }
 
     

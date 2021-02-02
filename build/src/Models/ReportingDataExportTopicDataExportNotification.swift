@@ -66,6 +66,12 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case flowDestinationDetailView = "FLOW_DESTINATION_DETAIL_VIEW"
         case scheduledCallbacksView = "SCHEDULED_CALLBACKS_VIEW"
         case contentSearchView = "CONTENT_SEARCH_VIEW"
+        case journeyActionMapSummaryView = "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
+        case journeyOutcomeSummaryView = "JOURNEY_OUTCOME_SUMMARY_VIEW"
+        case journeySegmentSummaryView = "JOURNEY_SEGMENT_SUMMARY_VIEW"
+        case agentDevelopmentDetailView = "AGENT_DEVELOPMENT_DETAIL_VIEW"
+        case agentDevelopmentDetailMeView = "AGENT_DEVELOPMENT_DETAIL_ME_VIEW"
+        case agentDevelopmentSummaryView = "AGENT_DEVELOPMENT_SUMMARY_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

@@ -7,12 +7,12 @@ The iOS SDK is compatible with Swift 5 and does not require any external depende
 ## Install using CocoaPods
 
 This package's source is on github at https://github.com/MyPureCloud/platform-client-sdk-ios.
-[![Release Notes Badge](https://developer.mypurecloud.com/images/sdk-release-notes.png)](releaseNotes.md))
+[![Release Notes Badge](https://developer.mypurecloud.com/images/sdk-release-notes.png)](https://github.com/MyPureCloud/platform-client-sdk-ios/blob/master/releaseNotes.md))
 
 Reference the SDK's pod in your project's Podfile:
 
 ```
-pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '50.0.0'
+pod 'PureCloudPlatformClientV2', :git => 'https://github.com/MyPureCloud/platform-client-sdk-ios.git', :tag => '51.0.0'
 ```
 
 Then install your project's dependencies:

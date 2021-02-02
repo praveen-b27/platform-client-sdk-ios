@@ -23,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postLocationsSearch**](SearchAPI.html#postLocationsSearch) | Search locations |
 | [**postSearch**](SearchAPI.html#postSearch) | Search resources. |
 | [**postSearchSuggest**](SearchAPI.html#postSearchSuggest) | Suggest resources. |
+| [**postSpeechandtextanalyticsTranscriptsSearch**](SearchAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
 | [**postUsersSearch**](SearchAPI.html#postUsersSearch) | Search users |
 | [**postVoicemailSearch**](SearchAPI.html#postVoicemailSearch) | Search voicemails |
 {: class="table-striped"}
@@ -868,6 +869,59 @@ SearchAPI.postSearchSuggest(body: body, profile: profile) { (response, error) in
 ### Return type
 
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+
+<a name="postSpeechandtextanalyticsTranscriptsSearch"></a>
+
+# **postSpeechandtextanalyticsTranscriptsSearch**
+
+
+
+> [JsonSearchResponse](JsonSearchResponse.html) postSpeechandtextanalyticsTranscriptsSearch(body)
+
+Search resources.
+
+
+
+Wraps POST /api/v2/speechandtextanalytics/transcripts/search  
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
+* recording:recording:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TranscriptSearchRequest = new TranscriptSearchRequest(...) // Search request options
+
+// Code example
+SearchAPI.postSpeechandtextanalyticsTranscriptsSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.postSpeechandtextanalyticsTranscriptsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TranscriptSearchRequest**](TranscriptSearchRequest.html)| Search request options | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JsonSearchResponse**](JsonSearchResponse.html)
 
 <a name="postUsersSearch"></a>
 

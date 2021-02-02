@@ -31,6 +31,8 @@ public class AsyncConversationQuery: Codable {
     public var mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?
     /** Filters that target surveys */
     public var surveyFilters: [SurveyDetailQueryFilter]?
+    /** Filters that target resolutions */
+    public var resolutionFilters: [ResolutionDetailQueryFilter]?
     /** Sort the result set in ascending/descending order. Default is ascending */
     public var order: Order?
     /** Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart */
@@ -42,7 +44,7 @@ public class AsyncConversationQuery: Codable {
     /** Add a filter to only include conversations that started after the beginning of the interval start date (UTC) */
     public var startOfDayIntervalMatching: Bool?
 
-    public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, limit: Int?, startOfDayIntervalMatching: Bool?) {
+    public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, resolutionFilters: [ResolutionDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, limit: Int?, startOfDayIntervalMatching: Bool?) {
         
         self.conversationFilters = conversationFilters
         
@@ -53,6 +55,8 @@ public class AsyncConversationQuery: Codable {
         self.mediaEndpointStatFilters = mediaEndpointStatFilters
         
         self.surveyFilters = surveyFilters
+        
+        self.resolutionFilters = resolutionFilters
         
         self.order = order
         

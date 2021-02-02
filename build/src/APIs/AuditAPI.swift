@@ -13,7 +13,7 @@ open class AuditAPI {
     
     /**
      
-     Get service mapping information used in audits.
+     Get service mapping information used in realtime audits.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -37,7 +37,7 @@ open class AuditAPI {
 
     /**
      
-     Get service mapping information used in audits.
+     Get service mapping information used in realtime audits.
      
      - GET /api/v2/audits/query/realtime/servicemapping
      - 

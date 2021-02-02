@@ -657,6 +657,11 @@ open class ConversationsAPI {
     "surveyPromoterScore" : 123
   } ],
   "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+  "resolutions" : [ {
+    "queueId" : "aeiou",
+    "getnNextContactAvoided" : 123456789,
+    "userId" : "aeiou"
+  } ],
   "originatingDirection" : "aeiou",
   "divisionIds" : [ "aeiou" ],
   "participants" : [ {
@@ -903,6 +908,11 @@ open class ConversationsAPI {
       "surveyPromoterScore" : 123
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "resolutions" : [ {
+      "queueId" : "aeiou",
+      "getnNextContactAvoided" : 123456789,
+      "userId" : "aeiou"
+    } ],
     "originatingDirection" : "aeiou",
     "divisionIds" : [ "aeiou" ],
     "participants" : [ {
@@ -1229,6 +1239,11 @@ open class ConversationsAPI {
       "surveyPromoterScore" : 123
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "resolutions" : [ {
+      "queueId" : "aeiou",
+      "getnNextContactAvoided" : 123456789,
+      "userId" : "aeiou"
+    } ],
     "originatingDirection" : "aeiou",
     "divisionIds" : [ "aeiou" ],
     "participants" : [ {
@@ -17197,6 +17212,11 @@ open class ConversationsAPI {
       "surveyPromoterScore" : 123
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "resolutions" : [ {
+      "queueId" : "aeiou",
+      "getnNextContactAvoided" : 123456789,
+      "userId" : "aeiou"
+    } ],
     "originatingDirection" : "aeiou",
     "divisionIds" : [ "aeiou" ],
     "participants" : [ {

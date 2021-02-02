@@ -16,13 +16,13 @@ public class ManagementUnitListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var lastUri: String?
-    public var nextUri: String?
     public var pageCount: Int?
+    public var nextUri: String?
+    public var lastUri: String?
     public var previousUri: String?
     public var selfUri: String?
 
-    public init(entities: [ManagementUnit]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, nextUri: String?, pageCount: Int?, previousUri: String?, selfUri: String?) {
+    public init(entities: [ManagementUnit]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, pageCount: Int?, nextUri: String?, lastUri: String?, previousUri: String?, selfUri: String?) {
         
         self.entities = entities
         
@@ -34,11 +34,11 @@ public class ManagementUnitListing: Codable {
         
         self.firstUri = firstUri
         
-        self.lastUri = lastUri
+        self.pageCount = pageCount
         
         self.nextUri = nextUri
         
-        self.pageCount = pageCount
+        self.lastUri = lastUri
         
         self.previousUri = previousUri
         

@@ -10,7 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingEmailDomain**](RoutingAPI.html#deleteRoutingEmailDomain) | Delete a domain |
 | [**deleteRoutingEmailDomainRoute**](RoutingAPI.html#deleteRoutingEmailDomainRoute) | Delete a route |
 | [**deleteRoutingQueue**](RoutingAPI.html#deleteRoutingQueue) | Delete a queue |
-| [**deleteRoutingQueueUser**](RoutingAPI.html#deleteRoutingQueueUser) | Delete queue member |
+| [**deleteRoutingQueueUser**](RoutingAPI.html#deleteRoutingQueueUser) | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
 | [**deleteRoutingQueueWrapupcode**](RoutingAPI.html#deleteRoutingQueueWrapupcode) | Delete a wrap-up code from a queue |
 | [**deleteRoutingSettings**](RoutingAPI.html#deleteRoutingSettings) | Delete an organization&#39;s routing settings |
 | [**deleteRoutingSkill**](RoutingAPI.html#deleteRoutingSkill) | Delete Routing Skill |
@@ -32,7 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingQueue**](RoutingAPI.html#getRoutingQueue) | Get details about this queue. |
 | [**getRoutingQueueEstimatedwaittime**](RoutingAPI.html#getRoutingQueueEstimatedwaittime) | Get Estimated Wait Time |
 | [**getRoutingQueueMediatypeEstimatedwaittime**](RoutingAPI.html#getRoutingQueueMediatypeEstimatedwaittime) | Get Estimated Wait Time |
-| [**getRoutingQueueUsers**](RoutingAPI.html#getRoutingQueueUsers) | Get the members of this queue |
+| [**getRoutingQueueUsers**](RoutingAPI.html#getRoutingQueueUsers) | DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. |
 | [**getRoutingQueueWrapupcodes**](RoutingAPI.html#getRoutingQueueWrapupcodes) | Get the wrap-up codes for a queue |
 | [**getRoutingQueues**](RoutingAPI.html#getRoutingQueues) | Get list of queues. |
 | [**getRoutingQueuesDivisionviews**](RoutingAPI.html#getRoutingQueuesDivisionviews) | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
@@ -56,8 +56,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserRoutinglanguages**](RoutingAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
 | [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
-| [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | Update the ring number OR joined status for a User in a Queue |
-| [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | Join or unjoin a set of users for a queue |
+| [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
+| [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**patchRoutingSettingsContactcenter**](RoutingAPI.html#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
 | [**patchUserQueue**](RoutingAPI.html#patchUserQueue) | Join or unjoin a queue for a user |
 | [**patchUserQueues**](RoutingAPI.html#patchUserQueues) | Join or unjoin a set of queues for a user |
@@ -69,7 +69,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingEmailDomainTestconnection**](RoutingAPI.html#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this domain |
 | [**postRoutingEmailDomains**](RoutingAPI.html#postRoutingEmailDomains) | Create a domain |
 | [**postRoutingLanguages**](RoutingAPI.html#postRoutingLanguages) | Create Language |
-| [**postRoutingQueueUsers**](RoutingAPI.html#postRoutingQueueUsers) | Bulk add or delete up to 100 queue members |
+| [**postRoutingQueueUsers**](RoutingAPI.html#postRoutingQueueUsers) | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**postRoutingQueueWrapupcodes**](RoutingAPI.html#postRoutingQueueWrapupcodes) | Add up to 100 wrap-up codes to a queue |
 | [**postRoutingQueues**](RoutingAPI.html#postRoutingQueues) | Create a queue |
 | [**postRoutingSkills**](RoutingAPI.html#postRoutingSkills) | Create Skill |
@@ -256,7 +256,7 @@ RoutingAPI.deleteRoutingQueue(queueId: queueId, forceDelete: forceDelete) { (err
 
 > Void deleteRoutingQueueUser(queueId, memberId)
 
-Delete queue member
+DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
 
 
 
@@ -1406,7 +1406,7 @@ RoutingAPI.getRoutingQueueMediatypeEstimatedwaittime(queueId: queueId, mediaType
 
 > [QueueMemberEntityListing](QueueMemberEntityListing.html) getRoutingQueueUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence)
 
-Get the members of this queue
+DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
 
 
 
@@ -1426,7 +1426,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let pageSize: Int = 25 // Page size
+let pageSize: Int = 25 // Page size [max 100]
 let pageNumber: Int = 1 // Page number
 let sortBy: String = "name" // Sort by
 let expand: [String] = [RoutingAPI.Expand_getRoutingQueueUsers.enummember.rawValue] // Which fields, if any, to expand.
@@ -1455,7 +1455,7 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageSize: pageSize, pageNumber
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageSize** | **Int**| Page size [max 100] | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortBy** | **String**| Sort by | [optional] [default to name] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
@@ -2756,7 +2756,7 @@ RoutingAPI.patchRoutingEmailDomain(domainId: domainId, body: body) { (response, 
 
 > [QueueMember](QueueMember.html) patchRoutingQueueUser(queueId, memberId, body)
 
-Update the ring number OR joined status for a User in a Queue
+DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
 
 
 
@@ -2813,7 +2813,7 @@ RoutingAPI.patchRoutingQueueUser(queueId: queueId, memberId: memberId, body: bod
 
 > [QueueMemberEntityListing](QueueMemberEntityListing.html) patchRoutingQueueUsers(queueId, body)
 
-Join or unjoin a set of users for a queue
+DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
 
 
 
@@ -3463,7 +3463,7 @@ RoutingAPI.postRoutingLanguages(body: body) { (response, error) in
 
 > String postRoutingQueueUsers(queueId, body, delete)
 
-Bulk add or delete up to 100 queue members
+DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
 
 
 

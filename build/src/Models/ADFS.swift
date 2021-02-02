@@ -14,29 +14,32 @@ public class ADFS: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    public var relyingPartyIdentifier: String?
-    public var certificate: String?
+    public var disabled: Bool?
     public var issuerURI: String?
     public var ssoTargetURI: String?
-    public var disabled: Bool?
+    public var certificate: String?
+    public var certificates: [String]?
+    public var relyingPartyIdentifier: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, relyingPartyIdentifier: String?, certificate: String?, issuerURI: String?, ssoTargetURI: String?, disabled: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, certificate: String?, certificates: [String]?, relyingPartyIdentifier: String?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
-        self.relyingPartyIdentifier = relyingPartyIdentifier
-        
-        self.certificate = certificate
+        self.disabled = disabled
         
         self.issuerURI = issuerURI
         
         self.ssoTargetURI = ssoTargetURI
         
-        self.disabled = disabled
+        self.certificate = certificate
+        
+        self.certificates = certificates
+        
+        self.relyingPartyIdentifier = relyingPartyIdentifier
         
         self.selfUri = selfUri
         
@@ -45,11 +48,12 @@ public class ADFS: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
-        case relyingPartyIdentifier
-        case certificate
+        case disabled
         case issuerURI
         case ssoTargetURI
-        case disabled
+        case certificate
+        case certificates
+        case relyingPartyIdentifier
         case selfUri
     }
 

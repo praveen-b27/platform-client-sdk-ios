@@ -723,11 +723,12 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -786,11 +787,12 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -849,14 +851,15 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
-  "nameIdentifierFormat" : "aeiou",
   "issuerURI" : "aeiou",
+  "nameIdentifierFormat" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "logoImageData" : "aeiou",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou",
   "endpointCompression" : true
 }}]
@@ -917,11 +920,12 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -981,11 +985,12 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -1044,11 +1049,12 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -1107,11 +1113,12 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -1171,11 +1178,12 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -1295,11 +1303,12 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "autoProvisionUsers" : true,
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -1358,11 +1367,12 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
 
@@ -1673,11 +1683,12 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
-  "ssoTargetURI" : "aeiou",
   "disabled" : true,
+  "ssoTargetURI" : "aeiou",
   "id" : "aeiou"
 }}]
      

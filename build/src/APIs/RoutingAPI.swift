@@ -198,7 +198,7 @@ open class RoutingAPI {
     
     /**
      
-     Delete queue member
+     DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
      
      - parameter queueId: (path) Queue ID 
      - parameter memberId: (path) Member ID 
@@ -217,7 +217,7 @@ open class RoutingAPI {
 
     /**
      
-     Delete queue member
+     DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
      
      - DELETE /api/v2/routing/queues/{queueId}/users/{memberId}
      - 
@@ -2610,10 +2610,10 @@ open class RoutingAPI {
     
     /**
      
-     Get the members of this queue
+     DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
      
      - parameter queueId: (path) Queue ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageSize: (query) Page size [max 100] (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
@@ -2646,7 +2646,7 @@ open class RoutingAPI {
 
     /**
      
-     Get the members of this queue
+     DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
      
      - GET /api/v2/routing/queues/{queueId}/users
      - 
@@ -2933,7 +2933,7 @@ open class RoutingAPI {
 }}]
      
      - parameter queueId: (path) Queue ID 
-     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageSize: (query) Page size [max 100] (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
@@ -6236,7 +6236,7 @@ open class RoutingAPI {
     
     /**
      
-     Update the ring number OR joined status for a User in a Queue
+     DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
      
      - parameter queueId: (path) Queue ID 
      - parameter memberId: (path) Member ID 
@@ -6263,7 +6263,7 @@ open class RoutingAPI {
 
     /**
      
-     Update the ring number OR joined status for a User in a Queue
+     DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
      
      - PATCH /api/v2/routing/queues/{queueId}/users/{memberId}
      - 
@@ -6571,7 +6571,7 @@ open class RoutingAPI {
     
     /**
      
-     Join or unjoin a set of users for a queue
+     DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
      
      - parameter queueId: (path) Queue ID 
      - parameter body: (body) Queue Members 
@@ -6597,7 +6597,7 @@ open class RoutingAPI {
 
     /**
      
-     Join or unjoin a set of users for a queue
+     DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
      
      - PATCH /api/v2/routing/queues/{queueId}/users
      - 
@@ -8005,7 +8005,7 @@ open class RoutingAPI {
     
     /**
      
-     Bulk add or delete up to 100 queue members
+     DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
      
      - parameter queueId: (path) Queue ID 
      - parameter body: (body) Queue Members 
@@ -8032,7 +8032,7 @@ open class RoutingAPI {
 
     /**
      
-     Bulk add or delete up to 100 queue members
+     DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
      
      - POST /api/v2/routing/queues/{queueId}/users
      - 

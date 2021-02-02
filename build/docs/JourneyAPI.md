@@ -233,7 +233,7 @@ JourneyAPI.getJourneySegment(segmentId: segmentId) { (response, error) in
 
 
 
-> [SegmentListing](SegmentListing.html) getJourneySegments(sortBy, pageSize, pageNumber, isActive)
+> [SegmentListing](SegmentListing.html) getJourneySegments(sortBy, pageSize, pageNumber, isActive, segmentIds)
 
 Retrieve all segments.
 
@@ -257,9 +257,10 @@ let sortBy: String = "" // Field(s) to sort by. The response can be sorted by an
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
 let isActive: Bool = true // Determines whether or not to show only active segments.
+let segmentIds: [String] = [""] // IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request.
 
 // Code example
-JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive) { (response, error) in
+JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -278,6 +279,7 @@ JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pa
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **isActive** | **Bool**| Determines whether or not to show only active segments. | [optional] |
+| **segmentIds** | [**[String]**](String.html)| IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request. | [optional] |
 {: class="table-striped"}
 
 

@@ -7387,6 +7387,20 @@ open class RecordingAPI {
         "type" : "aeiou"
       } ],
       "startOfDayIntervalMatching" : true,
+      "resolutionFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "segmentFilters" : [ {
         "predicates" : [ "" ],
         "clauses" : [ {
@@ -7599,6 +7613,20 @@ open class RecordingAPI {
           "type" : "aeiou"
         } ],
         "startOfDayIntervalMatching" : true,
+        "resolutionFilters" : [ {
+          "predicates" : [ "" ],
+          "clauses" : [ {
+            "predicates" : [ {
+              "metric" : "aeiou",
+              "range" : "",
+              "type" : "aeiou",
+              "value" : "aeiou",
+              "operator" : "aeiou"
+            } ],
+            "type" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
         "segmentFilters" : [ {
           "predicates" : [ "" ],
           "clauses" : [ {
@@ -13179,6 +13207,20 @@ open class RecordingAPI {
         "type" : "aeiou"
       } ],
       "startOfDayIntervalMatching" : true,
+      "resolutionFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "segmentFilters" : [ {
         "predicates" : [ "" ],
         "clauses" : [ {
@@ -17030,6 +17072,20 @@ open class RecordingAPI {
         "type" : "aeiou"
       } ],
       "startOfDayIntervalMatching" : true,
+      "resolutionFilters" : [ {
+        "predicates" : [ "" ],
+        "clauses" : [ {
+          "predicates" : [ {
+            "metric" : "aeiou",
+            "range" : "",
+            "type" : "aeiou",
+            "value" : "aeiou",
+            "operator" : "aeiou"
+          } ],
+          "type" : "aeiou"
+        } ],
+        "type" : "aeiou"
+      } ],
       "segmentFilters" : [ {
         "predicates" : [ "" ],
         "clauses" : [ {

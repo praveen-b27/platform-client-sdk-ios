@@ -72,7 +72,7 @@ NotificationsAPI.deleteNotificationsChannelSubscriptions(channelId: channelId) {
 
 
 
-> [AvailableTopicEntityListing](AvailableTopicEntityListing.html) getNotificationsAvailabletopics(expand)
+> [AvailableTopicEntityListing](AvailableTopicEntityListing.html) getNotificationsAvailabletopics(expand, includePreview)
 
 Get available notification topics.
 
@@ -92,9 +92,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let expand: [String] = [NotificationsAPI.Expand_getNotificationsAvailabletopics.enummember.rawValue] // Which fields, if any, to expand
+let includePreview: Bool = true // Whether or not to include Preview topics
 
 // Code example
-NotificationsAPI.getNotificationsAvailabletopics(expand: expand) { (response, error) in
+NotificationsAPI.getNotificationsAvailabletopics(expand: expand, includePreview: includePreview) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -109,7 +110,8 @@ NotificationsAPI.getNotificationsAvailabletopics(expand: expand) { (response, er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: _description ("description"), requirespermissions ("requiresPermissions"), schema ("schema"), transports ("transports"), publicapitemplateuripaths ("publicApiTemplateUriPaths") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: _description ("description"), requirespermissions ("requiresPermissions"), enforced ("enforced"), schema ("schema"), visibility ("visibility"), transports ("transports"), publicapitemplateuripaths ("publicApiTemplateUriPaths") |
+| **includePreview** | **Bool**| Whether or not to include Preview topics | [optional] [default to true] |
 {: class="table-striped"}
 
 

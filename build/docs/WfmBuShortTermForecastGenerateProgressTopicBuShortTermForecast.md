@@ -19,6 +19,7 @@ title: WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast
 | **planningGroupsVersion** | **Int** |  | [optional] |
 | **weekCount** | **Int** |  | [optional] |
 | **metadata** | [**WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata**](WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata.html) |  | [optional] |
+| **canUseForScheduling** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

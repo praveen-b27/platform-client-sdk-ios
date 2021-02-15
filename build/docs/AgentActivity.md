@@ -19,6 +19,7 @@ title: AgentActivity
 | **highestCriticalScore** | **Float** |  | [optional] |
 | **lowestCriticalScore** | **Float** |  | [optional] |
 | **agentEvaluatorActivityList** | [**[AgentEvaluatorActivity]**](AgentEvaluatorActivity.html) |  | [optional] |
+| **numEvaluationsWithoutViewPermission** | **Int** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

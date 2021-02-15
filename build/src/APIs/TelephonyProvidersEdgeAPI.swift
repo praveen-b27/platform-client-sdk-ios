@@ -4429,6 +4429,134 @@ open class TelephonyProvidersEdgeAPI {
 
     
     
+    public enum ModelType_getTelephonyProvidersEdgesDidpoolsDids: String { 
+        case assignedAndUnassigned = "ASSIGNED_AND_UNASSIGNED"
+        case unassigned = "UNASSIGNED"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+     
+     - parameter type: (query) The type of numbers to return. 
+     - parameter _id: (query) Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)
+     - parameter numberMatch: (query) A number to filter the results by. (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgesDidpoolsDids(type: ModelType_getTelephonyProvidersEdgesDidpoolsDids, _id: [String]? = nil, numberMatch: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: DIDNumberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesDidpoolsDidsWithRequestBuilder(type: type, _id: _id, numberMatch: numberMatch, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder)
+        requestBuilder.execute { (response: Response<DIDNumberEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+     
+     - GET /api/v2/telephony/providers/edges/didpools/dids
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "owner" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "ownerType" : "aeiou",
+    "number" : "aeiou",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "didPool" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "assigned" : true,
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter type: (query) The type of numbers to return. 
+     - parameter _id: (query) Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. (optional)
+     - parameter numberMatch: (query) A number to filter the results by. (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+
+     - returns: RequestBuilder<DIDNumberEntityListing> 
+     */
+    open class func getTelephonyProvidersEdgesDidpoolsDidsWithRequestBuilder(type: ModelType_getTelephonyProvidersEdgesDidpoolsDids, _id: [String]? = nil, numberMatch: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<DIDNumberEntityListing> {
+        let path = "/api/v2/telephony/providers/edges/didpools/dids"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "type": type.rawValue, 
+            
+            "id": _id, 
+            
+            "numberMatch": numberMatch, 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DIDNumberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
     
     
     

@@ -12,8 +12,8 @@ title: ManagementUnitListing
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
-| **pageCount** | **Int** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
+| **pageCount** | **Int** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |

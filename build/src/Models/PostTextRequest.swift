@@ -56,8 +56,9 @@ public class PostTextRequest: Codable {
     public var messagingPlatformType: MessagingPlatformType?
     public var amazonLexRequest: AmazonLexRequest?
     public var googleDialogflow: GoogleDialogflowCustomSettings?
+    public var genesysBotConnector: GenesysBotConnector?
 
-    public init(botId: String?, botAlias: String?, integrationId: String?, botSessionId: String?, postTextMessage: PostTextMessage?, languageCode: String?, botSessionTimeoutMinutes: Int?, botChannels: [BotChannels]?, botCorrelationId: String?, messagingPlatformType: MessagingPlatformType?, amazonLexRequest: AmazonLexRequest?, googleDialogflow: GoogleDialogflowCustomSettings?) {
+    public init(botId: String?, botAlias: String?, integrationId: String?, botSessionId: String?, postTextMessage: PostTextMessage?, languageCode: String?, botSessionTimeoutMinutes: Int?, botChannels: [BotChannels]?, botCorrelationId: String?, messagingPlatformType: MessagingPlatformType?, amazonLexRequest: AmazonLexRequest?, googleDialogflow: GoogleDialogflowCustomSettings?, genesysBotConnector: GenesysBotConnector?) {
         
         self.botId = botId
         
@@ -82,6 +83,8 @@ public class PostTextRequest: Codable {
         self.amazonLexRequest = amazonLexRequest
         
         self.googleDialogflow = googleDialogflow
+        
+        self.genesysBotConnector = genesysBotConnector
         
     }
 

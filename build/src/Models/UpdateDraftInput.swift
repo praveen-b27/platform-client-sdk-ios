@@ -12,9 +12,9 @@ import Foundation
 
 public class UpdateDraftInput: Codable {
 
-    /** Category of action */
+    /** Category of action, Can be up to 256 characters long */
     public var category: String?
-    /** Name of action */
+    /** Name of action, Can be up to 256 characters long */
     public var name: String?
     /** Configuration to support request and response processing */
     public var config: ActionConfig?

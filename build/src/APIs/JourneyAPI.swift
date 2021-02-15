@@ -15,6 +15,180 @@ open class JourneyAPI {
     
     /**
      
+     Delete single action map.
+     
+     - parameter actionMapId: (path) ID of the action map. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneyActionmap(actionMapId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneyActionmapWithRequestBuilder(actionMapId: actionMapId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete single action map.
+     
+     - DELETE /api/v2/journey/actionmaps/{actionMapId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter actionMapId: (path) ID of the action map. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneyActionmapWithRequestBuilder(actionMapId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/journey/actionmaps/{actionMapId}"
+        let actionMapIdPreEscape = "\(actionMapId)"
+        let actionMapIdPostEscape = actionMapIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionMapId}", with: actionMapIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Delete a single action template.
+     
+     - parameter actionTemplateId: (path) ID of the action template. 
+     - parameter hardDelete: (query) Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneyActiontemplate(actionTemplateId: String, hardDelete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneyActiontemplateWithRequestBuilder(actionTemplateId: actionTemplateId, hardDelete: hardDelete)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a single action template.
+     
+     - DELETE /api/v2/journey/actiontemplates/{actionTemplateId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter actionTemplateId: (path) ID of the action template. 
+     - parameter hardDelete: (query) Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneyActiontemplateWithRequestBuilder(actionTemplateId: String, hardDelete: Bool? = nil) -> RequestBuilder<Void> {
+        var path = "/api/v2/journey/actiontemplates/{actionTemplateId}"
+        let actionTemplateIdPreEscape = "\(actionTemplateId)"
+        let actionTemplateIdPostEscape = actionTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionTemplateId}", with: actionTemplateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "hardDelete": hardDelete
+            
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Delete an outcome.
+     
+     - parameter outcomeId: (path) ID of the outcome. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneyOutcome(outcomeId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneyOutcomeWithRequestBuilder(outcomeId: outcomeId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete an outcome.
+     
+     - DELETE /api/v2/journey/outcomes/{outcomeId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter outcomeId: (path) ID of the outcome. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneyOutcomeWithRequestBuilder(outcomeId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/journey/outcomes/{outcomeId}"
+        let outcomeIdPreEscape = "\(outcomeId)"
+        let outcomeIdPostEscape = outcomeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{outcomeId}", with: outcomeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete a segment.
      
      - parameter segmentId: (path) ID of the segment. 
@@ -63,6 +237,293 @@ open class JourneyAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a single action map.
+     
+     - parameter actionMapId: (path) ID of the action map. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyActionmap(actionMapId: String, completion: @escaping ((_ data: ActionMap?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActionmapWithRequestBuilder(actionMapId: actionMapId)
+        requestBuilder.execute { (response: Response<ActionMap>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single action map.
+     
+     - GET /api/v2/journey/actionmaps/{actionMapId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ignoreFrequencyCap" : true,
+  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "weight" : 123,
+  "isActive" : true,
+  "version" : 123,
+  "triggerWithSegments" : [ "aeiou" ],
+  "triggerWithOutcomeProbabilityConditions" : [ {
+    "probability" : 1.3579000000000001069366817318950779736042022705078125,
+    "outcomeId" : "aeiou",
+    "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+  } ],
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "triggerWithEventConditions" : [ {
+    "streamType" : "aeiou",
+    "values" : [ "aeiou" ],
+    "sessionType" : "aeiou",
+    "eventName" : "aeiou",
+    "key" : "aeiou",
+    "operator" : "aeiou"
+  } ],
+  "pageUrlConditions" : [ {
+    "values" : [ "aeiou" ],
+    "operator" : "aeiou"
+  } ],
+  "actionMapScheduleGroups" : {
+    "actionMapScheduleGroup" : {
+      "id" : "aeiou"
+    },
+    "emergencyActionMapScheduleGroup" : ""
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "action" : {
+    "actionTemplate" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "mediaType" : "aeiou",
+    "architectFlowFields" : {
+      "architectFlow" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "flowRequestMappings" : [ {
+        "attributeType" : "aeiou",
+        "mappingType" : "aeiou",
+        "name" : "aeiou",
+        "value" : "aeiou"
+      } ]
+    }
+  },
+  "id" : "aeiou",
+  "activation" : {
+    "delayInSeconds" : 123,
+    "type" : "aeiou"
+  },
+  "startDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter actionMapId: (path) ID of the action map. 
+
+     - returns: RequestBuilder<ActionMap> 
+     */
+    open class func getJourneyActionmapWithRequestBuilder(actionMapId: String) -> RequestBuilder<ActionMap> {
+        var path = "/api/v2/journey/actionmaps/{actionMapId}"
+        let actionMapIdPreEscape = "\(actionMapId)"
+        let actionMapIdPostEscape = actionMapIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionMapId}", with: actionMapIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionMap>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Retrieve all action maps.
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter filterField: (query) Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
+     - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
+     - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering or sorting. A maximum of 100 action maps are allowed per request. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyActionmaps(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil, completion: @escaping ((_ data: ActionMapListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActionmapsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, filterField: filterField, filterValue: filterValue, actionMapIds: actionMapIds)
+        requestBuilder.execute { (response: Response<ActionMapListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve all action maps.
+     
+     - GET /api/v2/journey/actionmaps
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "ignoreFrequencyCap" : true,
+    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "displayName" : "aeiou",
+    "selfUri" : "aeiou",
+    "weight" : 123,
+    "isActive" : true,
+    "version" : 123,
+    "triggerWithSegments" : [ "aeiou" ],
+    "triggerWithOutcomeProbabilityConditions" : [ {
+      "probability" : 1.3579000000000001069366817318950779736042022705078125,
+      "outcomeId" : "aeiou",
+      "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "triggerWithEventConditions" : [ {
+      "streamType" : "aeiou",
+      "values" : [ "aeiou" ],
+      "sessionType" : "aeiou",
+      "eventName" : "aeiou",
+      "key" : "aeiou",
+      "operator" : "aeiou"
+    } ],
+    "pageUrlConditions" : [ {
+      "values" : [ "aeiou" ],
+      "operator" : "aeiou"
+    } ],
+    "actionMapScheduleGroups" : {
+      "actionMapScheduleGroup" : {
+        "id" : "aeiou"
+      },
+      "emergencyActionMapScheduleGroup" : ""
+    },
+    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+    "action" : {
+      "actionTemplate" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "mediaType" : "aeiou",
+      "architectFlowFields" : {
+        "architectFlow" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "flowRequestMappings" : [ {
+          "attributeType" : "aeiou",
+          "mappingType" : "aeiou",
+          "name" : "aeiou",
+          "value" : "aeiou"
+        } ]
+      }
+    },
+    "id" : "aeiou",
+    "activation" : {
+      "delayInSeconds" : 123,
+      "type" : "aeiou"
+    },
+    "startDate" : "2000-01-23T04:56:07.000+0000"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter filterField: (query) Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
+     - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
+     - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering or sorting. A maximum of 100 action maps are allowed per request. (optional)
+
+     - returns: RequestBuilder<ActionMapListing> 
+     */
+    open class func getJourneyActionmapsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil) -> RequestBuilder<ActionMapListing> {
+        let path = "/api/v2/journey/actionmaps"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortBy": sortBy, 
+            
+            "filterField": filterField, 
+            
+            "filterValue": filterValue, 
+            
+            "actionMapIds": actionMapIds
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ActionMapListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
     
@@ -242,6 +703,520 @@ open class JourneyAPI {
         ])
 
         let requestBuilder: RequestBuilder<ActionTargetListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a single action template.
+     
+     - parameter actionTemplateId: (path) ID of the action template. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyActiontemplate(actionTemplateId: String, completion: @escaping ((_ data: ActionTemplate?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActiontemplateWithRequestBuilder(actionTemplateId: actionTemplateId)
+        requestBuilder.execute { (response: Response<ActionTemplate>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single action template.
+     
+     - GET /api/v2/journey/actiontemplates/{actionTemplateId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "description" : "aeiou",
+  "mediaType" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "contentOffer" : {
+    "imageUrl" : "aeiou",
+    "layoutMode" : "aeiou",
+    "style" : {
+      "offer" : {
+        "padding" : "aeiou",
+        "backgroundColor" : "aeiou",
+        "color" : "aeiou"
+      },
+      "ctaButton" : {
+        "backgroundColor" : "aeiou",
+        "color" : "aeiou",
+        "textAlign" : "aeiou",
+        "fontSize" : "aeiou",
+        "font" : "aeiou"
+      },
+      "closeButton" : {
+        "color" : "aeiou",
+        "opacity" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "position" : {
+        "top" : "aeiou",
+        "left" : "aeiou",
+        "bottom" : "aeiou",
+        "right" : "aeiou"
+      },
+      "title" : {
+        "color" : "aeiou",
+        "textAlign" : "aeiou",
+        "fontSize" : "aeiou",
+        "font" : "aeiou"
+      },
+      "body" : "",
+      "headline" : ""
+    },
+    "title" : "aeiou",
+    "body" : "aeiou",
+    "headline" : "aeiou",
+    "displayMode" : "aeiou",
+    "callToAction" : {
+      "text" : "aeiou",
+      "url" : "aeiou",
+      "target" : "aeiou"
+    }
+  }
+}}]
+     
+     - parameter actionTemplateId: (path) ID of the action template. 
+
+     - returns: RequestBuilder<ActionTemplate> 
+     */
+    open class func getJourneyActiontemplateWithRequestBuilder(actionTemplateId: String) -> RequestBuilder<ActionTemplate> {
+        var path = "/api/v2/journey/actiontemplates/{actionTemplateId}"
+        let actionTemplateIdPreEscape = "\(actionTemplateId)"
+        let actionTemplateIdPostEscape = actionTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionTemplateId}", with: actionTemplateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum MediaType_getJourneyActiontemplates: String { 
+        case webchat = "webchat"
+        case webmessagingoffer = "webMessagingOffer"
+        case contentoffer = "contentOffer"
+        case integrationaction = "integrationAction"
+        case architectflow = "architectFlow"
+    }
+
+    
+    
+    
+    public enum State_getJourneyActiontemplates: String { 
+        case active = "Active"
+        case inactive = "Inactive"
+        case deleted = "Deleted"
+    }
+
+    
+    
+    /**
+     
+     Retrieve all action templates.
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). (optional)
+     - parameter mediaType: (query) Media type (optional)
+     - parameter state: (query) Action template state (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyActiontemplates(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil, completion: @escaping ((_ data: ActionTemplateListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActiontemplatesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, mediaType: mediaType, state: state)
+        requestBuilder.execute { (response: Response<ActionTemplateListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve all action templates.
+     
+     - GET /api/v2/journey/actiontemplates
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+    "description" : "aeiou",
+    "mediaType" : "aeiou",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "contentOffer" : {
+      "imageUrl" : "aeiou",
+      "layoutMode" : "aeiou",
+      "style" : {
+        "offer" : {
+          "padding" : "aeiou",
+          "backgroundColor" : "aeiou",
+          "color" : "aeiou"
+        },
+        "ctaButton" : {
+          "backgroundColor" : "aeiou",
+          "color" : "aeiou",
+          "textAlign" : "aeiou",
+          "fontSize" : "aeiou",
+          "font" : "aeiou"
+        },
+        "closeButton" : {
+          "color" : "aeiou",
+          "opacity" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "position" : {
+          "top" : "aeiou",
+          "left" : "aeiou",
+          "bottom" : "aeiou",
+          "right" : "aeiou"
+        },
+        "title" : {
+          "color" : "aeiou",
+          "textAlign" : "aeiou",
+          "fontSize" : "aeiou",
+          "font" : "aeiou"
+        },
+        "body" : "",
+        "headline" : ""
+      },
+      "title" : "aeiou",
+      "body" : "aeiou",
+      "headline" : "aeiou",
+      "displayMode" : "aeiou",
+      "callToAction" : {
+        "text" : "aeiou",
+        "url" : "aeiou",
+        "target" : "aeiou"
+      }
+    }
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). (optional)
+     - parameter mediaType: (query) Media type (optional)
+     - parameter state: (query) Action template state (optional)
+
+     - returns: RequestBuilder<ActionTemplateListing> 
+     */
+    open class func getJourneyActiontemplatesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil) -> RequestBuilder<ActionTemplateListing> {
+        let path = "/api/v2/journey/actiontemplates"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortBy": sortBy, 
+            
+            "mediaType": mediaType?.rawValue, 
+            
+            "state": state?.rawValue
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ActionTemplateListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a single outcome.
+     
+     - parameter outcomeId: (path) ID of the outcome. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyOutcome(outcomeId: String, completion: @escaping ((_ data: Outcome?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyOutcomeWithRequestBuilder(outcomeId: outcomeId)
+        requestBuilder.execute { (response: Response<Outcome>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single outcome.
+     
+     - GET /api/v2/journey/outcomes/{outcomeId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "journey" : {
+    "patterns" : [ {
+      "streamType" : "aeiou",
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ],
+      "count" : 123,
+      "sessionType" : "aeiou",
+      "eventName" : "aeiou"
+    } ]
+  },
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "context" : {
+    "patterns" : [ {
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "entityType" : "aeiou",
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ]
+    } ]
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "description" : "aeiou",
+  "isPositive" : true,
+  "id" : "aeiou",
+  "isActive" : true,
+  "version" : 123
+}}]
+     
+     - parameter outcomeId: (path) ID of the outcome. 
+
+     - returns: RequestBuilder<Outcome> 
+     */
+    open class func getJourneyOutcomeWithRequestBuilder(outcomeId: String) -> RequestBuilder<Outcome> {
+        var path = "/api/v2/journey/outcomes/{outcomeId}"
+        let outcomeIdPreEscape = "\(outcomeId)"
+        let outcomeIdPostEscape = outcomeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{outcomeId}", with: outcomeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Outcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Retrieve all outcomes.
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 20 outcomes are allowed per request. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyOutcomes(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil, completion: @escaping ((_ data: OutcomeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyOutcomesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, outcomeIds: outcomeIds)
+        requestBuilder.execute { (response: Response<OutcomeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve all outcomes.
+     
+     - GET /api/v2/journey/outcomes
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "journey" : {
+      "patterns" : [ {
+        "streamType" : "aeiou",
+        "criteria" : [ {
+          "shouldIgnoreCase" : true,
+          "values" : [ "aeiou" ],
+          "key" : "aeiou",
+          "operator" : "aeiou"
+        } ],
+        "count" : 123,
+        "sessionType" : "aeiou",
+        "eventName" : "aeiou"
+      } ]
+    },
+    "displayName" : "aeiou",
+    "selfUri" : "aeiou",
+    "context" : {
+      "patterns" : [ {
+        "criteria" : [ {
+          "shouldIgnoreCase" : true,
+          "entityType" : "aeiou",
+          "values" : [ "aeiou" ],
+          "key" : "aeiou",
+          "operator" : "aeiou"
+        } ]
+      } ]
+    },
+    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+    "description" : "aeiou",
+    "isPositive" : true,
+    "id" : "aeiou",
+    "isActive" : true,
+    "version" : 123
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
+     - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 20 outcomes are allowed per request. (optional)
+
+     - returns: RequestBuilder<OutcomeListing> 
+     */
+    open class func getJourneyOutcomesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil) -> RequestBuilder<OutcomeListing> {
+        let path = "/api/v2/journey/outcomes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortBy": sortBy, 
+            
+            "outcomeIds": outcomeIds
+            
+        ])
+
+        let requestBuilder: RequestBuilder<OutcomeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -492,6 +1467,129 @@ open class JourneyAPI {
     
     /**
      
+     Update single action map.
+     
+     - parameter actionMapId: (path) ID of the action map. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchJourneyActionmap(actionMapId: String, body: PatchActionMap? = nil, completion: @escaping ((_ data: ActionMap?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchJourneyActionmapWithRequestBuilder(actionMapId: actionMapId, body: body)
+        requestBuilder.execute { (response: Response<ActionMap>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update single action map.
+     
+     - PATCH /api/v2/journey/actionmaps/{actionMapId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ignoreFrequencyCap" : true,
+  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "weight" : 123,
+  "isActive" : true,
+  "version" : 123,
+  "triggerWithSegments" : [ "aeiou" ],
+  "triggerWithOutcomeProbabilityConditions" : [ {
+    "probability" : 1.3579000000000001069366817318950779736042022705078125,
+    "outcomeId" : "aeiou",
+    "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+  } ],
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "triggerWithEventConditions" : [ {
+    "streamType" : "aeiou",
+    "values" : [ "aeiou" ],
+    "sessionType" : "aeiou",
+    "eventName" : "aeiou",
+    "key" : "aeiou",
+    "operator" : "aeiou"
+  } ],
+  "pageUrlConditions" : [ {
+    "values" : [ "aeiou" ],
+    "operator" : "aeiou"
+  } ],
+  "actionMapScheduleGroups" : {
+    "actionMapScheduleGroup" : {
+      "id" : "aeiou"
+    },
+    "emergencyActionMapScheduleGroup" : ""
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "action" : {
+    "actionTemplate" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "mediaType" : "aeiou",
+    "architectFlowFields" : {
+      "architectFlow" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "flowRequestMappings" : [ {
+        "attributeType" : "aeiou",
+        "mappingType" : "aeiou",
+        "name" : "aeiou",
+        "value" : "aeiou"
+      } ]
+    }
+  },
+  "id" : "aeiou",
+  "activation" : {
+    "delayInSeconds" : 123,
+    "type" : "aeiou"
+  },
+  "startDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter actionMapId: (path) ID of the action map. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ActionMap> 
+     */
+    open class func patchJourneyActionmapWithRequestBuilder(actionMapId: String, body: PatchActionMap? = nil) -> RequestBuilder<ActionMap> {
+        var path = "/api/v2/journey/actionmaps/{actionMapId}"
+        let actionMapIdPreEscape = "\(actionMapId)"
+        let actionMapIdPostEscape = actionMapIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionMapId}", with: actionMapIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionMap>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
      Update a single action target.
      
      - parameter actionTargetId: (path) ID of the action target. 
@@ -563,6 +1661,223 @@ open class JourneyAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActionTarget>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update a single action template.
+     
+     - parameter actionTemplateId: (path) ID of the action template. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchJourneyActiontemplate(actionTemplateId: String, body: PatchActionTemplate? = nil, completion: @escaping ((_ data: ActionTemplate?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchJourneyActiontemplateWithRequestBuilder(actionTemplateId: actionTemplateId, body: body)
+        requestBuilder.execute { (response: Response<ActionTemplate>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a single action template.
+     
+     - PATCH /api/v2/journey/actiontemplates/{actionTemplateId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "description" : "aeiou",
+  "mediaType" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "contentOffer" : {
+    "imageUrl" : "aeiou",
+    "layoutMode" : "aeiou",
+    "style" : {
+      "offer" : {
+        "padding" : "aeiou",
+        "backgroundColor" : "aeiou",
+        "color" : "aeiou"
+      },
+      "ctaButton" : {
+        "backgroundColor" : "aeiou",
+        "color" : "aeiou",
+        "textAlign" : "aeiou",
+        "fontSize" : "aeiou",
+        "font" : "aeiou"
+      },
+      "closeButton" : {
+        "color" : "aeiou",
+        "opacity" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "position" : {
+        "top" : "aeiou",
+        "left" : "aeiou",
+        "bottom" : "aeiou",
+        "right" : "aeiou"
+      },
+      "title" : {
+        "color" : "aeiou",
+        "textAlign" : "aeiou",
+        "fontSize" : "aeiou",
+        "font" : "aeiou"
+      },
+      "body" : "",
+      "headline" : ""
+    },
+    "title" : "aeiou",
+    "body" : "aeiou",
+    "headline" : "aeiou",
+    "displayMode" : "aeiou",
+    "callToAction" : {
+      "text" : "aeiou",
+      "url" : "aeiou",
+      "target" : "aeiou"
+    }
+  }
+}}]
+     
+     - parameter actionTemplateId: (path) ID of the action template. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ActionTemplate> 
+     */
+    open class func patchJourneyActiontemplateWithRequestBuilder(actionTemplateId: String, body: PatchActionTemplate? = nil) -> RequestBuilder<ActionTemplate> {
+        var path = "/api/v2/journey/actiontemplates/{actionTemplateId}"
+        let actionTemplateIdPreEscape = "\(actionTemplateId)"
+        let actionTemplateIdPostEscape = actionTemplateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionTemplateId}", with: actionTemplateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update an outcome.
+     
+     - parameter outcomeId: (path) ID of the outcome. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchJourneyOutcome(outcomeId: String, body: PatchOutcome? = nil, completion: @escaping ((_ data: Outcome?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchJourneyOutcomeWithRequestBuilder(outcomeId: outcomeId, body: body)
+        requestBuilder.execute { (response: Response<Outcome>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update an outcome.
+     
+     - PATCH /api/v2/journey/outcomes/{outcomeId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "journey" : {
+    "patterns" : [ {
+      "streamType" : "aeiou",
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ],
+      "count" : 123,
+      "sessionType" : "aeiou",
+      "eventName" : "aeiou"
+    } ]
+  },
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "context" : {
+    "patterns" : [ {
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "entityType" : "aeiou",
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ]
+    } ]
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "description" : "aeiou",
+  "isPositive" : true,
+  "id" : "aeiou",
+  "isActive" : true,
+  "version" : 123
+}}]
+     
+     - parameter outcomeId: (path) ID of the outcome. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Outcome> 
+     */
+    open class func patchJourneyOutcomeWithRequestBuilder(outcomeId: String, body: PatchOutcome? = nil) -> RequestBuilder<Outcome> {
+        var path = "/api/v2/journey/outcomes/{outcomeId}"
+        let outcomeIdPreEscape = "\(outcomeId)"
+        let outcomeIdPostEscape = outcomeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{outcomeId}", with: outcomeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Outcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -752,6 +2067,325 @@ open class JourneyAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create an action map.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyActionmaps(body: ActionMap? = nil, completion: @escaping ((_ data: ActionMap?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyActionmapsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ActionMap>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create an action map.
+     
+     - POST /api/v2/journey/actionmaps
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ignoreFrequencyCap" : true,
+  "endDate" : "2000-01-23T04:56:07.000+0000",
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "weight" : 123,
+  "isActive" : true,
+  "version" : 123,
+  "triggerWithSegments" : [ "aeiou" ],
+  "triggerWithOutcomeProbabilityConditions" : [ {
+    "probability" : 1.3579000000000001069366817318950779736042022705078125,
+    "outcomeId" : "aeiou",
+    "maximumProbability" : 1.3579000000000001069366817318950779736042022705078125
+  } ],
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "triggerWithEventConditions" : [ {
+    "streamType" : "aeiou",
+    "values" : [ "aeiou" ],
+    "sessionType" : "aeiou",
+    "eventName" : "aeiou",
+    "key" : "aeiou",
+    "operator" : "aeiou"
+  } ],
+  "pageUrlConditions" : [ {
+    "values" : [ "aeiou" ],
+    "operator" : "aeiou"
+  } ],
+  "actionMapScheduleGroups" : {
+    "actionMapScheduleGroup" : {
+      "id" : "aeiou"
+    },
+    "emergencyActionMapScheduleGroup" : ""
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "action" : {
+    "actionTemplate" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "mediaType" : "aeiou",
+    "architectFlowFields" : {
+      "architectFlow" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "flowRequestMappings" : [ {
+        "attributeType" : "aeiou",
+        "mappingType" : "aeiou",
+        "name" : "aeiou",
+        "value" : "aeiou"
+      } ]
+    }
+  },
+  "id" : "aeiou",
+  "activation" : {
+    "delayInSeconds" : 123,
+    "type" : "aeiou"
+  },
+  "startDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ActionMap> 
+     */
+    open class func postJourneyActionmapsWithRequestBuilder(body: ActionMap? = nil) -> RequestBuilder<ActionMap> {
+        let path = "/api/v2/journey/actionmaps"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionMap>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a single action template.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyActiontemplates(body: ActionTemplate? = nil, completion: @escaping ((_ data: ActionTemplate?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyActiontemplatesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ActionTemplate>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a single action template.
+     
+     - POST /api/v2/journey/actiontemplates
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "description" : "aeiou",
+  "mediaType" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "contentOffer" : {
+    "imageUrl" : "aeiou",
+    "layoutMode" : "aeiou",
+    "style" : {
+      "offer" : {
+        "padding" : "aeiou",
+        "backgroundColor" : "aeiou",
+        "color" : "aeiou"
+      },
+      "ctaButton" : {
+        "backgroundColor" : "aeiou",
+        "color" : "aeiou",
+        "textAlign" : "aeiou",
+        "fontSize" : "aeiou",
+        "font" : "aeiou"
+      },
+      "closeButton" : {
+        "color" : "aeiou",
+        "opacity" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "position" : {
+        "top" : "aeiou",
+        "left" : "aeiou",
+        "bottom" : "aeiou",
+        "right" : "aeiou"
+      },
+      "title" : {
+        "color" : "aeiou",
+        "textAlign" : "aeiou",
+        "fontSize" : "aeiou",
+        "font" : "aeiou"
+      },
+      "body" : "",
+      "headline" : ""
+    },
+    "title" : "aeiou",
+    "body" : "aeiou",
+    "headline" : "aeiou",
+    "displayMode" : "aeiou",
+    "callToAction" : {
+      "text" : "aeiou",
+      "url" : "aeiou",
+      "target" : "aeiou"
+    }
+  }
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<ActionTemplate> 
+     */
+    open class func postJourneyActiontemplatesWithRequestBuilder(body: ActionTemplate? = nil) -> RequestBuilder<ActionTemplate> {
+        let path = "/api/v2/journey/actiontemplates"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActionTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create an outcome.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyOutcomes(body: Outcome? = nil, completion: @escaping ((_ data: Outcome?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyOutcomesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Outcome>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create an outcome.
+     
+     - POST /api/v2/journey/outcomes
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "journey" : {
+    "patterns" : [ {
+      "streamType" : "aeiou",
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ],
+      "count" : 123,
+      "sessionType" : "aeiou",
+      "eventName" : "aeiou"
+    } ]
+  },
+  "displayName" : "aeiou",
+  "selfUri" : "aeiou",
+  "context" : {
+    "patterns" : [ {
+      "criteria" : [ {
+        "shouldIgnoreCase" : true,
+        "entityType" : "aeiou",
+        "values" : [ "aeiou" ],
+        "key" : "aeiou",
+        "operator" : "aeiou"
+      } ]
+    } ]
+  },
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "description" : "aeiou",
+  "isPositive" : true,
+  "id" : "aeiou",
+  "isActive" : true,
+  "version" : 123
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Outcome> 
+     */
+    open class func postJourneyOutcomesWithRequestBuilder(body: Outcome? = nil) -> RequestBuilder<Outcome> {
+        let path = "/api/v2/journey/outcomes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Outcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

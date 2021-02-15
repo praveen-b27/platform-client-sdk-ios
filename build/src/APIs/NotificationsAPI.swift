@@ -70,11 +70,15 @@ open class NotificationsAPI {
     public enum Expand_getNotificationsAvailabletopics: String { 
         case _description = "description"
         case requirespermissions = "requiresPermissions"
+        case enforced = "enforced"
         case schema = "schema"
+        case visibility = "visibility"
         case transports = "transports"
         case publicapitemplateuripaths = "publicApiTemplateUriPaths"
     }
 
+    
+    
     
     
     /**
@@ -82,10 +86,11 @@ open class NotificationsAPI {
      Get available notification topics.
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter includePreview: (query) Whether or not to include Preview topics (optional, default to true)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getNotificationsAvailabletopics(expand: [String]? = nil, completion: @escaping ((_ data: AvailableTopicEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getNotificationsAvailabletopicsWithRequestBuilder(expand: expand)
+    open class func getNotificationsAvailabletopics(expand: [String]? = nil, includePreview: Bool? = nil, completion: @escaping ((_ data: AvailableTopicEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getNotificationsAvailabletopicsWithRequestBuilder(expand: expand, includePreview: includePreview)
         requestBuilder.execute { (response: Response<AvailableTopicEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -116,21 +121,25 @@ open class NotificationsAPI {
     "schema" : {
       "key" : "{}"
     },
+    "enforced" : true,
     "transports" : [ "aeiou" ],
     "requiresCurrentUser" : true,
+    "visibility" : "aeiou",
     "requiresPermissions" : [ "aeiou" ],
     "requiresCurrentUserOrPermission" : true,
     "description" : "aeiou",
     "id" : "aeiou",
+    "requiresDivisionPermissions" : true,
     "publicApiTemplateUriPaths" : [ "aeiou" ]
   } ]
 }}]
      
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter includePreview: (query) Whether or not to include Preview topics (optional, default to true)
 
      - returns: RequestBuilder<AvailableTopicEntityListing> 
      */
-    open class func getNotificationsAvailabletopicsWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<AvailableTopicEntityListing> {
+    open class func getNotificationsAvailabletopicsWithRequestBuilder(expand: [String]? = nil, includePreview: Bool? = nil) -> RequestBuilder<AvailableTopicEntityListing> {
         let path = "/api/v2/notifications/availabletopics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -143,7 +152,9 @@ open class NotificationsAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "expand": expand
+            "expand": expand, 
+            
+            "includePreview": includePreview
             
         ])
 

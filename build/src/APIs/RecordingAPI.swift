@@ -9717,6 +9717,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxConfigurableScreenRecordingStreams" : 123,
   "maxSimultaneousStreams" : 123
 }}]
      
@@ -18006,6 +18007,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "maxConfigurableScreenRecordingStreams" : 123,
   "maxSimultaneousStreams" : 123
 }}]
      

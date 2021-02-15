@@ -2530,12 +2530,14 @@ open class QualityAPI {
     "highestEvaluationScore" : 1.3579000000000001069366817318950779736042022705078125,
     "selfUri" : "aeiou",
     "averageCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "numEvaluationsWithoutViewPermission" : 123,
     "highestCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
     "lowestEvaluationScore" : 1.3579000000000001069366817318950779736042022705078125,
     "name" : "aeiou",
     "agentEvaluatorActivityList" : [ {
       "numEvaluations" : 123,
       "agent" : "",
+      "numEvaluationsWithoutViewPermission" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "id" : "aeiou",
@@ -8083,6 +8085,7 @@ open class QualityAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "numCalibrationsStarted" : 123,
+    "numEvaluationsWithoutViewPermission" : 123,
     "numEvaluationsAssigned" : 123,
     "numEvaluationsCompleted" : 123,
     "selfUri" : "aeiou",

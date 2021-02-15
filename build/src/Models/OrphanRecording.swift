@@ -16,6 +16,8 @@ public class OrphanRecording: Codable {
         case chat = "CHAT"
         case email = "EMAIL"
         case screenRecording = "SCREEN_RECORDING"
+        case pureengage = "PUREENGAGE"
+        case pureconnect = "PURECONNECT"
     }
     public enum MediaType: String, Codable { 
         case call = "CALL"

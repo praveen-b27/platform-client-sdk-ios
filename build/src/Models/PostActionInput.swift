@@ -12,9 +12,9 @@ import Foundation
 
 public class PostActionInput: Codable {
 
-    /** Category of action */
+    /** Category of action, Can be up to 256 characters long */
     public var category: String?
-    /** Name of action */
+    /** Name of action, Can be up to 256 characters long */
     public var name: String?
     /** The ID of the integration this action is associated to */
     public var integrationId: String?

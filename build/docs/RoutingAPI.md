@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingEmailDomain**](RoutingAPI.html#deleteRoutingEmailDomain) | Delete a domain |
 | [**deleteRoutingEmailDomainRoute**](RoutingAPI.html#deleteRoutingEmailDomainRoute) | Delete a route |
 | [**deleteRoutingQueue**](RoutingAPI.html#deleteRoutingQueue) | Delete a queue |
+| [**deleteRoutingQueueMember**](RoutingAPI.html#deleteRoutingQueueMember) | Delete a queue member. |
 | [**deleteRoutingQueueUser**](RoutingAPI.html#deleteRoutingQueueUser) | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
 | [**deleteRoutingQueueWrapupcode**](RoutingAPI.html#deleteRoutingQueueWrapupcode) | Delete a wrap-up code from a queue |
 | [**deleteRoutingSettings**](RoutingAPI.html#deleteRoutingSettings) | Delete an organization&#39;s routing settings |
@@ -32,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingQueue**](RoutingAPI.html#getRoutingQueue) | Get details about this queue. |
 | [**getRoutingQueueEstimatedwaittime**](RoutingAPI.html#getRoutingQueueEstimatedwaittime) | Get Estimated Wait Time |
 | [**getRoutingQueueMediatypeEstimatedwaittime**](RoutingAPI.html#getRoutingQueueMediatypeEstimatedwaittime) | Get Estimated Wait Time |
+| [**getRoutingQueueMembers**](RoutingAPI.html#getRoutingQueueMembers) | Get the members of this queue. |
 | [**getRoutingQueueUsers**](RoutingAPI.html#getRoutingQueueUsers) | DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue. |
 | [**getRoutingQueueWrapupcodes**](RoutingAPI.html#getRoutingQueueWrapupcodes) | Get the wrap-up codes for a queue |
 | [**getRoutingQueues**](RoutingAPI.html#getRoutingQueues) | Get list of queues. |
@@ -56,6 +58,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserRoutinglanguages**](RoutingAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
 | [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
+| [**patchRoutingEmailDomainValidate**](RoutingAPI.html#patchRoutingEmailDomainValidate) | Validate domain settings |
+| [**patchRoutingQueueMember**](RoutingAPI.html#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
+| [**patchRoutingQueueMembers**](RoutingAPI.html#patchRoutingQueueMembers) | Join or unjoin a set of users for a queue |
 | [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
 | [**patchRoutingQueueUsers**](RoutingAPI.html#patchRoutingQueueUsers) | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**patchRoutingSettingsContactcenter**](RoutingAPI.html#patchRoutingSettingsContactcenter) | Update Contact Center Settings |
@@ -69,6 +74,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingEmailDomainTestconnection**](RoutingAPI.html#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this domain |
 | [**postRoutingEmailDomains**](RoutingAPI.html#postRoutingEmailDomains) | Create a domain |
 | [**postRoutingLanguages**](RoutingAPI.html#postRoutingLanguages) | Create Language |
+| [**postRoutingQueueMembers**](RoutingAPI.html#postRoutingQueueMembers) | Bulk add or delete up to 100 queue members |
 | [**postRoutingQueueUsers**](RoutingAPI.html#postRoutingQueueUsers) | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**postRoutingQueueWrapupcodes**](RoutingAPI.html#postRoutingQueueWrapupcodes) | Add up to 100 wrap-up codes to a queue |
 | [**postRoutingQueues**](RoutingAPI.html#postRoutingQueues) | Create a queue |
@@ -248,11 +254,65 @@ RoutingAPI.deleteRoutingQueue(queueId: queueId, forceDelete: forceDelete) { (err
 
 `nil` (empty response body)
 
+<a name="deleteRoutingQueueMember"></a>
+
+# **deleteRoutingQueueMember**
+
+
+
+> Void deleteRoutingQueueMember(queueId, memberId)
+
+Delete a queue member.
+
+
+
+Wraps DELETE /api/v2/routing/queues/{queueId}/members/{memberId}  
+
+Requires ANY permissions: 
+
+* routing:queue:edit
+* routing:queueMember:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let memberId: String = "" // Member ID
+
+// Code example
+RoutingAPI.deleteRoutingQueueMember(queueId: queueId, memberId: memberId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingQueueMember was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **memberId** | **String**| Member ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="deleteRoutingQueueUser"></a>
 
 # **deleteRoutingQueueUser**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > Void deleteRoutingQueueUser(queueId, memberId)
 
@@ -1228,7 +1288,7 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp"), webmessaging ("webmessaging") |
+| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 {: class="table-striped"}
@@ -1398,11 +1458,86 @@ RoutingAPI.getRoutingQueueMediatypeEstimatedwaittime(queueId: queueId, mediaType
 
 [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html)
 
+<a name="getRoutingQueueMembers"></a>
+
+# **getRoutingQueueMembers**
+
+
+
+> [QueueMemberEntityListing](QueueMemberEntityListing.html) getRoutingQueueMembers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence)
+
+Get the members of this queue.
+
+
+
+Wraps GET /api/v2/routing/queues/{queueId}/members  
+
+Requires ANY permissions: 
+
+* routing:queue:view
+* routing:queueMember:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let pageSize: Int = 25 // Page size [max 100]
+let pageNumber: Int = 1 // Page number
+let sortBy: String = "name" // Sort by
+let expand: [String] = [RoutingAPI.Expand_getRoutingQueueMembers.enummember.rawValue] // Which fields, if any, to expand.
+let joined: Bool = true // Filter by joined status
+let name: String = "" // Filter by queue member name
+let profileSkills: [String] = [""] // Filter by profile skill
+let skills: [String] = [""] // Filter by skill
+let languages: [String] = [""] // Filter by language
+let routingStatus: [String] = [""] // Filter by routing status
+let presence: [String] = [""] // Filter by presence
+
+// Code example
+RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingQueueMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **pageSize** | **Int**| Page size [max 100] | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **joined** | **Bool**| Filter by joined status | [optional] |
+| **name** | **String**| Filter by queue member name | [optional] |
+| **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
+| **skills** | [**[String]**](String.html)| Filter by skill | [optional] |
+| **languages** | [**[String]**](String.html)| Filter by language | [optional] |
+| **routingStatus** | [**[String]**](String.html)| Filter by routing status | [optional] |
+| **presence** | [**[String]**](String.html)| Filter by presence | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
 <a name="getRoutingQueueUsers"></a>
 
 # **getRoutingQueueUsers**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [QueueMemberEntityListing](QueueMemberEntityListing.html) getRoutingQueueUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence)
 
@@ -2748,11 +2883,177 @@ RoutingAPI.patchRoutingEmailDomain(domainId: domainId, body: body) { (response, 
 
 [**InboundDomain**](InboundDomain.html)
 
+<a name="patchRoutingEmailDomainValidate"></a>
+
+# **patchRoutingEmailDomainValidate**
+
+
+
+> [InboundDomain](InboundDomain.html) patchRoutingEmailDomainValidate(domainId, body)
+
+Validate domain settings
+
+
+
+Wraps PATCH /api/v2/routing/email/domains/{domainId}/validate  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+let body: InboundDomainPatchRequest = new InboundDomainPatchRequest(...) // Domain settings
+
+// Code example
+RoutingAPI.patchRoutingEmailDomainValidate(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingEmailDomainValidate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+| **body** | [**InboundDomainPatchRequest**](InboundDomainPatchRequest.html)| Domain settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**InboundDomain**](InboundDomain.html)
+
+<a name="patchRoutingQueueMember"></a>
+
+# **patchRoutingQueueMember**
+
+
+
+> [QueueMember](QueueMember.html) patchRoutingQueueMember(queueId, memberId, body)
+
+Update the ring number OR joined status for a queue member.
+
+
+
+Wraps PATCH /api/v2/routing/queues/{queueId}/members/{memberId}  
+
+Requires ANY permissions: 
+
+* routing:queue:edit
+* routing:queueMember:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let memberId: String = "" // Member ID
+let body: QueueMember = new QueueMember(...) // Queue Member
+
+// Code example
+RoutingAPI.patchRoutingQueueMember(queueId: queueId, memberId: memberId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingQueueMember was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **memberId** | **String**| Member ID | |
+| **body** | [**QueueMember**](QueueMember.html)| Queue Member | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**QueueMember**](QueueMember.html)
+
+<a name="patchRoutingQueueMembers"></a>
+
+# **patchRoutingQueueMembers**
+
+
+
+> [QueueMemberEntityListing](QueueMemberEntityListing.html) patchRoutingQueueMembers(queueId, body)
+
+Join or unjoin a set of users for a queue
+
+
+
+Wraps PATCH /api/v2/routing/queues/{queueId}/members  
+
+Requires ANY permissions: 
+
+* routing:queue:edit
+* routing:queueMember:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let body: [QueueMember] = [new QueueMember(...)] // Queue Members
+
+// Code example
+RoutingAPI.patchRoutingQueueMembers(queueId: queueId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingQueueMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **body** | [**[QueueMember]**](QueueMember.html)| Queue Members | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
 <a name="patchRoutingQueueUser"></a>
 
 # **patchRoutingQueueUser**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [QueueMember](QueueMember.html) patchRoutingQueueUser(queueId, memberId, body)
 
@@ -2809,7 +3110,7 @@ RoutingAPI.patchRoutingQueueUser(queueId: queueId, memberId: memberId, body: bod
 
 # **patchRoutingQueueUsers**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [QueueMemberEntityListing](QueueMemberEntityListing.html) patchRoutingQueueUsers(queueId, body)
 
@@ -3455,11 +3756,68 @@ RoutingAPI.postRoutingLanguages(body: body) { (response, error) in
 
 [**Language**](Language.html)
 
+<a name="postRoutingQueueMembers"></a>
+
+# **postRoutingQueueMembers**
+
+
+
+> String postRoutingQueueMembers(queueId, body, delete)
+
+Bulk add or delete up to 100 queue members
+
+
+
+Wraps POST /api/v2/routing/queues/{queueId}/members  
+
+Requires ANY permissions: 
+
+* routing:queue:edit
+* routing:queueMember:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let body: [WritableEntity] = [new WritableEntity(...)] // Queue Members
+let delete: Bool = false // True to delete queue members
+
+// Code example
+RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingQueueMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **body** | [**[WritableEntity]**](WritableEntity.html)| Queue Members | |
+| **delete** | **Bool**| True to delete queue members | [optional] [default to false] |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
+
 <a name="postRoutingQueueUsers"></a>
 
 # **postRoutingQueueUsers**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > String postRoutingQueueUsers(queueId, body, delete)
 

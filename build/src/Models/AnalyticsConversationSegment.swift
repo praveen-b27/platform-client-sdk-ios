@@ -46,6 +46,7 @@ public class AnalyticsConversationSegment: Codable {
         case converting = "converting"
         case uploading = "uploading"
         case sharing = "sharing"
+        case callback = "callback"
     }
     /** The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var segmentStart: Date?

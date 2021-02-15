@@ -99,6 +99,8 @@ public class ConversationAggregationQuery: Codable {
         case tagentresponsetime = "tAgentResponseTime"
         case talert = "tAlert"
         case tanswered = "tAnswered"
+        case tcallback = "tCallback"
+        case tcallbackcomplete = "tCallbackComplete"
         case tcontacting = "tContacting"
         case tdialing = "tDialing"
         case tflowout = "tFlowOut"

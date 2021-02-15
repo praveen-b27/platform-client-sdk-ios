@@ -85,6 +85,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case reachedMaximumAttemptOfRetry = "REACHED_MAXIMUM_ATTEMPT_OF_RETRY"
         case failedLongRunningExport = "FAILED_LONG_RUNNING_EXPORT"
         case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
+        case notAuthorizedToViewExport = "NOT_AUTHORIZED_TO_VIEW_EXPORT"
     }
     public var _id: String?
     public var runId: String?

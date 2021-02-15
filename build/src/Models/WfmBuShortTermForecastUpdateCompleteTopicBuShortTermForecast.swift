@@ -29,8 +29,9 @@ public class WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast: Codab
     public var planningGroupsVersion: Int?
     public var weekCount: Int?
     public var metadata: WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata?
+    public var canUseForScheduling: Bool?
 
-    public init(_id: String?, weekDate: String?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, referenceStartDate: Date?, sourceDays: [WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer]?, modifications: [WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification]?, timeZone: String?, planningGroupsVersion: Int?, weekCount: Int?, metadata: WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata?) {
+    public init(_id: String?, weekDate: String?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, referenceStartDate: Date?, sourceDays: [WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer]?, modifications: [WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification]?, timeZone: String?, planningGroupsVersion: Int?, weekCount: Int?, metadata: WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata?, canUseForScheduling: Bool?) {
         
         self._id = _id
         
@@ -56,6 +57,8 @@ public class WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast: Codab
         
         self.metadata = metadata
         
+        self.canUseForScheduling = canUseForScheduling
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -71,6 +74,7 @@ public class WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast: Codab
         case planningGroupsVersion
         case weekCount
         case metadata
+        case canUseForScheduling
     }
 
 

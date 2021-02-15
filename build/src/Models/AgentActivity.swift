@@ -24,10 +24,11 @@ public class AgentActivity: Codable {
     public var highestCriticalScore: Float?
     public var lowestCriticalScore: Float?
     public var agentEvaluatorActivityList: [AgentEvaluatorActivity]?
+    public var numEvaluationsWithoutViewPermission: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, agent: User?, numEvaluations: Int?, averageEvaluationScore: Int?, numCriticalEvaluations: Int?, averageCriticalScore: Float?, highestEvaluationScore: Float?, lowestEvaluationScore: Float?, highestCriticalScore: Float?, lowestCriticalScore: Float?, agentEvaluatorActivityList: [AgentEvaluatorActivity]?, selfUri: String?) {
+    public init(_id: String?, name: String?, agent: User?, numEvaluations: Int?, averageEvaluationScore: Int?, numCriticalEvaluations: Int?, averageCriticalScore: Float?, highestEvaluationScore: Float?, lowestEvaluationScore: Float?, highestCriticalScore: Float?, lowestCriticalScore: Float?, agentEvaluatorActivityList: [AgentEvaluatorActivity]?, numEvaluationsWithoutViewPermission: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -53,6 +54,8 @@ public class AgentActivity: Codable {
         
         self.agentEvaluatorActivityList = agentEvaluatorActivityList
         
+        self.numEvaluationsWithoutViewPermission = numEvaluationsWithoutViewPermission
+        
         self.selfUri = selfUri
         
     }
@@ -70,6 +73,7 @@ public class AgentActivity: Codable {
         case highestCriticalScore
         case lowestCriticalScore
         case agentEvaluatorActivityList
+        case numEvaluationsWithoutViewPermission
         case selfUri
     }
 

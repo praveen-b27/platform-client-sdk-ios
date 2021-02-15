@@ -11,11 +11,16 @@ import Foundation
 
 public class RecordingSettings: Codable {
 
+    /** Maximum number of simultaneous screen recording streams */
     public var maxSimultaneousStreams: Int?
+    /** Upper limit that maxSimultaneousStreams can be configured */
+    public var maxConfigurableScreenRecordingStreams: Int?
 
-    public init(maxSimultaneousStreams: Int?) {
+    public init(maxSimultaneousStreams: Int?, maxConfigurableScreenRecordingStreams: Int?) {
         
         self.maxSimultaneousStreams = maxSimultaneousStreams
+        
+        self.maxConfigurableScreenRecordingStreams = maxConfigurableScreenRecordingStreams
         
     }
 

@@ -30,7 +30,6 @@ public class TranscriptAggregateQueryPredicate: Codable {
         case messagetype = "messageType"
         case queueid = "queueId"
         case teamid = "teamId"
-        case topic = "topic"
         case userid = "userId"
     }
     public enum Operator: String, Codable { 

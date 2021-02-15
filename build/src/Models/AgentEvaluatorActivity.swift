@@ -18,10 +18,11 @@ public class AgentEvaluatorActivity: Codable {
     public var evaluator: User?
     public var numEvaluations: Int?
     public var averageEvaluationScore: Int?
+    public var numEvaluationsWithoutViewPermission: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, agent: User?, evaluator: User?, numEvaluations: Int?, averageEvaluationScore: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, agent: User?, evaluator: User?, numEvaluations: Int?, averageEvaluationScore: Int?, numEvaluationsWithoutViewPermission: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -35,6 +36,8 @@ public class AgentEvaluatorActivity: Codable {
         
         self.averageEvaluationScore = averageEvaluationScore
         
+        self.numEvaluationsWithoutViewPermission = numEvaluationsWithoutViewPermission
+        
         self.selfUri = selfUri
         
     }
@@ -46,6 +49,7 @@ public class AgentEvaluatorActivity: Codable {
         case evaluator
         case numEvaluations
         case averageEvaluationScore
+        case numEvaluationsWithoutViewPermission
         case selfUri
     }
 

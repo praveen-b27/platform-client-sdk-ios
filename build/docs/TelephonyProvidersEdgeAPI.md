@@ -49,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesDid) | Get a DID by ID. |
 | [**getTelephonyProvidersEdgesDidpool**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesDidpool) | Get a DID Pool by ID. |
 | [**getTelephonyProvidersEdgesDidpools**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesDidpools) | Get a listing of DID Pools |
+| [**getTelephonyProvidersEdgesDidpoolsDids**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesDidpoolsDids) | Get a listing of unassigned and/or assigned numbers in a set of DID Pools. |
 | [**getTelephonyProvidersEdgesDids**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesDids) | Get a listing of DIDs |
 | [**getTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesEdgegroup) | Get edge group. |
 | [**getTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesEdgegroupEdgetrunkbase) | Gets the edge trunk base associated with the edge group |
@@ -2368,6 +2369,68 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpools(pageSize: pageSize,
 ### Return type
 
 [**DIDPoolEntityListing**](DIDPoolEntityListing.html)
+
+<a name="getTelephonyProvidersEdgesDidpoolsDids"></a>
+
+# **getTelephonyProvidersEdgesDidpoolsDids**
+
+
+
+> [DIDNumberEntityListing](DIDNumberEntityListing.html) getTelephonyProvidersEdgesDidpoolsDids(type, _id, numberMatch, pageSize, pageNumber, sortOrder)
+
+Get a listing of unassigned and/or assigned numbers in a set of DID Pools.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/didpools/dids  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let type: TelephonyProvidersEdgeAPI.ModelType_getTelephonyProvidersEdgesDidpoolsDids = TelephonyProvidersEdgeAPI.ModelType_getTelephonyProvidersEdgesDidpoolsDids.enummember // The type of numbers to return.
+let _id: [String] = [""] // Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned.
+let numberMatch: String = "" // A number to filter the results by.
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortOrder: String = "ascending" // Sort order
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpoolsDids(type: type, _id: _id, numberMatch: numberMatch, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesDidpoolsDids was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **type** | **String**| The type of numbers to return. |<br />**Values**: assignedAndUnassigned ("ASSIGNED_AND_UNASSIGNED"), unassigned ("UNASSIGNED") |
+| **_id** | [**[String]**](String.html)| Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned. | [optional] |
+| **numberMatch** | **String**| A number to filter the results by. | [optional] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DIDNumberEntityListing**](DIDNumberEntityListing.html)
 
 <a name="getTelephonyProvidersEdgesDids"></a>
 

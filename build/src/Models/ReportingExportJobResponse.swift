@@ -76,6 +76,9 @@ public class ReportingExportJobResponse: Codable {
         case agentDevelopmentDetailView = "AGENT_DEVELOPMENT_DETAIL_VIEW"
         case agentDevelopmentDetailMeView = "AGENT_DEVELOPMENT_DETAIL_ME_VIEW"
         case agentDevelopmentSummaryView = "AGENT_DEVELOPMENT_SUMMARY_VIEW"
+        case agentPerformanceMeView = "AGENT_PERFORMANCE_ME_VIEW"
+        case agentStatusMeView = "AGENT_STATUS_ME_VIEW"
+        case agentEvaluationMeView = "AGENT_EVALUATION_ME_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"
@@ -91,6 +94,7 @@ public class ReportingExportJobResponse: Codable {
         case failedLongRunningExport = "FAILED_LONG_RUNNING_EXPORT"
         case tooManyRequestsFromAnOrganization = "TOO_MANY_REQUESTS_FROM_AN_ORGANIZATION"
         case failedAsExportFileSizeIsGreaterThan10mb = "FAILED_AS_EXPORT_FILE_SIZE_IS_GREATER_THAN_10MB"
+        case notAuthorizedToViewExport = "NOT_AUTHORIZED_TO_VIEW_EXPORT"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"

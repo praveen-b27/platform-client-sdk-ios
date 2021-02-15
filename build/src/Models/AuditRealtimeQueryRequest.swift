@@ -27,6 +27,7 @@ public class AuditRealtimeQueryRequest: Codable {
         case groups = "Groups"
         case telephony = "Telephony"
         case outbound = "Outbound"
+        case speechAndTextAnalytics = "SpeechAndTextAnalytics"
     }
     /** Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?

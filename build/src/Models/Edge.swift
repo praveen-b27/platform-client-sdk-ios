@@ -98,7 +98,9 @@ public class Edge: Codable {
     public var physicalEdge: Bool?
     public var managed: Bool?
     public var edgeDeploymentType: EdgeDeploymentType?
+    /** The current state of the Edge&#39;s call draining process before it can be safely rebooted or updated. */
     public var callDrainingState: CallDrainingState?
+    /** The remaining number of conversations the Edge has to drain before it can be safely rebooted or updated. When an Edge is not draining conversations, this will be NULL or 0. */
     public var conversationCount: Int?
     /** Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed. */
     public var proxy: String?

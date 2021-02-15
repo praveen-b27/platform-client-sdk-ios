@@ -19,6 +19,7 @@ title: WfmBuShortTermForecastImportCompleteTopicBuShortTermForecast
 | **planningGroupsVersion** | **Int** |  | [optional] |
 | **weekCount** | **Int** |  | [optional] |
 | **metadata** | [**WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata**](WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata.html) |  | [optional] |
+| **canUseForScheduling** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

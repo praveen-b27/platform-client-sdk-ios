@@ -21,9 +21,9 @@ public class SendAgentlessOutboundMessageRequest: Codable {
     }
     /** The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. */
     public var fromAddress: String?
-    /** The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234 */
+    /** The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. */
     public var toAddress: String?
-    /** The recipient messaging address messenger type. */
+    /** The recipient messaging address messenger type. Currently SMS is the only supported type. */
     public var toAddressMessengerType: ToAddressMessengerType?
     /** The text of the message to send */
     public var textBody: String?

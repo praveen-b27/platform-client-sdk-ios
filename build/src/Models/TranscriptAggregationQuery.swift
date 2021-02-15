@@ -25,7 +25,6 @@ public class TranscriptAggregationQuery: Codable {
         case messagetype = "messageType"
         case queueid = "queueId"
         case teamid = "teamId"
-        case topic = "topic"
         case userid = "userId"
     }
     public enum Metrics: String, Codable { 

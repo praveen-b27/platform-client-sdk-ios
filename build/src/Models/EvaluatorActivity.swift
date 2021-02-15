@@ -21,10 +21,11 @@ public class EvaluatorActivity: Codable {
     public var numCalibrationsAssigned: Int?
     public var numCalibrationsStarted: Int?
     public var numCalibrationsCompleted: Int?
+    public var numEvaluationsWithoutViewPermission: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, evaluator: User?, numEvaluationsAssigned: Int?, numEvaluationsStarted: Int?, numEvaluationsCompleted: Int?, numCalibrationsAssigned: Int?, numCalibrationsStarted: Int?, numCalibrationsCompleted: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, evaluator: User?, numEvaluationsAssigned: Int?, numEvaluationsStarted: Int?, numEvaluationsCompleted: Int?, numCalibrationsAssigned: Int?, numCalibrationsStarted: Int?, numCalibrationsCompleted: Int?, numEvaluationsWithoutViewPermission: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -44,6 +45,8 @@ public class EvaluatorActivity: Codable {
         
         self.numCalibrationsCompleted = numCalibrationsCompleted
         
+        self.numEvaluationsWithoutViewPermission = numEvaluationsWithoutViewPermission
+        
         self.selfUri = selfUri
         
     }
@@ -58,6 +61,7 @@ public class EvaluatorActivity: Codable {
         case numCalibrationsAssigned
         case numCalibrationsStarted
         case numCalibrationsCompleted
+        case numEvaluationsWithoutViewPermission
         case selfUri
     }
 

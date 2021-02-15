@@ -19,6 +19,7 @@ public class WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadReques
         case failed = "Failed"
         case cancelled = "Cancelled"
         case purged = "Purged"
+        case purgePending = "PurgePending"
     }
     public var requestId: String?
     public var dateImportStarted: WfmHistoricalDataUploadRequestStatusTopicDateTime?

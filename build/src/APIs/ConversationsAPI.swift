@@ -22298,18 +22298,15 @@ open class ConversationsAPI {
     
     
     
-    
-    
     /**
      
      Create a Facebook Integration
      
      - parameter body: (body) FacebookIntegrationRequest 
-     - parameter async: (query) Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsFacebook(body: FacebookIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: FacebookIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: body, async: async)
+    open class func postConversationsMessagingIntegrationsFacebook(body: FacebookIntegrationRequest, completion: @escaping ((_ data: FacebookIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<FacebookIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -22375,23 +22372,17 @@ open class ConversationsAPI {
 }}]
      
      - parameter body: (body) FacebookIntegrationRequest 
-     - parameter async: (query) Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<FacebookIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: FacebookIntegrationRequest, async: Bool? = nil) -> RequestBuilder<FacebookIntegration> {
+    open class func postConversationsMessagingIntegrationsFacebookWithRequestBuilder(body: FacebookIntegrationRequest) -> RequestBuilder<FacebookIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/facebook"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "async": async
-            
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FacebookIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -22401,18 +22392,15 @@ open class ConversationsAPI {
     
     
     
-    
-    
     /**
      
      Create a LINE messenger Integration
      
      - parameter body: (body) LineIntegrationRequest 
-     - parameter async: (query) Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsLine(body: LineIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: LineIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsLineWithRequestBuilder(body: body, async: async)
+    open class func postConversationsMessagingIntegrationsLine(body: LineIntegrationRequest, completion: @escaping ((_ data: LineIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsLineWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<LineIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -22478,23 +22466,17 @@ open class ConversationsAPI {
 }}]
      
      - parameter body: (body) LineIntegrationRequest 
-     - parameter async: (query) Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<LineIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsLineWithRequestBuilder(body: LineIntegrationRequest, async: Bool? = nil) -> RequestBuilder<LineIntegration> {
+    open class func postConversationsMessagingIntegrationsLineWithRequestBuilder(body: LineIntegrationRequest) -> RequestBuilder<LineIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/line"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "async": async
-            
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LineIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -22504,18 +22486,15 @@ open class ConversationsAPI {
     
     
     
-    
-    
     /**
      
      Create a Twitter Integration
      
      - parameter body: (body) TwitterIntegrationRequest 
-     - parameter async: (query) Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsTwitter(body: TwitterIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: TwitterIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: body, async: async)
+    open class func postConversationsMessagingIntegrationsTwitter(body: TwitterIntegrationRequest, completion: @escaping ((_ data: TwitterIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<TwitterIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -22585,23 +22564,17 @@ open class ConversationsAPI {
 }}]
      
      - parameter body: (body) TwitterIntegrationRequest 
-     - parameter async: (query) Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<TwitterIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: TwitterIntegrationRequest, async: Bool? = nil) -> RequestBuilder<TwitterIntegration> {
+    open class func postConversationsMessagingIntegrationsTwitterWithRequestBuilder(body: TwitterIntegrationRequest) -> RequestBuilder<TwitterIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/twitter"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "async": async
-            
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TwitterIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -22611,18 +22584,15 @@ open class ConversationsAPI {
     
     
     
-    
-    
     /**
      
      Create a WhatsApp Integration
      
      - parameter body: (body) WhatsAppIntegrationRequest 
-     - parameter async: (query) Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postConversationsMessagingIntegrationsWhatsapp(body: WhatsAppIntegrationRequest, async: Bool? = nil, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: body, async: async)
+    open class func postConversationsMessagingIntegrationsWhatsapp(body: WhatsAppIntegrationRequest, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<WhatsAppIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -22689,23 +22659,17 @@ open class ConversationsAPI {
 }}]
      
      - parameter body: (body) WhatsAppIntegrationRequest 
-     - parameter async: (query) Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. (optional, default to false)
 
      - returns: RequestBuilder<WhatsAppIntegration> 
      */
-    open class func postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: WhatsAppIntegrationRequest, async: Bool? = nil) -> RequestBuilder<WhatsAppIntegration> {
+    open class func postConversationsMessagingIntegrationsWhatsappWithRequestBuilder(body: WhatsAppIntegrationRequest) -> RequestBuilder<WhatsAppIntegration> {
         let path = "/api/v2/conversations/messaging/integrations/whatsapp"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "async": async
-            
-        ])
+        let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

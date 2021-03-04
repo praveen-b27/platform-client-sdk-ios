@@ -9,6 +9,7 @@ title: AvailableTopic
 |------------ | ------------- | ------------- | -------------|
 | **_description** | **String** |  | [optional] |
 | **_id** | **String** |  | [optional] |
+| **permissionDetails** | [**[PermissionDetails]**](PermissionDetails.html) | Full detailed permissions required to subscribe to the topic | [optional] |
 | **requiresPermissions** | **[String]** | Permissions required to subscribe to the topic | [optional] |
 | **requiresDivisionPermissions** | **Bool** | True if the subscribing user must belong to the same division as the topic object ID | [optional] |
 | **enforced** | **Bool** | Whether or not the permissions on this topic are enforced | [optional] |

@@ -3176,7 +3176,7 @@ ArchitectAPI.getFlowsDatatableRows(datatableId: datatableId, pageNumber: pageNum
 
 
 
-> [DataTablesDomainEntityListing](DataTablesDomainEntityListing.html) getFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder)
+> [DataTablesDomainEntityListing](DataTablesDomainEntityListing.html) getFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId)
 
 Retrieve a list of datatables for the org
 
@@ -3201,9 +3201,10 @@ let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
 let sortBy: ArchitectAPI.SortBy_getFlowsDatatables = ArchitectAPI.SortBy_getFlowsDatatables.enummember // Sort by
 let sortOrder: String = "ascending" // Sort order
+let divisionId: [String] = [""] // division ID(s)
 
 // Code example
-ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3223,6 +3224,7 @@ ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **sortBy** | **String**| Sort by | [optional] [default to id]<br />**Values**: _id ("id"), name ("name") |
 | **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
+| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
 {: class="table-striped"}
 
 

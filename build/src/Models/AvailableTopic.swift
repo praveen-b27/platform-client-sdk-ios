@@ -22,6 +22,8 @@ public class AvailableTopic: Codable {
     }
     public var _description: String?
     public var _id: String?
+    /** Full detailed permissions required to subscribe to the topic */
+    public var permissionDetails: [PermissionDetails]?
     /** Permissions required to subscribe to the topic */
     public var requiresPermissions: [String]?
     /** True if the subscribing user must belong to the same division as the topic object ID */
@@ -39,11 +41,13 @@ public class AvailableTopic: Codable {
     public var transports: [Transports]?
     public var publicApiTemplateUriPaths: [String]?
 
-    public init(_description: String?, _id: String?, requiresPermissions: [String]?, requiresDivisionPermissions: Bool?, enforced: Bool?, visibility: Visibility?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?, publicApiTemplateUriPaths: [String]?) {
+    public init(_description: String?, _id: String?, permissionDetails: [PermissionDetails]?, requiresPermissions: [String]?, requiresDivisionPermissions: Bool?, enforced: Bool?, visibility: Visibility?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?, publicApiTemplateUriPaths: [String]?) {
         
         self._description = _description
         
         self._id = _id
+        
+        self.permissionDetails = permissionDetails
         
         self.requiresPermissions = requiresPermissions
         
@@ -68,6 +72,7 @@ public class AvailableTopic: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _description = "description"
         case _id = "id"
+        case permissionDetails
         case requiresPermissions
         case requiresDivisionPermissions
         case enforced

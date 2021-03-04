@@ -11,6 +11,7 @@ Management Unit object for Workforce Management
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **businessUnit** | [**BusinessUnitReference**](BusinessUnitReference.html) | The business unit to which this management unit belongs | [optional] |
 | **startDayOfWeek** | **String** | Start day of week for scheduling and forecasting purposes. Moving to Business Unit | [optional] |
 | **timeZone** | **String** | The time zone for the management unit in standard Olson format.  Moving to Business Unit | [optional] |
 | **settings** | [**ManagementUnitSettingsResponse**](ManagementUnitSettingsResponse.html) | The configuration settings for this management unit | [optional] |

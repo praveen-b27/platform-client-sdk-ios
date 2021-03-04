@@ -9267,19 +9267,12 @@ open class RoutingAPI {
      - parameter delete: (query) True to delete queue members (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingQueueMembers(queueId: String, body: [WritableEntity], delete: Bool? = nil, completion: @escaping ((_ data: String?,_ error: Error?) -> Void)) {
+    open class func postRoutingQueueMembers(queueId: String, body: [WritableEntity], delete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingQueueMembersWithRequestBuilder(queueId: queueId, body: body, delete: delete)
-        requestBuilder.execute { (response: Response<String>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
                 completion(nil, error)
             }
         }
@@ -9294,15 +9287,14 @@ open class RoutingAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="aeiou"}]
      
      - parameter queueId: (path) Queue ID 
      - parameter body: (body) Queue Members 
      - parameter delete: (query) True to delete queue members (optional, default to false)
 
-     - returns: RequestBuilder<String> 
+     - returns: RequestBuilder<Void> 
      */
-    open class func postRoutingQueueMembersWithRequestBuilder(queueId: String, body: [WritableEntity], delete: Bool? = nil) -> RequestBuilder<String> {
+    open class func postRoutingQueueMembersWithRequestBuilder(queueId: String, body: [WritableEntity], delete: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/api/v2/routing/queues/{queueId}/members"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9319,7 +9311,7 @@ open class RoutingAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -9340,19 +9332,12 @@ open class RoutingAPI {
      - parameter delete: (query) True to delete queue members (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingQueueUsers(queueId: String, body: [WritableEntity], delete: Bool? = nil, completion: @escaping ((_ data: String?,_ error: Error?) -> Void)) {
+    open class func postRoutingQueueUsers(queueId: String, body: [WritableEntity], delete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         let requestBuilder = postRoutingQueueUsersWithRequestBuilder(queueId: queueId, body: body, delete: delete)
-        requestBuilder.execute { (response: Response<String>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
                 completion(nil, error)
             }
         }
@@ -9367,15 +9352,14 @@ open class RoutingAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="aeiou"}]
      
      - parameter queueId: (path) Queue ID 
      - parameter body: (body) Queue Members 
      - parameter delete: (query) True to delete queue members (optional, default to false)
 
-     - returns: RequestBuilder<String> 
+     - returns: RequestBuilder<Void> 
      */
-    open class func postRoutingQueueUsersWithRequestBuilder(queueId: String, body: [WritableEntity], delete: Bool? = nil) -> RequestBuilder<String> {
+    open class func postRoutingQueueUsersWithRequestBuilder(queueId: String, body: [WritableEntity], delete: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/api/v2/routing/queues/{queueId}/users"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9392,7 +9376,7 @@ open class RoutingAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

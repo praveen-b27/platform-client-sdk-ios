@@ -28,6 +28,7 @@ public class AuditLogMessage: Codable {
         case telephony = "Telephony"
         case outbound = "Outbound"
         case speechAndTextAnalytics = "SpeechAndTextAnalytics"
+        case routing = "Routing"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -129,8 +130,14 @@ public class AuditLogMessage: Codable {
         case dnclist = "DNCList"
         case callAnalysisResponseSet = "CallAnalysisResponseSet"
         case ruleSet = "RuleSet"
+        case campaignSchedule = "CampaignSchedule"
+        case sequenceSchedule = "SequenceSchedule"
+        case organizationProperties = "OrganizationProperties"
+        case wrapUpCodeMapping = "WrapUpCodeMapping"
+        case messagingCampaign = "MessagingCampaign"
         case transcriptionSettings = "TranscriptionSettings"
         case speechTextAnalyticsSettings = "SpeechTextAnalyticsSettings"
+        case predictor = "Predictor"
     }
     /** Id of the audit message. */
     public var _id: String?

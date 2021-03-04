@@ -3762,7 +3762,7 @@ RoutingAPI.postRoutingLanguages(body: body) { (response, error) in
 
 
 
-> String postRoutingQueueMembers(queueId, body, delete)
+> Void postRoutingQueueMembers(queueId, body, delete)
 
 Bulk add or delete up to 100 queue members
 
@@ -3788,12 +3788,11 @@ let body: [WritableEntity] = [new WritableEntity(...)] // Queue Members
 let delete: Bool = false // True to delete queue members
 
 // Code example
-RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete) { (response, error) in
+RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("RoutingAPI.postRoutingQueueMembers was successful")
-        dump(response)
     }
 }
 ```
@@ -3811,7 +3810,7 @@ RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete)
 
 ### Return type
 
-**String**
+`nil` (empty response body)
 
 <a name="postRoutingQueueUsers"></a>
 
@@ -3819,7 +3818,7 @@ RoutingAPI.postRoutingQueueMembers(queueId: queueId, body: body, delete: delete)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> String postRoutingQueueUsers(queueId, body, delete)
+> Void postRoutingQueueUsers(queueId, body, delete)
 
 DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
 
@@ -3845,12 +3844,11 @@ let body: [WritableEntity] = [new WritableEntity(...)] // Queue Members
 let delete: Bool = false // True to delete queue members
 
 // Code example
-RoutingAPI.postRoutingQueueUsers(queueId: queueId, body: body, delete: delete) { (response, error) in
+RoutingAPI.postRoutingQueueUsers(queueId: queueId, body: body, delete: delete) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("RoutingAPI.postRoutingQueueUsers was successful")
-        dump(response)
     }
 }
 ```
@@ -3868,7 +3866,7 @@ RoutingAPI.postRoutingQueueUsers(queueId: queueId, body: body, delete: delete) {
 
 ### Return type
 
-**String**
+`nil` (empty response body)
 
 <a name="postRoutingQueueWrapupcodes"></a>
 

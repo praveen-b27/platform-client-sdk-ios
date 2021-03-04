@@ -21,10 +21,12 @@ public class TranscriptAggregationQuery: Codable {
         case divisionid = "divisionId"
         case dnis = "dnis"
         case flowid = "flowId"
+        case flowversion = "flowVersion"
         case mediatype = "mediaType"
         case messagetype = "messageType"
         case queueid = "queueId"
         case teamid = "teamId"
+        case topicid = "topicId"
         case userid = "userId"
     }
     public enum Metrics: String, Codable { 

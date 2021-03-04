@@ -31,7 +31,7 @@ public class CreateManagementUnitApiRequest: Codable {
     public var settings: CreateManagementUnitSettingsRequest?
     /** The id of the division to which this management unit belongs.  Defaults to home division ID */
     public var divisionId: String?
-    /** The id of the business unit to which this management unit belongs.  Required after business unit launch */
+    /** The id of the business unit to which this management unit belongs */
     public var businessUnitId: String?
 
     public init(name: String?, timeZone: String?, startDayOfWeek: StartDayOfWeek?, settings: CreateManagementUnitSettingsRequest?, divisionId: String?, businessUnitId: String?) {

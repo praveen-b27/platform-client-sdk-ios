@@ -26,6 +26,8 @@ public class ManagementUnit: Codable {
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
+    /** The business unit to which this management unit belongs */
+    public var businessUnit: BusinessUnitReference?
     /** Start day of week for scheduling and forecasting purposes. Moving to Business Unit */
     public var startDayOfWeek: StartDayOfWeek?
     /** The time zone for the management unit in standard Olson format.  Moving to Business Unit */
@@ -43,13 +45,15 @@ public class ManagementUnit: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, businessUnit: BusinessUnitReference?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.division = division
+        
+        self.businessUnit = businessUnit
         
         self.startDayOfWeek = startDayOfWeek
         
@@ -73,6 +77,7 @@ public class ManagementUnit: Codable {
         case _id = "id"
         case name
         case division
+        case businessUnit
         case startDayOfWeek
         case timeZone
         case settings

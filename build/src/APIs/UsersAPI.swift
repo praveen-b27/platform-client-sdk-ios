@@ -6592,7 +6592,7 @@ open class UsersAPI {
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter types: (query) Specifies the activity types. (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
-     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getUsersDevelopmentActivities(userId: [String]? = nil, moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivities? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivities? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
@@ -6661,7 +6661,7 @@ open class UsersAPI {
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter types: (query) Specifies the activity types. (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
-     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
 
      - returns: RequestBuilder<DevelopmentActivityListing> 
      */
@@ -6775,7 +6775,7 @@ open class UsersAPI {
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter types: (query) Specifies the activity types. (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
-     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getUsersDevelopmentActivitiesMe(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getUsersDevelopmentActivitiesMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getUsersDevelopmentActivitiesMe? = nil, types: [String]? = nil, statuses: [String]? = nil, relationship: [String]? = nil, completion: @escaping ((_ data: DevelopmentActivityListing?,_ error: Error?) -> Void)) {
@@ -6843,7 +6843,7 @@ open class UsersAPI {
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter types: (query) Specifies the activity types. (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
-     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only those that have the specified relationship. If not specified, all relationships are returned. (optional)
+     - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
 
      - returns: RequestBuilder<DevelopmentActivityListing> 
      */

@@ -21,8 +21,10 @@ public class RoutingData: Codable {
     public var skillIds: [String]?
     /** A list of agents to be preferred in routing */
     public var preferredAgentIds: [String]?
+    /** A list of scored agents for routing decisions */
+    public var scoredAgents: [ScoredAgent]?
 
-    public init(queueId: String?, languageId: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?) {
+    public init(queueId: String?, languageId: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?) {
         
         self.queueId = queueId
         
@@ -33,6 +35,8 @@ public class RoutingData: Codable {
         self.skillIds = skillIds
         
         self.preferredAgentIds = preferredAgentIds
+        
+        self.scoredAgents = scoredAgents
         
     }
 

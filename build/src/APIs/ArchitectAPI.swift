@@ -8804,6 +8804,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "schema" : {
     "$schema" : "aeiou",
     "description" : "aeiou",
@@ -9378,6 +9383,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Retrieve a list of datatables for the org
@@ -9387,10 +9394,11 @@ open class ArchitectAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Sort by (optional, default to id)
      - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter divisionId: (query) division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlowsDatatables(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: DataTablesDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsDatatablesWithRequestBuilder(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getFlowsDatatables(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: DataTablesDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatablesWithRequestBuilder(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId)
         requestBuilder.execute { (response: Response<DataTablesDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -9421,6 +9429,11 @@ open class ArchitectAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "schema" : {
       "$schema" : "aeiou",
       "description" : "aeiou",
@@ -9451,10 +9464,11 @@ open class ArchitectAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Sort by (optional, default to id)
      - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter divisionId: (query) division ID(s) (optional)
 
      - returns: RequestBuilder<DataTablesDomainEntityListing> 
      */
-    open class func getFlowsDatatablesWithRequestBuilder(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil) -> RequestBuilder<DataTablesDomainEntityListing> {
+    open class func getFlowsDatatablesWithRequestBuilder(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<DataTablesDomainEntityListing> {
         let path = "/api/v2/flows/datatables"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -9475,7 +9489,9 @@ open class ArchitectAPI {
             
             "sortBy": sortBy?.rawValue, 
             
-            "sortOrder": sortOrder
+            "sortOrder": sortOrder, 
+            
+            "divisionId": divisionId
             
         ])
 
@@ -16230,6 +16246,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "schema" : {
     "$schema" : "aeiou",
     "description" : "aeiou",
@@ -18069,6 +18090,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "schema" : {
     "$schema" : "aeiou",
     "description" : "aeiou",

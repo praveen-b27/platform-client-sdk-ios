@@ -17,6 +17,7 @@ title: WemLearningAssignmentTopicLearningAssignmentNotification
 | **dateCreated** | [**Date**](Date.html) |  | [optional] |
 | **modifiedBy** | [**WemLearningAssignmentTopicUserReference**](WemLearningAssignmentTopicUserReference.html) |  | [optional] |
 | **dateModified** | [**Date**](Date.html) |  | [optional] |
+| **isOverdue** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

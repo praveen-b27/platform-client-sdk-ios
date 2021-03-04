@@ -30,6 +30,10 @@ public class CreateWorkPlanShift: Codable {
     public var constrainLatestStopTime: Bool?
     /** Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true */
     public var latestStopTimeMinutesFromMidnight: Int?
+    /** Whether the earliest stop time constraint for the shift is enabled */
+    public var constrainEarliestStopTime: Bool?
+    /** This is the earliest time a shift can end */
+    public var earliestStopTimeMinutesFromMidnight: Int?
     /** Increment in offset minutes that would contribute to different possible start times for the shift. Used if flexibleStartTime == true */
     public var startIncrementMinutes: Int?
     /** Whether the paid time setting for the shift is flexible */
@@ -49,7 +53,7 @@ public class CreateWorkPlanShift: Codable {
     /** Activities configured for this shift */
     public var activities: [CreateWorkPlanActivity]?
 
-    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [CreateWorkPlanActivity]?) {
+    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [CreateWorkPlanActivity]?) {
         
         self.name = name
         
@@ -68,6 +72,10 @@ public class CreateWorkPlanShift: Codable {
         self.constrainLatestStopTime = constrainLatestStopTime
         
         self.latestStopTimeMinutesFromMidnight = latestStopTimeMinutesFromMidnight
+        
+        self.constrainEarliestStopTime = constrainEarliestStopTime
+        
+        self.earliestStopTimeMinutesFromMidnight = earliestStopTimeMinutesFromMidnight
         
         self.startIncrementMinutes = startIncrementMinutes
         

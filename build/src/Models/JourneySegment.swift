@@ -35,6 +35,8 @@ public class JourneySegment: Codable {
     public var context: Context?
     /** The pattern of rules defining the segment. */
     public var journey: Journey?
+    /** Details of an entity corresponding to this segment in an external system. */
+    public var externalSegment: ExternalSegment?
     /** Time, in days, from when the segment is assigned until it is automatically unassigned. */
     public var assignmentExpirationDays: Int?
     /** The URI for this object */
@@ -44,7 +46,7 @@ public class JourneySegment: Codable {
     /** Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
-    public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, scope: Scope?, shouldDisplayToAgent: Bool?, context: Context?, journey: Journey?, assignmentExpirationDays: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
+    public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, scope: Scope?, shouldDisplayToAgent: Bool?, context: Context?, journey: Journey?, externalSegment: ExternalSegment?, assignmentExpirationDays: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
         
         self._id = _id
         
@@ -65,6 +67,8 @@ public class JourneySegment: Codable {
         self.context = context
         
         self.journey = journey
+        
+        self.externalSegment = externalSegment
         
         self.assignmentExpirationDays = assignmentExpirationDays
         
@@ -87,6 +91,7 @@ public class JourneySegment: Codable {
         case shouldDisplayToAgent
         case context
         case journey
+        case externalSegment
         case assignmentExpirationDays
         case selfUri
         case createdDate

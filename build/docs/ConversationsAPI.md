@@ -7064,7 +7064,7 @@ ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, err
 
 
 
-> [FacebookIntegration](FacebookIntegration.html) postConversationsMessagingIntegrationsFacebook(body, async)
+> [FacebookIntegration](FacebookIntegration.html) postConversationsMessagingIntegrationsFacebook(body)
 
 Create a Facebook Integration
 
@@ -7085,10 +7085,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: FacebookIntegrationRequest = new FacebookIntegrationRequest(...) // FacebookIntegrationRequest
-let async: Bool = false // Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished.
 
 // Code example
-ConversationsAPI.postConversationsMessagingIntegrationsFacebook(body: body, async: async) { (response, error) in
+ConversationsAPI.postConversationsMessagingIntegrationsFacebook(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7104,7 +7103,6 @@ ConversationsAPI.postConversationsMessagingIntegrationsFacebook(body: body, asyn
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**FacebookIntegrationRequest**](FacebookIntegrationRequest.html)| FacebookIntegrationRequest | |
-| **async** | **Bool**| Create a Facebook integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Facebook integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -7118,7 +7116,7 @@ ConversationsAPI.postConversationsMessagingIntegrationsFacebook(body: body, asyn
 
 
 
-> [LineIntegration](LineIntegration.html) postConversationsMessagingIntegrationsLine(body, async)
+> [LineIntegration](LineIntegration.html) postConversationsMessagingIntegrationsLine(body)
 
 Create a LINE messenger Integration
 
@@ -7139,10 +7137,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: LineIntegrationRequest = new LineIntegrationRequest(...) // LineIntegrationRequest
-let async: Bool = false // Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished.
 
 // Code example
-ConversationsAPI.postConversationsMessagingIntegrationsLine(body: body, async: async) { (response, error) in
+ConversationsAPI.postConversationsMessagingIntegrationsLine(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7158,7 +7155,6 @@ ConversationsAPI.postConversationsMessagingIntegrationsLine(body: body, async: a
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest | |
-| **async** | **Bool**| Create a LINE integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new LINE integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -7172,7 +7168,7 @@ ConversationsAPI.postConversationsMessagingIntegrationsLine(body: body, async: a
 
 
 
-> [TwitterIntegration](TwitterIntegration.html) postConversationsMessagingIntegrationsTwitter(body, async)
+> [TwitterIntegration](TwitterIntegration.html) postConversationsMessagingIntegrationsTwitter(body)
 
 Create a Twitter Integration
 
@@ -7193,10 +7189,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest
-let async: Bool = false // Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished.
 
 // Code example
-ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body, async: async) { (response, error) in
+ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7212,7 +7207,6 @@ ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body, async
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest.html)| TwitterIntegrationRequest | |
-| **async** | **Bool**| Create a Twitter integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new Twitter integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -7226,7 +7220,7 @@ ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body, async
 
 
 
-> [WhatsAppIntegration](WhatsAppIntegration.html) postConversationsMessagingIntegrationsWhatsapp(body, async)
+> [WhatsAppIntegration](WhatsAppIntegration.html) postConversationsMessagingIntegrationsWhatsapp(body)
 
 Create a WhatsApp Integration
 
@@ -7247,10 +7241,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: WhatsAppIntegrationRequest = new WhatsAppIntegrationRequest(...) // WhatsAppIntegrationRequest
-let async: Bool = false // Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration's createStatus for Completed or Error to detect the create is finished.
 
 // Code example
-ConversationsAPI.postConversationsMessagingIntegrationsWhatsapp(body: body, async: async) { (response, error) in
+ConversationsAPI.postConversationsMessagingIntegrationsWhatsapp(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7266,7 +7259,6 @@ ConversationsAPI.postConversationsMessagingIntegrationsWhatsapp(body: body, asyn
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest.html)| WhatsAppIntegrationRequest | |
-| **async** | **Bool**| Create a WhatsApp integration in an asynchronous manner. If the parameter value is true, this initiates the generation of a new WhatsApp integration. An integration ID is returned, it can be used to query the integration. Check the integration&#39;s createStatus for Completed or Error to detect the create is finished. | [optional] [default to false] |
 {: class="table-striped"}
 
 

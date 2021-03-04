@@ -1274,6 +1274,11 @@ open class JourneyAPI {
       "eventName" : "aeiou"
     } ]
   },
+  "externalSegment" : {
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "source" : "aeiou"
+  },
   "displayName" : "aeiou",
   "selfUri" : "aeiou",
   "description" : "aeiou",
@@ -1390,6 +1395,11 @@ open class JourneyAPI {
         "sessionType" : "aeiou",
         "eventName" : "aeiou"
       } ]
+    },
+    "externalSegment" : {
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "source" : "aeiou"
     },
     "displayName" : "aeiou",
     "selfUri" : "aeiou",
@@ -1938,6 +1948,11 @@ open class JourneyAPI {
       "eventName" : "aeiou"
     } ]
   },
+  "externalSegment" : {
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "source" : "aeiou"
+  },
   "displayName" : "aeiou",
   "selfUri" : "aeiou",
   "description" : "aeiou",
@@ -2442,6 +2457,11 @@ open class JourneyAPI {
       "sessionType" : "aeiou",
       "eventName" : "aeiou"
     } ]
+  },
+  "externalSegment" : {
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "source" : "aeiou"
   },
   "displayName" : "aeiou",
   "selfUri" : "aeiou",

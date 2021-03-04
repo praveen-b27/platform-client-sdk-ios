@@ -69,12 +69,13 @@ open class NotificationsAPI {
     
     public enum Expand_getNotificationsAvailabletopics: String { 
         case _description = "description"
-        case requirespermissions = "requiresPermissions"
         case enforced = "enforced"
         case schema = "schema"
         case visibility = "visibility"
         case transports = "transports"
         case publicapitemplateuripaths = "publicApiTemplateUriPaths"
+        case requirespermissions = "requiresPermissions"
+        case permissiondetails = "permissionDetails"
     }
 
     
@@ -124,6 +125,12 @@ open class NotificationsAPI {
     "enforced" : true,
     "transports" : [ "aeiou" ],
     "requiresCurrentUser" : true,
+    "permissionDetails" : [ {
+      "enforced" : true,
+      "permissions" : [ "aeiou" ],
+      "type" : "aeiou",
+      "allowsCurrentUser" : true
+    } ],
     "visibility" : "aeiou",
     "requiresPermissions" : [ "aeiou" ],
     "requiresCurrentUserOrPermission" : true,

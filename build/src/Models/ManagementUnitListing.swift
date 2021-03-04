@@ -12,13 +12,21 @@ import Foundation
 public class ManagementUnitListing: Codable {
 
     public var entities: [ManagementUnit]?
+    /** Deprecated, paging is not supported */
     public var pageSize: Int?
+    /** Deprecated, paging is not supported */
     public var pageNumber: Int?
+    /** Deprecated, paging is not supported */
     public var total: Int64?
+    /** Deprecated, paging is not supported */
     public var firstUri: String?
+    /** Deprecated, paging is not supported */
     public var nextUri: String?
+    /** Deprecated, paging is not supported */
     public var pageCount: Int?
+    /** Deprecated, paging is not supported */
     public var lastUri: String?
+    /** Deprecated, paging is not supported */
     public var previousUri: String?
     public var selfUri: String?
 

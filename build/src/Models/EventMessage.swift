@@ -45,6 +45,7 @@ public class EventMessage: Codable {
         case dncAuthenticationFailure = "DNC_AUTHENTICATION_FAILURE"
         case exceededContactLimit = "EXCEEDED_CONTACT_LIMIT"
         case exceededDncRecordLimit = "EXCEEDED_DNC_RECORD_LIMIT"
+        case exceededDncPhoneNumberLength = "EXCEEDED_DNC_PHONE_NUMBER_LENGTH"
         case inactiveEdgesFailedPlaceCalls = "INACTIVE_EDGES_FAILED_PLACE_CALLS"
         case inactiveEdgesTurnedCampaignOff = "INACTIVE_EDGES_TURNED_CAMPAIGN_OFF"
         case invalidPhoneNumber = "INVALID_PHONE_NUMBER"

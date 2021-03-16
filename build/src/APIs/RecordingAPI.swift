@@ -3174,7 +3174,7 @@ open class RecordingAPI {
      
      - parameter conversationId: (path) Conversation ID 
      - parameter maxWaitMs: (query) The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)
-     - parameter formatId: (query) The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)
+     - parameter formatId: (query) The desired media format (optional, default to WEBM)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getConversationRecordings(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, completion: @escaping ((_ data: [Recording]?,_ error: Error?) -> Void)) {
@@ -3763,7 +3763,7 @@ open class RecordingAPI {
      
      - parameter conversationId: (path) Conversation ID 
      - parameter maxWaitMs: (query) The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)
-     - parameter formatId: (query) The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)
+     - parameter formatId: (query) The desired media format (optional, default to WEBM)
 
      - returns: RequestBuilder<[Recording]> 
      */

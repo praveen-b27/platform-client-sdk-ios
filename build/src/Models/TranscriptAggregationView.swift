@@ -13,7 +13,6 @@ public class TranscriptAggregationView: Codable {
 
     public enum Target: String, Codable { 
         case ntopiccommunications = "nTopicCommunications"
-        case ntopicsegments = "nTopicSegments"
         case ocustomersentiment = "oCustomerSentiment"
     }
     public enum Function: String, Codable { 

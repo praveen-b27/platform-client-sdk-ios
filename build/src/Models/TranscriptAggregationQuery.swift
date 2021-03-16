@@ -25,13 +25,13 @@ public class TranscriptAggregationQuery: Codable {
         case mediatype = "mediaType"
         case messagetype = "messageType"
         case queueid = "queueId"
+        case resultsby = "resultsBy"
         case teamid = "teamId"
         case topicid = "topicId"
         case userid = "userId"
     }
     public enum Metrics: String, Codable { 
         case ntopiccommunications = "nTopicCommunications"
-        case ntopicsegments = "nTopicSegments"
         case ocustomersentiment = "oCustomerSentiment"
     }
     public enum AlternateTimeDimension: String, Codable { 

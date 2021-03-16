@@ -1332,7 +1332,9 @@ open class WorkforceManagementAPI {
         case shiftTrading = "ShiftTrading"
         case shortTermForecasts = "ShortTermForecasts"
         case buShortTermForecasts = "BuShortTermForecasts"
+        case timeOffPlans = "TimeOffPlans"
         case timeOffRequests = "TimeOffRequests"
+        case timeOffLimits = "TimeOffLimits"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
@@ -3426,7 +3428,9 @@ open class WorkforceManagementAPI {
         case shiftTrading = "ShiftTrading"
         case shortTermForecasts = "ShortTermForecasts"
         case buShortTermForecasts = "BuShortTermForecasts"
+        case timeOffPlans = "TimeOffPlans"
         case timeOffRequests = "TimeOffRequests"
+        case timeOffLimits = "TimeOffLimits"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
@@ -6202,7 +6206,9 @@ open class WorkforceManagementAPI {
         case shiftTrading = "ShiftTrading"
         case shortTermForecasts = "ShortTermForecasts"
         case buShortTermForecasts = "BuShortTermForecasts"
+        case timeOffPlans = "TimeOffPlans"
         case timeOffRequests = "TimeOffRequests"
+        case timeOffLimits = "TimeOffLimits"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
@@ -10433,7 +10439,7 @@ open class WorkforceManagementAPI {
     
     /**
      
-     Gets the lookup ids to fetch the specified set of requests
+     Fetches time off requests matching the conditions specified in the request body
      
      - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
@@ -10459,10 +10465,10 @@ open class WorkforceManagementAPI {
 
     /**
      
-     Gets the lookup ids to fetch the specified set of requests
+     Fetches time off requests matching the conditions specified in the request body
      
      - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query
-     - 
+     - Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

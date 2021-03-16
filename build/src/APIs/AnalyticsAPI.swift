@@ -2386,6 +2386,93 @@ open class AnalyticsAPI {
     
     
     
+    /**
+     
+     Query for bot aggregates
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsBotsAggregatesQuery(body: BotAggregationQuery, completion: @escaping ((_ data: BotAggregateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsBotsAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BotAggregateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for bot aggregates
+     
+     - POST /api/v2/analytics/bots/aggregates/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "aeiou",
+      "metrics" : [ {
+        "metric" : "aeiou",
+        "stats" : {
+          "current" : 1.3579000000000001069366817318950779736042022705078125,
+          "min" : 1.3579000000000001069366817318950779736042022705078125,
+          "max" : 1.3579000000000001069366817318950779736042022705078125,
+          "count" : 123456789,
+          "sum" : 1.3579000000000001069366817318950779736042022705078125,
+          "countPositive" : 123456789,
+          "countNegative" : 123456789,
+          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
+          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
+          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
+          "target" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "qualifier" : "aeiou"
+      } ],
+      "views" : [ {
+        "stats" : "",
+        "name" : "aeiou"
+      } ]
+    } ],
+    "group" : {
+      "key" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<BotAggregateQueryResponse> 
+     */
+    open class func postAnalyticsBotsAggregatesQueryWithRequestBuilder(body: BotAggregationQuery) -> RequestBuilder<BotAggregateQueryResponse> {
+        let path = "/api/v2/analytics/bots/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BotAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**

@@ -160,6 +160,7 @@ open class TextbotsAPI {
         "image" : "aeiou",
         "firstName" : "aeiou",
         "lastName" : "aeiou",
+        "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
         "email" : "aeiou"

@@ -2451,8 +2451,9 @@ Patch a user&#39;s CallForwarding
 
 Wraps PATCH /api/v2/users/{userId}/callforwarding  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:callForwarding:edit
 
 ### Example
 
@@ -3740,8 +3741,9 @@ Update a user&#39;s CallForwarding
 
 Wraps PUT /api/v2/users/{userId}/callforwarding  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:callForwarding:edit
 
 ### Example
 

@@ -1847,6 +1847,7 @@ open class RoutingAPI {
         case twitter = "twitter"
         case line = "line"
         case whatsapp = "whatsapp"
+        case _open = "open"
     }
 
     
@@ -6634,6 +6635,72 @@ open class RoutingAPI {
         let requestBuilder: RequestBuilder<UserSkillEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update attributes of an in-queue conversation
+     
+     - parameter conversationId: (path) Conversation ID 
+     - parameter body: (body) Conversation Attributes 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingConversation(conversationId: String, body: RoutingConversationAttributes, completion: @escaping ((_ data: RoutingConversationAttributes?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingConversationWithRequestBuilder(conversationId: conversationId, body: body)
+        requestBuilder.execute { (response: Response<RoutingConversationAttributes>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update attributes of an in-queue conversation
+     
+     - PATCH /api/v2/routing/conversations/{conversationId}
+     - Returns an object indicating the updated values of all settable attributes.  Supported attributes: priority (each point of priority is equivalent to one minute of time in queue).
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "priority" : 123
+}}]
+     
+     - parameter conversationId: (path) Conversation ID 
+     - parameter body: (body) Conversation Attributes 
+
+     - returns: RequestBuilder<RoutingConversationAttributes> 
+     */
+    open class func patchRoutingConversationWithRequestBuilder(conversationId: String, body: RoutingConversationAttributes) -> RequestBuilder<RoutingConversationAttributes> {
+        var path = "/api/v2/routing/conversations/{conversationId}"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RoutingConversationAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     

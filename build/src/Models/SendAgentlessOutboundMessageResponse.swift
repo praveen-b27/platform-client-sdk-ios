@@ -18,6 +18,7 @@ public class SendAgentlessOutboundMessageResponse: Codable {
         case line = "line"
         case whatsapp = "whatsapp"
         case webmessaging = "webmessaging"
+        case _open = "open"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

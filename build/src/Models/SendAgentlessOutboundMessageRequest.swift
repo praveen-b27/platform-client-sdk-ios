@@ -18,6 +18,7 @@ public class SendAgentlessOutboundMessageRequest: Codable {
         case line = "line"
         case whatsapp = "whatsapp"
         case webmessaging = "webmessaging"
+        case _open = "open"
     }
     /** The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. */
     public var fromAddress: String?

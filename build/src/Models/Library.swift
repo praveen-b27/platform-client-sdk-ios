@@ -14,6 +14,7 @@ public class Library: Codable {
     public enum ResponseType: String, Codable { 
         case messagingTemplate = "MessagingTemplate"
         case campaignSmsTemplate = "CampaignSmsTemplate"
+        case campaignEmailTemplate = "CampaignEmailTemplate"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

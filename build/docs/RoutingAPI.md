@@ -57,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserQueues**](RoutingAPI.html#getUserQueues) | Get queues for user |
 | [**getUserRoutinglanguages**](RoutingAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](RoutingAPI.html#getUserRoutingskills) | List routing skills for user |
+| [**patchRoutingConversation**](RoutingAPI.html#patchRoutingConversation) | Update attributes of an in-queue conversation |
 | [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingEmailDomainValidate**](RoutingAPI.html#patchRoutingEmailDomainValidate) | Validate domain settings |
 | [**patchRoutingQueueMember**](RoutingAPI.html#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
@@ -1288,7 +1289,7 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp") |
+| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp"), _open ("open") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 {: class="table-striped"}
@@ -2828,6 +2829,60 @@ RoutingAPI.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: 
 ### Return type
 
 [**UserSkillEntityListing**](UserSkillEntityListing.html)
+
+<a name="patchRoutingConversation"></a>
+
+# **patchRoutingConversation**
+
+
+
+> [RoutingConversationAttributes](RoutingConversationAttributes.html) patchRoutingConversation(conversationId, body)
+
+Update attributes of an in-queue conversation
+
+Returns an object indicating the updated values of all settable attributes.  Supported attributes: priority (each point of priority is equivalent to one minute of time in queue).
+
+Wraps PATCH /api/v2/routing/conversations/{conversationId}  
+
+Requires ANY permissions: 
+
+* routing:conversation:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let body: RoutingConversationAttributes = new RoutingConversationAttributes(...) // Conversation Attributes
+
+// Code example
+RoutingAPI.patchRoutingConversation(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingConversation was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **body** | [**RoutingConversationAttributes**](RoutingConversationAttributes.html)| Conversation Attributes | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RoutingConversationAttributes**](RoutingConversationAttributes.html)
 
 <a name="patchRoutingEmailDomain"></a>
 

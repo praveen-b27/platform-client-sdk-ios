@@ -98,7 +98,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
 | [**postWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitSchedulesSearch) | Query published schedules for given given time range for set of users |
 | [**postWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequests) | Create a new time off request |
-| [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Gets the lookup ids to fetch the specified set of requests |
+| [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Fetches time off requests matching the conditions specified in the request body |
 | [**postWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradeMatch) | Matches a shift trade. This route can only be called by the receiving agent |
 | [**postWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttrades) | Adds a shift trade |
 | [**postWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradesSearch) | Searches for potential shift trade matches for the current agent |
@@ -808,6 +808,17 @@ Requires ANY permissions:
 * wfm:timeOffRequest:add
 * wfm:timeOffRequest:edit
 * wfm:timeOffRequest:view
+* wfm:timeOffLimit:add
+* wfm:timeOffLimit:delete
+* wfm:timeOffLimit:edit
+* wfm:timeOffLimit:view
+* wfm:timeOffPlan:add
+* wfm:timeOffPlan:delete
+* wfm:timeOffPlan:edit
+* wfm:timeOffPlan:view
+* wfm:timeOffRequest:add
+* wfm:timeOffRequest:edit
+* wfm:timeOffRequest:view
 * wfm:workPlan:add
 * wfm:workPlan:delete
 * wfm:workPlan:edit
@@ -964,6 +975,14 @@ Requires ANY permissions:
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
 * wfm:shortTermForecast:view
+* wfm:timeOffLimit:add
+* wfm:timeOffLimit:delete
+* wfm:timeOffLimit:edit
+* wfm:timeOffLimit:view
+* wfm:timeOffPlan:add
+* wfm:timeOffPlan:delete
+* wfm:timeOffPlan:edit
+* wfm:timeOffPlan:view
 * wfm:timeOffRequest:add
 * wfm:timeOffRequest:edit
 * wfm:timeOffRequest:view
@@ -1106,7 +1125,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
+| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**|  | [optional] |
 {: class="table-striped"}
 
@@ -2124,7 +2143,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunits(feature: feature, div
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
+| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**|  | [optional] |
 {: class="table-striped"}
 
@@ -2241,6 +2260,14 @@ Requires ANY permissions:
 * wfm:shortTermForecast:delete
 * wfm:shortTermForecast:edit
 * wfm:shortTermForecast:view
+* wfm:timeOffLimit:add
+* wfm:timeOffLimit:delete
+* wfm:timeOffLimit:edit
+* wfm:timeOffLimit:view
+* wfm:timeOffPlan:add
+* wfm:timeOffPlan:delete
+* wfm:timeOffPlan:edit
+* wfm:timeOffPlan:view
 * wfm:timeOffRequest:add
 * wfm:timeOffRequest:edit
 * wfm:timeOffRequest:view
@@ -3269,7 +3296,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunits(pageSize: pageSize,
 | **pageSize** | **Int**| Deprecated, paging is not supported | [optional] |
 | **pageNumber** | **Int**| Deprecated, paging is not supported | [optional] |
 | **expand** | **String**| Deprecated, expand settings on the single MU route | [optional]<br />**Values**: details ("details") |
-| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffRequests ("TimeOffRequests"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
+| **feature** | **String**|  | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), coaching ("Coaching"), activityCodes ("ActivityCodes"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), historicalAdherence ("HistoricalAdherence"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**|  | [optional] |
 {: class="table-striped"}
 
@@ -5326,9 +5353,9 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 
 > [TimeOffRequestListing](TimeOffRequestListing.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, body)
 
-Gets the lookup ids to fetch the specified set of requests
+Fetches time off requests matching the conditions specified in the request body
 
-
+Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
 
 Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query  
 

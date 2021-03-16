@@ -12,10 +12,17 @@ import Foundation
 
 public class MessagingRecipient: Codable {
 
+    public enum IdType: String, Codable { 
+        case email = "Email"
+        case phone = "Phone"
+        case opaque = "Opaque"
+    }
     /** Nickname/user name */
     public var nickname: String?
     /** The recipient identifier specific for particular channel/integration. This is required when sending a message. */
     public var _id: String?
+    /** The recipient identifier type. This is used to indicate the format used by the recipient identifier. */
+    public var idType: IdType?
     /** Avatar image */
     public var image: String?
     /** Sender&#39;s first name */
@@ -25,11 +32,13 @@ public class MessagingRecipient: Codable {
     /** Sender&#39;s email address */
     public var email: String?
 
-    public init(nickname: String?, _id: String?, image: String?, firstName: String?, lastName: String?, email: String?) {
+    public init(nickname: String?, _id: String?, idType: IdType?, image: String?, firstName: String?, lastName: String?, email: String?) {
         
         self.nickname = nickname
         
         self._id = _id
+        
+        self.idType = idType
         
         self.image = image
         
@@ -44,6 +53,7 @@ public class MessagingRecipient: Codable {
     public enum CodingKeys: String, CodingKey { 
         case nickname
         case _id = "id"
+        case idType
         case image
         case firstName
         case lastName

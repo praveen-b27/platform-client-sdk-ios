@@ -16,7 +16,7 @@ public class Dependency: Codable {
         case acdskill = "ACDSKILL"
         case acdwrapupcode = "ACDWRAPUPCODE"
         case botconnectorbot = "BOTCONNECTORBOT"
-        case botconnectorbotversion = "BOTCONNECTORBOTVERSION"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
         case botflow = "BOTFLOW"
         case bridgeaction = "BRIDGEACTION"
         case commonmoduleflow = "COMMONMODULEFLOW"

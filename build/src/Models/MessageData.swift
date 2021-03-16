@@ -22,6 +22,7 @@ public class MessageData: Codable {
         case line = "line"
         case whatsapp = "whatsapp"
         case webmessaging = "webmessaging"
+        case _open = "open"
     }
     public enum Status: String, Codable { 
         case queued = "queued"

@@ -26,10 +26,12 @@ public class DialerContact: Codable {
     public var phoneNumberStatus: [String:PhoneNumberStatus]?
     /** Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip */
     public var contactColumnTimeZones: [String:ContactColumnTimeZone]?
+    /** the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue */
+    public var configurationOverrides: ConfigurationOverrides?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
         
         self._id = _id
         
@@ -47,6 +49,8 @@ public class DialerContact: Codable {
         
         self.contactColumnTimeZones = contactColumnTimeZones
         
+        self.configurationOverrides = configurationOverrides
+        
         self.selfUri = selfUri
         
     }
@@ -60,6 +64,7 @@ public class DialerContact: Codable {
         case callable
         case phoneNumberStatus
         case contactColumnTimeZones
+        case configurationOverrides
         case selfUri
     }
 

@@ -27,8 +27,6 @@ public class AsyncConversationQuery: Codable {
     public var segmentFilters: [SegmentDetailQueryFilter]?
     /** Filters that target evaluations */
     public var evaluationFilters: [EvaluationDetailQueryFilter]?
-    /** Filters that target mediaEndpointStats */
-    public var mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?
     /** Filters that target surveys */
     public var surveyFilters: [SurveyDetailQueryFilter]?
     /** Filters that target resolutions */
@@ -44,15 +42,13 @@ public class AsyncConversationQuery: Codable {
     /** Add a filter to only include conversations that started after the beginning of the interval start date (UTC) */
     public var startOfDayIntervalMatching: Bool?
 
-    public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, resolutionFilters: [ResolutionDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, limit: Int?, startOfDayIntervalMatching: Bool?) {
+    public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, resolutionFilters: [ResolutionDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, limit: Int?, startOfDayIntervalMatching: Bool?) {
         
         self.conversationFilters = conversationFilters
         
         self.segmentFilters = segmentFilters
         
         self.evaluationFilters = evaluationFilters
-        
-        self.mediaEndpointStatFilters = mediaEndpointStatFilters
         
         self.surveyFilters = surveyFilters
         

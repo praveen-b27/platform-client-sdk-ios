@@ -3707,7 +3707,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhonebasesettingsTemplate(ph
 
 
 
-> [PhoneEntityListing](PhoneEntityListing.html) getTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, expand, fields)
+> [PhoneEntityListing](PhoneEntityListing.html) getTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, name, statusOperationalStatus, secondaryStatusOperationalStatus, expand, fields)
 
 Get a list of Phone Instances
 
@@ -3729,7 +3729,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
-let sortBy: String = "name" // Value by which to sort
+let sortBy: TelephonyProvidersEdgeAPI.SortBy_getTelephonyProvidersEdgesPhones = TelephonyProvidersEdgeAPI.SortBy_getTelephonyProvidersEdgesPhones.enummember // The field to sort by
 let sortOrder: String = "ASC" // Sort order
 let siteId: String = "" // Filter by site.id
 let webRtcUserId: String = "" // Filter by webRtcUser.id
@@ -3740,11 +3740,13 @@ let phoneHardwareId: String = "" // Filter by phone_hardwareId
 let linesId: String = "" // Filter by lines.id
 let linesName: String = "" // Filter by lines.name
 let name: String = "" // Name of the Phone to filter by
+let statusOperationalStatus: String = "" // The primary status to filter by
+let secondaryStatusOperationalStatus: String = "" // The secondary status to filter by
 let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesPhones.enummember.rawValue] // Fields to expand in the response, comma-separated
 let fields: [String] = [TelephonyProvidersEdgeAPI.Fields_getTelephonyProvidersEdgesPhones.enummember.rawValue] // Fields and properties to get, comma-separated
 
 // Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, siteId: siteId, webRtcUserId: webRtcUserId, phoneBaseSettingsId: phoneBaseSettingsId, linesLoggedInUserId: linesLoggedInUserId, linesDefaultForUserId: linesDefaultForUserId, phoneHardwareId: phoneHardwareId, linesId: linesId, linesName: linesName, name: name, expand: expand, fields: fields) { (response, error) in
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, siteId: siteId, webRtcUserId: webRtcUserId, phoneBaseSettingsId: phoneBaseSettingsId, linesLoggedInUserId: linesLoggedInUserId, linesDefaultForUserId: linesDefaultForUserId, phoneHardwareId: phoneHardwareId, linesId: linesId, linesName: linesName, name: name, statusOperationalStatus: statusOperationalStatus, secondaryStatusOperationalStatus: secondaryStatusOperationalStatus, expand: expand, fields: fields) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3761,7 +3763,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumbe
 | ------------- | ------------- | ------------- | ------------- |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
-| **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
+| **sortBy** | **String**| The field to sort by | [optional] [default to name]<br />**Values**: name ("name"), statusOperationalstatus ("status.operationalStatus"), secondarystatusOperationalstatus ("secondaryStatus.operationalStatus") |
 | **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
 | **siteId** | **String**| Filter by site.id | [optional] |
 | **webRtcUserId** | **String**| Filter by webRtcUser.id | [optional] |
@@ -3772,6 +3774,8 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumbe
 | **linesId** | **String**| Filter by lines.id | [optional] |
 | **linesName** | **String**| Filter by lines.name | [optional] |
 | **name** | **String**| Name of the Phone to filter by | [optional] |
+| **statusOperationalStatus** | **String**| The primary status to filter by | [optional] |
+| **secondaryStatusOperationalStatus** | **String**| The secondary status to filter by | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: properties ("properties"), site ("site"), status ("status"), statusPrimaryedgesstatus ("status.primaryEdgesStatus"), statusSecondaryedgesstatus ("status.secondaryEdgesStatus"), phonebasesettings ("phoneBaseSettings"), lines ("lines") |
 | **fields** | [**[String]**](String.html)| Fields and properties to get, comma-separated | [optional]<br />**Values**: webrtcuser ("webRtcUser"), properties_ ("properties.*"), linesLoggedinuser ("lines.loggedInUser"), linesDefaultforuser ("lines.defaultForUser") |
 {: class="table-striped"}

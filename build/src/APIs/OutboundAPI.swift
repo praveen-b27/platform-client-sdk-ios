@@ -4286,6 +4286,9 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "configurationOverrides" : {
+    "priority" : true
+  },
   "callable" : true,
   "data" : {
     "key" : "{}"
@@ -8541,6 +8544,9 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
+  "configurationOverrides" : {
+    "priority" : true
+  },
   "callable" : true,
   "data" : {
     "key" : "{}"
@@ -8643,6 +8649,9 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
+  "configurationOverrides" : {
+    "priority" : true
+  },
   "callable" : true,
   "data" : {
     "key" : "{}"
@@ -8885,6 +8894,9 @@ open class OutboundAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "preview" : [ {
+    "configurationOverrides" : {
+      "priority" : true
+    },
     "callable" : true,
     "data" : {
       "key" : "{}"
@@ -10269,6 +10281,9 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "configurationOverrides" : {
+    "priority" : true
+  },
   "callable" : true,
   "data" : {
     "key" : "{}"

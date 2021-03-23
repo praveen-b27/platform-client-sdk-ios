@@ -27,8 +27,6 @@ public class ConversationQuery: Codable {
     public var segmentFilters: [SegmentDetailQueryFilter]?
     /** Filters that target evaluations */
     public var evaluationFilters: [EvaluationDetailQueryFilter]?
-    /** Filters that target mediaEndpointStats */
-    public var mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?
     /** Filters that target surveys */
     public var surveyFilters: [SurveyDetailQueryFilter]?
     /** Filters that target resolutions */
@@ -44,15 +42,13 @@ public class ConversationQuery: Codable {
     /** Page size and number to control iterating through large result sets. Default page size is 25 */
     public var paging: PagingSpec?
 
-    public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, mediaEndpointStatFilters: [MediaEndpointStatDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, resolutionFilters: [ResolutionDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, aggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?) {
+    public init(conversationFilters: [ConversationDetailQueryFilter]?, segmentFilters: [SegmentDetailQueryFilter]?, evaluationFilters: [EvaluationDetailQueryFilter]?, surveyFilters: [SurveyDetailQueryFilter]?, resolutionFilters: [ResolutionDetailQueryFilter]?, order: Order?, orderBy: OrderBy?, interval: String?, aggregations: [AnalyticsQueryAggregation]?, paging: PagingSpec?) {
         
         self.conversationFilters = conversationFilters
         
         self.segmentFilters = segmentFilters
         
         self.evaluationFilters = evaluationFilters
-        
-        self.mediaEndpointStatFilters = mediaEndpointStatFilters
         
         self.surveyFilters = surveyFilters
         

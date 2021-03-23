@@ -7441,20 +7441,6 @@ open class RecordingAPI {
         } ],
         "type" : "aeiou"
       } ],
-      "mediaEndpointStatFilters" : [ {
-        "predicates" : [ "" ],
-        "clauses" : [ {
-          "predicates" : [ {
-            "range" : "",
-            "type" : "aeiou",
-            "dimension" : "aeiou",
-            "value" : "aeiou",
-            "operator" : "aeiou"
-          } ],
-          "type" : "aeiou"
-        } ],
-        "type" : "aeiou"
-      } ],
       "order" : "aeiou"
     },
     "action" : "aeiou",
@@ -7658,20 +7644,6 @@ open class RecordingAPI {
                 "lte" : 1.3579000000000001069366817318950779736042022705078125,
                 "gt" : 1.3579000000000001069366817318950779736042022705078125
               },
-              "type" : "aeiou",
-              "dimension" : "aeiou",
-              "value" : "aeiou",
-              "operator" : "aeiou"
-            } ],
-            "type" : "aeiou"
-          } ],
-          "type" : "aeiou"
-        } ],
-        "mediaEndpointStatFilters" : [ {
-          "predicates" : [ "" ],
-          "clauses" : [ {
-            "predicates" : [ {
-              "range" : "",
               "type" : "aeiou",
               "dimension" : "aeiou",
               "value" : "aeiou",
@@ -13262,20 +13234,6 @@ open class RecordingAPI {
         } ],
         "type" : "aeiou"
       } ],
-      "mediaEndpointStatFilters" : [ {
-        "predicates" : [ "" ],
-        "clauses" : [ {
-          "predicates" : [ {
-            "range" : "",
-            "type" : "aeiou",
-            "dimension" : "aeiou",
-            "value" : "aeiou",
-            "operator" : "aeiou"
-          } ],
-          "type" : "aeiou"
-        } ],
-        "type" : "aeiou"
-      } ],
       "order" : "aeiou"
     },
     "action" : "aeiou",
@@ -17118,20 +17076,6 @@ open class RecordingAPI {
               "lte" : 1.3579000000000001069366817318950779736042022705078125,
               "gt" : 1.3579000000000001069366817318950779736042022705078125
             },
-            "type" : "aeiou",
-            "dimension" : "aeiou",
-            "value" : "aeiou",
-            "operator" : "aeiou"
-          } ],
-          "type" : "aeiou"
-        } ],
-        "type" : "aeiou"
-      } ],
-      "mediaEndpointStatFilters" : [ {
-        "predicates" : [ "" ],
-        "clauses" : [ {
-          "predicates" : [ {
-            "range" : "",
             "type" : "aeiou",
             "dimension" : "aeiou",
             "value" : "aeiou",

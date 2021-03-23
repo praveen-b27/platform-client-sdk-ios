@@ -15,6 +15,7 @@ public class PhoneStatus: Codable {
         case operational = "OPERATIONAL"
         case degraded = "DEGRADED"
         case offline = "OFFLINE"
+        case unknown = "UNKNOWN"
     }
     public enum EdgesStatus: String, Codable { 
         case inService = "IN_SERVICE"

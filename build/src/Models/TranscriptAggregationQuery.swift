@@ -25,7 +25,6 @@ public class TranscriptAggregationQuery: Codable {
         case mediatype = "mediaType"
         case messagetype = "messageType"
         case queueid = "queueId"
-        case resultsby = "resultsBy"
         case teamid = "teamId"
         case topicid = "topicId"
         case userid = "userId"

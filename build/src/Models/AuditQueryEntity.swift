@@ -84,6 +84,7 @@ public class AuditQueryEntity: Codable {
         case routingTranscriptionSettings = "RoutingTranscriptionSettings"
         case speechTextAnalyticsSettings = "SpeechTextAnalyticsSettings"
         case predictor = "Predictor"
+        case workPlan = "WorkPlan"
     }
     public enum Actions: String, Codable { 
         case create = "Create"

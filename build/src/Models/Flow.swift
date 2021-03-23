@@ -25,6 +25,20 @@ public class Flow: Codable {
         case surveyinvite = "SURVEYINVITE"
         case workflow = "WORKFLOW"
     }
+    public enum CompatibleFlowTypes: String, Codable { 
+        case bot = "BOT"
+        case commonmodule = "COMMONMODULE"
+        case inboundcall = "INBOUNDCALL"
+        case inboundchat = "INBOUNDCHAT"
+        case inboundemail = "INBOUNDEMAIL"
+        case inboundshortmessage = "INBOUNDSHORTMESSAGE"
+        case inqueuecall = "INQUEUECALL"
+        case outboundcall = "OUTBOUNDCALL"
+        case securecall = "SECURECALL"
+        case speech = "SPEECH"
+        case surveyinvite = "SURVEYINVITE"
+        case workflow = "WORKFLOW"
+    }
     /** The flow identifier */
     public var _id: String?
     /** The flow name */
@@ -54,10 +68,12 @@ public class Flow: Codable {
     public var nluInfo: NluInfo?
     /** List of supported languages for the published version of the flow. */
     public var supportedLanguages: [SupportedLanguage]?
+    /** Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action. */
+    public var compatibleFlowTypes: [CompatibleFlowTypes]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, selfUri: String?) {
         
         self._id = _id
         
@@ -99,6 +115,8 @@ public class Flow: Codable {
         
         self.supportedLanguages = supportedLanguages
         
+        self.compatibleFlowTypes = compatibleFlowTypes
+        
         self.selfUri = selfUri
         
     }
@@ -124,6 +142,7 @@ public class Flow: Codable {
         case currentOperation
         case nluInfo
         case supportedLanguages
+        case compatibleFlowTypes
         case selfUri
     }
 

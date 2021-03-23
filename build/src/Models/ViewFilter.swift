@@ -36,7 +36,7 @@ public class ViewFilter: Codable {
         case facebook = "facebook"
         case whatsapp = "whatsapp"
         case webmessaging = "webmessaging"
-        case general = "general"
+        case _open = "open"
     }
     public enum FlowOutcomeValues: String, Codable { 
         case success = "SUCCESS"

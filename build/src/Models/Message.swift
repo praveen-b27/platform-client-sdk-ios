@@ -48,6 +48,7 @@ public class Message: Codable {
         case telegram = "telegram"
         case kakao = "kakao"
         case webmessaging = "webmessaging"
+        case _open = "open"
     }
     /** The connection state of this communication. */
     public var state: State?

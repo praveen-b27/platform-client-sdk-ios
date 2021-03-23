@@ -8317,6 +8317,17 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    public enum SortBy_getTelephonyProvidersEdgesPhones: String { 
+        case name = "name"
+        case statusOperationalstatus = "status.operationalStatus"
+        case secondarystatusOperationalstatus = "secondaryStatus.operationalStatus"
+    }
+
+    
+    
+    
+    
+    
     
     
     
@@ -8367,7 +8378,7 @@ open class TelephonyProvidersEdgeAPI {
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
+     - parameter sortBy: (query) The field to sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter webRtcUserId: (query) Filter by webRtcUser.id (optional)
@@ -8378,12 +8389,14 @@ open class TelephonyProvidersEdgeAPI {
      - parameter linesId: (query) Filter by lines.id (optional)
      - parameter linesName: (query) Filter by lines.name (optional)
      - parameter name: (query) Name of the Phone to filter by (optional)
+     - parameter statusOperationalStatus: (query) The primary status to filter by (optional)
+     - parameter secondaryStatusOperationalStatus: (query) The secondary status to filter by (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTelephonyProvidersEdgesPhones(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, siteId: String? = nil, webRtcUserId: String? = nil, phoneBaseSettingsId: String? = nil, linesLoggedInUserId: String? = nil, linesDefaultForUserId: String? = nil, phoneHardwareId: String? = nil, linesId: String? = nil, linesName: String? = nil, name: String? = nil, expand: [String]? = nil, fields: [String]? = nil, completion: @escaping ((_ data: PhoneEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesPhonesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, siteId: siteId, webRtcUserId: webRtcUserId, phoneBaseSettingsId: phoneBaseSettingsId, linesLoggedInUserId: linesLoggedInUserId, linesDefaultForUserId: linesDefaultForUserId, phoneHardwareId: phoneHardwareId, linesId: linesId, linesName: linesName, name: name, expand: expand, fields: fields)
+    open class func getTelephonyProvidersEdgesPhones(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getTelephonyProvidersEdgesPhones? = nil, sortOrder: String? = nil, siteId: String? = nil, webRtcUserId: String? = nil, phoneBaseSettingsId: String? = nil, linesLoggedInUserId: String? = nil, linesDefaultForUserId: String? = nil, phoneHardwareId: String? = nil, linesId: String? = nil, linesName: String? = nil, name: String? = nil, statusOperationalStatus: String? = nil, secondaryStatusOperationalStatus: String? = nil, expand: [String]? = nil, fields: [String]? = nil, completion: @escaping ((_ data: PhoneEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesPhonesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, siteId: siteId, webRtcUserId: webRtcUserId, phoneBaseSettingsId: phoneBaseSettingsId, linesLoggedInUserId: linesLoggedInUserId, linesDefaultForUserId: linesDefaultForUserId, phoneHardwareId: phoneHardwareId, linesId: linesId, linesName: linesName, name: name, statusOperationalStatus: statusOperationalStatus, secondaryStatusOperationalStatus: secondaryStatusOperationalStatus, expand: expand, fields: fields)
         requestBuilder.execute { (response: Response<PhoneEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -8705,7 +8718,7 @@ open class TelephonyProvidersEdgeAPI {
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
-     - parameter sortBy: (query) Value by which to sort (optional, default to name)
+     - parameter sortBy: (query) The field to sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter siteId: (query) Filter by site.id (optional)
      - parameter webRtcUserId: (query) Filter by webRtcUser.id (optional)
@@ -8716,12 +8729,14 @@ open class TelephonyProvidersEdgeAPI {
      - parameter linesId: (query) Filter by lines.id (optional)
      - parameter linesName: (query) Filter by lines.name (optional)
      - parameter name: (query) Name of the Phone to filter by (optional)
+     - parameter statusOperationalStatus: (query) The primary status to filter by (optional)
+     - parameter secondaryStatusOperationalStatus: (query) The secondary status to filter by (optional)
      - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter fields: (query) Fields and properties to get, comma-separated (optional)
 
      - returns: RequestBuilder<PhoneEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesPhonesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, siteId: String? = nil, webRtcUserId: String? = nil, phoneBaseSettingsId: String? = nil, linesLoggedInUserId: String? = nil, linesDefaultForUserId: String? = nil, phoneHardwareId: String? = nil, linesId: String? = nil, linesName: String? = nil, name: String? = nil, expand: [String]? = nil, fields: [String]? = nil) -> RequestBuilder<PhoneEntityListing> {
+    open class func getTelephonyProvidersEdgesPhonesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getTelephonyProvidersEdgesPhones? = nil, sortOrder: String? = nil, siteId: String? = nil, webRtcUserId: String? = nil, phoneBaseSettingsId: String? = nil, linesLoggedInUserId: String? = nil, linesDefaultForUserId: String? = nil, phoneHardwareId: String? = nil, linesId: String? = nil, linesName: String? = nil, name: String? = nil, statusOperationalStatus: String? = nil, secondaryStatusOperationalStatus: String? = nil, expand: [String]? = nil, fields: [String]? = nil) -> RequestBuilder<PhoneEntityListing> {
         let path = "/api/v2/telephony/providers/edges/phones"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8738,7 +8753,7 @@ open class TelephonyProvidersEdgeAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "sortBy": sortBy, 
+            "sortBy": sortBy?.rawValue, 
             
             "sortOrder": sortOrder, 
             
@@ -8759,6 +8774,10 @@ open class TelephonyProvidersEdgeAPI {
             "lines.name": linesName, 
             
             "name": name, 
+            
+            "status.operationalStatus": statusOperationalStatus, 
+            
+            "secondaryStatus.operationalStatus": secondaryStatusOperationalStatus, 
             
             "expand": expand, 
             

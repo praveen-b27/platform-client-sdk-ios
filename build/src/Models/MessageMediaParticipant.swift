@@ -57,6 +57,7 @@ public class MessageMediaParticipant: Codable {
         case telegram = "telegram"
         case kakao = "kakao"
         case webmessaging = "webmessaging"
+        case _open = "open"
     }
     /** The unique participant ID. */
     public var _id: String?

@@ -6499,6 +6499,7 @@ open class ArchitectAPI {
   "savedVersion" : "",
   "outputSchema" : "{}",
   "inputSchema" : "{}",
+  "compatibleFlowTypes" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "active" : true,
@@ -6789,6 +6790,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
@@ -7419,6 +7421,7 @@ open class ArchitectAPI {
       "key" : "{}"
     }
   },
+  "compatibleFlowTypes" : [ "aeiou" ],
   "createdByClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -7882,6 +7885,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -8332,6 +8336,7 @@ open class ArchitectAPI {
     "savedVersion" : "",
     "outputSchema" : "{}",
     "inputSchema" : "{}",
+    "compatibleFlowTypes" : [ "aeiou" ],
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "active" : true,
@@ -8622,6 +8627,7 @@ open class ArchitectAPI {
           "key" : "{}"
         }
       },
+      "compatibleFlowTypes" : [ "aeiou" ],
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "nluInfo" : {
@@ -9562,6 +9568,7 @@ open class ArchitectAPI {
       "debug" : true,
       "outputSchema" : "",
       "inputSchema" : "",
+      "compatibleFlowTypes" : [ "aeiou" ],
       "createdByClient" : {
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -9991,6 +9998,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -12882,6 +12890,7 @@ open class ArchitectAPI {
       "key" : "{}"
     }
   },
+  "compatibleFlowTypes" : [ "aeiou" ],
   "createdByClient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13230,6 +13239,7 @@ open class ArchitectAPI {
   "savedVersion" : "",
   "outputSchema" : "{}",
   "inputSchema" : "{}",
+  "compatibleFlowTypes" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "active" : true,
@@ -13520,6 +13530,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
@@ -13973,6 +13984,7 @@ open class ArchitectAPI {
   "savedVersion" : "",
   "outputSchema" : "{}",
   "inputSchema" : "{}",
+  "compatibleFlowTypes" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "active" : true,
@@ -14263,6 +14275,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
@@ -14380,6 +14393,7 @@ open class ArchitectAPI {
   "savedVersion" : "",
   "outputSchema" : "{}",
   "inputSchema" : "{}",
+  "compatibleFlowTypes" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "active" : true,
@@ -14670,6 +14684,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
@@ -15137,6 +15152,7 @@ open class ArchitectAPI {
   "savedVersion" : "",
   "outputSchema" : "{}",
   "inputSchema" : "{}",
+  "compatibleFlowTypes" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "active" : true,
@@ -15427,6 +15443,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
@@ -15544,6 +15561,7 @@ open class ArchitectAPI {
   "savedVersion" : "",
   "outputSchema" : "{}",
   "inputSchema" : "{}",
+  "compatibleFlowTypes" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "active" : true,
@@ -15834,6 +15852,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
@@ -17641,6 +17660,7 @@ open class ArchitectAPI {
   "savedVersion" : "",
   "outputSchema" : "{}",
   "inputSchema" : "{}",
+  "compatibleFlowTypes" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "active" : true,
@@ -17931,6 +17951,7 @@ open class ArchitectAPI {
         "key" : "{}"
       }
     },
+    "compatibleFlowTypes" : [ "aeiou" ],
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {

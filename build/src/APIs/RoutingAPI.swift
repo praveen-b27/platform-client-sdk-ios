@@ -1475,6 +1475,7 @@ open class RoutingAPI {
     "savedVersion" : "",
     "outputSchema" : "{}",
     "inputSchema" : "{}",
+    "compatibleFlowTypes" : [ "aeiou" ],
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "active" : true,
@@ -1765,6 +1766,7 @@ open class RoutingAPI {
           "key" : "{}"
         }
       },
+      "compatibleFlowTypes" : [ "aeiou" ],
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "nluInfo" : {
@@ -1910,6 +1912,7 @@ open class RoutingAPI {
       "savedVersion" : "",
       "outputSchema" : "{}",
       "inputSchema" : "{}",
+      "compatibleFlowTypes" : [ "aeiou" ],
       "selfUri" : "aeiou",
       "description" : "aeiou",
       "active" : true,
@@ -2200,6 +2203,7 @@ open class RoutingAPI {
             "key" : "{}"
           }
         },
+        "compatibleFlowTypes" : [ "aeiou" ],
         "createdByClient" : "",
         "selfUri" : "aeiou",
         "nluInfo" : {
@@ -10526,6 +10530,7 @@ open class RoutingAPI {
     "savedVersion" : "",
     "outputSchema" : "{}",
     "inputSchema" : "{}",
+    "compatibleFlowTypes" : [ "aeiou" ],
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "active" : true,
@@ -10816,6 +10821,7 @@ open class RoutingAPI {
           "key" : "{}"
         }
       },
+      "compatibleFlowTypes" : [ "aeiou" ],
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "nluInfo" : {

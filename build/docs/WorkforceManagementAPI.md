@@ -14,7 +14,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitServicegoaltemplate) | Delete a service goal template |
 | [**deleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekSchedule) | Delete a schedule |
 | [**deleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekShorttermforecast) | Delete a short term forecast |
-| [**deleteWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunit) | Delete management unit |
 | [**deleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplan) | Delete a work plan |
 | [**deleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplanrotation) | Delete a work plan rotation |
 | [**getWorkforcemanagementAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
@@ -43,7 +42,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecasts) | Get short term forecasts |
 | [**getWorkforcemanagementBusinessunits**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunits) | Get business units |
 | [**getWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitsDivisionviews) | Get business units across divisions |
-| [**getWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunit) | Get management unit |
+| [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
+| [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
 | [**getWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitActivitycodes) | Get activity codes |
 | [**getWorkforcemanagementManagementunitAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAdherence) | Get a list of user schedule adherence records for the requested management unit |
 | [**getWorkforcemanagementManagementunitAgent**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAgent) | Get data for agent in the management unit |
@@ -72,7 +72,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
 | [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
 | [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
-| [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunit) | Update the requested management unit |
 | [**patchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitUserTimeoffrequest) | Update a time off request |
 | [**patchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWeekShifttrade) | Updates a shift trade. This route can only be called by the initiating agent |
 | [**patchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWorkplan) | Update a work plan |
@@ -93,6 +92,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastCopy) | Copy a short term forecast |
 | [**postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate) | Generate a short term forecast |
 | [**postWorkforcemanagementBusinessunits**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunits) | Add a new business unit |
+| [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
+| [**postWorkforcemanagementHistoricaldataValidate**](WorkforceManagementAPI.html#postWorkforcemanagementHistoricaldataValidate) | Trigger validation process for historical import |
 | [**postWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitAgentschedulesSearch) | Query published schedules for given given time range for set of users |
 | [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
 | [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
@@ -481,57 +482,6 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitWeekShorttermforecas
 | **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteWorkforcemanagementManagementunit"></a>
-
-# **deleteWorkforcemanagementManagementunit**
-
-
-
-> Void deleteWorkforcemanagementManagementunit(managementUnitId)
-
-Delete management unit
-
-
-
-Wraps DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}  
-
-Requires ANY permissions: 
-
-* wfm:managementUnit:delete
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-
-// Code example
-WorkforceManagementAPI.deleteWorkforcemanagementManagementunit(managementUnitId: managementUnitId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("WorkforceManagementAPI.deleteWorkforcemanagementManagementunit was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -1712,6 +1662,7 @@ Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{week
 Requires ANY permissions: 
 
 * wfm:schedule:view
+* wfm:publishedSchedule:view
 
 ### Example
 
@@ -2204,81 +2155,23 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitsDivisionviews(division
 
 [**BusinessUnitListing**](BusinessUnitListing.html)
 
-<a name="getWorkforcemanagementManagementunit"></a>
+<a name="getWorkforcemanagementHistoricaldataDeletejob"></a>
 
-# **getWorkforcemanagementManagementunit**
+# **getWorkforcemanagementHistoricaldataDeletejob**
 
 
 
-> [ManagementUnit](ManagementUnit.html) getWorkforcemanagementManagementunit(managementUnitId, expand)
+> [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse.html) getWorkforcemanagementHistoricaldataDeletejob()
 
-Get management unit
+Retrieves delete job status for historical data imports of the organization
 
-settings.shortTermForecasting is deprecated and now lives on the business unit
 
-Wraps GET /api/v2/workforcemanagement/managementunits/{managementUnitId}  
 
-Requires ANY permissions: 
+Wraps GET /api/v2/workforcemanagement/historicaldata/deletejob  
 
-* wfm:activityCode:add
-* wfm:activityCode:delete
-* wfm:activityCode:edit
-* wfm:activityCode:view
-* wfm:agent:edit
-* wfm:agentSchedule:view
-* wfm:agentTimeOffRequest:submit
-* wfm:agent:view
-* wfm:businessUnit:add
-* wfm:businessUnit:delete
-* wfm:businessUnit:edit
-* wfm:businessUnit:view
-* wfm:historicalAdherence:view
-* wfm:intraday:view
-* wfm:managementUnit:add
-* wfm:managementUnit:delete
-* wfm:managementUnit:edit
-* wfm:managementUnit:view
-* wfm:publishedSchedule:view
-* wfm:realtimeAdherence:view
-* wfm:schedule:add
-* wfm:schedule:delete
-* wfm:schedule:edit
-* wfm:schedule:generate
-* wfm:schedule:view
-* wfm:serviceGoalTemplate:add
-* wfm:serviceGoalTemplate:delete
-* wfm:serviceGoalTemplate:edit
-* wfm:serviceGoalTemplate:view
-* wfm:planningGroup:add
-* wfm:planningGroup:delete
-* wfm:planningGroup:edit
-* wfm:planningGroup:view
-* wfm:shiftTradeRequest:edit
-* wfm:shiftTradeRequest:view
-* wfm:agentShiftTradeRequest:participate
-* wfm:shortTermForecast:add
-* wfm:shortTermForecast:delete
-* wfm:shortTermForecast:edit
-* wfm:shortTermForecast:view
-* wfm:timeOffLimit:add
-* wfm:timeOffLimit:delete
-* wfm:timeOffLimit:edit
-* wfm:timeOffLimit:view
-* wfm:timeOffPlan:add
-* wfm:timeOffPlan:delete
-* wfm:timeOffPlan:edit
-* wfm:timeOffPlan:view
-* wfm:timeOffRequest:add
-* wfm:timeOffRequest:edit
-* wfm:timeOffRequest:view
-* wfm:workPlan:add
-* wfm:workPlan:delete
-* wfm:workPlan:edit
-* wfm:workPlan:view
-* wfm:workPlanRotation:add
-* wfm:workPlanRotation:delete
-* wfm:workPlanRotation:edit
-* wfm:workPlanRotation:view
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
 
 ### Example
 
@@ -2288,15 +2181,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementManagementunit.enummember.rawValue] // 
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: managementUnitId, expand: expand) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementHistoricaldataDeletejob() { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
-        print("WorkforceManagementAPI.getWorkforcemanagementManagementunit was successful")
+        print("WorkforceManagementAPI.getWorkforcemanagementHistoricaldataDeletejob was successful")
         dump(response)
     }
 }
@@ -2304,17 +2195,61 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: ma
 
 ### Parameters
 
+This endpoint does not require any parameters.
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsAdherence ("settings.adherence"), settingsTimeoff ("settings.timeOff"), settingsScheduling ("settings.scheduling"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsShifttrading ("settings.shiftTrading") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ManagementUnit**](ManagementUnit.html)
+[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html)
+
+<a name="getWorkforcemanagementHistoricaldataImportstatus"></a>
+
+# **getWorkforcemanagementHistoricaldataImportstatus**
+
+
+
+> [HistoricalImportStatusListing](HistoricalImportStatusListing.html) getWorkforcemanagementHistoricaldataImportstatus()
+
+Retrieves status of the historical data imports of the organization
+
+
+
+Wraps GET /api/v2/workforcemanagement/historicaldata/importstatus  
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementHistoricaldataImportstatus() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementHistoricaldataImportstatus was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**HistoricalImportStatusListing**](HistoricalImportStatusListing.html)
 
 <a name="getWorkforcemanagementManagementunitActivitycodes"></a>
 
@@ -3889,60 +3824,6 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitServicegoaltemplate(b
 
 [**ServiceGoalTemplate**](ServiceGoalTemplate.html)
 
-<a name="patchWorkforcemanagementManagementunit"></a>
-
-# **patchWorkforcemanagementManagementunit**
-
-
-
-> [ManagementUnit](ManagementUnit.html) patchWorkforcemanagementManagementunit(managementUnitId, body)
-
-Update the requested management unit
-
-
-
-Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}  
-
-Requires ANY permissions: 
-
-* wfm:managementUnit:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let body: UpdateManagementUnitRequest = new UpdateManagementUnitRequest(...) // body
-
-// Code example
-WorkforceManagementAPI.patchWorkforcemanagementManagementunit(managementUnitId: managementUnitId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("WorkforceManagementAPI.patchWorkforcemanagementManagementunit was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
-| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest.html)| body | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ManagementUnit**](ManagementUnit.html)
-
 <a name="patchWorkforcemanagementManagementunitUserTimeoffrequest"></a>
 
 # **patchWorkforcemanagementManagementunitUserTimeoffrequest**
@@ -5068,6 +4949,105 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (respo
 ### Return type
 
 [**BusinessUnit**](BusinessUnit.html)
+
+<a name="postWorkforcemanagementHistoricaldataDeletejob"></a>
+
+# **postWorkforcemanagementHistoricaldataDeletejob**
+
+
+
+> [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse.html) postWorkforcemanagementHistoricaldataDeletejob()
+
+Delete the entries of the historical data imports in the organization
+
+
+
+Wraps POST /api/v2/workforcemanagement/historicaldata/deletejob  
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementHistoricaldataDeletejob() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementHistoricaldataDeletejob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html)
+
+<a name="postWorkforcemanagementHistoricaldataValidate"></a>
+
+# **postWorkforcemanagementHistoricaldataValidate**
+
+
+
+> Void postWorkforcemanagementHistoricaldataValidate(body)
+
+Trigger validation process for historical import
+
+
+
+Wraps POST /api/v2/workforcemanagement/historicaldata/validate  
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ValidationServiceRequest = new ValidationServiceRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ValidationServiceRequest**](ValidationServiceRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postWorkforcemanagementManagementunitAgentschedulesSearch"></a>
 

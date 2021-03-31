@@ -2446,7 +2446,7 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 
 
 
-> [Utilization](Utilization.html) getRoutingUserUtilization(userId)
+> [AgentMaxUtilization](AgentMaxUtilization.html) getRoutingUserUtilization(userId)
 
 Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
 
@@ -2491,7 +2491,7 @@ RoutingAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**AgentMaxUtilization**](AgentMaxUtilization.html)
 
 <a name="getRoutingUtilization"></a>
 
@@ -4674,7 +4674,7 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (respons
 
 
 
-> [Utilization](Utilization.html) putRoutingUserUtilization(userId, body)
+> [AgentMaxUtilization](AgentMaxUtilization.html) putRoutingUserUtilization(userId, body)
 
 Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
 
@@ -4720,7 +4720,7 @@ RoutingAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, er
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**AgentMaxUtilization**](AgentMaxUtilization.html)
 
 <a name="putRoutingUtilization"></a>
 

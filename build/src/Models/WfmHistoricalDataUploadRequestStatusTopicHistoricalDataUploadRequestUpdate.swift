@@ -21,32 +21,27 @@ public class WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadReques
         case purged = "Purged"
         case purgePending = "PurgePending"
     }
+    public enum ModelType: String, Codable { 
+        case csv = "Csv"
+        case json = "Json"
+    }
     public var requestId: String?
-    public var dateImportStarted: WfmHistoricalDataUploadRequestStatusTopicDateTime?
-    public var dateImportEnded: WfmHistoricalDataUploadRequestStatusTopicDateTime?
-    public var dateCreated: WfmHistoricalDataUploadRequestStatusTopicDateTime?
-    public var dateModified: WfmHistoricalDataUploadRequestStatusTopicDateTime?
     public var status: Status?
     public var error: String?
     public var active: Bool?
+    public var type: ModelType?
 
-    public init(requestId: String?, dateImportStarted: WfmHistoricalDataUploadRequestStatusTopicDateTime?, dateImportEnded: WfmHistoricalDataUploadRequestStatusTopicDateTime?, dateCreated: WfmHistoricalDataUploadRequestStatusTopicDateTime?, dateModified: WfmHistoricalDataUploadRequestStatusTopicDateTime?, status: Status?, error: String?, active: Bool?) {
+    public init(requestId: String?, status: Status?, error: String?, active: Bool?, type: ModelType?) {
         
         self.requestId = requestId
-        
-        self.dateImportStarted = dateImportStarted
-        
-        self.dateImportEnded = dateImportEnded
-        
-        self.dateCreated = dateCreated
-        
-        self.dateModified = dateModified
         
         self.status = status
         
         self.error = error
         
         self.active = active
+        
+        self.type = type
         
     }
 

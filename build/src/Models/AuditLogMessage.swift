@@ -35,6 +35,7 @@ public class AuditLogMessage: Codable {
         case view = "View"
         case update = "Update"
         case delete = "Delete"
+        case deleteAll = "DeleteAll"
         case download = "Download"
         case upload = "Upload"
         case memberAdd = "MemberAdd"
@@ -141,6 +142,7 @@ public class AuditLogMessage: Codable {
         case speechTextAnalyticsSettings = "SpeechTextAnalyticsSettings"
         case predictor = "Predictor"
         case workPlan = "WorkPlan"
+        case sentimentFeedback = "SentimentFeedback"
     }
     /** Id of the audit message. */
     public var _id: String?

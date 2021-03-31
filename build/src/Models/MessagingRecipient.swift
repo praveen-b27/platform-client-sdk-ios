@@ -23,7 +23,7 @@ public class MessagingRecipient: Codable {
     public var _id: String?
     /** The recipient identifier type. This is used to indicate the format used by the recipient identifier. */
     public var idType: IdType?
-    /** Avatar image */
+    /** Path or URI to an image file containing an avatar */
     public var image: String?
     /** Sender&#39;s first name */
     public var firstName: String?

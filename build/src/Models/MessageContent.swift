@@ -16,6 +16,7 @@ public class MessageContent: Codable {
         case attachment = "Attachment"
         case location = "Location"
         case quickReply = "QuickReply"
+        case buttonResponse = "ButtonResponse"
         case notification = "Notification"
         case genericTemplate = "GenericTemplate"
         case listTemplate = "ListTemplate"
@@ -31,6 +32,8 @@ public class MessageContent: Codable {
     public var attachment: ContentAttachment?
     /** Quick reply object */
     public var quickReply: ContentQuickReply?
+    /** Button response object */
+    public var buttonResponse: ContentButtonResponse?
     /** Generic content object */
     public var generic: ContentGeneric?
     /** List content object */
@@ -44,7 +47,7 @@ public class MessageContent: Codable {
     /** The postback object result of a user clicking in a button */
     public var postback: ContentPostback?
 
-    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?) {
+    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, buttonResponse: ContentButtonResponse?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?) {
         
         self.contentType = contentType
         
@@ -53,6 +56,8 @@ public class MessageContent: Codable {
         self.attachment = attachment
         
         self.quickReply = quickReply
+        
+        self.buttonResponse = buttonResponse
         
         self.generic = generic
         

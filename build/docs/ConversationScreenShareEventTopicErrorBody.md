@@ -7,11 +7,11 @@ title: ConversationScreenShareEventTopicErrorBody
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **status** | **Int** |  | [optional] |
+| **message** | **String** |  | [optional] |
 | **code** | **String** |  | [optional] |
+| **status** | **Int** |  | [optional] |
 | **entityId** | **String** |  | [optional] |
 | **entityName** | **String** |  | [optional] |
-| **message** | **String** |  | [optional] |
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |

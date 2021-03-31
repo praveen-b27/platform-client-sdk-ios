@@ -502,61 +502,6 @@ open class WorkforceManagementAPI {
     
     
     
-    /**
-     
-     Delete management unit
-     
-     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func deleteWorkforcemanagementManagementunit(managementUnitId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: managementUnitId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     
-     Delete management unit
-     
-     - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}
-     - 
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func deleteWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String) -> RequestBuilder<Void> {
-        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
-        let managementUnitIdPreEscape = "\(managementUnitId)"
-        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
-        let body: Data? = nil
-            
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
-    }
-
-    
-    
-    
     
     
     /**
@@ -3595,31 +3540,15 @@ open class WorkforceManagementAPI {
     }
 
     
-    
-    
-    
-    public enum Expand_getWorkforcemanagementManagementunit: String { 
-        case settings = "settings"
-        case settingsAdherence = "settings.adherence"
-        case settingsTimeoff = "settings.timeOff"
-        case settingsScheduling = "settings.scheduling"
-        case settingsShorttermforecasting = "settings.shortTermForecasting"
-        case settingsShifttrading = "settings.shiftTrading"
-    }
-
-    
-    
     /**
      
-     Get management unit
+     Retrieves delete job status for historical data imports of the organization
      
-     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter expand: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunit(managementUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: managementUnitId, expand: expand)
-        requestBuilder.execute { (response: Response<ManagementUnit>?, error) -> Void in
+    open class func getWorkforcemanagementHistoricaldataDeletejob(completion: @escaping ((_ data: HistoricalImportDeleteJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder()
+        requestBuilder.execute { (response: Response<HistoricalImportDeleteJobResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -3637,107 +3566,24 @@ open class WorkforceManagementAPI {
 
     /**
      
-     Get management unit
+     Retrieves delete job status for historical data imports of the organization
      
-     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}
-     - settings.shortTermForecasting is deprecated and now lives on the business unit
+     - GET /api/v2/workforcemanagement/historicaldata/deletejob
+     - 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "startDayOfWeek" : "aeiou",
-  "settings" : {
-    "metadata" : {
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "shiftTrading" : {
-      "weeklyMaxPaidViolations" : "aeiou",
-      "unequalPaid" : "aeiou",
-      "requiresMatchingLanguages" : true,
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true,
-      "weeklyMinPaidViolations" : "aeiou",
-      "requiresMatchingSkills" : true,
-      "requiresMatchingQueues" : true,
-      "minHoursInFuture" : 123,
-      "activityCategoryRules" : [ {
-        "activityCodeIdReplacement" : "aeiou",
-        "activityCategory" : "aeiou",
-        "action" : "aeiou"
-      } ],
-      "requiresMatchingPlanningGroups" : true
-    },
-    "adherence" : {
-      "ignoredActivityCategories" : {
-        "values" : [ "aeiou" ]
-      },
-      "nonOnQueueActivitiesEquivalent" : true,
-      "adherenceTargetPercent" : 123,
-      "adherenceExceptionThresholdSeconds" : 123,
-      "trackOnQueueActivity" : true,
-      "severeAlertThresholdMinutes" : 123
-    },
-    "scheduling" : {
-      "planningPeriod" : {
-        "weekCount" : 123,
-        "startDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "maxOccupancyPercentForDeferredWork" : 123,
-      "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-      "shrinkageOverrides" : {
-        "values" : [ {
-          "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-          "intervalIndex" : 123
-        } ],
-        "clear" : true
-      },
-      "startDayOfWeekend" : "aeiou"
-    },
-    "timeOff" : {
-      "submissionEarliestDaysFromNow" : 123,
-      "submissionRangeEnforced" : true,
-      "submissionLatestDaysFromNow" : 123
-    },
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "metadata" : "",
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
   "selfUri" : "aeiou",
   "name" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
   "id" : "aeiou",
-  "version" : 123
+  "status" : "aeiou"
 }}]
-     
-     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter expand: (query)  (optional)
 
-     - returns: RequestBuilder<ManagementUnit> 
+     - returns: RequestBuilder<HistoricalImportDeleteJobResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<ManagementUnit> {
-        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
-        let managementUnitIdPreEscape = "\(managementUnitId)"
-        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+    open class func getWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {
+        let path = "/api/v2/workforcemanagement/historicaldata/deletejob"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         
@@ -3746,14 +3592,76 @@ open class WorkforceManagementAPI {
         let body: Data? = nil
             
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-            
-            "expand": expand
-            
-        ])
+        let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<ManagementUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<HistoricalImportDeleteJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Retrieves status of the historical data imports of the organization
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementHistoricaldataImportstatus(completion: @escaping ((_ data: HistoricalImportStatusListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementHistoricaldataImportstatusWithRequestBuilder()
+        requestBuilder.execute { (response: Response<HistoricalImportStatusListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieves status of the historical data imports of the organization
+     
+     - GET /api/v2/workforcemanagement/historicaldata/importstatus
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "requestId" : "aeiou",
+    "dateImportStarted" : "2000-01-23T04:56:07.000+0000",
+    "active" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "dateImportEnded" : "2000-01-23T04:56:07.000+0000",
+    "error" : "aeiou",
+    "type" : "aeiou",
+    "status" : "aeiou"
+  } ]
+}}]
+
+     - returns: RequestBuilder<HistoricalImportStatusListing> 
+     */
+    open class func getWorkforcemanagementHistoricaldataImportstatusWithRequestBuilder() -> RequestBuilder<HistoricalImportStatusListing> {
+        let path = "/api/v2/workforcemanagement/historicaldata/importstatus"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HistoricalImportStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -7424,152 +7332,6 @@ open class WorkforceManagementAPI {
     
     
     
-    /**
-     
-     Update the requested management unit
-     
-     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func patchWorkforcemanagementManagementunit(managementUnitId: String, body: UpdateManagementUnitRequest? = nil, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: managementUnitId, body: body)
-        requestBuilder.execute { (response: Response<ManagementUnit>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     
-     Update the requested management unit
-     
-     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}
-     - 
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "division" : {
-    "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou"
-  },
-  "startDayOfWeek" : "aeiou",
-  "settings" : {
-    "metadata" : {
-      "modifiedBy" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
-      "dateModified" : "2000-01-23T04:56:07.000+0000",
-      "version" : 123
-    },
-    "shiftTrading" : {
-      "weeklyMaxPaidViolations" : "aeiou",
-      "unequalPaid" : "aeiou",
-      "requiresMatchingLanguages" : true,
-      "oneSided" : "aeiou",
-      "allowDirectTrades" : true,
-      "autoReview" : true,
-      "enabled" : true,
-      "weeklyMinPaidViolations" : "aeiou",
-      "requiresMatchingSkills" : true,
-      "requiresMatchingQueues" : true,
-      "minHoursInFuture" : 123,
-      "activityCategoryRules" : [ {
-        "activityCodeIdReplacement" : "aeiou",
-        "activityCategory" : "aeiou",
-        "action" : "aeiou"
-      } ],
-      "requiresMatchingPlanningGroups" : true
-    },
-    "adherence" : {
-      "ignoredActivityCategories" : {
-        "values" : [ "aeiou" ]
-      },
-      "nonOnQueueActivitiesEquivalent" : true,
-      "adherenceTargetPercent" : 123,
-      "adherenceExceptionThresholdSeconds" : 123,
-      "trackOnQueueActivity" : true,
-      "severeAlertThresholdMinutes" : 123
-    },
-    "scheduling" : {
-      "planningPeriod" : {
-        "weekCount" : 123,
-        "startDate" : "2000-01-23T04:56:07.000+0000"
-      },
-      "maxOccupancyPercentForDeferredWork" : 123,
-      "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-      "shrinkageOverrides" : {
-        "values" : [ {
-          "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
-          "intervalIndex" : 123
-        } ],
-        "clear" : true
-      },
-      "startDayOfWeekend" : "aeiou"
-    },
-    "timeOff" : {
-      "submissionEarliestDaysFromNow" : 123,
-      "submissionRangeEnforced" : true,
-      "submissionLatestDaysFromNow" : 123
-    },
-    "shortTermForecasting" : {
-      "defaultHistoryWeeks" : 123
-    }
-  },
-  "metadata" : "",
-  "businessUnit" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "timeZone" : "aeiou",
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "version" : 123
-}}]
-     
-     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter body: (body) body (optional)
-
-     - returns: RequestBuilder<ManagementUnit> 
-     */
-    open class func patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, body: UpdateManagementUnitRequest? = nil) -> RequestBuilder<ManagementUnit> {
-        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
-        let managementUnitIdPreEscape = "\(managementUnitId)"
-        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<ManagementUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
-    }
-
-    
-    
-    
-    
-    
     
     
     
@@ -9909,6 +9671,115 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Delete the entries of the historical data imports in the organization
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementHistoricaldataDeletejob(completion: @escaping ((_ data: HistoricalImportDeleteJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder()
+        requestBuilder.execute { (response: Response<HistoricalImportDeleteJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete the entries of the historical data imports in the organization
+     
+     - POST /api/v2/workforcemanagement/historicaldata/deletejob
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<HistoricalImportDeleteJobResponse> 
+     */
+    open class func postWorkforcemanagementHistoricaldataDeletejobWithRequestBuilder() -> RequestBuilder<HistoricalImportDeleteJobResponse> {
+        let path = "/api/v2/workforcemanagement/historicaldata/deletejob"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HistoricalImportDeleteJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Trigger validation process for historical import
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementHistoricaldataValidate(body: ValidationServiceRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Trigger validation process for historical import
+     
+     - POST /api/v2/workforcemanagement/historicaldata/validate
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: ValidationServiceRequest? = nil) -> RequestBuilder<Void> {
+        let path = "/api/v2/workforcemanagement/historicaldata/validate"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

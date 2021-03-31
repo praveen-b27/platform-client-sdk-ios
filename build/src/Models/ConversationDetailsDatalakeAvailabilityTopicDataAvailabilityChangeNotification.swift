@@ -11,13 +11,7 @@ import Foundation
 
 public class ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification: Codable {
 
-    public var dataAvailabilityDate: ConversationDetailsDatalakeAvailabilityTopicDateTime?
 
-    public init(dataAvailabilityDate: ConversationDetailsDatalakeAvailabilityTopicDateTime?) {
-        
-        self.dataAvailabilityDate = dataAvailabilityDate
-        
-    }
 
 
 }

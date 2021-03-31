@@ -2963,7 +2963,7 @@ This endpoint does not require any parameters.
 
 
 
-> [MessagingIntegrationEntityListing](MessagingIntegrationEntityListing.html) getConversationsMessagingIntegrations(pageSize, pageNumber)
+> [MessagingIntegrationEntityListing](MessagingIntegrationEntityListing.html) getConversationsMessagingIntegrations(pageSize, pageNumber, expand, supportedContentId)
 
 Get a list of Integrations
 
@@ -2985,9 +2985,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrations = ConversationsAPI.Expand_getConversationsMessagingIntegrations.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3004,6 +3006,8 @@ ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageN
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3017,7 +3021,7 @@ ConversationsAPI.getConversationsMessagingIntegrations(pageSize: pageSize, pageN
 
 
 
-> [FacebookIntegrationEntityListing](FacebookIntegrationEntityListing.html) getConversationsMessagingIntegrationsFacebook(pageSize, pageNumber)
+> [FacebookIntegrationEntityListing](FacebookIntegrationEntityListing.html) getConversationsMessagingIntegrationsFacebook(pageSize, pageNumber, expand, supportedContentId)
 
 Get a list of Facebook Integrations
 
@@ -3039,9 +3043,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebook = ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebook.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3058,6 +3064,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSiz
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3071,7 +3079,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebook(pageSize: pageSiz
 
 
 
-> [FacebookIntegration](FacebookIntegration.html) getConversationsMessagingIntegrationsFacebookIntegrationId(integrationId)
+> [FacebookIntegration](FacebookIntegration.html) getConversationsMessagingIntegrationsFacebookIntegrationId(integrationId, expand)
 
 Get a Facebook messaging integration
 
@@ -3092,9 +3100,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebookIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsFacebookIntegrationId.enummember // Expand instructions for the return value.
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(integrationId: integrationId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3110,6 +3119,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(inte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 {: class="table-striped"}
 
 
@@ -3123,7 +3133,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsFacebookIntegrationId(inte
 
 
 
-> [LineIntegrationEntityListing](LineIntegrationEntityListing.html) getConversationsMessagingIntegrationsLine(pageSize, pageNumber)
+> [LineIntegrationEntityListing](LineIntegrationEntityListing.html) getConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId)
 
 Get a list of LINE messenger Integrations
 
@@ -3145,9 +3155,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine = ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3164,6 +3176,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, p
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3177,7 +3191,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, p
 
 
 
-> [LineIntegration](LineIntegration.html) getConversationsMessagingIntegrationsLineIntegrationId(integrationId)
+> [LineIntegration](LineIntegration.html) getConversationsMessagingIntegrationsLineIntegrationId(integrationId, expand)
 
 Get a LINE messenger integration
 
@@ -3198,9 +3212,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsLineIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsLineIntegrationId.enummember // Expand instructions for the return value.
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3216,6 +3231,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrat
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 {: class="table-striped"}
 
 
@@ -3229,7 +3245,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrat
 
 
 
-> [TwitterIntegrationEntityListing](TwitterIntegrationEntityListing.html) getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber)
+> [TwitterIntegrationEntityListing](TwitterIntegrationEntityListing.html) getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId)
 
 Get a list of Twitter Integrations
 
@@ -3251,9 +3267,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3270,6 +3288,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3283,7 +3303,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize
 
 
 
-> [TwitterIntegration](TwitterIntegration.html) getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId)
+> [TwitterIntegration](TwitterIntegration.html) getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, expand)
 
 Get a Twitter messaging integration
 
@@ -3304,9 +3324,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId.enummember // Expand instructions for the return value.
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3322,6 +3343,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integ
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 {: class="table-striped"}
 
 
@@ -3335,7 +3357,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integ
 
 
 
-> [WhatsAppIntegrationEntityListing](WhatsAppIntegrationEntityListing.html) getConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber)
+> [WhatsAppIntegrationEntityListing](WhatsAppIntegrationEntityListing.html) getConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber, expand, supportedContentId)
 
 Get a list of WhatsApp Integrations
 
@@ -3357,9 +3379,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsapp = ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsapp.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3376,6 +3400,8 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSiz
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
 {: class="table-striped"}
 
 
@@ -3389,7 +3415,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsapp(pageSize: pageSiz
 
 
 
-> [WhatsAppIntegration](WhatsAppIntegration.html) getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId)
+> [WhatsAppIntegration](WhatsAppIntegration.html) getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId, expand)
 
 Get a WhatsApp messaging integration
 
@@ -3410,9 +3436,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsappIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsWhatsappIntegrationId.enummember // Expand instructions for the return value.
 
 // Code example
-ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId) { (response, error) in
+ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3428,6 +3455,7 @@ ConversationsAPI.getConversationsMessagingIntegrationsWhatsappIntegrationId(inte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
 {: class="table-striped"}
 
 

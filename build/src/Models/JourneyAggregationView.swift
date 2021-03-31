@@ -12,6 +12,8 @@ import Foundation
 public class JourneyAggregationView: Codable {
 
     public enum Target: String, Codable { 
+        case ndistinctjourneyactions = "nDistinctJourneyActions"
+        case njourneyactionsblocked = "nJourneyActionsBlocked"
         case njourneyoutcomesachieved = "nJourneyOutcomesAchieved"
         case njourneyoutcomesattributed = "nJourneyOutcomesAttributed"
         case njourneysegmentsassigned = "nJourneySegmentsAssigned"

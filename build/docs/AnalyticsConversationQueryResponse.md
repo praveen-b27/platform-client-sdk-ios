@@ -9,6 +9,7 @@ title: AnalyticsConversationQueryResponse
 |------------ | ------------- | ------------- | -------------|
 | **aggregations** | [**[AggregationResult]**](AggregationResult.html) |  | [optional] |
 | **conversations** | [**[AnalyticsConversationWithoutAttributes]**](AnalyticsConversationWithoutAttributes.html) |  | [optional] |
+| **totalHits** | **Int** |  | [optional] |
 {: class="table table-striped"}
 
 

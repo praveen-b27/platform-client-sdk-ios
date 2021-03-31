@@ -8,7 +8,6 @@ title: EdgeMetricsTopicEdgeMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **edge** | [**EdgeMetricsTopicUriReference**](EdgeMetricsTopicUriReference.html) |  | [optional] |
-| **eventTime** | [**EdgeMetricsTopicOffsetDateTime**](EdgeMetricsTopicOffsetDateTime.html) |  | [optional] |
 | **upTimeMsec** | **Int** |  | [optional] |
 | **processors** | [**[EdgeMetricsTopicEdgeMetricProcessor]**](EdgeMetricsTopicEdgeMetricProcessor.html) |  | [optional] |
 | **memory** | [**[EdgeMetricsTopicEdgeMetricMemory]**](EdgeMetricsTopicEdgeMetricMemory.html) |  | [optional] |

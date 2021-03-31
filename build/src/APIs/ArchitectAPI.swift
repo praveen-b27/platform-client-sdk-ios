@@ -10370,6 +10370,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -10417,6 +10422,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Get a pageable list of flow milestones, filtered by query parameters
@@ -10429,10 +10436,11 @@ open class ArchitectAPI {
      - parameter name: (query) Name (optional)
      - parameter _description: (query) Description (optional)
      - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlowsMilestones(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, completion: @escaping ((_ data: FlowMilestoneListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsMilestonesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription)
+    open class func getFlowsMilestones(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: FlowMilestoneListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsMilestonesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, divisionId: divisionId)
         requestBuilder.execute { (response: Response<FlowMilestoneListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -10463,6 +10471,11 @@ open class ArchitectAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -10484,10 +10497,11 @@ open class ArchitectAPI {
      - parameter name: (query) Name (optional)
      - parameter _description: (query) Description (optional)
      - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
 
      - returns: RequestBuilder<FlowMilestoneListing> 
      */
-    open class func getFlowsMilestonesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil) -> RequestBuilder<FlowMilestoneListing> {
+    open class func getFlowsMilestonesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<FlowMilestoneListing> {
         let path = "/api/v2/flows/milestones"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -10514,11 +10528,134 @@ open class ArchitectAPI {
             
             "description": _description, 
             
-            "nameOrDescription": nameOrDescription
+            "nameOrDescription": nameOrDescription, 
+            
+            "divisionId": divisionId
             
         ])
 
         let requestBuilder: RequestBuilder<FlowMilestoneListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get a pageable list of basic flow milestone information objects filterable by query parameters.
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsMilestonesDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: FlowMilestoneDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsMilestonesDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<FlowMilestoneDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a pageable list of basic flow milestone information objects filterable by query parameters.
+     
+     - GET /api/v2/flows/milestones/divisionviews
+     - This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
+
+     - returns: RequestBuilder<FlowMilestoneDivisionViewEntityListing> 
+     */
+    open class func getFlowsMilestonesDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<FlowMilestoneDivisionViewEntityListing> {
+        let path = "/api/v2/flows/milestones/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortBy": sortBy, 
+            
+            "sortOrder": sortOrder, 
+            
+            "id": _id, 
+            
+            "name": name, 
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<FlowMilestoneDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -10561,6 +10698,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "currentOperation" : {
     "errorMessageParams" : {
       "key" : "aeiou"
@@ -10888,6 +11030,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Get a pageable list of flow outcomes, filtered by query parameters
@@ -10900,10 +11044,11 @@ open class ArchitectAPI {
      - parameter name: (query) Name (optional)
      - parameter _description: (query) Description (optional)
      - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlowsOutcomes(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, completion: @escaping ((_ data: FlowOutcomeListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsOutcomesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription)
+    open class func getFlowsOutcomes(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: FlowOutcomeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsOutcomesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, divisionId: divisionId)
         requestBuilder.execute { (response: Response<FlowOutcomeListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -10934,6 +11079,11 @@ open class ArchitectAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "currentOperation" : {
       "errorMessageParams" : {
         "key" : "aeiou"
@@ -11235,10 +11385,11 @@ open class ArchitectAPI {
      - parameter name: (query) Name (optional)
      - parameter _description: (query) Description (optional)
      - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
 
      - returns: RequestBuilder<FlowOutcomeListing> 
      */
-    open class func getFlowsOutcomesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil) -> RequestBuilder<FlowOutcomeListing> {
+    open class func getFlowsOutcomesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<FlowOutcomeListing> {
         let path = "/api/v2/flows/outcomes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -11265,11 +11416,134 @@ open class ArchitectAPI {
             
             "description": _description, 
             
-            "nameOrDescription": nameOrDescription
+            "nameOrDescription": nameOrDescription, 
+            
+            "divisionId": divisionId
             
         ])
 
         let requestBuilder: RequestBuilder<FlowOutcomeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get a pageable list of basic flow outcome information objects filterable by query parameters.
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsOutcomesDivisionviews(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: FlowOutcomeDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsOutcomesDivisionviewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId)
+        requestBuilder.execute { (response: Response<FlowOutcomeDivisionViewEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a pageable list of basic flow outcome information objects filterable by query parameters.
+     
+     - GET /api/v2/flows/outcomes/divisionviews
+     - This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter divisionId: (query) division ID(s) (optional)
+
+     - returns: RequestBuilder<FlowOutcomeDivisionViewEntityListing> 
+     */
+    open class func getFlowsOutcomesDivisionviewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, _id: [String]? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<FlowOutcomeDivisionViewEntityListing> {
+        let path = "/api/v2/flows/outcomes/divisionviews"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortBy": sortBy, 
+            
+            "sortOrder": sortOrder, 
+            
+            "id": _id, 
+            
+            "name": name, 
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<FlowOutcomeDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -16371,6 +16645,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -16433,6 +16712,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "currentOperation" : {
     "errorMessageParams" : {
       "key" : "aeiou"
@@ -18237,6 +18521,11 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",

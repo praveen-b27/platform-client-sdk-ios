@@ -270,6 +270,8 @@ open class AnalyticsAPI {
       "remote" : "aeiou",
       "roomId" : "aeiou",
       "messageType" : "aeiou",
+      "removedSkillIds" : [ "aeiou" ],
+      "routingRule" : 123,
       "requestedRoutings" : [ "aeiou" ],
       "mediaCount" : 123,
       "dnis" : "aeiou",
@@ -299,9 +301,9 @@ open class AnalyticsAPI {
       "dispositionAnalyzer" : "aeiou",
       "addressOther" : "aeiou",
       "cobrowseRoomId" : "aeiou",
+      "activeSkillIds" : [ "aeiou" ],
       "protocolCallId" : "aeiou",
       "mediaType" : "aeiou",
-      "monitoredSessionId" : "aeiou",
       "flowOutType" : "aeiou",
       "outboundCampaignId" : "aeiou",
       "addressTo" : "aeiou",
@@ -321,6 +323,7 @@ open class AnalyticsAPI {
       "peerId" : "aeiou",
       "remoteNameDisplayable" : "aeiou",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+      "agentBullseyeRing" : 123,
       "callbackNumbers" : [ "aeiou" ],
       "recording" : true,
       "screenShareAddressSelf" : "aeiou",
@@ -360,6 +363,7 @@ open class AnalyticsAPI {
           "value" : "aeiou"
         } ]
       } ],
+      "bullseyeRing" : 123,
       "journeyCustomerSessionIdType" : "aeiou",
       "provider" : "aeiou",
       "journeyCustomerIdType" : "aeiou",
@@ -521,6 +525,8 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "removedSkillIds" : [ "aeiou" ],
+        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -550,9 +556,9 @@ open class AnalyticsAPI {
         "dispositionAnalyzer" : "aeiou",
         "addressOther" : "aeiou",
         "cobrowseRoomId" : "aeiou",
+        "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
-        "monitoredSessionId" : "aeiou",
         "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
@@ -572,6 +578,7 @@ open class AnalyticsAPI {
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "agentBullseyeRing" : 123,
         "callbackNumbers" : [ "aeiou" ],
         "recording" : true,
         "screenShareAddressSelf" : "aeiou",
@@ -611,6 +618,7 @@ open class AnalyticsAPI {
             "value" : "aeiou"
           } ]
         } ],
+        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -852,6 +860,8 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "removedSkillIds" : [ "aeiou" ],
+        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -881,9 +891,9 @@ open class AnalyticsAPI {
         "dispositionAnalyzer" : "aeiou",
         "addressOther" : "aeiou",
         "cobrowseRoomId" : "aeiou",
+        "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
-        "monitoredSessionId" : "aeiou",
         "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
@@ -903,6 +913,7 @@ open class AnalyticsAPI {
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "agentBullseyeRing" : 123,
         "callbackNumbers" : [ "aeiou" ],
         "recording" : true,
         "screenShareAddressSelf" : "aeiou",
@@ -942,6 +953,7 @@ open class AnalyticsAPI {
             "value" : "aeiou"
           } ]
         } ],
+        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -2726,6 +2738,7 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "totalHits" : 123,
   "aggregations" : [ {
     "metric" : "aeiou",
     "count" : 123456789,
@@ -2796,6 +2809,8 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "removedSkillIds" : [ "aeiou" ],
+        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -2825,9 +2840,9 @@ open class AnalyticsAPI {
         "dispositionAnalyzer" : "aeiou",
         "addressOther" : "aeiou",
         "cobrowseRoomId" : "aeiou",
+        "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
-        "monitoredSessionId" : "aeiou",
         "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
@@ -2847,6 +2862,7 @@ open class AnalyticsAPI {
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "agentBullseyeRing" : 123,
         "callbackNumbers" : [ "aeiou" ],
         "recording" : true,
         "screenShareAddressSelf" : "aeiou",
@@ -2886,6 +2902,7 @@ open class AnalyticsAPI {
             "value" : "aeiou"
           } ]
         } ],
+        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -3042,6 +3059,8 @@ open class AnalyticsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "removedSkillIds" : [ "aeiou" ],
+        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -3071,9 +3090,9 @@ open class AnalyticsAPI {
         "dispositionAnalyzer" : "aeiou",
         "addressOther" : "aeiou",
         "cobrowseRoomId" : "aeiou",
+        "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
-        "monitoredSessionId" : "aeiou",
         "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
@@ -3093,6 +3112,7 @@ open class AnalyticsAPI {
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "agentBullseyeRing" : 123,
         "callbackNumbers" : [ "aeiou" ],
         "recording" : true,
         "screenShareAddressSelf" : "aeiou",
@@ -3132,6 +3152,7 @@ open class AnalyticsAPI {
             "value" : "aeiou"
           } ]
         } ],
+        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -4397,6 +4418,7 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "totalHits" : 123,
   "userDetails" : [ {
     "primaryPresence" : [ {
       "systemPresence" : "aeiou",

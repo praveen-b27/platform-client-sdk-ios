@@ -12,6 +12,7 @@ Message content element
 | **location** | [**ContentLocation**](ContentLocation.html) | Location object | [optional] |
 | **attachment** | [**ContentAttachment**](ContentAttachment.html) | Attachment object | [optional] |
 | **quickReply** | [**ContentQuickReply**](ContentQuickReply.html) | Quick reply object | [optional] |
+| **buttonResponse** | [**ContentButtonResponse**](ContentButtonResponse.html) | Button response object | [optional] |
 | **generic** | [**ContentGeneric**](ContentGeneric.html) | Generic content object | [optional] |
 | **list** | [**ContentList**](ContentList.html) | List content object | [optional] |
 | **template** | [**ContentNotificationTemplate**](ContentNotificationTemplate.html) | Template notification object | [optional] |

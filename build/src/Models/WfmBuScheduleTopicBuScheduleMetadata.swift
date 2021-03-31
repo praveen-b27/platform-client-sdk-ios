@@ -12,7 +12,6 @@ import Foundation
 public class WfmBuScheduleTopicBuScheduleMetadata: Codable {
 
     public var _id: String?
-    public var weekDate: WfmBuScheduleTopicLocalDate?
     public var weekCount: Int?
     public var _description: String?
     public var published: Bool?
@@ -21,11 +20,9 @@ public class WfmBuScheduleTopicBuScheduleMetadata: Codable {
     public var generationResults: WfmBuScheduleTopicBuScheduleGenerationResultSummary?
     public var metadata: WfmBuScheduleTopicWfmVersionedEntityMetadata?
 
-    public init(_id: String?, weekDate: WfmBuScheduleTopicLocalDate?, weekCount: Int?, _description: String?, published: Bool?, shortTermForecast: WfmBuScheduleTopicBuShortTermForecastReference?, managementUnits: [WfmBuScheduleTopicBuManagementUnitScheduleSummary]?, generationResults: WfmBuScheduleTopicBuScheduleGenerationResultSummary?, metadata: WfmBuScheduleTopicWfmVersionedEntityMetadata?) {
+    public init(_id: String?, weekCount: Int?, _description: String?, published: Bool?, shortTermForecast: WfmBuScheduleTopicBuShortTermForecastReference?, managementUnits: [WfmBuScheduleTopicBuManagementUnitScheduleSummary]?, generationResults: WfmBuScheduleTopicBuScheduleGenerationResultSummary?, metadata: WfmBuScheduleTopicWfmVersionedEntityMetadata?) {
         
         self._id = _id
-        
-        self.weekDate = weekDate
         
         self.weekCount = weekCount
         
@@ -45,7 +42,6 @@ public class WfmBuScheduleTopicBuScheduleMetadata: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
-        case weekDate
         case weekCount
         case _description = "description"
         case published

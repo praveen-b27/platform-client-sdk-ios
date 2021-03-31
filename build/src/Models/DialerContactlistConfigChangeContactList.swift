@@ -18,6 +18,7 @@ public class DialerContactlistConfigChangeContactList: Codable {
     public var version: Int?
     public var columnNames: [String]?
     public var phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?
+    public var emailColumns: [DialerContactlistConfigChangeEmailColumn]?
     public var importStatus: DialerContactlistConfigChangeImportStatus?
     public var previewModeColumnName: String?
     public var previewModeAcceptedValues: [String]?
@@ -28,7 +29,7 @@ public class DialerContactlistConfigChangeContactList: Codable {
     public var division: DialerContactlistConfigChangeUriReference?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, columnNames: [String]?, phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?, importStatus: DialerContactlistConfigChangeImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int?, attemptLimits: DialerContactlistConfigChangeUriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, division: DialerContactlistConfigChangeUriReference?, additionalProperties: JSON?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, columnNames: [String]?, phoneColumns: [DialerContactlistConfigChangeContactPhoneNumberColumn]?, emailColumns: [DialerContactlistConfigChangeEmailColumn]?, importStatus: DialerContactlistConfigChangeImportStatus?, previewModeColumnName: String?, previewModeAcceptedValues: [String]?, size: Int?, attemptLimits: DialerContactlistConfigChangeUriReference?, automaticTimeZoneMapping: Bool?, zipCodeColumnName: String?, division: DialerContactlistConfigChangeUriReference?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -43,6 +44,8 @@ public class DialerContactlistConfigChangeContactList: Codable {
         self.columnNames = columnNames
         
         self.phoneColumns = phoneColumns
+        
+        self.emailColumns = emailColumns
         
         self.importStatus = importStatus
         
@@ -72,6 +75,7 @@ public class DialerContactlistConfigChangeContactList: Codable {
         case version
         case columnNames
         case phoneColumns
+        case emailColumns
         case importStatus
         case previewModeColumnName
         case previewModeAcceptedValues

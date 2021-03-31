@@ -13,7 +13,6 @@ public class OAuthClientRequest: Codable {
 
     public enum AuthorizedGrantType: String, Codable { 
         case code = "CODE"
-        case codePkce = "CODE_PKCE"
         case token = "TOKEN"
         case saml2bearer = "SAML2BEARER"
         case password = "PASSWORD"

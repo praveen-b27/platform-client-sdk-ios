@@ -681,6 +681,8 @@ open class ConversationsAPI {
       "remote" : "aeiou",
       "roomId" : "aeiou",
       "messageType" : "aeiou",
+      "removedSkillIds" : [ "aeiou" ],
+      "routingRule" : 123,
       "requestedRoutings" : [ "aeiou" ],
       "mediaCount" : 123,
       "dnis" : "aeiou",
@@ -710,9 +712,9 @@ open class ConversationsAPI {
       "dispositionAnalyzer" : "aeiou",
       "addressOther" : "aeiou",
       "cobrowseRoomId" : "aeiou",
+      "activeSkillIds" : [ "aeiou" ],
       "protocolCallId" : "aeiou",
       "mediaType" : "aeiou",
-      "monitoredSessionId" : "aeiou",
       "flowOutType" : "aeiou",
       "outboundCampaignId" : "aeiou",
       "addressTo" : "aeiou",
@@ -732,6 +734,7 @@ open class ConversationsAPI {
       "peerId" : "aeiou",
       "remoteNameDisplayable" : "aeiou",
       "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+      "agentBullseyeRing" : 123,
       "callbackNumbers" : [ "aeiou" ],
       "recording" : true,
       "screenShareAddressSelf" : "aeiou",
@@ -771,6 +774,7 @@ open class ConversationsAPI {
           "value" : "aeiou"
         } ]
       } ],
+      "bullseyeRing" : 123,
       "journeyCustomerSessionIdType" : "aeiou",
       "provider" : "aeiou",
       "journeyCustomerIdType" : "aeiou",
@@ -932,6 +936,8 @@ open class ConversationsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "removedSkillIds" : [ "aeiou" ],
+        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -961,9 +967,9 @@ open class ConversationsAPI {
         "dispositionAnalyzer" : "aeiou",
         "addressOther" : "aeiou",
         "cobrowseRoomId" : "aeiou",
+        "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
-        "monitoredSessionId" : "aeiou",
         "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
@@ -983,6 +989,7 @@ open class ConversationsAPI {
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "agentBullseyeRing" : 123,
         "callbackNumbers" : [ "aeiou" ],
         "recording" : true,
         "screenShareAddressSelf" : "aeiou",
@@ -1022,6 +1029,7 @@ open class ConversationsAPI {
             "value" : "aeiou"
           } ]
         } ],
+        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -1263,6 +1271,8 @@ open class ConversationsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "removedSkillIds" : [ "aeiou" ],
+        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -1292,9 +1302,9 @@ open class ConversationsAPI {
         "dispositionAnalyzer" : "aeiou",
         "addressOther" : "aeiou",
         "cobrowseRoomId" : "aeiou",
+        "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
-        "monitoredSessionId" : "aeiou",
         "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
@@ -1314,6 +1324,7 @@ open class ConversationsAPI {
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "agentBullseyeRing" : 123,
         "callbackNumbers" : [ "aeiou" ],
         "recording" : true,
         "screenShareAddressSelf" : "aeiou",
@@ -1353,6 +1364,7 @@ open class ConversationsAPI {
             "value" : "aeiou"
           } ]
         } ],
+        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -8454,16 +8466,27 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrations: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
+    
+    
     /**
      
      Get a list of Integrations
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrations(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: MessagingIntegrationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+    open class func getConversationsMessagingIntegrations(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrations? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: MessagingIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId)
         requestBuilder.execute { (response: Response<MessagingIntegrationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -8520,10 +8543,12 @@ open class ConversationsAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
 
      - returns: RequestBuilder<MessagingIntegrationEntityListing> 
      */
-    open class func getConversationsMessagingIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<MessagingIntegrationEntityListing> {
+    open class func getConversationsMessagingIntegrationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrations? = nil, supportedContentId: String? = nil) -> RequestBuilder<MessagingIntegrationEntityListing> {
         let path = "/api/v2/conversations/messaging/integrations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8538,7 +8563,11 @@ open class ConversationsAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "expand": expand?.rawValue, 
+            
+            "supportedContent.id": supportedContentId
             
         ])
 
@@ -8552,16 +8581,27 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsFacebook: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
+    
+    
     /**
      
      Get a list of Facebook Integrations
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsFacebook(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: FacebookIntegrationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsFacebookWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+    open class func getConversationsMessagingIntegrationsFacebook(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsFacebook? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: FacebookIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsFacebookWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId)
         requestBuilder.execute { (response: Response<FacebookIntegrationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -8639,10 +8679,12 @@ open class ConversationsAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
 
      - returns: RequestBuilder<FacebookIntegrationEntityListing> 
      */
-    open class func getConversationsMessagingIntegrationsFacebookWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<FacebookIntegrationEntityListing> {
+    open class func getConversationsMessagingIntegrationsFacebookWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsFacebook? = nil, supportedContentId: String? = nil) -> RequestBuilder<FacebookIntegrationEntityListing> {
         let path = "/api/v2/conversations/messaging/integrations/facebook"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8657,7 +8699,11 @@ open class ConversationsAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "expand": expand?.rawValue, 
+            
+            "supportedContent.id": supportedContentId
             
         ])
 
@@ -8669,15 +8715,23 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsFacebookIntegrationId: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
     /**
      
      Get a Facebook messaging integration
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsFacebookIntegrationId(integrationId: String, completion: @escaping ((_ data: FacebookIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsFacebookIntegrationIdWithRequestBuilder(integrationId: integrationId)
+    open class func getConversationsMessagingIntegrationsFacebookIntegrationId(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsFacebookIntegrationId? = nil, completion: @escaping ((_ data: FacebookIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsFacebookIntegrationIdWithRequestBuilder(integrationId: integrationId, expand: expand)
         requestBuilder.execute { (response: Response<FacebookIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -8743,10 +8797,11 @@ open class ConversationsAPI {
 }}]
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
 
      - returns: RequestBuilder<FacebookIntegration> 
      */
-    open class func getConversationsMessagingIntegrationsFacebookIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<FacebookIntegration> {
+    open class func getConversationsMessagingIntegrationsFacebookIntegrationIdWithRequestBuilder(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsFacebookIntegrationId? = nil) -> RequestBuilder<FacebookIntegration> {
         var path = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8759,7 +8814,12 @@ open class ConversationsAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue
+            
+        ])
 
         let requestBuilder: RequestBuilder<FacebookIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -8771,16 +8831,27 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsLine: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
+    
+    
     /**
      
      Get a list of LINE messenger Integrations
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsLine(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: LineIntegrationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsLineWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+    open class func getConversationsMessagingIntegrationsLine(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsLine? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: LineIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsLineWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId)
         requestBuilder.execute { (response: Response<LineIntegrationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -8858,10 +8929,12 @@ open class ConversationsAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
 
      - returns: RequestBuilder<LineIntegrationEntityListing> 
      */
-    open class func getConversationsMessagingIntegrationsLineWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<LineIntegrationEntityListing> {
+    open class func getConversationsMessagingIntegrationsLineWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsLine? = nil, supportedContentId: String? = nil) -> RequestBuilder<LineIntegrationEntityListing> {
         let path = "/api/v2/conversations/messaging/integrations/line"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8876,7 +8949,11 @@ open class ConversationsAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "expand": expand?.rawValue, 
+            
+            "supportedContent.id": supportedContentId
             
         ])
 
@@ -8888,15 +8965,23 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsLineIntegrationId: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
     /**
      
      Get a LINE messenger integration
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsLineIntegrationId(integrationId: String, completion: @escaping ((_ data: LineIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsLineIntegrationIdWithRequestBuilder(integrationId: integrationId)
+    open class func getConversationsMessagingIntegrationsLineIntegrationId(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsLineIntegrationId? = nil, completion: @escaping ((_ data: LineIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsLineIntegrationIdWithRequestBuilder(integrationId: integrationId, expand: expand)
         requestBuilder.execute { (response: Response<LineIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -8962,10 +9047,11 @@ open class ConversationsAPI {
 }}]
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
 
      - returns: RequestBuilder<LineIntegration> 
      */
-    open class func getConversationsMessagingIntegrationsLineIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<LineIntegration> {
+    open class func getConversationsMessagingIntegrationsLineIntegrationIdWithRequestBuilder(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsLineIntegrationId? = nil) -> RequestBuilder<LineIntegration> {
         var path = "/api/v2/conversations/messaging/integrations/line/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8978,7 +9064,12 @@ open class ConversationsAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue
+            
+        ])
 
         let requestBuilder: RequestBuilder<LineIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -8990,16 +9081,27 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsTwitter: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
+    
+    
     /**
      
      Get a list of Twitter Integrations
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsTwitter(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: TwitterIntegrationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsTwitterWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+    open class func getConversationsMessagingIntegrationsTwitter(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsTwitter? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: TwitterIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsTwitterWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId)
         requestBuilder.execute { (response: Response<TwitterIntegrationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -9081,10 +9183,12 @@ open class ConversationsAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
 
      - returns: RequestBuilder<TwitterIntegrationEntityListing> 
      */
-    open class func getConversationsMessagingIntegrationsTwitterWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TwitterIntegrationEntityListing> {
+    open class func getConversationsMessagingIntegrationsTwitterWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsTwitter? = nil, supportedContentId: String? = nil) -> RequestBuilder<TwitterIntegrationEntityListing> {
         let path = "/api/v2/conversations/messaging/integrations/twitter"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -9099,7 +9203,11 @@ open class ConversationsAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "expand": expand?.rawValue, 
+            
+            "supportedContent.id": supportedContentId
             
         ])
 
@@ -9111,15 +9219,23 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsTwitterIntegrationId: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
     /**
      
      Get a Twitter messaging integration
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: String, completion: @escaping ((_ data: TwitterIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsTwitterIntegrationIdWithRequestBuilder(integrationId: integrationId)
+    open class func getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsTwitterIntegrationId? = nil, completion: @escaping ((_ data: TwitterIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsTwitterIntegrationIdWithRequestBuilder(integrationId: integrationId, expand: expand)
         requestBuilder.execute { (response: Response<TwitterIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -9189,10 +9305,11 @@ open class ConversationsAPI {
 }}]
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
 
      - returns: RequestBuilder<TwitterIntegration> 
      */
-    open class func getConversationsMessagingIntegrationsTwitterIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<TwitterIntegration> {
+    open class func getConversationsMessagingIntegrationsTwitterIntegrationIdWithRequestBuilder(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsTwitterIntegrationId? = nil) -> RequestBuilder<TwitterIntegration> {
         var path = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9205,7 +9322,12 @@ open class ConversationsAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue
+            
+        ])
 
         let requestBuilder: RequestBuilder<TwitterIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -9217,16 +9339,27 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsWhatsapp: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
+    
+    
     /**
      
      Get a list of WhatsApp Integrations
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsWhatsapp(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: WhatsAppIntegrationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsWhatsappWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+    open class func getConversationsMessagingIntegrationsWhatsapp(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsWhatsapp? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: WhatsAppIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsWhatsappWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId)
         requestBuilder.execute { (response: Response<WhatsAppIntegrationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -9305,10 +9438,12 @@ open class ConversationsAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
 
      - returns: RequestBuilder<WhatsAppIntegrationEntityListing> 
      */
-    open class func getConversationsMessagingIntegrationsWhatsappWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<WhatsAppIntegrationEntityListing> {
+    open class func getConversationsMessagingIntegrationsWhatsappWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsWhatsapp? = nil, supportedContentId: String? = nil) -> RequestBuilder<WhatsAppIntegrationEntityListing> {
         let path = "/api/v2/conversations/messaging/integrations/whatsapp"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -9323,7 +9458,11 @@ open class ConversationsAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "expand": expand?.rawValue, 
+            
+            "supportedContent.id": supportedContentId
             
         ])
 
@@ -9335,15 +9474,23 @@ open class ConversationsAPI {
     
     
     
+    
+    public enum Expand_getConversationsMessagingIntegrationsWhatsappIntegrationId: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
     /**
      
      Get a WhatsApp messaging integration
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: String, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: integrationId)
+    open class func getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsWhatsappIntegrationId? = nil, completion: @escaping ((_ data: WhatsAppIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: integrationId, expand: expand)
         requestBuilder.execute { (response: Response<WhatsAppIntegration>?, error) -> Void in
             do {
                 if let e = error {
@@ -9410,10 +9557,11 @@ open class ConversationsAPI {
 }}]
      
      - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
 
      - returns: RequestBuilder<WhatsAppIntegration> 
      */
-    open class func getConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<WhatsAppIntegration> {
+    open class func getConversationsMessagingIntegrationsWhatsappIntegrationIdWithRequestBuilder(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsWhatsappIntegrationId? = nil) -> RequestBuilder<WhatsAppIntegration> {
         var path = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9426,7 +9574,12 @@ open class ConversationsAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue
+            
+        ])
 
         let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -17166,6 +17319,7 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "totalHits" : 123,
   "aggregations" : [ {
     "metric" : "aeiou",
     "count" : 123456789,
@@ -17236,6 +17390,8 @@ open class ConversationsAPI {
         "remote" : "aeiou",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
+        "removedSkillIds" : [ "aeiou" ],
+        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -17265,9 +17421,9 @@ open class ConversationsAPI {
         "dispositionAnalyzer" : "aeiou",
         "addressOther" : "aeiou",
         "cobrowseRoomId" : "aeiou",
+        "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
         "mediaType" : "aeiou",
-        "monitoredSessionId" : "aeiou",
         "flowOutType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
@@ -17287,6 +17443,7 @@ open class ConversationsAPI {
         "peerId" : "aeiou",
         "remoteNameDisplayable" : "aeiou",
         "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
+        "agentBullseyeRing" : 123,
         "callbackNumbers" : [ "aeiou" ],
         "recording" : true,
         "screenShareAddressSelf" : "aeiou",
@@ -17326,6 +17483,7 @@ open class ConversationsAPI {
             "value" : "aeiou"
           } ]
         } ],
+        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -22263,6 +22421,13 @@ open class ConversationsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "messagingTemplate" : {
+    "parameters" : [ {
+      "id" : "aeiou",
+      "value" : "aeiou"
+    } ],
+    "responseId" : "aeiou"
+  },
   "conversationId" : "aeiou",
   "selfUri" : "aeiou",
   "messengerType" : "aeiou",

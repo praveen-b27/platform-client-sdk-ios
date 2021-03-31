@@ -1043,7 +1043,7 @@ UsersAPI.getProfilesUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, 
 
 
 
-> [Utilization](Utilization.html) getRoutingUserUtilization(userId)
+> [AgentMaxUtilization](AgentMaxUtilization.html) getRoutingUserUtilization(userId)
 
 Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned.
 
@@ -1088,7 +1088,7 @@ UsersAPI.getRoutingUserUtilization(userId: userId) { (response, error) in
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**AgentMaxUtilization**](AgentMaxUtilization.html)
 
 <a name="getUser"></a>
 
@@ -3679,7 +3679,7 @@ UsersAPI.postUsersSearch(body: body) { (response, error) in
 
 
 
-> [Utilization](Utilization.html) putRoutingUserUtilization(userId, body)
+> [AgentMaxUtilization](AgentMaxUtilization.html) putRoutingUserUtilization(userId, body)
 
 Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration.
 
@@ -3725,7 +3725,7 @@ UsersAPI.putRoutingUserUtilization(userId: userId, body: body) { (response, erro
 
 ### Return type
 
-[**Utilization**](Utilization.html)
+[**AgentMaxUtilization**](AgentMaxUtilization.html)
 
 <a name="putUserCallforwarding"></a>
 

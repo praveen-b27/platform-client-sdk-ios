@@ -10,7 +10,6 @@ title: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateNot
 | **status** | **String** |  | [optional] |
 | **operationId** | **String** |  | [optional] |
 | **result** | [**WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing**](WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing.html) |  | [optional] |
-| **weekDate** | [**WfmBulkShiftTradeStateUpdateNotificationTopicLocalDate**](WfmBulkShiftTradeStateUpdateNotificationTopicLocalDate.html) |  | [optional] |
 {: class="table table-striped"}
 
 

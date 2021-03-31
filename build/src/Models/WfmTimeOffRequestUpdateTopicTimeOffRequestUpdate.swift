@@ -17,12 +17,21 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
         case denied = "DENIED"
         case canceled = "CANCELED"
     }
+    public enum Substatus: String, Codable { 
+        case advanceTimeElapsed = "AdvanceTimeElapsed"
+        case autoApproved = "AutoApproved"
+        case invalidDailyDuration = "InvalidDailyDuration"
+        case outsideShift = "OutsideShift"
+        case waitlisted = "Waitlisted"
+    }
     public var _id: String?
     public var user: WfmTimeOffRequestUpdateTopicUserReference?
     public var isFullDayRequest: Bool?
     public var markedAsRead: Bool?
     public var activityCodeId: String?
+    public var paid: Bool?
     public var status: Status?
+    public var substatus: Substatus?
     public var partialDayStartDateTimes: [String]?
     public var fullDayManagementUnitDates: [String]?
     public var dailyDurationMinutes: Int?
@@ -34,7 +43,7 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
     public var modifiedDate: String?
     public var modifiedBy: String?
 
-    public init(_id: String?, user: WfmTimeOffRequestUpdateTopicUserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, status: Status?, partialDayStartDateTimes: [String]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, reviewedDate: String?, reviewedBy: String?, submittedDate: String?, submittedBy: String?, modifiedDate: String?, modifiedBy: String?) {
+    public init(_id: String?, user: WfmTimeOffRequestUpdateTopicUserReference?, isFullDayRequest: Bool?, markedAsRead: Bool?, activityCodeId: String?, paid: Bool?, status: Status?, substatus: Substatus?, partialDayStartDateTimes: [String]?, fullDayManagementUnitDates: [String]?, dailyDurationMinutes: Int?, notes: String?, reviewedDate: String?, reviewedBy: String?, submittedDate: String?, submittedBy: String?, modifiedDate: String?, modifiedBy: String?) {
         
         self._id = _id
         
@@ -46,7 +55,11 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
         
         self.activityCodeId = activityCodeId
         
+        self.paid = paid
+        
         self.status = status
+        
+        self.substatus = substatus
         
         self.partialDayStartDateTimes = partialDayStartDateTimes
         
@@ -76,7 +89,9 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
         case isFullDayRequest
         case markedAsRead
         case activityCodeId
+        case paid
         case status
+        case substatus
         case partialDayStartDateTimes
         case fullDayManagementUnitDates
         case dailyDurationMinutes

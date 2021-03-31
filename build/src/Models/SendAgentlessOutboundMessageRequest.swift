@@ -20,16 +20,18 @@ public class SendAgentlessOutboundMessageRequest: Codable {
         case webmessaging = "webmessaging"
         case _open = "open"
     }
-    /** The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned sms phone number. */
+    /** The messaging address of the sender of the message. For an SMS messenger type, this must be a currently provisioned SMS phone number. For a WhatsApp messenger type use the provisioned WhatsApp integration’s ID */
     public var fromAddress: String?
     /** The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234. */
     public var toAddress: String?
-    /** The recipient messaging address messenger type. Currently SMS is the only supported type. */
+    /** The recipient messaging address messenger type. Currently SMS and WhatsApp is the only supported type. */
     public var toAddressMessengerType: ToAddressMessengerType?
-    /** The text of the message to send */
+    /** The text of the message to send. This field is required in the case of SMS messenger type */
     public var textBody: String?
+    /** The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type */
+    public var messagingTemplate: MessagingTemplateRequest?
 
-    public init(fromAddress: String?, toAddress: String?, toAddressMessengerType: ToAddressMessengerType?, textBody: String?) {
+    public init(fromAddress: String?, toAddress: String?, toAddressMessengerType: ToAddressMessengerType?, textBody: String?, messagingTemplate: MessagingTemplateRequest?) {
         
         self.fromAddress = fromAddress
         
@@ -38,6 +40,8 @@ public class SendAgentlessOutboundMessageRequest: Codable {
         self.toAddressMessengerType = toAddressMessengerType
         
         self.textBody = textBody
+        
+        self.messagingTemplate = messagingTemplate
         
     }
 

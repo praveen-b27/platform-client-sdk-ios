@@ -21,7 +21,7 @@ public class ContentQuickReply: Codable {
     public var text: String?
     /** Content of the textback payload after clicking a quick reply */
     public var payload: String?
-    /** Image associated with quick reply */
+    /** Path or URI to an image file associated with quick reply */
     public var image: String?
     /** Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text. */
     public var action: Action?

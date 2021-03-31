@@ -69,6 +69,7 @@ public class ReportingExportMetadataJobResponse: Codable {
         case agentScorecardView = "AGENT_SCORECARD_VIEW"
         case agentScorecardMeView = "AGENT_SCORECARD_ME_VIEW"
         case agentGamificationLeadershipView = "AGENT_GAMIFICATION_LEADERSHIP_VIEW"
+        case agentScheduleMeView = "AGENT_SCHEDULE_ME_VIEW"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

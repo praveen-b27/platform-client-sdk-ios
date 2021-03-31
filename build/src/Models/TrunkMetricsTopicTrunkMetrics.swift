@@ -12,15 +12,12 @@ import Foundation
 public class TrunkMetricsTopicTrunkMetrics: Codable {
 
     public var calls: TrunkMetricsTopicTrunkMetricsCalls?
-    public var eventTime: TrunkMetricsTopicOffsetDateTime?
     public var qos: TrunkMetricsTopicTrunkMetricsQoS?
     public var trunk: TrunkMetricsTopicUriReference?
 
-    public init(calls: TrunkMetricsTopicTrunkMetricsCalls?, eventTime: TrunkMetricsTopicOffsetDateTime?, qos: TrunkMetricsTopicTrunkMetricsQoS?, trunk: TrunkMetricsTopicUriReference?) {
+    public init(calls: TrunkMetricsTopicTrunkMetricsCalls?, qos: TrunkMetricsTopicTrunkMetricsQoS?, trunk: TrunkMetricsTopicUriReference?) {
         
         self.calls = calls
-        
-        self.eventTime = eventTime
         
         self.qos = qos
         

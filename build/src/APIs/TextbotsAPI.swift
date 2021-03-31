@@ -105,6 +105,12 @@ open class TextbotsAPI {
         "text" : "aeiou",
         "url" : "aeiou"
       },
+      "buttonResponse" : {
+        "payload" : "aeiou",
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou"
+      },
       "location" : {
         "address" : "aeiou",
         "latitude" : 1.3579000000000001069366817318950779736042022705078125,

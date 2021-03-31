@@ -24,14 +24,16 @@ public class SendAgentlessOutboundMessageResponse: Codable {
     public var _id: String?
     /** The identifier of the conversation. */
     public var conversationId: String?
-    /** The sender of the text message. */
+    /** The sender of the message. */
     public var fromAddress: String?
-    /** The recipient of the text message. */
+    /** The recipient of the message. */
     public var toAddress: String?
-    /** Type of text messenger. */
+    /** Type of messenger. */
     public var messengerType: MessengerType?
     /** The body of the text message. */
     public var textBody: String?
+    /** The messaging template sent */
+    public var messagingTemplate: MessagingTemplateRequest?
     /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
     /** The URI for this object */
@@ -39,7 +41,7 @@ public class SendAgentlessOutboundMessageResponse: Codable {
     /** Details of the user created the job */
     public var user: AddressableEntityRef?
 
-    public init(_id: String?, conversationId: String?, fromAddress: String?, toAddress: String?, messengerType: MessengerType?, textBody: String?, timestamp: Date?, selfUri: String?, user: AddressableEntityRef?) {
+    public init(_id: String?, conversationId: String?, fromAddress: String?, toAddress: String?, messengerType: MessengerType?, textBody: String?, messagingTemplate: MessagingTemplateRequest?, timestamp: Date?, selfUri: String?, user: AddressableEntityRef?) {
         
         self._id = _id
         
@@ -52,6 +54,8 @@ public class SendAgentlessOutboundMessageResponse: Codable {
         self.messengerType = messengerType
         
         self.textBody = textBody
+        
+        self.messagingTemplate = messagingTemplate
         
         self.timestamp = timestamp
         
@@ -68,6 +72,7 @@ public class SendAgentlessOutboundMessageResponse: Codable {
         case toAddress
         case messengerType
         case textBody
+        case messagingTemplate
         case timestamp
         case selfUri
         case user

@@ -46,6 +46,7 @@ public class ConversationEventTopicMessage: Codable {
         case telegram = "TELEGRAM"
         case kakao = "KAKAO"
         case webmessaging = "WEBMESSAGING"
+        case _open = "OPEN"
     }
     public var _id: String?
     public var state: State?

@@ -20,17 +20,14 @@ public class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpd
     public var status: Status?
     public var operationId: String?
     public var result: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing?
-    public var weekDate: WfmBulkShiftTradeStateUpdateNotificationTopicLocalDate?
 
-    public init(status: Status?, operationId: String?, result: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing?, weekDate: WfmBulkShiftTradeStateUpdateNotificationTopicLocalDate?) {
+    public init(status: Status?, operationId: String?, result: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing?) {
         
         self.status = status
         
         self.operationId = operationId
         
         self.result = result
-        
-        self.weekDate = weekDate
         
     }
 

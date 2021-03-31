@@ -66,8 +66,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsExecution**](ArchitectAPI.html#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
 | [**getFlowsMilestone**](ArchitectAPI.html#getFlowsMilestone) | Get a flow milestone |
 | [**getFlowsMilestones**](ArchitectAPI.html#getFlowsMilestones) | Get a pageable list of flow milestones, filtered by query parameters |
+| [**getFlowsMilestonesDivisionviews**](ArchitectAPI.html#getFlowsMilestonesDivisionviews) | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
 | [**getFlowsOutcome**](ArchitectAPI.html#getFlowsOutcome) | Get a flow outcome |
 | [**getFlowsOutcomes**](ArchitectAPI.html#getFlowsOutcomes) | Get a pageable list of flow outcomes, filtered by query parameters |
+| [**getFlowsOutcomesDivisionviews**](ArchitectAPI.html#getFlowsOutcomesDivisionviews) | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
 | [**postArchitectDependencytrackingBuild**](ArchitectAPI.html#postArchitectDependencytrackingBuild) | Rebuild Dependency Tracking data for an organization |
 | [**postArchitectEmergencygroups**](ArchitectAPI.html#postArchitectEmergencygroups) | Creates a new emergency group |
 | [**postArchitectIvrs**](ArchitectAPI.html#postArchitectIvrs) | Create IVR config. |
@@ -3416,7 +3418,7 @@ ArchitectAPI.getFlowsMilestone(milestoneId: milestoneId) { (response, error) in
 
 
 
-> [FlowMilestoneListing](FlowMilestoneListing.html) getFlowsMilestones(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription)
+> [FlowMilestoneListing](FlowMilestoneListing.html) getFlowsMilestones(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, divisionId)
 
 Get a pageable list of flow milestones, filtered by query parameters
 
@@ -3444,9 +3446,10 @@ let _id: [String] = [""] // ID
 let name: String = "" // Name
 let _description: String = "" // Description
 let nameOrDescription: String = "" // Name or description
+let divisionId: [String] = [""] // division ID(s)
 
 // Code example
-ArchitectAPI.getFlowsMilestones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription) { (response, error) in
+ArchitectAPI.getFlowsMilestones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3469,12 +3472,77 @@ ArchitectAPI.getFlowsMilestones(pageNumber: pageNumber, pageSize: pageSize, sort
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
+| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
 [**FlowMilestoneListing**](FlowMilestoneListing.html)
+
+<a name="getFlowsMilestonesDivisionviews"></a>
+
+# **getFlowsMilestonesDivisionviews**
+
+
+
+> [FlowMilestoneDivisionViewEntityListing](FlowMilestoneDivisionViewEntityListing.html) getFlowsMilestonesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+Get a pageable list of basic flow milestone information objects filterable by query parameters.
+
+This returns flow milestones consisting of name and division. If one or more IDs are specified, the search will fetch flow milestones that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+Wraps GET /api/v2/flows/milestones/divisionviews  
+
+Requires ALL permissions: 
+
+* architect:flowMilestone:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: String = "id" // Sort by
+let sortOrder: String = "asc" // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let divisionId: [String] = [""] // division ID(s)
+
+// Code example
+ArchitectAPI.getFlowsMilestonesDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsMilestonesDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **sortBy** | **String**| Sort by | [optional] [default to id] |
+| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **name** | **String**| Name | [optional] |
+| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowMilestoneDivisionViewEntityListing**](FlowMilestoneDivisionViewEntityListing.html)
 
 <a name="getFlowsOutcome"></a>
 
@@ -3534,7 +3602,7 @@ ArchitectAPI.getFlowsOutcome(flowOutcomeId: flowOutcomeId) { (response, error) i
 
 
 
-> [FlowOutcomeListing](FlowOutcomeListing.html) getFlowsOutcomes(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription)
+> [FlowOutcomeListing](FlowOutcomeListing.html) getFlowsOutcomes(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, divisionId)
 
 Get a pageable list of flow outcomes, filtered by query parameters
 
@@ -3562,9 +3630,10 @@ let _id: [String] = [""] // ID
 let name: String = "" // Name
 let _description: String = "" // Description
 let nameOrDescription: String = "" // Name or description
+let divisionId: [String] = [""] // division ID(s)
 
 // Code example
-ArchitectAPI.getFlowsOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription) { (response, error) in
+ArchitectAPI.getFlowsOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3587,12 +3656,77 @@ ArchitectAPI.getFlowsOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
+| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
 [**FlowOutcomeListing**](FlowOutcomeListing.html)
+
+<a name="getFlowsOutcomesDivisionviews"></a>
+
+# **getFlowsOutcomesDivisionviews**
+
+
+
+> [FlowOutcomeDivisionViewEntityListing](FlowOutcomeDivisionViewEntityListing.html) getFlowsOutcomesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+Get a pageable list of basic flow outcome information objects filterable by query parameters.
+
+This returns flow outcomes consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
+
+Wraps GET /api/v2/flows/outcomes/divisionviews  
+
+Requires ALL permissions: 
+
+* architect:flowOutcome:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: String = "id" // Sort by
+let sortOrder: String = "asc" // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let divisionId: [String] = [""] // division ID(s)
+
+// Code example
+ArchitectAPI.getFlowsOutcomesDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsOutcomesDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **sortBy** | **String**| Sort by | [optional] [default to id] |
+| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **name** | **String**| Name | [optional] |
+| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing.html)
 
 <a name="postArchitectDependencytrackingBuild"></a>
 

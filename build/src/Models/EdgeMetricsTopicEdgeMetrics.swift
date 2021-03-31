@@ -12,7 +12,6 @@ import Foundation
 public class EdgeMetricsTopicEdgeMetrics: Codable {
 
     public var edge: EdgeMetricsTopicUriReference?
-    public var eventTime: EdgeMetricsTopicOffsetDateTime?
     public var upTimeMsec: Int?
     public var processors: [EdgeMetricsTopicEdgeMetricProcessor]?
     public var memory: [EdgeMetricsTopicEdgeMetricMemory]?
@@ -20,11 +19,9 @@ public class EdgeMetricsTopicEdgeMetrics: Codable {
     public var subsystems: [EdgeMetricsTopicEdgeMetricSubsystem]?
     public var networks: [EdgeMetricsTopicEdgeMetricNetworks]?
 
-    public init(edge: EdgeMetricsTopicUriReference?, eventTime: EdgeMetricsTopicOffsetDateTime?, upTimeMsec: Int?, processors: [EdgeMetricsTopicEdgeMetricProcessor]?, memory: [EdgeMetricsTopicEdgeMetricMemory]?, disks: [EdgeMetricsTopicEdgeMetricDisk]?, subsystems: [EdgeMetricsTopicEdgeMetricSubsystem]?, networks: [EdgeMetricsTopicEdgeMetricNetworks]?) {
+    public init(edge: EdgeMetricsTopicUriReference?, upTimeMsec: Int?, processors: [EdgeMetricsTopicEdgeMetricProcessor]?, memory: [EdgeMetricsTopicEdgeMetricMemory]?, disks: [EdgeMetricsTopicEdgeMetricDisk]?, subsystems: [EdgeMetricsTopicEdgeMetricSubsystem]?, networks: [EdgeMetricsTopicEdgeMetricNetworks]?) {
         
         self.edge = edge
-        
-        self.eventTime = eventTime
         
         self.upTimeMsec = upTimeMsec
         

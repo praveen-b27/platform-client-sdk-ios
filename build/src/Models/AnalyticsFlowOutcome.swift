@@ -11,28 +11,28 @@ import Foundation
 
 public class AnalyticsFlowOutcome: Codable {
 
-    /** Unique identifiers of a flow outcome */
+    /** Combination of unique flow outcome identifier and its value separated by colon */
+    public var flowOutcome: String?
+    /** The outcome ending timestamp in ISO 8601 format. This may be null if the outcome did not succeed. */
+    public var flowOutcomeEndTimestamp: Date?
+    /** Unique identifier of a flow outcome */
     public var flowOutcomeId: String?
+    /** The outcome starting timestamp in ISO 8601 format */
+    public var flowOutcomeStartTimestamp: Date?
     /** Flow outcome value, e.g. SUCCESS */
     public var flowOutcomeValue: String?
-    /** Colon-separated combinations of unique flow outcome identifier and value */
-    public var flowOutcome: String?
-    /** Date/time the outcome started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var flowOutcomeStartTimestamp: Date?
-    /** Date/time the outcome ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var flowOutcomeEndTimestamp: Date?
 
-    public init(flowOutcomeId: String?, flowOutcomeValue: String?, flowOutcome: String?, flowOutcomeStartTimestamp: Date?, flowOutcomeEndTimestamp: Date?) {
-        
-        self.flowOutcomeId = flowOutcomeId
-        
-        self.flowOutcomeValue = flowOutcomeValue
+    public init(flowOutcome: String?, flowOutcomeEndTimestamp: Date?, flowOutcomeId: String?, flowOutcomeStartTimestamp: Date?, flowOutcomeValue: String?) {
         
         self.flowOutcome = flowOutcome
         
+        self.flowOutcomeEndTimestamp = flowOutcomeEndTimestamp
+        
+        self.flowOutcomeId = flowOutcomeId
+        
         self.flowOutcomeStartTimestamp = flowOutcomeStartTimestamp
         
-        self.flowOutcomeEndTimestamp = flowOutcomeEndTimestamp
+        self.flowOutcomeValue = flowOutcomeValue
         
     }
 

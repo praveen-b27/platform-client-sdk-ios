@@ -21,6 +21,7 @@ public class ConversationDetailQueryPredicate: Codable {
         case conversationid = "conversationId"
         case conversationstart = "conversationStart"
         case divisionid = "divisionId"
+        case externaltag = "externalTag"
         case mediastatsminconversationmos = "mediaStatsMinConversationMos"
         case originatingdirection = "originatingDirection"
     }

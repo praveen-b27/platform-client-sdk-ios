@@ -32,8 +32,10 @@ public class PostTextResponse: Codable {
     public var googleDialogFlow: [String:JSON]?
     /** Raw data response from Genesys&#39; Dialogengine (if called) */
     public var genesysDialogEngine: [String:JSON]?
+    /** Raw data response from Genesys&#39; BotConnector (if called) */
+    public var genesysBotConnector: [String:JSON]?
 
-    public init(botState: BotState?, replyMessages: [PostTextMessage]?, intentName: String?, slots: [String:String]?, botCorrelationId: String?, amazonLex: [String:JSON]?, googleDialogFlow: [String:JSON]?, genesysDialogEngine: [String:JSON]?) {
+    public init(botState: BotState?, replyMessages: [PostTextMessage]?, intentName: String?, slots: [String:String]?, botCorrelationId: String?, amazonLex: [String:JSON]?, googleDialogFlow: [String:JSON]?, genesysDialogEngine: [String:JSON]?, genesysBotConnector: [String:JSON]?) {
         
         self.botState = botState
         
@@ -50,6 +52,8 @@ public class PostTextResponse: Codable {
         self.googleDialogFlow = googleDialogFlow
         
         self.genesysDialogEngine = genesysDialogEngine
+        
+        self.genesysBotConnector = genesysBotConnector
         
     }
 

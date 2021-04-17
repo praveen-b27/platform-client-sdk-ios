@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAuthorizationRolesDefault**](AuthorizationAPI.html#postAuthorizationRolesDefault) | Restores all default roles |
 | [**postAuthorizationSubjectBulkadd**](AuthorizationAPI.html#postAuthorizationSubjectBulkadd) | Bulk-grant roles and divisions to a subject. |
 | [**postAuthorizationSubjectBulkremove**](AuthorizationAPI.html#postAuthorizationSubjectBulkremove) | Bulk-remove grants from a subject. |
+| [**postAuthorizationSubjectBulkreplace**](AuthorizationAPI.html#postAuthorizationSubjectBulkreplace) | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**postAuthorizationSubjectDivisionRole**](AuthorizationAPI.html#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
 | [**putAuthorizationDivision**](AuthorizationAPI.html#putAuthorizationDivision) | Update a division. |
 | [**putAuthorizationRole**](AuthorizationAPI.html#putAuthorizationRole) | Update an organization role. |
@@ -1346,7 +1347,7 @@ AuthorizationAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectT
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), user ("USER"), datatables ("DATATABLES") |
+| **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), user ("USER"), datatables ("DATATABLES") |
 | **body** | **[String]**| Object Id List | |
 {: class="table-striped"}
 
@@ -1724,6 +1725,62 @@ AuthorizationAPI.postAuthorizationSubjectBulkremove(subjectId: subjectId, body: 
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postAuthorizationSubjectBulkreplace"></a>
+
+# **postAuthorizationSubjectBulkreplace**
+
+
+
+> Void postAuthorizationSubjectBulkreplace(subjectId, body, subjectType)
+
+Replace subject&#39;s roles and divisions with the exact list supplied in the request.
+
+This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkreplace  
+
+Requires ALL permissions: 
+
+* authorization:grant:add
+* authorization:grant:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
+let subjectType: String = "PC_USER" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+
+// Code example
+AuthorizationAPI.postAuthorizationSubjectBulkreplace(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AuthorizationAPI.postAuthorizationSubjectBulkreplace was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| Subject ID (user or group) | |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
+| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
 {: class="table-striped"}
 
 

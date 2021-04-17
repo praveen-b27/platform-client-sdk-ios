@@ -64,6 +64,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsUsersObservationsQuery**](UsersAPI.html#postAnalyticsUsersObservationsQuery) | Query for user observations |
 | [**postAuthorizationSubjectBulkadd**](UsersAPI.html#postAuthorizationSubjectBulkadd) | Bulk-grant roles and divisions to a subject. |
 | [**postAuthorizationSubjectBulkremove**](UsersAPI.html#postAuthorizationSubjectBulkremove) | Bulk-remove grants from a subject. |
+| [**postAuthorizationSubjectBulkreplace**](UsersAPI.html#postAuthorizationSubjectBulkreplace) | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**postAuthorizationSubjectDivisionRole**](UsersAPI.html#postAuthorizationSubjectDivisionRole) | Make a grant of a role in a division |
 | [**postUserInvite**](UsersAPI.html#postUserInvite) | Send an activation email to the user |
 | [**postUserPassword**](UsersAPI.html#postUserPassword) | Change a users password |
@@ -2141,7 +2142,7 @@ UsersAPI.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, inter
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
-| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
@@ -2210,7 +2211,7 @@ UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval,
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
-| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
@@ -2267,7 +2268,7 @@ UsersAPI.getUsersDevelopmentActivity(activityId: activityId, type: type) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **activityId** | **String**| Specifies the activity ID, maps to either assignment or appointment ID | |
-| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching") |
+| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire") |
 {: class="table-striped"}
 
 
@@ -3188,6 +3189,62 @@ UsersAPI.postAuthorizationSubjectBulkremove(subjectId: subjectId, body: body) { 
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postAuthorizationSubjectBulkreplace"></a>
+
+# **postAuthorizationSubjectBulkreplace**
+
+
+
+> Void postAuthorizationSubjectBulkreplace(subjectId, body, subjectType)
+
+Replace subject&#39;s roles and divisions with the exact list supplied in the request.
+
+This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
+
+Wraps POST /api/v2/authorization/subjects/{subjectId}/bulkreplace  
+
+Requires ALL permissions: 
+
+* authorization:grant:add
+* authorization:grant:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
+let subjectType: String = "PC_USER" // what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+
+// Code example
+UsersAPI.postAuthorizationSubjectBulkreplace(subjectId: subjectId, body: body, subjectType: subjectType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.postAuthorizationSubjectBulkreplace was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **subjectId** | **String**| Subject ID (user or group) | |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Pairs of role and division IDs | |
+| **subjectType** | **String**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to PC_USER] |
 {: class="table-striped"}
 
 

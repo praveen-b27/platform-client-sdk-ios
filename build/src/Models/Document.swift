@@ -58,12 +58,12 @@ public class Document: Codable {
     /** A list of permitted action rights for the user making the request */
     public var acl: [String]?
     public var sharingStatus: SharingStatus?
-    public var sharingUri: String?
     public var downloadSharingUri: String?
+    public var sharingUri: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, changeNumber: Int?, dateCreated: Date?, dateModified: Date?, dateUploaded: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, uploadedBy: DomainEntityRef?, contentType: String?, contentLength: Int64?, systemType: SystemType?, filename: String?, pageCount: Int64?, read: Bool?, callerAddress: String?, receiverAddress: String?, tags: [String]?, tagValues: [TagValue]?, attributes: [DocumentAttribute]?, thumbnails: [DocumentThumbnail]?, uploadStatus: DomainEntityRef?, uploadDestinationUri: String?, uploadMethod: UploadMethod?, lockInfo: LockInfo?, acl: [String]?, sharingStatus: SharingStatus?, sharingUri: String?, downloadSharingUri: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, changeNumber: Int?, dateCreated: Date?, dateModified: Date?, dateUploaded: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, uploadedBy: DomainEntityRef?, contentType: String?, contentLength: Int64?, systemType: SystemType?, filename: String?, pageCount: Int64?, read: Bool?, callerAddress: String?, receiverAddress: String?, tags: [String]?, tagValues: [TagValue]?, attributes: [DocumentAttribute]?, thumbnails: [DocumentThumbnail]?, uploadStatus: DomainEntityRef?, uploadDestinationUri: String?, uploadMethod: UploadMethod?, lockInfo: LockInfo?, acl: [String]?, sharingStatus: SharingStatus?, downloadSharingUri: String?, sharingUri: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -121,9 +121,9 @@ public class Document: Codable {
         
         self.sharingStatus = sharingStatus
         
-        self.sharingUri = sharingUri
-        
         self.downloadSharingUri = downloadSharingUri
+        
+        self.sharingUri = sharingUri
         
         self.selfUri = selfUri
         
@@ -158,8 +158,8 @@ public class Document: Codable {
         case lockInfo
         case acl
         case sharingStatus
-        case sharingUri
         case downloadSharingUri
+        case sharingUri
         case selfUri
     }
 

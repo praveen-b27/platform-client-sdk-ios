@@ -4418,7 +4418,6 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "externalDataSources" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
     "id" : "aeiou",
     "relationship" : "aeiou",
     "user" : {
@@ -5783,7 +5782,6 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "externalDataSources" : [ "" ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
   "id" : "aeiou",
   "relationship" : "aeiou",
   "user" : {
@@ -8111,7 +8109,6 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "externalDataSources" : [ "" ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
     "id" : "aeiou",
     "relationship" : "aeiou",
     "user" : {
@@ -13495,7 +13492,6 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "externalDataSources" : [ "" ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
   "id" : "aeiou",
   "relationship" : "aeiou",
   "user" : {
@@ -15911,7 +15907,6 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "externalDataSources" : [ "" ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
   "id" : "aeiou",
   "relationship" : "aeiou",
   "user" : {

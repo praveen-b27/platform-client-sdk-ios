@@ -86,6 +86,7 @@ public class AuditQueryEntity: Codable {
         case predictor = "Predictor"
         case workPlan = "WorkPlan"
         case sentimentFeedback = "SentimentFeedback"
+        case integration = "Integration"
     }
     public enum Actions: String, Codable { 
         case create = "Create"

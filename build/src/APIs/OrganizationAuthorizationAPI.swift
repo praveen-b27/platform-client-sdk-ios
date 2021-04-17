@@ -1056,7 +1056,8 @@ open class OrganizationAuthorizationAPI {
   "organization" : "",
   "selfUri" : "aeiou",
   "id" : "aeiou",
-  "enabled" : true
+  "enabled" : true,
+  "usesDefaultRole" : true
 }}]
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
@@ -2397,7 +2398,8 @@ open class OrganizationAuthorizationAPI {
     "organization" : "",
     "selfUri" : "aeiou",
     "id" : "aeiou",
-    "enabled" : true
+    "enabled" : true,
+    "usesDefaultRole" : true
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -5232,7 +5234,8 @@ open class OrganizationAuthorizationAPI {
   "organization" : "",
   "selfUri" : "aeiou",
   "id" : "aeiou",
-  "enabled" : true
+  "enabled" : true,
+  "usesDefaultRole" : true
 }}]
      
      - parameter body: (body) Trust 
@@ -5777,7 +5780,8 @@ open class OrganizationAuthorizationAPI {
   "organization" : "",
   "selfUri" : "aeiou",
   "id" : "aeiou",
-  "enabled" : true
+  "enabled" : true,
+  "usesDefaultRole" : true
 }}]
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 

@@ -51,6 +51,9 @@ open class TextbotsAPI {
   "googleDialogFlow" : {
     "key" : "{}"
   },
+  "genesysBotConnector" : {
+    "key" : "{}"
+  },
   "slots" : {
     "key" : "aeiou"
   },

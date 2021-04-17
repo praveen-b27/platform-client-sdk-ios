@@ -43,6 +43,8 @@ public class DependencyObject: Codable {
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"

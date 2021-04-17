@@ -13,6 +13,7 @@ public class SurveyQuestionScore: Codable {
 
     public var questionId: String?
     public var answerId: String?
+    /** Unweighted score of the question */
     public var score: Int?
     public var markedNA: Bool?
     public var npsScore: Int?

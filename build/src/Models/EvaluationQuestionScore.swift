@@ -13,9 +13,12 @@ public class EvaluationQuestionScore: Codable {
 
     public var questionId: String?
     public var answerId: String?
+    /** Unweighted score of the question */
     public var score: Int?
     public var markedNA: Bool?
+    /** Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question */
     public var failedKillQuestion: Bool?
+    /** Comments from the evaluator specific to this question */
     public var comments: String?
 
     public init(questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, failedKillQuestion: Bool?, comments: String?) {

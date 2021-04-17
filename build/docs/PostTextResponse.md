@@ -15,6 +15,7 @@ title: PostTextResponse
 | **amazonLex** | [**[String:JSON]**](JSON.html) | Raw data response from AWS (if called) | [optional] |
 | **googleDialogFlow** | [**[String:JSON]**](JSON.html) | Raw data response from Google Dialogflow (if called) | [optional] |
 | **genesysDialogEngine** | [**[String:JSON]**](JSON.html) | Raw data response from Genesys&#39; Dialogengine (if called) | [optional] |
+| **genesysBotConnector** | [**[String:JSON]**](JSON.html) | Raw data response from Genesys&#39; BotConnector (if called) | [optional] |
 {: class="table table-striped"}
 
 

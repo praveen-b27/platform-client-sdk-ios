@@ -15,36 +15,42 @@ public class AnalyticsConversationWithoutAttributes: Codable {
         case inbound = "inbound"
         case outbound = "outbound"
     }
+    /** The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var conversationEnd: Date?
     /** Unique identifier for the conversation */
     public var conversationId: String?
-    /** Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conversationStart: Date?
-    /** Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var conversationEnd: Date?
+    /** Identifier(s) of division(s) associated with a conversation */
+    public var divisionIds: [String]?
+    /** External tag for the conversation */
+    public var externalTag: String?
     /** The lowest estimated average MOS among all the audio streams belonging to this conversation */
     public var mediaStatsMinConversationMos: Double?
     /** The lowest R-factor value among all of the audio streams belonging to this conversation */
     public var mediaStatsMinConversationRFactor: Double?
     /** The original direction of the conversation */
     public var originatingDirection: OriginatingDirection?
-    /** Evaluations tied to this conversation */
+    /** Evaluations associated with this conversation */
     public var evaluations: [AnalyticsEvaluation]?
-    /** Surveys tied to this conversation */
+    /** Surveys associated with this conversation */
     public var surveys: [AnalyticsSurvey]?
-    /** Resolutions tied to this conversation */
+    /** Resolutions associated with this conversation */
     public var resolutions: [AnalyticsResolution]?
-    /** Identifiers of divisions associated with this conversation */
-    public var divisionIds: [String]?
     /** Participants in the conversation */
     public var participants: [AnalyticsParticipantWithoutAttributes]?
 
-    public init(conversationId: String?, conversationStart: Date?, conversationEnd: Date?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, divisionIds: [String]?, participants: [AnalyticsParticipantWithoutAttributes]?) {
+    public init(conversationEnd: Date?, conversationId: String?, conversationStart: Date?, divisionIds: [String]?, externalTag: String?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipantWithoutAttributes]?) {
+        
+        self.conversationEnd = conversationEnd
         
         self.conversationId = conversationId
         
         self.conversationStart = conversationStart
         
-        self.conversationEnd = conversationEnd
+        self.divisionIds = divisionIds
+        
+        self.externalTag = externalTag
         
         self.mediaStatsMinConversationMos = mediaStatsMinConversationMos
         
@@ -57,8 +63,6 @@ public class AnalyticsConversationWithoutAttributes: Codable {
         self.surveys = surveys
         
         self.resolutions = resolutions
-        
-        self.divisionIds = divisionIds
         
         self.participants = participants
         

@@ -15,6 +15,7 @@ public class AuditRealtimeQueryRequest: Codable {
         case architect = "Architect"
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
+        case integrations = "Integrations"
         case peoplePermissions = "PeoplePermissions"
         case presence = "Presence"
         case quality = "Quality"

@@ -679,12 +679,11 @@ open class WorkforceManagementAPI {
   "isOutOfOffice" : true,
   "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+0000",
   "managementUnit" : {
+    "startDayOfWeek" : "aeiou",
     "division" : {
       "selfUri" : "aeiou",
-      "name" : "aeiou",
       "id" : "aeiou"
     },
-    "startDayOfWeek" : "aeiou",
     "settings" : {
       "metadata" : {
         "modifiedBy" : "",
@@ -922,7 +921,6 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "division" : {
     "selfUri" : "aeiou",
-    "name" : "aeiou",
     "id" : "aeiou"
   },
   "settings" : {
@@ -1329,12 +1327,11 @@ open class WorkforceManagementAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "startDayOfWeek" : "aeiou",
     "division" : {
       "selfUri" : "aeiou",
-      "name" : "aeiou",
       "id" : "aeiou"
     },
-    "startDayOfWeek" : "aeiou",
     "settings" : {
       "metadata" : {
         "modifiedBy" : {
@@ -3423,7 +3420,6 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "division" : {
       "selfUri" : "aeiou",
-      "name" : "aeiou",
       "id" : "aeiou"
     },
     "authorized" : true,
@@ -3503,7 +3499,6 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "division" : {
       "selfUri" : "aeiou",
-      "name" : "aeiou",
       "id" : "aeiou"
     },
     "authorized" : true,
@@ -3813,12 +3808,11 @@ open class WorkforceManagementAPI {
     "isOutOfOffice" : true,
     "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+0000",
     "managementUnit" : {
+      "startDayOfWeek" : "aeiou",
       "division" : {
         "selfUri" : "aeiou",
-        "name" : "aeiou",
         "id" : "aeiou"
       },
-      "startDayOfWeek" : "aeiou",
       "settings" : {
         "metadata" : {
           "modifiedBy" : "",
@@ -6168,12 +6162,11 @@ open class WorkforceManagementAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "startDayOfWeek" : "aeiou",
     "division" : {
       "selfUri" : "aeiou",
-      "name" : "aeiou",
       "id" : "aeiou"
     },
-    "startDayOfWeek" : "aeiou",
     "settings" : {
       "metadata" : {
         "modifiedBy" : {
@@ -6338,12 +6331,11 @@ open class WorkforceManagementAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "startDayOfWeek" : "aeiou",
     "division" : {
       "selfUri" : "aeiou",
-      "name" : "aeiou",
       "id" : "aeiou"
     },
-    "startDayOfWeek" : "aeiou",
     "settings" : {
       "metadata" : {
         "modifiedBy" : {
@@ -6931,7 +6923,6 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "division" : {
     "selfUri" : "aeiou",
-    "name" : "aeiou",
     "id" : "aeiou"
   },
   "settings" : {
@@ -9634,7 +9625,6 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "division" : {
     "selfUri" : "aeiou",
-    "name" : "aeiou",
     "id" : "aeiou"
   },
   "settings" : {
@@ -11518,12 +11508,11 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "startDayOfWeek" : "aeiou",
   "division" : {
     "selfUri" : "aeiou",
-    "name" : "aeiou",
     "id" : "aeiou"
   },
-  "startDayOfWeek" : "aeiou",
   "settings" : {
     "metadata" : {
       "modifiedBy" : {

@@ -11,249 +11,222 @@ import Foundation
 
 public class AnalyticsSession: Codable {
 
-    public enum MediaType: String, Codable { 
-        case voice = "voice"
-        case chat = "chat"
-        case email = "email"
-        case callback = "callback"
-        case cobrowse = "cobrowse"
-        case video = "video"
-        case screenshare = "screenshare"
-        case message = "message"
-    }
-    public enum MessageType: String, Codable { 
-        case sms = "sms"
-        case facebook = "facebook"
-        case twitter = "twitter"
-        case line = "line"
-    }
     public enum Direction: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
     }
+    public enum MediaType: String, Codable { 
+        case callback = "callback"
+        case chat = "chat"
+        case cobrowse = "cobrowse"
+        case email = "email"
+        case message = "message"
+        case screenshare = "screenshare"
+        case video = "video"
+        case voice = "voice"
+    }
     public enum RequestedRoutings: String, Codable { 
+        case bullseye = "Bullseye"
+        case last = "Last"
+        case manual = "Manual"
         case predictive = "Predictive"
         case preferred = "Preferred"
-        case manual = "Manual"
-        case last = "Last"
-        case bullseye = "Bullseye"
         case standard = "Standard"
     }
     public enum UsedRouting: String, Codable { 
+        case bullseye = "Bullseye"
+        case last = "Last"
+        case manual = "Manual"
         case predictive = "Predictive"
         case preferred = "Preferred"
-        case manual = "Manual"
-        case last = "Last"
-        case bullseye = "Bullseye"
         case standard = "Standard"
     }
-    /** The session media type */
-    public var mediaType: MediaType?
-    /** The unique identifier of this session */
-    public var sessionId: String?
-    public var addressOther: String?
-    public var addressSelf: String?
+    /** ID(s) of Skill(s) that are active on the conversation */
+    public var activeSkillIds: [String]?
+    /** Marker for an agent that skipped after call work */
+    public var acwSkipped: Bool?
+    /** The address that initiated an action */
     public var addressFrom: String?
+    /** The email address for the participant on the other side of the email conversation */
+    public var addressOther: String?
+    /** The email address for the participant on this side of the email conversation */
+    public var addressSelf: String?
+    /** The address receiving an action */
     public var addressTo: String?
-    /** Message type for messaging services such as sms */
-    public var messageType: MessageType?
+    /** Unique identifier of the active virtual agent assistant */
+    public var agentAssistantId: String?
+    /** Bullseye ring of the targeted agent */
+    public var agentBullseyeRing: Int?
     /** Automatic Number Identification (caller&#39;s number) */
     public var ani: String?
-    /** Direction */
+    /** ID of the user that manually assigned a conversation */
+    public var assignerId: String?
+    /** Flag that indicates that the identity of the customer has been asserted as verified by the provider. */
+    public var authenticated: Bool?
+    /** Callback phone number(s) */
+    public var callbackNumbers: [String]?
+    /** Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var callbackScheduledTime: Date?
+    /** The name of the user requesting a call back */
+    public var callbackUserName: String?
+    /** Describes side of the cobrowse (sharer or viewer) */
+    public var cobrowseRole: String?
+    /** A unique identifier for a PureCloud cobrowse room */
+    public var cobrowseRoomId: String?
+    /** The direction of the communication */
     public var direction: Direction?
+    /** (Dialer) Analyzer (for example speech.person) */
+    public var dispositionAnalyzer: String?
+    /** (Dialer) Result of the analysis (for example disposition.classification.callable.machine) */
+    public var dispositionName: String?
     /** Dialed number identification service (number dialed by the calling party) */
     public var dnis: String?
-    /** Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred */
-    public var sessionDnis: String?
+    /** Unique identifier of the edge device */
+    public var edgeId: String?
+    /** Type of flow in that occurred when entering ACD. */
+    public var flowInType: String?
+    /** Type of flow out that occurred when emitting tFlowOut. */
+    public var flowOutType: String?
+    /** Identifier of the journey action. */
+    public var journeyActionId: String?
+    /** Identifier of the journey action map that triggered the action. */
+    public var journeyActionMapId: String?
+    /** Version of the journey action map that triggered the action. */
+    public var journeyActionMapVersion: Int?
+    /** Primary identifier of the journey customer in the source where the activities originate from. */
+    public var journeyCustomerId: String?
+    /** Type of primary identifier of the journey customer (e.g. cookie). */
+    public var journeyCustomerIdType: String?
+    /** Unique identifier of the journey session. */
+    public var journeyCustomerSessionId: String?
+    /** Type or category of journey sessions (e.g. web, ticket, delivery, atm). */
+    public var journeyCustomerSessionIdType: String?
+    /** Media bridge ID for the conference session consistent across all participants */
+    public var mediaBridgeId: String?
+    /** Count of any media (images, files, etc) included in this session */
+    public var mediaCount: Int?
+    /** The session media type */
+    public var mediaType: MediaType?
+    /** Message type for messaging services. E.g.: sms, facebook, twitter, line */
+    public var messageType: String?
+    /** The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation) */
+    public var monitoredParticipantId: String?
     /** (Dialer) Unique identifier of the outbound campaign */
     public var outboundCampaignId: String?
     /** (Dialer) Unique identifier of the contact */
     public var outboundContactId: String?
     /** (Dialer) Unique identifier of the contact list that this contact belongs to */
     public var outboundContactListId: String?
-    /** (Dialer) Unique identifier of the contact list that this contact belongs to */
-    public var dispositionAnalyzer: String?
-    /** (Dialer) Result of the analysis */
-    public var dispositionName: String?
-    /** Unique identifier of the edge device */
-    public var edgeId: String?
-    public var remoteNameDisplayable: String?
-    /** Unique identifier for the room */
-    public var roomId: String?
-    public var monitoredParticipantId: String?
-    /** The name of the user requesting a call back */
-    public var callbackUserName: String?
-    /** List of numbers to callback */
-    public var callbackNumbers: [String]?
-    /** Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var callbackScheduledTime: Date?
-    /** A unique identifier for a script */
-    public var scriptId: String?
-    /** A unique identifier for a peer */
+    /** This identifies pairs of related sessions on a conversation. E.g. an external session’s peerId will be the session that the call originally connected to, e.g. if an IVR was dialed, the IVR session, which will also have the external session’s ID as its peer. After that point, any transfers of that session to other internal components (acd, agent, etc.) will all spawn new sessions whose peerIds point back to that original external session. */
     public var peerId: String?
-    /** (Dialer) Whether the agent can skip the dialer contact */
-    public var skipEnabled: Bool?
-    /** The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling */
-    public var timeoutSeconds: Int?
-    /** Describe side of the cobrowse (sharer or viewer) */
-    public var cobrowseRole: String?
-    /** A unique identifier for a PureCloud Cobrowse room. */
-    public var cobrowseRoomId: String?
-    public var mediaBridgeId: String?
-    /** Direct ScreenShare address */
-    public var screenShareAddressSelf: String?
-    /** Flag determining if screenShare is started or not (true/false) */
-    public var sharingScreen: Bool?
-    /** A unique identifier for a PureCloud ScreenShare room. */
-    public var screenShareRoomId: String?
-    /** A unique identifier for a PureCloud video room. */
-    public var videoRoomId: String?
-    /** Direct Video address */
-    public var videoAddressSelf: String?
-    /** List of segments for this session */
-    public var segments: [AnalyticsConversationSegment]?
-    /** List of metrics for this session */
-    public var metrics: [AnalyticsSessionMetric]?
-    /** IVR flow execution associated with this session */
-    public var flow: AnalyticsFlow?
-    /** Media endpoint stats associated with this session */
-    public var mediaEndpointStats: [AnalyticsMediaEndpointStat]?
-    /** Flag determining if an audio recording was started or not */
-    public var recording: Bool?
-    /** ID of the journey customer */
-    public var journeyCustomerId: String?
-    /** Type of the journey customer ID */
-    public var journeyCustomerIdType: String?
-    /** ID of the journey customer session */
-    public var journeyCustomerSessionId: String?
-    /** Type of the journey customer session ID */
-    public var journeyCustomerSessionIdType: String?
-    /** Journey action ID */
-    public var journeyActionId: String?
-    /** Journey action map ID */
-    public var journeyActionMapId: String?
-    /** Journey action map version */
-    public var journeyActionMapVersion: String?
     /** The original voice protocol call ID, e.g. a SIP call ID */
     public var protocolCallId: String?
-    /** The source provider for the communication */
+    /** The source provider for the communication. */
     public var provider: String?
+    /** Flag determining if an audio recording was started or not */
+    public var recording: Bool?
     /** Name, phone number, or email address of the remote party. */
     public var remote: String?
-    /** Count of any media (images, files, etc) included in this session */
-    public var mediaCount: Int?
-    /** Type of flow in that occurred, e.g. acd, ivr, etc. */
-    public var flowInType: String?
-    /** Type of flow out that occurred, e.g. voicemail, callback, or acd */
-    public var flowOutType: String?
-    /** All routing types for requested/attempted routing methods. */
+    /** Unique identifier for the remote party */
+    public var remoteNameDisplayable: String?
+    /** ID(s) of Skill(s) that have been removed by bullseye routing */
+    public var removedSkillIds: [String]?
+    /** Routing type(s) for requested/attempted routing methods. */
     public var requestedRoutings: [RequestedRoutings]?
-    /** Complete routing method */
-    public var usedRouting: UsedRouting?
-    /** Selected agent id */
+    /** Unique identifier for the room */
+    public var roomId: String?
+    /** Routing ring for bullseye or preferred agent routing */
+    public var routingRing: Int?
+    /** Direct ScreenShare address */
+    public var screenShareAddressSelf: String?
+    /** A unique identifier for a PureCloud ScreenShare room */
+    public var screenShareRoomId: String?
+    /** A unique identifier for a script */
+    public var scriptId: String?
+    /** Selected agent ID */
     public var selectedAgentId: String?
     /** Selected agent GPR rank */
     public var selectedAgentRank: Int?
-    /** Unique identifier of the active virtual agent assistant */
-    public var agentAssistantId: String?
+    /** Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred */
+    public var sessionDnis: String?
+    /** The unique identifier of this session */
+    public var sessionId: String?
+    /** Flag determining if screenShare is started or not (true/false) */
+    public var sharingScreen: Bool?
+    /** (Dialer) Whether the agent can skip the dialer contact */
+    public var skipEnabled: Bool?
+    /** The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling) */
+    public var timeoutSeconds: Int?
+    /** Complete routing method */
+    public var usedRouting: UsedRouting?
+    /** Direct Video address */
+    public var videoAddressSelf: String?
+    /** A unique identifier for a PureCloud video room */
+    public var videoRoomId: String?
     /** Proposed agents */
     public var proposedAgents: [AnalyticsProposedAgent]?
-    /** ID of the user that manually assigned a conversation */
-    public var assignerId: String?
-    /** Marker for an agent that skipped after call work */
-    public var acwSkipped: Bool?
-    /** Bullseye ring of the conversation */
-    public var bullseyeRing: Int?
-    /** Bullseye ring of the targeted agent */
-    public var agentBullseyeRing: Int?
-    /** Routing rule the conversation is in for preferred agent routing */
-    public var routingRule: Int?
-    /** IDs of skills that have been removed by bullseye routing */
-    public var removedSkillIds: [String]?
-    /** IDs of Skills that are active on the conversation */
-    public var activeSkillIds: [String]?
+    /** MediaEndpointStats associated with this session */
+    public var mediaEndpointStats: [AnalyticsMediaEndpointStat]?
+    /** IVR flow execution associated with this session */
+    public var flow: AnalyticsFlow?
+    /** List of metrics for this session */
+    public var metrics: [AnalyticsSessionMetric]?
+    /** List of segments for this session */
+    public var segments: [AnalyticsConversationSegment]?
 
-    public init(mediaType: MediaType?, sessionId: String?, addressOther: String?, addressSelf: String?, addressFrom: String?, addressTo: String?, messageType: MessageType?, ani: String?, direction: Direction?, dnis: String?, sessionDnis: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, dispositionAnalyzer: String?, dispositionName: String?, edgeId: String?, remoteNameDisplayable: String?, roomId: String?, monitoredParticipantId: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Date?, scriptId: String?, peerId: String?, skipEnabled: Bool?, timeoutSeconds: Int?, cobrowseRole: String?, cobrowseRoomId: String?, mediaBridgeId: String?, screenShareAddressSelf: String?, sharingScreen: Bool?, screenShareRoomId: String?, videoRoomId: String?, videoAddressSelf: String?, segments: [AnalyticsConversationSegment]?, metrics: [AnalyticsSessionMetric]?, flow: AnalyticsFlow?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, recording: Bool?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: String?, protocolCallId: String?, provider: String?, remote: String?, mediaCount: Int?, flowInType: String?, flowOutType: String?, requestedRoutings: [RequestedRoutings]?, usedRouting: UsedRouting?, selectedAgentId: String?, selectedAgentRank: Int?, agentAssistantId: String?, proposedAgents: [AnalyticsProposedAgent]?, assignerId: String?, acwSkipped: Bool?, bullseyeRing: Int?, agentBullseyeRing: Int?, routingRule: Int?, removedSkillIds: [String]?, activeSkillIds: [String]?) {
+    public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, cobrowseRole: String?, cobrowseRoomId: String?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?) {
         
-        self.mediaType = mediaType
+        self.activeSkillIds = activeSkillIds
         
-        self.sessionId = sessionId
+        self.acwSkipped = acwSkipped
+        
+        self.addressFrom = addressFrom
         
         self.addressOther = addressOther
         
         self.addressSelf = addressSelf
         
-        self.addressFrom = addressFrom
-        
         self.addressTo = addressTo
         
-        self.messageType = messageType
+        self.agentAssistantId = agentAssistantId
+        
+        self.agentBullseyeRing = agentBullseyeRing
         
         self.ani = ani
         
-        self.direction = direction
+        self.assignerId = assignerId
         
-        self.dnis = dnis
-        
-        self.sessionDnis = sessionDnis
-        
-        self.outboundCampaignId = outboundCampaignId
-        
-        self.outboundContactId = outboundContactId
-        
-        self.outboundContactListId = outboundContactListId
-        
-        self.dispositionAnalyzer = dispositionAnalyzer
-        
-        self.dispositionName = dispositionName
-        
-        self.edgeId = edgeId
-        
-        self.remoteNameDisplayable = remoteNameDisplayable
-        
-        self.roomId = roomId
-        
-        self.monitoredParticipantId = monitoredParticipantId
-        
-        self.callbackUserName = callbackUserName
+        self.authenticated = authenticated
         
         self.callbackNumbers = callbackNumbers
         
         self.callbackScheduledTime = callbackScheduledTime
         
-        self.scriptId = scriptId
-        
-        self.peerId = peerId
-        
-        self.skipEnabled = skipEnabled
-        
-        self.timeoutSeconds = timeoutSeconds
+        self.callbackUserName = callbackUserName
         
         self.cobrowseRole = cobrowseRole
         
         self.cobrowseRoomId = cobrowseRoomId
         
-        self.mediaBridgeId = mediaBridgeId
+        self.direction = direction
         
-        self.screenShareAddressSelf = screenShareAddressSelf
+        self.dispositionAnalyzer = dispositionAnalyzer
         
-        self.sharingScreen = sharingScreen
+        self.dispositionName = dispositionName
         
-        self.screenShareRoomId = screenShareRoomId
+        self.dnis = dnis
         
-        self.videoRoomId = videoRoomId
+        self.edgeId = edgeId
         
-        self.videoAddressSelf = videoAddressSelf
+        self.flowInType = flowInType
         
-        self.segments = segments
+        self.flowOutType = flowOutType
         
-        self.metrics = metrics
+        self.journeyActionId = journeyActionId
         
-        self.flow = flow
+        self.journeyActionMapId = journeyActionMapId
         
-        self.mediaEndpointStats = mediaEndpointStats
-        
-        self.recording = recording
+        self.journeyActionMapVersion = journeyActionMapVersion
         
         self.journeyCustomerId = journeyCustomerId
         
@@ -263,49 +236,77 @@ public class AnalyticsSession: Codable {
         
         self.journeyCustomerSessionIdType = journeyCustomerSessionIdType
         
-        self.journeyActionId = journeyActionId
+        self.mediaBridgeId = mediaBridgeId
         
-        self.journeyActionMapId = journeyActionMapId
+        self.mediaCount = mediaCount
         
-        self.journeyActionMapVersion = journeyActionMapVersion
+        self.mediaType = mediaType
+        
+        self.messageType = messageType
+        
+        self.monitoredParticipantId = monitoredParticipantId
+        
+        self.outboundCampaignId = outboundCampaignId
+        
+        self.outboundContactId = outboundContactId
+        
+        self.outboundContactListId = outboundContactListId
+        
+        self.peerId = peerId
         
         self.protocolCallId = protocolCallId
         
         self.provider = provider
         
+        self.recording = recording
+        
         self.remote = remote
         
-        self.mediaCount = mediaCount
+        self.remoteNameDisplayable = remoteNameDisplayable
         
-        self.flowInType = flowInType
-        
-        self.flowOutType = flowOutType
+        self.removedSkillIds = removedSkillIds
         
         self.requestedRoutings = requestedRoutings
         
-        self.usedRouting = usedRouting
+        self.roomId = roomId
+        
+        self.routingRing = routingRing
+        
+        self.screenShareAddressSelf = screenShareAddressSelf
+        
+        self.screenShareRoomId = screenShareRoomId
+        
+        self.scriptId = scriptId
         
         self.selectedAgentId = selectedAgentId
         
         self.selectedAgentRank = selectedAgentRank
         
-        self.agentAssistantId = agentAssistantId
+        self.sessionDnis = sessionDnis
+        
+        self.sessionId = sessionId
+        
+        self.sharingScreen = sharingScreen
+        
+        self.skipEnabled = skipEnabled
+        
+        self.timeoutSeconds = timeoutSeconds
+        
+        self.usedRouting = usedRouting
+        
+        self.videoAddressSelf = videoAddressSelf
+        
+        self.videoRoomId = videoRoomId
         
         self.proposedAgents = proposedAgents
         
-        self.assignerId = assignerId
+        self.mediaEndpointStats = mediaEndpointStats
         
-        self.acwSkipped = acwSkipped
+        self.flow = flow
         
-        self.bullseyeRing = bullseyeRing
+        self.metrics = metrics
         
-        self.agentBullseyeRing = agentBullseyeRing
-        
-        self.routingRule = routingRule
-        
-        self.removedSkillIds = removedSkillIds
-        
-        self.activeSkillIds = activeSkillIds
+        self.segments = segments
         
     }
 

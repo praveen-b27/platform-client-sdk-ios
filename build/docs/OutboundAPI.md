@@ -93,7 +93,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlists**](OutboundAPI.html#postOutboundContactlists) | Create a contact List. |
 | [**postOutboundConversationDnc**](OutboundAPI.html#postOutboundConversationDnc) | Add phone numbers to a Dialer DNC list. |
 | [**postOutboundDnclistExport**](OutboundAPI.html#postOutboundDnclistExport) | Initiate the export of a dnc list. |
-| [**postOutboundDnclistPhonenumbers**](OutboundAPI.html#postOutboundDnclistPhonenumbers) | Add phone numbers to a Dialer DNC list. |
+| [**postOutboundDnclistPhonenumbers**](OutboundAPI.html#postOutboundDnclistPhonenumbers) | Add phone numbers to a DNC list. |
 | [**postOutboundDnclists**](OutboundAPI.html#postOutboundDnclists) | Create dialer DNC list |
 | [**postOutboundMessagingcampaigns**](OutboundAPI.html#postOutboundMessagingcampaigns) | Create a Messaging Campaign |
 | [**postOutboundMessagingcampaignsProgress**](OutboundAPI.html#postOutboundMessagingcampaignsProgress) | Get progress for a list of messaging campaigns |
@@ -4874,7 +4874,7 @@ OutboundAPI.postOutboundDnclistExport(dncListId: dncListId) { (response, error) 
 
 > Void postOutboundDnclistPhonenumbers(dncListId, body)
 
-Add phone numbers to a Dialer DNC list.
+Add phone numbers to a DNC list.
 
 Only Internal DNC lists may be appended to
 

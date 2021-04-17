@@ -12,14 +12,14 @@ import Foundation
 public class ViewFilter: Codable {
 
     public enum MediaTypes: String, Codable { 
-        case voice = "voice"
-        case chat = "chat"
-        case email = "email"
         case callback = "callback"
+        case chat = "chat"
         case cobrowse = "cobrowse"
-        case video = "video"
-        case screenshare = "screenshare"
+        case email = "email"
         case message = "message"
+        case screenshare = "screenshare"
+        case video = "video"
+        case voice = "voice"
     }
     public enum Directions: String, Codable { 
         case inbound = "inbound"
@@ -73,26 +73,26 @@ public class ViewFilter: Codable {
         case workflow = "workflow"
     }
     public enum FlowEntryTypes: String, Codable { 
-        case dnis = "dnis"
-        case direct = "direct"
-        case flow = "flow"
         case agent = "agent"
+        case direct = "direct"
+        case dnis = "dnis"
+        case flow = "flow"
         case outbound = "outbound"
     }
     public enum UsedRoutingTypes: String, Codable { 
+        case bullseye = "Bullseye"
+        case last = "Last"
+        case manual = "Manual"
         case predictive = "Predictive"
         case preferred = "Preferred"
-        case manual = "Manual"
-        case last = "Last"
-        case bullseye = "Bullseye"
         case standard = "Standard"
     }
     public enum RequestedRoutingTypes: String, Codable { 
+        case bullseye = "Bullseye"
+        case last = "Last"
+        case manual = "Manual"
         case predictive = "Predictive"
         case preferred = "Preferred"
-        case manual = "Manual"
-        case last = "Last"
-        case bullseye = "Bullseye"
         case standard = "Standard"
     }
     public enum ParticipantPurposes: String, Codable { 
@@ -120,10 +120,6 @@ public class ViewFilter: Codable {
         case scheduled = "Scheduled"
         case invalidSchedule = "InvalidSchedule"
         case inProgress = "InProgress"
-        case completed = "Completed"
-    }
-    public enum DevelopmentKeyType: String, Codable { 
-        case due = "Due"
         case completed = "Completed"
     }
     /** The media types are used to filter the view */
@@ -320,12 +316,18 @@ public class ViewFilter: Codable {
     public var developmentStatusList: [DevelopmentStatusList]?
     /** The list of development moduleIds used to filter agent development view */
     public var developmentModuleIds: [String]?
-    /** Represents due or completed to filter agent development view */
-    public var developmentKeyType: DevelopmentKeyType?
     /** Indicates filtering for development activities */
     public var developmentActivityOverdue: Bool?
+    /** The customer sentiment score used to filter the view */
+    public var customerSentimentScore: NumericRange?
+    /** The customer sentiment trend used to filter the view */
+    public var customerSentimentTrend: NumericRange?
+    /** The list of transfer targets used to filter flow data */
+    public var flowTransferTargets: [String]?
+    /** Filter for development name */
+    public var developmentName: String?
 
-    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, answered: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, hasMedia: Bool?, roleIds: [String]?, reportsTos: [String]?, locationIds: [String]?, flowOutTypes: [String]?, providerList: [String]?, callbackNumberList: [String]?, callbackInterval: String?, usedRoutingTypes: [UsedRoutingTypes]?, requestedRoutingTypes: [RequestedRoutingTypes]?, hasAgentAssistId: Bool?, transcripts: [Transcripts]?, transcriptLanguages: [String]?, participantPurposes: [ParticipantPurposes]?, showFirstQueue: Bool?, teamIds: [String]?, filterUsersByTeamIds: [String]?, journeyActionMapIds: [String]?, journeyOutcomeIds: [String]?, journeySegmentIds: [String]?, journeyActionMapTypes: [JourneyActionMapTypes]?, developmentRoleList: [DevelopmentRoleList]?, developmentTypeList: [DevelopmentTypeList]?, developmentStatusList: [DevelopmentStatusList]?, developmentModuleIds: [String]?, developmentKeyType: DevelopmentKeyType?, developmentActivityOverdue: Bool?) {
+    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, answered: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, hasMedia: Bool?, roleIds: [String]?, reportsTos: [String]?, locationIds: [String]?, flowOutTypes: [String]?, providerList: [String]?, callbackNumberList: [String]?, callbackInterval: String?, usedRoutingTypes: [UsedRoutingTypes]?, requestedRoutingTypes: [RequestedRoutingTypes]?, hasAgentAssistId: Bool?, transcripts: [Transcripts]?, transcriptLanguages: [String]?, participantPurposes: [ParticipantPurposes]?, showFirstQueue: Bool?, teamIds: [String]?, filterUsersByTeamIds: [String]?, journeyActionMapIds: [String]?, journeyOutcomeIds: [String]?, journeySegmentIds: [String]?, journeyActionMapTypes: [JourneyActionMapTypes]?, developmentRoleList: [DevelopmentRoleList]?, developmentTypeList: [DevelopmentTypeList]?, developmentStatusList: [DevelopmentStatusList]?, developmentModuleIds: [String]?, developmentActivityOverdue: Bool?, customerSentimentScore: NumericRange?, customerSentimentTrend: NumericRange?, flowTransferTargets: [String]?, developmentName: String?) {
         
         self.mediaTypes = mediaTypes
         
@@ -521,9 +523,15 @@ public class ViewFilter: Codable {
         
         self.developmentModuleIds = developmentModuleIds
         
-        self.developmentKeyType = developmentKeyType
-        
         self.developmentActivityOverdue = developmentActivityOverdue
+        
+        self.customerSentimentScore = customerSentimentScore
+        
+        self.customerSentimentTrend = customerSentimentTrend
+        
+        self.flowTransferTargets = flowTransferTargets
+        
+        self.developmentName = developmentName
         
     }
 

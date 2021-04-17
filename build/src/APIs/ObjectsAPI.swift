@@ -420,6 +420,8 @@ open class ObjectsAPI {
         case managementunit = "MANAGEMENTUNIT"
         case businessunit = "BUSINESSUNIT"
         case flow = "FLOW"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
         case user = "USER"
         case datatables = "DATATABLES"
     }

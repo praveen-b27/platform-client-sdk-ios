@@ -11,12 +11,18 @@ import Foundation
 
 public class EvaluationScoringSet: Codable {
 
+    /** Score of all questions */
     public var totalScore: Float?
+    /** Score of only the critical questions */
     public var totalCriticalScore: Float?
+    /** Score of only the non-critical questions */
     public var totalNonCriticalScore: Float?
     public var questionGroupScores: [EvaluationQuestionGroupScore]?
+    /** Indicates that at least one fatal question was answered without having the highest score available for the question */
     public var anyFailedKillQuestions: Bool?
+    /** Overall comments from the evaluator */
     public var comments: String?
+    /** Comments from the agent while reviewing evaluation results */
     public var agentComments: String?
 
     public init(totalScore: Float?, totalCriticalScore: Float?, totalNonCriticalScore: Float?, questionGroupScores: [EvaluationQuestionGroupScore]?, anyFailedKillQuestions: Bool?, comments: String?, agentComments: String?) {

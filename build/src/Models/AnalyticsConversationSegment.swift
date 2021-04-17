@@ -12,84 +12,134 @@ import Foundation
 public class AnalyticsConversationSegment: Codable {
 
     public enum DisconnectType: String, Codable { 
-        case endpoint = "endpoint"
         case client = "client"
-        case system = "system"
-        case transfer = "transfer"
-        case error = "error"
-        case peer = "peer"
-        case other = "other"
-        case spam = "spam"
-        case transportfailure = "transportFailure"
         case conferencetransfer = "conferenceTransfer"
         case consulttransfer = "consultTransfer"
+        case endpoint = "endpoint"
+        case error = "error"
         case forwardtransfer = "forwardTransfer"
-        case timeout = "timeout"
         case noanswertransfer = "noAnswerTransfer"
         case notavailabletransfer = "notAvailableTransfer"
+        case other = "other"
+        case peer = "peer"
+        case spam = "spam"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transportfailure = "transportFailure"
         case uncallable = "uncallable"
     }
     public enum SegmentType: String, Codable { 
-        case unknown = "unknown"
         case alert = "alert"
-        case system = "system"
+        case callback = "callback"
+        case contacting = "contacting"
+        case converting = "converting"
         case delay = "delay"
+        case dialing = "dialing"
         case hold = "hold"
         case interact = "interact"
         case ivr = "ivr"
-        case dialing = "dialing"
-        case wrapup = "wrapup"
-        case voicemail = "voicemail"
         case scheduled = "scheduled"
-        case contacting = "contacting"
-        case transmitting = "transmitting"
-        case converting = "converting"
-        case uploading = "uploading"
         case sharing = "sharing"
-        case callback = "callback"
+        case system = "system"
+        case transmitting = "transmitting"
+        case unknown = "unknown"
+        case uploading = "uploading"
+        case voicemail = "voicemail"
+        case wrapup = "wrapup"
     }
-    /** The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var segmentStart: Date?
-    /** The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var segmentEnd: Date?
+    /** Flag indicating if audio is muted or not (true/false) */
+    public var audioMuted: Bool?
+    /** Indicates whether the segment was a conference */
+    public var conference: Bool?
+    /** The unique identifier of a new conversation when a conversation is ended for a conference */
+    public var destinationConversationId: String?
+    /** The unique identifier of a new session when a session is ended for a conference */
+    public var destinationSessionId: String?
+    /** The session disconnect type */
+    public var disconnectType: DisconnectType?
+    /** A code corresponding to the error that occurred */
+    public var errorCode: String?
+    /** Unique identifier for a PureCloud group */
+    public var groupId: String?
+    /** Q.850 response code(s) */
+    public var q850ResponseCodes: [Int64]?
     /** Queue identifier */
     public var queueId: String?
-    /** Wrapup Code id */
+    /** Unique identifier for the language requested for an interaction */
+    public var requestedLanguageId: String?
+    /** Unique identifier(s) for skill(s) requested for an interaction */
+    public var requestedRoutingSkillIds: [String]?
+    /** Unique identifier(s) for agent(s) requested for an interaction */
+    public var requestedRoutingUserIds: [String]?
+    /** The end time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var segmentEnd: Date?
+    /** The start time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var segmentStart: Date?
+    /** The activity that takes place in the segment, such as hold or interact */
+    public var segmentType: SegmentType?
+    /** SIP response code(s) */
+    public var sipResponseCodes: [Int64]?
+    /** The unique identifier of the previous conversation when a new conversation is created for a conference */
+    public var sourceConversationId: String?
+    /** The unique identifier of the previous session when a new session is created for a conference */
+    public var sourceSessionId: String?
+    /** The subject for the initial email that started this conversation */
+    public var subject: String?
+    /** Flag indicating if video is muted/paused or not (true/false) */
+    public var videoMuted: Bool?
+    /** Wrap up code */
     public var wrapUpCode: String?
     /** Note entered by an agent during after-call work */
     public var wrapUpNote: String?
+    /** Tag(s) assigned during after-call work */
     public var wrapUpTags: [String]?
-    public var errorCode: String?
-    /** A description of the event that disconnected the segment */
-    public var disconnectType: DisconnectType?
-    /** The activity taking place for the participant in the segment */
-    public var segmentType: SegmentType?
-    public var requestedRoutingUserIds: [String]?
-    public var requestedRoutingSkillIds: [String]?
-    /** A unique identifier for the language requested for an interaction. */
-    public var requestedLanguageId: String?
+    /** Scored agents */
     public var scoredAgents: [AnalyticsScoredAgent]?
+    /** Additional segment properties */
     public var properties: [AnalyticsProperty]?
-    public var sourceConversationId: String?
-    public var destinationConversationId: String?
-    public var sourceSessionId: String?
-    public var destinationSessionId: String?
-    public var sipResponseCodes: [Int64]?
-    public var q850ResponseCodes: [Int64]?
-    /** Indicates whether the segment was a conference */
-    public var conference: Bool?
-    public var groupId: String?
-    public var subject: String?
-    public var audioMuted: Bool?
-    public var videoMuted: Bool?
 
-    public init(segmentStart: Date?, segmentEnd: Date?, queueId: String?, wrapUpCode: String?, wrapUpNote: String?, wrapUpTags: [String]?, errorCode: String?, disconnectType: DisconnectType?, segmentType: SegmentType?, requestedRoutingUserIds: [String]?, requestedRoutingSkillIds: [String]?, requestedLanguageId: String?, scoredAgents: [AnalyticsScoredAgent]?, properties: [AnalyticsProperty]?, sourceConversationId: String?, destinationConversationId: String?, sourceSessionId: String?, destinationSessionId: String?, sipResponseCodes: [Int64]?, q850ResponseCodes: [Int64]?, conference: Bool?, groupId: String?, subject: String?, audioMuted: Bool?, videoMuted: Bool?) {
+    public init(audioMuted: Bool?, conference: Bool?, destinationConversationId: String?, destinationSessionId: String?, disconnectType: DisconnectType?, errorCode: String?, groupId: String?, q850ResponseCodes: [Int64]?, queueId: String?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutingUserIds: [String]?, segmentEnd: Date?, segmentStart: Date?, segmentType: SegmentType?, sipResponseCodes: [Int64]?, sourceConversationId: String?, sourceSessionId: String?, subject: String?, videoMuted: Bool?, wrapUpCode: String?, wrapUpNote: String?, wrapUpTags: [String]?, scoredAgents: [AnalyticsScoredAgent]?, properties: [AnalyticsProperty]?) {
         
-        self.segmentStart = segmentStart
+        self.audioMuted = audioMuted
+        
+        self.conference = conference
+        
+        self.destinationConversationId = destinationConversationId
+        
+        self.destinationSessionId = destinationSessionId
+        
+        self.disconnectType = disconnectType
+        
+        self.errorCode = errorCode
+        
+        self.groupId = groupId
+        
+        self.q850ResponseCodes = q850ResponseCodes
+        
+        self.queueId = queueId
+        
+        self.requestedLanguageId = requestedLanguageId
+        
+        self.requestedRoutingSkillIds = requestedRoutingSkillIds
+        
+        self.requestedRoutingUserIds = requestedRoutingUserIds
         
         self.segmentEnd = segmentEnd
         
-        self.queueId = queueId
+        self.segmentStart = segmentStart
+        
+        self.segmentType = segmentType
+        
+        self.sipResponseCodes = sipResponseCodes
+        
+        self.sourceConversationId = sourceConversationId
+        
+        self.sourceSessionId = sourceSessionId
+        
+        self.subject = subject
+        
+        self.videoMuted = videoMuted
         
         self.wrapUpCode = wrapUpCode
         
@@ -97,43 +147,9 @@ public class AnalyticsConversationSegment: Codable {
         
         self.wrapUpTags = wrapUpTags
         
-        self.errorCode = errorCode
-        
-        self.disconnectType = disconnectType
-        
-        self.segmentType = segmentType
-        
-        self.requestedRoutingUserIds = requestedRoutingUserIds
-        
-        self.requestedRoutingSkillIds = requestedRoutingSkillIds
-        
-        self.requestedLanguageId = requestedLanguageId
-        
         self.scoredAgents = scoredAgents
         
         self.properties = properties
-        
-        self.sourceConversationId = sourceConversationId
-        
-        self.destinationConversationId = destinationConversationId
-        
-        self.sourceSessionId = sourceSessionId
-        
-        self.destinationSessionId = destinationSessionId
-        
-        self.sipResponseCodes = sipResponseCodes
-        
-        self.q850ResponseCodes = q850ResponseCodes
-        
-        self.conference = conference
-        
-        self.groupId = groupId
-        
-        self.subject = subject
-        
-        self.audioMuted = audioMuted
-        
-        self.videoMuted = videoMuted
         
     }
 

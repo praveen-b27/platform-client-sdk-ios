@@ -7,31 +7,31 @@ title: AnalyticsConversationSegment
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **segmentStart** | [**Date**](Date.html) | The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **segmentEnd** | [**Date**](Date.html) | The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **queueId** | **String** | Queue identifier | [optional] |
-| **wrapUpCode** | **String** | Wrapup Code id | [optional] |
-| **wrapUpNote** | **String** | Note entered by an agent during after-call work | [optional] |
-| **wrapUpTags** | **[String]** |  | [optional] |
-| **errorCode** | **String** |  | [optional] |
-| **disconnectType** | **String** | A description of the event that disconnected the segment | [optional] |
-| **segmentType** | **String** | The activity taking place for the participant in the segment | [optional] |
-| **requestedRoutingUserIds** | **[String]** |  | [optional] |
-| **requestedRoutingSkillIds** | **[String]** |  | [optional] |
-| **requestedLanguageId** | **String** | A unique identifier for the language requested for an interaction. | [optional] |
-| **scoredAgents** | [**[AnalyticsScoredAgent]**](AnalyticsScoredAgent.html) |  | [optional] |
-| **properties** | [**[AnalyticsProperty]**](AnalyticsProperty.html) |  | [optional] |
-| **sourceConversationId** | **String** |  | [optional] |
-| **destinationConversationId** | **String** |  | [optional] |
-| **sourceSessionId** | **String** |  | [optional] |
-| **destinationSessionId** | **String** |  | [optional] |
-| **sipResponseCodes** | **[Int64]** |  | [optional] |
-| **q850ResponseCodes** | **[Int64]** |  | [optional] |
+| **audioMuted** | **Bool** | Flag indicating if audio is muted or not (true/false) | [optional] |
 | **conference** | **Bool** | Indicates whether the segment was a conference | [optional] |
-| **groupId** | **String** |  | [optional] |
-| **subject** | **String** |  | [optional] |
-| **audioMuted** | **Bool** |  | [optional] |
-| **videoMuted** | **Bool** |  | [optional] |
+| **destinationConversationId** | **String** | The unique identifier of a new conversation when a conversation is ended for a conference | [optional] |
+| **destinationSessionId** | **String** | The unique identifier of a new session when a session is ended for a conference | [optional] |
+| **disconnectType** | **String** | The session disconnect type | [optional] |
+| **errorCode** | **String** | A code corresponding to the error that occurred | [optional] |
+| **groupId** | **String** | Unique identifier for a PureCloud group | [optional] |
+| **q850ResponseCodes** | **[Int64]** | Q.850 response code(s) | [optional] |
+| **queueId** | **String** | Queue identifier | [optional] |
+| **requestedLanguageId** | **String** | Unique identifier for the language requested for an interaction | [optional] |
+| **requestedRoutingSkillIds** | **[String]** | Unique identifier(s) for skill(s) requested for an interaction | [optional] |
+| **requestedRoutingUserIds** | **[String]** | Unique identifier(s) for agent(s) requested for an interaction | [optional] |
+| **segmentEnd** | [**Date**](Date.html) | The end time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **segmentStart** | [**Date**](Date.html) | The start time of a segment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **segmentType** | **String** | The activity that takes place in the segment, such as hold or interact | [optional] |
+| **sipResponseCodes** | **[Int64]** | SIP response code(s) | [optional] |
+| **sourceConversationId** | **String** | The unique identifier of the previous conversation when a new conversation is created for a conference | [optional] |
+| **sourceSessionId** | **String** | The unique identifier of the previous session when a new session is created for a conference | [optional] |
+| **subject** | **String** | The subject for the initial email that started this conversation | [optional] |
+| **videoMuted** | **Bool** | Flag indicating if video is muted/paused or not (true/false) | [optional] |
+| **wrapUpCode** | **String** | Wrap up code | [optional] |
+| **wrapUpNote** | **String** | Note entered by an agent during after-call work | [optional] |
+| **wrapUpTags** | **[String]** | Tag(s) assigned during after-call work | [optional] |
+| **scoredAgents** | [**[AnalyticsScoredAgent]**](AnalyticsScoredAgent.html) | Scored agents | [optional] |
+| **properties** | [**[AnalyticsProperty]**](AnalyticsProperty.html) | Additional segment properties | [optional] |
 {: class="table table-striped"}
 
 

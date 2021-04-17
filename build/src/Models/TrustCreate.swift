@@ -11,7 +11,7 @@ import Foundation
 
 public class TrustCreate: Codable {
 
-    /** The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship. */
+    /** The pairing Id created by the trustee. This is required to prove that the trustee agrees to the relationship.  Not required when creating a default pairing with Customer Care. */
     public var pairingId: String?
     /** If disabled no trustee user will have access, even if they were previously added. */
     public var enabled: Bool?

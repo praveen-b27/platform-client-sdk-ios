@@ -13,7 +13,7 @@ public class AdditionalMessage: Codable {
 
     /** The body of the text message. */
     public var textBody: String?
-    /** The media ids associated with the text message. */
+    /** The media ids associated with the text message. See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage. */
     public var mediaIds: [String]?
     /** The sticker ids associated with the text message. */
     public var stickerIds: [String]?

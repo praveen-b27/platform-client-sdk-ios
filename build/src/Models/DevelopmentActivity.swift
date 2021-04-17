@@ -15,6 +15,8 @@ public class DevelopmentActivity: Codable {
     public enum ModelType: String, Codable { 
         case informational = "Informational"
         case coaching = "Coaching"
+        case assessedContent = "AssessedContent"
+        case questionnaire = "Questionnaire"
     }
     public enum Status: String, Codable { 
         case planned = "Planned"

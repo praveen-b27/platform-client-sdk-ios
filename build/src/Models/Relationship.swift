@@ -13,8 +13,7 @@ public class Relationship: Codable {
 
     /** The globally unique identifier for the object. */
     public var _id: String?
-    public var name: String?
-    /** The user associated with the external organization */
+    /** The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note. */
     public var user: User?
     /** The external organization this relationship is attached to */
     public var externalOrganization: ExternalOrganization?
@@ -25,11 +24,9 @@ public class Relationship: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: User?, externalOrganization: ExternalOrganization?, relationship: String?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
+    public init(_id: String?, user: User?, externalOrganization: ExternalOrganization?, relationship: String?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
         
         self._id = _id
-        
-        self.name = name
         
         self.user = user
         
@@ -45,7 +42,6 @@ public class Relationship: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
-        case name
         case user
         case externalOrganization
         case relationship

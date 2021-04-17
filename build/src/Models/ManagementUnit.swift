@@ -24,8 +24,6 @@ public class ManagementUnit: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
     /** The business unit to which this management unit belongs */
     public var businessUnit: BusinessUnitReference?
     /** Start day of week for scheduling and forecasting purposes. Moving to Business Unit */
@@ -36,6 +34,8 @@ public class ManagementUnit: Codable {
     public var settings: ManagementUnitSettingsResponse?
     /** Version info metadata for this management unit. Deprecated, use settings.metadata */
     public var metadata: WfmVersionedEntityMetadata?
+    /** The division to which this entity belongs. */
+    public var division: DivisionReference?
     /** The version of the underlying entity.  Deprecated, use field from settings.metadata instead */
     public var version: Int?
     /** The date and time at which this entity was last modified.  Deprecated, use field from settings.metadata instead. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -45,13 +45,11 @@ public class ManagementUnit: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, businessUnit: BusinessUnitReference?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
+    public init(_id: String?, name: String?, businessUnit: BusinessUnitReference?, startDayOfWeek: StartDayOfWeek?, timeZone: String?, settings: ManagementUnitSettingsResponse?, metadata: WfmVersionedEntityMetadata?, division: DivisionReference?, version: Int?, dateModified: Date?, modifiedBy: UserReference?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
-        
-        self.division = division
         
         self.businessUnit = businessUnit
         
@@ -62,6 +60,8 @@ public class ManagementUnit: Codable {
         self.settings = settings
         
         self.metadata = metadata
+        
+        self.division = division
         
         self.version = version
         
@@ -76,12 +76,12 @@ public class ManagementUnit: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
-        case division
         case businessUnit
         case startDayOfWeek
         case timeZone
         case settings
         case metadata
+        case division
         case version
         case dateModified
         case modifiedBy

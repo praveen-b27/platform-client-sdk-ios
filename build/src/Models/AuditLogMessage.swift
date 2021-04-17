@@ -15,6 +15,7 @@ public class AuditLogMessage: Codable {
         case architect = "Architect"
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
+        case integrations = "Integrations"
         case peoplePermissions = "PeoplePermissions"
         case presence = "Presence"
         case quality = "Quality"
@@ -143,6 +144,7 @@ public class AuditLogMessage: Codable {
         case predictor = "Predictor"
         case workPlan = "WorkPlan"
         case sentimentFeedback = "SentimentFeedback"
+        case integration = "Integration"
     }
     /** Id of the audit message. */
     public var _id: String?

@@ -638,8 +638,8 @@ open class ConversationsAPI {
     "formName" : "aeiou",
     "eventTime" : "2000-01-23T04:56:07.000+0000",
     "rescored" : true,
-    "evaluatorId" : "aeiou",
-    "calibrationId" : "aeiou"
+    "calibrationId" : "aeiou",
+    "evaluatorId" : "aeiou"
   } ],
   "conversationId" : "aeiou",
   "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -653,13 +653,15 @@ open class ConversationsAPI {
     "surveyFormId" : "aeiou",
     "surveyFormContextId" : "aeiou",
     "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-    "userId" : "aeiou",
-    "surveyPromoterScore" : 123
+    "surveyPromoterScore" : 123,
+    "userId" : "aeiou"
   } ],
   "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+  "externalTag" : "aeiou",
   "resolutions" : [ {
     "queueId" : "aeiou",
-    "getnNextContactAvoided" : 123456789,
+    "eventTime" : "2000-01-23T04:56:07.000+0000",
+    "nNextContactAvoided" : 123456789,
     "userId" : "aeiou"
   } ],
   "originatingDirection" : "aeiou",
@@ -667,9 +669,10 @@ open class ConversationsAPI {
   "participants" : [ {
     "participantId" : "aeiou",
     "sessions" : [ {
+      "authenticated" : true,
       "usedRouting" : "aeiou",
-      "monitoredParticipantId" : "aeiou",
       "cobrowseRole" : "aeiou",
+      "monitoredParticipantId" : "aeiou",
       "videoAddressSelf" : "aeiou",
       "proposedAgents" : [ {
         "proposedAgentId" : "aeiou",
@@ -682,7 +685,6 @@ open class ConversationsAPI {
       "roomId" : "aeiou",
       "messageType" : "aeiou",
       "removedSkillIds" : [ "aeiou" ],
-      "routingRule" : 123,
       "requestedRoutings" : [ "aeiou" ],
       "mediaCount" : 123,
       "dnis" : "aeiou",
@@ -705,6 +707,7 @@ open class ConversationsAPI {
         "transferType" : "aeiou",
         "entryReason" : "aeiou",
         "endingLanguage" : "aeiou",
+        "recognitionFailureReason" : "aeiou",
         "flowId" : "aeiou",
         "startingLanguage" : "aeiou",
         "flowType" : "aeiou"
@@ -714,8 +717,8 @@ open class ConversationsAPI {
       "cobrowseRoomId" : "aeiou",
       "activeSkillIds" : [ "aeiou" ],
       "protocolCallId" : "aeiou",
-      "mediaType" : "aeiou",
       "flowOutType" : "aeiou",
+      "mediaType" : "aeiou",
       "outboundCampaignId" : "aeiou",
       "addressTo" : "aeiou",
       "edgeId" : "aeiou",
@@ -725,10 +728,10 @@ open class ConversationsAPI {
         "emitDate" : "2000-01-23T04:56:07.000+0000",
         "value" : 123456789
       } ],
+      "journeyActionMapVersion" : 123,
       "mediaBridgeId" : "aeiou",
-      "journeyActionMapVersion" : "aeiou",
-      "screenShareRoomId" : "aeiou",
       "agentAssistantId" : "aeiou",
+      "screenShareRoomId" : "aeiou",
       "assignerId" : "aeiou",
       "outboundContactId" : "aeiou",
       "peerId" : "aeiou",
@@ -744,23 +747,23 @@ open class ConversationsAPI {
         "queueId" : "aeiou",
         "conference" : true,
         "subject" : "aeiou",
-        "sourceConversationId" : "aeiou",
         "groupId" : "aeiou",
+        "sourceConversationId" : "aeiou",
         "errorCode" : "aeiou",
         "requestedRoutingSkillIds" : [ "aeiou" ],
         "segmentEnd" : "2000-01-23T04:56:07.000+0000",
         "wrapUpNote" : "aeiou",
         "destinationSessionId" : "aeiou",
         "disconnectType" : "aeiou",
-        "segmentStart" : "2000-01-23T04:56:07.000+0000",
         "requestedRoutingUserIds" : [ "aeiou" ],
+        "segmentStart" : "2000-01-23T04:56:07.000+0000",
         "scoredAgents" : [ {
           "scoredAgentId" : "aeiou",
           "agentScore" : 123
         } ],
         "videoMuted" : true,
-        "q850ResponseCodes" : [ 123456789 ],
         "audioMuted" : true,
+        "q850ResponseCodes" : [ 123456789 ],
         "wrapUpCode" : "aeiou",
         "destinationConversationId" : "aeiou",
         "wrapUpTags" : [ "aeiou" ],
@@ -774,7 +777,6 @@ open class ConversationsAPI {
           "value" : "aeiou"
         } ]
       } ],
-      "bullseyeRing" : 123,
       "journeyCustomerSessionIdType" : "aeiou",
       "provider" : "aeiou",
       "journeyCustomerIdType" : "aeiou",
@@ -784,10 +786,11 @@ open class ConversationsAPI {
       "flowInType" : "aeiou",
       "ani" : "aeiou",
       "direction" : "aeiou",
+      "routingRing" : 123,
       "journeyCustomerSessionId" : "aeiou",
       "sessionId" : "aeiou",
       "journeyActionId" : "aeiou",
-      "dispositionName" : "disposition.classification.callable.machine",
+      "dispositionName" : "aeiou",
       "scriptId" : "aeiou",
       "selectedAgentId" : "aeiou",
       "acwSkipped" : true,
@@ -795,9 +798,10 @@ open class ConversationsAPI {
         "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
         "underrunPackets" : 123456789,
         "overrunPackets" : 123456789,
-        "minMos" : 1.3579000000000001069366817318950779736042022705078125,
         "maxLatencyMs" : 123456789,
+        "minMos" : 1.3579000000000001069366817318950779736042022705078125,
         "codecs" : [ "aeiou" ],
+        "eventTime" : "2000-01-23T04:56:07.000+0000",
         "receivedPackets" : 123456789,
         "duplicatePackets" : 123456789,
         "invalidPackets" : 123456789,
@@ -811,8 +815,8 @@ open class ConversationsAPI {
     "teamId" : "aeiou",
     "externalOrganizationId" : "aeiou",
     "participantName" : "aeiou",
-    "userId" : "aeiou",
-    "flaggedReason" : "aeiou"
+    "flaggedReason" : "aeiou",
+    "userId" : "aeiou"
   } ]
 }}]
      
@@ -893,8 +897,8 @@ open class ConversationsAPI {
       "formName" : "aeiou",
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
-      "evaluatorId" : "aeiou",
-      "calibrationId" : "aeiou"
+      "calibrationId" : "aeiou",
+      "evaluatorId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -908,13 +912,15 @@ open class ConversationsAPI {
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "surveyPromoterScore" : 123
+      "surveyPromoterScore" : 123,
+      "userId" : "aeiou"
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
-      "getnNextContactAvoided" : 123456789,
+      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -922,9 +928,10 @@ open class ConversationsAPI {
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
+        "authenticated" : true,
         "usedRouting" : "aeiou",
-        "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
+        "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
@@ -937,7 +944,6 @@ open class ConversationsAPI {
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "removedSkillIds" : [ "aeiou" ],
-        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -960,6 +966,7 @@ open class ConversationsAPI {
           "transferType" : "aeiou",
           "entryReason" : "aeiou",
           "endingLanguage" : "aeiou",
+          "recognitionFailureReason" : "aeiou",
           "flowId" : "aeiou",
           "startingLanguage" : "aeiou",
           "flowType" : "aeiou"
@@ -969,8 +976,8 @@ open class ConversationsAPI {
         "cobrowseRoomId" : "aeiou",
         "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
-        "mediaType" : "aeiou",
         "flowOutType" : "aeiou",
+        "mediaType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
         "edgeId" : "aeiou",
@@ -980,10 +987,10 @@ open class ConversationsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+0000",
           "value" : 123456789
         } ],
+        "journeyActionMapVersion" : 123,
         "mediaBridgeId" : "aeiou",
-        "journeyActionMapVersion" : "aeiou",
-        "screenShareRoomId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "screenShareRoomId" : "aeiou",
         "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
@@ -999,23 +1006,23 @@ open class ConversationsAPI {
           "queueId" : "aeiou",
           "conference" : true,
           "subject" : "aeiou",
-          "sourceConversationId" : "aeiou",
           "groupId" : "aeiou",
+          "sourceConversationId" : "aeiou",
           "errorCode" : "aeiou",
           "requestedRoutingSkillIds" : [ "aeiou" ],
           "segmentEnd" : "2000-01-23T04:56:07.000+0000",
           "wrapUpNote" : "aeiou",
           "destinationSessionId" : "aeiou",
           "disconnectType" : "aeiou",
-          "segmentStart" : "2000-01-23T04:56:07.000+0000",
           "requestedRoutingUserIds" : [ "aeiou" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+0000",
           "scoredAgents" : [ {
             "scoredAgentId" : "aeiou",
             "agentScore" : 123
           } ],
           "videoMuted" : true,
-          "q850ResponseCodes" : [ 123456789 ],
           "audioMuted" : true,
+          "q850ResponseCodes" : [ 123456789 ],
           "wrapUpCode" : "aeiou",
           "destinationConversationId" : "aeiou",
           "wrapUpTags" : [ "aeiou" ],
@@ -1029,7 +1036,6 @@ open class ConversationsAPI {
             "value" : "aeiou"
           } ]
         } ],
-        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -1039,10 +1045,11 @@ open class ConversationsAPI {
         "flowInType" : "aeiou",
         "ani" : "aeiou",
         "direction" : "aeiou",
+        "routingRing" : 123,
         "journeyCustomerSessionId" : "aeiou",
         "sessionId" : "aeiou",
         "journeyActionId" : "aeiou",
-        "dispositionName" : "disposition.classification.callable.machine",
+        "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
         "acwSkipped" : true,
@@ -1050,9 +1057,10 @@ open class ConversationsAPI {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
           "overrunPackets" : 123456789,
-          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
           "maxLatencyMs" : 123456789,
+          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
           "codecs" : [ "aeiou" ],
+          "eventTime" : "2000-01-23T04:56:07.000+0000",
           "receivedPackets" : 123456789,
           "duplicatePackets" : 123456789,
           "invalidPackets" : 123456789,
@@ -1066,8 +1074,8 @@ open class ConversationsAPI {
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
-      "userId" : "aeiou",
-      "flaggedReason" : "aeiou"
+      "flaggedReason" : "aeiou",
+      "userId" : "aeiou"
     } ]
   } ]
 }}]
@@ -1228,8 +1236,8 @@ open class ConversationsAPI {
       "formName" : "aeiou",
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
-      "evaluatorId" : "aeiou",
-      "calibrationId" : "aeiou"
+      "calibrationId" : "aeiou",
+      "evaluatorId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1243,13 +1251,15 @@ open class ConversationsAPI {
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "surveyPromoterScore" : 123
+      "surveyPromoterScore" : 123,
+      "userId" : "aeiou"
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
-      "getnNextContactAvoided" : 123456789,
+      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -1257,9 +1267,10 @@ open class ConversationsAPI {
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
+        "authenticated" : true,
         "usedRouting" : "aeiou",
-        "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
+        "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
@@ -1272,7 +1283,6 @@ open class ConversationsAPI {
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "removedSkillIds" : [ "aeiou" ],
-        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -1295,6 +1305,7 @@ open class ConversationsAPI {
           "transferType" : "aeiou",
           "entryReason" : "aeiou",
           "endingLanguage" : "aeiou",
+          "recognitionFailureReason" : "aeiou",
           "flowId" : "aeiou",
           "startingLanguage" : "aeiou",
           "flowType" : "aeiou"
@@ -1304,8 +1315,8 @@ open class ConversationsAPI {
         "cobrowseRoomId" : "aeiou",
         "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
-        "mediaType" : "aeiou",
         "flowOutType" : "aeiou",
+        "mediaType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
         "edgeId" : "aeiou",
@@ -1315,10 +1326,10 @@ open class ConversationsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+0000",
           "value" : 123456789
         } ],
+        "journeyActionMapVersion" : 123,
         "mediaBridgeId" : "aeiou",
-        "journeyActionMapVersion" : "aeiou",
-        "screenShareRoomId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "screenShareRoomId" : "aeiou",
         "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
@@ -1334,23 +1345,23 @@ open class ConversationsAPI {
           "queueId" : "aeiou",
           "conference" : true,
           "subject" : "aeiou",
-          "sourceConversationId" : "aeiou",
           "groupId" : "aeiou",
+          "sourceConversationId" : "aeiou",
           "errorCode" : "aeiou",
           "requestedRoutingSkillIds" : [ "aeiou" ],
           "segmentEnd" : "2000-01-23T04:56:07.000+0000",
           "wrapUpNote" : "aeiou",
           "destinationSessionId" : "aeiou",
           "disconnectType" : "aeiou",
-          "segmentStart" : "2000-01-23T04:56:07.000+0000",
           "requestedRoutingUserIds" : [ "aeiou" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+0000",
           "scoredAgents" : [ {
             "scoredAgentId" : "aeiou",
             "agentScore" : 123
           } ],
           "videoMuted" : true,
-          "q850ResponseCodes" : [ 123456789 ],
           "audioMuted" : true,
+          "q850ResponseCodes" : [ 123456789 ],
           "wrapUpCode" : "aeiou",
           "destinationConversationId" : "aeiou",
           "wrapUpTags" : [ "aeiou" ],
@@ -1364,7 +1375,6 @@ open class ConversationsAPI {
             "value" : "aeiou"
           } ]
         } ],
-        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -1374,10 +1384,11 @@ open class ConversationsAPI {
         "flowInType" : "aeiou",
         "ani" : "aeiou",
         "direction" : "aeiou",
+        "routingRing" : 123,
         "journeyCustomerSessionId" : "aeiou",
         "sessionId" : "aeiou",
         "journeyActionId" : "aeiou",
-        "dispositionName" : "disposition.classification.callable.machine",
+        "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
         "acwSkipped" : true,
@@ -1385,9 +1396,10 @@ open class ConversationsAPI {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
           "overrunPackets" : 123456789,
-          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
           "maxLatencyMs" : 123456789,
+          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
           "codecs" : [ "aeiou" ],
+          "eventTime" : "2000-01-23T04:56:07.000+0000",
           "receivedPackets" : 123456789,
           "duplicatePackets" : 123456789,
           "invalidPackets" : 123456789,
@@ -1404,8 +1416,8 @@ open class ConversationsAPI {
       },
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
-      "userId" : "aeiou",
-      "flaggedReason" : "aeiou"
+      "flaggedReason" : "aeiou",
+      "userId" : "aeiou"
     } ]
   } ]
 }}]
@@ -7679,7 +7691,7 @@ open class ConversationsAPI {
      Get media
      
      - GET /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}
-     - 
+     - See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -17347,8 +17359,8 @@ open class ConversationsAPI {
       "formName" : "aeiou",
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
-      "evaluatorId" : "aeiou",
-      "calibrationId" : "aeiou"
+      "calibrationId" : "aeiou",
+      "evaluatorId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -17362,13 +17374,15 @@ open class ConversationsAPI {
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+0000",
-      "userId" : "aeiou",
-      "surveyPromoterScore" : 123
+      "surveyPromoterScore" : 123,
+      "userId" : "aeiou"
     } ],
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
-      "getnNextContactAvoided" : 123456789,
+      "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -17376,9 +17390,10 @@ open class ConversationsAPI {
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
+        "authenticated" : true,
         "usedRouting" : "aeiou",
-        "monitoredParticipantId" : "aeiou",
         "cobrowseRole" : "aeiou",
+        "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
@@ -17391,7 +17406,6 @@ open class ConversationsAPI {
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "removedSkillIds" : [ "aeiou" ],
-        "routingRule" : 123,
         "requestedRoutings" : [ "aeiou" ],
         "mediaCount" : 123,
         "dnis" : "aeiou",
@@ -17414,6 +17428,7 @@ open class ConversationsAPI {
           "transferType" : "aeiou",
           "entryReason" : "aeiou",
           "endingLanguage" : "aeiou",
+          "recognitionFailureReason" : "aeiou",
           "flowId" : "aeiou",
           "startingLanguage" : "aeiou",
           "flowType" : "aeiou"
@@ -17423,8 +17438,8 @@ open class ConversationsAPI {
         "cobrowseRoomId" : "aeiou",
         "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
-        "mediaType" : "aeiou",
         "flowOutType" : "aeiou",
+        "mediaType" : "aeiou",
         "outboundCampaignId" : "aeiou",
         "addressTo" : "aeiou",
         "edgeId" : "aeiou",
@@ -17434,10 +17449,10 @@ open class ConversationsAPI {
           "emitDate" : "2000-01-23T04:56:07.000+0000",
           "value" : 123456789
         } ],
+        "journeyActionMapVersion" : 123,
         "mediaBridgeId" : "aeiou",
-        "journeyActionMapVersion" : "aeiou",
-        "screenShareRoomId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "screenShareRoomId" : "aeiou",
         "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
         "peerId" : "aeiou",
@@ -17453,23 +17468,23 @@ open class ConversationsAPI {
           "queueId" : "aeiou",
           "conference" : true,
           "subject" : "aeiou",
-          "sourceConversationId" : "aeiou",
           "groupId" : "aeiou",
+          "sourceConversationId" : "aeiou",
           "errorCode" : "aeiou",
           "requestedRoutingSkillIds" : [ "aeiou" ],
           "segmentEnd" : "2000-01-23T04:56:07.000+0000",
           "wrapUpNote" : "aeiou",
           "destinationSessionId" : "aeiou",
           "disconnectType" : "aeiou",
-          "segmentStart" : "2000-01-23T04:56:07.000+0000",
           "requestedRoutingUserIds" : [ "aeiou" ],
+          "segmentStart" : "2000-01-23T04:56:07.000+0000",
           "scoredAgents" : [ {
             "scoredAgentId" : "aeiou",
             "agentScore" : 123
           } ],
           "videoMuted" : true,
-          "q850ResponseCodes" : [ 123456789 ],
           "audioMuted" : true,
+          "q850ResponseCodes" : [ 123456789 ],
           "wrapUpCode" : "aeiou",
           "destinationConversationId" : "aeiou",
           "wrapUpTags" : [ "aeiou" ],
@@ -17483,7 +17498,6 @@ open class ConversationsAPI {
             "value" : "aeiou"
           } ]
         } ],
-        "bullseyeRing" : 123,
         "journeyCustomerSessionIdType" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
@@ -17493,10 +17507,11 @@ open class ConversationsAPI {
         "flowInType" : "aeiou",
         "ani" : "aeiou",
         "direction" : "aeiou",
+        "routingRing" : 123,
         "journeyCustomerSessionId" : "aeiou",
         "sessionId" : "aeiou",
         "journeyActionId" : "aeiou",
-        "dispositionName" : "disposition.classification.callable.machine",
+        "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
         "acwSkipped" : true,
@@ -17504,9 +17519,10 @@ open class ConversationsAPI {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
           "underrunPackets" : 123456789,
           "overrunPackets" : 123456789,
-          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
           "maxLatencyMs" : 123456789,
+          "minMos" : 1.3579000000000001069366817318950779736042022705078125,
           "codecs" : [ "aeiou" ],
+          "eventTime" : "2000-01-23T04:56:07.000+0000",
           "receivedPackets" : 123456789,
           "duplicatePackets" : 123456789,
           "invalidPackets" : 123456789,
@@ -17520,8 +17536,8 @@ open class ConversationsAPI {
       "teamId" : "aeiou",
       "externalOrganizationId" : "aeiou",
       "participantName" : "aeiou",
-      "userId" : "aeiou",
-      "flaggedReason" : "aeiou"
+      "flaggedReason" : "aeiou",
+      "userId" : "aeiou"
     } ]
   } ]
 }}]
@@ -21750,7 +21766,7 @@ open class ConversationsAPI {
      Create media
      
      - POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media
-     - 
+     - See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-upload for example usage.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

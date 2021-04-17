@@ -12,7 +12,9 @@ import Foundation
 public class SurveyQuestionGroupScore: Codable {
 
     public var questionGroupId: String?
+    /** Score of all questions in the group */
     public var totalScore: Float?
+    /** Maximum possible score of all questions in the group */
     public var maxTotalScore: Float?
     public var markedNA: Bool?
     public var questionScores: [SurveyQuestionScore]?

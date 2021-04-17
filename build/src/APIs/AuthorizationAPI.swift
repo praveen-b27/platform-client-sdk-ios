@@ -3886,6 +3886,8 @@ open class AuthorizationAPI {
         case managementunit = "MANAGEMENTUNIT"
         case businessunit = "BUSINESSUNIT"
         case flow = "FLOW"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
         case user = "USER"
         case datatables = "DATATABLES"
     }
@@ -5612,6 +5614,71 @@ open class AuthorizationAPI {
         
         
         let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Replace subject's roles and divisions with the exact list supplied in the request.
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) Pairs of role and division IDs 
+     - parameter subjectType: (query) what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationSubjectBulkreplace(subjectId: String, body: RoleDivisionGrants, subjectType: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationSubjectBulkreplaceWithRequestBuilder(subjectId: subjectId, body: body, subjectType: subjectType)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Replace subject's roles and divisions with the exact list supplied in the request.
+     
+     - POST /api/v2/authorization/subjects/{subjectId}/bulkreplace
+     - This operation will not remove grants that are inherited from group membership. It will only set the grants directly applied to the subject.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter body: (body) Pairs of role and division IDs 
+     - parameter subjectType: (query) what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) (optional, default to PC_USER)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postAuthorizationSubjectBulkreplaceWithRequestBuilder(subjectId: String, body: RoleDivisionGrants, subjectType: String? = nil) -> RequestBuilder<Void> {
+        var path = "/api/v2/authorization/subjects/{subjectId}/bulkreplace"
+        let subjectIdPreEscape = "\(subjectId)"
+        let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{subjectId}", with: subjectIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "subjectType": subjectType
+            
+        ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

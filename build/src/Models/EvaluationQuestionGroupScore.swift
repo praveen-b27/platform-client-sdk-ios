@@ -12,18 +12,30 @@ import Foundation
 public class EvaluationQuestionGroupScore: Codable {
 
     public var questionGroupId: String?
+    /** Score of all questions in the group */
     public var totalScore: Float?
+    /** Maximum possible score of all questions in the group */
     public var maxTotalScore: Float?
     public var markedNA: Bool?
+    /** Score of only the critical questions in the group */
     public var totalCriticalScore: Float?
+    /** Maximum possible score of only the critical questions in the group */
     public var maxTotalCriticalScore: Float?
+    /** Score of only the non critical questions in the group */
     public var totalNonCriticalScore: Float?
+    /** Maximum possible score of only the non critical questions in the group */
     public var maxTotalNonCriticalScore: Float?
+    /** Unweighted score of all questions in the group */
     public var totalScoreUnweighted: Float?
+    /** Maximum possible unweighted score of all questions in the group */
     public var maxTotalScoreUnweighted: Float?
+    /** Unweighted score of only the critical questions in the group */
     public var totalCriticalScoreUnweighted: Float?
+    /** Maximum possible unweighted score of only the critical questions in the group */
     public var maxTotalCriticalScoreUnweighted: Float?
+    /** Unweighted score of only the non critical questions in the group */
     public var totalNonCriticalScoreUnweighted: Float?
+    /** Maximum possible unweighted score of only the non critical questions in the group */
     public var maxTotalNonCriticalScoreUnweighted: Float?
     public var questionScores: [EvaluationQuestionScore]?
 

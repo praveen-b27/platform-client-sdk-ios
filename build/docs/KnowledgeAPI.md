@@ -428,7 +428,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, k
 
 
 
-> [DocumentListing](DocumentListing.html) getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title)
+> [DocumentListing](DocumentListing.html) getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, documentIds)
 
 Get documents
 
@@ -456,9 +456,10 @@ let limit: String = "" // Number of entities to return. Maximum of 200. Deprecat
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let categories: String = "" // Filter by categories ids, comma separated values expected.
 let title: String = "" // Filter by document title.
+let documentIds: [String] = [""] // Comma-separated list of document identifiers to fetch by.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, categories: categories, title: title) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, categories: categories, title: title, documentIds: documentIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -481,6 +482,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowled
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **categories** | **String**| Filter by categories ids, comma separated values expected. | [optional] |
 | **title** | **String**| Filter by document title. | [optional] |
+| **documentIds** | [**[String]**](String.html)| Comma-separated list of document identifiers to fetch by. | [optional] |
 {: class="table-striped"}
 
 

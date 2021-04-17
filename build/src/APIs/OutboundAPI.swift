@@ -9162,7 +9162,7 @@ open class OutboundAPI {
     
     /**
      
-     Add phone numbers to a Dialer DNC list.
+     Add phone numbers to a DNC list.
      
      - parameter dncListId: (path) DncList ID 
      - parameter body: (body) DNC Phone Numbers 
@@ -9181,7 +9181,7 @@ open class OutboundAPI {
 
     /**
      
-     Add phone numbers to a Dialer DNC list.
+     Add phone numbers to a DNC list.
      
      - POST /api/v2/outbound/dnclists/{dncListId}/phonenumbers
      - Only Internal DNC lists may be appended to

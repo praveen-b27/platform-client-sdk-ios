@@ -61,6 +61,7 @@ open class GeneralDataProtectionRegulationAPI {
     "externalContactId" : "aeiou",
     "emailAddresses" : [ "aeiou" ],
     "name" : "aeiou",
+    "externalId" : "aeiou",
     "dialerContactId" : {
       "contactListId" : "aeiou",
       "id" : "aeiou"
@@ -169,6 +170,7 @@ open class GeneralDataProtectionRegulationAPI {
       "externalContactId" : "aeiou",
       "emailAddresses" : [ "aeiou" ],
       "name" : "aeiou",
+      "externalId" : "aeiou",
       "dialerContactId" : {
         "contactListId" : "aeiou",
         "id" : "aeiou"
@@ -289,6 +291,7 @@ open class GeneralDataProtectionRegulationAPI {
     "externalContactId" : "aeiou",
     "emailAddresses" : [ "aeiou" ],
     "name" : "aeiou",
+    "externalId" : "aeiou",
     "dialerContactId" : {
       "contactListId" : "aeiou",
       "id" : "aeiou"
@@ -395,6 +398,7 @@ open class GeneralDataProtectionRegulationAPI {
     "externalContactId" : "aeiou",
     "emailAddresses" : [ "aeiou" ],
     "name" : "aeiou",
+    "externalId" : "aeiou",
     "dialerContactId" : {
       "contactListId" : "aeiou",
       "id" : "aeiou"

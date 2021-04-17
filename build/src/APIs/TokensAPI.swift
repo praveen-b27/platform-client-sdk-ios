@@ -68,7 +68,7 @@ open class TokensAPI {
     
     /**
      
-     Delete  auth token used to make the request.
+     Delete auth token used to make the request.
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -85,7 +85,7 @@ open class TokensAPI {
 
     /**
      
-     Delete  auth token used to make the request.
+     Delete auth token used to make the request.
      
      - DELETE /api/v2/tokens/me
      - 

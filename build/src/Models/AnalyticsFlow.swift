@@ -11,6 +11,13 @@ import Foundation
 
 public class AnalyticsFlow: Codable {
 
+    public enum EntryType: String, Codable { 
+        case agent = "agent"
+        case direct = "direct"
+        case dnis = "dnis"
+        case flow = "flow"
+        case outbound = "outbound"
+    }
     public enum FlowType: String, Codable { 
         case bot = "BOT"
         case commonmodule = "COMMONMODULE"
@@ -25,69 +32,66 @@ public class AnalyticsFlow: Codable {
         case surveyinvite = "SURVEYINVITE"
         case workflow = "WORKFLOW"
     }
-    public enum EntryType: String, Codable { 
-        case dnis = "dnis"
-        case direct = "direct"
-        case flow = "flow"
-        case agent = "agent"
-        case outbound = "outbound"
-    }
-    /** The unique identifier of this flow */
-    public var flowId: String?
-    /** The name of this flow */
-    public var flowName: String?
-    /** The version of this flow */
-    public var flowVersion: String?
-    /** The type of this flow */
-    public var flowType: FlowType?
-    /** The exit reason for this flow, e.g. DISCONNECT */
-    public var exitReason: String?
-    /** The particular entry reason for this flow, e.g. an address, userId, or flowId */
-    public var entryReason: String?
-    /** The entry type for this flow */
-    public var entryType: EntryType?
-    /** The type of transfer for flows that ended with a transfer */
-    public var transferType: String?
-    /** The name of a transfer target */
-    public var transferTargetName: String?
-    /** The address of a transfer target */
-    public var transferTargetAddress: String?
-    /** Flag indicating whether the flow issued a callback */
-    public var issuedCallback: Bool?
-    /** Flow starting language, e.g. en-us */
-    public var startingLanguage: String?
     /** Flow ending language, e.g. en-us */
     public var endingLanguage: String?
+    /** The particular entry reason for this flow, e.g. an address, userId, or flowId */
+    public var entryReason: String?
+    /** The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct */
+    public var entryType: EntryType?
+    /** The exit reason for this flow, e.g. DISCONNECT */
+    public var exitReason: String?
+    /** The unique identifier of this flow */
+    public var flowId: String?
+    /** The name of this flow at the time of flow execution */
+    public var flowName: String?
+    /** The type of this flow */
+    public var flowType: FlowType?
+    /** The version of this flow */
+    public var flowVersion: String?
+    /** Flag indicating whether the flow issued a callback */
+    public var issuedCallback: Bool?
+    /** The recognition failure reason causing to exit/disconnect */
+    public var recognitionFailureReason: String?
+    /** Flow starting language, e.g. en-us */
+    public var startingLanguage: String?
+    /** The address of a flow transfer target, e.g. a phone number, an email address, or a queueId */
+    public var transferTargetAddress: String?
+    /** The name of a flow transfer target */
+    public var transferTargetName: String?
+    /** The type of transfer for flows that ended with a transfer */
+    public var transferType: String?
     /** Flow outcomes */
     public var outcomes: [AnalyticsFlowOutcome]?
 
-    public init(flowId: String?, flowName: String?, flowVersion: String?, flowType: FlowType?, exitReason: String?, entryReason: String?, entryType: EntryType?, transferType: String?, transferTargetName: String?, transferTargetAddress: String?, issuedCallback: Bool?, startingLanguage: String?, endingLanguage: String?, outcomes: [AnalyticsFlowOutcome]?) {
+    public init(endingLanguage: String?, entryReason: String?, entryType: EntryType?, exitReason: String?, flowId: String?, flowName: String?, flowType: FlowType?, flowVersion: String?, issuedCallback: Bool?, recognitionFailureReason: String?, startingLanguage: String?, transferTargetAddress: String?, transferTargetName: String?, transferType: String?, outcomes: [AnalyticsFlowOutcome]?) {
         
-        self.flowId = flowId
-        
-        self.flowName = flowName
-        
-        self.flowVersion = flowVersion
-        
-        self.flowType = flowType
-        
-        self.exitReason = exitReason
+        self.endingLanguage = endingLanguage
         
         self.entryReason = entryReason
         
         self.entryType = entryType
         
-        self.transferType = transferType
+        self.exitReason = exitReason
         
-        self.transferTargetName = transferTargetName
+        self.flowId = flowId
         
-        self.transferTargetAddress = transferTargetAddress
+        self.flowName = flowName
+        
+        self.flowType = flowType
+        
+        self.flowVersion = flowVersion
         
         self.issuedCallback = issuedCallback
         
+        self.recognitionFailureReason = recognitionFailureReason
+        
         self.startingLanguage = startingLanguage
         
-        self.endingLanguage = endingLanguage
+        self.transferTargetAddress = transferTargetAddress
+        
+        self.transferTargetName = transferTargetName
+        
+        self.transferType = transferType
         
         self.outcomes = outcomes
         

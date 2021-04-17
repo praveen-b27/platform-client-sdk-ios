@@ -19,18 +19,18 @@ public class AnalyticsProperty: Codable {
         case string = "string"
         case uuid = "uuid"
     }
-    /** Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match */
-    public var propertyType: PropertyType?
     /** User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property. */
     public var property: String?
+    /** Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match */
+    public var propertyType: PropertyType?
     /** What property value to match against */
     public var value: String?
 
-    public init(propertyType: PropertyType?, property: String?, value: String?) {
-        
-        self.propertyType = propertyType
+    public init(property: String?, propertyType: PropertyType?, value: String?) {
         
         self.property = property
+        
+        self.propertyType = propertyType
         
         self.value = value
         

@@ -16,19 +16,19 @@ public class ObservationValue: Codable {
         case outbound = "outbound"
     }
     public enum RequestedRoutings: String, Codable { 
+        case bullseye = "Bullseye"
+        case last = "Last"
+        case manual = "Manual"
         case predictive = "Predictive"
         case preferred = "Preferred"
-        case manual = "Manual"
-        case last = "Last"
-        case bullseye = "Bullseye"
         case standard = "Standard"
     }
     public enum UsedRouting: String, Codable { 
+        case bullseye = "Bullseye"
+        case last = "Last"
+        case manual = "Manual"
         case predictive = "Predictive"
         case preferred = "Preferred"
-        case manual = "Manual"
-        case last = "Last"
-        case bullseye = "Bullseye"
         case standard = "Standard"
     }
     /** The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */

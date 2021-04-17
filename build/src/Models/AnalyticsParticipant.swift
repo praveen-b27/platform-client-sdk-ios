@@ -11,58 +11,50 @@ import Foundation
 
 public class AnalyticsParticipant: Codable {
 
-    public enum Purpose: String, Codable { 
-        case manual = "manual"
-        case dialer = "dialer"
-        case inbound = "inbound"
-        case acd = "acd"
-        case ivr = "ivr"
-        case voicemail = "voicemail"
-        case outbound = "outbound"
-        case agent = "agent"
-        case user = "user"
-        case station = "station"
-        case group = "group"
-        case customer = "customer"
-        case external = "external"
-        case fax = "fax"
-        case workflow = "workflow"
-        case campaign = "campaign"
-        case api = "api"
-    }
     public enum FlaggedReason: String, Codable { 
         case general = "general"
     }
+    public enum Purpose: String, Codable { 
+        case acd = "acd"
+        case agent = "agent"
+        case api = "api"
+        case campaign = "campaign"
+        case customer = "customer"
+        case dialer = "dialer"
+        case external = "external"
+        case fax = "fax"
+        case group = "group"
+        case inbound = "inbound"
+        case ivr = "ivr"
+        case manual = "manual"
+        case outbound = "outbound"
+        case station = "station"
+        case user = "user"
+        case voicemail = "voicemail"
+        case workflow = "workflow"
+    }
+    /** External contact identifier */
+    public var externalContactId: String?
+    /** External organization identifier */
+    public var externalOrganizationId: String?
+    /** Reason for which participant flagged conversation */
+    public var flaggedReason: FlaggedReason?
     /** Unique identifier for the participant */
     public var participantId: String?
     /** A human readable name identifying the participant */
     public var participantName: String?
-    /** If a user, then this will be the unique identifier for the user */
-    public var userId: String?
     /** The participant&#39;s purpose */
     public var purpose: Purpose?
-    /** External Contact Identifier */
-    public var externalContactId: String?
-    /** External Organization Identifier */
-    public var externalOrganizationId: String?
-    /** Reason for which participant flagged conversation */
-    public var flaggedReason: FlaggedReason?
-    /** The team id the user is a member of */
+    /** The team ID the user is a member of */
     public var teamId: String?
+    /** Unique identifier for the user */
+    public var userId: String?
     /** List of sessions associated to this participant */
     public var sessions: [AnalyticsSession]?
     /** List of attributes associated to this participant */
     public var attributes: [String:String]?
 
-    public init(participantId: String?, participantName: String?, userId: String?, purpose: Purpose?, externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, teamId: String?, sessions: [AnalyticsSession]?, attributes: [String:String]?) {
-        
-        self.participantId = participantId
-        
-        self.participantName = participantName
-        
-        self.userId = userId
-        
-        self.purpose = purpose
+    public init(externalContactId: String?, externalOrganizationId: String?, flaggedReason: FlaggedReason?, participantId: String?, participantName: String?, purpose: Purpose?, teamId: String?, userId: String?, sessions: [AnalyticsSession]?, attributes: [String:String]?) {
         
         self.externalContactId = externalContactId
         
@@ -70,7 +62,15 @@ public class AnalyticsParticipant: Codable {
         
         self.flaggedReason = flaggedReason
         
+        self.participantId = participantId
+        
+        self.participantName = participantName
+        
+        self.purpose = purpose
+        
         self.teamId = teamId
+        
+        self.userId = userId
         
         self.sessions = sessions
         

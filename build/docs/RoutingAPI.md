@@ -2998,7 +2998,7 @@ RoutingAPI.patchRoutingEmailDomainValidate(domainId: domainId, body: body) { (re
 
 
 
-> [QueueMember](QueueMember.html) patchRoutingQueueMember(queueId, memberId, body)
+> Void patchRoutingQueueMember(queueId, memberId, body)
 
 Update the ring number OR joined status for a queue member.
 
@@ -3024,12 +3024,11 @@ let memberId: String = "" // Member ID
 let body: QueueMember = new QueueMember(...) // Queue Member
 
 // Code example
-RoutingAPI.patchRoutingQueueMember(queueId: queueId, memberId: memberId, body: body) { (response, error) in
+RoutingAPI.patchRoutingQueueMember(queueId: queueId, memberId: memberId, body: body) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("RoutingAPI.patchRoutingQueueMember was successful")
-        dump(response)
     }
 }
 ```
@@ -3047,7 +3046,7 @@ RoutingAPI.patchRoutingQueueMember(queueId: queueId, memberId: memberId, body: b
 
 ### Return type
 
-[**QueueMember**](QueueMember.html)
+`nil` (empty response body)
 
 <a name="patchRoutingQueueMembers"></a>
 
@@ -3110,7 +3109,7 @@ RoutingAPI.patchRoutingQueueMembers(queueId: queueId, body: body) { (response, e
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [QueueMember](QueueMember.html) patchRoutingQueueUser(queueId, memberId, body)
+> Void patchRoutingQueueUser(queueId, memberId, body)
 
 DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
 
@@ -3136,12 +3135,11 @@ let memberId: String = "" // Member ID
 let body: QueueMember = new QueueMember(...) // Queue Member
 
 // Code example
-RoutingAPI.patchRoutingQueueUser(queueId: queueId, memberId: memberId, body: body) { (response, error) in
+RoutingAPI.patchRoutingQueueUser(queueId: queueId, memberId: memberId, body: body) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("RoutingAPI.patchRoutingQueueUser was successful")
-        dump(response)
     }
 }
 ```
@@ -3159,7 +3157,7 @@ RoutingAPI.patchRoutingQueueUser(queueId: queueId, memberId: memberId, body: bod
 
 ### Return type
 
-[**QueueMember**](QueueMember.html)
+`nil` (empty response body)
 
 <a name="patchRoutingQueueUsers"></a>
 

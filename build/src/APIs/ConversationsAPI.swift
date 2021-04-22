@@ -1551,18 +1551,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -1864,6 +1866,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -2424,8 +2427,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversation ID 
@@ -2831,18 +2833,20 @@ open class ConversationsAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "address" : "aeiou",
+    "selfUri" : "aeiou",
+    "externalTag" : "aeiou",
+    "divisions" : [ {
+      "division" : "",
+      "entities" : [ "" ]
+    } ],
+    "maxParticipants" : 123,
     "conversationIds" : [ "aeiou" ],
     "recordingState" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "state" : "aeiou",
-    "divisions" : [ {
-      "division" : "",
-      "entities" : [ "" ]
-    } ],
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -3144,6 +3148,7 @@ open class ConversationsAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -3704,8 +3709,7 @@ open class ConversationsAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -5379,6 +5383,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -9866,18 +9871,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -10179,6 +10186,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -10739,8 +10747,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -11084,18 +11091,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -11397,6 +11406,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -11957,8 +11967,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -12229,18 +12238,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -12542,6 +12553,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -13102,8 +13114,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -13374,18 +13385,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -13687,6 +13700,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -14247,8 +14261,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -14519,18 +14532,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -14832,6 +14847,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -15392,8 +15408,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -15664,18 +15679,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -15977,6 +15994,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -16537,8 +16555,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -18001,18 +18018,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -18314,6 +18333,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -18874,8 +18894,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -19202,18 +19221,20 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "address" : "aeiou",
+  "selfUri" : "aeiou",
+  "externalTag" : "aeiou",
+  "divisions" : [ {
+    "division" : "",
+    "entities" : [ "" ]
+  } ],
+  "maxParticipants" : 123,
   "conversationIds" : [ "aeiou" ],
   "recordingState" : "aeiou",
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "startTime" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "endTime" : "2000-01-23T04:56:07.000+0000",
   "state" : "aeiou",
-  "divisions" : [ {
-    "division" : "",
-    "entities" : [ "" ]
-  } ],
   "participants" : [ {
     "queueId" : "aeiou",
     "monitoredParticipantId" : "aeiou",
@@ -19515,6 +19536,7 @@ open class ConversationsAPI {
         "callingPartyNumber" : "aeiou",
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
+        "joinedMemberCount" : 123,
         "callingPartyName" : "aeiou",
         "acwSettings" : {
           "timeoutMs" : 123,
@@ -20075,8 +20097,7 @@ open class ConversationsAPI {
       "state" : "aeiou",
       "id" : "aeiou"
     } ]
-  } ],
-  "maxParticipants" : 123
+  } ]
 }}]
      
      - parameter conversationId: (path) conversationId 

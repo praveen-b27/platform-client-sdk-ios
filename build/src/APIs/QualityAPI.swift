@@ -324,18 +324,20 @@ open class QualityAPI {
   "lowScore" : 123,
   "conversation" : {
     "address" : "aeiou",
+    "selfUri" : "aeiou",
+    "externalTag" : "aeiou",
+    "divisions" : [ {
+      "division" : "",
+      "entities" : [ "" ]
+    } ],
+    "maxParticipants" : 123,
     "conversationIds" : [ "aeiou" ],
     "recordingState" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "state" : "aeiou",
-    "divisions" : [ {
-      "division" : "",
-      "entities" : [ "" ]
-    } ],
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -617,6 +619,7 @@ open class QualityAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -923,8 +926,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "evaluationForm" : ""
 }}]
@@ -1070,14 +1072,8 @@ open class QualityAPI {
   },
   "conversation" : {
     "address" : "aeiou",
-    "conversationIds" : [ "aeiou" ],
-    "recordingState" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "startTime" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "endTime" : "2000-01-23T04:56:07.000+0000",
-    "state" : "aeiou",
+    "externalTag" : "aeiou",
     "divisions" : [ {
       "division" : {
         "selfUri" : "aeiou",
@@ -1086,6 +1082,14 @@ open class QualityAPI {
       },
       "entities" : [ "" ]
     } ],
+    "maxParticipants" : 123,
+    "conversationIds" : [ "aeiou" ],
+    "recordingState" : "aeiou",
+    "name" : "aeiou",
+    "startTime" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "endTime" : "2000-01-23T04:56:07.000+0000",
+    "state" : "aeiou",
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -1459,8 +1463,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "queue" : {
     "mediaSettings" : {
@@ -1518,6 +1521,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -2932,18 +2936,20 @@ open class QualityAPI {
   "lowScore" : 123,
   "conversation" : {
     "address" : "aeiou",
+    "selfUri" : "aeiou",
+    "externalTag" : "aeiou",
+    "divisions" : [ {
+      "division" : "",
+      "entities" : [ "" ]
+    } ],
+    "maxParticipants" : 123,
     "conversationIds" : [ "aeiou" ],
     "recordingState" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "state" : "aeiou",
-    "divisions" : [ {
-      "division" : "",
-      "entities" : [ "" ]
-    } ],
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -3225,6 +3231,7 @@ open class QualityAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -3531,8 +3538,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "evaluationForm" : ""
 }}]
@@ -3912,18 +3918,20 @@ open class QualityAPI {
     "lowScore" : 123,
     "conversation" : {
       "address" : "aeiou",
+      "selfUri" : "aeiou",
+      "externalTag" : "aeiou",
+      "divisions" : [ {
+        "division" : "",
+        "entities" : [ "" ]
+      } ],
+      "maxParticipants" : 123,
       "conversationIds" : [ "aeiou" ],
       "recordingState" : "aeiou",
-      "selfUri" : "aeiou",
       "name" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
-      "divisions" : [ {
-        "division" : "",
-        "entities" : [ "" ]
-      } ],
       "participants" : [ {
         "queueId" : "aeiou",
         "monitoredParticipantId" : "aeiou",
@@ -4205,6 +4213,7 @@ open class QualityAPI {
             "callingPartyNumber" : "aeiou",
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
+            "joinedMemberCount" : 123,
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -4511,8 +4520,7 @@ open class QualityAPI {
           "state" : "aeiou",
           "id" : "aeiou"
         } ]
-      } ],
-      "maxParticipants" : 123
+      } ]
     },
     "evaluationForm" : ""
   } ],
@@ -5093,14 +5101,8 @@ open class QualityAPI {
   },
   "conversation" : {
     "address" : "aeiou",
-    "conversationIds" : [ "aeiou" ],
-    "recordingState" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "startTime" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "endTime" : "2000-01-23T04:56:07.000+0000",
-    "state" : "aeiou",
+    "externalTag" : "aeiou",
     "divisions" : [ {
       "division" : {
         "selfUri" : "aeiou",
@@ -5109,6 +5111,14 @@ open class QualityAPI {
       },
       "entities" : [ "" ]
     } ],
+    "maxParticipants" : 123,
+    "conversationIds" : [ "aeiou" ],
+    "recordingState" : "aeiou",
+    "name" : "aeiou",
+    "startTime" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "endTime" : "2000-01-23T04:56:07.000+0000",
+    "state" : "aeiou",
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -5482,8 +5492,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "queue" : {
     "mediaSettings" : {
@@ -5541,6 +5550,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -6049,18 +6059,20 @@ open class QualityAPI {
   "id" : "aeiou",
   "conversation" : {
     "address" : "aeiou",
+    "selfUri" : "aeiou",
+    "externalTag" : "aeiou",
+    "divisions" : [ {
+      "division" : "",
+      "entities" : [ "" ]
+    } ],
+    "maxParticipants" : 123,
     "conversationIds" : [ "aeiou" ],
     "recordingState" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "state" : "aeiou",
-    "divisions" : [ {
-      "division" : "",
-      "entities" : [ "" ]
-    } ],
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -6362,6 +6374,7 @@ open class QualityAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -6922,8 +6935,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "queue" : {
     "selfUri" : "aeiou",
@@ -7117,14 +7129,8 @@ open class QualityAPI {
     },
     "conversation" : {
       "address" : "aeiou",
-      "conversationIds" : [ "aeiou" ],
-      "recordingState" : "aeiou",
       "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "startTime" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "endTime" : "2000-01-23T04:56:07.000+0000",
-      "state" : "aeiou",
+      "externalTag" : "aeiou",
       "divisions" : [ {
         "division" : {
           "selfUri" : "aeiou",
@@ -7133,6 +7139,14 @@ open class QualityAPI {
         },
         "entities" : [ "" ]
       } ],
+      "maxParticipants" : 123,
+      "conversationIds" : [ "aeiou" ],
+      "recordingState" : "aeiou",
+      "name" : "aeiou",
+      "startTime" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "endTime" : "2000-01-23T04:56:07.000+0000",
+      "state" : "aeiou",
       "participants" : [ {
         "queueId" : "aeiou",
         "monitoredParticipantId" : "aeiou",
@@ -7506,8 +7520,7 @@ open class QualityAPI {
           "state" : "aeiou",
           "id" : "aeiou"
         } ]
-      } ],
-      "maxParticipants" : 123
+      } ]
     },
     "queue" : {
       "mediaSettings" : {
@@ -7565,6 +7578,7 @@ open class QualityAPI {
       "callingPartyNumber" : "aeiou",
       "modifiedBy" : "aeiou",
       "id" : "aeiou",
+      "joinedMemberCount" : 123,
       "callingPartyName" : "aeiou",
       "acwSettings" : {
         "timeoutMs" : 123,
@@ -10042,6 +10056,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -10535,6 +10550,7 @@ open class QualityAPI {
       "callingPartyNumber" : "aeiou",
       "modifiedBy" : "aeiou",
       "id" : "aeiou",
+      "joinedMemberCount" : 123,
       "callingPartyName" : "aeiou",
       "acwSettings" : {
         "timeoutMs" : 123,
@@ -11784,18 +11800,20 @@ open class QualityAPI {
   "id" : "aeiou",
   "conversation" : {
     "address" : "aeiou",
+    "selfUri" : "aeiou",
+    "externalTag" : "aeiou",
+    "divisions" : [ {
+      "division" : "",
+      "entities" : [ "" ]
+    } ],
+    "maxParticipants" : 123,
     "conversationIds" : [ "aeiou" ],
     "recordingState" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "state" : "aeiou",
-    "divisions" : [ {
-      "division" : "",
-      "entities" : [ "" ]
-    } ],
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -12097,6 +12115,7 @@ open class QualityAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -12657,8 +12676,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "queue" : {
     "selfUri" : "aeiou",
@@ -13427,18 +13445,20 @@ open class QualityAPI {
   "lowScore" : 123,
   "conversation" : {
     "address" : "aeiou",
+    "selfUri" : "aeiou",
+    "externalTag" : "aeiou",
+    "divisions" : [ {
+      "division" : "",
+      "entities" : [ "" ]
+    } ],
+    "maxParticipants" : 123,
     "conversationIds" : [ "aeiou" ],
     "recordingState" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "state" : "aeiou",
-    "divisions" : [ {
-      "division" : "",
-      "entities" : [ "" ]
-    } ],
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -13720,6 +13740,7 @@ open class QualityAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -14026,8 +14047,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "evaluationForm" : ""
 }}]
@@ -14167,14 +14187,8 @@ open class QualityAPI {
   },
   "conversation" : {
     "address" : "aeiou",
-    "conversationIds" : [ "aeiou" ],
-    "recordingState" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "startTime" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "endTime" : "2000-01-23T04:56:07.000+0000",
-    "state" : "aeiou",
+    "externalTag" : "aeiou",
     "divisions" : [ {
       "division" : {
         "selfUri" : "aeiou",
@@ -14183,6 +14197,14 @@ open class QualityAPI {
       },
       "entities" : [ "" ]
     } ],
+    "maxParticipants" : 123,
+    "conversationIds" : [ "aeiou" ],
+    "recordingState" : "aeiou",
+    "name" : "aeiou",
+    "startTime" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "endTime" : "2000-01-23T04:56:07.000+0000",
+    "state" : "aeiou",
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -14556,8 +14578,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "queue" : {
     "mediaSettings" : {
@@ -14615,6 +14636,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -15531,6 +15553,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -16304,6 +16327,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -17026,18 +17050,20 @@ open class QualityAPI {
   "lowScore" : 123,
   "conversation" : {
     "address" : "aeiou",
+    "selfUri" : "aeiou",
+    "externalTag" : "aeiou",
+    "divisions" : [ {
+      "division" : "",
+      "entities" : [ "" ]
+    } ],
+    "maxParticipants" : 123,
     "conversationIds" : [ "aeiou" ],
     "recordingState" : "aeiou",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "startTime" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "state" : "aeiou",
-    "divisions" : [ {
-      "division" : "",
-      "entities" : [ "" ]
-    } ],
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -17319,6 +17345,7 @@ open class QualityAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -17625,8 +17652,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "evaluationForm" : ""
 }}]
@@ -17767,14 +17793,8 @@ open class QualityAPI {
   },
   "conversation" : {
     "address" : "aeiou",
-    "conversationIds" : [ "aeiou" ],
-    "recordingState" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "startTime" : "2000-01-23T04:56:07.000+0000",
-    "id" : "aeiou",
-    "endTime" : "2000-01-23T04:56:07.000+0000",
-    "state" : "aeiou",
+    "externalTag" : "aeiou",
     "divisions" : [ {
       "division" : {
         "selfUri" : "aeiou",
@@ -17783,6 +17803,14 @@ open class QualityAPI {
       },
       "entities" : [ "" ]
     } ],
+    "maxParticipants" : 123,
+    "conversationIds" : [ "aeiou" ],
+    "recordingState" : "aeiou",
+    "name" : "aeiou",
+    "startTime" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "endTime" : "2000-01-23T04:56:07.000+0000",
+    "state" : "aeiou",
     "participants" : [ {
       "queueId" : "aeiou",
       "monitoredParticipantId" : "aeiou",
@@ -18156,8 +18184,7 @@ open class QualityAPI {
         "state" : "aeiou",
         "id" : "aeiou"
       } ]
-    } ],
-    "maxParticipants" : 123
+    } ]
   },
   "queue" : {
     "mediaSettings" : {
@@ -18215,6 +18242,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -19068,6 +19096,7 @@ open class QualityAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,

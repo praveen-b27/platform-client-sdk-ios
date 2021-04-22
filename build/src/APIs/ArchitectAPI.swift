@@ -6824,7 +6824,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -7459,7 +7460,8 @@ open class ArchitectAPI {
   "nluInfo" : {
     "intents" : [ {
       "name" : "aeiou"
-    } ]
+    } ],
+    "domain" : ""
   },
   "type" : "aeiou",
   "secure" : true,
@@ -7923,7 +7925,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -8661,7 +8664,8 @@ open class ArchitectAPI {
       "nluInfo" : {
         "intents" : [ {
           "name" : "aeiou"
-        } ]
+        } ],
+        "domain" : ""
       },
       "type" : "aeiou",
       "secure" : true,
@@ -9606,7 +9610,8 @@ open class ArchitectAPI {
       "nluInfo" : {
         "intents" : [ {
           "name" : "aeiou"
-        } ]
+        } ],
+        "domain" : ""
       },
       "type" : "aeiou",
       "secure" : true,
@@ -10036,7 +10041,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -13202,7 +13208,8 @@ open class ArchitectAPI {
   "nluInfo" : {
     "intents" : [ {
       "name" : "aeiou"
-    } ]
+    } ],
+    "domain" : ""
   },
   "type" : "aeiou",
   "secure" : true,
@@ -13838,7 +13845,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -14583,7 +14591,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -14992,7 +15001,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -15751,7 +15761,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -16160,7 +16171,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,
@@ -18269,7 +18281,8 @@ open class ArchitectAPI {
     "nluInfo" : {
       "intents" : [ {
         "name" : "aeiou"
-      } ]
+      } ],
+      "domain" : ""
     },
     "type" : "aeiou",
     "secure" : true,

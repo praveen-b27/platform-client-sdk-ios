@@ -11,9 +11,12 @@ import Foundation
 
 public class NluInfo: Codable {
 
+    public var domain: AddressableEntityRef?
     public var intents: [Intent]?
 
-    public init(intents: [Intent]?) {
+    public init(domain: AddressableEntityRef?, intents: [Intent]?) {
+        
+        self.domain = domain
         
         self.intents = intents
         

@@ -1476,6 +1476,7 @@ open class AuthorizationAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -1949,6 +1950,7 @@ open class AuthorizationAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -2928,6 +2930,7 @@ open class AuthorizationAPI {
             "callingPartyNumber" : "aeiou",
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
+            "joinedMemberCount" : 123,
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -3776,6 +3779,7 @@ open class AuthorizationAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -4454,6 +4458,7 @@ open class AuthorizationAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -4928,6 +4933,7 @@ open class AuthorizationAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -5391,6 +5397,7 @@ open class AuthorizationAPI {
             "callingPartyNumber" : "aeiou",
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
+            "joinedMemberCount" : 123,
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -6205,6 +6212,7 @@ open class AuthorizationAPI {
           "callingPartyNumber" : "aeiou",
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
+          "joinedMemberCount" : 123,
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -6800,6 +6808,7 @@ open class AuthorizationAPI {
             "callingPartyNumber" : "aeiou",
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
+            "joinedMemberCount" : 123,
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,

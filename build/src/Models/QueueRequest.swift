@@ -32,8 +32,10 @@ public class QueueRequest: Codable {
     public var modifiedBy: String?
     /** The ID of the user that created the queue. */
     public var createdBy: String?
-    /** The number of users in the queue. */
+    /** The total number of members (joined or unjoined) in the queue. */
     public var memberCount: Int?
+    /** The number of joined members in the queue. */
+    public var joinedMemberCount: Int?
     /** The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM */
     public var mediaSettings: [String:MediaSetting]?
     /** The routing rules for the queue, used for routing to known or preferred agents. */
@@ -66,7 +68,7 @@ public class QueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, selfUri: String?) {
         
         self._id = _id
         
@@ -85,6 +87,8 @@ public class QueueRequest: Codable {
         self.createdBy = createdBy
         
         self.memberCount = memberCount
+        
+        self.joinedMemberCount = joinedMemberCount
         
         self.mediaSettings = mediaSettings
         
@@ -130,6 +134,7 @@ public class QueueRequest: Codable {
         case modifiedBy
         case createdBy
         case memberCount
+        case joinedMemberCount
         case mediaSettings
         case routingRules
         case bullseye

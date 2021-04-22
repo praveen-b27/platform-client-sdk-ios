@@ -16,6 +16,10 @@ public class DialerDnclistConfigChangeDncList: Codable {
         case dncCom = "DNC_COM"
         case gryphon = "GRYPHON"
     }
+    public enum ContactMethod: String, Codable { 
+        case email = "EMAIL"
+        case phone = "PHONE"
+    }
     public var _id: String?
     public var name: String?
     public var dateCreated: Date?
@@ -27,10 +31,11 @@ public class DialerDnclistConfigChangeDncList: Codable {
     public var loginId: String?
     public var dncCodes: [String]?
     public var licenseId: String?
+    public var contactMethod: ContactMethod?
     public var division: DialerDnclistConfigChangeUriReference?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: DialerDnclistConfigChangeImportStatus?, size: Int?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, division: DialerDnclistConfigChangeUriReference?, additionalProperties: JSON?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: DialerDnclistConfigChangeImportStatus?, size: Int?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -54,6 +59,8 @@ public class DialerDnclistConfigChangeDncList: Codable {
         
         self.licenseId = licenseId
         
+        self.contactMethod = contactMethod
+        
         self.division = division
         
         self.additionalProperties = additionalProperties
@@ -72,6 +79,7 @@ public class DialerDnclistConfigChangeDncList: Codable {
         case loginId
         case dncCodes
         case licenseId
+        case contactMethod
         case division
         case additionalProperties
     }

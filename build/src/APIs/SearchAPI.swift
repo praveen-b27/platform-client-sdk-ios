@@ -1352,18 +1352,20 @@ open class SearchAPI {
     "user" : "",
     "conversation" : {
       "address" : "aeiou",
+      "selfUri" : "aeiou",
+      "externalTag" : "aeiou",
+      "divisions" : [ {
+        "division" : "",
+        "entities" : [ "" ]
+      } ],
+      "maxParticipants" : 123,
       "conversationIds" : [ "aeiou" ],
       "recordingState" : "aeiou",
-      "selfUri" : "aeiou",
       "name" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
-      "divisions" : [ {
-        "division" : "",
-        "entities" : [ "" ]
-      } ],
       "participants" : [ {
         "queueId" : "aeiou",
         "monitoredParticipantId" : "aeiou",
@@ -1665,6 +1667,7 @@ open class SearchAPI {
             "callingPartyNumber" : "aeiou",
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
+            "joinedMemberCount" : 123,
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -2225,8 +2228,7 @@ open class SearchAPI {
           "state" : "aeiou",
           "id" : "aeiou"
         } ]
-      } ],
-      "maxParticipants" : 123
+      } ]
     },
     "queue" : "",
     "group" : ""
@@ -3890,18 +3892,20 @@ open class SearchAPI {
     "user" : "",
     "conversation" : {
       "address" : "aeiou",
+      "selfUri" : "aeiou",
+      "externalTag" : "aeiou",
+      "divisions" : [ {
+        "division" : "",
+        "entities" : [ "" ]
+      } ],
+      "maxParticipants" : 123,
       "conversationIds" : [ "aeiou" ],
       "recordingState" : "aeiou",
-      "selfUri" : "aeiou",
       "name" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
-      "divisions" : [ {
-        "division" : "",
-        "entities" : [ "" ]
-      } ],
       "participants" : [ {
         "queueId" : "aeiou",
         "monitoredParticipantId" : "aeiou",
@@ -4203,6 +4207,7 @@ open class SearchAPI {
             "callingPartyNumber" : "aeiou",
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
+            "joinedMemberCount" : 123,
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -4763,8 +4768,7 @@ open class SearchAPI {
           "state" : "aeiou",
           "id" : "aeiou"
         } ]
-      } ],
-      "maxParticipants" : 123
+      } ]
     },
     "queue" : "",
     "group" : ""

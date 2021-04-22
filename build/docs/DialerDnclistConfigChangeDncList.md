@@ -18,6 +18,7 @@ title: DialerDnclistConfigChangeDncList
 | **loginId** | **String** |  | [optional] |
 | **dncCodes** | **[String]** |  | [optional] |
 | **licenseId** | **String** |  | [optional] |
+| **contactMethod** | **String** |  | [optional] |
 | **division** | [**DialerDnclistConfigChangeUriReference**](DialerDnclistConfigChangeUriReference.html) |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}

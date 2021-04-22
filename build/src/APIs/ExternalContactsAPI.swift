@@ -1276,12 +1276,13 @@ open class ExternalContactsAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "entityType" : "aeiou",
   "externalDataSources" : [ {
     "platform" : "aeiou",
     "url" : "aeiou"
   } ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "entityId" : "aeiou",
   "id" : "aeiou",
   "createDate" : "2000-01-23T04:56:07.000+0000"
 }}]
@@ -1640,12 +1641,13 @@ open class ExternalContactsAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "entityType" : "aeiou",
     "externalDataSources" : [ {
       "platform" : "aeiou",
       "url" : "aeiou"
     } ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
+    "entityId" : "aeiou",
     "id" : "aeiou",
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
@@ -3937,12 +3939,13 @@ open class ExternalContactsAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "entityType" : "aeiou",
   "externalDataSources" : [ {
     "platform" : "aeiou",
     "url" : "aeiou"
   } ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "entityId" : "aeiou",
   "id" : "aeiou",
   "createDate" : "2000-01-23T04:56:07.000+0000"
 }}]
@@ -4301,12 +4304,13 @@ open class ExternalContactsAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "entityType" : "aeiou",
     "externalDataSources" : [ {
       "platform" : "aeiou",
       "url" : "aeiou"
     } ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
+    "entityId" : "aeiou",
     "id" : "aeiou",
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
@@ -7550,12 +7554,13 @@ open class ExternalContactsAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
+    "entityType" : "aeiou",
     "externalDataSources" : [ {
       "platform" : "aeiou",
       "url" : "aeiou"
     } ],
     "selfUri" : "aeiou",
-    "name" : "aeiou",
+    "entityId" : "aeiou",
     "id" : "aeiou",
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
@@ -11974,12 +11979,13 @@ open class ExternalContactsAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "entityType" : "aeiou",
   "externalDataSources" : [ {
     "platform" : "aeiou",
     "url" : "aeiou"
   } ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "entityId" : "aeiou",
   "id" : "aeiou",
   "createDate" : "2000-01-23T04:56:07.000+0000"
 }}]
@@ -12885,12 +12891,13 @@ open class ExternalContactsAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "entityType" : "aeiou",
   "externalDataSources" : [ {
     "platform" : "aeiou",
     "url" : "aeiou"
   } ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "entityId" : "aeiou",
   "id" : "aeiou",
   "createDate" : "2000-01-23T04:56:07.000+0000"
 }}]
@@ -14719,12 +14726,13 @@ open class ExternalContactsAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "entityType" : "aeiou",
   "externalDataSources" : [ {
     "platform" : "aeiou",
     "url" : "aeiou"
   } ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "entityId" : "aeiou",
   "id" : "aeiou",
   "createDate" : "2000-01-23T04:56:07.000+0000"
 }}]
@@ -15664,12 +15672,13 @@ open class ExternalContactsAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
+  "entityType" : "aeiou",
   "externalDataSources" : [ {
     "platform" : "aeiou",
     "url" : "aeiou"
   } ],
   "selfUri" : "aeiou",
-  "name" : "aeiou",
+  "entityId" : "aeiou",
   "id" : "aeiou",
   "createDate" : "2000-01-23T04:56:07.000+0000"
 }}]

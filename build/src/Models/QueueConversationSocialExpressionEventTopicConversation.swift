@@ -16,8 +16,9 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
     public var participants: [QueueConversationSocialExpressionEventTopicParticipant]?
     public var recordingState: String?
     public var address: String?
+    public var externalTag: String?
 
-    public init(_id: String?, maxParticipants: Int?, participants: [QueueConversationSocialExpressionEventTopicParticipant]?, recordingState: String?, address: String?) {
+    public init(_id: String?, maxParticipants: Int?, participants: [QueueConversationSocialExpressionEventTopicParticipant]?, recordingState: String?, address: String?, externalTag: String?) {
         
         self._id = _id
         
@@ -29,6 +30,8 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
         
         self.address = address
         
+        self.externalTag = externalTag
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -37,6 +40,7 @@ public class QueueConversationSocialExpressionEventTopicConversation: Codable {
         case participants
         case recordingState
         case address
+        case externalTag
     }
 
 

@@ -140,6 +140,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case routingTranscriptionSettings = "RoutingTranscriptionSettings"
         case speechTextAnalyticsSettings = "SpeechTextAnalyticsSettings"
         case predictor = "Predictor"
+        case workPlan = "WorkPlan"
     }
     public var _id: String?
     public var userId: String?

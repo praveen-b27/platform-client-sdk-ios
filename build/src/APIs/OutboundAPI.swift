@@ -2003,6 +2003,7 @@ open class OutboundAPI {
     "conversation" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "externalTag" : "aeiou",
       "startTime" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "endTime" : "2000-01-23T04:56:07.000+0000",
@@ -2252,15 +2253,17 @@ open class OutboundAPI {
           },
           "conversation" : {
             "address" : "aeiou",
+            "selfUri" : "aeiou",
+            "externalTag" : "aeiou",
+            "divisions" : [ "" ],
+            "maxParticipants" : 123,
             "conversationIds" : [ "aeiou" ],
             "recordingState" : "aeiou",
-            "selfUri" : "aeiou",
             "name" : "aeiou",
             "startTime" : "2000-01-23T04:56:07.000+0000",
             "id" : "aeiou",
             "endTime" : "2000-01-23T04:56:07.000+0000",
             "state" : "aeiou",
-            "divisions" : [ "" ],
             "participants" : [ {
               "queueId" : "aeiou",
               "monitoredParticipantId" : "aeiou",
@@ -2365,8 +2368,7 @@ open class OutboundAPI {
               },
               "endTime" : "2000-01-23T04:56:07.000+0000",
               "screenshares" : [ "" ]
-            } ],
-            "maxParticipants" : 123
+            } ]
           },
           "queue" : {
             "mediaSettings" : {
@@ -2424,6 +2426,7 @@ open class OutboundAPI {
             "callingPartyNumber" : "aeiou",
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
+            "joinedMemberCount" : 123,
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,

@@ -76,6 +76,8 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case agentScorecardMeView = "AGENT_SCORECARD_ME_VIEW"
         case agentGamificationLeadershipView = "AGENT_GAMIFICATION_LEADERSHIP_VIEW"
         case agentScheduleMeView = "AGENT_SCHEDULE_ME_VIEW"
+        case botPerformanceSummaryView = "BOT_PERFORMANCE_SUMMARY_VIEW"
+        case botPerformanceDetailView = "BOT_PERFORMANCE_DETAIL_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

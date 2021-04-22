@@ -225,6 +225,427 @@ open class OrganizationAPI {
     }
 
     
+    
+    
+    /**
+     
+     Get a limit change request
+     
+     - parameter requestId: (path) Unique id for the limit change request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsLimitsChangerequest(requestId: String, completion: @escaping ((_ data: LimitChangeRequestDetails?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsLimitsChangerequestWithRequestBuilder(requestId: requestId)
+        requestBuilder.execute { (response: Response<LimitChangeRequestDetails>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a limit change request
+     
+     - GET /api/v2/organizations/limits/changerequests/{requestId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "description" : "aeiou",
+  "requestedValue" : 1.3579000000000001069366817318950779736042022705078125,
+  "statusHistory" : [ {
+    "dateStatusChanged" : "2000-01-23T04:56:07.000+0000",
+    "rejectReason" : "aeiou",
+    "changedBy" : "aeiou",
+    "message" : "aeiou",
+    "status" : "aeiou",
+    "previousStatus" : "aeiou"
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "rejectReason" : "aeiou",
+  "createdBy" : "aeiou",
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+  "namespace" : "aeiou",
+  "id" : "aeiou",
+  "lastChangedBy" : "aeiou",
+  "key" : "aeiou",
+  "currentValue" : 1.3579000000000001069366817318950779736042022705078125,
+  "supportCaseUrl" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter requestId: (path) Unique id for the limit change request 
+
+     - returns: RequestBuilder<LimitChangeRequestDetails> 
+     */
+    open class func getOrganizationsLimitsChangerequestWithRequestBuilder(requestId: String) -> RequestBuilder<LimitChangeRequestDetails> {
+        var path = "/api/v2/organizations/limits/changerequests/{requestId}"
+        let requestIdPreEscape = "\(requestId)"
+        let requestIdPostEscape = requestIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{requestId}", with: requestIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LimitChangeRequestDetails>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum Status_getOrganizationsLimitsChangerequests: String { 
+        case _open = "Open"
+        case approved = "Approved"
+        case implementingChange = "ImplementingChange"
+        case changeImplemented = "ChangeImplemented"
+        case rejected = "Rejected"
+        case rollback = "Rollback"
+        case implementingRollback = "ImplementingRollback"
+        case rollbackImplemented = "RollbackImplemented"
+    }
+
+    
+    
+    
+    
+    
+    public enum Expand_getOrganizationsLimitsChangerequests: String { 
+        case statushistory = "statusHistory"
+    }
+
+    
+    
+    /**
+     
+     Get the available limit change requests
+     
+     - parameter after: (query) Timestamp indicating the date to begin after when searching for requests. (optional)
+     - parameter before: (query) Timestamp indicating the date to end before when searching for requests. (optional)
+     - parameter status: (query) Status of the request to be filtered by (optional)
+     - parameter pageSize: (query) Page Size (optional, default to 25)
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsLimitsChangerequests(after: Int64? = nil, before: Int64? = nil, status: Status_getOrganizationsLimitsChangerequests? = nil, pageSize: Int? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LimitChangeRequestsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsLimitsChangerequestsWithRequestBuilder(after: after, before: before, status: status, pageSize: pageSize, expand: expand)
+        requestBuilder.execute { (response: Response<LimitChangeRequestsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the available limit change requests
+     
+     - GET /api/v2/organizations/limits/changerequests
+     - Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "requestedValue" : 1.3579000000000001069366817318950779736042022705078125,
+    "statusHistory" : [ {
+      "dateStatusChanged" : "2000-01-23T04:56:07.000+0000",
+      "rejectReason" : "aeiou",
+      "changedBy" : "aeiou",
+      "message" : "aeiou",
+      "status" : "aeiou",
+      "previousStatus" : "aeiou"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "rejectReason" : "aeiou",
+    "createdBy" : "aeiou",
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "namespace" : "aeiou",
+    "id" : "aeiou",
+    "lastChangedBy" : "aeiou",
+    "key" : "aeiou",
+    "currentValue" : 1.3579000000000001069366817318950779736042022705078125,
+    "supportCaseUrl" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter after: (query) Timestamp indicating the date to begin after when searching for requests. (optional)
+     - parameter before: (query) Timestamp indicating the date to end before when searching for requests. (optional)
+     - parameter status: (query) Status of the request to be filtered by (optional)
+     - parameter pageSize: (query) Page Size (optional, default to 25)
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
+
+     - returns: RequestBuilder<LimitChangeRequestsEntityListing> 
+     */
+    open class func getOrganizationsLimitsChangerequestsWithRequestBuilder(after: Int64? = nil, before: Int64? = nil, status: Status_getOrganizationsLimitsChangerequests? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<LimitChangeRequestsEntityListing> {
+        let path = "/api/v2/organizations/limits/changerequests"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "after": after?.encodeToJSON(), 
+            
+            "before": before?.encodeToJSON(), 
+            
+            "status": status?.rawValue, 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<LimitChangeRequestsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get a link to the limit documentation
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsLimitsDocs(completion: @escaping ((_ data: UrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsLimitsDocsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<UrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a link to the limit documentation
+     
+     - GET /api/v2/organizations/limits/docs
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "url" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<UrlResponse> 
+     */
+    open class func getOrganizationsLimitsDocsWithRequestBuilder() -> RequestBuilder<UrlResponse> {
+        let path = "/api/v2/organizations/limits/docs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get the effective limits in a namespace for an organization
+     
+     - parameter namespaceName: (path) The namespace to fetch limits for 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsLimitsNamespace(namespaceName: String, completion: @escaping ((_ data: LimitsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsLimitsNamespaceWithRequestBuilder(namespaceName: namespaceName)
+        requestBuilder.execute { (response: Response<LimitsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the effective limits in a namespace for an organization
+     
+     - GET /api/v2/organizations/limits/namespaces/{namespaceName}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "value" : 1.3579000000000001069366817318950779736042022705078125,
+    "key" : "aeiou"
+  } ]
+}}]
+     
+     - parameter namespaceName: (path) The namespace to fetch limits for 
+
+     - returns: RequestBuilder<LimitsEntityListing> 
+     */
+    open class func getOrganizationsLimitsNamespaceWithRequestBuilder(namespaceName: String) -> RequestBuilder<LimitsEntityListing> {
+        var path = "/api/v2/organizations/limits/namespaces/{namespaceName}"
+        let namespaceNamePreEscape = "\(namespaceName)"
+        let namespaceNamePostEscape = namespaceNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{namespaceName}", with: namespaceNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LimitsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get the available limit namespaces
+     
+     - parameter pageSize: (query) Page size (optional, default to 100)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsLimitsNamespaces(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: LimitsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<LimitsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the available limit namespaces
+     
+     - GET /api/v2/organizations/limits/namespaces
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "value" : 1.3579000000000001069366817318950779736042022705078125,
+    "key" : "aeiou"
+  } ]
+}}]
+     
+     - parameter pageSize: (query) Page size (optional, default to 100)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+
+     - returns: RequestBuilder<LimitsEntityListing> 
+     */
+    open class func getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<LimitsEntityListing> {
+        let path = "/api/v2/organizations/limits/namespaces"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<LimitsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      
      Get organization.

@@ -32,6 +32,8 @@ public class Conversation: Codable {
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
+    /** The external tag associated with the conversation. */
+    public var externalTag: String?
     /** The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startTime: Date?
     /** The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -53,11 +55,13 @@ public class Conversation: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, startTime: Date?, endTime: Date?, address: String?, participants: [Participant]?, conversationIds: [String]?, maxParticipants: Int?, recordingState: RecordingState?, state: State?, divisions: [ConversationDivisionMembership]?, selfUri: String?) {
+    public init(_id: String?, name: String?, externalTag: String?, startTime: Date?, endTime: Date?, address: String?, participants: [Participant]?, conversationIds: [String]?, maxParticipants: Int?, recordingState: RecordingState?, state: State?, divisions: [ConversationDivisionMembership]?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.externalTag = externalTag
         
         self.startTime = startTime
         
@@ -84,6 +88,7 @@ public class Conversation: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case externalTag
         case startTime
         case endTime
         case address

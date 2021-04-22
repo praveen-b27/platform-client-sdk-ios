@@ -10,6 +10,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFieldconfig**](OrganizationAPI.html#getFieldconfig) | Fetch field config for an entity type |
 | [**getOrganizationsEmbeddedintegration**](OrganizationAPI.html#getOrganizationsEmbeddedintegration) | Get the list of domains that will be allowed to embed PureCloud applications |
 | [**getOrganizationsIpaddressauthentication**](OrganizationAPI.html#getOrganizationsIpaddressauthentication) | Get organization IP address whitelist settings |
+| [**getOrganizationsLimitsChangerequest**](OrganizationAPI.html#getOrganizationsLimitsChangerequest) | Get a limit change request |
+| [**getOrganizationsLimitsChangerequests**](OrganizationAPI.html#getOrganizationsLimitsChangerequests) | Get the available limit change requests |
+| [**getOrganizationsLimitsDocs**](OrganizationAPI.html#getOrganizationsLimitsDocs) | Get a link to the limit documentation |
+| [**getOrganizationsLimitsNamespace**](OrganizationAPI.html#getOrganizationsLimitsNamespace) | Get the effective limits in a namespace for an organization |
+| [**getOrganizationsLimitsNamespaces**](OrganizationAPI.html#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
 | [**getOrganizationsMe**](OrganizationAPI.html#getOrganizationsMe) | Get organization. |
 | [**getOrganizationsWhitelist**](OrganizationAPI.html#getOrganizationsWhitelist) | Use PUT /api/v2/organizations/embeddedintegration instead |
 | [**patchOrganizationsFeature**](OrganizationAPI.html#patchOrganizationsFeature) | Update organization |
@@ -164,6 +169,271 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**IpAddressAuthentication**](IpAddressAuthentication.html)
+
+<a name="getOrganizationsLimitsChangerequest"></a>
+
+# **getOrganizationsLimitsChangerequest**
+
+
+
+> [LimitChangeRequestDetails](LimitChangeRequestDetails.html) getOrganizationsLimitsChangerequest(requestId)
+
+Get a limit change request
+
+
+
+Wraps GET /api/v2/organizations/limits/changerequests/{requestId}  
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let requestId: String = "" // Unique id for the limit change request
+
+// Code example
+OrganizationAPI.getOrganizationsLimitsChangerequest(requestId: requestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsLimitsChangerequest was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **requestId** | **String**| Unique id for the limit change request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LimitChangeRequestDetails**](LimitChangeRequestDetails.html)
+
+<a name="getOrganizationsLimitsChangerequests"></a>
+
+# **getOrganizationsLimitsChangerequests**
+
+
+
+> [LimitChangeRequestsEntityListing](LimitChangeRequestsEntityListing.html) getOrganizationsLimitsChangerequests(after, before, status, pageSize, expand)
+
+Get the available limit change requests
+
+Timestamp interval defaults to the last 365 days if both query parameters are omitted. If only one parameter is omitted, the interval will default to a 180 day range in the specified direction.
+
+Wraps GET /api/v2/organizations/limits/changerequests  
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let after: Int64 = 0 // Timestamp indicating the date to begin after when searching for requests.
+let before: Int64 = 0 // Timestamp indicating the date to end before when searching for requests.
+let status: OrganizationAPI.Status_getOrganizationsLimitsChangerequests = OrganizationAPI.Status_getOrganizationsLimitsChangerequests.enummember // Status of the request to be filtered by
+let pageSize: Int = 25 // Page Size
+let expand: [String] = [OrganizationAPI.Expand_getOrganizationsLimitsChangerequests.enummember.rawValue] // Which fields, if any, to expand.
+
+// Code example
+OrganizationAPI.getOrganizationsLimitsChangerequests(after: after, before: before, status: status, pageSize: pageSize, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsLimitsChangerequests was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **after** | **Int64**| Timestamp indicating the date to begin after when searching for requests. | [optional] |
+| **before** | **Int64**| Timestamp indicating the date to end before when searching for requests. | [optional] |
+| **status** | **String**| Status of the request to be filtered by | [optional]<br />**Values**: _open ("Open"), approved ("Approved"), implementingChange ("ImplementingChange"), changeImplemented ("ChangeImplemented"), rejected ("Rejected"), rollback ("Rollback"), implementingRollback ("ImplementingRollback"), rollbackImplemented ("RollbackImplemented") |
+| **pageSize** | **Int**| Page Size | [optional] [default to 25] |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: statushistory ("statusHistory") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LimitChangeRequestsEntityListing**](LimitChangeRequestsEntityListing.html)
+
+<a name="getOrganizationsLimitsDocs"></a>
+
+# **getOrganizationsLimitsDocs**
+
+
+
+> [UrlResponse](UrlResponse.html) getOrganizationsLimitsDocs()
+
+Get a link to the limit documentation
+
+
+
+Wraps GET /api/v2/organizations/limits/docs  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OrganizationAPI.getOrganizationsLimitsDocs() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsLimitsDocs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**UrlResponse**](UrlResponse.html)
+
+<a name="getOrganizationsLimitsNamespace"></a>
+
+# **getOrganizationsLimitsNamespace**
+
+
+
+> [LimitsEntityListing](LimitsEntityListing.html) getOrganizationsLimitsNamespace(namespaceName)
+
+Get the effective limits in a namespace for an organization
+
+
+
+Wraps GET /api/v2/organizations/limits/namespaces/{namespaceName}  
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let namespaceName: String = "" // The namespace to fetch limits for
+
+// Code example
+OrganizationAPI.getOrganizationsLimitsNamespace(namespaceName: namespaceName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsLimitsNamespace was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **namespaceName** | **String**| The namespace to fetch limits for | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LimitsEntityListing**](LimitsEntityListing.html)
+
+<a name="getOrganizationsLimitsNamespaces"></a>
+
+# **getOrganizationsLimitsNamespaces**
+
+
+
+> [LimitsEntityListing](LimitsEntityListing.html) getOrganizationsLimitsNamespaces(pageSize, pageNumber)
+
+Get the available limit namespaces
+
+
+
+Wraps GET /api/v2/organizations/limits/namespaces  
+
+Requires ANY permissions: 
+
+* limits:organization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 100 // Page size
+let pageNumber: Int = 1 // Page number
+
+// Code example
+OrganizationAPI.getOrganizationsLimitsNamespaces(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsLimitsNamespaces was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] [default to 100] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LimitsEntityListing**](LimitsEntityListing.html)
 
 <a name="getOrganizationsMe"></a>
 

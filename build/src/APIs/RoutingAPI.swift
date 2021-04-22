@@ -1772,7 +1772,8 @@ open class RoutingAPI {
       "nluInfo" : {
         "intents" : [ {
           "name" : "aeiou"
-        } ]
+        } ],
+        "domain" : ""
       },
       "type" : "aeiou",
       "secure" : true,
@@ -2209,7 +2210,8 @@ open class RoutingAPI {
         "nluInfo" : {
           "intents" : [ {
             "name" : "aeiou"
-          } ]
+          } ],
+          "domain" : ""
         },
         "type" : "aeiou",
         "secure" : true,
@@ -2394,6 +2396,7 @@ open class RoutingAPI {
   "callingPartyNumber" : "aeiou",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
+  "joinedMemberCount" : 123,
   "callingPartyName" : "aeiou",
   "acwSettings" : {
     "timeoutMs" : 123,
@@ -3707,6 +3710,7 @@ open class RoutingAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -3946,6 +3950,7 @@ open class RoutingAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -4179,6 +4184,7 @@ open class RoutingAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -4391,6 +4397,7 @@ open class RoutingAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -6325,6 +6332,7 @@ open class RoutingAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -7839,6 +7847,7 @@ open class RoutingAPI {
   "callingPartyNumber" : "aeiou",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
+  "joinedMemberCount" : 123,
   "callingPartyName" : "aeiou",
   "acwSettings" : {
     "timeoutMs" : 123,
@@ -8030,6 +8039,7 @@ open class RoutingAPI {
     "callingPartyNumber" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
+    "joinedMemberCount" : 123,
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -9078,6 +9088,7 @@ open class RoutingAPI {
   "callingPartyNumber" : "aeiou",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
+  "joinedMemberCount" : 123,
   "callingPartyName" : "aeiou",
   "acwSettings" : {
     "timeoutMs" : 123,
@@ -10280,7 +10291,8 @@ open class RoutingAPI {
       "nluInfo" : {
         "intents" : [ {
           "name" : "aeiou"
-        } ]
+        } ],
+        "domain" : ""
       },
       "type" : "aeiou",
       "secure" : true,
@@ -10451,6 +10463,7 @@ open class RoutingAPI {
   "callingPartyNumber" : "aeiou",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
+  "joinedMemberCount" : 123,
   "callingPartyName" : "aeiou",
   "acwSettings" : {
     "timeoutMs" : 123,

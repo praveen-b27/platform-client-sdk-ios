@@ -1,0 +1,17 @@
+---
+title: TranscriptionsTopicTranscriptWord
+---
+## TranscriptionsTopicTranscriptWord
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **confidence** | **Double** |  | [optional] |
+| **startTimeMs** | **Int** |  | [optional] |
+| **offsetMs** | **Int** |  | [optional] |
+| **durationMs** | **Int** |  | [optional] |
+| **word** | **String** |  | [optional] |
+{: class="table table-striped"}
+
+

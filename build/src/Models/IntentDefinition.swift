@@ -13,16 +13,20 @@ public class IntentDefinition: Codable {
 
     /** The name of the intent. */
     public var name: String?
-    /** The bindings for the named entity types used in this intent. */
+    /** The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities */
     public var entityTypeBindings: [NamedEntityTypeBinding]?
+    /** The references for the named entity used in this intent.This field is mutually exclusive with entityTypeBindings */
+    public var entityNameReferences: [String]?
     /** The utterances that act as training phrases for the intent. */
     public var utterances: [NluUtterance]?
 
-    public init(name: String?, entityTypeBindings: [NamedEntityTypeBinding]?, utterances: [NluUtterance]?) {
+    public init(name: String?, entityTypeBindings: [NamedEntityTypeBinding]?, entityNameReferences: [String]?, utterances: [NluUtterance]?) {
         
         self.name = name
         
         self.entityTypeBindings = entityTypeBindings
+        
+        self.entityNameReferences = entityNameReferences
         
         self.utterances = utterances
         

@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundCallanalysisresponseset**](OutboundAPI.html#getOutboundCallanalysisresponseset) | Get a dialer call analysis response set. |
 | [**getOutboundCallanalysisresponsesets**](OutboundAPI.html#getOutboundCallanalysisresponsesets) | Query a list of dialer call analysis response sets. |
 | [**getOutboundCampaign**](OutboundAPI.html#getOutboundCampaign) | Get dialer campaign. |
+| [**getOutboundCampaignAgentownedmappingpreviewResults**](OutboundAPI.html#getOutboundCampaignAgentownedmappingpreviewResults) | Get a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**getOutboundCampaignDiagnostics**](OutboundAPI.html#getOutboundCampaignDiagnostics) | Get campaign diagnostics |
 | [**getOutboundCampaignInteractions**](OutboundAPI.html#getOutboundCampaignInteractions) | Get dialer campaign interactions. |
 | [**getOutboundCampaignProgress**](OutboundAPI.html#getOutboundCampaignProgress) | Get campaign progress |
@@ -80,6 +81,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundAudits**](OutboundAPI.html#postOutboundAudits) | Retrieves audits for dialer. |
 | [**postOutboundCallabletimesets**](OutboundAPI.html#postOutboundCallabletimesets) | Create callable time set |
 | [**postOutboundCallanalysisresponsesets**](OutboundAPI.html#postOutboundCallanalysisresponsesets) | Create a dialer call analysis response set. |
+| [**postOutboundCampaignAgentownedmappingpreview**](OutboundAPI.html#postOutboundCampaignAgentownedmappingpreview) | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**postOutboundCampaignCallbackSchedule**](OutboundAPI.html#postOutboundCampaignCallbackSchedule) | Schedule a Callback for a Dialer Campaign (Deprecated) |
 | [**postOutboundCampaignrules**](OutboundAPI.html#postOutboundCampaignrules) | Create Campaign Rule |
 | [**postOutboundCampaigns**](OutboundAPI.html#postOutboundCampaigns) | Create a campaign. |
@@ -1389,6 +1391,60 @@ OutboundAPI.getOutboundCampaign(campaignId: campaignId) { (response, error) in
 ### Return type
 
 [**Campaign**](Campaign.html)
+
+<a name="getOutboundCampaignAgentownedmappingpreviewResults"></a>
+
+# **getOutboundCampaignAgentownedmappingpreviewResults**
+
+
+
+> [AgentOwnedMappingPreviewListing](AgentOwnedMappingPreviewListing.html) getOutboundCampaignAgentownedmappingpreviewResults(campaignId)
+
+Get a preview of how agents will be mapped to this campaign&#39;s contact list.
+
+
+
+Wraps GET /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results  
+
+Requires ALL permissions: 
+
+* outbound:campaign:view
+* outbound:contact:view
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+
+// Code example
+OutboundAPI.getOutboundCampaignAgentownedmappingpreviewResults(campaignId: campaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundCampaignAgentownedmappingpreviewResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentOwnedMappingPreviewListing**](AgentOwnedMappingPreviewListing.html)
 
 <a name="getOutboundCampaignDiagnostics"></a>
 
@@ -4178,6 +4234,60 @@ OutboundAPI.postOutboundCallanalysisresponsesets(body: body) { (response, error)
 ### Return type
 
 [**ResponseSet**](ResponseSet.html)
+
+<a name="postOutboundCampaignAgentownedmappingpreview"></a>
+
+# **postOutboundCampaignAgentownedmappingpreview**
+
+
+
+> [Empty](Empty.html) postOutboundCampaignAgentownedmappingpreview(campaignId)
+
+Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list.
+
+
+
+Wraps POST /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview  
+
+Requires ALL permissions: 
+
+* outbound:campaign:view
+* outbound:contact:view
+* directory:user:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+
+// Code example
+OutboundAPI.postOutboundCampaignAgentownedmappingpreview(campaignId: campaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundCampaignAgentownedmappingpreview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Empty**](Empty.html)
 
 <a name="postOutboundCampaignCallbackSchedule"></a>
 

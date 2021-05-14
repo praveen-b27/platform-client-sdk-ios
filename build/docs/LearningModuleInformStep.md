@@ -1,0 +1,18 @@
+---
+title: LearningModuleInformStep
+---
+## LearningModuleInformStep
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **type** | **String** | The learning module inform step type | |
+| **name** | **String** | The name of the inform step or content | [optional] |
+| **value** | **String** | The value for inform step | |
+| **sharingUri** | **String** | The sharing uri for Content type inform step | [optional] |
+| **contentType** | **String** | The document type for Content type Inform step | [optional] |
+| **order** | **Int** | The order of inform step in a learning module | |
+{: class="table table-striped"}
+
+

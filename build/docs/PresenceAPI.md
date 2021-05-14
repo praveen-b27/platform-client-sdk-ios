@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserPresence**](PresenceAPI.html#getUserPresence) | Get a user&#39;s Presence |
 | [**getUserPresencesMicrosoftteams**](PresenceAPI.html#getUserPresencesMicrosoftteams) | Get a user&#39;s Microsoft Teams presence. |
 | [**getUserPresencesPurecloud**](PresenceAPI.html#getUserPresencesPurecloud) | Get a user&#39;s Genesys Cloud presence. |
+| [**getUserPresencesZoomphone**](PresenceAPI.html#getUserPresencesZoomphone) | Get a user&#39;s Zoom Phone presence. |
 | [**patchUserPresence**](PresenceAPI.html#patchUserPresence) | Patch a user&#39;s Presence |
 | [**patchUserPresencesPurecloud**](PresenceAPI.html#patchUserPresencesPurecloud) | Patch a Genesys Cloud user&#39;s presence |
 | [**postPresencedefinitions**](PresenceAPI.html#postPresencedefinitions) | Create a Presence Definition |
@@ -385,6 +386,59 @@ PresenceAPI.getUserPresencesPurecloud(userId: userId) { (response, error) in
 ### Return type
 
 [**UserPresence**](UserPresence.html)
+
+<a name="getUserPresencesZoomphone"></a>
+
+# **getUserPresencesZoomphone**
+
+
+
+> [PresenceExpand](PresenceExpand.html) getUserPresencesZoomphone(userId)
+
+Get a user&#39;s Zoom Phone presence.
+
+Gets the presence for a Zoom user.  This will return the Zoom Phone presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
+
+Wraps GET /api/v2/users/{userId}/presences/zoomphone  
+
+Requires ANY permissions: 
+
+* integration:zoomPhone:view
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // user Id
+
+// Code example
+PresenceAPI.getUserPresencesZoomphone(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PresenceAPI.getUserPresencesZoomphone was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| user Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PresenceExpand**](PresenceExpand.html)
 
 <a name="patchUserPresence"></a>
 

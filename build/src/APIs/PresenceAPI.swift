@@ -1320,6 +1320,332 @@ open class PresenceAPI {
     
     
     
+    /**
+     
+     Get a user's Zoom Phone presence.
+     
+     - parameter userId: (path) user Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserPresencesZoomphone(userId: String, completion: @escaping ((_ data: PresenceExpand?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserPresencesZoomphoneWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<PresenceExpand>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a user's Zoom Phone presence.
+     
+     - GET /api/v2/users/{userId}/presences/zoomphone
+     - Gets the presence for a Zoom user.  This will return the Zoom Phone presence mapped to Genesys Cloud presence with additional activity details in the message field. This presence source is read-only.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "outOfOffices" : [ {
+    "endDate" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "active" : true,
+    "id" : "aeiou",
+    "user" : {
+      "addresses" : [ "" ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "userId" : "aeiou",
+        "status" : "aeiou"
+      },
+      "title" : "aeiou",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "authorization" : {
+        "unusedRoles" : [ "" ],
+        "permissions" : [ "aeiou" ],
+        "permissionPolicies" : [ {
+          "policyDescription" : "aeiou",
+          "resourceConditionNode" : {
+            "operands" : [ {
+              "type" : "aeiou",
+              "value" : "aeiou"
+            } ],
+            "variableName" : "aeiou",
+            "conjunction" : "aeiou",
+            "terms" : [ "" ],
+            "operator" : "aeiou"
+          },
+          "actionSetKey" : "aeiou",
+          "namedResources" : [ "aeiou" ],
+          "policyName" : "aeiou",
+          "entityName" : "aeiou",
+          "domain" : "aeiou",
+          "allowConditions" : true,
+          "id" : "aeiou",
+          "resourceCondition" : "aeiou",
+          "actionSet" : [ "aeiou" ]
+        } ],
+        "roles" : [ {
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      },
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "skillUri" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "station" : {
+        "defaultStation" : "",
+        "lastAssociatedStation" : "",
+        "associatedStation" : {
+          "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "name" : "aeiou",
+          "defaultUser" : "",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "associatedUser" : "",
+          "providerInfo" : {
+            "key" : "aeiou"
+          }
+        },
+        "effectiveStation" : ""
+      },
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "department" : "aeiou",
+      "presence" : "",
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
+      "email" : "aeiou",
+      "images" : [ {
+        "imageUri" : "aeiou",
+        "resolution" : "aeiou"
+      } ],
+      "manager" : "",
+      "employerInfo" : {
+        "employeeType" : "aeiou",
+        "dateHire" : "aeiou",
+        "employeeId" : "aeiou",
+        "officialName" : "aeiou"
+      },
+      "languages" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "languageUri" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "selfUri" : "aeiou",
+      "conversationSummary" : {
+        "call" : {
+          "enterprise" : "",
+          "contactCenter" : {
+            "acw" : 123,
+            "active" : 123
+          }
+        },
+        "socialExpression" : "",
+        "chat" : "",
+        "callback" : "",
+        "video" : "",
+        "message" : "",
+        "userId" : "aeiou",
+        "email" : ""
+      },
+      "groups" : [ {
+        "images" : [ "" ],
+        "addresses" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "visibility" : "aeiou",
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "owners" : [ "" ],
+        "type" : "aeiou",
+        "version" : 123,
+        "rulesVisible" : true,
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou"
+      } ],
+      "primaryContactInfo" : [ {
+        "extension" : "aeiou",
+        "address" : "aeiou",
+        "countryCode" : "aeiou",
+        "display" : "aeiou",
+        "mediaType" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
+        "hobbies" : [ "aeiou" ],
+        "biography" : "aeiou",
+        "interests" : [ "aeiou" ],
+        "spouse" : "aeiou"
+      },
+      "team" : {
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
+      "certifications" : [ "aeiou" ],
+      "version" : 123,
+      "outOfOffice" : "",
+      "languagePreference" : "aeiou",
+      "profileSkills" : [ "aeiou" ],
+      "chat" : {
+        "jabberId" : "aeiou"
+      },
+      "name" : "aeiou",
+      "locations" : [ {
+        "notes" : "aeiou",
+        "coordinates" : {
+          "key" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "locationDefinition" : "",
+        "id" : "aeiou",
+        "floorplanId" : "aeiou"
+      } ],
+      "username" : "aeiou",
+      "geolocation" : {
+        "country" : "aeiou",
+        "city" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "locations" : [ {
+          "images" : "aeiou",
+          "address" : {
+            "zipcode" : "aeiou",
+            "country" : "aeiou",
+            "city" : "aeiou",
+            "street1" : "aeiou",
+            "countryName" : "aeiou",
+            "state" : "aeiou",
+            "street2" : "aeiou"
+          },
+          "notes" : "aeiou",
+          "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
+          "selfUri" : "aeiou",
+          "profileImage" : [ {
+            "imageUri" : "aeiou",
+            "resolution" : "aeiou"
+          } ],
+          "emergencyNumber" : {
+            "number" : "aeiou",
+            "e164" : "aeiou",
+            "type" : "aeiou"
+          },
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "addressStored" : true,
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
+        } ],
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "region" : "aeiou",
+        "primary" : true,
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      }
+    },
+    "startDate" : "2000-01-23T04:56:07.000+0000",
+    "indefinite" : true
+  } ],
+  "presences" : [ {
+    "presenceDefinition" : {
+      "systemPresence" : "aeiou",
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "source" : "aeiou",
+    "message" : "aeiou",
+    "primary" : true
+  } ],
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter userId: (path) user Id 
+
+     - returns: RequestBuilder<PresenceExpand> 
+     */
+    open class func getUserPresencesZoomphoneWithRequestBuilder(userId: String) -> RequestBuilder<PresenceExpand> {
+        var path = "/api/v2/users/{userId}/presences/zoomphone"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PresenceExpand>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     

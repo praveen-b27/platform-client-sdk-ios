@@ -1855,6 +1855,78 @@ open class OutboundAPI {
     
     /**
      
+     Get a preview of how agents will be mapped to this campaign's contact list.
+     
+     - parameter campaignId: (path) Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundCampaignAgentownedmappingpreviewResults(campaignId: String, completion: @escaping ((_ data: AgentOwnedMappingPreviewListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundCampaignAgentownedmappingpreviewResultsWithRequestBuilder(campaignId: campaignId)
+        requestBuilder.execute { (response: Response<AgentOwnedMappingPreviewListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a preview of how agents will be mapped to this campaign's contact list.
+     
+     - GET /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agentOwnedColumn" : "aeiou",
+    "recordCount" : 123,
+    "exists" : true,
+    "userId" : "aeiou",
+    "email" : "aeiou",
+    "isQueueMember" : true
+  } ]
+}}]
+     
+     - parameter campaignId: (path) Campaign ID 
+
+     - returns: RequestBuilder<AgentOwnedMappingPreviewListing> 
+     */
+    open class func getOutboundCampaignAgentownedmappingpreviewResultsWithRequestBuilder(campaignId: String) -> RequestBuilder<AgentOwnedMappingPreviewListing> {
+        var path = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results"
+        let campaignIdPreEscape = "\(campaignId)"
+        let campaignIdPostEscape = campaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{campaignId}", with: campaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentOwnedMappingPreviewListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Get campaign diagnostics
      
      - parameter campaignId: (path) Campaign ID 
@@ -8101,6 +8173,69 @@ open class OutboundAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ResponseSet>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+     
+     - parameter campaignId: (path) Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postOutboundCampaignAgentownedmappingpreview(campaignId: String, completion: @escaping ((_ data: Empty?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOutboundCampaignAgentownedmappingpreviewWithRequestBuilder(campaignId: campaignId)
+        requestBuilder.execute { (response: Response<Empty>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Initiate request for a preview of how agents will be mapped to this campaign's contact list.
+     
+     - POST /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={ }}]
+     
+     - parameter campaignId: (path) Campaign ID 
+
+     - returns: RequestBuilder<Empty> 
+     */
+    open class func postOutboundCampaignAgentownedmappingpreviewWithRequestBuilder(campaignId: String) -> RequestBuilder<Empty> {
+        var path = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview"
+        let campaignIdPreEscape = "\(campaignId)"
+        let campaignIdPostEscape = campaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{campaignId}", with: campaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

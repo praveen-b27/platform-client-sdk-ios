@@ -36,6 +36,7 @@ public class AuditLogMessage: Codable {
         case create = "Create"
         case view = "View"
         case update = "Update"
+        case move = "Move"
         case delete = "Delete"
         case deleteAll = "DeleteAll"
         case download = "Download"
@@ -153,6 +154,7 @@ public class AuditLogMessage: Codable {
         case voicemailPolicy = "VoicemailPolicy"
         case voicemailUserPolicy = "VoicemailUserPolicy"
         case workPlan = "WorkPlan"
+        case workspace = "Workspace"
         case wrapupCode = "WrapupCode"
         case wrapUpCodeMapping = "WrapUpCodeMapping"
     }

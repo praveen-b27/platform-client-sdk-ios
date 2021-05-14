@@ -12,8 +12,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteQualityForm**](QualityAPI.html#deleteQualityForm) | Delete an evaluation form. |
 | [**deleteQualityFormsEvaluation**](QualityAPI.html#deleteQualityFormsEvaluation) | Delete an evaluation form. |
 | [**deleteQualityFormsSurvey**](QualityAPI.html#deleteQualityFormsSurvey) | Delete a survey form. |
-| [**deleteQualityKeywordset**](QualityAPI.html#deleteQualityKeywordset) | Delete a keywordSet by id. |
-| [**deleteQualityKeywordsets**](QualityAPI.html#deleteQualityKeywordsets) | Delete keyword sets |
 | [**getQualityAgentsActivity**](QualityAPI.html#getQualityAgentsActivity) | Gets a list of Agent Activities |
 | [**getQualityCalibration**](QualityAPI.html#getQualityCalibration) | Get a calibration by id.  Requires either calibrator id or conversation id |
 | [**getQualityCalibrations**](QualityAPI.html#getQualityCalibrations) | Get the list of calibrations |
@@ -33,8 +31,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityFormsSurveys**](QualityAPI.html#getQualityFormsSurveys) | Get the list of survey forms |
 | [**getQualityFormsSurveysBulk**](QualityAPI.html#getQualityFormsSurveysBulk) | Retrieve a list of survey forms by their ids |
 | [**getQualityFormsSurveysBulkContexts**](QualityAPI.html#getQualityFormsSurveysBulkContexts) | Retrieve a list of the latest form versions by context ids |
-| [**getQualityKeywordset**](QualityAPI.html#getQualityKeywordset) | Get a keywordSet by id. |
-| [**getQualityKeywordsets**](QualityAPI.html#getQualityKeywordsets) | Get the list of keyword sets |
 | [**getQualityPublishedform**](QualityAPI.html#getQualityPublishedform) | Get the published evaluation forms. |
 | [**getQualityPublishedforms**](QualityAPI.html#getQualityPublishedforms) | Get the published evaluation forms. |
 | [**getQualityPublishedformsEvaluation**](QualityAPI.html#getQualityPublishedformsEvaluation) | Get the most recent published version of an evaluation form. |
@@ -52,18 +48,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postQualityForms**](QualityAPI.html#postQualityForms) | Create an evaluation form. |
 | [**postQualityFormsEvaluations**](QualityAPI.html#postQualityFormsEvaluations) | Create an evaluation form. |
 | [**postQualityFormsSurveys**](QualityAPI.html#postQualityFormsSurveys) | Create a survey form. |
-| [**postQualityKeywordsets**](QualityAPI.html#postQualityKeywordsets) | Create a Keyword Set |
 | [**postQualityPublishedforms**](QualityAPI.html#postQualityPublishedforms) | Publish an evaluation form. |
 | [**postQualityPublishedformsEvaluations**](QualityAPI.html#postQualityPublishedformsEvaluations) | Publish an evaluation form. |
 | [**postQualityPublishedformsSurveys**](QualityAPI.html#postQualityPublishedformsSurveys) | Publish a survey form. |
-| [**postQualitySpotability**](QualityAPI.html#postQualitySpotability) | Retrieve the spotability statistic |
 | [**postQualitySurveysScoring**](QualityAPI.html#postQualitySurveysScoring) | Score survey |
 | [**putQualityCalibration**](QualityAPI.html#putQualityCalibration) | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
 | [**putQualityConversationEvaluation**](QualityAPI.html#putQualityConversationEvaluation) | Update an evaluation |
 | [**putQualityForm**](QualityAPI.html#putQualityForm) | Update an evaluation form. |
 | [**putQualityFormsEvaluation**](QualityAPI.html#putQualityFormsEvaluation) | Update an evaluation form. |
 | [**putQualityFormsSurvey**](QualityAPI.html#putQualityFormsSurvey) | Update a survey form. |
-| [**putQualityKeywordset**](QualityAPI.html#putQualityKeywordset) | Update a keywordSet to the specified keywordSet via PUT. |
 | [**putQualitySurveysScorable**](QualityAPI.html#putQualitySurveysScorable) | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table-striped"}
 
@@ -323,108 +316,6 @@ QualityAPI.deleteQualityFormsSurvey(formId: formId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteQualityKeywordset"></a>
-
-# **deleteQualityKeywordset**
-
-
-
-> Void deleteQualityKeywordset(keywordSetId)
-
-Delete a keywordSet by id.
-
-
-
-Wraps DELETE /api/v2/quality/keywordsets/{keywordSetId}  
-
-Requires ANY permissions: 
-
-* quality:keywordset:delete
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let keywordSetId: String = "" // KeywordSet ID
-
-// Code example
-QualityAPI.deleteQualityKeywordset(keywordSetId: keywordSetId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("QualityAPI.deleteQualityKeywordset was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **keywordSetId** | **String**| KeywordSet ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteQualityKeywordsets"></a>
-
-# **deleteQualityKeywordsets**
-
-
-
-> Void deleteQualityKeywordsets(ids)
-
-Delete keyword sets
-
-Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
-
-Wraps DELETE /api/v2/quality/keywordsets  
-
-Requires ANY permissions: 
-
-* quality:keywordset:delete
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let ids: String = "" // A comma-delimited list of valid KeywordSet ids
-
-// Code example
-QualityAPI.deleteQualityKeywordsets(ids: ids) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("QualityAPI.deleteQualityKeywordsets was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **ids** | **String**| A comma-delimited list of valid KeywordSet ids | |
 {: class="table-striped"}
 
 
@@ -1601,128 +1492,6 @@ QualityAPI.getQualityFormsSurveysBulkContexts(contextId: contextId, published: p
 
 [**SurveyFormEntityListing**](SurveyFormEntityListing.html)
 
-<a name="getQualityKeywordset"></a>
-
-# **getQualityKeywordset**
-
-
-
-> [KeywordSet](KeywordSet.html) getQualityKeywordset(keywordSetId)
-
-Get a keywordSet by id.
-
-
-
-Wraps GET /api/v2/quality/keywordsets/{keywordSetId}  
-
-Requires ANY permissions: 
-
-* quality:keywordset:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let keywordSetId: String = "" // KeywordSet ID
-
-// Code example
-QualityAPI.getQualityKeywordset(keywordSetId: keywordSetId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("QualityAPI.getQualityKeywordset was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **keywordSetId** | **String**| KeywordSet ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
-
-<a name="getQualityKeywordsets"></a>
-
-# **getQualityKeywordsets**
-
-
-
-> [KeywordSetEntityListing](KeywordSetEntityListing.html) getQualityKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator)
-
-Get the list of keyword sets
-
-
-
-Wraps GET /api/v2/quality/keywordsets  
-
-Requires ANY permissions: 
-
-* quality:keywordset:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
-let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
-let nextPage: String = "" // next page token
-let previousPage: String = "" // Previous page token
-let name: String = "" // the keyword set name - used for filtering results in searches.
-let queueId: String = "" // the queue id - used for filtering results in searches.
-let agentId: String = "" // the agent id - used for filtering results in searches.
-let _operator: QualityAPI.Operator_getQualityKeywordsets = QualityAPI.Operator_getQualityKeywordsets.enummember // If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters.
-
-// Code example
-QualityAPI.getQualityKeywordsets(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, queueId: queueId, agentId: agentId, _operator: _operator) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("QualityAPI.getQualityKeywordsets was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
-| **nextPage** | **String**| next page token | [optional] |
-| **previousPage** | **String**| Previous page token | [optional] |
-| **name** | **String**| the keyword set name - used for filtering results in searches. | [optional] |
-| **queueId** | **String**| the queue id - used for filtering results in searches. | [optional] |
-| **agentId** | **String**| the agent id - used for filtering results in searches. | [optional] |
-| **_operator** | **String**| If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. | [optional]<br />**Values**: and ("AND"), or ("OR") |
-{: class="table-striped"}
-
-
-### Return type
-
-[**KeywordSetEntityListing**](KeywordSetEntityListing.html)
-
 <a name="getQualityPublishedform"></a>
 
 # **getQualityPublishedform**
@@ -2631,60 +2400,6 @@ QualityAPI.postQualityFormsSurveys(body: body) { (response, error) in
 
 [**SurveyForm**](SurveyForm.html)
 
-<a name="postQualityKeywordsets"></a>
-
-# **postQualityKeywordsets**
-
-
-
-> [KeywordSet](KeywordSet.html) postQualityKeywordsets(body, expand)
-
-Create a Keyword Set
-
-
-
-Wraps POST /api/v2/quality/keywordsets  
-
-Requires ANY permissions: 
-
-* quality:keywordset:add
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: KeywordSet = new KeywordSet(...) // keywordSet
-let expand: String = "" // queueId
-
-// Code example
-QualityAPI.postQualityKeywordsets(body: body, expand: expand) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("QualityAPI.postQualityKeywordsets was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet | |
-| **expand** | **String**| queueId | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
-
 <a name="postQualityPublishedforms"></a>
 
 # **postQualityPublishedforms**
@@ -2840,57 +2555,6 @@ QualityAPI.postQualityPublishedformsSurveys(body: body) { (response, error) in
 ### Return type
 
 [**SurveyForm**](SurveyForm.html)
-
-<a name="postQualitySpotability"></a>
-
-# **postQualitySpotability**
-
-
-
-> [KeywordSet](KeywordSet.html) postQualitySpotability(body)
-
-Retrieve the spotability statistic
-
-
-
-Wraps POST /api/v2/quality/spotability  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: KeywordSet = new KeywordSet(...) // Keyword Set
-
-// Code example
-QualityAPI.postQualitySpotability(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("QualityAPI.postQualitySpotability was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**KeywordSet**](KeywordSet.html)| Keyword Set | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
 
 <a name="postQualitySurveysScoring"></a>
 
@@ -3218,60 +2882,6 @@ QualityAPI.putQualityFormsSurvey(formId: formId, body: body) { (response, error)
 ### Return type
 
 [**SurveyForm**](SurveyForm.html)
-
-<a name="putQualityKeywordset"></a>
-
-# **putQualityKeywordset**
-
-
-
-> [KeywordSet](KeywordSet.html) putQualityKeywordset(keywordSetId, body)
-
-Update a keywordSet to the specified keywordSet via PUT.
-
-
-
-Wraps PUT /api/v2/quality/keywordsets/{keywordSetId}  
-
-Requires ANY permissions: 
-
-* quality:keywordset:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let keywordSetId: String = "" // KeywordSet ID
-let body: KeywordSet = new KeywordSet(...) // keywordSet
-
-// Code example
-QualityAPI.putQualityKeywordset(keywordSetId: keywordSetId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("QualityAPI.putQualityKeywordset was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **keywordSetId** | **String**| KeywordSet ID | |
-| **body** | [**KeywordSet**](KeywordSet.html)| keywordSet | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**KeywordSet**](KeywordSet.html)
 
 <a name="putQualitySurveysScorable"></a>
 

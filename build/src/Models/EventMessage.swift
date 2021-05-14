@@ -37,6 +37,7 @@ public class EventMessage: Codable {
         case contactListFilterInternalError = "CONTACT_LIST_FILTER_INTERNAL_ERROR"
         case contactColumnsLimitExceeded = "CONTACT_COLUMNS_LIMIT_EXCEEDED"
         case contactColumnLengthLimitExceeded = "CONTACT_COLUMN_LENGTH_LIMIT_EXCEEDED"
+        case contactIdLengthLimitExceeded = "CONTACT_ID_LENGTH_LIMIT_EXCEEDED"
         case contactDatumLengthLimitExceeded = "CONTACT_DATUM_LENGTH_LIMIT_EXCEEDED"
         case contactZipCodeColumnValueInvalid = "CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID"
         case dataActionExecutionFailed = "DATA_ACTION_EXECUTION_FAILED"

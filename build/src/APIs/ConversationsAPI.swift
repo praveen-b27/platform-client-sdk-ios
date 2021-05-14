@@ -629,9 +629,8 @@ open class ConversationsAPI {
   "evaluations" : [ {
     "formId" : "aeiou",
     "queueId" : "aeiou",
-    "oTotalScore" : 123456789,
-    "oTotalCriticalScore" : 123456789,
     "contextId" : "aeiou",
+    "getoTotalScore" : 123456789,
     "userId" : "aeiou",
     "evaluationId" : "aeiou",
     "deleted" : true,
@@ -639,16 +638,17 @@ open class ConversationsAPI {
     "eventTime" : "2000-01-23T04:56:07.000+0000",
     "rescored" : true,
     "calibrationId" : "aeiou",
-    "evaluatorId" : "aeiou"
+    "evaluatorId" : "aeiou",
+    "getoTotalCriticalScore" : 123456789
   } ],
   "conversationId" : "aeiou",
   "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
   "surveys" : [ {
     "queueId" : "aeiou",
     "surveyStatus" : "aeiou",
-    "oSurveyTotalScore" : 123456789,
     "surveyId" : "aeiou",
     "surveyFormName" : "aeiou",
+    "getoSurveyTotalScore" : 123456789,
     "eventTime" : "2000-01-23T04:56:07.000+0000",
     "surveyFormId" : "aeiou",
     "surveyFormContextId" : "aeiou",
@@ -660,8 +660,8 @@ open class ConversationsAPI {
   "externalTag" : "aeiou",
   "resolutions" : [ {
     "queueId" : "aeiou",
+    "getnNextContactAvoided" : 123456789,
     "eventTime" : "2000-01-23T04:56:07.000+0000",
-    "nNextContactAvoided" : 123456789,
     "userId" : "aeiou"
   } ],
   "originatingDirection" : "aeiou",
@@ -888,9 +888,8 @@ open class ConversationsAPI {
     "evaluations" : [ {
       "formId" : "aeiou",
       "queueId" : "aeiou",
-      "oTotalScore" : 123456789,
-      "oTotalCriticalScore" : 123456789,
       "contextId" : "aeiou",
+      "getoTotalScore" : 123456789,
       "userId" : "aeiou",
       "evaluationId" : "aeiou",
       "deleted" : true,
@@ -898,16 +897,17 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "getoTotalCriticalScore" : 123456789
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
-      "oSurveyTotalScore" : 123456789,
       "surveyId" : "aeiou",
       "surveyFormName" : "aeiou",
+      "getoSurveyTotalScore" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
@@ -919,8 +919,8 @@ open class ConversationsAPI {
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
+      "getnNextContactAvoided" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -1227,9 +1227,8 @@ open class ConversationsAPI {
     "evaluations" : [ {
       "formId" : "aeiou",
       "queueId" : "aeiou",
-      "oTotalScore" : 123456789,
-      "oTotalCriticalScore" : 123456789,
       "contextId" : "aeiou",
+      "getoTotalScore" : 123456789,
       "userId" : "aeiou",
       "evaluationId" : "aeiou",
       "deleted" : true,
@@ -1237,16 +1236,17 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "getoTotalCriticalScore" : 123456789
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
-      "oSurveyTotalScore" : 123456789,
       "surveyId" : "aeiou",
       "surveyFormName" : "aeiou",
+      "getoSurveyTotalScore" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
@@ -1258,8 +1258,8 @@ open class ConversationsAPI {
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
+      "getnNextContactAvoided" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -17367,9 +17367,8 @@ open class ConversationsAPI {
     "evaluations" : [ {
       "formId" : "aeiou",
       "queueId" : "aeiou",
-      "oTotalScore" : 123456789,
-      "oTotalCriticalScore" : 123456789,
       "contextId" : "aeiou",
+      "getoTotalScore" : 123456789,
       "userId" : "aeiou",
       "evaluationId" : "aeiou",
       "deleted" : true,
@@ -17377,16 +17376,17 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "getoTotalCriticalScore" : 123456789
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
-      "oSurveyTotalScore" : 123456789,
       "surveyId" : "aeiou",
       "surveyFormName" : "aeiou",
+      "getoSurveyTotalScore" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
@@ -17398,8 +17398,8 @@ open class ConversationsAPI {
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
+      "getnNextContactAvoided" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
-      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",

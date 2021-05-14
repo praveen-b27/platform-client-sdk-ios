@@ -342,25 +342,15 @@ open class RecordingAPI {
       "timestamp" : "2000-01-23T04:56:07.000+0000"
     } ],
     "annotations" : [ {
-      "timeEnd" : "aeiou",
-      "keywordName" : "aeiou",
-      "keywordConfidenceThreshold" : "aeiou",
-      "recordingLocation" : 123456789,
-      "customerScoreModifier" : "aeiou",
-      "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "type" : "aeiou",
-      "absoluteDurationMs" : 123456789,
-      "agentScoreModifier" : "aeiou",
-      "recordingDurationMs" : 123456789,
       "absoluteLocation" : 123456789,
-      "timeBegin" : "aeiou",
+      "recordingLocation" : 123456789,
+      "selfUri" : "aeiou",
       "name" : "aeiou",
+      "description" : "aeiou",
       "location" : 123456789,
       "id" : "aeiou",
-      "keywordSetId" : "aeiou",
-      "keywordSetName" : "aeiou",
+      "type" : "aeiou",
+      "absoluteDurationMs" : 123456789,
       "durationMs" : 123456789,
       "user" : {
         "addresses" : [ "" ],
@@ -620,7 +610,7 @@ open class RecordingAPI {
           "longitude" : 1.3579000000000001069366817318950779736042022705078125
         }
       },
-      "utterance" : "aeiou"
+      "recordingDurationMs" : 123456789
     } ],
     "archiveMedium" : "aeiou",
     "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -1327,25 +1317,15 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "annotations" : [ {
-    "timeEnd" : "aeiou",
-    "keywordName" : "aeiou",
-    "keywordConfidenceThreshold" : "aeiou",
-    "recordingLocation" : 123456789,
-    "customerScoreModifier" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "type" : "aeiou",
-    "absoluteDurationMs" : 123456789,
-    "agentScoreModifier" : "aeiou",
-    "recordingDurationMs" : 123456789,
     "absoluteLocation" : 123456789,
-    "timeBegin" : "aeiou",
+    "recordingLocation" : 123456789,
+    "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "location" : 123456789,
     "id" : "aeiou",
-    "keywordSetId" : "aeiou",
-    "keywordSetName" : "aeiou",
+    "type" : "aeiou",
+    "absoluteDurationMs" : 123456789,
     "durationMs" : 123456789,
     "user" : {
       "addresses" : [ "" ],
@@ -1605,7 +1585,7 @@ open class RecordingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "utterance" : "aeiou"
+    "recordingDurationMs" : 123456789
   } ],
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -1754,25 +1734,15 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "timeEnd" : "aeiou",
-  "keywordName" : "aeiou",
-  "keywordConfidenceThreshold" : "aeiou",
-  "recordingLocation" : 123456789,
-  "customerScoreModifier" : "aeiou",
-  "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "type" : "aeiou",
-  "absoluteDurationMs" : 123456789,
-  "agentScoreModifier" : "aeiou",
-  "recordingDurationMs" : 123456789,
   "absoluteLocation" : 123456789,
-  "timeBegin" : "aeiou",
+  "recordingLocation" : 123456789,
+  "selfUri" : "aeiou",
   "name" : "aeiou",
+  "description" : "aeiou",
   "location" : 123456789,
   "id" : "aeiou",
-  "keywordSetId" : "aeiou",
-  "keywordSetName" : "aeiou",
+  "type" : "aeiou",
+  "absoluteDurationMs" : 123456789,
   "durationMs" : 123456789,
   "user" : {
     "addresses" : [ "" ],
@@ -2032,7 +2002,7 @@ open class RecordingAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "utterance" : "aeiou"
+  "recordingDurationMs" : 123456789
 }}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -2108,25 +2078,15 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
-  "timeEnd" : "aeiou",
-  "keywordName" : "aeiou",
-  "keywordConfidenceThreshold" : "aeiou",
-  "recordingLocation" : 123456789,
-  "customerScoreModifier" : "aeiou",
-  "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "type" : "aeiou",
-  "absoluteDurationMs" : 123456789,
-  "agentScoreModifier" : "aeiou",
-  "recordingDurationMs" : 123456789,
   "absoluteLocation" : 123456789,
-  "timeBegin" : "aeiou",
+  "recordingLocation" : 123456789,
+  "selfUri" : "aeiou",
   "name" : "aeiou",
+  "description" : "aeiou",
   "location" : 123456789,
   "id" : "aeiou",
-  "keywordSetId" : "aeiou",
-  "keywordSetName" : "aeiou",
+  "type" : "aeiou",
+  "absoluteDurationMs" : 123456789,
   "durationMs" : 123456789,
   "user" : {
     "addresses" : [ "" ],
@@ -2386,7 +2346,7 @@ open class RecordingAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "utterance" : "aeiou"
+  "recordingDurationMs" : 123456789
 } ]}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -2459,25 +2419,15 @@ open class RecordingAPI {
   "conversationId" : "aeiou",
   "selfUri" : "aeiou",
   "annotations" : [ {
-    "timeEnd" : "aeiou",
-    "keywordName" : "aeiou",
-    "keywordConfidenceThreshold" : "aeiou",
-    "recordingLocation" : 123456789,
-    "customerScoreModifier" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "type" : "aeiou",
-    "absoluteDurationMs" : 123456789,
-    "agentScoreModifier" : "aeiou",
-    "recordingDurationMs" : 123456789,
     "absoluteLocation" : 123456789,
-    "timeBegin" : "aeiou",
+    "recordingLocation" : 123456789,
+    "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "location" : 123456789,
     "id" : "aeiou",
-    "keywordSetId" : "aeiou",
-    "keywordSetName" : "aeiou",
+    "type" : "aeiou",
+    "absoluteDurationMs" : 123456789,
     "durationMs" : 123456789,
     "user" : {
       "addresses" : [ "" ],
@@ -2737,7 +2687,7 @@ open class RecordingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "utterance" : "aeiou"
+    "recordingDurationMs" : 123456789
   } ],
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -2825,25 +2775,15 @@ open class RecordingAPI {
   "conversationId" : "aeiou",
   "selfUri" : "aeiou",
   "annotations" : [ {
-    "timeEnd" : "aeiou",
-    "keywordName" : "aeiou",
-    "keywordConfidenceThreshold" : "aeiou",
-    "recordingLocation" : 123456789,
-    "customerScoreModifier" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "type" : "aeiou",
-    "absoluteDurationMs" : 123456789,
-    "agentScoreModifier" : "aeiou",
-    "recordingDurationMs" : 123456789,
     "absoluteLocation" : 123456789,
-    "timeBegin" : "aeiou",
+    "recordingLocation" : 123456789,
+    "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "location" : 123456789,
     "id" : "aeiou",
-    "keywordSetId" : "aeiou",
-    "keywordSetName" : "aeiou",
+    "type" : "aeiou",
+    "absoluteDurationMs" : 123456789,
     "durationMs" : 123456789,
     "user" : {
       "addresses" : [ "" ],
@@ -3103,7 +3043,7 @@ open class RecordingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "utterance" : "aeiou"
+    "recordingDurationMs" : 123456789
   } ],
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -3430,25 +3370,15 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "annotations" : [ {
-    "timeEnd" : "aeiou",
-    "keywordName" : "aeiou",
-    "keywordConfidenceThreshold" : "aeiou",
-    "recordingLocation" : 123456789,
-    "customerScoreModifier" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "type" : "aeiou",
-    "absoluteDurationMs" : 123456789,
-    "agentScoreModifier" : "aeiou",
-    "recordingDurationMs" : 123456789,
     "absoluteLocation" : 123456789,
-    "timeBegin" : "aeiou",
+    "recordingLocation" : 123456789,
+    "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "location" : 123456789,
     "id" : "aeiou",
-    "keywordSetId" : "aeiou",
-    "keywordSetName" : "aeiou",
+    "type" : "aeiou",
+    "absoluteDurationMs" : 123456789,
     "durationMs" : 123456789,
     "user" : {
       "addresses" : [ "" ],
@@ -3708,7 +3638,7 @@ open class RecordingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "utterance" : "aeiou"
+    "recordingDurationMs" : 123456789
   } ],
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -4057,25 +3987,15 @@ open class RecordingAPI {
       "timestamp" : "2000-01-23T04:56:07.000+0000"
     } ],
     "annotations" : [ {
-      "timeEnd" : "aeiou",
-      "keywordName" : "aeiou",
-      "keywordConfidenceThreshold" : "aeiou",
-      "recordingLocation" : 123456789,
-      "customerScoreModifier" : "aeiou",
-      "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-      "selfUri" : "aeiou",
-      "description" : "aeiou",
-      "type" : "aeiou",
-      "absoluteDurationMs" : 123456789,
-      "agentScoreModifier" : "aeiou",
-      "recordingDurationMs" : 123456789,
       "absoluteLocation" : 123456789,
-      "timeBegin" : "aeiou",
+      "recordingLocation" : 123456789,
+      "selfUri" : "aeiou",
       "name" : "aeiou",
+      "description" : "aeiou",
       "location" : 123456789,
       "id" : "aeiou",
-      "keywordSetId" : "aeiou",
-      "keywordSetName" : "aeiou",
+      "type" : "aeiou",
+      "absoluteDurationMs" : 123456789,
       "durationMs" : 123456789,
       "user" : {
         "addresses" : [ "" ],
@@ -4335,7 +4255,7 @@ open class RecordingAPI {
           "longitude" : 1.3579000000000001069366817318950779736042022705078125
         }
       },
-      "utterance" : "aeiou"
+      "recordingDurationMs" : 123456789
     } ],
     "archiveMedium" : "aeiou",
     "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -4760,25 +4680,15 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "annotations" : [ {
-    "timeEnd" : "aeiou",
-    "keywordName" : "aeiou",
-    "keywordConfidenceThreshold" : "aeiou",
-    "recordingLocation" : 123456789,
-    "customerScoreModifier" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "type" : "aeiou",
-    "absoluteDurationMs" : 123456789,
-    "agentScoreModifier" : "aeiou",
-    "recordingDurationMs" : 123456789,
     "absoluteLocation" : 123456789,
-    "timeBegin" : "aeiou",
+    "recordingLocation" : 123456789,
+    "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "location" : 123456789,
     "id" : "aeiou",
-    "keywordSetId" : "aeiou",
-    "keywordSetName" : "aeiou",
+    "type" : "aeiou",
+    "absoluteDurationMs" : 123456789,
     "durationMs" : 123456789,
     "user" : {
       "addresses" : [ "" ],
@@ -5038,7 +4948,7 @@ open class RecordingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "utterance" : "aeiou"
+    "recordingDurationMs" : 123456789
   } ],
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -5433,25 +5343,15 @@ open class RecordingAPI {
         "timestamp" : "2000-01-23T04:56:07.000+0000"
       } ],
       "annotations" : [ {
-        "timeEnd" : "aeiou",
-        "keywordName" : "aeiou",
-        "keywordConfidenceThreshold" : "aeiou",
-        "recordingLocation" : 123456789,
-        "customerScoreModifier" : "aeiou",
-        "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-        "selfUri" : "aeiou",
-        "description" : "aeiou",
-        "type" : "aeiou",
-        "absoluteDurationMs" : 123456789,
-        "agentScoreModifier" : "aeiou",
-        "recordingDurationMs" : 123456789,
         "absoluteLocation" : 123456789,
-        "timeBegin" : "aeiou",
+        "recordingLocation" : 123456789,
+        "selfUri" : "aeiou",
         "name" : "aeiou",
+        "description" : "aeiou",
         "location" : 123456789,
         "id" : "aeiou",
-        "keywordSetId" : "aeiou",
-        "keywordSetName" : "aeiou",
+        "type" : "aeiou",
+        "absoluteDurationMs" : 123456789,
         "durationMs" : 123456789,
         "user" : {
           "addresses" : [ "" ],
@@ -5711,7 +5611,7 @@ open class RecordingAPI {
             "longitude" : 1.3579000000000001069366817318950779736042022705078125
           }
         },
-        "utterance" : "aeiou"
+        "recordingDurationMs" : 123456789
       } ],
       "archiveMedium" : "aeiou",
       "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -12101,25 +12001,15 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "timeEnd" : "aeiou",
-  "keywordName" : "aeiou",
-  "keywordConfidenceThreshold" : "aeiou",
-  "recordingLocation" : 123456789,
-  "customerScoreModifier" : "aeiou",
-  "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "type" : "aeiou",
-  "absoluteDurationMs" : 123456789,
-  "agentScoreModifier" : "aeiou",
-  "recordingDurationMs" : 123456789,
   "absoluteLocation" : 123456789,
-  "timeBegin" : "aeiou",
+  "recordingLocation" : 123456789,
+  "selfUri" : "aeiou",
   "name" : "aeiou",
+  "description" : "aeiou",
   "location" : 123456789,
   "id" : "aeiou",
-  "keywordSetId" : "aeiou",
-  "keywordSetName" : "aeiou",
+  "type" : "aeiou",
+  "absoluteDurationMs" : 123456789,
   "durationMs" : 123456789,
   "user" : {
     "addresses" : [ "" ],
@@ -12379,7 +12269,7 @@ open class RecordingAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "utterance" : "aeiou"
+  "recordingDurationMs" : 123456789
 }}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -14977,25 +14867,15 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "annotations" : [ {
-    "timeEnd" : "aeiou",
-    "keywordName" : "aeiou",
-    "keywordConfidenceThreshold" : "aeiou",
-    "recordingLocation" : 123456789,
-    "customerScoreModifier" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "type" : "aeiou",
-    "absoluteDurationMs" : 123456789,
-    "agentScoreModifier" : "aeiou",
-    "recordingDurationMs" : 123456789,
     "absoluteLocation" : 123456789,
-    "timeBegin" : "aeiou",
+    "recordingLocation" : 123456789,
+    "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "location" : 123456789,
     "id" : "aeiou",
-    "keywordSetId" : "aeiou",
-    "keywordSetName" : "aeiou",
+    "type" : "aeiou",
+    "absoluteDurationMs" : 123456789,
     "durationMs" : 123456789,
     "user" : {
       "addresses" : [ "" ],
@@ -15255,7 +15135,7 @@ open class RecordingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "utterance" : "aeiou"
+    "recordingDurationMs" : 123456789
   } ],
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",
@@ -15381,25 +15261,15 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "timeEnd" : "aeiou",
-  "keywordName" : "aeiou",
-  "keywordConfidenceThreshold" : "aeiou",
-  "recordingLocation" : 123456789,
-  "customerScoreModifier" : "aeiou",
-  "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-  "selfUri" : "aeiou",
-  "description" : "aeiou",
-  "type" : "aeiou",
-  "absoluteDurationMs" : 123456789,
-  "agentScoreModifier" : "aeiou",
-  "recordingDurationMs" : 123456789,
   "absoluteLocation" : 123456789,
-  "timeBegin" : "aeiou",
+  "recordingLocation" : 123456789,
+  "selfUri" : "aeiou",
   "name" : "aeiou",
+  "description" : "aeiou",
   "location" : 123456789,
   "id" : "aeiou",
-  "keywordSetId" : "aeiou",
-  "keywordSetName" : "aeiou",
+  "type" : "aeiou",
+  "absoluteDurationMs" : 123456789,
   "durationMs" : 123456789,
   "user" : {
     "addresses" : [ "" ],
@@ -15659,7 +15529,7 @@ open class RecordingAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "utterance" : "aeiou"
+  "recordingDurationMs" : 123456789
 }}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -15958,25 +15828,15 @@ open class RecordingAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "annotations" : [ {
-    "timeEnd" : "aeiou",
-    "keywordName" : "aeiou",
-    "keywordConfidenceThreshold" : "aeiou",
-    "recordingLocation" : 123456789,
-    "customerScoreModifier" : "aeiou",
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
-    "description" : "aeiou",
-    "type" : "aeiou",
-    "absoluteDurationMs" : 123456789,
-    "agentScoreModifier" : "aeiou",
-    "recordingDurationMs" : 123456789,
     "absoluteLocation" : 123456789,
-    "timeBegin" : "aeiou",
+    "recordingLocation" : 123456789,
+    "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "location" : 123456789,
     "id" : "aeiou",
-    "keywordSetId" : "aeiou",
-    "keywordSetName" : "aeiou",
+    "type" : "aeiou",
+    "absoluteDurationMs" : 123456789,
     "durationMs" : 123456789,
     "user" : {
       "addresses" : [ "" ],
@@ -16236,7 +16096,7 @@ open class RecordingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "utterance" : "aeiou"
+    "recordingDurationMs" : 123456789
   } ],
   "archiveMedium" : "aeiou",
   "exportedDate" : "2000-01-23T04:56:07.000+0000",

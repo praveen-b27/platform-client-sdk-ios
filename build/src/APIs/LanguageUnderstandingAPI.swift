@@ -248,7 +248,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -259,6 +260,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : "",
     "entityTypes" : [ {
       "name" : "aeiou",
@@ -421,7 +426,8 @@ open class LanguageUnderstandingAPI {
         "entityTypeBindings" : [ {
           "entityType" : "aeiou",
           "entityName" : "aeiou"
-        } ]
+        } ],
+        "entityNameReferences" : [ "aeiou" ]
       } ],
       "dateTrained" : "2000-01-23T04:56:07.000+0000",
       "trainingStatus" : "aeiou",
@@ -432,6 +438,10 @@ open class LanguageUnderstandingAPI {
       "published" : true,
       "datePublished" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "entities" : [ {
+        "name" : "aeiou",
+        "type" : "aeiou"
+      } ],
       "domain" : {
         "lastPublishedVersion" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -607,7 +617,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -618,6 +629,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : {
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -736,7 +751,8 @@ open class LanguageUnderstandingAPI {
     "entityTypeBindings" : [ {
       "entityType" : "aeiou",
       "entityName" : "aeiou"
-    } ]
+    } ],
+    "entityNameReferences" : [ "aeiou" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+0000",
   "trainingStatus" : "aeiou",
@@ -747,6 +763,10 @@ open class LanguageUnderstandingAPI {
   "published" : true,
   "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "entities" : [ {
+    "name" : "aeiou",
+    "type" : "aeiou"
+  } ],
   "domain" : {
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -875,7 +895,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -886,6 +907,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : {
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -1005,7 +1030,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -1016,6 +1042,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : {
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -1151,7 +1181,8 @@ open class LanguageUnderstandingAPI {
         "entityTypeBindings" : [ {
           "entityType" : "aeiou",
           "entityName" : "aeiou"
-        } ]
+        } ],
+        "entityNameReferences" : [ "aeiou" ]
       } ],
       "dateTrained" : "2000-01-23T04:56:07.000+0000",
       "trainingStatus" : "aeiou",
@@ -1162,6 +1193,10 @@ open class LanguageUnderstandingAPI {
       "published" : true,
       "datePublished" : "2000-01-23T04:56:07.000+0000",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "entities" : [ {
+        "name" : "aeiou",
+        "type" : "aeiou"
+      } ],
       "domain" : "",
       "entityTypes" : [ {
         "name" : "aeiou",
@@ -1278,7 +1313,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -1289,6 +1325,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : "",
     "entityTypes" : [ {
       "name" : "aeiou",
@@ -1402,7 +1442,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -1413,6 +1454,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : {
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -1542,7 +1587,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -1553,6 +1599,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : {
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -1660,7 +1710,8 @@ open class LanguageUnderstandingAPI {
     "entityTypeBindings" : [ {
       "entityType" : "aeiou",
       "entityName" : "aeiou"
-    } ]
+    } ],
+    "entityNameReferences" : [ "aeiou" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+0000",
   "trainingStatus" : "aeiou",
@@ -1671,6 +1722,10 @@ open class LanguageUnderstandingAPI {
   "published" : true,
   "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "entities" : [ {
+    "name" : "aeiou",
+    "type" : "aeiou"
+  } ],
   "domain" : {
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -1781,7 +1836,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -1792,6 +1848,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : {
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -1901,7 +1961,8 @@ open class LanguageUnderstandingAPI {
     "entityTypeBindings" : [ {
       "entityType" : "aeiou",
       "entityName" : "aeiou"
-    } ]
+    } ],
+    "entityNameReferences" : [ "aeiou" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+0000",
   "trainingStatus" : "aeiou",
@@ -1912,6 +1973,10 @@ open class LanguageUnderstandingAPI {
   "published" : true,
   "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "entities" : [ {
+    "name" : "aeiou",
+    "type" : "aeiou"
+  } ],
   "domain" : {
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -2019,7 +2084,8 @@ open class LanguageUnderstandingAPI {
       "entityTypeBindings" : [ {
         "entityType" : "aeiou",
         "entityName" : "aeiou"
-      } ]
+      } ],
+      "entityNameReferences" : [ "aeiou" ]
     } ],
     "dateTrained" : "2000-01-23T04:56:07.000+0000",
     "trainingStatus" : "aeiou",
@@ -2030,6 +2096,10 @@ open class LanguageUnderstandingAPI {
     "published" : true,
     "datePublished" : "2000-01-23T04:56:07.000+0000",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "entities" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "domain" : "",
     "entityTypes" : [ {
       "name" : "aeiou",
@@ -2123,7 +2193,8 @@ open class LanguageUnderstandingAPI {
     "entityTypeBindings" : [ {
       "entityType" : "aeiou",
       "entityName" : "aeiou"
-    } ]
+    } ],
+    "entityNameReferences" : [ "aeiou" ]
   } ],
   "dateTrained" : "2000-01-23T04:56:07.000+0000",
   "trainingStatus" : "aeiou",
@@ -2134,6 +2205,10 @@ open class LanguageUnderstandingAPI {
   "published" : true,
   "datePublished" : "2000-01-23T04:56:07.000+0000",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "entities" : [ {
+    "name" : "aeiou",
+    "type" : "aeiou"
+  } ],
   "domain" : {
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",

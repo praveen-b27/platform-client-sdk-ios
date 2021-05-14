@@ -31,30 +31,10 @@ public class Annotation: Codable {
     public var user: User?
     /** Text of annotation. */
     public var _description: String?
-    /** The word or phrase which is being looked for with speech recognition. */
-    public var keywordName: String?
-    /** Actual confidence that this is an accurate match. */
-    public var confidence: Float?
-    /** A unique identifier for the keyword set to which this spotted keyword belongs. */
-    public var keywordSetId: String?
-    /** The keyword set to which this spotted keyword belongs. */
-    public var keywordSetName: String?
-    /** The phonetic spellings for the phrase and alternate spellings. */
-    public var utterance: String?
-    /** Beginning time offset of the keyword spot match. */
-    public var timeBegin: String?
-    /** Ending time offset of the keyword spot match. */
-    public var timeEnd: String?
-    /** Configured sensitivity threshold that can be increased to lower false positives or decreased to reduce false negatives. */
-    public var keywordConfidenceThreshold: String?
-    /** A modifier to the evaluation score when the phrase is spotted in the agent channel. */
-    public var agentScoreModifier: String?
-    /** A modifier to the evaluation score when the phrase is spotted in the customer channel. */
-    public var customerScoreModifier: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, type: String?, location: Int64?, durationMs: Int64?, absoluteLocation: Int64?, absoluteDurationMs: Int64?, recordingLocation: Int64?, recordingDurationMs: Int64?, user: User?, _description: String?, keywordName: String?, confidence: Float?, keywordSetId: String?, keywordSetName: String?, utterance: String?, timeBegin: String?, timeEnd: String?, keywordConfidenceThreshold: String?, agentScoreModifier: String?, customerScoreModifier: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, type: String?, location: Int64?, durationMs: Int64?, absoluteLocation: Int64?, absoluteDurationMs: Int64?, recordingLocation: Int64?, recordingDurationMs: Int64?, user: User?, _description: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -78,26 +58,6 @@ public class Annotation: Codable {
         
         self._description = _description
         
-        self.keywordName = keywordName
-        
-        self.confidence = confidence
-        
-        self.keywordSetId = keywordSetId
-        
-        self.keywordSetName = keywordSetName
-        
-        self.utterance = utterance
-        
-        self.timeBegin = timeBegin
-        
-        self.timeEnd = timeEnd
-        
-        self.keywordConfidenceThreshold = keywordConfidenceThreshold
-        
-        self.agentScoreModifier = agentScoreModifier
-        
-        self.customerScoreModifier = customerScoreModifier
-        
         self.selfUri = selfUri
         
     }
@@ -114,16 +74,6 @@ public class Annotation: Codable {
         case recordingDurationMs
         case user
         case _description = "description"
-        case keywordName
-        case confidence
-        case keywordSetId
-        case keywordSetName
-        case utterance
-        case timeBegin
-        case timeEnd
-        case keywordConfidenceThreshold
-        case agentScoreModifier
-        case customerScoreModifier
         case selfUri
     }
 

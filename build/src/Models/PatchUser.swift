@@ -15,30 +15,18 @@ public class PatchUser: Codable {
     public var _id: String?
     /** The value that denotes if acdAutoAnswer is set on the user */
     public var acdAutoAnswer: Bool?
-    public var certifications: [String]?
-    public var biography: Biography?
-    public var employerInfo: EmployerInfo?
 
-    public init(_id: String?, acdAutoAnswer: Bool?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?) {
+    public init(_id: String?, acdAutoAnswer: Bool?) {
         
         self._id = _id
         
         self.acdAutoAnswer = acdAutoAnswer
-        
-        self.certifications = certifications
-        
-        self.biography = biography
-        
-        self.employerInfo = employerInfo
         
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case acdAutoAnswer
-        case certifications
-        case biography
-        case employerInfo
     }
 
 

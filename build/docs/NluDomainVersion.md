@@ -20,6 +20,7 @@ title: NluDomainVersion
 | **evaluationStatus** | **String** | The evaluation status of the NLU domain version. | [optional] |
 | **intents** | [**[IntentDefinition]**](IntentDefinition.html) | The intents defined for this NLU domain version. | [optional] |
 | **entityTypes** | [**[NamedEntityTypeDefinition]**](NamedEntityTypeDefinition.html) | The entity types defined for this NLU domain version. | [optional] |
+| **entities** | [**[NamedEntityDefinition]**](NamedEntityDefinition.html) | The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

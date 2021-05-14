@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postCoachingAppointmentConversations**](CoachingAPI.html#postCoachingAppointmentConversations) | Add a conversation to an appointment |
 | [**postCoachingAppointments**](CoachingAPI.html#postCoachingAppointments) | Create a new appointment |
 | [**postCoachingAppointmentsAggregatesQuery**](CoachingAPI.html#postCoachingAppointmentsAggregatesQuery) | Retrieve aggregated appointment data |
+| [**postCoachingScheduleslotsQuery**](CoachingAPI.html#postCoachingScheduleslotsQuery) | Get list of possible slots where a coaching appointment can be scheduled. |
 {: class="table-striped"}
 
 <a name="deleteCoachingAppointment"></a>
@@ -1030,4 +1031,56 @@ CoachingAPI.postCoachingAppointmentsAggregatesQuery(body: body) { (response, err
 ### Return type
 
 [**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse.html)
+
+<a name="postCoachingScheduleslotsQuery"></a>
+
+# **postCoachingScheduleslotsQuery**
+
+
+
+> [CoachingSlotsResponse](CoachingSlotsResponse.html) postCoachingScheduleslotsQuery(body)
+
+Get list of possible slots where a coaching appointment can be scheduled.
+
+
+
+Wraps POST /api/v2/coaching/scheduleslots/query  
+
+Requires ANY permissions: 
+
+* coaching:scheduleSlot:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CoachingSlotsRequest = new CoachingSlotsRequest(...) // The slot search request
+
+// Code example
+CoachingAPI.postCoachingScheduleslotsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("CoachingAPI.postCoachingScheduleslotsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CoachingSlotsRequest**](CoachingSlotsRequest.html)| The slot search request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CoachingSlotsResponse**](CoachingSlotsResponse.html)
 

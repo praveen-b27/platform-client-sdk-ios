@@ -86,6 +86,7 @@ public class AuditQueryEntity: Codable {
         case voicemailPolicy = "VoicemailPolicy"
         case voicemailUserPolicy = "VoicemailUserPolicy"
         case workPlan = "WorkPlan"
+        case workspace = "Workspace"
         case wrapupCode = "WrapupCode"
         case wrapUpCodeMapping = "WrapUpCodeMapping"
     }
@@ -93,6 +94,7 @@ public class AuditQueryEntity: Codable {
         case create = "Create"
         case view = "View"
         case update = "Update"
+        case move = "Move"
         case delete = "Delete"
         case deleteAll = "DeleteAll"
         case download = "Download"

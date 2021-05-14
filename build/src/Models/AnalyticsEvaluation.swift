@@ -33,10 +33,12 @@ public class AnalyticsEvaluation: Codable {
     public var rescored: Bool?
     /** ID of the agent the evaluation was performed against */
     public var userId: String?
-    public var oTotalCriticalScore: Int64?
-    public var oTotalScore: Int64?
+    /** Total critical score of the evaluation */
+    public var getoTotalCriticalScore: Int64?
+    /** Total score of the evaluation */
+    public var getoTotalScore: Int64?
 
-    public init(calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
+    public init(calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, rescored: Bool?, userId: String?, getoTotalCriticalScore: Int64?, getoTotalScore: Int64?) {
         
         self.calibrationId = calibrationId
         
@@ -60,9 +62,9 @@ public class AnalyticsEvaluation: Codable {
         
         self.userId = userId
         
-        self.oTotalCriticalScore = oTotalCriticalScore
+        self.getoTotalCriticalScore = getoTotalCriticalScore
         
-        self.oTotalScore = oTotalScore
+        self.getoTotalScore = getoTotalScore
         
     }
 

@@ -50,10 +50,12 @@ public class NluDomainVersion: Codable {
     public var intents: [IntentDefinition]?
     /** The entity types defined for this NLU domain version. */
     public var entityTypes: [NamedEntityTypeDefinition]?
+    /** The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings */
+    public var entities: [NamedEntityDefinition]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, domain: NluDomain?, _description: String?, language: String?, published: Bool?, dateCreated: Date?, dateModified: Date?, dateTrained: Date?, datePublished: Date?, trainingStatus: TrainingStatus?, evaluationStatus: EvaluationStatus?, intents: [IntentDefinition]?, entityTypes: [NamedEntityTypeDefinition]?, selfUri: String?) {
+    public init(_id: String?, domain: NluDomain?, _description: String?, language: String?, published: Bool?, dateCreated: Date?, dateModified: Date?, dateTrained: Date?, datePublished: Date?, trainingStatus: TrainingStatus?, evaluationStatus: EvaluationStatus?, intents: [IntentDefinition]?, entityTypes: [NamedEntityTypeDefinition]?, entities: [NamedEntityDefinition]?, selfUri: String?) {
         
         self._id = _id
         
@@ -81,6 +83,8 @@ public class NluDomainVersion: Codable {
         
         self.entityTypes = entityTypes
         
+        self.entities = entities
+        
         self.selfUri = selfUri
         
     }
@@ -99,6 +103,7 @@ public class NluDomainVersion: Codable {
         case evaluationStatus
         case intents
         case entityTypes
+        case entities
         case selfUri
     }
 

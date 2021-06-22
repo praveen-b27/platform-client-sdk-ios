@@ -8,12 +8,11 @@
 import Foundation
 
 
-/** User reaction to public message */
+/** User reaction to public message. */
 
 public class ContentReaction: Codable {
 
     public enum ReactionType: String, Codable { 
-        case _none = "None"
         case like = "Like"
         case love = "Love"
         case wow = "Wow"
@@ -24,9 +23,9 @@ public class ContentReaction: Codable {
         case pride = "Pride"
         case care = "Care"
     }
-    /** Type of reaction */
+    /** Type of reaction. */
     public var reactionType: ReactionType?
-    /** Number of users that reacted this way to this public message */
+    /** Number of users that reacted this way to the message. */
     public var count: Int?
 
     public init(reactionType: ReactionType?, count: Int?) {

@@ -19,6 +19,8 @@ public class Trustee: Codable {
     public var usesDefaultRole: Bool?
     /** Date Trust was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
+    /** The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateExpired: Date?
     /** User that created trust. */
     public var createdBy: OrgUser?
     /** Organization associated with this trust. */
@@ -26,7 +28,7 @@ public class Trustee: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, enabled: Bool?, usesDefaultRole: Bool?, dateCreated: Date?, createdBy: OrgUser?, organization: Organization?, selfUri: String?) {
+    public init(_id: String?, enabled: Bool?, usesDefaultRole: Bool?, dateCreated: Date?, dateExpired: Date?, createdBy: OrgUser?, organization: Organization?, selfUri: String?) {
         
         self._id = _id
         
@@ -35,6 +37,8 @@ public class Trustee: Codable {
         self.usesDefaultRole = usesDefaultRole
         
         self.dateCreated = dateCreated
+        
+        self.dateExpired = dateExpired
         
         self.createdBy = createdBy
         
@@ -49,6 +53,7 @@ public class Trustee: Codable {
         case enabled
         case usesDefaultRole
         case dateCreated
+        case dateExpired
         case createdBy
         case organization
         case selfUri

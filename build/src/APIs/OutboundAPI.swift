@@ -1240,11 +1240,11 @@ open class OutboundAPI {
     "maxAttemptsPerContact" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -1465,11 +1465,11 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -1688,11 +1688,11 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -2128,7 +2128,9 @@ open class OutboundAPI {
           },
           "scriptId" : "aeiou",
           "timeoutSeconds" : 123,
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+          "callerId" : "aeiou",
+          "callerIdName" : "aeiou"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -2369,7 +2371,9 @@ open class OutboundAPI {
                 "voicemail" : "",
                 "scriptId" : "aeiou",
                 "timeoutSeconds" : 123,
-                "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+                "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+                "callerId" : "aeiou",
+                "callerIdName" : "aeiou"
               } ],
               "videos" : [ "" ],
               "externalOrganizationId" : "aeiou",
@@ -2560,11 +2564,11 @@ open class OutboundAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -2772,6 +2776,7 @@ open class OutboundAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -3463,11 +3468,11 @@ open class OutboundAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -3661,11 +3666,11 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -3813,11 +3818,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3947,11 +3952,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4160,11 +4165,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -4851,11 +4856,11 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -5029,11 +5034,11 @@ open class OutboundAPI {
     "zipCodeColumnName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -5303,11 +5308,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -5730,11 +5735,11 @@ open class OutboundAPI {
     "licenseId" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Import status (optional, default to false)
@@ -5916,6 +5921,15 @@ open class OutboundAPI {
     
     
     
+    public enum DncSourceType_getOutboundDnclistsDivisionviews: String { 
+        case rds = "rds"
+        case dncCom = "dnc.com"
+        case gryphon = "gryphon"
+    }
+
+    
+    
+    
     
     
     
@@ -5937,13 +5951,14 @@ open class OutboundAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
+     - parameter dncSourceType: (query) DncSourceType (optional)
      - parameter _id: (query) id (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundDnclistsDivisionviews(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundDnclistsDivisionviews? = nil, name: String? = nil, _id: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclistsDivisionviews? = nil, completion: @escaping ((_ data: DncListDivisionViewListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundDnclistsDivisionviewsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, _id: _id, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getOutboundDnclistsDivisionviews(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundDnclistsDivisionviews? = nil, name: String? = nil, dncSourceType: DncSourceType_getOutboundDnclistsDivisionviews? = nil, _id: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclistsDivisionviews? = nil, completion: @escaping ((_ data: DncListDivisionViewListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundDnclistsDivisionviewsWithRequestBuilder(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, dncSourceType: dncSourceType, _id: _id, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<DncListDivisionViewListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5992,11 +6007,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -6005,13 +6020,14 @@ open class OutboundAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter filterType: (query) Filter type (optional, default to Prefix)
      - parameter name: (query) Name (optional)
+     - parameter dncSourceType: (query) DncSourceType (optional)
      - parameter _id: (query) id (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter sortOrder: (query) Sort order (optional, default to a)
 
      - returns: RequestBuilder<DncListDivisionViewListing> 
      */
-    open class func getOutboundDnclistsDivisionviewsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundDnclistsDivisionviews? = nil, name: String? = nil, _id: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclistsDivisionviews? = nil) -> RequestBuilder<DncListDivisionViewListing> {
+    open class func getOutboundDnclistsDivisionviewsWithRequestBuilder(includeImportStatus: Bool? = nil, includeSize: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, filterType: FilterType_getOutboundDnclistsDivisionviews? = nil, name: String? = nil, dncSourceType: DncSourceType_getOutboundDnclistsDivisionviews? = nil, _id: [String]? = nil, sortBy: String? = nil, sortOrder: SortOrder_getOutboundDnclistsDivisionviews? = nil) -> RequestBuilder<DncListDivisionViewListing> {
         let path = "/api/v2/outbound/dnclists/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6035,6 +6051,8 @@ open class OutboundAPI {
             "filterType": filterType?.rawValue, 
             
             "name": name, 
+            
+            "dncSourceType": dncSourceType?.rawValue, 
             
             "id": _id, 
             
@@ -6241,11 +6259,11 @@ open class OutboundAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6494,6 +6512,7 @@ open class OutboundAPI {
     
     
     public enum ModelType_getOutboundMessagingcampaigns: String { 
+        case email = "EMAIL"
         case sms = "SMS"
     }
 
@@ -6587,11 +6606,11 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -6792,11 +6811,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -7060,11 +7079,11 @@ open class OutboundAPI {
     "queue" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -7591,11 +7610,11 @@ open class OutboundAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)

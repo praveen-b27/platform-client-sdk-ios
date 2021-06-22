@@ -616,7 +616,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 
 
 
-> [KnowledgeBaseListing](KnowledgeBaseListing.html) getKnowledgeKnowledgebases(before, after, limit, pageSize, name)
+> [KnowledgeBaseListing](KnowledgeBaseListing.html) getKnowledgeKnowledgebases(before, after, limit, pageSize, name, coreLanguage)
 
 Get knowledge bases
 
@@ -641,9 +641,10 @@ let after: String = "" // The cursor that points to the end of the set of entiti
 let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let name: String = "" // Name of the KnowledgeBase to filter.
+let coreLanguage: KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases = KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases.enummember // To filter knowledgebases by corelanguage.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -663,6 +664,7 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **name** | **String**| Name of the KnowledgeBase to filter. | [optional] |
+| **coreLanguage** | **String**| To filter knowledgebases by corelanguage. | [optional]<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 {: class="table-striped"}
 
 

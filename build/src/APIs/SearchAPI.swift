@@ -391,6 +391,7 @@ open class SearchAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -738,8 +739,8 @@ open class SearchAPI {
     "int" : true,
     "long" : true,
     "textual" : true,
-    "pojo" : true,
     "missingNode" : true,
+    "pojo" : true,
     "number" : true,
     "boolean" : true,
     "null" : true,
@@ -878,8 +879,8 @@ open class SearchAPI {
     "int" : true,
     "long" : true,
     "textual" : true,
-    "pojo" : true,
     "missingNode" : true,
+    "pojo" : true,
     "number" : true,
     "boolean" : true,
     "null" : true,
@@ -1153,6 +1154,7 @@ open class SearchAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1411,7 +1413,9 @@ open class SearchAPI {
           },
           "scriptId" : "aeiou",
           "timeoutSeconds" : 123,
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+          "callerId" : "aeiou",
+          "callerIdName" : "aeiou"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1729,11 +1733,11 @@ open class SearchAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1941,6 +1945,7 @@ open class SearchAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -2308,8 +2313,9 @@ open class SearchAPI {
     "evaluations" : [ {
       "formId" : "aeiou",
       "queueId" : "aeiou",
+      "oTotalScore" : 123456789,
+      "oTotalCriticalScore" : 123456789,
       "contextId" : "aeiou",
-      "getoTotalScore" : 123456789,
       "userId" : "aeiou",
       "evaluationId" : "aeiou",
       "deleted" : true,
@@ -2317,17 +2323,16 @@ open class SearchAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
-      "getoTotalCriticalScore" : 123456789
+      "evaluatorId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
+      "oSurveyTotalScore" : 123456789,
       "surveyId" : "aeiou",
       "surveyFormName" : "aeiou",
-      "getoSurveyTotalScore" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
@@ -2339,8 +2344,8 @@ open class SearchAPI {
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
-      "getnNextContactAvoided" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -2880,6 +2885,7 @@ open class SearchAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3044,6 +3050,20 @@ open class SearchAPI {
   "pageSize" : 123,
   "results" : [ {
     "externalUrl" : "aeiou",
+    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "languageCode" : "aeiou",
+    "type" : "aeiou",
+    "article" : {
+      "alternatives" : [ "aeiou" ],
+      "title" : "aeiou",
+      "content" : {
+        "body" : {
+          "locationUrl" : "aeiou"
+        }
+      }
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "knowledgeBase" : "",
     "faq" : {
@@ -3051,10 +3071,7 @@ open class SearchAPI {
       "answer" : "aeiou",
       "alternatives" : [ "aeiou" ]
     },
-    "confidence" : 1.3579000000000001069366817318950779736042022705078125,
-    "selfUri" : "aeiou",
     "name" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "categories" : [ {
       "knowledgeBase" : {
@@ -3066,6 +3083,7 @@ open class SearchAPI {
         "description" : "aeiou",
         "coreLanguage" : "en-us",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "articleCount" : 123,
         "id" : "aeiou"
       },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -3075,9 +3093,7 @@ open class SearchAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "languageCode" : "aeiou"
-    } ],
-    "languageCode" : "aeiou",
-    "type" : "aeiou"
+    } ]
   } ]
 }}]
      
@@ -3270,8 +3286,8 @@ open class SearchAPI {
     "int" : true,
     "long" : true,
     "textual" : true,
-    "pojo" : true,
     "missingNode" : true,
+    "pojo" : true,
     "number" : true,
     "boolean" : true,
     "null" : true,
@@ -3369,8 +3385,8 @@ open class SearchAPI {
     "int" : true,
     "long" : true,
     "textual" : true,
-    "pojo" : true,
     "missingNode" : true,
+    "pojo" : true,
     "number" : true,
     "boolean" : true,
     "null" : true,
@@ -3462,8 +3478,8 @@ open class SearchAPI {
     "int" : true,
     "long" : true,
     "textual" : true,
-    "pojo" : true,
     "missingNode" : true,
+    "pojo" : true,
     "number" : true,
     "boolean" : true,
     "null" : true,
@@ -3710,6 +3726,7 @@ open class SearchAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -3951,7 +3968,9 @@ open class SearchAPI {
           },
           "scriptId" : "aeiou",
           "timeoutSeconds" : 123,
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+          "callerId" : "aeiou",
+          "callerIdName" : "aeiou"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -4269,11 +4288,11 @@ open class SearchAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4481,6 +4500,7 @@ open class SearchAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",

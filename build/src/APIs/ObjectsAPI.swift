@@ -231,11 +231,11 @@ open class ObjectsAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -416,6 +416,7 @@ open class ObjectsAPI {
         case campaign = "CAMPAIGN"
         case contactlist = "CONTACTLIST"
         case dnclist = "DNCLIST"
+        case emailcampaign = "EMAILCAMPAIGN"
         case messagingcampaign = "MESSAGINGCAMPAIGN"
         case managementunit = "MANAGEMENTUNIT"
         case businessunit = "BUSINESSUNIT"
@@ -423,6 +424,10 @@ open class ObjectsAPI {
         case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case user = "USER"
+        case callroute = "CALLROUTE"
+        case emergencygroups = "EMERGENCYGROUPS"
+        case routingschedules = "ROUTINGSCHEDULES"
+        case routingschedulegroups = "ROUTINGSCHEDULEGROUPS"
         case datatables = "DATATABLES"
     }
 

@@ -226,6 +226,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -383,7 +384,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -681,11 +684,11 @@ open class QualityAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -1135,7 +1138,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1583,11 +1588,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -1795,6 +1800,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2330,6 +2336,7 @@ open class QualityAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2441,11 +2448,11 @@ open class QualityAPI {
     "lowestCriticalScore" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -2726,6 +2733,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2883,7 +2891,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -3181,11 +3191,11 @@ open class QualityAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3708,6 +3718,7 @@ open class QualityAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3865,7 +3876,9 @@ open class QualityAPI {
           },
           "scriptId" : "aeiou",
           "timeoutSeconds" : 123,
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+          "callerId" : "aeiou",
+          "callerIdName" : "aeiou"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -4163,11 +4176,11 @@ open class QualityAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4413,11 +4426,11 @@ open class QualityAPI {
     "evaluationForm" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter calibratorId: (query) user id of calibrator 
@@ -4530,7 +4543,7 @@ open class QualityAPI {
      Get audits for conversation or recording
      
      - GET /api/v2/quality/conversations/{conversationId}/audits
-     - Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+     - Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -4721,6 +4734,7 @@ open class QualityAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4820,11 +4834,11 @@ open class QualityAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -5052,7 +5066,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -5500,11 +5516,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -5712,6 +5728,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -5883,11 +5900,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -6006,7 +6023,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -6324,11 +6343,11 @@ open class QualityAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -6536,6 +6555,7 @@ open class QualityAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -6860,6 +6880,213 @@ open class QualityAPI {
     
     
     
+    /**
+     
+     Get status of audit query execution
+     
+     - parameter transactionId: (path) Transaction ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityConversationsAuditsQueryTransactionId(transactionId: String, completion: @escaping ((_ data: QualityAuditQueryExecutionStatusResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityConversationsAuditsQueryTransactionIdWithRequestBuilder(transactionId: transactionId)
+        requestBuilder.execute { (response: Response<QualityAuditQueryExecutionStatusResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get status of audit query execution
+     
+     - GET /api/v2/quality/conversations/audits/query/{transactionId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateStart" : "2000-01-23T04:56:07.000+0000",
+  "interval" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "filters" : [ {
+    "property" : "aeiou",
+    "value" : "aeiou"
+  } ],
+  "sort" : [ {
+    "sortOrder" : "aeiou",
+    "name" : "aeiou"
+  } ]
+}}]
+     
+     - parameter transactionId: (path) Transaction ID 
+
+     - returns: RequestBuilder<QualityAuditQueryExecutionStatusResponse> 
+     */
+    open class func getQualityConversationsAuditsQueryTransactionIdWithRequestBuilder(transactionId: String) -> RequestBuilder<QualityAuditQueryExecutionStatusResponse> {
+        var path = "/api/v2/quality/conversations/audits/query/{transactionId}"
+        let transactionIdPreEscape = "\(transactionId)"
+        let transactionIdPostEscape = transactionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{transactionId}", with: transactionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<QualityAuditQueryExecutionStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getQualityConversationsAuditsQueryTransactionIdResults: String { 
+        case user = "user"
+    }
+
+    
+    
+    /**
+     
+     Get results of audit query
+     
+     - parameter transactionId: (path) Transaction ID 
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityConversationsAuditsQueryTransactionIdResults(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil, completion: @escaping ((_ data: QualityAuditQueryExecutionResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityConversationsAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand)
+        requestBuilder.execute { (response: Response<QualityAuditQueryExecutionResultsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get results of audit query
+     
+     - GET /api/v2/quality/conversations/audits/query/{transactionId}/results
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursor" : "aeiou",
+  "entities" : [ {
+    "propertyChanges" : [ {
+      "property" : "aeiou",
+      "newValues" : [ "aeiou" ],
+      "oldValues" : [ "aeiou" ]
+    } ],
+    "level" : "aeiou",
+    "messageInfo" : {
+      "messageWithParams" : "aeiou",
+      "localizableMessageCode" : "aeiou",
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou"
+    },
+    "entityType" : "aeiou",
+    "serviceName" : "aeiou",
+    "remoteIps" : [ "aeiou" ],
+    "userTrusteeOrgId" : "aeiou",
+    "context" : {
+      "key" : "aeiou"
+    },
+    "client" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "action" : "aeiou",
+    "userHomeOrgId" : "aeiou",
+    "id" : "aeiou",
+    "user" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "entity" : "",
+    "status" : "aeiou",
+    "eventDate" : "2000-01-23T04:56:07.000+0000"
+  } ],
+  "pageSize" : 123,
+  "id" : "aeiou"
+}}]
+     
+     - parameter transactionId: (path) Transaction ID 
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<QualityAuditQueryExecutionResultsResponse> 
+     */
+    open class func getQualityConversationsAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<QualityAuditQueryExecutionResultsResponse> {
+        var path = "/api/v2/quality/conversations/audits/query/{transactionId}/results"
+        let transactionIdPreEscape = "\(transactionId)"
+        let transactionIdPostEscape = transactionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{transactionId}", with: transactionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "cursor": cursor, 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<QualityAuditQueryExecutionResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -7080,7 +7307,9 @@ open class QualityAPI {
           },
           "scriptId" : "aeiou",
           "timeoutSeconds" : 123,
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+          "callerId" : "aeiou",
+          "callerIdName" : "aeiou"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -7528,11 +7757,11 @@ open class QualityAPI {
         "pageNumber" : 123,
         "entities" : [ "" ],
         "firstUri" : "aeiou",
-        "selfUri" : "aeiou",
         "lastUri" : "aeiou",
+        "selfUri" : "aeiou",
         "pageSize" : 123,
-        "nextUri" : "aeiou",
-        "previousUri" : "aeiou"
+        "previousUri" : "aeiou",
+        "nextUri" : "aeiou"
       },
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -7740,6 +7969,7 @@ open class QualityAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -7830,11 +8060,11 @@ open class QualityAPI {
     "resourceType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8165,6 +8395,7 @@ open class QualityAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8256,11 +8487,11 @@ open class QualityAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8363,11 +8594,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -8485,11 +8716,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8529,11 +8760,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -8638,11 +8869,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8682,11 +8913,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8780,11 +9011,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -8905,11 +9136,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8949,11 +9180,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -9061,11 +9292,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9105,11 +9336,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9204,11 +9435,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -9325,11 +9556,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9367,11 +9598,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -9477,11 +9708,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9519,11 +9750,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9622,11 +9853,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9664,11 +9895,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) A comma-delimited list of valid survey form ids 
@@ -9749,11 +9980,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9791,11 +10022,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter contextId: (query) A comma-delimited list of valid survey form context ids 
@@ -9871,11 +10102,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -9996,11 +10227,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10040,11 +10271,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10126,11 +10357,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -10251,11 +10482,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10295,11 +10526,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10382,11 +10613,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -10506,11 +10737,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10548,11 +10779,11 @@ open class QualityAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10637,11 +10868,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10760,7 +10991,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -11078,11 +11311,11 @@ open class QualityAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -11290,6 +11523,7 @@ open class QualityAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11654,11 +11888,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -11794,11 +12028,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -12248,6 +12482,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -12405,7 +12640,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -12703,11 +12940,11 @@ open class QualityAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -13151,7 +13388,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -13599,11 +13838,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13811,6 +14050,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -13925,6 +14165,76 @@ open class QualityAPI {
         ])
 
         let requestBuilder: RequestBuilder<Evaluation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create audit query execution
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postQualityConversationsAuditsQuery(body: QMAuditQueryRequest, completion: @escaping ((_ data: QualityAuditQueryExecutionStatusResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postQualityConversationsAuditsQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<QualityAuditQueryExecutionStatusResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create audit query execution
+     
+     - POST /api/v2/quality/conversations/audits/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateStart" : "2000-01-23T04:56:07.000+0000",
+  "interval" : "aeiou",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "filters" : [ {
+    "property" : "aeiou",
+    "value" : "aeiou"
+  } ],
+  "sort" : [ {
+    "sortOrder" : "aeiou",
+    "name" : "aeiou"
+  } ]
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<QualityAuditQueryExecutionStatusResponse> 
+     */
+    open class func postQualityConversationsAuditsQueryWithRequestBuilder(body: QMAuditQueryRequest) -> RequestBuilder<QualityAuditQueryExecutionStatusResponse> {
+        let path = "/api/v2/quality/conversations/audits/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<QualityAuditQueryExecutionStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -14061,11 +14371,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14167,11 +14477,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14274,11 +14584,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14378,11 +14688,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14484,11 +14794,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14591,11 +14901,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14942,6 +15252,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -15099,7 +15410,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -15397,11 +15710,11 @@ open class QualityAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -15846,7 +16159,9 @@ open class QualityAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -16294,11 +16609,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -16506,6 +16821,7 @@ open class QualityAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -16675,11 +16991,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -16788,11 +17104,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -16902,11 +17218,11 @@ open class QualityAPI {
     "pageNumber" : 123,
     "entities" : [ "" ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -16976,10 +17292,10 @@ open class QualityAPI {
      Update a survey as an end-customer, for the purposes of scoring it.
      
      - parameter body: (body) survey 
-     - parameter customerSurveyUrl: (query) customerSurveyUrl (optional)
+     - parameter customerSurveyUrl: (query) customerSurveyUrl 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putQualitySurveysScorable(body: ScorableSurvey, customerSurveyUrl: String? = nil, completion: @escaping ((_ data: ScorableSurvey?,_ error: Error?) -> Void)) {
+    open class func putQualitySurveysScorable(body: ScorableSurvey, customerSurveyUrl: String, completion: @escaping ((_ data: ScorableSurvey?,_ error: Error?) -> Void)) {
         let requestBuilder = putQualitySurveysScorableWithRequestBuilder(body: body, customerSurveyUrl: customerSurveyUrl)
         requestBuilder.execute { (response: Response<ScorableSurvey>?, error) -> Void in
             do {
@@ -17012,11 +17328,11 @@ open class QualityAPI {
       "pageNumber" : 123,
       "entities" : [ "" ],
       "firstUri" : "aeiou",
-      "selfUri" : "aeiou",
       "lastUri" : "aeiou",
+      "selfUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -17079,11 +17395,11 @@ open class QualityAPI {
 }}]
      
      - parameter body: (body) survey 
-     - parameter customerSurveyUrl: (query) customerSurveyUrl (optional)
+     - parameter customerSurveyUrl: (query) customerSurveyUrl 
 
      - returns: RequestBuilder<ScorableSurvey> 
      */
-    open class func putQualitySurveysScorableWithRequestBuilder(body: ScorableSurvey, customerSurveyUrl: String? = nil) -> RequestBuilder<ScorableSurvey> {
+    open class func putQualitySurveysScorableWithRequestBuilder(body: ScorableSurvey, customerSurveyUrl: String) -> RequestBuilder<ScorableSurvey> {
         let path = "/api/v2/quality/surveys/scorable"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         

@@ -19,15 +19,20 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case cancelled = "Cancelled"
     }
     public enum ServiceName: String, Codable { 
+        case analyticsReporting = "AnalyticsReporting"
         case architect = "Architect"
+        case coaching = "Coaching"
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
+        case datatables = "Datatables"
+        case gamification = "Gamification"
         case groups = "Groups"
         case integrations = "Integrations"
         case languageUnderstanding = "LanguageUnderstanding"
         case limits = "Limits"
         case outbound = "Outbound"
         case peoplePermissions = "PeoplePermissions"
+        case performance = "Performance"
         case predictiveEngagement = "PredictiveEngagement"
         case presence = "Presence"
         case quality = "Quality"
@@ -37,7 +42,10 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case telephony = "Telephony"
         case topicsDefinitions = "TopicsDefinitions"
         case triggers = "Triggers"
+        case webDeployments = "WebDeployments"
+        case webhooks = "Webhooks"
         case workforceManagement = "WorkforceManagement"
+        case messaging = "Messaging"
     }
     /** Id of the audit query execution request. */
     public var _id: String?

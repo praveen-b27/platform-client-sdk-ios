@@ -30,6 +30,8 @@ title: QueueConversationVideoEventTopicCallback
 | **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
 | **afterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
 | **afterCallWorkRequired** | **Bool** |  | [optional] |
+| **callerId** | **String** |  | [optional] |
+| **callerIdName** | **String** |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

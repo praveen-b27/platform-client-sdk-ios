@@ -2,19 +2,19 @@
 title: MessagingRecipient
 ---
 ## MessagingRecipient
-This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform
+Information about the recipient the message is sent to or received from.
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **nickname** | **String** | Nickname/user name | [optional] |
-| **_id** | **String** | The recipient identifier specific for particular channel/integration. This is required when sending a message. | |
-| **idType** | **String** | The recipient identifier type. This is used to indicate the format used by the recipient identifier. | [optional] |
-| **image** | **String** | Path or URI to an image file containing an avatar | [optional] |
-| **firstName** | **String** | Sender&#39;s first name | [optional] |
-| **lastName** | **String** | Sender&#39;s last name | [optional] |
-| **email** | **String** | Sender&#39;s email address | [optional] |
+| **nickname** | **String** | Nickname or display name of the recipient. | [optional] |
+| **_id** | **String** | The recipient ID specific to the provider. | |
+| **idType** | **String** | The recipient ID type. This is used to indicate the format used for the ID. | [optional] |
+| **image** | **String** | URL of an image that represents the recipient. | [optional] |
+| **firstName** | **String** | First name of the recipient. | [optional] |
+| **lastName** | **String** | Last name of the recipient. | [optional] |
+| **email** | **String** | E-mail address of the recipient. | [optional] |
 {: class="table table-striped"}
 
 

@@ -30,6 +30,8 @@ title: QueueConversationSocialExpressionEventTopicCallback
 | **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
 | **afterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
 | **afterCallWorkRequired** | **Bool** |  | [optional] |
+| **callerId** | **String** |  | [optional] |
+| **callerIdName** | **String** |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

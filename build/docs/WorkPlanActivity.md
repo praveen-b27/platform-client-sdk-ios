@@ -23,6 +23,7 @@ Activity configured for shift in work plan
 | **minimumLengthFromShiftEndMinutes** | **Int** | The minimum duration between shift item (e.g., break or meal) end and shift end in minutes | [optional] |
 | **_id** | **String** | ID of the activity. This is required only for the case of updating an existing activity | [optional] |
 | **delete** | **Bool** | If marked true for updating an existing activity, the activity will be permanently deleted | [optional] |
+| **validationId** | **String** | ID of the activity in the context of work plan validation | [optional] |
 {: class="table table-striped"}
 
 

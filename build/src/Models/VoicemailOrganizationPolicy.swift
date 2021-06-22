@@ -23,10 +23,12 @@ public class VoicemailOrganizationPolicy: Codable {
     public var pinRequired: Bool?
     /** Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting. */
     public var sendEmailNotifications: Bool?
+    /** Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization. */
+    public var disableEmailPii: Bool?
     /** The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
-    public init(enabled: Bool?, alertTimeoutSeconds: Int?, pinConfiguration: PINConfiguration?, voicemailExtension: String?, pinRequired: Bool?, sendEmailNotifications: Bool?, modifiedDate: Date?) {
+    public init(enabled: Bool?, alertTimeoutSeconds: Int?, pinConfiguration: PINConfiguration?, voicemailExtension: String?, pinRequired: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, modifiedDate: Date?) {
         
         self.enabled = enabled
         
@@ -39,6 +41,8 @@ public class VoicemailOrganizationPolicy: Codable {
         self.pinRequired = pinRequired
         
         self.sendEmailNotifications = sendEmailNotifications
+        
+        self.disableEmailPii = disableEmailPii
         
         self.modifiedDate = modifiedDate
         

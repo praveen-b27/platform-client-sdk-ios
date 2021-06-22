@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Attachment object */
+/** Attachment object. */
 
 public class ContentAttachment: Codable {
 
@@ -18,19 +18,19 @@ public class ContentAttachment: Codable {
         case audio = "Audio"
         case file = "File"
     }
-    /** Vendor specific ID for media. For example, a LINE sticker ID */
+    /** Provider specific ID for attachment. For example, a LINE sticker ID. */
     public var _id: String?
-    /** The type of media this instance represents */
+    /** The type of attachment this instance represents. */
     public var mediaType: MediaType?
-    /** Content element url */
+    /** URL of the attachment. */
     public var url: String?
-    /** Content mime type from https://www.iana.org/assignments/media-types/media-types.xhtml */
+    /** Attachment mime type (https://www.iana.org/assignments/media-types/media-types.xhtml). */
     public var mime: String?
-    /** Text message associated with media element: e.g. caption in case of image. */
+    /** Text associated with attachment such as an image caption. */
     public var text: String?
-    /** Secure hash of the media content */
+    /** Secure hash of the attachment content. */
     public var sha256: String?
-    /** Suggested file name for media file */
+    /** Suggested file name for attachment. */
     public var filename: String?
 
     public init(_id: String?, mediaType: MediaType?, url: String?, mime: String?, text: String?, sha256: String?, filename: String?) {

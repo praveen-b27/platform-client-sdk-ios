@@ -39,7 +39,10 @@ public class Dependency: Codable {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -62,6 +65,7 @@ public class Dependency: Codable {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
     /** The dependency identifier */
     public var _id: String?

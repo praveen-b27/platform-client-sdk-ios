@@ -42,8 +42,10 @@ public class WorkPlanActivity: Codable {
     public var _id: String?
     /** If marked true for updating an existing activity, the activity will be permanently deleted */
     public var delete: Bool?
+    /** ID of the activity in the context of work plan validation */
+    public var validationId: String?
 
-    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?, _id: String?, delete: Bool?) {
+    public init(activityCodeId: String?, _description: String?, lengthMinutes: Int?, startTimeIsRelativeToShiftStart: Bool?, flexibleStartTime: Bool?, earliestStartTimeMinutes: Int?, latestStartTimeMinutes: Int?, exactStartTimeMinutes: Int?, startTimeIncrementMinutes: Int?, countsAsPaidTime: Bool?, countsAsContiguousWorkTime: Bool?, minimumLengthFromShiftStartMinutes: Int?, minimumLengthFromShiftEndMinutes: Int?, _id: String?, delete: Bool?, validationId: String?) {
         
         self.activityCodeId = activityCodeId
         
@@ -75,6 +77,8 @@ public class WorkPlanActivity: Codable {
         
         self.delete = delete
         
+        self.validationId = validationId
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -93,6 +97,7 @@ public class WorkPlanActivity: Codable {
         case minimumLengthFromShiftEndMinutes
         case _id = "id"
         case delete
+        case validationId
     }
 
 

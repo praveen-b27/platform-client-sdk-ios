@@ -68,9 +68,11 @@ public class QueueConversationVideoEventTopicCallback: Codable {
     public var wrapup: QueueConversationVideoEventTopicWrapup?
     public var afterCallWork: QueueConversationVideoEventTopicAfterCallWork?
     public var afterCallWorkRequired: Bool?
+    public var callerId: String?
+    public var callerIdName: String?
     public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationVideoEventTopicDialerPreview?, voicemail: QueueConversationVideoEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: QueueConversationVideoEventTopicDialerPreview?, voicemail: QueueConversationVideoEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?, additionalProperties: JSON?) {
         
         self.state = state
         
@@ -118,6 +120,10 @@ public class QueueConversationVideoEventTopicCallback: Codable {
         
         self.afterCallWorkRequired = afterCallWorkRequired
         
+        self.callerId = callerId
+        
+        self.callerIdName = callerIdName
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -146,6 +152,8 @@ public class QueueConversationVideoEventTopicCallback: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case callerId
+        case callerIdName
         case additionalProperties
     }
 

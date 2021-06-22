@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Button response object */
+/** Button response object representing the click of a structured message button, such as a quick reply. */
 
 public class ContentButtonResponse: Codable {
 
@@ -16,13 +16,13 @@ public class ContentButtonResponse: Codable {
         case button = "Button"
         case quickReply = "QuickReply"
     }
-    /** An ID assigned to the button response. Each object inside the content array has a unique ID. */
+    /** An ID assigned to the button response (Deprecated). */
     public var _id: String?
-    /** Button response type that captures Button and QuickReply type responses */
+    /** Describes the button that resulted in the Button Response. */
     public var type: ModelType?
-    /** Text to show inside the Button reply. This is also used as the response text after clicking on the Button. */
+    /** The response text from the button click. */
     public var text: String?
-    /** Content of the textback payload after clicking a button */
+    /** The response payload associated with the clicked button. */
     public var payload: String?
 
     public init(_id: String?, type: ModelType?, text: String?, payload: String?) {

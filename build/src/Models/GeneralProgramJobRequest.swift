@@ -16,6 +16,9 @@ public class GeneralProgramJobRequest: Codable {
         case esUs = "es-US"
         case enAu = "en-AU"
         case enGb = "en-GB"
+        case enZa = "en-ZA"
+        case esEs = "es-ES"
+        case enIn = "en-IN"
     }
     public enum Mode: String, Codable { 
         case skip = "Skip"

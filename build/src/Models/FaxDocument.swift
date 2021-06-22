@@ -29,12 +29,12 @@ public class FaxDocument: Codable {
     public var callerAddress: String?
     public var receiverAddress: String?
     public var thumbnails: [DocumentThumbnail]?
-    public var sharingUri: String?
     public var downloadSharingUri: String?
+    public var sharingUri: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, contentType: String?, contentLength: Int64?, filename: String?, read: Bool?, pageCount: Int64?, callerAddress: String?, receiverAddress: String?, thumbnails: [DocumentThumbnail]?, sharingUri: String?, downloadSharingUri: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, contentType: String?, contentLength: Int64?, filename: String?, read: Bool?, pageCount: Int64?, callerAddress: String?, receiverAddress: String?, thumbnails: [DocumentThumbnail]?, downloadSharingUri: String?, sharingUri: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -66,9 +66,9 @@ public class FaxDocument: Codable {
         
         self.thumbnails = thumbnails
         
-        self.sharingUri = sharingUri
-        
         self.downloadSharingUri = downloadSharingUri
+        
+        self.sharingUri = sharingUri
         
         self.selfUri = selfUri
         
@@ -90,8 +90,8 @@ public class FaxDocument: Codable {
         case callerAddress
         case receiverAddress
         case thumbnails
-        case sharingUri
         case downloadSharingUri
+        case sharingUri
         case selfUri
     }
 

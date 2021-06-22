@@ -73,6 +73,8 @@ public class ReportingExportMetadataJobResponse: Codable {
         case botPerformanceSummaryView = "BOT_PERFORMANCE_SUMMARY_VIEW"
         case botPerformanceDetailView = "BOT_PERFORMANCE_DETAIL_VIEW"
         case scheduledExportsView = "SCHEDULED_EXPORTS_VIEW"
+        case topicTrendSummaryView = "TOPIC_TREND_SUMMARY_VIEW"
+        case topicTrendDetailView = "TOPIC_TREND_DETAIL_VIEW"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

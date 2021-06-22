@@ -19,6 +19,7 @@ public class AssessmentFormQuestion: Codable {
     }
     public var _id: String?
     public var type: ModelType?
+    /** The question text */
     public var text: String?
     public var helpText: String?
     public var naEnabled: Bool?

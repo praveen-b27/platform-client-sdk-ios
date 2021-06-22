@@ -2,16 +2,16 @@
 title: ContentButtonResponse
 ---
 ## ContentButtonResponse
-Button response object
+Button response object representing the click of a structured message button, such as a quick reply.
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** | An ID assigned to the button response. Each object inside the content array has a unique ID. | [optional] |
-| **type** | **String** | Button response type that captures Button and QuickReply type responses | [optional] |
-| **text** | **String** | Text to show inside the Button reply. This is also used as the response text after clicking on the Button. | |
-| **payload** | **String** | Content of the textback payload after clicking a button | [optional] |
+| **_id** | **String** | An ID assigned to the button response (Deprecated). | [optional] |
+| **type** | **String** | Describes the button that resulted in the Button Response. | [optional] |
+| **text** | **String** | The response text from the button click. | |
+| **payload** | **String** | The response payload associated with the clicked button. | [optional] |
 {: class="table table-striped"}
 
 

@@ -39,6 +39,7 @@ public class BuForecastTimeSeriesResult: Codable {
         case curveFit = "CurveFit"
         case multiLinearRegression = "MultiLinearRegression"
         case dynamicHarmonicRegression = "DynamicHarmonicRegression"
+        case theta = "Theta"
         case other = "Other"
     }
     /** The metric this result applies to */

@@ -1139,7 +1139,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let trusteeOrgId: String = "" // Trustee Organization Id
-let body: Trustee = new Trustee(...) // Client
+let body: TrustUpdate = new TrustUpdate(...) // Client
 
 // Code example
 OrganizationAuthorizationAPI.putOrgauthorizationTrustee(trusteeOrgId: trusteeOrgId, body: body) { (response, error) in
@@ -1158,7 +1158,7 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrustee(trusteeOrgId: trusteeOrg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-| **body** | [**Trustee**](Trustee.html)| Client | |
+| **body** | [**TrustUpdate**](TrustUpdate.html)| Client | |
 {: class="table-striped"}
 
 

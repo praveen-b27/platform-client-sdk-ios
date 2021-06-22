@@ -523,6 +523,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -920,6 +921,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1053,6 +1055,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "aeiou",
     "geolocation" : ""
   },
+  "dateExpired" : "2000-01-23T04:56:07.000+0000",
   "organization" : "",
   "selfUri" : "aeiou",
   "id" : "aeiou",
@@ -1302,6 +1305,7 @@ open class OrganizationAuthorizationAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1826,6 +1830,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1998,11 +2003,11 @@ open class OrganizationAuthorizationAPI {
     "geolocation" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
@@ -2262,6 +2267,7 @@ open class OrganizationAuthorizationAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -2395,6 +2401,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "aeiou",
       "geolocation" : ""
     },
+    "dateExpired" : "2000-01-23T04:56:07.000+0000",
     "organization" : "",
     "selfUri" : "aeiou",
     "id" : "aeiou",
@@ -2402,11 +2409,11 @@ open class OrganizationAuthorizationAPI {
     "usesDefaultRole" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2658,6 +2665,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3039,6 +3047,7 @@ open class OrganizationAuthorizationAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -3464,6 +3473,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3636,11 +3646,11 @@ open class OrganizationAuthorizationAPI {
     "geolocation" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter trustorOrgId: (path) Trustee Organization Id 
@@ -3903,6 +3913,7 @@ open class OrganizationAuthorizationAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -4042,11 +4053,11 @@ open class OrganizationAuthorizationAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4295,6 +4306,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4687,6 +4699,7 @@ open class OrganizationAuthorizationAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -5098,6 +5111,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -5231,6 +5245,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "aeiou",
     "geolocation" : ""
   },
+  "dateExpired" : "2000-01-23T04:56:07.000+0000",
   "organization" : "",
   "selfUri" : "aeiou",
   "id" : "aeiou",
@@ -5437,7 +5452,7 @@ open class OrganizationAuthorizationAPI {
      - parameter body: (body) Client 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putOrgauthorizationTrustee(trusteeOrgId: String, body: Trustee, completion: @escaping ((_ data: Trustee?,_ error: Error?) -> Void)) {
+    open class func putOrgauthorizationTrustee(trusteeOrgId: String, body: TrustUpdate, completion: @escaping ((_ data: Trustee?,_ error: Error?) -> Void)) {
         let requestBuilder = putOrgauthorizationTrusteeWithRequestBuilder(trusteeOrgId: trusteeOrgId, body: body)
         requestBuilder.execute { (response: Response<Trustee>?, error) -> Void in
             do {
@@ -5644,6 +5659,7 @@ open class OrganizationAuthorizationAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -5777,6 +5793,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "aeiou",
     "geolocation" : ""
   },
+  "dateExpired" : "2000-01-23T04:56:07.000+0000",
   "organization" : "",
   "selfUri" : "aeiou",
   "id" : "aeiou",
@@ -5789,7 +5806,7 @@ open class OrganizationAuthorizationAPI {
 
      - returns: RequestBuilder<Trustee> 
      */
-    open class func putOrgauthorizationTrusteeWithRequestBuilder(trusteeOrgId: String, body: Trustee) -> RequestBuilder<Trustee> {
+    open class func putOrgauthorizationTrusteeWithRequestBuilder(trusteeOrgId: String, body: TrustUpdate) -> RequestBuilder<Trustee> {
         var path = "/api/v2/orgauthorization/trustees/{trusteeOrgId}"
         let trusteeOrgIdPreEscape = "\(trusteeOrgId)"
         let trusteeOrgIdPostEscape = trusteeOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6224,6 +6241,7 @@ open class OrganizationAuthorizationAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",

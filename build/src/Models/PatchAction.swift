@@ -24,14 +24,18 @@ public class PatchAction: Codable {
     public var actionTemplate: ActionMapActionTemplate?
     /** Architect Flow Id and input contract. */
     public var architectFlowFields: ArchitectFlowFields?
+    /** Admin-configurable fields of a web messaging offer action. */
+    public var webMessagingOfferFields: WebMessagingOfferFields?
 
-    public init(mediaType: MediaType?, actionTemplate: ActionMapActionTemplate?, architectFlowFields: ArchitectFlowFields?) {
+    public init(mediaType: MediaType?, actionTemplate: ActionMapActionTemplate?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?) {
         
         self.mediaType = mediaType
         
         self.actionTemplate = actionTemplate
         
         self.architectFlowFields = architectFlowFields
+        
+        self.webMessagingOfferFields = webMessagingOfferFields
         
     }
 

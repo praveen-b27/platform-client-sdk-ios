@@ -2972,7 +2972,7 @@ OutboundAPI.getOutboundDnclistsDivisionview(dncListId: dncListId, includeImportS
 
 
 
-> [DncListDivisionViewListing](DncListDivisionViewListing.html) getOutboundDnclistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, _id, sortBy, sortOrder)
+> [DncListDivisionViewListing](DncListDivisionViewListing.html) getOutboundDnclistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, dncSourceType, _id, sortBy, sortOrder)
 
 Query a list of simplified dnc list objects.
 
@@ -2998,12 +2998,13 @@ let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
 let filterType: OutboundAPI.FilterType_getOutboundDnclistsDivisionviews = OutboundAPI.FilterType_getOutboundDnclistsDivisionviews.enummember // Filter type
 let name: String = "" // Name
+let dncSourceType: OutboundAPI.DncSourceType_getOutboundDnclistsDivisionviews = OutboundAPI.DncSourceType_getOutboundDnclistsDivisionviews.enummember // DncSourceType
 let _id: [String] = [""] // id
 let sortBy: String = "" // Sort by
 let sortOrder: OutboundAPI.SortOrder_getOutboundDnclistsDivisionviews = OutboundAPI.SortOrder_getOutboundDnclistsDivisionviews.enummember // Sort order
 
 // Code example
-OutboundAPI.getOutboundDnclistsDivisionviews(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, _id: _id, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+OutboundAPI.getOutboundDnclistsDivisionviews(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, dncSourceType: dncSourceType, _id: _id, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3024,6 +3025,7 @@ OutboundAPI.getOutboundDnclistsDivisionviews(includeImportStatus: includeImportS
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **filterType** | **String**| Filter type | [optional] [default to Prefix]<br />**Values**: equals ("Equals"), regEx ("RegEx"), contains ("Contains"), _prefix ("Prefix"), lessThan ("LessThan"), lessThanEqualTo ("LessThanEqualTo"), greaterThan ("GreaterThan"), greaterThanEqualTo ("GreaterThanEqualTo"), beginsWith ("BeginsWith"), endsWith ("EndsWith") |
 | **name** | **String**| Name | [optional] |
+| **dncSourceType** | **String**| DncSourceType | [optional]<br />**Values**: rds ("rds"), dncCom ("dnc.com"), gryphon ("gryphon") |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
@@ -3314,7 +3316,7 @@ OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNu
 | **name** | **String**| Name | [optional] |
 | **contactListId** | **String**| Contact List ID | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
-| **type** | **String**| Campaign Type | [optional]<br />**Values**: sms ("SMS") |
+| **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS") |
 | **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
 | **_id** | [**[String]**](String.html)| A list of messaging campaign ids to bulk fetch | [optional] |
 {: class="table-striped"}

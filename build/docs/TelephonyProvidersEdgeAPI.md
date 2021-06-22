@@ -3045,7 +3045,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLinebasesetting(lineBaseId: 
 
 
 
-> [LineBaseEntityListing](LineBaseEntityListing.html) getTelephonyProvidersEdgesLinebasesettings(pageNumber, pageSize, sortBy, sortOrder)
+> [LineBaseEntityListing](LineBaseEntityListing.html) getTelephonyProvidersEdgesLinebasesettings(pageNumber, pageSize, sortBy, sortOrder, expand)
 
 Get a listing of line base settings objects
 
@@ -3069,9 +3069,10 @@ let pageNumber: Int = 1 // Page number
 let pageSize: Int = 25 // Page size
 let sortBy: String = "name" // Value by which to sort
 let sortOrder: String = "ASC" // Sort order
+let expand: [String] = [TelephonyProvidersEdgeAPI.Expand_getTelephonyProvidersEdgesLinebasesettings.enummember.rawValue] // Fields to expand in the response, comma-separated
 
 // Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLinebasesettings(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLinebasesettings(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3090,6 +3091,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesLinebasesettings(pageNumber:
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **sortBy** | **String**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **String**| Sort order | [optional] [default to ASC] |
+| **expand** | [**[String]**](String.html)| Fields to expand in the response, comma-separated | [optional]<br />**Values**: properties ("properties") |
 {: class="table-striped"}
 
 

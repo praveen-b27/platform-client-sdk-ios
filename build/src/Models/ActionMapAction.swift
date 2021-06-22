@@ -24,14 +24,18 @@ public class ActionMapAction: Codable {
     public var mediaType: MediaType?
     /** Architect Flow Id and input contract. */
     public var architectFlowFields: ArchitectFlowFields?
+    /** Admin-configurable fields of a web messaging offer action. */
+    public var webMessagingOfferFields: WebMessagingOfferFields?
 
-    public init(actionTemplate: ActionMapActionTemplate?, mediaType: MediaType?, architectFlowFields: ArchitectFlowFields?) {
+    public init(actionTemplate: ActionMapActionTemplate?, mediaType: MediaType?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?) {
         
         self.actionTemplate = actionTemplate
         
         self.mediaType = mediaType
         
         self.architectFlowFields = architectFlowFields
+        
+        self.webMessagingOfferFields = webMessagingOfferFields
         
     }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Template header object */
+/** Template header object. */
 
 public class NotificationTemplateHeader: Codable {
 
@@ -16,13 +16,13 @@ public class NotificationTemplateHeader: Codable {
         case text = "Text"
         case media = "Media"
     }
-    /** Template header type */
+    /** Template header type. */
     public var type: ModelType?
-    /** Header text. For WhatsApp, ignored */
+    /** Header text. For WhatsApp, ignored. */
     public var text: String?
-    /** Attachment object */
+    /** Media template header image. */
     public var media: ContentAttachment?
-    /** Template parameters for placeholders in template */
+    /** Template parameters for placeholders in template. */
     public var parameters: [NotificationTemplateParameter]?
 
     public init(type: ModelType?, text: String?, media: ContentAttachment?, parameters: [NotificationTemplateParameter]?) {

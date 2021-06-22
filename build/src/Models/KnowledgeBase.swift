@@ -26,14 +26,16 @@ public class KnowledgeBase: Codable {
     public var dateCreated: Date?
     /** Knowledge base last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
-    /** The count representing the number of documents of type FAQ per KnowledgeBase */
+    /** The count representing the number of documents of type FAQ in the KnowledgeBase */
     public var faqCount: Int?
     /** The date representing when the last document is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateDocumentLastModified: Date?
+    /** The count representing the number of documents of type Article in the KnowledgeBase */
+    public var articleCount: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, coreLanguage: CoreLanguage?, dateCreated: Date?, dateModified: Date?, faqCount: Int?, dateDocumentLastModified: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, coreLanguage: CoreLanguage?, dateCreated: Date?, dateModified: Date?, faqCount: Int?, dateDocumentLastModified: Date?, articleCount: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -51,6 +53,8 @@ public class KnowledgeBase: Codable {
         
         self.dateDocumentLastModified = dateDocumentLastModified
         
+        self.articleCount = articleCount
+        
         self.selfUri = selfUri
         
     }
@@ -64,6 +68,7 @@ public class KnowledgeBase: Codable {
         case dateModified
         case faqCount
         case dateDocumentLastModified
+        case articleCount
         case selfUri
     }
 

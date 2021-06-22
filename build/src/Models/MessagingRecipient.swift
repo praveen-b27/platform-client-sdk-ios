@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform */
+/** Information about the recipient the message is sent to or received from. */
 
 public class MessagingRecipient: Codable {
 
@@ -17,19 +17,19 @@ public class MessagingRecipient: Codable {
         case phone = "Phone"
         case opaque = "Opaque"
     }
-    /** Nickname/user name */
+    /** Nickname or display name of the recipient. */
     public var nickname: String?
-    /** The recipient identifier specific for particular channel/integration. This is required when sending a message. */
+    /** The recipient ID specific to the provider. */
     public var _id: String?
-    /** The recipient identifier type. This is used to indicate the format used by the recipient identifier. */
+    /** The recipient ID type. This is used to indicate the format used for the ID. */
     public var idType: IdType?
-    /** Path or URI to an image file containing an avatar */
+    /** URL of an image that represents the recipient. */
     public var image: String?
-    /** Sender&#39;s first name */
+    /** First name of the recipient. */
     public var firstName: String?
-    /** Sender&#39;s last name */
+    /** Last name of the recipient. */
     public var lastName: String?
-    /** Sender&#39;s email address */
+    /** E-mail address of the recipient. */
     public var email: String?
 
     public init(nickname: String?, _id: String?, idType: IdType?, image: String?, firstName: String?, lastName: String?, email: String?) {

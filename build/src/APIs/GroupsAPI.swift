@@ -435,6 +435,7 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -766,6 +767,7 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -856,11 +858,11 @@ open class GroupsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter groupId: (path) Group ID 
@@ -1138,6 +1140,7 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1228,11 +1231,11 @@ open class GroupsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter groupId: (path) Group ID 
@@ -1574,6 +1577,7 @@ open class GroupsAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1671,11 +1675,11 @@ open class GroupsAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -1927,6 +1931,7 @@ open class GroupsAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2119,11 +2124,11 @@ open class GroupsAPI {
     "version" : 123456789
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2424,6 +2429,7 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2747,6 +2753,7 @@ open class GroupsAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3065,6 +3072,7 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",

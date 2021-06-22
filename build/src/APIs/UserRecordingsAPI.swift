@@ -193,7 +193,9 @@ open class UserRecordingsAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -507,11 +509,11 @@ open class UserRecordingsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -719,6 +721,7 @@ open class UserRecordingsAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1267,7 +1270,9 @@ open class UserRecordingsAPI {
           },
           "scriptId" : "aeiou",
           "timeoutSeconds" : 123,
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+          "callerId" : "aeiou",
+          "callerIdName" : "aeiou"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1581,11 +1586,11 @@ open class UserRecordingsAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1793,6 +1798,7 @@ open class UserRecordingsAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -2084,11 +2090,11 @@ open class UserRecordingsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2313,7 +2319,9 @@ open class UserRecordingsAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -2627,11 +2635,11 @@ open class UserRecordingsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -2839,6 +2847,7 @@ open class UserRecordingsAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",

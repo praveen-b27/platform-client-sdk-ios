@@ -56,8 +56,10 @@ public class WorkPlanShift: Codable {
     public var _id: String?
     /** If marked true for updating an existing shift, the shift will be permanently deleted */
     public var delete: Bool?
+    /** ID of shift in the context of work plan validation */
+    public var validationId: String?
 
-    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [WorkPlanActivity]?, _id: String?, delete: Bool?) {
+    public init(name: String?, days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, constrainStopTime: Bool?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, constrainEarliestStopTime: Bool?, earliestStopTimeMinutesFromMidnight: Int?, startIncrementMinutes: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, constrainContiguousWorkTime: Bool?, minimumContiguousWorkTimeMinutes: Int?, maximumContiguousWorkTimeMinutes: Int?, activities: [WorkPlanActivity]?, _id: String?, delete: Bool?, validationId: String?) {
         
         self.name = name
         
@@ -103,6 +105,8 @@ public class WorkPlanShift: Codable {
         
         self.delete = delete
         
+        self.validationId = validationId
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -128,6 +132,7 @@ public class WorkPlanShift: Codable {
         case activities
         case _id = "id"
         case delete
+        case validationId
     }
 
 

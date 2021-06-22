@@ -16,8 +16,6 @@ public class JourneyAggregationQuery: Codable {
         case containsanycondition = "containsAnyCondition"
         case endswithcondition = "endsWithCondition"
         case equalcondition = "equalCondition"
-        case greaterthancondition = "greaterThanCondition"
-        case greaterthanorequalcondition = "greaterThanOrEqualCondition"
         case journeyactionid = "journeyActionId"
         case journeyactionmapid = "journeyActionMapId"
         case journeyactionmapversion = "journeyActionMapVersion"
@@ -25,6 +23,7 @@ public class JourneyAggregationQuery: Codable {
         case journeyactiontargetid = "journeyActionTargetId"
         case journeyactiontemplateid = "journeyActionTemplateId"
         case journeyblockingactionmapid = "journeyBlockingActionMapId"
+        case journeyblockingemergencyschedulegroupid = "journeyBlockingEmergencyScheduleGroupId"
         case journeyblockingreason = "journeyBlockingReason"
         case journeyblockingschedulegroupid = "journeyBlockingScheduleGroupId"
         case journeycustomerid = "journeyCustomerId"
@@ -37,8 +36,6 @@ public class JourneyAggregationQuery: Codable {
         case journeysegmentscope = "journeySegmentScope"
         case journeysessionsegmentid = "journeySessionSegmentId"
         case journeysessiontype = "journeySessionType"
-        case lessthancondition = "lessThanCondition"
-        case lessthanorequalcondition = "lessThanOrEqualCondition"
         case notcontainsallcondition = "notContainsAllCondition"
         case notcontainsanycondition = "notContainsAnyCondition"
         case notequalcondition = "notEqualCondition"
@@ -47,6 +44,7 @@ public class JourneyAggregationQuery: Codable {
     }
     public enum Metrics: String, Codable { 
         case ndistinctjourneyactions = "nDistinctJourneyActions"
+        case ndistinctjourneysessions = "nDistinctJourneySessions"
         case njourneyactionsblocked = "nJourneyActionsBlocked"
         case njourneyoutcomesachieved = "nJourneyOutcomesAchieved"
         case njourneyoutcomesattributed = "nJourneyOutcomesAttributed"

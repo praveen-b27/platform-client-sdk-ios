@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningModules**](LearningAPI.html#getLearningModules) | Get all learning modules of an organization |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
 | [**postLearningAssignments**](LearningAPI.html#postLearningAssignments) | Create Learning Assignment |
+| [**postLearningAssignmentsAggregatesQuery**](LearningAPI.html#postLearningAssignmentsAggregatesQuery) | Retrieve aggregated assignment data |
 | [**postLearningAssignmentsBulkadd**](LearningAPI.html#postLearningAssignmentsBulkadd) | Add multiple learning assignments |
 | [**postLearningAssignmentsBulkremove**](LearningAPI.html#postLearningAssignmentsBulkremove) | Remove multiple Learning Assignments |
 | [**postLearningModulePublish**](LearningAPI.html#postLearningModulePublish) | Publish a Learning module |
@@ -247,7 +248,7 @@ LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, compl
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **userId** | [**[String]**](String.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional] |
-| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire") |
+| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
@@ -318,7 +319,7 @@ LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, com
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
-| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire") |
+| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
@@ -542,7 +543,7 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **isArchived** | **Bool**| Archive status | [optional] [default to false] |
-| **types** | [**[String]**](String.html)| Specifies the module types. | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire") |
+| **types** | [**[String]**](String.html)| Specifies the module types. | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |
@@ -661,6 +662,58 @@ LearningAPI.postLearningAssignments(body: body) { (response, error) in
 
 [**LearningAssignment**](LearningAssignment.html)
 
+<a name="postLearningAssignmentsAggregatesQuery"></a>
+
+# **postLearningAssignmentsAggregatesQuery**
+
+
+
+> [LearningAssignmentAggregateResponse](LearningAssignmentAggregateResponse.html) postLearningAssignmentsAggregatesQuery(body)
+
+Retrieve aggregated assignment data
+
+
+
+Wraps POST /api/v2/learning/assignments/aggregates/query  
+
+Requires ANY permissions: 
+
+* learning:assignment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: LearningAssignmentAggregateParam = new LearningAssignmentAggregateParam(...) // Aggregate Request
+
+// Code example
+LearningAPI.postLearningAssignmentsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningAssignmentsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**LearningAssignmentAggregateParam**](LearningAssignmentAggregateParam.html)| Aggregate Request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningAssignmentAggregateResponse**](LearningAssignmentAggregateResponse.html)
+
 <a name="postLearningAssignmentsBulkadd"></a>
 
 # **postLearningAssignmentsBulkadd**
@@ -719,7 +772,7 @@ LearningAPI.postLearningAssignmentsBulkadd(body: body) { (response, error) in
 
 
 
-> Void postLearningAssignmentsBulkremove(body)
+> [LearningAssignmentBulkRemoveResponse](LearningAssignmentBulkRemoveResponse.html) postLearningAssignmentsBulkremove(body)
 
 Remove multiple Learning Assignments
 
@@ -742,11 +795,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let body: [String] = [new [String](...)] // The IDs of the learning assignments to be removed
 
 // Code example
-LearningAPI.postLearningAssignmentsBulkremove(body: body) { (error) in
+LearningAPI.postLearningAssignmentsBulkremove(body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("LearningAPI.postLearningAssignmentsBulkremove was successful")
+        dump(response)
     }
 }
 ```
@@ -762,7 +816,7 @@ LearningAPI.postLearningAssignmentsBulkremove(body: body) { (error) in
 
 ### Return type
 
-`nil` (empty response body)
+[**LearningAssignmentBulkRemoveResponse**](LearningAssignmentBulkRemoveResponse.html)
 
 <a name="postLearningModulePublish"></a>
 

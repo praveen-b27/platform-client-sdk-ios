@@ -12,15 +12,20 @@ import Foundation
 public class AuditQueryService: Codable {
 
     public enum Name: String, Codable { 
+        case analyticsReporting = "AnalyticsReporting"
         case architect = "Architect"
+        case coaching = "Coaching"
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
+        case datatables = "Datatables"
+        case gamification = "Gamification"
         case groups = "Groups"
         case integrations = "Integrations"
         case languageUnderstanding = "LanguageUnderstanding"
         case limits = "Limits"
         case outbound = "Outbound"
         case peoplePermissions = "PeoplePermissions"
+        case performance = "Performance"
         case predictiveEngagement = "PredictiveEngagement"
         case presence = "Presence"
         case quality = "Quality"
@@ -30,7 +35,10 @@ public class AuditQueryService: Codable {
         case telephony = "Telephony"
         case topicsDefinitions = "TopicsDefinitions"
         case triggers = "Triggers"
+        case webDeployments = "WebDeployments"
+        case webhooks = "Webhooks"
         case workforceManagement = "WorkforceManagement"
+        case messaging = "Messaging"
     }
     /** Name of the Service */
     public var name: Name?

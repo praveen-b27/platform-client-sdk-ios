@@ -16,6 +16,7 @@ public class DevelopmentActivity: Codable {
         case informational = "Informational"
         case coaching = "Coaching"
         case assessedContent = "AssessedContent"
+        case assessment = "Assessment"
         case questionnaire = "Questionnaire"
     }
     public enum Status: String, Codable { 

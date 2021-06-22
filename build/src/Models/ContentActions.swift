@@ -12,15 +12,15 @@ import Foundation
 
 public class ContentActions: Codable {
 
-    /** A URL for a web page to redirect the user to */
+    /** A URL of a web page to direct the user to. */
     public var url: String?
-    /** The target window or tab within the URL&#39;s web page. If empty will open a blank page or tab. */
+    /** The target window in which to open the URL. If empty will open a blank page or tab. */
     public var urlTarget: String?
-    /** Text to be sent back in reply when a list item is selected */
+    /** Text to be sent back in reply when the item is selected. */
     public var textback: String?
-    /** Execute an organization&#39;s specific command */
+    /** Execute an organization&#39;s specific command. */
     public var commandName: String?
-    /** Additional context for the command */
+    /** Additional context for the command. */
     public var context: [String:JSON]?
 
     public init(url: String?, urlTarget: String?, textback: String?, commandName: String?, context: [String:JSON]?) {

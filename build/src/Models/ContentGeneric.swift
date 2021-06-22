@@ -8,23 +8,23 @@
 import Foundation
 
 
-/** Generic content object */
+/** Generic content object. */
 
 public class ContentGeneric: Codable {
 
-    /** An ID assigned to this rich message content. Each instance inside the content array has a unique ID. */
+    /** A unique ID assigned to this rich message content. */
     public var _id: String?
-    /** Text to show in the title row */
+    /** Text to show in the title. */
     public var title: String?
-    /** Text to show in the description row. This is immediately below the title */
+    /** Text to show in the description. */
     public var _description: String?
-    /** Path or URI to an image file */
+    /** URL of an image. */
     public var image: String?
-    /** Path or URI to a video file */
+    /** URL of a video. */
     public var video: String?
-    /** User actions available on the content. All actions are optional and all actions are executed simultaneously. */
+    /** Actions to be taken. */
     public var actions: ContentActions?
-    /** An array of component objects */
+    /** An array of component objects. */
     public var components: [ButtonComponent]?
 
     public init(_id: String?, title: String?, _description: String?, image: String?, video: String?, actions: ContentActions?, components: [ButtonComponent]?) {

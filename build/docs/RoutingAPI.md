@@ -7,8 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteRoutingAssessment**](RoutingAPI.html#deleteRoutingAssessment) | Delete single benefit assessment. |
 | [**deleteRoutingEmailDomain**](RoutingAPI.html#deleteRoutingEmailDomain) | Delete a domain |
 | [**deleteRoutingEmailDomainRoute**](RoutingAPI.html#deleteRoutingEmailDomainRoute) | Delete a route |
+| [**deleteRoutingPredictor**](RoutingAPI.html#deleteRoutingPredictor) | Delete single predictor. |
 | [**deleteRoutingQueue**](RoutingAPI.html#deleteRoutingQueue) | Delete a queue |
 | [**deleteRoutingQueueMember**](RoutingAPI.html#deleteRoutingQueueMember) | Delete a queue member. |
 | [**deleteRoutingQueueUser**](RoutingAPI.html#deleteRoutingQueueUser) | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
@@ -22,6 +24,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingWrapupcode**](RoutingAPI.html#deleteRoutingWrapupcode) | Delete wrap-up code |
 | [**deleteUserRoutinglanguage**](RoutingAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
 | [**deleteUserRoutingskill**](RoutingAPI.html#deleteUserRoutingskill) | Remove routing skill from user |
+| [**getRoutingAssessment**](RoutingAPI.html#getRoutingAssessment) | Retrieve a single benefit assessment. |
+| [**getRoutingAssessments**](RoutingAPI.html#getRoutingAssessments) | Retrieve all benefit assessments. |
+| [**getRoutingAssessmentsJob**](RoutingAPI.html#getRoutingAssessmentsJob) | Retrieve a single benefit assessments job. |
+| [**getRoutingAssessmentsJobs**](RoutingAPI.html#getRoutingAssessmentsJobs) | Retrieve all benefit assessment jobs. |
 | [**getRoutingEmailDomain**](RoutingAPI.html#getRoutingEmailDomain) | Get domain |
 | [**getRoutingEmailDomainRoute**](RoutingAPI.html#getRoutingEmailDomainRoute) | Get a route |
 | [**getRoutingEmailDomainRoutes**](RoutingAPI.html#getRoutingEmailDomainRoutes) | Get routes |
@@ -30,7 +36,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingLanguages**](RoutingAPI.html#getRoutingLanguages) | Get the list of supported languages. |
 | [**getRoutingMessageRecipient**](RoutingAPI.html#getRoutingMessageRecipient) | Get a recipient |
 | [**getRoutingMessageRecipients**](RoutingAPI.html#getRoutingMessageRecipients) | Get recipients |
+| [**getRoutingPredictor**](RoutingAPI.html#getRoutingPredictor) | Retrieve a single predictor. |
+| [**getRoutingPredictors**](RoutingAPI.html#getRoutingPredictors) | Retrieve all predictors. |
+| [**getRoutingPredictorsKeyperformanceindicators**](RoutingAPI.html#getRoutingPredictorsKeyperformanceindicators) | Get a list of Key Performance Indicators available for the predictors. |
 | [**getRoutingQueue**](RoutingAPI.html#getRoutingQueue) | Get details about this queue. |
+| [**getRoutingQueueComparisonperiod**](RoutingAPI.html#getRoutingQueueComparisonperiod) | Get a Comparison Period. |
+| [**getRoutingQueueComparisonperiods**](RoutingAPI.html#getRoutingQueueComparisonperiods) | Get list of comparison periods |
 | [**getRoutingQueueEstimatedwaittime**](RoutingAPI.html#getRoutingQueueEstimatedwaittime) | Get Estimated Wait Time |
 | [**getRoutingQueueMediatypeEstimatedwaittime**](RoutingAPI.html#getRoutingQueueMediatypeEstimatedwaittime) | Get Estimated Wait Time |
 | [**getRoutingQueueMembers**](RoutingAPI.html#getRoutingQueueMembers) | Get the members of this queue. |
@@ -60,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingConversation**](RoutingAPI.html#patchRoutingConversation) | Update attributes of an in-queue conversation |
 | [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingEmailDomainValidate**](RoutingAPI.html#patchRoutingEmailDomainValidate) | Validate domain settings |
+| [**patchRoutingPredictor**](RoutingAPI.html#patchRoutingPredictor) | Update single predictor. |
 | [**patchRoutingQueueMember**](RoutingAPI.html#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
 | [**patchRoutingQueueMembers**](RoutingAPI.html#patchRoutingQueueMembers) | Join or unjoin a set of users for a queue |
 | [**patchRoutingQueueUser**](RoutingAPI.html#patchRoutingQueueUser) | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
@@ -71,10 +83,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserRoutinglanguagesBulk**](RoutingAPI.html#patchUserRoutinglanguagesBulk) | Add bulk routing language to user. Max limit 50 languages |
 | [**patchUserRoutingskillsBulk**](RoutingAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
 | [**postAnalyticsQueuesObservationsQuery**](RoutingAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
+| [**postRoutingAssessments**](RoutingAPI.html#postRoutingAssessments) | Create a benefit assessment. |
+| [**postRoutingAssessmentsJobs**](RoutingAPI.html#postRoutingAssessmentsJobs) | Create a benefit assessment job. |
 | [**postRoutingEmailDomainRoutes**](RoutingAPI.html#postRoutingEmailDomainRoutes) | Create a route |
 | [**postRoutingEmailDomainTestconnection**](RoutingAPI.html#postRoutingEmailDomainTestconnection) | Tests the custom SMTP server integration connection set on this domain |
 | [**postRoutingEmailDomains**](RoutingAPI.html#postRoutingEmailDomains) | Create a domain |
 | [**postRoutingLanguages**](RoutingAPI.html#postRoutingLanguages) | Create Language |
+| [**postRoutingPredictors**](RoutingAPI.html#postRoutingPredictors) | Create a predictor. |
 | [**postRoutingQueueMembers**](RoutingAPI.html#postRoutingQueueMembers) | Bulk add or delete up to 100 queue members |
 | [**postRoutingQueueUsers**](RoutingAPI.html#postRoutingQueueUsers) | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**postRoutingQueueWrapupcodes**](RoutingAPI.html#postRoutingQueueWrapupcodes) | Add up to 100 wrap-up codes to a queue |
@@ -97,6 +112,57 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUserRoutingskill**](RoutingAPI.html#putUserRoutingskill) | Update routing skill proficiency or state. |
 | [**putUserRoutingskillsBulk**](RoutingAPI.html#putUserRoutingskillsBulk) | Replace all routing skills assigned to a user |
 {: class="table-striped"}
+
+<a name="deleteRoutingAssessment"></a>
+
+# **deleteRoutingAssessment**
+
+
+
+> Void deleteRoutingAssessment(assessmentId)
+
+Delete single benefit assessment.
+
+
+
+Wraps DELETE /api/v2/routing/assessments/{assessmentId}  
+
+Requires ANY permissions: 
+
+* routing:assessment:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assessmentId: String = "" // Benefit Assessment ID
+
+// Code example
+RoutingAPI.deleteRoutingAssessment(assessmentId: assessmentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingAssessment was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assessmentId** | **String**| Benefit Assessment ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteRoutingEmailDomain"></a>
 
@@ -195,6 +261,58 @@ RoutingAPI.deleteRoutingEmailDomainRoute(domainName: domainName, routeId: routeI
 | ------------- | ------------- | ------------- | ------------- |
 | **domainName** | **String**| email domain | |
 | **routeId** | **String**| route ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingPredictor"></a>
+
+# **deleteRoutingPredictor**
+
+
+
+> Void deleteRoutingPredictor(predictorId)
+
+Delete single predictor.
+
+
+
+Wraps DELETE /api/v2/routing/predictors/{predictorId}  
+
+Requires ALL permissions: 
+
+* routing:predictor:delete
+* routing:queue:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let predictorId: String = "" // Predictor ID
+
+// Code example
+RoutingAPI.deleteRoutingPredictor(predictorId: predictorId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingPredictor was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **predictorId** | **String**| Predictor ID | |
 {: class="table-striped"}
 
 
@@ -872,6 +990,223 @@ RoutingAPI.deleteUserRoutingskill(userId: userId, skillId: skillId) { (error) in
 
 `nil` (empty response body)
 
+<a name="getRoutingAssessment"></a>
+
+# **getRoutingAssessment**
+
+
+
+> [BenefitAssessment](BenefitAssessment.html) getRoutingAssessment(assessmentId)
+
+Retrieve a single benefit assessment.
+
+
+
+Wraps GET /api/v2/routing/assessments/{assessmentId}  
+
+Requires ANY permissions: 
+
+* routing:assessment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assessmentId: String = "" // Benefit Assessment ID
+
+// Code example
+RoutingAPI.getRoutingAssessment(assessmentId: assessmentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingAssessment was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assessmentId** | **String**| Benefit Assessment ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BenefitAssessment**](BenefitAssessment.html)
+
+<a name="getRoutingAssessments"></a>
+
+# **getRoutingAssessments**
+
+
+
+> [AssessmentListing](AssessmentListing.html) getRoutingAssessments(before, after, limit, pageSize, queueId)
+
+Retrieve all benefit assessments.
+
+
+
+Wraps GET /api/v2/routing/assessments  
+
+Requires ANY permissions: 
+
+* routing:queue:view
+* routing:assessment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let queueId: [String] = [""] // Queue ID(s) to filter assessments by.
+
+// Code example
+RoutingAPI.getRoutingAssessments(before: before, after: after, limit: limit, pageSize: pageSize, queueId: queueId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingAssessments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **queueId** | [**[String]**](String.html)| Queue ID(s) to filter assessments by. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssessmentListing**](AssessmentListing.html)
+
+<a name="getRoutingAssessmentsJob"></a>
+
+# **getRoutingAssessmentsJob**
+
+
+
+> [BenefitAssessmentJob](BenefitAssessmentJob.html) getRoutingAssessmentsJob(jobId)
+
+Retrieve a single benefit assessments job.
+
+
+
+Wraps GET /api/v2/routing/assessments/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* routing:assessment:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // Benefit Assessment Job ID
+
+// Code example
+RoutingAPI.getRoutingAssessmentsJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingAssessmentsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| Benefit Assessment Job ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BenefitAssessmentJob**](BenefitAssessmentJob.html)
+
+<a name="getRoutingAssessmentsJobs"></a>
+
+# **getRoutingAssessmentsJobs**
+
+
+
+> [AssessmentJobListing](AssessmentJobListing.html) getRoutingAssessmentsJobs(divisionId)
+
+Retrieve all benefit assessment jobs.
+
+
+
+Wraps GET /api/v2/routing/assessments/jobs  
+
+Requires ANY permissions: 
+
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let divisionId: [String] = [""] // Division ID(s) to filter assessment jobs by.
+
+// Code example
+RoutingAPI.getRoutingAssessmentsJobs(divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingAssessmentsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **divisionId** | [**[String]**](String.html)| Division ID(s) to filter assessment jobs by. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssessmentJobListing**](AssessmentJobListing.html)
+
 <a name="getRoutingEmailDomain"></a>
 
 # **getRoutingEmailDomain**
@@ -1299,6 +1634,167 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: p
 
 [**RecipientListing**](RecipientListing.html)
 
+<a name="getRoutingPredictor"></a>
+
+# **getRoutingPredictor**
+
+
+
+> [Predictor](Predictor.html) getRoutingPredictor(predictorId)
+
+Retrieve a single predictor.
+
+
+
+Wraps GET /api/v2/routing/predictors/{predictorId}  
+
+Requires ANY permissions: 
+
+* routing:predictor:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let predictorId: String = "" // Predictor ID
+
+// Code example
+RoutingAPI.getRoutingPredictor(predictorId: predictorId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingPredictor was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **predictorId** | **String**| Predictor ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Predictor**](Predictor.html)
+
+<a name="getRoutingPredictors"></a>
+
+# **getRoutingPredictors**
+
+
+
+> [PredictorListing](PredictorListing.html) getRoutingPredictors(before, after, limit, pageSize, queueId)
+
+Retrieve all predictors.
+
+
+
+Wraps GET /api/v2/routing/predictors  
+
+Requires ANY permissions: 
+
+* routing:predictor:view
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let queueId: [String] = [""] // Comma-separated list of queue Ids to filter by.
+
+// Code example
+RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, pageSize: pageSize, queueId: queueId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingPredictors was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **queueId** | [**[String]**](String.html)| Comma-separated list of queue Ids to filter by. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PredictorListing**](PredictorListing.html)
+
+<a name="getRoutingPredictorsKeyperformanceindicators"></a>
+
+# **getRoutingPredictorsKeyperformanceindicators**
+
+
+
+> [[KeyPerformanceIndicator]](KeyPerformanceIndicator.html) getRoutingPredictorsKeyperformanceindicators()
+
+Get a list of Key Performance Indicators available for the predictors.
+
+
+
+Wraps GET /api/v2/routing/predictors/keyperformanceindicators  
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.getRoutingPredictorsKeyperformanceindicators() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingPredictorsKeyperformanceindicators was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**[KeyPerformanceIndicator]**](KeyPerformanceIndicator.html)
+
 <a name="getRoutingQueue"></a>
 
 # **getRoutingQueue**
@@ -1350,6 +1846,114 @@ RoutingAPI.getRoutingQueue(queueId: queueId) { (response, error) in
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="getRoutingQueueComparisonperiod"></a>
+
+# **getRoutingQueueComparisonperiod**
+
+
+
+> [ComparisonPeriod](ComparisonPeriod.html) getRoutingQueueComparisonperiod(queueId, comparisonPeriodId)
+
+Get a Comparison Period.
+
+
+
+Wraps GET /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId}  
+
+Requires ALL permissions: 
+
+* routing:comparisonPeriod:view
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue id
+let comparisonPeriodId: String = "" // ComparisonPeriod id
+
+// Code example
+RoutingAPI.getRoutingQueueComparisonperiod(queueId: queueId, comparisonPeriodId: comparisonPeriodId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingQueueComparisonperiod was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue id | |
+| **comparisonPeriodId** | **String**| ComparisonPeriod id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ComparisonPeriod**](ComparisonPeriod.html)
+
+<a name="getRoutingQueueComparisonperiods"></a>
+
+# **getRoutingQueueComparisonperiods**
+
+
+
+> [ComparisonPeriodListing](ComparisonPeriodListing.html) getRoutingQueueComparisonperiods(queueId)
+
+Get list of comparison periods
+
+
+
+Wraps GET /api/v2/routing/queues/{queueId}/comparisonperiods  
+
+Requires ALL permissions: 
+
+* routing:comparisonPeriod:view
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue id
+
+// Code example
+RoutingAPI.getRoutingQueueComparisonperiods(queueId: queueId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingQueueComparisonperiods was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ComparisonPeriodListing**](ComparisonPeriodListing.html)
 
 <a name="getRoutingQueueEstimatedwaittime"></a>
 
@@ -2992,6 +3596,61 @@ RoutingAPI.patchRoutingEmailDomainValidate(domainId: domainId, body: body) { (re
 
 [**InboundDomain**](InboundDomain.html)
 
+<a name="patchRoutingPredictor"></a>
+
+# **patchRoutingPredictor**
+
+
+
+> [Predictor](Predictor.html) patchRoutingPredictor(predictorId, body)
+
+Update single predictor.
+
+
+
+Wraps PATCH /api/v2/routing/predictors/{predictorId}  
+
+Requires ALL permissions: 
+
+* routing:predictor:edit
+* routing:queue:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let predictorId: String = "" // Predictor ID
+let body: PatchPredictorRequest = new PatchPredictorRequest(...) // 
+
+// Code example
+RoutingAPI.patchRoutingPredictor(predictorId: predictorId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingPredictor was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **predictorId** | **String**| Predictor ID | |
+| **body** | [**PatchPredictorRequest**](PatchPredictorRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Predictor**](Predictor.html)
+
 <a name="patchRoutingQueueMember"></a>
 
 # **patchRoutingQueueMember**
@@ -3597,6 +4256,111 @@ RoutingAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error) 
 
 [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
 
+<a name="postRoutingAssessments"></a>
+
+# **postRoutingAssessments**
+
+
+
+> [BenefitAssessment](BenefitAssessment.html) postRoutingAssessments(body)
+
+Create a benefit assessment.
+
+
+
+Wraps POST /api/v2/routing/assessments  
+
+Requires ALL permissions: 
+
+* routing:assessment:add
+* routing:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateBenefitAssessmentRequest = new CreateBenefitAssessmentRequest(...) // 
+
+// Code example
+RoutingAPI.postRoutingAssessments(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingAssessments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateBenefitAssessmentRequest**](CreateBenefitAssessmentRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BenefitAssessment**](BenefitAssessment.html)
+
+<a name="postRoutingAssessmentsJobs"></a>
+
+# **postRoutingAssessmentsJobs**
+
+
+
+> [BenefitAssessmentJob](BenefitAssessmentJob.html) postRoutingAssessmentsJobs(body)
+
+Create a benefit assessment job.
+
+
+
+Wraps POST /api/v2/routing/assessments/jobs  
+
+Requires ANY permissions: 
+
+* routing:assessment:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateBenefitAssessmentJobRequest = new CreateBenefitAssessmentJobRequest(...) // 
+
+// Code example
+RoutingAPI.postRoutingAssessmentsJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingAssessmentsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateBenefitAssessmentJobRequest**](CreateBenefitAssessmentJobRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BenefitAssessmentJob**](BenefitAssessmentJob.html)
+
 <a name="postRoutingEmailDomainRoutes"></a>
 
 # **postRoutingEmailDomainRoutes**
@@ -3808,6 +4572,59 @@ RoutingAPI.postRoutingLanguages(body: body) { (response, error) in
 ### Return type
 
 [**Language**](Language.html)
+
+<a name="postRoutingPredictors"></a>
+
+# **postRoutingPredictors**
+
+
+
+> [Predictor](Predictor.html) postRoutingPredictors(body)
+
+Create a predictor.
+
+
+
+Wraps POST /api/v2/routing/predictors  
+
+Requires ALL permissions: 
+
+* routing:predictor:add
+* routing:queue:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreatePredictorRequest = new CreatePredictorRequest(...) // 
+
+// Code example
+RoutingAPI.postRoutingPredictors(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingPredictors was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreatePredictorRequest**](CreatePredictorRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Predictor**](Predictor.html)
 
 <a name="postRoutingQueueMembers"></a>
 

@@ -250,8 +250,9 @@ Search using the q64 value returned from a previous search.
 
 Wraps GET /api/v2/search  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 
@@ -305,8 +306,9 @@ Suggest resources using the q64 value returned from a previous suggest query.
 
 Wraps GET /api/v2/search/suggest  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 
@@ -360,8 +362,9 @@ Search users using the q64 value returned from a previous search
 
 Wraps GET /api/v2/users/search  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 
@@ -778,8 +781,9 @@ Search resources.
 
 Wraps POST /api/v2/search  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 
@@ -831,8 +835,9 @@ Suggest resources.
 
 Wraps POST /api/v2/search/suggest  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 
@@ -937,8 +942,9 @@ Search users
 
 Wraps POST /api/v2/users/search  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* directory:user:divisionview
 
 ### Example
 

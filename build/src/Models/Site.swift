@@ -58,12 +58,14 @@ public class Site: Codable {
     public var ntpSettings: NTPSettings?
     /** Media model for the site */
     public var mediaModel: MediaModel?
-    /** The core site */
+    /** Is this site a core site */
     public var coreSite: Bool?
+    /** The site connections */
+    public var siteConnections: [SiteConnection]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, mediaModel: MediaModel?, coreSite: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, primarySites: [DomainEntityRef]?, secondarySites: [DomainEntityRef]?, primaryEdges: [Edge]?, secondaryEdges: [Edge]?, addresses: [Contact]?, edges: [Edge]?, edgeAutoUpdateConfig: EdgeAutoUpdateConfig?, mediaRegionsUseLatencyBased: Bool?, location: LocationDefinition?, managed: Bool?, ntpSettings: NTPSettings?, mediaModel: MediaModel?, coreSite: Bool?, siteConnections: [SiteConnection]?, selfUri: String?) {
         
         self._id = _id
         
@@ -113,6 +115,8 @@ public class Site: Codable {
         
         self.coreSite = coreSite
         
+        self.siteConnections = siteConnections
+        
         self.selfUri = selfUri
         
     }
@@ -142,6 +146,7 @@ public class Site: Codable {
         case ntpSettings
         case mediaModel
         case coreSite
+        case siteConnections
         case selfUri
     }
 

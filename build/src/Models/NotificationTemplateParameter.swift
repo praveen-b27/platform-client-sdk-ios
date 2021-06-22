@@ -8,13 +8,13 @@
 import Foundation
 
 
-/** Parameters for placeholders in template */
+/** Template parameters for placeholders in template. */
 
 public class NotificationTemplateParameter: Codable {
 
-    /** Parameter name */
+    /** Parameter name. */
     public var name: String?
-    /** Parameter text value */
+    /** Parameter text value. */
     public var text: String?
 
     public init(name: String?, text: String?) {

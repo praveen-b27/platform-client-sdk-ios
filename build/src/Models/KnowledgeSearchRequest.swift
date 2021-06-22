@@ -13,6 +13,7 @@ public class KnowledgeSearchRequest: Codable {
 
     public enum DocumentType: String, Codable { 
         case faq = "Faq"
+        case article = "Article"
     }
     /** Input query to search content in the knowledge base */
     public var query: String?

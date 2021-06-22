@@ -94,8 +94,12 @@ public class CallbackBasic: Codable {
     public var afterCallWork: AfterCallWork?
     /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** The phone number displayed to recipients of the phone call. The value should conform to the E164 format. */
+    public var callerId: String?
+    /** The name displayed to recipients of the phone call. */
+    public var callerIdName: String?
 
-    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, _id: String?, segments: [Segment]?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: DialerPreview?, voicemail: Voicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, externalCampaign: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, provider: String?, peerId: String?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
         
         self.state = state
         
@@ -147,6 +151,10 @@ public class CallbackBasic: Codable {
         
         self.afterCallWorkRequired = afterCallWorkRequired
         
+        self.callerId = callerId
+        
+        self.callerIdName = callerIdName
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -175,6 +183,8 @@ public class CallbackBasic: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case callerId
+        case callerIdName
     }
 
 

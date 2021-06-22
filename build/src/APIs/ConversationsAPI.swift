@@ -435,6 +435,61 @@ open class ConversationsAPI {
     
     /**
      
+     Delete an Open messaging integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteConversationsMessagingIntegrationsOpenIntegrationId(integrationId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteConversationsMessagingIntegrationsOpenIntegrationIdWithRequestBuilder(integrationId: integrationId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete an Open messaging integration
+     
+     - DELETE /api/v2/conversations/messaging/integrations/open/{integrationId}
+     - See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter integrationId: (path) Integration ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteConversationsMessagingIntegrationsOpenIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/conversations/messaging/integrations/open/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete a Twitter messaging integration
      
      - parameter integrationId: (path) Integration ID 
@@ -629,8 +684,9 @@ open class ConversationsAPI {
   "evaluations" : [ {
     "formId" : "aeiou",
     "queueId" : "aeiou",
+    "oTotalScore" : 123456789,
+    "oTotalCriticalScore" : 123456789,
     "contextId" : "aeiou",
-    "getoTotalScore" : 123456789,
     "userId" : "aeiou",
     "evaluationId" : "aeiou",
     "deleted" : true,
@@ -638,17 +694,16 @@ open class ConversationsAPI {
     "eventTime" : "2000-01-23T04:56:07.000+0000",
     "rescored" : true,
     "calibrationId" : "aeiou",
-    "evaluatorId" : "aeiou",
-    "getoTotalCriticalScore" : 123456789
+    "evaluatorId" : "aeiou"
   } ],
   "conversationId" : "aeiou",
   "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
   "surveys" : [ {
     "queueId" : "aeiou",
     "surveyStatus" : "aeiou",
+    "oSurveyTotalScore" : 123456789,
     "surveyId" : "aeiou",
     "surveyFormName" : "aeiou",
-    "getoSurveyTotalScore" : 123456789,
     "eventTime" : "2000-01-23T04:56:07.000+0000",
     "surveyFormId" : "aeiou",
     "surveyFormContextId" : "aeiou",
@@ -660,8 +715,8 @@ open class ConversationsAPI {
   "externalTag" : "aeiou",
   "resolutions" : [ {
     "queueId" : "aeiou",
-    "getnNextContactAvoided" : 123456789,
     "eventTime" : "2000-01-23T04:56:07.000+0000",
+    "nNextContactAvoided" : 123456789,
     "userId" : "aeiou"
   } ],
   "originatingDirection" : "aeiou",
@@ -888,8 +943,9 @@ open class ConversationsAPI {
     "evaluations" : [ {
       "formId" : "aeiou",
       "queueId" : "aeiou",
+      "oTotalScore" : 123456789,
+      "oTotalCriticalScore" : 123456789,
       "contextId" : "aeiou",
-      "getoTotalScore" : 123456789,
       "userId" : "aeiou",
       "evaluationId" : "aeiou",
       "deleted" : true,
@@ -897,17 +953,16 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
-      "getoTotalCriticalScore" : 123456789
+      "evaluatorId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
+      "oSurveyTotalScore" : 123456789,
       "surveyId" : "aeiou",
       "surveyFormName" : "aeiou",
-      "getoSurveyTotalScore" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
@@ -919,8 +974,8 @@ open class ConversationsAPI {
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
-      "getnNextContactAvoided" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -1227,8 +1282,9 @@ open class ConversationsAPI {
     "evaluations" : [ {
       "formId" : "aeiou",
       "queueId" : "aeiou",
+      "oTotalScore" : 123456789,
+      "oTotalCriticalScore" : 123456789,
       "contextId" : "aeiou",
-      "getoTotalScore" : 123456789,
       "userId" : "aeiou",
       "evaluationId" : "aeiou",
       "deleted" : true,
@@ -1236,17 +1292,16 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
-      "getoTotalCriticalScore" : 123456789
+      "evaluatorId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
+      "oSurveyTotalScore" : 123456789,
       "surveyId" : "aeiou",
       "surveyFormName" : "aeiou",
-      "getoSurveyTotalScore" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
@@ -1258,8 +1313,8 @@ open class ConversationsAPI {
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
-      "getnNextContactAvoided" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -1610,7 +1665,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1928,11 +1985,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2140,6 +2197,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -2892,7 +2950,9 @@ open class ConversationsAPI {
         },
         "scriptId" : "aeiou",
         "timeoutSeconds" : 123,
-        "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+        "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+        "callerId" : "aeiou",
+        "callerIdName" : "aeiou"
       } ],
       "videos" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -3210,11 +3270,11 @@ open class ConversationsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3422,6 +3482,7 @@ open class ConversationsAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -3712,11 +3773,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter communicationType: (query) Call or Chat communication filtering (optional)
@@ -4557,11 +4618,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallbackConversationEntityListing> 
@@ -4731,11 +4792,11 @@ open class ConversationsAPI {
     "maxParticipants" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallConversationEntityListing> 
@@ -5234,6 +5295,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -5444,11 +5506,11 @@ open class ConversationsAPI {
     "direction" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size, maximum 50 (optional, default to 25)
@@ -6215,11 +6277,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ChatConversationEntityListing> 
@@ -6687,11 +6749,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CobrowseConversationEntityListing> 
@@ -7035,11 +7097,11 @@ open class ConversationsAPI {
     "time" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -7454,11 +7516,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<EmailConversationEntityListing> 
@@ -7965,6 +8027,7 @@ open class ConversationsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -8395,11 +8458,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<MessageConversationEntityListing> 
@@ -8551,11 +8614,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8687,11 +8750,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8937,11 +9000,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9099,6 +9162,260 @@ open class ConversationsAPI {
     
     
     
+    public enum Expand_getConversationsMessagingIntegrationsOpen: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
+    
+    
+    /**
+     
+     Get a list of Open messaging integrations
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingIntegrationsOpen(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsOpen? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: OpenIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsOpenWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId)
+        requestBuilder.execute { (response: Response<OpenIntegrationEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of Open messaging integrations
+     
+     - GET /api/v2/conversations/messaging/integrations/open
+     - See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "createError" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "createStatus" : "aeiou",
+    "outboundNotificationWebhookSignatureSecretToken" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
+    "name" : "aeiou",
+    "recipient" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "webhookHeaders" : {
+      "key" : "aeiou"
+    },
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "outboundNotificationWebhookUrl" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "pageSize" : 123,
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter supportedContentId: (query) Filter integrations returned based on the supported content ID (optional)
+
+     - returns: RequestBuilder<OpenIntegrationEntityListing> 
+     */
+    open class func getConversationsMessagingIntegrationsOpenWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: Expand_getConversationsMessagingIntegrationsOpen? = nil, supportedContentId: String? = nil) -> RequestBuilder<OpenIntegrationEntityListing> {
+        let path = "/api/v2/conversations/messaging/integrations/open"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "expand": expand?.rawValue, 
+            
+            "supportedContent.id": supportedContentId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<OpenIntegrationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Expand_getConversationsMessagingIntegrationsOpenIntegrationId: String { 
+        case supportedcontent = "supportedContent"
+    }
+
+    
+    
+    /**
+     
+     Get an Open messaging integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingIntegrationsOpenIntegrationId(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsOpenIntegrationId? = nil, completion: @escaping ((_ data: OpenIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingIntegrationsOpenIntegrationIdWithRequestBuilder(integrationId: integrationId, expand: expand)
+        requestBuilder.execute { (response: Response<OpenIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get an Open messaging integration
+     
+     - GET /api/v2/conversations/messaging/integrations/open/{integrationId}
+     - See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
+  "outboundNotificationWebhookSignatureSecretToken" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "webhookHeaders" : {
+    "key" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "outboundNotificationWebhookUrl" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter expand: (query) Expand instructions for the return value. (optional)
+
+     - returns: RequestBuilder<OpenIntegration> 
+     */
+    open class func getConversationsMessagingIntegrationsOpenIntegrationIdWithRequestBuilder(integrationId: String, expand: Expand_getConversationsMessagingIntegrationsOpenIntegrationId? = nil) -> RequestBuilder<OpenIntegration> {
+        var path = "/api/v2/conversations/messaging/integrations/open/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue
+            
+        ])
+
+        let requestBuilder: RequestBuilder<OpenIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
     public enum Expand_getConversationsMessagingIntegrationsTwitter: String { 
         case supportedcontent = "supportedContent"
     }
@@ -9191,11 +9508,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9446,11 +9763,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9663,11 +9980,11 @@ open class ConversationsAPI {
     "stickerType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter messengerType: (path) Messenger Type 
@@ -9699,6 +10016,67 @@ open class ConversationsAPI {
         ])
 
         let requestBuilder: RequestBuilder<MessagingStickerEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get conversation threading window timeline for each messaging type
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingThreadingtimeline(completion: @escaping ((_ data: ConversationThreadingWindow?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingThreadingtimelineWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ConversationThreadingWindow>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get conversation threading window timeline for each messaging type
+     
+     - GET /api/v2/conversations/messaging/threadingtimeline
+     - Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : [ {
+    "timeoutInMinutes" : 123456789,
+    "messengerType" : "aeiou"
+  } ],
+  "id" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<ConversationThreadingWindow> 
+     */
+    open class func getConversationsMessagingThreadingtimelineWithRequestBuilder() -> RequestBuilder<ConversationThreadingWindow> {
+        let path = "/api/v2/conversations/messaging/threadingtimeline"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConversationThreadingWindow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -9930,7 +10308,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -10248,11 +10628,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -10460,6 +10840,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -11150,7 +11531,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -11468,11 +11851,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -11680,6 +12063,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -12297,7 +12681,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -12615,11 +13001,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -12827,6 +13213,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -13444,7 +13831,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -13762,11 +14151,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -13974,6 +14363,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -14591,7 +14981,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -14909,11 +15301,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15121,6 +15513,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -15738,7 +16131,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -16056,11 +16451,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -16268,6 +16663,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -16892,6 +17288,109 @@ open class ConversationsAPI {
     
     /**
      
+     Update an Open messaging integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) OpenIntegrationUpdateRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchConversationsMessagingIntegrationsOpenIntegrationId(integrationId: String, body: OpenIntegrationUpdateRequest, completion: @escaping ((_ data: OpenIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchConversationsMessagingIntegrationsOpenIntegrationIdWithRequestBuilder(integrationId: integrationId, body: body)
+        requestBuilder.execute { (response: Response<OpenIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update an Open messaging integration
+     
+     - PATCH /api/v2/conversations/messaging/integrations/open/{integrationId}
+     - See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
+  "outboundNotificationWebhookSignatureSecretToken" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "webhookHeaders" : {
+    "key" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "outboundNotificationWebhookUrl" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter body: (body) OpenIntegrationUpdateRequest 
+
+     - returns: RequestBuilder<OpenIntegration> 
+     */
+    open class func patchConversationsMessagingIntegrationsOpenIntegrationIdWithRequestBuilder(integrationId: String, body: OpenIntegrationUpdateRequest) -> RequestBuilder<OpenIntegration> {
+        var path = "/api/v2/conversations/messaging/integrations/open/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
      Update Twitter messaging integration
      
      - parameter integrationId: (path) Integration ID 
@@ -17367,8 +17866,9 @@ open class ConversationsAPI {
     "evaluations" : [ {
       "formId" : "aeiou",
       "queueId" : "aeiou",
+      "oTotalScore" : 123456789,
+      "oTotalCriticalScore" : 123456789,
       "contextId" : "aeiou",
-      "getoTotalScore" : 123456789,
       "userId" : "aeiou",
       "evaluationId" : "aeiou",
       "deleted" : true,
@@ -17376,17 +17876,16 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou",
-      "getoTotalCriticalScore" : 123456789
+      "evaluatorId" : "aeiou"
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
+      "oSurveyTotalScore" : 123456789,
       "surveyId" : "aeiou",
       "surveyFormName" : "aeiou",
-      "getoSurveyTotalScore" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "surveyFormId" : "aeiou",
       "surveyFormContextId" : "aeiou",
@@ -17398,8 +17897,8 @@ open class ConversationsAPI {
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
-      "getnNextContactAvoided" : 123456789,
       "eventTime" : "2000-01-23T04:56:07.000+0000",
+      "nNextContactAvoided" : 123456789,
       "userId" : "aeiou"
     } ],
     "originatingDirection" : "aeiou",
@@ -18077,7 +18576,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -18395,11 +18896,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -18607,6 +19108,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -19280,7 +19782,9 @@ open class ConversationsAPI {
       },
       "scriptId" : "aeiou",
       "timeoutSeconds" : 123,
-      "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+      "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "callerId" : "aeiou",
+      "callerIdName" : "aeiou"
     } ],
     "videos" : [ {
       "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -19598,11 +20102,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -19810,6 +20314,7 @@ open class ConversationsAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -21624,6 +22129,7 @@ open class ConversationsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -22056,6 +22562,7 @@ open class ConversationsAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -22157,11 +22664,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path)  
@@ -22502,6 +23009,101 @@ open class ConversationsAPI {
     
     /**
      
+     Send an inbound Open Message
+     
+     - parameter body: (body) NormalizedMessage 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsMessagesInboundOpen(body: OpenNormalizedMessage, completion: @escaping ((_ data: OpenNormalizedMessage?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagesInboundOpenWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OpenNormalizedMessage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Send an inbound Open Message
+     
+     - POST /api/v2/conversations/messages/inbound/open
+     - Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "channel" : {
+    "messageId" : "aeiou",
+    "from" : {
+      "firstName" : "aeiou",
+      "lastName" : "aeiou",
+      "idType" : "aeiou",
+      "nickname" : "aeiou",
+      "id" : "aeiou"
+    },
+    "id" : "aeiou",
+    "to" : {
+      "firstName" : "aeiou",
+      "lastName" : "aeiou",
+      "idType" : "aeiou",
+      "nickname" : "aeiou",
+      "id" : "aeiou"
+    },
+    "time" : "2000-01-23T04:56:07.000+0000",
+    "type" : "aeiou",
+    "platform" : "aeiou"
+  },
+  "id" : "aeiou",
+  "text" : "aeiou",
+  "type" : "aeiou",
+  "content" : [ {
+    "attachment" : {
+      "filename" : "aeiou",
+      "sha256" : "aeiou",
+      "mime" : "aeiou",
+      "mediaType" : "aeiou",
+      "id" : "aeiou",
+      "text" : "aeiou",
+      "url" : "aeiou"
+    },
+    "contentType" : "aeiou"
+  } ],
+  "direction" : "aeiou"
+}}]
+     
+     - parameter body: (body) NormalizedMessage 
+
+     - returns: RequestBuilder<OpenNormalizedMessage> 
+     */
+    open class func postConversationsMessagesInboundOpenWithRequestBuilder(body: OpenNormalizedMessage) -> RequestBuilder<OpenNormalizedMessage> {
+        let path = "/api/v2/conversations/messages/inbound/open"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenNormalizedMessage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Create a Facebook Integration
      
      - parameter body: (body) FacebookIntegrationRequest 
@@ -22681,6 +23283,102 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LineIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create an Open messaging integration
+     
+     - parameter body: (body) OpenIntegrationRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsMessagingIntegrationsOpen(body: OpenIntegrationRequest, completion: @escaping ((_ data: OpenIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingIntegrationsOpenWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<OpenIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create an Open messaging integration
+     
+     - POST /api/v2/conversations/messaging/integrations/open
+     - See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "createError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createStatus" : "aeiou",
+  "outboundNotificationWebhookSignatureSecretToken" : "aeiou",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "",
+  "name" : "aeiou",
+  "recipient" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "webhookHeaders" : {
+    "key" : "aeiou"
+  },
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "outboundNotificationWebhookUrl" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter body: (body) OpenIntegrationRequest 
+
+     - returns: RequestBuilder<OpenIntegration> 
+     */
+    open class func postConversationsMessagingIntegrationsOpenWithRequestBuilder(body: OpenIntegrationRequest) -> RequestBuilder<OpenIntegration> {
+        let path = "/api/v2/conversations/messaging/integrations/open"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OpenIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -23203,6 +23901,69 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LineIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update conversation threading window timeline for each messaging type
+     
+     - parameter body: (body) ConversationThreadingWindowRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putConversationsMessagingThreadingtimeline(body: ConversationThreadingWindow, completion: @escaping ((_ data: ConversationThreadingWindow?,_ error: Error?) -> Void)) {
+        let requestBuilder = putConversationsMessagingThreadingtimelineWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ConversationThreadingWindow>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update conversation threading window timeline for each messaging type
+     
+     - PUT /api/v2/conversations/messaging/threadingtimeline
+     - PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : [ {
+    "timeoutInMinutes" : 123456789,
+    "messengerType" : "aeiou"
+  } ],
+  "id" : "aeiou"
+}}]
+     
+     - parameter body: (body) ConversationThreadingWindowRequest 
+
+     - returns: RequestBuilder<ConversationThreadingWindow> 
+     */
+    open class func putConversationsMessagingThreadingtimelineWithRequestBuilder(body: ConversationThreadingWindow) -> RequestBuilder<ConversationThreadingWindow> {
+        let path = "/api/v2/conversations/messaging/threadingtimeline"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ConversationThreadingWindow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

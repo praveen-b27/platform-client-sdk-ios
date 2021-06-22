@@ -28,6 +28,7 @@ title: EvaluationQualityV2TopicEvaluationV2
 | **rescore** | **Bool** |  | [optional] |
 | **conversationDate** | [**Date**](Date.html) |  | [optional] |
 | **mediaType** | **[String]** |  | [optional] |
+| **calibration** | [**EvaluationQualityV2TopicCalibration**](EvaluationQualityV2TopicCalibration.html) |  | [optional] |
 {: class="table table-striped"}
 
 

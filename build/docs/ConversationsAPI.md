@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsEmailMessagesDraftAttachment**](ConversationsAPI.html#deleteConversationsEmailMessagesDraftAttachment) | Delete attachment from draft |
 | [**deleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsFacebookIntegrationId) | Delete a Facebook messaging integration |
 | [**deleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsLineIntegrationId) | Delete a LINE messenger integration |
+| [**deleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsOpenIntegrationId) | Delete an Open messaging integration |
 | [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete a Twitter messaging integration |
 | [**deleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsWhatsappIntegrationId) | Delete a WhatsApp messaging integration |
 | [**getAnalyticsConversationDetails**](ConversationsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
@@ -66,11 +67,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebookIntegrationId) | Get a Facebook messaging integration |
 | [**getConversationsMessagingIntegrationsLine**](ConversationsAPI.html#getConversationsMessagingIntegrationsLine) | Get a list of LINE messenger Integrations |
 | [**getConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsLineIntegrationId) | Get a LINE messenger integration |
+| [**getConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpen) | Get a list of Open messaging integrations |
+| [**getConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpenIntegrationId) | Get an Open messaging integration |
 | [**getConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitter) | Get a list of Twitter Integrations |
 | [**getConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitterIntegrationId) | Get a Twitter messaging integration |
 | [**getConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsapp) | Get a list of WhatsApp Integrations |
 | [**getConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsappIntegrationId) | Get a WhatsApp messaging integration |
 | [**getConversationsMessagingSticker**](ConversationsAPI.html#getConversationsMessagingSticker) | Get a list of Messaging Stickers |
+| [**getConversationsMessagingThreadingtimeline**](ConversationsAPI.html#getConversationsMessagingThreadingtimeline) | Get conversation threading window timeline for each messaging type |
 | [**patchConversationParticipant**](ConversationsAPI.html#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI.html#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCall**](ConversationsAPI.html#patchConversationsCall) | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
@@ -99,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessageParticipantAttributes**](ConversationsAPI.html#patchConversationsMessageParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsMessageParticipantCommunication**](ConversationsAPI.html#patchConversationsMessageParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
 | [**patchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsFacebookIntegrationId) | Update Facebook messaging integration |
+| [**patchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsOpenIntegrationId) | Update an Open messaging integration |
 | [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update or activate a WhatsApp messaging integration. |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
@@ -137,14 +142,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessageParticipantReplace**](ConversationsAPI.html#postConversationsMessageParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsMessages**](ConversationsAPI.html#postConversationsMessages) | Create an outbound messaging conversation. |
 | [**postConversationsMessagesAgentless**](ConversationsAPI.html#postConversationsMessagesAgentless) | Send an agentless outbound message |
+| [**postConversationsMessagesInboundOpen**](ConversationsAPI.html#postConversationsMessagesInboundOpen) | Send an inbound Open Message |
 | [**postConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#postConversationsMessagingIntegrationsFacebook) | Create a Facebook Integration |
 | [**postConversationsMessagingIntegrationsLine**](ConversationsAPI.html#postConversationsMessagingIntegrationsLine) | Create a LINE messenger Integration |
+| [**postConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#postConversationsMessagingIntegrationsOpen) | Create an Open messaging integration |
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI.html#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**putConversationsCallParticipantCommunicationUuidata**](ConversationsAPI.html#putConversationsCallParticipantCommunicationUuidata) | Set uuiData to be sent on future commands. |
 | [**putConversationsEmailMessagesDraft**](ConversationsAPI.html#putConversationsEmailMessagesDraft) | Update conversation draft reply |
 | [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration |
+| [**putConversationsMessagingThreadingtimeline**](ConversationsAPI.html#putConversationsMessagingThreadingtimeline) | Update conversation threading window timeline for each messaging type |
 {: class="table-striped"}
 
 <a name="deleteAnalyticsConversationsDetailsJob"></a>
@@ -493,6 +501,57 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsLineIntegrationId(integ
         dump(error)
     } else {
         print("ConversationsAPI.deleteConversationsMessagingIntegrationsLineIntegrationId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteConversationsMessagingIntegrationsOpenIntegrationId"></a>
+
+# **deleteConversationsMessagingIntegrationsOpenIntegrationId**
+
+
+
+> Void deleteConversationsMessagingIntegrationsOpenIntegrationId(integrationId)
+
+Delete an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/open/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.deleteConversationsMessagingIntegrationsOpenIntegrationId(integrationId: integrationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsMessagingIntegrationsOpenIntegrationId was successful")
     }
 }
 ```
@@ -2661,6 +2720,7 @@ Wraps GET /api/v2/conversations/messages/{conversationId}/communications/{commun
 Requires ANY permissions: 
 
 * conversation:message:view
+* conversation:webmessaging:view
 
 ### Example
 
@@ -2717,6 +2777,7 @@ Wraps GET /api/v2/conversations/messages/{conversationId}/messages/{messageId}
 Requires ANY permissions: 
 
 * conversation:message:view
+* conversation:webmessaging:view
 
 ### Example
 
@@ -3239,6 +3300,118 @@ ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrat
 
 [**LineIntegration**](LineIntegration.html)
 
+<a name="getConversationsMessagingIntegrationsOpen"></a>
+
+# **getConversationsMessagingIntegrationsOpen**
+
+
+
+> [OpenIntegrationEntityListing](OpenIntegrationEntityListing.html) getConversationsMessagingIntegrationsOpen(pageSize, pageNumber, expand, supportedContentId)
+
+Get a list of Open messaging integrations
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Wraps GET /api/v2/conversations/messaging/integrations/open  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpen = ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpen.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsOpen(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsOpen was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenIntegrationEntityListing**](OpenIntegrationEntityListing.html)
+
+<a name="getConversationsMessagingIntegrationsOpenIntegrationId"></a>
+
+# **getConversationsMessagingIntegrationsOpenIntegrationId**
+
+
+
+> [OpenIntegration](OpenIntegration.html) getConversationsMessagingIntegrationsOpenIntegrationId(integrationId, expand)
+
+Get an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Wraps GET /api/v2/conversations/messaging/integrations/open/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpenIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsOpenIntegrationId.enummember // Expand instructions for the return value.
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenIntegration**](OpenIntegration.html)
+
 <a name="getConversationsMessagingIntegrationsTwitter"></a>
 
 # **getConversationsMessagingIntegrationsTwitter**
@@ -3518,6 +3691,54 @@ ConversationsAPI.getConversationsMessagingSticker(messengerType: messengerType, 
 ### Return type
 
 [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html)
+
+<a name="getConversationsMessagingThreadingtimeline"></a>
+
+# **getConversationsMessagingThreadingtimeline**
+
+
+
+> [ConversationThreadingWindow](ConversationThreadingWindow.html) getConversationsMessagingThreadingtimeline()
+
+Get conversation threading window timeline for each messaging type
+
+Conversation messaging threading timeline is a setting defined for each messenger type in your organization. This setting will dictate whether a new message is added to the most recent existing conversation, or creates a new Conversation. If the existing Conversation is still in a connected state the threading timeline setting will never play a role. After the conversation is disconnected, if an inbound message is received or an outbound message is sent after the setting for threading timeline expires, a new conversation is created.
+
+Wraps GET /api/v2/conversations/messaging/threadingtimeline  
+
+Requires ALL permissions: 
+
+* conversation:threadingTimeline:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsMessagingThreadingtimeline() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingThreadingtimeline was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ConversationThreadingWindow**](ConversationThreadingWindow.html)
 
 <a name="patchConversationParticipant"></a>
 
@@ -5049,6 +5270,60 @@ ConversationsAPI.patchConversationsMessagingIntegrationsFacebookIntegrationId(in
 ### Return type
 
 [**FacebookIntegration**](FacebookIntegration.html)
+
+<a name="patchConversationsMessagingIntegrationsOpenIntegrationId"></a>
+
+# **patchConversationsMessagingIntegrationsOpenIntegrationId**
+
+
+
+> [OpenIntegration](OpenIntegration.html) patchConversationsMessagingIntegrationsOpenIntegrationId(integrationId, body)
+
+Update an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/open/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: OpenIntegrationUpdateRequest = new OpenIntegrationUpdateRequest(...) // OpenIntegrationUpdateRequest
+
+// Code example
+ConversationsAPI.patchConversationsMessagingIntegrationsOpenIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingIntegrationsOpenIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**OpenIntegrationUpdateRequest**](OpenIntegrationUpdateRequest.html)| OpenIntegrationUpdateRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenIntegration**](OpenIntegration.html)
 
 <a name="patchConversationsMessagingIntegrationsTwitterIntegrationId"></a>
 
@@ -6778,9 +7053,10 @@ Send message on existing conversation/communication. Only one message body field
 
 Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * conversation:message:create
+* conversation:webmessaging:create
 
 ### Example
 
@@ -6834,9 +7110,10 @@ See https://developer.genesys.cloud/api/rest/v2/conversations/messaging-media-up
 
 Wraps POST /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * conversation:message:create
+* conversation:webmessaging:create
 
 ### Example
 
@@ -6891,6 +7168,7 @@ Wraps POST /api/v2/conversations/messages/{conversationId}/messages/bulk
 Requires ANY permissions: 
 
 * conversation:message:view
+* conversation:webmessaging:view
 
 ### Example
 
@@ -7086,6 +7364,58 @@ ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, err
 
 [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse.html)
 
+<a name="postConversationsMessagesInboundOpen"></a>
+
+# **postConversationsMessagesInboundOpen**
+
+
+
+> [OpenNormalizedMessage](OpenNormalizedMessage.html) postConversationsMessagesInboundOpen(body)
+
+Send an inbound Open Message
+
+Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+
+Wraps POST /api/v2/conversations/messages/inbound/open  
+
+Requires ALL permissions: 
+
+* conversation:message:receive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: OpenNormalizedMessage = new OpenNormalizedMessage(...) // NormalizedMessage
+
+// Code example
+ConversationsAPI.postConversationsMessagesInboundOpen(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagesInboundOpen was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**OpenNormalizedMessage**](OpenNormalizedMessage.html)| NormalizedMessage | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenNormalizedMessage**](OpenNormalizedMessage.html)
+
 <a name="postConversationsMessagingIntegrationsFacebook"></a>
 
 # **postConversationsMessagingIntegrationsFacebook**
@@ -7189,6 +7519,58 @@ ConversationsAPI.postConversationsMessagingIntegrationsLine(body: body) { (respo
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
+
+<a name="postConversationsMessagingIntegrationsOpen"></a>
+
+# **postConversationsMessagingIntegrationsOpen**
+
+
+
+> [OpenIntegration](OpenIntegration.html) postConversationsMessagingIntegrationsOpen(body)
+
+Create an Open messaging integration
+
+See https://developer.genesys.cloud/api/digital/openmessaging/ for more information.
+
+Wraps POST /api/v2/conversations/messaging/integrations/open  
+
+Requires ALL permissions: 
+
+* messaging:integration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: OpenIntegrationRequest = new OpenIntegrationRequest(...) // OpenIntegrationRequest
+
+// Code example
+ConversationsAPI.postConversationsMessagingIntegrationsOpen(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagingIntegrationsOpen was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**OpenIntegrationRequest**](OpenIntegrationRequest.html)| OpenIntegrationRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OpenIntegration**](OpenIntegration.html)
 
 <a name="postConversationsMessagingIntegrationsTwitter"></a>
 
@@ -7509,4 +7891,56 @@ ConversationsAPI.putConversationsMessagingIntegrationsLineIntegrationId(integrat
 ### Return type
 
 [**LineIntegration**](LineIntegration.html)
+
+<a name="putConversationsMessagingThreadingtimeline"></a>
+
+# **putConversationsMessagingThreadingtimeline**
+
+
+
+> [ConversationThreadingWindow](ConversationThreadingWindow.html) putConversationsMessagingThreadingtimeline(body)
+
+Update conversation threading window timeline for each messaging type
+
+PUT Conversation messaging threading timeline is intended to set the conversation threading settings for ALL messengerTypes. If you omit a messengerType in the request body then the setting for that messengerType will use the platform default value. The PUT replaces the existing setting(s) that were previously set for each messengerType.
+
+Wraps PUT /api/v2/conversations/messaging/threadingtimeline  
+
+Requires ALL permissions: 
+
+* conversation:threadingTimeline:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationThreadingWindow = new ConversationThreadingWindow(...) // ConversationThreadingWindowRequest
+
+// Code example
+ConversationsAPI.putConversationsMessagingThreadingtimeline(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationsMessagingThreadingtimeline was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationThreadingWindow**](ConversationThreadingWindow.html)| ConversationThreadingWindowRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationThreadingWindow**](ConversationThreadingWindow.html)
 

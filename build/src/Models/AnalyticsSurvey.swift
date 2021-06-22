@@ -31,10 +31,9 @@ public class AnalyticsSurvey: Codable {
     public var surveyStatus: String?
     /** ID of the agent the survey was performed against */
     public var userId: String?
-    /** Total score of the survey */
-    public var getoSurveyTotalScore: Int64?
+    public var oSurveyTotalScore: Int64?
 
-    public init(eventTime: Date?, queueId: String?, surveyCompletedDate: Date?, surveyFormContextId: String?, surveyFormId: String?, surveyFormName: String?, surveyId: String?, surveyPromoterScore: Int?, surveyStatus: String?, userId: String?, getoSurveyTotalScore: Int64?) {
+    public init(eventTime: Date?, queueId: String?, surveyCompletedDate: Date?, surveyFormContextId: String?, surveyFormId: String?, surveyFormName: String?, surveyId: String?, surveyPromoterScore: Int?, surveyStatus: String?, userId: String?, oSurveyTotalScore: Int64?) {
         
         self.eventTime = eventTime
         
@@ -56,7 +55,7 @@ public class AnalyticsSurvey: Codable {
         
         self.userId = userId
         
-        self.getoSurveyTotalScore = getoSurveyTotalScore
+        self.oSurveyTotalScore = oSurveyTotalScore
         
     }
 

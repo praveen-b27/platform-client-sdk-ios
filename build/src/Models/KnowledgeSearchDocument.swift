@@ -17,6 +17,7 @@ public class KnowledgeSearchDocument: Codable {
     }
     public enum ModelType: String, Codable { 
         case faq = "Faq"
+        case article = "Article"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
@@ -37,12 +38,14 @@ public class KnowledgeSearchDocument: Codable {
     public var knowledgeBase: KnowledgeBase?
     /** External URL to the document */
     public var externalUrl: String?
+    /** Article */
+    public var article: DocumentArticle?
     /** The confidence associated with a document with respect to a search query */
     public var confidence: Double?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, languageCode: LanguageCode?, type: ModelType?, faq: DocumentFaq?, dateCreated: Date?, dateModified: Date?, categories: [KnowledgeCategory]?, knowledgeBase: KnowledgeBase?, externalUrl: String?, confidence: Double?, selfUri: String?) {
+    public init(_id: String?, name: String?, languageCode: LanguageCode?, type: ModelType?, faq: DocumentFaq?, dateCreated: Date?, dateModified: Date?, categories: [KnowledgeCategory]?, knowledgeBase: KnowledgeBase?, externalUrl: String?, article: DocumentArticle?, confidence: Double?, selfUri: String?) {
         
         self._id = _id
         
@@ -64,6 +67,8 @@ public class KnowledgeSearchDocument: Codable {
         
         self.externalUrl = externalUrl
         
+        self.article = article
+        
         self.confidence = confidence
         
         self.selfUri = selfUri
@@ -81,6 +86,7 @@ public class KnowledgeSearchDocument: Codable {
         case categories
         case knowledgeBase
         case externalUrl
+        case article
         case confidence
         case selfUri
     }

@@ -12,15 +12,20 @@ import Foundation
 public class AuditRealtimeQueryRequest: Codable {
 
     public enum ServiceName: String, Codable { 
+        case analyticsReporting = "AnalyticsReporting"
         case architect = "Architect"
+        case coaching = "Coaching"
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
+        case datatables = "Datatables"
+        case gamification = "Gamification"
         case groups = "Groups"
         case integrations = "Integrations"
         case languageUnderstanding = "LanguageUnderstanding"
         case limits = "Limits"
         case outbound = "Outbound"
         case peoplePermissions = "PeoplePermissions"
+        case performance = "Performance"
         case predictiveEngagement = "PredictiveEngagement"
         case presence = "Presence"
         case quality = "Quality"
@@ -30,7 +35,10 @@ public class AuditRealtimeQueryRequest: Codable {
         case telephony = "Telephony"
         case topicsDefinitions = "TopicsDefinitions"
         case triggers = "Triggers"
+        case webDeployments = "WebDeployments"
+        case webhooks = "Webhooks"
         case workforceManagement = "WorkforceManagement"
+        case messaging = "Messaging"
     }
     /** Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?

@@ -521,6 +521,7 @@ open class RecordingAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -1496,6 +1497,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1913,6 +1915,7 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2257,6 +2260,7 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2598,6 +2602,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2954,6 +2959,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3549,6 +3555,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4166,6 +4173,7 @@ open class RecordingAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -4859,6 +4867,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -5522,6 +5531,7 @@ open class RecordingAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -5699,11 +5709,11 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -6320,6 +6330,7 @@ open class RecordingAPI {
                 "spouse" : "aeiou"
               },
               "team" : {
+                "division" : "",
                 "memberCount" : 123456789,
                 "selfUri" : "aeiou",
                 "name" : "aeiou",
@@ -6416,11 +6427,11 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
+                "selfUri" : "aeiou",
                 "pageSize" : 123,
-                "nextUri" : "aeiou",
-                "previousUri" : "aeiou"
+                "previousUri" : "aeiou",
+                "nextUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6502,11 +6513,11 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -6997,6 +7008,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -7093,11 +7105,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -7566,11 +7578,11 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8237,6 +8249,7 @@ open class RecordingAPI {
                 "spouse" : "aeiou"
               },
               "team" : {
+                "division" : "",
                 "memberCount" : 123456789,
                 "selfUri" : "aeiou",
                 "name" : "aeiou",
@@ -8333,11 +8346,11 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
+                "selfUri" : "aeiou",
                 "pageSize" : 123,
-                "nextUri" : "aeiou",
-                "previousUri" : "aeiou"
+                "previousUri" : "aeiou",
+                "nextUri" : "aeiou"
               },
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -8419,11 +8432,11 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8935,6 +8948,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -9031,11 +9045,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -9367,6 +9381,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -9459,11 +9474,11 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9842,6 +9857,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -9992,7 +10008,9 @@ open class RecordingAPI {
           },
           "scriptId" : "aeiou",
           "timeoutSeconds" : 123,
-          "startHoldTime" : "2000-01-23T04:56:07.000+0000"
+          "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+          "callerId" : "aeiou",
+          "callerIdName" : "aeiou"
         } ],
         "videos" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -10307,11 +10325,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -10556,11 +10574,11 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10605,7 +10623,7 @@ open class RecordingAPI {
      - parameter body: (body) Policy 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchRecordingCrossplatformMediaretentionpolicy(policyId: String, body: CrossPlatformPolicy, completion: @escaping ((_ data: CrossPlatformPolicy?,_ error: Error?) -> Void)) {
+    open class func patchRecordingCrossplatformMediaretentionpolicy(policyId: String, body: CrossPlatformPolicyUpdate, completion: @escaping ((_ data: CrossPlatformPolicy?,_ error: Error?) -> Void)) {
         let requestBuilder = patchRecordingCrossplatformMediaretentionpolicyWithRequestBuilder(policyId: policyId, body: body)
         requestBuilder.execute { (response: Response<CrossPlatformPolicy>?, error) -> Void in
             do {
@@ -11030,6 +11048,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -11126,11 +11145,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11221,7 +11240,7 @@ open class RecordingAPI {
 
      - returns: RequestBuilder<CrossPlatformPolicy> 
      */
-    open class func patchRecordingCrossplatformMediaretentionpolicyWithRequestBuilder(policyId: String, body: CrossPlatformPolicy) -> RequestBuilder<CrossPlatformPolicy> {
+    open class func patchRecordingCrossplatformMediaretentionpolicyWithRequestBuilder(policyId: String, body: CrossPlatformPolicyUpdate) -> RequestBuilder<CrossPlatformPolicy> {
         var path = "/api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}"
         let policyIdPreEscape = "\(policyId)"
         let policyIdPostEscape = policyIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -11251,7 +11270,7 @@ open class RecordingAPI {
      - parameter body: (body) Policy 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchRecordingMediaretentionpolicy(policyId: String, body: Policy, completion: @escaping ((_ data: Policy?,_ error: Error?) -> Void)) {
+    open class func patchRecordingMediaretentionpolicy(policyId: String, body: PolicyUpdate, completion: @escaping ((_ data: Policy?,_ error: Error?) -> Void)) {
         let requestBuilder = patchRecordingMediaretentionpolicyWithRequestBuilder(policyId: policyId, body: body)
         requestBuilder.execute { (response: Response<Policy>?, error) -> Void in
             do {
@@ -11697,6 +11716,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -11793,11 +11813,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11884,7 +11904,7 @@ open class RecordingAPI {
 
      - returns: RequestBuilder<Policy> 
      */
-    open class func patchRecordingMediaretentionpolicyWithRequestBuilder(policyId: String, body: Policy) -> RequestBuilder<Policy> {
+    open class func patchRecordingMediaretentionpolicyWithRequestBuilder(policyId: String, body: PolicyUpdate) -> RequestBuilder<Policy> {
         var path = "/api/v2/recording/mediaretentionpolicies/{policyId}"
         let policyIdPreEscape = "\(policyId)"
         let policyIdPostEscape = policyIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12180,6 +12200,7 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -12793,6 +12814,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -12889,11 +12911,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -13381,6 +13403,7 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -14011,6 +14034,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -14107,11 +14131,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -14427,6 +14451,7 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -14594,6 +14619,104 @@ open class RecordingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[AddressableEntityRef]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Acknowledge a screen recording.
+     
+     - parameter body: (body) AcknowledgeScreenRecordingRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRecordingsScreensessionsAcknowledge(body: AcknowledgeScreenRecordingRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRecordingsScreensessionsAcknowledgeWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Acknowledge a screen recording.
+     
+     - POST /api/v2/recordings/screensessions/acknowledge
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) AcknowledgeScreenRecordingRequest 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postRecordingsScreensessionsAcknowledgeWithRequestBuilder(body: AcknowledgeScreenRecordingRequest) -> RequestBuilder<Void> {
+        let path = "/api/v2/recordings/screensessions/acknowledge"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Provide meta-data a screen recording.
+     
+     - parameter body: (body) ScreenRecordingMetaDataRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRecordingsScreensessionsMetadata(body: ScreenRecordingMetaDataRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRecordingsScreensessionsMetadataWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Provide meta-data a screen recording.
+     
+     - POST /api/v2/recordings/screensessions/metadata
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) ScreenRecordingMetaDataRequest 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postRecordingsScreensessionsMetadataWithRequestBuilder(body: ScreenRecordingMetaDataRequest) -> RequestBuilder<Void> {
+        let path = "/api/v2/recordings/screensessions/metadata"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -15046,6 +15169,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15440,6 +15564,7 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -16007,6 +16132,7 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -16609,6 +16735,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -16705,11 +16832,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -17519,6 +17646,7 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -17615,11 +17743,11 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

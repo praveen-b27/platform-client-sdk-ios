@@ -294,6 +294,7 @@ open class LearningAPI {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case questionnaire = "Questionnaire"
+        case assessment = "Assessment"
     }
 
     
@@ -417,11 +418,11 @@ open class LearningAPI {
     "user" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -524,6 +525,7 @@ open class LearningAPI {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case questionnaire = "Questionnaire"
+        case assessment = "Assessment"
     }
 
     
@@ -646,11 +648,11 @@ open class LearningAPI {
     "user" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -1025,6 +1027,7 @@ open class LearningAPI {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case questionnaire = "Questionnaire"
+        case assessment = "Assessment"
     }
 
     
@@ -1142,11 +1145,11 @@ open class LearningAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter isArchived: (query) Archive status (optional, default to false)
@@ -1426,6 +1429,78 @@ open class LearningAPI {
     
     /**
      
+     Retrieve aggregated assignment data
+     
+     - parameter body: (body) Aggregate Request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningAssignmentsAggregatesQuery(body: LearningAssignmentAggregateParam, completion: @escaping ((_ data: LearningAssignmentAggregateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningAssignmentsAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<LearningAssignmentAggregateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve aggregated assignment data
+     
+     - POST /api/v2/learning/assignments/aggregates/query
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "aeiou",
+      "metrics" : [ {
+        "metric" : "aeiou",
+        "stats" : {
+          "count" : 123
+        }
+      } ]
+    } ],
+    "group" : {
+      "key" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter body: (body) Aggregate Request 
+
+     - returns: RequestBuilder<LearningAssignmentAggregateResponse> 
+     */
+    open class func postLearningAssignmentsAggregatesQueryWithRequestBuilder(body: LearningAssignmentAggregateParam) -> RequestBuilder<LearningAssignmentAggregateResponse> {
+        let path = "/api/v2/learning/assignments/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningAssignmentAggregateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Add multiple learning assignments
      
      - parameter body: (body) The learning assignments to be created (optional)
@@ -1549,12 +1624,19 @@ open class LearningAPI {
      - parameter body: (body) The IDs of the learning assignments to be removed (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLearningAssignmentsBulkremove(body: [String]? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postLearningAssignmentsBulkremove(body: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentBulkRemoveResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postLearningAssignmentsBulkremoveWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<LearningAssignmentBulkRemoveResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -1569,12 +1651,24 @@ open class LearningAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "assignmentId" : "aeiou"
+  } ],
+  "disallowedEntities" : [ {
+    "errorCode" : "aeiou",
+    "entity" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ]
+}}]
      
      - parameter body: (body) The IDs of the learning assignments to be removed (optional)
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<LearningAssignmentBulkRemoveResponse> 
      */
-    open class func postLearningAssignmentsBulkremoveWithRequestBuilder(body: [String]? = nil) -> RequestBuilder<Void> {
+    open class func postLearningAssignmentsBulkremoveWithRequestBuilder(body: [String]? = nil) -> RequestBuilder<LearningAssignmentBulkRemoveResponse> {
         let path = "/api/v2/learning/assignments/bulkremove"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1583,7 +1677,7 @@ open class LearningAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<LearningAssignmentBulkRemoveResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -1802,11 +1896,11 @@ open class LearningAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
   "previousUri" : "aeiou",
+  "nextUri" : "aeiou",
   "unfilteredTotal" : 123
 }}]
      

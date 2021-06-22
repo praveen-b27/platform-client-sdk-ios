@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Message content element */
+/** Message content element. */
 
 public class MessageContent: Codable {
 
@@ -16,35 +16,35 @@ public class MessageContent: Codable {
         case attachment = "Attachment"
         case location = "Location"
         case quickReply = "QuickReply"
-        case buttonResponse = "ButtonResponse"
         case notification = "Notification"
         case genericTemplate = "GenericTemplate"
         case listTemplate = "ListTemplate"
         case postback = "Postback"
         case reactions = "Reactions"
         case mention = "Mention"
+        case buttonResponse = "ButtonResponse"
     }
     /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
     public var contentType: ContentType?
-    /** Location object */
+    /** Location content. */
     public var location: ContentLocation?
-    /** Attachment object */
+    /** Attachment content. */
     public var attachment: ContentAttachment?
-    /** Quick reply object */
+    /** Quick reply content. */
     public var quickReply: ContentQuickReply?
-    /** Button response object */
+    /** Button response content. */
     public var buttonResponse: ContentButtonResponse?
-    /** Generic content object */
+    /** Generic content. */
     public var generic: ContentGeneric?
-    /** List content object */
+    /** List content. */
     public var list: ContentList?
-    /** Template notification object */
+    /** Template notification content. */
     public var template: ContentNotificationTemplate?
-    /** A list of reactions */
+    /** A set of reactions to a message. */
     public var reactions: [ContentReaction]?
-    /** This is used to identify who the message is sent to, as well as who it was sent from. This information is channel specific - depends on capabilities to describe party by the platform */
+    /** Mention content. */
     public var mention: MessagingRecipient?
-    /** The postback object result of a user clicking in a button */
+    /** Structured message postback (Deprecated). */
     public var postback: ContentPostback?
 
     public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, buttonResponse: ContentButtonResponse?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?) {

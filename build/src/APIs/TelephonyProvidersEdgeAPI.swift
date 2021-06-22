@@ -798,11 +798,11 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -896,11 +896,11 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 
@@ -1001,11 +1001,11 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 
@@ -1481,6 +1481,34 @@ open class TelephonyProvidersEdgeAPI {
       "addressVerified" : true
     },
     "mediaModel" : "aeiou",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "aeiou",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "site" : "",
+          "connectionErrors" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou"
+        } ]
+      } ],
+      "name" : "aeiou",
+      "secondaryCoreSites" : [ "" ],
+      "mediaModel" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "enabled" : true,
+      "primaryCoreSites" : [ "" ]
+    } ],
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -2020,6 +2048,34 @@ open class TelephonyProvidersEdgeAPI {
         "addressVerified" : true
       },
       "mediaModel" : "aeiou",
+      "siteConnections" : [ {
+        "coreSite" : true,
+        "managed" : true,
+        "selfUri" : "aeiou",
+        "edgeList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou",
+          "edgeConnectionList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "site" : "",
+            "connectionErrors" : [ "aeiou" ],
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou"
+          } ]
+        } ],
+        "name" : "aeiou",
+        "secondaryCoreSites" : [ "" ],
+        "mediaModel" : "aeiou",
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "enabled" : true,
+        "primaryCoreSites" : [ "" ]
+      } ],
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -2335,6 +2391,34 @@ open class TelephonyProvidersEdgeAPI {
           "addressVerified" : true
         },
         "mediaModel" : "aeiou",
+        "siteConnections" : [ {
+          "coreSite" : true,
+          "managed" : true,
+          "selfUri" : "aeiou",
+          "edgeList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou",
+            "edgeConnectionList" : [ {
+              "interfaceIpAddress" : "aeiou",
+              "site" : "",
+              "connectionErrors" : [ "aeiou" ],
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "interfaceName" : "aeiou"
+            } ]
+          } ],
+          "name" : "aeiou",
+          "secondaryCoreSites" : [ "" ],
+          "mediaModel" : "aeiou",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "enabled" : true,
+          "primaryCoreSites" : [ "" ]
+        } ],
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -2388,11 +2472,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2769,11 +2853,11 @@ open class TelephonyProvidersEdgeAPI {
     "startDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3164,11 +3248,11 @@ open class TelephonyProvidersEdgeAPI {
     "friendlyName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3402,11 +3486,11 @@ open class TelephonyProvidersEdgeAPI {
     "edgeVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3558,11 +3642,11 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3847,6 +3931,34 @@ open class TelephonyProvidersEdgeAPI {
         "addressVerified" : true
       },
       "mediaModel" : "aeiou",
+      "siteConnections" : [ {
+        "coreSite" : true,
+        "managed" : true,
+        "selfUri" : "aeiou",
+        "edgeList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou",
+          "edgeConnectionList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "site" : "",
+            "connectionErrors" : [ "aeiou" ],
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou"
+          } ]
+        } ],
+        "name" : "aeiou",
+        "secondaryCoreSites" : [ "" ],
+        "mediaModel" : "aeiou",
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "enabled" : true,
+        "primaryCoreSites" : [ "" ]
+      } ],
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -3865,11 +3977,11 @@ open class TelephonyProvidersEdgeAPI {
     "statusCode" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4038,11 +4150,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CertificateAuthorityEntityListing> 
@@ -4385,11 +4497,11 @@ open class TelephonyProvidersEdgeAPI {
     "endPhoneNumber" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4507,11 +4619,11 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) The type of numbers to return. 
@@ -4640,11 +4752,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5005,11 +5117,11 @@ open class TelephonyProvidersEdgeAPI {
     "phoneTrunkBases" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5339,11 +5451,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5457,11 +5569,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5736,6 +5848,34 @@ open class TelephonyProvidersEdgeAPI {
         "addressVerified" : true
       },
       "mediaModel" : "aeiou",
+      "siteConnections" : [ {
+        "coreSite" : true,
+        "managed" : true,
+        "selfUri" : "aeiou",
+        "edgeList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou",
+          "edgeConnectionList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "site" : "",
+            "connectionErrors" : [ "aeiou" ],
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou"
+          } ]
+        } ],
+        "name" : "aeiou",
+        "secondaryCoreSites" : [ "" ],
+        "mediaModel" : "aeiou",
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "enabled" : true,
+        "primaryCoreSites" : [ "" ]
+      } ],
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -5876,6 +6016,13 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    
+    public enum Expand_getTelephonyProvidersEdgesLinebasesettings: String { 
+        case properties = "properties"
+    }
+
+    
+    
     /**
      
      Get a listing of line base settings objects
@@ -5884,10 +6031,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Value by which to sort (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTelephonyProvidersEdgesLinebasesettings(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: LineBaseEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesLinebasesettingsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getTelephonyProvidersEdgesLinebasesettings(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LineBaseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesLinebasesettingsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, expand: expand)
         requestBuilder.execute { (response: Response<LineBaseEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5940,21 +6088,22 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Value by which to sort (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
+     - parameter expand: (query) Fields to expand in the response, comma-separated (optional)
 
      - returns: RequestBuilder<LineBaseEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesLinebasesettingsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil) -> RequestBuilder<LineBaseEntityListing> {
+    open class func getTelephonyProvidersEdgesLinebasesettingsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, expand: [String]? = nil) -> RequestBuilder<LineBaseEntityListing> {
         let path = "/api/v2/telephony/providers/edges/linebasesettings"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5973,7 +6122,9 @@ open class TelephonyProvidersEdgeAPI {
             
             "sortBy": sortBy, 
             
-            "sortOrder": sortOrder
+            "sortOrder": sortOrder, 
+            
+            "expand": expand
             
         ])
 
@@ -6243,6 +6394,34 @@ open class TelephonyProvidersEdgeAPI {
           "addressVerified" : true
         },
         "mediaModel" : "aeiou",
+        "siteConnections" : [ {
+          "coreSite" : true,
+          "managed" : true,
+          "selfUri" : "aeiou",
+          "edgeList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou",
+            "edgeConnectionList" : [ {
+              "interfaceIpAddress" : "aeiou",
+              "site" : "",
+              "connectionErrors" : [ "aeiou" ],
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "interfaceName" : "aeiou"
+            } ]
+          } ],
+          "name" : "aeiou",
+          "secondaryCoreSites" : [ "" ],
+          "mediaModel" : "aeiou",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "enabled" : true,
+          "primaryCoreSites" : [ "" ]
+        } ],
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -6266,11 +6445,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6545,6 +6724,34 @@ open class TelephonyProvidersEdgeAPI {
         "addressVerified" : true
       },
       "mediaModel" : "aeiou",
+      "siteConnections" : [ {
+        "coreSite" : true,
+        "managed" : true,
+        "selfUri" : "aeiou",
+        "edgeList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou",
+          "edgeConnectionList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "site" : "",
+            "connectionErrors" : [ "aeiou" ],
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou"
+          } ]
+        } ],
+        "name" : "aeiou",
+        "secondaryCoreSites" : [ "" ],
+        "mediaModel" : "aeiou",
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "enabled" : true,
+        "primaryCoreSites" : [ "" ]
+      } ],
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -6748,11 +6955,11 @@ open class TelephonyProvidersEdgeAPI {
     "startDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -7116,6 +7323,34 @@ open class TelephonyProvidersEdgeAPI {
       "addressVerified" : true
     },
     "mediaModel" : "aeiou",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "aeiou",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "site" : "",
+          "connectionErrors" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou"
+        } ]
+      } ],
+      "name" : "aeiou",
+      "secondaryCoreSites" : [ "" ],
+      "mediaModel" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "enabled" : true,
+      "primaryCoreSites" : [ "" ]
+    } ],
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -7411,6 +7646,34 @@ open class TelephonyProvidersEdgeAPI {
         "addressVerified" : true
       },
       "mediaModel" : "aeiou",
+      "siteConnections" : [ {
+        "coreSite" : true,
+        "managed" : true,
+        "selfUri" : "aeiou",
+        "edgeList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou",
+          "edgeConnectionList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "site" : "",
+            "connectionErrors" : [ "aeiou" ],
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou"
+          } ]
+        } ],
+        "name" : "aeiou",
+        "secondaryCoreSites" : [ "" ],
+        "mediaModel" : "aeiou",
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "enabled" : true,
+        "primaryCoreSites" : [ "" ]
+      } ],
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -7433,11 +7696,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7718,6 +7981,34 @@ open class TelephonyProvidersEdgeAPI {
           "addressVerified" : true
         },
         "mediaModel" : "aeiou",
+        "siteConnections" : [ {
+          "coreSite" : true,
+          "managed" : true,
+          "selfUri" : "aeiou",
+          "edgeList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou",
+            "edgeConnectionList" : [ {
+              "interfaceIpAddress" : "aeiou",
+              "site" : "",
+              "connectionErrors" : [ "aeiou" ],
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "interfaceName" : "aeiou"
+            } ]
+          } ],
+          "name" : "aeiou",
+          "secondaryCoreSites" : [ "" ],
+          "mediaModel" : "aeiou",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "enabled" : true,
+          "primaryCoreSites" : [ "" ]
+        } ],
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -8052,11 +8343,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8160,11 +8451,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8626,6 +8917,34 @@ open class TelephonyProvidersEdgeAPI {
             "addressVerified" : true
           },
           "mediaModel" : "aeiou",
+          "siteConnections" : [ {
+            "coreSite" : true,
+            "managed" : true,
+            "selfUri" : "aeiou",
+            "edgeList" : [ {
+              "interfaceIpAddress" : "aeiou",
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "interfaceName" : "aeiou",
+              "edgeConnectionList" : [ {
+                "interfaceIpAddress" : "aeiou",
+                "site" : "",
+                "connectionErrors" : [ "aeiou" ],
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou",
+                "interfaceName" : "aeiou"
+              } ]
+            } ],
+            "name" : "aeiou",
+            "secondaryCoreSites" : [ "" ],
+            "mediaModel" : "aeiou",
+            "id" : "aeiou",
+            "type" : "aeiou",
+            "enabled" : true,
+            "primaryCoreSites" : [ "" ]
+          } ],
           "edgeAutoUpdateConfig" : {
             "rrule" : "aeiou",
             "start" : "aeiou",
@@ -8709,11 +9028,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -9027,6 +9346,34 @@ open class TelephonyProvidersEdgeAPI {
           "addressVerified" : true
         },
         "mediaModel" : "aeiou",
+        "siteConnections" : [ {
+          "coreSite" : true,
+          "managed" : true,
+          "selfUri" : "aeiou",
+          "edgeList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou",
+            "edgeConnectionList" : [ {
+              "interfaceIpAddress" : "aeiou",
+              "site" : "",
+              "connectionErrors" : [ "aeiou" ],
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "interfaceName" : "aeiou"
+            } ]
+          } ],
+          "name" : "aeiou",
+          "secondaryCoreSites" : [ "" ],
+          "mediaModel" : "aeiou",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "enabled" : true,
+          "primaryCoreSites" : [ "" ]
+        } ],
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -9200,11 +9547,11 @@ open class TelephonyProvidersEdgeAPI {
     "friendlyName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -9458,6 +9805,34 @@ open class TelephonyProvidersEdgeAPI {
     "addressVerified" : true
   },
   "mediaModel" : "aeiou",
+  "siteConnections" : [ {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "aeiou",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "aeiou",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "interfaceName" : "aeiou",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "site" : "",
+        "connectionErrors" : [ "aeiou" ],
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou"
+      } ]
+    } ],
+    "name" : "aeiou",
+    "secondaryCoreSites" : [ "" ],
+    "mediaModel" : "aeiou",
+    "id" : "aeiou",
+    "type" : "aeiou",
+    "enabled" : true,
+    "primaryCoreSites" : [ "" ]
+  } ],
   "edgeAutoUpdateConfig" : {
     "rrule" : "aeiou",
     "start" : "aeiou",
@@ -9917,11 +10292,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter siteId: (path) Site ID 
@@ -10213,6 +10588,34 @@ open class TelephonyProvidersEdgeAPI {
       "addressVerified" : true
     },
     "mediaModel" : "aeiou",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "aeiou",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "site" : "",
+          "connectionErrors" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou"
+        } ]
+      } ],
+      "name" : "aeiou",
+      "secondaryCoreSites" : [ "" ],
+      "mediaModel" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "enabled" : true,
+      "primaryCoreSites" : [ "" ]
+    } ],
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -10221,11 +10624,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10323,11 +10726,11 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 1000)
@@ -10747,11 +11150,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -10874,11 +11277,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query)  (optional)
@@ -11126,11 +11529,11 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12396,6 +12799,34 @@ open class TelephonyProvidersEdgeAPI {
       "addressVerified" : true
     },
     "mediaModel" : "aeiou",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "aeiou",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "site" : "",
+          "connectionErrors" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou"
+        } ]
+      } ],
+      "name" : "aeiou",
+      "secondaryCoreSites" : [ "" ],
+      "mediaModel" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "enabled" : true,
+      "primaryCoreSites" : [ "" ]
+    } ],
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -13053,6 +13484,34 @@ open class TelephonyProvidersEdgeAPI {
       "addressVerified" : true
     },
     "mediaModel" : "aeiou",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "aeiou",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "site" : "",
+          "connectionErrors" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou"
+        } ]
+      } ],
+      "name" : "aeiou",
+      "secondaryCoreSites" : [ "" ],
+      "mediaModel" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "enabled" : true,
+      "primaryCoreSites" : [ "" ]
+    } ],
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -13492,6 +13951,34 @@ open class TelephonyProvidersEdgeAPI {
           "addressVerified" : true
         },
         "mediaModel" : "aeiou",
+        "siteConnections" : [ {
+          "coreSite" : true,
+          "managed" : true,
+          "selfUri" : "aeiou",
+          "edgeList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou",
+            "edgeConnectionList" : [ {
+              "interfaceIpAddress" : "aeiou",
+              "site" : "",
+              "connectionErrors" : [ "aeiou" ],
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "interfaceName" : "aeiou"
+            } ]
+          } ],
+          "name" : "aeiou",
+          "secondaryCoreSites" : [ "" ],
+          "mediaModel" : "aeiou",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "enabled" : true,
+          "primaryCoreSites" : [ "" ]
+        } ],
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -14007,6 +14494,34 @@ open class TelephonyProvidersEdgeAPI {
     "addressVerified" : true
   },
   "mediaModel" : "aeiou",
+  "siteConnections" : [ {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "aeiou",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "aeiou",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "interfaceName" : "aeiou",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "site" : "",
+        "connectionErrors" : [ "aeiou" ],
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou"
+      } ]
+    } ],
+    "name" : "aeiou",
+    "secondaryCoreSites" : [ "" ],
+    "mediaModel" : "aeiou",
+    "id" : "aeiou",
+    "type" : "aeiou",
+    "enabled" : true,
+    "primaryCoreSites" : [ "" ]
+  } ],
   "edgeAutoUpdateConfig" : {
     "rrule" : "aeiou",
     "start" : "aeiou",
@@ -14331,6 +14846,34 @@ open class TelephonyProvidersEdgeAPI {
       "addressVerified" : true
     },
     "mediaModel" : "aeiou",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "aeiou",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "site" : "",
+          "connectionErrors" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou"
+        } ]
+      } ],
+      "name" : "aeiou",
+      "secondaryCoreSites" : [ "" ],
+      "mediaModel" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "enabled" : true,
+      "primaryCoreSites" : [ "" ]
+    } ],
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -14601,6 +15144,34 @@ open class TelephonyProvidersEdgeAPI {
         "addressVerified" : true
       },
       "mediaModel" : "aeiou",
+      "siteConnections" : [ {
+        "coreSite" : true,
+        "managed" : true,
+        "selfUri" : "aeiou",
+        "edgeList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou",
+          "edgeConnectionList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "site" : "",
+            "connectionErrors" : [ "aeiou" ],
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou"
+          } ]
+        } ],
+        "name" : "aeiou",
+        "secondaryCoreSites" : [ "" ],
+        "mediaModel" : "aeiou",
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "enabled" : true,
+        "primaryCoreSites" : [ "" ]
+      } ],
       "edgeAutoUpdateConfig" : {
         "rrule" : "aeiou",
         "start" : "aeiou",
@@ -15705,6 +16276,34 @@ open class TelephonyProvidersEdgeAPI {
       "addressVerified" : true
     },
     "mediaModel" : "aeiou",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "aeiou",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "aeiou",
+          "site" : "",
+          "connectionErrors" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "interfaceName" : "aeiou"
+        } ]
+      } ],
+      "name" : "aeiou",
+      "secondaryCoreSites" : [ "" ],
+      "mediaModel" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "enabled" : true,
+      "primaryCoreSites" : [ "" ]
+    } ],
     "edgeAutoUpdateConfig" : {
       "rrule" : "aeiou",
       "start" : "aeiou",
@@ -15989,6 +16588,34 @@ open class TelephonyProvidersEdgeAPI {
           "addressVerified" : true
         },
         "mediaModel" : "aeiou",
+        "siteConnections" : [ {
+          "coreSite" : true,
+          "managed" : true,
+          "selfUri" : "aeiou",
+          "edgeList" : [ {
+            "interfaceIpAddress" : "aeiou",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou",
+            "interfaceName" : "aeiou",
+            "edgeConnectionList" : [ {
+              "interfaceIpAddress" : "aeiou",
+              "site" : "",
+              "connectionErrors" : [ "aeiou" ],
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou",
+              "interfaceName" : "aeiou"
+            } ]
+          } ],
+          "name" : "aeiou",
+          "secondaryCoreSites" : [ "" ],
+          "mediaModel" : "aeiou",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "enabled" : true,
+          "primaryCoreSites" : [ "" ]
+        } ],
         "edgeAutoUpdateConfig" : {
           "rrule" : "aeiou",
           "start" : "aeiou",
@@ -16436,6 +17063,34 @@ open class TelephonyProvidersEdgeAPI {
     "addressVerified" : true
   },
   "mediaModel" : "aeiou",
+  "siteConnections" : [ {
+    "coreSite" : true,
+    "managed" : true,
+    "selfUri" : "aeiou",
+    "edgeList" : [ {
+      "interfaceIpAddress" : "aeiou",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "interfaceName" : "aeiou",
+      "edgeConnectionList" : [ {
+        "interfaceIpAddress" : "aeiou",
+        "site" : "",
+        "connectionErrors" : [ "aeiou" ],
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "interfaceName" : "aeiou"
+      } ]
+    } ],
+    "name" : "aeiou",
+    "secondaryCoreSites" : [ "" ],
+    "mediaModel" : "aeiou",
+    "id" : "aeiou",
+    "type" : "aeiou",
+    "enabled" : true,
+    "primaryCoreSites" : [ "" ]
+  } ],
   "edgeAutoUpdateConfig" : {
     "rrule" : "aeiou",
     "start" : "aeiou",

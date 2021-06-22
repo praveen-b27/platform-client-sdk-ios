@@ -9,7 +9,7 @@ title: AssessmentFormQuestion
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **text** | **String** |  | [optional] |
+| **text** | **String** | The question text | |
 | **helpText** | **String** |  | [optional] |
 | **naEnabled** | **Bool** |  | [optional] |
 | **commentsRequired** | **Bool** |  | [optional] |

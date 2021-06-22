@@ -502,6 +502,61 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     
+     Delete management unit
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementManagementunit(managementUnitId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: managementUnitId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete management unit
+     
+     - DELETE /api/v2/workforcemanagement/managementunits/{managementUnitId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**
@@ -667,6 +722,11 @@ open class WorkforceManagementAPI {
   "selfUri" : "aeiou",
   "adherenceState" : "aeiou",
   "team" : {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "memberCount" : 123456789,
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -866,6 +926,150 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ModelingStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get the management unit to which the agent belongs
+     
+     - parameter agentId: (path) The ID of the agent to look up 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAgentManagementunit(agentId: String, completion: @escaping ((_ data: AgentManagementUnitReference?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAgentManagementunitWithRequestBuilder(agentId: agentId)
+        requestBuilder.execute { (response: Response<AgentManagementUnitReference>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the management unit to which the agent belongs
+     
+     - GET /api/v2/workforcemanagement/agents/{agentId}/managementunit
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "businessUnit" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "managementUnit" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "user" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter agentId: (path) The ID of the agent to look up 
+
+     - returns: RequestBuilder<AgentManagementUnitReference> 
+     */
+    open class func getWorkforcemanagementAgentManagementunitWithRequestBuilder(agentId: String) -> RequestBuilder<AgentManagementUnitReference> {
+        var path = "/api/v2/workforcemanagement/agents/{agentId}/managementunit"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentManagementUnitReference>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get the management unit to which the currently logged in agent belongs
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAgentsMeManagementunit(completion: @escaping ((_ data: AgentManagementUnitReference?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAgentsMeManagementunitWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AgentManagementUnitReference>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the management unit to which the currently logged in agent belongs
+     
+     - GET /api/v2/workforcemanagement/agents/me/managementunit
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "businessUnit" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "managementUnit" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "user" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+
+     - returns: RequestBuilder<AgentManagementUnitReference> 
+     */
+    open class func getWorkforcemanagementAgentsMeManagementunitWithRequestBuilder() -> RequestBuilder<AgentManagementUnitReference> {
+        let path = "/api/v2/workforcemanagement/agents/me/managementunit"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentManagementUnitReference>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1412,8 +1616,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -3664,6 +3868,169 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum Expand_getWorkforcemanagementManagementunit: String { 
+        case settings = "settings"
+        case settingsAdherence = "settings.adherence"
+        case settingsTimeoff = "settings.timeOff"
+        case settingsScheduling = "settings.scheduling"
+        case settingsShorttermforecasting = "settings.shortTermForecasting"
+        case settingsShifttrading = "settings.shiftTrading"
+    }
+
+    
+    
+    /**
+     
+     Get management unit
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter expand: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementManagementunit(managementUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: managementUnitId, expand: expand)
+        requestBuilder.execute { (response: Response<ManagementUnit>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get management unit
+     
+     - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}
+     - settings.shortTermForecasting is deprecated and now lives on the business unit
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "startDayOfWeek" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "settings" : {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "shiftTrading" : {
+      "weeklyMaxPaidViolations" : "aeiou",
+      "unequalPaid" : "aeiou",
+      "requiresMatchingLanguages" : true,
+      "oneSided" : "aeiou",
+      "allowDirectTrades" : true,
+      "autoReview" : true,
+      "enabled" : true,
+      "weeklyMinPaidViolations" : "aeiou",
+      "requiresMatchingSkills" : true,
+      "requiresMatchingQueues" : true,
+      "minHoursInFuture" : 123,
+      "activityCategoryRules" : [ {
+        "activityCodeIdReplacement" : "aeiou",
+        "activityCategory" : "aeiou",
+        "action" : "aeiou"
+      } ],
+      "requiresMatchingPlanningGroups" : true
+    },
+    "adherence" : {
+      "ignoredActivityCategories" : {
+        "values" : [ "aeiou" ]
+      },
+      "nonOnQueueActivitiesEquivalent" : true,
+      "adherenceTargetPercent" : 123,
+      "adherenceExceptionThresholdSeconds" : 123,
+      "trackOnQueueActivity" : true,
+      "severeAlertThresholdMinutes" : 123
+    },
+    "scheduling" : {
+      "planningPeriod" : {
+        "weekCount" : 123,
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      },
+      "maxOccupancyPercentForDeferredWork" : 123,
+      "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+      "shrinkageOverrides" : {
+        "values" : [ {
+          "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+          "intervalIndex" : 123
+        } ],
+        "clear" : true
+      },
+      "startDayOfWeekend" : "aeiou"
+    },
+    "timeOff" : {
+      "submissionEarliestDaysFromNow" : 123,
+      "submissionRangeEnforced" : true,
+      "submissionLatestDaysFromNow" : 123
+    },
+    "shortTermForecasting" : {
+      "defaultHistoryWeeks" : 123
+    }
+  },
+  "metadata" : "",
+  "businessUnit" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "timeZone" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter expand: (query)  (optional)
+
+     - returns: RequestBuilder<ManagementUnit> 
+     */
+    open class func getWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<ManagementUnit> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ManagementUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Get activity codes
@@ -3796,6 +4163,11 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "adherenceState" : "aeiou",
     "team" : {
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -4432,6 +4804,7 @@ open class WorkforceManagementAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -4967,6 +5340,7 @@ open class WorkforceManagementAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -5594,12 +5968,14 @@ open class WorkforceManagementAPI {
   },
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
+  "valid" : true,
   "minimumShiftStartDistanceMinutes" : 123,
   "constrainMaximumConsecutiveWorkingDays" : true,
   "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "exactStartTimeMinutesFromMidnight" : 123,
+    "validationId" : "aeiou",
     "maximumContiguousWorkTimeMinutes" : 123,
     "startIncrementMinutes" : 123,
     "flexiblePaidTime" : true,
@@ -5612,6 +5988,7 @@ open class WorkforceManagementAPI {
     "latestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
+      "validationId" : "aeiou",
       "lengthMinutes" : 123,
       "earliestStartTimeMinutes" : 123,
       "description" : "aeiou",
@@ -5911,6 +6288,10 @@ open class WorkforceManagementAPI {
     
     public enum Expand_getWorkforcemanagementManagementunitWorkplans: String { 
         case agentcount = "agentCount"
+        case agents = "agents"
+        case optionaldays = "optionalDays"
+        case shifts = "shifts"
+        case shiftstartvariances = "shiftStartVariances"
         case details = "details"
     }
 
@@ -5947,7 +6328,7 @@ open class WorkforceManagementAPI {
      Get work plans
      
      - GET /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans
-     - 
+     - \"expand=details\" is deprecated
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5975,12 +6356,14 @@ open class WorkforceManagementAPI {
     },
     "constrainWeeklyPaidTime" : true,
     "enabled" : true,
+    "valid" : true,
     "minimumShiftStartDistanceMinutes" : 123,
     "constrainMaximumConsecutiveWorkingDays" : true,
     "maximumConsecutiveWorkingDays" : 123,
     "constrainMinimumTimeBetweenShifts" : true,
     "shifts" : [ {
       "exactStartTimeMinutesFromMidnight" : 123,
+      "validationId" : "aeiou",
       "maximumContiguousWorkTimeMinutes" : 123,
       "startIncrementMinutes" : 123,
       "flexiblePaidTime" : true,
@@ -5993,6 +6376,7 @@ open class WorkforceManagementAPI {
       "latestStopTimeMinutesFromMidnight" : 123,
       "activities" : [ {
         "startTimeIncrementMinutes" : 123,
+        "validationId" : "aeiou",
         "lengthMinutes" : 123,
         "earliestStartTimeMinutes" : 123,
         "description" : "aeiou",
@@ -6247,8 +6631,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -6416,8 +6800,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -7323,6 +7707,151 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     
+     Update the requested management unit
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunit(managementUnitId: String, body: UpdateManagementUnitRequest? = nil, completion: @escaping ((_ data: ManagementUnit?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<ManagementUnit>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update the requested management unit
+     
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "startDayOfWeek" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "settings" : {
+    "metadata" : {
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "shiftTrading" : {
+      "weeklyMaxPaidViolations" : "aeiou",
+      "unequalPaid" : "aeiou",
+      "requiresMatchingLanguages" : true,
+      "oneSided" : "aeiou",
+      "allowDirectTrades" : true,
+      "autoReview" : true,
+      "enabled" : true,
+      "weeklyMinPaidViolations" : "aeiou",
+      "requiresMatchingSkills" : true,
+      "requiresMatchingQueues" : true,
+      "minHoursInFuture" : 123,
+      "activityCategoryRules" : [ {
+        "activityCodeIdReplacement" : "aeiou",
+        "activityCategory" : "aeiou",
+        "action" : "aeiou"
+      } ],
+      "requiresMatchingPlanningGroups" : true
+    },
+    "adherence" : {
+      "ignoredActivityCategories" : {
+        "values" : [ "aeiou" ]
+      },
+      "nonOnQueueActivitiesEquivalent" : true,
+      "adherenceTargetPercent" : 123,
+      "adherenceExceptionThresholdSeconds" : 123,
+      "trackOnQueueActivity" : true,
+      "severeAlertThresholdMinutes" : 123
+    },
+    "scheduling" : {
+      "planningPeriod" : {
+        "weekCount" : 123,
+        "startDate" : "2000-01-23T04:56:07.000+0000"
+      },
+      "maxOccupancyPercentForDeferredWork" : 123,
+      "defaultShrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+      "shrinkageOverrides" : {
+        "values" : [ {
+          "shrinkagePercent" : 1.3579000000000001069366817318950779736042022705078125,
+          "intervalIndex" : 123
+        } ],
+        "clear" : true
+      },
+      "startDayOfWeekend" : "aeiou"
+    },
+    "timeOff" : {
+      "submissionEarliestDaysFromNow" : 123,
+      "submissionRangeEnforced" : true,
+      "submissionLatestDaysFromNow" : 123
+    },
+    "shortTermForecasting" : {
+      "defaultHistoryWeeks" : 123
+    }
+  },
+  "metadata" : "",
+  "businessUnit" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "timeZone" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<ManagementUnit> 
+     */
+    open class func patchWorkforcemanagementManagementunitWithRequestBuilder(managementUnitId: String, body: UpdateManagementUnitRequest? = nil) -> RequestBuilder<ManagementUnit> {
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ManagementUnit>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
     
     
     
@@ -7608,12 +8137,14 @@ open class WorkforceManagementAPI {
   },
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
+  "valid" : true,
   "minimumShiftStartDistanceMinutes" : 123,
   "constrainMaximumConsecutiveWorkingDays" : true,
   "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "exactStartTimeMinutesFromMidnight" : 123,
+    "validationId" : "aeiou",
     "maximumContiguousWorkTimeMinutes" : 123,
     "startIncrementMinutes" : 123,
     "flexiblePaidTime" : true,
@@ -7626,6 +8157,7 @@ open class WorkforceManagementAPI {
     "latestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
+      "validationId" : "aeiou",
       "lengthMinutes" : 123,
       "earliestStartTimeMinutes" : 123,
       "description" : "aeiou",
@@ -10893,12 +11425,14 @@ open class WorkforceManagementAPI {
   },
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
+  "valid" : true,
   "minimumShiftStartDistanceMinutes" : 123,
   "constrainMaximumConsecutiveWorkingDays" : true,
   "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "exactStartTimeMinutesFromMidnight" : 123,
+    "validationId" : "aeiou",
     "maximumContiguousWorkTimeMinutes" : 123,
     "startIncrementMinutes" : 123,
     "flexiblePaidTime" : true,
@@ -10911,6 +11445,7 @@ open class WorkforceManagementAPI {
     "latestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
+      "validationId" : "aeiou",
       "lengthMinutes" : 123,
       "earliestStartTimeMinutes" : 123,
       "description" : "aeiou",
@@ -11374,12 +11909,14 @@ open class WorkforceManagementAPI {
   },
   "constrainWeeklyPaidTime" : true,
   "enabled" : true,
+  "valid" : true,
   "minimumShiftStartDistanceMinutes" : 123,
   "constrainMaximumConsecutiveWorkingDays" : true,
   "maximumConsecutiveWorkingDays" : 123,
   "constrainMinimumTimeBetweenShifts" : true,
   "shifts" : [ {
     "exactStartTimeMinutesFromMidnight" : 123,
+    "validationId" : "aeiou",
     "maximumContiguousWorkTimeMinutes" : 123,
     "startIncrementMinutes" : 123,
     "flexiblePaidTime" : true,
@@ -11392,6 +11929,7 @@ open class WorkforceManagementAPI {
     "latestStopTimeMinutesFromMidnight" : 123,
     "activities" : [ {
       "startTimeIncrementMinutes" : 123,
+      "validationId" : "aeiou",
       "lengthMinutes" : 123,
       "earliestStartTimeMinutes" : 123,
       "description" : "aeiou",

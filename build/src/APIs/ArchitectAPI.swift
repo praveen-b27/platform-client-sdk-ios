@@ -528,6 +528,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1099,6 +1100,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1448,7 +1450,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -1471,6 +1476,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -1508,7 +1514,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -1531,6 +1540,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -1564,7 +1574,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -1587,6 +1600,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -1658,11 +1672,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -1933,6 +1947,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2078,7 +2093,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2101,6 +2119,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2134,7 +2153,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2157,6 +2179,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2219,11 +2242,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2299,7 +2322,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2322,6 +2348,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2355,7 +2382,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2378,6 +2408,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2451,11 +2482,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2534,7 +2565,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2557,6 +2591,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2600,7 +2635,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2623,6 +2661,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2697,11 +2736,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -2782,7 +2821,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2805,6 +2847,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2842,7 +2885,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2865,6 +2911,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -2898,7 +2945,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2921,6 +2971,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -3156,11 +3207,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3224,7 +3275,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -3247,6 +3301,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -3282,7 +3337,10 @@ open class ArchitectAPI {
         case inboundemailflow = "INBOUNDEMAILFLOW"
         case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
         case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -3305,6 +3363,7 @@ open class ArchitectAPI {
         case userprompt = "USERPROMPT"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
     }
 
     
@@ -3378,11 +3437,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3588,11 +3647,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3795,11 +3854,11 @@ open class ArchitectAPI {
     "closedHoursFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4061,6 +4120,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4481,6 +4541,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -4776,11 +4837,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5059,6 +5120,7 @@ open class ArchitectAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -5179,11 +5241,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5406,6 +5468,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Get a list of schedule groups.
@@ -5416,10 +5480,11 @@ open class ArchitectAPI {
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter name: (query) Name of the Schedule Group to filter by. (optional)
      - parameter scheduleIds: (query) A comma-delimited list of Schedule IDs to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectSchedulegroups(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, scheduleIds: String? = nil, completion: @escaping ((_ data: ScheduleGroupEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectSchedulegroupsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, scheduleIds: scheduleIds)
+    open class func getArchitectSchedulegroups(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, scheduleIds: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: ScheduleGroupEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectSchedulegroupsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, scheduleIds: scheduleIds, divisionId: divisionId)
         requestBuilder.execute { (response: Response<ScheduleGroupEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5472,11 +5537,11 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5485,10 +5550,11 @@ open class ArchitectAPI {
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter name: (query) Name of the Schedule Group to filter by. (optional)
      - parameter scheduleIds: (query) A comma-delimited list of Schedule IDs to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
 
      - returns: RequestBuilder<ScheduleGroupEntityListing> 
      */
-    open class func getArchitectSchedulegroupsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, scheduleIds: String? = nil) -> RequestBuilder<ScheduleGroupEntityListing> {
+    open class func getArchitectSchedulegroupsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, scheduleIds: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<ScheduleGroupEntityListing> {
         let path = "/api/v2/architect/schedulegroups"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5511,7 +5577,9 @@ open class ArchitectAPI {
             
             "name": name, 
             
-            "scheduleIds": scheduleIds
+            "scheduleIds": scheduleIds, 
+            
+            "divisionId": divisionId
             
         ])
 
@@ -5520,6 +5588,8 @@ open class ArchitectAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
+    
     
     
     
@@ -5540,10 +5610,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter name: (query) Name of the Schedule to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArchitectSchedules(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, completion: @escaping ((_ data: ScheduleEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getArchitectSchedulesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name)
+    open class func getArchitectSchedules(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: ScheduleEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectSchedulesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, divisionId: divisionId)
         requestBuilder.execute { (response: Response<ScheduleEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5591,11 +5662,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5603,10 +5674,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to ASC)
      - parameter name: (query) Name of the Schedule to filter by. (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
 
      - returns: RequestBuilder<ScheduleEntityListing> 
      */
-    open class func getArchitectSchedulesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil) -> RequestBuilder<ScheduleEntityListing> {
+    open class func getArchitectSchedulesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, name: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<ScheduleEntityListing> {
         let path = "/api/v2/architect/schedules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5627,7 +5699,9 @@ open class ArchitectAPI {
             
             "sortOrder": sortOrder, 
             
-            "name": name
+            "name": name, 
+            
+            "divisionId": divisionId
             
         ])
 
@@ -5998,6 +6072,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -6301,11 +6376,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6431,11 +6506,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6702,6 +6777,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -6825,7 +6901,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -7175,6 +7306,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -7461,7 +7593,62 @@ open class ArchitectAPI {
     "intents" : [ {
       "name" : "aeiou"
     } ],
-    "domain" : ""
+    "domain" : "",
+    "version" : {
+      "intents" : [ {
+        "utterances" : [ {
+          "segments" : [ {
+            "text" : "aeiou",
+            "entity" : {
+              "name" : "aeiou"
+            }
+          } ]
+        } ],
+        "name" : "aeiou",
+        "entityTypeBindings" : [ {
+          "entityType" : "aeiou",
+          "entityName" : "aeiou"
+        } ],
+        "entityNameReferences" : [ "aeiou" ]
+      } ],
+      "dateTrained" : "2000-01-23T04:56:07.000+0000",
+      "trainingStatus" : "aeiou",
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "language" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "published" : true,
+      "datePublished" : "2000-01-23T04:56:07.000+0000",
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "entities" : [ {
+        "name" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "domain" : {
+        "lastPublishedVersion" : "",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "draftVersion" : ""
+      },
+      "entityTypes" : [ {
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "mechanism" : {
+          "restricted" : true,
+          "type" : "aeiou",
+          "items" : [ {
+            "synonyms" : [ "aeiou" ],
+            "value" : "aeiou"
+          } ]
+        }
+      } ],
+      "id" : "aeiou",
+      "evaluationStatus" : "aeiou"
+    }
   },
   "type" : "aeiou",
   "secure" : true,
@@ -7642,6 +7829,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -7926,7 +8114,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -8107,6 +8350,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8201,11 +8445,11 @@ open class ArchitectAPI {
     "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -8255,10 +8499,13 @@ open class ArchitectAPI {
         case inboundshortmessage = "inboundshortmessage"
         case outboundcall = "outboundcall"
         case inqueuecall = "inqueuecall"
+        case inqueueemail = "inqueueemail"
+        case inqueueshortmessage = "inqueueshortmessage"
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
         case workflow = "workflow"
+        case workitem = "workitem"
     }
 
     
@@ -8542,6 +8789,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8665,7 +8913,62 @@ open class ArchitectAPI {
         "intents" : [ {
           "name" : "aeiou"
         } ],
-        "domain" : ""
+        "domain" : "",
+        "version" : {
+          "intents" : [ {
+            "utterances" : [ {
+              "segments" : [ {
+                "text" : "aeiou",
+                "entity" : {
+                  "name" : "aeiou"
+                }
+              } ]
+            } ],
+            "name" : "aeiou",
+            "entityTypeBindings" : [ {
+              "entityType" : "aeiou",
+              "entityName" : "aeiou"
+            } ],
+            "entityNameReferences" : [ "aeiou" ]
+          } ],
+          "dateTrained" : "2000-01-23T04:56:07.000+0000",
+          "trainingStatus" : "aeiou",
+          "selfUri" : "aeiou",
+          "description" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "published" : true,
+          "datePublished" : "2000-01-23T04:56:07.000+0000",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "entities" : [ {
+            "name" : "aeiou",
+            "type" : "aeiou"
+          } ],
+          "domain" : {
+            "lastPublishedVersion" : "",
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "language" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou",
+            "draftVersion" : ""
+          },
+          "entityTypes" : [ {
+            "name" : "aeiou",
+            "description" : "aeiou",
+            "mechanism" : {
+              "restricted" : true,
+              "type" : "aeiou",
+              "items" : [ {
+                "synonyms" : [ "aeiou" ],
+                "value" : "aeiou"
+              } ]
+            }
+          } ],
+          "id" : "aeiou",
+          "evaluationStatus" : "aeiou"
+        }
       },
       "type" : "aeiou",
       "secure" : true,
@@ -8709,11 +9012,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9146,46 +9449,7 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
-  "entities" : [ {
-    "owner" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
-    "importMode" : "aeiou",
-    "countRecordsFailed" : 123,
-    "countRecordsUpdated" : 123,
-    "selfUri" : "aeiou",
-    "uploadURI" : "aeiou",
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "errorInformation" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    },
-    "countRecordsDeleted" : 123,
-    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "status" : "aeiou"
-  } ],
-  "pageSize" : 123
+  "entities" : [ "{}" ]
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9356,11 +9620,11 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9490,11 +9754,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -9549,10 +9813,13 @@ open class ArchitectAPI {
         case inboundshortmessage = "inboundshortmessage"
         case outboundcall = "outboundcall"
         case inqueuecall = "inqueuecall"
+        case inqueueemail = "inqueueemail"
+        case inqueueshortmessage = "inqueueshortmessage"
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
         case workflow = "workflow"
+        case workitem = "workitem"
     }
 
     
@@ -9650,7 +9917,62 @@ open class ArchitectAPI {
         "intents" : [ {
           "name" : "aeiou"
         } ],
-        "domain" : ""
+        "domain" : "",
+        "version" : {
+          "intents" : [ {
+            "utterances" : [ {
+              "segments" : [ {
+                "text" : "aeiou",
+                "entity" : {
+                  "name" : "aeiou"
+                }
+              } ]
+            } ],
+            "name" : "aeiou",
+            "entityTypeBindings" : [ {
+              "entityType" : "aeiou",
+              "entityName" : "aeiou"
+            } ],
+            "entityNameReferences" : [ "aeiou" ]
+          } ],
+          "dateTrained" : "2000-01-23T04:56:07.000+0000",
+          "trainingStatus" : "aeiou",
+          "selfUri" : "aeiou",
+          "description" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "published" : true,
+          "datePublished" : "2000-01-23T04:56:07.000+0000",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "entities" : [ {
+            "name" : "aeiou",
+            "type" : "aeiou"
+          } ],
+          "domain" : {
+            "lastPublishedVersion" : "",
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "language" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou",
+            "draftVersion" : ""
+          },
+          "entityTypes" : [ {
+            "name" : "aeiou",
+            "description" : "aeiou",
+            "mechanism" : {
+              "restricted" : true,
+              "type" : "aeiou",
+              "items" : [ {
+                "synonyms" : [ "aeiou" ],
+                "value" : "aeiou"
+              } ]
+            }
+          } ],
+          "id" : "aeiou",
+          "evaluationStatus" : "aeiou"
+        }
       },
       "type" : "aeiou",
       "secure" : true,
@@ -9831,6 +10153,7 @@ open class ArchitectAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -9944,11 +10267,11 @@ open class ArchitectAPI {
     "debugVersion" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -10081,7 +10404,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -10262,6 +10640,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -10555,11 +10934,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -10682,11 +11061,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -10959,6 +11338,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -11340,6 +11720,7 @@ open class ArchitectAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -11443,11 +11824,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11570,11 +11951,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12046,6 +12427,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -12469,6 +12851,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -12978,6 +13361,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -13184,6 +13568,349 @@ open class ArchitectAPI {
     
     
     
+    /**
+     
+     Generate flow history
+     
+     - parameter flowId: (path) Flow ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowHistory(flowId: String, completion: @escaping ((_ data: Operation?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowHistoryWithRequestBuilder(flowId: flowId)
+        requestBuilder.execute { (response: Response<Operation>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Generate flow history
+     
+     - POST /api/v2/flows/{flowId}/history
+     - Asynchronous.  Notification topic: v2.flows.{flowId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorMessageParams" : {
+    "key" : "aeiou"
+  },
+  "actionStatus" : "aeiou",
+  "errorMessage" : "aeiou",
+  "client" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "errorCode" : "aeiou",
+  "id" : "aeiou",
+  "complete" : true,
+  "user" : {
+    "addresses" : [ "" ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : {
+      "startTime" : "2000-01-23T04:56:07.000+0000",
+      "userId" : "aeiou",
+      "status" : "aeiou"
+    },
+    "title" : "aeiou",
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "authorization" : {
+      "unusedRoles" : [ "" ],
+      "permissions" : [ "aeiou" ],
+      "permissionPolicies" : [ {
+        "policyDescription" : "aeiou",
+        "resourceConditionNode" : {
+          "operands" : [ {
+            "type" : "aeiou",
+            "value" : "aeiou"
+          } ],
+          "variableName" : "aeiou",
+          "conjunction" : "aeiou",
+          "terms" : [ "" ],
+          "operator" : "aeiou"
+        },
+        "actionSetKey" : "aeiou",
+        "namedResources" : [ "aeiou" ],
+        "policyName" : "aeiou",
+        "entityName" : "aeiou",
+        "domain" : "aeiou",
+        "allowConditions" : true,
+        "id" : "aeiou",
+        "resourceCondition" : "aeiou",
+        "actionSet" : [ "aeiou" ]
+      } ],
+      "roles" : [ {
+        "name" : "aeiou",
+        "id" : "aeiou"
+      } ]
+    },
+    "skills" : [ {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "skillUri" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "station" : {
+      "defaultStation" : "",
+      "lastAssociatedStation" : "",
+      "associatedStation" : {
+        "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "name" : "aeiou",
+        "defaultUser" : "",
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "associatedUser" : "",
+        "providerInfo" : {
+          "key" : "aeiou"
+        }
+      },
+      "effectiveStation" : ""
+    },
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "department" : "aeiou",
+    "presence" : {
+      "presenceDefinition" : {
+        "systemPresence" : "aeiou",
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "source" : "aeiou",
+      "message" : "aeiou",
+      "primary" : true
+    },
+    "lastTokenIssued" : {
+      "dateIssued" : "2000-01-23T04:56:07.000+0000"
+    },
+    "email" : "aeiou",
+    "images" : [ {
+      "imageUri" : "aeiou",
+      "resolution" : "aeiou"
+    } ],
+    "manager" : "",
+    "employerInfo" : {
+      "employeeType" : "aeiou",
+      "dateHire" : "aeiou",
+      "employeeId" : "aeiou",
+      "officialName" : "aeiou"
+    },
+    "languages" : [ {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "languageUri" : "aeiou",
+      "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "selfUri" : "aeiou",
+    "conversationSummary" : {
+      "call" : {
+        "enterprise" : "",
+        "contactCenter" : {
+          "acw" : 123,
+          "active" : 123
+        }
+      },
+      "socialExpression" : "",
+      "chat" : "",
+      "callback" : "",
+      "video" : "",
+      "message" : "",
+      "userId" : "aeiou",
+      "email" : ""
+    },
+    "groups" : [ {
+      "images" : [ "" ],
+      "addresses" : [ {
+        "extension" : "aeiou",
+        "address" : "aeiou",
+        "display" : "aeiou",
+        "mediaType" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "visibility" : "aeiou",
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "owners" : [ "" ],
+      "type" : "aeiou",
+      "version" : 123,
+      "rulesVisible" : true,
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou"
+    } ],
+    "primaryContactInfo" : [ {
+      "extension" : "aeiou",
+      "address" : "aeiou",
+      "countryCode" : "aeiou",
+      "display" : "aeiou",
+      "mediaType" : "aeiou",
+      "type" : "aeiou"
+    } ],
+    "biography" : {
+      "education" : [ {
+        "notes" : "aeiou",
+        "school" : "aeiou",
+        "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "dateEnd" : "2000-01-23T04:56:07.000+0000",
+        "fieldOfStudy" : "aeiou"
+      } ],
+      "hobbies" : [ "aeiou" ],
+      "biography" : "aeiou",
+      "interests" : [ "aeiou" ],
+      "spouse" : "aeiou"
+    },
+    "team" : {
+      "division" : "",
+      "memberCount" : 123456789,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou"
+    },
+    "certifications" : [ "aeiou" ],
+    "version" : 123,
+    "outOfOffice" : {
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "active" : true,
+      "id" : "aeiou",
+      "user" : "",
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "indefinite" : true
+    },
+    "languagePreference" : "aeiou",
+    "profileSkills" : [ "aeiou" ],
+    "chat" : {
+      "jabberId" : "aeiou"
+    },
+    "name" : "aeiou",
+    "locations" : [ {
+      "notes" : "aeiou",
+      "coordinates" : {
+        "key" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "locationDefinition" : "",
+      "id" : "aeiou",
+      "floorplanId" : "aeiou"
+    } ],
+    "username" : "aeiou",
+    "geolocation" : {
+      "country" : "aeiou",
+      "city" : "aeiou",
+      "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "locations" : [ {
+        "images" : "aeiou",
+        "address" : {
+          "zipcode" : "aeiou",
+          "country" : "aeiou",
+          "city" : "aeiou",
+          "street1" : "aeiou",
+          "countryName" : "aeiou",
+          "state" : "aeiou",
+          "street2" : "aeiou"
+        },
+        "notes" : "aeiou",
+        "floorplanImage" : [ "" ],
+        "addressVerificationDetails" : {
+          "dateStarted" : "2000-01-23T04:56:07.000+0000",
+          "dateFinished" : "2000-01-23T04:56:07.000+0000",
+          "service" : "smartystreets-us",
+          "status" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "profileImage" : [ {
+          "imageUri" : "aeiou",
+          "resolution" : "aeiou"
+        } ],
+        "emergencyNumber" : {
+          "number" : "aeiou",
+          "e164" : "aeiou",
+          "type" : "aeiou"
+        },
+        "version" : 123,
+        "path" : [ "aeiou" ],
+        "addressStored" : true,
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "contactUser" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "state" : "aeiou",
+        "addressVerified" : true
+      } ],
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "region" : "aeiou",
+      "primary" : true,
+      "longitude" : 1.3579000000000001069366817318950779736042022705078125
+    }
+  },
+  "errorDetails" : [ {
+    "fieldName" : "aeiou",
+    "entityName" : "aeiou",
+    "errorCode" : "aeiou",
+    "entityId" : "aeiou"
+  } ],
+  "actionName" : "aeiou"
+}}]
+     
+     - parameter flowId: (path) Flow ID 
+
+     - returns: RequestBuilder<Operation> 
+     */
+    open class func postFlowHistoryWithRequestBuilder(flowId: String) -> RequestBuilder<Operation> {
+        var path = "/api/v2/flows/{flowId}/history"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**
@@ -13248,7 +13975,62 @@ open class ArchitectAPI {
     "intents" : [ {
       "name" : "aeiou"
     } ],
-    "domain" : ""
+    "domain" : "",
+    "version" : {
+      "intents" : [ {
+        "utterances" : [ {
+          "segments" : [ {
+            "text" : "aeiou",
+            "entity" : {
+              "name" : "aeiou"
+            }
+          } ]
+        } ],
+        "name" : "aeiou",
+        "entityTypeBindings" : [ {
+          "entityType" : "aeiou",
+          "entityName" : "aeiou"
+        } ],
+        "entityNameReferences" : [ "aeiou" ]
+      } ],
+      "dateTrained" : "2000-01-23T04:56:07.000+0000",
+      "trainingStatus" : "aeiou",
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "language" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "published" : true,
+      "datePublished" : "2000-01-23T04:56:07.000+0000",
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "entities" : [ {
+        "name" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "domain" : {
+        "lastPublishedVersion" : "",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "draftVersion" : ""
+      },
+      "entityTypes" : [ {
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "mechanism" : {
+          "restricted" : true,
+          "type" : "aeiou",
+          "items" : [ {
+            "synonyms" : [ "aeiou" ],
+            "value" : "aeiou"
+          } ]
+        }
+      } ],
+      "id" : "aeiou",
+      "evaluationStatus" : "aeiou"
+    }
   },
   "type" : "aeiou",
   "secure" : true,
@@ -13429,6 +14211,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -13548,15 +14331,18 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Create flow
      
      - parameter body: (body)  
+     - parameter language: (query) Language (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postFlows(body: Flow, completion: @escaping ((_ data: Flow?,_ error: Error?) -> Void)) {
-        let requestBuilder = postFlowsWithRequestBuilder(body: body)
+    open class func postFlows(body: Flow, language: String? = nil, completion: @escaping ((_ data: Flow?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsWithRequestBuilder(body: body, language: language)
         requestBuilder.execute { (response: Response<Flow>?, error) -> Void in
             do {
                 if let e = error {
@@ -13762,6 +14548,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -13885,7 +14672,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -13930,17 +14772,23 @@ open class ArchitectAPI {
 }}]
      
      - parameter body: (body)  
+     - parameter language: (query) Language (optional)
 
      - returns: RequestBuilder<Flow> 
      */
-    open class func postFlowsWithRequestBuilder(body: Flow) -> RequestBuilder<Flow> {
+    open class func postFlowsWithRequestBuilder(body: Flow, language: String? = nil) -> RequestBuilder<Flow> {
         let path = "/api/v2/flows"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "language": language
+            
+        ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -14167,6 +15015,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -14508,6 +15357,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -14631,7 +15481,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -14918,6 +15823,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -15041,7 +15947,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -15334,6 +16295,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -15678,6 +16640,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -15801,7 +16764,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -16088,6 +17106,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -16211,7 +17230,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -16979,6 +18053,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -17496,6 +18571,7 @@ open class ArchitectAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -18198,6 +19274,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -18321,7 +19398,62 @@ open class ArchitectAPI {
       "intents" : [ {
         "name" : "aeiou"
       } ],
-      "domain" : ""
+      "domain" : "",
+      "version" : {
+        "intents" : [ {
+          "utterances" : [ {
+            "segments" : [ {
+              "text" : "aeiou",
+              "entity" : {
+                "name" : "aeiou"
+              }
+            } ]
+          } ],
+          "name" : "aeiou",
+          "entityTypeBindings" : [ {
+            "entityType" : "aeiou",
+            "entityName" : "aeiou"
+          } ],
+          "entityNameReferences" : [ "aeiou" ]
+        } ],
+        "dateTrained" : "2000-01-23T04:56:07.000+0000",
+        "trainingStatus" : "aeiou",
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "language" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "published" : true,
+        "datePublished" : "2000-01-23T04:56:07.000+0000",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "entities" : [ {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "domain" : {
+          "lastPublishedVersion" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "id" : "aeiou",
+          "draftVersion" : ""
+        },
+        "entityTypes" : [ {
+          "name" : "aeiou",
+          "description" : "aeiou",
+          "mechanism" : {
+            "restricted" : true,
+            "type" : "aeiou",
+            "items" : [ {
+              "synonyms" : [ "aeiou" ],
+              "value" : "aeiou"
+            } ]
+          }
+        } ],
+        "id" : "aeiou",
+        "evaluationStatus" : "aeiou"
+      }
     },
     "type" : "aeiou",
     "secure" : true,
@@ -18857,6 +19989,7 @@ open class ArchitectAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",

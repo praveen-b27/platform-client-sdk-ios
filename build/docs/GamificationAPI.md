@@ -7,8 +7,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getGamificationLeaderboard**](GamificationAPI.html#getGamificationLeaderboard) | Leaderboard of the requesting user&#39;s division |
-| [**getGamificationLeaderboardAll**](GamificationAPI.html#getGamificationLeaderboardAll) | Leaderboard by division |
+| [**getGamificationLeaderboard**](GamificationAPI.html#getGamificationLeaderboard) | Leaderboard of the requesting user&#39;s division or performance profile |
+| [**getGamificationLeaderboardAll**](GamificationAPI.html#getGamificationLeaderboardAll) | Leaderboard by filter type |
 | [**getGamificationLeaderboardAllBestpoints**](GamificationAPI.html#getGamificationLeaderboardAllBestpoints) | Best Points by division |
 | [**getGamificationLeaderboardBestpoints**](GamificationAPI.html#getGamificationLeaderboardBestpoints) | Best Points of the requesting user&#39;s division |
 | [**getGamificationMetric**](GamificationAPI.html#getGamificationMetric) | Gamified metric by id |
@@ -51,7 +51,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 > [Leaderboard](Leaderboard.html) getGamificationLeaderboard(startWorkday, endWorkday, metricId)
 
-Leaderboard of the requesting user&#39;s division
+Leaderboard of the requesting user&#39;s division or performance profile
 
 
 
@@ -107,7 +107,7 @@ GamificationAPI.getGamificationLeaderboard(startWorkday: startWorkday, endWorkda
 
 > [Leaderboard](Leaderboard.html) getGamificationLeaderboardAll(filterType, filterId, startWorkday, endWorkday, metricId)
 
-Leaderboard by division
+Leaderboard by filter type
 
 
 
@@ -147,7 +147,7 @@ GamificationAPI.getGamificationLeaderboardAll(filterType: filterType, filterId: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filterType** | **String**| Filter type for the query request. |<br />**Values**: division ("Division") |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
 | **filterId** | **String**| ID for the filter type. For example, division Id | |
 | **startWorkday** | **Date**| Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **endWorkday** | **Date**| End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
@@ -204,7 +204,7 @@ GamificationAPI.getGamificationLeaderboardAllBestpoints(filterType: filterType, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filterType** | **String**| Filter type for the query request. |<br />**Values**: division ("Division") |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
 | **filterId** | **String**| ID for the filter type. For example, division Id | |
 {: class="table-striped"}
 
@@ -267,7 +267,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Metric](Metric.html) getGamificationMetric(metricId)
+> [Metric](Metric.html) getGamificationMetric(metricId, performanceProfileId)
 
 Gamified metric by id
 
@@ -290,9 +290,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let metricId: String = "" // metric Id
+let performanceProfileId: String = "" // The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given.
 
 // Code example
-GamificationAPI.getGamificationMetric(metricId: metricId) { (response, error) in
+GamificationAPI.getGamificationMetric(metricId: metricId, performanceProfileId: performanceProfileId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -308,6 +309,7 @@ GamificationAPI.getGamificationMetric(metricId: metricId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **String**| metric Id | |
+| **performanceProfileId** | **String**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional] |
 {: class="table-striped"}
 
 
@@ -595,7 +597,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let workday: Date = new Date(...) // Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let expand: [String] = [GamificationAPI.Expand_getGamificationScorecards.enummember.rawValue] // Which fields, if any, to expand.
 
 // Code example
@@ -614,7 +616,7 @@ GamificationAPI.getGamificationScorecards(workday: workday, expand: expand) { (r
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **workday** | **Date**| Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **workday** | **Date**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: objective ("objective") |
 {: class="table-striped"}
 
@@ -649,8 +651,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
 GamificationAPI.getGamificationScorecardsAttendance(startWorkday: startWorkday, endWorkday: endWorkday) { (response, error) in
@@ -668,8 +670,8 @@ GamificationAPI.getGamificationScorecardsAttendance(startWorkday: startWorkday, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **startWorkday** | **Date**| Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 {: class="table-striped"}
 
 
@@ -751,7 +753,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
 GamificationAPI.getGamificationScorecardsPointsAlltime(endWorkday: endWorkday) { (response, error) in
@@ -769,7 +771,7 @@ GamificationAPI.getGamificationScorecardsPointsAlltime(endWorkday: endWorkday) {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 {: class="table-striped"}
 
 
@@ -855,8 +857,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let dayOfWeek: GamificationAPI.DayOfWeek_getGamificationScorecardsPointsTrends = GamificationAPI.DayOfWeek_getGamificationScorecardsPointsTrends.enummember // Optional filter to specify which day of weeks to be included in the response
 
 // Code example
@@ -875,8 +877,8 @@ GamificationAPI.getGamificationScorecardsPointsTrends(startWorkday: startWorkday
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **startWorkday** | **Date**| Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **dayOfWeek** | **String**| Optional filter to specify which day of weeks to be included in the response | [optional]<br />**Values**: sunday ("Sunday"), monday ("Monday"), tuesday ("Tuesday"), wednesday ("Wednesday"), thursday ("Thursday"), friday ("Friday"), saturday ("Saturday") |
 {: class="table-striped"}
 
@@ -912,7 +914,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // 
-let workday: Date = new Date(...) // Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let expand: [String] = [GamificationAPI.Expand_getGamificationScorecardsUser.enummember.rawValue] // Which fields, if any, to expand.
 
 // Code example
@@ -932,7 +934,7 @@ GamificationAPI.getGamificationScorecardsUser(userId: userId, workday: workday, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**|  | |
-| **workday** | **Date**| Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **workday** | **Date**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: objective ("objective") |
 {: class="table-striped"}
 
@@ -968,8 +970,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // 
-let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
 GamificationAPI.getGamificationScorecardsUserAttendance(userId: userId, startWorkday: startWorkday, endWorkday: endWorkday) { (response, error) in
@@ -988,8 +990,8 @@ GamificationAPI.getGamificationScorecardsUserAttendance(userId: userId, startWor
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**|  | |
-| **startWorkday** | **Date**| Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 {: class="table-striped"}
 
 
@@ -1076,7 +1078,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // 
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
 GamificationAPI.getGamificationScorecardsUserPointsAlltime(userId: userId, endWorkday: endWorkday) { (response, error) in
@@ -1095,7 +1097,7 @@ GamificationAPI.getGamificationScorecardsUserPointsAlltime(userId: userId, endWo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**|  | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 {: class="table-striped"}
 
 
@@ -1130,8 +1132,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // 
-let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let dayOfWeek: GamificationAPI.DayOfWeek_getGamificationScorecardsUserPointsTrends = GamificationAPI.DayOfWeek_getGamificationScorecardsUserPointsTrends.enummember // Optional filter to specify which day of weeks to be included in the response
 
 // Code example
@@ -1151,8 +1153,8 @@ GamificationAPI.getGamificationScorecardsUserPointsTrends(userId: userId, startW
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**|  | |
-| **startWorkday** | **Date**| Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **dayOfWeek** | **String**| Optional filter to specify which day of weeks to be included in the response | [optional]<br />**Values**: sunday ("Sunday"), monday ("Monday"), tuesday ("Tuesday"), wednesday ("Wednesday"), thursday ("Thursday"), friday ("Friday"), saturday ("Saturday") |
 {: class="table-striped"}
 
@@ -1188,8 +1190,8 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let userId: String = "" // 
-let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
 
 // Code example
@@ -1209,8 +1211,8 @@ GamificationAPI.getGamificationScorecardsUserValuesTrends(userId: userId, startW
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**|  | |
-| **startWorkday** | **Date**| Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
 {: class="table-striped"}
 
@@ -1265,7 +1267,7 @@ GamificationAPI.getGamificationScorecardsUsersPointsAverage(filterType: filterTy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filterType** | **String**| Filter type for the query request. |<br />**Values**: division ("Division") |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
 | **filterId** | **String**| ID for the filter type. | |
 | **workday** | **Date**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 {: class="table-striped"}
@@ -1322,7 +1324,7 @@ GamificationAPI.getGamificationScorecardsUsersValuesAverage(filterType: filterTy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filterType** | **String**| Filter type for the query request. |<br />**Values**: division ("Division") |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
 | **filterId** | **String**| ID for the filter type. For example, division Id | |
 | **workday** | **Date**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
@@ -1361,8 +1363,8 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsUsersValuesTrends = GamificationAPI.FilterType_getGamificationScorecardsUsersValuesTrends.enummember // Filter type for the query request.
 let filterId: String = "" // ID for the filter type.
-let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
 
 // Code example
@@ -1381,10 +1383,10 @@ GamificationAPI.getGamificationScorecardsUsersValuesTrends(filterType: filterTyp
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filterType** | **String**| Filter type for the query request. |<br />**Values**: division ("Division") |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
 | **filterId** | **String**| ID for the filter type. | |
-| **startWorkday** | **Date**| Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
 {: class="table-striped"}
 
@@ -1473,8 +1475,8 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
-let endWorkday: Date = new Date(...) // End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let filterType: GamificationAPI.FilterType_getGamificationScorecardsValuesTrends = GamificationAPI.FilterType_getGamificationScorecardsValuesTrends.enummember // Filter type for the query request. If not set, then the request is for the requesting user.
 let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
 
@@ -1494,9 +1496,9 @@ GamificationAPI.getGamificationScorecardsValuesTrends(startWorkday: startWorkday
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **startWorkday** | **Date**| Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **endWorkday** | **Date**| End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **filterType** | **String**| Filter type for the query request. If not set, then the request is for the requesting user. | [optional]<br />**Values**: division ("Division") |
+| **startWorkday** | **Date**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **endWorkday** | **Date**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **filterType** | **String**| Filter type for the query request. If not set, then the request is for the requesting user. | [optional]<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
 | **timeZone** | **String**| Timezone for the workday. Defaults to UTC | [optional] [default to UTC] |
 {: class="table-striped"}
 
@@ -1713,7 +1715,7 @@ GamificationAPI.postGamificationMetrics(body: body) { (response, error) in
 
 
 
-> [Metric](Metric.html) putGamificationMetric(metricId, body)
+> [Metric](Metric.html) putGamificationMetric(metricId, body, performanceProfileId)
 
 Updates a metric
 
@@ -1735,9 +1737,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let metricId: String = "" // metric Id
 let body: Metric = new Metric(...) // Metric
+let performanceProfileId: String = "" // The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given.
 
 // Code example
-GamificationAPI.putGamificationMetric(metricId: metricId, body: body) { (response, error) in
+GamificationAPI.putGamificationMetric(metricId: metricId, body: body, performanceProfileId: performanceProfileId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1754,6 +1757,7 @@ GamificationAPI.putGamificationMetric(metricId: metricId, body: body) { (respons
 | ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **String**| metric Id | |
 | **body** | [**Metric**](Metric.html)| Metric | |
+| **performanceProfileId** | **String**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional] |
 {: class="table-striped"}
 
 

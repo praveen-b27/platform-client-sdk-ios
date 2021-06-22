@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** List content object */
+/** List content object. */
 
 public class ContentList: Codable {
 
@@ -16,19 +16,19 @@ public class ContentList: Codable {
         case selection = "Selection"
         case vertical = "Vertical"
     }
-    /** An ID assigned to this rich message content. Each instance inside the content array has a unique ID. */
+    /** A unique ID assigned to this rich message content. */
     public var _id: String?
-    /** The type of list this instance represents */
+    /** The type of list this instance represents. */
     public var listType: ListType?
-    /** Text to show in the title row */
+    /** Text to show in the title. */
     public var title: String?
-    /** Text to show in the description row. This is immediately below the title */
+    /** Text to show in the description. */
     public var _description: String?
-    /** Label for Submit button */
+    /** Label for Submit button. */
     public var submitLabel: String?
-    /** User actions available on the content. All actions are optional and all actions are executed simultaneously. */
+    /** The list actions. */
     public var actions: ContentActions?
-    /** An array of component objects */
+    /** An array of component objects. */
     public var components: [ListItemComponent]?
 
     public init(_id: String?, listType: ListType?, title: String?, _description: String?, submitLabel: String?, actions: ContentActions?, components: [ListItemComponent]?) {

@@ -13,8 +13,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsDialects**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsDialects) | Get list of supported Speech &amp; Text Analytics dialects |
 | [**getSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgram) | Get a Speech &amp; Text Analytics program by id |
+| [**getSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramMappings) | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**getSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsPrograms) | Get the list of Speech &amp; Text Analytics programs |
 | [**getSpeechandtextanalyticsProgramsGeneralJob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsGeneralJob) | Get a Speech &amp; Text Analytics general program job by id |
+| [**getSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsMappings) | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**getSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsPublishjob) | Get a Speech &amp; Text Analytics publish programs job by id |
 | [**getSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsUnpublished) | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**getSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsSettings) | Get Speech And Text Analytics Settings |
@@ -30,6 +32,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSpeechandtextanalyticsTopicsPublishjobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTopicsPublishjobs) | Create new Speech &amp; Text Analytics publish topics job |
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
 | [**putSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgram) | Update existing Speech &amp; Text Analytics program |
+| [**putSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgramMappings) | Set Speech &amp; Text Analytics program mappings to queues and flows |
+| [**putSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsSettings) | Update Speech And Text Analytics Settings |
 | [**putSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsTopic) | Update existing Speech &amp; Text Analytics topic |
 {: class="table-striped"}
 
@@ -342,6 +346,58 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgram(programId: programId) { 
 
 [**Program**](Program.html)
 
+<a name="getSpeechandtextanalyticsProgramMappings"></a>
+
+# **getSpeechandtextanalyticsProgramMappings**
+
+
+
+> [ProgramMappings](ProgramMappings.html) getSpeechandtextanalyticsProgramMappings(programId)
+
+Get Speech &amp; Text Analytics program mappings to queues and flows by id
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/{programId}/mappings  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramMappings(programId: programId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramMappings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ProgramMappings**](ProgramMappings.html)
+
 <a name="getSpeechandtextanalyticsPrograms"></a>
 
 # **getSpeechandtextanalyticsPrograms**
@@ -450,6 +506,60 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsGeneralJob(jobId: jobId)
 ### Return type
 
 [**GeneralProgramJob**](GeneralProgramJob.html)
+
+<a name="getSpeechandtextanalyticsProgramsMappings"></a>
+
+# **getSpeechandtextanalyticsProgramsMappings**
+
+
+
+> [ProgramsMappingsEntityListing](ProgramsMappingsEntityListing.html) getSpeechandtextanalyticsProgramsMappings(nextPage, pageSize)
+
+Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/mappings  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nextPage: String = "" // The key for listing the next page
+let pageSize: Int = 20 // The page size for the listing
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsMappings(nextPage: nextPage, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsMappings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nextPage** | **String**| The key for listing the next page | [optional] |
+| **pageSize** | **Int**| The page size for the listing | [optional] [default to 20] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ProgramsMappingsEntityListing**](ProgramsMappingsEntityListing.html)
 
 <a name="getSpeechandtextanalyticsProgramsPublishjob"></a>
 
@@ -755,7 +865,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneral(dialect: dialect) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: enUs ("en-US"), esUs ("es-US") |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: enUs ("en-US"), esUs ("es-US"), enAu ("en-AU"), enGb ("en-GB"), enZa ("en-ZA"), esEs ("es-ES"), enIn ("en-IN") |
 {: class="table-striped"}
 
 
@@ -1236,6 +1346,112 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgram(programId: programId, bo
 ### Return type
 
 [**Program**](Program.html)
+
+<a name="putSpeechandtextanalyticsProgramMappings"></a>
+
+# **putSpeechandtextanalyticsProgramMappings**
+
+
+
+> [ProgramMappings](ProgramMappings.html) putSpeechandtextanalyticsProgramMappings(programId, body)
+
+Set Speech &amp; Text Analytics program mappings to queues and flows
+
+
+
+Wraps PUT /api/v2/speechandtextanalytics/programs/{programId}/mappings  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+let body: ProgramMappingsRequest = new ProgramMappingsRequest(...) // The program to set mappings for
+
+// Code example
+SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramMappings(programId: programId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramMappings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+| **body** | [**ProgramMappingsRequest**](ProgramMappingsRequest.html)| The program to set mappings for | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ProgramMappings**](ProgramMappings.html)
+
+<a name="putSpeechandtextanalyticsSettings"></a>
+
+# **putSpeechandtextanalyticsSettings**
+
+
+
+> [SpeechTextAnalyticsSettingsResponse](SpeechTextAnalyticsSettingsResponse.html) putSpeechandtextanalyticsSettings(body)
+
+Update Speech And Text Analytics Settings
+
+
+
+Wraps PUT /api/v2/speechandtextanalytics/settings  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SpeechTextAnalyticsSettingsRequest = new SpeechTextAnalyticsSettingsRequest(...) // Speech And Text Analytics Settings
+
+// Code example
+SpeechTextAnalyticsAPI.putSpeechandtextanalyticsSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.putSpeechandtextanalyticsSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SpeechTextAnalyticsSettingsRequest**](SpeechTextAnalyticsSettingsRequest.html)| Speech And Text Analytics Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse.html)
 
 <a name="putSpeechandtextanalyticsTopic"></a>
 

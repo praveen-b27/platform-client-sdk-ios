@@ -10,11 +10,11 @@ title: ArrayNode
 | **nodeType** | **String** |  | [optional] |
 | **float** | **Bool** |  | [optional] |
 | **number** | **Bool** |  | [optional] |
-| **boolean** | **Bool** |  | [optional] |
-| **object** | **Bool** |  | [optional] |
 | **valueNode** | **Bool** |  | [optional] |
-| **containerNode** | **Bool** |  | [optional] |
 | **floatingPointNumber** | **Bool** |  | [optional] |
+| **containerNode** | **Bool** |  | [optional] |
+| **missingNode** | **Bool** |  | [optional] |
+| **object** | **Bool** |  | [optional] |
 | **pojo** | **Bool** |  | [optional] |
 | **integralNumber** | **Bool** |  | [optional] |
 | **short** | **Bool** |  | [optional] |
@@ -24,8 +24,8 @@ title: ArrayNode
 | **bigDecimal** | **Bool** |  | [optional] |
 | **bigInteger** | **Bool** |  | [optional] |
 | **textual** | **Bool** |  | [optional] |
+| **boolean** | **Bool** |  | [optional] |
 | **binary** | **Bool** |  | [optional] |
-| **missingNode** | **Bool** |  | [optional] |
 | **array** | **Bool** |  | [optional] |
 | **null** | **Bool** |  | [optional] |
 {: class="table table-striped"}

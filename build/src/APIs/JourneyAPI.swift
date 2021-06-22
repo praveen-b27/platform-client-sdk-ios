@@ -316,6 +316,9 @@ open class JourneyAPI {
       "id" : "aeiou"
     },
     "mediaType" : "aeiou",
+    "webMessagingOfferFields" : {
+      "offerText" : "aeiou"
+    },
     "architectFlowFields" : {
       "architectFlow" : {
         "selfUri" : "aeiou",
@@ -374,6 +377,10 @@ open class JourneyAPI {
     
     
     
+    
+    
+    
+    
     /**
      
      Retrieve all action maps.
@@ -383,11 +390,13 @@ open class JourneyAPI {
      - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
      - parameter filterField: (query) Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
      - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
-     - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering or sorting. A maximum of 100 action maps are allowed per request. (optional)
+     - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)
+     - parameter queryFields: (query) Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getJourneyActionmaps(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil, completion: @escaping ((_ data: ActionMapListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getJourneyActionmapsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, filterField: filterField, filterValue: filterValue, actionMapIds: actionMapIds)
+    open class func getJourneyActionmaps(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: ActionMapListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActionmapsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, filterField: filterField, filterValue: filterValue, actionMapIds: actionMapIds, queryFields: queryFields, queryValue: queryValue)
         requestBuilder.execute { (response: Response<ActionMapListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -457,6 +466,9 @@ open class JourneyAPI {
         "id" : "aeiou"
       },
       "mediaType" : "aeiou",
+      "webMessagingOfferFields" : {
+        "offerText" : "aeiou"
+      },
       "architectFlowFields" : {
         "architectFlow" : {
           "selfUri" : "aeiou",
@@ -478,11 +490,11 @@ open class JourneyAPI {
     "startDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -490,11 +502,13 @@ open class JourneyAPI {
      - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
      - parameter filterField: (query) Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires &#39;filterField&#39; to also be set. (optional)
      - parameter filterValue: (query) Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)
-     - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering or sorting. A maximum of 100 action maps are allowed per request. (optional)
+     - parameter actionMapIds: (query) IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)
+     - parameter queryFields: (query) Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<ActionMapListing> 
      */
-    open class func getJourneyActionmapsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil) -> RequestBuilder<ActionMapListing> {
+    open class func getJourneyActionmapsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, filterField: String? = nil, filterValue: String? = nil, actionMapIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<ActionMapListing> {
         let path = "/api/v2/journey/actionmaps"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -517,7 +531,11 @@ open class JourneyAPI {
             
             "filterValue": filterValue, 
             
-            "actionMapIds": actionMapIds
+            "actionMapIds": actionMapIds, 
+            
+            "queryFields": queryFields, 
+            
+            "queryValue": queryValue
             
         ])
 
@@ -671,11 +689,11 @@ open class JourneyAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -851,6 +869,10 @@ open class JourneyAPI {
 
     
     
+    
+    
+    
+    
     /**
      
      Retrieve all action templates.
@@ -859,11 +881,13 @@ open class JourneyAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). (optional)
      - parameter mediaType: (query) Media type (optional)
-     - parameter state: (query) Action template state (optional)
+     - parameter state: (query) Action template state. (optional)
+     - parameter queryFields: (query) ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getJourneyActiontemplates(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil, completion: @escaping ((_ data: ActionTemplateListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getJourneyActiontemplatesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, mediaType: mediaType, state: state)
+    open class func getJourneyActiontemplates(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: ActionTemplateListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyActiontemplatesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, mediaType: mediaType, state: state, queryFields: queryFields, queryValue: queryValue)
         requestBuilder.execute { (response: Response<ActionTemplateListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -949,22 +973,24 @@ open class JourneyAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Field(s) to sort by. Prefix with &#39;-&#39; for descending (e.g. sortBy=name,-createdDate). (optional)
      - parameter mediaType: (query) Media type (optional)
-     - parameter state: (query) Action template state (optional)
+     - parameter state: (query) Action template state. (optional)
+     - parameter queryFields: (query) ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<ActionTemplateListing> 
      */
-    open class func getJourneyActiontemplatesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil) -> RequestBuilder<ActionTemplateListing> {
+    open class func getJourneyActiontemplatesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, mediaType: MediaType_getJourneyActiontemplates? = nil, state: State_getJourneyActiontemplates? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<ActionTemplateListing> {
         let path = "/api/v2/journey/actiontemplates"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -985,7 +1011,11 @@ open class JourneyAPI {
             
             "mediaType": mediaType?.rawValue, 
             
-            "state": state?.rawValue
+            "state": state?.rawValue, 
+            
+            "queryFields": queryFields, 
+            
+            "queryValue": queryValue
             
         ])
 
@@ -1101,6 +1131,10 @@ open class JourneyAPI {
     
     
     
+    
+    
+    
+    
     /**
      
      Retrieve all outcomes.
@@ -1108,11 +1142,13 @@ open class JourneyAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
-     - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 20 outcomes are allowed per request. (optional)
+     - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)
+     - parameter queryFields: (query) Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getJourneyOutcomes(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil, completion: @escaping ((_ data: OutcomeListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getJourneyOutcomesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, outcomeIds: outcomeIds)
+    open class func getJourneyOutcomes(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: OutcomeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyOutcomesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, outcomeIds: outcomeIds, queryFields: queryFields, queryValue: queryValue)
         requestBuilder.execute { (response: Response<OutcomeListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1179,21 +1215,23 @@ open class JourneyAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
-     - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 20 outcomes are allowed per request. (optional)
+     - parameter outcomeIds: (query) IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)
+     - parameter queryFields: (query) Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<OutcomeListing> 
      */
-    open class func getJourneyOutcomesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil) -> RequestBuilder<OutcomeListing> {
+    open class func getJourneyOutcomesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: String? = nil, outcomeIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<OutcomeListing> {
         let path = "/api/v2/journey/outcomes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1212,7 +1250,11 @@ open class JourneyAPI {
             
             "sortBy": sortBy, 
             
-            "outcomeIds": outcomeIds
+            "outcomeIds": outcomeIds, 
+            
+            "queryFields": queryFields, 
+            
+            "queryValue": queryValue
             
         ])
 
@@ -1338,6 +1380,10 @@ open class JourneyAPI {
     
     
     
+    
+    
+    
+    
     /**
      
      Retrieve all segments.
@@ -1346,11 +1392,13 @@ open class JourneyAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
-     - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
+     - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getJourneySegmentsWithRequestBuilder(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds)
+    open class func getJourneySegments(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil, completion: @escaping ((_ data: SegmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySegmentsWithRequestBuilder(sortBy: sortBy, pageSize: pageSize, pageNumber: pageNumber, isActive: isActive, segmentIds: segmentIds, queryFields: queryFields, queryValue: queryValue)
         requestBuilder.execute { (response: Response<SegmentListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1425,22 +1473,24 @@ open class JourneyAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter isActive: (query) Determines whether or not to show only active segments. (optional)
-     - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination or sorting. A maximum of 100 segments are allowed per request. (optional)
+     - parameter segmentIds: (query) IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)
+     - parameter queryFields: (query) Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)
+     - parameter queryValue: (query) Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)
 
      - returns: RequestBuilder<SegmentListing> 
      */
-    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil) -> RequestBuilder<SegmentListing> {
+    open class func getJourneySegmentsWithRequestBuilder(sortBy: String? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, isActive: Bool? = nil, segmentIds: [String]? = nil, queryFields: [String]? = nil, queryValue: String? = nil) -> RequestBuilder<SegmentListing> {
         let path = "/api/v2/journey/segments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1461,7 +1511,11 @@ open class JourneyAPI {
             
             "isActive": isActive, 
             
-            "segmentIds": segmentIds
+            "segmentIds": segmentIds, 
+            
+            "queryFields": queryFields, 
+            
+            "queryValue": queryValue
             
         ])
 
@@ -1550,6 +1604,9 @@ open class JourneyAPI {
       "id" : "aeiou"
     },
     "mediaType" : "aeiou",
+    "webMessagingOfferFields" : {
+      "offerText" : "aeiou"
+    },
     "architectFlowFields" : {
       "architectFlow" : {
         "selfUri" : "aeiou",
@@ -2163,6 +2220,9 @@ open class JourneyAPI {
       "id" : "aeiou"
     },
     "mediaType" : "aeiou",
+    "webMessagingOfferFields" : {
+      "offerText" : "aeiou"
+    },
     "architectFlowFields" : {
       "architectFlow" : {
         "selfUri" : "aeiou",

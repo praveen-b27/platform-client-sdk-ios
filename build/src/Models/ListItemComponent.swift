@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** An entry in List template */
+/** An entry in a List template. */
 
 public class ListItemComponent: Codable {
 
@@ -16,19 +16,19 @@ public class ListItemComponent: Codable {
         case listItem = "ListItem"
         case listItemBig = "ListItemBig"
     }
-    /** An ID assigned to this component */
+    /** An ID assigned to this list item. */
     public var _id: String?
-    /** An ID of the rich message instance */
+    /** An ID of the rich message instance. */
     public var rmid: String?
-    /** The type of component to render */
+    /** The type of list item to render. */
     public var type: ModelType?
-    /** Path or URI to an image file */
+    /** URL of an image. */
     public var image: String?
-    /** The main headline of the list item */
+    /** The main headline of the list item. */
     public var title: String?
-    /** Text to show in the description row */
+    /** Text to show in the list item description. */
     public var _description: String?
-    /** User actions available on the content. All actions are optional and all actions are executed simultaneously. */
+    /** The list item actions. */
     public var actions: ContentActions?
 
     public init(_id: String?, rmid: String?, type: ModelType?, image: String?, title: String?, _description: String?, actions: ContentActions?) {

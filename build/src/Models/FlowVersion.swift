@@ -24,11 +24,14 @@ public class FlowVersion: Codable {
         case inboundemail = "INBOUNDEMAIL"
         case inboundshortmessage = "INBOUNDSHORTMESSAGE"
         case inqueuecall = "INQUEUECALL"
+        case inqueueemail = "INQUEUEEMAIL"
+        case inqueueshortmessage = "INQUEUESHORTMESSAGE"
         case outboundcall = "OUTBOUNDCALL"
         case securecall = "SECURECALL"
         case speech = "SPEECH"
         case surveyinvite = "SURVEYINVITE"
         case workflow = "WORKFLOW"
+        case workitem = "WORKITEM"
     }
     /** The flow version identifier */
     public var _id: String?

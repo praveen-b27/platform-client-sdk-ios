@@ -18,7 +18,7 @@ public class DncListDivisionView: Codable {
     public var division: Division?
     /** The status of the import process. */
     public var importStatus: ImportStatus?
-    /** The number of contacts in the ContactList. */
+    /** The number of contacts in the DncList. */
     public var size: Int64?
     /** The URI for this object */
     public var selfUri: String?

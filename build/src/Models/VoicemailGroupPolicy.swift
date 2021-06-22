@@ -23,6 +23,8 @@ public class VoicemailGroupPolicy: Codable {
     public var enabled: Bool?
     /** Whether email notifications are sent to group members when a new voicemail is received */
     public var sendEmailNotifications: Bool?
+    /** Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization. */
+    public var disableEmailPii: Bool?
     /** How many seconds to ring before rotating to the next member in the group */
     public var rotateCallsSecs: Int?
     /** How many rotations to go through */
@@ -32,7 +34,7 @@ public class VoicemailGroupPolicy: Codable {
     /** Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin. */
     public var groupAlertType: GroupAlertType?
 
-    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?) {
+    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?) {
         
         self.name = name
         
@@ -41,6 +43,8 @@ public class VoicemailGroupPolicy: Codable {
         self.enabled = enabled
         
         self.sendEmailNotifications = sendEmailNotifications
+        
+        self.disableEmailPii = disableEmailPii
         
         self.rotateCallsSecs = rotateCallsSecs
         

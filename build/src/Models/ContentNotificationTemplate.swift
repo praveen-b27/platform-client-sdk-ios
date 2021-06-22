@@ -8,19 +8,19 @@
 import Foundation
 
 
-/** Template notification object */
+/** Template notification object. */
 
 public class ContentNotificationTemplate: Codable {
 
-    /** The messaging channel template id. For WhatsApp, &#39;namespace@name&#39; */
+    /** The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;. */
     public var _id: String?
-    /** Template language */
+    /** Template language. */
     public var language: String?
-    /** Template header object */
+    /** The template header. */
     public var header: NotificationTemplateHeader?
-    /** Template body object */
+    /** The template body. */
     public var body: NotificationTemplateBody?
-    /** Template footer object */
+    /** The template footer. */
     public var footer: NotificationTemplateFooter?
 
     public init(_id: String?, language: String?, header: NotificationTemplateHeader?, body: NotificationTemplateBody?, footer: NotificationTemplateFooter?) {

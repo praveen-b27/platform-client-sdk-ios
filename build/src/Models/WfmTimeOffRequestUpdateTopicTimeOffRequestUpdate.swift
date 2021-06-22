@@ -22,6 +22,7 @@ public class WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate: Codable {
         case autoApproved = "AutoApproved"
         case invalidDailyDuration = "InvalidDailyDuration"
         case outsideShift = "OutsideShift"
+        case removedFromWaitlist = "RemovedFromWaitlist"
         case waitlisted = "Waitlisted"
     }
     public var _id: String?

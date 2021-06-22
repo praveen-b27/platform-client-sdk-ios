@@ -465,11 +465,11 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -780,11 +780,11 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -881,11 +881,11 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -997,11 +997,11 @@ open class AuthorizationAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -1326,6 +1326,7 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1800,6 +1801,7 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -2132,11 +2134,11 @@ open class AuthorizationAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter roleId: (path) Role ID 
@@ -2400,6 +2402,7 @@ open class AuthorizationAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2490,11 +2493,11 @@ open class AuthorizationAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter roleId: (path) Role ID 
@@ -2780,6 +2783,7 @@ open class AuthorizationAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -3006,11 +3010,11 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -3629,6 +3633,7 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -3886,6 +3891,7 @@ open class AuthorizationAPI {
         case campaign = "CAMPAIGN"
         case contactlist = "CONTACTLIST"
         case dnclist = "DNCLIST"
+        case emailcampaign = "EMAILCAMPAIGN"
         case messagingcampaign = "MESSAGINGCAMPAIGN"
         case managementunit = "MANAGEMENTUNIT"
         case businessunit = "BUSINESSUNIT"
@@ -3893,6 +3899,10 @@ open class AuthorizationAPI {
         case flowmilestone = "FLOWMILESTONE"
         case flowoutcome = "FLOWOUTCOME"
         case user = "USER"
+        case callroute = "CALLROUTE"
+        case emergencygroups = "EMERGENCYGROUPS"
+        case routingschedules = "ROUTINGSCHEDULES"
+        case routingschedulegroups = "ROUTINGSCHEDULEGROUPS"
         case datatables = "DATATABLES"
     }
 
@@ -4308,6 +4318,7 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4783,6 +4794,7 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -5247,6 +5259,7 @@ open class AuthorizationAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -5473,11 +5486,11 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter force: (query) Restore default roles (optional, default to false)
@@ -6062,6 +6075,7 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
+            "division" : "",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -6658,6 +6672,7 @@ open class AuthorizationAPI {
               "spouse" : "aeiou"
             },
             "team" : {
+              "division" : "",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6884,11 +6899,11 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter body: (body) Organization roles list 

@@ -19,8 +19,10 @@ public class TrustCreate: Codable {
     public var users: [TrustMemberCreate]?
     /** The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required. */
     public var groups: [TrustMemberCreate]?
+    /** The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateExpired: Date?
 
-    public init(pairingId: String?, enabled: Bool?, users: [TrustMemberCreate]?, groups: [TrustMemberCreate]?) {
+    public init(pairingId: String?, enabled: Bool?, users: [TrustMemberCreate]?, groups: [TrustMemberCreate]?, dateExpired: Date?) {
         
         self.pairingId = pairingId
         
@@ -29,6 +31,8 @@ public class TrustCreate: Codable {
         self.users = users
         
         self.groups = groups
+        
+        self.dateExpired = dateExpired
         
     }
 

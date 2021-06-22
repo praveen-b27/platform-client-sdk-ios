@@ -26,11 +26,14 @@ public class AnalyticsFlow: Codable {
         case inboundemail = "INBOUNDEMAIL"
         case inboundshortmessage = "INBOUNDSHORTMESSAGE"
         case inqueuecall = "INQUEUECALL"
+        case inqueueemail = "INQUEUEEMAIL"
+        case inqueueshortmessage = "INQUEUESHORTMESSAGE"
         case outboundcall = "OUTBOUNDCALL"
         case securecall = "SECURECALL"
         case speech = "SPEECH"
         case surveyinvite = "SURVEYINVITE"
         case workflow = "WORKFLOW"
+        case workitem = "WORKITEM"
     }
     /** Flow ending language, e.g. en-us */
     public var endingLanguage: String?

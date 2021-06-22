@@ -8,11 +8,11 @@
 import Foundation
 
 
-/** Template footer object */
+/** Template footer object. */
 
 public class NotificationTemplateFooter: Codable {
 
-    /** Footer text. For WhatsApp, ignored */
+    /** Footer text. For WhatsApp, ignored. */
     public var text: String?
 
     public init(text: String?) {

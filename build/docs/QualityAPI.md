@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityConversationAudits**](QualityAPI.html#getQualityConversationAudits) | Get audits for conversation or recording |
 | [**getQualityConversationEvaluation**](QualityAPI.html#getQualityConversationEvaluation) | Get an evaluation |
 | [**getQualityConversationSurveys**](QualityAPI.html#getQualityConversationSurveys) | Get the surveys for a conversation |
+| [**getQualityConversationsAuditsQueryTransactionId**](QualityAPI.html#getQualityConversationsAuditsQueryTransactionId) | Get status of audit query execution |
+| [**getQualityConversationsAuditsQueryTransactionIdResults**](QualityAPI.html#getQualityConversationsAuditsQueryTransactionIdResults) | Get results of audit query |
 | [**getQualityEvaluationsQuery**](QualityAPI.html#getQualityEvaluationsQuery) | Queries Evaluations and returns a paged list |
 | [**getQualityEvaluatorsActivity**](QualityAPI.html#getQualityEvaluatorsActivity) | Get an evaluator activity |
 | [**getQualityForm**](QualityAPI.html#getQualityForm) | Get an evaluation form |
@@ -44,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsSurveysAggregatesQuery**](QualityAPI.html#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
 | [**postQualityCalibrations**](QualityAPI.html#postQualityCalibrations) | Create a calibration |
 | [**postQualityConversationEvaluations**](QualityAPI.html#postQualityConversationEvaluations) | Create an evaluation |
+| [**postQualityConversationsAuditsQuery**](QualityAPI.html#postQualityConversationsAuditsQuery) | Create audit query execution |
 | [**postQualityEvaluationsScoring**](QualityAPI.html#postQualityEvaluationsScoring) | Score evaluation |
 | [**postQualityForms**](QualityAPI.html#postQualityForms) | Create an evaluation form. |
 | [**postQualityFormsEvaluations**](QualityAPI.html#postQualityFormsEvaluations) | Create an evaluation form. |
@@ -527,13 +530,13 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 
 # **getQualityConversationAudits**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [QualityAuditPage](QualityAuditPage.html) getQualityConversationAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType)
 
 Get audits for conversation or recording
 
-Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.
+Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
 
 Wraps GET /api/v2/quality/conversations/{conversationId}/audits  
 
@@ -703,6 +706,116 @@ QualityAPI.getQualityConversationSurveys(conversationId: conversationId) { (resp
 ### Return type
 
 [**[Survey]**](Survey.html)
+
+<a name="getQualityConversationsAuditsQueryTransactionId"></a>
+
+# **getQualityConversationsAuditsQueryTransactionId**
+
+
+
+> [QualityAuditQueryExecutionStatusResponse](QualityAuditQueryExecutionStatusResponse.html) getQualityConversationsAuditsQueryTransactionId(transactionId)
+
+Get status of audit query execution
+
+
+
+Wraps GET /api/v2/quality/conversations/audits/query/{transactionId}  
+
+Requires ALL permissions: 
+
+* audits:interactionDetails:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let transactionId: String = "" // Transaction ID
+
+// Code example
+QualityAPI.getQualityConversationsAuditsQueryTransactionId(transactionId: transactionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityConversationsAuditsQueryTransactionId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **transactionId** | **String**| Transaction ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
+
+<a name="getQualityConversationsAuditsQueryTransactionIdResults"></a>
+
+# **getQualityConversationsAuditsQueryTransactionIdResults**
+
+
+
+> [QualityAuditQueryExecutionResultsResponse](QualityAuditQueryExecutionResultsResponse.html) getQualityConversationsAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand)
+
+Get results of audit query
+
+
+
+Wraps GET /api/v2/quality/conversations/audits/query/{transactionId}/results  
+
+Requires ALL permissions: 
+
+* audits:interactionDetails:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let transactionId: String = "" // Transaction ID
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
+let pageSize: Int = 25 // Page size
+let expand: [String] = [QualityAPI.Expand_getQualityConversationsAuditsQueryTransactionIdResults.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **transactionId** | **String**| Transaction ID | |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse.html)
 
 <a name="getQualityEvaluationsQuery"></a>
 
@@ -2193,6 +2306,58 @@ QualityAPI.postQualityConversationEvaluations(conversationId: conversationId, bo
 
 [**Evaluation**](Evaluation.html)
 
+<a name="postQualityConversationsAuditsQuery"></a>
+
+# **postQualityConversationsAuditsQuery**
+
+
+
+> [QualityAuditQueryExecutionStatusResponse](QualityAuditQueryExecutionStatusResponse.html) postQualityConversationsAuditsQuery(body)
+
+Create audit query execution
+
+
+
+Wraps POST /api/v2/quality/conversations/audits/query  
+
+Requires ALL permissions: 
+
+* audits:interactionDetails:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: QMAuditQueryRequest = new QMAuditQueryRequest(...) // query
+
+// Code example
+QualityAPI.postQualityConversationsAuditsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.postQualityConversationsAuditsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**QMAuditQueryRequest**](QMAuditQueryRequest.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
+
 <a name="postQualityEvaluationsScoring"></a>
 
 # **postQualityEvaluationsScoring**
@@ -2928,7 +3093,7 @@ QualityAPI.putQualitySurveysScorable(body: body, customerSurveyUrl: customerSurv
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey | |
-| **customerSurveyUrl** | **String**| customerSurveyUrl | [optional] |
+| **customerSurveyUrl** | **String**| customerSurveyUrl | |
 {: class="table-striped"}
 
 

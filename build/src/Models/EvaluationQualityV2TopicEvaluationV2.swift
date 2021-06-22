@@ -37,8 +37,9 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
     public var rescore: Bool?
     public var conversationDate: Date?
     public var mediaType: [String]?
+    public var calibration: EvaluationQualityV2TopicCalibration?
 
-    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?) {
+    public init(_id: String?, conversationId: String?, agent: EvaluationQualityV2TopicUser?, evaluator: EvaluationQualityV2TopicUser?, eventTime: Date?, evaluationFormId: String?, formName: String?, scoringSet: EvaluationQualityV2TopicEvaluationScoringSet?, contextId: String?, status: Status?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, eventType: String?, resourceId: String?, resourceType: String?, divisionIds: [String]?, rescore: Bool?, conversationDate: Date?, mediaType: [String]?, calibration: EvaluationQualityV2TopicCalibration?) {
         
         self._id = _id
         
@@ -82,6 +83,8 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         
         self.mediaType = mediaType
         
+        self.calibration = calibration
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -106,6 +109,7 @@ public class EvaluationQualityV2TopicEvaluationV2: Codable {
         case rescore
         case conversationDate
         case mediaType
+        case calibration
     }
 
 

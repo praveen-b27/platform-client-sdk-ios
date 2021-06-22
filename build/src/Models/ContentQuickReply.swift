@@ -8,22 +8,22 @@
 import Foundation
 
 
-/** Quick reply object */
+/** Quick reply object. */
 
 public class ContentQuickReply: Codable {
 
     public enum Action: String, Codable { 
         case message = "Message"
     }
-    /** An ID assigned to the quick reply. Each object inside the content array has a unique ID. */
+    /** A unique ID assigned to the quick reply (Deprecated). */
     public var _id: String?
     /** Text to show inside the quick reply. This is also used as the response text after clicking on the quick reply. */
     public var text: String?
-    /** Content of the textback payload after clicking a quick reply */
+    /** Content of the payload included in the quick reply response. Could be an ID identifying the quick reply response. */
     public var payload: String?
-    /** Path or URI to an image file associated with quick reply */
+    /** URL of an image associated with the quick reply. */
     public var image: String?
-    /** Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text. */
+    /** Specifies the type of action that is triggered upon clicking the quick reply. */
     public var action: Action?
 
     public init(_id: String?, text: String?, payload: String?, image: String?, action: Action?) {

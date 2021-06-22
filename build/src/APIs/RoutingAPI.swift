@@ -15,6 +15,61 @@ open class RoutingAPI {
     
     /**
      
+     Delete single benefit assessment.
+     
+     - parameter assessmentId: (path) Benefit Assessment ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingAssessment(assessmentId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingAssessmentWithRequestBuilder(assessmentId: assessmentId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete single benefit assessment.
+     
+     - DELETE /api/v2/routing/assessments/{assessmentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter assessmentId: (path) Benefit Assessment ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingAssessmentWithRequestBuilder(assessmentId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/routing/assessments/{assessmentId}"
+        let assessmentIdPreEscape = "\(assessmentId)"
+        let assessmentIdPostEscape = assessmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assessmentId}", with: assessmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete a domain
      
      - parameter domainId: (path) domain ID 
@@ -112,6 +167,61 @@ open class RoutingAPI {
         let routeIdPreEscape = "\(routeId)"
         let routeIdPostEscape = routeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{routeId}", with: routeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Delete single predictor.
+     
+     - parameter predictorId: (path) Predictor ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingPredictor(predictorId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingPredictorWithRequestBuilder(predictorId: predictorId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete single predictor.
+     
+     - DELETE /api/v2/routing/predictors/{predictorId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter predictorId: (path) Predictor ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingPredictorWithRequestBuilder(predictorId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/routing/predictors/{predictorId}"
+        let predictorIdPreEscape = "\(predictorId)"
+        let predictorIdPostEscape = predictorIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{predictorId}", with: predictorIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         
@@ -875,6 +985,343 @@ open class RoutingAPI {
     
     /**
      
+     Retrieve a single benefit assessment.
+     
+     - parameter assessmentId: (path) Benefit Assessment ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingAssessment(assessmentId: String, completion: @escaping ((_ data: BenefitAssessment?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingAssessmentWithRequestBuilder(assessmentId: assessmentId)
+        requestBuilder.execute { (response: Response<BenefitAssessment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single benefit assessment.
+     
+     - GET /api/v2/routing/assessments/{assessmentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "queues" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "kpiAssessments" : [ {
+    "assessmentResult" : "aeiou",
+    "checks" : [ {
+      "result" : "aeiou",
+      "type" : "aeiou"
+    } ],
+    "kpi" : "aeiou"
+  } ]
+}}]
+     
+     - parameter assessmentId: (path) Benefit Assessment ID 
+
+     - returns: RequestBuilder<BenefitAssessment> 
+     */
+    open class func getRoutingAssessmentWithRequestBuilder(assessmentId: String) -> RequestBuilder<BenefitAssessment> {
+        var path = "/api/v2/routing/assessments/{assessmentId}"
+        let assessmentIdPreEscape = "\(assessmentId)"
+        let assessmentIdPostEscape = assessmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assessmentId}", with: assessmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BenefitAssessment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Retrieve all benefit assessments.
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter queueId: (query) Queue ID(s) to filter assessments by. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingAssessments(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, queueId: [String]? = nil, completion: @escaping ((_ data: AssessmentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingAssessmentsWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, queueId: queueId)
+        requestBuilder.execute { (response: Response<AssessmentListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve all benefit assessments.
+     
+     - GET /api/v2/routing/assessments
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "queues" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "kpiAssessments" : [ {
+      "assessmentResult" : "aeiou",
+      "checks" : [ {
+        "result" : "aeiou",
+        "type" : "aeiou"
+      } ],
+      "kpi" : "aeiou"
+    } ]
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter queueId: (query) Queue ID(s) to filter assessments by. (optional)
+
+     - returns: RequestBuilder<AssessmentListing> 
+     */
+    open class func getRoutingAssessmentsWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, queueId: [String]? = nil) -> RequestBuilder<AssessmentListing> {
+        let path = "/api/v2/routing/assessments"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "before": before, 
+            
+            "after": after, 
+            
+            "limit": limit, 
+            
+            "pageSize": pageSize, 
+            
+            "queueId": queueId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AssessmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a single benefit assessments job.
+     
+     - parameter jobId: (path) Benefit Assessment Job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingAssessmentsJob(jobId: String, completion: @escaping ((_ data: BenefitAssessmentJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingAssessmentsJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<BenefitAssessmentJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single benefit assessments job.
+     
+     - GET /api/v2/routing/assessments/jobs/{jobId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou"
+}}]
+     
+     - parameter jobId: (path) Benefit Assessment Job ID 
+
+     - returns: RequestBuilder<BenefitAssessmentJob> 
+     */
+    open class func getRoutingAssessmentsJobWithRequestBuilder(jobId: String) -> RequestBuilder<BenefitAssessmentJob> {
+        var path = "/api/v2/routing/assessments/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BenefitAssessmentJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve all benefit assessment jobs.
+     
+     - parameter divisionId: (query) Division ID(s) to filter assessment jobs by. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingAssessmentsJobs(divisionId: [String]? = nil, completion: @escaping ((_ data: AssessmentJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingAssessmentsJobsWithRequestBuilder(divisionId: divisionId)
+        requestBuilder.execute { (response: Response<AssessmentJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve all benefit assessment jobs.
+     
+     - GET /api/v2/routing/assessments/jobs
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou"
+  } ],
+  "selfUri" : "aeiou"
+}}]
+     
+     - parameter divisionId: (query) Division ID(s) to filter assessment jobs by. (optional)
+
+     - returns: RequestBuilder<AssessmentJobListing> 
+     */
+    open class func getRoutingAssessmentsJobsWithRequestBuilder(divisionId: [String]? = nil) -> RequestBuilder<AssessmentJobListing> {
+        let path = "/api/v2/routing/assessments/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "divisionId": divisionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<AssessmentJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Get domain
      
      - parameter domainId: (path) domain ID 
@@ -1125,11 +1572,11 @@ open class RoutingAPI {
     "spamFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter domainName: (path) email domain 
@@ -1228,11 +1675,11 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
@@ -1379,11 +1826,11 @@ open class RoutingAPI {
     "version" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -1650,6 +2097,7 @@ open class RoutingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1773,7 +2221,62 @@ open class RoutingAPI {
         "intents" : [ {
           "name" : "aeiou"
         } ],
-        "domain" : ""
+        "domain" : "",
+        "version" : {
+          "intents" : [ {
+            "utterances" : [ {
+              "segments" : [ {
+                "text" : "aeiou",
+                "entity" : {
+                  "name" : "aeiou"
+                }
+              } ]
+            } ],
+            "name" : "aeiou",
+            "entityTypeBindings" : [ {
+              "entityType" : "aeiou",
+              "entityName" : "aeiou"
+            } ],
+            "entityNameReferences" : [ "aeiou" ]
+          } ],
+          "dateTrained" : "2000-01-23T04:56:07.000+0000",
+          "trainingStatus" : "aeiou",
+          "selfUri" : "aeiou",
+          "description" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "published" : true,
+          "datePublished" : "2000-01-23T04:56:07.000+0000",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "entities" : [ {
+            "name" : "aeiou",
+            "type" : "aeiou"
+          } ],
+          "domain" : {
+            "lastPublishedVersion" : "",
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "language" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou",
+            "draftVersion" : ""
+          },
+          "entityTypes" : [ {
+            "name" : "aeiou",
+            "description" : "aeiou",
+            "mechanism" : {
+              "restricted" : true,
+              "type" : "aeiou",
+              "items" : [ {
+                "synonyms" : [ "aeiou" ],
+                "value" : "aeiou"
+              } ]
+            }
+          } ],
+          "id" : "aeiou",
+          "evaluationStatus" : "aeiou"
+        }
       },
       "type" : "aeiou",
       "secure" : true,
@@ -2088,6 +2591,7 @@ open class RoutingAPI {
           "spouse" : "aeiou"
         },
         "team" : {
+          "division" : "",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -2211,7 +2715,62 @@ open class RoutingAPI {
           "intents" : [ {
             "name" : "aeiou"
           } ],
-          "domain" : ""
+          "domain" : "",
+          "version" : {
+            "intents" : [ {
+              "utterances" : [ {
+                "segments" : [ {
+                  "text" : "aeiou",
+                  "entity" : {
+                    "name" : "aeiou"
+                  }
+                } ]
+              } ],
+              "name" : "aeiou",
+              "entityTypeBindings" : [ {
+                "entityType" : "aeiou",
+                "entityName" : "aeiou"
+              } ],
+              "entityNameReferences" : [ "aeiou" ]
+            } ],
+            "dateTrained" : "2000-01-23T04:56:07.000+0000",
+            "trainingStatus" : "aeiou",
+            "selfUri" : "aeiou",
+            "description" : "aeiou",
+            "language" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "published" : true,
+            "datePublished" : "2000-01-23T04:56:07.000+0000",
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
+            "entities" : [ {
+              "name" : "aeiou",
+              "type" : "aeiou"
+            } ],
+            "domain" : {
+              "lastPublishedVersion" : "",
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "language" : "aeiou",
+              "dateModified" : "2000-01-23T04:56:07.000+0000",
+              "id" : "aeiou",
+              "draftVersion" : ""
+            },
+            "entityTypes" : [ {
+              "name" : "aeiou",
+              "description" : "aeiou",
+              "mechanism" : {
+                "restricted" : true,
+                "type" : "aeiou",
+                "items" : [ {
+                  "synonyms" : [ "aeiou" ],
+                  "value" : "aeiou"
+                } ]
+              }
+            } ],
+            "id" : "aeiou",
+            "evaluationStatus" : "aeiou"
+          }
         },
         "type" : "aeiou",
         "secure" : true,
@@ -2256,11 +2815,11 @@ open class RoutingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter messengerType: (query) Messenger Type (optional)
@@ -2291,6 +2850,259 @@ open class RoutingAPI {
         ])
 
         let requestBuilder: RequestBuilder<RecipientListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a single predictor.
+     
+     - parameter predictorId: (path) Predictor ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingPredictor(predictorId: String, completion: @escaping ((_ data: Predictor?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorWithRequestBuilder(predictorId: predictorId)
+        requestBuilder.execute { (response: Response<Predictor>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single predictor.
+     
+     - GET /api/v2/routing/predictors/{predictorId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schedule" : {
+    "scheduleType" : "aeiou",
+    "dateStarted" : "2000-01-23T04:56:07.000+0000"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "kpi" : "aeiou",
+  "queues" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "routingTimeoutSeconds" : 123,
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "workloadBalancingConfig" : {
+    "enabled" : true
+  }
+}}]
+     
+     - parameter predictorId: (path) Predictor ID 
+
+     - returns: RequestBuilder<Predictor> 
+     */
+    open class func getRoutingPredictorWithRequestBuilder(predictorId: String) -> RequestBuilder<Predictor> {
+        var path = "/api/v2/routing/predictors/{predictorId}"
+        let predictorIdPreEscape = "\(predictorId)"
+        let predictorIdPostEscape = predictorIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{predictorId}", with: predictorIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Predictor>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Retrieve all predictors.
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter queueId: (query) Comma-separated list of queue Ids to filter by. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingPredictors(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, queueId: [String]? = nil, completion: @escaping ((_ data: PredictorListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorsWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, queueId: queueId)
+        requestBuilder.execute { (response: Response<PredictorListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve all predictors.
+     
+     - GET /api/v2/routing/predictors
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "schedule" : {
+      "scheduleType" : "aeiou",
+      "dateStarted" : "2000-01-23T04:56:07.000+0000"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "kpi" : "aeiou",
+    "queues" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "routingTimeoutSeconds" : 123,
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "workloadBalancingConfig" : {
+      "enabled" : true
+    }
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter queueId: (query) Comma-separated list of queue Ids to filter by. (optional)
+
+     - returns: RequestBuilder<PredictorListing> 
+     */
+    open class func getRoutingPredictorsWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, queueId: [String]? = nil) -> RequestBuilder<PredictorListing> {
+        let path = "/api/v2/routing/predictors"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "before": before, 
+            
+            "after": after, 
+            
+            "limit": limit, 
+            
+            "pageSize": pageSize, 
+            
+            "queueId": queueId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<PredictorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get a list of Key Performance Indicators available for the predictors.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingPredictorsKeyperformanceindicators(completion: @escaping ((_ data: [KeyPerformanceIndicator]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<[KeyPerformanceIndicator]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of Key Performance Indicators available for the predictors.
+     
+     - GET /api/v2/routing/predictors/keyperformanceindicators
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example=[ {
+  "name" : "aeiou",
+  "id" : "aeiou"
+} ]}]
+
+     - returns: RequestBuilder<[KeyPerformanceIndicator]> 
+     */
+    open class func getRoutingPredictorsKeyperformanceindicatorsWithRequestBuilder() -> RequestBuilder<[KeyPerformanceIndicator]> {
+        let path = "/api/v2/routing/predictors/keyperformanceindicators"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[KeyPerformanceIndicator]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2471,6 +3283,163 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Queue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a Comparison Period.
+     
+     - parameter queueId: (path) Queue id 
+     - parameter comparisonPeriodId: (path) ComparisonPeriod id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingQueueComparisonperiod(queueId: String, comparisonPeriodId: String, completion: @escaping ((_ data: ComparisonPeriod?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueComparisonperiodWithRequestBuilder(queueId: queueId, comparisonPeriodId: comparisonPeriodId)
+        requestBuilder.execute { (response: Response<ComparisonPeriod>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a Comparison Period.
+     
+     - GET /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "kpiTotalOff" : 123456789,
+  "kpi" : "aeiou",
+  "dateStarted" : "2000-01-23T04:56:07.000+0000",
+  "dateEnded" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "interactionCountOff" : 123456789,
+  "interactionCountOn" : 123456789,
+  "id" : "aeiou",
+  "kpiTotalOn" : 123456789
+}}]
+     
+     - parameter queueId: (path) Queue id 
+     - parameter comparisonPeriodId: (path) ComparisonPeriod id 
+
+     - returns: RequestBuilder<ComparisonPeriod> 
+     */
+    open class func getRoutingQueueComparisonperiodWithRequestBuilder(queueId: String, comparisonPeriodId: String) -> RequestBuilder<ComparisonPeriod> {
+        var path = "/api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId}"
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let comparisonPeriodIdPreEscape = "\(comparisonPeriodId)"
+        let comparisonPeriodIdPostEscape = comparisonPeriodIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{comparisonPeriodId}", with: comparisonPeriodIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ComparisonPeriod>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get list of comparison periods
+     
+     - parameter queueId: (path) Queue id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingQueueComparisonperiods(queueId: String, completion: @escaping ((_ data: ComparisonPeriodListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueComparisonperiodsWithRequestBuilder(queueId: queueId)
+        requestBuilder.execute { (response: Response<ComparisonPeriodListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get list of comparison periods
+     
+     - GET /api/v2/routing/queues/{queueId}/comparisonperiods
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "kpiTotalOff" : 123456789,
+    "kpi" : "aeiou",
+    "dateStarted" : "2000-01-23T04:56:07.000+0000",
+    "dateEnded" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "interactionCountOff" : 123456789,
+    "interactionCountOn" : 123456789,
+    "id" : "aeiou",
+    "kpiTotalOn" : 123456789
+  } ],
+  "selfUri" : "aeiou"
+}}]
+     
+     - parameter queueId: (path) Queue id 
+
+     - returns: RequestBuilder<ComparisonPeriodListing> 
+     */
+    open class func getRoutingQueueComparisonperiodsWithRequestBuilder(queueId: String) -> RequestBuilder<ComparisonPeriodListing> {
+        var path = "/api/v2/routing/queues/{queueId}/comparisonperiods"
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ComparisonPeriodListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2902,6 +3871,7 @@ open class RoutingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2994,11 +3964,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -3334,6 +4304,7 @@ open class RoutingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3426,11 +4397,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -3550,11 +4521,11 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -3765,11 +4736,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4005,11 +4976,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 100] (optional, default to 25)
@@ -4239,11 +5210,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 500] (optional, default to 25)
@@ -4453,11 +5424,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter joined: (query) Joined (optional)
@@ -4800,11 +5771,11 @@ open class RoutingAPI {
     "version" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4971,11 +5942,11 @@ open class RoutingAPI {
     "region" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5366,6 +6337,7 @@ open class RoutingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -5748,6 +6720,7 @@ open class RoutingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -5845,11 +6818,11 @@ open class RoutingAPI {
     "cancellationDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
@@ -6171,11 +7144,11 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6388,11 +7361,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6499,11 +7472,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6607,11 +7580,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6880,6 +7853,89 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update single predictor.
+     
+     - parameter predictorId: (path) Predictor ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingPredictor(predictorId: String, body: PatchPredictorRequest? = nil, completion: @escaping ((_ data: Predictor?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingPredictorWithRequestBuilder(predictorId: predictorId, body: body)
+        requestBuilder.execute { (response: Response<Predictor>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update single predictor.
+     
+     - PATCH /api/v2/routing/predictors/{predictorId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schedule" : {
+    "scheduleType" : "aeiou",
+    "dateStarted" : "2000-01-23T04:56:07.000+0000"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "kpi" : "aeiou",
+  "queues" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "routingTimeoutSeconds" : 123,
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "workloadBalancingConfig" : {
+    "enabled" : true
+  }
+}}]
+     
+     - parameter predictorId: (path) Predictor ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Predictor> 
+     */
+    open class func patchRoutingPredictorWithRequestBuilder(predictorId: String, body: PatchPredictorRequest? = nil) -> RequestBuilder<Predictor> {
+        var path = "/api/v2/routing/predictors/{predictorId}"
+        let predictorIdPreEscape = "\(predictorId)"
+        let predictorIdPostEscape = predictorIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{predictorId}", with: predictorIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Predictor>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -7167,6 +8223,7 @@ open class RoutingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -7259,11 +8316,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -7571,6 +8628,7 @@ open class RoutingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -7663,11 +8721,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -8095,11 +9153,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8261,11 +9319,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8343,11 +9401,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -8476,6 +9534,144 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<QueueObservationQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a benefit assessment.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingAssessments(body: CreateBenefitAssessmentRequest? = nil, completion: @escaping ((_ data: BenefitAssessment?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingAssessmentsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BenefitAssessment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a benefit assessment.
+     
+     - POST /api/v2/routing/assessments
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "queues" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "kpiAssessments" : [ {
+    "assessmentResult" : "aeiou",
+    "checks" : [ {
+      "result" : "aeiou",
+      "type" : "aeiou"
+    } ],
+    "kpi" : "aeiou"
+  } ]
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<BenefitAssessment> 
+     */
+    open class func postRoutingAssessmentsWithRequestBuilder(body: CreateBenefitAssessmentRequest? = nil) -> RequestBuilder<BenefitAssessment> {
+        let path = "/api/v2/routing/assessments"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BenefitAssessment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a benefit assessment job.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingAssessmentsJobs(body: CreateBenefitAssessmentJobRequest? = nil, completion: @escaping ((_ data: BenefitAssessmentJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingAssessmentsJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BenefitAssessmentJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a benefit assessment job.
+     
+     - POST /api/v2/routing/assessments/jobs
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou"
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<BenefitAssessmentJob> 
+     */
+    open class func postRoutingAssessmentsJobsWithRequestBuilder(body: CreateBenefitAssessmentJobRequest? = nil) -> RequestBuilder<BenefitAssessmentJob> {
+        let path = "/api/v2/routing/assessments/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BenefitAssessmentJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -8781,6 +9977,82 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Language>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a predictor.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingPredictors(body: CreatePredictorRequest? = nil, completion: @escaping ((_ data: Predictor?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingPredictorsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Predictor>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a predictor.
+     
+     - POST /api/v2/routing/predictors
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "schedule" : {
+    "scheduleType" : "aeiou",
+    "dateStarted" : "2000-01-23T04:56:07.000+0000"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "kpi" : "aeiou",
+  "queues" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "routingTimeoutSeconds" : 123,
+  "selfUri" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "state" : "aeiou",
+  "workloadBalancingConfig" : {
+    "enabled" : true
+  }
+}}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Predictor> 
+     */
+    open class func postRoutingPredictorsWithRequestBuilder(body: CreatePredictorRequest? = nil) -> RequestBuilder<Predictor> {
+        let path = "/api/v2/routing/predictors"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Predictor>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -9522,6 +10794,7 @@ open class RoutingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -10169,6 +11442,7 @@ open class RoutingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
+        "division" : "",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -10292,7 +11566,62 @@ open class RoutingAPI {
         "intents" : [ {
           "name" : "aeiou"
         } ],
-        "domain" : ""
+        "domain" : "",
+        "version" : {
+          "intents" : [ {
+            "utterances" : [ {
+              "segments" : [ {
+                "text" : "aeiou",
+                "entity" : {
+                  "name" : "aeiou"
+                }
+              } ]
+            } ],
+            "name" : "aeiou",
+            "entityTypeBindings" : [ {
+              "entityType" : "aeiou",
+              "entityName" : "aeiou"
+            } ],
+            "entityNameReferences" : [ "aeiou" ]
+          } ],
+          "dateTrained" : "2000-01-23T04:56:07.000+0000",
+          "trainingStatus" : "aeiou",
+          "selfUri" : "aeiou",
+          "description" : "aeiou",
+          "language" : "aeiou",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "published" : true,
+          "datePublished" : "2000-01-23T04:56:07.000+0000",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "entities" : [ {
+            "name" : "aeiou",
+            "type" : "aeiou"
+          } ],
+          "domain" : {
+            "lastPublishedVersion" : "",
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "language" : "aeiou",
+            "dateModified" : "2000-01-23T04:56:07.000+0000",
+            "id" : "aeiou",
+            "draftVersion" : ""
+          },
+          "entityTypes" : [ {
+            "name" : "aeiou",
+            "description" : "aeiou",
+            "mechanism" : {
+              "restricted" : true,
+              "type" : "aeiou",
+              "items" : [ {
+                "synonyms" : [ "aeiou" ],
+                "value" : "aeiou"
+              } ]
+            }
+          } ],
+          "id" : "aeiou",
+          "evaluationStatus" : "aeiou"
+        }
       },
       "type" : "aeiou",
       "secure" : true,
@@ -10893,6 +12222,7 @@ open class RoutingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
+      "division" : "",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -11353,11 +12683,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

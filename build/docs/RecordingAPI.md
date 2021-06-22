@@ -48,6 +48,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRecordingMediaretentionpolicies**](RecordingAPI.html#postRecordingMediaretentionpolicies) | Create media retention policy |
 | [**postRecordingRecordingkeys**](RecordingAPI.html#postRecordingRecordingkeys) | Create encryption key |
 | [**postRecordingsDeletionprotection**](RecordingAPI.html#postRecordingsDeletionprotection) | Get a list of conversations with protected recordings |
+| [**postRecordingsScreensessionsAcknowledge**](RecordingAPI.html#postRecordingsScreensessionsAcknowledge) | Acknowledge a screen recording. |
+| [**postRecordingsScreensessionsMetadata**](RecordingAPI.html#postRecordingsScreensessionsMetadata) | Provide meta-data a screen recording. |
 | [**putConversationRecording**](RecordingAPI.html#putConversationRecording) | Updates the retention records on a recording. |
 | [**putConversationRecordingAnnotation**](RecordingAPI.html#putConversationRecordingAnnotation) | Update annotation |
 | [**putOrphanrecording**](RecordingAPI.html#putOrphanrecording) | Updates an orphan recording to a regular recording with retention values |
@@ -1690,7 +1692,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let policyId: String = "" // Policy ID
-let body: CrossPlatformPolicy = new CrossPlatformPolicy(...) // Policy
+let body: CrossPlatformPolicyUpdate = new CrossPlatformPolicyUpdate(...) // Policy
 
 // Code example
 RecordingAPI.patchRecordingCrossplatformMediaretentionpolicy(policyId: policyId, body: body) { (response, error) in
@@ -1709,7 +1711,7 @@ RecordingAPI.patchRecordingCrossplatformMediaretentionpolicy(policyId: policyId,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **policyId** | **String**| Policy ID | |
-| **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy.html)| Policy | |
+| **body** | [**CrossPlatformPolicyUpdate**](CrossPlatformPolicyUpdate.html)| Policy | |
 {: class="table-striped"}
 
 
@@ -1744,7 +1746,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let policyId: String = "" // Policy ID
-let body: Policy = new Policy(...) // Policy
+let body: PolicyUpdate = new PolicyUpdate(...) // Policy
 
 // Code example
 RecordingAPI.patchRecordingMediaretentionpolicy(policyId: policyId, body: body) { (response, error) in
@@ -1763,7 +1765,7 @@ RecordingAPI.patchRecordingMediaretentionpolicy(policyId: policyId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **policyId** | **String**| Policy ID | |
-| **body** | [**Policy**](Policy.html)| Policy | |
+| **body** | [**PolicyUpdate**](PolicyUpdate.html)| Policy | |
 {: class="table-striped"}
 
 
@@ -2289,6 +2291,106 @@ RecordingAPI.postRecordingsDeletionprotection(body: body) { (response, error) in
 ### Return type
 
 [**[AddressableEntityRef]**](AddressableEntityRef.html)
+
+<a name="postRecordingsScreensessionsAcknowledge"></a>
+
+# **postRecordingsScreensessionsAcknowledge**
+
+
+
+> Void postRecordingsScreensessionsAcknowledge(body)
+
+Acknowledge a screen recording.
+
+
+
+Wraps POST /api/v2/recordings/screensessions/acknowledge  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AcknowledgeScreenRecordingRequest = new AcknowledgeScreenRecordingRequest(...) // AcknowledgeScreenRecordingRequest
+
+// Code example
+RecordingAPI.postRecordingsScreensessionsAcknowledge(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RecordingAPI.postRecordingsScreensessionsAcknowledge was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AcknowledgeScreenRecordingRequest**](AcknowledgeScreenRecordingRequest.html)| AcknowledgeScreenRecordingRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postRecordingsScreensessionsMetadata"></a>
+
+# **postRecordingsScreensessionsMetadata**
+
+
+
+> Void postRecordingsScreensessionsMetadata(body)
+
+Provide meta-data a screen recording.
+
+
+
+Wraps POST /api/v2/recordings/screensessions/metadata  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ScreenRecordingMetaDataRequest = new ScreenRecordingMetaDataRequest(...) // ScreenRecordingMetaDataRequest
+
+// Code example
+RecordingAPI.postRecordingsScreensessionsMetadata(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RecordingAPI.postRecordingsScreensessionsMetadata was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ScreenRecordingMetaDataRequest**](ScreenRecordingMetaDataRequest.html)| ScreenRecordingMetaDataRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="putConversationRecording"></a>
 

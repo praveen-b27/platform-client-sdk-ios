@@ -16,7 +16,7 @@ public class DataTable: Codable {
     public var _id: String?
     public var name: String?
     /** The division to which this entity belongs. */
-    public var division: Division?
+    public var division: WritableDivision?
     /** The description from the JSON schema (equates to the Description field on the JSON schema.) */
     public var _description: String?
     /** the schema as stored in the system. */
@@ -24,7 +24,7 @@ public class DataTable: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, schema: JsonSchemaDocument?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, schema: JsonSchemaDocument?, selfUri: String?) {
         
         self._id = _id
         

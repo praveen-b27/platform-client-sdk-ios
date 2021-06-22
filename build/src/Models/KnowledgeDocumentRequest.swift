@@ -13,6 +13,7 @@ public class KnowledgeDocumentRequest: Codable {
 
     public enum ModelType: String, Codable { 
         case faq = "Faq"
+        case article = "Article"
     }
     /** Document type according to assigned template */
     public var type: ModelType?
@@ -22,8 +23,10 @@ public class KnowledgeDocumentRequest: Codable {
     public var faq: DocumentFaq?
     /** Document categories */
     public var categories: [DocumentCategoryInput]?
+    /** Article details */
+    public var article: DocumentArticle?
 
-    public init(type: ModelType?, externalUrl: String?, faq: DocumentFaq?, categories: [DocumentCategoryInput]?) {
+    public init(type: ModelType?, externalUrl: String?, faq: DocumentFaq?, categories: [DocumentCategoryInput]?, article: DocumentArticle?) {
         
         self.type = type
         
@@ -32,6 +35,8 @@ public class KnowledgeDocumentRequest: Codable {
         self.faq = faq
         
         self.categories = categories
+        
+        self.article = article
         
     }
 

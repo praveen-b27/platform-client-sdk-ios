@@ -17,7 +17,7 @@ public class ManagementUnitSettingsResponse: Codable {
     public var shortTermForecasting: ShortTermForecastingSettings?
     /** Time off request settings for this management unit */
     public var timeOff: TimeOffRequestSettings?
-    /** Scheduling settings for this management unit */
+    /** Scheduling settings for this management unit. These settings are only available if you have the permission wfm:managementUnit:view */
     public var scheduling: SchedulingSettingsResponse?
     /** Shift trade settings for this management unit */
     public var shiftTrading: ShiftTradeSettings?

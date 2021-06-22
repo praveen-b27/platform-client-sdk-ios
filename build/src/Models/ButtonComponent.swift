@@ -8,17 +8,17 @@
 import Foundation
 
 
-/** Structured template button object */
+/** Structured template button object. */
 
 public class ButtonComponent: Codable {
 
-    /** An ID assigned to this component */
+    /** The ID of this component. */
     public var _id: String?
-    /** Deprecated - Use title instead */
+    /** Deprecated - Use title instead. */
     public var text: String?
-    /** Text to show inside the button */
+    /** Text to show inside the button. */
     public var title: String?
-    /** User actions available on the content. All actions are optional and all actions are executed simultaneously. */
+    /** The button actions. */
     public var actions: ContentActions?
 
     public init(_id: String?, text: String?, title: String?, actions: ContentActions?) {

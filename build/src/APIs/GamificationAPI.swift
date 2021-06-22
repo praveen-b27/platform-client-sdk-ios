@@ -19,7 +19,7 @@ open class GamificationAPI {
     
     /**
      
-     Leaderboard of the requesting user's division
+     Leaderboard of the requesting user's division or performance profile
      
      - parameter startWorkday: (query) Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -46,7 +46,7 @@ open class GamificationAPI {
 
     /**
      
-     Leaderboard of the requesting user's division
+     Leaderboard of the requesting user's division or performance profile
      
      - GET /api/v2/gamification/leaderboard
      - 
@@ -90,7 +90,8 @@ open class GamificationAPI {
       "id" : "aeiou"
     },
     "points" : 123456789
-  } ]
+  } ],
+  "userRank" : ""
 }}]
      
      - parameter startWorkday: (query) Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -128,6 +129,7 @@ open class GamificationAPI {
     
     
     public enum FilterType_getGamificationLeaderboardAll: String { 
+        case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
 
@@ -143,7 +145,7 @@ open class GamificationAPI {
     
     /**
      
-     Leaderboard by division
+     Leaderboard by filter type
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. For example, division Id 
@@ -172,7 +174,7 @@ open class GamificationAPI {
 
     /**
      
-     Leaderboard by division
+     Leaderboard by filter type
      
      - GET /api/v2/gamification/leaderboard/all
      - 
@@ -216,7 +218,8 @@ open class GamificationAPI {
       "id" : "aeiou"
     },
     "points" : 123456789
-  } ]
+  } ],
+  "userRank" : ""
 }}]
      
      - parameter filterType: (query) Filter type for the query request. 
@@ -260,6 +263,7 @@ open class GamificationAPI {
     
     
     public enum FilterType_getGamificationLeaderboardAllBestpoints: String { 
+        case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
 
@@ -425,15 +429,18 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      
      Gamified metric by id
      
      - parameter metricId: (path) metric Id 
+     - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationMetric(metricId: String, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationMetricWithRequestBuilder(metricId: metricId)
+    open class func getGamificationMetric(metricId: String, performanceProfileId: String? = nil, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationMetricWithRequestBuilder(metricId: metricId, performanceProfileId: performanceProfileId)
         requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
             do {
                 if let e = error {
@@ -483,10 +490,11 @@ open class GamificationAPI {
 }}]
      
      - parameter metricId: (path) metric Id 
+     - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func getGamificationMetricWithRequestBuilder(metricId: String) -> RequestBuilder<Metric> {
+    open class func getGamificationMetricWithRequestBuilder(metricId: String, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
         var path = "/api/v2/gamification/metrics/{metricId}"
         let metricIdPreEscape = "\(metricId)"
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -499,7 +507,12 @@ open class GamificationAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "performance profile id": performanceProfileId
+            
+        ])
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -793,11 +806,23 @@ open class GamificationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "metricOrders" : [ "aeiou" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "maxLeaderboardRankSize" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
-  "id" : "aeiou"
+  "active" : true,
+  "id" : "aeiou",
+  "reportingIntervals" : [ {
+    "intervalType" : "aeiou",
+    "intervalValue" : 123
+  } ]
 }}]
      
      - parameter performanceProfileId: (path) Performance Profile Id 
@@ -861,11 +886,23 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "total" : 123456789,
   "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "metricOrders" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "maxLeaderboardRankSize" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "id" : "aeiou"
+    "active" : true,
+    "id" : "aeiou",
+    "reportingIntervals" : [ {
+      "intervalType" : "aeiou",
+      "intervalValue" : 123
+    } ]
   } ],
   "selfUri" : "aeiou"
 }}]
@@ -903,7 +940,7 @@ open class GamificationAPI {
      
      Workday performance metrics of the requesting user
      
-     - parameter workday: (query) Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -976,7 +1013,7 @@ open class GamificationAPI {
   } ]
 }}]
      
-     - parameter workday: (query) Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
 
      - returns: RequestBuilder<WorkdayMetricListing> 
@@ -1014,8 +1051,8 @@ open class GamificationAPI {
      
      Attendance status metrics of the requesting user
      
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsAttendance(startWorkday: Date, endWorkday: Date, completion: @escaping ((_ data: AttendanceStatusListing?,_ error: Error?) -> Void)) {
@@ -1052,8 +1089,8 @@ open class GamificationAPI {
   } ]
 }}]
      
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<AttendanceStatusListing> 
      */
@@ -1155,7 +1192,7 @@ open class GamificationAPI {
      
      All-time points of the requesting user
      
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsPointsAlltime(endWorkday: Date, completion: @escaping ((_ data: AllTimePoints?,_ error: Error?) -> Void)) {
@@ -1194,7 +1231,7 @@ open class GamificationAPI {
   }
 }}]
      
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<AllTimePoints> 
      */
@@ -1315,8 +1352,8 @@ open class GamificationAPI {
      
      Points trends of the requesting user
      
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter dayOfWeek: (query) Optional filter to specify which day of weeks to be included in the response (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1362,8 +1399,8 @@ open class GamificationAPI {
   }
 }}]
      
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter dayOfWeek: (query) Optional filter to specify which day of weeks to be included in the response (optional)
 
      - returns: RequestBuilder<WorkdayPointsTrend> 
@@ -1411,7 +1448,7 @@ open class GamificationAPI {
      Workday performance metrics for a user
      
      - parameter userId: (path)  
-     - parameter workday: (query) Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1485,7 +1522,7 @@ open class GamificationAPI {
 }}]
      
      - parameter userId: (path)  
-     - parameter workday: (query) Target querying workday. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter workday: (query) Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter expand: (query) Which fields, if any, to expand. (optional)
 
      - returns: RequestBuilder<WorkdayMetricListing> 
@@ -1529,8 +1566,8 @@ open class GamificationAPI {
      Attendance status metrics for a user
      
      - parameter userId: (path)  
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsUserAttendance(userId: String, startWorkday: Date, endWorkday: Date, completion: @escaping ((_ data: AttendanceStatusListing?,_ error: Error?) -> Void)) {
@@ -1568,8 +1605,8 @@ open class GamificationAPI {
 }}]
      
      - parameter userId: (path)  
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<AttendanceStatusListing> 
      */
@@ -1685,7 +1722,7 @@ open class GamificationAPI {
      All-time points for a user
      
      - parameter userId: (path)  
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getGamificationScorecardsUserPointsAlltime(userId: String, endWorkday: Date, completion: @escaping ((_ data: AllTimePoints?,_ error: Error?) -> Void)) {
@@ -1725,7 +1762,7 @@ open class GamificationAPI {
 }}]
      
      - parameter userId: (path)  
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<AllTimePoints> 
      */
@@ -1779,8 +1816,8 @@ open class GamificationAPI {
      Points trend for a user
      
      - parameter userId: (path)  
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter dayOfWeek: (query) Optional filter to specify which day of weeks to be included in the response (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1827,8 +1864,8 @@ open class GamificationAPI {
 }}]
      
      - parameter userId: (path)  
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter dayOfWeek: (query) Optional filter to specify which day of weeks to be included in the response (optional)
 
      - returns: RequestBuilder<WorkdayPointsTrend> 
@@ -1876,8 +1913,8 @@ open class GamificationAPI {
      Values Trends of a user
      
      - parameter userId: (path)  
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1956,8 +1993,8 @@ open class GamificationAPI {
 }}]
      
      - parameter userId: (path)  
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
 
      - returns: RequestBuilder<WorkdayValuesTrend> 
@@ -1994,6 +2031,7 @@ open class GamificationAPI {
     
     
     public enum FilterType_getGamificationScorecardsUsersPointsAverage: String { 
+        case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
 
@@ -2084,6 +2122,7 @@ open class GamificationAPI {
     
     
     public enum FilterType_getGamificationScorecardsUsersValuesAverage: String { 
+        case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
 
@@ -2216,6 +2255,7 @@ open class GamificationAPI {
     
     
     public enum FilterType_getGamificationScorecardsUsersValuesTrends: String { 
+        case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
 
@@ -2235,8 +2275,8 @@ open class GamificationAPI {
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. 
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2316,8 +2356,8 @@ open class GamificationAPI {
      
      - parameter filterType: (query) Filter type for the query request. 
      - parameter filterId: (query) ID for the filter type. 
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
 
      - returns: RequestBuilder<WorkdayValuesTrend> 
@@ -2474,6 +2514,7 @@ open class GamificationAPI {
     
     
     public enum FilterType_getGamificationScorecardsValuesTrends: String { 
+        case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
 
@@ -2485,8 +2526,8 @@ open class GamificationAPI {
      
      Values trends of the requesting user or group
      
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter filterType: (query) Filter type for the query request. If not set, then the request is for the requesting user. (optional)
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
      - parameter completion: completion handler to receive the data and the error objects
@@ -2565,8 +2606,8 @@ open class GamificationAPI {
   } ]
 }}]
      
-     - parameter startWorkday: (query) Start workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
-     - parameter endWorkday: (query) End workday of querying workdays range. Workday is represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter filterType: (query) Filter type for the query request. If not set, then the request is for the requesting user. (optional)
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
 
@@ -2889,16 +2930,19 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      
      Updates a metric
      
      - parameter metricId: (path) metric Id 
      - parameter body: (body) Metric 
+     - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putGamificationMetric(metricId: String, body: Metric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
-        let requestBuilder = putGamificationMetricWithRequestBuilder(metricId: metricId, body: body)
+    open class func putGamificationMetric(metricId: String, body: Metric, performanceProfileId: String? = nil, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+        let requestBuilder = putGamificationMetricWithRequestBuilder(metricId: metricId, body: body, performanceProfileId: performanceProfileId)
         requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
             do {
                 if let e = error {
@@ -2949,10 +2993,11 @@ open class GamificationAPI {
      
      - parameter metricId: (path) metric Id 
      - parameter body: (body) Metric 
+     - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func putGamificationMetricWithRequestBuilder(metricId: String, body: Metric) -> RequestBuilder<Metric> {
+    open class func putGamificationMetricWithRequestBuilder(metricId: String, body: Metric, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
         var path = "/api/v2/gamification/metrics/{metricId}"
         let metricIdPreEscape = "\(metricId)"
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2962,7 +3007,12 @@ open class GamificationAPI {
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "performance profile id": performanceProfileId
+            
+        ])
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -3010,11 +3060,23 @@ open class GamificationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "metricOrders" : [ "aeiou" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "maxLeaderboardRankSize" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
-  "id" : "aeiou"
+  "active" : true,
+  "id" : "aeiou",
+  "reportingIntervals" : [ {
+    "intervalType" : "aeiou",
+    "intervalValue" : 123
+  } ]
 }}]
      
      - parameter performanceProfileId: (path) Performance Profile Id 

@@ -13,6 +13,7 @@ public class KnowledgeDocumentBulkRequest: Codable {
 
     public enum ModelType: String, Codable { 
         case faq = "Faq"
+        case article = "Article"
     }
     /** Document type according to assigned template */
     public var type: ModelType?
@@ -22,10 +23,12 @@ public class KnowledgeDocumentBulkRequest: Codable {
     public var faq: DocumentFaq?
     /** Document categories */
     public var categories: [DocumentCategoryInput]?
+    /** Article details */
+    public var article: DocumentArticle?
     /** Identifier of document for update. Omit for create new Document. */
     public var _id: String?
 
-    public init(type: ModelType?, externalUrl: String?, faq: DocumentFaq?, categories: [DocumentCategoryInput]?, _id: String?) {
+    public init(type: ModelType?, externalUrl: String?, faq: DocumentFaq?, categories: [DocumentCategoryInput]?, article: DocumentArticle?, _id: String?) {
         
         self.type = type
         
@@ -34,6 +37,8 @@ public class KnowledgeDocumentBulkRequest: Codable {
         self.faq = faq
         
         self.categories = categories
+        
+        self.article = article
         
         self._id = _id
         
@@ -44,6 +49,7 @@ public class KnowledgeDocumentBulkRequest: Codable {
         case externalUrl
         case faq
         case categories
+        case article
         case _id = "id"
     }
 

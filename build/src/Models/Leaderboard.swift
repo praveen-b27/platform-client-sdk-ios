@@ -21,8 +21,10 @@ public class Leaderboard: Codable {
     public var dateEndWorkday: Date?
     /** The list of leaders generated. */
     public var leaders: [LeaderboardItem]?
+    /** The requesting user&#39;s rank */
+    public var userRank: LeaderboardItem?
 
-    public init(division: Division?, metric: Metric?, dateStartWorkday: Date?, dateEndWorkday: Date?, leaders: [LeaderboardItem]?) {
+    public init(division: Division?, metric: Metric?, dateStartWorkday: Date?, dateEndWorkday: Date?, leaders: [LeaderboardItem]?, userRank: LeaderboardItem?) {
         
         self.division = division
         
@@ -33,6 +35,8 @@ public class Leaderboard: Codable {
         self.dateEndWorkday = dateEndWorkday
         
         self.leaders = leaders
+        
+        self.userRank = userRank
         
     }
 

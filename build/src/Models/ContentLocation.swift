@@ -8,19 +8,19 @@
 import Foundation
 
 
-/** Location object */
+/** Location object. */
 
 public class ContentLocation: Codable {
 
-    /** Location map url */
+    /** URL of the Location. */
     public var url: String?
-    /** Location postal address */
+    /** Location postal address. */
     public var address: String?
-    /** Location name */
+    /** Location name. */
     public var text: String?
-    /** Latitude of the location */
+    /** Latitude of the location. */
     public var latitude: Double?
-    /** Longitude of the location */
+    /** Longitude of the location. */
     public var longitude: Double?
 
     public init(url: String?, address: String?, text: String?, latitude: Double?, longitude: Double?) {

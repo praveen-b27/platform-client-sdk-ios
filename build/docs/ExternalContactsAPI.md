@@ -42,10 +42,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsBulkContactsAdd**](ExternalContactsAPI.html#postExternalcontactsBulkContactsAdd) | Bulk add contacts |
 | [**postExternalcontactsBulkContactsRemove**](ExternalContactsAPI.html#postExternalcontactsBulkContactsRemove) | Bulk remove contacts |
 | [**postExternalcontactsBulkContactsUpdate**](ExternalContactsAPI.html#postExternalcontactsBulkContactsUpdate) | Bulk update contacts |
+| [**postExternalcontactsBulkNotes**](ExternalContactsAPI.html#postExternalcontactsBulkNotes) | Bulk fetch notes |
+| [**postExternalcontactsBulkNotesAdd**](ExternalContactsAPI.html#postExternalcontactsBulkNotesAdd) | Bulk add notes |
+| [**postExternalcontactsBulkNotesRemove**](ExternalContactsAPI.html#postExternalcontactsBulkNotesRemove) | Bulk remove notes |
+| [**postExternalcontactsBulkNotesUpdate**](ExternalContactsAPI.html#postExternalcontactsBulkNotesUpdate) | Bulk update notes |
 | [**postExternalcontactsBulkOrganizations**](ExternalContactsAPI.html#postExternalcontactsBulkOrganizations) | Bulk fetch organizations |
 | [**postExternalcontactsBulkOrganizationsAdd**](ExternalContactsAPI.html#postExternalcontactsBulkOrganizationsAdd) | Bulk add organizations |
 | [**postExternalcontactsBulkOrganizationsRemove**](ExternalContactsAPI.html#postExternalcontactsBulkOrganizationsRemove) | Bulk remove organizations |
 | [**postExternalcontactsBulkOrganizationsUpdate**](ExternalContactsAPI.html#postExternalcontactsBulkOrganizationsUpdate) | Bulk update organizations |
+| [**postExternalcontactsBulkRelationships**](ExternalContactsAPI.html#postExternalcontactsBulkRelationships) | Bulk fetch relationships |
+| [**postExternalcontactsBulkRelationshipsAdd**](ExternalContactsAPI.html#postExternalcontactsBulkRelationshipsAdd) | Bulk add relationships |
+| [**postExternalcontactsBulkRelationshipsRemove**](ExternalContactsAPI.html#postExternalcontactsBulkRelationshipsRemove) | Bulk remove relationships |
+| [**postExternalcontactsBulkRelationshipsUpdate**](ExternalContactsAPI.html#postExternalcontactsBulkRelationshipsUpdate) | Bulk update relationships |
 | [**postExternalcontactsContactNotes**](ExternalContactsAPI.html#postExternalcontactsContactNotes) | Create a note for an external contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI.html#postExternalcontactsContacts) | Create an external contact |
 | [**postExternalcontactsContactsSchemas**](ExternalContactsAPI.html#postExternalcontactsContactsSchemas) | Create a schema |
@@ -1967,6 +1975,218 @@ ExternalContactsAPI.postExternalcontactsBulkContactsUpdate(body: body) { (respon
 
 [**BulkContactsResponse**](BulkContactsResponse.html)
 
+<a name="postExternalcontactsBulkNotes"></a>
+
+# **postExternalcontactsBulkNotes**
+
+
+
+> [BulkFetchNotesResponse](BulkFetchNotesResponse.html) postExternalcontactsBulkNotes(body)
+
+Bulk fetch notes
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/notes  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Note ids
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkNotes(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkNotes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Note ids | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkFetchNotesResponse**](BulkFetchNotesResponse.html)
+
+<a name="postExternalcontactsBulkNotesAdd"></a>
+
+# **postExternalcontactsBulkNotesAdd**
+
+
+
+> [BulkNotesResponse](BulkNotesResponse.html) postExternalcontactsBulkNotesAdd(body)
+
+Bulk add notes
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/notes/add  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:add
+* externalContacts:externalOrganization:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkNotesRequest = new BulkNotesRequest(...) // Notes
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkNotesAdd(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkNotesAdd was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkNotesRequest**](BulkNotesRequest.html)| Notes | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkNotesResponse**](BulkNotesResponse.html)
+
+<a name="postExternalcontactsBulkNotesRemove"></a>
+
+# **postExternalcontactsBulkNotesRemove**
+
+
+
+> [BulkDeleteResponse](BulkDeleteResponse.html) postExternalcontactsBulkNotesRemove(body)
+
+Bulk remove notes
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/notes/remove  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:delete
+* externalContacts:externalOrganization:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Note ids
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkNotesRemove(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkNotesRemove was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Note ids | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postExternalcontactsBulkNotesUpdate"></a>
+
+# **postExternalcontactsBulkNotesUpdate**
+
+
+
+> [BulkNotesResponse](BulkNotesResponse.html) postExternalcontactsBulkNotesUpdate(body)
+
+Bulk update notes
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/notes/update  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:edit
+* externalContacts:externalOrganization:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkNotesRequest = new BulkNotesRequest(...) // Notes
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkNotesUpdate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkNotesUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkNotesRequest**](BulkNotesRequest.html)| Notes | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkNotesResponse**](BulkNotesResponse.html)
+
 <a name="postExternalcontactsBulkOrganizations"></a>
 
 # **postExternalcontactsBulkOrganizations**
@@ -2174,6 +2394,218 @@ ExternalContactsAPI.postExternalcontactsBulkOrganizationsUpdate(body: body) { (r
 ### Return type
 
 [**BulkOrganizationsResponse**](BulkOrganizationsResponse.html)
+
+<a name="postExternalcontactsBulkRelationships"></a>
+
+# **postExternalcontactsBulkRelationships**
+
+
+
+> [BulkFetchRelationshipsResponse](BulkFetchRelationshipsResponse.html) postExternalcontactsBulkRelationships(body)
+
+Bulk fetch relationships
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/relationships  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Relationships ids
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkRelationships(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkRelationships was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Relationships ids | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkFetchRelationshipsResponse**](BulkFetchRelationshipsResponse.html)
+
+<a name="postExternalcontactsBulkRelationshipsAdd"></a>
+
+# **postExternalcontactsBulkRelationshipsAdd**
+
+
+
+> [BulkRelationshipsResponse](BulkRelationshipsResponse.html) postExternalcontactsBulkRelationshipsAdd(body)
+
+Bulk add relationships
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/relationships/add  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:add
+* externalContacts:externalOrganization:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkRelationshipsRequest = new BulkRelationshipsRequest(...) // Relationships
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkRelationshipsAdd(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkRelationshipsAdd was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkRelationshipsRequest**](BulkRelationshipsRequest.html)| Relationships | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkRelationshipsResponse**](BulkRelationshipsResponse.html)
+
+<a name="postExternalcontactsBulkRelationshipsRemove"></a>
+
+# **postExternalcontactsBulkRelationshipsRemove**
+
+
+
+> [BulkDeleteResponse](BulkDeleteResponse.html) postExternalcontactsBulkRelationshipsRemove(body)
+
+Bulk remove relationships
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/relationships/remove  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:delete
+* externalContacts:externalOrganization:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Relationships ids
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkRelationshipsRemove(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkRelationshipsRemove was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Relationships ids | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postExternalcontactsBulkRelationshipsUpdate"></a>
+
+# **postExternalcontactsBulkRelationshipsUpdate**
+
+
+
+> [BulkRelationshipsResponse](BulkRelationshipsResponse.html) postExternalcontactsBulkRelationshipsUpdate(body)
+
+Bulk update relationships
+
+
+
+Wraps POST /api/v2/externalcontacts/bulk/relationships/update  
+
+Requires ALL permissions: 
+
+* externalContacts:contact:edit
+* externalContacts:externalOrganization:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkRelationshipsRequest = new BulkRelationshipsRequest(...) // Relationships
+
+// Code example
+ExternalContactsAPI.postExternalcontactsBulkRelationshipsUpdate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsBulkRelationshipsUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkRelationshipsRequest**](BulkRelationshipsRequest.html)| Relationships | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkRelationshipsResponse**](BulkRelationshipsResponse.html)
 
 <a name="postExternalcontactsContactNotes"></a>
 

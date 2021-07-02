@@ -35,8 +35,10 @@ public class Contact: Codable {
     /** Use internal extension instead of address. Mutually exclusive with the address field. */
     public var _extension: String?
     public var countryCode: String?
+    /** Integration tag value if this number is associated with an external integration. */
+    public var integration: String?
 
-    public init(address: String?, display: String?, mediaType: MediaType?, type: ModelType?, _extension: String?, countryCode: String?) {
+    public init(address: String?, display: String?, mediaType: MediaType?, type: ModelType?, _extension: String?, countryCode: String?, integration: String?) {
         
         self.address = address
         
@@ -50,6 +52,8 @@ public class Contact: Codable {
         
         self.countryCode = countryCode
         
+        self.integration = integration
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -59,6 +63,7 @@ public class Contact: Codable {
         case type
         case _extension = "extension"
         case countryCode
+        case integration
     }
 
 

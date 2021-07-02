@@ -1616,8 +1616,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -3104,12 +3104,14 @@ open class WorkforceManagementAPI {
       "planningGroupId" : "aeiou",
       "metricResults" : [ {
         "metric" : "aeiou",
-        "forecastingMethod" : "aeiou"
+        "forecastingMethod" : "aeiou",
+        "forecastType" : "aeiou"
       } ]
     } ]
   },
   "id" : "aeiou",
   "weekDate" : "2000-01-23T04:56:07.000+0000",
+  "canUseForScheduling" : true,
   "modifications" : [ {
     "startIntervalIndex" : 123,
     "legacyMetric" : "aeiou",
@@ -3318,7 +3320,8 @@ open class WorkforceManagementAPI {
     "planningGroupId" : "aeiou",
     "metricResults" : [ {
       "metric" : "aeiou",
-      "forecastingMethod" : "aeiou"
+      "forecastingMethod" : "aeiou",
+      "forecastType" : "aeiou"
     } ]
   } ]
 }}]
@@ -3351,6 +3354,103 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuForecastGenerationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get the result of a long term forecast calculation
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata(businessUnitId: String, weekDateId: Date, forecastId: String, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: LongTermForecastResultResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<LongTermForecastResultResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the result of a long term forecast calculation
+     
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata
+     - Includes modifications unless you pass the doNotApplyModifications query parameter
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
+    "planningGroups" : [ {
+      "averageHandleTimeSecondsPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "planningGroupId" : "aeiou",
+      "offeredPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ]
+    } ],
+    "weekCount" : 123
+  },
+  "downloadUrl" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter forecastId: (path) The ID of the forecast 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<LongTermForecastResultResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdataWithRequestBuilder(businessUnitId: String, weekDateId: Date, forecastId: String, forceDownloadService: Bool? = nil) -> RequestBuilder<LongTermForecastResultResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let forecastIdPreEscape = "\(forecastId)"
+        let forecastIdPostEscape = forecastIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{forecastId}", with: forecastIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "forceDownloadService": forceDownloadService
+            
+        ])
+
+        let requestBuilder: RequestBuilder<LongTermForecastResultResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -3520,6 +3620,7 @@ open class WorkforceManagementAPI {
     "id" : "aeiou",
     "weekDate" : "2000-01-23T04:56:07.000+0000",
     "weekCount" : 123,
+    "canUseForScheduling" : true,
     "creationMethod" : "aeiou"
   } ]
 }}]
@@ -4787,6 +4888,7 @@ open class WorkforceManagementAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -5323,6 +5425,7 @@ open class WorkforceManagementAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -6631,8 +6734,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -6800,8 +6903,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "aeiou",
   "selfUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -9884,12 +9987,14 @@ open class WorkforceManagementAPI {
         "planningGroupId" : "aeiou",
         "metricResults" : [ {
           "metric" : "aeiou",
-          "forecastingMethod" : "aeiou"
+          "forecastingMethod" : "aeiou",
+          "forecastType" : "aeiou"
         } ]
       } ]
     },
     "id" : "aeiou",
     "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "canUseForScheduling" : true,
     "modifications" : [ {
       "startIntervalIndex" : 123,
       "legacyMetric" : "aeiou",
@@ -10057,12 +10162,14 @@ open class WorkforceManagementAPI {
         "planningGroupId" : "aeiou",
         "metricResults" : [ {
           "metric" : "aeiou",
-          "forecastingMethod" : "aeiou"
+          "forecastingMethod" : "aeiou",
+          "forecastType" : "aeiou"
         } ]
       } ]
     },
     "id" : "aeiou",
     "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "canUseForScheduling" : true,
     "modifications" : [ {
       "startIntervalIndex" : 123,
       "legacyMetric" : "aeiou",

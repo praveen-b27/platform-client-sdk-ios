@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAuthorizationDivisionsHome**](ObjectsAPI.html#getAuthorizationDivisionsHome) | Retrieve the home division for the organization. |
 | [**getAuthorizationDivisionsLimit**](ObjectsAPI.html#getAuthorizationDivisionsLimit) | Returns the maximum allowed number of divisions. |
 | [**postAuthorizationDivisionObject**](ObjectsAPI.html#postAuthorizationDivisionObject) | Assign a list of objects to a division |
+| [**postAuthorizationDivisionRestore**](ObjectsAPI.html#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
 | [**postAuthorizationDivisions**](ObjectsAPI.html#postAuthorizationDivisions) | Create a division. |
 | [**putAuthorizationDivision**](ObjectsAPI.html#putAuthorizationDivision) | Update a division. |
 {: class="table-striped"}
@@ -337,6 +338,60 @@ ObjectsAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectType: o
 ### Return type
 
 `nil` (empty response body)
+
+<a name="postAuthorizationDivisionRestore"></a>
+
+# **postAuthorizationDivisionRestore**
+
+
+
+> [AuthzDivision](AuthzDivision.html) postAuthorizationDivisionRestore(divisionId, body)
+
+Recreate a previously deleted division.
+
+
+
+Wraps POST /api/v2/authorization/divisions/{divisionId}/restore  
+
+Requires ANY permissions: 
+
+* authorization:division:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let divisionId: String = "" // Division ID
+let body: AuthzDivision = new AuthzDivision(...) // Recreated division data
+
+// Code example
+ObjectsAPI.postAuthorizationDivisionRestore(divisionId: divisionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ObjectsAPI.postAuthorizationDivisionRestore was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **divisionId** | **String**| Division ID | |
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
 
 <a name="postAuthorizationDivisions"></a>
 

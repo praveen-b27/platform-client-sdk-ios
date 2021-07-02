@@ -22,6 +22,8 @@ public class EmailMessage: Codable {
     public var bcc: [EmailAddress]?
     /** The sender of the email message. */
     public var from: EmailAddress?
+    /** The receiver of the reply email message. */
+    public var replyTo: EmailAddress?
     /** The subject of the email message. */
     public var subject: String?
     /** The attachments of the email message. */
@@ -37,7 +39,7 @@ public class EmailMessage: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, subject: String?, attachments: [Attachment]?, textBody: String?, htmlBody: String?, time: Date?, historyIncluded: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, to: [EmailAddress]?, cc: [EmailAddress]?, bcc: [EmailAddress]?, from: EmailAddress?, replyTo: EmailAddress?, subject: String?, attachments: [Attachment]?, textBody: String?, htmlBody: String?, time: Date?, historyIncluded: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -50,6 +52,8 @@ public class EmailMessage: Codable {
         self.bcc = bcc
         
         self.from = from
+        
+        self.replyTo = replyTo
         
         self.subject = subject
         
@@ -74,6 +78,7 @@ public class EmailMessage: Codable {
         case cc
         case bcc
         case from
+        case replyTo
         case subject
         case attachments
         case textBody

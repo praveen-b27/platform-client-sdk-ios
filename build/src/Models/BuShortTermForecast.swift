@@ -31,6 +31,8 @@ public class BuShortTermForecast: Codable {
     public var legacy: Bool?
     /** Metadata for this forecast */
     public var metadata: WfmVersionedEntityMetadata?
+    /** Whether this forecast can be used for scheduling */
+    public var canUseForScheduling: Bool?
     /** The reference start date for interval-based data for this forecast. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var referenceStartDate: Date?
     /** The source day pointers for this forecast */
@@ -48,7 +50,7 @@ public class BuShortTermForecast: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, weekDate: Date?, weekCount: Int?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, metadata: WfmVersionedEntityMetadata?, referenceStartDate: Date?, sourceDays: [ForecastSourceDayPointer]?, modifications: [BuForecastModification]?, generationResults: BuForecastGenerationResult?, timeZone: String?, planningGroupsVersion: Int?, planningGroups: ForecastPlanningGroupsResponse?, selfUri: String?) {
+    public init(_id: String?, weekDate: Date?, weekCount: Int?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, metadata: WfmVersionedEntityMetadata?, canUseForScheduling: Bool?, referenceStartDate: Date?, sourceDays: [ForecastSourceDayPointer]?, modifications: [BuForecastModification]?, generationResults: BuForecastGenerationResult?, timeZone: String?, planningGroupsVersion: Int?, planningGroups: ForecastPlanningGroupsResponse?, selfUri: String?) {
         
         self._id = _id
         
@@ -63,6 +65,8 @@ public class BuShortTermForecast: Codable {
         self.legacy = legacy
         
         self.metadata = metadata
+        
+        self.canUseForScheduling = canUseForScheduling
         
         self.referenceStartDate = referenceStartDate
         
@@ -90,6 +94,7 @@ public class BuShortTermForecast: Codable {
         case _description = "description"
         case legacy
         case metadata
+        case canUseForScheduling
         case referenceStartDate
         case sourceDays
         case modifications

@@ -1572,11 +1572,11 @@ open class RoutingAPI {
     "spamFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter domainName: (path) email domain 
@@ -1675,11 +1675,11 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
@@ -1826,11 +1826,11 @@ open class RoutingAPI {
     "version" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2080,6 +2080,7 @@ open class RoutingAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -2574,6 +2575,7 @@ open class RoutingAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -2815,11 +2817,11 @@ open class RoutingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter messengerType: (query) Messenger Type (optional)
@@ -3854,6 +3856,7 @@ open class RoutingAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -3964,11 +3967,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -4287,6 +4290,7 @@ open class RoutingAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -4397,11 +4401,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -4521,11 +4525,11 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -4736,11 +4740,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4976,11 +4980,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 100] (optional, default to 25)
@@ -5210,11 +5214,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 500] (optional, default to 25)
@@ -5424,11 +5428,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter joined: (query) Joined (optional)
@@ -5771,11 +5775,11 @@ open class RoutingAPI {
     "version" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5942,11 +5946,11 @@ open class RoutingAPI {
     "region" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6320,6 +6324,7 @@ open class RoutingAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -6703,6 +6708,7 @@ open class RoutingAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -6818,11 +6824,11 @@ open class RoutingAPI {
     "cancellationDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
@@ -7144,11 +7150,11 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7361,11 +7367,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7472,11 +7478,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7580,11 +7586,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7853,6 +7859,88 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Request an update of the emails from /replyTo of an outbound domain
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) domain with emails that need update set 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchRoutingEmailOutboundDomain(domainId: String, body: OutboundDomain, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchRoutingEmailOutboundDomainWithRequestBuilder(domainId: domainId, body: body)
+        requestBuilder.execute { (response: Response<OutboundDomain>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Request an update of the emails from /replyTo of an outbound domain
+     
+     - PATCH /api/v2/routing/email/outbound/domains/{domainId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cnameVerificationResult" : {
+    "records" : [ {
+      "name" : "aeiou",
+      "type" : "aeiou",
+      "value" : "aeiou"
+    } ],
+    "status" : "aeiou"
+  },
+  "dkimVerificationResult" : "",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "replyToEmail" : "",
+  "fromEmail" : {
+    "name" : "aeiou",
+    "email" : "aeiou"
+  }
+}}]
+     
+     - parameter domainId: (path) domain ID 
+     - parameter body: (body) domain with emails that need update set 
+
+     - returns: RequestBuilder<OutboundDomain> 
+     */
+    open class func patchRoutingEmailOutboundDomainWithRequestBuilder(domainId: String, body: OutboundDomain) -> RequestBuilder<OutboundDomain> {
+        var path = "/api/v2/routing/email/outbound/domains/{domainId}"
+        let domainIdPreEscape = "\(domainId)"
+        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -8206,6 +8294,7 @@ open class RoutingAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -8316,11 +8405,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -8611,6 +8700,7 @@ open class RoutingAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -8721,11 +8811,11 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -9153,11 +9243,11 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9319,11 +9409,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9401,11 +9491,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -10777,6 +10867,7 @@ open class RoutingAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -11425,6 +11516,7 @@ open class RoutingAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -12205,6 +12297,7 @@ open class RoutingAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -12683,11 +12776,11 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

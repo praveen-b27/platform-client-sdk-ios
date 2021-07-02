@@ -25,7 +25,7 @@ public class AuditQueryService: Codable {
         case limits = "Limits"
         case outbound = "Outbound"
         case peoplePermissions = "PeoplePermissions"
-        case performance = "Performance"
+        case employeePerformance = "EmployeePerformance"
         case predictiveEngagement = "PredictiveEngagement"
         case presence = "Presence"
         case quality = "Quality"
@@ -39,6 +39,7 @@ public class AuditQueryService: Codable {
         case webhooks = "Webhooks"
         case workforceManagement = "WorkforceManagement"
         case messaging = "Messaging"
+        case supportability = "Supportability"
     }
     /** Name of the Service */
     public var name: Name?

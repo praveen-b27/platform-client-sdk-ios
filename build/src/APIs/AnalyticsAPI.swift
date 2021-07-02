@@ -263,6 +263,7 @@ open class AnalyticsAPI {
       "cobrowseRole" : "aeiou",
       "monitoredParticipantId" : "aeiou",
       "videoAddressSelf" : "aeiou",
+      "agentOwned" : true,
       "proposedAgents" : [ {
         "proposedAgentId" : "aeiou",
         "agentRank" : 123
@@ -522,6 +523,7 @@ open class AnalyticsAPI {
         "cobrowseRole" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "agentOwned" : true,
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -861,6 +863,7 @@ open class AnalyticsAPI {
         "cobrowseRole" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "agentOwned" : true,
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -1311,11 +1314,11 @@ open class AnalyticsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1400,11 +1403,11 @@ open class AnalyticsAPI {
     "dateLimitations" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -1490,11 +1493,11 @@ open class AnalyticsAPI {
     "availableLocales" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1827,11 +1830,11 @@ open class AnalyticsAPI {
     "runStatus" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter scheduleId: (path) Schedule ID 
@@ -2102,11 +2105,11 @@ open class AnalyticsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -2821,6 +2824,7 @@ open class AnalyticsAPI {
         "cobrowseRole" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "agentOwned" : true,
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -3075,6 +3079,7 @@ open class AnalyticsAPI {
         "cobrowseRole" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "agentOwned" : true,
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123

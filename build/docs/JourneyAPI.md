@@ -436,7 +436,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageNumber: Int = 1 // Page number
-let pageSize: Int = 25 // Page size
+let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 
 // Code example
 JourneyAPI.getJourneyActiontargets(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
@@ -455,7 +455,7 @@ JourneyAPI.getJourneyActiontargets(pageNumber: pageNumber, pageSize: pageSize) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageSize** | **Int**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 {: class="table-striped"}
 
 

@@ -374,6 +374,7 @@ open class SearchAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -1137,6 +1138,7 @@ open class SearchAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -1733,11 +1735,11 @@ open class SearchAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1928,6 +1930,7 @@ open class SearchAPI {
               "address" : "aeiou",
               "countryCode" : "aeiou",
               "display" : "aeiou",
+              "integration" : "microsoftteams",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],
@@ -2358,6 +2361,7 @@ open class SearchAPI {
         "cobrowseRole" : "aeiou",
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
+        "agentOwned" : true,
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -2868,6 +2872,7 @@ open class SearchAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -3084,7 +3089,8 @@ open class SearchAPI {
         "coreLanguage" : "en-us",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
-        "id" : "aeiou"
+        "id" : "aeiou",
+        "published" : true
       },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -3709,6 +3715,7 @@ open class SearchAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -4288,11 +4295,11 @@ open class SearchAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4483,6 +4490,7 @@ open class SearchAPI {
               "address" : "aeiou",
               "countryCode" : "aeiou",
               "display" : "aeiou",
+              "integration" : "microsoftteams",
               "mediaType" : "aeiou",
               "type" : "aeiou"
             } ],

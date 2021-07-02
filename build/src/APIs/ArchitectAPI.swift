@@ -511,6 +511,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -1083,6 +1084,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -1438,6 +1440,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -1460,6 +1463,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1502,6 +1507,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -1524,6 +1530,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1562,6 +1570,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -1584,6 +1593,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1672,11 +1683,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -1930,6 +1941,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -2081,6 +2093,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2103,6 +2116,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2141,6 +2156,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2163,6 +2179,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2242,11 +2260,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2310,6 +2328,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2332,6 +2351,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2370,6 +2391,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2392,6 +2414,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2482,11 +2506,11 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2553,6 +2577,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2575,6 +2600,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2623,6 +2650,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2645,6 +2673,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2736,11 +2766,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -2809,6 +2839,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2831,6 +2862,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2873,6 +2906,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2895,6 +2929,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2933,6 +2969,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -2955,6 +2992,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3207,11 +3246,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3263,6 +3302,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -3285,6 +3325,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3325,6 +3367,7 @@ open class ArchitectAPI {
         case dialogenginebot = "DIALOGENGINEBOT"
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"
@@ -3347,6 +3390,8 @@ open class ArchitectAPI {
         case lexv2bot = "LEXV2BOT"
         case lexv2botalias = "LEXV2BOTALIAS"
         case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3437,11 +3482,11 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3647,11 +3692,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3854,11 +3899,11 @@ open class ArchitectAPI {
     "closedHoursFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4103,6 +4148,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -4524,6 +4570,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -4837,11 +4884,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5103,6 +5150,7 @@ open class ArchitectAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -5241,11 +5289,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5537,11 +5585,11 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5662,11 +5710,11 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6055,6 +6103,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -6376,11 +6425,11 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6506,11 +6555,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6760,6 +6809,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -7289,6 +7339,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -7812,6 +7863,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -8333,6 +8385,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -8445,11 +8498,11 @@ open class ArchitectAPI {
     "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -8772,6 +8825,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -9012,11 +9066,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9620,11 +9674,11 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9754,11 +9808,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -10136,6 +10190,7 @@ open class ArchitectAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -10267,11 +10322,11 @@ open class ArchitectAPI {
     "debugVersion" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -10623,6 +10678,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -10934,11 +10990,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11061,11 +11117,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11321,6 +11377,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -11703,6 +11760,7 @@ open class ArchitectAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -11824,11 +11882,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11951,11 +12009,11 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12410,6 +12468,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -12834,6 +12893,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -13344,6 +13404,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -13768,6 +13829,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -14194,6 +14256,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -14531,6 +14594,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -14998,6 +15062,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -15340,6 +15405,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -15806,6 +15872,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -16278,6 +16345,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -16623,6 +16691,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -17089,6 +17158,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -18036,6 +18106,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -18554,6 +18625,7 @@ open class ArchitectAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -19257,6 +19329,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -19972,6 +20045,7 @@ open class ArchitectAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],

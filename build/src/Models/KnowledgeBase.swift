@@ -32,10 +32,12 @@ public class KnowledgeBase: Codable {
     public var dateDocumentLastModified: Date?
     /** The count representing the number of documents of type Article in the KnowledgeBase */
     public var articleCount: Int?
+    /** Flag that indicates the knowledge base is published */
+    public var published: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, coreLanguage: CoreLanguage?, dateCreated: Date?, dateModified: Date?, faqCount: Int?, dateDocumentLastModified: Date?, articleCount: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, coreLanguage: CoreLanguage?, dateCreated: Date?, dateModified: Date?, faqCount: Int?, dateDocumentLastModified: Date?, articleCount: Int?, published: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -55,6 +57,8 @@ public class KnowledgeBase: Codable {
         
         self.articleCount = articleCount
         
+        self.published = published
+        
         self.selfUri = selfUri
         
     }
@@ -69,6 +73,7 @@ public class KnowledgeBase: Codable {
         case faqCount
         case dateDocumentLastModified
         case articleCount
+        case published
         case selfUri
     }
 

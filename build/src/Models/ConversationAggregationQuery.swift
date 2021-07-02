@@ -17,6 +17,7 @@ public class ConversationAggregationQuery: Codable {
         case addressto = "addressTo"
         case agentassistantid = "agentAssistantId"
         case agentbullseyering = "agentBullseyeRing"
+        case agentowned = "agentOwned"
         case agentrank = "agentRank"
         case agentscore = "agentScore"
         case ani = "ani"

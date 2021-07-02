@@ -31,10 +31,12 @@ public class BuShortTermForecastListItem: Codable {
     public var legacy: Bool?
     /** Metadata for this forecast */
     public var metadata: WfmVersionedEntityMetadata?
+    /** Whether this forecast can be used for scheduling */
+    public var canUseForScheduling: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, weekDate: Date?, weekCount: Int?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+    public init(_id: String?, weekDate: Date?, weekCount: Int?, creationMethod: CreationMethod?, _description: String?, legacy: Bool?, metadata: WfmVersionedEntityMetadata?, canUseForScheduling: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -50,6 +52,8 @@ public class BuShortTermForecastListItem: Codable {
         
         self.metadata = metadata
         
+        self.canUseForScheduling = canUseForScheduling
+        
         self.selfUri = selfUri
         
     }
@@ -62,6 +66,7 @@ public class BuShortTermForecastListItem: Codable {
         case _description = "description"
         case legacy
         case metadata
+        case canUseForScheduling
         case selfUri
     }
 

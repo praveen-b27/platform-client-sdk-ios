@@ -609,11 +609,11 @@ open class ContentManagementAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter documentId: (path) Document ID 
@@ -886,11 +886,11 @@ open class ContentManagementAPI {
     "uploadDestinationUri" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter workspaceId: (query) Workspace ID 
@@ -1047,11 +1047,11 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "aeiou",
-    "lastUri" : "aeiou",
     "selfUri" : "aeiou",
+    "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   }
 }}]
      
@@ -1209,11 +1209,11 @@ open class ContentManagementAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<SecurityProfileEntityListing> 
@@ -1446,6 +1446,7 @@ open class ContentManagementAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -1877,6 +1878,7 @@ open class ContentManagementAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -2250,6 +2252,7 @@ open class ContentManagementAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -2360,11 +2363,11 @@ open class ContentManagementAPI {
     "group" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter entityId: (query) Filters the shares returned to only the entity specified by the value of this parameter. (optional)
@@ -2522,11 +2525,11 @@ open class ContentManagementAPI {
     "statusCode" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2983,11 +2986,11 @@ open class ContentManagementAPI {
     "uploadDestinationUri" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -3249,6 +3252,7 @@ open class ContentManagementAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -3617,6 +3621,7 @@ open class ContentManagementAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -3727,11 +3732,11 @@ open class ContentManagementAPI {
     "group" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -3926,11 +3931,11 @@ open class ContentManagementAPI {
     "acl" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -4075,11 +4080,11 @@ open class ContentManagementAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4206,11 +4211,11 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "aeiou",
-    "lastUri" : "aeiou",
     "selfUri" : "aeiou",
+    "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   }
 }}]
      
@@ -4706,11 +4711,11 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "aeiou",
-    "lastUri" : "aeiou",
     "selfUri" : "aeiou",
+    "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   }
 }}]
      
@@ -4952,6 +4957,7 @@ open class ContentManagementAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -5211,11 +5217,11 @@ open class ContentManagementAPI {
     "acl" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter workspaceId: (path) Workspace ID 
@@ -5619,6 +5625,7 @@ open class ContentManagementAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],

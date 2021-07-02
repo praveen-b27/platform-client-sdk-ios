@@ -10,7 +10,7 @@ Button response object representing the click of a structured message button, su
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Describes the button that resulted in the Button Response. | [optional] |
 | **text** | **String** | The response text from the button click. | |
-| **payload** | **String** | The response payload associated with the clicked button. | [optional] |
+| **payload** | **String** | The response payload associated with the clicked button. | |
 {: class="table table-striped"}
 
 

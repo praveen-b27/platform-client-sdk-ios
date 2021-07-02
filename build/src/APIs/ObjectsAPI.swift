@@ -231,11 +231,11 @@ open class ObjectsAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -487,6 +487,79 @@ open class ObjectsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Recreate a previously deleted division.
+     
+     - parameter divisionId: (path) Division ID 
+     - parameter body: (body) Recreated division data 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuthorizationDivisionRestore(divisionId: String, body: AuthzDivision, completion: @escaping ((_ data: AuthzDivision?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: divisionId, body: body)
+        requestBuilder.execute { (response: Response<AuthzDivision>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Recreate a previously deleted division.
+     
+     - POST /api/v2/authorization/divisions/{divisionId}/restore
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "objectCounts" : {
+    "key" : 123456789
+  },
+  "id" : "aeiou",
+  "homeDivision" : true
+}}]
+     
+     - parameter divisionId: (path) Division ID 
+     - parameter body: (body) Recreated division data 
+
+     - returns: RequestBuilder<AuthzDivision> 
+     */
+    open class func postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: String, body: AuthzDivision) -> RequestBuilder<AuthzDivision> {
+        var path = "/api/v2/authorization/divisions/{divisionId}/restore"
+        let divisionIdPreEscape = "\(divisionId)"
+        let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{divisionId}", with: divisionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AuthzDivision>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

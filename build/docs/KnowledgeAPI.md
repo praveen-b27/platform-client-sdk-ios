@@ -616,7 +616,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 
 
 
-> [KnowledgeBaseListing](KnowledgeBaseListing.html) getKnowledgeKnowledgebases(before, after, limit, pageSize, name, coreLanguage)
+> [KnowledgeBaseListing](KnowledgeBaseListing.html) getKnowledgeKnowledgebases(before, after, limit, pageSize, name, coreLanguage, published)
 
 Get knowledge bases
 
@@ -640,11 +640,12 @@ let before: String = "" // The cursor that points to the start of the set of ent
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
-let name: String = "" // Name of the KnowledgeBase to filter.
-let coreLanguage: KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases = KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases.enummember // To filter knowledgebases by corelanguage.
+let name: String = "" // Filter by Name.
+let coreLanguage: KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases = KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases.enummember // Filter by core language.
+let published: Bool = true // Filter by published status.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage, published: published) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -663,8 +664,9 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
-| **name** | **String**| Name of the KnowledgeBase to filter. | [optional] |
-| **coreLanguage** | **String**| To filter knowledgebases by corelanguage. | [optional]<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
+| **name** | **String**| Filter by Name. | [optional] |
+| **coreLanguage** | **String**| Filter by core language. | [optional]<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
+| **published** | **Bool**| Filter by published status. | [optional] |
 {: class="table-striped"}
 
 

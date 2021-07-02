@@ -14,6 +14,7 @@ title: BuShortTermForecastListItem
 | **_description** | **String** | The description of this forecast | [optional] |
 | **legacy** | **Bool** | Whether this forecast contains modifications on legacy metrics | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Metadata for this forecast | [optional] |
+| **canUseForScheduling** | **Bool** | Whether this forecast can be used for scheduling | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

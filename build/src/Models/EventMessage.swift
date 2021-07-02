@@ -58,6 +58,7 @@ public class EventMessage: Codable {
         case importInvalidCustomId = "IMPORT_INVALID_CUSTOM_ID"
         case importInvalidData = "IMPORT_INVALID_DATA"
         case importInvalidEmailAddresses = "IMPORT_INVALID_EMAIL_ADDRESSES"
+        case importInvalidPhoneNumbers = "IMPORT_INVALID_PHONE_NUMBERS"
         case importInvalidExpirationDate = "IMPORT_INVALID_EXPIRATION_DATE"
         case importExpirationDateExceedsMaxDays = "IMPORT_EXPIRATION_DATE_EXCEEDS_MAX_DAYS"
         case importColumnExceedsLengthLimit = "IMPORT_COLUMN_EXCEEDS_LENGTH_LIMIT"

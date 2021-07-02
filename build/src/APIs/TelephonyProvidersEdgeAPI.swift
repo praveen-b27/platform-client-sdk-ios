@@ -798,11 +798,11 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -896,11 +896,11 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 
@@ -1001,11 +1001,11 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 
@@ -1414,6 +1414,7 @@ open class TelephonyProvidersEdgeAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -1981,6 +1982,7 @@ open class TelephonyProvidersEdgeAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -2324,6 +2326,7 @@ open class TelephonyProvidersEdgeAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -2472,11 +2475,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2853,11 +2856,11 @@ open class TelephonyProvidersEdgeAPI {
     "startDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3248,11 +3251,11 @@ open class TelephonyProvidersEdgeAPI {
     "friendlyName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3486,11 +3489,11 @@ open class TelephonyProvidersEdgeAPI {
     "edgeVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3642,11 +3645,11 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3864,6 +3867,7 @@ open class TelephonyProvidersEdgeAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -3977,11 +3981,11 @@ open class TelephonyProvidersEdgeAPI {
     "statusCode" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4150,11 +4154,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CertificateAuthorityEntityListing> 
@@ -4497,11 +4501,11 @@ open class TelephonyProvidersEdgeAPI {
     "endPhoneNumber" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4619,11 +4623,11 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) The type of numbers to return. 
@@ -4752,11 +4756,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5117,11 +5121,11 @@ open class TelephonyProvidersEdgeAPI {
     "phoneTrunkBases" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5451,11 +5455,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5569,11 +5573,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5781,6 +5785,7 @@ open class TelephonyProvidersEdgeAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -6088,11 +6093,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6327,6 +6332,7 @@ open class TelephonyProvidersEdgeAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -6445,11 +6451,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6657,6 +6663,7 @@ open class TelephonyProvidersEdgeAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -6955,11 +6962,11 @@ open class TelephonyProvidersEdgeAPI {
     "startDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -7146,6 +7153,7 @@ open class TelephonyProvidersEdgeAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -7469,6 +7477,7 @@ open class TelephonyProvidersEdgeAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -7696,11 +7705,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7914,6 +7923,7 @@ open class TelephonyProvidersEdgeAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -8343,11 +8353,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8451,11 +8461,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8850,6 +8860,7 @@ open class TelephonyProvidersEdgeAPI {
             "address" : "aeiou",
             "countryCode" : "aeiou",
             "display" : "aeiou",
+            "integration" : "microsoftteams",
             "mediaType" : "aeiou",
             "type" : "aeiou"
           } ],
@@ -9028,11 +9039,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -9279,6 +9290,7 @@ open class TelephonyProvidersEdgeAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -9547,11 +9559,11 @@ open class TelephonyProvidersEdgeAPI {
     "friendlyName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -9628,6 +9640,7 @@ open class TelephonyProvidersEdgeAPI {
     "address" : "aeiou",
     "countryCode" : "aeiou",
     "display" : "aeiou",
+    "integration" : "microsoftteams",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],
@@ -10292,11 +10305,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter siteId: (path) Site ID 
@@ -10411,6 +10424,7 @@ open class TelephonyProvidersEdgeAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -10624,11 +10638,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10726,11 +10740,11 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 1000)
@@ -11150,11 +11164,11 @@ open class TelephonyProvidersEdgeAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11277,11 +11291,11 @@ open class TelephonyProvidersEdgeAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query)  (optional)
@@ -11529,11 +11543,11 @@ open class TelephonyProvidersEdgeAPI {
     "family" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11733,6 +11747,77 @@ open class TelephonyProvidersEdgeAPI {
         let requestBuilder: RequestBuilder<TrunkRecordingEnabledCount>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Scales the ASG to match the desired capacity
+     
+     - parameter asgId: (path) Id of the asg that is to be scaled 
+     - parameter body: (body) AsgScaleRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTelephonyProvidersEdgesAutoscalinggroupCapacity(asgId: String, body: AsgScaleRequest, completion: @escaping ((_ data: ScaleASGResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTelephonyProvidersEdgesAutoscalinggroupCapacityWithRequestBuilder(asgId: asgId, body: body)
+        requestBuilder.execute { (response: Response<ScaleASGResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Scales the ASG to match the desired capacity
+     
+     - PATCH /api/v2/telephony/providers/edges/autoscalinggroups/{asgId}/capacity
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "minSize" : 123,
+  "maxSize" : 123,
+  "id" : "aeiou",
+  "desiredCapacity" : 123
+}}]
+     
+     - parameter asgId: (path) Id of the asg that is to be scaled 
+     - parameter body: (body) AsgScaleRequest 
+
+     - returns: RequestBuilder<ScaleASGResponse> 
+     */
+    open class func patchTelephonyProvidersEdgesAutoscalinggroupCapacityWithRequestBuilder(asgId: String, body: AsgScaleRequest) -> RequestBuilder<ScaleASGResponse> {
+        var path = "/api/v2/telephony/providers/edges/autoscalinggroups/{asgId}/capacity"
+        let asgIdPreEscape = "\(asgId)"
+        let asgIdPostEscape = asgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{asgId}", with: asgIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScaleASGResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     
@@ -12732,6 +12817,7 @@ open class TelephonyProvidersEdgeAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -13307,6 +13393,7 @@ open class TelephonyProvidersEdgeAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -13884,6 +13971,7 @@ open class TelephonyProvidersEdgeAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -14317,6 +14405,7 @@ open class TelephonyProvidersEdgeAPI {
     "address" : "aeiou",
     "countryCode" : "aeiou",
     "display" : "aeiou",
+    "integration" : "microsoftteams",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],
@@ -14779,6 +14868,7 @@ open class TelephonyProvidersEdgeAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -15077,6 +15167,7 @@ open class TelephonyProvidersEdgeAPI {
         "address" : "aeiou",
         "countryCode" : "aeiou",
         "display" : "aeiou",
+        "integration" : "microsoftteams",
         "mediaType" : "aeiou",
         "type" : "aeiou"
       } ],
@@ -16099,6 +16190,7 @@ open class TelephonyProvidersEdgeAPI {
       "address" : "aeiou",
       "countryCode" : "aeiou",
       "display" : "aeiou",
+      "integration" : "microsoftteams",
       "mediaType" : "aeiou",
       "type" : "aeiou"
     } ],
@@ -16521,6 +16613,7 @@ open class TelephonyProvidersEdgeAPI {
           "address" : "aeiou",
           "countryCode" : "aeiou",
           "display" : "aeiou",
+          "integration" : "microsoftteams",
           "mediaType" : "aeiou",
           "type" : "aeiou"
         } ],
@@ -16886,6 +16979,7 @@ open class TelephonyProvidersEdgeAPI {
     "address" : "aeiou",
     "countryCode" : "aeiou",
     "display" : "aeiou",
+    "integration" : "microsoftteams",
     "mediaType" : "aeiou",
     "type" : "aeiou"
   } ],

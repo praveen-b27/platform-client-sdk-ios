@@ -16,13 +16,13 @@ public class FlowMilestoneDivisionViewEntityListing: Codable {
     public var pageNumber: Int?
     public var total: Int64?
     public var firstUri: String?
-    public var previousUri: String?
-    public var lastUri: String?
     public var selfUri: String?
     public var nextUri: String?
+    public var previousUri: String?
+    public var lastUri: String?
     public var pageCount: Int?
 
-    public init(entities: [FlowMilestoneDivisionView]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, previousUri: String?, lastUri: String?, selfUri: String?, nextUri: String?, pageCount: Int?) {
+    public init(entities: [FlowMilestoneDivisionView]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, pageCount: Int?) {
         
         self.entities = entities
         
@@ -34,13 +34,13 @@ public class FlowMilestoneDivisionViewEntityListing: Codable {
         
         self.firstUri = firstUri
         
-        self.previousUri = previousUri
-        
-        self.lastUri = lastUri
-        
         self.selfUri = selfUri
         
         self.nextUri = nextUri
+        
+        self.previousUri = previousUri
+        
+        self.lastUri = lastUri
         
         self.pageCount = pageCount
         

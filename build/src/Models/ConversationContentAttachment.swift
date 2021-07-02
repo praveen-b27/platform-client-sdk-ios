@@ -17,6 +17,7 @@ public class ConversationContentAttachment: Codable {
         case video = "Video"
         case audio = "Audio"
         case file = "File"
+        case link = "Link"
     }
     /** Provider specific ID for attachment. For example, a LINE sticker ID. */
     public var _id: String?

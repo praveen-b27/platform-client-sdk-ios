@@ -71,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingConversation**](RoutingAPI.html#patchRoutingConversation) | Update attributes of an in-queue conversation |
 | [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingEmailDomainValidate**](RoutingAPI.html#patchRoutingEmailDomainValidate) | Validate domain settings |
+| [**patchRoutingEmailOutboundDomain**](RoutingAPI.html#patchRoutingEmailOutboundDomain) | Request an update of the emails from /replyTo of an outbound domain |
 | [**patchRoutingPredictor**](RoutingAPI.html#patchRoutingPredictor) | Update single predictor. |
 | [**patchRoutingQueueMember**](RoutingAPI.html#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
 | [**patchRoutingQueueMembers**](RoutingAPI.html#patchRoutingQueueMembers) | Join or unjoin a set of users for a queue |
@@ -3595,6 +3596,60 @@ RoutingAPI.patchRoutingEmailDomainValidate(domainId: domainId, body: body) { (re
 ### Return type
 
 [**InboundDomain**](InboundDomain.html)
+
+<a name="patchRoutingEmailOutboundDomain"></a>
+
+# **patchRoutingEmailOutboundDomain**
+
+
+
+> [OutboundDomain](OutboundDomain.html) patchRoutingEmailOutboundDomain(domainId, body)
+
+Request an update of the emails from /replyTo of an outbound domain
+
+
+
+Wraps PATCH /api/v2/routing/email/outbound/domains/{domainId}  
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // domain ID
+let body: OutboundDomain = new OutboundDomain(...) // domain with emails that need update set
+
+// Code example
+RoutingAPI.patchRoutingEmailOutboundDomain(domainId: domainId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.patchRoutingEmailOutboundDomain was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **domainId** | **String**| domain ID | |
+| **body** | [**OutboundDomain**](OutboundDomain.html)| domain with emails that need update set | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain.html)
 
 <a name="patchRoutingPredictor"></a>
 

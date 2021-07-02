@@ -42,16 +42,24 @@ public class BuForecastTimeSeriesResult: Codable {
         case theta = "Theta"
         case other = "Other"
     }
+    public enum ForecastType: String, Codable { 
+        case longTerm = "LongTerm"
+        case shortTerm = "ShortTerm"
+    }
     /** The metric this result applies to */
     public var metric: Metric?
     /** The forecasting method that was used for this metric */
     public var forecastingMethod: ForecastingMethod?
+    /** The forecasting type in this forecast result */
+    public var forecastType: ForecastType?
 
-    public init(metric: Metric?, forecastingMethod: ForecastingMethod?) {
+    public init(metric: Metric?, forecastingMethod: ForecastingMethod?, forecastType: ForecastType?) {
         
         self.metric = metric
         
         self.forecastingMethod = forecastingMethod
+        
+        self.forecastType = forecastType
         
     }
 

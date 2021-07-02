@@ -41,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecast) | Get a short term forecast |
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecastData**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastData) | Get the result of a short term forecast calculation |
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults) | Gets the forecast generation results |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata) | Get the result of a long term forecast calculation |
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups) | Gets the forecast planning group snapshot |
 | [**getWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecasts) | Get short term forecasts |
 | [**getWorkforcemanagementBusinessunits**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunits) | Get business units |
@@ -2157,6 +2158,64 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastGe
 ### Return type
 
 [**BuForecastGenerationResult**](BuForecastGenerationResult.html)
+
+<a name="getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata"></a>
+
+# **getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata**
+
+
+
+> [LongTermForecastResultResponse](LongTermForecastResultResponse.html) getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata(businessUnitId, weekDateId, forecastId, forceDownloadService)
+
+Get the result of a long term forecast calculation
+
+Includes modifications unless you pass the doNotApplyModifications query parameter
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata  
+
+Requires ANY permissions: 
+
+* wfm:shortTermForecast:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let forecastId: String = "" // The ID of the forecast
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **forecastId** | **String**| The ID of the forecast | |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LongTermForecastResultResponse**](LongTermForecastResultResponse.html)
 
 <a name="getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups"></a>
 

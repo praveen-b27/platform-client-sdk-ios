@@ -32,7 +32,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case limits = "Limits"
         case outbound = "Outbound"
         case peoplePermissions = "PeoplePermissions"
-        case performance = "Performance"
+        case employeePerformance = "EmployeePerformance"
         case predictiveEngagement = "PredictiveEngagement"
         case presence = "Presence"
         case quality = "Quality"
@@ -46,6 +46,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case webhooks = "Webhooks"
         case workforceManagement = "WorkforceManagement"
         case messaging = "Messaging"
+        case supportability = "Supportability"
     }
     /** Id of the audit query execution request. */
     public var _id: String?

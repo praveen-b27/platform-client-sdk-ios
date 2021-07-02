@@ -17,16 +17,16 @@ public class QualityAudit: Codable {
     public var user: User?
     public var jobId: String?
     public var action: String?
-    public var entity: AuditEntity?
     public var level: String?
+    public var entity: AuditEntity?
     public var timestamp: String?
-    public var changes: [Change]?
     public var status: String?
+    public var changes: [Change]?
     public var entityType: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: User?, jobId: String?, action: String?, entity: AuditEntity?, level: String?, timestamp: String?, changes: [Change]?, status: String?, entityType: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: User?, jobId: String?, action: String?, level: String?, entity: AuditEntity?, timestamp: String?, status: String?, changes: [Change]?, entityType: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -38,15 +38,15 @@ public class QualityAudit: Codable {
         
         self.action = action
         
-        self.entity = entity
-        
         self.level = level
+        
+        self.entity = entity
         
         self.timestamp = timestamp
         
-        self.changes = changes
-        
         self.status = status
+        
+        self.changes = changes
         
         self.entityType = entityType
         
@@ -60,11 +60,11 @@ public class QualityAudit: Codable {
         case user
         case jobId
         case action
-        case entity
         case level
+        case entity
         case timestamp
-        case changes
         case status
+        case changes
         case entityType
         case selfUri
     }

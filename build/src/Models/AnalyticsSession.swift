@@ -57,6 +57,8 @@ public class AnalyticsSession: Codable {
     public var agentAssistantId: String?
     /** Bullseye ring of the targeted agent */
     public var agentBullseyeRing: Int?
+    /** Flag indicating an agent-owned callback */
+    public var agentOwned: Bool?
     /** Automatic Number Identification (caller&#39;s number) */
     public var ani: String?
     /** ID of the user that manually assigned a conversation */
@@ -155,6 +157,8 @@ public class AnalyticsSession: Codable {
     public var sharingScreen: Bool?
     /** (Dialer) Whether the agent can skip the dialer contact */
     public var skipEnabled: Bool?
+    /** The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling) */
+    public var timeoutSeconds: Int?
     /** Complete routing method */
     public var usedRouting: UsedRouting?
     /** Direct Video address */
@@ -171,10 +175,8 @@ public class AnalyticsSession: Codable {
     public var metrics: [AnalyticsSessionMetric]?
     /** List of segments for this session */
     public var segments: [AnalyticsConversationSegment]?
-    /** The number of seconds before PureCloud begins the call for a call back (0 disables automatic calling) */
-    public var timeoutSeconds: Int?
 
-    public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, cobrowseRole: String?, cobrowseRoomId: String?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?, timeoutSeconds: Int?) {
+    public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, cobrowseRole: String?, cobrowseRoomId: String?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?) {
         
         self.activeSkillIds = activeSkillIds
         
@@ -191,6 +193,8 @@ public class AnalyticsSession: Codable {
         self.agentAssistantId = agentAssistantId
         
         self.agentBullseyeRing = agentBullseyeRing
+        
+        self.agentOwned = agentOwned
         
         self.ani = ani
         
@@ -290,6 +294,8 @@ public class AnalyticsSession: Codable {
         
         self.skipEnabled = skipEnabled
         
+        self.timeoutSeconds = timeoutSeconds
+        
         self.usedRouting = usedRouting
         
         self.videoAddressSelf = videoAddressSelf
@@ -305,8 +311,6 @@ public class AnalyticsSession: Codable {
         self.metrics = metrics
         
         self.segments = segments
-        
-        self.timeoutSeconds = timeoutSeconds
         
     }
 

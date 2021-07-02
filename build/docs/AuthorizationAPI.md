@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserRoles**](AuthorizationAPI.html#getUserRoles) | Returns a listing of roles and permissions for a user. |
 | [**patchAuthorizationRole**](AuthorizationAPI.html#patchAuthorizationRole) | Patch Organization Role for needsUpdate Field |
 | [**postAuthorizationDivisionObject**](AuthorizationAPI.html#postAuthorizationDivisionObject) | Assign a list of objects to a division |
+| [**postAuthorizationDivisionRestore**](AuthorizationAPI.html#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
 | [**postAuthorizationDivisions**](AuthorizationAPI.html#postAuthorizationDivisions) | Create a division. |
 | [**postAuthorizationRole**](AuthorizationAPI.html#postAuthorizationRole) | Bulk-grant subjects and divisions with an organization role. |
 | [**postAuthorizationRoleComparedefaultRightRoleId**](AuthorizationAPI.html#postAuthorizationRoleComparedefaultRightRoleId) | Get an unsaved org role to default role comparison |
@@ -1355,6 +1356,60 @@ AuthorizationAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectT
 ### Return type
 
 `nil` (empty response body)
+
+<a name="postAuthorizationDivisionRestore"></a>
+
+# **postAuthorizationDivisionRestore**
+
+
+
+> [AuthzDivision](AuthzDivision.html) postAuthorizationDivisionRestore(divisionId, body)
+
+Recreate a previously deleted division.
+
+
+
+Wraps POST /api/v2/authorization/divisions/{divisionId}/restore  
+
+Requires ANY permissions: 
+
+* authorization:division:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let divisionId: String = "" // Division ID
+let body: AuthzDivision = new AuthzDivision(...) // Recreated division data
+
+// Code example
+AuthorizationAPI.postAuthorizationDivisionRestore(divisionId: divisionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.postAuthorizationDivisionRestore was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **divisionId** | **String**| Division ID | |
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AuthzDivision**](AuthzDivision.html)
 
 <a name="postAuthorizationDivisions"></a>
 

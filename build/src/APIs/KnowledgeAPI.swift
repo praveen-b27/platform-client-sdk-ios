@@ -57,7 +57,8 @@ open class KnowledgeAPI {
   "coreLanguage" : "en-us",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "published" : true
 }}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -144,7 +145,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
@@ -260,7 +262,8 @@ open class KnowledgeAPI {
       "coreLanguage" : "en-us",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "published" : true
     },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -362,7 +365,8 @@ open class KnowledgeAPI {
   "coreLanguage" : "en-us",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "published" : true
 }}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -462,7 +466,8 @@ open class KnowledgeAPI {
       "coreLanguage" : "en-us",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "published" : true
     },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -593,7 +598,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "children" : [ "" ],
@@ -710,7 +716,8 @@ open class KnowledgeAPI {
       "coreLanguage" : "en-us",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "published" : true
     },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -857,7 +864,8 @@ open class KnowledgeAPI {
         "coreLanguage" : "en-us",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
-        "id" : "aeiou"
+        "id" : "aeiou",
+        "published" : true
       },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -996,7 +1004,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   },
   "dateTriggered" : "2000-01-23T04:56:07.000+0000",
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
@@ -1122,7 +1131,8 @@ open class KnowledgeAPI {
       "coreLanguage" : "en-us",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "published" : true
     },
     "dateTriggered" : "2000-01-23T04:56:07.000+0000",
     "dateCompleted" : "2000-01-23T04:56:07.000+0000",
@@ -1204,6 +1214,8 @@ open class KnowledgeAPI {
 
     
     
+    
+    
     /**
      
      Get knowledge bases
@@ -1212,12 +1224,13 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
-     - parameter name: (query) Name of the KnowledgeBase to filter. (optional)
-     - parameter coreLanguage: (query) To filter knowledgebases by corelanguage. (optional)
+     - parameter name: (query) Filter by Name. (optional)
+     - parameter coreLanguage: (query) Filter by core language. (optional)
+     - parameter published: (query) Filter by published status. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebases(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, completion: @escaping ((_ data: KnowledgeBaseListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebasesWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage)
+    open class func getKnowledgeKnowledgebases(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil, completion: @escaping ((_ data: KnowledgeBaseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebasesWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage, published: published)
         requestBuilder.execute { (response: Response<KnowledgeBaseListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1254,7 +1267,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   } ],
   "selfUri" : "aeiou",
   "nextUri" : "aeiou",
@@ -1265,12 +1279,13 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
-     - parameter name: (query) Name of the KnowledgeBase to filter. (optional)
-     - parameter coreLanguage: (query) To filter knowledgebases by corelanguage. (optional)
+     - parameter name: (query) Filter by Name. (optional)
+     - parameter coreLanguage: (query) Filter by core language. (optional)
+     - parameter published: (query) Filter by published status. (optional)
 
      - returns: RequestBuilder<KnowledgeBaseListing> 
      */
-    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil) -> RequestBuilder<KnowledgeBaseListing> {
+    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil) -> RequestBuilder<KnowledgeBaseListing> {
         let path = "/api/v2/knowledge/knowledgebases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1293,7 +1308,9 @@ open class KnowledgeAPI {
             
             "name": name, 
             
-            "coreLanguage": coreLanguage?.rawValue
+            "coreLanguage": coreLanguage?.rawValue, 
+            
+            "published": published
             
         ])
 
@@ -1352,7 +1369,8 @@ open class KnowledgeAPI {
   "coreLanguage" : "en-us",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "published" : true
 }}]
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -1450,7 +1468,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "children" : [ "" ],
@@ -1568,7 +1587,8 @@ open class KnowledgeAPI {
       "coreLanguage" : "en-us",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "published" : true
     },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -1695,7 +1715,8 @@ open class KnowledgeAPI {
         "coreLanguage" : "en-us",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
-        "id" : "aeiou"
+        "id" : "aeiou",
+        "published" : true
       },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -1818,7 +1839,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "children" : [ "" ],
@@ -1929,7 +1951,8 @@ open class KnowledgeAPI {
       "coreLanguage" : "en-us",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
-      "id" : "aeiou"
+      "id" : "aeiou",
+      "published" : true
     },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -2038,7 +2061,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   },
   "dateTriggered" : "2000-01-23T04:56:07.000+0000",
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
@@ -2140,7 +2164,8 @@ open class KnowledgeAPI {
     "coreLanguage" : "en-us",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "published" : true
   },
   "dateTriggered" : "2000-01-23T04:56:07.000+0000",
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
@@ -2263,7 +2288,8 @@ open class KnowledgeAPI {
         "coreLanguage" : "en-us",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
-        "id" : "aeiou"
+        "id" : "aeiou",
+        "published" : true
       },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -2345,7 +2371,8 @@ open class KnowledgeAPI {
   "coreLanguage" : "en-us",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "published" : true
 }}]
      
      - parameter body: (body)  

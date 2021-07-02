@@ -11,8 +11,8 @@ title: JsonNode
 | **nodeType** | **String** |  | [optional] |
 | **number** | **Bool** |  | [optional] |
 | **valueNode** | **Bool** |  | [optional] |
-| **floatingPointNumber** | **Bool** |  | [optional] |
 | **containerNode** | **Bool** |  | [optional] |
+| **floatingPointNumber** | **Bool** |  | [optional] |
 | **missingNode** | **Bool** |  | [optional] |
 | **object** | **Bool** |  | [optional] |
 | **pojo** | **Bool** |  | [optional] |

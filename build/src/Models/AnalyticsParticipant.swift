@@ -18,6 +18,7 @@ public class AnalyticsParticipant: Codable {
         case acd = "acd"
         case agent = "agent"
         case api = "api"
+        case botflow = "botflow"
         case campaign = "campaign"
         case customer = "customer"
         case dialer = "dialer"

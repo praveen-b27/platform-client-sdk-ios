@@ -18,6 +18,8 @@ public class EventMessage: Codable {
         case approachingEntityLimit = "APPROACHING_ENTITY_LIMIT"
         case automaticTimeZoneZipCodeInvalid = "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID"
         case campaignContentTemplateSubstitutionMismatch = "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
+        case campaignEmailBodyCharacterLimitExceeded = "CAMPAIGN_EMAIL_BODY_CHARACTER_LIMIT_EXCEEDED"
+        case campaignEmailSubjectCharacterLimitExceeded = "CAMPAIGN_EMAIL_SUBJECT_CHARACTER_LIMIT_EXCEEDED"
         case campaignMessageCharacterLimitExceeded = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
         case campaignStartError = "CAMPAIGN_START_ERROR"
         case campaignRuleStartError = "CAMPAIGN_RULE_START_ERROR"

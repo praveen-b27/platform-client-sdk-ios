@@ -1943,7 +1943,7 @@ RecordingAPI.postRecordingBatchrequests(body: body) { (response, error) in
 
 Create media retention policy
 
-
+Policy does not work retroactively
 
 Wraps POST /api/v2/recording/crossplatform/mediaretentionpolicies  
 
@@ -2151,7 +2151,7 @@ RecordingAPI.postRecordingLocalkeysSettings(body: body) { (response, error) in
 
 Create media retention policy
 
-
+Policy does not work retroactively
 
 Wraps POST /api/v2/recording/mediaretentionpolicies  
 
@@ -2572,7 +2572,7 @@ RecordingAPI.putOrphanrecording(orphanId: orphanId, body: body) { (response, err
 
 Update a media retention policy
 
-
+Policy does not work retroactively
 
 Wraps PUT /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}  
 
@@ -2736,7 +2736,7 @@ RecordingAPI.putRecordingLocalkeysSetting(settingsId: settingsId, body: body) { 
 
 Update a media retention policy
 
-
+Policy does not work retroactively
 
 Wraps PUT /api/v2/recording/mediaretentionpolicies/{policyId}  
 

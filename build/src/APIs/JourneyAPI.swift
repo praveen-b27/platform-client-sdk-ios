@@ -635,7 +635,7 @@ open class JourneyAPI {
      Retrieve all action targets.
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
+     - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getJourneyActiontargets(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ActionTargetListing?,_ error: Error?) -> Void)) {
@@ -697,7 +697,7 @@ open class JourneyAPI {
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
+     - parameter pageSize: (query) Page size (optional, default to 25)
 
      - returns: RequestBuilder<ActionTargetListing> 
      */

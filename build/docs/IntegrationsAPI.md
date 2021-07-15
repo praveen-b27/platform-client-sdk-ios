@@ -24,6 +24,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsActions**](IntegrationsAPI.html#getIntegrationsActions) | Retrieves all actions associated with filters passed in via query param. |
 | [**getIntegrationsActionsCategories**](IntegrationsAPI.html#getIntegrationsActionsCategories) | Retrieves all categories of available Actions |
 | [**getIntegrationsActionsDrafts**](IntegrationsAPI.html#getIntegrationsActionsDrafts) | Retrieves all action drafts associated with the filters passed in via query param. |
+| [**getIntegrationsBotconnectorIntegrationIdBot**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBot) | Get a specific botConnector bot, plus versions, for this integration |
+| [**getIntegrationsBotconnectorIntegrationIdBotVersions**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBotVersions) | Get a list of bot versions for a bot |
+| [**getIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBots) | Get a list of botConnector bots for this integration |
+| [**getIntegrationsBotconnectorIntegrationIdBotsSummaries**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBotsSummaries) | Get a summary list of botConnector bots for this integration |
 | [**getIntegrationsClientapps**](IntegrationsAPI.html#getIntegrationsClientapps) | List permitted client app integrations for the logged in user |
 | [**getIntegrationsCredential**](IntegrationsAPI.html#getIntegrationsCredential) | Get a single credential with sensitive fields redacted |
 | [**getIntegrationsCredentials**](IntegrationsAPI.html#getIntegrationsCredentials) | List multiple sets of credentials |
@@ -58,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postIntegrationsCredentials**](IntegrationsAPI.html#postIntegrationsCredentials) | Create a set of credentials |
 | [**postIntegrationsWorkforcemanagementVendorconnection**](IntegrationsAPI.html#postIntegrationsWorkforcemanagementVendorconnection) | Add a vendor connection |
 | [**putIntegrationConfigCurrent**](IntegrationsAPI.html#putIntegrationConfigCurrent) | Update integration configuration. |
+| [**putIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI.html#putIntegrationsBotconnectorIntegrationIdBots) | Set a list of botConnector bots plus versions for this integration |
 | [**putIntegrationsCredential**](IntegrationsAPI.html#putIntegrationsCredential) | Update a set of credentials |
 | [**putIntegrationsSpeechTtsSettings**](IntegrationsAPI.html#putIntegrationsSpeechTtsSettings) | Update TTS settings for an org |
 {: class="table-striped"}
@@ -928,7 +933,7 @@ let pageSize: Int = 25 // The total page size requested
 let pageNumber: Int = 1 // The page number requested
 let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
-let sortBy: String = "" // Root level field name to sort on.
+let sortBy: String = "" // Root level field name to sort on.  Only 'name' is supported on this endpoint.
 let sortOrder: IntegrationsAPI.SortOrder_getIntegrationsActionsCategories = IntegrationsAPI.SortOrder_getIntegrationsActionsCategories.enummember // Direction to sort 'sortBy' field.
 let secure: IntegrationsAPI.Secure_getIntegrationsActionsCategories = IntegrationsAPI.Secure_getIntegrationsActionsCategories.enummember // Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
 
@@ -952,7 +957,7 @@ IntegrationsAPI.getIntegrationsActionsCategories(pageSize: pageSize, pageNumber:
 | **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
-| **sortBy** | **String**| Root level field name to sort on. | [optional] |
+| **sortBy** | **String**| Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. | [optional] |
 | **sortOrder** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: asc ("ASC"), desc ("DESC") |
 | **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
@@ -1032,6 +1037,228 @@ IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pag
 ### Return type
 
 [**ActionEntityListing**](ActionEntityListing.html)
+
+<a name="getIntegrationsBotconnectorIntegrationIdBot"></a>
+
+# **getIntegrationsBotconnectorIntegrationIdBot**
+
+
+
+> [BotConnectorBot](BotConnectorBot.html) getIntegrationsBotconnectorIntegrationIdBot(integrationId, botId, version)
+
+Get a specific botConnector bot, plus versions, for this integration
+
+
+
+Wraps GET /api/v2/integrations/botconnector/{integrationId}/bots/{botId}  
+
+Requires ANY permissions: 
+
+* integration:botconnector:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // The integration ID for this group of bots
+let botId: String = "" // The botID for this bot
+let version: String = "" // Specific Version
+
+// Code example
+IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBot(integrationId: integrationId, botId: botId, version: version) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBot was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| The integration ID for this group of bots | |
+| **botId** | **String**| The botID for this bot | |
+| **version** | **String**| Specific Version | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BotConnectorBot**](BotConnectorBot.html)
+
+<a name="getIntegrationsBotconnectorIntegrationIdBotVersions"></a>
+
+# **getIntegrationsBotconnectorIntegrationIdBotVersions**
+
+
+
+> [BotConnectorBotVersionSummaryEntityListing](BotConnectorBotVersionSummaryEntityListing.html) getIntegrationsBotconnectorIntegrationIdBotVersions(integrationId, botId, pageNumber, pageSize)
+
+Get a list of bot versions for a bot
+
+
+
+Wraps GET /api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions  
+
+Requires ANY permissions: 
+
+* integration:botconnector:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // The integration ID for this bot group
+let botId: String = "" // The botID for this bot
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotVersions(integrationId: integrationId, botId: botId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| The integration ID for this bot group | |
+| **botId** | **String**| The botID for this bot | |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BotConnectorBotVersionSummaryEntityListing**](BotConnectorBotVersionSummaryEntityListing.html)
+
+<a name="getIntegrationsBotconnectorIntegrationIdBots"></a>
+
+# **getIntegrationsBotconnectorIntegrationIdBots**
+
+
+
+> [BotList](BotList.html) getIntegrationsBotconnectorIntegrationIdBots(integrationId)
+
+Get a list of botConnector bots for this integration
+
+
+
+Wraps GET /api/v2/integrations/botconnector/{integrationId}/bots  
+
+Requires ANY permissions: 
+
+* integration:botconnector:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // The integration ID for this group of bots
+
+// Code example
+IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBots(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBots was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| The integration ID for this group of bots | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BotList**](BotList.html)
+
+<a name="getIntegrationsBotconnectorIntegrationIdBotsSummaries"></a>
+
+# **getIntegrationsBotconnectorIntegrationIdBotsSummaries**
+
+
+
+> [BotConnectorBotSummaryEntityListing](BotConnectorBotSummaryEntityListing.html) getIntegrationsBotconnectorIntegrationIdBotsSummaries(integrationId, pageNumber, pageSize)
+
+Get a summary list of botConnector bots for this integration
+
+
+
+Wraps GET /api/v2/integrations/botconnector/{integrationId}/bots/summaries  
+
+Requires ANY permissions: 
+
+* integration:botconnector:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // The integration ID for this group of bots
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotsSummaries(integrationId: integrationId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsBotconnectorIntegrationIdBotsSummaries was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| The integration ID for this group of bots | |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BotConnectorBotSummaryEntityListing**](BotConnectorBotSummaryEntityListing.html)
 
 <a name="getIntegrationsClientapps"></a>
 
@@ -2887,6 +3114,59 @@ IntegrationsAPI.putIntegrationConfigCurrent(integrationId: integrationId, body: 
 ### Return type
 
 [**IntegrationConfiguration**](IntegrationConfiguration.html)
+
+<a name="putIntegrationsBotconnectorIntegrationIdBots"></a>
+
+# **putIntegrationsBotconnectorIntegrationIdBots**
+
+
+
+> Void putIntegrationsBotconnectorIntegrationIdBots(integrationId, botList)
+
+Set a list of botConnector bots plus versions for this integration
+
+
+
+Wraps PUT /api/v2/integrations/botconnector/{integrationId}/bots  
+
+Requires ANY permissions: 
+
+* integration:botconnector:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // The integration ID for this group of bots
+let botList: BotList = new BotList(...) // 
+
+// Code example
+IntegrationsAPI.putIntegrationsBotconnectorIntegrationIdBots(integrationId: integrationId, botList: botList) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("IntegrationsAPI.putIntegrationsBotconnectorIntegrationIdBots was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| The integration ID for this group of bots | |
+| **botList** | [**BotList**](BotList.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="putIntegrationsCredential"></a>
 

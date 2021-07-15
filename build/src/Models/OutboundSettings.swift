@@ -34,10 +34,12 @@ public class OutboundSettings: Codable {
     public var abandonSeconds: Double?
     /** The denominator to be used in determining the compliance abandon rate */
     public var complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?
+    /** The settings for automatic time zone mapping. Note that changing these settings will change them for both voice and messaging campaigns. */
+    public var automaticTimeZoneMapping: AutomaticTimeZoneMappingSettings?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, maxCallsPerAgent: Int?, maxConfigurableCallsPerAgent: Int?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, maxCallsPerAgent: Int?, maxConfigurableCallsPerAgent: Int?, maxLineUtilization: Double?, abandonSeconds: Double?, complianceAbandonRateDenominator: ComplianceAbandonRateDenominator?, automaticTimeZoneMapping: AutomaticTimeZoneMappingSettings?, selfUri: String?) {
         
         self._id = _id
         
@@ -59,6 +61,8 @@ public class OutboundSettings: Codable {
         
         self.complianceAbandonRateDenominator = complianceAbandonRateDenominator
         
+        self.automaticTimeZoneMapping = automaticTimeZoneMapping
+        
         self.selfUri = selfUri
         
     }
@@ -74,6 +78,7 @@ public class OutboundSettings: Codable {
         case maxLineUtilization
         case abandonSeconds
         case complianceAbandonRateDenominator
+        case automaticTimeZoneMapping
         case selfUri
     }
 

@@ -123,18 +123,19 @@ open class NotificationsAPI {
       "key" : "{}"
     },
     "enforced" : true,
-    "transports" : [ "aeiou" ],
     "requiresCurrentUser" : true,
+    "visibility" : "aeiou",
+    "requiresPermissions" : [ "aeiou" ],
+    "requiresCurrentUserOrPermission" : true,
+    "description" : "aeiou",
+    "requiresAnyValidator" : true,
+    "transports" : [ "aeiou" ],
     "permissionDetails" : [ {
       "enforced" : true,
       "permissions" : [ "aeiou" ],
       "type" : "aeiou",
       "allowsCurrentUser" : true
     } ],
-    "visibility" : "aeiou",
-    "requiresPermissions" : [ "aeiou" ],
-    "requiresCurrentUserOrPermission" : true,
-    "description" : "aeiou",
     "id" : "aeiou",
     "requiresDivisionPermissions" : true,
     "publicApiTemplateUriPaths" : [ "aeiou" ]
@@ -313,6 +314,69 @@ open class NotificationsAPI {
         let requestBuilder: RequestBuilder<ChannelEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Verify a channel still exists and is valid
+     
+     - parameter channelId: (path) Channel ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headNotificationsChannel(channelId: String, completion: @escaping ((_ data: Bool?,_ error: Error?) -> Void)) {
+        let requestBuilder = headNotificationsChannelWithRequestBuilder(channelId: channelId)
+        requestBuilder.execute { (response: Response<Bool>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Verify a channel still exists and is valid
+     
+     - HEAD /api/v2/notifications/channels/{channelId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example=true}]
+     
+     - parameter channelId: (path) Channel ID 
+
+     - returns: RequestBuilder<Bool> 
+     */
+    open class func headNotificationsChannelWithRequestBuilder(channelId: String) -> RequestBuilder<Bool> {
+        var path = "/api/v2/notifications/channels/{channelId}"
+        let channelIdPreEscape = "\(channelId)"
+        let channelIdPostEscape = channelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{channelId}", with: channelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Bool>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "HEAD", url: url!, body: body)
     }
 
     

@@ -12,6 +12,8 @@ import Foundation
 
 public class ScimUserListResponse: Codable {
 
+    /** The list of supported schemas. */
+    public var schemas: [String]?
     /** The total number of results. */
     public var totalResults: Int64?
     /** The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results. */
@@ -20,10 +22,10 @@ public class ScimUserListResponse: Codable {
     public var itemsPerPage: Int64?
     /** The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty. */
     public var resources: [ScimV2User]?
-    /** The list of supported schemas. */
-    public var schemas: [String]?
 
-    public init(totalResults: Int64?, startIndex: Int64?, itemsPerPage: Int64?, resources: [ScimV2User]?, schemas: [String]?) {
+    public init(schemas: [String]?, totalResults: Int64?, startIndex: Int64?, itemsPerPage: Int64?, resources: [ScimV2User]?) {
+        
+        self.schemas = schemas
         
         self.totalResults = totalResults
         
@@ -33,16 +35,14 @@ public class ScimUserListResponse: Codable {
         
         self.resources = resources
         
-        self.schemas = schemas
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case schemas
         case totalResults
         case startIndex
         case itemsPerPage
         case resources = "Resources"
-        case schemas
     }
 
 

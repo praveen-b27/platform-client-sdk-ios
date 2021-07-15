@@ -3013,7 +3013,7 @@ ArchitectAPI.getFlowsDatatableImportJob(datatableId: datatableId, importJobId: i
 
 
 
-> [EntityListing](EntityListing.html) getFlowsDatatableImportJobs(datatableId, pageNumber, pageSize)
+> [DataTableImportEntityListing](DataTableImportEntityListing.html) getFlowsDatatableImportJobs(datatableId, pageNumber, pageSize)
 
 Get all recent import jobs
 
@@ -3061,7 +3061,7 @@ ArchitectAPI.getFlowsDatatableImportJobs(datatableId: datatableId, pageNumber: p
 
 ### Return type
 
-[**EntityListing**](EntityListing.html)
+[**DataTableImportEntityListing**](DataTableImportEntityListing.html)
 
 <a name="getFlowsDatatableRow"></a>
 

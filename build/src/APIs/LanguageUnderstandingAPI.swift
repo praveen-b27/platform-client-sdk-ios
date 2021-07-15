@@ -194,6 +194,123 @@ open class LanguageUnderstandingAPI {
     
     /**
      
+     Delete a miner.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteLanguageunderstandingMiner(minerId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteLanguageunderstandingMinerWithRequestBuilder(minerId: minerId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a miner.
+     
+     - DELETE /api/v2/languageunderstanding/miners/{minerId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter minerId: (path) Miner ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteLanguageunderstandingMinerWithRequestBuilder(minerId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Delete a draft
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter draftId: (path) Draft ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteLanguageunderstandingMinerDraft(minerId: String, draftId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteLanguageunderstandingMinerDraftWithRequestBuilder(minerId: minerId, draftId: draftId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a draft
+     
+     - DELETE /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter draftId: (path) Draft ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let draftIdPreEscape = "\(draftId)"
+        let draftIdPostEscape = draftIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{draftId}", with: draftIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Find an NLU Domain.
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1254,6 +1371,621 @@ open class LanguageUnderstandingAPI {
     
     
     
+    /**
+     
+     Get information about a miner.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMiner(minerId: String, completion: @escaping ((_ data: Miner?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerWithRequestBuilder(minerId: minerId)
+        requestBuilder.execute { (response: Response<Miner>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get information about a miner.
+     
+     - GET /api/v2/languageunderstanding/miners/{minerId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "conversationsDateRangeStart" : "2019-06-20",
+  "selfUri" : "aeiou",
+  "language" : "aeiou",
+  "mediaType" : "aeiou",
+  "dateModified" : "2020-04-30T23:56:07.268",
+  "message" : "aeiou",
+  "conversationDataUploaded" : true,
+  "conversationsDateRangeEnd" : "2019-12-20",
+  "queueIds" : [ "aeiou" ],
+  "dateCreated" : "2020-04-29T17:12:06.613",
+  "dateCompleted" : "2020-05-20T23:56:07.268",
+  "dateTriggered" : "2020-04-30T23:56:07.268",
+  "latestDraftVersion" : {
+    "intents" : [ {
+      "utterances" : [ "aeiou" ],
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "dateCreated" : "2020-05-20T23:56:07.268",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2020-05-20T23:56:07.268",
+    "id" : "aeiou",
+    "miner" : ""
+  },
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+
+     - returns: RequestBuilder<Miner> 
+     */
+    open class func getLanguageunderstandingMinerWithRequestBuilder(minerId: String) -> RequestBuilder<Miner> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Miner>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get information about a draft.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter draftId: (path) Draft ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMinerDraft(minerId: String, draftId: String, completion: @escaping ((_ data: Draft?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: minerId, draftId: draftId)
+        requestBuilder.execute { (response: Response<Draft>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get information about a draft.
+     
+     - GET /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intents" : [ {
+    "utterances" : [ "aeiou" ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "dateCreated" : "2020-05-20T23:56:07.268",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2020-05-20T23:56:07.268",
+  "id" : "aeiou",
+  "miner" : {
+    "conversationsDateRangeStart" : "2019-06-20",
+    "selfUri" : "aeiou",
+    "language" : "aeiou",
+    "mediaType" : "aeiou",
+    "dateModified" : "2020-04-30T23:56:07.268",
+    "message" : "aeiou",
+    "conversationDataUploaded" : true,
+    "conversationsDateRangeEnd" : "2019-12-20",
+    "queueIds" : [ "aeiou" ],
+    "dateCreated" : "2020-04-29T17:12:06.613",
+    "dateCompleted" : "2020-05-20T23:56:07.268",
+    "dateTriggered" : "2020-04-30T23:56:07.268",
+    "latestDraftVersion" : "",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  }
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter draftId: (path) Draft ID 
+
+     - returns: RequestBuilder<Draft> 
+     */
+    open class func getLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String) -> RequestBuilder<Draft> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let draftIdPreEscape = "\(draftId)"
+        let draftIdPostEscape = draftIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{draftId}", with: draftIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Draft>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve the list of drafts created.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMinerDrafts(minerId: String, completion: @escaping ((_ data: DraftListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: minerId)
+        requestBuilder.execute { (response: Response<DraftListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve the list of drafts created.
+     
+     - GET /api/v2/languageunderstanding/miners/{minerId}/drafts
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "intents" : [ {
+      "utterances" : [ "aeiou" ],
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "dateCreated" : "2020-05-20T23:56:07.268",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2020-05-20T23:56:07.268",
+    "id" : "aeiou",
+    "miner" : {
+      "conversationsDateRangeStart" : "2019-06-20",
+      "selfUri" : "aeiou",
+      "language" : "aeiou",
+      "mediaType" : "aeiou",
+      "dateModified" : "2020-04-30T23:56:07.268",
+      "message" : "aeiou",
+      "conversationDataUploaded" : true,
+      "conversationsDateRangeEnd" : "2019-12-20",
+      "queueIds" : [ "aeiou" ],
+      "dateCreated" : "2020-04-29T17:12:06.613",
+      "dateCompleted" : "2020-05-20T23:56:07.268",
+      "dateTriggered" : "2020-04-30T23:56:07.268",
+      "latestDraftVersion" : "",
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "status" : "aeiou"
+    }
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+
+     - returns: RequestBuilder<DraftListing> 
+     */
+    open class func getLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: String) -> RequestBuilder<DraftListing> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DraftListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get information about a mined intent
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter intentId: (path) The ID of the intent to be retrieved. 
+     - parameter expand: (query) Option to fetch utterances (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMinerIntent(minerId: String, intentId: String, expand: String? = nil, completion: @escaping ((_ data: MinerIntent?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerIntentWithRequestBuilder(minerId: minerId, intentId: intentId, expand: expand)
+        requestBuilder.execute { (response: Response<MinerIntent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get information about a mined intent
+     
+     - GET /api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "utterances" : [ {
+    "utteranceText" : "I want to pay bill."
+  } ],
+  "selfUri" : "aeiou",
+  "name" : "pay bill.",
+  "id" : "aeiou",
+  "miner" : {
+    "conversationsDateRangeStart" : "2019-06-20",
+    "selfUri" : "aeiou",
+    "language" : "aeiou",
+    "mediaType" : "aeiou",
+    "dateModified" : "2020-04-30T23:56:07.268",
+    "message" : "aeiou",
+    "conversationDataUploaded" : true,
+    "conversationsDateRangeEnd" : "2019-12-20",
+    "queueIds" : [ "aeiou" ],
+    "dateCreated" : "2020-04-29T17:12:06.613",
+    "dateCompleted" : "2020-05-20T23:56:07.268",
+    "dateTriggered" : "2020-04-30T23:56:07.268",
+    "latestDraftVersion" : {
+      "intents" : [ {
+        "utterances" : [ "aeiou" ],
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "dateCreated" : "2020-05-20T23:56:07.268",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "dateModified" : "2020-05-20T23:56:07.268",
+      "id" : "aeiou",
+      "miner" : ""
+    },
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  },
+  "analyticVolumePercent" : 21.5
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter intentId: (path) The ID of the intent to be retrieved. 
+     - parameter expand: (query) Option to fetch utterances (optional)
+
+     - returns: RequestBuilder<MinerIntent> 
+     */
+    open class func getLanguageunderstandingMinerIntentWithRequestBuilder(minerId: String, intentId: String, expand: String? = nil) -> RequestBuilder<MinerIntent> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let intentIdPreEscape = "\(intentId)"
+        let intentIdPostEscape = intentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{intentId}", with: intentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<MinerIntent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Retrieve a list of mined intents.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter expand: (query) Option to fetch utterances. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMinerIntents(minerId: String, expand: String? = nil, completion: @escaping ((_ data: MinedIntentsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinerIntentsWithRequestBuilder(minerId: minerId, expand: expand)
+        requestBuilder.execute { (response: Response<MinedIntentsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a list of mined intents.
+     
+     - GET /api/v2/languageunderstanding/miners/{minerId}/intents
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "utterances" : [ {
+      "utteranceText" : "I want to pay bill."
+    } ],
+    "selfUri" : "aeiou",
+    "name" : "pay bill.",
+    "id" : "aeiou",
+    "miner" : {
+      "conversationsDateRangeStart" : "2019-06-20",
+      "selfUri" : "aeiou",
+      "language" : "aeiou",
+      "mediaType" : "aeiou",
+      "dateModified" : "2020-04-30T23:56:07.268",
+      "message" : "aeiou",
+      "conversationDataUploaded" : true,
+      "conversationsDateRangeEnd" : "2019-12-20",
+      "queueIds" : [ "aeiou" ],
+      "dateCreated" : "2020-04-29T17:12:06.613",
+      "dateCompleted" : "2020-05-20T23:56:07.268",
+      "dateTriggered" : "2020-04-30T23:56:07.268",
+      "latestDraftVersion" : {
+        "intents" : [ {
+          "utterances" : [ "aeiou" ],
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ],
+        "dateCreated" : "2020-05-20T23:56:07.268",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "dateModified" : "2020-05-20T23:56:07.268",
+        "id" : "aeiou",
+        "miner" : ""
+      },
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "status" : "aeiou"
+    },
+    "analyticVolumePercent" : 21.5
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter expand: (query) Option to fetch utterances. (optional)
+
+     - returns: RequestBuilder<MinedIntentsListing> 
+     */
+    open class func getLanguageunderstandingMinerIntentsWithRequestBuilder(minerId: String, expand: String? = nil) -> RequestBuilder<MinedIntentsListing> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/intents"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<MinedIntentsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Retrieve the list of miners created.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingMiners(completion: @escaping ((_ data: MinerListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingMinersWithRequestBuilder()
+        requestBuilder.execute { (response: Response<MinerListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve the list of miners created.
+     
+     - GET /api/v2/languageunderstanding/miners
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "conversationsDateRangeStart" : "2019-06-20",
+    "selfUri" : "aeiou",
+    "language" : "aeiou",
+    "mediaType" : "aeiou",
+    "dateModified" : "2020-04-30T23:56:07.268",
+    "message" : "aeiou",
+    "conversationDataUploaded" : true,
+    "conversationsDateRangeEnd" : "2019-12-20",
+    "queueIds" : [ "aeiou" ],
+    "dateCreated" : "2020-04-29T17:12:06.613",
+    "dateCompleted" : "2020-05-20T23:56:07.268",
+    "dateTriggered" : "2020-04-30T23:56:07.268",
+    "latestDraftVersion" : {
+      "intents" : [ {
+        "utterances" : [ "aeiou" ],
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      } ],
+      "dateCreated" : "2020-05-20T23:56:07.268",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "dateModified" : "2020-05-20T23:56:07.268",
+      "id" : "aeiou",
+      "miner" : ""
+    },
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<MinerListing> 
+     */
+    open class func getLanguageunderstandingMinersWithRequestBuilder() -> RequestBuilder<MinerListing> {
+        let path = "/api/v2/languageunderstanding/miners"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MinerListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**
@@ -1365,6 +2097,107 @@ open class LanguageUnderstandingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Save information for the draft
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter draftId: (path) Draft ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchLanguageunderstandingMinerDraft(minerId: String, draftId: String, body: DraftRequest? = nil, completion: @escaping ((_ data: Draft?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchLanguageunderstandingMinerDraftWithRequestBuilder(minerId: minerId, draftId: draftId, body: body)
+        requestBuilder.execute { (response: Response<Draft>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Save information for the draft
+     
+     - PATCH /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intents" : [ {
+    "utterances" : [ "aeiou" ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "dateCreated" : "2020-05-20T23:56:07.268",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2020-05-20T23:56:07.268",
+  "id" : "aeiou",
+  "miner" : {
+    "conversationsDateRangeStart" : "2019-06-20",
+    "selfUri" : "aeiou",
+    "language" : "aeiou",
+    "mediaType" : "aeiou",
+    "dateModified" : "2020-04-30T23:56:07.268",
+    "message" : "aeiou",
+    "conversationDataUploaded" : true,
+    "conversationsDateRangeEnd" : "2019-12-20",
+    "queueIds" : [ "aeiou" ],
+    "dateCreated" : "2020-04-29T17:12:06.613",
+    "dateCompleted" : "2020-05-20T23:56:07.268",
+    "dateTriggered" : "2020-04-30T23:56:07.268",
+    "latestDraftVersion" : "",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  }
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter draftId: (path) Draft ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Draft> 
+     */
+    open class func patchLanguageunderstandingMinerDraftWithRequestBuilder(minerId: String, draftId: String, body: DraftRequest? = nil) -> RequestBuilder<Draft> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let draftIdPreEscape = "\(draftId)"
+        let draftIdPostEscape = draftIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{draftId}", with: draftIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Draft>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -2132,6 +2965,281 @@ open class LanguageUnderstandingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<NluDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Create a new draft resource.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter body: (body) Details for creating draft resource 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingMinerDrafts(minerId: String, body: Draft, completion: @escaping ((_ data: Draft?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: minerId, body: body)
+        requestBuilder.execute { (response: Response<Draft>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a new draft resource.
+     
+     - POST /api/v2/languageunderstanding/miners/{minerId}/drafts
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intents" : [ {
+    "utterances" : [ "aeiou" ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "dateCreated" : "2020-05-20T23:56:07.268",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2020-05-20T23:56:07.268",
+  "id" : "aeiou",
+  "miner" : {
+    "conversationsDateRangeStart" : "2019-06-20",
+    "selfUri" : "aeiou",
+    "language" : "aeiou",
+    "mediaType" : "aeiou",
+    "dateModified" : "2020-04-30T23:56:07.268",
+    "message" : "aeiou",
+    "conversationDataUploaded" : true,
+    "conversationsDateRangeEnd" : "2019-12-20",
+    "queueIds" : [ "aeiou" ],
+    "dateCreated" : "2020-04-29T17:12:06.613",
+    "dateCompleted" : "2020-05-20T23:56:07.268",
+    "dateTriggered" : "2020-04-30T23:56:07.268",
+    "latestDraftVersion" : "",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  }
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter body: (body) Details for creating draft resource 
+
+     - returns: RequestBuilder<Draft> 
+     */
+    open class func postLanguageunderstandingMinerDraftsWithRequestBuilder(minerId: String, body: Draft) -> RequestBuilder<Draft> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/drafts"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Draft>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingMinerExecute(minerId: String, body: MinerExecuteRequest? = nil, completion: @escaping ((_ data: Miner?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingMinerExecuteWithRequestBuilder(minerId: minerId, body: body)
+        requestBuilder.execute { (response: Response<Miner>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+     
+     - POST /api/v2/languageunderstanding/miners/{minerId}/execute
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "conversationsDateRangeStart" : "2019-06-20",
+  "selfUri" : "aeiou",
+  "language" : "aeiou",
+  "mediaType" : "aeiou",
+  "dateModified" : "2020-04-30T23:56:07.268",
+  "message" : "aeiou",
+  "conversationDataUploaded" : true,
+  "conversationsDateRangeEnd" : "2019-12-20",
+  "queueIds" : [ "aeiou" ],
+  "dateCreated" : "2020-04-29T17:12:06.613",
+  "dateCompleted" : "2020-05-20T23:56:07.268",
+  "dateTriggered" : "2020-04-30T23:56:07.268",
+  "latestDraftVersion" : {
+    "intents" : [ {
+      "utterances" : [ "aeiou" ],
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "dateCreated" : "2020-05-20T23:56:07.268",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2020-05-20T23:56:07.268",
+    "id" : "aeiou",
+    "miner" : ""
+  },
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter minerId: (path) Miner ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Miner> 
+     */
+    open class func postLanguageunderstandingMinerExecuteWithRequestBuilder(minerId: String, body: MinerExecuteRequest? = nil) -> RequestBuilder<Miner> {
+        var path = "/api/v2/languageunderstanding/miners/{minerId}/execute"
+        let minerIdPreEscape = "\(minerId)"
+        let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{minerId}", with: minerIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Miner>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a unique miner.
+     
+     - parameter body: (body) Details for creating a new miner resource. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLanguageunderstandingMiners(body: Miner, completion: @escaping ((_ data: Miner?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLanguageunderstandingMinersWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Miner>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a unique miner.
+     
+     - POST /api/v2/languageunderstanding/miners
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "conversationsDateRangeStart" : "2019-06-20",
+  "selfUri" : "aeiou",
+  "language" : "aeiou",
+  "mediaType" : "aeiou",
+  "dateModified" : "2020-04-30T23:56:07.268",
+  "message" : "aeiou",
+  "conversationDataUploaded" : true,
+  "conversationsDateRangeEnd" : "2019-12-20",
+  "queueIds" : [ "aeiou" ],
+  "dateCreated" : "2020-04-29T17:12:06.613",
+  "dateCompleted" : "2020-05-20T23:56:07.268",
+  "dateTriggered" : "2020-04-30T23:56:07.268",
+  "latestDraftVersion" : {
+    "intents" : [ {
+      "utterances" : [ "aeiou" ],
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    } ],
+    "dateCreated" : "2020-05-20T23:56:07.268",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2020-05-20T23:56:07.268",
+    "id" : "aeiou",
+    "miner" : ""
+  },
+  "name" : "aeiou",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter body: (body) Details for creating a new miner resource. 
+
+     - returns: RequestBuilder<Miner> 
+     */
+    open class func postLanguageunderstandingMinersWithRequestBuilder(body: Miner) -> RequestBuilder<Miner> {
+        let path = "/api/v2/languageunderstanding/miners"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Miner>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

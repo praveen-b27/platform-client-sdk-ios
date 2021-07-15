@@ -12,6 +12,7 @@ import Foundation
 public class ViewFilter: Codable {
 
     public enum MediaTypes: String, Codable { 
+        case unknown = "unknown"
         case callback = "callback"
         case chat = "chat"
         case cobrowse = "cobrowse"
@@ -125,6 +126,61 @@ public class ViewFilter: Codable {
         case invalidSchedule = "InvalidSchedule"
         case inProgress = "InProgress"
         case completed = "Completed"
+    }
+    public enum BotMessageTypes: String, Codable { 
+        case unknown = "Unknown"
+        case phone = "Phone"
+        case sms = "SMS"
+        case genesysChatWidget = "GenesysChatWidget"
+        case facebookMessenger = "FacebookMessenger"
+        case weChat = "WeChat"
+        case whatsapp = "Whatsapp"
+        case appleBusinessChat = "AppleBusinessChat"
+        case telegram = "Telegram"
+        case slack = "Slack"
+        case signal = "Signal"
+        case line = "Line"
+        case discord = "Discord"
+        case twitterDirectMessage = "TwitterDirectMessage"
+        case other = "Other"
+    }
+    public enum BotProviderList: String, Codable { 
+        case unknown = "Unknown"
+        case genesys = "Genesys"
+        case amazon = "Amazon"
+        case google = "Google"
+        case nuance = "Nuance"
+    }
+    public enum BotProductList: String, Codable { 
+        case unknown = "Unknown"
+        case genesysDialogEngine = "GenesysDialogEngine"
+        case amazonLex = "AmazonLex"
+        case googleDialogFlow = "GoogleDialogFlow"
+        case googleDialogFlowResell = "GoogleDialogFlowResell"
+        case genesysBotFlow = "GenesysBotFlow"
+        case nuanceDlg = "NuanceDlg"
+        case googleDialogFlowCx = "GoogleDialogFlowCx"
+        case genesysByob = "GenesysByob"
+    }
+    public enum BotRecognitionFailureReasonList: String, Codable { 
+        case unknown = "Unknown"
+        case noInputCollection = "NoInputCollection"
+        case noInputConfirmation = "NoInputConfirmation"
+        case noMatchCollection = "NoMatchCollection"
+        case noMatchConfirmation = "NoMatchConfirmation"
+        case maxWrongMatch = "MaxWrongMatch"
+    }
+    public enum BotResultList: String, Codable { 
+        case unknown = "Unknown"
+        case exitRequestedByUser = "ExitRequestedByUser"
+        case exitRequestedByBot = "ExitRequestedByBot"
+        case exitError = "ExitError"
+        case exitRecognitionFailure = "ExitRecognitionFailure"
+        case disconnectRequestedByUser = "DisconnectRequestedByUser"
+        case disconnectRequestedByBot = "DisconnectRequestedByBot"
+        case disconnectSessionExpired = "DisconnectSessionExpired"
+        case disconnectError = "DisconnectError"
+        case disconnectRecognitionFailure = "DisconnectRecognitionFailure"
     }
     /** The media types are used to filter the view */
     public var mediaTypes: [MediaTypes]?
@@ -338,8 +394,28 @@ public class ViewFilter: Codable {
     public var isNotResponding: Bool?
     /** Indicates filtering for the authenticated chat */
     public var isAuthenticated: Bool?
+    /** The list of bot IDs used to filter bot views */
+    public var botIds: [String]?
+    /** The list of bot versions used to filter bot views */
+    public var botVersions: [String]?
+    /** The list of bot message types used to filter bot views */
+    public var botMessageTypes: [BotMessageTypes]?
+    /** The list of bot providers used to filter bot views */
+    public var botProviderList: [BotProviderList]?
+    /** The list of bot products used to filter bot views */
+    public var botProductList: [BotProductList]?
+    /** The list of bot recognition failure reasons used to filter bot views */
+    public var botRecognitionFailureReasonList: [BotRecognitionFailureReasonList]?
+    /** The list of bot intents used to filter bot views */
+    public var botIntentList: [String]?
+    /** The list of bot final intents used to filter bot views */
+    public var botFinalIntentList: [String]?
+    /** The list of bot slots used to filter bot views */
+    public var botSlotList: [String]?
+    /** The list of bot results used to filter bot views */
+    public var botResultList: [BotResultList]?
 
-    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, answered: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, hasMedia: Bool?, roleIds: [String]?, reportsTos: [String]?, locationIds: [String]?, flowOutTypes: [String]?, providerList: [String]?, callbackNumberList: [String]?, callbackInterval: String?, usedRoutingTypes: [UsedRoutingTypes]?, requestedRoutingTypes: [RequestedRoutingTypes]?, hasAgentAssistId: Bool?, transcripts: [Transcripts]?, transcriptLanguages: [String]?, participantPurposes: [ParticipantPurposes]?, showFirstQueue: Bool?, teamIds: [String]?, filterUsersByTeamIds: [String]?, journeyActionMapIds: [String]?, journeyOutcomeIds: [String]?, journeySegmentIds: [String]?, journeyActionMapTypes: [JourneyActionMapTypes]?, developmentRoleList: [DevelopmentRoleList]?, developmentTypeList: [DevelopmentTypeList]?, developmentStatusList: [DevelopmentStatusList]?, developmentModuleIds: [String]?, developmentActivityOverdue: Bool?, customerSentimentScore: NumericRange?, customerSentimentTrend: NumericRange?, flowTransferTargets: [String]?, developmentName: String?, topicIds: [String]?, externalTags: [String]?, isNotResponding: Bool?, isAuthenticated: Bool?) {
+    public init(mediaTypes: [MediaTypes]?, queueIds: [String]?, skillIds: [String]?, skillGroups: [String]?, languageIds: [String]?, languageGroups: [String]?, directions: [Directions]?, originatingDirections: [OriginatingDirections]?, wrapUpCodes: [String]?, dnisList: [String]?, sessionDnisList: [String]?, filterQueuesByUserIds: [String]?, filterUsersByQueueIds: [String]?, userIds: [String]?, addressTos: [String]?, addressFroms: [String]?, outboundCampaignIds: [String]?, outboundContactListIds: [String]?, contactIds: [String]?, externalContactIds: [String]?, externalOrgIds: [String]?, aniList: [String]?, durationsMilliseconds: [NumericRange]?, acdDurationsMilliseconds: [NumericRange]?, talkDurationsMilliseconds: [NumericRange]?, acwDurationsMilliseconds: [NumericRange]?, handleDurationsMilliseconds: [NumericRange]?, holdDurationsMilliseconds: [NumericRange]?, abandonDurationsMilliseconds: [NumericRange]?, evaluationScore: NumericRange?, evaluationCriticalScore: NumericRange?, evaluationFormIds: [String]?, evaluatedAgentIds: [String]?, evaluatorIds: [String]?, transferred: Bool?, abandoned: Bool?, answered: Bool?, messageTypes: [MessageTypes]?, divisionIds: [String]?, surveyFormIds: [String]?, surveyTotalScore: NumericRange?, surveyNpsScore: NumericRange?, mos: NumericRange?, surveyQuestionGroupScore: NumericRange?, surveyPromoterScore: NumericRange?, surveyFormContextIds: [String]?, conversationIds: [String]?, sipCallIds: [String]?, isEnded: Bool?, isSurveyed: Bool?, surveyScores: [NumericRange]?, promoterScores: [NumericRange]?, isCampaign: Bool?, surveyStatuses: [String]?, conversationProperties: ConversationProperties?, isBlindTransferred: Bool?, isConsulted: Bool?, isConsultTransferred: Bool?, remoteParticipants: [String]?, flowIds: [String]?, flowOutcomeIds: [String]?, flowOutcomeValues: [FlowOutcomeValues]?, flowDestinationTypes: [FlowDestinationTypes]?, flowDisconnectReasons: [FlowDisconnectReasons]?, flowTypes: [FlowTypes]?, flowEntryTypes: [FlowEntryTypes]?, flowEntryReasons: [String]?, flowVersions: [String]?, groupIds: [String]?, hasJourneyCustomerId: Bool?, hasJourneyActionMapId: Bool?, hasJourneyVisitId: Bool?, hasMedia: Bool?, roleIds: [String]?, reportsTos: [String]?, locationIds: [String]?, flowOutTypes: [String]?, providerList: [String]?, callbackNumberList: [String]?, callbackInterval: String?, usedRoutingTypes: [UsedRoutingTypes]?, requestedRoutingTypes: [RequestedRoutingTypes]?, hasAgentAssistId: Bool?, transcripts: [Transcripts]?, transcriptLanguages: [String]?, participantPurposes: [ParticipantPurposes]?, showFirstQueue: Bool?, teamIds: [String]?, filterUsersByTeamIds: [String]?, journeyActionMapIds: [String]?, journeyOutcomeIds: [String]?, journeySegmentIds: [String]?, journeyActionMapTypes: [JourneyActionMapTypes]?, developmentRoleList: [DevelopmentRoleList]?, developmentTypeList: [DevelopmentTypeList]?, developmentStatusList: [DevelopmentStatusList]?, developmentModuleIds: [String]?, developmentActivityOverdue: Bool?, customerSentimentScore: NumericRange?, customerSentimentTrend: NumericRange?, flowTransferTargets: [String]?, developmentName: String?, topicIds: [String]?, externalTags: [String]?, isNotResponding: Bool?, isAuthenticated: Bool?, botIds: [String]?, botVersions: [String]?, botMessageTypes: [BotMessageTypes]?, botProviderList: [BotProviderList]?, botProductList: [BotProductList]?, botRecognitionFailureReasonList: [BotRecognitionFailureReasonList]?, botIntentList: [String]?, botFinalIntentList: [String]?, botSlotList: [String]?, botResultList: [BotResultList]?) {
         
         self.mediaTypes = mediaTypes
         
@@ -552,6 +628,26 @@ public class ViewFilter: Codable {
         self.isNotResponding = isNotResponding
         
         self.isAuthenticated = isAuthenticated
+        
+        self.botIds = botIds
+        
+        self.botVersions = botVersions
+        
+        self.botMessageTypes = botMessageTypes
+        
+        self.botProviderList = botProviderList
+        
+        self.botProductList = botProductList
+        
+        self.botRecognitionFailureReasonList = botRecognitionFailureReasonList
+        
+        self.botIntentList = botIntentList
+        
+        self.botFinalIntentList = botFinalIntentList
+        
+        self.botSlotList = botSlotList
+        
+        self.botResultList = botResultList
         
     }
 

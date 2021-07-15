@@ -28,6 +28,8 @@ public class AvailableTopic: Codable {
     public var requiresPermissions: [String]?
     /** True if the subscribing user must belong to the same division as the topic object ID */
     public var requiresDivisionPermissions: Bool?
+    /** If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met. */
+    public var requiresAnyValidator: Bool?
     /** Whether or not the permissions on this topic are enforced */
     public var enforced: Bool?
     /** Visibility of this topic (Public or Preview) */
@@ -41,7 +43,7 @@ public class AvailableTopic: Codable {
     public var transports: [Transports]?
     public var publicApiTemplateUriPaths: [String]?
 
-    public init(_description: String?, _id: String?, permissionDetails: [PermissionDetails]?, requiresPermissions: [String]?, requiresDivisionPermissions: Bool?, enforced: Bool?, visibility: Visibility?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?, publicApiTemplateUriPaths: [String]?) {
+    public init(_description: String?, _id: String?, permissionDetails: [PermissionDetails]?, requiresPermissions: [String]?, requiresDivisionPermissions: Bool?, requiresAnyValidator: Bool?, enforced: Bool?, visibility: Visibility?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?, publicApiTemplateUriPaths: [String]?) {
         
         self._description = _description
         
@@ -52,6 +54,8 @@ public class AvailableTopic: Codable {
         self.requiresPermissions = requiresPermissions
         
         self.requiresDivisionPermissions = requiresDivisionPermissions
+        
+        self.requiresAnyValidator = requiresAnyValidator
         
         self.enforced = enforced
         
@@ -75,6 +79,7 @@ public class AvailableTopic: Codable {
         case permissionDetails
         case requiresPermissions
         case requiresDivisionPermissions
+        case requiresAnyValidator
         case enforced
         case visibility
         case schema

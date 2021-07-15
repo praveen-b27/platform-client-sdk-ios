@@ -1,13 +1,12 @@
 ---
-title: EntityListing
+title: PagedNamespaceListing
 ---
-## EntityListing
+## PagedNamespaceListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[JSON]**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

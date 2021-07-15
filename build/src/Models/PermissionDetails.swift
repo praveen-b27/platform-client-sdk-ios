@@ -16,6 +16,7 @@ public class PermissionDetails: Codable {
         case requirespermissions = "requiresPermissions"
         case requiresdivisionpermissions = "requiresDivisionPermissions"
         case requiresanydivisionpermissions = "requiresAnyDivisionPermissions"
+        case requiresuserbeconversationparticipant = "requiresUserBeConversationParticipant"
     }
     /** The type of permission requirement */
     public var type: ModelType?

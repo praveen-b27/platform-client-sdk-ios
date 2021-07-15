@@ -201,4 +201,51 @@ open class TokensAPI {
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
 
+    
+    /**
+     
+     Verify user token
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headTokensMe(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = headTokensMeWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Verify user token
+     
+     - HEAD /api/v2/tokens/me
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headTokensMeWithRequestBuilder() -> RequestBuilder<Void> {
+        let path = "/api/v2/tokens/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "HEAD", url: url!, body: body)
+    }
+
 }

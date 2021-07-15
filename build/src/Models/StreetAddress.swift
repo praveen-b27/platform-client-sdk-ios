@@ -17,10 +17,15 @@ public class StreetAddress: Codable {
     public var a1: String?
     /** City or township */
     public var a3: String?
+    /** Number and street */
     public var RD: String?
+    /** House Number */
     public var HNO: String?
+    /** extra location info like suite 300 */
     public var LOC: String?
+    /** Name of the customer */
     public var NAM: String?
+    /** Postal code */
     public var PC: String?
 
     public init(country: String?, a1: String?, a3: String?, RD: String?, HNO: String?, LOC: String?, NAM: String?, PC: String?) {

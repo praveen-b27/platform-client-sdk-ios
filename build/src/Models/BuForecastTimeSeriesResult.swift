@@ -40,6 +40,7 @@ public class BuForecastTimeSeriesResult: Codable {
         case multiLinearRegression = "MultiLinearRegression"
         case dynamicHarmonicRegression = "DynamicHarmonicRegression"
         case theta = "Theta"
+        case ensemble = "Ensemble"
         case other = "Other"
     }
     public enum ForecastType: String, Codable { 

@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOrganizationsLimitsChangerequests**](OrganizationAPI.html#getOrganizationsLimitsChangerequests) | Get the available limit change requests |
 | [**getOrganizationsLimitsDocs**](OrganizationAPI.html#getOrganizationsLimitsDocs) | Get a link to the limit documentation |
 | [**getOrganizationsLimitsNamespace**](OrganizationAPI.html#getOrganizationsLimitsNamespace) | Get the effective limits in a namespace for an organization |
+| [**getOrganizationsLimitsNamespaceDefaults**](OrganizationAPI.html#getOrganizationsLimitsNamespaceDefaults) | Get the default limits in a namespace for an organization |
 | [**getOrganizationsLimitsNamespaces**](OrganizationAPI.html#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
 | [**getOrganizationsMe**](OrganizationAPI.html#getOrganizationsMe) | Get organization. |
 | [**getOrganizationsWhitelist**](OrganizationAPI.html#getOrganizationsWhitelist) | Use PUT /api/v2/organizations/embeddedintegration instead |
@@ -381,13 +382,64 @@ OrganizationAPI.getOrganizationsLimitsNamespace(namespaceName: namespaceName) { 
 
 [**LimitsEntityListing**](LimitsEntityListing.html)
 
+<a name="getOrganizationsLimitsNamespaceDefaults"></a>
+
+# **getOrganizationsLimitsNamespaceDefaults**
+
+
+
+> [LimitsEntityListing](LimitsEntityListing.html) getOrganizationsLimitsNamespaceDefaults(namespaceName)
+
+Get the default limits in a namespace for an organization
+
+
+
+Wraps GET /api/v2/organizations/limits/namespaces/{namespaceName}/defaults  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let namespaceName: String = "" // The namespace to fetch defaults limits for
+
+// Code example
+OrganizationAPI.getOrganizationsLimitsNamespaceDefaults(namespaceName: namespaceName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsLimitsNamespaceDefaults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **namespaceName** | **String**| The namespace to fetch defaults limits for | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LimitsEntityListing**](LimitsEntityListing.html)
+
 <a name="getOrganizationsLimitsNamespaces"></a>
 
 # **getOrganizationsLimitsNamespaces**
 
 
 
-> [LimitsEntityListing](LimitsEntityListing.html) getOrganizationsLimitsNamespaces(pageSize, pageNumber)
+> [PagedNamespaceListing](PagedNamespaceListing.html) getOrganizationsLimitsNamespaces(pageSize, pageNumber)
 
 Get the available limit namespaces
 
@@ -433,7 +485,7 @@ OrganizationAPI.getOrganizationsLimitsNamespaces(pageSize: pageSize, pageNumber:
 
 ### Return type
 
-[**LimitsEntityListing**](LimitsEntityListing.html)
+[**PagedNamespaceListing**](PagedNamespaceListing.html)
 
 <a name="getOrganizationsMe"></a>
 

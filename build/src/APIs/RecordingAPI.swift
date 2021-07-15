@@ -12431,7 +12431,7 @@ open class RecordingAPI {
      Create media retention policy
      
      - POST /api/v2/recording/crossplatform/mediaretentionpolicies
-     - 
+     - Policy does not work retroactively
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -13632,7 +13632,7 @@ open class RecordingAPI {
      Create media retention policy
      
      - POST /api/v2/recording/mediaretentionpolicies
-     - 
+     - Policy does not work retroactively
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -16359,7 +16359,7 @@ open class RecordingAPI {
      Update a media retention policy
      
      - PUT /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId}
-     - 
+     - Policy does not work retroactively
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -17250,7 +17250,7 @@ open class RecordingAPI {
      Update a media retention policy
      
      - PUT /api/v2/recording/mediaretentionpolicies/{policyId}
-     - 
+     - Policy does not work retroactively
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

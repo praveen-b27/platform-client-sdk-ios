@@ -178,7 +178,10 @@ open class TextbotsAPI {
   } ],
   "intentName" : "aeiou",
   "botCorrelationId" : "aeiou",
-  "botState" : "aeiou"
+  "botState" : "aeiou",
+  "nuanceMixDlg" : {
+    "key" : "{}"
+  }
 }}]
      
      - parameter postTextRequest: (body)  

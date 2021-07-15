@@ -113,6 +113,16 @@ title: ViewFilter
 | **externalTags** | **[String]** | The list of external Tags used to filter conversation data | [optional] |
 | **isNotResponding** | **Bool** | Indicates filtering for not responding users | [optional] |
 | **isAuthenticated** | **Bool** | Indicates filtering for the authenticated chat | [optional] |
+| **botIds** | **[String]** | The list of bot IDs used to filter bot views | [optional] |
+| **botVersions** | **[String]** | The list of bot versions used to filter bot views | [optional] |
+| **botMessageTypes** | **[String]** | The list of bot message types used to filter bot views | [optional] |
+| **botProviderList** | **[String]** | The list of bot providers used to filter bot views | [optional] |
+| **botProductList** | **[String]** | The list of bot products used to filter bot views | [optional] |
+| **botRecognitionFailureReasonList** | **[String]** | The list of bot recognition failure reasons used to filter bot views | [optional] |
+| **botIntentList** | **[String]** | The list of bot intents used to filter bot views | [optional] |
+| **botFinalIntentList** | **[String]** | The list of bot final intents used to filter bot views | [optional] |
+| **botSlotList** | **[String]** | The list of bot slots used to filter bot views | [optional] |
+| **botResultList** | **[String]** | The list of bot results used to filter bot views | [optional] |
 {: class="table table-striped"}
 
 

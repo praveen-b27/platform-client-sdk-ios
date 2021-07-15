@@ -14,7 +14,7 @@ public class Leaderboard: Codable {
     /** The targeted division for this leaderboard */
     public var division: Division?
     /** The metric id if the leaderboard is about a specific metric */
-    public var metric: Metric?
+    public var metric: AddressableEntityRef?
     /** Start workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateStartWorkday: Date?
     /** End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
@@ -24,7 +24,7 @@ public class Leaderboard: Codable {
     /** The requesting user&#39;s rank */
     public var userRank: LeaderboardItem?
 
-    public init(division: Division?, metric: Metric?, dateStartWorkday: Date?, dateEndWorkday: Date?, leaders: [LeaderboardItem]?, userRank: LeaderboardItem?) {
+    public init(division: Division?, metric: AddressableEntityRef?, dateStartWorkday: Date?, dateEndWorkday: Date?, leaders: [LeaderboardItem]?, userRank: LeaderboardItem?) {
         
         self.division = division
         

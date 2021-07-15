@@ -75,14 +75,14 @@ public class WorkPlanListItemResponse: Codable {
     public var shifts: [WorkPlanShift]?
     /** Agents in this work plan. Populate with expand=details (defaults to empty list) */
     public var agents: [DeletableUserReference]?
-    /** Version metadata for this work plan */
-    public var metadata: WfmVersionedEntityMetadata?
     /** Number of agents in this work plan.  Populate with expand=agentCount */
     public var agentCount: Int?
+    /** Version metadata for this work plan */
+    public var metadata: WfmVersionedEntityMetadata?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, enabled: Bool?, valid: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumConsecutiveNonWorkingMinutesPerWeek: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, constrainMaximumConsecutiveWorkingDays: Bool?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidMinutesPerPlanningPeriod: Int?, maximumPaidMinutesPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVarianceType: ShiftStartVarianceType?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [WorkPlanShift]?, agents: [DeletableUserReference]?, metadata: WfmVersionedEntityMetadata?, agentCount: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, enabled: Bool?, valid: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumConsecutiveNonWorkingMinutesPerWeek: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, constrainMaximumConsecutiveWorkingDays: Bool?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidMinutesPerPlanningPeriod: Int?, maximumPaidMinutesPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVarianceType: ShiftStartVarianceType?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [WorkPlanShift]?, agents: [DeletableUserReference]?, agentCount: Int?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
         
         self._id = _id
         
@@ -144,9 +144,9 @@ public class WorkPlanListItemResponse: Codable {
         
         self.agents = agents
         
-        self.metadata = metadata
-        
         self.agentCount = agentCount
+        
+        self.metadata = metadata
         
         self.selfUri = selfUri
         
@@ -183,8 +183,8 @@ public class WorkPlanListItemResponse: Codable {
         case shiftStartVariances
         case shifts
         case agents
-        case metadata
         case agentCount
+        case metadata
         case selfUri
     }
 

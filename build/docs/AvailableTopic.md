@@ -12,6 +12,7 @@ title: AvailableTopic
 | **permissionDetails** | [**[PermissionDetails]**](PermissionDetails.html) | Full detailed permissions required to subscribe to the topic | [optional] |
 | **requiresPermissions** | **[String]** | Permissions required to subscribe to the topic | [optional] |
 | **requiresDivisionPermissions** | **Bool** | True if the subscribing user must belong to the same division as the topic object ID | [optional] |
+| **requiresAnyValidator** | **Bool** | If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met. | [optional] |
 | **enforced** | **Bool** | Whether or not the permissions on this topic are enforced | [optional] |
 | **visibility** | **String** | Visibility of this topic (Public or Preview) | [optional] |
 | **schema** | [**[String:JSON]**](JSON.html) |  | [optional] |

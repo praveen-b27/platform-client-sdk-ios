@@ -16,8 +16,8 @@ List of users matching the learning module rule
 | **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
-| **previousUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
+| **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 {: class="table table-striped"}
 

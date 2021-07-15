@@ -1791,29 +1791,7 @@ open class SpeechTextAnalyticsAPI {
   "types" : [ "aeiou" ],
   "pageNumber" : 123,
   "pageSize" : 123,
-  "results" : {
-    "integralNumber" : true,
-    "double" : true,
-    "valueNode" : true,
-    "floatingPointNumber" : true,
-    "bigInteger" : true,
-    "nodeType" : "aeiou",
-    "float" : true,
-    "int" : true,
-    "long" : true,
-    "textual" : true,
-    "missingNode" : true,
-    "pojo" : true,
-    "number" : true,
-    "boolean" : true,
-    "null" : true,
-    "array" : true,
-    "binary" : true,
-    "containerNode" : true,
-    "short" : true,
-    "bigDecimal" : true,
-    "object" : true
-  },
+  "results" : { },
   "aggregations" : ""
 }}]
      

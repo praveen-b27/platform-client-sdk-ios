@@ -1697,7 +1697,7 @@ open class IntegrationsAPI {
      - parameter pageNumber: (query) The page number requested (optional, default to 1)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter sortBy: (query) Root level field name to sort on. (optional)
+     - parameter sortBy: (query) Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
      - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1743,7 +1743,7 @@ open class IntegrationsAPI {
      - parameter pageNumber: (query) The page number requested (optional, default to 1)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter sortBy: (query) Root level field name to sort on. (optional)
+     - parameter sortBy: (query) Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
      - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
 
@@ -1982,6 +1982,384 @@ open class IntegrationsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get a specific botConnector bot, plus versions, for this integration
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The botID for this bot 
+     - parameter version: (query) Specific Version (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBot(integrationId: String, botId: String, version: String? = nil, completion: @escaping ((_ data: BotConnectorBot?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsBotconnectorIntegrationIdBotWithRequestBuilder(integrationId: integrationId, botId: botId, version: version)
+        requestBuilder.execute { (response: Response<BotConnectorBot>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a specific botConnector bot, plus versions, for this integration
+     
+     - GET /api/v2/integrations/botconnector/{integrationId}/bots/{botId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "versions" : [ {
+    "intents" : [ {
+      "slots" : {
+        "key" : {
+          "name" : "aeiou",
+          "type" : "aeiou"
+        }
+      },
+      "name" : "aeiou"
+    } ],
+    "supportedLanguages" : [ "aeiou" ],
+    "version" : "aeiou"
+  } ],
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "botCompositeTag" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The botID for this bot 
+     - parameter version: (query) Specific Version (optional)
+
+     - returns: RequestBuilder<BotConnectorBot> 
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBotWithRequestBuilder(integrationId: String, botId: String, version: String? = nil) -> RequestBuilder<BotConnectorBot> {
+        var path = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let botIdPreEscape = "\(botId)"
+        let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "version": version
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BotConnectorBot>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get a list of bot versions for a bot
+     
+     - parameter integrationId: (path) The integration ID for this bot group 
+     - parameter botId: (path) The botID for this bot 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBotVersions(integrationId: String, botId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotConnectorBotVersionSummaryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsBotconnectorIntegrationIdBotVersionsWithRequestBuilder(integrationId: integrationId, botId: botId, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<BotConnectorBotVersionSummaryEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of bot versions for a bot
+     
+     - GET /api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "botCompositeTag" : "aeiou",
+    "id" : "aeiou",
+    "version" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) The integration ID for this bot group 
+     - parameter botId: (path) The botID for this bot 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+
+     - returns: RequestBuilder<BotConnectorBotVersionSummaryEntityListing> 
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBotVersionsWithRequestBuilder(integrationId: String, botId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<BotConnectorBotVersionSummaryEntityListing> {
+        var path = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let botIdPreEscape = "\(botId)"
+        let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BotConnectorBotVersionSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a list of botConnector bots for this integration
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBots(integrationId: String, completion: @escaping ((_ data: BotList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: integrationId)
+        requestBuilder.execute { (response: Response<BotList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of botConnector bots for this integration
+     
+     - GET /api/v2/integrations/botconnector/{integrationId}/bots
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "chatBots" : [ {
+    "versions" : [ {
+      "intents" : [ {
+        "slots" : {
+          "key" : {
+            "name" : "aeiou",
+            "type" : "aeiou"
+          }
+        },
+        "name" : "aeiou"
+      } ],
+      "supportedLanguages" : [ "aeiou" ],
+      "version" : "aeiou"
+    } ],
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "botCompositeTag" : "aeiou",
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+
+     - returns: RequestBuilder<BotList> 
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: String) -> RequestBuilder<BotList> {
+        var path = "/api/v2/integrations/botconnector/{integrationId}/bots"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BotList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get a summary list of botConnector bots for this integration
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBotsSummaries(integrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotConnectorBotSummaryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsBotconnectorIntegrationIdBotsSummariesWithRequestBuilder(integrationId: integrationId, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<BotConnectorBotSummaryEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a summary list of botConnector bots for this integration
+     
+     - GET /api/v2/integrations/botconnector/{integrationId}/bots/summaries
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "botCompositeTag" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+
+     - returns: RequestBuilder<BotConnectorBotSummaryEntityListing> 
+     */
+    open class func getIntegrationsBotconnectorIntegrationIdBotsSummariesWithRequestBuilder(integrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<BotConnectorBotSummaryEntityListing> {
+        var path = "/api/v2/integrations/botconnector/{integrationId}/bots/summaries"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BotConnectorBotSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -6163,6 +6541,62 @@ open class IntegrationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IntegrationConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Set a list of botConnector bots plus versions for this integration
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+     - parameter botList: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putIntegrationsBotconnectorIntegrationIdBots(integrationId: String, botList: BotList, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = putIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: integrationId, botList: botList)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Set a list of botConnector bots plus versions for this integration
+     
+     - PUT /api/v2/integrations/botconnector/{integrationId}/bots
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter integrationId: (path) The integration ID for this group of bots 
+     - parameter botList: (body)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func putIntegrationsBotconnectorIntegrationIdBotsWithRequestBuilder(integrationId: String, botList: BotList) -> RequestBuilder<Void> {
+        var path = "/api/v2/integrations/botconnector/{integrationId}/bots"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: botList)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

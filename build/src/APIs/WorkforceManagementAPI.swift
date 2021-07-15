@@ -500,6 +500,53 @@ open class WorkforceManagementAPI {
     }
 
     
+    /**
+     
+     Disable generated calendar link for the current user
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementCalendarUrlIcs(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementCalendarUrlIcsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Disable generated calendar link for the current user
+     
+     - DELETE /api/v2/workforcemanagement/calendar/url/ics
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementCalendarUrlIcsWithRequestBuilder() -> RequestBuilder<Void> {
+        let path = "/api/v2/workforcemanagement/calendar/url/ics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -3840,6 +3887,126 @@ open class WorkforceManagementAPI {
     }
 
     
+    
+    
+    /**
+     
+     Get ics formatted calendar based on shareable link
+     
+     - parameter calendarId: (query) The id of the ics-formatted calendar 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementCalendarDataIcs(calendarId: String, completion: @escaping ((_ data: String?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementCalendarDataIcsWithRequestBuilder(calendarId: calendarId)
+        requestBuilder.execute { (response: Response<String>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get ics formatted calendar based on shareable link
+     
+     - GET /api/v2/workforcemanagement/calendar/data/ics
+     - 
+     - examples: [{output=none}]
+     
+     - parameter calendarId: (query) The id of the ics-formatted calendar 
+
+     - returns: RequestBuilder<String> 
+     */
+    open class func getWorkforcemanagementCalendarDataIcsWithRequestBuilder(calendarId: String) -> RequestBuilder<String> {
+        let path = "/api/v2/workforcemanagement/calendar/data/ics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "calendarId": calendarId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get existing calendar link for the current user
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementCalendarUrlIcs(completion: @escaping ((_ data: CalendarUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementCalendarUrlIcsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<CalendarUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get existing calendar link for the current user
+     
+     - GET /api/v2/workforcemanagement/calendar/url/ics
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "calendarUrl" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<CalendarUrlResponse> 
+     */
+    open class func getWorkforcemanagementCalendarUrlIcsWithRequestBuilder() -> RequestBuilder<CalendarUrlResponse> {
+        let path = "/api/v2/workforcemanagement/calendar/url/ics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CalendarUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      
      Retrieves delete job status for historical data imports of the organization
@@ -6013,16 +6180,28 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    public enum IncludeOnly_getWorkforcemanagementManagementunitWorkplan: String { 
+        case agentcount = "agentCount"
+        case agents = "agents"
+        case optionaldays = "optionalDays"
+        case shifts = "shifts"
+        case shiftstartvariances = "shiftStartVariances"
+    }
+
+    
+    
     /**
      
      Get a work plan
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to fetch 
+     - parameter includeOnly: (query) limit response to the specified fields (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId)
+    open class func getWorkforcemanagementManagementunitWorkplan(managementUnitId: String, workPlanId: String, includeOnly: [String]? = nil, completion: @escaping ((_ data: WorkPlan?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: managementUnitId, workPlanId: workPlanId, includeOnly: includeOnly)
         requestBuilder.execute { (response: Response<WorkPlan>?, error) -> Void in
             do {
                 if let e = error {
@@ -6139,15 +6318,17 @@ open class WorkforceManagementAPI {
   "weeklyMaximumPaidMinutes" : 123,
   "name" : "aeiou",
   "minimumDaysOffPerPlanningPeriod" : 123,
-  "constrainMaximumConsecutiveWorkingWeekends" : true
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "agentCount" : 123
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter workPlanId: (path) The ID of the work plan to fetch 
+     - parameter includeOnly: (query) limit response to the specified fields (optional)
 
      - returns: RequestBuilder<WorkPlan> 
      */
-    open class func getWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String) -> RequestBuilder<WorkPlan> {
+    open class func getWorkforcemanagementManagementunitWorkplanWithRequestBuilder(managementUnitId: String, workPlanId: String, includeOnly: [String]? = nil) -> RequestBuilder<WorkPlan> {
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6163,7 +6344,12 @@ open class WorkforceManagementAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "includeOnly": includeOnly
+            
+        ])
 
         let requestBuilder: RequestBuilder<WorkPlan>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -8308,7 +8494,8 @@ open class WorkforceManagementAPI {
   "weeklyMaximumPaidMinutes" : 123,
   "name" : "aeiou",
   "minimumDaysOffPerPlanningPeriod" : 123,
-  "constrainMaximumConsecutiveWorkingWeekends" : true
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "agentCount" : 123
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -10305,6 +10492,74 @@ open class WorkforceManagementAPI {
     }
 
     
+    
+    
+    /**
+     
+     Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+     
+     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementCalendarUrlIcs(language: String? = nil, completion: @escaping ((_ data: CalendarUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementCalendarUrlIcsWithRequestBuilder(language: language)
+        requestBuilder.execute { (response: Response<CalendarUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
+     
+     - POST /api/v2/workforcemanagement/calendar/url/ics
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "calendarUrl" : "aeiou"
+}}]
+     
+     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize default activity code names in the ics-formatted calendar (optional, default to en-US)
+
+     - returns: RequestBuilder<CalendarUrlResponse> 
+     */
+    open class func postWorkforcemanagementCalendarUrlIcsWithRequestBuilder(language: String? = nil) -> RequestBuilder<CalendarUrlResponse> {
+        let path = "/api/v2/workforcemanagement/calendar/url/ics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "language": language
+            
+        ])
+
+        let requestBuilder: RequestBuilder<CalendarUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
     /**
      
      Delete the entries of the historical data imports in the organization
@@ -11600,7 +11855,8 @@ open class WorkforceManagementAPI {
   "weeklyMaximumPaidMinutes" : 123,
   "name" : "aeiou",
   "minimumDaysOffPerPlanningPeriod" : 123,
-  "constrainMaximumConsecutiveWorkingWeekends" : true
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "agentCount" : 123
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
@@ -12084,7 +12340,8 @@ open class WorkforceManagementAPI {
   "weeklyMaximumPaidMinutes" : 123,
   "name" : "aeiou",
   "minimumDaysOffPerPlanningPeriod" : 123,
-  "constrainMaximumConsecutiveWorkingWeekends" : true
+  "constrainMaximumConsecutiveWorkingWeekends" : true,
+  "agentCount" : 123
 }}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 

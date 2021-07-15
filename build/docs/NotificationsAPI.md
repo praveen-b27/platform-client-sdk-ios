@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getNotificationsAvailabletopics**](NotificationsAPI.html#getNotificationsAvailabletopics) | Get available notification topics. |
 | [**getNotificationsChannelSubscriptions**](NotificationsAPI.html#getNotificationsChannelSubscriptions) | The list of all subscriptions for this channel |
 | [**getNotificationsChannels**](NotificationsAPI.html#getNotificationsChannels) | The list of existing channels |
+| [**headNotificationsChannel**](NotificationsAPI.html#headNotificationsChannel) | Verify a channel still exists and is valid |
 | [**postNotificationsChannelSubscriptions**](NotificationsAPI.html#postNotificationsChannelSubscriptions) | Add a list of subscriptions to the existing list of subscriptions |
 | [**postNotificationsChannels**](NotificationsAPI.html#postNotificationsChannels) | Create a new channel |
 | [**putNotificationsChannelSubscriptions**](NotificationsAPI.html#putNotificationsChannelSubscriptions) | Replace the current list of subscriptions with a new list. |
@@ -220,6 +221,57 @@ NotificationsAPI.getNotificationsChannels(includechannels: includechannels) { (r
 ### Return type
 
 [**ChannelEntityListing**](ChannelEntityListing.html)
+
+<a name="headNotificationsChannel"></a>
+
+# **headNotificationsChannel**
+
+
+
+> Bool headNotificationsChannel(channelId)
+
+Verify a channel still exists and is valid
+
+
+
+Wraps HEAD /api/v2/notifications/channels/{channelId}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let channelId: String = "" // Channel ID
+
+// Code example
+NotificationsAPI.headNotificationsChannel(channelId: channelId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("NotificationsAPI.headNotificationsChannel was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **channelId** | **String**| Channel ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+**Bool**
 
 <a name="postNotificationsChannelSubscriptions"></a>
 

@@ -9475,9 +9475,9 @@ open class ArchitectAPI {
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlowsDatatableImportJobs(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+    open class func getFlowsDatatableImportJobs(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DataTableImportEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getFlowsDatatableImportJobsWithRequestBuilder(datatableId: datatableId, pageNumber: pageNumber, pageSize: pageSize)
-        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<DataTableImportEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -9503,16 +9503,55 @@ open class ArchitectAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}" ]
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "owner" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "importMode" : "aeiou",
+    "countRecordsFailed" : 123,
+    "countRecordsUpdated" : 123,
+    "selfUri" : "aeiou",
+    "uploadURI" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "errorInformation" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "countRecordsDeleted" : 123,
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
+    "name" : "aeiou",
+    "id" : "aeiou",
+    "status" : "aeiou"
+  } ],
+  "pageSize" : 123
 }}]
      
      - parameter datatableId: (path) id of datatable 
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter pageSize: (query) Page size (optional, default to 25)
 
-     - returns: RequestBuilder<EntityListing> 
+     - returns: RequestBuilder<DataTableImportEntityListing> 
      */
-    open class func getFlowsDatatableImportJobsWithRequestBuilder(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<EntityListing> {
+    open class func getFlowsDatatableImportJobsWithRequestBuilder(datatableId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<DataTableImportEntityListing> {
         var path = "/api/v2/flows/datatables/{datatableId}/import/jobs"
         let datatableIdPreEscape = "\(datatableId)"
         let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9534,7 +9573,7 @@ open class ArchitectAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DataTableImportEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

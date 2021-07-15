@@ -1072,7 +1072,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let queueId: [String] = [""] // Queue ID(s) to filter assessments by.
 
@@ -1094,7 +1094,7 @@ RoutingAPI.getRoutingAssessments(before: before, after: after, limit: limit, pag
 | ------------- | ------------- | ------------- | ------------- |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **queueId** | [**[String]**](String.html)| Queue ID(s) to filter assessments by. | [optional] |
 {: class="table-striped"}
@@ -1716,7 +1716,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let queueId: [String] = [""] // Comma-separated list of queue Ids to filter by.
 
@@ -1738,7 +1738,7 @@ RoutingAPI.getRoutingPredictors(before: before, after: after, limit: limit, page
 | ------------- | ------------- | ------------- | ------------- |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **queueId** | [**[String]**](String.html)| Comma-separated list of queue Ids to filter by. | [optional] |
 {: class="table-striped"}

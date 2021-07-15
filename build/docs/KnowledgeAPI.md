@@ -276,7 +276,7 @@ let knowledgeBaseId: String = "" // Knowledge base ID
 let languageCode: KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageCategories = KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageCategories.enummember // Language code, format: iso2-LOCALE
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let name: String = "" // Filter to return the categories that starts with the given category name.
 
@@ -300,7 +300,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowle
 | **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **name** | **String**| Filter to return the categories that starts with the given category name. | [optional] |
 {: class="table-striped"}
@@ -452,7 +452,7 @@ let knowledgeBaseId: String = "" // Knowledge base ID
 let languageCode: KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments = KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments.enummember // Language code, format: iso2-LOCALE
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let categories: String = "" // Filter by categories ids, comma separated values expected.
 let title: String = "" // Filter by document title.
@@ -478,7 +478,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowled
 | **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **categories** | **String**| Filter by categories ids, comma separated values expected. | [optional] |
 | **title** | **String**| Filter by document title. | [optional] |
@@ -576,7 +576,7 @@ let knowledgeBaseId: String = "" // Knowledge base ID
 let languageCode: KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings = KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings.enummember // Language code, format: iso2-LOCALE
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let knowledgeDocumentsState: KnowledgeAPI.KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings = KnowledgeAPI.KnowledgeDocumentsState_getKnowledgeKnowledgebaseLanguageTrainings.enummember // Return the training with the specified state of the trained documents.
 
@@ -600,7 +600,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 | **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **knowledgeDocumentsState** | **String**| Return the training with the specified state of the trained documents. | [optional]<br />**Values**: draft ("Draft"), active ("Active"), discarded ("Discarded"), archived ("Archived") |
 {: class="table-striped"}
@@ -638,7 +638,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
-let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize.
+let limit: String = "" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let name: String = "" // Filter by Name.
 let coreLanguage: KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases = KnowledgeAPI.CoreLanguage_getKnowledgeKnowledgebases.enummember // Filter by core language.
@@ -662,7 +662,7 @@ KnowledgeAPI.getKnowledgeKnowledgebases(before: before, after: after, limit: lim
 | ------------- | ------------- | ------------- | ------------- |
 | **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
-| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. | [optional] |
+| **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **name** | **String**| Filter by Name. | [optional] |
 | **coreLanguage** | **String**| Filter by core language. | [optional]<br />**Values**: enUs ("en-US"), deDe ("de-DE") |

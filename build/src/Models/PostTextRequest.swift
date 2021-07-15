@@ -54,11 +54,16 @@ public class PostTextRequest: Codable {
     public var botCorrelationId: String?
     /** If the channels list contains a &#39;Messaging&#39; item and the messaging platform is known, include it here to get accurate analytics */
     public var messagingPlatformType: MessagingPlatformType?
+    /** Provider specific settings, if any */
     public var amazonLexRequest: AmazonLexRequest?
+    /** Provider specific settings, if any */
     public var googleDialogflow: GoogleDialogflowCustomSettings?
+    /** Provider specific settings, if any */
     public var genesysBotConnector: GenesysBotConnector?
+    /** Provider specific settings, if any */
+    public var nuanceMixDlg: NuanceMixDlgSettings?
 
-    public init(botId: String?, botAlias: String?, integrationId: String?, botSessionId: String?, postTextMessage: PostTextMessage?, languageCode: String?, botSessionTimeoutMinutes: Int?, botChannels: [BotChannels]?, botCorrelationId: String?, messagingPlatformType: MessagingPlatformType?, amazonLexRequest: AmazonLexRequest?, googleDialogflow: GoogleDialogflowCustomSettings?, genesysBotConnector: GenesysBotConnector?) {
+    public init(botId: String?, botAlias: String?, integrationId: String?, botSessionId: String?, postTextMessage: PostTextMessage?, languageCode: String?, botSessionTimeoutMinutes: Int?, botChannels: [BotChannels]?, botCorrelationId: String?, messagingPlatformType: MessagingPlatformType?, amazonLexRequest: AmazonLexRequest?, googleDialogflow: GoogleDialogflowCustomSettings?, genesysBotConnector: GenesysBotConnector?, nuanceMixDlg: NuanceMixDlgSettings?) {
         
         self.botId = botId
         
@@ -85,6 +90,8 @@ public class PostTextRequest: Codable {
         self.googleDialogflow = googleDialogflow
         
         self.genesysBotConnector = genesysBotConnector
+        
+        self.nuanceMixDlg = nuanceMixDlg
         
     }
 

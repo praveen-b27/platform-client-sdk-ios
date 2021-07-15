@@ -13,13 +13,13 @@ import Foundation
 public class ScimV2SchemaAttribute: Codable {
 
     public enum ModelType: String, Codable { 
-        case string = "STRING"
-        case boolean = "BOOLEAN"
-        case decimal = "DECIMAL"
-        case integer = "INTEGER"
-        case dateTime = "DATE_TIME"
-        case reference = "REFERENCE"
-        case complex = "COMPLEX"
+        case string = "string"
+        case boolean = "boolean"
+        case decimal = "decimal"
+        case integer = "integer"
+        case datetime = "dateTime"
+        case reference = "reference"
+        case complex = "complex"
     }
     public enum Mutability: String, Codable { 
         case readwrite = "readWrite"
@@ -28,21 +28,21 @@ public class ScimV2SchemaAttribute: Codable {
         case writeonly = "writeOnly"
     }
     public enum Returned: String, Codable { 
-        case always = "ALWAYS"
-        case never = "NEVER"
-        case _default = "DEFAULT"
-        case request = "REQUEST"
+        case always = "always"
+        case never = "never"
+        case _default = "default"
+        case request = "request"
     }
     public enum Uniqueness: String, Codable { 
-        case _none = "NONE"
-        case server = "SERVER"
-        case global = "GLOBAL"
+        case _none = "none"
+        case server = "server"
+        case global = "global"
     }
     public enum ReferenceTypes: String, Codable { 
-        case user = "USER"
-        case group = "GROUP"
-        case external = "EXTERNAL"
-        case uri = "URI"
+        case user = "User"
+        case group = "Group"
+        case external = "external"
+        case uri = "uri"
     }
     /** The name of the attribute. */
     public var name: String?

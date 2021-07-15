@@ -24,24 +24,24 @@ public class ScimError: Codable {
         case invalidvers = "invalidVers"
         case sensitive = "sensitive"
     }
+    /** The list of schemas for the SCIM error. */
+    public var schemas: [String]?
     /** The HTTP status code returned for the SCIM error. */
     public var status: String?
     /** The type of SCIM error when httpStatus is a \&quot;400\&quot; error. */
     public var scimType: ScimType?
     /** The detailed description of the SCIM error. */
     public var detail: String?
-    /** The list of schemas for the SCIM error. */
-    public var schemas: [String]?
 
-    public init(status: String?, scimType: ScimType?, detail: String?, schemas: [String]?) {
+    public init(schemas: [String]?, status: String?, scimType: ScimType?, detail: String?) {
+        
+        self.schemas = schemas
         
         self.status = status
         
         self.scimType = scimType
         
         self.detail = detail
-        
-        self.schemas = schemas
         
     }
 

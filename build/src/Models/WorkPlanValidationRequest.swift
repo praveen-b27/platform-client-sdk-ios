@@ -75,10 +75,12 @@ public class WorkPlanValidationRequest: Codable {
     public var shifts: [WorkPlanShift]?
     /** Agents in this work plan */
     public var agents: [DeletableUserReference]?
+    /** Number of agents in this work plan */
+    public var agentCount: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, enabled: Bool?, valid: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumConsecutiveNonWorkingMinutesPerWeek: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, constrainMaximumConsecutiveWorkingDays: Bool?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidMinutesPerPlanningPeriod: Int?, maximumPaidMinutesPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVarianceType: ShiftStartVarianceType?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [WorkPlanShift]?, agents: [DeletableUserReference]?, selfUri: String?) {
+    public init(_id: String?, name: String?, enabled: Bool?, valid: Bool?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, constrainPaidTimeGranularity: Bool?, paidTimeGranularityMinutes: Int?, constrainMinimumTimeBetweenShifts: Bool?, minimumTimeBetweenShiftsMinutes: Int?, maximumDays: Int?, minimumConsecutiveNonWorkingMinutesPerWeek: Int?, constrainMaximumConsecutiveWorkingWeekends: Bool?, maximumConsecutiveWorkingWeekends: Int?, minimumWorkingDaysPerWeek: Int?, constrainMaximumConsecutiveWorkingDays: Bool?, maximumConsecutiveWorkingDays: Int?, minimumShiftStartDistanceMinutes: Int?, minimumDaysOffPerPlanningPeriod: Int?, maximumDaysOffPerPlanningPeriod: Int?, minimumPaidMinutesPerPlanningPeriod: Int?, maximumPaidMinutesPerPlanningPeriod: Int?, optionalDays: SetWrapperDayOfWeek?, shiftStartVarianceType: ShiftStartVarianceType?, shiftStartVariances: ListWrapperShiftStartVariance?, shifts: [WorkPlanShift]?, agents: [DeletableUserReference]?, agentCount: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -140,6 +142,8 @@ public class WorkPlanValidationRequest: Codable {
         
         self.agents = agents
         
+        self.agentCount = agentCount
+        
         self.selfUri = selfUri
         
     }
@@ -175,6 +179,7 @@ public class WorkPlanValidationRequest: Codable {
         case shiftStartVariances
         case shifts
         case agents
+        case agentCount
         case selfUri
     }
 

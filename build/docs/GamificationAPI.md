@@ -267,7 +267,7 @@ This endpoint does not require any parameters.
 
 
 
-> [Metric](Metric.html) getGamificationMetric(metricId, performanceProfileId)
+> [Metric](Metric.html) getGamificationMetric(metricId, workday, performanceProfileId)
 
 Gamified metric by id
 
@@ -290,10 +290,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let metricId: String = "" // metric Id
+let workday: Date = new Date(...) // The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let performanceProfileId: String = "" // The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given.
 
 // Code example
-GamificationAPI.getGamificationMetric(metricId: metricId, performanceProfileId: performanceProfileId) { (response, error) in
+GamificationAPI.getGamificationMetric(metricId: metricId, workday: workday, performanceProfileId: performanceProfileId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -309,6 +310,7 @@ GamificationAPI.getGamificationMetric(metricId: metricId, performanceProfileId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **String**| metric Id | |
+| **workday** | **Date**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **performanceProfileId** | **String**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional] |
 {: class="table-striped"}
 
@@ -423,7 +425,7 @@ This endpoint does not require any parameters.
 
 
 
-> [GetMetricsResponse](GetMetricsResponse.html) getGamificationMetrics(performanceProfileId)
+> [GetMetricsResponse](GetMetricsResponse.html) getGamificationMetrics(performanceProfileId, workday)
 
 All gamified metrics for a given profile
 
@@ -446,9 +448,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let performanceProfileId: String = "" // The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given.
+let workday: Date = new Date(...) // The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
-GamificationAPI.getGamificationMetrics(performanceProfileId: performanceProfileId) { (response, error) in
+GamificationAPI.getGamificationMetrics(performanceProfileId: performanceProfileId, workday: workday) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -464,6 +467,7 @@ GamificationAPI.getGamificationMetrics(performanceProfileId: performanceProfileI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **performanceProfileId** | **String**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional] |
+| **workday** | **Date**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 {: class="table-striped"}
 
 

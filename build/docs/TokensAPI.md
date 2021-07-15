@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteToken**](TokensAPI.html#deleteToken) | Delete all auth tokens for the specified user. |
 | [**deleteTokensMe**](TokensAPI.html#deleteTokensMe) | Delete auth token used to make the request. |
 | [**getTokensMe**](TokensAPI.html#getTokensMe) | Fetch information about the current token |
+| [**headTokensMe**](TokensAPI.html#headTokensMe) | Verify user token |
 {: class="table-striped"}
 
 <a name="deleteToken"></a>
@@ -155,4 +156,50 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**TokenInfo**](TokenInfo.html)
+
+<a name="headTokensMe"></a>
+
+# **headTokensMe**
+
+
+
+> Void headTokensMe()
+
+Verify user token
+
+
+
+Wraps HEAD /api/v2/tokens/me  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TokensAPI.headTokensMe() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TokensAPI.headTokensMe was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+`nil` (empty response body)
 

@@ -21,10 +21,18 @@ public class Metric: Codable {
     public var objective: Objective?
     /** Performance profile id of this metric */
     public var performanceProfileId: String?
+    /** The linked metric entity reference */
+    public var linkedMetric: AddressableEntityRef?
+    /** The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateUnlinked: Date?
+    /** The source performance profile when this metric is linked */
+    public var sourcePerformanceProfile: PerformanceProfile?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, metricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, metricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
         
         self._id = _id
         
@@ -36,6 +44,14 @@ public class Metric: Codable {
         
         self.performanceProfileId = performanceProfileId
         
+        self.linkedMetric = linkedMetric
+        
+        self.dateCreated = dateCreated
+        
+        self.dateUnlinked = dateUnlinked
+        
+        self.sourcePerformanceProfile = sourcePerformanceProfile
+        
         self.selfUri = selfUri
         
     }
@@ -46,6 +62,10 @@ public class Metric: Codable {
         case metricDefinitionId
         case objective
         case performanceProfileId
+        case linkedMetric
+        case dateCreated
+        case dateUnlinked
+        case sourcePerformanceProfile
         case selfUri
     }
 

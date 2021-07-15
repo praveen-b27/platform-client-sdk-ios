@@ -60,26 +60,8 @@ open class GamificationAPI {
     "id" : "aeiou"
   },
   "metric" : {
-    "metricDefinitionId" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "performanceProfileId" : "aeiou",
-    "objective" : {
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "templateId" : "aeiou",
-      "zones" : [ {
-        "upperLimitValue" : 123,
-        "directionType" : "aeiou",
-        "lowerLimitPoints" : 123,
-        "zoneType" : "aeiou",
-        "upperLimitPoints" : 123,
-        "label" : "aeiou",
-        "lowerLimitValue" : 123
-      } ],
-      "enabled" : true
-    }
+    "id" : "aeiou"
   },
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
   "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
@@ -188,26 +170,8 @@ open class GamificationAPI {
     "id" : "aeiou"
   },
   "metric" : {
-    "metricDefinitionId" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "id" : "aeiou",
-    "performanceProfileId" : "aeiou",
-    "objective" : {
-      "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "id" : "aeiou",
-      "templateId" : "aeiou",
-      "zones" : [ {
-        "upperLimitValue" : 123,
-        "directionType" : "aeiou",
-        "lowerLimitPoints" : 123,
-        "zoneType" : "aeiou",
-        "upperLimitPoints" : 123,
-        "label" : "aeiou",
-        "lowerLimitValue" : 123
-      } ],
-      "enabled" : true
-    }
+    "id" : "aeiou"
   },
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
   "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
@@ -431,16 +395,19 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      
      Gamified metric by id
      
      - parameter metricId: (path) metric Id 
+     - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationMetric(metricId: String, performanceProfileId: String? = nil, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationMetricWithRequestBuilder(metricId: metricId, performanceProfileId: performanceProfileId)
+    open class func getGamificationMetric(metricId: String, workday: Date? = nil, performanceProfileId: String? = nil, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationMetricWithRequestBuilder(metricId: metricId, workday: workday, performanceProfileId: performanceProfileId)
         requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
             do {
                 if let e = error {
@@ -468,9 +435,34 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
+  "linkedMetric" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "sourcePerformanceProfile" : {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "metricOrders" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "maxLeaderboardRankSize" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "active" : true,
+    "id" : "aeiou",
+    "reportingIntervals" : [ {
+      "intervalType" : "aeiou",
+      "intervalValue" : 123
+    } ]
+  },
   "id" : "aeiou",
+  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
@@ -490,11 +482,12 @@ open class GamificationAPI {
 }}]
      
      - parameter metricId: (path) metric Id 
+     - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func getGamificationMetricWithRequestBuilder(metricId: String, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
+    open class func getGamificationMetricWithRequestBuilder(metricId: String, workday: Date? = nil, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
         var path = "/api/v2/gamification/metrics/{metricId}"
         let metricIdPreEscape = "\(metricId)"
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -510,7 +503,9 @@ open class GamificationAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "performance profile id": performanceProfileId
+            "workday": workday?.encodeToJSON(), 
+            
+            "performanceProfileId": performanceProfileId
             
         ])
 
@@ -690,15 +685,18 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      
      All gamified metrics for a given profile
      
      - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
+     - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationMetrics(performanceProfileId: String? = nil, completion: @escaping ((_ data: GetMetricsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationMetricsWithRequestBuilder(performanceProfileId: performanceProfileId)
+    open class func getGamificationMetrics(performanceProfileId: String? = nil, workday: Date? = nil, completion: @escaping ((_ data: GetMetricsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationMetricsWithRequestBuilder(performanceProfileId: performanceProfileId, workday: workday)
         requestBuilder.execute { (response: Response<GetMetricsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -743,10 +741,11 @@ open class GamificationAPI {
 }}]
      
      - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
+     - parameter workday: (query) The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
 
      - returns: RequestBuilder<GetMetricsResponse> 
      */
-    open class func getGamificationMetricsWithRequestBuilder(performanceProfileId: String? = nil) -> RequestBuilder<GetMetricsResponse> {
+    open class func getGamificationMetricsWithRequestBuilder(performanceProfileId: String? = nil, workday: Date? = nil) -> RequestBuilder<GetMetricsResponse> {
         let path = "/api/v2/gamification/metrics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -759,7 +758,9 @@ open class GamificationAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "performance profile id": performanceProfileId
+            "performanceProfileId": performanceProfileId, 
+            
+            "workday": workday?.encodeToJSON()
             
         ])
 
@@ -987,9 +988,34 @@ open class GamificationAPI {
     } ],
     "metric" : {
       "metricDefinitionId" : "aeiou",
+      "linkedMetric" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "sourcePerformanceProfile" : {
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "metricOrders" : [ "aeiou" ],
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "maxLeaderboardRankSize" : 123,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "active" : true,
+        "id" : "aeiou",
+        "reportingIntervals" : [ {
+          "intervalType" : "aeiou",
+          "intervalValue" : 123
+        } ]
+      },
       "id" : "aeiou",
+      "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
       "performanceProfileId" : "aeiou",
       "objective" : {
         "dateStart" : "2000-01-23T04:56:07.000+0000",
@@ -1495,9 +1521,34 @@ open class GamificationAPI {
     } ],
     "metric" : {
       "metricDefinitionId" : "aeiou",
+      "linkedMetric" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
+      "sourcePerformanceProfile" : {
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "metricOrders" : [ "aeiou" ],
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "maxLeaderboardRankSize" : 123,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "active" : true,
+        "id" : "aeiou",
+        "reportingIntervals" : [ {
+          "intervalType" : "aeiou",
+          "intervalValue" : 123
+        } ]
+      },
       "id" : "aeiou",
+      "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
       "performanceProfileId" : "aeiou",
       "objective" : {
         "dateStart" : "2000-01-23T04:56:07.000+0000",
@@ -2886,9 +2937,34 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
+  "linkedMetric" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "sourcePerformanceProfile" : {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "metricOrders" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "maxLeaderboardRankSize" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "active" : true,
+    "id" : "aeiou",
+    "reportingIntervals" : [ {
+      "intervalType" : "aeiou",
+      "intervalValue" : 123
+    } ]
+  },
   "id" : "aeiou",
+  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
@@ -2970,9 +3046,34 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
+  "linkedMetric" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "sourcePerformanceProfile" : {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "metricOrders" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "maxLeaderboardRankSize" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "active" : true,
+    "id" : "aeiou",
+    "reportingIntervals" : [ {
+      "intervalType" : "aeiou",
+      "intervalValue" : 123
+    } ]
+  },
   "id" : "aeiou",
+  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
@@ -3010,7 +3111,7 @@ open class GamificationAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "performance profile id": performanceProfileId
+            "performanceProfileId": performanceProfileId
             
         ])
 

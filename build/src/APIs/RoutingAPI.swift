@@ -1078,7 +1078,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Queue ID(s) to filter assessments by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1137,7 +1137,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Queue ID(s) to filter assessments by. (optional)
 
@@ -2955,7 +2955,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Comma-separated list of queue Ids to filter by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -3015,7 +3015,7 @@ open class RoutingAPI {
      
      - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
-     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize. (optional)
+     - parameter limit: (query) Number of entities to return. Maximum of 200. Deprecated in favour of pageSize, use CursorQueryParameters instead. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter queueId: (query) Comma-separated list of queue Ids to filter by. (optional)
 

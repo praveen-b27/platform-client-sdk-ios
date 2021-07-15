@@ -7702,6 +7702,19 @@ open class OutboundAPI {
   "abandonSeconds" : 1.3579000000000001069366817318950779736042022705078125,
   "maxConfigurableCallsPerAgent" : 123,
   "complianceAbandonRateDenominator" : "aeiou",
+  "automaticTimeZoneMapping" : {
+    "callableWindows" : [ {
+      "mapped" : {
+        "latestCallableTime" : "21:00",
+        "earliestCallableTime" : "08:00"
+      },
+      "unmapped" : {
+        "latestCallableTime" : "21:00",
+        "timeZoneId" : "America/New York",
+        "earliestCallableTime" : "08:00"
+      }
+    } ]
+  },
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",

@@ -572,6 +572,74 @@ open class OrganizationAPI {
     
     
     
+    /**
+     
+     Get the default limits in a namespace for an organization
+     
+     - parameter namespaceName: (path) The namespace to fetch defaults limits for 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsLimitsNamespaceDefaults(namespaceName: String, completion: @escaping ((_ data: LimitsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsLimitsNamespaceDefaultsWithRequestBuilder(namespaceName: namespaceName)
+        requestBuilder.execute { (response: Response<LimitsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the default limits in a namespace for an organization
+     
+     - GET /api/v2/organizations/limits/namespaces/{namespaceName}/defaults
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "value" : 1.3579000000000001069366817318950779736042022705078125,
+    "key" : "aeiou"
+  } ]
+}}]
+     
+     - parameter namespaceName: (path) The namespace to fetch defaults limits for 
+
+     - returns: RequestBuilder<LimitsEntityListing> 
+     */
+    open class func getOrganizationsLimitsNamespaceDefaultsWithRequestBuilder(namespaceName: String) -> RequestBuilder<LimitsEntityListing> {
+        var path = "/api/v2/organizations/limits/namespaces/{namespaceName}/defaults"
+        let namespaceNamePreEscape = "\(namespaceName)"
+        let namespaceNamePostEscape = namespaceNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{namespaceName}", with: namespaceNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LimitsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**
@@ -582,9 +650,9 @@ open class OrganizationAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOrganizationsLimitsNamespaces(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: LimitsEntityListing?,_ error: Error?) -> Void)) {
+    open class func getOrganizationsLimitsNamespaces(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: PagedNamespaceListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
-        requestBuilder.execute { (response: Response<LimitsEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<PagedNamespaceListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -609,19 +677,14 @@ open class OrganizationAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "entities" : [ {
-    "value" : 1.3579000000000001069366817318950779736042022705078125,
-    "key" : "aeiou"
-  } ]
-}}]
+     - examples: [{contentType=application/json, example={ }}]
      
      - parameter pageSize: (query) Page size (optional, default to 100)
      - parameter pageNumber: (query) Page number (optional, default to 1)
 
-     - returns: RequestBuilder<LimitsEntityListing> 
+     - returns: RequestBuilder<PagedNamespaceListing> 
      */
-    open class func getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<LimitsEntityListing> {
+    open class func getOrganizationsLimitsNamespacesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<PagedNamespaceListing> {
         let path = "/api/v2/organizations/limits/namespaces"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -640,7 +703,7 @@ open class OrganizationAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<LimitsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PagedNamespaceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

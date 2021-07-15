@@ -16,6 +16,7 @@ public class AnalyticsSession: Codable {
         case outbound = "outbound"
     }
     public enum MediaType: String, Codable { 
+        case unknown = "unknown"
         case callback = "callback"
         case chat = "chat"
         case cobrowse = "cobrowse"

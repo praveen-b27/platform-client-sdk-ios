@@ -45,10 +45,12 @@ public class ModelResponse: Codable {
     public var responseType: ResponseType?
     /** An optional messaging template definition for responseType.MessagingTemplate. */
     public var messagingTemplate: MessagingTemplate?
+    /** Assets used in the response */
+    public var assets: [AddressableEntityRef]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: Int?, libraries: [DomainEntityRef]?, texts: [ResponseText]?, createdBy: User?, dateCreated: Date?, interactionType: InteractionType?, substitutions: [ResponseSubstitution]?, substitutionsSchema: JsonSchemaDocument?, responseType: ResponseType?, messagingTemplate: MessagingTemplate?, assets: [AddressableEntityRef]?, selfUri: String?) {
         
         self._id = _id
         
@@ -74,6 +76,8 @@ public class ModelResponse: Codable {
         
         self.messagingTemplate = messagingTemplate
         
+        self.assets = assets
+        
         self.selfUri = selfUri
         
     }
@@ -91,6 +95,7 @@ public class ModelResponse: Codable {
         case substitutionsSchema
         case responseType
         case messagingTemplate
+        case assets
         case selfUri
     }
 

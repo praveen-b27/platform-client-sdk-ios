@@ -321,6 +321,81 @@ open class KnowledgeAPI {
     
     
     
+    
+    public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
+        case enUs = "en-US"
+        case deDe = "de-DE"
+    }
+
+    
+    
+    
+    
+    /**
+     
+     Delete import operation
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter importId: (path) Import ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete import operation
+     
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter importId: (path) Import ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode.rawValue)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let importIdPreEscape = "\(importId)"
+        let importIdPostEscape = importIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importId}", with: importIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Get knowledge base
@@ -940,6 +1015,125 @@ open class KnowledgeAPI {
         ])
 
         let requestBuilder: RequestBuilder<DocumentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
+        case enUs = "en-US"
+        case deDe = "de-DE"
+    }
+
+    
+    
+    
+    
+    /**
+     
+     Get import operation report
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter importId: (path) Import ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String, completion: @escaping ((_ data: KnowledgeImport?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId)
+        requestBuilder.execute { (response: Response<KnowledgeImport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get import operation report
+     
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ignoreHeaders" : true,
+  "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "coreLanguage" : "en-us",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "articleCount" : 123,
+    "id" : "aeiou",
+    "published" : true
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "uploadKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "report" : {
+    "validated" : {
+      "success" : 123,
+      "failure" : 123
+    },
+    "totalDocuments" : 123,
+    "imported" : "",
+    "errors" : [ {
+      "line" : 123,
+      "message" : "aeiou"
+    } ]
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "languageCode" : "aeiou",
+  "fileType" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter importId: (path) Import ID 
+
+     - returns: RequestBuilder<KnowledgeImport> 
+     */
+    open class func getKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String) -> RequestBuilder<KnowledgeImport> {
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode.rawValue)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let importIdPreEscape = "\(importId)"
+        let importIdPostEscape = importIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importId}", with: importIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -1773,6 +1967,189 @@ open class KnowledgeAPI {
     
     
     
+    public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
+        case enUs = "en-US"
+        case deDe = "de-DE"
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Start import operation
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter importId: (path) Import ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String, body: ImportStatusRequest, completion: @escaping ((_ data: KnowledgeImport?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeImport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Start import operation
+     
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ignoreHeaders" : true,
+  "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "coreLanguage" : "en-us",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "articleCount" : 123,
+    "id" : "aeiou",
+    "published" : true
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "uploadKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "report" : {
+    "validated" : {
+      "success" : 123,
+      "failure" : 123
+    },
+    "totalDocuments" : 123,
+    "imported" : "",
+    "errors" : [ {
+      "line" : 123,
+      "message" : "aeiou"
+    } ]
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "languageCode" : "aeiou",
+  "fileType" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter importId: (path) Import ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeImport> 
+     */
+    open class func patchKnowledgeKnowledgebaseLanguageDocumentsImportWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport, importId: String, body: ImportStatusRequest) -> RequestBuilder<KnowledgeImport> {
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode.rawValue)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let importIdPreEscape = "\(importId)"
+        let importIdPostEscape = importIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{importId}", with: importIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Creates a presigned URL for uploading a knowledge import file with a set of documents
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeDocumentuploads(body: UploadUrlRequest, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeDocumentuploadsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates a presigned URL for uploading a knowledge import file with a set of documents
+     
+     - POST /api/v2/knowledge/documentuploads
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "aeiou"
+  },
+  "uploadKey" : "aeiou",
+  "url" : "aeiou"
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<UploadUrlResponse> 
+     */
+    open class func postKnowledgeDocumentuploadsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {
+        let path = "/api/v2/knowledge/documentuploads"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageCategories: String { 
         case enUs = "en-US"
         case deDe = "de-DE"
@@ -1997,6 +2374,119 @@ open class KnowledgeAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports: String { 
+        case enUs = "en-US"
+        case deDe = "de-DE"
+    }
+
+    
+    
+    
+    
+    /**
+     
+     Create import operation
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports, body: KnowledgeImport, completion: @escaping ((_ data: KnowledgeImport?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseLanguageDocumentsImportsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeImport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create import operation
+     
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "ignoreHeaders" : true,
+  "knowledgeBase" : {
+    "dateDocumentLastModified" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "faqCount" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "coreLanguage" : "en-us",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "articleCount" : 123,
+    "id" : "aeiou",
+    "published" : true
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "uploadKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "report" : {
+    "validated" : {
+      "success" : 123,
+      "failure" : 123
+    },
+    "totalDocuments" : 123,
+    "imported" : "",
+    "errors" : [ {
+      "line" : 123,
+      "message" : "aeiou"
+    } ]
+  },
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "languageCode" : "aeiou",
+  "fileType" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeImport> 
+     */
+    open class func postKnowledgeKnowledgebaseLanguageDocumentsImportsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports, body: KnowledgeImport) -> RequestBuilder<KnowledgeImport> {
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode.rawValue)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

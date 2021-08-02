@@ -663,8 +663,8 @@ open class IdentityProviderAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthProviderEntityListing> 
@@ -723,13 +723,15 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ADFS> 
@@ -787,13 +789,15 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CustomerInteractionCenter> 
@@ -850,18 +854,20 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
-  "nameIdentifierFormat" : "aeiou",
-  "certificates" : [ "aeiou" ],
   "logoImageData" : "aeiou",
   "selfUri" : "aeiou",
-  "name" : "aeiou",
   "certificate" : "aeiou",
+  "sloBinding" : "aeiou",
+  "endpointCompression" : true,
+  "relyingPartyIdentifier" : "aeiou",
+  "nameIdentifierFormat" : "aeiou",
+  "sloURI" : "aeiou",
+  "certificates" : [ "aeiou" ],
+  "name" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou",
-  "endpointCompression" : true
+  "id" : "aeiou"
 }}]
 
      - returns: RequestBuilder<GenericSAML> 
@@ -920,13 +926,15 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<GSuite> 
@@ -985,13 +993,15 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<IdentityNow> 
@@ -1049,13 +1059,15 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<Okta> 
@@ -1113,13 +1125,15 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OneLogin> 
@@ -1178,13 +1192,15 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<PingIdentity> 
@@ -1303,13 +1319,15 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "autoProvisionUsers" : true,
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<PureEngage> 
@@ -1367,13 +1385,15 @@ open class IdentityProviderAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
 
      - returns: RequestBuilder<Salesforce> 
@@ -1683,13 +1703,15 @@ open class IdentityProviderAPI {
      - examples: [{contentType=application/json, example={
   "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
+  "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "certificate" : "aeiou",
   "disabled" : true,
   "ssoTargetURI" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "sloBinding" : "aeiou"
 }}]
      
      - parameter body: (body) Provider 

@@ -12,32 +12,17 @@ import Foundation
 
 public class ButtonComponent: Codable {
 
-    /** The ID of this component. */
-    public var _id: String?
-    /** Deprecated - Use title instead. */
-    public var text: String?
     /** Text to show inside the button. */
     public var title: String?
     /** The button actions. */
     public var actions: ContentActions?
 
-    public init(_id: String?, text: String?, title: String?, actions: ContentActions?) {
-        
-        self._id = _id
-        
-        self.text = text
+    public init(title: String?, actions: ContentActions?) {
         
         self.title = title
         
         self.actions = actions
         
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case text
-        case title
-        case actions
     }
 
 

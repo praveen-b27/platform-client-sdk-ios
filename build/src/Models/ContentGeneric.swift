@@ -12,8 +12,6 @@ import Foundation
 
 public class ContentGeneric: Codable {
 
-    /** A unique ID assigned to this rich message content. */
-    public var _id: String?
     /** Text to show in the title. */
     public var title: String?
     /** Text to show in the description. */
@@ -27,9 +25,7 @@ public class ContentGeneric: Codable {
     /** An array of component objects. */
     public var components: [ButtonComponent]?
 
-    public init(_id: String?, title: String?, _description: String?, image: String?, video: String?, actions: ContentActions?, components: [ButtonComponent]?) {
-        
-        self._id = _id
+    public init(title: String?, _description: String?, image: String?, video: String?, actions: ContentActions?, components: [ButtonComponent]?) {
         
         self.title = title
         
@@ -46,7 +42,6 @@ public class ContentGeneric: Codable {
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
         case title
         case _description = "description"
         case image

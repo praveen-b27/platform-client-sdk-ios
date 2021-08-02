@@ -26,11 +26,13 @@ public class FlowAggregationQuery: Codable {
         case conversationid = "conversationId"
         case convertedfrom = "convertedFrom"
         case convertedto = "convertedTo"
+        case deliverystatus = "deliveryStatus"
         case direction = "direction"
         case disconnecttype = "disconnectType"
         case divisionid = "divisionId"
         case dnis = "dnis"
         case edgeid = "edgeId"
+        case eligibleagentcount = "eligibleAgentCount"
         case endinglanguage = "endingLanguage"
         case entryreason = "entryReason"
         case entrytype = "entryType"
@@ -96,6 +98,7 @@ public class FlowAggregationQuery: Codable {
         case transfertype = "transferType"
         case usedrouting = "usedRouting"
         case userid = "userId"
+        case waitinginteractioncount = "waitingInteractionCount"
         case wrapupcode = "wrapUpCode"
     }
     public enum Metrics: String, Codable { 

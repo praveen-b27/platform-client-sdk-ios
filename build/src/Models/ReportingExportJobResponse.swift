@@ -88,6 +88,8 @@ public class ReportingExportJobResponse: Codable {
         case scheduledExportsView = "SCHEDULED_EXPORTS_VIEW"
         case topicTrendSummaryView = "TOPIC_TREND_SUMMARY_VIEW"
         case topicTrendDetailView = "TOPIC_TREND_DETAIL_VIEW"
+        case actionMapBlockedConstraintsDetailView = "ACTION_MAP_BLOCKED_CONSTRAINTS_DETAIL_VIEW"
+        case actionMapBlockedConstraintsIntervalDetailView = "ACTION_MAP_BLOCKED_CONSTRAINTS_INTERVAL_DETAIL_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

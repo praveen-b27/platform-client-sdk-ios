@@ -12,6 +12,8 @@ title: GSuite
 | **disabled** | **Bool** |  | [optional] |
 | **issuerURI** | **String** |  | [optional] |
 | **ssoTargetURI** | **String** |  | [optional] |
+| **sloURI** | **String** |  | [optional] |
+| **sloBinding** | **String** |  | [optional] |
 | **certificate** | **String** |  | [optional] |
 | **certificates** | **[String]** |  | [optional] |
 | **relyingPartyIdentifier** | **String** |  | [optional] |

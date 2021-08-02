@@ -421,8 +421,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -651,8 +651,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -1148,8 +1148,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter isArchived: (query) Archive status (optional, default to false)
@@ -1899,8 +1899,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
   "previousUri" : "aeiou",
+  "nextUri" : "aeiou",
   "unfilteredTotal" : 123
 }}]
      

@@ -26,6 +26,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case callbacknumber = "callbackNumber"
         case callbackscheduledtime = "callbackScheduledTime"
         case conference = "conference"
+        case deliverystatus = "deliveryStatus"
         case destinationconversationid = "destinationConversationId"
         case direction = "direction"
         case disconnecttype = "disconnectType"

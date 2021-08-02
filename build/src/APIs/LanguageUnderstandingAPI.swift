@@ -344,6 +344,7 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "engineVersion" : "aeiou",
   "lastPublishedVersion" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
@@ -560,6 +561,7 @@ open class LanguageUnderstandingAPI {
         "type" : "aeiou"
       } ],
       "domain" : {
+        "engineVersion" : "aeiou",
         "lastPublishedVersion" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "selfUri" : "aeiou",
@@ -589,8 +591,8 @@ open class LanguageUnderstandingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -751,6 +753,7 @@ open class LanguageUnderstandingAPI {
       "type" : "aeiou"
     } ],
     "domain" : {
+      "engineVersion" : "aeiou",
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -885,6 +888,7 @@ open class LanguageUnderstandingAPI {
     "type" : "aeiou"
   } ],
   "domain" : {
+    "engineVersion" : "aeiou",
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -1029,6 +1033,7 @@ open class LanguageUnderstandingAPI {
       "type" : "aeiou"
     } ],
     "domain" : {
+      "engineVersion" : "aeiou",
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -1164,6 +1169,7 @@ open class LanguageUnderstandingAPI {
       "type" : "aeiou"
     } ],
     "domain" : {
+      "engineVersion" : "aeiou",
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -1192,8 +1198,8 @@ open class LanguageUnderstandingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter domainId: (path) ID of the NLU domain. 
@@ -1277,6 +1283,7 @@ open class LanguageUnderstandingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "engineVersion" : "aeiou",
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -1335,8 +1342,8 @@ open class LanguageUnderstandingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -2024,6 +2031,7 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "engineVersion" : "aeiou",
   "lastPublishedVersion" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
@@ -2292,6 +2300,7 @@ open class LanguageUnderstandingAPI {
       "type" : "aeiou"
     } ],
     "domain" : {
+      "engineVersion" : "aeiou",
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -2437,6 +2446,7 @@ open class LanguageUnderstandingAPI {
       "type" : "aeiou"
     } ],
     "domain" : {
+      "engineVersion" : "aeiou",
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -2560,6 +2570,7 @@ open class LanguageUnderstandingAPI {
     "type" : "aeiou"
   } ],
   "domain" : {
+    "engineVersion" : "aeiou",
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -2686,6 +2697,7 @@ open class LanguageUnderstandingAPI {
       "type" : "aeiou"
     } ],
     "domain" : {
+      "engineVersion" : "aeiou",
       "lastPublishedVersion" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
@@ -2811,6 +2823,7 @@ open class LanguageUnderstandingAPI {
     "type" : "aeiou"
   } ],
   "domain" : {
+    "engineVersion" : "aeiou",
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -2896,6 +2909,7 @@ open class LanguageUnderstandingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "engineVersion" : "aeiou",
   "lastPublishedVersion" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
@@ -3318,6 +3332,7 @@ open class LanguageUnderstandingAPI {
     "type" : "aeiou"
   } ],
   "domain" : {
+    "engineVersion" : "aeiou",
     "lastPublishedVersion" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",

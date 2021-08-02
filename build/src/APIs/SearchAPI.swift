@@ -1694,8 +1694,8 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -2318,6 +2318,7 @@ open class SearchAPI {
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
         "agentOwned" : true,
+        "waitingInteractionCounts" : [ 123 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -2326,6 +2327,7 @@ open class SearchAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
         "remote" : "aeiou",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "removedSkillIds" : [ "aeiou" ],
@@ -2375,6 +2377,7 @@ open class SearchAPI {
         "journeyActionMapVersion" : 123,
         "mediaBridgeId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "deliveryStatus" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
@@ -2434,6 +2437,7 @@ open class SearchAPI {
         "journeyCustomerSessionId" : "aeiou",
         "sessionId" : "aeiou",
         "journeyActionId" : "aeiou",
+        "eligibleAgentCounts" : [ 123 ],
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
@@ -4188,8 +4192,8 @@ open class SearchAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",

@@ -13,6 +13,69 @@ open class UploadsAPI {
     
     
     
+    /**
+     
+     Creates a presigned URL for uploading a knowledge import file with a set of documents
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeDocumentuploads(body: UploadUrlRequest, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeDocumentuploadsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates a presigned URL for uploading a knowledge import file with a set of documents
+     
+     - POST /api/v2/knowledge/documentuploads
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "aeiou"
+  },
+  "uploadKey" : "aeiou",
+  "url" : "aeiou"
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<UploadUrlResponse> 
+     */
+    open class func postKnowledgeDocumentuploadsWithRequestBuilder(body: UploadUrlRequest) -> RequestBuilder<UploadUrlResponse> {
+        let path = "/api/v2/knowledge/documentuploads"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     /**

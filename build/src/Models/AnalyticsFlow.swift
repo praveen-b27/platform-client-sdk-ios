@@ -32,6 +32,7 @@ public class AnalyticsFlow: Codable {
         case securecall = "SECURECALL"
         case speech = "SPEECH"
         case surveyinvite = "SURVEYINVITE"
+        case voicemail = "VOICEMAIL"
         case workflow = "WORKFLOW"
         case workitem = "WORKITEM"
     }

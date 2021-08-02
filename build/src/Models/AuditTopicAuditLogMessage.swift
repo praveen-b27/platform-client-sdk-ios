@@ -76,6 +76,8 @@ public class AuditTopicAuditLogMessage: Codable {
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"
+        case actionMap = "ActionMap"
+        case actionTemplate = "ActionTemplate"
         case attemptLimits = "AttemptLimits"
         case authOrganization = "AuthOrganization"
         case authUser = "AuthUser"

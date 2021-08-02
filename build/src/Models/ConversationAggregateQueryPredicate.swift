@@ -31,11 +31,13 @@ public class ConversationAggregateQueryPredicate: Codable {
         case conversationid = "conversationId"
         case convertedfrom = "convertedFrom"
         case convertedto = "convertedTo"
+        case deliverystatus = "deliveryStatus"
         case direction = "direction"
         case disconnecttype = "disconnectType"
         case divisionid = "divisionId"
         case dnis = "dnis"
         case edgeid = "edgeId"
+        case eligibleagentcount = "eligibleAgentCount"
         case externalcontactid = "externalContactId"
         case externalmediacount = "externalMediaCount"
         case externalorganizationid = "externalOrganizationId"
@@ -84,6 +86,7 @@ public class ConversationAggregateQueryPredicate: Codable {
         case teamid = "teamId"
         case usedrouting = "usedRouting"
         case userid = "userId"
+        case waitinginteractioncount = "waitingInteractionCount"
         case wrapupcode = "wrapUpCode"
     }
     public enum Operator: String, Codable { 

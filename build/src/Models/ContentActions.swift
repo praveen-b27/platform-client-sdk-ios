@@ -18,22 +18,14 @@ public class ContentActions: Codable {
     public var urlTarget: String?
     /** Text to be sent back in reply when the item is selected. */
     public var textback: String?
-    /** Execute an organization&#39;s specific command. */
-    public var commandName: String?
-    /** Additional context for the command. */
-    public var context: [String:JSON]?
 
-    public init(url: String?, urlTarget: String?, textback: String?, commandName: String?, context: [String:JSON]?) {
+    public init(url: String?, urlTarget: String?, textback: String?) {
         
         self.url = url
         
         self.urlTarget = urlTarget
         
         self.textback = textback
-        
-        self.commandName = commandName
-        
-        self.context = context
         
     }
 

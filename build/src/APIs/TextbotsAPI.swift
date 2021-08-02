@@ -146,22 +146,15 @@ open class TextbotsAPI {
       "generic" : {
         "image" : "aeiou",
         "components" : [ {
-          "id" : "aeiou",
-          "text" : "aeiou",
           "title" : "aeiou",
           "actions" : ""
         } ],
         "description" : "aeiou",
-        "id" : "aeiou",
         "video" : "aeiou",
         "title" : "aeiou",
         "actions" : {
           "urlTarget" : "aeiou",
-          "commandName" : "aeiou",
           "textback" : "aeiou",
-          "context" : {
-            "key" : "{}"
-          },
           "url" : "aeiou"
         }
       },

@@ -25,6 +25,7 @@ public class Flow: Codable {
         case securecall = "SECURECALL"
         case speech = "SPEECH"
         case surveyinvite = "SURVEYINVITE"
+        case voicemail = "VOICEMAIL"
         case workflow = "WORKFLOW"
         case workitem = "WORKITEM"
     }
@@ -42,6 +43,7 @@ public class Flow: Codable {
         case securecall = "SECURECALL"
         case speech = "SPEECH"
         case surveyinvite = "SURVEYINVITE"
+        case voicemail = "VOICEMAIL"
         case workflow = "WORKFLOW"
         case workitem = "WORKITEM"
     }

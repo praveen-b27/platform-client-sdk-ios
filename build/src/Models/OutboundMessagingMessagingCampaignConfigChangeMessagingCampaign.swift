@@ -33,9 +33,10 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
     public var contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?
     public var messagesPerMinute: Int?
     public var smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?
+    public var emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?
     public var errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?
 
-    public init(_id: String?, division: OutboundMessagingMessagingCampaignConfigChangeUriReference?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?, contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?, errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?) {
+    public init(_id: String?, division: OutboundMessagingMessagingCampaignConfigChangeUriReference?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?, contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?, emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?, errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?) {
         
         self._id = _id
         
@@ -67,6 +68,8 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         
         self.smsConfig = smsConfig
         
+        self.emailConfig = emailConfig
+        
         self.errors = errors
         
     }
@@ -87,6 +90,7 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         case contactSorts
         case messagesPerMinute
         case smsConfig
+        case emailConfig
         case errors
     }
 

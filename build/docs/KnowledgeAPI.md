@@ -10,11 +10,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteKnowledgeKnowledgebase**](KnowledgeAPI.html#deleteKnowledgeKnowledgebase) | Delete knowledge base |
 | [**deleteKnowledgeKnowledgebaseLanguageCategory**](KnowledgeAPI.html#deleteKnowledgeKnowledgebaseLanguageCategory) | Delete category |
 | [**deleteKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI.html#deleteKnowledgeKnowledgebaseLanguageDocument) | Delete document |
+| [**deleteKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI.html#deleteKnowledgeKnowledgebaseLanguageDocumentsImport) | Delete import operation |
 | [**getKnowledgeKnowledgebase**](KnowledgeAPI.html#getKnowledgeKnowledgebase) | Get knowledge base |
 | [**getKnowledgeKnowledgebaseLanguageCategories**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageCategories) | Get categories |
 | [**getKnowledgeKnowledgebaseLanguageCategory**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageCategory) | Get category |
 | [**getKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageDocument) | Get document |
 | [**getKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageDocuments) | Get documents |
+| [**getKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageDocumentsImport) | Get import operation report |
 | [**getKnowledgeKnowledgebaseLanguageTraining**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageTraining) | Get training detail |
 | [**getKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageTrainings) | Get all trainings information for a knowledgebase |
 | [**getKnowledgeKnowledgebases**](KnowledgeAPI.html#getKnowledgeKnowledgebases) | Get knowledge bases |
@@ -22,8 +24,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeKnowledgebaseLanguageCategory**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageCategory) | Update category |
 | [**patchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageDocument) | Update document |
 | [**patchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageDocuments) | Update documents collection |
+| [**patchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageDocumentsImport) | Start import operation |
+| [**postKnowledgeDocumentuploads**](KnowledgeAPI.html#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postKnowledgeKnowledgebaseLanguageCategories**](KnowledgeAPI.html#postKnowledgeKnowledgebaseLanguageCategories) | Create new category |
 | [**postKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI.html#postKnowledgeKnowledgebaseLanguageDocuments) | Create document |
+| [**postKnowledgeKnowledgebaseLanguageDocumentsImports**](KnowledgeAPI.html#postKnowledgeKnowledgebaseLanguageDocumentsImports) | Create import operation |
 | [**postKnowledgeKnowledgebaseLanguageTrainingPromote**](KnowledgeAPI.html#postKnowledgeKnowledgebaseLanguageTrainingPromote) | Promote trained documents from draft state to active. |
 | [**postKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI.html#postKnowledgeKnowledgebaseLanguageTrainings) | Trigger training |
 | [**postKnowledgeKnowledgebaseSearch**](KnowledgeAPI.html#postKnowledgeKnowledgebaseSearch) | Search Documents |
@@ -193,6 +198,61 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageDocument(documentId: documentId
 ### Return type
 
 [**KnowledgeDocument**](KnowledgeDocument.html)
+
+<a name="deleteKnowledgeKnowledgebaseLanguageDocumentsImport"></a>
+
+# **deleteKnowledgeKnowledgebaseLanguageDocumentsImport**
+
+
+
+> Void deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId)
+
+Delete import operation
+
+
+
+Wraps DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}  
+
+Requires ALL permissions: 
+
+* knowledge:document:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: KnowledgeAPI.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport = KnowledgeAPI.LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE
+let importId: String = "" // Import ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageDocumentsImport was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
+| **importId** | **String**| Import ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="getKnowledgeKnowledgebase"></a>
 
@@ -489,6 +549,62 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowled
 ### Return type
 
 [**DocumentListing**](DocumentListing.html)
+
+<a name="getKnowledgeKnowledgebaseLanguageDocumentsImport"></a>
+
+# **getKnowledgeKnowledgebaseLanguageDocumentsImport**
+
+
+
+> [KnowledgeImport](KnowledgeImport.html) getKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId)
+
+Get import operation report
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}  
+
+Requires ALL permissions: 
+
+* knowledge:document:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport = KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE
+let importId: String = "" // Import ID
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocumentsImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
+| **importId** | **String**| Import ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeImport**](KnowledgeImport.html)
 
 <a name="getKnowledgeKnowledgebaseLanguageTraining"></a>
 
@@ -900,6 +1016,117 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowl
 
 [**DocumentListing**](DocumentListing.html)
 
+<a name="patchKnowledgeKnowledgebaseLanguageDocumentsImport"></a>
+
+# **patchKnowledgeKnowledgebaseLanguageDocumentsImport**
+
+
+
+> [KnowledgeImport](KnowledgeImport.html) patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId, languageCode, importId, body)
+
+Start import operation
+
+
+
+Wraps PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId}  
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+* knowledge:document:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: KnowledgeAPI.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport = KnowledgeAPI.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE
+let importId: String = "" // Import ID
+let body: ImportStatusRequest = new ImportStatusRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocumentsImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
+| **importId** | **String**| Import ID | |
+| **body** | [**ImportStatusRequest**](ImportStatusRequest.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeImport**](KnowledgeImport.html)
+
+<a name="postKnowledgeDocumentuploads"></a>
+
+# **postKnowledgeDocumentuploads**
+
+
+
+> [UploadUrlResponse](UploadUrlResponse.html) postKnowledgeDocumentuploads(body)
+
+Creates a presigned URL for uploading a knowledge import file with a set of documents
+
+
+
+Wraps POST /api/v2/knowledge/documentuploads  
+
+Requires ALL permissions: 
+
+* knowledge:document:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UploadUrlRequest = new UploadUrlRequest(...) // query
+
+// Code example
+KnowledgeAPI.postKnowledgeDocumentuploads(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeDocumentuploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UploadUrlRequest**](UploadUrlRequest.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse.html)
+
 <a name="postKnowledgeKnowledgebaseLanguageCategories"></a>
 
 # **postKnowledgeKnowledgebaseLanguageCategories**
@@ -1011,6 +1238,62 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: knowle
 ### Return type
 
 [**KnowledgeDocument**](KnowledgeDocument.html)
+
+<a name="postKnowledgeKnowledgebaseLanguageDocumentsImports"></a>
+
+# **postKnowledgeKnowledgebaseLanguageDocumentsImports**
+
+
+
+> [KnowledgeImport](KnowledgeImport.html) postKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId, languageCode, body)
+
+Create import operation
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports  
+
+Requires ALL permissions: 
+
+* knowledge:document:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: KnowledgeAPI.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports = KnowledgeAPI.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports.enummember // Language code, format: iso2-LOCALE
+let body: KnowledgeImport = new KnowledgeImport(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocumentsImports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), deDe ("de-DE") |
+| **body** | [**KnowledgeImport**](KnowledgeImport.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeImport**](KnowledgeImport.html)
 
 <a name="postKnowledgeKnowledgebaseLanguageTrainingPromote"></a>
 

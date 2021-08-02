@@ -25,10 +25,12 @@ public class NluDomain: Codable {
     public var dateCreated: Date?
     /** The date when the NLU domain was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
+    /** The version of the NLU engine to use. */
+    public var engineVersion: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, language: String?, draftVersion: NluDomainVersion?, lastPublishedVersion: NluDomainVersion?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, language: String?, draftVersion: NluDomainVersion?, lastPublishedVersion: NluDomainVersion?, dateCreated: Date?, dateModified: Date?, engineVersion: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -44,6 +46,8 @@ public class NluDomain: Codable {
         
         self.dateModified = dateModified
         
+        self.engineVersion = engineVersion
+        
         self.selfUri = selfUri
         
     }
@@ -56,6 +60,7 @@ public class NluDomain: Codable {
         case lastPublishedVersion
         case dateCreated
         case dateModified
+        case engineVersion
         case selfUri
     }
 

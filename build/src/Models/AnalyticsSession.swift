@@ -11,6 +11,15 @@ import Foundation
 
 public class AnalyticsSession: Codable {
 
+    public enum DeliveryStatus: String, Codable { 
+        case deliveryFailed = "DeliveryFailed"
+        case deliverySuccess = "DeliverySuccess"
+        case failed = "Failed"
+        case queued = "Queued"
+        case read = "Read"
+        case received = "Received"
+        case sent = "Sent"
+    }
     public enum Direction: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -76,6 +85,10 @@ public class AnalyticsSession: Codable {
     public var cobrowseRole: String?
     /** A unique identifier for a PureCloud cobrowse room */
     public var cobrowseRoomId: String?
+    /** The email delivery status */
+    public var deliveryStatus: DeliveryStatus?
+    /** Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var deliveryStatusChangeDate: Date?
     /** The direction of the communication */
     public var direction: Direction?
     /** (Dialer) Analyzer (for example speech.person) */
@@ -86,6 +99,8 @@ public class AnalyticsSession: Codable {
     public var dnis: String?
     /** Unique identifier of the edge device */
     public var edgeId: String?
+    /** Number of eligible agents for each predictive routing attempt */
+    public var eligibleAgentCounts: [Int]?
     /** Type of flow in that occurred when entering ACD. */
     public var flowInType: String?
     /** Type of flow out that occurred when emitting tFlowOut. */
@@ -166,6 +181,8 @@ public class AnalyticsSession: Codable {
     public var videoAddressSelf: String?
     /** A unique identifier for a PureCloud video room */
     public var videoRoomId: String?
+    /** Number of waiting interactions for each predictive routing attempt */
+    public var waitingInteractionCounts: [Int]?
     /** Proposed agents */
     public var proposedAgents: [AnalyticsProposedAgent]?
     /** MediaEndpointStats associated with this session */
@@ -177,7 +194,7 @@ public class AnalyticsSession: Codable {
     /** List of segments for this session */
     public var segments: [AnalyticsConversationSegment]?
 
-    public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, cobrowseRole: String?, cobrowseRoomId: String?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?) {
+    public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, cobrowseRole: String?, cobrowseRoomId: String?, deliveryStatus: DeliveryStatus?, deliveryStatusChangeDate: Date?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, waitingInteractionCounts: [Int]?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?) {
         
         self.activeSkillIds = activeSkillIds
         
@@ -213,6 +230,10 @@ public class AnalyticsSession: Codable {
         
         self.cobrowseRoomId = cobrowseRoomId
         
+        self.deliveryStatus = deliveryStatus
+        
+        self.deliveryStatusChangeDate = deliveryStatusChangeDate
+        
         self.direction = direction
         
         self.dispositionAnalyzer = dispositionAnalyzer
@@ -222,6 +243,8 @@ public class AnalyticsSession: Codable {
         self.dnis = dnis
         
         self.edgeId = edgeId
+        
+        self.eligibleAgentCounts = eligibleAgentCounts
         
         self.flowInType = flowInType
         
@@ -302,6 +325,8 @@ public class AnalyticsSession: Codable {
         self.videoAddressSelf = videoAddressSelf
         
         self.videoRoomId = videoRoomId
+        
+        self.waitingInteractionCounts = waitingInteractionCounts
         
         self.proposedAgents = proposedAgents
         

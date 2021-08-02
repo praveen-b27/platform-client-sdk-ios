@@ -730,6 +730,7 @@ open class ConversationsAPI {
       "monitoredParticipantId" : "aeiou",
       "videoAddressSelf" : "aeiou",
       "agentOwned" : true,
+      "waitingInteractionCounts" : [ 123 ],
       "proposedAgents" : [ {
         "proposedAgentId" : "aeiou",
         "agentRank" : 123
@@ -738,6 +739,7 @@ open class ConversationsAPI {
       "skipEnabled" : true,
       "journeyActionMapId" : "aeiou",
       "remote" : "aeiou",
+      "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
       "roomId" : "aeiou",
       "messageType" : "aeiou",
       "removedSkillIds" : [ "aeiou" ],
@@ -787,6 +789,7 @@ open class ConversationsAPI {
       "journeyActionMapVersion" : 123,
       "mediaBridgeId" : "aeiou",
       "agentAssistantId" : "aeiou",
+      "deliveryStatus" : "aeiou",
       "screenShareRoomId" : "aeiou",
       "assignerId" : "aeiou",
       "outboundContactId" : "aeiou",
@@ -846,6 +849,7 @@ open class ConversationsAPI {
       "journeyCustomerSessionId" : "aeiou",
       "sessionId" : "aeiou",
       "journeyActionId" : "aeiou",
+      "eligibleAgentCounts" : [ 123 ],
       "dispositionName" : "aeiou",
       "scriptId" : "aeiou",
       "selectedAgentId" : "aeiou",
@@ -990,6 +994,7 @@ open class ConversationsAPI {
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
         "agentOwned" : true,
+        "waitingInteractionCounts" : [ 123 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -998,6 +1003,7 @@ open class ConversationsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
         "remote" : "aeiou",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "removedSkillIds" : [ "aeiou" ],
@@ -1047,6 +1053,7 @@ open class ConversationsAPI {
         "journeyActionMapVersion" : 123,
         "mediaBridgeId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "deliveryStatus" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
@@ -1106,6 +1113,7 @@ open class ConversationsAPI {
         "journeyCustomerSessionId" : "aeiou",
         "sessionId" : "aeiou",
         "journeyActionId" : "aeiou",
+        "eligibleAgentCounts" : [ 123 ],
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
@@ -1330,6 +1338,7 @@ open class ConversationsAPI {
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
         "agentOwned" : true,
+        "waitingInteractionCounts" : [ 123 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -1338,6 +1347,7 @@ open class ConversationsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
         "remote" : "aeiou",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "removedSkillIds" : [ "aeiou" ],
@@ -1387,6 +1397,7 @@ open class ConversationsAPI {
         "journeyActionMapVersion" : 123,
         "mediaBridgeId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "deliveryStatus" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
@@ -1446,6 +1457,7 @@ open class ConversationsAPI {
         "journeyCustomerSessionId" : "aeiou",
         "sessionId" : "aeiou",
         "journeyActionId" : "aeiou",
+        "eligibleAgentCounts" : [ 123 ],
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
@@ -1991,8 +2003,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3277,8 +3289,8 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3781,8 +3793,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter communicationType: (query) Call or Chat communication filtering (optional)
@@ -3939,6 +3951,7 @@ open class ConversationsAPI {
     "flaggedReason" : "aeiou",
     "script" : "",
     "consultParticipantId" : "aeiou",
+    "coachedParticipantId" : "aeiou",
     "recordingState" : "aeiou",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
@@ -4626,8 +4639,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallbackConversationEntityListing> 
@@ -4778,6 +4791,7 @@ open class ConversationsAPI {
       "flaggedReason" : "aeiou",
       "script" : "",
       "consultParticipantId" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "recordingState" : "aeiou",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
@@ -4800,8 +4814,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallConversationEntityListing> 
@@ -5515,8 +5529,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size, maximum 50 (optional, default to 25)
@@ -6286,8 +6300,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ChatConversationEntityListing> 
@@ -6758,8 +6772,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CobrowseConversationEntityListing> 
@@ -7108,8 +7122,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -7528,8 +7542,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<EmailConversationEntityListing> 
@@ -8471,8 +8485,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<MessageConversationEntityListing> 
@@ -8627,8 +8641,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8763,8 +8777,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9013,8 +9027,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9265,8 +9279,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9521,8 +9535,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9776,8 +9790,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9993,8 +10007,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter messengerType: (path) Messenger Type 
@@ -10642,8 +10656,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -11866,8 +11880,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -13017,8 +13031,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -14168,8 +14182,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15319,8 +15333,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -16470,8 +16484,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -17929,6 +17943,7 @@ open class ConversationsAPI {
         "monitoredParticipantId" : "aeiou",
         "videoAddressSelf" : "aeiou",
         "agentOwned" : true,
+        "waitingInteractionCounts" : [ 123 ],
         "proposedAgents" : [ {
           "proposedAgentId" : "aeiou",
           "agentRank" : 123
@@ -17937,6 +17952,7 @@ open class ConversationsAPI {
         "skipEnabled" : true,
         "journeyActionMapId" : "aeiou",
         "remote" : "aeiou",
+        "deliveryStatusChangeDate" : "2000-01-23T04:56:07.000+0000",
         "roomId" : "aeiou",
         "messageType" : "aeiou",
         "removedSkillIds" : [ "aeiou" ],
@@ -17986,6 +18002,7 @@ open class ConversationsAPI {
         "journeyActionMapVersion" : 123,
         "mediaBridgeId" : "aeiou",
         "agentAssistantId" : "aeiou",
+        "deliveryStatus" : "aeiou",
         "screenShareRoomId" : "aeiou",
         "assignerId" : "aeiou",
         "outboundContactId" : "aeiou",
@@ -18045,6 +18062,7 @@ open class ConversationsAPI {
         "journeyCustomerSessionId" : "aeiou",
         "sessionId" : "aeiou",
         "journeyActionId" : "aeiou",
+        "eligibleAgentCounts" : [ 123 ],
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
@@ -18917,8 +18935,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -20124,8 +20142,8 @@ open class ConversationsAPI {
           "selfUri" : "aeiou",
           "lastUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -22691,8 +22709,8 @@ open class ConversationsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path)  

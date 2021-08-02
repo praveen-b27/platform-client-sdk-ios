@@ -444,8 +444,8 @@ open class ResponseManagementAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -877,6 +877,7 @@ open class ResponseManagementAPI {
   "version" : 123,
   "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "assets" : [ "" ],
   "texts" : [ {
     "contentType" : "aeiou",
     "content" : "aeiou"
@@ -1265,6 +1266,7 @@ open class ResponseManagementAPI {
     "version" : 123,
     "responseType" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "assets" : [ "" ],
     "texts" : [ {
       "contentType" : "aeiou",
       "content" : "aeiou"
@@ -1549,8 +1551,8 @@ open class ResponseManagementAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter libraryId: (query) Library ID 
@@ -1979,6 +1981,7 @@ open class ResponseManagementAPI {
   "version" : 123,
   "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "assets" : [ "" ],
   "texts" : [ {
     "contentType" : "aeiou",
     "content" : "aeiou"
@@ -2348,6 +2351,7 @@ open class ResponseManagementAPI {
       "version" : 123,
       "responseType" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "assets" : [ "" ],
       "texts" : [ {
         "contentType" : "aeiou",
         "content" : "aeiou"
@@ -2632,8 +2636,8 @@ open class ResponseManagementAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   }
 }}]
      
@@ -3056,6 +3060,7 @@ open class ResponseManagementAPI {
   "version" : 123,
   "responseType" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "assets" : [ "" ],
   "texts" : [ {
     "contentType" : "aeiou",
     "content" : "aeiou"

@@ -39,6 +39,7 @@ public class Document: Codable {
     public var workspace: DomainEntityRef?
     public var createdBy: DomainEntityRef?
     public var uploadedBy: DomainEntityRef?
+    public var sharingUri: String?
     public var contentType: String?
     public var contentLength: Int64?
     public var systemType: SystemType?
@@ -58,12 +59,11 @@ public class Document: Codable {
     /** A list of permitted action rights for the user making the request */
     public var acl: [String]?
     public var sharingStatus: SharingStatus?
-    public var sharingUri: String?
     public var downloadSharingUri: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, changeNumber: Int?, dateCreated: Date?, dateModified: Date?, dateUploaded: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, uploadedBy: DomainEntityRef?, contentType: String?, contentLength: Int64?, systemType: SystemType?, filename: String?, pageCount: Int64?, read: Bool?, callerAddress: String?, receiverAddress: String?, tags: [String]?, tagValues: [TagValue]?, attributes: [DocumentAttribute]?, thumbnails: [DocumentThumbnail]?, uploadStatus: DomainEntityRef?, uploadDestinationUri: String?, uploadMethod: UploadMethod?, lockInfo: LockInfo?, acl: [String]?, sharingStatus: SharingStatus?, sharingUri: String?, downloadSharingUri: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, changeNumber: Int?, dateCreated: Date?, dateModified: Date?, dateUploaded: Date?, contentUri: String?, workspace: DomainEntityRef?, createdBy: DomainEntityRef?, uploadedBy: DomainEntityRef?, sharingUri: String?, contentType: String?, contentLength: Int64?, systemType: SystemType?, filename: String?, pageCount: Int64?, read: Bool?, callerAddress: String?, receiverAddress: String?, tags: [String]?, tagValues: [TagValue]?, attributes: [DocumentAttribute]?, thumbnails: [DocumentThumbnail]?, uploadStatus: DomainEntityRef?, uploadDestinationUri: String?, uploadMethod: UploadMethod?, lockInfo: LockInfo?, acl: [String]?, sharingStatus: SharingStatus?, downloadSharingUri: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -84,6 +84,8 @@ public class Document: Codable {
         self.createdBy = createdBy
         
         self.uploadedBy = uploadedBy
+        
+        self.sharingUri = sharingUri
         
         self.contentType = contentType
         
@@ -121,8 +123,6 @@ public class Document: Codable {
         
         self.sharingStatus = sharingStatus
         
-        self.sharingUri = sharingUri
-        
         self.downloadSharingUri = downloadSharingUri
         
         self.selfUri = selfUri
@@ -140,6 +140,7 @@ public class Document: Codable {
         case workspace
         case createdBy
         case uploadedBy
+        case sharingUri
         case contentType
         case contentLength
         case systemType
@@ -158,7 +159,6 @@ public class Document: Codable {
         case lockInfo
         case acl
         case sharingStatus
-        case sharingUri
         case downloadSharingUri
         case selfUri
     }

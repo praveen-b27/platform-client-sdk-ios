@@ -20,6 +20,7 @@ Contains information about a response.
 | **substitutionsSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | Metadata about the text substitutions in json schema format. | [optional] |
 | **responseType** | **String** | The response type represented by the response. | [optional] |
 | **messagingTemplate** | [**MessagingTemplate**](MessagingTemplate.html) | An optional messaging template definition for responseType.MessagingTemplate. | [optional] |
+| **assets** | [**[AddressableEntityRef]**](AddressableEntityRef.html) | Assets used in the response | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

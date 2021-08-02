@@ -14,6 +14,7 @@ title: FaxDocument
 | **contentUri** | **String** |  | [optional] |
 | **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **createdBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **sharingUri** | **String** |  | [optional] |
 | **contentType** | **String** |  | [optional] |
 | **contentLength** | **Int64** |  | [optional] |
 | **filename** | **String** |  | [optional] |
@@ -22,7 +23,6 @@ title: FaxDocument
 | **callerAddress** | **String** |  | [optional] |
 | **receiverAddress** | **String** |  | [optional] |
 | **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail.html) |  | [optional] |
-| **sharingUri** | **String** |  | [optional] |
 | **downloadSharingUri** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

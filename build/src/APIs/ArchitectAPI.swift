@@ -1479,6 +1479,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -1546,6 +1547,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -1609,6 +1611,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -1686,8 +1689,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2132,6 +2135,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -2195,6 +2199,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -2263,8 +2268,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2367,6 +2372,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -2430,6 +2436,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -2509,8 +2516,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2616,6 +2623,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -2689,6 +2697,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -2769,8 +2778,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -2878,6 +2887,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -2945,6 +2955,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -3008,6 +3019,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -3249,8 +3261,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3341,6 +3353,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -3406,6 +3419,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
@@ -3485,8 +3499,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3695,8 +3709,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3902,8 +3916,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4887,8 +4901,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5292,8 +5306,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5588,8 +5602,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5713,8 +5727,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6428,8 +6442,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6558,8 +6572,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6983,6 +6997,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -7676,6 +7691,7 @@ open class ArchitectAPI {
         "type" : "aeiou"
       } ],
       "domain" : {
+        "engineVersion" : "aeiou",
         "lastPublishedVersion" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "selfUri" : "aeiou",
@@ -8198,6 +8214,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -8501,8 +8518,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -8557,6 +8574,7 @@ open class ArchitectAPI {
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case voicemail = "voicemail"
         case workflow = "workflow"
         case workitem = "workitem"
     }
@@ -8999,6 +9017,7 @@ open class ArchitectAPI {
             "type" : "aeiou"
           } ],
           "domain" : {
+            "engineVersion" : "aeiou",
             "lastPublishedVersion" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "selfUri" : "aeiou",
@@ -9069,8 +9088,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9716,8 +9735,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9780,6 +9799,8 @@ open class ArchitectAPI {
     
     
     
+    
+    
     /**
      
      Retrieve a list of datatables for the org
@@ -9790,10 +9811,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional, default to id)
      - parameter sortOrder: (query) Sort order (optional, default to ascending)
      - parameter divisionId: (query) division ID(s) (optional)
+     - parameter name: (query) Name to filter by (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getFlowsDatatables(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: DataTablesDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getFlowsDatatablesWithRequestBuilder(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId)
+    open class func getFlowsDatatables(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, name: String? = nil, completion: @escaping ((_ data: DataTablesDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatablesWithRequestBuilder(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId, name: name)
         requestBuilder.execute { (response: Response<DataTablesDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -9850,8 +9872,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -9860,10 +9882,11 @@ open class ArchitectAPI {
      - parameter sortBy: (query) Sort by (optional, default to id)
      - parameter sortOrder: (query) Sort order (optional, default to ascending)
      - parameter divisionId: (query) division ID(s) (optional)
+     - parameter name: (query) Name to filter by (optional)
 
      - returns: RequestBuilder<DataTablesDomainEntityListing> 
      */
-    open class func getFlowsDatatablesWithRequestBuilder(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<DataTablesDomainEntityListing> {
+    open class func getFlowsDatatablesWithRequestBuilder(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, name: String? = nil) -> RequestBuilder<DataTablesDomainEntityListing> {
         let path = "/api/v2/flows/datatables"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -9886,7 +9909,9 @@ open class ArchitectAPI {
             
             "sortOrder": sortOrder, 
             
-            "divisionId": divisionId
+            "divisionId": divisionId, 
+            
+            "name": name
             
         ])
 
@@ -9911,6 +9936,7 @@ open class ArchitectAPI {
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case voicemail = "voicemail"
         case workflow = "workflow"
         case workitem = "workitem"
     }
@@ -10042,6 +10068,7 @@ open class ArchitectAPI {
             "type" : "aeiou"
           } ],
           "domain" : {
+            "engineVersion" : "aeiou",
             "lastPublishedVersion" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "selfUri" : "aeiou",
@@ -10364,8 +10391,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -10530,6 +10557,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -11032,8 +11060,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11159,8 +11187,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11924,8 +11952,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12051,8 +12079,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -14108,6 +14136,7 @@ open class ArchitectAPI {
         "type" : "aeiou"
       } ],
       "domain" : {
+        "engineVersion" : "aeiou",
         "lastPublishedVersion" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "selfUri" : "aeiou",
@@ -14807,6 +14836,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -15618,6 +15648,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -16085,6 +16116,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -16904,6 +16936,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -17371,6 +17404,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",
@@ -19542,6 +19576,7 @@ open class ArchitectAPI {
           "type" : "aeiou"
         } ],
         "domain" : {
+          "engineVersion" : "aeiou",
           "lastPublishedVersion" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "selfUri" : "aeiou",

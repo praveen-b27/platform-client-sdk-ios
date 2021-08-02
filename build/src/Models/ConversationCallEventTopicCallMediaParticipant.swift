@@ -98,10 +98,11 @@ public class ConversationCallEventTopicCallMediaParticipant: Codable {
     public var dnis: String?
     public var documentId: String?
     public var monitoredParticipantId: String?
+    public var coachedParticipantId: String?
     public var consultParticipantId: String?
     public var faxStatus: ConversationCallEventTopicFaxStatus?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationCallEventTopicUriReference?, queue: ConversationCallEventTopicUriReference?, team: ConversationCallEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationCallEventTopicErrorBody?, script: ConversationCallEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationCallEventTopicUriReference?, externalOrganization: ConversationCallEventTopicUriReference?, wrapup: ConversationCallEventTopicWrapup?, conversationRoutingData: ConversationCallEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationCallEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: ConversationCallEventTopicUriReference?, ani: String?, dnis: String?, documentId: String?, monitoredParticipantId: String?, consultParticipantId: String?, faxStatus: ConversationCallEventTopicFaxStatus?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: ConversationCallEventTopicUriReference?, queue: ConversationCallEventTopicUriReference?, team: ConversationCallEventTopicUriReference?, attributes: [String:String]?, errorInfo: ConversationCallEventTopicErrorBody?, script: ConversationCallEventTopicUriReference?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: ConversationCallEventTopicUriReference?, externalOrganization: ConversationCallEventTopicUriReference?, wrapup: ConversationCallEventTopicWrapup?, conversationRoutingData: ConversationCallEventTopicConversationRoutingData?, peer: String?, screenRecordingState: String?, flaggedReason: FlaggedReason?, journeyContext: ConversationCallEventTopicJourneyContext?, startAcwTime: Date?, endAcwTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: ConversationCallEventTopicUriReference?, ani: String?, dnis: String?, documentId: String?, monitoredParticipantId: String?, coachedParticipantId: String?, consultParticipantId: String?, faxStatus: ConversationCallEventTopicFaxStatus?) {
         
         self._id = _id
         
@@ -189,6 +190,8 @@ public class ConversationCallEventTopicCallMediaParticipant: Codable {
         
         self.monitoredParticipantId = monitoredParticipantId
         
+        self.coachedParticipantId = coachedParticipantId
+        
         self.consultParticipantId = consultParticipantId
         
         self.faxStatus = faxStatus
@@ -239,6 +242,7 @@ public class ConversationCallEventTopicCallMediaParticipant: Codable {
         case dnis
         case documentId
         case monitoredParticipantId
+        case coachedParticipantId
         case consultParticipantId
         case faxStatus
     }

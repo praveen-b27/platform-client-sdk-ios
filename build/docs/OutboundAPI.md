@@ -1865,6 +1865,7 @@ Requires ANY permissions:
 
 * outbound:campaign:view
 * outbound:messagingCampaign:view
+* outbound:emailCampaign:view
 
 ### Example
 
@@ -1903,7 +1904,7 @@ OutboundAPI.getOutboundCampaignsAll(pageSize: pageSize, pageNumber: pageNumber, 
 | **_id** | [**[String]**](String.html)| Campaign ID(s) | [optional] |
 | **name** | **String**| Campaign name(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
-| **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: sms ("sms"), voice ("voice") |
+| **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice") |
 | **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
@@ -1930,6 +1931,7 @@ Requires ANY permissions:
 
 * outbound:campaign:search
 * outbound:messagingCampaign:search
+* outbound:emailCampaign:search
 
 ### Example
 
@@ -1968,7 +1970,7 @@ OutboundAPI.getOutboundCampaignsAllDivisionviews(pageSize: pageSize, pageNumber:
 | **_id** | [**[String]**](String.html)| Campaign ID(s) | [optional] |
 | **name** | **String**| Campaign name(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
-| **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: sms ("sms"), voice ("voice") |
+| **mediaType** | [**[String]**](String.html)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice") |
 | **sortOrder** | **String**| Sort order | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
 {: class="table-striped"}
 
@@ -3276,6 +3278,7 @@ Wraps GET /api/v2/outbound/messagingcampaigns
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:view
+* outbound:emailCampaign:view
 
 ### Example
 

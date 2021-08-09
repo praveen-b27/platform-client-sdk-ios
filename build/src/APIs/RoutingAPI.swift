@@ -1575,8 +1575,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter domainName: (path) email domain 
@@ -1678,8 +1678,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<InboundDomainEntityListing> 
@@ -1829,8 +1829,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2822,8 +2822,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter messengerType: (query) Messenger Type (optional)
@@ -3610,6 +3610,12 @@ open class RoutingAPI {
     
     
     
+    public enum SortOrder_getRoutingQueueMembers: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+
+    
     
     
     public enum Expand_getRoutingQueueMembers: String { 
@@ -3649,27 +3655,36 @@ open class RoutingAPI {
     
     
     
+    public enum MemberBy_getRoutingQueueMembers: String { 
+        case user = "user"
+        case group = "group"
+    }
+
+    
+    
+    
     
     /**
      
      Get the members of this queue.
      
      - parameter queueId: (path) Queue ID 
-     - parameter pageSize: (query) Page size [max 100] (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter pageNumber: (query)  (optional, default to 1)
+     - parameter pageSize: (query) Max value is 100 (optional, default to 25)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
-     - parameter joined: (query) Filter by joined status (optional)
      - parameter name: (query) Filter by queue member name (optional)
      - parameter profileSkills: (query) Filter by profile skill (optional)
      - parameter skills: (query) Filter by skill (optional)
      - parameter languages: (query) Filter by language (optional)
      - parameter routingStatus: (query) Filter by routing status (optional)
      - parameter presence: (query) Filter by presence (optional)
+     - parameter memberBy: (query) Filter by member type (optional)
+     - parameter joined: (query) Filter by joined status (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueueMembers(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil, completion: @escaping ((_ data: QueueMemberEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueueMembersWithRequestBuilder(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence)
+    open class func getRoutingQueueMembers(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueMembers? = nil, expand: [String]? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil, memberBy: MemberBy_getRoutingQueueMembers? = nil, joined: Bool? = nil, completion: @escaping ((_ data: QueueMemberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueMembersWithRequestBuilder(queueId: queueId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, expand: expand, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence, memberBy: memberBy, joined: joined)
         requestBuilder.execute { (response: Response<QueueMemberEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -3972,26 +3987,27 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
-     - parameter pageSize: (query) Page size [max 100] (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter pageNumber: (query)  (optional, default to 1)
+     - parameter pageSize: (query) Max value is 100 (optional, default to 25)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
-     - parameter joined: (query) Filter by joined status (optional)
      - parameter name: (query) Filter by queue member name (optional)
      - parameter profileSkills: (query) Filter by profile skill (optional)
      - parameter skills: (query) Filter by skill (optional)
      - parameter languages: (query) Filter by language (optional)
      - parameter routingStatus: (query) Filter by routing status (optional)
      - parameter presence: (query) Filter by presence (optional)
+     - parameter memberBy: (query) Filter by member type (optional)
+     - parameter joined: (query) Filter by joined status (optional)
 
      - returns: RequestBuilder<QueueMemberEntityListing> 
      */
-    open class func getRoutingQueueMembersWithRequestBuilder(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil) -> RequestBuilder<QueueMemberEntityListing> {
+    open class func getRoutingQueueMembersWithRequestBuilder(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueMembers? = nil, expand: [String]? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil, memberBy: MemberBy_getRoutingQueueMembers? = nil, joined: Bool? = nil) -> RequestBuilder<QueueMemberEntityListing> {
         var path = "/api/v2/routing/queues/{queueId}/members"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4007,15 +4023,13 @@ open class RoutingAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
             
-            "sortBy": sortBy, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder?.rawValue, 
             
             "expand": expand, 
-            
-            "joined": joined, 
             
             "name": name, 
             
@@ -4027,7 +4041,11 @@ open class RoutingAPI {
             
             "routingStatus": routingStatus, 
             
-            "presence": presence
+            "presence": presence, 
+            
+            "memberBy": memberBy?.rawValue, 
+            
+            "joined": joined
             
         ])
 
@@ -4043,6 +4061,12 @@ open class RoutingAPI {
     
     
     
+    
+    public enum SortOrder_getRoutingQueueUsers: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+
     
     
     
@@ -4089,9 +4113,9 @@ open class RoutingAPI {
      DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
      
      - parameter queueId: (path) Queue ID 
-     - parameter pageSize: (query) Page size [max 100] (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter pageNumber: (query)  (optional, default to 1)
+     - parameter pageSize: (query) Max value is 100 (optional, default to 25)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter joined: (query) Filter by joined status (optional)
      - parameter name: (query) Filter by queue member name (optional)
@@ -4102,8 +4126,8 @@ open class RoutingAPI {
      - parameter presence: (query) Filter by presence (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueueUsers(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil, completion: @escaping ((_ data: QueueMemberEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueueUsersWithRequestBuilder(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence)
+    open class func getRoutingQueueUsers(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueUsers? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil, completion: @escaping ((_ data: QueueMemberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueUsersWithRequestBuilder(queueId: queueId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence)
         requestBuilder.execute { (response: Response<QueueMemberEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4406,14 +4430,14 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
-     - parameter pageSize: (query) Page size [max 100] (optional, default to 25)
-     - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
+     - parameter pageNumber: (query)  (optional, default to 1)
+     - parameter pageSize: (query) Max value is 100 (optional, default to 25)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
      - parameter expand: (query) Which fields, if any, to expand. (optional)
      - parameter joined: (query) Filter by joined status (optional)
      - parameter name: (query) Filter by queue member name (optional)
@@ -4425,7 +4449,7 @@ open class RoutingAPI {
 
      - returns: RequestBuilder<QueueMemberEntityListing> 
      */
-    open class func getRoutingQueueUsersWithRequestBuilder(queueId: String, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil) -> RequestBuilder<QueueMemberEntityListing> {
+    open class func getRoutingQueueUsersWithRequestBuilder(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueUsers? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil) -> RequestBuilder<QueueMemberEntityListing> {
         var path = "/api/v2/routing/queues/{queueId}/users"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4441,11 +4465,11 @@ open class RoutingAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
             
-            "sortBy": sortBy, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder?.rawValue, 
             
             "expand": expand, 
             
@@ -4530,8 +4554,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -4573,6 +4597,12 @@ open class RoutingAPI {
     
     
     
+    public enum SortOrder_getRoutingQueues: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+
+    
     
     
     
@@ -4584,16 +4614,16 @@ open class RoutingAPI {
      
      Get list of queues.
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
-     - parameter name: (query) Name (optional)
-     - parameter _id: (query) ID(s) (optional)
-     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
+     - parameter name: (query) Filter by queue name (optional)
+     - parameter _id: (query) Filter by queue ID(s) (optional)
+     - parameter divisionId: (query) Filter by queue division ID(s) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueues(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, _id: _id, divisionId: divisionId)
+    open class func getRoutingQueues(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId)
         requestBuilder.execute { (response: Response<QueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4745,20 +4775,20 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
-     - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
-     - parameter name: (query) Name (optional)
-     - parameter _id: (query) ID(s) (optional)
-     - parameter divisionId: (query) Division ID(s) (optional)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
+     - parameter name: (query) Filter by queue name (optional)
+     - parameter _id: (query) Filter by queue ID(s) (optional)
+     - parameter divisionId: (query) Filter by queue division ID(s) (optional)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
-    open class func getRoutingQueuesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil) -> RequestBuilder<QueueEntityListing> {
+    open class func getRoutingQueuesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil) -> RequestBuilder<QueueEntityListing> {
         let path = "/api/v2/routing/queues"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4771,11 +4801,11 @@ open class RoutingAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "pageSize": pageSize?.encodeToJSON(), 
-            
             "pageNumber": pageNumber?.encodeToJSON(), 
             
-            "sortBy": sortBy, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortOrder": sortOrder?.rawValue, 
             
             "name": name, 
             
@@ -4985,8 +5015,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 100] (optional, default to 25)
@@ -5219,8 +5249,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size [max value is 500] (optional, default to 25)
@@ -5266,22 +5296,25 @@ open class RoutingAPI {
     
     
     
-    
+    public enum SortOrder_getRoutingQueuesMe: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+
     
     
     /**
      
      Get a paged listing of queues the user is a member of.
      
-     - parameter joined: (query) Joined (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter joined: (query) Filter by joined status. (optional)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueuesMe(joined: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: UserQueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesMeWithRequestBuilder(joined: joined, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getRoutingQueuesMe(pageNumber: Int? = nil, pageSize: Int? = nil, joined: Bool? = nil, sortOrder: SortOrder_getRoutingQueuesMe? = nil, completion: @escaping ((_ data: UserQueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesMeWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, joined: joined, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<UserQueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5433,19 +5466,18 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
-     - parameter joined: (query) Joined (optional)
-     - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
-     - parameter sortOrder: (query) Sort order (optional, default to asc)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter joined: (query) Filter by joined status. (optional)
+     - parameter sortOrder: (query) Note: results are sorted by name. (optional, default to asc)
 
      - returns: RequestBuilder<UserQueueEntityListing> 
      */
-    open class func getRoutingQueuesMeWithRequestBuilder(joined: Bool? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, sortOrder: String? = nil) -> RequestBuilder<UserQueueEntityListing> {
+    open class func getRoutingQueuesMeWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, joined: Bool? = nil, sortOrder: SortOrder_getRoutingQueuesMe? = nil) -> RequestBuilder<UserQueueEntityListing> {
         let path = "/api/v2/routing/queues/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5458,15 +5490,13 @@ open class RoutingAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "joined": joined, 
+            "pageNumber": pageNumber?.encodeToJSON(), 
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON(), 
+            "joined": joined, 
             
-            "sortBy": sortBy, 
-            
-            "sortOrder": sortOrder
+            "sortOrder": sortOrder?.rawValue
             
         ])
 
@@ -5780,8 +5810,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5951,8 +5981,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6829,8 +6859,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
@@ -7155,8 +7185,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7372,8 +7402,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7483,8 +7513,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7591,8 +7621,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -7644,9 +7674,9 @@ open class RoutingAPI {
      - parameter body: (body) Conversation Attributes 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchRoutingConversation(conversationId: String, body: RoutingConversationAttributes, completion: @escaping ((_ data: RoutingConversationAttributes?,_ error: Error?) -> Void)) {
+    open class func patchRoutingConversation(conversationId: String, body: RoutingConversationAttributesRequest, completion: @escaping ((_ data: RoutingConversationAttributesResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = patchRoutingConversationWithRequestBuilder(conversationId: conversationId, body: body)
-        requestBuilder.execute { (response: Response<RoutingConversationAttributes>?, error) -> Void in
+        requestBuilder.execute { (response: Response<RoutingConversationAttributesResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -7667,20 +7697,36 @@ open class RoutingAPI {
      Update attributes of an in-queue conversation
      
      - PATCH /api/v2/routing/conversations/{conversationId}
-     - Returns an object indicating the updated values of all settable attributes.  Supported attributes: priority (each point of priority is equivalent to one minute of time in queue).
+     - Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "skills" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "version" : "aeiou"
+  } ],
+  "language" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "version" : "aeiou"
+  },
   "priority" : 123
 }}]
      
      - parameter conversationId: (path) Conversation ID 
      - parameter body: (body) Conversation Attributes 
 
-     - returns: RequestBuilder<RoutingConversationAttributes> 
+     - returns: RequestBuilder<RoutingConversationAttributesResponse> 
      */
-    open class func patchRoutingConversationWithRequestBuilder(conversationId: String, body: RoutingConversationAttributes) -> RequestBuilder<RoutingConversationAttributes> {
+    open class func patchRoutingConversationWithRequestBuilder(conversationId: String, body: RoutingConversationAttributesRequest) -> RequestBuilder<RoutingConversationAttributesResponse> {
         var path = "/api/v2/routing/conversations/{conversationId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7692,7 +7738,7 @@ open class RoutingAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<RoutingConversationAttributes>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<RoutingConversationAttributesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -7861,88 +7907,6 @@ open class RoutingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
-    }
-
-    
-    
-    
-    
-    
-    /**
-     
-     Request an update of the emails from /replyTo of an outbound domain
-     
-     - parameter domainId: (path) domain ID 
-     - parameter body: (body) domain with emails that need update set 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func patchRoutingEmailOutboundDomain(domainId: String, body: OutboundDomain, completion: @escaping ((_ data: OutboundDomain?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchRoutingEmailOutboundDomainWithRequestBuilder(domainId: domainId, body: body)
-        requestBuilder.execute { (response: Response<OutboundDomain>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     
-     Request an update of the emails from /replyTo of an outbound domain
-     
-     - PATCH /api/v2/routing/email/outbound/domains/{domainId}
-     - 
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "cnameVerificationResult" : {
-    "records" : [ {
-      "name" : "aeiou",
-      "type" : "aeiou",
-      "value" : "aeiou"
-    } ],
-    "status" : "aeiou"
-  },
-  "dkimVerificationResult" : "",
-  "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "id" : "aeiou",
-  "replyToEmail" : "",
-  "fromEmail" : {
-    "name" : "aeiou",
-    "email" : "aeiou"
-  }
-}}]
-     
-     - parameter domainId: (path) domain ID 
-     - parameter body: (body) domain with emails that need update set 
-
-     - returns: RequestBuilder<OutboundDomain> 
-     */
-    open class func patchRoutingEmailOutboundDomainWithRequestBuilder(domainId: String, body: OutboundDomain) -> RequestBuilder<OutboundDomain> {
-        var path = "/api/v2/routing/email/outbound/domains/{domainId}"
-        let domainIdPreEscape = "\(domainId)"
-        let domainIdPostEscape = domainIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{domainId}", with: domainIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<OutboundDomain>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -8410,8 +8374,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -8816,8 +8780,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter queueId: (path) Queue ID 
@@ -9248,8 +9212,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9414,8 +9378,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9496,8 +9460,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -12782,8 +12746,8 @@ open class RoutingAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

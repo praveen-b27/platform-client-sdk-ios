@@ -1067,16 +1067,31 @@ open class SpeechTextAnalyticsAPI {
     
     
     
+    
+    public enum State_getSpeechandtextanalyticsTopics: String { 
+        case latest = "latest"
+        case published = "published"
+    }
+
+    
+    
+    
+    
+    
+    
     /**
      
      Get the list of Speech & Text Analytics topics
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter state: (query) Topic state (optional)
+     - parameter name: (query) Case insensitive partial name to filter by (optional)
+     - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsTopics(nextPage: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: TopicsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize)
+    open class func getSpeechandtextanalyticsTopics(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, completion: @escaping ((_ data: TopicsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids)
         requestBuilder.execute { (response: Response<TopicsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1129,10 +1144,13 @@ open class SpeechTextAnalyticsAPI {
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional, default to 20)
+     - parameter state: (query) Topic state (optional)
+     - parameter name: (query) Case insensitive partial name to filter by (optional)
+     - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
 
      - returns: RequestBuilder<TopicsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil) -> RequestBuilder<TopicsEntityListing> {
+    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil) -> RequestBuilder<TopicsEntityListing> {
         let path = "/api/v2/speechandtextanalytics/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1147,7 +1165,13 @@ open class SpeechTextAnalyticsAPI {
             
             "nextPage": nextPage, 
             
-            "pageSize": pageSize?.encodeToJSON()
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "state": state?.rawValue, 
+            
+            "name": name, 
+            
+            "ids": ids
             
         ])
 

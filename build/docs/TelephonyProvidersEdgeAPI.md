@@ -93,7 +93,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesTrunks**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesTrunks) | Get the list of available trunks. |
 | [**getTelephonyProvidersEdgesTrunksMetrics**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesTrunksMetrics) | Get the metrics for a list of trunks. |
 | [**getTelephonyProvidersEdgesTrunkswithrecording**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesTrunkswithrecording) | Get Counts of trunks that have recording disabled or enabled |
-| [**patchTelephonyProvidersEdgesAutoscalinggroupCapacity**](TelephonyProvidersEdgeAPI.html#patchTelephonyProvidersEdgesAutoscalinggroupCapacity) | Scales the ASG to match the desired capacity |
 | [**postTelephonyProvidersEdgeDiagnosticNslookup**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeDiagnosticNslookup) | Nslookup request command to collect networking-related information from an Edge for a target IP or host. |
 | [**postTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeDiagnosticPing) | Ping Request command to collect networking-related information from an Edge for a target IP or host. |
 | [**postTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeAPI.html#postTelephonyProvidersEdgeDiagnosticRoute) | Route request command to collect networking-related information from an Edge for a target IP or host. |
@@ -507,7 +506,7 @@ TelephonyProvidersEdgeAPI.deleteTelephonyProvidersEdgesExtensionpool(extensionPo
 
 Delete Outbound Route
 
-
+This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
 
 Wraps DELETE /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
 
@@ -3328,7 +3327,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesMetrics(edgeIds: edgeIds) { 
 
 Get outbound route
 
-
+This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
 
 Wraps GET /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
 
@@ -4840,61 +4839,6 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesTrunkswithrecording(trunkTyp
 
 [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html)
 
-<a name="patchTelephonyProvidersEdgesAutoscalinggroupCapacity"></a>
-
-# **patchTelephonyProvidersEdgesAutoscalinggroupCapacity**
-
-
-
-> [ScaleASGResponse](ScaleASGResponse.html) patchTelephonyProvidersEdgesAutoscalinggroupCapacity(asgId, body)
-
-Scales the ASG to match the desired capacity
-
-
-
-Wraps PATCH /api/v2/telephony/providers/edges/autoscalinggroups/{asgId}/capacity  
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-* internal:edge:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let asgId: String = "" // Id of the asg that is to be scaled
-let body: AsgScaleRequest = new AsgScaleRequest(...) // AsgScaleRequest
-
-// Code example
-TelephonyProvidersEdgeAPI.patchTelephonyProvidersEdgesAutoscalinggroupCapacity(asgId: asgId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.patchTelephonyProvidersEdgesAutoscalinggroupCapacity was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **asgId** | **String**| Id of the asg that is to be scaled | |
-| **body** | [**AsgScaleRequest**](AsgScaleRequest.html)| AsgScaleRequest | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ScaleASGResponse**](ScaleASGResponse.html)
-
 <a name="postTelephonyProvidersEdgeDiagnosticNslookup"></a>
 
 # **postTelephonyProvidersEdgeDiagnosticNslookup**
@@ -5808,7 +5752,7 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesExtensionpools(body: body) 
 
 Create outbound rule
 
-
+This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
 
 Wraps POST /api/v2/telephony/providers/edges/outboundroutes  
 
@@ -6821,7 +6765,7 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesExtensionpool(extensionPoolI
 
 Update outbound route
 
-
+This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
 
 Wraps PUT /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}  
 

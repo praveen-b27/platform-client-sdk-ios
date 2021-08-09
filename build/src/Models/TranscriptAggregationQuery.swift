@@ -32,6 +32,7 @@ public class TranscriptAggregationQuery: Codable {
     public enum Metrics: String, Codable { 
         case ntopiccommunications = "nTopicCommunications"
         case ocustomersentiment = "oCustomerSentiment"
+        case osentimentscore = "oSentimentScore"
     }
     public enum AlternateTimeDimension: String, Codable { 
         case eventtime = "eventTime"

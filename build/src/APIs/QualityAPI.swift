@@ -688,8 +688,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -1592,8 +1592,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -2454,8 +2454,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -3198,8 +3198,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -4184,8 +4184,8 @@ open class QualityAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "previousUri" : "aeiou",
-              "nextUri" : "aeiou"
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4434,8 +4434,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter calibratorId: (query) user id of calibrator 
@@ -4843,8 +4843,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -5525,8 +5525,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -5910,8 +5910,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -6353,8 +6353,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -7768,8 +7768,8 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "lastUri" : "aeiou",
         "pageSize" : 123,
-        "previousUri" : "aeiou",
-        "nextUri" : "aeiou"
+        "nextUri" : "aeiou",
+        "previousUri" : "aeiou"
       },
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -8072,8 +8072,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8500,8 +8500,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8607,8 +8607,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -8729,8 +8729,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8773,8 +8773,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -8882,8 +8882,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8926,8 +8926,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9024,8 +9024,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -9149,8 +9149,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9193,8 +9193,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -9305,8 +9305,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9349,8 +9349,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9448,8 +9448,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -9569,8 +9569,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9611,8 +9611,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -9721,8 +9721,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9763,8 +9763,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9866,8 +9866,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9908,8 +9908,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) A comma-delimited list of valid survey form ids 
@@ -9993,8 +9993,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10035,8 +10035,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter contextId: (query) A comma-delimited list of valid survey form context ids 
@@ -10115,8 +10115,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -10240,8 +10240,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10284,8 +10284,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10370,8 +10370,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -10495,8 +10495,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10539,8 +10539,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10626,8 +10626,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -10750,8 +10750,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10792,8 +10792,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10881,8 +10881,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -11324,8 +11324,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -11902,8 +11902,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -12042,8 +12042,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -12955,8 +12955,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -13853,8 +13853,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -14387,8 +14387,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14493,8 +14493,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14600,8 +14600,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14704,8 +14704,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14810,8 +14810,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14917,8 +14917,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -15727,8 +15727,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "previousUri" : "aeiou",
-            "nextUri" : "aeiou"
+            "nextUri" : "aeiou",
+            "previousUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -16626,8 +16626,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -17009,8 +17009,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -17122,8 +17122,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -17236,8 +17236,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "previousUri" : "aeiou",
-    "nextUri" : "aeiou"
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -17346,8 +17346,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "previousUri" : "aeiou",
-      "nextUri" : "aeiou"
+      "nextUri" : "aeiou",
+      "previousUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",

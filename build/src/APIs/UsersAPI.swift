@@ -849,8 +849,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -950,8 +950,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1634,8 +1634,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3522,8 +3522,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4621,8 +4621,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4824,8 +4824,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4932,8 +4932,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6089,8 +6089,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6496,8 +6496,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6676,8 +6676,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -6862,8 +6862,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -9242,8 +9242,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9408,8 +9408,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9490,8 +9490,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9821,8 +9821,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter body: (body) Users 
@@ -12496,8 +12496,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

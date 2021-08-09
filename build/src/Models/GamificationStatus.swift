@@ -15,12 +15,16 @@ public class GamificationStatus: Codable {
     public var isActive: Bool?
     /** Gamification start date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateStart: Date?
+    /** Automatic assignment of users to the default profile */
+    public var automaticUserAssignment: Bool?
 
-    public init(isActive: Bool?, dateStart: Date?) {
+    public init(isActive: Bool?, dateStart: Date?, automaticUserAssignment: Bool?) {
         
         self.isActive = isActive
         
         self.dateStart = dateStart
+        
+        self.automaticUserAssignment = automaticUserAssignment
         
     }
 

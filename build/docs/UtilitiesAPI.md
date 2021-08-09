@@ -10,6 +10,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getDate**](UtilitiesAPI.html#getDate) | Get the current system date/time |
 | [**getIpranges**](UtilitiesAPI.html#getIpranges) | Get public ip address ranges for PureCloud |
 | [**getTimezones**](UtilitiesAPI.html#getTimezones) | Get time zones list |
+| [**getUploadsV1Publicasset**](UtilitiesAPI.html#getUploadsV1Publicasset) | 301 redirect. |
+| [**getWebdeploymentsV1SubResources**](UtilitiesAPI.html#getWebdeploymentsV1SubResources) | 301 redirect. |
 | [**postCertificateDetails**](UtilitiesAPI.html#postCertificateDetails) | Returns the information about an X509 PEM encoded certificate or certificate chain. |
 {: class="table-striped"}
 
@@ -159,6 +161,98 @@ UtilitiesAPI.getTimezones(pageSize: pageSize, pageNumber: pageNumber) { (respons
 ### Return type
 
 [**TimeZoneEntityListing**](TimeZoneEntityListing.html)
+
+<a name="getUploadsV1Publicasset"></a>
+
+# **getUploadsV1Publicasset**
+
+
+
+> Void getUploadsV1Publicasset()
+
+301 redirect.
+
+
+
+Wraps GET /uploads/v1/publicassets/{subResources}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UtilitiesAPI.getUploadsV1Publicasset() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UtilitiesAPI.getUploadsV1Publicasset was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="getWebdeploymentsV1SubResources"></a>
+
+# **getWebdeploymentsV1SubResources**
+
+
+
+> Void getWebdeploymentsV1SubResources()
+
+301 redirect.
+
+
+
+Wraps GET /webdeployments/v1/{subResources}  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UtilitiesAPI.getWebdeploymentsV1SubResources() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UtilitiesAPI.getWebdeploymentsV1SubResources was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postCertificateDetails"></a>
 

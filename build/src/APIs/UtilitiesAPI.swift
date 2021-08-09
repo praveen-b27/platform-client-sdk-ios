@@ -182,8 +182,8 @@ open class UtilitiesAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -211,6 +211,94 @@ open class UtilitiesAPI {
         ])
 
         let requestBuilder: RequestBuilder<TimeZoneEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     301 redirect.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUploadsV1Publicasset(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUploadsV1PublicassetWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     301 redirect.
+     
+     - GET /uploads/v1/publicassets/{subResources}
+     - 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getUploadsV1PublicassetWithRequestBuilder() -> RequestBuilder<Void> {
+        let path = "/uploads/v1/publicassets/{subResources}"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     301 redirect.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWebdeploymentsV1SubResources(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWebdeploymentsV1SubResourcesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     301 redirect.
+     
+     - GET /webdeployments/v1/{subResources}
+     - 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getWebdeploymentsV1SubResourcesWithRequestBuilder() -> RequestBuilder<Void> {
+        let path = "/webdeployments/v1/{subResources}"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

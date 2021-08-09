@@ -23,6 +23,7 @@ public class AuditRealtimeQueryRequest: Codable {
         case integrations = "Integrations"
         case knowledge = "Knowledge"
         case languageUnderstanding = "LanguageUnderstanding"
+        case learning = "Learning"
         case limits = "Limits"
         case outbound = "Outbound"
         case peoplePermissions = "PeoplePermissions"

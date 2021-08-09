@@ -71,7 +71,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchRoutingConversation**](RoutingAPI.html#patchRoutingConversation) | Update attributes of an in-queue conversation |
 | [**patchRoutingEmailDomain**](RoutingAPI.html#patchRoutingEmailDomain) | Update domain settings |
 | [**patchRoutingEmailDomainValidate**](RoutingAPI.html#patchRoutingEmailDomainValidate) | Validate domain settings |
-| [**patchRoutingEmailOutboundDomain**](RoutingAPI.html#patchRoutingEmailOutboundDomain) | Request an update of the emails from /replyTo of an outbound domain |
 | [**patchRoutingPredictor**](RoutingAPI.html#patchRoutingPredictor) | Update single predictor. |
 | [**patchRoutingQueueMember**](RoutingAPI.html#patchRoutingQueueMember) | Update the ring number OR joined status for a queue member. |
 | [**patchRoutingQueueMembers**](RoutingAPI.html#patchRoutingQueueMembers) | Join or unjoin a set of users for a queue |
@@ -2070,7 +2069,7 @@ RoutingAPI.getRoutingQueueMediatypeEstimatedwaittime(queueId: queueId, mediaType
 
 
 
-> [QueueMemberEntityListing](QueueMemberEntityListing.html) getRoutingQueueMembers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence)
+> [QueueMemberEntityListing](QueueMemberEntityListing.html) getRoutingQueueMembers(queueId, pageNumber, pageSize, sortOrder, expand, name, profileSkills, skills, languages, routingStatus, presence, memberBy, joined)
 
 Get the members of this queue.
 
@@ -2092,20 +2091,21 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let pageSize: Int = 25 // Page size [max 100]
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // Sort by
+let pageNumber: Int = 1 // 
+let pageSize: Int = 25 // Max value is 100
+let sortOrder: RoutingAPI.SortOrder_getRoutingQueueMembers = RoutingAPI.SortOrder_getRoutingQueueMembers.enummember // Note: results are sorted by name.
 let expand: [String] = [RoutingAPI.Expand_getRoutingQueueMembers.enummember.rawValue] // Which fields, if any, to expand.
-let joined: Bool = true // Filter by joined status
 let name: String = "" // Filter by queue member name
 let profileSkills: [String] = [""] // Filter by profile skill
 let skills: [String] = [""] // Filter by skill
 let languages: [String] = [""] // Filter by language
 let routingStatus: [String] = [""] // Filter by routing status
 let presence: [String] = [""] // Filter by presence
+let memberBy: RoutingAPI.MemberBy_getRoutingQueueMembers = RoutingAPI.MemberBy_getRoutingQueueMembers.enummember // Filter by member type
+let joined: Bool = true // Filter by joined status
 
 // Code example
-RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence) { (response, error) in
+RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, expand: expand, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence, memberBy: memberBy, joined: joined) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2121,17 +2121,18 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageSize: pageSize, pageNumb
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **pageSize** | **Int**| Page size [max 100] | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **pageNumber** | **Int**|  | [optional] [default to 1] |
+| **pageSize** | **Int**| Max value is 100 | [optional] [default to 25] |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
-| **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
 | **skills** | [**[String]**](String.html)| Filter by skill | [optional] |
 | **languages** | [**[String]**](String.html)| Filter by language | [optional] |
 | **routingStatus** | [**[String]**](String.html)| Filter by routing status | [optional] |
 | **presence** | [**[String]**](String.html)| Filter by presence | [optional] |
+| **memberBy** | **String**| Filter by member type | [optional]<br />**Values**: user ("user"), group ("group") |
+| **joined** | **Bool**| Filter by joined status | [optional] |
 {: class="table-striped"}
 
 
@@ -2145,7 +2146,7 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageSize: pageSize, pageNumb
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-> [QueueMemberEntityListing](QueueMemberEntityListing.html) getRoutingQueueUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence)
+> [QueueMemberEntityListing](QueueMemberEntityListing.html) getRoutingQueueUsers(queueId, pageNumber, pageSize, sortOrder, expand, joined, name, profileSkills, skills, languages, routingStatus, presence)
 
 DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
 
@@ -2167,9 +2168,9 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // Queue ID
-let pageSize: Int = 25 // Page size [max 100]
-let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // Sort by
+let pageNumber: Int = 1 // 
+let pageSize: Int = 25 // Max value is 100
+let sortOrder: RoutingAPI.SortOrder_getRoutingQueueUsers = RoutingAPI.SortOrder_getRoutingQueueUsers.enummember // Note: results are sorted by name.
 let expand: [String] = [RoutingAPI.Expand_getRoutingQueueUsers.enummember.rawValue] // Which fields, if any, to expand.
 let joined: Bool = true // Filter by joined status
 let name: String = "" // Filter by queue member name
@@ -2180,7 +2181,7 @@ let routingStatus: [String] = [""] // Filter by routing status
 let presence: [String] = [""] // Filter by presence
 
 // Code example
-RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence) { (response, error) in
+RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2196,9 +2197,9 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageSize: pageSize, pageNumber
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| Queue ID | |
-| **pageSize** | **Int**| Page size [max 100] | [optional] [default to 25] |
-| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
+| **pageNumber** | **Int**|  | [optional] [default to 1] |
+| **pageSize** | **Int**| Max value is 100 | [optional] [default to 25] |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 | **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
@@ -2276,7 +2277,7 @@ RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, page
 
 
 
-> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageSize, pageNumber, sortBy, name, _id, divisionId)
+> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId)
 
 Get list of queues.
 
@@ -2296,15 +2297,15 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // Sort by
-let name: String = "" // Name
-let _id: [String] = [""] // ID(s)
-let divisionId: [String] = [""] // Division ID(s)
+let pageSize: Int = 25 // Page size
+let sortOrder: RoutingAPI.SortOrder_getRoutingQueues = RoutingAPI.SortOrder_getRoutingQueues.enummember // Note: results are sorted by name.
+let name: String = "" // Filter by queue name
+let _id: [String] = [""] // Filter by queue ID(s)
+let divisionId: [String] = [""] // Filter by queue division ID(s)
 
 // Code example
-RoutingAPI.getRoutingQueues(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, name: name, _id: _id, divisionId: divisionId) { (response, error) in
+RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2319,12 +2320,12 @@ RoutingAPI.getRoutingQueues(pageSize: pageSize, pageNumber: pageNumber, sortBy: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **name** | **String**| Name | [optional] |
-| **_id** | [**[String]**](String.html)| ID(s) | [optional] |
-| **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
+| **name** | **String**| Filter by queue name | [optional] |
+| **_id** | [**[String]**](String.html)| Filter by queue ID(s) | [optional] |
+| **divisionId** | [**[String]**](String.html)| Filter by queue division ID(s) | [optional] |
 {: class="table-striped"}
 
 
@@ -2460,7 +2461,7 @@ RoutingAPI.getRoutingQueuesDivisionviewsAll(pageSize: pageSize, pageNumber: page
 
 
 
-> [UserQueueEntityListing](UserQueueEntityListing.html) getRoutingQueuesMe(joined, pageSize, pageNumber, sortBy, sortOrder)
+> [UserQueueEntityListing](UserQueueEntityListing.html) getRoutingQueuesMe(pageNumber, pageSize, joined, sortOrder)
 
 Get a paged listing of queues the user is a member of.
 
@@ -2479,14 +2480,13 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let joined: Bool = true // Joined
-let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
-let sortBy: String = "name" // Sort by
-let sortOrder: String = "asc" // Sort order
+let pageSize: Int = 25 // Page size
+let joined: Bool = true // Filter by joined status.
+let sortOrder: RoutingAPI.SortOrder_getRoutingQueuesMe = RoutingAPI.SortOrder_getRoutingQueuesMe.enummember // Note: results are sorted by name.
 
 // Code example
-RoutingAPI.getRoutingQueuesMe(joined: joined, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+RoutingAPI.getRoutingQueuesMe(pageNumber: pageNumber, pageSize: pageSize, joined: joined, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2501,11 +2501,10 @@ RoutingAPI.getRoutingQueuesMe(joined: joined, pageSize: pageSize, pageNumber: pa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **joined** | **Bool**| Joined | [optional] |
-| **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name] |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **joined** | **Bool**| Filter by joined status. | [optional] |
+| **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
 {: class="table-striped"}
 
 
@@ -3441,11 +3440,11 @@ RoutingAPI.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: 
 
 
 
-> [RoutingConversationAttributes](RoutingConversationAttributes.html) patchRoutingConversation(conversationId, body)
+> [RoutingConversationAttributesResponse](RoutingConversationAttributesResponse.html) patchRoutingConversation(conversationId, body)
 
 Update attributes of an in-queue conversation
 
-Returns an object indicating the updated values of all settable attributes.  Supported attributes: priority (each point of priority is equivalent to one minute of time in queue).
+Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
 
 Wraps PATCH /api/v2/routing/conversations/{conversationId}  
 
@@ -3462,7 +3461,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // Conversation ID
-let body: RoutingConversationAttributes = new RoutingConversationAttributes(...) // Conversation Attributes
+let body: RoutingConversationAttributesRequest = new RoutingConversationAttributesRequest(...) // Conversation Attributes
 
 // Code example
 RoutingAPI.patchRoutingConversation(conversationId: conversationId, body: body) { (response, error) in
@@ -3481,13 +3480,13 @@ RoutingAPI.patchRoutingConversation(conversationId: conversationId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| Conversation ID | |
-| **body** | [**RoutingConversationAttributes**](RoutingConversationAttributes.html)| Conversation Attributes | |
+| **body** | [**RoutingConversationAttributesRequest**](RoutingConversationAttributesRequest.html)| Conversation Attributes | |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**RoutingConversationAttributes**](RoutingConversationAttributes.html)
+[**RoutingConversationAttributesResponse**](RoutingConversationAttributesResponse.html)
 
 <a name="patchRoutingEmailDomain"></a>
 
@@ -3596,60 +3595,6 @@ RoutingAPI.patchRoutingEmailDomainValidate(domainId: domainId, body: body) { (re
 ### Return type
 
 [**InboundDomain**](InboundDomain.html)
-
-<a name="patchRoutingEmailOutboundDomain"></a>
-
-# **patchRoutingEmailOutboundDomain**
-
-
-
-> [OutboundDomain](OutboundDomain.html) patchRoutingEmailOutboundDomain(domainId, body)
-
-Request an update of the emails from /replyTo of an outbound domain
-
-
-
-Wraps PATCH /api/v2/routing/email/outbound/domains/{domainId}  
-
-Requires ALL permissions: 
-
-* routing:email:manage
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let domainId: String = "" // domain ID
-let body: OutboundDomain = new OutboundDomain(...) // domain with emails that need update set
-
-// Code example
-RoutingAPI.patchRoutingEmailOutboundDomain(domainId: domainId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("RoutingAPI.patchRoutingEmailOutboundDomain was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **domainId** | **String**| domain ID | |
-| **body** | [**OutboundDomain**](OutboundDomain.html)| domain with emails that need update set | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**OutboundDomain**](OutboundDomain.html)
 
 <a name="patchRoutingPredictor"></a>
 

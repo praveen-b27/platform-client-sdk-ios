@@ -11,12 +11,12 @@ title: QualityAudit
 | **name** | **String** |  | [optional] |
 | **user** | [**User**](User.html) |  | [optional] |
 | **jobId** | **String** |  | [optional] |
-| **action** | **String** |  | [optional] |
 | **level** | **String** |  | [optional] |
 | **entity** | [**AuditEntity**](AuditEntity.html) |  | [optional] |
-| **changes** | [**[Change]**](Change.html) |  | [optional] |
+| **action** | **String** |  | [optional] |
 | **timestamp** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
+| **changes** | [**[Change]**](Change.html) |  | [optional] |
 | **entityType** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}

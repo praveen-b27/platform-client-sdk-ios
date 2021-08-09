@@ -424,7 +424,7 @@ open class AuditAPI {
     
     /**
      
-     This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+     This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
      
      - parameter body: (body) query 
      - parameter expand: (query) Which fields, if any, to expand (optional)
@@ -450,7 +450,7 @@ open class AuditAPI {
 
     /**
      
-     This endpoint will only retrieve 7 days worth of audits for certain services. Please use /query to get a full list and older audits.
+     This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
      
      - POST /api/v2/audits/query/realtime
      - 

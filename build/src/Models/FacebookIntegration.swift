@@ -24,6 +24,10 @@ public class FacebookIntegration: Codable {
     public var appId: String?
     /** The Page Id from Facebook messenger */
     public var pageId: String?
+    /** The name of the Facebook page */
+    public var pageName: String?
+    /** The url of the profile image of the Facebook page */
+    public var pageProfileImageUrl: String?
     /** The status of the Facebook Integration */
     public var status: String?
     /** The recipient reference associated to the Facebook Integration. This recipient is used to associate a flow to an integration */
@@ -45,7 +49,7 @@ public class FacebookIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, appId: String?, pageId: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, appId: String?, pageId: String?, pageName: String?, pageProfileImageUrl: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
@@ -54,6 +58,10 @@ public class FacebookIntegration: Codable {
         self.appId = appId
         
         self.pageId = pageId
+        
+        self.pageName = pageName
+        
+        self.pageProfileImageUrl = pageProfileImageUrl
         
         self.status = status
         
@@ -82,6 +90,8 @@ public class FacebookIntegration: Codable {
         case name
         case appId
         case pageId
+        case pageName
+        case pageProfileImageUrl
         case status
         case recipient
         case dateCreated

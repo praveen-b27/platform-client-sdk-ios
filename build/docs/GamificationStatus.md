@@ -9,6 +9,7 @@ title: GamificationStatus
 |------------ | ------------- | ------------- | -------------|
 | **isActive** | **Bool** | Gamification status of the organization. | [optional] |
 | **dateStart** | [**Date**](Date.html) | Gamification start date. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **automaticUserAssignment** | **Bool** | Automatic assignment of users to the default profile | [optional] |
 {: class="table table-striped"}
 
 

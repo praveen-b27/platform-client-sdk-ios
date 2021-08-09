@@ -12,6 +12,7 @@ import Foundation
 public class CommonCampaignDivisionView: Codable {
 
     public enum MediaType: String, Codable { 
+        case email = "email"
         case sms = "sms"
         case voice = "voice"
     }

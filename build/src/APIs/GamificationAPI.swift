@@ -2017,28 +2017,9 @@ open class GamificationAPI {
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
     } ],
     "metricDefinition" : {
-      "unitType" : "aeiou",
-      "defaultObjective" : {
-        "id" : "aeiou",
-        "templateId" : "aeiou",
-        "zones" : [ {
-          "upperLimitValue" : 123,
-          "directionType" : "aeiou",
-          "lowerLimitPoints" : 123,
-          "zoneType" : "aeiou",
-          "upperLimitPoints" : 123,
-          "label" : "aeiou",
-          "lowerLimitValue" : 123
-        } ],
-        "enabled" : true
-      },
-      "divisorMetrics" : [ "aeiou" ],
-      "lockTemplateId" : "aeiou",
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "dividendMetrics" : [ "aeiou" ],
-      "id" : "aeiou",
-      "shortName" : "aeiou"
+      "id" : "aeiou"
     }
   } ]
 }}]
@@ -2241,28 +2222,9 @@ open class GamificationAPI {
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
     } ],
     "metricDefinition" : {
-      "unitType" : "aeiou",
-      "defaultObjective" : {
-        "id" : "aeiou",
-        "templateId" : "aeiou",
-        "zones" : [ {
-          "upperLimitValue" : 123,
-          "directionType" : "aeiou",
-          "lowerLimitPoints" : 123,
-          "zoneType" : "aeiou",
-          "upperLimitPoints" : 123,
-          "label" : "aeiou",
-          "lowerLimitValue" : 123
-        } ],
-        "enabled" : true
-      },
-      "divisorMetrics" : [ "aeiou" ],
-      "lockTemplateId" : "aeiou",
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "dividendMetrics" : [ "aeiou" ],
-      "id" : "aeiou",
-      "shortName" : "aeiou"
+      "id" : "aeiou"
     }
   } ],
   "dateWorkday" : "2000-01-23T04:56:07.000+0000"
@@ -2379,28 +2341,9 @@ open class GamificationAPI {
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
     } ],
     "metricDefinition" : {
-      "unitType" : "aeiou",
-      "defaultObjective" : {
-        "id" : "aeiou",
-        "templateId" : "aeiou",
-        "zones" : [ {
-          "upperLimitValue" : 123,
-          "directionType" : "aeiou",
-          "lowerLimitPoints" : 123,
-          "zoneType" : "aeiou",
-          "upperLimitPoints" : 123,
-          "label" : "aeiou",
-          "lowerLimitValue" : 123
-        } ],
-        "enabled" : true
-      },
-      "divisorMetrics" : [ "aeiou" ],
-      "lockTemplateId" : "aeiou",
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "dividendMetrics" : [ "aeiou" ],
-      "id" : "aeiou",
-      "shortName" : "aeiou"
+      "id" : "aeiou"
     }
   } ]
 }}]
@@ -2502,28 +2445,9 @@ open class GamificationAPI {
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
     } ],
     "metricDefinition" : {
-      "unitType" : "aeiou",
-      "defaultObjective" : {
-        "id" : "aeiou",
-        "templateId" : "aeiou",
-        "zones" : [ {
-          "upperLimitValue" : 123,
-          "directionType" : "aeiou",
-          "lowerLimitPoints" : 123,
-          "zoneType" : "aeiou",
-          "upperLimitPoints" : 123,
-          "label" : "aeiou",
-          "lowerLimitValue" : 123
-        } ],
-        "enabled" : true
-      },
-      "divisorMetrics" : [ "aeiou" ],
-      "lockTemplateId" : "aeiou",
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "dividendMetrics" : [ "aeiou" ],
-      "id" : "aeiou",
-      "shortName" : "aeiou"
+      "id" : "aeiou"
     }
   } ],
   "dateWorkday" : "2000-01-23T04:56:07.000+0000"
@@ -2631,28 +2555,9 @@ open class GamificationAPI {
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
     } ],
     "metricDefinition" : {
-      "unitType" : "aeiou",
-      "defaultObjective" : {
-        "id" : "aeiou",
-        "templateId" : "aeiou",
-        "zones" : [ {
-          "upperLimitValue" : 123,
-          "directionType" : "aeiou",
-          "lowerLimitPoints" : 123,
-          "zoneType" : "aeiou",
-          "upperLimitPoints" : 123,
-          "label" : "aeiou",
-          "lowerLimitValue" : 123
-        } ],
-        "enabled" : true
-      },
-      "divisorMetrics" : [ "aeiou" ],
-      "lockTemplateId" : "aeiou",
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "dividendMetrics" : [ "aeiou" ],
-      "id" : "aeiou",
-      "shortName" : "aeiou"
+      "id" : "aeiou"
     }
   } ]
 }}]
@@ -2728,6 +2633,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateStart" : "2000-01-23T04:56:07.000+0000",
+  "automaticUserAssignment" : true,
   "isActive" : true
 }}]
 
@@ -3241,6 +3147,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateStart" : "2000-01-23T04:56:07.000+0000",
+  "automaticUserAssignment" : true,
   "isActive" : true
 }}]
      

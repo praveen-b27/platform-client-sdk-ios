@@ -773,7 +773,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopic(topicId: topicId) { (respo
 
 
 
-> [TopicsEntityListing](TopicsEntityListing.html) getSpeechandtextanalyticsTopics(nextPage, pageSize)
+> [TopicsEntityListing](TopicsEntityListing.html) getSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids)
 
 Get the list of Speech &amp; Text Analytics topics
 
@@ -795,9 +795,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
 let pageSize: Int = 20 // The page size for the listing
+let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics.enummember // Topic state
+let name: String = "" // Case insensitive partial name to filter by
+let ids: [String] = [""] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.
 
 // Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize) { (response, error) in
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -814,6 +817,9 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageS
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
 | **pageSize** | **Int**| The page size for the listing | [optional] [default to 20] |
+| **state** | **String**| Topic state | [optional]<br />**Values**: latest ("latest"), published ("published") |
+| **name** | **String**| Case insensitive partial name to filter by | [optional] |
+| **ids** | [**[String]**](String.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |
 {: class="table-striped"}
 
 

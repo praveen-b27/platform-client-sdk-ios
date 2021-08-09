@@ -13,6 +13,174 @@ open class TextbotsAPI {
     
     
     
+    
+    
+    /**
+     
+     Issue a bot flow turn event
+     
+     - parameter sessionId: (path) The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39; 
+     - parameter turnRequest: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTextbotsBotflowsSessionTurns(sessionId: String, turnRequest: TextBotFlowTurnRequest, completion: @escaping ((_ data: TextBotFlowTurnResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTextbotsBotflowsSessionTurnsWithRequestBuilder(sessionId: sessionId, turnRequest: turnRequest)
+        requestBuilder.execute { (response: Response<TextBotFlowTurnResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Issue a bot flow turn event
+     
+     - POST /api/v2/textbots/botflows/sessions/{sessionId}/turns
+     - Send a turn event to an executing bot flow and produce the next action to take.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "previousTurn" : {
+    "id" : "aeiou"
+  },
+  "nextActionExit" : {
+    "outputData" : {
+      "variables" : {
+        "key" : "{}"
+      }
+    },
+    "reason" : "aeiou",
+    "flowLocation" : "",
+    "reasonExtendedInfo" : "aeiou",
+    "activeIntent" : "aeiou"
+  },
+  "nextActionWaitForInput" : {
+    "modeConstraints" : {
+      "text" : {
+        "languagePreferences" : [ "aeiou" ]
+      }
+    }
+  },
+  "id" : "aeiou",
+  "nextActionType" : "aeiou",
+  "nextActionDisconnect" : {
+    "reason" : "aeiou",
+    "flowLocation" : {
+      "actionNumber" : 123,
+      "sequenceName" : "aeiou",
+      "actionName" : "aeiou"
+    },
+    "reasonExtendedInfo" : "aeiou"
+  },
+  "prompts" : {
+    "outputLanguage" : "aeiou",
+    "textPrompts" : {
+      "segments" : [ {
+        "format" : {
+          "flags" : [ "aeiou" ]
+        },
+        "text" : "aeiou",
+        "type" : "aeiou"
+      } ]
+    }
+  }
+}}]
+     
+     - parameter sessionId: (path) The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39; 
+     - parameter turnRequest: (body)  
+
+     - returns: RequestBuilder<TextBotFlowTurnResponse> 
+     */
+    open class func postTextbotsBotflowsSessionTurnsWithRequestBuilder(sessionId: String, turnRequest: TextBotFlowTurnRequest) -> RequestBuilder<TextBotFlowTurnResponse> {
+        var path = "/api/v2/textbots/botflows/sessions/{sessionId}/turns"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: turnRequest)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TextBotFlowTurnResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create an execution instance of a bot flow definition.
+     
+     - parameter launchRequest: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTextbotsBotflowsSessions(launchRequest: TextBotFlowLaunchRequest, completion: @escaping ((_ data: TextBotFlowLaunchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTextbotsBotflowsSessionsWithRequestBuilder(launchRequest: launchRequest)
+        requestBuilder.execute { (response: Response<TextBotFlowLaunchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create an execution instance of a bot flow definition.
+     
+     - POST /api/v2/textbots/botflows/sessions
+     - The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "id" : "aeiou"
+}}]
+     
+     - parameter launchRequest: (body)  
+
+     - returns: RequestBuilder<TextBotFlowLaunchResponse> 
+     */
+    open class func postTextbotsBotflowsSessionsWithRequestBuilder(launchRequest: TextBotFlowLaunchRequest) -> RequestBuilder<TextBotFlowLaunchResponse> {
+        let path = "/api/v2/textbots/botflows/sessions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: launchRequest)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TextBotFlowLaunchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Send an intent to a bot to start a dialog/interact with it via text

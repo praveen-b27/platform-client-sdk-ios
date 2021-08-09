@@ -14,6 +14,7 @@ public class TranscriptAggregationView: Codable {
     public enum Target: String, Codable { 
         case ntopiccommunications = "nTopicCommunications"
         case ocustomersentiment = "oCustomerSentiment"
+        case osentimentscore = "oSentimentScore"
     }
     public enum Function: String, Codable { 
         case rangebound = "rangeBound"

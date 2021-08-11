@@ -18,6 +18,9 @@ public class DevelopmentActivityAggregateQueryResponseMetric: Codable {
         case ncompleteactivities = "nCompleteActivities"
         case noverdueactivities = "nOverdueActivities"
         case ninvalidscheduleactivities = "nInvalidScheduleActivities"
+        case npassedactivities = "nPassedActivities"
+        case nfailedactivities = "nFailedActivities"
+        case oactivityscore = "oActivityScore"
     }
     /** The metric this applies to */
     public var metric: Metric?

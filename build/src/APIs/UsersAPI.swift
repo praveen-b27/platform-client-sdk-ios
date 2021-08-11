@@ -11068,7 +11068,10 @@ open class UsersAPI {
       "metrics" : [ {
         "metric" : "aeiou",
         "stats" : {
-          "count" : 123
+          "min" : 123,
+          "max" : 123,
+          "count" : 123,
+          "sum" : 123
         }
       } ]
     } ],

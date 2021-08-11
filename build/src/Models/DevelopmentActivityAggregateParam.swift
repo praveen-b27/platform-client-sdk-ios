@@ -18,6 +18,9 @@ public class DevelopmentActivityAggregateParam: Codable {
         case ncompleteactivities = "nCompleteActivities"
         case noverdueactivities = "nOverdueActivities"
         case ninvalidscheduleactivities = "nInvalidScheduleActivities"
+        case npassedactivities = "nPassedActivities"
+        case nfailedactivities = "nFailedActivities"
+        case oactivityscore = "oActivityScore"
     }
     public enum GroupBy: String, Codable { 
         case attendeeid = "attendeeId"

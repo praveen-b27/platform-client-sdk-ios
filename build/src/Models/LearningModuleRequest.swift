@@ -12,6 +12,12 @@ import Foundation
 
 public class LearningModuleRequest: Codable {
 
+    public enum ModelType: String, Codable { 
+        case informational = "Informational"
+        case assessedContent = "AssessedContent"
+        case questionnaire = "Questionnaire"
+        case assessment = "Assessment"
+    }
     /** The name of learning module */
     public var name: String?
     /** The description of learning module */
@@ -20,8 +26,12 @@ public class LearningModuleRequest: Codable {
     public var completionTimeInDays: Int?
     /** The list of inform steps in a learning module */
     public var informSteps: [LearningModuleInformStepRequest]?
+    /** The type for the learning module */
+    public var type: ModelType?
+    /** The assessment form for learning module */
+    public var assessmentForm: AssessmentForm?
 
-    public init(name: String?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStepRequest]?) {
+    public init(name: String?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStepRequest]?, type: ModelType?, assessmentForm: AssessmentForm?) {
         
         self.name = name
         
@@ -31,6 +41,10 @@ public class LearningModuleRequest: Codable {
         
         self.informSteps = informSteps
         
+        self.type = type
+        
+        self.assessmentForm = assessmentForm
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -38,6 +52,8 @@ public class LearningModuleRequest: Codable {
         case _description = "description"
         case completionTimeInDays
         case informSteps
+        case type
+        case assessmentForm
     }
 
 

@@ -643,6 +643,7 @@ open class RecordingAPI {
     "archiveDate" : "2000-01-23T04:56:07.000+0000",
     "estimatedTranscodeTimeMs" : 123456789,
     "outputDurationMs" : 123,
+    "recordingErrorStatus" : "aeiou",
     "startTime" : "aeiou",
     "id" : "aeiou",
     "remainingRestorationsAllowedForOrg" : 123,
@@ -1620,6 +1621,7 @@ open class RecordingAPI {
   "archiveDate" : "2000-01-23T04:56:07.000+0000",
   "estimatedTranscodeTimeMs" : 123456789,
   "outputDurationMs" : 123,
+  "recordingErrorStatus" : "aeiou",
   "startTime" : "aeiou",
   "id" : "aeiou",
   "remainingRestorationsAllowedForOrg" : 123,
@@ -3683,6 +3685,7 @@ open class RecordingAPI {
   "archiveDate" : "2000-01-23T04:56:07.000+0000",
   "estimatedTranscodeTimeMs" : 123456789,
   "outputDurationMs" : 123,
+  "recordingErrorStatus" : "aeiou",
   "startTime" : "aeiou",
   "id" : "aeiou",
   "remainingRestorationsAllowedForOrg" : 123,
@@ -4302,6 +4305,7 @@ open class RecordingAPI {
     "archiveDate" : "2000-01-23T04:56:07.000+0000",
     "estimatedTranscodeTimeMs" : 123456789,
     "outputDurationMs" : 123,
+    "recordingErrorStatus" : "aeiou",
     "startTime" : "aeiou",
     "id" : "aeiou",
     "remainingRestorationsAllowedForOrg" : 123,
@@ -4997,6 +5001,7 @@ open class RecordingAPI {
   "archiveDate" : "2000-01-23T04:56:07.000+0000",
   "estimatedTranscodeTimeMs" : 123456789,
   "outputDurationMs" : 123,
+  "recordingErrorStatus" : "aeiou",
   "startTime" : "aeiou",
   "id" : "aeiou",
   "remainingRestorationsAllowedForOrg" : 123,
@@ -5662,6 +5667,7 @@ open class RecordingAPI {
       "archiveDate" : "2000-01-23T04:56:07.000+0000",
       "estimatedTranscodeTimeMs" : 123456789,
       "outputDurationMs" : 123,
+      "recordingErrorStatus" : "aeiou",
       "startTime" : "aeiou",
       "id" : "aeiou",
       "remainingRestorationsAllowedForOrg" : 123,
@@ -7274,6 +7280,7 @@ open class RecordingAPI {
   "percentProgress" : 123,
   "selfUri" : "aeiou",
   "errorMessage" : "aeiou",
+  "failedRecordings" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
   "user" : {
@@ -7408,6 +7415,101 @@ open class RecordingAPI {
     
     
     
+    
+    /**
+     
+     Get IDs of recordings that the bulk job failed for
+     
+     - parameter jobId: (path) jobId 
+     - parameter pageSize: (query) Page size. Maximum is 100. (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRecordingJobFailedrecordings(jobId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: FailedRecordingsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingJobFailedrecordingsWithRequestBuilder(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<FailedRecordingsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get IDs of recordings that the bulk job failed for
+     
+     - GET /api/v2/recording/jobs/{jobId}/failedrecordings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "recording" : "",
+    "conversation" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter jobId: (path) jobId 
+     - parameter pageSize: (query) Page size. Maximum is 100. (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+
+     - returns: RequestBuilder<FailedRecordingsEntityListing> 
+     */
+    open class func getRecordingJobFailedrecordingsWithRequestBuilder(jobId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<FailedRecordingsEntityListing> {
+        var path = "/api/v2/recording/jobs/{jobId}/failedrecordings"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<FailedRecordingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
     public enum SortBy_getRecordingJobs: String { 
         case userid = "userId"
         case datecreated = "dateCreated"
@@ -7486,6 +7588,7 @@ open class RecordingAPI {
     "percentProgress" : 123,
     "selfUri" : "aeiou",
     "errorMessage" : "aeiou",
+    "failedRecordings" : "aeiou",
     "id" : "aeiou",
     "state" : "aeiou",
     "user" : {
@@ -13082,6 +13185,7 @@ open class RecordingAPI {
   "percentProgress" : 123,
   "selfUri" : "aeiou",
   "errorMessage" : "aeiou",
+  "failedRecordings" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
   "user" : {
@@ -15314,6 +15418,7 @@ open class RecordingAPI {
   "archiveDate" : "2000-01-23T04:56:07.000+0000",
   "estimatedTranscodeTimeMs" : 123456789,
   "outputDurationMs" : 123,
+  "recordingErrorStatus" : "aeiou",
   "startTime" : "aeiou",
   "id" : "aeiou",
   "remainingRestorationsAllowedForOrg" : 123,
@@ -16279,6 +16384,7 @@ open class RecordingAPI {
   "archiveDate" : "2000-01-23T04:56:07.000+0000",
   "estimatedTranscodeTimeMs" : 123456789,
   "outputDurationMs" : 123,
+  "recordingErrorStatus" : "aeiou",
   "startTime" : "aeiou",
   "id" : "aeiou",
   "remainingRestorationsAllowedForOrg" : 123,
@@ -17017,6 +17123,7 @@ open class RecordingAPI {
   "percentProgress" : 123,
   "selfUri" : "aeiou",
   "errorMessage" : "aeiou",
+  "failedRecordings" : "aeiou",
   "id" : "aeiou",
   "state" : "aeiou",
   "user" : {

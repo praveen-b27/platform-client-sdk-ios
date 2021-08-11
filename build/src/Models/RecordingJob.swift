@@ -37,12 +37,14 @@ public class RecordingJob: Codable {
     public var percentProgress: Int?
     /** Error occurred during the job execution */
     public var errorMessage: String?
+    /** Get IDs of recordings that the bulk job failed for */
+    public var failedRecordings: String?
     /** The URI for this object */
     public var selfUri: String?
     /** Details of the user created the job */
     public var user: AddressableEntityRef?
 
-    public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, selfUri: String?, user: AddressableEntityRef?) {
+    public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, failedRecordings: String?, selfUri: String?, user: AddressableEntityRef?) {
         
         self._id = _id
         
@@ -62,6 +64,8 @@ public class RecordingJob: Codable {
         
         self.errorMessage = errorMessage
         
+        self.failedRecordings = failedRecordings
+        
         self.selfUri = selfUri
         
         self.user = user
@@ -78,6 +82,7 @@ public class RecordingJob: Codable {
         case totalProcessedRecordings
         case percentProgress
         case errorMessage
+        case failedRecordings
         case selfUri
         case user
     }

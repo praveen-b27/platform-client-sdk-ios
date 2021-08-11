@@ -38,7 +38,7 @@ public class Edge: Codable {
         case hardware = "HARDWARE"
         case ldm = "LDM"
         case cdm = "CDM"
-        case byoh = "BYOH"
+        case chs = "CHS"
         case invalid = "INVALID"
     }
     public enum CallDrainingState: String, Codable { 

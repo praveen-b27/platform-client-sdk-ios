@@ -3346,9 +3346,10 @@ This returns a simplified version of a Messaging Campaign, consisting of id, nam
 
 Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * outbound:messagingCampaign:search
+* outbound:emailCampaign:search
 
 ### Example
 
@@ -3390,7 +3391,7 @@ OutboundAPI.getOutboundMessagingcampaignsDivisionview(messagingCampaignId: messa
 
 
 
-> [MessagingCampaignDivisionViewEntityListing](MessagingCampaignDivisionViewEntityListing.html) getOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, _id, senderSmsPhoneNumber)
+> [MessagingCampaignDivisionViewEntityListing](MessagingCampaignDivisionViewEntityListing.html) getOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, _id, senderSmsPhoneNumber)
 
 Query a list of basic Messaging Campaign information objects
 
@@ -3398,9 +3399,10 @@ This returns a listing of simplified Messaging Campaigns, each consisting of id,
 
 Wraps GET /api/v2/outbound/messagingcampaigns/divisionviews  
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * outbound:messagingCampaign:search
+* outbound:emailCampaign:search
 
 ### Example
 
@@ -3414,11 +3416,12 @@ let pageSize: Int = 25 // Page size. The max that will be returned is 100.
 let pageNumber: Int = 1 // Page number
 let sortOrder: OutboundAPI.SortOrder_getOutboundMessagingcampaignsDivisionviews = OutboundAPI.SortOrder_getOutboundMessagingcampaignsDivisionviews.enummember // The direction to sort
 let name: String = "" // Name
+let type: OutboundAPI.ModelType_getOutboundMessagingcampaignsDivisionviews = OutboundAPI.ModelType_getOutboundMessagingcampaignsDivisionviews.enummember // Campaign Type
 let _id: [String] = [""] // id
 let senderSmsPhoneNumber: String = "" // Sender SMS Phone Number
 
 // Code example
-OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber) { (response, error) in
+OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, type: type, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3437,6 +3440,7 @@ OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageN
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| The direction to sort | [optional] [default to a]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Name | [optional] |
+| **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS") |
 | **_id** | [**[String]**](String.html)| id | [optional] |
 | **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
 {: class="table-striped"}

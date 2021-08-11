@@ -17,6 +17,9 @@ public class LearningAssignmentAggregateParam: Codable {
         case ninprogressactivities = "nInProgressActivities"
         case ncompleteactivities = "nCompleteActivities"
         case noverdueactivities = "nOverdueActivities"
+        case npassedactivities = "nPassedActivities"
+        case nfailedactivities = "nFailedActivities"
+        case oactivityscore = "oActivityScore"
     }
     public enum GroupBy: String, Codable { 
         case attendeeid = "attendeeId"

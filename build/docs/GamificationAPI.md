@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGamificationTemplate**](GamificationAPI.html#getGamificationTemplate) | Objective template by id |
 | [**getGamificationTemplates**](GamificationAPI.html#getGamificationTemplates) | All objective templates |
 | [**postGamificationMetrics**](GamificationAPI.html#postGamificationMetrics) | Creates a gamified metric with a given metric definition and metric objective |
+| [**postGamificationProfileActivate**](GamificationAPI.html#postGamificationProfileActivate) | Activate a performance profile |
+| [**postGamificationProfileDeactivate**](GamificationAPI.html#postGamificationProfileDeactivate) | Deactivate a performance profile |
 | [**putGamificationMetric**](GamificationAPI.html#putGamificationMetric) | Updates a metric |
 | [**putGamificationProfile**](GamificationAPI.html#putGamificationProfile) | Updates a performance profile |
 | [**putGamificationStatus**](GamificationAPI.html#putGamificationStatus) | Update gamification activation status |
@@ -1712,6 +1714,110 @@ GamificationAPI.postGamificationMetrics(body: body) { (response, error) in
 ### Return type
 
 [**Metric**](Metric.html)
+
+<a name="postGamificationProfileActivate"></a>
+
+# **postGamificationProfileActivate**
+
+
+
+> [PerformanceProfile](PerformanceProfile.html) postGamificationProfileActivate(performanceProfileId)
+
+Activate a performance profile
+
+
+
+Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/activate  
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let performanceProfileId: String = "" // Performance Profile Id
+
+// Code example
+GamificationAPI.postGamificationProfileActivate(performanceProfileId: performanceProfileId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationProfileActivate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **performanceProfileId** | **String**| Performance Profile Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="postGamificationProfileDeactivate"></a>
+
+# **postGamificationProfileDeactivate**
+
+
+
+> [PerformanceProfile](PerformanceProfile.html) postGamificationProfileDeactivate(performanceProfileId)
+
+Deactivate a performance profile
+
+
+
+Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/deactivate  
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let performanceProfileId: String = "" // Performance Profile Id
+
+// Code example
+GamificationAPI.postGamificationProfileDeactivate(performanceProfileId: performanceProfileId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationProfileDeactivate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **performanceProfileId** | **String**| Performance Profile Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PerformanceProfile**](PerformanceProfile.html)
 
 <a name="putGamificationMetric"></a>
 

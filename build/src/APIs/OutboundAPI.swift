@@ -6757,6 +6757,14 @@ open class OutboundAPI {
     
     
     
+    public enum ModelType_getOutboundMessagingcampaignsDivisionviews: String { 
+        case email = "EMAIL"
+        case sms = "SMS"
+    }
+
+    
+    
+    
     
     
     
@@ -6768,12 +6776,13 @@ open class OutboundAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortOrder: (query) The direction to sort (optional, default to a)
      - parameter name: (query) Name (optional)
+     - parameter type: (query) Campaign Type (optional)
      - parameter _id: (query) id (optional)
      - parameter senderSmsPhoneNumber: (query) Sender SMS Phone Number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOutboundMessagingcampaignsDivisionviews(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getOutboundMessagingcampaignsDivisionviews? = nil, name: String? = nil, _id: [String]? = nil, senderSmsPhoneNumber: String? = nil, completion: @escaping ((_ data: MessagingCampaignDivisionViewEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOutboundMessagingcampaignsDivisionviewsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber)
+    open class func getOutboundMessagingcampaignsDivisionviews(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getOutboundMessagingcampaignsDivisionviews? = nil, name: String? = nil, type: ModelType_getOutboundMessagingcampaignsDivisionviews? = nil, _id: [String]? = nil, senderSmsPhoneNumber: String? = nil, completion: @escaping ((_ data: MessagingCampaignDivisionViewEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundMessagingcampaignsDivisionviewsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, type: type, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber)
         requestBuilder.execute { (response: Response<MessagingCampaignDivisionViewEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6825,12 +6834,13 @@ open class OutboundAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter sortOrder: (query) The direction to sort (optional, default to a)
      - parameter name: (query) Name (optional)
+     - parameter type: (query) Campaign Type (optional)
      - parameter _id: (query) id (optional)
      - parameter senderSmsPhoneNumber: (query) Sender SMS Phone Number (optional)
 
      - returns: RequestBuilder<MessagingCampaignDivisionViewEntityListing> 
      */
-    open class func getOutboundMessagingcampaignsDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getOutboundMessagingcampaignsDivisionviews? = nil, name: String? = nil, _id: [String]? = nil, senderSmsPhoneNumber: String? = nil) -> RequestBuilder<MessagingCampaignDivisionViewEntityListing> {
+    open class func getOutboundMessagingcampaignsDivisionviewsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getOutboundMessagingcampaignsDivisionviews? = nil, name: String? = nil, type: ModelType_getOutboundMessagingcampaignsDivisionviews? = nil, _id: [String]? = nil, senderSmsPhoneNumber: String? = nil) -> RequestBuilder<MessagingCampaignDivisionViewEntityListing> {
         let path = "/api/v2/outbound/messagingcampaigns/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6850,6 +6860,8 @@ open class OutboundAPI {
             "sortOrder": sortOrder?.rawValue, 
             
             "name": name, 
+            
+            "type": type?.rawValue, 
             
             "id": _id, 
             

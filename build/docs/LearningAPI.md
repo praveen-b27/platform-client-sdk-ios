@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningModuleVersion**](LearningAPI.html#getLearningModuleVersion) | Get specific version of a published module |
 | [**getLearningModules**](LearningAPI.html#getLearningModules) | Get all learning modules of an organization |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
+| [**postLearningAssessmentsScoring**](LearningAPI.html#postLearningAssessmentsScoring) | Score learning assessment for preview |
 | [**postLearningAssignments**](LearningAPI.html#postLearningAssignments) | Create Learning Assignment |
 | [**postLearningAssignmentsAggregatesQuery**](LearningAPI.html#postLearningAssignmentsAggregatesQuery) | Retrieve aggregated assignment data |
 | [**postLearningAssignmentsBulkadd**](LearningAPI.html#postLearningAssignmentsBulkadd) | Add multiple learning assignments |
@@ -190,7 +191,7 @@ LearningAPI.getLearningAssignment(assignmentId: assignmentId, expand: expand) { 
 
 
 
-> [LearningAssignmentsDomainEntity](LearningAssignmentsDomainEntity.html) getLearningAssignments(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, userId, types, states, expand)
+> [LearningAssignmentsDomainEntity](LearningAssignmentsDomainEntity.html) getLearningAssignments(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand)
 
 List of Learning module Assignments
 
@@ -216,6 +217,9 @@ let completionInterval: String = "" // Specifies the range of completion dates t
 let overdue: LearningAPI.Overdue_getLearningAssignments = LearningAPI.Overdue_getLearningAssignments.enummember // Specifies if only the non-overdue (overdue is \"False\") or overdue (overdue is \"True\") assignments are returned. If overdue is \"Any\" or if the overdue parameter is not supplied, all assignments are returned
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let pass: LearningAPI.Pass_getLearningAssignments = LearningAPI.Pass_getLearningAssignments.enummember // Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") assignments (completed with assessment)are returned. If pass is \"Any\" or if the pass parameter is not supplied, all assignments are returned
+let minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)
+let maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)
 let sortOrder: LearningAPI.SortOrder_getLearningAssignments = LearningAPI.SortOrder_getLearningAssignments.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)
 let sortBy: LearningAPI.SortBy_getLearningAssignments = LearningAPI.SortBy_getLearningAssignments.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate
 let userId: [String] = [""] // Specifies the list of user IDs to be queried, up to 100 user IDs.
@@ -224,7 +228,7 @@ let states: [String] = [LearningAPI.States_getLearningAssignments.enummember.raw
 let expand: [String] = [LearningAPI.Expand_getLearningAssignments.enummember.rawValue] // Specifies the expand option for returning additional information
 
 // Code example
-LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand) { (response, error) in
+LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -245,6 +249,9 @@ LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, compl
 | **overdue** | **String**| Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pass** | **String**| Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **minPercentageScore** | **Float**| The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional] |
+| **maxPercentageScore** | **Float**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **userId** | [**[String]**](String.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional] |
@@ -264,7 +271,7 @@ LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, compl
 
 
 
-> [LearningAssignmentsDomainEntity](LearningAssignmentsDomainEntity.html) getLearningAssignmentsMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, sortBy, types, states, expand)
+> [LearningAssignmentsDomainEntity](LearningAssignmentsDomainEntity.html) getLearningAssignmentsMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand)
 
 List of Learning Assignments assigned to current user
 
@@ -289,6 +296,9 @@ let completionInterval: String = "" // Specifies the range of completion dates t
 let overdue: LearningAPI.Overdue_getLearningAssignmentsMe = LearningAPI.Overdue_getLearningAssignmentsMe.enummember // Specifies if only the non-overdue (overdue is \"False\") or overdue (overdue is \"True\") assignments are returned. If overdue is \"Any\" or if the overdue parameter is not supplied, all assignments are returned
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
+let pass: LearningAPI.Pass_getLearningAssignmentsMe = LearningAPI.Pass_getLearningAssignmentsMe.enummember // Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") assignments (completed with assessment)are returned. If pass is \"Any\" or if the pass parameter is not supplied, all assignments are returned
+let minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)
+let maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)
 let sortOrder: LearningAPI.SortOrder_getLearningAssignmentsMe = LearningAPI.SortOrder_getLearningAssignmentsMe.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)
 let sortBy: LearningAPI.SortBy_getLearningAssignmentsMe = LearningAPI.SortBy_getLearningAssignmentsMe.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate
 let types: [String] = [LearningAPI.Types_getLearningAssignmentsMe.enummember.rawValue] // Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned
@@ -296,7 +306,7 @@ let states: [String] = [LearningAPI.States_getLearningAssignmentsMe.enummember.r
 let expand: [String] = [LearningAPI.Expand_getLearningAssignmentsMe.enummember.rawValue] // Specifies the expand option for returning additional information
 
 // Code example
-LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand) { (response, error) in
+LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -317,6 +327,9 @@ LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, com
 | **overdue** | **String**| Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pass** | **String**| Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **minPercentageScore** | **Float**| The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional] |
+| **maxPercentageScore** | **Float**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
@@ -497,7 +510,7 @@ LearningAPI.getLearningModuleVersion(moduleId: moduleId, versionId: versionId, e
 
 
 
-> [LearningModulesDomainEntityListing](LearningModulesDomainEntityListing.html) getLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand)
+> [LearningModulesDomainEntityListing](LearningModulesDomainEntityListing.html) getLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished)
 
 Get all learning modules of an organization
 
@@ -525,9 +538,10 @@ let sortOrder: LearningAPI.SortOrder_getLearningModules = LearningAPI.SortOrder_
 let sortBy: LearningAPI.SortBy_getLearningModules = LearningAPI.SortBy_getLearningModules.enummember // Sort by
 let searchTerm: String = "" // Search Term (searchable by name)
 let expand: [String] = [LearningAPI.Expand_getLearningModules.enummember.rawValue] // Fields to expand in response(case insensitive)
+let isPublished: LearningAPI.IsPublished_getLearningModules = LearningAPI.IsPublished_getLearningModules.enummember // Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned
 
 // Code example
-LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand) { (response, error) in
+LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -550,6 +564,7 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 | **sortBy** | **String**| Sort by | [optional] [default to name]<br />**Values**: name ("name") |
 | **searchTerm** | **String**| Search Term (searchable by name) | [optional] |
 | **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: rule ("rule"), summarydata ("summaryData") |
+| **isPublished** | **String**| Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned | [optional] [default to Any]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
 {: class="table-striped"}
 
 
@@ -609,6 +624,60 @@ LearningAPI.patchLearningAssignment(assignmentId: assignmentId, body: body) { (r
 ### Return type
 
 [**LearningAssignment**](LearningAssignment.html)
+
+<a name="postLearningAssessmentsScoring"></a>
+
+# **postLearningAssessmentsScoring**
+
+
+
+> [AssessmentScoringSet](AssessmentScoringSet.html) postLearningAssessmentsScoring(body)
+
+Score learning assessment for preview
+
+
+
+Wraps POST /api/v2/learning/assessments/scoring  
+
+Requires ANY permissions: 
+
+* learning:module:view
+* learning:module:add
+* learning:module:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: LearningAssessmentScoringRequest = new LearningAssessmentScoringRequest(...) // Assessment form and answers to score
+
+// Code example
+LearningAPI.postLearningAssessmentsScoring(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningAssessmentsScoring was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**LearningAssessmentScoringRequest**](LearningAssessmentScoringRequest.html)| Assessment form and answers to score | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssessmentScoringSet**](AssessmentScoringSet.html)
 
 <a name="postLearningAssignments"></a>
 

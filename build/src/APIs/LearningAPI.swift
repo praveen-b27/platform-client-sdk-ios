@@ -168,6 +168,7 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "isPassed" : true,
   "isManual" : true,
   "selfUri" : "aeiou",
   "module" : {
@@ -189,8 +190,15 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
+    "summaryData" : {
+      "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+      "assignedCount" : 123,
+      "passedCount" : 123,
+      "completedCount" : 123
+    },
     "informSteps" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -199,6 +207,46 @@ open class LearningAPI {
       "sharingUri" : "aeiou",
       "order" : 123
     } ],
+    "assessmentForm" : {
+      "selfUri" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "contextId" : "aeiou",
+      "id" : "aeiou",
+      "published" : true,
+      "passPercent" : 123,
+      "questionGroups" : [ {
+        "defaultAnswersToHighest" : true,
+        "manualWeight" : true,
+        "visibilityCondition" : "",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "questions" : [ {
+          "helpText" : "aeiou",
+          "commentsRequired" : true,
+          "visibilityCondition" : {
+            "combiningOperation" : "aeiou",
+            "predicates" : [ "{}" ]
+          },
+          "isCritical" : true,
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "isKill" : true,
+          "maxResponseCharacters" : 123,
+          "naEnabled" : true,
+          "answerOptions" : [ {
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "value" : 123
+          } ]
+        } ],
+        "weight" : 1.3579000000000001069366817318950779736042022705078125,
+        "id" : "aeiou",
+        "defaultAnswersToNA" : true,
+        "type" : "aeiou",
+        "naEnabled" : true
+      } ]
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
@@ -209,6 +257,50 @@ open class LearningAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "version" : 123,
   "isRule" : true,
+  "assessment" : {
+    "assessmentFormId" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "answers" : {
+      "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+      "isPassed" : true,
+      "comments" : "aeiou",
+      "agentComments" : "aeiou",
+      "failureReasons" : [ "aeiou" ],
+      "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+      "questionGroupScores" : [ {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "markedNA" : true,
+        "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "questionScores" : [ {
+          "failedKillQuestion" : true,
+          "answerId" : "aeiou",
+          "score" : 123,
+          "comments" : "aeiou",
+          "questionId" : "aeiou",
+          "markedNA" : true,
+          "freeTextAnswer" : "aeiou"
+        } ],
+        "questionGroupId" : "aeiou",
+        "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "totalScore" : 1.3579000000000001069366817318950779736042022705078125
+    },
+    "contextId" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "assessmentId" : "aeiou",
+    "dateSubmitted" : "2000-01-23T04:56:07.000+0000",
+    "status" : "aeiou"
+  },
+  "assessmentForm" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "isOverdue" : true,
   "createdBy" : {
@@ -217,6 +309,7 @@ open class LearningAPI {
   },
   "modifiedBy" : "",
   "id" : "aeiou",
+  "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
   "state" : "aeiou",
   "user" : ""
 }}]
@@ -260,6 +353,19 @@ open class LearningAPI {
     
     
     public enum Overdue_getLearningAssignments: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum Pass_getLearningAssignments: String { 
         case _true = "True"
         case _false = "False"
         case any = "Any"
@@ -325,6 +431,9 @@ open class LearningAPI {
      - parameter overdue: (query) Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)
+     - parameter minPercentageScore: (query) The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
+     - parameter maxPercentageScore: (query) The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)
@@ -333,8 +442,8 @@ open class LearningAPI {
      - parameter expand: (query) Specifies the expand option for returning additional information (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningAssignments(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignments? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningAssignments? = nil, sortBy: SortBy_getLearningAssignments? = nil, userId: [String]? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentsDomainEntity?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLearningAssignmentsWithRequestBuilder(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand)
+    open class func getLearningAssignments(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignments? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, pass: Pass_getLearningAssignments? = nil, minPercentageScore: Float? = nil, maxPercentageScore: Float? = nil, sortOrder: SortOrder_getLearningAssignments? = nil, sortBy: SortBy_getLearningAssignments? = nil, userId: [String]? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentsDomainEntity?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningAssignmentsWithRequestBuilder(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand)
         requestBuilder.execute { (response: Response<LearningAssignmentsDomainEntity>?, error) -> Void in
             do {
                 if let e = error {
@@ -365,6 +474,7 @@ open class LearningAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "isPassed" : true,
     "isManual" : true,
     "selfUri" : "aeiou",
     "module" : {
@@ -386,8 +496,15 @@ open class LearningAPI {
       "description" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "source" : "aeiou",
+      "type" : "aeiou",
       "version" : 123,
       "completionTimeInDays" : 123,
+      "summaryData" : {
+        "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+        "assignedCount" : 123,
+        "passedCount" : 123,
+        "completedCount" : 123
+      },
       "informSteps" : [ {
         "name" : "aeiou",
         "type" : "aeiou",
@@ -396,6 +513,46 @@ open class LearningAPI {
         "sharingUri" : "aeiou",
         "order" : 123
       } ],
+      "assessmentForm" : {
+        "selfUri" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "contextId" : "aeiou",
+        "id" : "aeiou",
+        "published" : true,
+        "passPercent" : 123,
+        "questionGroups" : [ {
+          "defaultAnswersToHighest" : true,
+          "manualWeight" : true,
+          "visibilityCondition" : "",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "questions" : [ {
+            "helpText" : "aeiou",
+            "commentsRequired" : true,
+            "visibilityCondition" : {
+              "combiningOperation" : "aeiou",
+              "predicates" : [ "{}" ]
+            },
+            "isCritical" : true,
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "type" : "aeiou",
+            "isKill" : true,
+            "maxResponseCharacters" : 123,
+            "naEnabled" : true,
+            "answerOptions" : [ {
+              "id" : "aeiou",
+              "text" : "aeiou",
+              "value" : 123
+            } ]
+          } ],
+          "weight" : 1.3579000000000001069366817318950779736042022705078125,
+          "id" : "aeiou",
+          "defaultAnswersToNA" : true,
+          "type" : "aeiou",
+          "naEnabled" : true
+        } ]
+      },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "",
       "name" : "aeiou",
@@ -406,6 +563,50 @@ open class LearningAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123,
     "isRule" : true,
+    "assessment" : {
+      "assessmentFormId" : "aeiou",
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "isPassed" : true,
+        "comments" : "aeiou",
+        "agentComments" : "aeiou",
+        "failureReasons" : [ "aeiou" ],
+        "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "questionGroupScores" : [ {
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "markedNA" : true,
+          "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "questionScores" : [ {
+            "failedKillQuestion" : true,
+            "answerId" : "aeiou",
+            "score" : 123,
+            "comments" : "aeiou",
+            "questionId" : "aeiou",
+            "markedNA" : true,
+            "freeTextAnswer" : "aeiou"
+          } ],
+          "questionGroupId" : "aeiou",
+          "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "totalScore" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "contextId" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "assessmentId" : "aeiou",
+      "dateSubmitted" : "2000-01-23T04:56:07.000+0000",
+      "status" : "aeiou"
+    },
+    "assessmentForm" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "isOverdue" : true,
     "createdBy" : {
@@ -414,6 +615,7 @@ open class LearningAPI {
     },
     "modifiedBy" : "",
     "id" : "aeiou",
+    "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
     "state" : "aeiou",
     "user" : ""
   } ],
@@ -431,6 +633,9 @@ open class LearningAPI {
      - parameter overdue: (query) Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)
+     - parameter minPercentageScore: (query) The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
+     - parameter maxPercentageScore: (query) The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)
@@ -440,7 +645,7 @@ open class LearningAPI {
 
      - returns: RequestBuilder<LearningAssignmentsDomainEntity> 
      */
-    open class func getLearningAssignmentsWithRequestBuilder(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignments? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningAssignments? = nil, sortBy: SortBy_getLearningAssignments? = nil, userId: [String]? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<LearningAssignmentsDomainEntity> {
+    open class func getLearningAssignmentsWithRequestBuilder(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignments? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, pass: Pass_getLearningAssignments? = nil, minPercentageScore: Float? = nil, maxPercentageScore: Float? = nil, sortOrder: SortOrder_getLearningAssignments? = nil, sortBy: SortBy_getLearningAssignments? = nil, userId: [String]? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<LearningAssignmentsDomainEntity> {
         let path = "/api/v2/learning/assignments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -464,6 +669,12 @@ open class LearningAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pass": pass?.rawValue, 
+            
+            "minPercentageScore": minPercentageScore, 
+            
+            "maxPercentageScore": maxPercentageScore, 
             
             "sortOrder": sortOrder?.rawValue, 
             
@@ -493,6 +704,19 @@ open class LearningAPI {
     
     
     public enum Overdue_getLearningAssignmentsMe: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum Pass_getLearningAssignmentsMe: String { 
         case _true = "True"
         case _false = "False"
         case any = "Any"
@@ -556,6 +780,9 @@ open class LearningAPI {
      - parameter overdue: (query) Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)
+     - parameter minPercentageScore: (query) The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
+     - parameter maxPercentageScore: (query) The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
      - parameter types: (query) Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)
@@ -563,8 +790,8 @@ open class LearningAPI {
      - parameter expand: (query) Specifies the expand option for returning additional information (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningAssignmentsMe(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignmentsMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningAssignmentsMe? = nil, sortBy: SortBy_getLearningAssignmentsMe? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentsDomainEntity?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLearningAssignmentsMeWithRequestBuilder(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand)
+    open class func getLearningAssignmentsMe(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignmentsMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, pass: Pass_getLearningAssignmentsMe? = nil, minPercentageScore: Float? = nil, maxPercentageScore: Float? = nil, sortOrder: SortOrder_getLearningAssignmentsMe? = nil, sortBy: SortBy_getLearningAssignmentsMe? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentsDomainEntity?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningAssignmentsMeWithRequestBuilder(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand)
         requestBuilder.execute { (response: Response<LearningAssignmentsDomainEntity>?, error) -> Void in
             do {
                 if let e = error {
@@ -595,6 +822,7 @@ open class LearningAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "isPassed" : true,
     "isManual" : true,
     "selfUri" : "aeiou",
     "module" : {
@@ -616,8 +844,15 @@ open class LearningAPI {
       "description" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "source" : "aeiou",
+      "type" : "aeiou",
       "version" : 123,
       "completionTimeInDays" : 123,
+      "summaryData" : {
+        "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+        "assignedCount" : 123,
+        "passedCount" : 123,
+        "completedCount" : 123
+      },
       "informSteps" : [ {
         "name" : "aeiou",
         "type" : "aeiou",
@@ -626,6 +861,46 @@ open class LearningAPI {
         "sharingUri" : "aeiou",
         "order" : 123
       } ],
+      "assessmentForm" : {
+        "selfUri" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "contextId" : "aeiou",
+        "id" : "aeiou",
+        "published" : true,
+        "passPercent" : 123,
+        "questionGroups" : [ {
+          "defaultAnswersToHighest" : true,
+          "manualWeight" : true,
+          "visibilityCondition" : "",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "questions" : [ {
+            "helpText" : "aeiou",
+            "commentsRequired" : true,
+            "visibilityCondition" : {
+              "combiningOperation" : "aeiou",
+              "predicates" : [ "{}" ]
+            },
+            "isCritical" : true,
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "type" : "aeiou",
+            "isKill" : true,
+            "maxResponseCharacters" : 123,
+            "naEnabled" : true,
+            "answerOptions" : [ {
+              "id" : "aeiou",
+              "text" : "aeiou",
+              "value" : 123
+            } ]
+          } ],
+          "weight" : 1.3579000000000001069366817318950779736042022705078125,
+          "id" : "aeiou",
+          "defaultAnswersToNA" : true,
+          "type" : "aeiou",
+          "naEnabled" : true
+        } ]
+      },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "",
       "name" : "aeiou",
@@ -636,6 +911,50 @@ open class LearningAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123,
     "isRule" : true,
+    "assessment" : {
+      "assessmentFormId" : "aeiou",
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "isPassed" : true,
+        "comments" : "aeiou",
+        "agentComments" : "aeiou",
+        "failureReasons" : [ "aeiou" ],
+        "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "questionGroupScores" : [ {
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "markedNA" : true,
+          "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "questionScores" : [ {
+            "failedKillQuestion" : true,
+            "answerId" : "aeiou",
+            "score" : 123,
+            "comments" : "aeiou",
+            "questionId" : "aeiou",
+            "markedNA" : true,
+            "freeTextAnswer" : "aeiou"
+          } ],
+          "questionGroupId" : "aeiou",
+          "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "totalScore" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "contextId" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "assessmentId" : "aeiou",
+      "dateSubmitted" : "2000-01-23T04:56:07.000+0000",
+      "status" : "aeiou"
+    },
+    "assessmentForm" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "isOverdue" : true,
     "createdBy" : {
@@ -644,6 +963,7 @@ open class LearningAPI {
     },
     "modifiedBy" : "",
     "id" : "aeiou",
+    "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
     "state" : "aeiou",
     "user" : ""
   } ],
@@ -661,6 +981,9 @@ open class LearningAPI {
      - parameter overdue: (query) Specifies if only the non-overdue (overdue is \&quot;False\&quot;) or overdue (overdue is \&quot;True\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or if the overdue parameter is not supplied, all assignments are returned (optional, default to Any)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pass: (query) Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) assignments (completed with assessment)are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all assignments are returned (optional, default to Any)
+     - parameter minPercentageScore: (query) The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
+     - parameter maxPercentageScore: (query) The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
      - parameter types: (query) Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional)
@@ -669,7 +992,7 @@ open class LearningAPI {
 
      - returns: RequestBuilder<LearningAssignmentsDomainEntity> 
      */
-    open class func getLearningAssignmentsMeWithRequestBuilder(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignmentsMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningAssignmentsMe? = nil, sortBy: SortBy_getLearningAssignmentsMe? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<LearningAssignmentsDomainEntity> {
+    open class func getLearningAssignmentsMeWithRequestBuilder(moduleId: String? = nil, interval: String? = nil, completionInterval: String? = nil, overdue: Overdue_getLearningAssignmentsMe? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, pass: Pass_getLearningAssignmentsMe? = nil, minPercentageScore: Float? = nil, maxPercentageScore: Float? = nil, sortOrder: SortOrder_getLearningAssignmentsMe? = nil, sortBy: SortBy_getLearningAssignmentsMe? = nil, types: [String]? = nil, states: [String]? = nil, expand: [String]? = nil) -> RequestBuilder<LearningAssignmentsDomainEntity> {
         let path = "/api/v2/learning/assignments/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -693,6 +1016,12 @@ open class LearningAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pass": pass?.rawValue, 
+            
+            "minPercentageScore": minPercentageScore, 
+            
+            "maxPercentageScore": maxPercentageScore, 
             
             "sortOrder": sortOrder?.rawValue, 
             
@@ -775,8 +1104,15 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,
+  "summaryData" : {
+    "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+    "assignedCount" : 123,
+    "passedCount" : 123,
+    "completedCount" : 123
+  },
   "informSteps" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -785,6 +1121,46 @@ open class LearningAPI {
     "sharingUri" : "aeiou",
     "order" : 123
   } ],
+  "assessmentForm" : {
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "contextId" : "aeiou",
+    "id" : "aeiou",
+    "published" : true,
+    "passPercent" : 123,
+    "questionGroups" : [ {
+      "defaultAnswersToHighest" : true,
+      "manualWeight" : true,
+      "visibilityCondition" : "",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "questions" : [ {
+        "helpText" : "aeiou",
+        "commentsRequired" : true,
+        "visibilityCondition" : {
+          "combiningOperation" : "aeiou",
+          "predicates" : [ "{}" ]
+        },
+        "isCritical" : true,
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou",
+        "isKill" : true,
+        "maxResponseCharacters" : 123,
+        "naEnabled" : true,
+        "answerOptions" : [ {
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "value" : 123
+        } ]
+      } ],
+      "weight" : 1.3579000000000001069366817318950779736042022705078125,
+      "id" : "aeiou",
+      "defaultAnswersToNA" : true,
+      "type" : "aeiou",
+      "naEnabled" : true
+    } ]
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : {
     "selfUri" : "aeiou",
@@ -965,8 +1341,15 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,
+  "summaryData" : {
+    "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+    "assignedCount" : 123,
+    "passedCount" : 123,
+    "completedCount" : 123
+  },
   "informSteps" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -975,6 +1358,46 @@ open class LearningAPI {
     "sharingUri" : "aeiou",
     "order" : 123
   } ],
+  "assessmentForm" : {
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "contextId" : "aeiou",
+    "id" : "aeiou",
+    "published" : true,
+    "passPercent" : 123,
+    "questionGroups" : [ {
+      "defaultAnswersToHighest" : true,
+      "manualWeight" : true,
+      "visibilityCondition" : "",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "questions" : [ {
+        "helpText" : "aeiou",
+        "commentsRequired" : true,
+        "visibilityCondition" : {
+          "combiningOperation" : "aeiou",
+          "predicates" : [ "{}" ]
+        },
+        "isCritical" : true,
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou",
+        "isKill" : true,
+        "maxResponseCharacters" : 123,
+        "naEnabled" : true,
+        "answerOptions" : [ {
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "value" : 123
+        } ]
+      } ],
+      "weight" : 1.3579000000000001069366817318950779736042022705078125,
+      "id" : "aeiou",
+      "defaultAnswersToNA" : true,
+      "type" : "aeiou",
+      "naEnabled" : true
+    } ]
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : {
     "selfUri" : "aeiou",
@@ -1061,6 +1484,15 @@ open class LearningAPI {
 
     
     
+    
+    public enum IsPublished_getLearningModules: String { 
+        case _true = "True"
+        case _false = "False"
+        case any = "Any"
+    }
+
+    
+    
     /**
      
      Get all learning modules of an organization
@@ -1073,10 +1505,11 @@ open class LearningAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter searchTerm: (query) Search Term (searchable by name) (optional)
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
+     - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningModulesDomainEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand)
+    open class func getLearningModules(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil, completion: @escaping ((_ data: LearningModulesDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModulesWithRequestBuilder(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished)
         requestBuilder.execute { (response: Response<LearningModulesDomainEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1125,8 +1558,15 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
+    "summaryData" : {
+      "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+      "assignedCount" : 123,
+      "passedCount" : 123,
+      "completedCount" : 123
+    },
     "informSteps" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -1135,6 +1575,46 @@ open class LearningAPI {
       "sharingUri" : "aeiou",
       "order" : 123
     } ],
+    "assessmentForm" : {
+      "selfUri" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "contextId" : "aeiou",
+      "id" : "aeiou",
+      "published" : true,
+      "passPercent" : 123,
+      "questionGroups" : [ {
+        "defaultAnswersToHighest" : true,
+        "manualWeight" : true,
+        "visibilityCondition" : "",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "questions" : [ {
+          "helpText" : "aeiou",
+          "commentsRequired" : true,
+          "visibilityCondition" : {
+            "combiningOperation" : "aeiou",
+            "predicates" : [ "{}" ]
+          },
+          "isCritical" : true,
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "isKill" : true,
+          "maxResponseCharacters" : 123,
+          "naEnabled" : true,
+          "answerOptions" : [ {
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "value" : 123
+          } ]
+        } ],
+        "weight" : 1.3579000000000001069366817318950779736042022705078125,
+        "id" : "aeiou",
+        "defaultAnswersToNA" : true,
+        "type" : "aeiou",
+        "naEnabled" : true
+      } ]
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : {
       "selfUri" : "aeiou",
@@ -1160,10 +1640,11 @@ open class LearningAPI {
      - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter searchTerm: (query) Search Term (searchable by name) (optional)
      - parameter expand: (query) Fields to expand in response(case insensitive) (optional)
+     - parameter isPublished: (query) Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)
 
      - returns: RequestBuilder<LearningModulesDomainEntityListing> 
      */
-    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil) -> RequestBuilder<LearningModulesDomainEntityListing> {
+    open class func getLearningModulesWithRequestBuilder(isArchived: Bool? = nil, types: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getLearningModules? = nil, sortBy: SortBy_getLearningModules? = nil, searchTerm: String? = nil, expand: [String]? = nil, isPublished: IsPublished_getLearningModules? = nil) -> RequestBuilder<LearningModulesDomainEntityListing> {
         let path = "/api/v2/learning/modules"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1190,7 +1671,9 @@ open class LearningAPI {
             
             "searchTerm": searchTerm, 
             
-            "expand": expand
+            "expand": expand, 
+            
+            "isPublished": isPublished?.rawValue
             
         ])
 
@@ -1240,6 +1723,7 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "isPassed" : true,
   "isManual" : true,
   "selfUri" : "aeiou",
   "module" : {
@@ -1261,8 +1745,15 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
+    "summaryData" : {
+      "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+      "assignedCount" : 123,
+      "passedCount" : 123,
+      "completedCount" : 123
+    },
     "informSteps" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -1271,6 +1762,46 @@ open class LearningAPI {
       "sharingUri" : "aeiou",
       "order" : 123
     } ],
+    "assessmentForm" : {
+      "selfUri" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "contextId" : "aeiou",
+      "id" : "aeiou",
+      "published" : true,
+      "passPercent" : 123,
+      "questionGroups" : [ {
+        "defaultAnswersToHighest" : true,
+        "manualWeight" : true,
+        "visibilityCondition" : "",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "questions" : [ {
+          "helpText" : "aeiou",
+          "commentsRequired" : true,
+          "visibilityCondition" : {
+            "combiningOperation" : "aeiou",
+            "predicates" : [ "{}" ]
+          },
+          "isCritical" : true,
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "isKill" : true,
+          "maxResponseCharacters" : 123,
+          "naEnabled" : true,
+          "answerOptions" : [ {
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "value" : 123
+          } ]
+        } ],
+        "weight" : 1.3579000000000001069366817318950779736042022705078125,
+        "id" : "aeiou",
+        "defaultAnswersToNA" : true,
+        "type" : "aeiou",
+        "naEnabled" : true
+      } ]
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
@@ -1281,6 +1812,50 @@ open class LearningAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "version" : 123,
   "isRule" : true,
+  "assessment" : {
+    "assessmentFormId" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "answers" : {
+      "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+      "isPassed" : true,
+      "comments" : "aeiou",
+      "agentComments" : "aeiou",
+      "failureReasons" : [ "aeiou" ],
+      "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+      "questionGroupScores" : [ {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "markedNA" : true,
+        "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "questionScores" : [ {
+          "failedKillQuestion" : true,
+          "answerId" : "aeiou",
+          "score" : 123,
+          "comments" : "aeiou",
+          "questionId" : "aeiou",
+          "markedNA" : true,
+          "freeTextAnswer" : "aeiou"
+        } ],
+        "questionGroupId" : "aeiou",
+        "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "totalScore" : 1.3579000000000001069366817318950779736042022705078125
+    },
+    "contextId" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "assessmentId" : "aeiou",
+    "dateSubmitted" : "2000-01-23T04:56:07.000+0000",
+    "status" : "aeiou"
+  },
+  "assessmentForm" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "isOverdue" : true,
   "createdBy" : {
@@ -1289,6 +1864,7 @@ open class LearningAPI {
   },
   "modifiedBy" : "",
   "id" : "aeiou",
+  "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
   "state" : "aeiou",
   "user" : ""
 }}]
@@ -1313,6 +1889,96 @@ open class LearningAPI {
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Score learning assessment for preview
+     
+     - parameter body: (body) Assessment form and answers to score 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningAssessmentsScoring(body: LearningAssessmentScoringRequest, completion: @escaping ((_ data: AssessmentScoringSet?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningAssessmentsScoringWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AssessmentScoringSet>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Score learning assessment for preview
+     
+     - POST /api/v2/learning/assessments/scoring
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+  "isPassed" : true,
+  "comments" : "aeiou",
+  "agentComments" : "aeiou",
+  "failureReasons" : [ "aeiou" ],
+  "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+  "questionGroupScores" : [ {
+    "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+    "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+    "markedNA" : true,
+    "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+    "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "questionScores" : [ {
+      "failedKillQuestion" : true,
+      "answerId" : "aeiou",
+      "score" : 123,
+      "comments" : "aeiou",
+      "questionId" : "aeiou",
+      "markedNA" : true,
+      "freeTextAnswer" : "aeiou"
+    } ],
+    "questionGroupId" : "aeiou",
+    "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+    "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+    "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+  } ],
+  "totalScore" : 1.3579000000000001069366817318950779736042022705078125
+}}]
+     
+     - parameter body: (body) Assessment form and answers to score 
+
+     - returns: RequestBuilder<AssessmentScoringSet> 
+     */
+    open class func postLearningAssessmentsScoringWithRequestBuilder(body: LearningAssessmentScoringRequest) -> RequestBuilder<AssessmentScoringSet> {
+        let path = "/api/v2/learning/assessments/scoring"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AssessmentScoringSet>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
     }
 
     
@@ -1353,6 +2019,7 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "isPassed" : true,
   "isManual" : true,
   "selfUri" : "aeiou",
   "module" : {
@@ -1374,8 +2041,15 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
+    "summaryData" : {
+      "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+      "assignedCount" : 123,
+      "passedCount" : 123,
+      "completedCount" : 123
+    },
     "informSteps" : [ {
       "name" : "aeiou",
       "type" : "aeiou",
@@ -1384,6 +2058,46 @@ open class LearningAPI {
       "sharingUri" : "aeiou",
       "order" : 123
     } ],
+    "assessmentForm" : {
+      "selfUri" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "contextId" : "aeiou",
+      "id" : "aeiou",
+      "published" : true,
+      "passPercent" : 123,
+      "questionGroups" : [ {
+        "defaultAnswersToHighest" : true,
+        "manualWeight" : true,
+        "visibilityCondition" : "",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "questions" : [ {
+          "helpText" : "aeiou",
+          "commentsRequired" : true,
+          "visibilityCondition" : {
+            "combiningOperation" : "aeiou",
+            "predicates" : [ "{}" ]
+          },
+          "isCritical" : true,
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "isKill" : true,
+          "maxResponseCharacters" : 123,
+          "naEnabled" : true,
+          "answerOptions" : [ {
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "value" : 123
+          } ]
+        } ],
+        "weight" : 1.3579000000000001069366817318950779736042022705078125,
+        "id" : "aeiou",
+        "defaultAnswersToNA" : true,
+        "type" : "aeiou",
+        "naEnabled" : true
+      } ]
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
@@ -1394,6 +2108,50 @@ open class LearningAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "version" : 123,
   "isRule" : true,
+  "assessment" : {
+    "assessmentFormId" : "aeiou",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "answers" : {
+      "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+      "isPassed" : true,
+      "comments" : "aeiou",
+      "agentComments" : "aeiou",
+      "failureReasons" : [ "aeiou" ],
+      "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+      "questionGroupScores" : [ {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "markedNA" : true,
+        "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "questionScores" : [ {
+          "failedKillQuestion" : true,
+          "answerId" : "aeiou",
+          "score" : 123,
+          "comments" : "aeiou",
+          "questionId" : "aeiou",
+          "markedNA" : true,
+          "freeTextAnswer" : "aeiou"
+        } ],
+        "questionGroupId" : "aeiou",
+        "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+        "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "totalScore" : 1.3579000000000001069366817318950779736042022705078125
+    },
+    "contextId" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "assessmentId" : "aeiou",
+    "dateSubmitted" : "2000-01-23T04:56:07.000+0000",
+    "status" : "aeiou"
+  },
+  "assessmentForm" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "isOverdue" : true,
   "createdBy" : {
@@ -1402,6 +2160,7 @@ open class LearningAPI {
   },
   "modifiedBy" : "",
   "id" : "aeiou",
+  "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
   "state" : "aeiou",
   "user" : ""
 }}]
@@ -1468,7 +2227,10 @@ open class LearningAPI {
       "metrics" : [ {
         "metric" : "aeiou",
         "stats" : {
-          "count" : 123
+          "min" : 123,
+          "max" : 123,
+          "count" : 123,
+          "sum" : 123
         }
       } ]
     } ],
@@ -1535,6 +2297,7 @@ open class LearningAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "isPassed" : true,
     "isManual" : true,
     "selfUri" : "aeiou",
     "module" : {
@@ -1556,8 +2319,15 @@ open class LearningAPI {
       "description" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "source" : "aeiou",
+      "type" : "aeiou",
       "version" : 123,
       "completionTimeInDays" : 123,
+      "summaryData" : {
+        "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+        "assignedCount" : 123,
+        "passedCount" : 123,
+        "completedCount" : 123
+      },
       "informSteps" : [ {
         "name" : "aeiou",
         "type" : "aeiou",
@@ -1566,6 +2336,46 @@ open class LearningAPI {
         "sharingUri" : "aeiou",
         "order" : 123
       } ],
+      "assessmentForm" : {
+        "selfUri" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "contextId" : "aeiou",
+        "id" : "aeiou",
+        "published" : true,
+        "passPercent" : 123,
+        "questionGroups" : [ {
+          "defaultAnswersToHighest" : true,
+          "manualWeight" : true,
+          "visibilityCondition" : "",
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "questions" : [ {
+            "helpText" : "aeiou",
+            "commentsRequired" : true,
+            "visibilityCondition" : {
+              "combiningOperation" : "aeiou",
+              "predicates" : [ "{}" ]
+            },
+            "isCritical" : true,
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "type" : "aeiou",
+            "isKill" : true,
+            "maxResponseCharacters" : 123,
+            "naEnabled" : true,
+            "answerOptions" : [ {
+              "id" : "aeiou",
+              "text" : "aeiou",
+              "value" : 123
+            } ]
+          } ],
+          "weight" : 1.3579000000000001069366817318950779736042022705078125,
+          "id" : "aeiou",
+          "defaultAnswersToNA" : true,
+          "type" : "aeiou",
+          "naEnabled" : true
+        } ]
+      },
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "",
       "name" : "aeiou",
@@ -1576,6 +2386,50 @@ open class LearningAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123,
     "isRule" : true,
+    "assessment" : {
+      "assessmentFormId" : "aeiou",
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "answers" : {
+        "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "isPassed" : true,
+        "comments" : "aeiou",
+        "agentComments" : "aeiou",
+        "failureReasons" : [ "aeiou" ],
+        "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+        "questionGroupScores" : [ {
+          "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "markedNA" : true,
+          "totalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "questionScores" : [ {
+            "failedKillQuestion" : true,
+            "answerId" : "aeiou",
+            "score" : 123,
+            "comments" : "aeiou",
+            "questionId" : "aeiou",
+            "markedNA" : true,
+            "freeTextAnswer" : "aeiou"
+          } ],
+          "questionGroupId" : "aeiou",
+          "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalNonCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "totalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
+          "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "totalScore" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "contextId" : "aeiou",
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "assessmentId" : "aeiou",
+      "dateSubmitted" : "2000-01-23T04:56:07.000+0000",
+      "status" : "aeiou"
+    },
+    "assessmentForm" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "isOverdue" : true,
     "createdBy" : {
@@ -1584,6 +2438,7 @@ open class LearningAPI {
     },
     "modifiedBy" : "",
     "id" : "aeiou",
+    "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
     "state" : "aeiou",
     "user" : ""
   } ],
@@ -1805,8 +2660,15 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,
+  "summaryData" : {
+    "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+    "assignedCount" : 123,
+    "passedCount" : 123,
+    "completedCount" : 123
+  },
   "informSteps" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -1815,6 +2677,46 @@ open class LearningAPI {
     "sharingUri" : "aeiou",
     "order" : 123
   } ],
+  "assessmentForm" : {
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "contextId" : "aeiou",
+    "id" : "aeiou",
+    "published" : true,
+    "passPercent" : 123,
+    "questionGroups" : [ {
+      "defaultAnswersToHighest" : true,
+      "manualWeight" : true,
+      "visibilityCondition" : "",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "questions" : [ {
+        "helpText" : "aeiou",
+        "commentsRequired" : true,
+        "visibilityCondition" : {
+          "combiningOperation" : "aeiou",
+          "predicates" : [ "{}" ]
+        },
+        "isCritical" : true,
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou",
+        "isKill" : true,
+        "maxResponseCharacters" : 123,
+        "naEnabled" : true,
+        "answerOptions" : [ {
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "value" : 123
+        } ]
+      } ],
+      "weight" : 1.3579000000000001069366817318950779736042022705078125,
+      "id" : "aeiou",
+      "defaultAnswersToNA" : true,
+      "type" : "aeiou",
+      "naEnabled" : true
+    } ]
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : {
     "selfUri" : "aeiou",
@@ -1990,8 +2892,15 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,
+  "summaryData" : {
+    "completedSum" : 1.3579000000000001069366817318950779736042022705078125,
+    "assignedCount" : 123,
+    "passedCount" : 123,
+    "completedCount" : 123
+  },
   "informSteps" : [ {
     "name" : "aeiou",
     "type" : "aeiou",
@@ -2000,6 +2909,46 @@ open class LearningAPI {
     "sharingUri" : "aeiou",
     "order" : 123
   } ],
+  "assessmentForm" : {
+    "selfUri" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "contextId" : "aeiou",
+    "id" : "aeiou",
+    "published" : true,
+    "passPercent" : 123,
+    "questionGroups" : [ {
+      "defaultAnswersToHighest" : true,
+      "manualWeight" : true,
+      "visibilityCondition" : "",
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "questions" : [ {
+        "helpText" : "aeiou",
+        "commentsRequired" : true,
+        "visibilityCondition" : {
+          "combiningOperation" : "aeiou",
+          "predicates" : [ "{}" ]
+        },
+        "isCritical" : true,
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou",
+        "isKill" : true,
+        "maxResponseCharacters" : 123,
+        "naEnabled" : true,
+        "answerOptions" : [ {
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "value" : 123
+        } ]
+      } ],
+      "weight" : 1.3579000000000001069366817318950779736042022705078125,
+      "id" : "aeiou",
+      "defaultAnswersToNA" : true,
+      "type" : "aeiou",
+      "naEnabled" : true
+    } ]
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : {
     "selfUri" : "aeiou",

@@ -11,7 +11,7 @@ import Foundation
 
 public class TimeOffRequestListing: Codable {
 
-    /** List of time off request look up objects */
+    /** List of time off requests */
     public var entities: [TimeOffRequest]?
 
     public init(entities: [TimeOffRequest]?) {

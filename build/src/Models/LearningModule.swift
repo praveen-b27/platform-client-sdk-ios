@@ -16,6 +16,12 @@ public class LearningModule: Codable {
         case userCreated = "UserCreated"
         case genesysBeyond = "GenesysBeyond"
     }
+    public enum ModelType: String, Codable { 
+        case informational = "Informational"
+        case assessedContent = "AssessedContent"
+        case questionnaire = "Questionnaire"
+        case assessment = "Assessment"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of learning module */
@@ -46,10 +52,16 @@ public class LearningModule: Codable {
     public var _description: String?
     /** The completion time of learning module in days */
     public var completionTimeInDays: Int?
+    /** The type for the learning module */
+    public var type: ModelType?
     /** The list of inform steps in a learning module */
     public var informSteps: [LearningModuleInformStep]?
+    /** The assessment form for learning module */
+    public var assessmentForm: AssessmentForm?
+    /** The learning module summary data */
+    public var summaryData: LearningModuleSummary?
 
-    public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStep]?) {
+    public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?) {
         
         self._id = _id
         
@@ -81,7 +93,13 @@ public class LearningModule: Codable {
         
         self.completionTimeInDays = completionTimeInDays
         
+        self.type = type
+        
         self.informSteps = informSteps
+        
+        self.assessmentForm = assessmentForm
+        
+        self.summaryData = summaryData
         
     }
 
@@ -101,7 +119,10 @@ public class LearningModule: Codable {
         case isPublished
         case _description = "description"
         case completionTimeInDays
+        case type
         case informSteps
+        case assessmentForm
+        case summaryData
     }
 
 

@@ -13,10 +13,22 @@ public class DevelopmentActivityAggregateQueryResponseStatistics: Codable {
 
     /** The count for this metric */
     public var count: Int?
+    /** The minimum value in this metric */
+    public var min: Int?
+    /** The maximum value in this metric */
+    public var max: Int?
+    /** The total of the values for this metric */
+    public var sum: Int?
 
-    public init(count: Int?) {
+    public init(count: Int?, min: Int?, max: Int?, sum: Int?) {
         
         self.count = count
+        
+        self.min = min
+        
+        self.max = max
+        
+        self.sum = sum
         
     }
 

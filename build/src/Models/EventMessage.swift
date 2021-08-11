@@ -52,6 +52,7 @@ public class EventMessage: Codable {
         case inactiveEdgesFailedPlaceCalls = "INACTIVE_EDGES_FAILED_PLACE_CALLS"
         case inactiveEdgesTurnedCampaignOff = "INACTIVE_EDGES_TURNED_CAMPAIGN_OFF"
         case invalidAgent = "INVALID_AGENT"
+        case invalidEmailAddress = "INVALID_EMAIL_ADDRESS"
         case invalidPhoneNumber = "INVALID_PHONE_NUMBER"
         case importFailedToReadHeaders = "IMPORT_FAILED_TO_READ_HEADERS"
         case importCouldNotParseAnEntry = "IMPORT_COULD_NOT_PARSE_AN_ENTRY"

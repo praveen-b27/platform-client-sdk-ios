@@ -27,6 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingCrossplatformMediaretentionpolicies**](RecordingAPI.html#getRecordingCrossplatformMediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled. |
 | [**getRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#getRecordingCrossplatformMediaretentionpolicy) | Get a media retention policy |
 | [**getRecordingJob**](RecordingAPI.html#getRecordingJob) | Get the status of the job associated with the job id. |
+| [**getRecordingJobFailedrecordings**](RecordingAPI.html#getRecordingJobFailedrecordings) | Get IDs of recordings that the bulk job failed for |
 | [**getRecordingJobs**](RecordingAPI.html#getRecordingJobs) | Get the status of all jobs within the user&#39;s organization |
 | [**getRecordingLocalkeysSetting**](RecordingAPI.html#getRecordingLocalkeysSetting) | Get the local encryption settings |
 | [**getRecordingLocalkeysSettings**](RecordingAPI.html#getRecordingLocalkeysSettings) | gets a list local key settings data |
@@ -1171,6 +1172,62 @@ RecordingAPI.getRecordingJob(jobId: jobId) { (response, error) in
 ### Return type
 
 [**RecordingJob**](RecordingJob.html)
+
+<a name="getRecordingJobFailedrecordings"></a>
+
+# **getRecordingJobFailedrecordings**
+
+
+
+> [FailedRecordingsEntityListing](FailedRecordingsEntityListing.html) getRecordingJobFailedrecordings(jobId, pageSize, pageNumber)
+
+Get IDs of recordings that the bulk job failed for
+
+
+
+Wraps GET /api/v2/recording/jobs/{jobId}/failedrecordings  
+
+Requires ALL permissions: 
+
+* recording:job:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let pageSize: Int = 25 // Page size. Maximum is 100.
+let pageNumber: Int = 1 // Page number
+
+// Code example
+RecordingAPI.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.getRecordingJobFailedrecordings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| jobId | |
+| **pageSize** | **Int**| Page size. Maximum is 100. | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FailedRecordingsEntityListing**](FailedRecordingsEntityListing.html)
 
 <a name="getRecordingJobs"></a>
 

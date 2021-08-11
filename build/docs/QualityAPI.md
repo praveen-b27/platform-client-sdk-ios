@@ -15,7 +15,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityAgentsActivity**](QualityAPI.html#getQualityAgentsActivity) | Gets a list of Agent Activities |
 | [**getQualityCalibration**](QualityAPI.html#getQualityCalibration) | Get a calibration by id.  Requires either calibrator id or conversation id |
 | [**getQualityCalibrations**](QualityAPI.html#getQualityCalibrations) | Get the list of calibrations |
-| [**getQualityConversationAudits**](QualityAPI.html#getQualityConversationAudits) | Get audits for conversation or recording |
 | [**getQualityConversationEvaluation**](QualityAPI.html#getQualityConversationEvaluation) | Get an evaluation |
 | [**getQualityConversationSurveys**](QualityAPI.html#getQualityConversationSurveys) | Get the surveys for a conversation |
 | [**getQualityConversationsAuditsQueryTransactionId**](QualityAPI.html#getQualityConversationsAuditsQueryTransactionId) | Get status of audit query execution |
@@ -525,79 +524,6 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 ### Return type
 
 [**CalibrationEntityListing**](CalibrationEntityListing.html)
-
-<a name="getQualityConversationAudits"></a>
-
-# **getQualityConversationAudits**
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-> [QualityAuditPage](QualityAuditPage.html) getQualityConversationAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType)
-
-Get audits for conversation or recording
-
-Different permissions are required for viewing different resource audit entries.  The quality:evaluation:viewAudit permission is required to view evaluation audits, the recording:recording:viewAudit permission is required to view recording audits, and so on.This endpoint is deprecated. Use following async endpoints, To query for audits POST /api/v2/quality/conversations/audits/queryTo get status of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}To get results of audit query GET /api/v2/quality/conversations/audits/query/{transactionId}/results
-
-Wraps GET /api/v2/quality/conversations/{conversationId}/audits  
-
-Requires ANY permissions: 
-
-* quality:calibration:viewAudit
-* quality:evaluation:viewAudit
-* quality:survey:viewAudit
-* recording:recording:viewAudit
-* recording:annotation:viewAudit
-* recording:screenRecording:viewAudit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let conversationId: String = "" // Conversation ID
-let pageSize: Int = 25 // The total page size requested
-let pageNumber: Int = 1 // The page number requested
-let sortBy: String = "" // variable name requested to sort by
-let expand: [String] = [""] // variable name requested by expand list
-let nextPage: String = "" // next page token
-let previousPage: String = "" // Previous page token
-let recordingId: String = "" // id of the recording
-let entityType: String = "Recording" // entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording
-
-// Code example
-QualityAPI.getQualityConversationAudits(conversationId: conversationId, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, recordingId: recordingId, entityType: entityType) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("QualityAPI.getQualityConversationAudits was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **conversationId** | **String**| Conversation ID | |
-| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
-| **nextPage** | **String**| next page token | [optional] |
-| **previousPage** | **String**| Previous page token | [optional] |
-| **recordingId** | **String**| id of the recording | [optional] |
-| **entityType** | **String**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to Recording] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**QualityAuditPage**](QualityAuditPage.html)
 
 <a name="getQualityConversationEvaluation"></a>
 

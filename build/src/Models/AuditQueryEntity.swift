@@ -47,6 +47,7 @@ public class AuditQueryEntity: Codable {
         case didpool = "DIDPool"
         case dnclist = "DNCList"
         case document = "Document"
+        case dynamicGroup = "DynamicGroup"
         case edge = "Edge"
         case edgeGroup = "EdgeGroup"
         case edgeLog = "EdgeLog"

@@ -27,6 +27,9 @@ public class Recording: Codable {
         case customerExperience = "CUSTOMER_EXPERIENCE"
         case adhoc = "ADHOC"
     }
+    public enum RecordingErrorStatus: String, Codable { 
+        case emailTranscriptTooLarge = "EMAIL_TRANSCRIPT_TOO_LARGE"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -78,10 +81,12 @@ public class Recording: Codable {
     public var users: [User]?
     /** Role of the file recording. It can be either customer_experience or adhoc. */
     public var recordingFileRole: RecordingFileRole?
+    /** Status of a recording that cannot be returned because of an error */
+    public var recordingErrorStatus: RecordingErrorStatus?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, annotations: [Annotation]?, transcript: [ChatMessage]?, emailTranscript: [RecordingEmailMessage]?, messagingTranscript: [RecordingMessagingMessage]?, fileState: FileState?, restoreExpirationTime: Date?, mediaUris: [String:MediaResult]?, estimatedTranscodeTimeMs: Int64?, actualTranscodeTimeMs: Int64?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, exportedDate: Date?, outputDurationMs: Int?, outputSizeInBytes: Int?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, users: [User]?, recordingFileRole: RecordingFileRole?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, annotations: [Annotation]?, transcript: [ChatMessage]?, emailTranscript: [RecordingEmailMessage]?, messagingTranscript: [RecordingMessagingMessage]?, fileState: FileState?, restoreExpirationTime: Date?, mediaUris: [String:MediaResult]?, estimatedTranscodeTimeMs: Int64?, actualTranscodeTimeMs: Int64?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, exportedDate: Date?, outputDurationMs: Int?, outputSizeInBytes: Int?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, users: [User]?, recordingFileRole: RecordingFileRole?, recordingErrorStatus: RecordingErrorStatus?, selfUri: String?) {
         
         self._id = _id
         
@@ -139,6 +144,8 @@ public class Recording: Codable {
         
         self.recordingFileRole = recordingFileRole
         
+        self.recordingErrorStatus = recordingErrorStatus
+        
         self.selfUri = selfUri
         
     }
@@ -172,6 +179,7 @@ public class Recording: Codable {
         case sessionId
         case users
         case recordingFileRole
+        case recordingErrorStatus
         case selfUri
     }
 

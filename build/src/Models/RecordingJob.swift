@@ -31,6 +31,10 @@ public class RecordingJob: Codable {
     public var totalConversations: Int?
     /** Total number of recordings affected. */
     public var totalRecordings: Int?
+    /** Total number of recordings that have been skipped. */
+    public var totalSkippedRecordings: Int?
+    /** Total number of recordings that the bulk job failed to process. */
+    public var totalFailedRecordings: Int?
     /** Total number of recordings have been processed. */
     public var totalProcessedRecordings: Int?
     /** Progress in percentage based on the number of recordings */
@@ -44,7 +48,7 @@ public class RecordingJob: Codable {
     /** Details of the user created the job */
     public var user: AddressableEntityRef?
 
-    public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, failedRecordings: String?, selfUri: String?, user: AddressableEntityRef?) {
+    public init(_id: String?, state: State?, recordingJobsQuery: RecordingJobsQuery?, dateCreated: Date?, totalConversations: Int?, totalRecordings: Int?, totalSkippedRecordings: Int?, totalFailedRecordings: Int?, totalProcessedRecordings: Int?, percentProgress: Int?, errorMessage: String?, failedRecordings: String?, selfUri: String?, user: AddressableEntityRef?) {
         
         self._id = _id
         
@@ -57,6 +61,10 @@ public class RecordingJob: Codable {
         self.totalConversations = totalConversations
         
         self.totalRecordings = totalRecordings
+        
+        self.totalSkippedRecordings = totalSkippedRecordings
+        
+        self.totalFailedRecordings = totalFailedRecordings
         
         self.totalProcessedRecordings = totalProcessedRecordings
         
@@ -79,6 +87,8 @@ public class RecordingJob: Codable {
         case dateCreated
         case totalConversations
         case totalRecordings
+        case totalSkippedRecordings
+        case totalFailedRecordings
         case totalProcessedRecordings
         case percentProgress
         case errorMessage

@@ -13,6 +13,7 @@ Message content element.
 | **quickReply** | [**ConversationContentQuickReply**](ConversationContentQuickReply.html) | Quick reply content. | [optional] |
 | **template** | [**ConversationContentNotificationTemplate**](ConversationContentNotificationTemplate.html) | Template notification content. | [optional] |
 | **buttonResponse** | [**ConversationContentButtonResponse**](ConversationContentButtonResponse.html) | Button response content. | [optional] |
+| **generic** | [**ContentGeneric**](ContentGeneric.html) | Generic Template Object | [optional] |
 {: class="table table-striped"}
 
 

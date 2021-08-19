@@ -26,6 +26,7 @@ public class EvaluationDetailQueryPredicate: Codable {
         case formid = "formId"
         case formname = "formName"
         case queueid = "queueId"
+        case released = "released"
         case rescored = "rescored"
         case userid = "userId"
     }

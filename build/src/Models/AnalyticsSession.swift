@@ -25,13 +25,13 @@ public class AnalyticsSession: Codable {
         case outbound = "outbound"
     }
     public enum MediaType: String, Codable { 
-        case unknown = "unknown"
         case callback = "callback"
         case chat = "chat"
         case cobrowse = "cobrowse"
         case email = "email"
         case message = "message"
         case screenshare = "screenshare"
+        case unknown = "unknown"
         case video = "video"
         case voice = "voice"
     }
@@ -81,6 +81,8 @@ public class AnalyticsSession: Codable {
     public var callbackScheduledTime: Date?
     /** The name of the user requesting a call back */
     public var callbackUserName: String?
+    /** The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation) */
+    public var coachedParticipantId: String?
     /** Describes side of the cobrowse (sharer or viewer) */
     public var cobrowseRole: String?
     /** A unique identifier for a PureCloud cobrowse room */
@@ -127,7 +129,7 @@ public class AnalyticsSession: Codable {
     public var mediaType: MediaType?
     /** Message type for messaging services. E.g.: sms, facebook, twitter, line */
     public var messageType: String?
-    /** The participantId being monitored (if someone (e.g. an agent) is being monitored, this would be the ID of the participant that was monitored that would correspond to other participantIds present in the conversation) */
+    /** The participantId being monitored (if someone (e.g. an agent) is being monitored, this would correspond to one of the other participantIds present in the conversation) */
     public var monitoredParticipantId: String?
     /** (Dialer) Unique identifier of the outbound campaign */
     public var outboundCampaignId: String?
@@ -194,7 +196,7 @@ public class AnalyticsSession: Codable {
     /** List of segments for this session */
     public var segments: [AnalyticsConversationSegment]?
 
-    public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, cobrowseRole: String?, cobrowseRoomId: String?, deliveryStatus: DeliveryStatus?, deliveryStatusChangeDate: Date?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, waitingInteractionCounts: [Int]?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?) {
+    public init(activeSkillIds: [String]?, acwSkipped: Bool?, addressFrom: String?, addressOther: String?, addressSelf: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, callbackNumbers: [String]?, callbackScheduledTime: Date?, callbackUserName: String?, coachedParticipantId: String?, cobrowseRole: String?, cobrowseRoomId: String?, deliveryStatus: DeliveryStatus?, deliveryStatusChangeDate: Date?, direction: Direction?, dispositionAnalyzer: String?, dispositionName: String?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, flowInType: String?, flowOutType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, mediaBridgeId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, monitoredParticipantId: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, peerId: String?, protocolCallId: String?, provider: String?, recording: Bool?, remote: String?, remoteNameDisplayable: String?, removedSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingRing: Int?, screenShareAddressSelf: String?, screenShareRoomId: String?, scriptId: String?, selectedAgentId: String?, selectedAgentRank: Int?, sessionDnis: String?, sessionId: String?, sharingScreen: Bool?, skipEnabled: Bool?, timeoutSeconds: Int?, usedRouting: UsedRouting?, videoAddressSelf: String?, videoRoomId: String?, waitingInteractionCounts: [Int]?, proposedAgents: [AnalyticsProposedAgent]?, mediaEndpointStats: [AnalyticsMediaEndpointStat]?, flow: AnalyticsFlow?, metrics: [AnalyticsSessionMetric]?, segments: [AnalyticsConversationSegment]?) {
         
         self.activeSkillIds = activeSkillIds
         
@@ -225,6 +227,8 @@ public class AnalyticsSession: Codable {
         self.callbackScheduledTime = callbackScheduledTime
         
         self.callbackUserName = callbackUserName
+        
+        self.coachedParticipantId = coachedParticipantId
         
         self.cobrowseRole = cobrowseRole
         

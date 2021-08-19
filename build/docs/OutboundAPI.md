@@ -20,7 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundContactlists**](OutboundAPI.html#deleteOutboundContactlists) | Delete multiple contact lists. |
 | [**deleteOutboundDnclist**](OutboundAPI.html#deleteOutboundDnclist) | Delete dialer DNC list |
 | [**deleteOutboundMessagingcampaign**](OutboundAPI.html#deleteOutboundMessagingcampaign) | Delete an Outbound Messaging Campaign |
-| [**deleteOutboundRuleset**](OutboundAPI.html#deleteOutboundRuleset) | Delete a Rule set. |
+| [**deleteOutboundRuleset**](OutboundAPI.html#deleteOutboundRuleset) | Delete a Rule Set. |
 | [**deleteOutboundSchedulesCampaign**](OutboundAPI.html#deleteOutboundSchedulesCampaign) | Delete a dialer campaign schedule. |
 | [**deleteOutboundSchedulesSequence**](OutboundAPI.html#deleteOutboundSchedulesSequence) | Delete a dialer sequence schedule. |
 | [**deleteOutboundSequence**](OutboundAPI.html#deleteOutboundSequence) | Delete a dialer campaign sequence. |
@@ -99,7 +99,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundDnclists**](OutboundAPI.html#postOutboundDnclists) | Create dialer DNC list |
 | [**postOutboundMessagingcampaigns**](OutboundAPI.html#postOutboundMessagingcampaigns) | Create a Messaging Campaign |
 | [**postOutboundMessagingcampaignsProgress**](OutboundAPI.html#postOutboundMessagingcampaignsProgress) | Get progress for a list of messaging campaigns |
-| [**postOutboundRulesets**](OutboundAPI.html#postOutboundRulesets) | Create a Dialer Call Analysis Response Set. |
+| [**postOutboundRulesets**](OutboundAPI.html#postOutboundRulesets) | Create a Rule Set. |
 | [**postOutboundSequences**](OutboundAPI.html#postOutboundSequences) | Create a new campaign sequence. |
 | [**putOutboundAttemptlimit**](OutboundAPI.html#putOutboundAttemptlimit) | Update attempt limits |
 | [**putOutboundCallabletimeset**](OutboundAPI.html#putOutboundCallabletimeset) | Update callable time set |
@@ -112,7 +112,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putOutboundContactlistfilter**](OutboundAPI.html#putOutboundContactlistfilter) | Update Contact List Filter |
 | [**putOutboundDnclist**](OutboundAPI.html#putOutboundDnclist) | Update dialer DNC list |
 | [**putOutboundMessagingcampaign**](OutboundAPI.html#putOutboundMessagingcampaign) | Update an Outbound Messaging Campaign |
-| [**putOutboundRuleset**](OutboundAPI.html#putOutboundRuleset) | Update a RuleSet. |
+| [**putOutboundRuleset**](OutboundAPI.html#putOutboundRuleset) | Update a Rule Set. |
 | [**putOutboundSchedulesCampaign**](OutboundAPI.html#putOutboundSchedulesCampaign) | Update a new campaign schedule. |
 | [**putOutboundSchedulesSequence**](OutboundAPI.html#putOutboundSchedulesSequence) | Update a new sequence schedule. |
 | [**putOutboundSequence**](OutboundAPI.html#putOutboundSequence) | Update a new campaign sequence. |
@@ -797,7 +797,7 @@ OutboundAPI.deleteOutboundMessagingcampaign(messagingCampaignId: messagingCampai
 
 > Void deleteOutboundRuleset(ruleSetId)
 
-Delete a Rule set.
+Delete a Rule Set.
 
 
 
@@ -5206,7 +5206,7 @@ OutboundAPI.postOutboundMessagingcampaignsProgress(body: body) { (response, erro
 
 > [RuleSet](RuleSet.html) postOutboundRulesets(body)
 
-Create a Dialer Call Analysis Response Set.
+Create a Rule Set.
 
 
 
@@ -5908,7 +5908,7 @@ OutboundAPI.putOutboundMessagingcampaign(messagingCampaignId: messagingCampaignI
 
 > [RuleSet](RuleSet.html) putOutboundRuleset(ruleSetId, body)
 
-Update a RuleSet.
+Update a Rule Set.
 
 
 

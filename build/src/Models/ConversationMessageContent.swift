@@ -17,6 +17,7 @@ public class ConversationMessageContent: Codable {
         case quickReply = "QuickReply"
         case notification = "Notification"
         case buttonResponse = "ButtonResponse"
+        case genericTemplate = "GenericTemplate"
     }
     /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
     public var contentType: ContentType?
@@ -28,8 +29,10 @@ public class ConversationMessageContent: Codable {
     public var template: ConversationContentNotificationTemplate?
     /** Button response content. */
     public var buttonResponse: ConversationContentButtonResponse?
+    /** Generic Template Object */
+    public var generic: ContentGeneric?
 
-    public init(contentType: ContentType?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?) {
+    public init(contentType: ContentType?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?, generic: ContentGeneric?) {
         
         self.contentType = contentType
         
@@ -40,6 +43,8 @@ public class ConversationMessageContent: Codable {
         self.template = template
         
         self.buttonResponse = buttonResponse
+        
+        self.generic = generic
         
     }
 

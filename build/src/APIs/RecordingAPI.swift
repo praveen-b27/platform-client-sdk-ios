@@ -7275,12 +7275,15 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "totalConversations" : 123,
-  "percentProgress" : 123,
   "selfUri" : "aeiou",
   "errorMessage" : "aeiou",
   "failedRecordings" : "aeiou",
+  "totalRecordings" : 123,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "percentProgress" : 123,
+  "totalSkippedRecordings" : 123,
+  "totalFailedRecordings" : 123,
   "id" : "aeiou",
   "state" : "aeiou",
   "user" : {
@@ -7381,7 +7384,6 @@ open class RecordingAPI {
     "actionDate" : "2000-01-23T04:56:07.000+0000",
     "includeScreenRecordings" : true
   },
-  "totalRecordings" : 123,
   "totalProcessedRecordings" : 123
 }}]
      
@@ -7583,12 +7585,15 @@ open class RecordingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "totalConversations" : 123,
-    "percentProgress" : 123,
     "selfUri" : "aeiou",
     "errorMessage" : "aeiou",
     "failedRecordings" : "aeiou",
+    "totalRecordings" : 123,
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "percentProgress" : 123,
+    "totalSkippedRecordings" : 123,
+    "totalFailedRecordings" : 123,
     "id" : "aeiou",
     "state" : "aeiou",
     "user" : {
@@ -7689,7 +7694,6 @@ open class RecordingAPI {
       "actionDate" : "2000-01-23T04:56:07.000+0000",
       "includeScreenRecordings" : true
     },
-    "totalRecordings" : 123,
     "totalProcessedRecordings" : 123
   } ],
   "firstUri" : "aeiou",
@@ -13180,12 +13184,15 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "totalConversations" : 123,
-  "percentProgress" : 123,
   "selfUri" : "aeiou",
   "errorMessage" : "aeiou",
   "failedRecordings" : "aeiou",
+  "totalRecordings" : 123,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "percentProgress" : 123,
+  "totalSkippedRecordings" : 123,
+  "totalFailedRecordings" : 123,
   "id" : "aeiou",
   "state" : "aeiou",
   "user" : {
@@ -13286,7 +13293,6 @@ open class RecordingAPI {
     "actionDate" : "2000-01-23T04:56:07.000+0000",
     "includeScreenRecordings" : true
   },
-  "totalRecordings" : 123,
   "totalProcessedRecordings" : 123
 }}]
      
@@ -17118,12 +17124,15 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "totalConversations" : 123,
-  "percentProgress" : 123,
   "selfUri" : "aeiou",
   "errorMessage" : "aeiou",
   "failedRecordings" : "aeiou",
+  "totalRecordings" : 123,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "percentProgress" : 123,
+  "totalSkippedRecordings" : 123,
+  "totalFailedRecordings" : 123,
   "id" : "aeiou",
   "state" : "aeiou",
   "user" : {
@@ -17224,7 +17233,6 @@ open class RecordingAPI {
     "actionDate" : "2000-01-23T04:56:07.000+0000",
     "includeScreenRecordings" : true
   },
-  "totalRecordings" : 123,
   "totalProcessedRecordings" : 123
 }}]
      

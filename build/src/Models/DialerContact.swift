@@ -20,6 +20,8 @@ public class DialerContact: Codable {
     public var data: [String:JSON]?
     /** A map of call records for the contact phone columns. */
     public var callRecords: [String:CallRecord]?
+    /** A map of SMS records for the contact phone columns. */
+    public var latestSmsEvaluations: [String:MessageEvaluation]?
     /** Indicates whether or not the contact can be called. */
     public var callable: Bool?
     /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
@@ -31,7 +33,7 @@ public class DialerContact: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:JSON]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, selfUri: String?) {
         
         self._id = _id
         
@@ -42,6 +44,8 @@ public class DialerContact: Codable {
         self.data = data
         
         self.callRecords = callRecords
+        
+        self.latestSmsEvaluations = latestSmsEvaluations
         
         self.callable = callable
         
@@ -61,6 +65,7 @@ public class DialerContact: Codable {
         case contactListId
         case data
         case callRecords
+        case latestSmsEvaluations
         case callable
         case phoneNumberStatus
         case contactColumnTimeZones

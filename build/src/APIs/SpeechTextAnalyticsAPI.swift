@@ -1181,6 +1181,63 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
+    /**
+     
+     Get list of supported Speech & Text Analytics topics dialects
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsTopicsDialects(completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTopicsDialectsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get list of supported Speech & Text Analytics topics dialects
+     
+     - GET /api/v2/speechandtextanalytics/topics/dialects
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ "{}" ]
+}}]
+
+     - returns: RequestBuilder<EntityListing> 
+     */
+    open class func getSpeechandtextanalyticsTopicsDialectsWithRequestBuilder() -> RequestBuilder<EntityListing> {
+        let path = "/api/v2/speechandtextanalytics/topics/dialects"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     public enum Dialect_getSpeechandtextanalyticsTopicsGeneral: String { 
         case enUs = "en-US"

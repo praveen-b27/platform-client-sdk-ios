@@ -1987,7 +1987,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgen
 
 Get the list of week schedules for the specified week
 
-Use \&quot;recent\&quot; for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+Use \&quot;recent\&quot; (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
 
 Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules  
 
@@ -2005,7 +2005,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The ID of the business unit
-let weekId: String = "" // First day of schedule week in yyyy-MM-dd format, or 'recent' to get recent schedules
+let weekId: String = "" // First day of schedule week in yyyy-MM-dd format, or 'recent' (without quotes) to get recent schedules
 let includeOnlyPublished: Bool = true // includeOnlyPublished
 let expand: WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekSchedules = WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekSchedules.enummember // expand
 
@@ -2026,7 +2026,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedules(businessU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules | |
+| **weekId** | **String**| First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules | |
 | **includeOnlyPublished** | **Bool**| includeOnlyPublished | [optional] |
 | **expand** | **String**| expand | [optional]<br />**Values**: forecastDescription ("forecast.description") |
 {: class="table-striped"}
@@ -2336,7 +2336,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastPl
 
 Get short term forecasts
 
-Use \&quot;recent\&quot; for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+Use \&quot;recent\&quot; (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
 
 Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts  
 
@@ -2354,7 +2354,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
-let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format or 'recent' to fetch recent forecasts
+let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecasts(businessUnitId: businessUnitId, weekDateId: weekDateId) { (response, error) in
@@ -2373,7 +2373,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecasts(
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
-| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts | |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts | |
 {: class="table-striped"}
 
 

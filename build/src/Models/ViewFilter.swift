@@ -12,13 +12,13 @@ import Foundation
 public class ViewFilter: Codable {
 
     public enum MediaTypes: String, Codable { 
-        case unknown = "unknown"
         case callback = "callback"
         case chat = "chat"
         case cobrowse = "cobrowse"
         case email = "email"
         case message = "message"
         case screenshare = "screenshare"
+        case unknown = "unknown"
         case video = "video"
         case voice = "voice"
     }

@@ -17,18 +17,22 @@ public class WritableDialerContact: Codable {
     public var contactListId: String?
     /** An ordered map of the contact&#39;s columns and corresponding values. */
     public var data: [String:JSON]?
+    /** A map of SMS records for the contact phone columns. */
+    public var latestSmsEvaluations: [String:MessageEvaluation]?
     /** Indicates whether or not the contact can be called. */
     public var callable: Bool?
     /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
     public var phoneNumberStatus: [String:PhoneNumberStatus]?
 
-    public init(_id: String?, contactListId: String?, data: [String:JSON]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?) {
+    public init(_id: String?, contactListId: String?, data: [String:JSON]?, latestSmsEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?) {
         
         self._id = _id
         
         self.contactListId = contactListId
         
         self.data = data
+        
+        self.latestSmsEvaluations = latestSmsEvaluations
         
         self.callable = callable
         
@@ -40,6 +44,7 @@ public class WritableDialerContact: Codable {
         case _id = "id"
         case contactListId
         case data
+        case latestSmsEvaluations
         case callable
         case phoneNumberStatus
     }

@@ -178,6 +178,145 @@ open class AnalyticsAPI {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Get Reporting Turns.
+     
+     - parameter botFlowId: (path) ID of the bot flow. 
+     - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional, default to 50)
+     - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
+     - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsBotflowReportingturns(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil, completion: @escaping ((_ data: ReportingTurnsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId)
+        requestBuilder.execute { (response: Response<ReportingTurnsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get Reporting Turns.
+     
+     - GET /api/v2/analytics/botflows/{botFlowId}/reportingturns
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "botPrompts" : [ "aeiou" ],
+    "userInput" : "aeiou",
+    "sessionId" : "aeiou",
+    "askAction" : {
+      "actionType" : "aeiou",
+      "actionNumber" : 123,
+      "actionId" : "aeiou",
+      "actionName" : "aeiou"
+    },
+    "askActionResult" : "aeiou",
+    "intent" : {
+      "slots" : [ {
+        "confidence" : 1.3579000000000001069366817318950779736042022705078125,
+        "name" : "aeiou",
+        "type" : "aeiou",
+        "value" : "aeiou"
+      } ],
+      "confidence" : 1.3579000000000001069366817318950779736042022705078125,
+      "name" : "aeiou"
+    },
+    "conversation" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "knowledge" : {
+      "feedback" : {
+        "searchId" : "aeiou",
+        "documents" : [ {
+          "question" : "aeiou",
+          "answer" : "aeiou",
+          "confidence" : 1.3579000000000001069366817318950779736042022705078125,
+          "id" : "aeiou"
+        } ],
+        "rating" : 123
+      },
+      "search" : {
+        "searchId" : "aeiou",
+        "documents" : [ "" ],
+        "query" : "aeiou"
+      },
+      "knowledgeBaseId" : "aeiou"
+    }
+  } ],
+  "selfUri" : "aeiou",
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter botFlowId: (path) ID of the bot flow. 
+     - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional, default to 50)
+     - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
+     - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session (optional)
+
+     - returns: RequestBuilder<ReportingTurnsResponse> 
+     */
+    open class func getAnalyticsBotflowReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, actionId: String? = nil, sessionId: String? = nil) -> RequestBuilder<ReportingTurnsResponse> {
+        var path = "/api/v2/analytics/botflows/{botFlowId}/reportingturns"
+        let botFlowIdPreEscape = "\(botFlowId)"
+        let botFlowIdPostEscape = botFlowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botFlowId}", with: botFlowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "after": after, 
+            
+            "pageSize": pageSize, 
+            
+            "actionId": actionId, 
+            
+            "sessionId": sessionId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ReportingTurnsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Get a conversation by id
@@ -228,7 +367,8 @@ open class AnalyticsAPI {
     "eventTime" : "2000-01-23T04:56:07.000+0000",
     "rescored" : true,
     "calibrationId" : "aeiou",
-    "evaluatorId" : "aeiou"
+    "evaluatorId" : "aeiou",
+    "released" : true
   } ],
   "conversationId" : "aeiou",
   "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -387,6 +527,7 @@ open class AnalyticsAPI {
       "dispositionName" : "aeiou",
       "scriptId" : "aeiou",
       "selectedAgentId" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "acwSkipped" : true,
       "mediaEndpointStats" : [ {
         "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -492,7 +633,8 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "released" : true
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -651,6 +793,7 @@ open class AnalyticsAPI {
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -836,7 +979,8 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "released" : true
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -995,6 +1139,7 @@ open class AnalyticsAPI {
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2815,7 +2960,8 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "released" : true
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2974,6 +3120,7 @@ open class AnalyticsAPI {
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3074,7 +3221,8 @@ open class AnalyticsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "released" : true
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3233,6 +3381,7 @@ open class AnalyticsAPI {
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,

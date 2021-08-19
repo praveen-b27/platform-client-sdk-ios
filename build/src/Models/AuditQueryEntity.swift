@@ -210,6 +210,8 @@ public class AuditQueryEntity: Codable {
         case ipAllowlistClear = "IpAllowlistClear"
         case addPairingRole = "AddPairingRole"
         case add = "Add"
+        case assign = "Assign"
+        case unassign = "Unassign"
     }
     /** Name of the Entity */
     public var name: Name?

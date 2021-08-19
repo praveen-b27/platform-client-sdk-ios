@@ -847,7 +847,7 @@ open class OutboundAPI {
     
     /**
      
-     Delete a Rule set.
+     Delete a Rule Set.
      
      - parameter ruleSetId: (path) Rule Set ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -865,7 +865,7 @@ open class OutboundAPI {
 
     /**
      
-     Delete a Rule set.
+     Delete a Rule Set.
      
      - DELETE /api/v2/outbound/rulesets/{ruleSetId}
      - 
@@ -4369,6 +4369,15 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "latestSmsEvaluations" : {
+    "key" : {
+      "contactColumn" : "aeiou",
+      "messageType" : "aeiou",
+      "contactAddress" : "aeiou",
+      "wrapupCodeId" : "aeiou",
+      "timestamp" : "2000-01-23T04:56:07.000+0000"
+    }
+  },
   "configurationOverrides" : {
     "priority" : true
   },
@@ -8729,6 +8738,15 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
+  "latestSmsEvaluations" : {
+    "key" : {
+      "contactColumn" : "aeiou",
+      "messageType" : "aeiou",
+      "contactAddress" : "aeiou",
+      "wrapupCodeId" : "aeiou",
+      "timestamp" : "2000-01-23T04:56:07.000+0000"
+    }
+  },
   "configurationOverrides" : {
     "priority" : true
   },
@@ -8834,6 +8852,15 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
+  "latestSmsEvaluations" : {
+    "key" : {
+      "contactColumn" : "aeiou",
+      "messageType" : "aeiou",
+      "contactAddress" : "aeiou",
+      "wrapupCodeId" : "aeiou",
+      "timestamp" : "2000-01-23T04:56:07.000+0000"
+    }
+  },
   "configurationOverrides" : {
     "priority" : true
   },
@@ -9079,6 +9106,15 @@ open class OutboundAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "preview" : [ {
+    "latestSmsEvaluations" : {
+      "key" : {
+        "contactColumn" : "aeiou",
+        "messageType" : "aeiou",
+        "contactAddress" : "aeiou",
+        "wrapupCodeId" : "aeiou",
+        "timestamp" : "2000-01-23T04:56:07.000+0000"
+      }
+    },
     "configurationOverrides" : {
       "priority" : true
     },
@@ -9642,7 +9678,7 @@ open class OutboundAPI {
     
     /**
      
-     Create a Dialer Call Analysis Response Set.
+     Create a Rule Set.
      
      - parameter body: (body) RuleSet 
      - parameter completion: completion handler to receive the data and the error objects
@@ -9667,7 +9703,7 @@ open class OutboundAPI {
 
     /**
      
-     Create a Dialer Call Analysis Response Set.
+     Create a Rule Set.
      
      - POST /api/v2/outbound/rulesets
      - 
@@ -10466,6 +10502,15 @@ open class OutboundAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "latestSmsEvaluations" : {
+    "key" : {
+      "contactColumn" : "aeiou",
+      "messageType" : "aeiou",
+      "contactAddress" : "aeiou",
+      "wrapupCodeId" : "aeiou",
+      "timestamp" : "2000-01-23T04:56:07.000+0000"
+    }
+  },
   "configurationOverrides" : {
     "priority" : true
   },
@@ -10810,7 +10855,7 @@ open class OutboundAPI {
     
     /**
      
-     Update a RuleSet.
+     Update a Rule Set.
      
      - parameter ruleSetId: (path) Rule Set ID 
      - parameter body: (body) RuleSet 
@@ -10836,7 +10881,7 @@ open class OutboundAPI {
 
     /**
      
-     Update a RuleSet.
+     Update a Rule Set.
      
      - PUT /api/v2/outbound/rulesets/{ruleSetId}
      - 

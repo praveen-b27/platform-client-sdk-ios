@@ -29,6 +29,8 @@ public class AnalyticsEvaluation: Codable {
     public var formName: String?
     /** The ID of the associated queue */
     public var queueId: String?
+    /** Whether the evaluation has been released */
+    public var released: Bool?
     /** Whether the evaluation has been rescored at least once */
     public var rescored: Bool?
     /** ID of the agent the evaluation was performed against */
@@ -36,7 +38,7 @@ public class AnalyticsEvaluation: Codable {
     public var oTotalCriticalScore: Int64?
     public var oTotalScore: Int64?
 
-    public init(calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
+    public init(calibrationId: String?, contextId: String?, deleted: Bool?, evaluationId: String?, evaluatorId: String?, eventTime: Date?, formId: String?, formName: String?, queueId: String?, released: Bool?, rescored: Bool?, userId: String?, oTotalCriticalScore: Int64?, oTotalScore: Int64?) {
         
         self.calibrationId = calibrationId
         
@@ -55,6 +57,8 @@ public class AnalyticsEvaluation: Codable {
         self.formName = formName
         
         self.queueId = queueId
+        
+        self.released = released
         
         self.rescored = rescored
         

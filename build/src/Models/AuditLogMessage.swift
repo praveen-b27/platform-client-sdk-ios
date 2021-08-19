@@ -106,6 +106,8 @@ public class AuditLogMessage: Codable {
         case ipAllowlistClear = "IpAllowlistClear"
         case addPairingRole = "AddPairingRole"
         case add = "Add"
+        case assign = "Assign"
+        case unassign = "Unassign"
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"

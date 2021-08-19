@@ -2939,7 +2939,7 @@ open class WorkforceManagementAPI {
      Get the list of week schedules for the specified week
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules 
      - parameter includeOnlyPublished: (query) includeOnlyPublished (optional)
      - parameter expand: (query) expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -2967,7 +2967,7 @@ open class WorkforceManagementAPI {
      Get the list of week schedules for the specified week
      
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules
-     - Use \"recent\" for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
+     - Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3002,7 +3002,7 @@ open class WorkforceManagementAPI {
 }}]
      
      - parameter businessUnitId: (path) The ID of the business unit 
-     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; to get recent schedules 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format, or &#39;recent&#39; (without quotes) to get recent schedules 
      - parameter includeOnlyPublished: (query) includeOnlyPublished (optional)
      - parameter expand: (query) expand (optional)
 
@@ -3622,7 +3622,7 @@ open class WorkforceManagementAPI {
      Get short term forecasts
      
      - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
-     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementBusinessunitWeekShorttermforecasts(businessUnitId: String, weekDateId: String, completion: @escaping ((_ data: BuShortTermForecastListing?,_ error: Error?) -> Void)) {
@@ -3648,7 +3648,7 @@ open class WorkforceManagementAPI {
      Get short term forecasts
      
      - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts
-     - Use \"recent\" for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
+     - Use \"recent\" (without quotes) for the `weekDateId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any forecast which spans the specified week
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3674,7 +3674,7 @@ open class WorkforceManagementAPI {
 }}]
      
      - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
-     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; to fetch recent forecasts 
+     - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts 
 
      - returns: RequestBuilder<BuShortTermForecastListing> 
      */

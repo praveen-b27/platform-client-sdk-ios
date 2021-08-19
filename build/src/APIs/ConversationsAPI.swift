@@ -694,7 +694,8 @@ open class ConversationsAPI {
     "eventTime" : "2000-01-23T04:56:07.000+0000",
     "rescored" : true,
     "calibrationId" : "aeiou",
-    "evaluatorId" : "aeiou"
+    "evaluatorId" : "aeiou",
+    "released" : true
   } ],
   "conversationId" : "aeiou",
   "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -853,6 +854,7 @@ open class ConversationsAPI {
       "dispositionName" : "aeiou",
       "scriptId" : "aeiou",
       "selectedAgentId" : "aeiou",
+      "coachedParticipantId" : "aeiou",
       "acwSkipped" : true,
       "mediaEndpointStats" : [ {
         "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -958,7 +960,8 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "released" : true
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1117,6 +1120,7 @@ open class ConversationsAPI {
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1302,7 +1306,8 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "released" : true
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1461,6 +1466,7 @@ open class ConversationsAPI {
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -17913,7 +17919,8 @@ open class ConversationsAPI {
       "eventTime" : "2000-01-23T04:56:07.000+0000",
       "rescored" : true,
       "calibrationId" : "aeiou",
-      "evaluatorId" : "aeiou"
+      "evaluatorId" : "aeiou",
+      "released" : true
     } ],
     "conversationId" : "aeiou",
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
@@ -18072,6 +18079,7 @@ open class ConversationsAPI {
         "dispositionName" : "aeiou",
         "scriptId" : "aeiou",
         "selectedAgentId" : "aeiou",
+        "coachedParticipantId" : "aeiou",
         "acwSkipped" : true,
         "mediaEndpointStats" : [ {
           "minRFactor" : 1.3579000000000001069366817318950779736042022705078125,

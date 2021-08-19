@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async request |
 | [**deleteAnalyticsReportingSchedule**](AnalyticsAPI.html#deleteAnalyticsReportingSchedule) | Delete a scheduled report job. |
 | [**deleteAnalyticsUsersDetailsJob**](AnalyticsAPI.html#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
+| [**getAnalyticsBotflowReportingturns**](AnalyticsAPI.html#getAnalyticsBotflowReportingturns) | Get Reporting Turns. |
 | [**getAnalyticsConversationDetails**](AnalyticsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
 | [**getAnalyticsConversationsDetails**](AnalyticsAPI.html#getAnalyticsConversationsDetails) | Gets multiple conversations by id |
 | [**getAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJob) | Get status for async query for conversation details |
@@ -203,6 +204,66 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+<a name="getAnalyticsBotflowReportingturns"></a>
+
+# **getAnalyticsBotflowReportingturns**
+
+
+
+> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId)
+
+Get Reporting Turns.
+
+
+
+Wraps GET /api/v2/analytics/botflows/{botFlowId}/reportingturns  
+
+Requires ANY permissions: 
+
+* analytics:botFlowReportingTurn:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let botFlowId: String = "" // ID of the bot flow.
+let after: String = "" // The cursor that points to the ID of the last item in the list of entities that has been returned.
+let pageSize: String = "50" // Max number of entities to return. Maximum of 250
+let actionId: String = "" // Optional action ID to get the reporting turns associated to a particular flow action
+let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session
+
+// Code example
+AnalyticsAPI.getAnalyticsBotflowReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, actionId: actionId, sessionId: sessionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsBotflowReportingturns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **botFlowId** | **String**| ID of the bot flow. | |
+| **after** | **String**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] [default to 50] |
+| **actionId** | **String**| Optional action ID to get the reporting turns associated to a particular flow action | [optional] |
+| **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ReportingTurnsResponse**](ReportingTurnsResponse.html)
 
 <a name="getAnalyticsConversationDetails"></a>
 

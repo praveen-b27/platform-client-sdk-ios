@@ -22,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsSettings) | Get Speech And Text Analytics Settings |
 | [**getSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopic) | Get a Speech &amp; Text Analytics topic by id |
 | [**getSpeechandtextanalyticsTopics**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopics) | Get the list of Speech &amp; Text Analytics topics |
+| [**getSpeechandtextanalyticsTopicsDialects**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsDialects) | Get list of supported Speech &amp; Text Analytics topics dialects |
 | [**getSpeechandtextanalyticsTopicsGeneral**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsGeneral) | Get the Speech &amp; Text Analytics general topics for a given dialect |
 | [**getSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsPublishjob) | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**patchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#patchSpeechandtextanalyticsSettings) | Patch Speech And Text Analytics Settings |
@@ -826,6 +827,53 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageS
 ### Return type
 
 [**TopicsEntityListing**](TopicsEntityListing.html)
+
+<a name="getSpeechandtextanalyticsTopicsDialects"></a>
+
+# **getSpeechandtextanalyticsTopicsDialects**
+
+
+
+> [EntityListing](EntityListing.html) getSpeechandtextanalyticsTopicsDialects()
+
+Get list of supported Speech &amp; Text Analytics topics dialects
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/topics/dialects  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsDialects() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsDialects was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
 
 <a name="getSpeechandtextanalyticsTopicsGeneral"></a>
 

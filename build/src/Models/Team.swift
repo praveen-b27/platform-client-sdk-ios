@@ -16,7 +16,7 @@ public class Team: Codable {
     /** The team name */
     public var name: String?
     /** The division to which this entity belongs. */
-    public var division: Division?
+    public var division: WritableDivision?
     /** Team information. */
     public var _description: String?
     /** Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -26,7 +26,7 @@ public class Team: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateModified: Date?, memberCount: Int64?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateModified: Date?, memberCount: Int64?, selfUri: String?) {
         
         self._id = _id
         

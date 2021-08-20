@@ -436,7 +436,11 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -769,7 +773,11 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1143,7 +1151,11 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1581,7 +1593,11 @@ open class GroupsAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1936,7 +1952,11 @@ open class GroupsAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2435,7 +2455,11 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2760,7 +2784,11 @@ open class GroupsAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3080,7 +3108,11 @@ open class GroupsAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",

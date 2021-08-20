@@ -66,10 +66,12 @@ public class Evaluation: Codable {
     /** Is only true when the user making the request does not have sufficient permissions to see evaluation */
     public var redacted: Bool?
     public var isScoringIndex: Bool?
+    /** List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit */
+    public var authorizedActions: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversation: Conversation?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversation: Conversation?, evaluationForm: EvaluationForm?, evaluator: User?, agent: User?, calibration: Calibration?, status: Status?, answers: EvaluationScoringSet?, agentHasRead: Bool?, releaseDate: Date?, assignedDate: Date?, changedDate: Date?, queue: Queue?, mediaType: [MediaType]?, rescore: Bool?, conversationDate: Date?, conversationEndDate: Date?, neverRelease: Bool?, resourceId: String?, resourceType: ResourceType?, redacted: Bool?, isScoringIndex: Bool?, authorizedActions: [String]?, selfUri: String?) {
         
         self._id = _id
         
@@ -117,6 +119,8 @@ public class Evaluation: Codable {
         
         self.isScoringIndex = isScoringIndex
         
+        self.authorizedActions = authorizedActions
+        
         self.selfUri = selfUri
         
     }
@@ -145,6 +149,7 @@ public class Evaluation: Codable {
         case resourceType
         case redacted
         case isScoringIndex
+        case authorizedActions
         case selfUri
     }
 

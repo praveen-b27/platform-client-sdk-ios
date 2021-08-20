@@ -429,6 +429,7 @@ open class ObjectsAPI {
         case routingschedules = "ROUTINGSCHEDULES"
         case routingschedulegroups = "ROUTINGSCHEDULEGROUPS"
         case datatables = "DATATABLES"
+        case team = "TEAM"
     }
 
     

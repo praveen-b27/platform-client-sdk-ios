@@ -14,6 +14,7 @@ public class WorkdayValuesMetricItem: Codable {
     public enum UnitType: String, Codable { 
         case _none = "None"
         case percent = "Percent"
+        case currency = "Currency"
         case seconds = "Seconds"
         case number = "Number"
         case attendanceStatus = "AttendanceStatus"

@@ -1327,7 +1327,11 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
-            "division" : "",
+            "division" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            },
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1803,7 +1807,11 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
-            "division" : "",
+            "division" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            },
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -2405,7 +2413,11 @@ open class AuthorizationAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2787,7 +2799,11 @@ open class AuthorizationAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -3638,7 +3654,11 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
-            "division" : "",
+            "division" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            },
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -3909,6 +3929,7 @@ open class AuthorizationAPI {
         case routingschedules = "ROUTINGSCHEDULES"
         case routingschedulegroups = "ROUTINGSCHEDULEGROUPS"
         case datatables = "DATATABLES"
+        case team = "TEAM"
     }
 
     
@@ -4397,7 +4418,11 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
-            "division" : "",
+            "division" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            },
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4874,7 +4899,11 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
-            "division" : "",
+            "division" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            },
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -5340,7 +5369,11 @@ open class AuthorizationAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -6157,7 +6190,11 @@ open class AuthorizationAPI {
             "spouse" : "aeiou"
           },
           "team" : {
-            "division" : "",
+            "division" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            },
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -6755,7 +6792,11 @@ open class AuthorizationAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",

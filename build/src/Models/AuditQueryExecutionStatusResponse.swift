@@ -50,6 +50,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case workforceManagement = "WorkforceManagement"
         case messaging = "Messaging"
         case supportability = "Supportability"
+        case callback = "Callback"
     }
     /** Id of the audit query execution request. */
     public var _id: String?

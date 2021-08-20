@@ -522,7 +522,11 @@ open class RecordingAPI {
           "spouse" : "aeiou"
         },
         "team" : {
-          "division" : "",
+          "division" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -1500,7 +1504,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1920,7 +1928,11 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2266,7 +2278,11 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2609,7 +2625,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2967,7 +2987,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3564,7 +3588,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4184,7 +4212,11 @@ open class RecordingAPI {
           "spouse" : "aeiou"
         },
         "team" : {
-          "division" : "",
+          "division" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          },
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -4880,7 +4912,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -5546,7 +5582,11 @@ open class RecordingAPI {
             "spouse" : "aeiou"
           },
           "team" : {
-            "division" : "",
+            "division" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            },
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -6347,7 +6387,11 @@ open class RecordingAPI {
                 "spouse" : "aeiou"
               },
               "team" : {
-                "division" : "",
+                "division" : {
+                  "selfUri" : "aeiou",
+                  "name" : "aeiou",
+                  "id" : "aeiou"
+                },
                 "memberCount" : 123456789,
                 "selfUri" : "aeiou",
                 "name" : "aeiou",
@@ -7026,7 +7070,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -8369,7 +8417,11 @@ open class RecordingAPI {
                 "spouse" : "aeiou"
               },
               "team" : {
-                "division" : "",
+                "division" : {
+                  "selfUri" : "aeiou",
+                  "name" : "aeiou",
+                  "id" : "aeiou"
+                },
                 "memberCount" : 123456789,
                 "selfUri" : "aeiou",
                 "name" : "aeiou",
@@ -9069,7 +9121,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -9503,7 +9559,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -9980,7 +10040,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -10263,9 +10327,7 @@ open class RecordingAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+0000",
           "agent" : "",
           "resourceId" : "aeiou",
-          "releaseDate" : "2000-01-23T04:56:07.000+0000",
           "redacted" : true,
-          "selfUri" : "aeiou",
           "answers" : {
             "totalNonCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "comments" : "aeiou",
@@ -10298,13 +10360,9 @@ open class RecordingAPI {
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "anyFailedKillQuestions" : true
           },
-          "mediaType" : [ "aeiou" ],
           "changedDate" : "2000-01-23T04:56:07.000+0000",
-          "neverRelease" : true,
-          "agentHasRead" : true,
-          "conversationDate" : "2000-01-23T04:56:07.000+0000",
+          "authorizedActions" : [ "aeiou" ],
           "conversationEndDate" : "2000-01-23T04:56:07.000+0000",
-          "name" : "aeiou",
           "id" : "aeiou",
           "rescore" : true,
           "calibration" : {
@@ -10326,6 +10384,64 @@ open class RecordingAPI {
             "evaluationForm" : ""
           },
           "conversation" : "",
+          "evaluationForm" : {
+            "publishedVersions" : {
+              "total" : 123456789,
+              "pageCount" : 123,
+              "pageNumber" : 123,
+              "entities" : [ "" ],
+              "firstUri" : "aeiou",
+              "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
+              "pageSize" : 123,
+              "nextUri" : "aeiou",
+              "previousUri" : "aeiou"
+            },
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+            "contextId" : "aeiou",
+            "id" : "aeiou",
+            "published" : true,
+            "questionGroups" : [ {
+              "defaultAnswersToHighest" : true,
+              "manualWeight" : true,
+              "visibilityCondition" : "",
+              "name" : "aeiou",
+              "questions" : [ {
+                "helpText" : "aeiou",
+                "commentsRequired" : true,
+                "visibilityCondition" : {
+                  "combiningOperation" : "aeiou",
+                  "predicates" : [ "{}" ]
+                },
+                "isCritical" : true,
+                "id" : "aeiou",
+                "text" : "aeiou",
+                "type" : "aeiou",
+                "isKill" : true,
+                "naEnabled" : true,
+                "answerOptions" : [ {
+                  "id" : "aeiou",
+                  "text" : "aeiou",
+                  "value" : 123
+                } ]
+              } ],
+              "weight" : 1.3579000000000001069366817318950779736042022705078125,
+              "id" : "aeiou",
+              "defaultAnswersToNA" : true,
+              "type" : "aeiou",
+              "naEnabled" : true
+            } ]
+          },
+          "evaluator" : "",
+          "releaseDate" : "2000-01-23T04:56:07.000+0000",
+          "selfUri" : "aeiou",
+          "mediaType" : [ "aeiou" ],
+          "neverRelease" : true,
+          "agentHasRead" : true,
+          "conversationDate" : "2000-01-23T04:56:07.000+0000",
+          "name" : "aeiou",
           "queue" : {
             "mediaSettings" : {
               "key" : {
@@ -10441,57 +10557,6 @@ open class RecordingAPI {
             "name" : "aeiou"
           },
           "isScoringIndex" : true,
-          "evaluationForm" : {
-            "publishedVersions" : {
-              "total" : 123456789,
-              "pageCount" : 123,
-              "pageNumber" : 123,
-              "entities" : [ "" ],
-              "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
-              "lastUri" : "aeiou",
-              "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
-            },
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "modifiedDate" : "2000-01-23T04:56:07.000+0000",
-            "contextId" : "aeiou",
-            "id" : "aeiou",
-            "published" : true,
-            "questionGroups" : [ {
-              "defaultAnswersToHighest" : true,
-              "manualWeight" : true,
-              "visibilityCondition" : "",
-              "name" : "aeiou",
-              "questions" : [ {
-                "helpText" : "aeiou",
-                "commentsRequired" : true,
-                "visibilityCondition" : {
-                  "combiningOperation" : "aeiou",
-                  "predicates" : [ "{}" ]
-                },
-                "isCritical" : true,
-                "id" : "aeiou",
-                "text" : "aeiou",
-                "type" : "aeiou",
-                "isKill" : true,
-                "naEnabled" : true,
-                "answerOptions" : [ {
-                  "id" : "aeiou",
-                  "text" : "aeiou",
-                  "value" : 123
-                } ]
-              } ],
-              "weight" : 1.3579000000000001069366817318950779736042022705078125,
-              "id" : "aeiou",
-              "defaultAnswersToNA" : true,
-              "type" : "aeiou",
-              "naEnabled" : true
-            } ]
-          },
-          "evaluator" : "",
           "status" : "aeiou",
           "resourceType" : "aeiou"
         } ],
@@ -11172,7 +11237,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -11841,7 +11910,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -12326,7 +12399,11 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -12941,7 +13018,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -13534,7 +13615,11 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -14166,7 +14251,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -14584,7 +14673,11 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -15303,7 +15396,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15700,7 +15797,11 @@ open class RecordingAPI {
       "spouse" : "aeiou"
     },
     "team" : {
-      "division" : "",
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -16269,7 +16370,11 @@ open class RecordingAPI {
         "spouse" : "aeiou"
       },
       "team" : {
-        "division" : "",
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -16874,7 +16979,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -17789,7 +17898,11 @@ open class RecordingAPI {
               "spouse" : "aeiou"
             },
             "team" : {
-              "division" : "",
+              "division" : {
+                "selfUri" : "aeiou",
+                "name" : "aeiou",
+                "id" : "aeiou"
+              },
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",

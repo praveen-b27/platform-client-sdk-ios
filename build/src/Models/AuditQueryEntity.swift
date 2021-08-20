@@ -147,6 +147,7 @@ public class AuditQueryEntity: Codable {
         case workspace = "Workspace"
         case wrapupCode = "WrapupCode"
         case wrapUpCodeMapping = "WrapUpCodeMapping"
+        case participant = "Participant"
     }
     public enum Actions: String, Codable { 
         case create = "Create"
@@ -212,6 +213,9 @@ public class AuditQueryEntity: Codable {
         case add = "Add"
         case assign = "Assign"
         case unassign = "Unassign"
+        case reassign = "Reassign"
+        case reschedule = "Reschedule"
+        case cancel = "Cancel"
     }
     /** Name of the Entity */
     public var name: Name?

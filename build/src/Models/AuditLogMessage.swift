@@ -43,6 +43,7 @@ public class AuditLogMessage: Codable {
         case workforceManagement = "WorkforceManagement"
         case messaging = "Messaging"
         case supportability = "Supportability"
+        case callback = "Callback"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -108,6 +109,9 @@ public class AuditLogMessage: Codable {
         case add = "Add"
         case assign = "Assign"
         case unassign = "Unassign"
+        case reassign = "Reassign"
+        case reschedule = "Reschedule"
+        case cancel = "Cancel"
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"
@@ -245,6 +249,7 @@ public class AuditLogMessage: Codable {
         case workspace = "Workspace"
         case wrapupCode = "WrapupCode"
         case wrapUpCodeMapping = "WrapUpCodeMapping"
+        case participant = "Participant"
     }
     /** Id of the audit message. */
     public var _id: String?

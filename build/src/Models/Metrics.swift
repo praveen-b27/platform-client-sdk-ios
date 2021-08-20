@@ -14,6 +14,7 @@ public class Metrics: Codable {
     public enum UnitType: String, Codable { 
         case _none = "None"
         case percent = "Percent"
+        case currency = "Currency"
         case seconds = "Seconds"
         case number = "Number"
         case attendanceStatus = "AttendanceStatus"
@@ -28,6 +29,8 @@ public class Metrics: Codable {
     public var metricDefinitionName: String?
     /** The id of associated metric definition */
     public var metricDefinitionId: String?
+    /** The id of associated external metric definition */
+    public var externalMetricDefinitionId: String?
     /** Corresponding unit type for this metric */
     public var unitType: UnitType?
     /** A flag for whether this metric is enabled for a performance profile */
@@ -38,10 +41,14 @@ public class Metrics: Codable {
     public var maxPoints: Int?
     /** Performance profile id of this metric */
     public var performanceProfileId: String?
+    /** Unit definition of linked external metric */
+    public var unitDefinition: String?
+    /** Precision of linked external metric */
+    public var precision: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, order: Int?, metricDefinitionName: String?, metricDefinitionId: String?, unitType: UnitType?, enabled: Bool?, templateName: String?, maxPoints: Int?, performanceProfileId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, order: Int?, metricDefinitionName: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, unitType: UnitType?, enabled: Bool?, templateName: String?, maxPoints: Int?, performanceProfileId: String?, unitDefinition: String?, precision: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -53,6 +60,8 @@ public class Metrics: Codable {
         
         self.metricDefinitionId = metricDefinitionId
         
+        self.externalMetricDefinitionId = externalMetricDefinitionId
+        
         self.unitType = unitType
         
         self.enabled = enabled
@@ -62,6 +71,10 @@ public class Metrics: Codable {
         self.maxPoints = maxPoints
         
         self.performanceProfileId = performanceProfileId
+        
+        self.unitDefinition = unitDefinition
+        
+        self.precision = precision
         
         self.selfUri = selfUri
         
@@ -73,11 +86,14 @@ public class Metrics: Codable {
         case order
         case metricDefinitionName
         case metricDefinitionId
+        case externalMetricDefinitionId
         case unitType
         case enabled
         case templateName
         case maxPoints
         case performanceProfileId
+        case unitDefinition
+        case precision
         case selfUri
     }
 

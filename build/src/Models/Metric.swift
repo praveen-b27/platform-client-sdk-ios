@@ -17,6 +17,8 @@ public class Metric: Codable {
     public var name: String?
     /** The id of associated metric definition */
     public var metricDefinitionId: String?
+    /** The id of associated external metric definition */
+    public var externalMetricDefinitionId: String?
     /** Associated objective for this metric */
     public var objective: Objective?
     /** Performance profile id of this metric */
@@ -32,13 +34,15 @@ public class Metric: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, metricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
+    public init(_id: String?, name: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, objective: Objective?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.metricDefinitionId = metricDefinitionId
+        
+        self.externalMetricDefinitionId = externalMetricDefinitionId
         
         self.objective = objective
         
@@ -60,6 +64,7 @@ public class Metric: Codable {
         case _id = "id"
         case name
         case metricDefinitionId
+        case externalMetricDefinitionId
         case objective
         case performanceProfileId
         case linkedMetric

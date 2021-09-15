@@ -1697,8 +1697,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2280,8 +2280,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2528,8 +2528,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2790,8 +2790,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3273,8 +3273,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3511,8 +3511,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3721,8 +3721,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3928,8 +3928,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4921,8 +4921,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5330,8 +5330,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5626,8 +5626,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5751,8 +5751,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6470,8 +6470,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6600,8 +6600,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -8558,8 +8558,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -9128,8 +9128,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9775,8 +9775,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9912,8 +9912,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -9928,6 +9928,250 @@ open class ArchitectAPI {
      */
     open class func getFlowsDatatablesWithRequestBuilder(expand: Expand_getFlowsDatatables? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatables? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, name: String? = nil) -> RequestBuilder<DataTablesDomainEntityListing> {
         let path = "/api/v2/flows/datatables"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue, 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "sortBy": sortBy?.rawValue, 
+            
+            "sortOrder": sortOrder, 
+            
+            "divisionId": divisionId, 
+            
+            "name": name
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DataTablesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Expand_getFlowsDatatablesDivisionview: String { 
+        case schema = "schema"
+    }
+
+    
+    
+    /**
+     
+     Returns a specific datatable by id
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsDatatablesDivisionview(datatableId: String, expand: Expand_getFlowsDatatablesDivisionview? = nil, completion: @escaping ((_ data: DataTable?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatablesDivisionviewWithRequestBuilder(datatableId: datatableId, expand: expand)
+        requestBuilder.execute { (response: Response<DataTable>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Returns a specific datatable by id
+     
+     - GET /api/v2/flows/datatables/divisionviews/{datatableId}
+     - Given a datatableId returns the datatable object and schema associated with it.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "schema" : {
+    "$schema" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou",
+    "additionalProperties" : "{}",
+    "title" : "aeiou",
+    "type" : "aeiou",
+    "required" : [ "aeiou" ],
+    "properties" : {
+      "key" : "{}"
+    }
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "id" : "aeiou"
+}}]
+     
+     - parameter datatableId: (path) id of datatable 
+     - parameter expand: (query) Expand instructions for the result (optional)
+
+     - returns: RequestBuilder<DataTable> 
+     */
+    open class func getFlowsDatatablesDivisionviewWithRequestBuilder(datatableId: String, expand: Expand_getFlowsDatatablesDivisionview? = nil) -> RequestBuilder<DataTable> {
+        var path = "/api/v2/flows/datatables/divisionviews/{datatableId}"
+        let datatableIdPreEscape = "\(datatableId)"
+        let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{datatableId}", with: datatableIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand?.rawValue
+            
+        ])
+
+        let requestBuilder: RequestBuilder<DataTable>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    public enum Expand_getFlowsDatatablesDivisionviews: String { 
+        case schema = "schema"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum SortBy_getFlowsDatatablesDivisionviews: String { 
+        case _id = "id"
+        case name = "name"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Retrieve a list of datatables for the org
+     
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter divisionId: (query) division ID(s) (optional)
+     - parameter name: (query) Name to filter by (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsDatatablesDivisionviews(expand: Expand_getFlowsDatatablesDivisionviews? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatablesDivisionviews? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, name: String? = nil, completion: @escaping ((_ data: DataTablesDomainEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsDatatablesDivisionviewsWithRequestBuilder(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId, name: name)
+        requestBuilder.execute { (response: Response<DataTablesDomainEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a list of datatables for the org
+     
+     - GET /api/v2/flows/datatables/divisionviews
+     - Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "schema" : {
+      "$schema" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "additionalProperties" : "{}",
+      "title" : "aeiou",
+      "type" : "aeiou",
+      "required" : [ "aeiou" ],
+      "properties" : {
+        "key" : "{}"
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
+}}]
+     
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter sortBy: (query) Sort by (optional, default to id)
+     - parameter sortOrder: (query) Sort order (optional, default to ascending)
+     - parameter divisionId: (query) division ID(s) (optional)
+     - parameter name: (query) Name to filter by (optional)
+
+     - returns: RequestBuilder<DataTablesDomainEntityListing> 
+     */
+    open class func getFlowsDatatablesDivisionviewsWithRequestBuilder(expand: Expand_getFlowsDatatablesDivisionviews? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getFlowsDatatablesDivisionviews? = nil, sortOrder: String? = nil, divisionId: [String]? = nil, name: String? = nil) -> RequestBuilder<DataTablesDomainEntityListing> {
+        let path = "/api/v2/flows/datatables/divisionviews"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         
@@ -10431,8 +10675,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -11104,8 +11348,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11231,8 +11475,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11996,8 +12240,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12123,8 +12367,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)

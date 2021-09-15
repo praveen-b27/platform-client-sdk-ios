@@ -27,12 +27,14 @@ public class PerformanceProfile: Codable {
     public var reportingIntervals: [ReportingInterval]?
     /** The flag for active profiles */
     public var active: Bool?
+    /** The number of members in this performance profile */
+    public var memberCount: Int?
     /** The maximum rank size for the leaderboard. This counts the number of ranks can be retrieved in a leaderboard queries */
     public var maxLeaderboardRankSize: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, metricOrders: [String]?, dateCreated: Date?, reportingIntervals: [ReportingInterval]?, active: Bool?, maxLeaderboardRankSize: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, metricOrders: [String]?, dateCreated: Date?, reportingIntervals: [ReportingInterval]?, active: Bool?, memberCount: Int?, maxLeaderboardRankSize: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -50,6 +52,8 @@ public class PerformanceProfile: Codable {
         
         self.active = active
         
+        self.memberCount = memberCount
+        
         self.maxLeaderboardRankSize = maxLeaderboardRankSize
         
         self.selfUri = selfUri
@@ -65,6 +69,7 @@ public class PerformanceProfile: Codable {
         case dateCreated
         case reportingIntervals
         case active
+        case memberCount
         case maxLeaderboardRankSize
         case selfUri
     }

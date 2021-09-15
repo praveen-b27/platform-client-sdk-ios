@@ -29,7 +29,7 @@ Wraps GET /api/v2/search
 
 Requires ANY permissions: 
 
-* directory:user:divisionview
+* directory:user:view
 
 ### Example
 
@@ -85,7 +85,7 @@ Wraps GET /api/v2/search/suggest
 
 Requires ANY permissions: 
 
-* directory:user:divisionview
+* directory:user:view
 
 ### Example
 
@@ -141,7 +141,7 @@ Wraps POST /api/v2/search
 
 Requires ANY permissions: 
 
-* directory:user:divisionview
+* directory:user:view
 
 ### Example
 
@@ -195,7 +195,7 @@ Wraps POST /api/v2/search/suggest
 
 Requires ANY permissions: 
 
-* directory:user:divisionview
+* directory:user:view
 
 ### Example
 

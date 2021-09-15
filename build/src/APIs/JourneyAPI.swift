@@ -493,8 +493,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -692,8 +692,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -976,8 +976,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1218,8 +1218,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1476,8 +1476,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
@@ -1520,6 +1520,288 @@ open class JourneyAPI {
         ])
 
         let requestBuilder: RequestBuilder<SegmentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a single session.
+     
+     - parameter sessionId: (path) ID of the session. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneySession(sessionId: String, completion: @escaping ((_ data: Session?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySessionWithRequestBuilder(sessionId: sessionId)
+        requestBuilder.execute { (response: Response<Session>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a single session.
+     
+     - GET /api/v2/journey/sessions/{sessionId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "screenviewCount" : 123,
+  "shortId" : "aeiou",
+  "authenticated" : true,
+  "lastPage" : {
+    "fragment" : "aeiou",
+    "hostname" : "aeiou",
+    "keywords" : "aeiou",
+    "breadcrumb" : [ "aeiou" ],
+    "domain" : "aeiou",
+    "title" : "aeiou",
+    "lang" : "aeiou",
+    "queryString" : "aeiou",
+    "url" : "aeiou",
+    "pathname" : "aeiou"
+  },
+  "durationInSeconds" : 123,
+  "searchTerms" : [ "aeiou" ],
+  "conversationSubject" : "aeiou",
+  "userAgentString" : "aeiou",
+  "eventCount" : 123,
+  "type" : "aeiou",
+  "lastConnectedQueue" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "browser" : {
+    "featuresPdf" : true,
+    "featuresFlash" : true,
+    "viewWidth" : 123,
+    "featuresJava" : true,
+    "fingerprint" : "aeiou",
+    "viewHeight" : 123,
+    "isMobile" : true,
+    "featuresWebrtc" : true,
+    "family" : "aeiou",
+    "lang" : "aeiou",
+    "version" : "aeiou"
+  },
+  "customerId" : "aeiou",
+  "id" : "aeiou",
+  "customerIdType" : "aeiou",
+  "awayDate" : "2000-01-23T04:56:07.000+0000",
+  "attributeLists" : {
+    "key" : {
+      "dataType" : "aeiou",
+      "values" : [ "aeiou" ]
+    }
+  },
+  "mktCampaign" : {
+    "name" : "aeiou",
+    "clickId" : "aeiou",
+    "term" : "aeiou",
+    "medium" : "aeiou",
+    "source" : "aeiou",
+    "content" : "aeiou",
+    "network" : "aeiou"
+  },
+  "conversation" : "",
+  "ipOrganization" : "aeiou",
+  "externalUrl" : "aeiou",
+  "endedDate" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "idleDate" : "2000-01-23T04:56:07.000+0000",
+  "ipAddress" : "aeiou",
+  "externalId" : "aeiou",
+  "pageviewCount" : 123,
+  "externalContact" : "",
+  "originatingDirection" : "aeiou",
+  "referrer" : {
+    "hostname" : "aeiou",
+    "fragment" : "aeiou",
+    "keywords" : "aeiou",
+    "domain" : "aeiou",
+    "name" : "aeiou",
+    "medium" : "aeiou",
+    "queryString" : "aeiou",
+    "url" : "aeiou",
+    "pathname" : "aeiou"
+  },
+  "lastUserDisposition" : {
+    "code" : "aeiou",
+    "notes" : "aeiou",
+    "user" : ""
+  },
+  "outcomeAchievements" : [ {
+    "achievedDate" : "2000-01-23T04:56:07.000+0000",
+    "outcome" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "outcome" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      }
+    }
+  } ],
+  "lastConnectedUser" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "createdDate" : "2000-01-23T04:56:07.000+0000",
+  "conversationChannels" : [ {
+    "type" : "aeiou",
+    "platform" : "aeiou"
+  } ],
+  "segmentAssignments" : [ {
+    "assignedDate" : "2000-01-23T04:56:07.000+0000",
+    "segment" : {
+      "segment" : "",
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
+  "lastEvent" : {
+    "createdDate" : "2000-01-23T04:56:07.000+0000",
+    "eventName" : "aeiou",
+    "id" : "aeiou"
+  },
+  "attributes" : {
+    "key" : {
+      "dataType" : "aeiou",
+      "value" : "aeiou"
+    }
+  },
+  "device" : {
+    "screenWidth" : 123,
+    "osFamily" : "aeiou",
+    "osVersion" : "aeiou",
+    "screenHeight" : 123,
+    "fingerprint" : "aeiou",
+    "isMobile" : true,
+    "category" : "aeiou",
+    "type" : "aeiou"
+  },
+  "geolocation" : {
+    "country" : "aeiou",
+    "timezone" : "aeiou",
+    "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+    "postalCode" : "aeiou",
+    "regionName" : "aeiou",
+    "locality" : "aeiou",
+    "countryName" : "aeiou",
+    "source" : "aeiou",
+    "region" : "aeiou",
+    "longitude" : 1.3579000000000001069366817318950779736042022705078125
+  }
+}}]
+     
+     - parameter sessionId: (path) ID of the session. 
+
+     - returns: RequestBuilder<Session> 
+     */
+    open class func getJourneySessionWithRequestBuilder(sessionId: String) -> RequestBuilder<Session> {
+        var path = "/api/v2/journey/sessions/{sessionId}"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Session>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve latest outcome score associated with a session for all outcomes.
+     
+     - parameter sessionId: (path) ID of the session. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneySessionOutcomescores(sessionId: String, completion: @escaping ((_ data: OutcomeScoresResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySessionOutcomescoresWithRequestBuilder(sessionId: sessionId)
+        requestBuilder.execute { (response: Response<OutcomeScoresResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve latest outcome score associated with a session for all outcomes.
+     
+     - GET /api/v2/journey/sessions/{sessionId}/outcomescores
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "outcomeScores" : [ {
+    "sessionMaxProbability" : 1.3579000000000001069366817318950779736042022705078125,
+    "probability" : 1.3579000000000001069366817318950779736042022705078125,
+    "outcome" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000"
+}}]
+     
+     - parameter sessionId: (path) ID of the session. 
+
+     - returns: RequestBuilder<OutcomeScoresResult> 
+     */
+    open class func getJourneySessionOutcomescoresWithRequestBuilder(sessionId: String) -> RequestBuilder<OutcomeScoresResult> {
+        var path = "/api/v2/journey/sessions/{sessionId}/outcomescores"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OutcomeScoresResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

@@ -395,8 +395,8 @@ open class UserRecordingsAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -715,6 +715,7 @@ open class UserRecordingsAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -760,6 +761,7 @@ open class UserRecordingsAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -931,6 +933,7 @@ open class UserRecordingsAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -970,7 +973,8 @@ open class UserRecordingsAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1478,8 +1482,8 @@ open class UserRecordingsAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -1798,6 +1802,7 @@ open class UserRecordingsAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1843,6 +1848,7 @@ open class UserRecordingsAPI {
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
+            "messageInQueueFlow" : "",
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -2014,6 +2020,7 @@ open class UserRecordingsAPI {
         "messages" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
+          "authenticated" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : "",
@@ -2053,7 +2060,8 @@ open class UserRecordingsAPI {
           } ],
           "recipientCountry" : "aeiou",
           "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-          "recordingId" : "aeiou"
+          "recordingId" : "aeiou",
+          "agentAssistantId" : "aeiou"
         } ],
         "socialExpressions" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -2105,8 +2113,8 @@ open class UserRecordingsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -2533,8 +2541,8 @@ open class UserRecordingsAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -2853,6 +2861,7 @@ open class UserRecordingsAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2898,6 +2907,7 @@ open class UserRecordingsAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -3069,6 +3079,7 @@ open class UserRecordingsAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -3108,7 +3119,8 @@ open class UserRecordingsAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",

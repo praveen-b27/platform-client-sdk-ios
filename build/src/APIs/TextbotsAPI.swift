@@ -91,7 +91,109 @@ open class TextbotsAPI {
           "flags" : [ "aeiou" ]
         },
         "text" : "aeiou",
-        "type" : "aeiou"
+        "type" : "aeiou",
+        "content" : [ {
+          "template" : {
+            "footer" : {
+              "text" : "aeiou"
+            },
+            "header" : {
+              "text" : "aeiou",
+              "media" : "",
+              "type" : "aeiou",
+              "parameters" : [ {
+                "name" : "aeiou",
+                "text" : "aeiou"
+              } ]
+            },
+            "language" : "aeiou",
+            "id" : "aeiou",
+            "body" : {
+              "text" : "aeiou",
+              "parameters" : [ "" ]
+            }
+          },
+          "quickReply" : {
+            "image" : "aeiou",
+            "payload" : "aeiou",
+            "action" : "aeiou",
+            "id" : "aeiou",
+            "text" : "aeiou"
+          },
+          "postback" : {
+            "payload" : "aeiou",
+            "id" : "aeiou",
+            "text" : "aeiou"
+          },
+          "attachment" : {
+            "filename" : "aeiou",
+            "sha256" : "aeiou",
+            "mime" : "aeiou",
+            "mediaType" : "aeiou",
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "url" : "aeiou"
+          },
+          "buttonResponse" : {
+            "payload" : "aeiou",
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "type" : "aeiou"
+          },
+          "location" : {
+            "address" : "aeiou",
+            "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+            "text" : "aeiou",
+            "url" : "aeiou",
+            "longitude" : 1.3579000000000001069366817318950779736042022705078125
+          },
+          "reactions" : [ {
+            "reactionType" : "aeiou",
+            "count" : 123
+          } ],
+          "list" : {
+            "submitLabel" : "aeiou",
+            "components" : [ {
+              "image" : "aeiou",
+              "rmid" : "aeiou",
+              "description" : "aeiou",
+              "id" : "aeiou",
+              "type" : "aeiou",
+              "title" : "aeiou",
+              "actions" : ""
+            } ],
+            "description" : "aeiou",
+            "id" : "aeiou",
+            "title" : "aeiou",
+            "listType" : "aeiou",
+            "actions" : ""
+          },
+          "contentType" : "aeiou",
+          "generic" : {
+            "image" : "aeiou",
+            "components" : [ {
+              "title" : "aeiou",
+              "actions" : ""
+            } ],
+            "description" : "aeiou",
+            "video" : "aeiou",
+            "title" : "aeiou",
+            "actions" : {
+              "urlTarget" : "aeiou",
+              "textback" : "aeiou",
+              "url" : "aeiou"
+            }
+          },
+          "mention" : {
+            "image" : "aeiou",
+            "firstName" : "aeiou",
+            "lastName" : "aeiou",
+            "idType" : "aeiou",
+            "nickname" : "aeiou",
+            "id" : "aeiou",
+            "email" : "aeiou"
+          }
+        } ]
       } ]
     }
   }

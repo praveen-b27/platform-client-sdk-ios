@@ -15,8 +15,8 @@ List of users matching the learning module rule
 | **unfilteredTotal** | **Int** | The total number of users | [optional] |
 | **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-| **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 {: class="table table-striped"}

@@ -62,6 +62,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsDatatableRow**](ArchitectAPI.html#getFlowsDatatableRow) | Returns a specific row for the datatable |
 | [**getFlowsDatatableRows**](ArchitectAPI.html#getFlowsDatatableRows) | Returns the rows for the datatable with the given id |
 | [**getFlowsDatatables**](ArchitectAPI.html#getFlowsDatatables) | Retrieve a list of datatables for the org |
+| [**getFlowsDatatablesDivisionview**](ArchitectAPI.html#getFlowsDatatablesDivisionview) | Returns a specific datatable by id |
+| [**getFlowsDatatablesDivisionviews**](ArchitectAPI.html#getFlowsDatatablesDivisionviews) | Retrieve a list of datatables for the org |
 | [**getFlowsDivisionviews**](ArchitectAPI.html#getFlowsDivisionviews) | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**getFlowsExecution**](ArchitectAPI.html#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
 | [**getFlowsMilestone**](ArchitectAPI.html#getFlowsMilestone) | Get a flow milestone |
@@ -3217,6 +3219,124 @@ ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize
         dump(error)
     } else if let response = response {
         print("ArchitectAPI.getFlowsDatatables was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **sortBy** | **String**| Sort by | [optional] [default to id]<br />**Values**: _id ("id"), name ("name") |
+| **sortOrder** | **String**| Sort order | [optional] [default to ascending] |
+| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
+| **name** | **String**| Name to filter by | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html)
+
+<a name="getFlowsDatatablesDivisionview"></a>
+
+# **getFlowsDatatablesDivisionview**
+
+
+
+> [DataTable](DataTable.html) getFlowsDatatablesDivisionview(datatableId, expand)
+
+Returns a specific datatable by id
+
+Given a datatableId returns the datatable object and schema associated with it.
+
+Wraps GET /api/v2/flows/datatables/divisionviews/{datatableId}  
+
+Requires ALL permissions: 
+
+* architect:datatable:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let expand: ArchitectAPI.Expand_getFlowsDatatablesDivisionview = ArchitectAPI.Expand_getFlowsDatatablesDivisionview.enummember // Expand instructions for the result
+
+// Code example
+ArchitectAPI.getFlowsDatatablesDivisionview(datatableId: datatableId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsDatatablesDivisionview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datatableId** | **String**| id of datatable | |
+| **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DataTable**](DataTable.html)
+
+<a name="getFlowsDatatablesDivisionviews"></a>
+
+# **getFlowsDatatablesDivisionviews**
+
+
+
+> [DataTablesDomainEntityListing](DataTablesDomainEntityListing.html) getFlowsDatatablesDivisionviews(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name)
+
+Retrieve a list of datatables for the org
+
+Returns a metadata list of the datatables associated with this org, including datatableId, name and description.
+
+Wraps GET /api/v2/flows/datatables/divisionviews  
+
+Requires ALL permissions: 
+
+* architect:datatable:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let expand: ArchitectAPI.Expand_getFlowsDatatablesDivisionviews = ArchitectAPI.Expand_getFlowsDatatablesDivisionviews.enummember // Expand instructions for the result
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: ArchitectAPI.SortBy_getFlowsDatatablesDivisionviews = ArchitectAPI.SortBy_getFlowsDatatablesDivisionviews.enummember // Sort by
+let sortOrder: String = "ascending" // Sort order
+let divisionId: [String] = [""] // division ID(s)
+let name: String = "" // Name to filter by
+
+// Code example
+ArchitectAPI.getFlowsDatatablesDivisionviews(expand: expand, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, divisionId: divisionId, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsDatatablesDivisionviews was successful")
         dump(response)
     }
 }

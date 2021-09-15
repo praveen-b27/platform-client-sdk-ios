@@ -663,8 +663,8 @@ open class IdentityProviderAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<OAuthProviderEntityListing> 
@@ -788,6 +788,7 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
   "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
@@ -1058,6 +1059,7 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
   "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
@@ -1124,6 +1126,7 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
   "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],
@@ -1317,6 +1320,7 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "relyingPartyIdentifier" : "aeiou",
   "autoProvisionUsers" : true,
   "issuerURI" : "aeiou",
   "sloURI" : "aeiou",
@@ -1384,6 +1388,7 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "relyingPartyIdentifier" : "aeiou",
   "issuerURI" : "aeiou",
   "sloURI" : "aeiou",
   "certificates" : [ "aeiou" ],

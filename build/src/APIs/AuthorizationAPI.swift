@@ -468,8 +468,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -783,8 +783,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -884,8 +884,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1000,8 +1000,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -1434,6 +1434,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1483,6 +1484,7 @@ open class AuthorizationAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -1914,6 +1916,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1963,6 +1966,7 @@ open class AuthorizationAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -2147,8 +2151,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter roleId: (path) Role ID 
@@ -2511,8 +2515,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter roleId: (path) Role ID 
@@ -2906,6 +2910,7 @@ open class AuthorizationAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2955,6 +2960,7 @@ open class AuthorizationAPI {
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
+            "messageInQueueFlow" : "",
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -3033,8 +3039,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -3761,6 +3767,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3810,6 +3817,7 @@ open class AuthorizationAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -4525,6 +4533,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -4574,6 +4583,7 @@ open class AuthorizationAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -5006,6 +5016,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5055,6 +5066,7 @@ open class AuthorizationAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -5476,6 +5488,7 @@ open class AuthorizationAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5525,6 +5538,7 @@ open class AuthorizationAPI {
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
+            "messageInQueueFlow" : "",
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -5603,8 +5617,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter force: (query) Restore default roles (optional, default to false)
@@ -6297,6 +6311,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -6346,6 +6361,7 @@ open class AuthorizationAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -6899,6 +6915,7 @@ open class AuthorizationAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -6948,6 +6965,7 @@ open class AuthorizationAPI {
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
+            "messageInQueueFlow" : "",
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -7026,8 +7044,8 @@ open class AuthorizationAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter body: (body) Organization roles list 

@@ -1079,19 +1079,36 @@ open class SpeechTextAnalyticsAPI {
     
     
     
+    
+    public enum SortBy_getSpeechandtextanalyticsTopics: String { 
+        case name = "name"
+    }
+
+    
+    
+    
+    public enum SortOrder_getSpeechandtextanalyticsTopics: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+
+    
+    
     /**
      
      Get the list of Speech & Text Analytics topics
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional, default to 20)
-     - parameter state: (query) Topic state (optional)
+     - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
+     - parameter sortBy: (query) Sort results by. Defaults to name (optional)
+     - parameter sortOrder: (query) Sort order. Defaults to asc (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSpeechandtextanalyticsTopics(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, completion: @escaping ((_ data: TopicsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids)
+    open class func getSpeechandtextanalyticsTopics(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil, completion: @escaping ((_ data: TopicsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<TopicsEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1118,6 +1135,7 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "total" : 123,
   "pageCount" : 123,
   "entities" : [ {
     "dialect" : "aeiou",
@@ -1144,13 +1162,15 @@ open class SpeechTextAnalyticsAPI {
      
      - parameter nextPage: (query) The key for listing the next page (optional)
      - parameter pageSize: (query) The page size for the listing (optional, default to 20)
-     - parameter state: (query) Topic state (optional)
+     - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
+     - parameter sortBy: (query) Sort results by. Defaults to name (optional)
+     - parameter sortOrder: (query) Sort order. Defaults to asc (optional)
 
      - returns: RequestBuilder<TopicsEntityListing> 
      */
-    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil) -> RequestBuilder<TopicsEntityListing> {
+    open class func getSpeechandtextanalyticsTopicsWithRequestBuilder(nextPage: String? = nil, pageSize: Int? = nil, state: State_getSpeechandtextanalyticsTopics? = nil, name: String? = nil, ids: [String]? = nil, sortBy: SortBy_getSpeechandtextanalyticsTopics? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsTopics? = nil) -> RequestBuilder<TopicsEntityListing> {
         let path = "/api/v2/speechandtextanalytics/topics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1171,7 +1191,11 @@ open class SpeechTextAnalyticsAPI {
             
             "name": name, 
             
-            "ids": ids
+            "ids": ids, 
+            
+            "sortBy": sortBy?.rawValue, 
+            
+            "sortOrder": sortOrder?.rawValue
             
         ])
 
@@ -1247,6 +1271,11 @@ open class SpeechTextAnalyticsAPI {
         case enZa = "en-ZA"
         case esEs = "es-ES"
         case enIn = "en-IN"
+        case frFr = "fr-FR"
+        case frCa = "fr-CA"
+        case itIt = "it-IT"
+        case deDe = "de-DE"
+        case ptBr = "pt-BR"
     }
 
     

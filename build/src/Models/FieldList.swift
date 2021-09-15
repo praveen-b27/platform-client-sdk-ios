@@ -20,8 +20,9 @@ public class FieldList: Codable {
     public var state: String?
     public var type: String?
     public var _required: Bool?
+    public var gdpr: Bool?
 
-    public init(customLabels: Bool?, instructionText: String?, key: String?, labelKeys: [String]?, params: [String:JSON]?, repeatable: Bool?, state: String?, type: String?, _required: Bool?) {
+    public init(customLabels: Bool?, instructionText: String?, key: String?, labelKeys: [String]?, params: [String:JSON]?, repeatable: Bool?, state: String?, type: String?, _required: Bool?, gdpr: Bool?) {
         
         self.customLabels = customLabels
         
@@ -41,6 +42,8 @@ public class FieldList: Codable {
         
         self._required = _required
         
+        self.gdpr = gdpr
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -53,6 +56,7 @@ public class FieldList: Codable {
         case state
         case type
         case _required = "required"
+        case gdpr
     }
 
 

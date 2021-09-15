@@ -228,11 +228,11 @@ NotificationsAPI.getNotificationsChannels(includechannels: includechannels) { (r
 
 
 
-> Bool headNotificationsChannel(channelId)
+> Void headNotificationsChannel(channelId)
 
 Verify a channel still exists and is valid
 
-
+Returns a 200 OK if channel exists, and a 404 Not Found if it doesn&#39;t
 
 Wraps HEAD /api/v2/notifications/channels/{channelId}  
 
@@ -250,12 +250,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let channelId: String = "" // Channel ID
 
 // Code example
-NotificationsAPI.headNotificationsChannel(channelId: channelId) { (response, error) in
+NotificationsAPI.headNotificationsChannel(channelId: channelId) { (error) in
     if let error = error {
         dump(error)
-    } else if let response = response {
+    } else {
         print("NotificationsAPI.headNotificationsChannel was successful")
-        dump(response)
     }
 }
 ```
@@ -271,7 +270,7 @@ NotificationsAPI.headNotificationsChannel(channelId: channelId) { (response, err
 
 ### Return type
 
-**Bool**
+`nil` (empty response body)
 
 <a name="postNotificationsChannelSubscriptions"></a>
 

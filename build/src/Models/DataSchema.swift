@@ -15,7 +15,7 @@ public class DataSchema: Codable {
         case contact = "CONTACT"
         case externalOrganization = "EXTERNAL_ORGANIZATION"
     }
-    /** The globally unique identifier for the object. */
+    /** The globally unique identifier for the schema.  Only required if a schema is used for custom fields during external entity creation or updates. */
     public var _id: String?
     public var name: String?
     /** The schema&#39;s version, a positive integer. Required for updates. */

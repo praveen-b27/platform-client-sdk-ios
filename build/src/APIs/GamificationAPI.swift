@@ -439,7 +439,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : 123456789,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -451,6 +451,7 @@ open class GamificationAPI {
     "metricOrders" : [ "aeiou" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -728,14 +729,40 @@ open class GamificationAPI {
   "entities" : [ {
     "precision" : 123,
     "selfUri" : "aeiou",
+    "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
     "performanceProfileId" : "aeiou",
     "enabled" : true,
     "unitType" : "aeiou",
     "metricDefinitionId" : "aeiou",
+    "linkedMetric" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : 123456789,
     "templateName" : "aeiou",
     "maxPoints" : 123,
     "unitDefinition" : "aeiou",
     "name" : "aeiou",
+    "sourcePerformanceProfile" : {
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "metricOrders" : [ "aeiou" ],
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "maxLeaderboardRankSize" : 123,
+      "memberCount" : 123,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "active" : true,
+      "id" : "aeiou",
+      "reportingIntervals" : [ {
+        "intervalType" : "aeiou",
+        "intervalValue" : 123
+      } ]
+    },
     "id" : "aeiou",
     "metricDefinitionName" : "aeiou",
     "externalMetricDefinitionId" : "aeiou",
@@ -819,6 +846,7 @@ open class GamificationAPI {
   "metricOrders" : [ "aeiou" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "maxLeaderboardRankSize" : 123,
+  "memberCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -903,7 +931,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : 123456789,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -915,6 +943,7 @@ open class GamificationAPI {
     "metricOrders" : [ "aeiou" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1036,7 +1065,7 @@ open class GamificationAPI {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     },
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "dateCreated" : 123456789,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "sourcePerformanceProfile" : {
@@ -1048,6 +1077,7 @@ open class GamificationAPI {
       "metricOrders" : [ "aeiou" ],
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "maxLeaderboardRankSize" : 123,
+      "memberCount" : 123,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
@@ -1159,14 +1189,40 @@ open class GamificationAPI {
   "entities" : [ {
     "precision" : 123,
     "selfUri" : "aeiou",
+    "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
     "performanceProfileId" : "aeiou",
     "enabled" : true,
     "unitType" : "aeiou",
     "metricDefinitionId" : "aeiou",
+    "linkedMetric" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : 123456789,
     "templateName" : "aeiou",
     "maxPoints" : 123,
     "unitDefinition" : "aeiou",
     "name" : "aeiou",
+    "sourcePerformanceProfile" : {
+      "division" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "metricOrders" : [ "aeiou" ],
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "maxLeaderboardRankSize" : 123,
+      "memberCount" : 123,
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "description" : "aeiou",
+      "active" : true,
+      "id" : "aeiou",
+      "reportingIntervals" : [ {
+        "intervalType" : "aeiou",
+        "intervalValue" : 123
+      } ]
+    },
     "id" : "aeiou",
     "metricDefinitionName" : "aeiou",
     "externalMetricDefinitionId" : "aeiou",
@@ -1250,6 +1306,7 @@ open class GamificationAPI {
     "metricOrders" : [ "aeiou" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -1331,6 +1388,7 @@ open class GamificationAPI {
   "metricOrders" : [ "aeiou" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "maxLeaderboardRankSize" : 123,
+  "memberCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -1418,6 +1476,7 @@ open class GamificationAPI {
   "metricOrders" : [ "aeiou" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "maxLeaderboardRankSize" : 123,
+  "memberCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -1520,7 +1579,7 @@ open class GamificationAPI {
         "selfUri" : "aeiou",
         "id" : "aeiou"
       },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "dateCreated" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "sourcePerformanceProfile" : {
@@ -1532,6 +1591,7 @@ open class GamificationAPI {
         "metricOrders" : [ "aeiou" ],
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "maxLeaderboardRankSize" : 123,
+        "memberCount" : 123,
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
@@ -1817,7 +1877,7 @@ open class GamificationAPI {
     
     /**
      
-     Average points of the requesting user's division
+     Average points of the requesting user's division or performance profile
      
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter completion: completion handler to receive the data and the error objects
@@ -1842,7 +1902,7 @@ open class GamificationAPI {
 
     /**
      
-     Average points of the requesting user's division
+     Average points of the requesting user's division or performance profile
      
      - GET /api/v2/gamification/scorecards/points/average
      - 
@@ -2054,7 +2114,7 @@ open class GamificationAPI {
         "selfUri" : "aeiou",
         "id" : "aeiou"
       },
-      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "dateCreated" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "sourcePerformanceProfile" : {
@@ -2066,6 +2126,7 @@ open class GamificationAPI {
         "metricOrders" : [ "aeiou" ],
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "maxLeaderboardRankSize" : 123,
+        "memberCount" : 123,
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
@@ -2491,7 +2552,7 @@ open class GamificationAPI {
     
     /**
      
-     Values Trends of a user
+     Values trends of a user
      
      - parameter userId: (path)  
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
@@ -2519,7 +2580,7 @@ open class GamificationAPI {
 
     /**
      
-     Values Trends of a user
+     Values trends of a user
      
      - GET /api/v2/gamification/scorecards/users/{userId}/values/trends
      - 
@@ -2923,7 +2984,7 @@ open class GamificationAPI {
     
     /**
      
-     Average values of the requesting user's division
+     Average values of the requesting user's division or performance profile
      
      - parameter workday: (query) The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
@@ -2949,7 +3010,7 @@ open class GamificationAPI {
 
     /**
      
-     Average values of the requesting user's division
+     Average values of the requesting user's division or performance profile
      
      - GET /api/v2/gamification/scorecards/values/average
      - 
@@ -3027,6 +3088,8 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      
      Values trends of the requesting user or group
@@ -3034,11 +3097,12 @@ open class GamificationAPI {
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter filterType: (query) Filter type for the query request. If not set, then the request is for the requesting user. (optional)
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationScorecardsValuesTrends(startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsValuesTrends? = nil, timeZone: String? = nil, completion: @escaping ((_ data: WorkdayValuesTrend?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationScorecardsValuesTrendsWithRequestBuilder(startWorkday: startWorkday, endWorkday: endWorkday, filterType: filterType, timeZone: timeZone)
+    open class func getGamificationScorecardsValuesTrends(startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsValuesTrends? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil, completion: @escaping ((_ data: WorkdayValuesTrend?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationScorecardsValuesTrendsWithRequestBuilder(startWorkday: startWorkday, endWorkday: endWorkday, filterType: filterType, referenceWorkday: referenceWorkday, timeZone: timeZone)
         requestBuilder.execute { (response: Response<WorkdayValuesTrend>?, error) -> Void in
             do {
                 if let e = error {
@@ -3095,11 +3159,12 @@ open class GamificationAPI {
      - parameter startWorkday: (query) Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter endWorkday: (query) End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter filterType: (query) Filter type for the query request. If not set, then the request is for the requesting user. (optional)
+     - parameter referenceWorkday: (query) Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)
      - parameter timeZone: (query) Timezone for the workday. Defaults to UTC (optional, default to UTC)
 
      - returns: RequestBuilder<WorkdayValuesTrend> 
      */
-    open class func getGamificationScorecardsValuesTrendsWithRequestBuilder(startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsValuesTrends? = nil, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {
+    open class func getGamificationScorecardsValuesTrendsWithRequestBuilder(startWorkday: Date, endWorkday: Date, filterType: FilterType_getGamificationScorecardsValuesTrends? = nil, referenceWorkday: Date? = nil, timeZone: String? = nil) -> RequestBuilder<WorkdayValuesTrend> {
         let path = "/api/v2/gamification/scorecards/values/trends"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -3113,6 +3178,8 @@ open class GamificationAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
             "filterType": filterType?.rawValue, 
+            
+            "referenceWorkday": referenceWorkday?.encodeToJSON(), 
             
             "startWorkday": startWorkday.encodeToJSON(), 
             
@@ -3377,7 +3444,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : 123456789,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -3389,6 +3456,7 @@ open class GamificationAPI {
     "metricOrders" : [ "aeiou" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -3484,6 +3552,7 @@ open class GamificationAPI {
   "metricOrders" : [ "aeiou" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "maxLeaderboardRankSize" : 123,
+  "memberCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -3565,6 +3634,7 @@ open class GamificationAPI {
   "metricOrders" : [ "aeiou" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "maxLeaderboardRankSize" : 123,
+  "memberCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -3646,7 +3716,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : 123456789,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -3658,6 +3728,7 @@ open class GamificationAPI {
     "metricOrders" : [ "aeiou" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -3714,6 +3785,86 @@ open class GamificationAPI {
     
     
     
+    /**
+     
+     Create a new custom performance profile
+     
+     - parameter body: (body) performanceProfile 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationProfiles(body: CreatePerformanceProfile, completion: @escaping ((_ data: GetProfilesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfilesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<GetProfilesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a new custom performance profile
+     
+     - POST /api/v2/gamification/profiles
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "metricOrders" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "active" : true,
+    "id" : "aeiou",
+    "reportingIntervals" : [ {
+      "intervalType" : "aeiou",
+      "intervalValue" : 123
+    } ]
+  } ],
+  "selfUri" : "aeiou"
+}}]
+     
+     - parameter body: (body) performanceProfile 
+
+     - returns: RequestBuilder<GetProfilesResponse> 
+     */
+    open class func postGamificationProfilesWithRequestBuilder(body: CreatePerformanceProfile) -> RequestBuilder<GetProfilesResponse> {
+        let path = "/api/v2/gamification/profiles"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GetProfilesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -3760,7 +3911,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : 123456789,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -3772,6 +3923,7 @@ open class GamificationAPI {
     "metricOrders" : [ "aeiou" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
@@ -3880,6 +4032,7 @@ open class GamificationAPI {
   "metricOrders" : [ "aeiou" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "maxLeaderboardRankSize" : 123,
+  "memberCount" : 123,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
@@ -3962,7 +4115,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "dateCreated" : 123456789,
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -3974,6 +4127,7 @@ open class GamificationAPI {
     "metricOrders" : [ "aeiou" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",

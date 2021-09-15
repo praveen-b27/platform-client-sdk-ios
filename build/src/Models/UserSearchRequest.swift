@@ -34,7 +34,7 @@ public class UserSearchRequest: Codable {
     /** Provides more details about a specified resource */
     public var expand: [String]?
     public var query: [UserSearchCriteria]?
-    /** Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. */
+    /** Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. */
     public var integrationPresenceSource: IntegrationPresenceSource?
     /** This property only applies to api/v2/user/search; when set to true add additional search criteria to filter users by: directory:user:view */
     public var enforcePermissions: Bool?

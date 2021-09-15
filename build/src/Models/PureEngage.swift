@@ -19,13 +19,14 @@ public class PureEngage: Codable {
     public var ssoTargetURI: String?
     public var sloURI: String?
     public var sloBinding: String?
+    public var relyingPartyIdentifier: String?
     public var certificate: String?
     public var certificates: [String]?
     public var autoProvisionUsers: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, certificate: String?, certificates: [String]?, autoProvisionUsers: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, disabled: Bool?, issuerURI: String?, ssoTargetURI: String?, sloURI: String?, sloBinding: String?, relyingPartyIdentifier: String?, certificate: String?, certificates: [String]?, autoProvisionUsers: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -40,6 +41,8 @@ public class PureEngage: Codable {
         self.sloURI = sloURI
         
         self.sloBinding = sloBinding
+        
+        self.relyingPartyIdentifier = relyingPartyIdentifier
         
         self.certificate = certificate
         
@@ -59,6 +62,7 @@ public class PureEngage: Codable {
         case ssoTargetURI
         case sloURI
         case sloBinding
+        case relyingPartyIdentifier
         case certificate
         case certificates
         case autoProvisionUsers

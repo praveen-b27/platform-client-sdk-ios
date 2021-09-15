@@ -15,10 +15,11 @@ public class LearningAssignmentAggregateQueryRequestPredicate: Codable {
         case attendeeid = "attendeeId"
         case type = "type"
         case moduleid = "moduleId"
+        case ispassed = "isPassed"
     }
     /** Each predicates specifies a dimension. */
     public var dimension: Dimension?
-    /** Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, AssessedContent, Questionnaire */
+    /** Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment */
     public var value: String?
 
     public init(dimension: Dimension?, value: String?) {

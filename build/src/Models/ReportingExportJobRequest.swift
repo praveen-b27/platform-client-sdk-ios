@@ -81,6 +81,8 @@ public class ReportingExportJobRequest: Codable {
         case topicTrendDetailView = "TOPIC_TREND_DETAIL_VIEW"
         case actionMapBlockedConstraintsDetailView = "ACTION_MAP_BLOCKED_CONSTRAINTS_DETAIL_VIEW"
         case actionMapBlockedConstraintsIntervalDetailView = "ACTION_MAP_BLOCKED_CONSTRAINTS_INTERVAL_DETAIL_VIEW"
+        case flowMilestonePerformanceDetailView = "FLOW_MILESTONE_PERFORMANCE_DETAIL_VIEW"
+        case flowMilestonePerformanceIntervalDetailView = "FLOW_MILESTONE_PERFORMANCE_INTERVAL_DETAIL_VIEW"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"

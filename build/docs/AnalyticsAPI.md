@@ -30,6 +30,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsUsersDetailsJob**](AnalyticsAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
+| [**patchAnalyticsReportingSettings**](AnalyticsAPI.html#patchAnalyticsReportingSettings) | Patch AnalyticsReportingSettings values for an organization |
 | [**postAnalyticsBotsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsBotsAggregatesQuery) | Query for bot aggregates |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
@@ -1251,6 +1252,60 @@ This endpoint does not require any parameters.
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse.html)
 
+<a name="patchAnalyticsReportingSettings"></a>
+
+# **patchAnalyticsReportingSettings**
+
+
+
+> [AnalyticsReportingSettings](AnalyticsReportingSettings.html) patchAnalyticsReportingSettings(body)
+
+Patch AnalyticsReportingSettings values for an organization
+
+
+
+Wraps PATCH /api/v2/analytics/reporting/settings  
+
+Requires ANY permissions: 
+
+* recording:recordingSegment:view
+* analytics:conversationDetail:view
+* analytics:dashboardConfigurations:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AnalyticsReportingSettings = new AnalyticsReportingSettings(...) // AnalyticsReportingSettingsRequest
+
+// Code example
+AnalyticsAPI.patchAnalyticsReportingSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.patchAnalyticsReportingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)| AnalyticsReportingSettingsRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
+
 <a name="postAnalyticsBotsAggregatesQuery"></a>
 
 # **postAnalyticsBotsAggregatesQuery**
@@ -2205,7 +2260,7 @@ Wraps POST /api/v2/analytics/users/details/query
 
 Requires ANY permissions: 
 
-* analytics:userObservation:view
+* analytics:userDetail:view
 
 ### Example
 

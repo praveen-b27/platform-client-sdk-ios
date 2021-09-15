@@ -21,6 +21,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyOutcomes**](JourneyAPI.html#getJourneyOutcomes) | Retrieve all outcomes. |
 | [**getJourneySegment**](JourneyAPI.html#getJourneySegment) | Retrieve a single segment. |
 | [**getJourneySegments**](JourneyAPI.html#getJourneySegments) | Retrieve all segments. |
+| [**getJourneySession**](JourneyAPI.html#getJourneySession) | Retrieve a single session. |
+| [**getJourneySessionOutcomescores**](JourneyAPI.html#getJourneySessionOutcomescores) | Retrieve latest outcome score associated with a session for all outcomes. |
 | [**patchJourneyActionmap**](JourneyAPI.html#patchJourneyActionmap) | Update single action map. |
 | [**patchJourneyActiontarget**](JourneyAPI.html#patchJourneyActiontarget) | Update a single action target. |
 | [**patchJourneyActiontemplate**](JourneyAPI.html#patchJourneyActiontemplate) | Update a single action template. |
@@ -808,6 +810,110 @@ JourneyAPI.getJourneySegments(sortBy: sortBy, pageSize: pageSize, pageNumber: pa
 ### Return type
 
 [**SegmentListing**](SegmentListing.html)
+
+<a name="getJourneySession"></a>
+
+# **getJourneySession**
+
+
+
+> [Session](Session.html) getJourneySession(sessionId)
+
+Retrieve a single session.
+
+
+
+Wraps GET /api/v2/journey/sessions/{sessionId}  
+
+Requires ANY permissions: 
+
+* journey:session:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sessionId: String = "" // ID of the session.
+
+// Code example
+JourneyAPI.getJourneySession(sessionId: sessionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneySession was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sessionId** | **String**| ID of the session. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Session**](Session.html)
+
+<a name="getJourneySessionOutcomescores"></a>
+
+# **getJourneySessionOutcomescores**
+
+
+
+> [OutcomeScoresResult](OutcomeScoresResult.html) getJourneySessionOutcomescores(sessionId)
+
+Retrieve latest outcome score associated with a session for all outcomes.
+
+
+
+Wraps GET /api/v2/journey/sessions/{sessionId}/outcomescores  
+
+Requires ANY permissions: 
+
+* journey:outcomescores:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sessionId: String = "" // ID of the session.
+
+// Code example
+JourneyAPI.getJourneySessionOutcomescores(sessionId: sessionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneySessionOutcomescores was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sessionId** | **String**| ID of the session. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**OutcomeScoresResult**](OutcomeScoresResult.html)
 
 <a name="patchJourneyActionmap"></a>
 

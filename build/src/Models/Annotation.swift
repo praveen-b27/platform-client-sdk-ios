@@ -29,7 +29,7 @@ public class Annotation: Codable {
     public var recordingDurationMs: Int64?
     /** User that created this annotation (if any). */
     public var user: User?
-    /** Text of annotation. */
+    /** Text of annotation. Maximum character limit is 500. */
     public var _description: String?
     /** The URI for this object */
     public var selfUri: String?

@@ -77,7 +77,8 @@ open class OrganizationAPI {
       },
       "type" : "aeiou",
       "key" : "aeiou",
-      "required" : true
+      "required" : true,
+      "gdpr" : true
     } ],
     "key" : "aeiou"
   } ]

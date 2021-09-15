@@ -24,6 +24,7 @@ public class ConversationReason: Codable {
         case serverError = "ServerError"
         case mediaTypeNotAllowed = "MediaTypeNotAllowed"
         case invalidMediaContentLength = "InvalidMediaContentLength"
+        case recipientOptedOut = "RecipientOptedOut"
     }
     /** The reason code for the failed message receipt. */
     public var code: Code?

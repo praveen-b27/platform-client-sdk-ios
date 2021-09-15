@@ -8,9 +8,9 @@ title: DevelopmentActivityAggregateQueryResponseStatistics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **count** | **Int** | The count for this metric | [optional] |
-| **min** | **Int** | The minimum value in this metric | [optional] |
-| **max** | **Int** | The maximum value in this metric | [optional] |
-| **sum** | **Int** | The total of the values for this metric | [optional] |
+| **min** | **Double** | The minimum value in this metric | [optional] |
+| **max** | **Double** | The maximum value in this metric | [optional] |
+| **sum** | **Double** | The total of the values for this metric | [optional] |
 {: class="table table-striped"}
 
 

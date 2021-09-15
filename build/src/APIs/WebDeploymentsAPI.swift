@@ -191,6 +191,11 @@ open class WebDeploymentsAPI {
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "cobrowse" : {
+    "allowAgentControl" : true,
+    "maskSelectors" : [ "aeiou" ],
+    "enabled" : true
+  },
   "authenticationSettings" : {
     "integrationId" : "aeiou",
     "enabled" : true
@@ -323,6 +328,11 @@ open class WebDeploymentsAPI {
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "cobrowse" : {
+      "allowAgentControl" : true,
+      "maskSelectors" : [ "aeiou" ],
+      "enabled" : true
+    },
     "authenticationSettings" : {
       "integrationId" : "aeiou",
       "enabled" : true
@@ -451,6 +461,11 @@ open class WebDeploymentsAPI {
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "cobrowse" : {
+    "allowAgentControl" : true,
+    "maskSelectors" : [ "aeiou" ],
+    "enabled" : true
+  },
   "authenticationSettings" : {
     "integrationId" : "aeiou",
     "enabled" : true
@@ -579,6 +594,11 @@ open class WebDeploymentsAPI {
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "cobrowse" : {
+      "allowAgentControl" : true,
+      "maskSelectors" : [ "aeiou" ],
+      "enabled" : true
+    },
     "authenticationSettings" : {
       "integrationId" : "aeiou",
       "enabled" : true
@@ -883,6 +903,11 @@ open class WebDeploymentsAPI {
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "cobrowse" : {
+    "allowAgentControl" : true,
+    "maskSelectors" : [ "aeiou" ],
+    "enabled" : true
+  },
   "authenticationSettings" : {
     "integrationId" : "aeiou",
     "enabled" : true
@@ -1009,6 +1034,11 @@ open class WebDeploymentsAPI {
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "cobrowse" : {
+    "allowAgentControl" : true,
+    "maskSelectors" : [ "aeiou" ],
+    "enabled" : true
+  },
   "authenticationSettings" : {
     "integrationId" : "aeiou",
     "enabled" : true
@@ -1215,6 +1245,11 @@ open class WebDeploymentsAPI {
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "cobrowse" : {
+    "allowAgentControl" : true,
+    "maskSelectors" : [ "aeiou" ],
+    "enabled" : true
+  },
   "authenticationSettings" : {
     "integrationId" : "aeiou",
     "enabled" : true

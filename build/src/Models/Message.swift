@@ -75,6 +75,8 @@ public class Message: Codable {
     public var disconnectedTime: Date?
     /** The source provider for the message. */
     public var provider: String?
+    /** If true, the participant member is authenticated. */
+    public var authenticated: Bool?
     /** Indicates the type of message platform from which the message originated. */
     public var type: ModelType?
     /** Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format. */
@@ -99,8 +101,10 @@ public class Message: Codable {
     public var afterCallWork: AfterCallWork?
     /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
+    public var agentAssistantId: String?
 
-    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, _id: String?, held: Bool?, segments: [Segment]?, direction: Direction?, recordingId: String?, errorInfo: ErrorBody?, disconnectType: DisconnectType?, startHoldTime: Date?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, authenticated: Bool?, type: ModelType?, recipientCountry: String?, recipientType: String?, scriptId: String?, peerId: String?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, journeyContext: JourneyContext?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         
         self.state = state
         
@@ -128,6 +132,8 @@ public class Message: Codable {
         
         self.provider = provider
         
+        self.authenticated = authenticated
+        
         self.type = type
         
         self.recipientCountry = recipientCountry
@@ -152,6 +158,8 @@ public class Message: Codable {
         
         self.afterCallWorkRequired = afterCallWorkRequired
         
+        self.agentAssistantId = agentAssistantId
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -168,6 +176,7 @@ public class Message: Codable {
         case connectedTime
         case disconnectedTime
         case provider
+        case authenticated
         case type
         case recipientCountry
         case recipientType
@@ -180,6 +189,7 @@ public class Message: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case agentAssistantId
     }
 
 

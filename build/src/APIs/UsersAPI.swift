@@ -849,8 +849,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -950,8 +950,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1239,7 +1239,8 @@ open class UsersAPI {
       },
       "type" : "aeiou",
       "key" : "aeiou",
-      "required" : true
+      "required" : true,
+      "gdpr" : true
     } ],
     "key" : "aeiou"
   } ]
@@ -1638,8 +1639,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3546,8 +3547,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4543,6 +4544,7 @@ open class UsersAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "emailInQueueFlow" : "",
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
       "threshold" : 123,
@@ -4595,6 +4597,7 @@ open class UsersAPI {
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
+    "messageInQueueFlow" : "",
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -4653,8 +4656,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4856,8 +4859,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -4964,8 +4967,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6133,8 +6136,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -6241,7 +6244,7 @@ open class UsersAPI {
      - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
      - parameter expand: (query) Which fields, if any, to expand (optional)
-     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)
      - parameter state: (query) Only list users of this state (optional, default to active)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -6544,8 +6547,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6554,7 +6557,7 @@ open class UsersAPI {
      - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional, default to ASC)
      - parameter expand: (query) Which fields, if any, to expand (optional)
-     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. (optional)
+     - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)
      - parameter state: (query) Only list users of this state (optional, default to active)
 
      - returns: RequestBuilder<UserEntityListing> 
@@ -6724,8 +6727,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -6910,8 +6913,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -7233,6 +7236,7 @@ open class UsersAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -7282,6 +7286,7 @@ open class UsersAPI {
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
+            "messageInQueueFlow" : "",
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -7427,7 +7432,8 @@ open class UsersAPI {
           },
           "type" : "aeiou",
           "key" : "aeiou",
-          "required" : true
+          "required" : true,
+          "gdpr" : true
         } ],
         "key" : "aeiou"
       } ]
@@ -9004,6 +9010,7 @@ open class UsersAPI {
   },
   "enableManualAssignment" : true,
   "description" : "aeiou",
+  "emailInQueueFlow" : "",
   "routingRules" : [ {
     "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
     "threshold" : 123,
@@ -9056,6 +9063,7 @@ open class UsersAPI {
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
   "joinedMemberCount" : 123,
+  "messageInQueueFlow" : "",
   "callingPartyName" : "aeiou",
   "acwSettings" : {
     "timeoutMs" : 123,
@@ -9196,6 +9204,7 @@ open class UsersAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "emailInQueueFlow" : "",
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
       "threshold" : 123,
@@ -9248,6 +9257,7 @@ open class UsersAPI {
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
+    "messageInQueueFlow" : "",
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -9306,8 +9316,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9472,8 +9482,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9554,8 +9564,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 
@@ -9889,8 +9899,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter body: (body) Users 
@@ -11140,10 +11150,10 @@ open class UsersAPI {
       "metrics" : [ {
         "metric" : "aeiou",
         "stats" : {
-          "min" : 123,
-          "max" : 123,
+          "min" : 1.3579000000000001069366817318950779736042022705078125,
+          "max" : 1.3579000000000001069366817318950779736042022705078125,
           "count" : 123,
-          "sum" : 123
+          "sum" : 1.3579000000000001069366817318950779736042022705078125
         }
       } ]
     } ],
@@ -12583,8 +12593,8 @@ open class UsersAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter userId: (path) User ID 

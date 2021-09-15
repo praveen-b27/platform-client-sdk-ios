@@ -57,7 +57,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsEmails**](ConversationsAPI.html#getConversationsEmails) | Get active email conversations for the logged in user |
 | [**getConversationsMessage**](ConversationsAPI.html#getConversationsMessage) | Get message conversation |
 | [**getConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsAPI.html#getConversationsMessageCommunicationMessagesMediaMediaId) | Get media |
-| [**getConversationsMessageMessage**](ConversationsAPI.html#getConversationsMessageMessage) | Get message |
+| [**getConversationsMessageDetails**](ConversationsAPI.html#getConversationsMessageDetails) | Get message |
+| [**getConversationsMessageMessage**](ConversationsAPI.html#getConversationsMessageMessage) | Get conversation message |
 | [**getConversationsMessageParticipantWrapup**](ConversationsAPI.html#getConversationsMessageParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsMessageParticipantWrapupcodes**](ConversationsAPI.html#getConversationsMessageParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationsMessages**](ConversationsAPI.html#getConversationsMessages) | Get active message conversations for the logged in user |
@@ -2760,6 +2761,59 @@ ConversationsAPI.getConversationsMessageCommunicationMessagesMediaMediaId(conver
 
 [**MessageMediaData**](MessageMediaData.html)
 
+<a name="getConversationsMessageDetails"></a>
+
+# **getConversationsMessageDetails**
+
+
+
+> [MessageData](MessageData.html) getConversationsMessageDetails(messageId)
+
+Get message
+
+
+
+Wraps GET /api/v2/conversations/messages/{messageId}/details  
+
+Requires ANY permissions: 
+
+* conversation:message:view
+* conversation:webmessaging:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messageId: String = "" // messageId
+
+// Code example
+ConversationsAPI.getConversationsMessageDetails(messageId: messageId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessageDetails was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messageId** | **String**| messageId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessageData**](MessageData.html)
+
 <a name="getConversationsMessageMessage"></a>
 
 # **getConversationsMessageMessage**
@@ -2768,7 +2822,7 @@ ConversationsAPI.getConversationsMessageCommunicationMessagesMediaMediaId(conver
 
 > [MessageData](MessageData.html) getConversationsMessageMessage(conversationId, messageId)
 
-Get message
+Get conversation message
 
 
 

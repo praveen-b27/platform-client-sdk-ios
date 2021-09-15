@@ -127,6 +127,8 @@ title: ViewFilter
 | **isRecorded** | **Bool** | Indicates filtering for recorded | [optional] |
 | **hasEvaluation** | **Bool** | Indicates filtering for evaluation | [optional] |
 | **hasScoredEvaluation** | **Bool** | Indicates filtering for scored evaluation | [optional] |
+| **isAgentOwnedCallback** | **Bool** | Indicates filtering for agent owned callback interactions | [optional] |
+| **agentCallbackOwnerIds** | **[String]** | The list of callback owners used to filter interactions | [optional] |
 {: class="table table-striped"}
 
 

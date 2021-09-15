@@ -12,13 +12,13 @@ import Foundation
 public class OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress: Codable {
 
     public var domain: OutboundMessagingMessagingCampaignConfigChangeUriReference?
-    public var routeId: OutboundMessagingMessagingCampaignConfigChangeUriReference?
+    public var route: OutboundMessagingMessagingCampaignConfigChangeUriReference?
 
-    public init(domain: OutboundMessagingMessagingCampaignConfigChangeUriReference?, routeId: OutboundMessagingMessagingCampaignConfigChangeUriReference?) {
+    public init(domain: OutboundMessagingMessagingCampaignConfigChangeUriReference?, route: OutboundMessagingMessagingCampaignConfigChangeUriReference?) {
         
         self.domain = domain
         
-        self.routeId = routeId
+        self.route = route
         
     }
 

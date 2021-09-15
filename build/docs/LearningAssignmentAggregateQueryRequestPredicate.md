@@ -8,7 +8,7 @@ title: LearningAssignmentAggregateQueryRequestPredicate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **dimension** | **String** | Each predicates specifies a dimension. | |
-| **value** | **String** | Corresponding value for dimensions in predicates. If the dimensions is type, Valid Values: Informational, AssessedContent, Questionnaire | |
+| **value** | **String** | Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment | |
 {: class="table table-striped"}
 
 

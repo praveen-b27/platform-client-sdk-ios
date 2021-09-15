@@ -13,6 +13,7 @@ public class PredictorSchedule: Codable {
 
     public enum ScheduleType: String, Codable { 
         case hourOnHourOff = "HourOnHourOff"
+        case ongoingValueMonitoring = "OngoingValueMonitoring"
     }
     /** The predictor schedule type. */
     public var scheduleType: ScheduleType?

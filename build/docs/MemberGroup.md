@@ -1,0 +1,18 @@
+---
+title: MemberGroup
+---
+## MemberGroup
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **name** | **String** |  | [optional] |
+| **division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **type** | **String** | The type of group, e.g. TEAM, etc. | [optional] |
+| **memberCount** | **Int** | The number of members in this group | [optional] |
+| **selfUri** | **String** | The URI for this object | [optional] |
+{: class="table table-striped"}
+
+

@@ -28,6 +28,7 @@ public class ReportingTurnAction: Codable {
         case dataAction = "DataAction"
         case dataTableLookupAction = "DataTableLookupAction"
         case getExternalContactAction = "GetExternalContactAction"
+        case getExternalOrganizationAction = "GetExternalOrganizationAction"
         case loopAction = "LoopAction"
         case exitLoopAction = "ExitLoopAction"
         case nextLoopAction = "NextLoopAction"

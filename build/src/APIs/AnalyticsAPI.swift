@@ -1382,6 +1382,7 @@ open class AnalyticsAPI {
       "isAuthenticated" : true,
       "journeySegmentIds" : [ "aeiou" ],
       "surveyFormContextIds" : [ "aeiou" ],
+      "agentCallbackOwnerIds" : [ "aeiou" ],
       "journeyOutcomeIds" : [ "aeiou" ],
       "languageGroups" : [ "aeiou" ],
       "outboundCampaignIds" : [ "aeiou" ],
@@ -1463,6 +1464,7 @@ open class AnalyticsAPI {
       "hasJourneyVisitId" : true,
       "topicIds" : [ "aeiou" ],
       "flowEntryTypes" : [ "aeiou" ],
+      "isAgentOwnedCallback" : true,
       "botIds" : [ "aeiou" ]
     },
     "selectedColumns" : [ {
@@ -1488,8 +1490,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1577,8 +1579,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -1667,8 +1669,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -2004,8 +2006,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter scheduleId: (path) Schedule ID 
@@ -2279,8 +2281,8 @@ open class AnalyticsAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -2586,6 +2588,65 @@ open class AnalyticsAPI {
         let requestBuilder: RequestBuilder<DataAvailabilityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Patch AnalyticsReportingSettings values for an organization
+     
+     - parameter body: (body) AnalyticsReportingSettingsRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchAnalyticsReportingSettings(body: AnalyticsReportingSettings, completion: @escaping ((_ data: AnalyticsReportingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchAnalyticsReportingSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AnalyticsReportingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Patch AnalyticsReportingSettings values for an organization
+     
+     - PATCH /api/v2/analytics/reporting/settings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "piiMaskingEnabled" : true
+}}]
+     
+     - parameter body: (body) AnalyticsReportingSettingsRequest 
+
+     - returns: RequestBuilder<AnalyticsReportingSettings> 
+     */
+    open class func patchAnalyticsReportingSettingsWithRequestBuilder(body: AnalyticsReportingSettings) -> RequestBuilder<AnalyticsReportingSettings> {
+        let path = "/api/v2/analytics/reporting/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsReportingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     
@@ -4016,6 +4077,7 @@ open class AnalyticsAPI {
     "isAuthenticated" : true,
     "journeySegmentIds" : [ "aeiou" ],
     "surveyFormContextIds" : [ "aeiou" ],
+    "agentCallbackOwnerIds" : [ "aeiou" ],
     "journeyOutcomeIds" : [ "aeiou" ],
     "languageGroups" : [ "aeiou" ],
     "outboundCampaignIds" : [ "aeiou" ],
@@ -4097,6 +4159,7 @@ open class AnalyticsAPI {
     "hasJourneyVisitId" : true,
     "topicIds" : [ "aeiou" ],
     "flowEntryTypes" : [ "aeiou" ],
+    "isAgentOwnedCallback" : true,
     "botIds" : [ "aeiou" ]
   },
   "selectedColumns" : [ {

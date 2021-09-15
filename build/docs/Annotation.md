@@ -17,7 +17,7 @@ title: Annotation
 | **recordingLocation** | **Int64** | Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts | [optional] |
 | **recordingDurationMs** | **Int64** | Duration of annotation (milliseconds), adjusted for any recording cuts. | [optional] |
 | **user** | [**User**](User.html) | User that created this annotation (if any). | [optional] |
-| **_description** | **String** | Text of annotation. | [optional] |
+| **_description** | **String** | Text of annotation. Maximum character limit is 500. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -58,10 +58,12 @@ public class MessageData: Codable {
     public var stickers: [MessageSticker]?
     /** User who sent this message. */
     public var createdBy: User?
+    /** The id of the conversation of this message. */
+    public var conversationId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, providerMessageId: String?, timestamp: Date?, fromAddress: String?, toAddress: String?, direction: Direction?, messengerType: MessengerType?, textBody: String?, status: Status?, media: [MessageMedia]?, stickers: [MessageSticker]?, createdBy: User?, selfUri: String?) {
+    public init(_id: String?, name: String?, providerMessageId: String?, timestamp: Date?, fromAddress: String?, toAddress: String?, direction: Direction?, messengerType: MessengerType?, textBody: String?, status: Status?, media: [MessageMedia]?, stickers: [MessageSticker]?, createdBy: User?, conversationId: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -89,6 +91,8 @@ public class MessageData: Codable {
         
         self.createdBy = createdBy
         
+        self.conversationId = conversationId
+        
         self.selfUri = selfUri
         
     }
@@ -107,6 +111,7 @@ public class MessageData: Codable {
         case media
         case stickers
         case createdBy
+        case conversationId
         case selfUri
     }
 

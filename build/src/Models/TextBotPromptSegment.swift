@@ -14,6 +14,7 @@ public class TextBotPromptSegment: Codable {
 
     public enum ModelType: String, Codable { 
         case text = "Text"
+        case richMedia = "RichMedia"
     }
     /** The text of this prompt segment. */
     public var text: String?
@@ -21,14 +22,18 @@ public class TextBotPromptSegment: Codable {
     public var type: ModelType?
     /** Additional details describing the segment’s contents, which the client should honour where possible. */
     public var format: Format?
+    /** Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;. */
+    public var content: [MessageContent]?
 
-    public init(text: String?, type: ModelType?, format: Format?) {
+    public init(text: String?, type: ModelType?, format: Format?, content: [MessageContent]?) {
         
         self.text = text
         
         self.type = type
         
         self.format = format
+        
+        self.content = content
         
     }
 

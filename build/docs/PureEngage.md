@@ -14,6 +14,7 @@ title: PureEngage
 | **ssoTargetURI** | **String** |  | [optional] |
 | **sloURI** | **String** |  | [optional] |
 | **sloBinding** | **String** |  | [optional] |
+| **relyingPartyIdentifier** | **String** |  | [optional] |
 | **certificate** | **String** |  | [optional] |
 | **certificates** | **[String]** |  | [optional] |
 | **autoProvisionUsers** | **Bool** |  | [optional] |

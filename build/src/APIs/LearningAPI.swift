@@ -623,8 +623,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -971,8 +971,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -1628,8 +1628,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter isArchived: (query) Archive status (optional, default to false)
@@ -2227,10 +2227,10 @@ open class LearningAPI {
       "metrics" : [ {
         "metric" : "aeiou",
         "stats" : {
-          "min" : 123,
-          "max" : 123,
+          "min" : 1.3579000000000001069366817318950779736042022705078125,
+          "max" : 1.3579000000000001069366817318950779736042022705078125,
           "count" : 123,
-          "sum" : 123
+          "sum" : 1.3579000000000001069366817318950779736042022705078125
         }
       } ]
     } ],
@@ -2801,8 +2801,8 @@ open class LearningAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
   "previousUri" : "aeiou",
+  "nextUri" : "aeiou",
   "unfilteredTotal" : 123
 }}]
      

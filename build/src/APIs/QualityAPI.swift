@@ -571,8 +571,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -631,6 +631,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -680,6 +681,7 @@ open class QualityAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -851,6 +853,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -890,7 +893,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1384,6 +1388,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -1423,7 +1428,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -1480,8 +1486,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -1800,6 +1806,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1845,6 +1852,7 @@ open class QualityAPI {
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
+    "messageInQueueFlow" : "",
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -2468,8 +2476,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -3095,8 +3103,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3155,6 +3163,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3204,6 +3213,7 @@ open class QualityAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -3375,6 +3385,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -3414,7 +3425,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -4086,8 +4098,8 @@ open class QualityAPI {
               "selfUri" : "aeiou",
               "lastUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -4146,6 +4158,7 @@ open class QualityAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
               "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -4195,6 +4208,7 @@ open class QualityAPI {
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
+            "messageInQueueFlow" : "",
             "callingPartyName" : "aeiou",
             "acwSettings" : {
               "timeoutMs" : 123,
@@ -4366,6 +4380,7 @@ open class QualityAPI {
         "messages" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
+          "authenticated" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : "",
@@ -4405,7 +4420,8 @@ open class QualityAPI {
           } ],
           "recipientCountry" : "aeiou",
           "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-          "recordingId" : "aeiou"
+          "recordingId" : "aeiou",
+          "agentAssistantId" : "aeiou"
         } ],
         "socialExpressions" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -4458,8 +4474,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter calibratorId: (query) user id of calibrator 
@@ -4929,6 +4945,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -4968,7 +4985,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -5025,8 +5043,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -5345,6 +5363,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5390,6 +5409,7 @@ open class QualityAPI {
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
+    "messageInQueueFlow" : "",
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -5532,8 +5552,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -5854,8 +5874,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -6174,6 +6194,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -6223,6 +6244,7 @@ open class QualityAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -6394,6 +6416,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -6433,7 +6456,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -7182,6 +7206,7 @@ open class QualityAPI {
         "messages" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
           "peerId" : "aeiou",
+          "authenticated" : true,
           "held" : true,
           "afterCallWorkRequired" : true,
           "errorInfo" : "",
@@ -7221,7 +7246,8 @@ open class QualityAPI {
           } ],
           "recipientCountry" : "aeiou",
           "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-          "recordingId" : "aeiou"
+          "recordingId" : "aeiou",
+          "agentAssistantId" : "aeiou"
         } ],
         "socialExpressions" : [ {
           "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -7278,8 +7304,8 @@ open class QualityAPI {
         "selfUri" : "aeiou",
         "lastUri" : "aeiou",
         "pageSize" : 123,
-        "nextUri" : "aeiou",
-        "previousUri" : "aeiou"
+        "previousUri" : "aeiou",
+        "nextUri" : "aeiou"
       },
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -7598,6 +7624,7 @@ open class QualityAPI {
       },
       "enableManualAssignment" : true,
       "description" : "aeiou",
+      "emailInQueueFlow" : "",
       "autoAnswerOnly" : true,
       "routingRules" : [ {
         "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -7643,6 +7670,7 @@ open class QualityAPI {
       "modifiedBy" : "aeiou",
       "id" : "aeiou",
       "joinedMemberCount" : 123,
+      "messageInQueueFlow" : "",
       "callingPartyName" : "aeiou",
       "acwSettings" : {
         "timeoutMs" : 123,
@@ -7704,8 +7732,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8136,8 +8164,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8243,8 +8271,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -8365,8 +8393,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8409,8 +8437,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -8518,8 +8546,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8562,8 +8590,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -8660,8 +8688,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -8785,8 +8813,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8829,8 +8857,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -8941,8 +8969,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -8985,8 +9013,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9084,8 +9112,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -9205,8 +9233,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9247,8 +9275,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter formId: (path) Form ID 
@@ -9357,8 +9385,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9399,8 +9427,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) The total page size requested (optional, default to 25)
@@ -9502,8 +9530,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9544,8 +9572,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter _id: (query) A comma-delimited list of valid survey form ids 
@@ -9629,8 +9657,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9671,8 +9699,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter contextId: (query) A comma-delimited list of valid survey form context ids 
@@ -9751,8 +9779,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -9876,8 +9904,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9920,8 +9948,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10006,8 +10034,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -10131,8 +10159,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10175,8 +10203,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10262,8 +10290,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -10386,8 +10414,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10428,8 +10456,8 @@ open class QualityAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10517,8 +10545,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10839,8 +10867,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -11159,6 +11187,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -11208,6 +11237,7 @@ open class QualityAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -11379,6 +11409,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -11418,7 +11449,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -11543,8 +11575,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -11683,8 +11715,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -12479,8 +12511,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -12539,6 +12571,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -12588,6 +12621,7 @@ open class QualityAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -12759,6 +12793,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -12798,7 +12833,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -13286,6 +13322,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -13325,7 +13362,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -13382,8 +13420,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -13702,6 +13740,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -13747,6 +13786,7 @@ open class QualityAPI {
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
+    "messageInQueueFlow" : "",
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -14038,8 +14078,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14144,8 +14184,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14251,8 +14291,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14355,8 +14395,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14461,8 +14501,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -14568,8 +14608,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -15261,8 +15301,8 @@ open class QualityAPI {
             "selfUri" : "aeiou",
             "lastUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -15321,6 +15361,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
             "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -15370,6 +15411,7 @@ open class QualityAPI {
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
+          "messageInQueueFlow" : "",
           "callingPartyName" : "aeiou",
           "acwSettings" : {
             "timeoutMs" : 123,
@@ -15541,6 +15583,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -15580,7 +15623,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -16069,6 +16113,7 @@ open class QualityAPI {
       "messages" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
         "peerId" : "aeiou",
+        "authenticated" : true,
         "held" : true,
         "afterCallWorkRequired" : true,
         "errorInfo" : "",
@@ -16108,7 +16153,8 @@ open class QualityAPI {
         } ],
         "recipientCountry" : "aeiou",
         "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-        "recordingId" : "aeiou"
+        "recordingId" : "aeiou",
+        "agentAssistantId" : "aeiou"
       } ],
       "socialExpressions" : [ {
         "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
@@ -16165,8 +16211,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -16485,6 +16531,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16530,6 +16577,7 @@ open class QualityAPI {
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
+    "messageInQueueFlow" : "",
     "callingPartyName" : "aeiou",
     "acwSettings" : {
       "timeoutMs" : 123,
@@ -16670,8 +16718,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -16783,8 +16831,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -16897,8 +16945,8 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "lastUri" : "aeiou",
     "pageSize" : 123,
-    "nextUri" : "aeiou",
-    "previousUri" : "aeiou"
+    "previousUri" : "aeiou",
+    "nextUri" : "aeiou"
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -17007,8 +17055,8 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "lastUri" : "aeiou",
       "pageSize" : 123,
-      "nextUri" : "aeiou",
-      "previousUri" : "aeiou"
+      "previousUri" : "aeiou",
+      "nextUri" : "aeiou"
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",

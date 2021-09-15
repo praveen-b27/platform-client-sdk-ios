@@ -33,6 +33,8 @@ public class WebDeploymentConfigurationVersion: Codable {
     public var defaultLanguage: String?
     /** The settings for messenger */
     public var messenger: MessengerSettings?
+    /** The settings for cobrowse */
+    public var cobrowse: CobrowseSettings?
     /** The settings for journey events */
     public var journeyEvents: JourneyEventsSettings?
     /** The settings for authenticated deployments */
@@ -54,7 +56,7 @@ public class WebDeploymentConfigurationVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, messenger: MessengerSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, messenger: MessengerSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
         
         self._id = _id
         
@@ -69,6 +71,8 @@ public class WebDeploymentConfigurationVersion: Codable {
         self.defaultLanguage = defaultLanguage
         
         self.messenger = messenger
+        
+        self.cobrowse = cobrowse
         
         self.journeyEvents = journeyEvents
         
@@ -100,6 +104,7 @@ public class WebDeploymentConfigurationVersion: Codable {
         case languages
         case defaultLanguage
         case messenger
+        case cobrowse
         case journeyEvents
         case authenticationSettings
         case dateCreated

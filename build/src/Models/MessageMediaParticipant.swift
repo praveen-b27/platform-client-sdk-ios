@@ -137,8 +137,10 @@ public class MessageMediaParticipant: Codable {
     public var recipientCountry: String?
     /** The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type. */
     public var recipientType: String?
+    /** If true, the participant member is authenticated. */
+    public var authenticated: Bool?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, toAddress: Address?, fromAddress: Address?, messages: [MessageDetails]?, type: ModelType?, recipientCountry: String?, recipientType: String?, authenticated: Bool?) {
         
         self._id = _id
         
@@ -218,6 +220,8 @@ public class MessageMediaParticipant: Codable {
         
         self.recipientType = recipientType
         
+        self.authenticated = authenticated
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -260,6 +264,7 @@ public class MessageMediaParticipant: Codable {
         case type
         case recipientCountry
         case recipientType
+        case authenticated
     }
 
 

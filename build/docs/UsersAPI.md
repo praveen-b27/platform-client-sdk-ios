@@ -2045,7 +2045,7 @@ let _id: [String] = [""] // A list of user IDs to fetch by bulk
 let jabberId: [String] = [""] // A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter)
 let sortOrder: UsersAPI.SortOrder_getUsers = UsersAPI.SortOrder_getUsers.enummember // Ascending or descending sort order
 let expand: [String] = [UsersAPI.Expand_getUsers.enummember.rawValue] // Which fields, if any, to expand
-let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsers = UsersAPI.IntegrationPresenceSource_getUsers.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 10.
+let integrationPresenceSource: UsersAPI.IntegrationPresenceSource_getUsers = UsersAPI.IntegrationPresenceSource_getUsers.enummember // Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100.
 let state: UsersAPI.State_getUsers = UsersAPI.State_getUsers.enummember // Only list users of this state
 
 // Code example
@@ -2070,7 +2070,7 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 | **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
-| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 10. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
+| **integrationPresenceSource** | **String**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. | [optional]<br />**Values**: microsoftTeams ("MicrosoftTeams"), zoomPhone ("ZoomPhone"), ringCentral ("RingCentral") |
 | **state** | **String**| Only list users of this state | [optional] [default to active]<br />**Values**: active ("active"), inactive ("inactive"), deleted ("deleted"), any ("any") |
 {: class="table-striped"}
 
@@ -2345,7 +2345,7 @@ Wraps GET /api/v2/users/search
 
 Requires ANY permissions: 
 
-* directory:user:divisionview
+* directory:user:view
 
 ### Example
 
@@ -3001,7 +3001,7 @@ Wraps POST /api/v2/analytics/users/details/query
 
 Requires ANY permissions: 
 
-* analytics:userObservation:view
+* analytics:userDetail:view
 
 ### Example
 
@@ -3696,7 +3696,7 @@ Wraps POST /api/v2/users/search
 
 Requires ANY permissions: 
 
-* directory:user:divisionview
+* directory:user:view
 
 ### Example
 

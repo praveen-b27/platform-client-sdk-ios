@@ -103,6 +103,8 @@ public class AuditQueryEntity: Codable {
         case policy = "Policy"
         case predictor = "Predictor"
         case product = "Product"
+        case profile = "Profile"
+        case profileMembers = "ProfileMembers"
         case program = "Program"
         case prompt = "Prompt"
         case promptResource = "PromptResource"

@@ -29,6 +29,7 @@ title: ConversationEventTopicMessage
 | **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) |  | [optional] |
 | **afterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **afterCallWorkRequired** | **Bool** |  | [optional] |
+| **agentAssistantId** | **String** |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

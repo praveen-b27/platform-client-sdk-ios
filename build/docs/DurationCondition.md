@@ -10,6 +10,7 @@ title: DurationCondition
 | **durationTarget** | **String** |  | [optional] |
 | **durationOperator** | **String** |  | [optional] |
 | **durationRange** | **String** |  | [optional] |
+| **durationMode** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

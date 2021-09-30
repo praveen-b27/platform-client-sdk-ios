@@ -255,7 +255,7 @@ LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, compl
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **userId** | [**[String]**](String.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional] |
-| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
@@ -332,7 +332,7 @@ LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, com
 | **maxPercentageScore** | **Float**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
-| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
@@ -557,7 +557,7 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **isArchived** | **Bool**| Archive status | [optional] [default to false] |
-| **types** | [**[String]**](String.html)| Specifies the module types. | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the module types. | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| Sort order | [optional] [default to ascending]<br />**Values**: ascending ("ascending"), descending ("descending") |

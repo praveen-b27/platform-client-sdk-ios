@@ -776,6 +776,7 @@ open class ConversationsAPI {
       "cobrowseRoomId" : "aeiou",
       "activeSkillIds" : [ "aeiou" ],
       "protocolCallId" : "aeiou",
+      "destinationAddresses" : [ "aeiou" ],
       "flowOutType" : "aeiou",
       "mediaType" : "aeiou",
       "outboundCampaignId" : "aeiou",
@@ -1042,6 +1043,7 @@ open class ConversationsAPI {
         "cobrowseRoomId" : "aeiou",
         "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
+        "destinationAddresses" : [ "aeiou" ],
         "flowOutType" : "aeiou",
         "mediaType" : "aeiou",
         "outboundCampaignId" : "aeiou",
@@ -1388,6 +1390,7 @@ open class ConversationsAPI {
         "cobrowseRoomId" : "aeiou",
         "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
+        "destinationAddresses" : [ "aeiou" ],
         "flowOutType" : "aeiou",
         "mediaType" : "aeiou",
         "outboundCampaignId" : "aeiou",
@@ -18436,6 +18439,7 @@ open class ConversationsAPI {
         "cobrowseRoomId" : "aeiou",
         "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
+        "destinationAddresses" : [ "aeiou" ],
         "flowOutType" : "aeiou",
         "mediaType" : "aeiou",
         "outboundCampaignId" : "aeiou",
@@ -24156,6 +24160,70 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update the tags on a conversation.
+     
+     - parameter conversationId: (path) conversation ID 
+     - parameter body: (body) Conversation Tags 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putConversationTags(conversationId: String, body: ConversationTagsUpdate, completion: @escaping ((_ data: String?,_ error: Error?) -> Void)) {
+        let requestBuilder = putConversationTagsWithRequestBuilder(conversationId: conversationId, body: body)
+        requestBuilder.execute { (response: Response<String>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update the tags on a conversation.
+     
+     - PUT /api/v2/conversations/{conversationId}/tags
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example="aeiou"}]
+     
+     - parameter conversationId: (path) conversation ID 
+     - parameter body: (body) Conversation Tags 
+
+     - returns: RequestBuilder<String> 
+     */
+    open class func putConversationTagsWithRequestBuilder(conversationId: String, body: ConversationTagsUpdate) -> RequestBuilder<String> {
+        var path = "/api/v2/conversations/{conversationId}/tags"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

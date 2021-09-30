@@ -70,9 +70,10 @@ public class QueueConversationEventTopicMessage: Codable {
     public var wrapup: QueueConversationEventTopicWrapup?
     public var afterCallWork: QueueConversationEventTopicAfterCallWork?
     public var afterCallWorkRequired: Bool?
+    public var agentAssistantId: String?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationEventTopicAddress?, fromAddress: QueueConversationEventTopicAddress?, messages: [QueueConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationEventTopicJourneyContext?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -118,6 +119,8 @@ public class QueueConversationEventTopicMessage: Codable {
         
         self.afterCallWorkRequired = afterCallWorkRequired
         
+        self.agentAssistantId = agentAssistantId
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -145,6 +148,7 @@ public class QueueConversationEventTopicMessage: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case agentAssistantId
         case additionalProperties
     }
 

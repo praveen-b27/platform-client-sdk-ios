@@ -121,6 +121,7 @@ open class RecordingAPI {
   "orphanStatus" : "aeiou",
   "selfUri" : "aeiou",
   "recording" : {
+    "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
     "maxAllowedRestorationsForOrg" : 123,
     "emailTranscript" : [ {
       "cc" : [ "" ],
@@ -1099,6 +1100,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
   "emailTranscript" : [ {
     "cc" : [ "" ],
@@ -3183,6 +3185,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example=[ {
+  "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
   "emailTranscript" : [ {
     "cc" : [ "" ],
@@ -3811,6 +3814,7 @@ open class RecordingAPI {
   "orphanStatus" : "aeiou",
   "selfUri" : "aeiou",
   "recording" : {
+    "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
     "maxAllowedRestorationsForOrg" : 123,
     "emailTranscript" : [ {
       "cc" : [ "" ],
@@ -4507,6 +4511,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
   "emailTranscript" : [ {
     "cc" : [ "" ],
@@ -5181,6 +5186,7 @@ open class RecordingAPI {
     "orphanStatus" : "aeiou",
     "selfUri" : "aeiou",
     "recording" : {
+      "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
       "maxAllowedRestorationsForOrg" : 123,
       "emailTranscript" : [ {
         "cc" : [ "" ],
@@ -6017,6 +6023,7 @@ open class RecordingAPI {
           "duration" : {
             "durationTarget" : "aeiou",
             "durationOperator" : "aeiou",
+            "durationMode" : "aeiou",
             "durationRange" : "aeiou"
           },
           "languages" : [ {
@@ -6723,6 +6730,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {
@@ -8051,6 +8059,7 @@ open class RecordingAPI {
           "duration" : {
             "durationTarget" : "aeiou",
             "durationOperator" : "aeiou",
+            "durationMode" : "aeiou",
             "durationRange" : "aeiou"
           },
           "languages" : [ {
@@ -8757,6 +8766,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {
@@ -10900,6 +10910,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {
@@ -11554,6 +11565,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {
@@ -12685,6 +12697,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {
@@ -13899,6 +13912,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {
@@ -15011,6 +15025,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
   "emailTranscript" : [ {
     "cc" : [ "" ],
@@ -15985,6 +16000,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
   "emailTranscript" : [ {
     "cc" : [ "" ],
@@ -16650,6 +16666,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {
@@ -17550,6 +17567,7 @@ open class RecordingAPI {
         "duration" : {
           "durationTarget" : "aeiou",
           "durationOperator" : "aeiou",
+          "durationMode" : "aeiou",
           "durationRange" : "aeiou"
         },
         "languages" : [ {

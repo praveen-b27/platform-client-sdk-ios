@@ -32,6 +32,7 @@ public class ConversationAggregateQueryPredicate: Codable {
         case convertedfrom = "convertedFrom"
         case convertedto = "convertedTo"
         case deliverystatus = "deliveryStatus"
+        case destinationaddress = "destinationAddress"
         case direction = "direction"
         case disconnecttype = "disconnectType"
         case divisionid = "divisionId"

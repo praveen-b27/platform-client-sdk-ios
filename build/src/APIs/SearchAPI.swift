@@ -2381,6 +2381,7 @@ open class SearchAPI {
         "cobrowseRoomId" : "aeiou",
         "activeSkillIds" : [ "aeiou" ],
         "protocolCallId" : "aeiou",
+        "destinationAddresses" : [ "aeiou" ],
         "flowOutType" : "aeiou",
         "mediaType" : "aeiou",
         "outboundCampaignId" : "aeiou",

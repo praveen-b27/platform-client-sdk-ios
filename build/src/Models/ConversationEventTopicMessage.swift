@@ -70,9 +70,10 @@ public class ConversationEventTopicMessage: Codable {
     public var wrapup: ConversationEventTopicWrapup?
     public var afterCallWork: ConversationEventTopicAfterCallWork?
     public var afterCallWorkRequired: Bool?
+    public var agentAssistantId: String?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: ConversationEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: ConversationEventTopicAddress?, fromAddress: ConversationEventTopicAddress?, messages: [ConversationEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: ConversationEventTopicJourneyContext?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -118,6 +119,8 @@ public class ConversationEventTopicMessage: Codable {
         
         self.afterCallWorkRequired = afterCallWorkRequired
         
+        self.agentAssistantId = agentAssistantId
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -145,6 +148,7 @@ public class ConversationEventTopicMessage: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case agentAssistantId
         case additionalProperties
     }
 

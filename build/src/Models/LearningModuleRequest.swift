@@ -15,7 +15,6 @@ public class LearningModuleRequest: Codable {
     public enum ModelType: String, Codable { 
         case informational = "Informational"
         case assessedContent = "AssessedContent"
-        case questionnaire = "Questionnaire"
         case assessment = "Assessment"
     }
     /** The name of learning module */

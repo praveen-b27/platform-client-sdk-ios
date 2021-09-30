@@ -29,6 +29,7 @@ title: QueueConversationSocialExpressionEventTopicMessage
 | **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
 | **afterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) |  | [optional] |
 | **afterCallWorkRequired** | **Bool** |  | [optional] |
+| **agentAssistantId** | **String** |  | [optional] |
 | **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 

@@ -150,6 +150,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | Create a WhatsApp Integration |
 | [**putConversationParticipantFlaggedreason**](ConversationsAPI.html#putConversationParticipantFlaggedreason) | Set flagged reason on conversation participant to indicate bad conversation quality. |
+| [**putConversationTags**](ConversationsAPI.html#putConversationTags) | Update the tags on a conversation. |
 | [**putConversationsCallParticipantCommunicationUuidata**](ConversationsAPI.html#putConversationsCallParticipantCommunicationUuidata) | Set uuiData to be sent on future commands. |
 | [**putConversationsEmailMessagesDraft**](ConversationsAPI.html#putConversationsEmailMessagesDraft) | Update conversation draft reply |
 | [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration |
@@ -7781,6 +7782,60 @@ ConversationsAPI.putConversationParticipantFlaggedreason(conversationId: convers
 ### Return type
 
 `nil` (empty response body)
+
+<a name="putConversationTags"></a>
+
+# **putConversationTags**
+
+
+
+> String putConversationTags(conversationId, body)
+
+Update the tags on a conversation.
+
+
+
+Wraps PUT /api/v2/conversations/{conversationId}/tags  
+
+Requires ANY permissions: 
+
+* conversation:externalTag:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: ConversationTagsUpdate = new ConversationTagsUpdate(...) // Conversation Tags
+
+// Code example
+ConversationsAPI.putConversationTags(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.putConversationTags was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**ConversationTagsUpdate**](ConversationTagsUpdate.html)| Conversation Tags | |
+{: class="table-striped"}
+
+
+### Return type
+
+**String**
 
 <a name="putConversationsCallParticipantCommunicationUuidata"></a>
 

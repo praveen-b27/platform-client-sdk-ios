@@ -139,6 +139,8 @@ public class AuditTopicAuditLogMessage: Codable {
         case phone = "Phone"
         case phoneBase = "PhoneBase"
         case predictor = "Predictor"
+        case profile = "Profile"
+        case profileMembers = "ProfileMembers"
         case program = "Program"
         case prompt = "Prompt"
         case promptResource = "PromptResource"

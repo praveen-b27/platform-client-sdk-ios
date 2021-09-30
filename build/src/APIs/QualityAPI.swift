@@ -2145,8 +2145,8 @@ open class QualityAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter startTime: (query) Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
-     - parameter endTime: (query) End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter startTime: (query) Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
      - parameter agentUserId: (query) user id of agent requested (optional)
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)
@@ -2176,7 +2176,7 @@ open class QualityAPI {
      Gets a list of Agent Activities
      
      - GET /api/v2/quality/agents/activity
-     - Including the number of evaluations and average evaluation score
+     - Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2486,8 +2486,8 @@ open class QualityAPI {
      - parameter expand: (query) variable name requested by expand list (optional)
      - parameter nextPage: (query) next page token (optional)
      - parameter previousPage: (query) Previous page token (optional)
-     - parameter startTime: (query) Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
-     - parameter endTime: (query) End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter startTime: (query) Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
+     - parameter endTime: (query) End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional)
      - parameter agentUserId: (query) user id of agent requested (optional)
      - parameter evaluatorUserId: (query) user id of the evaluator (optional)
      - parameter name: (query) name (optional)

@@ -28,6 +28,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case coachedparticipantid = "coachedParticipantId"
         case conference = "conference"
         case deliverystatus = "deliveryStatus"
+        case destinationaddress = "destinationAddress"
         case destinationconversationid = "destinationConversationId"
         case direction = "direction"
         case disconnecttype = "disconnectType"

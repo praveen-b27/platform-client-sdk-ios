@@ -67,7 +67,7 @@ open class DataExtensionsAPI {
     "pattern" : "aeiou",
     "description" : "aeiou",
     "title" : "aeiou",
-    "type" : [ "aeiou" ],
+    "type" : "[\"string\"] for a text-based core type, [\"integer\"] for a numeric core type, or [\"boolean\", \"null\"] for the checkbox core type",
     "items" : {
       "pattern" : "aeiou",
       "type" : "aeiou"
@@ -166,7 +166,7 @@ open class DataExtensionsAPI {
       "pattern" : "aeiou",
       "description" : "aeiou",
       "title" : "aeiou",
-      "type" : [ "aeiou" ],
+      "type" : "[\"string\"] for a text-based core type, [\"integer\"] for a numeric core type, or [\"boolean\", \"null\"] for the checkbox core type",
       "items" : {
         "pattern" : "aeiou",
         "type" : "aeiou"

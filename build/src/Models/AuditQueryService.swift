@@ -18,6 +18,7 @@ public class AuditQueryService: Codable {
         case contactCenter = "ContactCenter"
         case contentManagement = "ContentManagement"
         case datatables = "Datatables"
+        case directory = "Directory"
         case gamification = "Gamification"
         case groups = "Groups"
         case integrations = "Integrations"

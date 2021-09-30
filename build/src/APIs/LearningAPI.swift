@@ -399,7 +399,6 @@ open class LearningAPI {
     public enum Types_getLearningAssignments: String { 
         case informational = "Informational"
         case assessedContent = "AssessedContent"
-        case questionnaire = "Questionnaire"
         case assessment = "Assessment"
     }
 
@@ -748,7 +747,6 @@ open class LearningAPI {
     public enum Types_getLearningAssignmentsMe: String { 
         case informational = "Informational"
         case assessedContent = "AssessedContent"
-        case questionnaire = "Questionnaire"
         case assessment = "Assessment"
     }
 
@@ -1449,7 +1447,6 @@ open class LearningAPI {
     public enum Types_getLearningModules: String { 
         case informational = "Informational"
         case assessedContent = "AssessedContent"
-        case questionnaire = "Questionnaire"
         case assessment = "Assessment"
     }
 

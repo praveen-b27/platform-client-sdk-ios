@@ -19,7 +19,6 @@ public class LearningModule: Codable {
     public enum ModelType: String, Codable { 
         case informational = "Informational"
         case assessedContent = "AssessedContent"
-        case questionnaire = "Questionnaire"
         case assessment = "Assessment"
     }
     /** The globally unique identifier for the object. */

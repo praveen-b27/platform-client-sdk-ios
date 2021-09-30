@@ -80,11 +80,7 @@ open class GeneralDataProtectionRegulationAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "id" : "aeiou",
-  "replacementTerms" : [ {
-    "type" : "aeiou",
-    "existingValue" : "aeiou",
-    "updatedValue" : "aeiou"
-  } ],
+  "replacementTerms" : "[ { \"type\": \"EMAIL\": \"existingValue\": \"personal.email@domain.com\", \"updatedValue\": \"updated.personal.email@domain.com\" } ]",
   "status" : "aeiou"
 }}]
      
@@ -189,11 +185,7 @@ open class GeneralDataProtectionRegulationAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "replacementTerms" : [ {
-      "type" : "aeiou",
-      "existingValue" : "aeiou",
-      "updatedValue" : "aeiou"
-    } ],
+    "replacementTerms" : "[ { \"type\": \"EMAIL\": \"existingValue\": \"personal.email@domain.com\", \"updatedValue\": \"updated.personal.email@domain.com\" } ]",
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
@@ -417,11 +409,7 @@ open class GeneralDataProtectionRegulationAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "id" : "aeiou",
-  "replacementTerms" : [ {
-    "type" : "aeiou",
-    "existingValue" : "aeiou",
-    "updatedValue" : "aeiou"
-  } ],
+  "replacementTerms" : "[ { \"type\": \"EMAIL\": \"existingValue\": \"personal.email@domain.com\", \"updatedValue\": \"updated.personal.email@domain.com\" } ]",
   "status" : "aeiou"
 }}]
      

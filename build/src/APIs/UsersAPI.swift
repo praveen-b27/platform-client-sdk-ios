@@ -5079,6 +5079,74 @@ open class UsersAPI {
     
     /**
      
+     Get user state information.
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserState(userId: String, completion: @escaping ((_ data: UserState?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserStateWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<UserState>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get user state information.
+     
+     - GET /api/v2/users/{userId}/state
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "stateChangeReason" : "aeiou",
+  "stateChangeDate" : "2000-01-23T04:56:07.000+0000",
+  "state" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<UserState> 
+     */
+    open class func getUserStateWithRequestBuilder(userId: String) -> RequestBuilder<UserState> {
+        var path = "/api/v2/users/{userId}/state"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserState>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Get station information for user
      
      - parameter userId: (path) User ID 
@@ -6633,7 +6701,6 @@ open class UsersAPI {
         case informational = "Informational"
         case coaching = "Coaching"
         case assessedContent = "AssessedContent"
-        case questionnaire = "Questionnaire"
         case assessment = "Assessment"
     }
 
@@ -6820,7 +6887,6 @@ open class UsersAPI {
         case informational = "Informational"
         case coaching = "Coaching"
         case assessedContent = "AssessedContent"
-        case questionnaire = "Questionnaire"
         case assessment = "Assessment"
     }
 
@@ -6979,7 +7045,6 @@ open class UsersAPI {
         case coaching = "Coaching"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
-        case questionnaire = "Questionnaire"
     }
 
     
@@ -12683,6 +12748,75 @@ open class UsersAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RoutingStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update user state information.
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) User 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putUserState(userId: String, body: UserState, completion: @escaping ((_ data: UserState?,_ error: Error?) -> Void)) {
+        let requestBuilder = putUserStateWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<UserState>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update user state information.
+     
+     - PUT /api/v2/users/{userId}/state
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "stateChangeReason" : "aeiou",
+  "stateChangeDate" : "2000-01-23T04:56:07.000+0000",
+  "state" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) User 
+
+     - returns: RequestBuilder<UserState> 
+     */
+    open class func putUserStateWithRequestBuilder(userId: String, body: UserState) -> RequestBuilder<UserState> {
+        var path = "/api/v2/users/{userId}/state"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserState>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

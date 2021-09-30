@@ -70,9 +70,10 @@ public class QueueConversationVideoEventTopicMessage: Codable {
     public var wrapup: QueueConversationVideoEventTopicWrapup?
     public var afterCallWork: QueueConversationVideoEventTopicAfterCallWork?
     public var afterCallWorkRequired: Bool?
+    public var agentAssistantId: String?
     public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationVideoEventTopicAddress?, fromAddress: QueueConversationVideoEventTopicAddress?, messages: [QueueConversationVideoEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, startHoldTime: Date?, connectedTime: Date?, disconnectedTime: Date?, toAddress: QueueConversationVideoEventTopicAddress?, fromAddress: QueueConversationVideoEventTopicAddress?, messages: [QueueConversationVideoEventTopicMessageDetails]?, messagesTranscriptUri: String?, type: ModelType?, recipientCountry: String?, recipientType: String?, journeyContext: QueueConversationVideoEventTopicJourneyContext?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, additionalProperties: JSON?) {
         
         self._id = _id
         
@@ -118,6 +119,8 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         
         self.afterCallWorkRequired = afterCallWorkRequired
         
+        self.agentAssistantId = agentAssistantId
+        
         self.additionalProperties = additionalProperties
         
     }
@@ -145,6 +148,7 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+        case agentAssistantId
         case additionalProperties
     }
 

@@ -61,6 +61,7 @@ open class TextbotsAPI {
       }
     },
     "reason" : "aeiou",
+    "flowOutcomes" : [ "" ],
     "flowLocation" : "",
     "reasonExtendedInfo" : "aeiou",
     "activeIntent" : "aeiou"
@@ -76,6 +77,17 @@ open class TextbotsAPI {
   "nextActionType" : "aeiou",
   "nextActionDisconnect" : {
     "reason" : "aeiou",
+    "flowOutcomes" : [ {
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "outcomeValue" : "aeiou",
+      "outcomeId" : "aeiou",
+      "dateEnd" : "2000-01-23T04:56:07.000+0000",
+      "milestones" : [ {
+        "sequence" : 123456789,
+        "dateReached" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      } ]
+    } ],
     "flowLocation" : {
       "actionNumber" : 123,
       "sequenceName" : "aeiou",

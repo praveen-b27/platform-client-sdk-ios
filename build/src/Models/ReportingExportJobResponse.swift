@@ -92,6 +92,12 @@ public class ReportingExportJobResponse: Codable {
         case actionMapBlockedConstraintsIntervalDetailView = "ACTION_MAP_BLOCKED_CONSTRAINTS_INTERVAL_DETAIL_VIEW"
         case flowMilestonePerformanceDetailView = "FLOW_MILESTONE_PERFORMANCE_DETAIL_VIEW"
         case flowMilestonePerformanceIntervalDetailView = "FLOW_MILESTONE_PERFORMANCE_INTERVAL_DETAIL_VIEW"
+        case agentTopicSummaryView = "AGENT_TOPIC_SUMMARY_VIEW"
+        case agentTopicDetailView = "AGENT_TOPIC_DETAIL_VIEW"
+        case queueTopicSummaryView = "QUEUE_TOPIC_SUMMARY_VIEW"
+        case queueTopicDetailView = "QUEUE_TOPIC_DETAIL_VIEW"
+        case flowTopicSummaryView = "FLOW_TOPIC_SUMMARY_VIEW"
+        case flowTopicDetailView = "FLOW_TOPIC_DETAIL_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

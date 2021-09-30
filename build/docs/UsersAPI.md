@@ -40,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserRoutinglanguages**](UsersAPI.html#getUserRoutinglanguages) | List routing language for user |
 | [**getUserRoutingskills**](UsersAPI.html#getUserRoutingskills) | List routing skills for user |
 | [**getUserRoutingstatus**](UsersAPI.html#getUserRoutingstatus) | Fetch the routing status of a user |
+| [**getUserState**](UsersAPI.html#getUserState) | Get user state information. |
 | [**getUserStation**](UsersAPI.html#getUserStation) | Get station information for user |
 | [**getUserSuperiors**](UsersAPI.html#getUserSuperiors) | Get superiors |
 | [**getUserTrustors**](UsersAPI.html#getUserTrustors) | List the organizations that have authorized/trusted the user. |
@@ -82,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putUserRoutingskill**](UsersAPI.html#putUserRoutingskill) | Update routing skill proficiency or state. |
 | [**putUserRoutingskillsBulk**](UsersAPI.html#putUserRoutingskillsBulk) | Replace all routing skills assigned to a user |
 | [**putUserRoutingstatus**](UsersAPI.html#putUserRoutingstatus) | Update the routing status of a user |
+| [**putUserState**](UsersAPI.html#putUserState) | Update user state information. |
 | [**putUserStationAssociatedstationStationId**](UsersAPI.html#putUserStationAssociatedstationStationId) | Set associated station |
 | [**putUserStationDefaultstationStationId**](UsersAPI.html#putUserStationDefaultstationStationId) | Set default station |
 {: class="table-striped"}
@@ -1854,6 +1856,58 @@ UsersAPI.getUserRoutingstatus(userId: userId) { (response, error) in
 
 [**RoutingStatus**](RoutingStatus.html)
 
+<a name="getUserState"></a>
+
+# **getUserState**
+
+
+
+> [UserState](UserState.html) getUserState(userId)
+
+Get user state information.
+
+
+
+Wraps GET /api/v2/users/{userId}/state  
+
+Requires ANY permissions: 
+
+* directory:userStateChange:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+UsersAPI.getUserState(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUserState was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserState**](UserState.html)
+
 <a name="getUserStation"></a>
 
 # **getUserStation**
@@ -2142,7 +2196,7 @@ UsersAPI.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, inter
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
-| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
@@ -2211,7 +2265,7 @@ UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval,
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: asc ("Asc"), desc ("Desc") |
-| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), questionnaire ("Questionnaire"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
@@ -2268,7 +2322,7 @@ UsersAPI.getUsersDevelopmentActivity(activityId: activityId, type: type) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **activityId** | **String**| Specifies the activity ID, maps to either assignment or appointment ID | |
-| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment"), questionnaire ("Questionnaire") |
+| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
 {: class="table-striped"}
 
 
@@ -4163,6 +4217,60 @@ UsersAPI.putUserRoutingstatus(userId: userId, body: body) { (response, error) in
 ### Return type
 
 [**RoutingStatus**](RoutingStatus.html)
+
+<a name="putUserState"></a>
+
+# **putUserState**
+
+
+
+> [UserState](UserState.html) putUserState(userId, body)
+
+Update user state information.
+
+
+
+Wraps PUT /api/v2/users/{userId}/state  
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: UserState = new UserState(...) // User
+
+// Code example
+UsersAPI.putUserState(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putUserState was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**UserState**](UserState.html)| User | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserState**](UserState.html)
 
 <a name="putUserStationAssociatedstationStationId"></a>
 

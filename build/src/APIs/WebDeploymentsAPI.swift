@@ -161,7 +161,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "languages" : [ "aeiou" ],
+  "languages" : "en-us, de-de",
   "journeyEvents" : {
     "formsTrackEvents" : [ {
       "formName" : "aeiou",
@@ -298,7 +298,7 @@ open class WebDeploymentsAPI {
      - examples: [{contentType=application/json, example={
   "total" : 123456789,
   "entities" : [ {
-    "languages" : [ "aeiou" ],
+    "languages" : "en-us, de-de",
     "journeyEvents" : {
       "formsTrackEvents" : [ {
         "formName" : "aeiou",
@@ -431,7 +431,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "languages" : [ "aeiou" ],
+  "languages" : "en-us, de-de",
   "journeyEvents" : {
     "formsTrackEvents" : [ {
       "formName" : "aeiou",
@@ -564,7 +564,7 @@ open class WebDeploymentsAPI {
      - examples: [{contentType=application/json, example={
   "total" : 123456789,
   "entities" : [ {
-    "languages" : [ "aeiou" ],
+    "languages" : "en-us, de-de",
     "journeyEvents" : {
       "formsTrackEvents" : [ {
         "formName" : "aeiou",
@@ -873,7 +873,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "languages" : [ "aeiou" ],
+  "languages" : "en-us, de-de",
   "journeyEvents" : {
     "formsTrackEvents" : [ {
       "formName" : "aeiou",
@@ -1004,7 +1004,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "languages" : [ "aeiou" ],
+  "languages" : "en-us, de-de",
   "journeyEvents" : {
     "formsTrackEvents" : [ {
       "formName" : "aeiou",
@@ -1215,7 +1215,7 @@ open class WebDeploymentsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "languages" : [ "aeiou" ],
+  "languages" : "en-us, de-de",
   "journeyEvents" : {
     "formsTrackEvents" : [ {
       "formName" : "aeiou",

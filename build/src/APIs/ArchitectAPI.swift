@@ -1697,8 +1697,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Object name to search for 
@@ -2280,8 +2280,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consuming object ID 
@@ -2528,8 +2528,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter _id: (query) Consumed object ID 
@@ -2790,8 +2790,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3273,8 +3273,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3511,8 +3511,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter name: (query) Name to search for (optional)
@@ -3600,6 +3600,11 @@ open class ArchitectAPI {
   "createdByApp" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "emergencyCallFlows" : [ {
     "emergencyFlow" : {
@@ -3701,6 +3706,11 @@ open class ArchitectAPI {
     "createdByApp" : "aeiou",
     "version" : 123,
     "enabled" : true,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "emergencyCallFlows" : [ {
       "emergencyFlow" : {
@@ -3721,8 +3731,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -3808,6 +3818,11 @@ open class ArchitectAPI {
   "holidayHoursFlow" : "",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -3909,6 +3924,11 @@ open class ArchitectAPI {
     "holidayHoursFlow" : "",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -3928,8 +3948,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -4921,8 +4941,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -5330,8 +5350,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5422,6 +5442,11 @@ open class ArchitectAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "rrule" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -5502,6 +5527,11 @@ open class ArchitectAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "holidaySchedules" : [ "" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -5608,6 +5638,11 @@ open class ArchitectAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "holidaySchedules" : [ "" ],
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -5626,8 +5661,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -5737,6 +5772,11 @@ open class ArchitectAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "rrule" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -5751,8 +5791,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6470,8 +6510,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter promptId: (path) Prompt ID 
@@ -6600,8 +6640,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -8558,8 +8598,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter flowId: (path) Flow ID 
@@ -9128,8 +9168,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -9775,8 +9815,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter datatableId: (path) id of datatable 
@@ -9912,8 +9952,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -10156,8 +10196,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter expand: (query) Expand instructions for the result (optional)
@@ -10675,8 +10715,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) Type (optional)
@@ -11348,8 +11388,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11475,8 +11515,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12240,8 +12280,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12367,8 +12407,8 @@ open class ArchitectAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12506,6 +12546,11 @@ open class ArchitectAPI {
   "createdByApp" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "emergencyCallFlows" : [ {
     "emergencyFlow" : {
@@ -12586,6 +12631,11 @@ open class ArchitectAPI {
   "holidayHoursFlow" : "",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -13458,6 +13508,11 @@ open class ArchitectAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "holidaySchedules" : [ "" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -13535,6 +13590,11 @@ open class ArchitectAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "rrule" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -18682,6 +18742,11 @@ open class ArchitectAPI {
   "createdByApp" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "emergencyCallFlows" : [ {
     "emergencyFlow" : {
@@ -18769,6 +18834,11 @@ open class ArchitectAPI {
   "holidayHoursFlow" : "",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -19313,6 +19383,11 @@ open class ArchitectAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "rrule" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -19394,6 +19469,11 @@ open class ArchitectAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "holidaySchedules" : [ "" ],
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -19990,12 +20070,12 @@ open class ArchitectAPI {
     
     
     
+    
+    
     public enum Expand_putFlowsDatatable: String { 
         case schema = "schema"
     }
 
-    
-    
     
     
     /**
@@ -20003,12 +20083,12 @@ open class ArchitectAPI {
      Updates a specific datatable by id
      
      - parameter datatableId: (path) id of datatable 
+     - parameter body: (body) datatable json-schema 
      - parameter expand: (query) Expand instructions for the result (optional)
-     - parameter body: (body) datatable json-schema (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putFlowsDatatable(datatableId: String, expand: Expand_putFlowsDatatable? = nil, body: DataTable? = nil, completion: @escaping ((_ data: DataTable?,_ error: Error?) -> Void)) {
-        let requestBuilder = putFlowsDatatableWithRequestBuilder(datatableId: datatableId, expand: expand, body: body)
+    open class func putFlowsDatatable(datatableId: String, body: DataTable, expand: Expand_putFlowsDatatable? = nil, completion: @escaping ((_ data: DataTable?,_ error: Error?) -> Void)) {
+        let requestBuilder = putFlowsDatatableWithRequestBuilder(datatableId: datatableId, body: body, expand: expand)
         requestBuilder.execute { (response: Response<DataTable>?, error) -> Void in
             do {
                 if let e = error {
@@ -20059,12 +20139,12 @@ open class ArchitectAPI {
 }}]
      
      - parameter datatableId: (path) id of datatable 
+     - parameter body: (body) datatable json-schema 
      - parameter expand: (query) Expand instructions for the result (optional)
-     - parameter body: (body) datatable json-schema (optional)
 
      - returns: RequestBuilder<DataTable> 
      */
-    open class func putFlowsDatatableWithRequestBuilder(datatableId: String, expand: Expand_putFlowsDatatable? = nil, body: DataTable? = nil) -> RequestBuilder<DataTable> {
+    open class func putFlowsDatatableWithRequestBuilder(datatableId: String, body: DataTable, expand: Expand_putFlowsDatatable? = nil) -> RequestBuilder<DataTable> {
         var path = "/api/v2/flows/datatables/{datatableId}"
         let datatableIdPreEscape = "\(datatableId)"
         let datatableIdPostEscape = datatableIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

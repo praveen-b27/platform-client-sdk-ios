@@ -32,6 +32,8 @@ public class DomainLogicalInterface: Codable {
     public var _id: String?
     /** The name of the entity. */
     public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
     /** The resource&#39;s description. */
     public var _description: String?
     /** The current version of the resource. */
@@ -102,11 +104,13 @@ public class DomainLogicalInterface: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, edgeUri: String?, edgeAssignedId: String?, friendlyName: String?, vlanTagId: Int?, hardwareAddress: String?, physicalAdapterId: String?, ifStatus: String?, interfaceType: InterfaceType?, publicNatAddressIpV4: String?, publicNatAddressIpV6: String?, routes: [DomainNetworkRoute]?, addresses: [DomainNetworkAddress]?, ipv4Capabilities: DomainCapabilities?, ipv6Capabilities: DomainCapabilities?, currentState: CurrentState?, lastModifiedUserId: String?, lastModifiedCorrelationId: String?, commandResponses: [DomainNetworkCommandResponse]?, inheritPhoneTrunkBasesIPv4: Bool?, inheritPhoneTrunkBasesIPv6: Bool?, useForInternalEdgeCommunication: Bool?, useForIndirectEdgeCommunication: Bool?, useForCloudProxyEdgeCommunication: Bool?, useForWanInterface: Bool?, externalTrunkBaseAssignments: [TrunkBaseAssignment]?, phoneTrunkBaseAssignments: [TrunkBaseAssignment]?, traceEnabled: Bool?, startDate: Date?, endDate: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, edgeUri: String?, edgeAssignedId: String?, friendlyName: String?, vlanTagId: Int?, hardwareAddress: String?, physicalAdapterId: String?, ifStatus: String?, interfaceType: InterfaceType?, publicNatAddressIpV4: String?, publicNatAddressIpV6: String?, routes: [DomainNetworkRoute]?, addresses: [DomainNetworkAddress]?, ipv4Capabilities: DomainCapabilities?, ipv6Capabilities: DomainCapabilities?, currentState: CurrentState?, lastModifiedUserId: String?, lastModifiedCorrelationId: String?, commandResponses: [DomainNetworkCommandResponse]?, inheritPhoneTrunkBasesIPv4: Bool?, inheritPhoneTrunkBasesIPv6: Bool?, useForInternalEdgeCommunication: Bool?, useForIndirectEdgeCommunication: Bool?, useForCloudProxyEdgeCommunication: Bool?, useForWanInterface: Bool?, externalTrunkBaseAssignments: [TrunkBaseAssignment]?, phoneTrunkBaseAssignments: [TrunkBaseAssignment]?, traceEnabled: Bool?, startDate: Date?, endDate: Date?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.division = division
         
         self._description = _description
         
@@ -191,6 +195,7 @@ public class DomainLogicalInterface: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case division
         case _description = "description"
         case version
         case dateCreated

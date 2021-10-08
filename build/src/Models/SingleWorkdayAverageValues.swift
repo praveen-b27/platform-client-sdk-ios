@@ -21,8 +21,10 @@ public class SingleWorkdayAverageValues: Codable {
     public var timezone: String?
     /** The metric value averages */
     public var results: [WorkdayValuesMetricItem]?
+    /** The targeted performance profile for the average points */
+    public var performanceProfile: AddressableEntityRef?
 
-    public init(dateWorkday: Date?, division: Division?, user: UserReference?, timezone: String?, results: [WorkdayValuesMetricItem]?) {
+    public init(dateWorkday: Date?, division: Division?, user: UserReference?, timezone: String?, results: [WorkdayValuesMetricItem]?, performanceProfile: AddressableEntityRef?) {
         
         self.dateWorkday = dateWorkday
         
@@ -33,6 +35,8 @@ public class SingleWorkdayAverageValues: Codable {
         self.timezone = timezone
         
         self.results = results
+        
+        self.performanceProfile = performanceProfile
         
     }
 

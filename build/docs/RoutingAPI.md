@@ -1624,7 +1624,7 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, pageSize: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp"), _open ("open") |
+| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp"), _open ("open"), instagram ("instagram") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 {: class="table-striped"}

@@ -13,6 +13,10 @@ public class Miner: Codable {
 
     public enum Language: String, Codable { 
         case enUs = "en-us"
+        case enGb = "en-gb"
+        case enAu = "en-au"
+        case enIn = "en-in"
+        case enZa = "en-za"
     }
     public enum Status: String, Codable { 
         case notStarted = "NotStarted"

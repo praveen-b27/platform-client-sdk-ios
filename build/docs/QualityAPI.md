@@ -1483,7 +1483,7 @@ QualityAPI.getQualityFormsSurveysBulk(_id: _id) { (response, error) in
 
 
 
-> [SurveyFormEntityListing](SurveyFormEntityListing.html) getQualityFormsSurveysBulkContexts(contextId, published)
+> [[SurveyForm]](SurveyForm.html) getQualityFormsSurveysBulkContexts(contextId, published)
 
 Retrieve a list of the latest form versions by context ids
 
@@ -1529,7 +1529,7 @@ QualityAPI.getQualityFormsSurveysBulkContexts(contextId: contextId, published: p
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+[**[SurveyForm]**](SurveyForm.html)
 
 <a name="getQualityPublishedform"></a>
 

@@ -27,8 +27,12 @@ public class OpenMessagingFromRecipient: Codable {
     public var firstName: String?
     /** Last name of the recipient. */
     public var lastName: String?
+    /** URL of an image that represents the recipient. */
+    public var image: String?
+    /** E-mail address of the recipient. */
+    public var email: String?
 
-    public init(nickname: String?, _id: String?, idType: IdType?, firstName: String?, lastName: String?) {
+    public init(nickname: String?, _id: String?, idType: IdType?, firstName: String?, lastName: String?, image: String?, email: String?) {
         
         self.nickname = nickname
         
@@ -40,6 +44,10 @@ public class OpenMessagingFromRecipient: Codable {
         
         self.lastName = lastName
         
+        self.image = image
+        
+        self.email = email
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -48,6 +56,8 @@ public class OpenMessagingFromRecipient: Codable {
         case idType
         case firstName
         case lastName
+        case image
+        case email
     }
 
 

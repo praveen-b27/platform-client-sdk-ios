@@ -11,7 +11,7 @@ import Foundation
 
 public class BuAgentScheduleShift: Codable {
 
-    /** The globally unique identifier for the object. */
+    /** The ID of the shift */
     public var _id: String?
     /** The start date of this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var startDate: Date?

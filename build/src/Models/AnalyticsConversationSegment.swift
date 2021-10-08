@@ -40,6 +40,7 @@ public class AnalyticsConversationSegment: Codable {
         case hold = "hold"
         case interact = "interact"
         case ivr = "ivr"
+        case monitoring = "monitoring"
         case scheduled = "scheduled"
         case sharing = "sharing"
         case system = "system"

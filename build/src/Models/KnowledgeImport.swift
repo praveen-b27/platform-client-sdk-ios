@@ -28,6 +28,8 @@ public class KnowledgeImport: Codable {
     }
     public enum LanguageCode: String, Codable { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
     /** Id of the import operation */

@@ -15,6 +15,7 @@ public class ConversationMessagingChannel: Codable {
     public enum Platform: String, Codable { 
         case twitter = "Twitter"
         case facebook = "Facebook"
+        case instagram = "Instagram"
         case line = "Line"
         case whatsapp = "Whatsapp"
         case webMessaging = "WebMessaging"

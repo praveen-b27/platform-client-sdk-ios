@@ -5660,7 +5660,7 @@ ArchitectAPI.putFlow(flowId: flowId, body: body) { (response, error) in
 
 
 
-> [DataTable](DataTable.html) putFlowsDatatable(datatableId, expand, body)
+> [DataTable](DataTable.html) putFlowsDatatable(datatableId, body, expand)
 
 Updates a specific datatable by id
 
@@ -5681,11 +5681,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let datatableId: String = "" // id of datatable
-let expand: ArchitectAPI.Expand_putFlowsDatatable = ArchitectAPI.Expand_putFlowsDatatable.enummember // Expand instructions for the result
 let body: DataTable = new DataTable(...) // datatable json-schema
+let expand: ArchitectAPI.Expand_putFlowsDatatable = ArchitectAPI.Expand_putFlowsDatatable.enummember // Expand instructions for the result
 
 // Code example
-ArchitectAPI.putFlowsDatatable(datatableId: datatableId, expand: expand, body: body) { (response, error) in
+ArchitectAPI.putFlowsDatatable(datatableId: datatableId, body: body, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5701,8 +5701,8 @@ ArchitectAPI.putFlowsDatatable(datatableId: datatableId, expand: expand, body: b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
+| **body** | [**DataTable**](DataTable.html)| datatable json-schema | |
 | **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
-| **body** | [**DataTable**](DataTable.html)| datatable json-schema | [optional] |
 {: class="table-striped"}
 
 

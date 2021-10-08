@@ -18,6 +18,7 @@ public class CreateOutboundMessagingConversationRequest: Codable {
         case line = "line"
         case whatsapp = "whatsapp"
         case webmessaging = "webmessaging"
+        case instagram = "instagram"
         case _open = "open"
     }
     /** The ID of the queue to be associated with the message. This will determine the fromAddress of the message. */

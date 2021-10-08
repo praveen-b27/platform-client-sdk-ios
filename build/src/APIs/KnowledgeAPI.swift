@@ -93,6 +93,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -197,6 +199,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocument: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -324,6 +328,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -474,6 +480,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageCategories: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -611,6 +619,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -726,6 +736,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocument: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -853,6 +865,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -871,6 +885,24 @@ open class KnowledgeAPI {
     
     
     
+    public enum SortBy_getKnowledgeKnowledgebaseLanguageDocuments: String { 
+        case title = "Title"
+        case date = "Date"
+    }
+
+    
+    
+    
+    public enum SortOrder_getKnowledgeKnowledgebaseLanguageDocuments: String { 
+        case asc = "ASC"
+        case ascending = "ascending"
+        case desc = "DESC"
+        case descending = "descending"
+    }
+
+    
+    
+    
     
     /**
      
@@ -884,11 +916,13 @@ open class KnowledgeAPI {
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter categories: (query) Filter by categories ids, comma separated values expected. (optional)
      - parameter title: (query) Filter by document title. (optional)
+     - parameter sortBy: (query) Sort by. (optional)
+     - parameter sortOrder: (query) Sort Order. (optional)
      - parameter documentIds: (query) Comma-separated list of document identifiers to fetch by. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil, documentIds: [String]? = nil, completion: @escaping ((_ data: DocumentListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, categories: categories, title: title, documentIds: documentIds)
+    open class func getKnowledgeKnowledgebaseLanguageDocuments(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil, sortBy: SortBy_getKnowledgeKnowledgebaseLanguageDocuments? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebaseLanguageDocuments? = nil, documentIds: [String]? = nil, completion: @escaping ((_ data: DocumentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, before: before, after: after, limit: limit, pageSize: pageSize, categories: categories, title: title, sortBy: sortBy, sortOrder: sortOrder, documentIds: documentIds)
         requestBuilder.execute { (response: Response<DocumentListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -975,11 +1009,13 @@ open class KnowledgeAPI {
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter categories: (query) Filter by categories ids, comma separated values expected. (optional)
      - parameter title: (query) Filter by document title. (optional)
+     - parameter sortBy: (query) Sort by. (optional)
+     - parameter sortOrder: (query) Sort Order. (optional)
      - parameter documentIds: (query) Comma-separated list of document identifiers to fetch by. (optional)
 
      - returns: RequestBuilder<DocumentListing> 
      */
-    open class func getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil, documentIds: [String]? = nil) -> RequestBuilder<DocumentListing> {
+    open class func getKnowledgeKnowledgebaseLanguageDocumentsWithRequestBuilder(knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments, before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, categories: String? = nil, title: String? = nil, sortBy: SortBy_getKnowledgeKnowledgebaseLanguageDocuments? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebaseLanguageDocuments? = nil, documentIds: [String]? = nil) -> RequestBuilder<DocumentListing> {
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1010,6 +1046,10 @@ open class KnowledgeAPI {
             
             "title": title, 
             
+            "sortBy": sortBy?.rawValue, 
+            
+            "sortOrder": sortOrder?.rawValue, 
+            
             "documentIds": documentIds
             
         ])
@@ -1025,6 +1065,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -1144,6 +1186,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTraining: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -1250,6 +1294,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -1403,11 +1449,31 @@ open class KnowledgeAPI {
     
     public enum CoreLanguage_getKnowledgeKnowledgebases: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
     
     
+    
+    
+    
+    public enum SortBy_getKnowledgeKnowledgebases: String { 
+        case name = "Name"
+        case date = "Date"
+    }
+
+    
+    
+    
+    public enum SortOrder_getKnowledgeKnowledgebases: String { 
+        case asc = "ASC"
+        case ascending = "ascending"
+        case desc = "DESC"
+        case descending = "descending"
+    }
+
     
     
     /**
@@ -1421,10 +1487,12 @@ open class KnowledgeAPI {
      - parameter name: (query) Filter by Name. (optional)
      - parameter coreLanguage: (query) Filter by core language. (optional)
      - parameter published: (query) Filter by published status. (optional)
+     - parameter sortBy: (query) Sort by. (optional)
+     - parameter sortOrder: (query) Sort Order. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebases(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil, completion: @escaping ((_ data: KnowledgeBaseListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebasesWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage, published: published)
+    open class func getKnowledgeKnowledgebases(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil, sortBy: SortBy_getKnowledgeKnowledgebases? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebases? = nil, completion: @escaping ((_ data: KnowledgeBaseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebasesWithRequestBuilder(before: before, after: after, limit: limit, pageSize: pageSize, name: name, coreLanguage: coreLanguage, published: published, sortBy: sortBy, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<KnowledgeBaseListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1476,10 +1544,12 @@ open class KnowledgeAPI {
      - parameter name: (query) Filter by Name. (optional)
      - parameter coreLanguage: (query) Filter by core language. (optional)
      - parameter published: (query) Filter by published status. (optional)
+     - parameter sortBy: (query) Sort by. (optional)
+     - parameter sortOrder: (query) Sort Order. (optional)
 
      - returns: RequestBuilder<KnowledgeBaseListing> 
      */
-    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil) -> RequestBuilder<KnowledgeBaseListing> {
+    open class func getKnowledgeKnowledgebasesWithRequestBuilder(before: String? = nil, after: String? = nil, limit: String? = nil, pageSize: String? = nil, name: String? = nil, coreLanguage: CoreLanguage_getKnowledgeKnowledgebases? = nil, published: Bool? = nil, sortBy: SortBy_getKnowledgeKnowledgebases? = nil, sortOrder: SortOrder_getKnowledgeKnowledgebases? = nil) -> RequestBuilder<KnowledgeBaseListing> {
         let path = "/api/v2/knowledge/knowledgebases"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1504,7 +1574,11 @@ open class KnowledgeAPI {
             
             "coreLanguage": coreLanguage?.rawValue, 
             
-            "published": published
+            "published": published, 
+            
+            "sortBy": sortBy?.rawValue, 
+            
+            "sortOrder": sortOrder?.rawValue
             
         ])
 
@@ -1597,6 +1671,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageCategory: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -1713,6 +1789,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocument: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -1841,6 +1919,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -1969,6 +2049,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -2152,6 +2234,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageCategories: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -2261,6 +2345,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -2384,6 +2470,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -2497,6 +2585,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 
@@ -2603,6 +2693,8 @@ open class KnowledgeAPI {
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings: String { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
 

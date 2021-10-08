@@ -784,25 +784,30 @@ open class TelephonyProvidersEdgeAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "createdByApp" : "aeiou",
+    "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "aeiou",
+    "name" : "aeiou",
+    "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
-    "state" : "aeiou",
-    "createdByApp" : "aeiou",
-    "version" : 123
+    "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -882,25 +887,30 @@ open class TelephonyProvidersEdgeAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "createdByApp" : "aeiou",
+    "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "aeiou",
+    "name" : "aeiou",
+    "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
-    "state" : "aeiou",
-    "createdByApp" : "aeiou",
-    "version" : 123
+    "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 
@@ -987,25 +997,30 @@ open class TelephonyProvidersEdgeAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "createdBy" : "aeiou",
     "selfUri" : "aeiou",
-    "name" : "aeiou",
-    "modifiedByApp" : "aeiou",
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "createdByApp" : "aeiou",
+    "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "aeiou",
+    "name" : "aeiou",
+    "modifiedByApp" : "aeiou",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
-    "state" : "aeiou",
-    "createdByApp" : "aeiou",
-    "version" : 123
+    "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter schemaCategory: (path) Schema category 
@@ -1336,6 +1351,7 @@ open class TelephonyProvidersEdgeAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "hybrid" : true,
     "createdBy" : "aeiou",
@@ -1352,6 +1368,7 @@ open class TelephonyProvidersEdgeAPI {
         "createdByApp" : "aeiou",
         "trunkType" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "createdBy" : "aeiou",
         "managed" : true,
@@ -1369,6 +1386,11 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou",
     "state" : "aeiou",
     "phoneTrunkBases" : [ "" ]
+  },
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
   },
   "patch" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -1421,6 +1443,7 @@ open class TelephonyProvidersEdgeAPI {
     "secondaryEdges" : [ "" ],
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ "" ],
     "managed" : true,
@@ -1875,6 +1898,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "edgeGroup" : "",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "edge" : {
     "softwareStatus" : {
       "callDrainingWaitTimeSeconds" : 123456789,
@@ -1908,6 +1936,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -1924,6 +1953,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -1942,6 +1972,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
     },
+    "division" : "",
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "apiVersion" : "aeiou",
@@ -1989,6 +2020,7 @@ open class TelephonyProvidersEdgeAPI {
       "secondaryEdges" : [ "" ],
       "description" : "aeiou",
       "createdByApp" : "aeiou",
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
       "managed" : true,
@@ -2104,6 +2136,7 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "version" : 123,
     "enabled" : true,
+    "division" : "",
     "site" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -2219,6 +2252,11 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "edgeGroup" : "",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "edge" : {
       "softwareStatus" : {
         "callDrainingWaitTimeSeconds" : 123456789,
@@ -2252,6 +2290,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -2268,6 +2307,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -2286,6 +2326,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -2333,6 +2374,7 @@ open class TelephonyProvidersEdgeAPI {
         "secondaryEdges" : [ "" ],
         "description" : "aeiou",
         "createdByApp" : "aeiou",
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
         "managed" : true,
@@ -2448,6 +2490,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "version" : 123,
       "enabled" : true,
+      "division" : "",
       "site" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
@@ -2478,8 +2521,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2583,6 +2626,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "trunkType" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
       "managed" : true,
@@ -2604,6 +2648,11 @@ open class TelephonyProvidersEdgeAPI {
   "description" : "aeiou",
   "createdByApp" : "aeiou",
   "useForInternalEdgeCommunication" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "useForWanInterface" : true,
   "interfaceType" : "aeiou",
   "routes" : [ {
@@ -2771,6 +2820,7 @@ open class TelephonyProvidersEdgeAPI {
         "createdByApp" : "aeiou",
         "trunkType" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "createdBy" : "aeiou",
         "managed" : true,
@@ -2792,6 +2842,11 @@ open class TelephonyProvidersEdgeAPI {
     "description" : "aeiou",
     "createdByApp" : "aeiou",
     "useForInternalEdgeCommunication" : true,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "useForWanInterface" : true,
     "interfaceType" : "aeiou",
     "routes" : [ {
@@ -2859,8 +2914,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2939,6 +2994,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -2953,6 +3013,7 @@ open class TelephonyProvidersEdgeAPI {
     "version" : 123,
     "timeModified" : "2000-01-23T04:56:07.000+0000",
     "sizeBytes" : 1.3579000000000001069366817318950779736042022705078125,
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -3147,6 +3208,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -3239,6 +3305,11 @@ open class TelephonyProvidersEdgeAPI {
     },
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -3254,8 +3325,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3492,8 +3563,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3594,6 +3665,11 @@ open class TelephonyProvidersEdgeAPI {
     "edgeGroup" : "",
     "enabled" : true,
     "registersEnabledStatus" : "aeiou",
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "edge" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -3648,8 +3724,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -3789,6 +3865,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -3805,6 +3882,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -3822,6 +3900,11 @@ open class TelephonyProvidersEdgeAPI {
       "id" : "aeiou",
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
+    },
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
     },
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -3874,6 +3957,7 @@ open class TelephonyProvidersEdgeAPI {
       "secondaryEdges" : [ "" ],
       "description" : "aeiou",
       "createdByApp" : "aeiou",
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
       "managed" : true,
@@ -3984,8 +4068,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4145,6 +4229,11 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "type" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -4157,8 +4246,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CertificateAuthorityEntityListing> 
@@ -4235,6 +4324,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "type" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -4313,6 +4407,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "phoneNumber" : "aeiou",
   "createdBy" : "aeiou",
@@ -4396,6 +4495,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "provider" : "aeiou",
@@ -4489,6 +4593,11 @@ open class TelephonyProvidersEdgeAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "provider" : "aeiou",
@@ -4504,8 +4613,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4626,8 +4735,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query) The type of numbers to return. 
@@ -4741,6 +4850,11 @@ open class TelephonyProvidersEdgeAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "phoneNumber" : "aeiou",
     "createdBy" : "aeiou",
@@ -4759,8 +4873,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4862,6 +4976,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "hybrid" : true,
   "createdBy" : "aeiou",
@@ -4878,6 +4997,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "trunkType" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
       "managed" : true,
@@ -4978,6 +5098,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "trunkType" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -5082,6 +5207,11 @@ open class TelephonyProvidersEdgeAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "hybrid" : true,
     "createdBy" : "aeiou",
@@ -5098,6 +5228,7 @@ open class TelephonyProvidersEdgeAPI {
         "createdByApp" : "aeiou",
         "trunkType" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "createdBy" : "aeiou",
         "managed" : true,
@@ -5124,8 +5255,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5275,6 +5406,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "number" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -5355,6 +5491,11 @@ open class TelephonyProvidersEdgeAPI {
   "endNumber" : "aeiou",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -5446,6 +5587,11 @@ open class TelephonyProvidersEdgeAPI {
     "endNumber" : "aeiou",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -5458,8 +5604,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5562,6 +5708,11 @@ open class TelephonyProvidersEdgeAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "number" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -5576,8 +5727,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -5668,6 +5819,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "loggedInUser" : "",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "site" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -5711,6 +5867,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -5727,6 +5884,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -5745,6 +5903,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
     },
+    "division" : "",
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "apiVersion" : "aeiou",
@@ -5792,6 +5951,7 @@ open class TelephonyProvidersEdgeAPI {
       "secondaryEdges" : [ "" ],
       "description" : "aeiou",
       "createdByApp" : "aeiou",
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
       "managed" : true,
@@ -5976,6 +6136,11 @@ open class TelephonyProvidersEdgeAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -6081,6 +6246,11 @@ open class TelephonyProvidersEdgeAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -6096,8 +6266,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -6215,6 +6385,11 @@ open class TelephonyProvidersEdgeAPI {
     },
     "loggedInUser" : "",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "site" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -6258,6 +6433,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -6274,6 +6450,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -6292,6 +6469,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -6339,6 +6517,7 @@ open class TelephonyProvidersEdgeAPI {
         "secondaryEdges" : [ "" ],
         "description" : "aeiou",
         "createdByApp" : "aeiou",
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
         "managed" : true,
@@ -6454,8 +6633,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6546,6 +6725,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "loggedInUser" : "",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "site" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -6589,6 +6773,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -6605,6 +6790,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -6623,6 +6809,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
     },
+    "division" : "",
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "apiVersion" : "aeiou",
@@ -6670,6 +6857,7 @@ open class TelephonyProvidersEdgeAPI {
       "secondaryEdges" : [ "" ],
       "description" : "aeiou",
       "createdByApp" : "aeiou",
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
       "managed" : true,
@@ -6877,6 +7065,7 @@ open class TelephonyProvidersEdgeAPI {
         "createdByApp" : "aeiou",
         "trunkType" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "createdBy" : "aeiou",
         "managed" : true,
@@ -6898,6 +7087,11 @@ open class TelephonyProvidersEdgeAPI {
     "description" : "aeiou",
     "createdByApp" : "aeiou",
     "useForInternalEdgeCommunication" : true,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "useForWanInterface" : true,
     "interfaceType" : "aeiou",
     "routes" : [ {
@@ -6965,8 +7159,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -7146,6 +7340,11 @@ open class TelephonyProvidersEdgeAPI {
   "distribution" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "site" : {
     "primarySites" : [ "" ],
     "addresses" : [ {
@@ -7160,6 +7359,7 @@ open class TelephonyProvidersEdgeAPI {
     "secondaryEdges" : [ "" ],
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -7194,6 +7394,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -7210,6 +7411,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -7228,6 +7430,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -7470,6 +7673,11 @@ open class TelephonyProvidersEdgeAPI {
     "distribution" : "aeiou",
     "version" : 123,
     "enabled" : true,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "site" : {
       "primarySites" : [ "" ],
       "addresses" : [ {
@@ -7484,6 +7692,7 @@ open class TelephonyProvidersEdgeAPI {
       "secondaryEdges" : [ "" ],
       "description" : "aeiou",
       "createdByApp" : "aeiou",
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ {
         "softwareStatus" : {
@@ -7518,6 +7727,7 @@ open class TelephonyProvidersEdgeAPI {
           "dateModified" : "2000-01-23T04:56:07.000+0000",
           "createdByApp" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "hybrid" : true,
           "createdBy" : "aeiou",
@@ -7534,6 +7744,7 @@ open class TelephonyProvidersEdgeAPI {
               "createdByApp" : "aeiou",
               "trunkType" : "aeiou",
               "version" : 123,
+              "division" : "",
               "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "createdBy" : "aeiou",
               "managed" : true,
@@ -7552,6 +7763,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "phoneTrunkBases" : [ "" ]
         },
+        "division" : "",
         "patch" : "aeiou",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "apiVersion" : "aeiou",
@@ -7708,8 +7920,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7793,6 +8005,11 @@ open class TelephonyProvidersEdgeAPI {
      - examples: [{contentType=application/json, example={
   "description" : "aeiou",
   "createdByApp" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
@@ -7806,6 +8023,7 @@ open class TelephonyProvidersEdgeAPI {
     "edgeGroup" : "",
     "loggedInUser" : "",
     "version" : 123,
+    "division" : "",
     "site" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -7849,6 +8067,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -7865,6 +8084,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -7883,6 +8103,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -7930,6 +8151,7 @@ open class TelephonyProvidersEdgeAPI {
         "secondaryEdges" : [ "" ],
         "description" : "aeiou",
         "createdByApp" : "aeiou",
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
         "managed" : true,
@@ -8185,6 +8407,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -8199,6 +8426,7 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "version" : 123,
     "lineMetaBase" : "",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -8323,6 +8551,11 @@ open class TelephonyProvidersEdgeAPI {
     },
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -8337,6 +8570,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "version" : 123,
       "lineMetaBase" : "",
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
       "name" : "aeiou",
@@ -8356,8 +8590,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8452,6 +8686,11 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "type" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -8464,8 +8703,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -8556,6 +8795,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -8570,6 +8814,7 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "version" : 123,
     "lineMetaBase" : "",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -8730,6 +8975,11 @@ open class TelephonyProvidersEdgeAPI {
   "entities" : [ {
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
@@ -8743,6 +8993,7 @@ open class TelephonyProvidersEdgeAPI {
       "edgeGroup" : "",
       "loggedInUser" : "",
       "version" : 123,
+      "division" : "",
       "site" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
@@ -8786,6 +9037,7 @@ open class TelephonyProvidersEdgeAPI {
           "dateModified" : "2000-01-23T04:56:07.000+0000",
           "createdByApp" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "hybrid" : true,
           "createdBy" : "aeiou",
@@ -8802,6 +9054,7 @@ open class TelephonyProvidersEdgeAPI {
               "createdByApp" : "aeiou",
               "trunkType" : "aeiou",
               "version" : 123,
+              "division" : "",
               "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "createdBy" : "aeiou",
               "managed" : true,
@@ -8820,6 +9073,7 @@ open class TelephonyProvidersEdgeAPI {
           "state" : "aeiou",
           "phoneTrunkBases" : [ "" ]
         },
+        "division" : "",
         "patch" : "aeiou",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "apiVersion" : "aeiou",
@@ -8867,6 +9121,7 @@ open class TelephonyProvidersEdgeAPI {
           "secondaryEdges" : [ "" ],
           "description" : "aeiou",
           "createdByApp" : "aeiou",
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "primaryEdges" : [ "" ],
           "managed" : true,
@@ -9042,8 +9297,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -9160,6 +9415,11 @@ open class TelephonyProvidersEdgeAPI {
      - examples: [{contentType=application/json, example={
   "description" : "aeiou",
   "createdByApp" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
@@ -9173,6 +9433,7 @@ open class TelephonyProvidersEdgeAPI {
     "edgeGroup" : "",
     "loggedInUser" : "",
     "version" : 123,
+    "division" : "",
     "site" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -9216,6 +9477,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -9232,6 +9494,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -9250,6 +9513,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -9297,6 +9561,7 @@ open class TelephonyProvidersEdgeAPI {
         "secondaryEdges" : [ "" ],
         "description" : "aeiou",
         "createdByApp" : "aeiou",
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
         "managed" : true,
@@ -9547,6 +9812,11 @@ open class TelephonyProvidersEdgeAPI {
     },
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -9562,8 +9832,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -9647,6 +9917,11 @@ open class TelephonyProvidersEdgeAPI {
   "secondaryEdges" : [ "" ],
   "description" : "aeiou",
   "createdByApp" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "primaryEdges" : [ {
     "softwareStatus" : {
@@ -9681,6 +9956,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -9697,6 +9973,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -9715,6 +9992,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
     },
+    "division" : "",
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "apiVersion" : "aeiou",
@@ -9936,6 +10214,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "classification" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -10029,6 +10312,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "classification" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -10184,6 +10472,11 @@ open class TelephonyProvidersEdgeAPI {
   "distribution" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -10291,6 +10584,11 @@ open class TelephonyProvidersEdgeAPI {
     "distribution" : "aeiou",
     "version" : 123,
     "enabled" : true,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -10308,8 +10606,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter siteId: (path) Site ID 
@@ -10431,6 +10729,11 @@ open class TelephonyProvidersEdgeAPI {
     "secondaryEdges" : [ "" ],
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -10465,6 +10768,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -10481,6 +10785,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -10499,6 +10804,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -10641,8 +10947,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10743,8 +11049,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 1000)
@@ -10821,6 +11127,11 @@ open class TelephonyProvidersEdgeAPI {
   "edgeGroup" : "",
   "enabled" : true,
   "registersEnabledStatus" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "edge" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -11021,6 +11332,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "trunkType" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "managed" : true,
@@ -11146,6 +11462,11 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "trunkType" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "managed" : true,
@@ -11167,8 +11488,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -11282,6 +11603,11 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "type" : "aeiou",
     "version" : 123,
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -11294,8 +11620,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter type: (query)  (optional)
@@ -11374,6 +11700,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "trunkType" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "managed" : true,
@@ -11492,6 +11823,11 @@ open class TelephonyProvidersEdgeAPI {
     "edgeGroup" : "",
     "enabled" : true,
     "registersEnabledStatus" : "aeiou",
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "edge" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -11546,8 +11882,8 @@ open class TelephonyProvidersEdgeAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -12076,6 +12412,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "trunkType" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
       "managed" : true,
@@ -12097,6 +12434,11 @@ open class TelephonyProvidersEdgeAPI {
   "description" : "aeiou",
   "createdByApp" : "aeiou",
   "useForInternalEdgeCommunication" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "useForWanInterface" : true,
   "interfaceType" : "aeiou",
   "routes" : [ {
@@ -12287,18 +12629,23 @@ open class TelephonyProvidersEdgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "dateCreated" : "2000-01-23T04:56:07.000+0000",
-  "createdBy" : "aeiou",
   "selfUri" : "aeiou",
-  "name" : "aeiou",
-  "modifiedByApp" : "aeiou",
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "createdByApp" : "aeiou",
+  "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : "aeiou",
+  "name" : "aeiou",
+  "modifiedByApp" : "aeiou",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
-  "state" : "aeiou",
-  "createdByApp" : "aeiou",
-  "version" : 123
+  "state" : "aeiou"
 }}]
      
      - parameter edgeId: (path) Edge ID 
@@ -12668,6 +13015,7 @@ open class TelephonyProvidersEdgeAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "hybrid" : true,
     "createdBy" : "aeiou",
@@ -12684,6 +13032,7 @@ open class TelephonyProvidersEdgeAPI {
         "createdByApp" : "aeiou",
         "trunkType" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "createdBy" : "aeiou",
         "managed" : true,
@@ -12701,6 +13050,11 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou",
     "state" : "aeiou",
     "phoneTrunkBases" : [ "" ]
+  },
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
   },
   "patch" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -12753,6 +13107,7 @@ open class TelephonyProvidersEdgeAPI {
     "secondaryEdges" : [ "" ],
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ "" ],
     "managed" : true,
@@ -12996,6 +13351,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "type" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -13067,6 +13427,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "provider" : "aeiou",
@@ -13140,6 +13505,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "hybrid" : true,
   "createdBy" : "aeiou",
@@ -13156,6 +13526,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "trunkType" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
       "managed" : true,
@@ -13242,6 +13613,11 @@ open class TelephonyProvidersEdgeAPI {
   "endNumber" : "aeiou",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -13315,6 +13691,11 @@ open class TelephonyProvidersEdgeAPI {
   "distribution" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "site" : {
     "primarySites" : [ "" ],
     "addresses" : [ {
@@ -13329,6 +13710,7 @@ open class TelephonyProvidersEdgeAPI {
     "secondaryEdges" : [ "" ],
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -13363,6 +13745,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -13379,6 +13762,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -13397,6 +13781,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -13682,6 +14067,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -13696,6 +14086,7 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "version" : 123,
     "lineMetaBase" : "",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -13770,6 +14161,11 @@ open class TelephonyProvidersEdgeAPI {
      - examples: [{contentType=application/json, example={
   "description" : "aeiou",
   "createdByApp" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
@@ -13783,6 +14179,7 @@ open class TelephonyProvidersEdgeAPI {
     "edgeGroup" : "",
     "loggedInUser" : "",
     "version" : 123,
+    "division" : "",
     "site" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -13826,6 +14223,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -13842,6 +14240,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -13860,6 +14259,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -13907,6 +14307,7 @@ open class TelephonyProvidersEdgeAPI {
         "secondaryEdges" : [ "" ],
         "description" : "aeiou",
         "createdByApp" : "aeiou",
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
         "managed" : true,
@@ -14195,6 +14596,11 @@ open class TelephonyProvidersEdgeAPI {
   "distribution" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -14341,6 +14747,11 @@ open class TelephonyProvidersEdgeAPI {
   "secondaryEdges" : [ "" ],
   "description" : "aeiou",
   "createdByApp" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "primaryEdges" : [ {
     "softwareStatus" : {
@@ -14375,6 +14786,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -14391,6 +14803,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -14409,6 +14822,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
     },
+    "division" : "",
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "apiVersion" : "aeiou",
@@ -14610,6 +15024,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "trunkType" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "managed" : true,
@@ -14719,6 +15138,7 @@ open class TelephonyProvidersEdgeAPI {
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "createdByApp" : "aeiou",
     "version" : 123,
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "hybrid" : true,
     "createdBy" : "aeiou",
@@ -14735,6 +15155,7 @@ open class TelephonyProvidersEdgeAPI {
         "createdByApp" : "aeiou",
         "trunkType" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "createdBy" : "aeiou",
         "managed" : true,
@@ -14752,6 +15173,11 @@ open class TelephonyProvidersEdgeAPI {
     "id" : "aeiou",
     "state" : "aeiou",
     "phoneTrunkBases" : [ "" ]
+  },
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
   },
   "patch" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
@@ -14804,6 +15230,7 @@ open class TelephonyProvidersEdgeAPI {
     "secondaryEdges" : [ "" ],
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ "" ],
     "managed" : true,
@@ -14989,6 +15416,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "edgeGroup" : "",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "edge" : {
     "softwareStatus" : {
       "callDrainingWaitTimeSeconds" : 123456789,
@@ -15022,6 +15454,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -15038,6 +15471,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -15056,6 +15490,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
     },
+    "division" : "",
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "apiVersion" : "aeiou",
@@ -15103,6 +15538,7 @@ open class TelephonyProvidersEdgeAPI {
       "secondaryEdges" : [ "" ],
       "description" : "aeiou",
       "createdByApp" : "aeiou",
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "primaryEdges" : [ "" ],
       "managed" : true,
@@ -15218,6 +15654,7 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "version" : 123,
     "enabled" : true,
+    "division" : "",
     "site" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -15333,6 +15770,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "trunkType" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
       "managed" : true,
@@ -15354,6 +15792,11 @@ open class TelephonyProvidersEdgeAPI {
   "description" : "aeiou",
   "createdByApp" : "aeiou",
   "useForInternalEdgeCommunication" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "useForWanInterface" : true,
   "interfaceType" : "aeiou",
   "routes" : [ {
@@ -15502,6 +15945,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "type" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -15581,6 +16029,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "phoneNumber" : "aeiou",
   "createdBy" : "aeiou",
@@ -15665,6 +16118,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "provider" : "aeiou",
@@ -15745,6 +16203,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "hybrid" : true,
   "createdBy" : "aeiou",
@@ -15761,6 +16224,7 @@ open class TelephonyProvidersEdgeAPI {
       "createdByApp" : "aeiou",
       "trunkType" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "aeiou",
       "managed" : true,
@@ -15856,6 +16320,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "trunkType" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -15951,6 +16420,11 @@ open class TelephonyProvidersEdgeAPI {
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "number" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
@@ -16032,6 +16506,11 @@ open class TelephonyProvidersEdgeAPI {
   "endNumber" : "aeiou",
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -16112,6 +16591,11 @@ open class TelephonyProvidersEdgeAPI {
   "distribution" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "site" : {
     "primarySites" : [ "" ],
     "addresses" : [ {
@@ -16126,6 +16610,7 @@ open class TelephonyProvidersEdgeAPI {
     "secondaryEdges" : [ "" ],
     "description" : "aeiou",
     "createdByApp" : "aeiou",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "primaryEdges" : [ {
       "softwareStatus" : {
@@ -16160,6 +16645,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -16176,6 +16662,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -16194,6 +16681,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -16412,6 +16900,11 @@ open class TelephonyProvidersEdgeAPI {
      - examples: [{contentType=application/json, example={
   "description" : "aeiou",
   "createdByApp" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
@@ -16425,6 +16918,7 @@ open class TelephonyProvidersEdgeAPI {
     "edgeGroup" : "",
     "loggedInUser" : "",
     "version" : 123,
+    "division" : "",
     "site" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
@@ -16468,6 +16962,7 @@ open class TelephonyProvidersEdgeAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "createdByApp" : "aeiou",
         "version" : 123,
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "hybrid" : true,
         "createdBy" : "aeiou",
@@ -16484,6 +16979,7 @@ open class TelephonyProvidersEdgeAPI {
             "createdByApp" : "aeiou",
             "trunkType" : "aeiou",
             "version" : 123,
+            "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "createdBy" : "aeiou",
             "managed" : true,
@@ -16502,6 +16998,7 @@ open class TelephonyProvidersEdgeAPI {
         "state" : "aeiou",
         "phoneTrunkBases" : [ "" ]
       },
+      "division" : "",
       "patch" : "aeiou",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "apiVersion" : "aeiou",
@@ -16549,6 +17046,7 @@ open class TelephonyProvidersEdgeAPI {
         "secondaryEdges" : [ "" ],
         "description" : "aeiou",
         "createdByApp" : "aeiou",
+        "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "primaryEdges" : [ "" ],
         "managed" : true,
@@ -16805,6 +17303,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "createdByApp" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -16819,6 +17322,7 @@ open class TelephonyProvidersEdgeAPI {
     "createdByApp" : "aeiou",
     "version" : 123,
     "lineMetaBase" : "",
+    "division" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "aeiou",
     "name" : "aeiou",
@@ -16915,6 +17419,11 @@ open class TelephonyProvidersEdgeAPI {
   "secondaryEdges" : [ "" ],
   "description" : "aeiou",
   "createdByApp" : "aeiou",
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "primaryEdges" : [ {
     "softwareStatus" : {
@@ -16949,6 +17458,7 @@ open class TelephonyProvidersEdgeAPI {
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "createdByApp" : "aeiou",
       "version" : 123,
+      "division" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "hybrid" : true,
       "createdBy" : "aeiou",
@@ -16965,6 +17475,7 @@ open class TelephonyProvidersEdgeAPI {
           "createdByApp" : "aeiou",
           "trunkType" : "aeiou",
           "version" : 123,
+          "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "createdBy" : "aeiou",
           "managed" : true,
@@ -16983,6 +17494,7 @@ open class TelephonyProvidersEdgeAPI {
       "state" : "aeiou",
       "phoneTrunkBases" : [ "" ]
     },
+    "division" : "",
     "patch" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "apiVersion" : "aeiou",
@@ -17202,6 +17714,11 @@ open class TelephonyProvidersEdgeAPI {
   },
   "classification" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -17286,6 +17803,11 @@ open class TelephonyProvidersEdgeAPI {
   "distribution" : "aeiou",
   "version" : 123,
   "enabled" : true,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "name" : "aeiou",
@@ -17373,6 +17895,11 @@ open class TelephonyProvidersEdgeAPI {
   "createdByApp" : "aeiou",
   "trunkType" : "aeiou",
   "version" : 123,
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "aeiou",
   "managed" : true,

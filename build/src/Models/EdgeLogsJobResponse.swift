@@ -20,6 +20,8 @@ public class EdgeLogsJobResponse: Codable {
     public var _id: String?
     /** The name of the entity. */
     public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
     /** The resource&#39;s description. */
     public var _description: String?
     /** The current version of the resource. */
@@ -41,11 +43,13 @@ public class EdgeLogsJobResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.division = division
         
         self._description = _description
         
@@ -72,6 +76,7 @@ public class EdgeLogsJobResponse: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case division
         case _description = "description"
         case version
         case dateCreated

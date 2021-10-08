@@ -14,6 +14,15 @@ public class OpenNormalizedMessage: Codable {
 
     public enum ModelType: String, Codable { 
         case text = "Text"
+        case receipt = "Receipt"
+    }
+    public enum Status: String, Codable { 
+        case sent = "Sent"
+        case delivered = "Delivered"
+        case read = "Read"
+        case failed = "Failed"
+        case published = "Published"
+        case removed = "Removed"
     }
     public enum Direction: String, Codable { 
         case inbound = "Inbound"
@@ -29,10 +38,18 @@ public class OpenNormalizedMessage: Codable {
     public var text: String?
     /** List of content elements. */
     public var content: [OpenMessageContent]?
+    /** Message receipt status, only used with type Receipt. */
+    public var status: Status?
+    /** List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. */
+    public var reasons: [Reason]?
+    /** Indicates if this is the last message receipt for this message, or if another message receipt can be expected. */
+    public var isFinalReceipt: Bool?
     /** The direction of the message. */
     public var direction: Direction?
+    /** Additional metadata about this message. */
+    public var metadata: [String:String]?
 
-    public init(_id: String?, channel: OpenMessagingChannel?, type: ModelType?, text: String?, content: [OpenMessageContent]?, direction: Direction?) {
+    public init(_id: String?, channel: OpenMessagingChannel?, type: ModelType?, text: String?, content: [OpenMessageContent]?, status: Status?, reasons: [Reason]?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
         
         self._id = _id
         
@@ -44,7 +61,15 @@ public class OpenNormalizedMessage: Codable {
         
         self.content = content
         
+        self.status = status
+        
+        self.reasons = reasons
+        
+        self.isFinalReceipt = isFinalReceipt
+        
         self.direction = direction
+        
+        self.metadata = metadata
         
     }
 
@@ -54,7 +79,11 @@ public class OpenNormalizedMessage: Codable {
         case type
         case text
         case content
+        case status
+        case reasons
+        case isFinalReceipt
         case direction
+        case metadata
     }
 
 

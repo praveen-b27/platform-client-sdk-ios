@@ -136,6 +136,7 @@ open class NotificationsAPI {
       "type" : "aeiou",
       "allowsCurrentUser" : true
     } ],
+    "topicParameters" : [ "aeiou" ],
     "id" : "aeiou",
     "requiresDivisionPermissions" : true,
     "publicApiTemplateUriPaths" : [ "aeiou" ]

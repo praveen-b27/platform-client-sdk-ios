@@ -29,12 +29,14 @@ public class VoicemailGroupPolicy: Codable {
     public var rotateCallsSecs: Int?
     /** How many rotations to go through */
     public var stopRingingAfterRotations: Int?
-    /**  A fallback group to contact when all of the members in this group did not answer the call. */
+    /** A fallback group to contact when all of the members in this group did not answer the call. */
     public var overflowGroupId: String?
     /** Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin. */
     public var groupAlertType: GroupAlertType?
+    /** The prompt to use when connecting a user to a Group Ring call */
+    public var interactiveResponsePromptId: String?
 
-    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?) {
+    public init(name: String?, group: Group?, enabled: Bool?, sendEmailNotifications: Bool?, disableEmailPii: Bool?, rotateCallsSecs: Int?, stopRingingAfterRotations: Int?, overflowGroupId: String?, groupAlertType: GroupAlertType?, interactiveResponsePromptId: String?) {
         
         self.name = name
         
@@ -53,6 +55,8 @@ public class VoicemailGroupPolicy: Codable {
         self.overflowGroupId = overflowGroupId
         
         self.groupAlertType = groupAlertType
+        
+        self.interactiveResponsePromptId = interactiveResponsePromptId
         
     }
 

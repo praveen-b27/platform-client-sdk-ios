@@ -23,8 +23,10 @@ public class Leaderboard: Codable {
     public var leaders: [LeaderboardItem]?
     /** The requesting user&#39;s rank */
     public var userRank: LeaderboardItem?
+    /** The targeted performance profile for the average points */
+    public var performanceProfile: AddressableEntityRef?
 
-    public init(division: Division?, metric: AddressableEntityRef?, dateStartWorkday: Date?, dateEndWorkday: Date?, leaders: [LeaderboardItem]?, userRank: LeaderboardItem?) {
+    public init(division: Division?, metric: AddressableEntityRef?, dateStartWorkday: Date?, dateEndWorkday: Date?, leaders: [LeaderboardItem]?, userRank: LeaderboardItem?, performanceProfile: AddressableEntityRef?) {
         
         self.division = division
         
@@ -37,6 +39,8 @@ public class Leaderboard: Codable {
         self.leaders = leaders
         
         self.userRank = userRank
+        
+        self.performanceProfile = performanceProfile
         
     }
 

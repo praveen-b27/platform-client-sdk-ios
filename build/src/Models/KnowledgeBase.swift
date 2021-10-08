@@ -13,6 +13,8 @@ public class KnowledgeBase: Codable {
 
     public enum CoreLanguage: String, Codable { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
     /** The globally unique identifier for the object. */

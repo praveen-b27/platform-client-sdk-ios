@@ -14,6 +14,7 @@ public class DialerAction: Codable {
     public enum ModelType: String, Codable { 
         case action = "Action"
         case modifycontactattribute = "modifyContactAttribute"
+        case dataactionbehavior = "dataActionBehavior"
     }
     public enum ActionTypeName: String, Codable { 
         case doNotDial = "DO_NOT_DIAL"
@@ -25,6 +26,7 @@ public class DialerAction: Codable {
         case numberUncallable = "NUMBER_UNCALLABLE"
         case setCallerId = "SET_CALLER_ID"
         case setSkills = "SET_SKILLS"
+        case dataAction = "DATA_ACTION"
     }
     public enum UpdateOption: String, Codable { 
         case _set = "SET"

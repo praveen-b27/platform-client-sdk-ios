@@ -317,6 +317,7 @@ open class JourneyAPI {
     },
     "mediaType" : "aeiou",
     "webMessagingOfferFields" : {
+      "architectFlow" : "",
       "offerText" : "aeiou"
     },
     "architectFlowFields" : {
@@ -467,6 +468,7 @@ open class JourneyAPI {
       },
       "mediaType" : "aeiou",
       "webMessagingOfferFields" : {
+        "architectFlow" : "",
         "offerText" : "aeiou"
       },
       "architectFlowFields" : {
@@ -493,8 +495,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -692,8 +694,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -976,8 +978,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1218,8 +1220,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageNumber: (query) Page number (optional, default to 1)
@@ -1476,8 +1478,8 @@ open class JourneyAPI {
   "selfUri" : "aeiou",
   "lastUri" : "aeiou",
   "pageSize" : 123,
-  "previousUri" : "aeiou",
-  "nextUri" : "aeiou"
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy=displayName,-createdDate). (optional)
@@ -1887,6 +1889,7 @@ open class JourneyAPI {
     },
     "mediaType" : "aeiou",
     "webMessagingOfferFields" : {
+      "architectFlow" : "",
       "offerText" : "aeiou"
     },
     "architectFlowFields" : {
@@ -2503,6 +2506,7 @@ open class JourneyAPI {
     },
     "mediaType" : "aeiou",
     "webMessagingOfferFields" : {
+      "architectFlow" : "",
       "offerText" : "aeiou"
     },
     "architectFlowFields" : {

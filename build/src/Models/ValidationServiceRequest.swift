@@ -13,14 +13,18 @@ public class ValidationServiceRequest: Codable {
 
     /** The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateImportEnded: Date?
-    /** Path to the file in the storage including the file name */
+    /** File URL is deprecated, please use upload key */
     public var fileUrl: String?
+    /** S3 key for the uploaded file */
+    public var uploadKey: String?
 
-    public init(dateImportEnded: Date?, fileUrl: String?) {
+    public init(dateImportEnded: Date?, fileUrl: String?, uploadKey: String?) {
         
         self.dateImportEnded = dateImportEnded
         
         self.fileUrl = fileUrl
+        
+        self.uploadKey = uploadKey
         
     }
 

@@ -52,6 +52,8 @@ public class Edge: Codable {
     public var _id: String?
     /** The name of the entity. */
     public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
     /** The resource&#39;s description. */
     public var _description: String?
     /** The current version of the resource. */
@@ -112,11 +114,13 @@ public class Edge: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, interfaces: [EdgeInterface]?, make: String?, model: String?, apiVersion: String?, softwareVersion: String?, softwareVersionTimestamp: String?, softwareVersionPlatform: String?, softwareVersionConfiguration: String?, fullSoftwareVersion: String?, pairingId: String?, fingerprint: String?, fingerprintHint: String?, currentVersion: String?, stagedVersion: String?, patch: String?, statusCode: StatusCode?, edgeGroup: EdgeGroup?, site: Site?, softwareStatus: DomainEdgeSoftwareUpdateDto?, onlineStatus: OnlineStatus?, serialNumber: String?, physicalEdge: Bool?, managed: Bool?, edgeDeploymentType: EdgeDeploymentType?, callDrainingState: CallDrainingState?, conversationCount: Int?, proxy: String?, offlineConfigCalled: Bool?, osName: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, interfaces: [EdgeInterface]?, make: String?, model: String?, apiVersion: String?, softwareVersion: String?, softwareVersionTimestamp: String?, softwareVersionPlatform: String?, softwareVersionConfiguration: String?, fullSoftwareVersion: String?, pairingId: String?, fingerprint: String?, fingerprintHint: String?, currentVersion: String?, stagedVersion: String?, patch: String?, statusCode: StatusCode?, edgeGroup: EdgeGroup?, site: Site?, softwareStatus: DomainEdgeSoftwareUpdateDto?, onlineStatus: OnlineStatus?, serialNumber: String?, physicalEdge: Bool?, managed: Bool?, edgeDeploymentType: EdgeDeploymentType?, callDrainingState: CallDrainingState?, conversationCount: Int?, proxy: String?, offlineConfigCalled: Bool?, osName: String?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.division = division
         
         self._description = _description
         
@@ -201,6 +205,7 @@ public class Edge: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case division
         case _description = "description"
         case version
         case dateCreated

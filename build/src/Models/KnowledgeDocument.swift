@@ -13,6 +13,8 @@ public class KnowledgeDocument: Codable {
 
     public enum LanguageCode: String, Codable { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
     public enum ModelType: String, Codable { 

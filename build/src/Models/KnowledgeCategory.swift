@@ -13,6 +13,8 @@ public class KnowledgeCategory: Codable {
 
     public enum LanguageCode: String, Codable { 
         case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
         case deDe = "de-DE"
     }
     /** The globally unique identifier for the object. */

@@ -18,6 +18,7 @@ public class Recipient: Codable {
         case line = "line"
         case whatsapp = "whatsapp"
         case webmessaging = "webmessaging"
+        case instagram = "instagram"
         case _open = "open"
     }
     /** The globally unique identifier for the object. */

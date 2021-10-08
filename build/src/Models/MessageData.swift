@@ -22,6 +22,7 @@ public class MessageData: Codable {
         case line = "line"
         case whatsapp = "whatsapp"
         case webmessaging = "webmessaging"
+        case instagram = "instagram"
         case _open = "open"
     }
     public enum Status: String, Codable { 

@@ -11,18 +11,30 @@ import Foundation
 
 public class RecordingMessagingMessage: Codable {
 
+    /** The message sender session id. */
     public var from: String?
+    /** The user who sent this message. */
     public var fromUser: User?
+    /** The PureCloud external contact sender details. */
     public var fromExternalContact: ExternalContact?
+    /** The message recipient. */
     public var to: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var timestamp: Date?
+    /** A globally unique identifier for this communication. */
     public var _id: String?
+    /** The content of this message. */
     public var messageText: String?
+    /** List of media objects attached  with this message. */
     public var messageMediaAttachments: [MessageMediaAttachment]?
+    /** List of message stickers attached with this message. */
     public var messageStickerAttachments: [MessageStickerAttachment]?
+    /** List of quick reply options offered with this message. */
+    public var quickReplies: [QuickReply]?
+    /** Button Response selected by user for this message. */
+    public var buttonResponse: ButtonResponse?
 
-    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?) {
+    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?) {
         
         self.from = from
         
@@ -42,6 +54,10 @@ public class RecordingMessagingMessage: Codable {
         
         self.messageStickerAttachments = messageStickerAttachments
         
+        self.quickReplies = quickReplies
+        
+        self.buttonResponse = buttonResponse
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -54,6 +70,8 @@ public class RecordingMessagingMessage: Codable {
         case messageText
         case messageMediaAttachments
         case messageStickerAttachments
+        case quickReplies
+        case buttonResponse
     }
 
 

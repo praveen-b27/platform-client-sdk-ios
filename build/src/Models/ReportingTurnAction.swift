@@ -40,6 +40,7 @@ public class ReportingTurnAction: Codable {
         case addFlowMilestoneAction = "AddFlowMilestoneAction"
         case askForStringAction = "AskForStringAction"
         case sendResponseAction = "SendResponseAction"
+        case getResponseAction = "GetResponseAction"
         case unknown = "Unknown"
     }
     /** The ID of the action in the bot flow. */

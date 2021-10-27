@@ -7728,7 +7728,7 @@ open class RoutingAPI {
      Update attributes of an in-queue conversation
      
      - PATCH /api/v2/routing/conversations/{conversationId}
-     - Returns an object indicating the updated values of all settable attributes. Supported attributes: priority (each point of priority is equivalent to one minute of time in queue), skillIds and languageId.
+     - Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

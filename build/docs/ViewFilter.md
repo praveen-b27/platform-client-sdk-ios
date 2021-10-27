@@ -131,6 +131,19 @@ title: ViewFilter
 | **isAgentOwnedCallback** | **Bool** | Indicates filtering for agent owned callback interactions | [optional] |
 | **agentCallbackOwnerIds** | **[String]** | The list of callback owners used to filter interactions | [optional] |
 | **transcriptTopics** | [**[TranscriptTopics]**](TranscriptTopics.html) | The list of transcript topics requested in filter | [optional] |
+| **journeyFrequencyCapReasons** | **[String]** | The list of frequency cap reasons to filter offer constraints | [optional] |
+| **journeyBlockingActionMapIds** | **[String]** | The list of blocking action maps to filter offer constraints | [optional] |
+| **journeyActionTargetIds** | **[String]** | The list of action targets to filter offer constraints | [optional] |
+| **journeyBlockingScheduleGroupIds** | **[String]** | The list of blocking schedule groups to filter offer constraints | [optional] |
+| **journeyBlockingEmergencyScheduleGroupIds** | **[String]** | The list of emergency schedule groups to filter offer constraints | [optional] |
+| **journeyUrlEqualConditions** | **[String]** | The list of url equal conditions to filter offer constraints | [optional] |
+| **journeyUrlNotEqualConditions** | **[String]** | The list of url not equal conditions to filter offer constraints | [optional] |
+| **journeyUrlStartsWithConditions** | **[String]** | The list of url starts with conditions to filter offer constraints | [optional] |
+| **journeyUrlEndsWithConditions** | **[String]** | The list of url ends with conditions to filter offer constraints | [optional] |
+| **journeyUrlContainsAnyConditions** | **[String]** | The list of url contains any conditions to filter offer constraints | [optional] |
+| **journeyUrlNotContainsAnyConditions** | **[String]** | The list of url not contains any conditions to filter offer constraints | [optional] |
+| **journeyUrlContainsAllConditions** | **[String]** | The list of url contains all conditions to filter offer constraints | [optional] |
+| **journeyUrlNotContainsAllConditions** | **[String]** | The list of url not contains all conditions to filter offer constraints | [optional] |
 {: class="table table-striped"}
 
 

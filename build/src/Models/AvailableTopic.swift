@@ -42,7 +42,7 @@ public class AvailableTopic: Codable {
     /** Transports that support events for the topic */
     public var transports: [Transports]?
     public var publicApiTemplateUriPaths: [String]?
-    /** Parameters in the topic name that can be substituted */
+    /** Parameters in the topic name that can be substituted, in the order they appear in the topic name */
     public var topicParameters: [String]?
 
     public init(_description: String?, _id: String?, permissionDetails: [PermissionDetails]?, requiresPermissions: [String]?, requiresDivisionPermissions: Bool?, requiresAnyValidator: Bool?, enforced: Bool?, visibility: Visibility?, schema: [String:JSON]?, requiresCurrentUser: Bool?, requiresCurrentUserOrPermission: Bool?, transports: [Transports]?, publicApiTemplateUriPaths: [String]?, topicParameters: [String]?) {

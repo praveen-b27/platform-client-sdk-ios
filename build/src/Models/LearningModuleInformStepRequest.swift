@@ -15,6 +15,7 @@ public class LearningModuleInformStepRequest: Codable {
     public enum ModelType: String, Codable { 
         case url = "Url"
         case content = "Content"
+        case richText = "RichText"
     }
     /** The learning module inform step type */
     public var type: ModelType?

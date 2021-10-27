@@ -11435,4 +11435,74 @@ open class VoicemailAPI {
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
+    
+    
+    
+    
+    
+    /**
+     
+     Update a user's voicemail policy
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) The user&#39;s voicemail policy 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putVoicemailUserpolicy(userId: String, body: VoicemailUserPolicy, completion: @escaping ((_ data: VoicemailUserPolicy?,_ error: Error?) -> Void)) {
+        let requestBuilder = putVoicemailUserpolicyWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<VoicemailUserPolicy>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a user's voicemail policy
+     
+     - PUT /api/v2/voicemail/userpolicies/{userId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "alertTimeoutSeconds" : 123,
+  "pin" : "aeiou",
+  "sendEmailNotifications" : true,
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "enabled" : true
+}}]
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) The user&#39;s voicemail policy 
+
+     - returns: RequestBuilder<VoicemailUserPolicy> 
+     */
+    open class func putVoicemailUserpolicyWithRequestBuilder(userId: String, body: VoicemailUserPolicy) -> RequestBuilder<VoicemailUserPolicy> {
+        var path = "/api/v2/voicemail/userpolicies/{userId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<VoicemailUserPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
 }

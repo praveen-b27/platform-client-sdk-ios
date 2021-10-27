@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postVoicemailSearch**](VoicemailAPI.html#postVoicemailSearch) | Search voicemails |
 | [**putVoicemailMessage**](VoicemailAPI.html#putVoicemailMessage) | Update a voicemail message |
 | [**putVoicemailPolicy**](VoicemailAPI.html#putVoicemailPolicy) | Update a policy |
+| [**putVoicemailUserpolicy**](VoicemailAPI.html#putVoicemailUserpolicy) | Update a user&#39;s voicemail policy |
 {: class="table-striped"}
 
 <a name="deleteVoicemailMessage"></a>
@@ -1267,4 +1268,58 @@ VoicemailAPI.putVoicemailPolicy(body: body) { (response, error) in
 ### Return type
 
 [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)
+
+<a name="putVoicemailUserpolicy"></a>
+
+# **putVoicemailUserpolicy**
+
+
+
+> [VoicemailUserPolicy](VoicemailUserPolicy.html) putVoicemailUserpolicy(userId, body)
+
+Update a user&#39;s voicemail policy
+
+
+
+Wraps PUT /api/v2/voicemail/userpolicies/{userId}  
+
+Requires ALL permissions: 
+
+* telephony:plugin:all
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: VoicemailUserPolicy = new VoicemailUserPolicy(...) // The user's voicemail policy
+
+// Code example
+VoicemailAPI.putVoicemailUserpolicy(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("VoicemailAPI.putVoicemailUserpolicy was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**VoicemailUserPolicy**](VoicemailUserPolicy.html)| The user&#39;s voicemail policy | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**VoicemailUserPolicy**](VoicemailUserPolicy.html)
 

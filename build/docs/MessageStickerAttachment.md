@@ -8,7 +8,7 @@ title: MessageStickerAttachment
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **url** | **String** | The location of the media, useful for retrieving it | [optional] |
-| **_id** | **String** |  | [optional] |
+| **_id** | **String** | A globally unique identifier for the media object. | [optional] |
 {: class="table table-striped"}
 
 

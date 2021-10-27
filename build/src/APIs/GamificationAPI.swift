@@ -2612,8 +2612,10 @@ open class GamificationAPI {
     "id" : "aeiou"
   },
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
+  "metric" : "",
   "timezone" : "aeiou",
   "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
+  "dateReferenceWorkday" : "2000-01-23T04:56:07.000+0000",
   "user" : {
     "selfUri" : "aeiou",
     "id" : "aeiou"
@@ -2948,8 +2950,10 @@ open class GamificationAPI {
     "id" : "aeiou"
   },
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
+  "metric" : "",
   "timezone" : "aeiou",
   "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
+  "dateReferenceWorkday" : "2000-01-23T04:56:07.000+0000",
   "user" : {
     "selfUri" : "aeiou",
     "id" : "aeiou"
@@ -3173,8 +3177,10 @@ open class GamificationAPI {
     "id" : "aeiou"
   },
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
+  "metric" : "",
   "timezone" : "aeiou",
   "dateStartWorkday" : "2000-01-23T04:56:07.000+0000",
+  "dateReferenceWorkday" : "2000-01-23T04:56:07.000+0000",
   "user" : {
     "selfUri" : "aeiou",
     "id" : "aeiou"

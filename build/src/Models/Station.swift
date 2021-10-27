@@ -34,10 +34,12 @@ public class Station: Codable {
     public var webRtcPersistentEnabled: Bool?
     /** Whether the station is configured to require TURN for routing WebRTC calls. Empty if station type is not inin_webrtc_softphone. */
     public var webRtcForceTurn: Bool?
+    /** The number of call appearances on the station. */
+    public var webRtcCallAppearances: Int?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, status: Status?, userId: String?, webRtcUserId: String?, primaryEdge: DomainEntityRef?, secondaryEdge: DomainEntityRef?, type: String?, lineAppearanceId: String?, webRtcMediaDscp: Int?, webRtcPersistentEnabled: Bool?, webRtcForceTurn: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, status: Status?, userId: String?, webRtcUserId: String?, primaryEdge: DomainEntityRef?, secondaryEdge: DomainEntityRef?, type: String?, lineAppearanceId: String?, webRtcMediaDscp: Int?, webRtcPersistentEnabled: Bool?, webRtcForceTurn: Bool?, webRtcCallAppearances: Int?, selfUri: String?) {
         
         self._id = _id
         
@@ -65,6 +67,8 @@ public class Station: Codable {
         
         self.webRtcForceTurn = webRtcForceTurn
         
+        self.webRtcCallAppearances = webRtcCallAppearances
+        
         self.selfUri = selfUri
         
     }
@@ -83,6 +87,7 @@ public class Station: Codable {
         case webRtcMediaDscp
         case webRtcPersistentEnabled
         case webRtcForceTurn
+        case webRtcCallAppearances
         case selfUri
     }
 

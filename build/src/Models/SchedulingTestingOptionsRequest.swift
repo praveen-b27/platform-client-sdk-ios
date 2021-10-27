@@ -19,8 +19,10 @@ public class SchedulingTestingOptionsRequest: Codable {
     public var failScheduling: Bool?
     /** Whether to populate warnings in the generated schedule */
     public var populateWarnings: Bool?
+    /** Whether to populate deprecated warnings in the generated schedule */
+    public var populateDeprecatedWarnings: Bool?
 
-    public init(fastScheduling: Bool?, delayScheduling: Bool?, failScheduling: Bool?, populateWarnings: Bool?) {
+    public init(fastScheduling: Bool?, delayScheduling: Bool?, failScheduling: Bool?, populateWarnings: Bool?, populateDeprecatedWarnings: Bool?) {
         
         self.fastScheduling = fastScheduling
         
@@ -29,6 +31,8 @@ public class SchedulingTestingOptionsRequest: Codable {
         self.failScheduling = failScheduling
         
         self.populateWarnings = populateWarnings
+        
+        self.populateDeprecatedWarnings = populateDeprecatedWarnings
         
     }
 

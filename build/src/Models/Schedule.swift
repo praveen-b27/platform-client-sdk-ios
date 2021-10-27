@@ -45,7 +45,7 @@ public class Schedule: Codable {
     public var start: String?
     /** Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS */
     public var end: String?
-    /** An iCal Recurrence Rule (RRULE) string. */
+    /** An iCal Recurrence Rule (RRULE) string. It is required to be set for schedules determining when upgrades to the Edge software can be applied. */
     public var rrule: String?
     /** The URI for this object */
     public var selfUri: String?

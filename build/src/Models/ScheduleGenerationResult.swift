@@ -13,7 +13,7 @@ public class ScheduleGenerationResult: Codable {
 
     /** Whether the schedule generation run failed */
     public var failed: Bool?
-    /** The run ID for the schedule generation. Reference this when requesting support */
+    /** The ID of the schedule generation run. Reference this when requesting support */
     public var runId: String?
     /** The number of schedule generation messages for this schedule generation run */
     public var messageCount: Int?

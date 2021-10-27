@@ -20,6 +20,7 @@ public class ReportingTurn: Codable {
         case agentRequestedByUser = "AgentRequestedByUser"
         case confirmationRequired = "ConfirmationRequired"
         case error = "Error"
+        case expressionError = "ExpressionError"
         case noInputCollection = "NoInputCollection"
         case noInputConfirmation = "NoInputConfirmation"
         case disambiguationRequired = "DisambiguationRequired"
@@ -44,7 +45,7 @@ public class ReportingTurn: Codable {
     public var dateCreated: Date?
     /** Result of the bot flow &#39;ask&#39; action. */
     public var askActionResult: AskActionResult?
-    /** The conversation details, across potentially multiple Cicero sessions. */
+    /** The conversation details, across potentially multiple Bot Flow sessions. */
     public var conversation: AddressableEntityRef?
 
     public init(userInput: String?, botPrompts: [String]?, sessionId: String?, askAction: ReportingTurnAction?, intent: ReportingTurnIntent?, knowledge: ReportingTurnKnowledge?, dateCreated: Date?, askActionResult: AskActionResult?, conversation: AddressableEntityRef?) {

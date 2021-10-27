@@ -1,0 +1,20 @@
+---
+title: JourneyOutcomeEventsNotificationDevice
+---
+## JourneyOutcomeEventsNotificationDevice
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **type** | **String** |  | [optional] |
+| **isMobile** | **Bool** |  | [optional] |
+| **screenHeight** | **Int** |  | [optional] |
+| **screenWidth** | **Int** |  | [optional] |
+| **fingerprint** | **String** |  | [optional] |
+| **osFamily** | **String** |  | [optional] |
+| **osVersion** | **String** |  | [optional] |
+| **category** | **String** |  | [optional] |
+{: class="table table-striped"}
+
+

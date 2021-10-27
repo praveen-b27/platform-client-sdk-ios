@@ -15,10 +15,10 @@ public class RecordingTranscodeCompleteTopicRecording: Codable {
     public var conversationId: String?
     public var fileState: String?
     public var mediaUris: [RecordingTranscodeCompleteTopicMediaResult]?
-    public var estimatedTranscodeTimeMs: Double?
-    public var actualTranscodeTimeMs: Double?
+    public var estimatedTranscodeTimeMs: Int?
+    public var actualTranscodeTimeMs: Int?
 
-    public init(_id: String?, conversationId: String?, fileState: String?, mediaUris: [RecordingTranscodeCompleteTopicMediaResult]?, estimatedTranscodeTimeMs: Double?, actualTranscodeTimeMs: Double?) {
+    public init(_id: String?, conversationId: String?, fileState: String?, mediaUris: [RecordingTranscodeCompleteTopicMediaResult]?, estimatedTranscodeTimeMs: Int?, actualTranscodeTimeMs: Int?) {
         
         self._id = _id
         

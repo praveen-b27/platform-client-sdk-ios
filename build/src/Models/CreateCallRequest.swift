@@ -35,8 +35,10 @@ public class CreateCallRequest: Codable {
     public var participants: [Destination]?
     /** User to User Information (UUI) data managed by SIP session application. */
     public var uuiData: String?
+    /** The external contact with which to associate the call. */
+    public var externalContactId: String?
 
-    public init(phoneNumber: String?, callerId: String?, callerIdName: String?, callFromQueueId: String?, callQueueId: String?, callUserId: String?, priority: Int?, languageId: String?, routingSkillsIds: [String]?, conversationIds: [String]?, participants: [Destination]?, uuiData: String?) {
+    public init(phoneNumber: String?, callerId: String?, callerIdName: String?, callFromQueueId: String?, callQueueId: String?, callUserId: String?, priority: Int?, languageId: String?, routingSkillsIds: [String]?, conversationIds: [String]?, participants: [Destination]?, uuiData: String?, externalContactId: String?) {
         
         self.phoneNumber = phoneNumber
         
@@ -61,6 +63,8 @@ public class CreateCallRequest: Codable {
         self.participants = participants
         
         self.uuiData = uuiData
+        
+        self.externalContactId = externalContactId
         
     }
 

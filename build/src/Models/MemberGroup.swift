@@ -13,13 +13,14 @@ public class MemberGroup: Codable {
 
     public enum ModelType: String, Codable { 
         case team = "TEAM"
+        case group = "GROUP"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
     /** The division to which this entity belongs. */
     public var division: Division?
-    /** The type of group, e.g. TEAM, etc. */
+    /** The group type */
     public var type: ModelType?
     /** The number of members in this group */
     public var memberCount: Int?

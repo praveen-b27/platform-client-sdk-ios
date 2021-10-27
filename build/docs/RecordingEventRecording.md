@@ -11,8 +11,8 @@ title: RecordingEventRecording
 | **conversationId** | **String** |  | [optional] |
 | **fileState** | **String** |  | [optional] |
 | **mediaUris** | [**[RecordingEventMediaResult]**](RecordingEventMediaResult.html) |  | [optional] |
-| **estimatedTranscodeTimeMs** | **Double** |  | [optional] |
-| **actualTranscodeTimeMs** | **Double** |  | [optional] |
+| **estimatedTranscodeTimeMs** | **Int** |  | [optional] |
+| **actualTranscodeTimeMs** | **Int** |  | [optional] |
 {: class="table table-striped"}
 
 

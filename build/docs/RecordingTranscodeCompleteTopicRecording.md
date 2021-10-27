@@ -11,8 +11,8 @@ title: RecordingTranscodeCompleteTopicRecording
 | **conversationId** | **String** |  | [optional] |
 | **fileState** | **String** |  | [optional] |
 | **mediaUris** | [**[RecordingTranscodeCompleteTopicMediaResult]**](RecordingTranscodeCompleteTopicMediaResult.html) |  | [optional] |
-| **estimatedTranscodeTimeMs** | **Double** |  | [optional] |
-| **actualTranscodeTimeMs** | **Double** |  | [optional] |
+| **estimatedTranscodeTimeMs** | **Int** |  | [optional] |
+| **actualTranscodeTimeMs** | **Int** |  | [optional] |
 {: class="table table-striped"}
 
 

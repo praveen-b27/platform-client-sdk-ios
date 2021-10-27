@@ -29,12 +29,10 @@ public class CreateOutboundMessagingConversationRequest: Codable {
     public var toAddressMessengerType: ToAddressMessengerType?
     /** An override to use an existing conversation.  If set to true, an existing conversation will be used if there is one within the conversation window.  If set to false, create request fails if there is a conversation within the conversation window. */
     public var useExistingConversation: Bool?
-    /** The external contact Id of the recipient of the message. */
+    /** The external contact with which the message will be associated. */
     public var externalContactId: String?
-    /** The external organization Id of the recipient of the message. */
-    public var externalOrganizationId: String?
 
-    public init(queueId: String?, toAddress: String?, toAddressMessengerType: ToAddressMessengerType?, useExistingConversation: Bool?, externalContactId: String?, externalOrganizationId: String?) {
+    public init(queueId: String?, toAddress: String?, toAddressMessengerType: ToAddressMessengerType?, useExistingConversation: Bool?, externalContactId: String?) {
         
         self.queueId = queueId
         
@@ -45,8 +43,6 @@ public class CreateOutboundMessagingConversationRequest: Codable {
         self.useExistingConversation = useExistingConversation
         
         self.externalContactId = externalContactId
-        
-        self.externalOrganizationId = externalOrganizationId
         
     }
 

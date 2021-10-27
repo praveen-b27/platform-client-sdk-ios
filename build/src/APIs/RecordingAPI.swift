@@ -146,6 +146,13 @@ open class RecordingAPI {
     } ],
     "messagingTranscript" : [ {
       "messageText" : "aeiou",
+      "quickReplies" : [ {
+        "payload" : "aeiou",
+        "isSelected" : true,
+        "action" : "aeiou",
+        "text" : "aeiou",
+        "url" : "aeiou"
+      } ],
       "fromUser" : "",
       "fromExternalContact" : {
         "schema" : "",
@@ -325,6 +332,11 @@ open class RecordingAPI {
         "salutation" : "aeiou",
         "cellPhone" : "",
         "surveyOptOut" : true
+      },
+      "buttonResponse" : {
+        "payload" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou"
       },
       "from" : "aeiou",
       "to" : "aeiou",
@@ -1126,6 +1138,13 @@ open class RecordingAPI {
   } ],
   "messagingTranscript" : [ {
     "messageText" : "aeiou",
+    "quickReplies" : [ {
+      "payload" : "aeiou",
+      "isSelected" : true,
+      "action" : "aeiou",
+      "text" : "aeiou",
+      "url" : "aeiou"
+    } ],
     "fromUser" : "",
     "fromExternalContact" : {
       "schema" : "",
@@ -1309,6 +1328,11 @@ open class RecordingAPI {
       "salutation" : "aeiou",
       "cellPhone" : "",
       "surveyOptOut" : true
+    },
+    "buttonResponse" : {
+      "payload" : "aeiou",
+      "text" : "aeiou",
+      "type" : "aeiou"
     },
     "from" : "aeiou",
     "to" : "aeiou",
@@ -3211,6 +3235,13 @@ open class RecordingAPI {
   } ],
   "messagingTranscript" : [ {
     "messageText" : "aeiou",
+    "quickReplies" : [ {
+      "payload" : "aeiou",
+      "isSelected" : true,
+      "action" : "aeiou",
+      "text" : "aeiou",
+      "url" : "aeiou"
+    } ],
     "fromUser" : "",
     "fromExternalContact" : {
       "schema" : "",
@@ -3394,6 +3425,11 @@ open class RecordingAPI {
       "salutation" : "aeiou",
       "cellPhone" : "",
       "surveyOptOut" : true
+    },
+    "buttonResponse" : {
+      "payload" : "aeiou",
+      "text" : "aeiou",
+      "type" : "aeiou"
     },
     "from" : "aeiou",
     "to" : "aeiou",
@@ -3840,6 +3876,13 @@ open class RecordingAPI {
     } ],
     "messagingTranscript" : [ {
       "messageText" : "aeiou",
+      "quickReplies" : [ {
+        "payload" : "aeiou",
+        "isSelected" : true,
+        "action" : "aeiou",
+        "text" : "aeiou",
+        "url" : "aeiou"
+      } ],
       "fromUser" : "",
       "fromExternalContact" : {
         "schema" : "",
@@ -4019,6 +4062,11 @@ open class RecordingAPI {
         "salutation" : "aeiou",
         "cellPhone" : "",
         "surveyOptOut" : true
+      },
+      "buttonResponse" : {
+        "payload" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou"
       },
       "from" : "aeiou",
       "to" : "aeiou",
@@ -4538,6 +4586,13 @@ open class RecordingAPI {
   } ],
   "messagingTranscript" : [ {
     "messageText" : "aeiou",
+    "quickReplies" : [ {
+      "payload" : "aeiou",
+      "isSelected" : true,
+      "action" : "aeiou",
+      "text" : "aeiou",
+      "url" : "aeiou"
+    } ],
     "fromUser" : "",
     "fromExternalContact" : {
       "schema" : "",
@@ -4721,6 +4776,11 @@ open class RecordingAPI {
       "salutation" : "aeiou",
       "cellPhone" : "",
       "surveyOptOut" : true
+    },
+    "buttonResponse" : {
+      "payload" : "aeiou",
+      "text" : "aeiou",
+      "type" : "aeiou"
     },
     "from" : "aeiou",
     "to" : "aeiou",
@@ -5213,6 +5273,13 @@ open class RecordingAPI {
       } ],
       "messagingTranscript" : [ {
         "messageText" : "aeiou",
+        "quickReplies" : [ {
+          "payload" : "aeiou",
+          "isSelected" : true,
+          "action" : "aeiou",
+          "text" : "aeiou",
+          "url" : "aeiou"
+        } ],
         "fromUser" : "",
         "fromExternalContact" : {
           "schema" : "",
@@ -5392,6 +5459,11 @@ open class RecordingAPI {
           "salutation" : "aeiou",
           "cellPhone" : "",
           "surveyOptOut" : true
+        },
+        "buttonResponse" : {
+          "payload" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou"
         },
         "from" : "aeiou",
         "to" : "aeiou",
@@ -15053,6 +15125,13 @@ open class RecordingAPI {
   } ],
   "messagingTranscript" : [ {
     "messageText" : "aeiou",
+    "quickReplies" : [ {
+      "payload" : "aeiou",
+      "isSelected" : true,
+      "action" : "aeiou",
+      "text" : "aeiou",
+      "url" : "aeiou"
+    } ],
     "fromUser" : "",
     "fromExternalContact" : {
       "schema" : "",
@@ -15236,6 +15315,11 @@ open class RecordingAPI {
       "salutation" : "aeiou",
       "cellPhone" : "",
       "surveyOptOut" : true
+    },
+    "buttonResponse" : {
+      "payload" : "aeiou",
+      "text" : "aeiou",
+      "type" : "aeiou"
     },
     "from" : "aeiou",
     "to" : "aeiou",
@@ -16028,6 +16112,13 @@ open class RecordingAPI {
   } ],
   "messagingTranscript" : [ {
     "messageText" : "aeiou",
+    "quickReplies" : [ {
+      "payload" : "aeiou",
+      "isSelected" : true,
+      "action" : "aeiou",
+      "text" : "aeiou",
+      "url" : "aeiou"
+    } ],
     "fromUser" : "",
     "fromExternalContact" : {
       "schema" : "",
@@ -16211,6 +16302,11 @@ open class RecordingAPI {
       "salutation" : "aeiou",
       "cellPhone" : "",
       "surveyOptOut" : true
+    },
+    "buttonResponse" : {
+      "payload" : "aeiou",
+      "text" : "aeiou",
+      "type" : "aeiou"
     },
     "from" : "aeiou",
     "to" : "aeiou",

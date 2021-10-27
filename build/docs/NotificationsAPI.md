@@ -111,7 +111,7 @@ NotificationsAPI.getNotificationsAvailabletopics(expand: expand, includePreview:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: _description ("description"), enforced ("enforced"), schema ("schema"), visibility ("visibility"), transports ("transports"), publicapitemplateuripaths ("publicApiTemplateUriPaths"), requirespermissions ("requiresPermissions"), permissiondetails ("permissionDetails") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: _description ("description"), enforced ("enforced"), schema ("schema"), visibility ("visibility"), transports ("transports"), publicapitemplateuripaths ("publicApiTemplateUriPaths"), requirespermissions ("requiresPermissions"), permissiondetails ("permissionDetails"), topicparameters ("topicParameters") |
 | **includePreview** | **Bool**| Whether or not to include Preview topics | [optional] [default to true] |
 {: class="table-striped"}
 

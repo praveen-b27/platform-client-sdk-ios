@@ -47,6 +47,7 @@ public class QueueConversationVideoEventTopicMessage: Codable {
         case kakao = "KAKAO"
         case webmessaging = "WEBMESSAGING"
         case _open = "OPEN"
+        case instagram = "INSTAGRAM"
     }
     public var _id: String?
     public var state: State?

@@ -22,7 +22,7 @@ Defines a period of time to perform a specific action.  Each schedule must be as
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
 | **start** | **String** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
 | **end** | **String** | Date time is represented as an ISO-8601 string without a timezone. For example: yyyy-MM-ddTHH:mm:ss.SSS | |
-| **rrule** | **String** | An iCal Recurrence Rule (RRULE) string. | |
+| **rrule** | **String** | An iCal Recurrence Rule (RRULE) string. It is required to be set for schedules determining when upgrades to the Edge software can be applied. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

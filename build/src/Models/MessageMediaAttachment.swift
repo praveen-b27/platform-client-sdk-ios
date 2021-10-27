@@ -22,7 +22,9 @@ public class MessageMediaAttachment: Codable {
     public var mediaType: MediaType?
     /** The optional content length of the the media object, in bytes. */
     public var contentLength: Int64?
+    /** The name of the media object. */
     public var name: String?
+    /** A globally unique identifier for the media object. */
     public var _id: String?
 
     public init(url: String?, mediaType: MediaType?, contentLength: Int64?, name: String?, _id: String?) {

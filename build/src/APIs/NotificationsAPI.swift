@@ -76,6 +76,7 @@ open class NotificationsAPI {
         case publicapitemplateuripaths = "publicApiTemplateUriPaths"
         case requirespermissions = "requiresPermissions"
         case permissiondetails = "permissionDetails"
+        case topicparameters = "topicParameters"
     }
 
     

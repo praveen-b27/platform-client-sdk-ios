@@ -63,6 +63,7 @@ public class ConversationMessageEventTopicMessageMediaParticipant: Codable {
         case kakao = "KAKAO"
         case webmessaging = "WEBMESSAGING"
         case _open = "OPEN"
+        case instagram = "INSTAGRAM"
     }
     public var _id: String?
     public var name: String?

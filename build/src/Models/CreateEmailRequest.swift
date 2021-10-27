@@ -45,8 +45,10 @@ public class CreateEmailRequest: Codable {
     public var htmlBody: String?
     /** A text body content of the email. */
     public var textBody: String?
+    /** The external contact with which the email should be associated. This field is only valid for OUTBOUND email. */
+    public var externalContactId: String?
 
-    public init(queueId: String?, flowId: String?, provider: String?, skillIds: [String]?, languageId: String?, priority: Int64?, attributes: [String:String]?, toAddress: String?, toName: String?, fromAddress: String?, fromName: String?, subject: String?, direction: Direction?, htmlBody: String?, textBody: String?) {
+    public init(queueId: String?, flowId: String?, provider: String?, skillIds: [String]?, languageId: String?, priority: Int64?, attributes: [String:String]?, toAddress: String?, toName: String?, fromAddress: String?, fromName: String?, subject: String?, direction: Direction?, htmlBody: String?, textBody: String?, externalContactId: String?) {
         
         self.queueId = queueId
         
@@ -77,6 +79,8 @@ public class CreateEmailRequest: Codable {
         self.htmlBody = htmlBody
         
         self.textBody = textBody
+        
+        self.externalContactId = externalContactId
         
     }
 

@@ -15,6 +15,8 @@ public class WorkdayValuesTrend: Codable {
     public var dateStartWorkday: Date?
     /** The end workday for the query range for the metric value trend. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateEndWorkday: Date?
+    /** The reference workday used to determine the metric definition. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateReferenceWorkday: Date?
     /** The targeted division for the query */
     public var division: Division?
     /** The targeted user for the query */
@@ -25,12 +27,16 @@ public class WorkdayValuesTrend: Codable {
     public var results: [WorkdayValuesMetricItem]?
     /** The targeted performance profile for the average points */
     public var performanceProfile: AddressableEntityRef?
+    /** The targeted metric for the average points */
+    public var metric: AddressableEntityRef?
 
-    public init(dateStartWorkday: Date?, dateEndWorkday: Date?, division: Division?, user: UserReference?, timezone: String?, results: [WorkdayValuesMetricItem]?, performanceProfile: AddressableEntityRef?) {
+    public init(dateStartWorkday: Date?, dateEndWorkday: Date?, dateReferenceWorkday: Date?, division: Division?, user: UserReference?, timezone: String?, results: [WorkdayValuesMetricItem]?, performanceProfile: AddressableEntityRef?, metric: AddressableEntityRef?) {
         
         self.dateStartWorkday = dateStartWorkday
         
         self.dateEndWorkday = dateEndWorkday
+        
+        self.dateReferenceWorkday = dateReferenceWorkday
         
         self.division = division
         
@@ -41,6 +47,8 @@ public class WorkdayValuesTrend: Codable {
         self.results = results
         
         self.performanceProfile = performanceProfile
+        
+        self.metric = metric
         
     }
 

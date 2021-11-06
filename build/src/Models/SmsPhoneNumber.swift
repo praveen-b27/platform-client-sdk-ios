@@ -23,6 +23,7 @@ public class SmsPhoneNumber: Codable {
         case porting = "PORTING"
         case pending = "PENDING"
         case pendingCancellation = "PENDING_CANCELLATION"
+        case initiated = "INITIATED"
     }
     public enum Capabilities: String, Codable { 
         case sms = "sms"
@@ -73,10 +74,12 @@ public class SmsPhoneNumber: Codable {
     public var addressId: SmsAddress?
     /** BillingType of this phone number, if the phoneNumberType is shortcode. */
     public var shortCodeBillingType: ShortCodeBillingType?
+    /** Status of latest asynchronous provisioning action */
+    public var provisioningStatus: SmsProvisioningStatus?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, selfUri: String?) {
+    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, provisioningStatus: SmsProvisioningStatus?, selfUri: String?) {
         
         self._id = _id
         
@@ -116,6 +119,8 @@ public class SmsPhoneNumber: Codable {
         
         self.shortCodeBillingType = shortCodeBillingType
         
+        self.provisioningStatus = provisioningStatus
+        
         self.selfUri = selfUri
         
     }
@@ -140,6 +145,7 @@ public class SmsPhoneNumber: Codable {
         case autoRenewable
         case addressId
         case shortCodeBillingType
+        case provisioningStatus
         case selfUri
     }
 

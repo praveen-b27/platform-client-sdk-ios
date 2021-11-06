@@ -8,6 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsProgram) | Delete a Speech &amp; Text Analytics program by id |
+| [**deleteSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsSentimentfeedback) | Delete All Speech &amp; Text Analytics SentimentFeedback |
+| [**deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId) | Delete a Speech &amp; Text Analytics SentimentFeedback by Id |
 | [**deleteSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsTopic) | Delete a Speech &amp; Text Analytics topic by id |
 | [**getSpeechandtextanalyticsConversation**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversation) | Get Speech and Text Analytics for a specific conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
@@ -19,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsMappings) | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**getSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsPublishjob) | Get a Speech &amp; Text Analytics publish programs job by id |
 | [**getSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramsUnpublished) | Get the list of Speech &amp; Text Analytics unpublished programs |
+| [**getSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsSentimentfeedback) | Get the list of Speech &amp; Text Analytics SentimentFeedback |
 | [**getSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsSettings) | Get Speech And Text Analytics Settings |
 | [**getSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopic) | Get a Speech &amp; Text Analytics topic by id |
 | [**getSpeechandtextanalyticsTopics**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopics) | Get the list of Speech &amp; Text Analytics topics |
@@ -29,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsPrograms) | Create new Speech &amp; Text Analytics program |
 | [**postSpeechandtextanalyticsProgramsGeneralJobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsProgramsGeneralJobs) | Create new Speech &amp; Text Analytics general program job |
 | [**postSpeechandtextanalyticsProgramsPublishjobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsProgramsPublishjobs) | Create new Speech &amp; Text Analytics publish programs job |
+| [**postSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsSentimentfeedback) | Create a Speech &amp; Text Analytics SentimentFeedback |
 | [**postSpeechandtextanalyticsTopics**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTopics) | Create new Speech &amp; Text Analytics topic |
 | [**postSpeechandtextanalyticsTopicsPublishjobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTopicsPublishjobs) | Create new Speech &amp; Text Analytics publish topics job |
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
@@ -84,6 +88,104 @@ SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsProgram(programId: programId,
 | ------------- | ------------- | ------------- | ------------- |
 | **programId** | **String**| The id of the program | |
 | **forceDelete** | **Bool**| Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. | [optional] [default to false] |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteSpeechandtextanalyticsSentimentfeedback"></a>
+
+# **deleteSpeechandtextanalyticsSentimentfeedback**
+
+
+
+> Void deleteSpeechandtextanalyticsSentimentfeedback()
+
+Delete All Speech &amp; Text Analytics SentimentFeedback
+
+
+
+Wraps DELETE /api/v2/speechandtextanalytics/sentimentfeedback  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:feedback:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsSentimentfeedback() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsSentimentfeedback was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId"></a>
+
+# **deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId**
+
+
+
+> Void deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId(sentimentFeedbackId)
+
+Delete a Speech &amp; Text Analytics SentimentFeedback by Id
+
+
+
+Wraps DELETE /api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:feedback:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sentimentFeedbackId: String = "" // The Id of the SentimentFeedback
+
+// Code example
+SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId(sentimentFeedbackId: sentimentFeedbackId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sentimentFeedbackId** | **String**| The Id of the SentimentFeedback | |
 {: class="table-striped"}
 
 
@@ -668,6 +770,58 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsUnpublished(nextPage: ne
 
 [**UnpublishedProgramsEntityListing**](UnpublishedProgramsEntityListing.html)
 
+<a name="getSpeechandtextanalyticsSentimentfeedback"></a>
+
+# **getSpeechandtextanalyticsSentimentfeedback**
+
+
+
+> [SentimentFeedbackEntityListing](SentimentFeedbackEntityListing.html) getSpeechandtextanalyticsSentimentfeedback(dialect)
+
+Get the list of Speech &amp; Text Analytics SentimentFeedback
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/sentimentfeedback  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:feedback:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dialect: String = "" // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsSentimentfeedback(dialect: dialect) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsSentimentfeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dialect** | **String**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SentimentFeedbackEntityListing**](SentimentFeedbackEntityListing.html)
+
 <a name="getSpeechandtextanalyticsSettings"></a>
 
 # **getSpeechandtextanalyticsSettings**
@@ -1193,6 +1347,58 @@ SpeechTextAnalyticsAPI.postSpeechandtextanalyticsProgramsPublishjobs(body: body)
 ### Return type
 
 [**ProgramJob**](ProgramJob.html)
+
+<a name="postSpeechandtextanalyticsSentimentfeedback"></a>
+
+# **postSpeechandtextanalyticsSentimentfeedback**
+
+
+
+> [SentimentFeedback](SentimentFeedback.html) postSpeechandtextanalyticsSentimentfeedback(body)
+
+Create a Speech &amp; Text Analytics SentimentFeedback
+
+
+
+Wraps POST /api/v2/speechandtextanalytics/sentimentfeedback  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:feedback:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SentimentFeedback = new SentimentFeedback(...) // The SentimentFeedback to create
+
+// Code example
+SpeechTextAnalyticsAPI.postSpeechandtextanalyticsSentimentfeedback(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.postSpeechandtextanalyticsSentimentfeedback was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SentimentFeedback**](SentimentFeedback.html)| The SentimentFeedback to create | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SentimentFeedback**](SentimentFeedback.html)
 
 <a name="postSpeechandtextanalyticsTopics"></a>
 

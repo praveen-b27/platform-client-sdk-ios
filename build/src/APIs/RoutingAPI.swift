@@ -647,15 +647,18 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      
      Delete a phone number provisioned for SMS.
      
      - parameter addressId: (path) Address ID 
+     - parameter async: (query) Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteRoutingSmsPhonenumber(addressId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId)
+    open class func deleteRoutingSmsPhonenumber(addressId: String, async: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId, async: async)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -676,10 +679,11 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      
      - parameter addressId: (path) Address ID 
+     - parameter async: (query) Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  (optional, default to false)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: String) -> RequestBuilder<Void> {
+    open class func deleteRoutingSmsPhonenumberWithRequestBuilder(addressId: String, async: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/api/v2/routing/sms/phonenumbers/{addressId}"
         let addressIdPreEscape = "\(addressId)"
         let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -692,7 +696,12 @@ open class RoutingAPI {
         let body: Data? = nil
             
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "async": async
+            
+        ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1996,6 +2005,7 @@ open class RoutingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -2493,6 +2503,7 @@ open class RoutingAPI {
           },
           "effectiveStation" : ""
         },
+        "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
         "id" : "aeiou",
         "state" : "aeiou",
         "department" : "aeiou",
@@ -3632,6 +3643,7 @@ open class RoutingAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -3794,6 +3806,7 @@ open class RoutingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -4088,6 +4101,7 @@ open class RoutingAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -4241,6 +4255,7 @@ open class RoutingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -6293,6 +6308,7 @@ open class RoutingAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -6490,6 +6506,30 @@ open class RoutingAPI {
     }
   },
   "countryCode" : "aeiou",
+  "provisioningStatus" : {
+    "action" : "aeiou",
+    "state" : "aeiou",
+    "error" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "version" : 123456789
+  },
   "name" : "aeiou",
   "phoneNumberType" : "aeiou",
   "modifiedBy" : "",
@@ -6681,6 +6721,7 @@ open class RoutingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -6878,6 +6919,30 @@ open class RoutingAPI {
       }
     },
     "countryCode" : "aeiou",
+    "provisioningStatus" : {
+      "action" : "aeiou",
+      "state" : "aeiou",
+      "error" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
+      "version" : 123456789
+    },
     "name" : "aeiou",
     "phoneNumberType" : "aeiou",
     "modifiedBy" : "",
@@ -8208,6 +8273,7 @@ open class RoutingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -8618,6 +8684,7 @@ open class RoutingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -10670,15 +10737,18 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      
      Provision a phone number for SMS
      
      - parameter body: (body) SmsPhoneNumber 
+     - parameter async: (query) Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postRoutingSmsPhonenumbers(body: SmsPhoneNumberProvision, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
-        let requestBuilder = postRoutingSmsPhonenumbersWithRequestBuilder(body: body)
+    open class func postRoutingSmsPhonenumbers(body: SmsPhoneNumberProvision, async: Bool? = nil, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingSmsPhonenumbersWithRequestBuilder(body: body, async: async)
         requestBuilder.execute { (response: Response<SmsPhoneNumber>?, error) -> Void in
             do {
                 if let e = error {
@@ -10796,6 +10866,7 @@ open class RoutingAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -10993,6 +11064,30 @@ open class RoutingAPI {
     }
   },
   "countryCode" : "aeiou",
+  "provisioningStatus" : {
+    "action" : "aeiou",
+    "state" : "aeiou",
+    "error" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "version" : 123456789
+  },
   "name" : "aeiou",
   "phoneNumberType" : "aeiou",
   "modifiedBy" : "",
@@ -11001,17 +11096,23 @@ open class RoutingAPI {
 }}]
      
      - parameter body: (body) SmsPhoneNumber 
+     - parameter async: (query) Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. (optional, default to false)
 
      - returns: RequestBuilder<SmsPhoneNumber> 
      */
-    open class func postRoutingSmsPhonenumbersWithRequestBuilder(body: SmsPhoneNumberProvision) -> RequestBuilder<SmsPhoneNumber> {
+    open class func postRoutingSmsPhonenumbersWithRequestBuilder(body: SmsPhoneNumberProvision, async: Bool? = nil) -> RequestBuilder<SmsPhoneNumber> {
         let path = "/api/v2/routing/sms/phonenumbers"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "async": async
+            
+        ])
 
         let requestBuilder: RequestBuilder<SmsPhoneNumber>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -11449,6 +11550,7 @@ open class RoutingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -12106,16 +12208,19 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      
      Update a phone number provisioned for SMS.
      
      - parameter addressId: (path) Address ID 
      - parameter body: (body) SmsPhoneNumber 
+     - parameter async: (query) Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putRoutingSmsPhonenumber(addressId: String, body: SmsPhoneNumber, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
-        let requestBuilder = putRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId, body: body)
+    open class func putRoutingSmsPhonenumber(addressId: String, body: SmsPhoneNumber, async: Bool? = nil, completion: @escaping ((_ data: SmsPhoneNumber?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingSmsPhonenumberWithRequestBuilder(addressId: addressId, body: body, async: async)
         requestBuilder.execute { (response: Response<SmsPhoneNumber>?, error) -> Void in
             do {
                 if let e = error {
@@ -12233,6 +12338,7 @@ open class RoutingAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -12430,6 +12536,30 @@ open class RoutingAPI {
     }
   },
   "countryCode" : "aeiou",
+  "provisioningStatus" : {
+    "action" : "aeiou",
+    "state" : "aeiou",
+    "error" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "version" : 123456789
+  },
   "name" : "aeiou",
   "phoneNumberType" : "aeiou",
   "modifiedBy" : "",
@@ -12439,10 +12569,11 @@ open class RoutingAPI {
      
      - parameter addressId: (path) Address ID 
      - parameter body: (body) SmsPhoneNumber 
+     - parameter async: (query) Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. (optional, default to false)
 
      - returns: RequestBuilder<SmsPhoneNumber> 
      */
-    open class func putRoutingSmsPhonenumberWithRequestBuilder(addressId: String, body: SmsPhoneNumber) -> RequestBuilder<SmsPhoneNumber> {
+    open class func putRoutingSmsPhonenumberWithRequestBuilder(addressId: String, body: SmsPhoneNumber, async: Bool? = nil) -> RequestBuilder<SmsPhoneNumber> {
         var path = "/api/v2/routing/sms/phonenumbers/{addressId}"
         let addressIdPreEscape = "\(addressId)"
         let addressIdPostEscape = addressIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -12452,7 +12583,12 @@ open class RoutingAPI {
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "async": async
+            
+        ])
 
         let requestBuilder: RequestBuilder<SmsPhoneNumber>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

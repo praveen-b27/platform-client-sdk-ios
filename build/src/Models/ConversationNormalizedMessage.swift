@@ -16,6 +16,7 @@ public class ConversationNormalizedMessage: Codable {
         case text = "Text"
         case structured = "Structured"
         case receipt = "Receipt"
+        case event = "Event"
     }
     public enum Status: String, Codable { 
         case sent = "Sent"
@@ -43,6 +44,8 @@ public class ConversationNormalizedMessage: Codable {
     public var text: String?
     /** List of content elements */
     public var content: [ConversationMessageContent]?
+    /** List of event elements. */
+    public var events: [ConversationMessageEvent]?
     /** Message receipt status, only used with type Receipt. */
     public var status: Status?
     /** List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. */
@@ -56,7 +59,7 @@ public class ConversationNormalizedMessage: Codable {
     /** Additional metadata about this message. */
     public var metadata: [String:String]?
 
-    public init(_id: String?, channel: ConversationMessagingChannel?, type: ModelType?, text: String?, content: [ConversationMessageContent]?, status: Status?, reasons: [ConversationReason]?, originatingEntity: OriginatingEntity?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
+    public init(_id: String?, channel: ConversationMessagingChannel?, type: ModelType?, text: String?, content: [ConversationMessageContent]?, events: [ConversationMessageEvent]?, status: Status?, reasons: [ConversationReason]?, originatingEntity: OriginatingEntity?, isFinalReceipt: Bool?, direction: Direction?, metadata: [String:String]?) {
         
         self._id = _id
         
@@ -67,6 +70,8 @@ public class ConversationNormalizedMessage: Codable {
         self.text = text
         
         self.content = content
+        
+        self.events = events
         
         self.status = status
         
@@ -88,6 +93,7 @@ public class ConversationNormalizedMessage: Codable {
         case type
         case text
         case content
+        case events
         case status
         case reasons
         case originatingEntity

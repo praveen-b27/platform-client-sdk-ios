@@ -314,6 +314,7 @@ open class SearchAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -664,6 +665,7 @@ open class SearchAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -782,6 +784,7 @@ open class SearchAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -1014,6 +1017,7 @@ open class SearchAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -1689,6 +1693,7 @@ open class SearchAPI {
               },
               "effectiveStation" : ""
             },
+            "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
             "id" : "aeiou",
             "state" : "aeiou",
             "department" : "aeiou",
@@ -2792,6 +2797,7 @@ open class SearchAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -3549,6 +3555,7 @@ open class SearchAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -4207,6 +4214,7 @@ open class SearchAPI {
               },
               "effectiveStation" : ""
             },
+            "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
             "id" : "aeiou",
             "state" : "aeiou",
             "department" : "aeiou",

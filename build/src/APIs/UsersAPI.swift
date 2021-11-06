@@ -1432,6 +1432,7 @@ open class UsersAPI {
             },
             "effectiveStation" : ""
           },
+          "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
           "id" : "aeiou",
           "state" : "aeiou",
           "department" : "aeiou",
@@ -1772,6 +1773,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -1909,6 +1911,7 @@ open class UsersAPI {
     },
     "effectiveStation" : ""
   },
+  "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "state" : "aeiou",
   "department" : "aeiou",
@@ -2155,6 +2158,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -2274,6 +2278,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -2622,6 +2627,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -2858,6 +2864,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -2976,6 +2983,7 @@ open class UsersAPI {
     },
     "effectiveStation" : ""
   },
+  "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "state" : "aeiou",
   "department" : "aeiou",
@@ -3222,6 +3230,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -3347,6 +3356,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -3823,6 +3833,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -4051,6 +4062,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
     }
@@ -4179,6 +4191,7 @@ open class UsersAPI {
           },
           "effectiveStation" : ""
         },
+        "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
         "id" : "aeiou",
         "state" : "aeiou",
         "department" : "aeiou",
@@ -5241,6 +5254,7 @@ open class UsersAPI {
         "proficiency" : 1.3579000000000001069366817318950779736042022705078125
       } ],
       "station" : "",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -5481,6 +5495,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -5599,6 +5614,7 @@ open class UsersAPI {
     },
     "effectiveStation" : ""
   },
+  "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "state" : "aeiou",
   "department" : "aeiou",
@@ -5891,6 +5907,7 @@ open class UsersAPI {
       "authorization" : "",
       "skills" : [ "" ],
       "station" : "",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -5962,6 +5979,7 @@ open class UsersAPI {
           },
           "effectiveStation" : ""
         },
+        "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
         "id" : "aeiou",
         "state" : "aeiou",
         "department" : "aeiou",
@@ -6268,6 +6286,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -6415,6 +6434,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -7143,6 +7163,7 @@ open class UsersAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case profileskills = "profileSkills"
@@ -7247,6 +7268,7 @@ open class UsersAPI {
     "siblings" : [ "" ],
     "directReports" : [ "" ]
   },
+  "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "state" : "aeiou",
   "presence" : "",
@@ -7442,6 +7464,7 @@ open class UsersAPI {
       "authorization" : "",
       "skills" : [ "" ],
       "station" : "",
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -7574,6 +7597,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -7998,6 +8022,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -8336,6 +8361,7 @@ open class UsersAPI {
     },
     "effectiveStation" : ""
   },
+  "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "state" : "aeiou",
   "department" : "aeiou",
@@ -8676,6 +8702,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -9764,6 +9791,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -10956,6 +10984,7 @@ open class UsersAPI {
     },
     "effectiveStation" : ""
   },
+  "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
   "state" : "aeiou",
   "department" : "aeiou",
@@ -11409,6 +11438,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -11819,6 +11849,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -12154,6 +12185,7 @@ open class UsersAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",

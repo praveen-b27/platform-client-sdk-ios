@@ -13,6 +13,7 @@ General rich media message structure with normalized feature support across many
 | **type** | **String** | Message type. | |
 | **text** | **String** | Message text. | [optional] |
 | **content** | [**[ConversationMessageContent]**](ConversationMessageContent.html) | List of content elements | [optional] |
+| **events** | [**[ConversationMessageEvent]**](ConversationMessageEvent.html) | List of event elements. | [optional] |
 | **status** | **String** | Message receipt status, only used with type Receipt. | [optional] |
 | **reasons** | [**[ConversationReason]**](ConversationReason.html) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
 | **originatingEntity** | **String** | Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies. | [optional] |

@@ -15,6 +15,7 @@ public class ConversationMessageContent: Codable {
     public enum ContentType: String, Codable { 
         case attachment = "Attachment"
         case location = "Location"
+        case story = "Story"
         case quickReply = "QuickReply"
         case notification = "Notification"
         case buttonResponse = "ButtonResponse"
@@ -24,6 +25,8 @@ public class ConversationMessageContent: Codable {
     public var contentType: ContentType?
     /** Location content. */
     public var location: ConversationContentLocation?
+    /** Ephemeral story content. */
+    public var story: ConversationContentStory?
     /** Attachment content. */
     public var attachment: ConversationContentAttachment?
     /** Quick reply content. */
@@ -35,11 +38,13 @@ public class ConversationMessageContent: Codable {
     /** Generic Template Object */
     public var generic: ConversationContentGeneric?
 
-    public init(contentType: ContentType?, location: ConversationContentLocation?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?, generic: ConversationContentGeneric?) {
+    public init(contentType: ContentType?, location: ConversationContentLocation?, story: ConversationContentStory?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?, generic: ConversationContentGeneric?) {
         
         self.contentType = contentType
         
         self.location = location
+        
+        self.story = story
         
         self.attachment = attachment
         

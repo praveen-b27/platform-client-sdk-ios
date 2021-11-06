@@ -21,6 +21,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI.html#getKnowledgeKnowledgebaseLanguageTrainings) | Get all trainings information for a knowledgebase |
 | [**getKnowledgeKnowledgebases**](KnowledgeAPI.html#getKnowledgeKnowledgebases) | Get knowledge bases |
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI.html#patchKnowledgeKnowledgebase) | Update knowledge base |
+| [**patchKnowledgeKnowledgebaseContext**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseContext) | Update specific context data of the knowledge base. |
+| [**patchKnowledgeKnowledgebaseContextValue**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseContextValue) | Update context value. |
 | [**patchKnowledgeKnowledgebaseLanguageCategory**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageCategory) | Update category |
 | [**patchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageDocument) | Update document |
 | [**patchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseLanguageDocuments) | Update documents collection |
@@ -851,6 +853,120 @@ KnowledgeAPI.patchKnowledgeKnowledgebase(knowledgeBaseId: knowledgeBaseId, body:
 ### Return type
 
 [**KnowledgeBase**](KnowledgeBase.html)
+
+<a name="patchKnowledgeKnowledgebaseContext"></a>
+
+# **patchKnowledgeKnowledgebaseContext**
+
+
+
+> [KnowledgeContextResponse](KnowledgeContextResponse.html) patchKnowledgeKnowledgebaseContext(knowledgeBaseId, contextId, body)
+
+Update specific context data of the knowledge base.
+
+
+
+Wraps PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/contexts/{contextId}  
+
+Requires ALL permissions: 
+
+* knowledge:context:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let contextId: String = "" // Context ID.
+let body: KnowledgeContextRequest = new KnowledgeContextRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeKnowledgebaseContext(knowledgeBaseId: knowledgeBaseId, contextId: contextId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeKnowledgebaseContext was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **contextId** | **String**| Context ID. | |
+| **body** | [**KnowledgeContextRequest**](KnowledgeContextRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeContextResponse**](KnowledgeContextResponse.html)
+
+<a name="patchKnowledgeKnowledgebaseContextValue"></a>
+
+# **patchKnowledgeKnowledgebaseContextValue**
+
+
+
+> [KnowledgeContextValueResponse](KnowledgeContextValueResponse.html) patchKnowledgeKnowledgebaseContextValue(knowledgeBaseId, contextId, contextValueId, body)
+
+Update context value.
+
+
+
+Wraps PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/contexts/{contextId}/values/{contextValueId}  
+
+Requires ALL permissions: 
+
+* knowledge:context:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let contextId: String = "" // Context ID.
+let contextValueId: String = "" // Context Value ID.
+let body: KnowledgeContextValueRequest = new KnowledgeContextValueRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeKnowledgebaseContextValue(knowledgeBaseId: knowledgeBaseId, contextId: contextId, contextValueId: contextValueId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeKnowledgebaseContextValue was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **contextId** | **String**| Context ID. | |
+| **contextValueId** | **String**| Context Value ID. | |
+| **body** | [**KnowledgeContextValueRequest**](KnowledgeContextValueRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeContextValueResponse**](KnowledgeContextValueResponse.html)
 
 <a name="patchKnowledgeKnowledgebaseLanguageCategory"></a>
 

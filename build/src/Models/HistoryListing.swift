@@ -52,11 +52,11 @@ public class HistoryListing: Codable {
     public var completed: Date?
     public var entities: [HistoryEntry]?
     public var pageSize: Int?
-    public var total: Int64?
     public var pageNumber: Int?
+    public var total: Int64?
     public var pageCount: Int?
 
-    public init(_id: String?, complete: Bool?, user: User?, client: DomainEntityRef?, errorMessage: String?, errorCode: String?, errorDetails: [Detail]?, errorMessageParams: [String:String]?, actionName: ActionName?, actionStatus: ActionStatus?, name: String?, _description: String?, system: Bool?, started: Date?, completed: Date?, entities: [HistoryEntry]?, pageSize: Int?, total: Int64?, pageNumber: Int?, pageCount: Int?) {
+    public init(_id: String?, complete: Bool?, user: User?, client: DomainEntityRef?, errorMessage: String?, errorCode: String?, errorDetails: [Detail]?, errorMessageParams: [String:String]?, actionName: ActionName?, actionStatus: ActionStatus?, name: String?, _description: String?, system: Bool?, started: Date?, completed: Date?, entities: [HistoryEntry]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?) {
         
         self._id = _id
         
@@ -92,9 +92,9 @@ public class HistoryListing: Codable {
         
         self.pageSize = pageSize
         
-        self.total = total
-        
         self.pageNumber = pageNumber
+        
+        self.total = total
         
         self.pageCount = pageCount
         
@@ -118,8 +118,8 @@ public class HistoryListing: Codable {
         case completed
         case entities
         case pageSize
-        case total
         case pageNumber
+        case total
         case pageCount
     }
 

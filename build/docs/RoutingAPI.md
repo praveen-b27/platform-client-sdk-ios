@@ -689,7 +689,7 @@ RoutingAPI.deleteRoutingSmsAddress(addressId: addressId) { (error) in
 
 
 
-> Void deleteRoutingSmsPhonenumber(addressId)
+> Void deleteRoutingSmsPhonenumber(addressId, async)
 
 Delete a phone number provisioned for SMS.
 
@@ -710,9 +710,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
+let async: Bool = false // Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number. 
 
 // Code example
-RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
+RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId, async: async) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -727,6 +728,7 @@ RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
+| **async** | **Bool**| Delete a phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the deletion of a provisioned phone number.  | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -2124,7 +2126,7 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 | **pageNumber** | **Int**|  | [optional] [default to 1] |
 | **pageSize** | **Int**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
 | **skills** | [**[String]**](String.html)| Filter by skill | [optional] |
@@ -2200,7 +2202,7 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageNumber: pageNumber, pageSi
 | **pageNumber** | **Int**|  | [optional] [default to 1] |
 | **pageSize** | **Int**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
 | **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
@@ -4954,7 +4956,7 @@ RoutingAPI.postRoutingSmsAddresses(body: body) { (response, error) in
 
 
 
-> [SmsPhoneNumber](SmsPhoneNumber.html) postRoutingSmsPhonenumbers(body)
+> [SmsPhoneNumber](SmsPhoneNumber.html) postRoutingSmsPhonenumbers(body, async)
 
 Provision a phone number for SMS
 
@@ -4975,9 +4977,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: SmsPhoneNumberProvision = new SmsPhoneNumberProvision(...) // SmsPhoneNumber
+let async: Bool = false // Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request.
 
 // Code example
-RoutingAPI.postRoutingSmsPhonenumbers(body: body) { (response, error) in
+RoutingAPI.postRoutingSmsPhonenumbers(body: body, async: async) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4993,6 +4996,7 @@ RoutingAPI.postRoutingSmsPhonenumbers(body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SmsPhoneNumberProvision**](SmsPhoneNumberProvision.html)| SmsPhoneNumber | |
+| **async** | **Bool**| Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber&#39;s provisioningStatus for completion of this request. | [optional] [default to false] |
 {: class="table-striped"}
 
 
@@ -5435,7 +5439,7 @@ RoutingAPI.putRoutingSettingsTranscription(body: body) { (response, error) in
 
 
 
-> [SmsPhoneNumber](SmsPhoneNumber.html) putRoutingSmsPhonenumber(addressId, body)
+> [SmsPhoneNumber](SmsPhoneNumber.html) putRoutingSmsPhonenumber(addressId, body, async)
 
 Update a phone number provisioned for SMS.
 
@@ -5457,9 +5461,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let addressId: String = "" // Address ID
 let body: SmsPhoneNumber = new SmsPhoneNumber(...) // SmsPhoneNumber
+let async: Bool = false // Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber's provisioningStatus for the progress of this request.
 
 // Code example
-RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (response, error) in
+RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body, async: async) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5476,6 +5481,7 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (respons
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
 | **body** | [**SmsPhoneNumber**](SmsPhoneNumber.html)| SmsPhoneNumber | |
+| **async** | **Bool**| Update an existing phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the update of a provisioned phone number. Check the phoneNumber&#39;s provisioningStatus for the progress of this request. | [optional] [default to false] |
 {: class="table-striped"}
 
 

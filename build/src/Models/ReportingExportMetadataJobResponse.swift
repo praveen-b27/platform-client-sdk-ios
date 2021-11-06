@@ -85,6 +85,7 @@ public class ReportingExportMetadataJobResponse: Codable {
         case queueTopicDetailView = "QUEUE_TOPIC_DETAIL_VIEW"
         case flowTopicSummaryView = "FLOW_TOPIC_SUMMARY_VIEW"
         case flowTopicDetailView = "FLOW_TOPIC_DETAIL_VIEW"
+        case agentInteractionsMeView = "AGENT_INTERACTIONS_ME_VIEW"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

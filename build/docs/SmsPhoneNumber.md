@@ -26,6 +26,7 @@ title: SmsPhoneNumber
 | **autoRenewable** | **String** | Renewal time period of this phone number, if the phoneNumberType is shortcode. | [optional] |
 | **addressId** | [**SmsAddress**](SmsAddress.html) | The id of an address attached to this phone number. | [optional] |
 | **shortCodeBillingType** | **String** | BillingType of this phone number, if the phoneNumberType is shortcode. | [optional] |
+| **provisioningStatus** | [**SmsProvisioningStatus**](SmsProvisioningStatus.html) | Status of latest asynchronous provisioning action | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

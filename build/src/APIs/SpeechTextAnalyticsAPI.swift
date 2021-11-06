@@ -75,6 +75,108 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
+    /**
+     
+     Delete All Speech & Text Analytics SentimentFeedback
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteSpeechandtextanalyticsSentimentfeedback(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete All Speech & Text Analytics SentimentFeedback
+     
+     - DELETE /api/v2/speechandtextanalytics/sentimentfeedback
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder() -> RequestBuilder<Void> {
+        let path = "/api/v2/speechandtextanalytics/sentimentfeedback"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Delete a Speech & Text Analytics SentimentFeedback by Id
+     
+     - parameter sentimentFeedbackId: (path) The Id of the SentimentFeedback 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId(sentimentFeedbackId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithRequestBuilder(sentimentFeedbackId: sentimentFeedbackId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a Speech & Text Analytics SentimentFeedback by Id
+     
+     - DELETE /api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter sentimentFeedbackId: (path) The Id of the SentimentFeedback 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackIdWithRequestBuilder(sentimentFeedbackId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}"
+        let sentimentFeedbackIdPreEscape = "\(sentimentFeedbackId)"
+        let sentimentFeedbackIdPostEscape = sentimentFeedbackIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sentimentFeedbackId}", with: sentimentFeedbackIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -912,6 +1014,83 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
+    
+    
+    /**
+     
+     Get the list of Speech & Text Analytics SentimentFeedback
+     
+     - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsSentimentfeedback(dialect: String? = nil, completion: @escaping ((_ data: SentimentFeedbackEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(dialect: dialect)
+        requestBuilder.execute { (response: Response<SentimentFeedbackEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the list of Speech & Text Analytics SentimentFeedback
+     
+     - GET /api/v2/speechandtextanalytics/sentimentfeedback
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dialect" : "en-US",
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "phrase" : "aeiou",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "id" : "aeiou",
+    "feedbackValue" : "aeiou"
+  } ]
+}}]
+     
+     - parameter dialect: (query) The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)
+
+     - returns: RequestBuilder<SentimentFeedbackEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(dialect: String? = nil) -> RequestBuilder<SentimentFeedbackEntityListing> {
+        let path = "/api/v2/speechandtextanalytics/sentimentfeedback"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "dialect": dialect
+            
+        ])
+
+        let requestBuilder: RequestBuilder<SentimentFeedbackEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     /**
      
      Get Speech And Text Analytics Settings
@@ -1698,6 +1877,73 @@ open class SpeechTextAnalyticsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a Speech & Text Analytics SentimentFeedback
+     
+     - parameter body: (body) The SentimentFeedback to create 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSpeechandtextanalyticsSentimentfeedback(body: SentimentFeedback, completion: @escaping ((_ data: SentimentFeedback?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SentimentFeedback>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a Speech & Text Analytics SentimentFeedback
+     
+     - POST /api/v2/speechandtextanalytics/sentimentfeedback
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dialect" : "en-US",
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "phrase" : "aeiou",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "id" : "aeiou",
+  "feedbackValue" : "aeiou"
+}}]
+     
+     - parameter body: (body) The SentimentFeedback to create 
+
+     - returns: RequestBuilder<SentimentFeedback> 
+     */
+    open class func postSpeechandtextanalyticsSentimentfeedbackWithRequestBuilder(body: SentimentFeedback) -> RequestBuilder<SentimentFeedback> {
+        let path = "/api/v2/speechandtextanalytics/sentimentfeedback"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SentimentFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

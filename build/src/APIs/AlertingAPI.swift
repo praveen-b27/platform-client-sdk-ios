@@ -305,6 +305,7 @@ open class AlertingAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -664,6 +665,7 @@ open class AlertingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -1081,6 +1083,7 @@ open class AlertingAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -1437,6 +1440,7 @@ open class AlertingAPI {
         },
         "effectiveStation" : ""
       },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
       "state" : "aeiou",
       "department" : "aeiou",
@@ -1795,6 +1799,7 @@ open class AlertingAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",
@@ -2227,6 +2232,7 @@ open class AlertingAPI {
       },
       "effectiveStation" : ""
     },
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
     "state" : "aeiou",
     "department" : "aeiou",

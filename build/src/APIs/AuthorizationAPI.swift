@@ -1482,6 +1482,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -1965,6 +1966,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -2961,6 +2963,7 @@ open class AuthorizationAPI {
               "id" : "aeiou"
             },
             "callingPartyNumber" : "aeiou",
+            "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
@@ -3819,6 +3822,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -4586,6 +4590,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -5070,6 +5075,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -5543,6 +5549,7 @@ open class AuthorizationAPI {
               "id" : "aeiou"
             },
             "callingPartyNumber" : "aeiou",
+            "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
@@ -6367,6 +6374,7 @@ open class AuthorizationAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -6972,6 +6980,7 @@ open class AuthorizationAPI {
               "id" : "aeiou"
             },
             "callingPartyNumber" : "aeiou",
+            "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,

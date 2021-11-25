@@ -17,6 +17,7 @@ public class ActionTemplate: Codable {
         case contentoffer = "contentOffer"
         case integrationaction = "integrationAction"
         case architectflow = "architectFlow"
+        case openaction = "openAction"
     }
     public enum State: String, Codable { 
         case active = "Active"

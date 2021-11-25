@@ -8,17 +8,23 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteOrgauthorizationTrustee**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustee) | Delete Org Trust |
+| [**deleteOrgauthorizationTrusteeCloneduser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeCloneduser) | Deletes cloned user |
 | [**deleteOrgauthorizationTrusteeUser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeUser) | Delete Trustee User |
 | [**deleteOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeUserRoles) | Delete Trustee User Roles |
 | [**deleteOrgauthorizationTrustor**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustor) | Delete Org Trust |
+| [**deleteOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustorCloneduser) | Delete Cloned User |
 | [**deleteOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustorUser) | Delete Trustee User |
 | [**getOrgauthorizationPairing**](OrganizationAuthorizationAPI.html#getOrgauthorizationPairing) | Get Pairing Info |
 | [**getOrgauthorizationTrustee**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustee) | Get Org Trust |
+| [**getOrgauthorizationTrusteeClonedusers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeClonedusers) | The list of cloned users from the trustee organization (i.e. users with a native user record). |
 | [**getOrgauthorizationTrusteeUser**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeUser) | Get Trustee User |
 | [**getOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeUserRoles) | Get Trustee User Roles |
 | [**getOrgauthorizationTrusteeUsers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeUsers) | The list of trustee users for this organization (i.e. users granted access to this organization). |
 | [**getOrgauthorizationTrustees**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustees) | The list of trustees for this organization (i.e. organizations granted access to this organization). |
+| [**getOrgauthorizationTrusteesDefault**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteesDefault) | Get organization authorization trust with Customer Care, if one exists. |
 | [**getOrgauthorizationTrustor**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustor) | Get Org Trust |
+| [**getOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorCloneduser) | Get Cloned User |
+| [**getOrgauthorizationTrustorClonedusers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorClonedusers) | The list of cloned users in the trustor organization (i.e. users with a native user record). |
 | [**getOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorUser) | Get Trustee User |
 | [**getOrgauthorizationTrustorUsers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorUsers) | The list of users in the trustor organization (i.e. users granted access). |
 | [**getOrgauthorizationTrustors**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustors) | The list of organizations that have authorized/trusted your organization. |
@@ -26,10 +32,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOrgauthorizationTrusteeUsers**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteeUsers) | Add a user to the trust. |
 | [**postOrgauthorizationTrustees**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrustees) | Create a new organization authorization trust. This is required to grant other organizations access to your organization. |
 | [**postOrgauthorizationTrusteesAudits**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteesAudits) | Get Org Trustee Audits |
+| [**postOrgauthorizationTrusteesDefault**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteesDefault) | Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. |
 | [**postOrgauthorizationTrustorAudits**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrustorAudits) | Get Org Trustor Audits |
 | [**putOrgauthorizationTrustee**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustee) | Update Org Trust |
 | [**putOrgauthorizationTrusteeUserRoledivisions**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeUserRoledivisions) | Update Trustee User Roles |
 | [**putOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeUserRoles) | Update Trustee User Roles |
+| [**putOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustorCloneduser) | Creates a clone of the trustee user in the trustor org. |
 | [**putOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustorUser) | Add a Trustee user to the trust. |
 {: class="table-striped"}
 
@@ -77,6 +85,59 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrustee(trusteeOrgId: trustee
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOrgauthorizationTrusteeCloneduser"></a>
+
+# **deleteOrgauthorizationTrusteeCloneduser**
+
+
+
+> Void deleteOrgauthorizationTrusteeCloneduser(trusteeOrgId, trusteeUserId)
+
+Deletes cloned user
+
+
+
+Wraps DELETE /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId}  
+
+Requires ANY permissions: 
+
+* directory:user:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let trusteeOrgId: String = "" // Trustee Organization Id
+let trusteeUserId: String = "" // Id of the cloned user to delete
+
+// Code example
+OrganizationAuthorizationAPI.deleteOrgauthorizationTrusteeCloneduser(trusteeOrgId: trusteeOrgId, trusteeUserId: trusteeUserId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OrganizationAuthorizationAPI.deleteOrgauthorizationTrusteeCloneduser was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trusteeOrgId** | **String**| Trustee Organization Id | |
+| **trusteeUserId** | **String**| Id of the cloned user to delete | |
 {: class="table-striped"}
 
 
@@ -241,6 +302,59 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrustor(trustorOrgId: trustor
 
 `nil` (empty response body)
 
+<a name="deleteOrgauthorizationTrustorCloneduser"></a>
+
+# **deleteOrgauthorizationTrustorCloneduser**
+
+
+
+> Void deleteOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId)
+
+Delete Cloned User
+
+
+
+Wraps DELETE /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}  
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let trustorOrgId: String = "" // Trustor Organization Id
+let trusteeUserId: String = "" // Trustee User Id
+
+// Code example
+OrganizationAuthorizationAPI.deleteOrgauthorizationTrustorCloneduser(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OrganizationAuthorizationAPI.deleteOrgauthorizationTrustorCloneduser was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trustorOrgId** | **String**| Trustor Organization Id | |
+| **trusteeUserId** | **String**| Trustee User Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="deleteOrgauthorizationTrustorUser"></a>
 
 # **deleteOrgauthorizationTrustorUser**
@@ -398,6 +512,58 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustee(trusteeOrgId: trusteeOrg
 ### Return type
 
 [**Trustee**](Trustee.html)
+
+<a name="getOrgauthorizationTrusteeClonedusers"></a>
+
+# **getOrgauthorizationTrusteeClonedusers**
+
+
+
+> [ClonedUserEntityListing](ClonedUserEntityListing.html) getOrgauthorizationTrusteeClonedusers(trusteeOrgId)
+
+The list of cloned users from the trustee organization (i.e. users with a native user record).
+
+There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
+
+Wraps GET /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers  
+
+Requires ANY permissions: 
+
+* directory:user:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let trusteeOrgId: String = "" // Trustee Organization Id
+
+// Code example
+OrganizationAuthorizationAPI.getOrgauthorizationTrusteeClonedusers(trusteeOrgId: trusteeOrgId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAuthorizationAPI.getOrgauthorizationTrusteeClonedusers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trusteeOrgId** | **String**| Trustee Organization Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ClonedUserEntityListing**](ClonedUserEntityListing.html)
 
 <a name="getOrgauthorizationTrusteeUser"></a>
 
@@ -617,6 +783,55 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustees(pageSize: pageSize, pag
 
 [**TrustEntityListing**](TrustEntityListing.html)
 
+<a name="getOrgauthorizationTrusteesDefault"></a>
+
+# **getOrgauthorizationTrusteesDefault**
+
+
+
+> [Trustee](Trustee.html) getOrgauthorizationTrusteesDefault()
+
+Get organization authorization trust with Customer Care, if one exists.
+
+
+
+Wraps GET /api/v2/orgauthorization/trustees/default  
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:view
+* authorization:orgTrusteeUser:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OrganizationAuthorizationAPI.getOrgauthorizationTrusteesDefault() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAuthorizationAPI.getOrgauthorizationTrusteesDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**Trustee**](Trustee.html)
+
 <a name="getOrgauthorizationTrustor"></a>
 
 # **getOrgauthorizationTrustor**
@@ -668,6 +883,112 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustor(trustorOrgId: trustorOrg
 ### Return type
 
 [**Trustor**](Trustor.html)
+
+<a name="getOrgauthorizationTrustorCloneduser"></a>
+
+# **getOrgauthorizationTrustorCloneduser**
+
+
+
+> [ClonedUser](ClonedUser.html) getOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId)
+
+Get Cloned User
+
+
+
+Wraps GET /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}  
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let trustorOrgId: String = "" // Trustor Organization Id
+let trusteeUserId: String = "" // Trustee User Id
+
+// Code example
+OrganizationAuthorizationAPI.getOrgauthorizationTrustorCloneduser(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAuthorizationAPI.getOrgauthorizationTrustorCloneduser was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trustorOrgId** | **String**| Trustor Organization Id | |
+| **trusteeUserId** | **String**| Trustee User Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ClonedUser**](ClonedUser.html)
+
+<a name="getOrgauthorizationTrustorClonedusers"></a>
+
+# **getOrgauthorizationTrustorClonedusers**
+
+
+
+> [ClonedUserEntityListing](ClonedUserEntityListing.html) getOrgauthorizationTrustorClonedusers(trustorOrgId)
+
+The list of cloned users in the trustor organization (i.e. users with a native user record).
+
+
+
+Wraps GET /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers  
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let trustorOrgId: String = "" // Trustor Organization Id
+
+// Code example
+OrganizationAuthorizationAPI.getOrgauthorizationTrustorClonedusers(trustorOrgId: trustorOrgId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAuthorizationAPI.getOrgauthorizationTrustorClonedusers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trustorOrgId** | **String**| Trustor Organization Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ClonedUserEntityListing**](ClonedUserEntityListing.html)
 
 <a name="getOrgauthorizationTrustorUser"></a>
 
@@ -1052,6 +1373,61 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrusteesAudits(body: body, page
 
 [**AuditQueryResponse**](AuditQueryResponse.html)
 
+<a name="postOrgauthorizationTrusteesDefault"></a>
+
+# **postOrgauthorizationTrusteesDefault**
+
+
+
+> [Trustee](Trustee.html) postOrgauthorizationTrusteesDefault(assignDefaultRole, autoExpire)
+
+Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+
+
+
+Wraps POST /api/v2/orgauthorization/trustees/default  
+
+Requires ALL permissions: 
+
+* authorization:orgTrustee:add
+* authorization:orgTrusteeUser:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assignDefaultRole: Bool = true // Assign Admin role to default pairing with Customer Care
+let autoExpire: Bool = true // Automatically expire pairing after 30 days
+
+// Code example
+OrganizationAuthorizationAPI.postOrgauthorizationTrusteesDefault(assignDefaultRole: assignDefaultRole, autoExpire: autoExpire) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAuthorizationAPI.postOrgauthorizationTrusteesDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assignDefaultRole** | **Bool**| Assign Admin role to default pairing with Customer Care | [optional] |
+| **autoExpire** | **Bool**| Automatically expire pairing after 30 days | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Trustee**](Trustee.html)
+
 <a name="postOrgauthorizationTrustorAudits"></a>
 
 # **postOrgauthorizationTrustorAudits**
@@ -1277,6 +1653,60 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrusteeUserRoles(trusteeOrgId: t
 ### Return type
 
 [**UserAuthorization**](UserAuthorization.html)
+
+<a name="putOrgauthorizationTrustorCloneduser"></a>
+
+# **putOrgauthorizationTrustorCloneduser**
+
+
+
+> [ClonedUser](ClonedUser.html) putOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId)
+
+Creates a clone of the trustee user in the trustor org.
+
+
+
+Wraps PUT /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}  
+
+Requires ALL permissions: 
+
+* authorization:orgTrusteeUser:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let trustorOrgId: String = "" // Trustor Organization Id
+let trusteeUserId: String = "" // Trustee User Id
+
+// Code example
+OrganizationAuthorizationAPI.putOrgauthorizationTrustorCloneduser(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAuthorizationAPI.putOrgauthorizationTrustorCloneduser was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **trustorOrgId** | **String**| Trustor Organization Id | |
+| **trusteeUserId** | **String**| Trustee User Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ClonedUser**](ClonedUser.html)
 
 <a name="putOrgauthorizationTrustorUser"></a>
 

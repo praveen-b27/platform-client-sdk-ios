@@ -679,6 +679,7 @@ open class QualityAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -1851,6 +1852,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "queueFlow" : "",
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -3214,6 +3216,7 @@ open class QualityAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -4210,6 +4213,7 @@ open class QualityAPI {
               "id" : "aeiou"
             },
             "callingPartyNumber" : "aeiou",
+            "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
@@ -5412,6 +5416,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "queueFlow" : "",
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -6248,6 +6253,7 @@ open class QualityAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -6834,7 +6840,7 @@ open class QualityAPI {
      Queries Evaluations and returns a paged list
      
      - GET /api/v2/quality/evaluations/query
-     - Query params must include one of conversationId, evaluatorUserId, or agentUserId
+     - Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -7675,6 +7681,7 @@ open class QualityAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "queueFlow" : "",
       "callingPartyNumber" : "aeiou",
+      "userMemberCount" : 123,
       "modifiedBy" : "aeiou",
       "id" : "aeiou",
       "joinedMemberCount" : 123,
@@ -11233,6 +11240,7 @@ open class QualityAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -12618,6 +12626,7 @@ open class QualityAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -13784,6 +13793,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "queueFlow" : "",
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -15410,6 +15420,7 @@ open class QualityAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -16577,6 +16588,7 @@ open class QualityAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "queueFlow" : "",
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,

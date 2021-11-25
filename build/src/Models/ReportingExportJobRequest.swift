@@ -90,6 +90,8 @@ public class ReportingExportJobRequest: Codable {
         case flowTopicSummaryView = "FLOW_TOPIC_SUMMARY_VIEW"
         case flowTopicDetailView = "FLOW_TOPIC_DETAIL_VIEW"
         case agentInteractionsMeView = "AGENT_INTERACTIONS_ME_VIEW"
+        case alertRulesView = "ALERT_RULES_VIEW"
+        case configureAlertRuleView = "CONFIGURE_ALERT_RULE_VIEW"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"

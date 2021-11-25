@@ -87,7 +87,7 @@ public class AnalyticsSession: Codable {
     public var cobrowseRole: String?
     /** A unique identifier for a PureCloud cobrowse room */
     public var cobrowseRoomId: String?
-    /** The email delivery status */
+    /** The email or SMS delivery status */
     public var deliveryStatus: DeliveryStatus?
     /** Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var deliveryStatusChangeDate: Date?

@@ -72,6 +72,68 @@ open class OrganizationAuthorizationAPI {
     
     /**
      
+     Deletes cloned user
+     
+     - parameter trusteeOrgId: (path) Trustee Organization Id 
+     - parameter trusteeUserId: (path) Id of the cloned user to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteOrgauthorizationTrusteeCloneduser(trusteeOrgId: String, trusteeUserId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteOrgauthorizationTrusteeCloneduserWithRequestBuilder(trusteeOrgId: trusteeOrgId, trusteeUserId: trusteeUserId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Deletes cloned user
+     
+     - DELETE /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter trusteeOrgId: (path) Trustee Organization Id 
+     - parameter trusteeUserId: (path) Id of the cloned user to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteOrgauthorizationTrusteeCloneduserWithRequestBuilder(trusteeOrgId: String, trusteeUserId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId}"
+        let trusteeOrgIdPreEscape = "\(trusteeOrgId)"
+        let trusteeOrgIdPostEscape = trusteeOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeOrgId}", with: trusteeOrgIdPostEscape, options: .literal, range: nil)
+        let trusteeUserIdPreEscape = "\(trusteeUserId)"
+        let trusteeUserIdPostEscape = trusteeUserIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeUserId}", with: trusteeUserIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
      Delete Trustee User
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
@@ -229,6 +291,68 @@ open class OrganizationAuthorizationAPI {
         let trustorOrgIdPreEscape = "\(trustorOrgId)"
         let trustorOrgIdPostEscape = trustorOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{trustorOrgId}", with: trustorOrgIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Delete Cloned User
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteOrgauthorizationTrustorCloneduser(trustorOrgId: String, trusteeUserId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteOrgauthorizationTrustorCloneduserWithRequestBuilder(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete Cloned User
+     
+     - DELETE /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteOrgauthorizationTrustorCloneduserWithRequestBuilder(trustorOrgId: String, trusteeUserId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}"
+        let trustorOrgIdPreEscape = "\(trustorOrgId)"
+        let trustorOrgIdPostEscape = trustorOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trustorOrgId}", with: trustorOrgIdPostEscape, options: .literal, range: nil)
+        let trusteeUserIdPreEscape = "\(trusteeUserId)"
+        let trusteeUserIdPostEscape = trusteeUserIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeUserId}", with: trusteeUserIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         
@@ -1097,6 +1221,82 @@ open class OrganizationAuthorizationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Trustee>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     The list of cloned users from the trustee organization (i.e. users with a native user record).
+     
+     - parameter trusteeOrgId: (path) Trustee Organization Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrgauthorizationTrusteeClonedusers(trusteeOrgId: String, completion: @escaping ((_ data: ClonedUserEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrgauthorizationTrusteeClonedusersWithRequestBuilder(trusteeOrgId: trusteeOrgId)
+        requestBuilder.execute { (response: Response<ClonedUserEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     The list of cloned users from the trustee organization (i.e. users with a native user record).
+     
+     - GET /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers
+     - There can be no more than 5 cloned users per organization, so results are represented as simple list and not paged
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "trustor" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "id" : "aeiou"
+  } ],
+  "selfUri" : "aeiou"
+}}]
+     
+     - parameter trusteeOrgId: (path) Trustee Organization Id 
+
+     - returns: RequestBuilder<ClonedUserEntityListing> 
+     */
+    open class func getOrgauthorizationTrusteeClonedusersWithRequestBuilder(trusteeOrgId: String) -> RequestBuilder<ClonedUserEntityListing> {
+        var path = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers"
+        let trusteeOrgIdPreEscape = "\(trusteeOrgId)"
+        let trusteeOrgIdPostEscape = trusteeOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeOrgId}", with: trusteeOrgIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ClonedUserEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -2483,6 +2683,388 @@ open class OrganizationAuthorizationAPI {
     }
 
     
+    /**
+     
+     Get organization authorization trust with Customer Care, if one exists.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrgauthorizationTrusteesDefault(completion: @escaping ((_ data: Trustee?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrgauthorizationTrusteesDefaultWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Trustee>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get organization authorization trust with Customer Care, if one exists.
+     
+     - GET /api/v2/orgauthorization/trustees/default
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "addresses" : [ "" ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "",
+    "title" : "aeiou",
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "authorization" : "",
+    "skills" : [ "" ],
+    "station" : "",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "department" : "aeiou",
+    "presence" : "",
+    "lastTokenIssued" : "",
+    "email" : "aeiou",
+    "images" : [ "" ],
+    "manager" : {
+      "addresses" : [ "" ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "userId" : "aeiou",
+        "status" : "aeiou"
+      },
+      "title" : "aeiou",
+      "division" : "",
+      "authorization" : {
+        "unusedRoles" : [ "" ],
+        "permissions" : [ "aeiou" ],
+        "permissionPolicies" : [ {
+          "policyDescription" : "aeiou",
+          "resourceConditionNode" : {
+            "operands" : [ {
+              "type" : "aeiou",
+              "value" : "aeiou"
+            } ],
+            "variableName" : "aeiou",
+            "conjunction" : "aeiou",
+            "terms" : [ "" ],
+            "operator" : "aeiou"
+          },
+          "actionSetKey" : "aeiou",
+          "namedResources" : [ "aeiou" ],
+          "policyName" : "aeiou",
+          "entityName" : "aeiou",
+          "domain" : "aeiou",
+          "allowConditions" : true,
+          "id" : "aeiou",
+          "resourceCondition" : "aeiou",
+          "actionSet" : [ "aeiou" ]
+        } ],
+        "roles" : [ {
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      },
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "skillUri" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "station" : {
+        "defaultStation" : "",
+        "lastAssociatedStation" : "",
+        "associatedStation" : {
+          "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "name" : "aeiou",
+          "defaultUser" : "",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "associatedUser" : "",
+          "providerInfo" : {
+            "key" : "aeiou"
+          }
+        },
+        "effectiveStation" : ""
+      },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "department" : "aeiou",
+      "presence" : {
+        "presenceDefinition" : {
+          "systemPresence" : "aeiou",
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "source" : "aeiou",
+        "message" : "aeiou",
+        "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
+      "email" : "aeiou",
+      "images" : [ {
+        "imageUri" : "aeiou",
+        "resolution" : "aeiou"
+      } ],
+      "manager" : "",
+      "employerInfo" : {
+        "employeeType" : "aeiou",
+        "dateHire" : "aeiou",
+        "employeeId" : "aeiou",
+        "officialName" : "aeiou"
+      },
+      "languages" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "languageUri" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "selfUri" : "aeiou",
+      "conversationSummary" : {
+        "call" : {
+          "enterprise" : "",
+          "contactCenter" : {
+            "acw" : 123,
+            "active" : 123
+          }
+        },
+        "socialExpression" : "",
+        "chat" : "",
+        "callback" : "",
+        "video" : "",
+        "message" : "",
+        "userId" : "aeiou",
+        "email" : ""
+      },
+      "groups" : [ {
+        "images" : [ "" ],
+        "addresses" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "visibility" : "aeiou",
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "owners" : [ "" ],
+        "type" : "aeiou",
+        "version" : 123,
+        "rulesVisible" : true,
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou"
+      } ],
+      "primaryContactInfo" : [ "" ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
+        "hobbies" : [ "aeiou" ],
+        "biography" : "aeiou",
+        "interests" : [ "aeiou" ],
+        "spouse" : "aeiou"
+      },
+      "team" : {
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
+      "certifications" : [ "aeiou" ],
+      "version" : 123,
+      "outOfOffice" : {
+        "endDate" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "active" : true,
+        "id" : "aeiou",
+        "user" : "",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "indefinite" : true
+      },
+      "languagePreference" : "aeiou",
+      "profileSkills" : [ "aeiou" ],
+      "chat" : "",
+      "name" : "aeiou",
+      "locations" : [ {
+        "notes" : "aeiou",
+        "coordinates" : {
+          "key" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "locationDefinition" : "",
+        "id" : "aeiou",
+        "floorplanId" : "aeiou"
+      } ],
+      "username" : "aeiou",
+      "geolocation" : {
+        "country" : "aeiou",
+        "city" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "locations" : [ {
+          "images" : "aeiou",
+          "address" : {
+            "zipcode" : "aeiou",
+            "country" : "aeiou",
+            "city" : "aeiou",
+            "street1" : "aeiou",
+            "countryName" : "aeiou",
+            "state" : "aeiou",
+            "street2" : "aeiou"
+          },
+          "notes" : "aeiou",
+          "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
+          "selfUri" : "aeiou",
+          "profileImage" : [ {
+            "imageUri" : "aeiou",
+            "resolution" : "aeiou"
+          } ],
+          "emergencyNumber" : {
+            "number" : "aeiou",
+            "e164" : "aeiou",
+            "type" : "aeiou"
+          },
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "addressStored" : true,
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
+        } ],
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "region" : "aeiou",
+        "primary" : true,
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      }
+    },
+    "employerInfo" : "",
+    "languages" : [ "" ],
+    "conversationSummary" : "",
+    "groups" : [ "" ],
+    "primaryContactInfo" : [ {
+      "extension" : "aeiou",
+      "address" : "aeiou",
+      "countryCode" : "aeiou",
+      "display" : "aeiou",
+      "integration" : "microsoftteams",
+      "mediaType" : "aeiou",
+      "type" : "aeiou"
+    } ],
+    "biography" : "",
+    "team" : "",
+    "certifications" : [ "aeiou" ],
+    "version" : 123,
+    "outOfOffice" : "",
+    "languagePreference" : "aeiou",
+    "profileSkills" : [ "aeiou" ],
+    "chat" : {
+      "jabberId" : "aeiou"
+    },
+    "organization" : {
+      "defaultCountryCode" : "aeiou",
+      "selfUri" : "aeiou",
+      "thirdPartyURI" : "aeiou",
+      "version" : 123,
+      "thirdPartyOrgName" : "aeiou",
+      "features" : {
+        "key" : true
+      },
+      "defaultLanguage" : "aeiou",
+      "defaultSiteId" : "aeiou",
+      "supportURI" : "aeiou",
+      "domain" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
+    },
+    "name" : "aeiou",
+    "locations" : [ "" ],
+    "username" : "aeiou",
+    "geolocation" : ""
+  },
+  "dateExpired" : "2000-01-23T04:56:07.000+0000",
+  "organization" : "",
+  "selfUri" : "aeiou",
+  "id" : "aeiou",
+  "enabled" : true,
+  "usesDefaultRole" : true
+}}]
+
+     - returns: RequestBuilder<Trustee> 
+     */
+    open class func getOrgauthorizationTrusteesDefaultWithRequestBuilder() -> RequestBuilder<Trustee> {
+        let path = "/api/v2/orgauthorization/trustees/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Trustee>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**
@@ -2869,6 +3451,161 @@ open class OrganizationAuthorizationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Trustor>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get Cloned User
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrgauthorizationTrustorCloneduser(trustorOrgId: String, trusteeUserId: String, completion: @escaping ((_ data: ClonedUser?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrgauthorizationTrustorCloneduserWithRequestBuilder(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId)
+        requestBuilder.execute { (response: Response<ClonedUser>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get Cloned User
+     
+     - GET /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "trustor" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "id" : "aeiou"
+}}]
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
+
+     - returns: RequestBuilder<ClonedUser> 
+     */
+    open class func getOrgauthorizationTrustorCloneduserWithRequestBuilder(trustorOrgId: String, trusteeUserId: String) -> RequestBuilder<ClonedUser> {
+        var path = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}"
+        let trustorOrgIdPreEscape = "\(trustorOrgId)"
+        let trustorOrgIdPostEscape = trustorOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trustorOrgId}", with: trustorOrgIdPostEscape, options: .literal, range: nil)
+        let trusteeUserIdPreEscape = "\(trusteeUserId)"
+        let trusteeUserIdPostEscape = trusteeUserIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeUserId}", with: trusteeUserIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ClonedUser>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     The list of cloned users in the trustor organization (i.e. users with a native user record).
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrgauthorizationTrustorClonedusers(trustorOrgId: String, completion: @escaping ((_ data: ClonedUserEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrgauthorizationTrustorClonedusersWithRequestBuilder(trustorOrgId: trustorOrgId)
+        requestBuilder.execute { (response: Response<ClonedUserEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     The list of cloned users in the trustor organization (i.e. users with a native user record).
+     
+     - GET /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "trustor" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "id" : "aeiou"
+  } ],
+  "selfUri" : "aeiou"
+}}]
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+
+     - returns: RequestBuilder<ClonedUserEntityListing> 
+     */
+    open class func getOrgauthorizationTrustorClonedusersWithRequestBuilder(trustorOrgId: String) -> RequestBuilder<ClonedUserEntityListing> {
+        var path = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers"
+        let trustorOrgIdPreEscape = "\(trustorOrgId)"
+        let trustorOrgIdPostEscape = trustorOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trustorOrgId}", with: trustorOrgIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ClonedUserEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -5449,6 +6186,404 @@ open class OrganizationAuthorizationAPI {
     
     
     
+    /**
+     
+     Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+     
+     - parameter assignDefaultRole: (query) Assign Admin role to default pairing with Customer Care (optional)
+     - parameter autoExpire: (query) Automatically expire pairing after 30 days (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postOrgauthorizationTrusteesDefault(assignDefaultRole: Bool? = nil, autoExpire: Bool? = nil, completion: @escaping ((_ data: Trustee?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOrgauthorizationTrusteesDefaultWithRequestBuilder(assignDefaultRole: assignDefaultRole, autoExpire: autoExpire)
+        requestBuilder.execute { (response: Response<Trustee>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+     
+     - POST /api/v2/orgauthorization/trustees/default
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "addresses" : [ "" ],
+    "acdAutoAnswer" : true,
+    "routingStatus" : "",
+    "title" : "aeiou",
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "authorization" : "",
+    "skills" : [ "" ],
+    "station" : "",
+    "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "state" : "aeiou",
+    "department" : "aeiou",
+    "presence" : "",
+    "lastTokenIssued" : "",
+    "email" : "aeiou",
+    "images" : [ "" ],
+    "manager" : {
+      "addresses" : [ "" ],
+      "acdAutoAnswer" : true,
+      "routingStatus" : {
+        "startTime" : "2000-01-23T04:56:07.000+0000",
+        "userId" : "aeiou",
+        "status" : "aeiou"
+      },
+      "title" : "aeiou",
+      "division" : "",
+      "authorization" : {
+        "unusedRoles" : [ "" ],
+        "permissions" : [ "aeiou" ],
+        "permissionPolicies" : [ {
+          "policyDescription" : "aeiou",
+          "resourceConditionNode" : {
+            "operands" : [ {
+              "type" : "aeiou",
+              "value" : "aeiou"
+            } ],
+            "variableName" : "aeiou",
+            "conjunction" : "aeiou",
+            "terms" : [ "" ],
+            "operator" : "aeiou"
+          },
+          "actionSetKey" : "aeiou",
+          "namedResources" : [ "aeiou" ],
+          "policyName" : "aeiou",
+          "entityName" : "aeiou",
+          "domain" : "aeiou",
+          "allowConditions" : true,
+          "id" : "aeiou",
+          "resourceCondition" : "aeiou",
+          "actionSet" : [ "aeiou" ]
+        } ],
+        "roles" : [ {
+          "name" : "aeiou",
+          "id" : "aeiou"
+        } ]
+      },
+      "skills" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "skillUri" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "station" : {
+        "defaultStation" : "",
+        "lastAssociatedStation" : "",
+        "associatedStation" : {
+          "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "name" : "aeiou",
+          "defaultUser" : "",
+          "id" : "aeiou",
+          "type" : "aeiou",
+          "associatedUser" : "",
+          "providerInfo" : {
+            "key" : "aeiou"
+          }
+        },
+        "effectiveStation" : ""
+      },
+      "dateLastLogin" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "department" : "aeiou",
+      "presence" : {
+        "presenceDefinition" : {
+          "systemPresence" : "aeiou",
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "source" : "aeiou",
+        "message" : "aeiou",
+        "primary" : true
+      },
+      "lastTokenIssued" : {
+        "dateIssued" : "2000-01-23T04:56:07.000+0000"
+      },
+      "email" : "aeiou",
+      "images" : [ {
+        "imageUri" : "aeiou",
+        "resolution" : "aeiou"
+      } ],
+      "manager" : "",
+      "employerInfo" : {
+        "employeeType" : "aeiou",
+        "dateHire" : "aeiou",
+        "employeeId" : "aeiou",
+        "officialName" : "aeiou"
+      },
+      "languages" : [ {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou",
+        "languageUri" : "aeiou",
+        "proficiency" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "selfUri" : "aeiou",
+      "conversationSummary" : {
+        "call" : {
+          "enterprise" : "",
+          "contactCenter" : {
+            "acw" : 123,
+            "active" : 123
+          }
+        },
+        "socialExpression" : "",
+        "chat" : "",
+        "callback" : "",
+        "video" : "",
+        "message" : "",
+        "userId" : "aeiou",
+        "email" : ""
+      },
+      "groups" : [ {
+        "images" : [ "" ],
+        "addresses" : [ {
+          "extension" : "aeiou",
+          "address" : "aeiou",
+          "display" : "aeiou",
+          "mediaType" : "aeiou",
+          "type" : "aeiou"
+        } ],
+        "visibility" : "aeiou",
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "owners" : [ "" ],
+        "type" : "aeiou",
+        "version" : 123,
+        "rulesVisible" : true,
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "state" : "aeiou"
+      } ],
+      "primaryContactInfo" : [ "" ],
+      "biography" : {
+        "education" : [ {
+          "notes" : "aeiou",
+          "school" : "aeiou",
+          "dateStart" : "2000-01-23T04:56:07.000+0000",
+          "dateEnd" : "2000-01-23T04:56:07.000+0000",
+          "fieldOfStudy" : "aeiou"
+        } ],
+        "hobbies" : [ "aeiou" ],
+        "biography" : "aeiou",
+        "interests" : [ "aeiou" ],
+        "spouse" : "aeiou"
+      },
+      "team" : {
+        "division" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "memberCount" : 123456789,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "description" : "aeiou",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou"
+      },
+      "certifications" : [ "aeiou" ],
+      "version" : 123,
+      "outOfOffice" : {
+        "endDate" : "2000-01-23T04:56:07.000+0000",
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "active" : true,
+        "id" : "aeiou",
+        "user" : "",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "indefinite" : true
+      },
+      "languagePreference" : "aeiou",
+      "profileSkills" : [ "aeiou" ],
+      "chat" : "",
+      "name" : "aeiou",
+      "locations" : [ {
+        "notes" : "aeiou",
+        "coordinates" : {
+          "key" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "locationDefinition" : "",
+        "id" : "aeiou",
+        "floorplanId" : "aeiou"
+      } ],
+      "username" : "aeiou",
+      "geolocation" : {
+        "country" : "aeiou",
+        "city" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "locations" : [ {
+          "images" : "aeiou",
+          "address" : {
+            "zipcode" : "aeiou",
+            "country" : "aeiou",
+            "city" : "aeiou",
+            "street1" : "aeiou",
+            "countryName" : "aeiou",
+            "state" : "aeiou",
+            "street2" : "aeiou"
+          },
+          "notes" : "aeiou",
+          "floorplanImage" : [ "" ],
+          "addressVerificationDetails" : {
+            "dateStarted" : "2000-01-23T04:56:07.000+0000",
+            "dateFinished" : "2000-01-23T04:56:07.000+0000",
+            "service" : "smartystreets-us",
+            "status" : "aeiou"
+          },
+          "selfUri" : "aeiou",
+          "profileImage" : [ {
+            "imageUri" : "aeiou",
+            "resolution" : "aeiou"
+          } ],
+          "emergencyNumber" : {
+            "number" : "aeiou",
+            "e164" : "aeiou",
+            "type" : "aeiou"
+          },
+          "version" : 123,
+          "path" : [ "aeiou" ],
+          "addressStored" : true,
+          "name" : "aeiou",
+          "id" : "aeiou",
+          "contactUser" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "state" : "aeiou",
+          "addressVerified" : true
+        } ],
+        "id" : "aeiou",
+        "type" : "aeiou",
+        "region" : "aeiou",
+        "primary" : true,
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      }
+    },
+    "employerInfo" : "",
+    "languages" : [ "" ],
+    "conversationSummary" : "",
+    "groups" : [ "" ],
+    "primaryContactInfo" : [ {
+      "extension" : "aeiou",
+      "address" : "aeiou",
+      "countryCode" : "aeiou",
+      "display" : "aeiou",
+      "integration" : "microsoftteams",
+      "mediaType" : "aeiou",
+      "type" : "aeiou"
+    } ],
+    "biography" : "",
+    "team" : "",
+    "certifications" : [ "aeiou" ],
+    "version" : 123,
+    "outOfOffice" : "",
+    "languagePreference" : "aeiou",
+    "profileSkills" : [ "aeiou" ],
+    "chat" : {
+      "jabberId" : "aeiou"
+    },
+    "organization" : {
+      "defaultCountryCode" : "aeiou",
+      "selfUri" : "aeiou",
+      "thirdPartyURI" : "aeiou",
+      "version" : 123,
+      "thirdPartyOrgName" : "aeiou",
+      "features" : {
+        "key" : true
+      },
+      "defaultLanguage" : "aeiou",
+      "defaultSiteId" : "aeiou",
+      "supportURI" : "aeiou",
+      "domain" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou",
+      "state" : "aeiou",
+      "voicemailEnabled" : true,
+      "productPlatform" : "aeiou"
+    },
+    "name" : "aeiou",
+    "locations" : [ "" ],
+    "username" : "aeiou",
+    "geolocation" : ""
+  },
+  "dateExpired" : "2000-01-23T04:56:07.000+0000",
+  "organization" : "",
+  "selfUri" : "aeiou",
+  "id" : "aeiou",
+  "enabled" : true,
+  "usesDefaultRole" : true
+}}]
+     
+     - parameter assignDefaultRole: (query) Assign Admin role to default pairing with Customer Care (optional)
+     - parameter autoExpire: (query) Automatically expire pairing after 30 days (optional)
+
+     - returns: RequestBuilder<Trustee> 
+     */
+    open class func postOrgauthorizationTrusteesDefaultWithRequestBuilder(assignDefaultRole: Bool? = nil, autoExpire: Bool? = nil) -> RequestBuilder<Trustee> {
+        let path = "/api/v2/orgauthorization/trustees/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "assignDefaultRole": assignDefaultRole, 
+            
+            "autoExpire": autoExpire
+            
+        ])
+
+        let requestBuilder: RequestBuilder<Trustee>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
     
     
     
@@ -6115,6 +7250,85 @@ open class OrganizationAuthorizationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserAuthorization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Creates a clone of the trustee user in the trustor org.
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putOrgauthorizationTrustorCloneduser(trustorOrgId: String, trusteeUserId: String, completion: @escaping ((_ data: ClonedUser?,_ error: Error?) -> Void)) {
+        let requestBuilder = putOrgauthorizationTrustorCloneduserWithRequestBuilder(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId)
+        requestBuilder.execute { (response: Response<ClonedUser>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates a clone of the trustee user in the trustor org.
+     
+     - PUT /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "trustor" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "id" : "aeiou"
+}}]
+     
+     - parameter trustorOrgId: (path) Trustor Organization Id 
+     - parameter trusteeUserId: (path) Trustee User Id 
+
+     - returns: RequestBuilder<ClonedUser> 
+     */
+    open class func putOrgauthorizationTrustorCloneduserWithRequestBuilder(trustorOrgId: String, trusteeUserId: String) -> RequestBuilder<ClonedUser> {
+        var path = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}"
+        let trustorOrgIdPreEscape = "\(trustorOrgId)"
+        let trustorOrgIdPostEscape = trustorOrgIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trustorOrgId}", with: trustorOrgIdPostEscape, options: .literal, range: nil)
+        let trusteeUserIdPreEscape = "\(trusteeUserId)"
+        let trusteeUserIdPostEscape = trusteeUserIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{trusteeUserId}", with: trusteeUserIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ClonedUser>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

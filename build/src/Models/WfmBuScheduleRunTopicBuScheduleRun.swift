@@ -28,8 +28,9 @@ public class WfmBuScheduleRunTopicBuScheduleRun: Codable {
     public var schedulingCanceledBy: WfmBuScheduleRunTopicUserReference?
     public var schedulingCompletedTime: String?
     public var messageCount: Int?
+    public var messageSeverityCounts: [WfmBuScheduleRunTopicSchedulerMessageSeverityCount]?
 
-    public init(_id: String?, percentComplete: Double?, intradayRescheduling: Bool?, state: State?, weekCount: Int?, schedule: WfmBuScheduleRunTopicBuScheduleReference?, schedulingCanceledBy: WfmBuScheduleRunTopicUserReference?, schedulingCompletedTime: String?, messageCount: Int?) {
+    public init(_id: String?, percentComplete: Double?, intradayRescheduling: Bool?, state: State?, weekCount: Int?, schedule: WfmBuScheduleRunTopicBuScheduleReference?, schedulingCanceledBy: WfmBuScheduleRunTopicUserReference?, schedulingCompletedTime: String?, messageCount: Int?, messageSeverityCounts: [WfmBuScheduleRunTopicSchedulerMessageSeverityCount]?) {
         
         self._id = _id
         
@@ -49,6 +50,8 @@ public class WfmBuScheduleRunTopicBuScheduleRun: Codable {
         
         self.messageCount = messageCount
         
+        self.messageSeverityCounts = messageSeverityCounts
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -61,6 +64,7 @@ public class WfmBuScheduleRunTopicBuScheduleRun: Codable {
         case schedulingCanceledBy
         case schedulingCompletedTime
         case messageCount
+        case messageSeverityCounts
     }
 
 

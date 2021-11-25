@@ -17,6 +17,7 @@ public class ActionMapAction: Codable {
         case contentoffer = "contentOffer"
         case integrationaction = "integrationAction"
         case architectflow = "architectFlow"
+        case openaction = "openAction"
     }
     /** Action template associated with the action map. */
     public var actionTemplate: ActionMapActionTemplate?
@@ -26,8 +27,10 @@ public class ActionMapAction: Codable {
     public var architectFlowFields: ArchitectFlowFields?
     /** Admin-configurable fields of a web messaging offer action. */
     public var webMessagingOfferFields: WebMessagingOfferFields?
+    /** Admin-configurable fields of an open action. */
+    public var openActionFields: OpenActionFields?
 
-    public init(actionTemplate: ActionMapActionTemplate?, mediaType: MediaType?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?) {
+    public init(actionTemplate: ActionMapActionTemplate?, mediaType: MediaType?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?, openActionFields: OpenActionFields?) {
         
         self.actionTemplate = actionTemplate
         
@@ -36,6 +39,8 @@ public class ActionMapAction: Codable {
         self.architectFlowFields = architectFlowFields
         
         self.webMessagingOfferFields = webMessagingOfferFields
+        
+        self.openActionFields = openActionFields
         
     }
 

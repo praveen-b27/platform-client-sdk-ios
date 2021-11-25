@@ -3225,6 +3225,7 @@ open class RoutingAPI {
     "id" : "aeiou"
   },
   "callingPartyNumber" : "aeiou",
+  "userMemberCount" : 123,
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
   "joinedMemberCount" : 123,
@@ -4744,6 +4745,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -4868,7 +4870,6 @@ open class RoutingAPI {
     public enum SortOrder_getRoutingQueuesDivisionviews: String { 
         case asc = "asc"
         case desc = "desc"
-        case score = "score"
     }
 
     
@@ -4986,6 +4987,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -5101,35 +5103,24 @@ open class RoutingAPI {
     
     
     
-    public enum SortBy_getRoutingQueuesDivisionviewsAll: String { 
-        case name = "name"
-        case _id = "id"
-        case divisionid = "divisionId"
-    }
-
-    
-    
-    
     public enum SortOrder_getRoutingQueuesDivisionviewsAll: String { 
         case asc = "asc"
         case desc = "desc"
-        case score = "score"
     }
 
     
     
     /**
      
-     Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+     Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
      
      - parameter pageSize: (query) Page size [max value is 500] (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to asc)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueuesDivisionviewsAll(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingQueuesDivisionviewsAll? = nil, sortOrder: SortOrder_getRoutingQueuesDivisionviewsAll? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesDivisionviewsAllWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder)
+    open class func getRoutingQueuesDivisionviewsAll(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getRoutingQueuesDivisionviewsAll? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesDivisionviewsAllWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<QueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5148,7 +5139,7 @@ open class RoutingAPI {
 
     /**
      
-     Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+     Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
      
      - GET /api/v2/routing/queues/divisionviews/all
      - 
@@ -5222,6 +5213,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -5289,12 +5281,11 @@ open class RoutingAPI {
      
      - parameter pageSize: (query) Page size [max value is 500] (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to name)
      - parameter sortOrder: (query) Sort order (optional, default to asc)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
-    open class func getRoutingQueuesDivisionviewsAllWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingQueuesDivisionviewsAll? = nil, sortOrder: SortOrder_getRoutingQueuesDivisionviewsAll? = nil) -> RequestBuilder<QueueEntityListing> {
+    open class func getRoutingQueuesDivisionviewsAllWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getRoutingQueuesDivisionviewsAll? = nil) -> RequestBuilder<QueueEntityListing> {
         let path = "/api/v2/routing/queues/divisionviews/all"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -5310,8 +5301,6 @@ open class RoutingAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             
             "pageNumber": pageNumber?.encodeToJSON(), 
-            
-            "sortBy": sortBy?.rawValue, 
             
             "sortOrder": sortOrder?.rawValue
             
@@ -5440,6 +5429,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -7436,6 +7426,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -9067,6 +9058,7 @@ open class RoutingAPI {
     "id" : "aeiou"
   },
   "callingPartyNumber" : "aeiou",
+  "userMemberCount" : 123,
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
   "joinedMemberCount" : 123,
@@ -9261,6 +9253,7 @@ open class RoutingAPI {
       "id" : "aeiou"
     },
     "callingPartyNumber" : "aeiou",
+    "userMemberCount" : 123,
     "modifiedBy" : "aeiou",
     "id" : "aeiou",
     "joinedMemberCount" : 123,
@@ -10527,6 +10520,7 @@ open class RoutingAPI {
     "id" : "aeiou"
   },
   "callingPartyNumber" : "aeiou",
+  "userMemberCount" : 123,
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
   "joinedMemberCount" : 123,
@@ -12003,6 +11997,7 @@ open class RoutingAPI {
     "id" : "aeiou"
   },
   "callingPartyNumber" : "aeiou",
+  "userMemberCount" : 123,
   "modifiedBy" : "aeiou",
   "id" : "aeiou",
   "joinedMemberCount" : 123,

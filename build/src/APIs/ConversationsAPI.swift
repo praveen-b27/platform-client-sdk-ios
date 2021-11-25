@@ -2259,6 +2259,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -3555,6 +3556,7 @@ open class ConversationsAPI {
             "id" : "aeiou"
           },
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -5499,6 +5501,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -11303,6 +11306,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -12537,6 +12541,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -13698,6 +13703,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -14859,6 +14865,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -16020,6 +16027,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -17181,6 +17189,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -19647,6 +19656,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -20864,6 +20874,7 @@ open class ConversationsAPI {
           "id" : "aeiou"
         },
         "callingPartyNumber" : "aeiou",
+        "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
         "id" : "aeiou",
         "joinedMemberCount" : 123,
@@ -23513,6 +23524,7 @@ open class ConversationsAPI {
     "responseId" : "aeiou"
   },
   "conversationId" : "aeiou",
+  "useExistingActiveConversation" : true,
   "selfUri" : "aeiou",
   "messengerType" : "aeiou",
   "fromAddress" : "aeiou",
@@ -23591,6 +23603,7 @@ open class ConversationsAPI {
   } ],
   "isFinalReceipt" : true,
   "channel" : {
+    "metadata" : { },
     "messageId" : "aeiou",
     "from" : {
       "firstName" : "aeiou",

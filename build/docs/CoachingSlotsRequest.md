@@ -11,6 +11,7 @@ title: CoachingSlotsRequest
 | **lengthInMinutes** | **Int** | The duration of coaching appointment to schedule in 15 minutes granularity up to maximum of 60 minutes | |
 | **attendeeIds** | **[String]** | List of attendees to determine coaching appointment slots | |
 | **facilitatorIds** | **[String]** | List of facilitators to determine coaching appointment slots | [optional] |
+| **interruptibleAppointmentIds** | **[String]** | List of appointment ids to exclude from consideration when determining blocked slots | [optional] |
 {: class="table table-striped"}
 
 

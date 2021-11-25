@@ -2118,7 +2118,7 @@ open class LanguageUnderstandingAPI {
     
     /**
      
-     Save information for the draft
+     Save information for the draft. Either topic draft or intent draft should be sent.
      
      - parameter minerId: (path) Miner ID 
      - parameter draftId: (path) Draft ID 
@@ -2145,7 +2145,7 @@ open class LanguageUnderstandingAPI {
 
     /**
      
-     Save information for the draft
+     Save information for the draft. Either topic draft or intent draft should be sent.
      
      - PATCH /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}
      - 
@@ -3084,7 +3084,7 @@ open class LanguageUnderstandingAPI {
     
     /**
      
-     Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+     Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
      
      - parameter minerId: (path) Miner ID 
      - parameter body: (body)  (optional)
@@ -3110,7 +3110,7 @@ open class LanguageUnderstandingAPI {
 
     /**
      
-     Start the mining process. Specify date range pair with mediaType and queueIds for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
+     Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
      
      - POST /api/v2/languageunderstanding/miners/{minerId}/execute
      - 

@@ -43,8 +43,8 @@ public class Metrics: Codable {
     public var performanceProfileId: String?
     /** The linked metric entity reference */
     public var linkedMetric: AddressableEntityRef?
-    /** The created date of this metric */
-    public var dateCreated: Int64?
+    /** The created date of this metric. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
     /** The unlinked workday for this metric if this metric was ever unlinked. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateUnlinked: Date?
     /** The source performance profile when this metric is linked */
@@ -56,7 +56,7 @@ public class Metrics: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, order: Int?, metricDefinitionName: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, unitType: UnitType?, enabled: Bool?, templateName: String?, maxPoints: Int?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Int64?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, unitDefinition: String?, precision: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, order: Int?, metricDefinitionName: String?, metricDefinitionId: String?, externalMetricDefinitionId: String?, unitType: UnitType?, enabled: Bool?, templateName: String?, maxPoints: Int?, performanceProfileId: String?, linkedMetric: AddressableEntityRef?, dateCreated: Date?, dateUnlinked: Date?, sourcePerformanceProfile: PerformanceProfile?, unitDefinition: String?, precision: Int?, selfUri: String?) {
         
         self._id = _id
         

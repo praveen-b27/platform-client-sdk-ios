@@ -19,6 +19,7 @@ public class AuditLogMessage: Codable {
         case contentManagement = "ContentManagement"
         case datatables = "Datatables"
         case directory = "Directory"
+        case dynamicSchema = "DynamicSchema"
         case gamification = "Gamification"
         case groups = "Groups"
         case integrations = "Integrations"
@@ -114,6 +115,7 @@ public class AuditLogMessage: Codable {
         case reassign = "Reassign"
         case reschedule = "Reschedule"
         case cancel = "Cancel"
+        case softDelete = "SoftDelete"
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"
@@ -154,6 +156,7 @@ public class AuditLogMessage: Codable {
         case dnclist = "DNCList"
         case document = "Document"
         case dynamicGroup = "DynamicGroup"
+        case dynamicSchema = "DynamicSchema"
         case edge = "Edge"
         case edgeGroup = "EdgeGroup"
         case edgeLog = "EdgeLog"

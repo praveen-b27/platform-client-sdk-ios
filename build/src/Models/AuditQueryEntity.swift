@@ -50,6 +50,7 @@ public class AuditQueryEntity: Codable {
         case dnclist = "DNCList"
         case document = "Document"
         case dynamicGroup = "DynamicGroup"
+        case dynamicSchema = "DynamicSchema"
         case edge = "Edge"
         case edgeGroup = "EdgeGroup"
         case edgeLog = "EdgeLog"
@@ -225,6 +226,7 @@ public class AuditQueryEntity: Codable {
         case reassign = "Reassign"
         case reschedule = "Reschedule"
         case cancel = "Cancel"
+        case softDelete = "SoftDelete"
     }
     /** Name of the Entity */
     public var name: Name?

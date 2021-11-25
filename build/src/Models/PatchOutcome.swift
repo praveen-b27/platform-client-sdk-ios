@@ -27,6 +27,8 @@ public class PatchOutcome: Codable {
     public var context: Context?
     /** The pattern of rules defining the filter of the outcome. */
     public var journey: Journey?
+    /** The field from the event indicating the associated value. */
+    public var associatedValueField: AssociatedValueField?
     /** The URI for this object */
     public var selfUri: String?
     /** Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -34,7 +36,7 @@ public class PatchOutcome: Codable {
     /** Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
-    public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, isPositive: Bool?, context: Context?, journey: Journey?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
+    public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, isPositive: Bool?, context: Context?, journey: Journey?, associatedValueField: AssociatedValueField?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
         
         self._id = _id
         
@@ -51,6 +53,8 @@ public class PatchOutcome: Codable {
         self.context = context
         
         self.journey = journey
+        
+        self.associatedValueField = associatedValueField
         
         self.selfUri = selfUri
         
@@ -69,6 +73,7 @@ public class PatchOutcome: Codable {
         case isPositive
         case context
         case journey
+        case associatedValueField
         case selfUri
         case createdDate
         case modifiedDate

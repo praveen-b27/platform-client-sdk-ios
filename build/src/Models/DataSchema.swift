@@ -14,6 +14,7 @@ public class DataSchema: Codable {
     public enum AppliesTo: String, Codable { 
         case contact = "CONTACT"
         case externalOrganization = "EXTERNAL_ORGANIZATION"
+        case openAction = "OPEN_ACTION"
     }
     /** The globally unique identifier for the schema.  Only required if a schema is used for custom fields during external entity creation or updates. */
     public var _id: String?

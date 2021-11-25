@@ -26,6 +26,7 @@ public class AuditQueryExecutionStatusResponse: Codable {
         case contentManagement = "ContentManagement"
         case datatables = "Datatables"
         case directory = "Directory"
+        case dynamicSchema = "DynamicSchema"
         case gamification = "Gamification"
         case groups = "Groups"
         case integrations = "Integrations"

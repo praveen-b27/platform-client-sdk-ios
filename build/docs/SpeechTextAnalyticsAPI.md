@@ -354,13 +354,13 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscr
 
 # **getSpeechandtextanalyticsDialects**
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 > [[JSON]](JSON.html) getSpeechandtextanalyticsDialects()
 
 Get list of supported Speech &amp; Text Analytics dialects
 
-
+This api has been deprecated. Use api/v2/topics/dialects instead
 
 Wraps GET /api/v2/speechandtextanalytics/dialects  
 

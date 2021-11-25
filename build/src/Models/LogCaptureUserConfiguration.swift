@@ -13,7 +13,7 @@ public class LogCaptureUserConfiguration: Codable {
 
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** Indicates when log capture will be turned off for the user. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** Indicates when log capture will be turned off for the user. (Must be within 24 hours). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateExpired: Date?
     /** The URI for this object */
     public var selfUri: String?

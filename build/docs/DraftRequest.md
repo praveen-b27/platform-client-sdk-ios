@@ -8,6 +8,7 @@ title: DraftRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **intents** | [**[DraftIntents]**](DraftIntents.html) | Draft intent object. | [optional] |
+| **topic** | [**[DraftTopics]**](DraftTopics.html) |  | [optional] |
 {: class="table table-striped"}
 
 

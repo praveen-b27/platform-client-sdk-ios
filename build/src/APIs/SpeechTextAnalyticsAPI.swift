@@ -271,6 +271,7 @@ open class SpeechTextAnalyticsAPI {
      - examples: [{contentType=application/json, example={
   "sentimentScore" : 1.3579000000000001069366817318950779736042022705078125,
   "sentimentTrend" : 1.3579000000000001069366817318950779736042022705078125,
+  "sentimentTrendClass" : "aeiou",
   "conversation" : {
     "selfUri" : "aeiou",
     "id" : "aeiou"
@@ -403,7 +404,7 @@ open class SpeechTextAnalyticsAPI {
      Get list of supported Speech & Text Analytics dialects
      
      - GET /api/v2/speechandtextanalytics/dialects
-     - 
+     - This api has been deprecated. Use api/v2/topics/dialects instead
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

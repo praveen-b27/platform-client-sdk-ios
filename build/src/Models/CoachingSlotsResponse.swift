@@ -17,14 +17,18 @@ public class CoachingSlotsResponse: Codable {
     public var attendeeSchedules: [UserAvailableTimes]?
     /** Periods of availability for facilitators to schedule coaching appointment */
     public var facilitatorSchedules: [UserAvailableTimes]?
+    /** Detailed data for WFM scheduled activities */
+    public var wfmScheduleActivities: [WfmScheduleActivity]?
 
-    public init(suggestedSlots: [CoachingSlot]?, attendeeSchedules: [UserAvailableTimes]?, facilitatorSchedules: [UserAvailableTimes]?) {
+    public init(suggestedSlots: [CoachingSlot]?, attendeeSchedules: [UserAvailableTimes]?, facilitatorSchedules: [UserAvailableTimes]?, wfmScheduleActivities: [WfmScheduleActivity]?) {
         
         self.suggestedSlots = suggestedSlots
         
         self.attendeeSchedules = attendeeSchedules
         
         self.facilitatorSchedules = facilitatorSchedules
+        
+        self.wfmScheduleActivities = wfmScheduleActivities
         
     }
 

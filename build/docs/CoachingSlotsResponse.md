@@ -10,6 +10,7 @@ title: CoachingSlotsResponse
 | **suggestedSlots** | [**[CoachingSlot]**](CoachingSlot.html) | List of slots where coaching appointment can be scheduled | [optional] |
 | **attendeeSchedules** | [**[UserAvailableTimes]**](UserAvailableTimes.html) | Periods of availability for attendees to schedule coaching appointment | [optional] |
 | **facilitatorSchedules** | [**[UserAvailableTimes]**](UserAvailableTimes.html) | Periods of availability for facilitators to schedule coaching appointment | [optional] |
+| **wfmScheduleActivities** | [**[WfmScheduleActivity]**](WfmScheduleActivity.html) | Detailed data for WFM scheduled activities | [optional] |
 {: class="table table-striped"}
 
 

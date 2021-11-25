@@ -19,8 +19,10 @@ public class CoachingSlotsRequest: Codable {
     public var attendeeIds: [String]?
     /** List of facilitators to determine coaching appointment slots */
     public var facilitatorIds: [String]?
+    /** List of appointment ids to exclude from consideration when determining blocked slots */
+    public var interruptibleAppointmentIds: [String]?
 
-    public init(interval: String?, lengthInMinutes: Int?, attendeeIds: [String]?, facilitatorIds: [String]?) {
+    public init(interval: String?, lengthInMinutes: Int?, attendeeIds: [String]?, facilitatorIds: [String]?, interruptibleAppointmentIds: [String]?) {
         
         self.interval = interval
         
@@ -29,6 +31,8 @@ public class CoachingSlotsRequest: Codable {
         self.attendeeIds = attendeeIds
         
         self.facilitatorIds = facilitatorIds
+        
+        self.interruptibleAppointmentIds = interruptibleAppointmentIds
         
     }
 

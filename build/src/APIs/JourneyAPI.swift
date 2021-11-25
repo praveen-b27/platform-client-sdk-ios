@@ -311,6 +311,16 @@ open class JourneyAPI {
   },
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "action" : {
+    "openActionFields" : {
+      "openAction" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "configurationFields" : {
+        "key" : "{}"
+      }
+    },
     "actionTemplate" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -462,6 +472,16 @@ open class JourneyAPI {
     },
     "modifiedDate" : "2000-01-23T04:56:07.000+0000",
     "action" : {
+      "openActionFields" : {
+        "openAction" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        },
+        "configurationFields" : {
+          "key" : "{}"
+        }
+      },
       "actionTemplate" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -858,6 +878,7 @@ open class JourneyAPI {
         case contentoffer = "contentOffer"
         case integrationaction = "integrationAction"
         case architectflow = "architectFlow"
+        case openaction = "openAction"
     }
 
     
@@ -1064,6 +1085,10 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "associatedValueField" : {
+    "dataType" : "aeiou",
+    "name" : "aeiou"
+  },
   "createdDate" : "2000-01-23T04:56:07.000+0000",
   "journey" : {
     "patterns" : [ {
@@ -1181,6 +1206,10 @@ open class JourneyAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "associatedValueField" : {
+      "dataType" : "aeiou",
+      "name" : "aeiou"
+    },
     "createdDate" : "2000-01-23T04:56:07.000+0000",
     "journey" : {
       "patterns" : [ {
@@ -1646,17 +1675,16 @@ open class JourneyAPI {
   "lastUserDisposition" : {
     "code" : "aeiou",
     "notes" : "aeiou",
-    "user" : ""
+    "user" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    }
   },
   "outcomeAchievements" : [ {
     "achievedDate" : "2000-01-23T04:56:07.000+0000",
     "outcome" : {
       "selfUri" : "aeiou",
-      "id" : "aeiou",
-      "outcome" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      }
+      "id" : "aeiou"
     }
   } ],
   "lastConnectedUser" : {
@@ -1671,7 +1699,6 @@ open class JourneyAPI {
   "segmentAssignments" : [ {
     "assignedDate" : "2000-01-23T04:56:07.000+0000",
     "segment" : {
-      "segment" : "",
       "selfUri" : "aeiou",
       "id" : "aeiou"
     }
@@ -1883,6 +1910,16 @@ open class JourneyAPI {
   },
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "action" : {
+    "openActionFields" : {
+      "openAction" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "configurationFields" : {
+        "key" : "{}"
+      }
+    },
     "actionTemplate" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -2176,6 +2213,10 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "associatedValueField" : {
+    "dataType" : "aeiou",
+    "name" : "aeiou"
+  },
   "createdDate" : "2000-01-23T04:56:07.000+0000",
   "journey" : {
     "patterns" : [ {
@@ -2500,6 +2541,16 @@ open class JourneyAPI {
   },
   "modifiedDate" : "2000-01-23T04:56:07.000+0000",
   "action" : {
+    "openActionFields" : {
+      "openAction" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
+      "configurationFields" : {
+        "key" : "{}"
+      }
+    },
     "actionTemplate" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -2697,6 +2748,10 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "associatedValueField" : {
+    "dataType" : "aeiou",
+    "name" : "aeiou"
+  },
   "createdDate" : "2000-01-23T04:56:07.000+0000",
   "journey" : {
     "patterns" : [ {

@@ -14,9 +14,9 @@ public class OAuthClient: Codable {
     public enum AuthorizedGrantType: String, Codable { 
         case code = "CODE"
         case token = "TOKEN"
-        case saml2bearer = "SAML2BEARER"
+        case saml2Bearer = "SAML2-BEARER"
         case password = "PASSWORD"
-        case clientCredentials = "CLIENT_CREDENTIALS"
+        case clientCredentials = "CLIENT-CREDENTIALS"
     }
     public enum State: String, Codable { 
         case active = "active"

@@ -13,10 +13,13 @@ public class DraftRequest: Codable {
 
     /** Draft intent object. */
     public var intents: [DraftIntents]?
+    public var topic: [DraftTopics]?
 
-    public init(intents: [DraftIntents]?) {
+    public init(intents: [DraftIntents]?, topic: [DraftTopics]?) {
         
         self.intents = intents
+        
+        self.topic = topic
         
     }
 

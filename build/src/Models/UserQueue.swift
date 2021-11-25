@@ -31,8 +31,10 @@ public class UserQueue: Codable {
     public var modifiedBy: String?
     /** The ID of the user that created the queue. */
     public var createdBy: String?
-    /** The total number of members (joined or unjoined) in the queue. */
+    /** The total number of members in the queue. */
     public var memberCount: Int?
+    /** The number of user members (i.e., non-group members) in the queue. */
+    public var userMemberCount: Int?
     /** The number of joined members in the queue. */
     public var joinedMemberCount: Int?
     /** The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM */
@@ -70,7 +72,7 @@ public class UserQueue: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, joined: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, joined: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -89,6 +91,8 @@ public class UserQueue: Codable {
         self.createdBy = createdBy
         
         self.memberCount = memberCount
+        
+        self.userMemberCount = userMemberCount
         
         self.joinedMemberCount = joinedMemberCount
         
@@ -140,6 +144,7 @@ public class UserQueue: Codable {
         case modifiedBy
         case createdBy
         case memberCount
+        case userMemberCount
         case joinedMemberCount
         case mediaSettings
         case routingRules

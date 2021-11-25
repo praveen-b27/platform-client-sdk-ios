@@ -335,6 +335,7 @@ open class RecordingAPI {
         "surveyOptOut" : true
       },
       "buttonResponse" : {
+        "messageType" : "aeiou",
         "payload" : "aeiou",
         "text" : "aeiou",
         "type" : "aeiou"
@@ -1333,6 +1334,7 @@ open class RecordingAPI {
       "surveyOptOut" : true
     },
     "buttonResponse" : {
+      "messageType" : "aeiou",
       "payload" : "aeiou",
       "text" : "aeiou",
       "type" : "aeiou"
@@ -3436,6 +3438,7 @@ open class RecordingAPI {
       "surveyOptOut" : true
     },
     "buttonResponse" : {
+      "messageType" : "aeiou",
       "payload" : "aeiou",
       "text" : "aeiou",
       "type" : "aeiou"
@@ -4075,6 +4078,7 @@ open class RecordingAPI {
         "surveyOptOut" : true
       },
       "buttonResponse" : {
+        "messageType" : "aeiou",
         "payload" : "aeiou",
         "text" : "aeiou",
         "type" : "aeiou"
@@ -4791,6 +4795,7 @@ open class RecordingAPI {
       "surveyOptOut" : true
     },
     "buttonResponse" : {
+      "messageType" : "aeiou",
       "payload" : "aeiou",
       "text" : "aeiou",
       "type" : "aeiou"
@@ -5476,6 +5481,7 @@ open class RecordingAPI {
           "surveyOptOut" : true
         },
         "buttonResponse" : {
+          "messageType" : "aeiou",
           "payload" : "aeiou",
           "text" : "aeiou",
           "type" : "aeiou"
@@ -6192,6 +6198,7 @@ open class RecordingAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
+            "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
@@ -6900,6 +6907,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -8230,6 +8238,7 @@ open class RecordingAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
+            "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
@@ -8938,6 +8947,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -10616,6 +10626,7 @@ open class RecordingAPI {
               "id" : "aeiou"
             },
             "callingPartyNumber" : "aeiou",
+            "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
             "id" : "aeiou",
             "joinedMemberCount" : 123,
@@ -11085,6 +11096,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -11741,6 +11753,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -12875,6 +12888,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -14092,6 +14106,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -15347,6 +15362,7 @@ open class RecordingAPI {
       "surveyOptOut" : true
     },
     "buttonResponse" : {
+      "messageType" : "aeiou",
       "payload" : "aeiou",
       "text" : "aeiou",
       "type" : "aeiou"
@@ -16337,6 +16353,7 @@ open class RecordingAPI {
       "surveyOptOut" : true
     },
     "buttonResponse" : {
+      "messageType" : "aeiou",
       "payload" : "aeiou",
       "text" : "aeiou",
       "type" : "aeiou"
@@ -16877,6 +16894,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,
@@ -17779,6 +17797,7 @@ open class RecordingAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
+          "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
           "id" : "aeiou",
           "joinedMemberCount" : 123,

@@ -90,6 +90,7 @@ public class ReportingDataExportTopicDataExportNotification: Codable {
         case queueTopicDetailView = "QUEUE_TOPIC_DETAIL_VIEW"
         case flowTopicSummaryView = "FLOW_TOPIC_SUMMARY_VIEW"
         case flowTopicDetailView = "FLOW_TOPIC_DETAIL_VIEW"
+        case agentInteractionsMeView = "AGENT_INTERACTIONS_ME_VIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

@@ -449,7 +449,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : 123456789,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -748,7 +748,7 @@ open class GamificationAPI {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     },
-    "dateCreated" : 123456789,
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "templateName" : "aeiou",
     "maxPoints" : 123,
     "unitDefinition" : "aeiou",
@@ -941,7 +941,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : 123456789,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -1075,7 +1075,7 @@ open class GamificationAPI {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     },
-    "dateCreated" : 123456789,
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "sourcePerformanceProfile" : {
@@ -1208,7 +1208,7 @@ open class GamificationAPI {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     },
-    "dateCreated" : 123456789,
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "templateName" : "aeiou",
     "maxPoints" : 123,
     "unitDefinition" : "aeiou",
@@ -1589,7 +1589,7 @@ open class GamificationAPI {
         "selfUri" : "aeiou",
         "id" : "aeiou"
       },
-      "dateCreated" : 123456789,
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "sourcePerformanceProfile" : {
@@ -2128,7 +2128,7 @@ open class GamificationAPI {
         "selfUri" : "aeiou",
         "id" : "aeiou"
       },
-      "dateCreated" : 123456789,
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "sourcePerformanceProfile" : {
@@ -3488,7 +3488,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : 123456789,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -3760,7 +3760,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : 123456789,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -3955,7 +3955,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : 123456789,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {
@@ -4159,7 +4159,7 @@ open class GamificationAPI {
     "selfUri" : "aeiou",
     "id" : "aeiou"
   },
-  "dateCreated" : 123456789,
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "sourcePerformanceProfile" : {

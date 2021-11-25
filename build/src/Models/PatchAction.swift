@@ -17,6 +17,7 @@ public class PatchAction: Codable {
         case contentoffer = "contentOffer"
         case integrationaction = "integrationAction"
         case architectflow = "architectFlow"
+        case openaction = "openAction"
     }
     /** Media type of action. */
     public var mediaType: MediaType?
@@ -26,8 +27,10 @@ public class PatchAction: Codable {
     public var architectFlowFields: ArchitectFlowFields?
     /** Admin-configurable fields of a web messaging offer action. */
     public var webMessagingOfferFields: WebMessagingOfferFields?
+    /** Admin-configurable fields of an open action. */
+    public var openActionFields: OpenActionFields?
 
-    public init(mediaType: MediaType?, actionTemplate: ActionMapActionTemplate?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?) {
+    public init(mediaType: MediaType?, actionTemplate: ActionMapActionTemplate?, architectFlowFields: ArchitectFlowFields?, webMessagingOfferFields: WebMessagingOfferFields?, openActionFields: OpenActionFields?) {
         
         self.mediaType = mediaType
         
@@ -36,6 +39,8 @@ public class PatchAction: Codable {
         self.architectFlowFields = architectFlowFields
         
         self.webMessagingOfferFields = webMessagingOfferFields
+        
+        self.openActionFields = openActionFields
         
     }
 

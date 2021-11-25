@@ -1837,6 +1837,27 @@ open class CoachingAPI {
     },
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "differenceRating" : "aeiou"
+  } ],
+  "wfmScheduleActivities" : [ {
+    "fullDayTimeOffMarkers" : [ {
+      "activityCodeId" : "aeiou",
+      "timeOffRequestId" : "aeiou",
+      "lengthMinutes" : 123,
+      "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+      "paid" : true,
+      "description" : "aeiou"
+    } ],
+    "activities" : [ {
+      "activityCodeId" : "aeiou",
+      "externalActivityType" : "aeiou",
+      "timeOffRequestId" : "aeiou",
+      "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "lengthMinutes" : 123,
+      "externalActivityId" : "aeiou",
+      "paid" : true,
+      "description" : "aeiou"
+    } ],
+    "userReference" : ""
   } ]
 }}]
      

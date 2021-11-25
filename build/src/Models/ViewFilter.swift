@@ -111,6 +111,7 @@ public class ViewFilter: Codable {
         case contentoffer = "contentOffer"
         case integrationaction = "integrationAction"
         case architectflow = "architectFlow"
+        case openaction = "openAction"
     }
     public enum DevelopmentRoleList: String, Codable { 
         case creator = "Creator"

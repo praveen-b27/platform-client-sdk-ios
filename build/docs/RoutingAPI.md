@@ -49,7 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingQueueWrapupcodes**](RoutingAPI.html#getRoutingQueueWrapupcodes) | Get the wrap-up codes for a queue |
 | [**getRoutingQueues**](RoutingAPI.html#getRoutingQueues) | Get list of queues. |
 | [**getRoutingQueuesDivisionviews**](RoutingAPI.html#getRoutingQueuesDivisionviews) | Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s). |
-| [**getRoutingQueuesDivisionviewsAll**](RoutingAPI.html#getRoutingQueuesDivisionviewsAll) | Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization. |
+| [**getRoutingQueuesDivisionviewsAll**](RoutingAPI.html#getRoutingQueuesDivisionviewsAll) | Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization. |
 | [**getRoutingQueuesMe**](RoutingAPI.html#getRoutingQueuesMe) | Get a paged listing of queues the user is a member of. |
 | [**getRoutingSettings**](RoutingAPI.html#getRoutingSettings) | Get an organization&#39;s routing settings |
 | [**getRoutingSettingsContactcenter**](RoutingAPI.html#getRoutingSettingsContactcenter) | Get Contact Center Settings |
@@ -2082,6 +2082,8 @@ Wraps GET /api/v2/routing/queues/{queueId}/members
 Requires ANY permissions: 
 
 * routing:queue:view
+* routing:queue:edit
+* routing:queue:readonly
 * routing:queueMember:manage
 
 ### Example
@@ -2388,7 +2390,7 @@ RoutingAPI.getRoutingQueuesDivisionviews(pageSize: pageSize, pageNumber: pageNum
 | **pageSize** | **Int**| Page size [max value is 100] | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number [max value is 5] | [optional] [default to 1] |
 | **sortBy** | **String**| Sort by | [optional] [default to name]<br />**Values**: name ("name"), _id ("id"), divisionid ("divisionId") |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc"), score ("score") |
+| **sortOrder** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
 | **name** | **String**| Name | [optional] |
 | **_id** | [**[String]**](String.html)| Queue ID(s) | [optional] |
 | **divisionId** | [**[String]**](String.html)| Division ID(s) | [optional] |
@@ -2405,9 +2407,9 @@ RoutingAPI.getRoutingQueuesDivisionviews(pageSize: pageSize, pageNumber: pageNum
 
 
 
-> [QueueEntityListing](QueueEntityListing.html) getRoutingQueuesDivisionviewsAll(pageSize, pageNumber, sortBy, sortOrder)
+> [QueueEntityListing](QueueEntityListing.html) getRoutingQueuesDivisionviewsAll(pageSize, pageNumber, sortOrder)
 
-Get a paged listing of simplified queue objects.  Can be used to get a digest of all queues in an organization.
+Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
 
 
 
@@ -2427,11 +2429,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size [max value is 500]
 let pageNumber: Int = 1 // Page number
-let sortBy: RoutingAPI.SortBy_getRoutingQueuesDivisionviewsAll = RoutingAPI.SortBy_getRoutingQueuesDivisionviewsAll.enummember // Sort by
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueuesDivisionviewsAll = RoutingAPI.SortOrder_getRoutingQueuesDivisionviewsAll.enummember // Sort order
 
 // Code example
-RoutingAPI.getRoutingQueuesDivisionviewsAll(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+RoutingAPI.getRoutingQueuesDivisionviewsAll(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2448,8 +2449,7 @@ RoutingAPI.getRoutingQueuesDivisionviewsAll(pageSize: pageSize, pageNumber: page
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size [max value is 500] | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to name]<br />**Values**: name ("name"), _id ("id"), divisionid ("divisionId") |
-| **sortOrder** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc"), score ("score") |
+| **sortOrder** | **String**| Sort order | [optional] [default to asc]<br />**Values**: asc ("asc"), desc ("desc") |
 {: class="table-striped"}
 
 

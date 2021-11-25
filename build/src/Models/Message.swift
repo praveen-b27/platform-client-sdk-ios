@@ -49,6 +49,7 @@ public class Message: Codable {
         case kakao = "kakao"
         case webmessaging = "webmessaging"
         case _open = "open"
+        case instagram = "instagram"
     }
     /** The connection state of this communication. */
     public var state: State?

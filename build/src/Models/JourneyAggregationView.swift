@@ -32,6 +32,7 @@ public class JourneyAggregationView: Codable {
         case nwebactionstimedout = "nWebActionsTimedout"
         case nwebactionsfrequencycapreached = "nWebActionsFrequencyCapReached"
         case nwebactionsofferedoutsideschedule = "nWebActionsOfferedOutsideSchedule"
+        case ojourneyoutcomevalue = "oJourneyOutcomeValue"
     }
     public enum Function: String, Codable { 
         case rangebound = "rangeBound"

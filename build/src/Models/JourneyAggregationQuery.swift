@@ -63,6 +63,7 @@ public class JourneyAggregationQuery: Codable {
         case nwebactionstimedout = "nWebActionsTimedout"
         case nwebactionsfrequencycapreached = "nWebActionsFrequencyCapReached"
         case nwebactionsofferedoutsideschedule = "nWebActionsOfferedOutsideSchedule"
+        case ojourneyoutcomevalue = "oJourneyOutcomeValue"
     }
     public enum AlternateTimeDimension: String, Codable { 
         case eventtime = "eventTime"

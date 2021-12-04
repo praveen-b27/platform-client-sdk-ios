@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Route path configuration */
 
 public class RoutePathResponse: Codable {
 

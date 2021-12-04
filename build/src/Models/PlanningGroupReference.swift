@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Planning Group */
 
 public class PlanningGroupReference: Codable {
 

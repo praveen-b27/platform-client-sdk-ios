@@ -12,6 +12,7 @@ import Foundation
 public class NamedEntityTypeMechanism: Codable {
 
     public enum ModelType: String, Codable { 
+        case dynamicList = "DynamicList"
         case list = "List"
         case regex = "Regex"
         case unknown = "Unknown"

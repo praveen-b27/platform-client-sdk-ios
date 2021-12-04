@@ -2,7 +2,6 @@
 title: SourcePlanningGroupRequest
 ---
 ## SourcePlanningGroupRequest
-Source planning group
 
 ## Properties
 

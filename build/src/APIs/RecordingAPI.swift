@@ -7579,6 +7579,10 @@ open class RecordingAPI {
     
     
     
+    
+    
+    
+    
     /**
      
      Get IDs of recordings that the bulk job failed for
@@ -7586,11 +7590,13 @@ open class RecordingAPI {
      - parameter jobId: (path) jobId 
      - parameter pageSize: (query) Page size. Maximum is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRecordingJobFailedrecordings(jobId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: FailedRecordingsEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRecordingJobFailedrecordingsWithRequestBuilder(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber)
-        requestBuilder.execute { (response: Response<FailedRecordingsEntityListing>?, error) -> Void in
+    open class func getRecordingJobFailedrecordings(jobId: String, pageSize: Int? = nil, pageNumber: Int? = nil, includeTotal: Bool? = nil, cursor: String? = nil, completion: @escaping ((_ data: FailedRecordingEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingJobFailedrecordingsWithRequestBuilder(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber, includeTotal: includeTotal, cursor: cursor)
+        requestBuilder.execute { (response: Response<FailedRecordingEntityListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -7616,31 +7622,24 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
   "entities" : [ {
     "recording" : "",
     "conversation" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     }
-  } ],
-  "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  } ]
 }}]
      
      - parameter jobId: (path) jobId 
      - parameter pageSize: (query) Page size. Maximum is 100. (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
 
-     - returns: RequestBuilder<FailedRecordingsEntityListing> 
+     - returns: RequestBuilder<FailedRecordingEntityListing> 
      */
-    open class func getRecordingJobFailedrecordingsWithRequestBuilder(jobId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<FailedRecordingsEntityListing> {
+    open class func getRecordingJobFailedrecordingsWithRequestBuilder(jobId: String, pageSize: Int? = nil, pageNumber: Int? = nil, includeTotal: Bool? = nil, cursor: String? = nil) -> RequestBuilder<FailedRecordingEntityListing> {
         var path = "/api/v2/recording/jobs/{jobId}/failedrecordings"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -7658,11 +7657,15 @@ open class RecordingAPI {
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "includeTotal": includeTotal, 
+            
+            "cursor": cursor
             
         ])
 
-        let requestBuilder: RequestBuilder<FailedRecordingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<FailedRecordingEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -7702,6 +7705,10 @@ open class RecordingAPI {
 
     
     
+    
+    
+    
+    
     /**
      
      Get the status of all jobs within the user's organization
@@ -7712,10 +7719,12 @@ open class RecordingAPI {
      - parameter state: (query) Filter by state (optional)
      - parameter showOnlyMyJobs: (query) Show only my jobs (optional)
      - parameter jobType: (query) Job Type (Can be left empty for both) (optional)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRecordingJobs(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRecordingJobs? = nil, state: State_getRecordingJobs? = nil, showOnlyMyJobs: Bool? = nil, jobType: JobType_getRecordingJobs? = nil, completion: @escaping ((_ data: RecordingJobEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRecordingJobsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, state: state, showOnlyMyJobs: showOnlyMyJobs, jobType: jobType)
+    open class func getRecordingJobs(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRecordingJobs? = nil, state: State_getRecordingJobs? = nil, showOnlyMyJobs: Bool? = nil, jobType: JobType_getRecordingJobs? = nil, includeTotal: Bool? = nil, cursor: String? = nil, completion: @escaping ((_ data: RecordingJobEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingJobsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, state: state, showOnlyMyJobs: showOnlyMyJobs, jobType: jobType, includeTotal: includeTotal, cursor: cursor)
         requestBuilder.execute { (response: Response<RecordingJobEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7742,9 +7751,6 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
-  "pageNumber" : 123,
   "entities" : [ {
     "totalConversations" : 123,
     "selfUri" : "aeiou",
@@ -7856,13 +7862,7 @@ open class RecordingAPI {
       "includeScreenRecordings" : true
     },
     "totalProcessedRecordings" : 123
-  } ],
-  "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
-  "lastUri" : "aeiou",
-  "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  } ]
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -7871,10 +7871,12 @@ open class RecordingAPI {
      - parameter state: (query) Filter by state (optional)
      - parameter showOnlyMyJobs: (query) Show only my jobs (optional)
      - parameter jobType: (query) Job Type (Can be left empty for both) (optional)
+     - parameter includeTotal: (query) If false, cursor will be used to locate the page instead of pageNumber. (optional)
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
 
      - returns: RequestBuilder<RecordingJobEntityListing> 
      */
-    open class func getRecordingJobsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRecordingJobs? = nil, state: State_getRecordingJobs? = nil, showOnlyMyJobs: Bool? = nil, jobType: JobType_getRecordingJobs? = nil) -> RequestBuilder<RecordingJobEntityListing> {
+    open class func getRecordingJobsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRecordingJobs? = nil, state: State_getRecordingJobs? = nil, showOnlyMyJobs: Bool? = nil, jobType: JobType_getRecordingJobs? = nil, includeTotal: Bool? = nil, cursor: String? = nil) -> RequestBuilder<RecordingJobEntityListing> {
         let path = "/api/v2/recording/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -7897,7 +7899,11 @@ open class RecordingAPI {
             
             "showOnlyMyJobs": showOnlyMyJobs, 
             
-            "jobType": jobType?.rawValue
+            "jobType": jobType?.rawValue, 
+            
+            "includeTotal": includeTotal, 
+            
+            "cursor": cursor
             
         ])
 

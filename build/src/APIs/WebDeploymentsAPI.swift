@@ -211,6 +211,11 @@ open class WebDeploymentsAPI {
     "styles" : {
       "primaryColor" : "#a7017c"
     },
+    "position" : {
+      "bottomSpace" : 123,
+      "sideSpace" : 123,
+      "alignment" : "aeiou"
+    },
     "fileUpload" : {
       "modes" : [ {
         "maxFileSizeKB" : 123456789,
@@ -348,6 +353,11 @@ open class WebDeploymentsAPI {
       "styles" : {
         "primaryColor" : "#a7017c"
       },
+      "position" : {
+        "bottomSpace" : 123,
+        "sideSpace" : 123,
+        "alignment" : "aeiou"
+      },
       "fileUpload" : {
         "modes" : [ {
           "maxFileSizeKB" : 123456789,
@@ -481,6 +491,11 @@ open class WebDeploymentsAPI {
     "styles" : {
       "primaryColor" : "#a7017c"
     },
+    "position" : {
+      "bottomSpace" : 123,
+      "sideSpace" : 123,
+      "alignment" : "aeiou"
+    },
     "fileUpload" : {
       "modes" : [ {
         "maxFileSizeKB" : 123456789,
@@ -613,6 +628,11 @@ open class WebDeploymentsAPI {
       },
       "styles" : {
         "primaryColor" : "#a7017c"
+      },
+      "position" : {
+        "bottomSpace" : 123,
+        "sideSpace" : 123,
+        "alignment" : "aeiou"
       },
       "fileUpload" : {
         "modes" : [ {
@@ -923,6 +943,11 @@ open class WebDeploymentsAPI {
     "styles" : {
       "primaryColor" : "#a7017c"
     },
+    "position" : {
+      "bottomSpace" : 123,
+      "sideSpace" : 123,
+      "alignment" : "aeiou"
+    },
     "fileUpload" : {
       "modes" : [ {
         "maxFileSizeKB" : 123456789,
@@ -1053,6 +1078,11 @@ open class WebDeploymentsAPI {
     },
     "styles" : {
       "primaryColor" : "#a7017c"
+    },
+    "position" : {
+      "bottomSpace" : 123,
+      "sideSpace" : 123,
+      "alignment" : "aeiou"
     },
     "fileUpload" : {
       "modes" : [ {
@@ -1264,6 +1294,11 @@ open class WebDeploymentsAPI {
     },
     "styles" : {
       "primaryColor" : "#a7017c"
+    },
+    "position" : {
+      "bottomSpace" : 123,
+      "sideSpace" : 123,
+      "alignment" : "aeiou"
     },
     "fileUpload" : {
       "modes" : [ {

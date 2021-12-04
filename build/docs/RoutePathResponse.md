@@ -2,7 +2,6 @@
 title: RoutePathResponse
 ---
 ## RoutePathResponse
-Route path configuration
 
 ## Properties
 

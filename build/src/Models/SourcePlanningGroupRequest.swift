@@ -8,7 +8,6 @@
 import Foundation
 
 
-/** Source planning group */
 
 public class SourcePlanningGroupRequest: Codable {
 

@@ -1179,7 +1179,7 @@ RecordingAPI.getRecordingJob(jobId: jobId) { (response, error) in
 
 
 
-> [FailedRecordingsEntityListing](FailedRecordingsEntityListing.html) getRecordingJobFailedrecordings(jobId, pageSize, pageNumber)
+> [FailedRecordingEntityListing](FailedRecordingEntityListing.html) getRecordingJobFailedrecordings(jobId, pageSize, pageNumber, includeTotal, cursor)
 
 Get IDs of recordings that the bulk job failed for
 
@@ -1202,9 +1202,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let jobId: String = "" // jobId
 let pageSize: Int = 25 // Page size. Maximum is 100.
 let pageNumber: Int = 1 // Page number
+let includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
 
 // Code example
-RecordingAPI.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+RecordingAPI.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, pageNumber: pageNumber, includeTotal: includeTotal, cursor: cursor) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1222,12 +1224,14 @@ RecordingAPI.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, p
 | **jobId** | **String**| jobId | |
 | **pageSize** | **Int**| Page size. Maximum is 100. | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
-[**FailedRecordingsEntityListing**](FailedRecordingsEntityListing.html)
+[**FailedRecordingEntityListing**](FailedRecordingEntityListing.html)
 
 <a name="getRecordingJobs"></a>
 
@@ -1235,7 +1239,7 @@ RecordingAPI.getRecordingJobFailedrecordings(jobId: jobId, pageSize: pageSize, p
 
 
 
-> [RecordingJobEntityListing](RecordingJobEntityListing.html) getRecordingJobs(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType)
+> [RecordingJobEntityListing](RecordingJobEntityListing.html) getRecordingJobs(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType, includeTotal, cursor)
 
 Get the status of all jobs within the user&#39;s organization
 
@@ -1261,9 +1265,11 @@ let sortBy: RecordingAPI.SortBy_getRecordingJobs = RecordingAPI.SortBy_getRecord
 let state: RecordingAPI.State_getRecordingJobs = RecordingAPI.State_getRecordingJobs.enummember // Filter by state
 let showOnlyMyJobs: Bool = true // Show only my jobs
 let jobType: RecordingAPI.JobType_getRecordingJobs = RecordingAPI.JobType_getRecordingJobs.enummember // Job Type (Can be left empty for both)
+let includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.
+let cursor: String = "" // Indicates where to resume query results (not required for first page)
 
 // Code example
-RecordingAPI.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, state: state, showOnlyMyJobs: showOnlyMyJobs, jobType: jobType) { (response, error) in
+RecordingAPI.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, state: state, showOnlyMyJobs: showOnlyMyJobs, jobType: jobType, includeTotal: includeTotal, cursor: cursor) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1284,6 +1290,8 @@ RecordingAPI.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy
 | **state** | **String**| Filter by state | [optional]<br />**Values**: fulfilled ("FULFILLED"), pending ("PENDING"), ready ("READY"), processing ("PROCESSING"), cancelled ("CANCELLED"), failed ("FAILED") |
 | **showOnlyMyJobs** | **Bool**| Show only my jobs | [optional] |
 | **jobType** | **String**| Job Type (Can be left empty for both) | [optional]<br />**Values**: delete ("DELETE"), export ("EXPORT") |
+| **includeTotal** | **Bool**| If false, cursor will be used to locate the page instead of pageNumber. | [optional] |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 {: class="table-striped"}
 
 

@@ -270,6 +270,16 @@ open class SpeechTextAnalyticsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "sentimentScore" : 1.3579000000000001069366817318950779736042022705078125,
+  "participantMetrics" : {
+    "agentDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
+    "overtalkDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
+    "ivrDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
+    "otherDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
+    "acdDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
+    "overtalkCount" : 123,
+    "customerDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125,
+    "silenceDurationPercentage" : 1.3579000000000001069366817318950779736042022705078125
+  },
   "sentimentTrend" : 1.3579000000000001069366817318950779736042022705078125,
   "sentimentTrendClass" : "aeiou",
   "conversation" : {
@@ -1010,6 +1020,63 @@ open class SpeechTextAnalyticsAPI {
         ])
 
         let requestBuilder: RequestBuilder<UnpublishedProgramsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get the list of Speech & Text Analytics sentiment supported dialects
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsSentimentDialects(completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsSentimentDialectsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the list of Speech & Text Analytics sentiment supported dialects
+     
+     - GET /api/v2/speechandtextanalytics/sentiment/dialects
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ "{}" ]
+}}]
+
+     - returns: RequestBuilder<EntityListing> 
+     */
+    open class func getSpeechandtextanalyticsSentimentDialectsWithRequestBuilder() -> RequestBuilder<EntityListing> {
+        let path = "/api/v2/speechandtextanalytics/sentiment/dialects"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }

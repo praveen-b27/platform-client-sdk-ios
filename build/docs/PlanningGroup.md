@@ -2,7 +2,6 @@
 title: PlanningGroup
 ---
 ## PlanningGroup
-Planning Group
 
 ## Properties
 

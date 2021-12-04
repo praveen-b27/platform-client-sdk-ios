@@ -2,7 +2,6 @@
 title: PlanningGroupReference
 ---
 ## PlanningGroupReference
-Planning Group
 
 ## Properties
 

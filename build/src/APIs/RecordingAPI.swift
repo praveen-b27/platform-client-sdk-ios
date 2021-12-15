@@ -354,7 +354,12 @@ open class RecordingAPI {
         "id" : "aeiou",
         "url" : "aeiou"
       } ],
-      "timestamp" : "2000-01-23T04:56:07.000+0000"
+      "timestamp" : "2000-01-23T04:56:07.000+0000",
+      "story" : {
+        "replyToId" : "aeiou",
+        "type" : "aeiou",
+        "url" : "aeiou"
+      }
     } ],
     "annotations" : [ {
       "absoluteLocation" : 123456789,
@@ -1353,7 +1358,12 @@ open class RecordingAPI {
       "id" : "aeiou",
       "url" : "aeiou"
     } ],
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
+    "timestamp" : "2000-01-23T04:56:07.000+0000",
+    "story" : {
+      "replyToId" : "aeiou",
+      "type" : "aeiou",
+      "url" : "aeiou"
+    }
   } ],
   "annotations" : [ {
     "absoluteLocation" : 123456789,
@@ -3457,7 +3467,12 @@ open class RecordingAPI {
       "id" : "aeiou",
       "url" : "aeiou"
     } ],
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
+    "timestamp" : "2000-01-23T04:56:07.000+0000",
+    "story" : {
+      "replyToId" : "aeiou",
+      "type" : "aeiou",
+      "url" : "aeiou"
+    }
   } ],
   "annotations" : [ {
     "absoluteLocation" : 123456789,
@@ -4097,7 +4112,12 @@ open class RecordingAPI {
         "id" : "aeiou",
         "url" : "aeiou"
       } ],
-      "timestamp" : "2000-01-23T04:56:07.000+0000"
+      "timestamp" : "2000-01-23T04:56:07.000+0000",
+      "story" : {
+        "replyToId" : "aeiou",
+        "type" : "aeiou",
+        "url" : "aeiou"
+      }
     } ],
     "annotations" : [ {
       "absoluteLocation" : 123456789,
@@ -4814,7 +4834,12 @@ open class RecordingAPI {
       "id" : "aeiou",
       "url" : "aeiou"
     } ],
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
+    "timestamp" : "2000-01-23T04:56:07.000+0000",
+    "story" : {
+      "replyToId" : "aeiou",
+      "type" : "aeiou",
+      "url" : "aeiou"
+    }
   } ],
   "annotations" : [ {
     "absoluteLocation" : 123456789,
@@ -5500,7 +5525,12 @@ open class RecordingAPI {
           "id" : "aeiou",
           "url" : "aeiou"
         } ],
-        "timestamp" : "2000-01-23T04:56:07.000+0000"
+        "timestamp" : "2000-01-23T04:56:07.000+0000",
+        "story" : {
+          "replyToId" : "aeiou",
+          "type" : "aeiou",
+          "url" : "aeiou"
+        }
       } ],
       "annotations" : [ {
         "absoluteLocation" : 123456789,
@@ -6155,6 +6185,7 @@ open class RecordingAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -6864,6 +6895,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -8201,6 +8233,7 @@ open class RecordingAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -8910,6 +8943,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -10585,6 +10619,7 @@ open class RecordingAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -11059,6 +11094,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -11716,6 +11752,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -12851,6 +12888,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -14069,6 +14107,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -15387,7 +15426,12 @@ open class RecordingAPI {
       "id" : "aeiou",
       "url" : "aeiou"
     } ],
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
+    "timestamp" : "2000-01-23T04:56:07.000+0000",
+    "story" : {
+      "replyToId" : "aeiou",
+      "type" : "aeiou",
+      "url" : "aeiou"
+    }
   } ],
   "annotations" : [ {
     "absoluteLocation" : 123456789,
@@ -16378,7 +16422,12 @@ open class RecordingAPI {
       "id" : "aeiou",
       "url" : "aeiou"
     } ],
-    "timestamp" : "2000-01-23T04:56:07.000+0000"
+    "timestamp" : "2000-01-23T04:56:07.000+0000",
+    "story" : {
+      "replyToId" : "aeiou",
+      "type" : "aeiou",
+      "url" : "aeiou"
+    }
   } ],
   "annotations" : [ {
     "absoluteLocation" : 123456789,
@@ -16857,6 +16906,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -17760,6 +17810,7 @@ open class RecordingAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {

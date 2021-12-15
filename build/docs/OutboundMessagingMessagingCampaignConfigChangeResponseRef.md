@@ -2,12 +2,13 @@
 title: OutboundMessagingMessagingCampaignConfigChangeResponseRef
 ---
 ## OutboundMessagingMessagingCampaignConfigChangeResponseRef
+A reference for a Response
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** |  | [optional] |
+| **_id** | **String** | The unique response id | [optional] |
 {: class="table table-striped"}
 
 

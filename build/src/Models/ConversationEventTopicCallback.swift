@@ -12,67 +12,89 @@ import Foundation
 public class ConversationEventTopicCallback: Codable {
 
     public enum State: String, Codable { 
-        case alerting = "ALERTING"
-        case dialing = "DIALING"
-        case contacting = "CONTACTING"
-        case offering = "OFFERING"
-        case connected = "CONNECTED"
-        case disconnected = "DISCONNECTED"
-        case terminated = "TERMINATED"
-        case scheduled = "SCHEDULED"
-        case uploading = "UPLOADING"
-        case _none = "NONE"
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case scheduled = "scheduled"
+        case uploading = "uploading"
+        case _none = "none"
     }
     public enum Direction: String, Codable { 
-        case inbound = "INBOUND"
-        case outbound = "OUTBOUND"
+        case inbound = "inbound"
+        case outbound = "outbound"
     }
     public enum DisconnectType: String, Codable { 
-        case endpoint = "ENDPOINT"
-        case client = "CLIENT"
-        case system = "SYSTEM"
-        case timeout = "TIMEOUT"
-        case transfer = "TRANSFER"
-        case transferConference = "TRANSFER_CONFERENCE"
-        case transferConsult = "TRANSFER_CONSULT"
-        case transferNoanswer = "TRANSFER_NOANSWER"
-        case transferNotavailable = "TRANSFER_NOTAVAILABLE"
-        case transferForward = "TRANSFER_FORWARD"
-        case transportFailure = "TRANSPORT_FAILURE"
-        case error = "ERROR"
-        case peer = "PEER"
-        case other = "OTHER"
-        case spam = "SPAM"
-        case uncallable = "UNCALLABLE"
+        case endpoint = "endpoint"
+        case client = "client"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transferForward = "transfer.forward"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
     }
+    /** The connection state of this communication. */
     public var state: State?
+    /** A globally unique identifier for this communication. */
     public var _id: String?
+    /** The direction of the call */
     public var direction: Direction?
+    /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
+    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
+    /** The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. */
     public var startHoldTime: Date?
     public var dialerPreview: ConversationEventTopicDialerPreview?
     public var voicemail: ConversationEventTopicVoicemail?
+    /** The phone number(s) to use to place the callback. */
     public var callbackNumbers: [String]?
+    /** The name of the user requesting a callback. */
     public var callbackUserName: String?
+    /** The UUID of the script to use. */
     public var scriptId: String?
+    /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
+    /** True if the call for the callback uses external dialing. */
     public var externalCampaign: Bool?
+    /** True if the ability to skip a callback should be enabled. */
     public var skipEnabled: Bool?
+    /** The source provider of the callback. */
     public var provider: String?
+    /** The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled. */
     public var timeoutSeconds: Int?
+    /** The timestamp when this communication was connected in the cloud clock. */
     public var connectedTime: Date?
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. */
     public var disconnectedTime: Date?
+    /** The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. */
     public var callbackScheduledTime: Date?
+    /** The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal. */
     public var automatedCallbackConfigId: String?
+    /** Call wrap up or disposition data. */
     public var wrapup: ConversationEventTopicWrapup?
+    /** A communication&#39;s after-call work data. */
     public var afterCallWork: ConversationEventTopicAfterCallWork?
+    /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** The phone number displayed to recipients of the phone call. The value should conform to the E164 format. */
     public var callerId: String?
+    /** The name displayed to recipients of the phone call. */
     public var callerIdName: String?
-    public var additionalProperties: JSON?
 
-    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: ConversationEventTopicDialerPreview?, voicemail: ConversationEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?, additionalProperties: JSON?) {
+    public init(state: State?, _id: String?, direction: Direction?, held: Bool?, disconnectType: DisconnectType?, startHoldTime: Date?, dialerPreview: ConversationEventTopicDialerPreview?, voicemail: ConversationEventTopicVoicemail?, callbackNumbers: [String]?, callbackUserName: String?, scriptId: String?, peerId: String?, externalCampaign: Bool?, skipEnabled: Bool?, provider: String?, timeoutSeconds: Int?, connectedTime: Date?, disconnectedTime: Date?, callbackScheduledTime: Date?, automatedCallbackConfigId: String?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, callerId: String?, callerIdName: String?) {
         
         self.state = state
         
@@ -124,8 +146,6 @@ public class ConversationEventTopicCallback: Codable {
         
         self.callerIdName = callerIdName
         
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -154,7 +174,6 @@ public class ConversationEventTopicCallback: Codable {
         case afterCallWorkRequired
         case callerId
         case callerIdName
-        case additionalProperties
     }
 
 

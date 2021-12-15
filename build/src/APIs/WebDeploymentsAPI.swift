@@ -222,15 +222,24 @@ open class WebDeploymentsAPI {
         "fileTypes" : [ "aeiou" ]
       } ]
     },
-    "enabled" : true
+    "enabled" : true,
+    "apps" : {
+      "knowledge" : {
+        "knowledgeBase" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "enabled" : true
+      }
+    }
   },
   "publishedUser" : "",
   "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "lastModifiedUser" : "",
   "id" : "aeiou",
+  "supportCenter" : {
+    "enabled" : true
+  },
   "createdUser" : "",
   "status" : "aeiou"
 }}]
@@ -364,15 +373,24 @@ open class WebDeploymentsAPI {
           "fileTypes" : [ "aeiou" ]
         } ]
       },
-      "enabled" : true
+      "enabled" : true,
+      "apps" : {
+        "knowledge" : {
+          "knowledgeBase" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "enabled" : true
+        }
+      }
     },
     "publishedUser" : "",
     "name" : "aeiou",
-    "lastModifiedUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "lastModifiedUser" : "",
     "id" : "aeiou",
+    "supportCenter" : {
+      "enabled" : true
+    },
     "createdUser" : "",
     "status" : "aeiou"
   } ],
@@ -502,15 +520,24 @@ open class WebDeploymentsAPI {
         "fileTypes" : [ "aeiou" ]
       } ]
     },
-    "enabled" : true
+    "enabled" : true,
+    "apps" : {
+      "knowledge" : {
+        "knowledgeBase" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "enabled" : true
+      }
+    }
   },
   "publishedUser" : "",
   "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "lastModifiedUser" : "",
   "id" : "aeiou",
+  "supportCenter" : {
+    "enabled" : true
+  },
   "createdUser" : "",
   "status" : "aeiou"
 }}]
@@ -640,15 +667,24 @@ open class WebDeploymentsAPI {
           "fileTypes" : [ "aeiou" ]
         } ]
       },
-      "enabled" : true
+      "enabled" : true,
+      "apps" : {
+        "knowledge" : {
+          "knowledgeBase" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "enabled" : true
+        }
+      }
     },
     "publishedUser" : "",
     "name" : "aeiou",
-    "lastModifiedUser" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "lastModifiedUser" : "",
     "id" : "aeiou",
+    "supportCenter" : {
+      "enabled" : true
+    },
     "createdUser" : "",
     "status" : "aeiou"
   } ],
@@ -954,15 +990,24 @@ open class WebDeploymentsAPI {
         "fileTypes" : [ "aeiou" ]
       } ]
     },
-    "enabled" : true
+    "enabled" : true,
+    "apps" : {
+      "knowledge" : {
+        "knowledgeBase" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "enabled" : true
+      }
+    }
   },
   "publishedUser" : "",
   "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "lastModifiedUser" : "",
   "id" : "aeiou",
+  "supportCenter" : {
+    "enabled" : true
+  },
   "createdUser" : "",
   "status" : "aeiou"
 }}]
@@ -1090,15 +1135,24 @@ open class WebDeploymentsAPI {
         "fileTypes" : [ "aeiou" ]
       } ]
     },
-    "enabled" : true
+    "enabled" : true,
+    "apps" : {
+      "knowledge" : {
+        "knowledgeBase" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "enabled" : true
+      }
+    }
   },
   "publishedUser" : "",
   "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "lastModifiedUser" : "",
   "id" : "aeiou",
+  "supportCenter" : {
+    "enabled" : true
+  },
   "createdUser" : "",
   "status" : "aeiou"
 }}]
@@ -1306,15 +1360,24 @@ open class WebDeploymentsAPI {
         "fileTypes" : [ "aeiou" ]
       } ]
     },
-    "enabled" : true
+    "enabled" : true,
+    "apps" : {
+      "knowledge" : {
+        "knowledgeBase" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "enabled" : true
+      }
+    }
   },
   "publishedUser" : "",
   "name" : "aeiou",
-  "lastModifiedUser" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "lastModifiedUser" : "",
   "id" : "aeiou",
+  "supportCenter" : {
+    "enabled" : true
+  },
   "createdUser" : "",
   "status" : "aeiou"
 }}]

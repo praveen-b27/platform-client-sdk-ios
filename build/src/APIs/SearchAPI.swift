@@ -1906,6 +1906,7 @@ open class SearchAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -2309,7 +2310,6 @@ open class SearchAPI {
       "released" : true
     } ],
     "conversationId" : "aeiou",
-    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "surveys" : [ {
       "queueId" : "aeiou",
       "surveyStatus" : "aeiou",
@@ -2323,7 +2323,6 @@ open class SearchAPI {
       "surveyPromoterScore" : 123,
       "userId" : "aeiou"
     } ],
-    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
     "externalTag" : "aeiou",
     "resolutions" : [ {
       "queueId" : "aeiou",
@@ -2333,6 +2332,10 @@ open class SearchAPI {
     } ],
     "originatingDirection" : "aeiou",
     "divisionIds" : [ "aeiou" ],
+    "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
+    "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "knowledgeBaseIds" : [ "aeiou" ],
+    "selfServed" : true,
     "participants" : [ {
       "participantId" : "aeiou",
       "sessions" : [ {
@@ -4428,6 +4431,7 @@ open class SearchAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {

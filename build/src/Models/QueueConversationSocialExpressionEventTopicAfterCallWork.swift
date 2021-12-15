@@ -8,18 +8,22 @@
 import Foundation
 
 
+/** A communication&#39;s after-call work data. */
 
 public class QueueConversationSocialExpressionEventTopicAfterCallWork: Codable {
 
     public enum State: String, Codable { 
-        case unknown = "UNKNOWN"
-        case skipped = "SKIPPED"
-        case pending = "PENDING"
-        case complete = "COMPLETE"
-        case notApplicable = "NOT_APPLICABLE"
+        case unknown = "unknown"
+        case skipped = "skipped"
+        case pending = "pending"
+        case complete = "complete"
+        case notapplicable = "notApplicable"
     }
+    /** The communication&#39;s after-call work state. */
     public var state: State?
+    /** The timestamp when this communication started after-call work in the cloud clock. */
     public var startTime: Date?
+    /** The timestamp when this communication ended after-call work in the cloud clock. */
     public var endTime: Date?
 
     public init(state: State?, startTime: Date?, endTime: Date?) {

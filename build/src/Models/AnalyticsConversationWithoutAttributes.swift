@@ -25,12 +25,16 @@ public class AnalyticsConversationWithoutAttributes: Codable {
     public var divisionIds: [String]?
     /** External tag for the conversation */
     public var externalTag: String?
+    /** The unique identifier(s) of the knowledge base(s) used */
+    public var knowledgeBaseIds: [String]?
     /** The lowest estimated average MOS among all the audio streams belonging to this conversation */
     public var mediaStatsMinConversationMos: Double?
     /** The lowest R-factor value among all of the audio streams belonging to this conversation */
     public var mediaStatsMinConversationRFactor: Double?
     /** The original direction of the conversation */
     public var originatingDirection: OriginatingDirection?
+    /** Indicates whether all flow sessions were self serviced */
+    public var selfServed: Bool?
     /** Evaluations associated with this conversation */
     public var evaluations: [AnalyticsEvaluation]?
     /** Surveys associated with this conversation */
@@ -40,7 +44,7 @@ public class AnalyticsConversationWithoutAttributes: Codable {
     /** Participants in the conversation */
     public var participants: [AnalyticsParticipantWithoutAttributes]?
 
-    public init(conversationEnd: Date?, conversationId: String?, conversationStart: Date?, divisionIds: [String]?, externalTag: String?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipantWithoutAttributes]?) {
+    public init(conversationEnd: Date?, conversationId: String?, conversationStart: Date?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipantWithoutAttributes]?) {
         
         self.conversationEnd = conversationEnd
         
@@ -52,11 +56,15 @@ public class AnalyticsConversationWithoutAttributes: Codable {
         
         self.externalTag = externalTag
         
+        self.knowledgeBaseIds = knowledgeBaseIds
+        
         self.mediaStatsMinConversationMos = mediaStatsMinConversationMos
         
         self.mediaStatsMinConversationRFactor = mediaStatsMinConversationRFactor
         
         self.originatingDirection = originatingDirection
+        
+        self.selfServed = selfServed
         
         self.evaluations = evaluations
         

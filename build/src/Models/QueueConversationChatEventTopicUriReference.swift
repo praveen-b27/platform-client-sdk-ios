@@ -11,7 +11,9 @@ import Foundation
 
 public class QueueConversationChatEventTopicUriReference: Codable {
 
+    /** The ID of the resource */
     public var _id: String?
+    /** The name of the resource */
     public var name: String?
 
     public init(_id: String?, name: String?) {

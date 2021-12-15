@@ -20,10 +20,12 @@ public class MessengerSettings: Codable {
     public var launcherButton: LauncherButtonSettings?
     /** The file upload settings for messenger */
     public var fileUpload: FileUploadSettings?
+    /** The apps embedded in the messenger */
+    public var apps: MessengerApps?
     /** The position settings for messenger */
     public var position: MessengerPositionSettings?
 
-    public init(enabled: Bool?, styles: MessengerStyles?, launcherButton: LauncherButtonSettings?, fileUpload: FileUploadSettings?, position: MessengerPositionSettings?) {
+    public init(enabled: Bool?, styles: MessengerStyles?, launcherButton: LauncherButtonSettings?, fileUpload: FileUploadSettings?, apps: MessengerApps?, position: MessengerPositionSettings?) {
         
         self.enabled = enabled
         
@@ -32,6 +34,8 @@ public class MessengerSettings: Codable {
         self.launcherButton = launcherButton
         
         self.fileUpload = fileUpload
+        
+        self.apps = apps
         
         self.position = position
         

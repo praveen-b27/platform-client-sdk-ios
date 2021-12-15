@@ -7,11 +7,11 @@ title: QueueConversationScreenShareEventTopicConversationRoutingData
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **queue** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
-| **language** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
-| **priority** | **Int** |  | [optional] |
-| **skills** | [**[QueueConversationScreenShareEventTopicUriReference]**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
-| **scoredAgents** | [**[QueueConversationScreenShareEventTopicScoredAgent]**](QueueConversationScreenShareEventTopicScoredAgent.html) |  | [optional] |
+| **queue** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **language** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **priority** | **Int** | The priority of the conversation to use for routing decisions | [optional] |
+| **skills** | [**[QueueConversationScreenShareEventTopicUriReference]**](QueueConversationScreenShareEventTopicUriReference.html) | The skills to use for routing decisions | [optional] |
+| **scoredAgents** | [**[QueueConversationScreenShareEventTopicScoredAgent]**](QueueConversationScreenShareEventTopicScoredAgent.html) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
 {: class="table table-striped"}
 
 

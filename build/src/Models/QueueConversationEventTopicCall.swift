@@ -12,74 +12,95 @@ import Foundation
 public class QueueConversationEventTopicCall: Codable {
 
     public enum State: String, Codable { 
-        case alerting = "ALERTING"
-        case dialing = "DIALING"
-        case contacting = "CONTACTING"
-        case offering = "OFFERING"
-        case connected = "CONNECTED"
-        case disconnected = "DISCONNECTED"
-        case terminated = "TERMINATED"
-        case uploading = "UPLOADING"
-        case converting = "CONVERTING"
-        case transmitting = "TRANSMITTING"
-        case _none = "NONE"
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case uploading = "uploading"
+        case converting = "converting"
+        case transmitting = "transmitting"
+        case _none = "none"
     }
     public enum RecordingState: String, Codable { 
-        case _none = "NONE"
-        case active = "ACTIVE"
-        case paused = "PAUSED"
+        case _none = "none"
+        case active = "active"
+        case paused = "paused"
     }
     public enum DisconnectType: String, Codable { 
-        case endpoint = "ENDPOINT"
-        case client = "CLIENT"
-        case system = "SYSTEM"
-        case timeout = "TIMEOUT"
-        case transfer = "TRANSFER"
-        case transferConference = "TRANSFER_CONFERENCE"
-        case transferConsult = "TRANSFER_CONSULT"
-        case transferForward = "TRANSFER_FORWARD"
-        case transferNoanswer = "TRANSFER_NOANSWER"
-        case transferNotavailable = "TRANSFER_NOTAVAILABLE"
-        case transportFailure = "TRANSPORT_FAILURE"
-        case error = "ERROR"
-        case peer = "PEER"
-        case other = "OTHER"
-        case spam = "SPAM"
-        case uncallable = "UNCALLABLE"
+        case endpoint = "endpoint"
+        case client = "client"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
     }
     public enum Direction: String, Codable { 
-        case outbound = "OUTBOUND"
-        case inbound = "INBOUND"
+        case outbound = "outbound"
+        case inbound = "inbound"
     }
+    /** A globally unique identifier for this communication. */
     public var _id: String?
+    /** The connection state of this communication. */
     public var state: State?
+    /** True if this call is being recorded. */
     public var recording: Bool?
+    /** State of recording on this call. */
     public var recordingState: RecordingState?
+    /** True if this call is muted so that remote participants can&#39;t hear any audio from this end. */
     public var muted: Bool?
+    /** True if this call is held and the person on this side hears hold music. */
     public var confined: Bool?
+    /** True if this call is held and the person on this side hears silence. */
     public var held: Bool?
     public var errorInfo: QueueConversationEventTopicErrorDetails?
+    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
+    /** The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. */
     public var startHoldTime: Date?
+    /** Whether a call is inbound or outbound. */
     public var direction: Direction?
+    /** If call is a fax of a document in content management, the id of the document in content management. */
     public var documentId: String?
     public var _self: QueueConversationEventTopicAddress?
+    /** Address and name data for a call endpoint. */
     public var other: QueueConversationEventTopicAddress?
+    /** The source provider of the call. */
     public var provider: String?
+    /** The UUID of the script to use. */
     public var scriptId: String?
+    /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
+    /** The timestamp when this communication was connected in the cloud clock. */
     public var connectedTime: Date?
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. */
     public var disconnectedTime: Date?
+    /** List of reasons that this call was disconnected. This will be set once the call disconnects. */
     public var disconnectReasons: [QueueConversationEventTopicDisconnectReason]?
     public var faxStatus: QueueConversationEventTopicFaxStatus?
+    /** User to User Information (UUI) data managed by SIP session application. */
     public var uuiData: String?
+    /** Call wrap up or disposition data. */
     public var wrapup: QueueConversationEventTopicWrapup?
     public var afterCallWork: QueueConversationEventTopicAfterCallWork?
+    /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
+    /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
-    public var additionalProperties: JSON?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?, additionalProperties: JSON?) {
+    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationEventTopicAddress?, other: QueueConversationEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationEventTopicDisconnectReason]?, faxStatus: QueueConversationEventTopicFaxStatus?, uuiData: String?, wrapup: QueueConversationEventTopicWrapup?, afterCallWork: QueueConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         
         self._id = _id
         
@@ -133,8 +154,6 @@ public class QueueConversationEventTopicCall: Codable {
         
         self.agentAssistantId = agentAssistantId
         
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -164,7 +183,6 @@ public class QueueConversationEventTopicCall: Codable {
         case afterCallWork
         case afterCallWorkRequired
         case agentAssistantId
-        case additionalProperties
     }
 
 

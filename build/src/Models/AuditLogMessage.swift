@@ -46,6 +46,7 @@ public class AuditLogMessage: Codable {
         case messaging = "Messaging"
         case supportability = "Supportability"
         case callback = "Callback"
+        case workitems = "Workitems"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -116,6 +117,7 @@ public class AuditLogMessage: Codable {
         case reschedule = "Reschedule"
         case cancel = "Cancel"
         case softDelete = "SoftDelete"
+        case hardDelete = "HardDelete"
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"
@@ -144,6 +146,7 @@ public class AuditLogMessage: Codable {
         case configurationVersion = "ConfigurationVersion"
         case contactList = "ContactList"
         case contactListFilter = "ContactListFilter"
+        case contactSchema = "ContactSchema"
         case conversationAttributes = "ConversationAttributes"
         case conversationAccount = "ConversationAccount"
         case conversationDefaultSupportedContent = "ConversationDefaultSupportedContent"
@@ -175,6 +178,7 @@ public class AuditLogMessage: Codable {
         case extensionPool = "ExtensionPool"
         case externalMetricsData = "ExternalMetricsData"
         case externalMetricsDefinition = "ExternalMetricsDefinition"
+        case externalOrganizationSchema = "ExternalOrganizationSchema"
         case feedback = "Feedback"
         case flow = "Flow"
         case flowMilestone = "FlowMilestone"
@@ -264,9 +268,12 @@ public class AuditLogMessage: Codable {
         case voicemailPolicy = "VoicemailPolicy"
         case voicemailUserPolicy = "VoicemailUserPolicy"
         case webhook = "Webhook"
+        case workbin = "Workbin"
+        case workitem = "Workitem"
         case workPlan = "WorkPlan"
         case workPlanRotation = "WorkPlanRotation"
         case workspace = "Workspace"
+        case worktype = "Worktype"
         case wrapupCode = "WrapupCode"
         case wrapUpCodeMapping = "WrapUpCodeMapping"
         case participant = "Participant"

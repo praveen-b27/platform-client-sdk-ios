@@ -8,10 +8,13 @@
 import Foundation
 
 
+/** A UriReference for a resource */
 
 public class DialerSequenceScheduleConfigChangeUriReference: Codable {
 
+    /** The ID of the resource */
     public var _id: String?
+    /** The name of the resource */
     public var name: String?
 
     public init(_id: String?, name: String?) {

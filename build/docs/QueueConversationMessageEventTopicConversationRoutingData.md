@@ -7,11 +7,11 @@ title: QueueConversationMessageEventTopicConversationRoutingData
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **queue** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **language** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **priority** | **Int** |  | [optional] |
-| **skills** | [**[QueueConversationMessageEventTopicUriReference]**](QueueConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **scoredAgents** | [**[QueueConversationMessageEventTopicScoredAgent]**](QueueConversationMessageEventTopicScoredAgent.html) |  | [optional] |
+| **queue** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **language** | [**QueueConversationMessageEventTopicUriReference**](QueueConversationMessageEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **priority** | **Int** | The priority of the conversation to use for routing decisions | [optional] |
+| **skills** | [**[QueueConversationMessageEventTopicUriReference]**](QueueConversationMessageEventTopicUriReference.html) | The skills to use for routing decisions | [optional] |
+| **scoredAgents** | [**[QueueConversationMessageEventTopicScoredAgent]**](QueueConversationMessageEventTopicScoredAgent.html) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
 {: class="table table-striped"}
 
 

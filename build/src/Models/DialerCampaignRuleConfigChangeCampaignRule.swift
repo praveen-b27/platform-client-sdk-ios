@@ -11,29 +11,27 @@ import Foundation
 
 public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
 
-    public var _id: String?
-    public var name: String?
-    public var dateCreated: Date?
-    public var dateModified: Date?
-    public var version: Int?
     public var campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?
+    /** The list of conditions that will trigger this Campaign Rule */
     public var campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?
+    /** The list of actions that will be taken when this Campaign Rule&#39;s conditions are met */
     public var campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?
+    /** Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL) */
     public var matchAnyConditions: Bool?
+    /** Whether this campaign rule is enabled */
     public var enabled: Bool?
-    public var additionalProperties: JSON?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?, campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?, campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, additionalProperties: JSON?) {
-        
-        self._id = _id
-        
-        self.name = name
-        
-        self.dateCreated = dateCreated
-        
-        self.dateModified = dateModified
-        
-        self.version = version
+    public init(campaignRuleEntities: DialerCampaignRuleConfigChangeCampaignRuleEntities?, campaignRuleConditions: [DialerCampaignRuleConfigChangeCampaignRuleCondition]?, campaignRuleActions: [DialerCampaignRuleConfigChangeCampaignRuleAction]?, matchAnyConditions: Bool?, enabled: Bool?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         
         self.campaignRuleEntities = campaignRuleEntities
         
@@ -45,22 +43,29 @@ public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
         
         self.enabled = enabled
         
-        self.additionalProperties = additionalProperties
+        self._id = _id
+        
+        self.name = name
+        
+        self.dateCreated = dateCreated
+        
+        self.dateModified = dateModified
+        
+        self.version = version
         
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case dateCreated
-        case dateModified
-        case version
         case campaignRuleEntities
         case campaignRuleConditions
         case campaignRuleActions
         case matchAnyConditions
         case enabled
-        case additionalProperties
+        case _id = "id"
+        case name
+        case dateCreated
+        case dateModified
+        case version
     }
 
 

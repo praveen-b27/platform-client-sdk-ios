@@ -8,9 +8,11 @@
 import Foundation
 
 
+/** A bare-bones flow version object */
 
 public class ArchitectFlowNotificationFlowVersion: Codable {
 
+    /** The version ID */
     public var _id: String?
 
     public init(_id: String?) {

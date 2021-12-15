@@ -38,6 +38,7 @@ public class AuditQueryEntity: Codable {
         case configurationVersion = "ConfigurationVersion"
         case contactList = "ContactList"
         case contactListFilter = "ContactListFilter"
+        case contactSchema = "ContactSchema"
         case conversationAttributes = "ConversationAttributes"
         case conversationAccount = "ConversationAccount"
         case conversationDefaultSupportedContent = "ConversationDefaultSupportedContent"
@@ -69,6 +70,7 @@ public class AuditQueryEntity: Codable {
         case extensionPool = "ExtensionPool"
         case externalMetricsData = "ExternalMetricsData"
         case externalMetricsDefinition = "ExternalMetricsDefinition"
+        case externalOrganizationSchema = "ExternalOrganizationSchema"
         case feedback = "Feedback"
         case flow = "Flow"
         case flowMilestone = "FlowMilestone"
@@ -158,9 +160,12 @@ public class AuditQueryEntity: Codable {
         case voicemailPolicy = "VoicemailPolicy"
         case voicemailUserPolicy = "VoicemailUserPolicy"
         case webhook = "Webhook"
+        case workbin = "Workbin"
+        case workitem = "Workitem"
         case workPlan = "WorkPlan"
         case workPlanRotation = "WorkPlanRotation"
         case workspace = "Workspace"
+        case worktype = "Worktype"
         case wrapupCode = "WrapupCode"
         case wrapUpCodeMapping = "WrapUpCodeMapping"
         case participant = "Participant"
@@ -234,6 +239,7 @@ public class AuditQueryEntity: Codable {
         case reschedule = "Reschedule"
         case cancel = "Cancel"
         case softDelete = "SoftDelete"
+        case hardDelete = "HardDelete"
     }
     /** Name of the Entity */
     public var name: Name?

@@ -13,15 +13,12 @@ public class UserRoutingStatusUserParam: Codable {
 
     public var key: String?
     public var value: String?
-    public var additionalProperties: JSON?
 
-    public init(key: String?, value: String?, additionalProperties: JSON?) {
+    public init(key: String?, value: String?) {
         
         self.key = key
         
         self.value = value
-        
-        self.additionalProperties = additionalProperties
         
     }
 

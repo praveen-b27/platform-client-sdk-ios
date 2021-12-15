@@ -12,13 +12,13 @@ import Foundation
 public class QueueConversationMessageEventTopicMessageDetails: Codable {
 
     public enum MessageStatus: String, Codable { 
-        case queued = "QUEUED"
-        case sent = "SENT"
-        case failed = "FAILED"
-        case received = "RECEIVED"
-        case deliverySuccess = "DELIVERY_SUCCESS"
-        case deliveryFailed = "DELIVERY_FAILED"
-        case read = "READ"
+        case queued = "queued"
+        case sent = "sent"
+        case failed = "failed"
+        case received = "received"
+        case deliverySuccess = "delivery-success"
+        case deliveryFailed = "delivery-failed"
+        case read = "read"
     }
     public var message: QueueConversationMessageEventTopicUriReference?
     public var messageTime: Date?

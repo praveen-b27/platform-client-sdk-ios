@@ -8,9 +8,11 @@
 import Foundation
 
 
+/** A reference for a Response */
 
 public class OutboundMessagingMessagingCampaignConfigChangeResponseRef: Codable {
 
+    /** The unique response id */
     public var _id: String?
 
     public init(_id: String?) {

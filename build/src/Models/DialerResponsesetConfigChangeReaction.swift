@@ -12,25 +12,22 @@ import Foundation
 public class DialerResponsesetConfigChangeReaction: Codable {
 
     public enum ReactionType: String, Codable { 
-        case hangup = "HANGUP"
-        case transfer = "TRANSFER"
-        case transferFlow = "TRANSFER_FLOW"
-        case playFile = "PLAY_FILE"
+        case hangup = "hangup"
+        case transfer = "transfer"
+        case transferFlow = "transfer_flow"
+        case playFile = "play_file"
     }
     public var data: String?
     public var name: String?
     public var reactionType: ReactionType?
-    public var additionalProperties: JSON?
 
-    public init(data: String?, name: String?, reactionType: ReactionType?, additionalProperties: JSON?) {
+    public init(data: String?, name: String?, reactionType: ReactionType?) {
         
         self.data = data
         
         self.name = name
         
         self.reactionType = reactionType
-        
-        self.additionalProperties = additionalProperties
         
     }
 

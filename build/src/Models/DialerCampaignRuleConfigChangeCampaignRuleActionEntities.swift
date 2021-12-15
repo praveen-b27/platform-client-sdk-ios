@@ -8,23 +8,24 @@
 import Foundation
 
 
+/** the campaign/sequence entities that this action acts on */
 
 public class DialerCampaignRuleConfigChangeCampaignRuleActionEntities: Codable {
 
-    public var campaigns: [DialerCampaignRuleConfigChangeUriReference]?
-    public var sequences: [DialerCampaignRuleConfigChangeUriReference]?
+    /** Whether this action should act on the entity that triggered it */
     public var useTriggeringEntity: Bool?
-    public var additionalProperties: JSON?
+    /** A list of campaignIds to act on */
+    public var campaigns: [DialerCampaignRuleConfigChangeUriReference]?
+    /** A list of sequenceIds to act on */
+    public var sequences: [DialerCampaignRuleConfigChangeUriReference]?
 
-    public init(campaigns: [DialerCampaignRuleConfigChangeUriReference]?, sequences: [DialerCampaignRuleConfigChangeUriReference]?, useTriggeringEntity: Bool?, additionalProperties: JSON?) {
+    public init(useTriggeringEntity: Bool?, campaigns: [DialerCampaignRuleConfigChangeUriReference]?, sequences: [DialerCampaignRuleConfigChangeUriReference]?) {
+        
+        self.useTriggeringEntity = useTriggeringEntity
         
         self.campaigns = campaigns
         
         self.sequences = sequences
-        
-        self.useTriggeringEntity = useTriggeringEntity
-        
-        self.additionalProperties = additionalProperties
         
     }
 

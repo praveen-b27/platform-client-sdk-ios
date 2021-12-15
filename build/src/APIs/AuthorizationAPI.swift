@@ -1435,6 +1435,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -1919,6 +1920,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -2916,6 +2918,7 @@ open class AuthorizationAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -3775,6 +3778,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -4545,6 +4549,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -5030,6 +5035,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -5504,6 +5510,7 @@ open class AuthorizationAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -6329,6 +6336,7 @@ open class AuthorizationAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -6935,6 +6943,7 @@ open class AuthorizationAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {

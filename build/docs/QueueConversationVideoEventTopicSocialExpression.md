@@ -7,25 +7,24 @@ title: QueueConversationVideoEventTopicSocialExpression
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **state** | **String** |  | [optional] |
-| **_id** | **String** |  | [optional] |
-| **socialMediaId** | **String** |  | [optional] |
-| **socialMediaHub** | **String** |  | [optional] |
-| **socialUserName** | **String** |  | [optional] |
-| **previewText** | **String** |  | [optional] |
-| **recordingId** | **String** |  | [optional] |
-| **held** | **Bool** |  | [optional] |
-| **provider** | **String** |  | [optional] |
-| **scriptId** | **String** |  | [optional] |
-| **peerId** | **String** |  | [optional] |
-| **disconnectType** | **String** |  | [optional] |
-| **startHoldTime** | [**Date**](Date.html) |  | [optional] |
-| **connectedTime** | [**Date**](Date.html) |  | [optional] |
-| **disconnectedTime** | [**Date**](Date.html) |  | [optional] |
-| **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) |  | [optional] |
-| **afterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) |  | [optional] |
-| **afterCallWorkRequired** | **Bool** |  | [optional] |
-| **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
+| **state** | **String** | The connection state of this communication. | [optional] |
+| **_id** | **String** | A globally unique identifier for this communication. | [optional] |
+| **socialMediaId** | **String** | A globally unique identifier for the social media. | [optional] |
+| **socialMediaHub** | **String** | The social network of the communication | [optional] |
+| **socialUserName** | **String** | The social media user name of the communication | [optional] |
+| **previewText** | **String** | The text preview of the communication contents | [optional] |
+| **recordingId** | **String** | A globally unique identifier for the recording associated with this chat. | [optional] |
+| **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
+| **provider** | **String** | The source provider of the social expression. | [optional] |
+| **scriptId** | **String** | The UUID of the script to use. | [optional] |
+| **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
+| **disconnectType** | **String** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
+| **startHoldTime** | [**Date**](Date.html) | The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. | [optional] |
+| **connectedTime** | [**Date**](Date.html) | The timestamp when this communication was connected in the cloud clock. | [optional] |
+| **disconnectedTime** | [**Date**](Date.html) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
+| **wrapup** | [**QueueConversationVideoEventTopicWrapup**](QueueConversationVideoEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
+| **afterCallWork** | [**QueueConversationVideoEventTopicAfterCallWork**](QueueConversationVideoEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **afterCallWorkRequired** | **Bool** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 {: class="table table-striped"}
 
 

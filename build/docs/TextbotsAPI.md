@@ -7,10 +7,69 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**getTextbotsBotsSearch**](TextbotsAPI.html#getTextbotsBotsSearch) | Find bots using the currently configured friendly name or ID. |
 | [**postTextbotsBotflowsSessionTurns**](TextbotsAPI.html#postTextbotsBotflowsSessionTurns) | Issue a bot flow turn event |
 | [**postTextbotsBotflowsSessions**](TextbotsAPI.html#postTextbotsBotflowsSessions) | Create an execution instance of a bot flow definition. |
 | [**postTextbotsBotsExecute**](TextbotsAPI.html#postTextbotsBotsExecute) | Send an intent to a bot to start a dialog/interact with it via text |
 {: class="table-striped"}
+
+<a name="getTextbotsBotsSearch"></a>
+
+# **getTextbotsBotsSearch**
+
+
+
+> [BotSearchResponseEntityListing](BotSearchResponseEntityListing.html) getTextbotsBotsSearch(botType, botName, botId, pageSize)
+
+Find bots using the currently configured friendly name or ID.
+
+The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+
+Wraps GET /api/v2/textbots/bots/search  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let botType: [String] = [TextbotsAPI.BotType_getTextbotsBotsSearch.enummember.rawValue] // Bot types
+let botName: String = "" // Bot name
+let botId: [String] = [""] // Bot IDs
+let pageSize: Int = 25 // The maximum results to return
+
+// Code example
+TextbotsAPI.getTextbotsBotsSearch(botType: botType, botName: botName, botId: botId, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TextbotsAPI.getTextbotsBotsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **botType** | [**[String]**](String.html)| Bot types | [optional]<br />**Values**: genesysBotConnector ("GenesysBotConnector"), genesysDialogEngine ("GenesysDialogEngine"), amazonLex ("AmazonLex"), googleDialogFlowES ("GoogleDialogFlowES"), googleDialogFlowCX ("GoogleDialogFlowCX"), nuanceDlg ("NuanceDlg"), genesysBotFlow ("GenesysBotFlow") |
+| **botName** | **String**| Bot name | [optional] |
+| **botId** | [**[String]**](String.html)| Bot IDs | [optional] |
+| **pageSize** | **Int**| The maximum results to return | [optional] [default to 25] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BotSearchResponseEntityListing**](BotSearchResponseEntityListing.html)
 
 <a name="postTextbotsBotflowsSessionTurns"></a>
 

@@ -11,15 +11,22 @@ import Foundation
 
 public class DialerCallabletimesetConfigChangeCallableTimeSet: Codable {
 
-    public var _id: String?
-    public var name: String?
-    public var dateCreated: Date?
-    public var dateModified: Date?
-    public var version: Int?
+    /** The list of callable times */
     public var callableTimes: [DialerCallabletimesetConfigChangeCallableTime]?
-    public var additionalProperties: JSON?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, callableTimes: [DialerCallabletimesetConfigChangeCallableTime]?, additionalProperties: JSON?) {
+    public init(callableTimes: [DialerCallabletimesetConfigChangeCallableTime]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+        
+        self.callableTimes = callableTimes
         
         self._id = _id
         
@@ -31,20 +38,15 @@ public class DialerCallabletimesetConfigChangeCallableTimeSet: Codable {
         
         self.version = version
         
-        self.callableTimes = callableTimes
-        
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case callableTimes
         case _id = "id"
         case name
         case dateCreated
         case dateModified
         case version
-        case callableTimes
-        case additionalProperties
     }
 
 

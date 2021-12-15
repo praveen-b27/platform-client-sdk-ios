@@ -7038,6 +7038,7 @@ open class ArchitectAPI {
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -7737,6 +7738,7 @@ open class ArchitectAPI {
   },
   "selfUri" : "aeiou",
   "nluInfo" : {
+    "engineVersion" : "aeiou",
     "intents" : [ {
       "name" : "aeiou"
     } ],
@@ -8265,6 +8267,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -9074,6 +9077,7 @@ open class ArchitectAPI {
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "nluInfo" : {
+        "engineVersion" : "aeiou",
         "intents" : [ {
           "name" : "aeiou"
         } ],
@@ -10369,6 +10373,7 @@ open class ArchitectAPI {
       },
       "selfUri" : "aeiou",
       "nluInfo" : {
+        "engineVersion" : "aeiou",
         "intents" : [ {
           "name" : "aeiou"
         } ],
@@ -10859,6 +10864,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -14485,6 +14491,7 @@ open class ArchitectAPI {
   },
   "selfUri" : "aeiou",
   "nluInfo" : {
+    "engineVersion" : "aeiou",
     "intents" : [ {
       "name" : "aeiou"
     } ],
@@ -15191,6 +15198,7 @@ open class ArchitectAPI {
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -16009,6 +16017,7 @@ open class ArchitectAPI {
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -16478,6 +16487,7 @@ open class ArchitectAPI {
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -17304,6 +17314,7 @@ open class ArchitectAPI {
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -17773,6 +17784,7 @@ open class ArchitectAPI {
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],
@@ -19972,6 +19984,7 @@ open class ArchitectAPI {
     "createdByClient" : "",
     "selfUri" : "aeiou",
     "nluInfo" : {
+      "engineVersion" : "aeiou",
       "intents" : [ {
         "name" : "aeiou"
       } ],

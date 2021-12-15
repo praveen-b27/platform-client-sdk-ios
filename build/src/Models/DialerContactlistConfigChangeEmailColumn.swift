@@ -11,17 +11,16 @@ import Foundation
 
 public class DialerContactlistConfigChangeEmailColumn: Codable {
 
+    /** The name of the email address column */
     public var columnName: String?
+    /** The type of the email address column, for example, &#39;work&#39; or &#39;home&#39; */
     public var type: String?
-    public var additionalProperties: JSON?
 
-    public init(columnName: String?, type: String?, additionalProperties: JSON?) {
+    public init(columnName: String?, type: String?) {
         
         self.columnName = columnName
         
         self.type = type
-        
-        self.additionalProperties = additionalProperties
         
     }
 

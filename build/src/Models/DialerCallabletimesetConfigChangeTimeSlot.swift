@@ -11,20 +11,20 @@ import Foundation
 
 public class DialerCallabletimesetConfigChangeTimeSlot: Codable {
 
+    /** The start time of this time slot */
     public var startTime: String?
+    /** The stop time of this time slot */
     public var stopTime: String?
+    /** The day this time slot applies */
     public var day: Int?
-    public var additionalProperties: JSON?
 
-    public init(startTime: String?, stopTime: String?, day: Int?, additionalProperties: JSON?) {
+    public init(startTime: String?, stopTime: String?, day: Int?) {
         
         self.startTime = startTime
         
         self.stopTime = stopTime
         
         self.day = day
-        
-        self.additionalProperties = additionalProperties
         
     }
 

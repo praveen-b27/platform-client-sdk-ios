@@ -18,6 +18,7 @@ public class Miner: Codable {
         case enIn = "en-in"
         case enZa = "en-za"
         case esUs = "es-us"
+        case esEs = "es-es"
     }
     public enum Status: String, Codable { 
         case notStarted = "NotStarted"

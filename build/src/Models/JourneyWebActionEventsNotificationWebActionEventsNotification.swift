@@ -12,11 +12,8 @@ import Foundation
 public class JourneyWebActionEventsNotificationWebActionEventsNotification: Codable {
 
     public enum EventType: String, Codable { 
-        case webEvent = "WebEvent"
         case webActionEvent = "WebActionEvent"
-        case outcomeAchievedEvent = "OutcomeAchievedEvent"
         case blockedWebActionOfferEvent = "BlockedWebActionOfferEvent"
-        case outcomeAttributionEvent = "OutcomeAttributionEvent"
     }
     public var _id: String?
     public var correlationId: String?
@@ -24,12 +21,12 @@ public class JourneyWebActionEventsNotificationWebActionEventsNotification: Coda
     public var createdDate: Date?
     public var customerId: String?
     public var customerIdType: String?
-    public var eventType: EventType?
     public var session: JourneyWebActionEventsNotificationSession?
+    public var eventType: EventType?
     public var webActionEvent: JourneyWebActionEventsNotificationWebActionMessage?
     public var blockedWebActionOfferEvent: JourneyWebActionEventsNotificationBlockedWebActionOfferMessage?
 
-    public init(_id: String?, correlationId: String?, externalContact: JourneyWebActionEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, eventType: EventType?, session: JourneyWebActionEventsNotificationSession?, webActionEvent: JourneyWebActionEventsNotificationWebActionMessage?, blockedWebActionOfferEvent: JourneyWebActionEventsNotificationBlockedWebActionOfferMessage?) {
+    public init(_id: String?, correlationId: String?, externalContact: JourneyWebActionEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyWebActionEventsNotificationSession?, eventType: EventType?, webActionEvent: JourneyWebActionEventsNotificationWebActionMessage?, blockedWebActionOfferEvent: JourneyWebActionEventsNotificationBlockedWebActionOfferMessage?) {
         
         self._id = _id
         
@@ -43,9 +40,9 @@ public class JourneyWebActionEventsNotificationWebActionEventsNotification: Coda
         
         self.customerIdType = customerIdType
         
-        self.eventType = eventType
-        
         self.session = session
+        
+        self.eventType = eventType
         
         self.webActionEvent = webActionEvent
         
@@ -60,8 +57,8 @@ public class JourneyWebActionEventsNotificationWebActionEventsNotification: Coda
         case createdDate
         case customerId
         case customerIdType
-        case eventType
         case session
+        case eventType
         case webActionEvent
         case blockedWebActionOfferEvent
     }

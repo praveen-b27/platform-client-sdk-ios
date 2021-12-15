@@ -11,17 +11,29 @@ import Foundation
 
 public class DialerCampaignScheduleConfigChangeCampaignSchedule: Codable {
 
-    public var _id: String?
-    public var name: String?
-    public var dateCreated: Date?
-    public var dateModified: Date?
-    public var version: Int?
+    /** a list of start and end times */
     public var intervals: [DialerCampaignScheduleConfigChangeScheduleInterval]?
+    /** time zone identifier to be applied to the intervals; for example Africa/Abidjan */
     public var timeZone: String?
     public var campaign: DialerCampaignScheduleConfigChangeUriReference?
-    public var additionalProperties: JSON?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, intervals: [DialerCampaignScheduleConfigChangeScheduleInterval]?, timeZone: String?, campaign: DialerCampaignScheduleConfigChangeUriReference?, additionalProperties: JSON?) {
+    public init(intervals: [DialerCampaignScheduleConfigChangeScheduleInterval]?, timeZone: String?, campaign: DialerCampaignScheduleConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+        
+        self.intervals = intervals
+        
+        self.timeZone = timeZone
+        
+        self.campaign = campaign
         
         self._id = _id
         
@@ -33,26 +45,17 @@ public class DialerCampaignScheduleConfigChangeCampaignSchedule: Codable {
         
         self.version = version
         
-        self.intervals = intervals
-        
-        self.timeZone = timeZone
-        
-        self.campaign = campaign
-        
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case intervals
+        case timeZone
+        case campaign
         case _id = "id"
         case name
         case dateCreated
         case dateModified
         case version
-        case intervals
-        case timeZone
-        case campaign
-        case additionalProperties
     }
 
 

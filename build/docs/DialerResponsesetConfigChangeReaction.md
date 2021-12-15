@@ -10,7 +10,6 @@ title: DialerResponsesetConfigChangeReaction
 | **data** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **reactionType** | **String** |  | [optional] |
-| **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

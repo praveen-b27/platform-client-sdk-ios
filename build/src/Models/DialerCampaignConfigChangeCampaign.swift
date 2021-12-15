@@ -12,66 +12,85 @@ import Foundation
 public class DialerCampaignConfigChangeCampaign: Codable {
 
     public enum DialingMode: String, Codable { 
-        case agentless = "AGENTLESS"
-        case external = "EXTERNAL"
-        case preview = "PREVIEW"
-        case power = "POWER"
-        case predictive = "PREDICTIVE"
-        case progressive = "PROGRESSIVE"
+        case agentless = "agentless"
+        case external = "external"
+        case preview = "preview"
+        case power = "power"
+        case predictive = "predictive"
+        case progressive = "progressive"
     }
     public enum CampaignStatus: String, Codable { 
-        case on = "ON"
-        case off = "OFF"
-        case complete = "COMPLETE"
-        case stopping = "STOPPING"
-        case invalid = "INVALID"
+        case on = "on"
+        case off = "off"
+        case complete = "complete"
+        case stopping = "stopping"
+        case invalid = "invalid"
     }
-    public var _id: String?
-    public var name: String?
-    public var dateCreated: Date?
-    public var dateModified: Date?
-    public var version: Int?
     public var contactList: DialerCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
     public var queue: DialerCampaignConfigChangeUriReference?
+    /** dialing mode of the campaign */
     public var dialingMode: DialingMode?
+    /** A UriReference for a resource */
     public var script: DialerCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
     public var edgeGroup: DialerCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
     public var site: DialerCampaignConfigChangeUriReference?
     public var campaignStatus: CampaignStatus?
+    /** the contact list phone columns to be called for the campaign */
     public var phoneColumns: [DialerCampaignConfigChangePhoneColumn]?
+    /** the targeted abandon rate percentage */
     public var abandonRate: Double?
+    /** identifiers of the do not call lists */
     public var dncLists: [DialerCampaignConfigChangeUriReference]?
+    /** A UriReference for a resource */
     public var callableTimeSet: DialerCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
     public var callAnalysisResponseSet: DialerCampaignConfigChangeUriReference?
+    /** caller id name to be displayed on the outbound call */
     public var callerName: String?
+    /** caller id phone number to be displayed on the outbound call */
     public var callerAddress: String?
+    /** for agentless campaigns, the number of outbound lines to be concurrently dialed */
     public var outboundLineCount: Int?
+    /** a list of current error conditions associated with the campaign */
     public var errors: [DialerCampaignConfigChangeRestErrorDetail]?
+    /** identifiers of the rule sets */
     public var ruleSets: [DialerCampaignConfigChangeUriReference]?
+    /** for preview campaigns, indicator of whether the agent can skip a preview without placing a call */
     public var skipPreviewDisabled: Bool?
+    /** for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls */
     public var previewTimeOutSeconds: Int?
+    /** for preview campaigns with multiple phone columns, indicator if one (true) or multiple (false) phone numbers will be available to call for each preview */
     public var singleNumberPreview: Bool?
     public var contactSort: DialerCampaignConfigChangeContactSort?
+    /** List of contact sort objects. */
     public var contactSorts: [DialerCampaignConfigChangeContactSort]?
+    /** for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds */
     public var noAnswerTimeout: Int?
+    /** The language the edge will use to analyze the call */
     public var callAnalysisLanguage: String?
+    /** The priority of this campaign relative to other campaigns */
     public var priority: Int?
+    /** List of contact filters */
     public var contactListFilters: [DialerCampaignConfigChangeUriReference]?
+    /** A UriReference for a resource */
     public var division: DialerCampaignConfigChangeUriReference?
+    /** For Preview Campaigns. Name of the contact column in the contact list containing the userIds of agents to assign specific contact records to. */
     public var agentOwnedColumn: String?
-    public var additionalProperties: JSON?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, contactList: DialerCampaignConfigChangeUriReference?, queue: DialerCampaignConfigChangeUriReference?, dialingMode: DialingMode?, script: DialerCampaignConfigChangeUriReference?, edgeGroup: DialerCampaignConfigChangeUriReference?, site: DialerCampaignConfigChangeUriReference?, campaignStatus: CampaignStatus?, phoneColumns: [DialerCampaignConfigChangePhoneColumn]?, abandonRate: Double?, dncLists: [DialerCampaignConfigChangeUriReference]?, callableTimeSet: DialerCampaignConfigChangeUriReference?, callAnalysisResponseSet: DialerCampaignConfigChangeUriReference?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, errors: [DialerCampaignConfigChangeRestErrorDetail]?, ruleSets: [DialerCampaignConfigChangeUriReference]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int?, singleNumberPreview: Bool?, contactSort: DialerCampaignConfigChangeContactSort?, contactSorts: [DialerCampaignConfigChangeContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DialerCampaignConfigChangeUriReference]?, division: DialerCampaignConfigChangeUriReference?, agentOwnedColumn: String?, additionalProperties: JSON?) {
-        
-        self._id = _id
-        
-        self.name = name
-        
-        self.dateCreated = dateCreated
-        
-        self.dateModified = dateModified
-        
-        self.version = version
+    public init(contactList: DialerCampaignConfigChangeUriReference?, queue: DialerCampaignConfigChangeUriReference?, dialingMode: DialingMode?, script: DialerCampaignConfigChangeUriReference?, edgeGroup: DialerCampaignConfigChangeUriReference?, site: DialerCampaignConfigChangeUriReference?, campaignStatus: CampaignStatus?, phoneColumns: [DialerCampaignConfigChangePhoneColumn]?, abandonRate: Double?, dncLists: [DialerCampaignConfigChangeUriReference]?, callableTimeSet: DialerCampaignConfigChangeUriReference?, callAnalysisResponseSet: DialerCampaignConfigChangeUriReference?, callerName: String?, callerAddress: String?, outboundLineCount: Int?, errors: [DialerCampaignConfigChangeRestErrorDetail]?, ruleSets: [DialerCampaignConfigChangeUriReference]?, skipPreviewDisabled: Bool?, previewTimeOutSeconds: Int?, singleNumberPreview: Bool?, contactSort: DialerCampaignConfigChangeContactSort?, contactSorts: [DialerCampaignConfigChangeContactSort]?, noAnswerTimeout: Int?, callAnalysisLanguage: String?, priority: Int?, contactListFilters: [DialerCampaignConfigChangeUriReference]?, division: DialerCampaignConfigChangeUriReference?, agentOwnedColumn: String?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         
         self.contactList = contactList
         
@@ -129,16 +148,19 @@ public class DialerCampaignConfigChangeCampaign: Codable {
         
         self.agentOwnedColumn = agentOwnedColumn
         
-        self.additionalProperties = additionalProperties
+        self._id = _id
+        
+        self.name = name
+        
+        self.dateCreated = dateCreated
+        
+        self.dateModified = dateModified
+        
+        self.version = version
         
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case dateCreated
-        case dateModified
-        case version
         case contactList
         case queue
         case dialingMode
@@ -167,7 +189,11 @@ public class DialerCampaignConfigChangeCampaign: Codable {
         case contactListFilters
         case division
         case agentOwnedColumn
-        case additionalProperties
+        case _id = "id"
+        case name
+        case dateCreated
+        case dateModified
+        case version
     }
 
 

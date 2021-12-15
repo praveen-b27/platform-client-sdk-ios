@@ -15,8 +15,6 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
         case webEvent = "WebEvent"
         case webActionEvent = "WebActionEvent"
         case outcomeAchievedEvent = "OutcomeAchievedEvent"
-        case blockedWebActionOfferEvent = "BlockedWebActionOfferEvent"
-        case outcomeAttributionEvent = "OutcomeAttributionEvent"
     }
     public var _id: String?
     public var correlationId: String?
@@ -24,13 +22,13 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
     public var createdDate: Date?
     public var customerId: String?
     public var customerIdType: String?
-    public var eventType: EventType?
     public var session: JourneyWebEventsNotificationSession?
+    public var eventType: EventType?
     public var webEvent: JourneyWebEventsNotificationWebMessage?
     public var webActionEvent: JourneyWebEventsNotificationWebActionMessage?
     public var outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?
 
-    public init(_id: String?, correlationId: String?, externalContact: JourneyWebEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, eventType: EventType?, session: JourneyWebEventsNotificationSession?, webEvent: JourneyWebEventsNotificationWebMessage?, webActionEvent: JourneyWebEventsNotificationWebActionMessage?, outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?) {
+    public init(_id: String?, correlationId: String?, externalContact: JourneyWebEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyWebEventsNotificationSession?, eventType: EventType?, webEvent: JourneyWebEventsNotificationWebMessage?, webActionEvent: JourneyWebEventsNotificationWebActionMessage?, outcomeAchievedEvent: JourneyWebEventsNotificationOutcomeAchievedMessage?) {
         
         self._id = _id
         
@@ -44,9 +42,9 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
         
         self.customerIdType = customerIdType
         
-        self.eventType = eventType
-        
         self.session = session
+        
+        self.eventType = eventType
         
         self.webEvent = webEvent
         
@@ -63,8 +61,8 @@ public class JourneyWebEventsNotificationWebEventsNotification: Codable {
         case createdDate
         case customerId
         case customerIdType
-        case eventType
         case session
+        case eventType
         case webEvent
         case webActionEvent
         case outcomeAchievedEvent

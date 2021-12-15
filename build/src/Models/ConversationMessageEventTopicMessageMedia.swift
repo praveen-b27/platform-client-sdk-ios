@@ -11,10 +11,15 @@ import Foundation
 
 public class ConversationMessageEventTopicMessageMedia: Codable {
 
+    /** The location of the media, useful for retrieving it */
     public var url: String?
+    /** The optional internet media type of the the media object.  If null then the media type should be dictated by the url */
     public var mediaType: String?
+    /** The optional content length of the the media object, in bytes. */
     public var contentLengthBytes: Int?
+    /** The optional name of the the media object. */
     public var name: String?
+    /** The optional id of the the media object. */
     public var _id: String?
 
     public init(url: String?, mediaType: String?, contentLengthBytes: Int?, name: String?, _id: String?) {

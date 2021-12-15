@@ -11,8 +11,11 @@ import Foundation
 
 public class ArchitectFlowOutcomeNotificationFlowOutcomeNotification: Codable {
 
+    /** The flow outcome ID */
     public var _id: String?
+    /** The flow outcome name */
     public var name: String?
+    /** The flow outcome description */
     public var _description: String?
     public var currentOperation: ArchitectFlowOutcomeNotificationArchitectOperation?
 

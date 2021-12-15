@@ -18,7 +18,9 @@ public class AgentActivityChangedTopicRoutingStatus: Codable {
         case notResponding = "NOT_RESPONDING"
         case communicating = "COMMUNICATING"
     }
+    /** Indicates the Routing State of the agent. */
     public var status: Status?
+    /** The timestamp when the agent went into this state. */
     public var startTime: Date?
 
     public init(status: Status?, startTime: Date?) {

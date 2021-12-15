@@ -838,6 +838,7 @@ open class VoicemailAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -2308,6 +2309,7 @@ open class VoicemailAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -3378,6 +3380,7 @@ open class VoicemailAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -4473,6 +4476,7 @@ open class VoicemailAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -5548,6 +5552,7 @@ open class VoicemailAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -6561,6 +6566,7 @@ open class VoicemailAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -8026,6 +8032,7 @@ open class VoicemailAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -9079,6 +9086,7 @@ open class VoicemailAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -10067,6 +10075,7 @@ open class VoicemailAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -11050,6 +11059,7 @@ open class VoicemailAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {

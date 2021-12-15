@@ -11,17 +11,16 @@ import Foundation
 
 public class DialerCallabletimesetConfigChangeCallableTime: Codable {
 
+    /** The time slots */
     public var timeSlots: [DialerCallabletimesetConfigChangeTimeSlot]?
+    /** The ISO ID for the timezone */
     public var timeZoneId: String?
-    public var additionalProperties: JSON?
 
-    public init(timeSlots: [DialerCallabletimesetConfigChangeTimeSlot]?, timeZoneId: String?, additionalProperties: JSON?) {
+    public init(timeSlots: [DialerCallabletimesetConfigChangeTimeSlot]?, timeZoneId: String?) {
         
         self.timeSlots = timeSlots
         
         self.timeZoneId = timeZoneId
-        
-        self.additionalProperties = additionalProperties
         
     }
 

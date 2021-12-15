@@ -8,17 +8,21 @@
 import Foundation
 
 
+/** The preview data to be used when this callback is a Preview. */
 
 public class QueueConversationSocialExpressionEventTopicDialerPreview: Codable {
 
     public var _id: String?
+    /** The contact associated with this preview data pop */
     public var contactId: String?
+    /** The contactList associated with this preview data pop. */
     public var contactListId: String?
+    /** The campaignId associated with this preview data pop. */
     public var campaignId: String?
+    /** The phone number columns associated with this campaign */
     public var phoneNumberColumns: [QueueConversationSocialExpressionEventTopicPhoneNumberColumn]?
-    public var additionalProperties: JSON?
 
-    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [QueueConversationSocialExpressionEventTopicPhoneNumberColumn]?, additionalProperties: JSON?) {
+    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [QueueConversationSocialExpressionEventTopicPhoneNumberColumn]?) {
         
         self._id = _id
         
@@ -30,8 +34,6 @@ public class QueueConversationSocialExpressionEventTopicDialerPreview: Codable {
         
         self.phoneNumberColumns = phoneNumberColumns
         
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -40,7 +42,6 @@ public class QueueConversationSocialExpressionEventTopicDialerPreview: Codable {
         case contactListId
         case campaignId
         case phoneNumberColumns
-        case additionalProperties
     }
 
 

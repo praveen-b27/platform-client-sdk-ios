@@ -13,15 +13,12 @@ public class ContactlistDownloadReadyExportUri: Codable {
 
     public var uri: String?
     public var exportTimestamp: String?
-    public var additionalProperties: JSON?
 
-    public init(uri: String?, exportTimestamp: String?, additionalProperties: JSON?) {
+    public init(uri: String?, exportTimestamp: String?) {
         
         self.uri = uri
         
         self.exportTimestamp = exportTimestamp
-        
-        self.additionalProperties = additionalProperties
         
     }
 

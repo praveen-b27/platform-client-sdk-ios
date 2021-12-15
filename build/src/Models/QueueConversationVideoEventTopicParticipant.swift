@@ -12,39 +12,64 @@ import Foundation
 public class QueueConversationVideoEventTopicParticipant: Codable {
 
     public enum ScreenRecordingState: String, Codable { 
-        case requested = "REQUESTED"
-        case active = "ACTIVE"
-        case paused = "PAUSED"
-        case stopped = "STOPPED"
-        case error = "ERROR"
-        case timeout = "TIMEOUT"
+        case requested = "requested"
+        case active = "active"
+        case paused = "paused"
+        case stopped = "stopped"
+        case error = "error"
+        case timeout = "timeout"
     }
+    /** A globally unique identifier for this conversation. */
     public var _id: String?
+    /** The timestamp when this participant was connected to the conversation in the provider clock. */
     public var connectedTime: Date?
+    /** The timestamp when this participant disconnected from the conversation in the provider clock. */
     public var endTime: Date?
+    /** If this participant represents a user, then this will be the globally unique identifier for the user. */
     public var userId: String?
+    /** If this participant represents an external contact, then this will be the globally unique identifier for the external contact. */
     public var externalContactId: String?
+    /** If this participant represents an external org, then this will be the globally unique identifier for the external org. */
     public var externalOrganizationId: String?
+    /** A human readable name identifying the participant. */
     public var name: String?
+    /** If present, the queue id that the communication channel came in on. */
     public var queueId: String?
+    /** If present, the group id that the participant represents. */
     public var groupId: String?
+    /** The team id that this participant is a member of when added to the conversation. */
     public var teamId: String?
+    /** A well known string that specifies the purpose or type of this participant. */
     public var purpose: String?
+    /** If this participant is part of a consult transfer, then this will be the participant id of the participant being transferred. */
     public var consultParticipantId: String?
+    /** The address for the this participant. For a phone call this will be the ANI. */
     public var address: String?
+    /** True iff this participant is required to enter wrapup for this conversation. */
     public var wrapupRequired: Bool?
+    /** True when a participant is expected to enter a wrapup code once the call connects. */
     public var wrapupExpected: Bool?
+    /** This field controls how the UI prompts the agent for a wrapup. */
     public var wrapupPrompt: String?
+    /** Specifies how long a timed ACW session will last. */
     public var wrapupTimeoutMs: Int?
     public var wrapup: QueueConversationVideoEventTopicWrapup?
+    /** The timestamp when this participant started after-call work. */
     public var startAcwTime: Date?
+    /** The timestamp when this participant ended after-call work. */
     public var endAcwTime: Date?
     public var conversationRoutingData: QueueConversationVideoEventTopicConversationRoutingData?
+    /** Specifies how long the agent has to answer an interaction before being marked as not responding. */
     public var alertingTimeoutMs: Int?
+    /** If this participant is a monitor, then this will be the id of the participant that is being monitored. */
     public var monitoredParticipantId: String?
+    /** If this participant is a coach, then this will be the id of the participant that is being coached. */
     public var coachedParticipantId: String?
+    /** The current screen recording state for this participant. */
     public var screenRecordingState: ScreenRecordingState?
+    /** If this participant has flagged the conversation, the reason code given. */
     public var flaggedReason: String?
+    /** Additional participant attributes */
     public var attributes: [String:String]?
     public var calls: [QueueConversationVideoEventTopicCall]?
     public var callbacks: [QueueConversationVideoEventTopicCallback]?
@@ -55,9 +80,8 @@ public class QueueConversationVideoEventTopicParticipant: Codable {
     public var screenshares: [QueueConversationVideoEventTopicScreenshare]?
     public var socialExpressions: [QueueConversationVideoEventTopicSocialExpression]?
     public var videos: [QueueConversationVideoEventTopicVideo]?
-    public var additionalProperties: JSON?
 
-    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int?, wrapup: QueueConversationVideoEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationVideoEventTopicConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationVideoEventTopicCall]?, callbacks: [QueueConversationVideoEventTopicCallback]?, chats: [QueueConversationVideoEventTopicChat]?, cobrowsesessions: [QueueConversationVideoEventTopicCobrowse]?, emails: [QueueConversationVideoEventTopicEmail]?, messages: [QueueConversationVideoEventTopicMessage]?, screenshares: [QueueConversationVideoEventTopicScreenshare]?, socialExpressions: [QueueConversationVideoEventTopicSocialExpression]?, videos: [QueueConversationVideoEventTopicVideo]?, additionalProperties: JSON?) {
+    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int?, wrapup: QueueConversationVideoEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationVideoEventTopicConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationVideoEventTopicCall]?, callbacks: [QueueConversationVideoEventTopicCallback]?, chats: [QueueConversationVideoEventTopicChat]?, cobrowsesessions: [QueueConversationVideoEventTopicCobrowse]?, emails: [QueueConversationVideoEventTopicEmail]?, messages: [QueueConversationVideoEventTopicMessage]?, screenshares: [QueueConversationVideoEventTopicScreenshare]?, socialExpressions: [QueueConversationVideoEventTopicSocialExpression]?, videos: [QueueConversationVideoEventTopicVideo]?) {
         
         self._id = _id
         
@@ -131,8 +155,6 @@ public class QueueConversationVideoEventTopicParticipant: Codable {
         
         self.videos = videos
         
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -172,7 +194,6 @@ public class QueueConversationVideoEventTopicParticipant: Codable {
         case screenshares
         case socialExpressions
         case videos
-        case additionalProperties
     }
 
 

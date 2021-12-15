@@ -13,8 +13,8 @@ title: JourneyOutcomeEventsNotificationOutcomeEventsNotification
 | **createdDate** | [**Date**](Date.html) |  | [optional] |
 | **customerId** | **String** |  | [optional] |
 | **customerIdType** | **String** |  | [optional] |
-| **eventType** | **String** |  | [optional] |
 | **session** | [**JourneyOutcomeEventsNotificationSession**](JourneyOutcomeEventsNotificationSession.html) |  | [optional] |
+| **eventType** | **String** |  | [optional] |
 | **outcomeAchievedEvent** | [**JourneyOutcomeEventsNotificationOutcomeAchievedMessage**](JourneyOutcomeEventsNotificationOutcomeAchievedMessage.html) |  | [optional] |
 | **outcomeAttributionEventMessage** | [**JourneyOutcomeEventsNotificationOutcomeAttributionMessage**](JourneyOutcomeEventsNotificationOutcomeAttributionMessage.html) |  | [optional] |
 {: class="table table-striped"}

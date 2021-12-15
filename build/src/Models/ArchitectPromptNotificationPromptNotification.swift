@@ -11,8 +11,11 @@ import Foundation
 
 public class ArchitectPromptNotificationPromptNotification: Codable {
 
+    /** The prompt ID */
     public var _id: String?
+    /** The prompt name */
     public var name: String?
+    /** The prompt description */
     public var _description: String?
     public var currentOperation: ArchitectPromptNotificationArchitectOperation?
 

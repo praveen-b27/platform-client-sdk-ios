@@ -8,20 +8,24 @@
 import Foundation
 
 
+/** The time interval to place outbound calls */
 
 public class DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone: Codable {
 
-    public var earliestCallableTime: String?
-    public var latestCallableTime: String?
+    /** The time zone to use for contacts that cannot be mapped */
     public var timeZoneId: String?
+    /** The earliest time to dial a contact */
+    public var earliestCallableTime: String?
+    /** The latest time to dial a contact */
+    public var latestCallableTime: String?
 
-    public init(earliestCallableTime: String?, latestCallableTime: String?, timeZoneId: String?) {
+    public init(timeZoneId: String?, earliestCallableTime: String?, latestCallableTime: String?) {
+        
+        self.timeZoneId = timeZoneId
         
         self.earliestCallableTime = earliestCallableTime
         
         self.latestCallableTime = latestCallableTime
-        
-        self.timeZoneId = timeZoneId
         
     }
 

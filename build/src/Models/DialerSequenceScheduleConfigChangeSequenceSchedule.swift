@@ -11,17 +11,29 @@ import Foundation
 
 public class DialerSequenceScheduleConfigChangeSequenceSchedule: Codable {
 
-    public var _id: String?
-    public var name: String?
-    public var dateCreated: Date?
-    public var dateModified: Date?
-    public var version: Int?
+    /** a list of start and end times */
     public var intervals: [DialerSequenceScheduleConfigChangeScheduleInterval]?
+    /** time zone identifier to be applied to the intervals; for example Africa/Abidjan */
     public var timeZone: String?
     public var sequence: DialerSequenceScheduleConfigChangeUriReference?
-    public var additionalProperties: JSON?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, intervals: [DialerSequenceScheduleConfigChangeScheduleInterval]?, timeZone: String?, sequence: DialerSequenceScheduleConfigChangeUriReference?, additionalProperties: JSON?) {
+    public init(intervals: [DialerSequenceScheduleConfigChangeScheduleInterval]?, timeZone: String?, sequence: DialerSequenceScheduleConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+        
+        self.intervals = intervals
+        
+        self.timeZone = timeZone
+        
+        self.sequence = sequence
         
         self._id = _id
         
@@ -33,26 +45,17 @@ public class DialerSequenceScheduleConfigChangeSequenceSchedule: Codable {
         
         self.version = version
         
-        self.intervals = intervals
-        
-        self.timeZone = timeZone
-        
-        self.sequence = sequence
-        
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case intervals
+        case timeZone
+        case sequence
         case _id = "id"
         case name
         case dateCreated
         case dateModified
         case version
-        case intervals
-        case timeZone
-        case sequence
-        case additionalProperties
     }
 
 

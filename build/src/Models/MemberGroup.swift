@@ -19,7 +19,7 @@ public class MemberGroup: Codable {
     public var _id: String?
     public var name: String?
     /** The division to which this entity belongs. */
-    public var division: Division?
+    public var division: WritableDivision?
     /** The group type */
     public var type: ModelType?
     /** The number of members in this group */
@@ -27,7 +27,7 @@ public class MemberGroup: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, type: ModelType?, memberCount: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, memberCount: Int?, selfUri: String?) {
         
         self._id = _id
         

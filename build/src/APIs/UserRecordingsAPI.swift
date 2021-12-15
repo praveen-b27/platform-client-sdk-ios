@@ -716,6 +716,7 @@ open class UserRecordingsAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -1805,6 +1806,7 @@ open class UserRecordingsAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -2866,6 +2868,7 @@ open class UserRecordingsAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {

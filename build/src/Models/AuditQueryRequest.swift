@@ -46,6 +46,7 @@ public class AuditQueryRequest: Codable {
         case messaging = "Messaging"
         case supportability = "Supportability"
         case callback = "Callback"
+        case workitems = "Workitems"
     }
     /** Date and time range of data to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
     public var interval: String?

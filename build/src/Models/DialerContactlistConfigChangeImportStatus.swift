@@ -15,14 +15,18 @@ public class DialerContactlistConfigChangeImportStatus: Codable {
         case inProgress = "IN_PROGRESS"
         case failed = "FAILED"
     }
+    /** current status of the import */
     public var importState: ImportState?
+    /** total number of records to be imported */
     public var totalRecords: Int?
+    /** number of records finished importing */
     public var completedRecords: Int?
+    /** percentage of records finished importing */
     public var percentageComplete: Int?
+    /** if the import has failed, the reason for the failure */
     public var failureReason: String?
-    public var additionalProperties: JSON?
 
-    public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?, additionalProperties: JSON?) {
+    public init(importState: ImportState?, totalRecords: Int?, completedRecords: Int?, percentageComplete: Int?, failureReason: String?) {
         
         self.importState = importState
         
@@ -33,8 +37,6 @@ public class DialerContactlistConfigChangeImportStatus: Codable {
         self.percentageComplete = percentageComplete
         
         self.failureReason = failureReason
-        
-        self.additionalProperties = additionalProperties
         
     }
 

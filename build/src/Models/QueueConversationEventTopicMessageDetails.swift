@@ -12,19 +12,25 @@ import Foundation
 public class QueueConversationEventTopicMessageDetails: Codable {
 
     public enum MessageStatus: String, Codable { 
-        case queued = "QUEUED"
-        case sent = "SENT"
-        case failed = "FAILED"
-        case received = "RECEIVED"
-        case deliverySuccess = "DELIVERY_SUCCESS"
-        case deliveryFailed = "DELIVERY_FAILED"
-        case read = "READ"
+        case queued = "queued"
+        case sent = "sent"
+        case failed = "failed"
+        case received = "received"
+        case deliverySuccess = "delivery-success"
+        case deliveryFailed = "delivery-failed"
+        case read = "read"
     }
+    /** UUID identifying the message media. */
     public var messageId: String?
+    /** The time when the message was sent or received. */
     public var messageTime: Date?
+    /** Indicates the delivery status of the message. */
     public var messageStatus: MessageStatus?
+    /** The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits. */
     public var messageSegmentCount: Int?
+    /** The media (images, files, etc) associated with this message, if any */
     public var media: [QueueConversationEventTopicMessageMedia]?
+    /** A list of stickers included in the message */
     public var stickers: [QueueConversationEventTopicMessageSticker]?
 
     public init(messageId: String?, messageTime: Date?, messageStatus: MessageStatus?, messageSegmentCount: Int?, media: [QueueConversationEventTopicMessageMedia]?, stickers: [QueueConversationEventTopicMessageSticker]?) {

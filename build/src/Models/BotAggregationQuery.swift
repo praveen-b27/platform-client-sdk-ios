@@ -24,10 +24,12 @@ public class BotAggregationQuery: Codable {
         case botversion = "botVersion"
         case conversationid = "conversationId"
         case externalcontactid = "externalContactId"
+        case knowledgebaseid = "knowledgeBaseId"
         case lastactionid = "lastActionId"
         case lastinputactionid = "lastInputActionId"
         case mediatype = "mediaType"
         case messagetype = "messageType"
+        case selfserved = "selfServed"
     }
     public enum Metrics: String, Codable { 
         case nbotsessions = "nBotSessions"

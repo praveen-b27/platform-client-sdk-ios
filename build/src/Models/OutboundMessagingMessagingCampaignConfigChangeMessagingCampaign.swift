@@ -12,43 +12,44 @@ import Foundation
 public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Codable {
 
     public enum CampaignStatus: String, Codable { 
-        case on = "ON"
-        case off = "OFF"
-        case complete = "COMPLETE"
-        case stopping = "STOPPING"
-        case invalid = "INVALID"
+        case on = "on"
+        case off = "off"
+        case complete = "complete"
+        case stopping = "stopping"
+        case invalid = "invalid"
     }
-    public var _id: String?
-    public var division: OutboundMessagingMessagingCampaignConfigChangeUriReference?
-    public var name: String?
-    public var dateCreated: Date?
-    public var dateModified: Date?
-    public var version: Int?
     public var campaignStatus: CampaignStatus?
     public var callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
     public var contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?
+    /** The dnc lists to check before sending a message for this messaging campaign. */
     public var dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?
+    /** The contact list filters to check before sending a message for this messaging campaign. */
     public var contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?
+    /** Whether this messaging campaign is always running. */
     public var alwaysRunning: Bool?
+    /** The order in which to sort contacts for dialing, based on up to four columns. */
     public var contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?
+    /** How many messages this messaging campaign will send per minute. */
     public var messagesPerMinute: Int?
     public var smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?
     public var emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?
+    /** A list of current error conditions associated with this messaging campaign */
     public var errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** A UriReference for a resource */
+    public var division: OutboundMessagingMessagingCampaignConfigChangeUriReference?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
 
-    public init(_id: String?, division: OutboundMessagingMessagingCampaignConfigChangeUriReference?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?, contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?, emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?, errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?) {
-        
-        self._id = _id
-        
-        self.division = division
-        
-        self.name = name
-        
-        self.dateCreated = dateCreated
-        
-        self.dateModified = dateModified
-        
-        self.version = version
+    public init(campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?, contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?, emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?, errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?, _id: String?, division: OutboundMessagingMessagingCampaignConfigChangeUriReference?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         
         self.campaignStatus = campaignStatus
         
@@ -72,15 +73,21 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         
         self.errors = errors
         
+        self._id = _id
+        
+        self.division = division
+        
+        self.name = name
+        
+        self.dateCreated = dateCreated
+        
+        self.dateModified = dateModified
+        
+        self.version = version
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case division
-        case name
-        case dateCreated
-        case dateModified
-        case version
         case campaignStatus
         case callableTimeSet
         case contactList
@@ -92,6 +99,12 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         case smsConfig
         case emailConfig
         case errors
+        case _id = "id"
+        case division
+        case name
+        case dateCreated
+        case dateModified
+        case version
     }
 
 

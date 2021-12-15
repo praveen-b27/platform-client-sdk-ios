@@ -12,10 +12,7 @@ import Foundation
 public class JourneyOutcomeEventsNotificationOutcomeEventsNotification: Codable {
 
     public enum EventType: String, Codable { 
-        case webEvent = "WebEvent"
-        case webActionEvent = "WebActionEvent"
         case outcomeAchievedEvent = "OutcomeAchievedEvent"
-        case blockedWebActionOfferEvent = "BlockedWebActionOfferEvent"
         case outcomeAttributionEvent = "OutcomeAttributionEvent"
     }
     public var _id: String?
@@ -24,12 +21,12 @@ public class JourneyOutcomeEventsNotificationOutcomeEventsNotification: Codable 
     public var createdDate: Date?
     public var customerId: String?
     public var customerIdType: String?
-    public var eventType: EventType?
     public var session: JourneyOutcomeEventsNotificationSession?
+    public var eventType: EventType?
     public var outcomeAchievedEvent: JourneyOutcomeEventsNotificationOutcomeAchievedMessage?
     public var outcomeAttributionEventMessage: JourneyOutcomeEventsNotificationOutcomeAttributionMessage?
 
-    public init(_id: String?, correlationId: String?, externalContact: JourneyOutcomeEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, eventType: EventType?, session: JourneyOutcomeEventsNotificationSession?, outcomeAchievedEvent: JourneyOutcomeEventsNotificationOutcomeAchievedMessage?, outcomeAttributionEventMessage: JourneyOutcomeEventsNotificationOutcomeAttributionMessage?) {
+    public init(_id: String?, correlationId: String?, externalContact: JourneyOutcomeEventsNotificationExternalContact?, createdDate: Date?, customerId: String?, customerIdType: String?, session: JourneyOutcomeEventsNotificationSession?, eventType: EventType?, outcomeAchievedEvent: JourneyOutcomeEventsNotificationOutcomeAchievedMessage?, outcomeAttributionEventMessage: JourneyOutcomeEventsNotificationOutcomeAttributionMessage?) {
         
         self._id = _id
         
@@ -43,9 +40,9 @@ public class JourneyOutcomeEventsNotificationOutcomeEventsNotification: Codable 
         
         self.customerIdType = customerIdType
         
-        self.eventType = eventType
-        
         self.session = session
+        
+        self.eventType = eventType
         
         self.outcomeAchievedEvent = outcomeAchievedEvent
         
@@ -60,8 +57,8 @@ public class JourneyOutcomeEventsNotificationOutcomeEventsNotification: Codable 
         case createdDate
         case customerId
         case customerIdType
-        case eventType
         case session
+        case eventType
         case outcomeAchievedEvent
         case outcomeAttributionEventMessage
     }

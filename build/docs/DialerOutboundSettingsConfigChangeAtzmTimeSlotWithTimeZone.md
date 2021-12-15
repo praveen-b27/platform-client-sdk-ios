@@ -2,14 +2,15 @@
 title: DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone
 ---
 ## DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone
+The time interval to place outbound calls
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **earliestCallableTime** | **String** |  | [optional] |
-| **latestCallableTime** | **String** |  | [optional] |
-| **timeZoneId** | **String** |  | [optional] |
+| **timeZoneId** | **String** | The time zone to use for contacts that cannot be mapped | [optional] |
+| **earliestCallableTime** | **String** | The earliest time to dial a contact | [optional] |
+| **latestCallableTime** | **String** | The latest time to dial a contact | [optional] |
 {: class="table table-striped"}
 
 

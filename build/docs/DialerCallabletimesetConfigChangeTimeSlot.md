@@ -7,10 +7,9 @@ title: DialerCallabletimesetConfigChangeTimeSlot
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **startTime** | **String** |  | [optional] |
-| **stopTime** | **String** |  | [optional] |
-| **day** | **Int** |  | [optional] |
-| **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
+| **startTime** | **String** | The start time of this time slot | [optional] |
+| **stopTime** | **String** | The stop time of this time slot | [optional] |
+| **day** | **Int** | The day this time slot applies | [optional] |
 {: class="table table-striped"}
 
 

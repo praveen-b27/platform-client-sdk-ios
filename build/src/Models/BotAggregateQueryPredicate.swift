@@ -29,10 +29,12 @@ public class BotAggregateQueryPredicate: Codable {
         case botversion = "botVersion"
         case conversationid = "conversationId"
         case externalcontactid = "externalContactId"
+        case knowledgebaseid = "knowledgeBaseId"
         case lastactionid = "lastActionId"
         case lastinputactionid = "lastInputActionId"
         case mediatype = "mediaType"
         case messagetype = "messageType"
+        case selfserved = "selfServed"
     }
     public enum Operator: String, Codable { 
         case matches = "matches"

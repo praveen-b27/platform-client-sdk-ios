@@ -11,17 +11,16 @@ import Foundation
 
 public class DialerCampaignScheduleConfigChangeScheduleInterval: Codable {
 
+    /** scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var start: String?
+    /** scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ */
     public var end: String?
-    public var additionalProperties: JSON?
 
-    public init(start: String?, end: String?, additionalProperties: JSON?) {
+    public init(start: String?, end: String?) {
         
         self.start = start
         
         self.end = end
-        
-        self.additionalProperties = additionalProperties
         
     }
 

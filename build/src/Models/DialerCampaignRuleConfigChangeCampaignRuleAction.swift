@@ -12,20 +12,22 @@ import Foundation
 public class DialerCampaignRuleConfigChangeCampaignRuleAction: Codable {
 
     public enum ActionType: String, Codable { 
-        case turnOnCampaign = "TURN_ON_CAMPAIGN"
-        case turnOffCampaign = "TURN_OFF_CAMPAIGN"
-        case turnOnSequence = "TURN_ON_SEQUENCE"
-        case turnOffSequence = "TURN_OFF_SEQUENCE"
-        case setCampaignPriority = "SET_CAMPAIGN_PRIORITY"
-        case recycleCampaign = "RECYCLE_CAMPAIGN"
+        case turnoncampaign = "turnOnCampaign"
+        case turnoffcampaign = "turnOffCampaign"
+        case turnonsequence = "turnOnSequence"
+        case turnoffsequence = "turnOffSequence"
+        case setcampaignpriority = "setCampaignPriority"
+        case recyclecampaign = "recycleCampaign"
     }
+    /** The globally unique identifier for the action */
     public var _id: String?
+    /** The parameters to match this action */
     public var parameters: [String:String]?
+    /** The type of this action */
     public var actionType: ActionType?
     public var campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?
-    public var additionalProperties: JSON?
 
-    public init(_id: String?, parameters: [String:String]?, actionType: ActionType?, campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?, additionalProperties: JSON?) {
+    public init(_id: String?, parameters: [String:String]?, actionType: ActionType?, campaignRuleActionEntities: DialerCampaignRuleConfigChangeCampaignRuleActionEntities?) {
         
         self._id = _id
         
@@ -35,8 +37,6 @@ public class DialerCampaignRuleConfigChangeCampaignRuleAction: Codable {
         
         self.campaignRuleActionEntities = campaignRuleActionEntities
         
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -44,7 +44,6 @@ public class DialerCampaignRuleConfigChangeCampaignRuleAction: Codable {
         case parameters
         case actionType
         case campaignRuleActionEntities
-        case additionalProperties
     }
 
 

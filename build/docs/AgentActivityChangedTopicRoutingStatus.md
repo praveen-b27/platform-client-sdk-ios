@@ -7,8 +7,8 @@ title: AgentActivityChangedTopicRoutingStatus
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **status** | **String** |  | [optional] |
-| **startTime** | [**Date**](Date.html) |  | [optional] |
+| **status** | **String** | Indicates the Routing State of the agent. | [optional] |
+| **startTime** | [**Date**](Date.html) | The timestamp when the agent went into this state. | [optional] |
 {: class="table table-striped"}
 
 

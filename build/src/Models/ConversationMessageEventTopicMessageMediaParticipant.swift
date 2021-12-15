@@ -51,19 +51,19 @@ public class ConversationMessageEventTopicMessageMediaParticipant: Codable {
         case general = "general"
     }
     public enum ModelType: String, Codable { 
-        case unknown = "UNKNOWN"
-        case sms = "SMS"
-        case twitter = "TWITTER"
-        case facebook = "FACEBOOK"
-        case line = "LINE"
-        case viber = "VIBER"
-        case wechat = "WECHAT"
-        case whatsapp = "WHATSAPP"
-        case telegram = "TELEGRAM"
-        case kakao = "KAKAO"
-        case webmessaging = "WEBMESSAGING"
-        case _open = "OPEN"
-        case instagram = "INSTAGRAM"
+        case unknown = "unknown"
+        case sms = "sms"
+        case twitter = "twitter"
+        case facebook = "facebook"
+        case line = "line"
+        case viber = "viber"
+        case wechat = "wechat"
+        case whatsapp = "whatsapp"
+        case telegram = "telegram"
+        case kakao = "kakao"
+        case webmessaging = "webmessaging"
+        case _open = "open"
+        case instagram = "instagram"
     }
     public var _id: String?
     public var name: String?

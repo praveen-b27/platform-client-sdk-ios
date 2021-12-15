@@ -11,12 +11,18 @@ import Foundation
 
 public class ArchitectFlowNotificationFlowNotification: Codable {
 
+    /** The flow ID */
     public var _id: String?
+    /** The flow name */
     public var name: String?
+    /** The flow description */
     public var _description: String?
+    /** The flow deleted state */
     public var deleted: Bool?
     public var checkedInVersion: ArchitectFlowNotificationFlowVersion?
+    /** A bare-bones flow version object */
     public var savedVersion: ArchitectFlowNotificationFlowVersion?
+    /** A bare-bones flow version object */
     public var publishedVersion: ArchitectFlowNotificationFlowVersion?
     public var currentOperation: ArchitectFlowNotificationArchitectOperation?
 

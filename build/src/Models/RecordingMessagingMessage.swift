@@ -33,8 +33,10 @@ public class RecordingMessagingMessage: Codable {
     public var quickReplies: [QuickReply]?
     /** Button Response selected by user for this message. */
     public var buttonResponse: ButtonResponse?
+    /** Ephemeral story content. */
+    public var story: RecordingContentStory?
 
-    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?) {
+    public init(from: String?, fromUser: User?, fromExternalContact: ExternalContact?, to: String?, timestamp: Date?, _id: String?, messageText: String?, messageMediaAttachments: [MessageMediaAttachment]?, messageStickerAttachments: [MessageStickerAttachment]?, quickReplies: [QuickReply]?, buttonResponse: ButtonResponse?, story: RecordingContentStory?) {
         
         self.from = from
         
@@ -58,6 +60,8 @@ public class RecordingMessagingMessage: Codable {
         
         self.buttonResponse = buttonResponse
         
+        self.story = story
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -72,6 +76,7 @@ public class RecordingMessagingMessage: Codable {
         case messageStickerAttachments
         case quickReplies
         case buttonResponse
+        case story
     }
 
 

@@ -8,17 +8,20 @@
 import Foundation
 
 
+/** The voicemail data to be used when this callback is an ACD voicemail. */
 
 public class QueueConversationEventTopicVoicemail: Codable {
 
     public enum UploadStatus: String, Codable { 
-        case pending = "PENDING"
-        case complete = "COMPLETE"
-        case failed = "FAILED"
-        case timeout = "TIMEOUT"
-        case _none = "NONE"
+        case pending = "pending"
+        case complete = "complete"
+        case failed = "failed"
+        case timeout = "timeout"
+        case _none = "none"
     }
+    /** The voicemail id */
     public var _id: String?
+    /** current state of the voicemail upload */
     public var uploadStatus: UploadStatus?
 
     public init(_id: String?, uploadStatus: UploadStatus?) {

@@ -4557,6 +4557,7 @@ open class UsersAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -7324,6 +7325,7 @@ open class UsersAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -9104,6 +9106,7 @@ open class UsersAPI {
   },
   "enableManualAssignment" : true,
   "description" : "aeiou",
+  "onHoldPrompt" : "",
   "emailInQueueFlow" : "",
   "routingRules" : [ {
     "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9299,6 +9302,7 @@ open class UsersAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,

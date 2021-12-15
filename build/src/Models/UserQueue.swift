@@ -55,6 +55,8 @@ public class UserQueue: Codable {
     public var messageInQueueFlow: DomainEntityRef?
     /** The prompt used for whisper on the queue, if configured. */
     public var whisperPrompt: DomainEntityRef?
+    /** The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play. */
+    public var onHoldPrompt: DomainEntityRef?
     /** Indicates whether voice transcription is enabled for this queue. */
     public var enableTranscription: Bool?
     /** Indicates whether manual assignment is enabled for this queue. */
@@ -72,7 +74,7 @@ public class UserQueue: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, joined: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: [String:MediaSetting]?, routingRules: [RoutingRule]?, bullseye: Bullseye?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, enableTranscription: Bool?, enableManualAssignment: Bool?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, joined: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -113,6 +115,8 @@ public class UserQueue: Codable {
         self.messageInQueueFlow = messageInQueueFlow
         
         self.whisperPrompt = whisperPrompt
+        
+        self.onHoldPrompt = onHoldPrompt
         
         self.enableTranscription = enableTranscription
         
@@ -155,6 +159,7 @@ public class UserQueue: Codable {
         case emailInQueueFlow
         case messageInQueueFlow
         case whisperPrompt
+        case onHoldPrompt
         case enableTranscription
         case enableManualAssignment
         case callingPartyName

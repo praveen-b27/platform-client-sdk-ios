@@ -9,7 +9,6 @@ title: UserRoutingStatusUserParam
 |------------ | ------------- | ------------- | -------------|
 | **key** | **String** |  | [optional] |
 | **value** | **String** |  | [optional] |
-| **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
 {: class="table table-striped"}
 
 

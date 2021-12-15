@@ -12,6 +12,108 @@ import Foundation
 open class TextbotsAPI {
     
     
+    public enum BotType_getTextbotsBotsSearch: String { 
+        case genesysBotConnector = "GenesysBotConnector"
+        case genesysDialogEngine = "GenesysDialogEngine"
+        case amazonLex = "AmazonLex"
+        case googleDialogFlowES = "GoogleDialogFlowES"
+        case googleDialogFlowCX = "GoogleDialogFlowCX"
+        case nuanceDlg = "NuanceDlg"
+        case genesysBotFlow = "GenesysBotFlow"
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Find bots using the currently configured friendly name or ID.
+     
+     - parameter botType: (query) Bot types (optional)
+     - parameter botName: (query) Bot name (optional)
+     - parameter botId: (query) Bot IDs (optional)
+     - parameter pageSize: (query) The maximum results to return (optional, default to 25)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTextbotsBotsSearch(botType: [String]? = nil, botName: String? = nil, botId: [String]? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: BotSearchResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTextbotsBotsSearchWithRequestBuilder(botType: botType, botName: botName, botId: botId, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<BotSearchResponseEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Find bots using the currently configured friendly name or ID.
+     
+     - GET /api/v2/textbots/bots/search
+     - The name does allow case-insensitive partial string matches or by IDs (up to 50), but not both at the same time. Optionally you can limit the scope of the search by providing one or more bot types.  You can specify the maximum results to return, up to a limit of 100
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "botType" : "aeiou",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter botType: (query) Bot types (optional)
+     - parameter botName: (query) Bot name (optional)
+     - parameter botId: (query) Bot IDs (optional)
+     - parameter pageSize: (query) The maximum results to return (optional, default to 25)
+
+     - returns: RequestBuilder<BotSearchResponseEntityListing> 
+     */
+    open class func getTextbotsBotsSearchWithRequestBuilder(botType: [String]? = nil, botName: String? = nil, botId: [String]? = nil, pageSize: Int? = nil) -> RequestBuilder<BotSearchResponseEntityListing> {
+        let path = "/api/v2/textbots/bots/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "botType": botType, 
+            
+            "botName": botName, 
+            
+            "botId": botId, 
+            
+            "pageSize": pageSize?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<BotSearchResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
     
     
     

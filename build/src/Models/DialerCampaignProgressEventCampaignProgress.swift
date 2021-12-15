@@ -12,13 +12,16 @@ import Foundation
 public class DialerCampaignProgressEventCampaignProgress: Codable {
 
     public var campaign: DialerCampaignProgressEventUriReference?
+    /** The number of contacts that have been called so far */
     public var numberOfContactsCalled: Double?
+    /** The number of contacts that have been messaged so far */
     public var numberOfContactsMessaged: Double?
+    /** The total number of contacts in the contact list */
     public var totalNumberOfContacts: Double?
+    /** numberOfContactsContacted/totalNumberOfContacts*100 */
     public var percentage: Int?
-    public var additionalProperties: JSON?
 
-    public init(campaign: DialerCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, additionalProperties: JSON?) {
+    public init(campaign: DialerCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?) {
         
         self.campaign = campaign
         
@@ -29,8 +32,6 @@ public class DialerCampaignProgressEventCampaignProgress: Codable {
         self.totalNumberOfContacts = totalNumberOfContacts
         
         self.percentage = percentage
-        
-        self.additionalProperties = additionalProperties
         
     }
 

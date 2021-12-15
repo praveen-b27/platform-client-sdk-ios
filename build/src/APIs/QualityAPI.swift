@@ -632,6 +632,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -1809,6 +1810,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
@@ -3169,6 +3171,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -4166,6 +4169,7 @@ open class QualityAPI {
             },
             "enableManualAssignment" : true,
             "description" : "aeiou",
+            "onHoldPrompt" : "",
             "emailInQueueFlow" : "",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
@@ -5373,6 +5377,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
@@ -6206,6 +6211,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -7638,6 +7644,7 @@ open class QualityAPI {
       },
       "enableManualAssignment" : true,
       "description" : "aeiou",
+      "onHoldPrompt" : "",
       "emailInQueueFlow" : "",
       "autoAnswerOnly" : true,
       "routingRules" : [ {
@@ -11193,6 +11200,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -12579,6 +12587,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -13750,6 +13759,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
@@ -15373,6 +15383,7 @@ open class QualityAPI {
           },
           "enableManualAssignment" : true,
           "description" : "aeiou",
+          "onHoldPrompt" : "",
           "emailInQueueFlow" : "",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
@@ -16545,6 +16556,7 @@ open class QualityAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {

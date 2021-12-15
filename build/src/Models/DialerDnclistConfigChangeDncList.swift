@@ -12,40 +12,39 @@ import Foundation
 public class DialerDnclistConfigChangeDncList: Codable {
 
     public enum DncSourceType: String, Codable { 
-        case rds = "RDS"
-        case dncCom = "DNC_COM"
-        case gryphon = "GRYPHON"
+        case rds = "rds"
+        case dncCom = "dnc.com"
+        case gryphon = "gryphon"
     }
     public enum ContactMethod: String, Codable { 
         case email = "EMAIL"
         case phone = "PHONE"
     }
-    public var _id: String?
-    public var name: String?
-    public var dateCreated: Date?
-    public var dateModified: Date?
-    public var version: Int?
     public var importStatus: DialerDnclistConfigChangeImportStatus?
+    /** the number of phone numbers in the do not call list */
     public var size: Int?
+    /** the type of dnc list being created, rds (csv file), gryphon, or dnc.com */
     public var dncSourceType: DncSourceType?
+    /** the loginId if the dncSourceType is dnc.com */
     public var loginId: String?
+    /** the list of dnc.com codes to be treated as DNC */
     public var dncCodes: [String]?
+    /** the license number if the dncSourceType is gryphon */
     public var licenseId: String?
     public var contactMethod: ContactMethod?
     public var division: DialerDnclistConfigChangeUriReference?
-    public var additionalProperties: JSON?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: DialerDnclistConfigChangeImportStatus?, size: Int?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, additionalProperties: JSON?) {
-        
-        self._id = _id
-        
-        self.name = name
-        
-        self.dateCreated = dateCreated
-        
-        self.dateModified = dateModified
-        
-        self.version = version
+    public init(importStatus: DialerDnclistConfigChangeImportStatus?, size: Int?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, contactMethod: ContactMethod?, division: DialerDnclistConfigChangeUriReference?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
         
         self.importStatus = importStatus
         
@@ -63,16 +62,19 @@ public class DialerDnclistConfigChangeDncList: Codable {
         
         self.division = division
         
-        self.additionalProperties = additionalProperties
+        self._id = _id
+        
+        self.name = name
+        
+        self.dateCreated = dateCreated
+        
+        self.dateModified = dateModified
+        
+        self.version = version
         
     }
 
     public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case dateCreated
-        case dateModified
-        case version
         case importStatus
         case size
         case dncSourceType
@@ -81,7 +83,11 @@ public class DialerDnclistConfigChangeDncList: Codable {
         case licenseId
         case contactMethod
         case division
-        case additionalProperties
+        case _id = "id"
+        case name
+        case dateCreated
+        case dateModified
+        case version
     }
 
 

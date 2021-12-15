@@ -11,9 +11,11 @@ import Foundation
 
 public class ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification: Codable {
 
+    /** The organization&#39;s new dependency tracking build status */
     public var status: String?
     public var user: ArchitectDependencyTrackingBuildNotificationUser?
     public var client: ArchitectDependencyTrackingBuildNotificationClient?
+    /** The time the last build started, in ISO 8601 format */
     public var startTime: Date?
 
     public init(status: String?, user: ArchitectDependencyTrackingBuildNotificationUser?, client: ArchitectDependencyTrackingBuildNotificationClient?, startTime: Date?) {

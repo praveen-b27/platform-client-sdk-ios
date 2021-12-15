@@ -12,15 +12,17 @@ import Foundation
 public class DialerCampaignRuleConfigChangeCampaignRuleCondition: Codable {
 
     public enum ConditionType: String, Codable { 
-        case campaignProgress = "CAMPAIGN_PROGRESS"
-        case campaignAgents = "CAMPAIGN_AGENTS"
+        case campaignprogress = "campaignProgress"
+        case campaignagents = "campaignAgents"
     }
+    /** The globally unique identifier for the condition */
     public var _id: String?
+    /** The parameters to match this condition */
     public var parameters: [String:String]?
+    /** The type of this condition */
     public var conditionType: ConditionType?
-    public var additionalProperties: JSON?
 
-    public init(_id: String?, parameters: [String:String]?, conditionType: ConditionType?, additionalProperties: JSON?) {
+    public init(_id: String?, parameters: [String:String]?, conditionType: ConditionType?) {
         
         self._id = _id
         
@@ -28,15 +30,12 @@ public class DialerCampaignRuleConfigChangeCampaignRuleCondition: Codable {
         
         self.conditionType = conditionType
         
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case parameters
         case conditionType
-        case additionalProperties
     }
 
 

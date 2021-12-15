@@ -12,8 +12,8 @@ import Foundation
 public class DialerContactlistfilterConfigChangeFilterPredicate: Codable {
 
     public enum ColumnType: String, Codable { 
-        case numeric = "NUMERIC"
-        case alphabetic = "ALPHABETIC"
+        case numeric = "numeric"
+        case alphabetic = "alphabetic"
     }
     public enum Operator: String, Codable { 
         case equals = "EQUALS"
@@ -29,15 +29,19 @@ public class DialerContactlistfilterConfigChangeFilterPredicate: Codable {
         case between = "BETWEEN"
         case _in = "IN"
     }
+    /** The contact list column */
     public var column: String?
+    /** Whether a contact column is numeric or alphabetic */
     public var columnType: ColumnType?
+    /** The comparison operator */
     public var _operator: Operator?
+    /** The value the predicate applies to */
     public var value: String?
     public var range: DialerContactlistfilterConfigChangeRange?
+    /** Whether or not to invert to result of evaluating the predicate */
     public var inverted: Bool?
-    public var additionalProperties: JSON?
 
-    public init(column: String?, columnType: ColumnType?, _operator: Operator?, value: String?, range: DialerContactlistfilterConfigChangeRange?, inverted: Bool?, additionalProperties: JSON?) {
+    public init(column: String?, columnType: ColumnType?, _operator: Operator?, value: String?, range: DialerContactlistfilterConfigChangeRange?, inverted: Bool?) {
         
         self.column = column
         
@@ -51,8 +55,6 @@ public class DialerContactlistfilterConfigChangeFilterPredicate: Codable {
         
         self.inverted = inverted
         
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -62,7 +64,6 @@ public class DialerContactlistfilterConfigChangeFilterPredicate: Codable {
         case value
         case range
         case inverted
-        case additionalProperties
     }
 
 

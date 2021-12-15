@@ -2229,6 +2229,7 @@ open class RoutingAPI {
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "nluInfo" : {
+        "engineVersion" : "aeiou",
         "intents" : [ {
           "name" : "aeiou"
         } ],
@@ -2727,6 +2728,7 @@ open class RoutingAPI {
         "createdByClient" : "",
         "selfUri" : "aeiou",
         "nluInfo" : {
+          "engineVersion" : "aeiou",
           "intents" : [ {
             "name" : "aeiou"
           } ],
@@ -3174,6 +3176,7 @@ open class RoutingAPI {
   },
   "enableManualAssignment" : true,
   "description" : "aeiou",
+  "onHoldPrompt" : "",
   "emailInQueueFlow" : "",
   "autoAnswerOnly" : true,
   "routingRules" : [ {
@@ -3349,6 +3352,13 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "kpiResults" : [ {
+    "kpiTotalOff" : 123,
+    "interactionCountOff" : 123,
+    "interactionCountOn" : 123,
+    "mediaType" : "aeiou",
+    "kpiTotalOn" : 123
+  } ],
   "kpiTotalOff" : 123456789,
   "kpi" : "aeiou",
   "dateStarted" : "2000-01-23T04:56:07.000+0000",
@@ -3428,6 +3438,13 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "total" : 123456789,
   "entities" : [ {
+    "kpiResults" : [ {
+      "kpiTotalOff" : 123,
+      "interactionCountOff" : 123,
+      "interactionCountOn" : 123,
+      "mediaType" : "aeiou",
+      "kpiTotalOn" : 123
+    } ],
     "kpiTotalOff" : 123456789,
     "kpi" : "aeiou",
     "dateStarted" : "2000-01-23T04:56:07.000+0000",
@@ -4694,6 +4711,7 @@ open class RoutingAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
@@ -4936,6 +4954,7 @@ open class RoutingAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
@@ -5162,6 +5181,7 @@ open class RoutingAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
@@ -5379,6 +5399,7 @@ open class RoutingAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -7376,6 +7397,7 @@ open class RoutingAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9008,6 +9030,7 @@ open class RoutingAPI {
   },
   "enableManualAssignment" : true,
   "description" : "aeiou",
+  "onHoldPrompt" : "",
   "emailInQueueFlow" : "",
   "routingRules" : [ {
     "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9203,6 +9226,7 @@ open class RoutingAPI {
     },
     "enableManualAssignment" : true,
     "description" : "aeiou",
+    "onHoldPrompt" : "",
     "emailInQueueFlow" : "",
     "routingRules" : [ {
       "waitSeconds" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10469,6 +10493,7 @@ open class RoutingAPI {
   },
   "enableManualAssignment" : true,
   "description" : "aeiou",
+  "onHoldPrompt" : "",
   "emailInQueueFlow" : "",
   "autoAnswerOnly" : true,
   "routingRules" : [ {
@@ -11768,6 +11793,7 @@ open class RoutingAPI {
       "createdByClient" : "",
       "selfUri" : "aeiou",
       "nluInfo" : {
+        "engineVersion" : "aeiou",
         "intents" : [ {
           "name" : "aeiou"
         } ],
@@ -11946,6 +11972,7 @@ open class RoutingAPI {
   },
   "enableManualAssignment" : true,
   "description" : "aeiou",
+  "onHoldPrompt" : "",
   "emailInQueueFlow" : "",
   "autoAnswerOnly" : true,
   "routingRules" : [ {

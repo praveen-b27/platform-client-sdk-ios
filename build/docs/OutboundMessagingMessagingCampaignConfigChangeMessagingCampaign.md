@@ -7,23 +7,23 @@ title: OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** |  | [optional] |
-| **division** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
-| **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
-| **version** | **Int** |  | [optional] |
 | **campaignStatus** | **String** |  | [optional] |
 | **callableTimeSet** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
-| **contactList** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
-| **dncLists** | [**[OutboundMessagingMessagingCampaignConfigChangeUriReference]**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
-| **contactListFilters** | [**[OutboundMessagingMessagingCampaignConfigChangeUriReference]**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) |  | [optional] |
-| **alwaysRunning** | **Bool** |  | [optional] |
-| **contactSorts** | [**[OutboundMessagingMessagingCampaignConfigChangeContactSort]**](OutboundMessagingMessagingCampaignConfigChangeContactSort.html) |  | [optional] |
-| **messagesPerMinute** | **Int** |  | [optional] |
+| **contactList** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
+| **dncLists** | [**[OutboundMessagingMessagingCampaignConfigChangeUriReference]**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) | The dnc lists to check before sending a message for this messaging campaign. | [optional] |
+| **contactListFilters** | [**[OutboundMessagingMessagingCampaignConfigChangeUriReference]**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) | The contact list filters to check before sending a message for this messaging campaign. | [optional] |
+| **alwaysRunning** | **Bool** | Whether this messaging campaign is always running. | [optional] |
+| **contactSorts** | [**[OutboundMessagingMessagingCampaignConfigChangeContactSort]**](OutboundMessagingMessagingCampaignConfigChangeContactSort.html) | The order in which to sort contacts for dialing, based on up to four columns. | [optional] |
+| **messagesPerMinute** | **Int** | How many messages this messaging campaign will send per minute. | [optional] |
 | **smsConfig** | [**OutboundMessagingMessagingCampaignConfigChangeSmsConfig**](OutboundMessagingMessagingCampaignConfigChangeSmsConfig.html) |  | [optional] |
 | **emailConfig** | [**OutboundMessagingMessagingCampaignConfigChangeEmailConfig**](OutboundMessagingMessagingCampaignConfigChangeEmailConfig.html) |  | [optional] |
-| **errors** | [**[OutboundMessagingMessagingCampaignConfigChangeErrorDetail]**](OutboundMessagingMessagingCampaignConfigChangeErrorDetail.html) |  | [optional] |
+| **errors** | [**[OutboundMessagingMessagingCampaignConfigChangeErrorDetail]**](OutboundMessagingMessagingCampaignConfigChangeErrorDetail.html) | A list of current error conditions associated with this messaging campaign | [optional] |
+| **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **division** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
+| **name** | **String** | The UI-visible name of the object | [optional] |
+| **dateCreated** | [**Date**](Date.html) | Creation time of the entity | [optional] |
+| **dateModified** | [**Date**](Date.html) | Last modified time of the entity | [optional] |
+| **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 {: class="table table-striped"}
 
 

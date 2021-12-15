@@ -11,7 +11,9 @@ import Foundation
 
 public class ConversationEventTopicScoredAgent: Codable {
 
+    /** A UriReference for a resource */
     public var agent: ConversationEventTopicUriReference?
+    /** Agent&#39;s score for the current conversation, from 0 - 100, higher being better */
     public var score: Int?
 
     public init(agent: ConversationEventTopicUriReference?, score: Int?) {

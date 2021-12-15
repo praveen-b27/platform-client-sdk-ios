@@ -15,15 +15,22 @@ public class DialerRulesetConfigChangeRule: Codable {
         case dialerPrecall = "DIALER_PRECALL"
         case dialerWrapup = "DIALER_WRAPUP"
     }
-    public var _id: String?
-    public var name: String?
-    public var order: Int?
-    public var category: Category?
-    public var actions: [DialerRulesetConfigChangeAction]?
+    /** The list of rule conditions; all must evaluate to true to trigger the rule actions */
     public var conditions: [DialerRulesetConfigChangeCondition]?
-    public var additionalProperties: JSON?
+    /** The identifier of the rule */
+    public var _id: String?
+    /** The name of the rule */
+    public var name: String?
+    /** The ranked order of the rule; rules are processed from lowest number to highest */
+    public var order: Int?
+    /** The category of the rule */
+    public var category: Category?
+    /** The list of rule actions to be taken if the conditions are true */
+    public var actions: [DialerRulesetConfigChangeAction]?
 
-    public init(_id: String?, name: String?, order: Int?, category: Category?, actions: [DialerRulesetConfigChangeAction]?, conditions: [DialerRulesetConfigChangeCondition]?, additionalProperties: JSON?) {
+    public init(conditions: [DialerRulesetConfigChangeCondition]?, _id: String?, name: String?, order: Int?, category: Category?, actions: [DialerRulesetConfigChangeAction]?) {
+        
+        self.conditions = conditions
         
         self._id = _id
         
@@ -35,20 +42,15 @@ public class DialerRulesetConfigChangeRule: Codable {
         
         self.actions = actions
         
-        self.conditions = conditions
-        
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case conditions
         case _id = "id"
         case name
         case order
         case category
         case actions
-        case conditions
-        case additionalProperties
     }
 
 

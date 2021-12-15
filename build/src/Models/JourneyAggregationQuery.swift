@@ -54,15 +54,15 @@ public class JourneyAggregationQuery: Codable {
         case nwebactionsaccepted = "nWebActionsAccepted"
         case nwebactionsengaged = "nWebActionsEngaged"
         case nwebactionserrored = "nWebActionsErrored"
+        case nwebactionsfrequencycapreached = "nWebActionsFrequencyCapReached"
         case nwebactionsignored = "nWebActionsIgnored"
         case nwebactionsoffered = "nWebActionsOffered"
+        case nwebactionsofferedoutsideschedule = "nWebActionsOfferedOutsideSchedule"
         case nwebactionsqualified = "nWebActionsQualified"
         case nwebactionsqualifiedoutsideschedule = "nWebActionsQualifiedOutsideSchedule"
         case nwebactionsrejected = "nWebActionsRejected"
         case nwebactionsstarted = "nWebActionsStarted"
         case nwebactionstimedout = "nWebActionsTimedout"
-        case nwebactionsfrequencycapreached = "nWebActionsFrequencyCapReached"
-        case nwebactionsofferedoutsideschedule = "nWebActionsOfferedOutsideSchedule"
         case ojourneyoutcomevalue = "oJourneyOutcomeValue"
     }
     public enum AlternateTimeDimension: String, Codable { 

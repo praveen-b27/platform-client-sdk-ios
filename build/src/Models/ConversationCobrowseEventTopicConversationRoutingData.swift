@@ -11,10 +11,15 @@ import Foundation
 
 public class ConversationCobrowseEventTopicConversationRoutingData: Codable {
 
+    /** A UriReference for a resource */
     public var queue: ConversationCobrowseEventTopicUriReference?
+    /** A UriReference for a resource */
     public var language: ConversationCobrowseEventTopicUriReference?
+    /** The priority of the conversation to use for routing decisions */
     public var priority: Int?
+    /** The skills to use for routing decisions */
     public var skills: [ConversationCobrowseEventTopicUriReference]?
+    /** A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents */
     public var scoredAgents: [ConversationCobrowseEventTopicScoredAgent]?
 
     public init(queue: ConversationCobrowseEventTopicUriReference?, language: ConversationCobrowseEventTopicUriReference?, priority: Int?, skills: [ConversationCobrowseEventTopicUriReference]?, scoredAgents: [ConversationCobrowseEventTopicScoredAgent]?) {

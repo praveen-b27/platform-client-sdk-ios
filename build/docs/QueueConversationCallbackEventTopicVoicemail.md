@@ -7,8 +7,8 @@ title: QueueConversationCallbackEventTopicVoicemail
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** |  | [optional] |
-| **uploadStatus** | **String** |  | [optional] |
+| **_id** | **String** | The voicemail id | [optional] |
+| **uploadStatus** | **String** | current state of the voicemail upload | [optional] |
 {: class="table table-striped"}
 
 

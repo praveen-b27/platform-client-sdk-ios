@@ -35,25 +35,42 @@ public class DialerRulesetConfigChangeCondition: Codable {
         case lastResultByColumn = "LAST_RESULT_BY_COLUMN"
         case lastResultOverall = "LAST_RESULT_OVERALL"
     }
-    public var type: String?
-    public var inverted: Bool?
-    public var attributeName: String?
-    public var value: String?
-    public var valueType: ValueType?
-    public var _operator: Operator?
-    public var codes: [String]?
-    public var propertyType: PropertyType?
-    public var property: String?
-    public var dataNotFoundResolution: Bool?
-    public var contactIdField: String?
-    public var callAnalysisResultField: String?
-    public var agentWrapupField: String?
-    public var contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?
-    public var predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?
+    /** A UriReference for a resource */
     public var dataAction: DialerRulesetConfigChangeUriReference?
-    public var additionalProperties: JSON?
+    /** The type of the condition */
+    public var type: String?
+    /** Indicates whether to evaluate for the opposite of the stated condition; default is false */
+    public var inverted: Bool?
+    /** An attribute name associated with the condition (applies only to certain rule conditions) */
+    public var attributeName: String?
+    /** A value associated with the condition */
+    public var value: String?
+    /** Determines the type of the value associated with the condition */
+    public var valueType: ValueType?
+    /** An operation type for condition evaluation */
+    public var _operator: Operator?
+    /** List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;) */
+    public var codes: [String]?
+    /** Determines the type of the property associated with the condition */
+    public var propertyType: PropertyType?
+    /** A value associated with the property type of this condition */
+    public var property: String?
+    /** The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition. */
+    public var dataNotFoundResolution: Bool?
+    /** The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition. */
+    public var contactIdField: String?
+    /** The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition. */
+    public var callAnalysisResultField: String?
+    /** The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition. */
+    public var agentWrapupField: String?
+    /** A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. */
+    public var contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?
+    /** A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. */
+    public var predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?
 
-    public init(type: String?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, propertyType: PropertyType?, property: String?, dataNotFoundResolution: Bool?, contactIdField: String?, callAnalysisResultField: String?, agentWrapupField: String?, contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?, predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?, dataAction: DialerRulesetConfigChangeUriReference?, additionalProperties: JSON?) {
+    public init(dataAction: DialerRulesetConfigChangeUriReference?, type: String?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, propertyType: PropertyType?, property: String?, dataNotFoundResolution: Bool?, contactIdField: String?, callAnalysisResultField: String?, agentWrapupField: String?, contactColumnToDataActionFieldMappings: [DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]?, predicates: [DialerRulesetConfigChangeDataActionConditionPredicate]?) {
+        
+        self.dataAction = dataAction
         
         self.type = type
         
@@ -85,13 +102,10 @@ public class DialerRulesetConfigChangeCondition: Codable {
         
         self.predicates = predicates
         
-        self.dataAction = dataAction
-        
-        self.additionalProperties = additionalProperties
-        
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case dataAction
         case type
         case inverted
         case attributeName
@@ -107,8 +121,6 @@ public class DialerRulesetConfigChangeCondition: Codable {
         case agentWrapupField
         case contactColumnToDataActionFieldMappings
         case predicates
-        case dataAction
-        case additionalProperties
     }
 
 

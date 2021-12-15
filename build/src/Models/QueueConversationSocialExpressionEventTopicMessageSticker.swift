@@ -11,7 +11,9 @@ import Foundation
 
 public class QueueConversationSocialExpressionEventTopicMessageSticker: Codable {
 
+    /** The location of the sticker, useful for retrieving it */
     public var url: String?
+    /** The unique id of the the sticker object. */
     public var _id: String?
 
     public init(url: String?, _id: String?) {

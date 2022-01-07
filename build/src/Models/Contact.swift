@@ -25,6 +25,7 @@ public class Contact: Codable {
         case home = "HOME"
         case mobile = "MOBILE"
         case main = "MAIN"
+        case other = "OTHER"
     }
     /** Email address or phone number for this contact type */
     public var address: String?

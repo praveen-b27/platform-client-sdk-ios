@@ -5358,6 +5358,66 @@ open class TelephonyProvidersEdgeAPI {
     }
 
     
+    /**
+     
+     List of edges more than 4 edge versions behind the latest software.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgesExpired(completion: @escaping ((_ data: ExpiredEdgeListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesExpiredWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ExpiredEdgeListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     List of edges more than 4 edge versions behind the latest software.
+     
+     - GET /api/v2/telephony/providers/edges/expired
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "name" : "aeiou",
+    "id" : "aeiou"
+  } ]
+}}]
+
+     - returns: RequestBuilder<ExpiredEdgeListing> 
+     */
+    open class func getTelephonyProvidersEdgesExpiredWithRequestBuilder() -> RequestBuilder<ExpiredEdgeListing> {
+        let path = "/api/v2/telephony/providers/edges/expired"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExpiredEdgeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
     
     
     /**

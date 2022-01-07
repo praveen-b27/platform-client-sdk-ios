@@ -895,6 +895,74 @@ open class GamificationAPI {
     
     
     
+    /**
+     
+     Members of a given performance profile
+     
+     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationProfileMembers(performanceProfileId: String, completion: @escaping ((_ data: MemberListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationProfileMembersWithRequestBuilder(performanceProfileId: performanceProfileId)
+        requestBuilder.execute { (response: Response<MemberListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Members of a given performance profile
+     
+     - GET /api/v2/gamification/profiles/{performanceProfileId}/members
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter performanceProfileId: (path) Performance Profile Id 
+
+     - returns: RequestBuilder<MemberListing> 
+     */
+    open class func getGamificationProfileMembersWithRequestBuilder(performanceProfileId: String) -> RequestBuilder<MemberListing> {
+        var path = "/api/v2/gamification/profiles/{performanceProfileId}/members"
+        let performanceProfileIdPreEscape = "\(performanceProfileId)"
+        let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MemberListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -3710,6 +3778,282 @@ open class GamificationAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Assign members to a given performance profile
+     
+     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter body: (body) assignUsers 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationProfileMembers(performanceProfileId: String, body: AssignUsers, completion: @escaping ((_ data: Assignment?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfileMembersWithRequestBuilder(performanceProfileId: performanceProfileId, body: body)
+        requestBuilder.execute { (response: Response<Assignment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Assign members to a given performance profile
+     
+     - POST /api/v2/gamification/profiles/{performanceProfileId}/members
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "removedMembers" : [ "" ],
+  "assignedMembers" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "assignmentErrors" : [ {
+    "message" : "aeiou",
+    "user" : ""
+  } ]
+}}]
+     
+     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter body: (body) assignUsers 
+
+     - returns: RequestBuilder<Assignment> 
+     */
+    open class func postGamificationProfileMembersWithRequestBuilder(performanceProfileId: String, body: AssignUsers) -> RequestBuilder<Assignment> {
+        var path = "/api/v2/gamification/profiles/{performanceProfileId}/members"
+        let performanceProfileIdPreEscape = "\(performanceProfileId)"
+        let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Assignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Validate member assignment
+     
+     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter body: (body) memberAssignments 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationProfileMembersValidate(performanceProfileId: String, body: ValidateAssignUsers, completion: @escaping ((_ data: AssignmentValidation?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfileMembersValidateWithRequestBuilder(performanceProfileId: performanceProfileId, body: body)
+        requestBuilder.execute { (response: Response<AssignmentValidation>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Validate member assignment
+     
+     - POST /api/v2/gamification/profiles/{performanceProfileId}/members/validate
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "invalidMemberAssignments" : [ {
+    "message" : "aeiou",
+    "user" : ""
+  } ],
+  "membersNotAssigned" : [ {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "membersAlreadyAssigned" : [ "" ],
+  "membersAlreadyAssignedToOther" : [ {
+    "selfUri" : "aeiou",
+    "currentProfile" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "id" : "aeiou"
+  } ]
+}}]
+     
+     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter body: (body) memberAssignments 
+
+     - returns: RequestBuilder<AssignmentValidation> 
+     */
+    open class func postGamificationProfileMembersValidateWithRequestBuilder(performanceProfileId: String, body: ValidateAssignUsers) -> RequestBuilder<AssignmentValidation> {
+        var path = "/api/v2/gamification/profiles/{performanceProfileId}/members/validate"
+        let performanceProfileIdPreEscape = "\(performanceProfileId)"
+        let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AssignmentValidation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Creates a linked metric
+     
+     - parameter sourceProfileId: (path) Source Performance Profile Id 
+     - parameter sourceMetricId: (path) Source Metric Id 
+     - parameter body: (body) linkedMetric 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postGamificationProfileMetricLink(sourceProfileId: String, sourceMetricId: String, body: TargetPerformanceProfile, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfileMetricLinkWithRequestBuilder(sourceProfileId: sourceProfileId, sourceMetricId: sourceMetricId, body: body)
+        requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates a linked metric
+     
+     - POST /api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metricDefinitionId" : "aeiou",
+  "linkedMetric" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "sourcePerformanceProfile" : {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "metricOrders" : [ "aeiou" ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "maxLeaderboardRankSize" : 123,
+    "memberCount" : 123,
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "description" : "aeiou",
+    "active" : true,
+    "id" : "aeiou",
+    "reportingIntervals" : [ {
+      "intervalType" : "aeiou",
+      "intervalValue" : 123
+    } ]
+  },
+  "id" : "aeiou",
+  "dateUnlinked" : "2000-01-23T04:56:07.000+0000",
+  "externalMetricDefinitionId" : "aeiou",
+  "performanceProfileId" : "aeiou",
+  "objective" : {
+    "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "templateId" : "aeiou",
+    "zones" : [ {
+      "upperLimitValue" : 123,
+      "directionType" : "aeiou",
+      "lowerLimitPoints" : 123,
+      "zoneType" : "aeiou",
+      "upperLimitPoints" : 123,
+      "label" : "aeiou",
+      "lowerLimitValue" : 123
+    } ],
+    "enabled" : true
+  }
+}}]
+     
+     - parameter sourceProfileId: (path) Source Performance Profile Id 
+     - parameter sourceMetricId: (path) Source Metric Id 
+     - parameter body: (body) linkedMetric 
+
+     - returns: RequestBuilder<Metric> 
+     */
+    open class func postGamificationProfileMetricLinkWithRequestBuilder(sourceProfileId: String, sourceMetricId: String, body: TargetPerformanceProfile) -> RequestBuilder<Metric> {
+        var path = "/api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link"
+        let sourceProfileIdPreEscape = "\(sourceProfileId)"
+        let sourceProfileIdPostEscape = sourceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceProfileId}", with: sourceProfileIdPostEscape, options: .literal, range: nil)
+        let sourceMetricIdPreEscape = "\(sourceMetricId)"
+        let sourceMetricIdPostEscape = sourceMetricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceMetricId}", with: sourceMetricIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

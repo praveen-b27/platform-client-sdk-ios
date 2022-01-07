@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGamificationMetricdefinitions**](GamificationAPI.html#getGamificationMetricdefinitions) | All metric definitions |
 | [**getGamificationMetrics**](GamificationAPI.html#getGamificationMetrics) | All gamified metrics for a given profile |
 | [**getGamificationProfile**](GamificationAPI.html#getGamificationProfile) | Performance profile by id |
+| [**getGamificationProfileMembers**](GamificationAPI.html#getGamificationProfileMembers) | Members of a given performance profile |
 | [**getGamificationProfileMetric**](GamificationAPI.html#getGamificationProfileMetric) | Performance profile gamified metric by id |
 | [**getGamificationProfileMetrics**](GamificationAPI.html#getGamificationProfileMetrics) | All gamified metrics for a given performance profile |
 | [**getGamificationProfileMetricsObjectivedetails**](GamificationAPI.html#getGamificationProfileMetricsObjectivedetails) | All metrics for a given performance profile with objective details such as order and maxPoints |
@@ -45,6 +46,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postGamificationMetrics**](GamificationAPI.html#postGamificationMetrics) | Creates a gamified metric with a given metric definition and metric objective |
 | [**postGamificationProfileActivate**](GamificationAPI.html#postGamificationProfileActivate) | Activate a performance profile |
 | [**postGamificationProfileDeactivate**](GamificationAPI.html#postGamificationProfileDeactivate) | Deactivate a performance profile |
+| [**postGamificationProfileMembers**](GamificationAPI.html#postGamificationProfileMembers) | Assign members to a given performance profile |
+| [**postGamificationProfileMembersValidate**](GamificationAPI.html#postGamificationProfileMembersValidate) | Validate member assignment |
+| [**postGamificationProfileMetricLink**](GamificationAPI.html#postGamificationProfileMetricLink) | Creates a linked metric |
 | [**postGamificationProfileMetrics**](GamificationAPI.html#postGamificationProfileMetrics) | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**postGamificationProfiles**](GamificationAPI.html#postGamificationProfiles) | Create a new custom performance profile |
 | [**putGamificationMetric**](GamificationAPI.html#putGamificationMetric) | Updates a metric |
@@ -538,6 +542,58 @@ GamificationAPI.getGamificationProfile(performanceProfileId: performanceProfileI
 ### Return type
 
 [**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="getGamificationProfileMembers"></a>
+
+# **getGamificationProfileMembers**
+
+
+
+> [MemberListing](MemberListing.html) getGamificationProfileMembers(performanceProfileId)
+
+Members of a given performance profile
+
+
+
+Wraps GET /api/v2/gamification/profiles/{performanceProfileId}/members  
+
+Requires ANY permissions: 
+
+* gamification:profile:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let performanceProfileId: String = "" // Performance Profile Id
+
+// Code example
+GamificationAPI.getGamificationProfileMembers(performanceProfileId: performanceProfileId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationProfileMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **performanceProfileId** | **String**| Performance Profile Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MemberListing**](MemberListing.html)
 
 <a name="getGamificationProfileMetric"></a>
 
@@ -2111,6 +2167,170 @@ GamificationAPI.postGamificationProfileDeactivate(performanceProfileId: performa
 ### Return type
 
 [**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="postGamificationProfileMembers"></a>
+
+# **postGamificationProfileMembers**
+
+
+
+> [Assignment](Assignment.html) postGamificationProfileMembers(performanceProfileId, body)
+
+Assign members to a given performance profile
+
+
+
+Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/members  
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let performanceProfileId: String = "" // Performance Profile Id
+let body: AssignUsers = new AssignUsers(...) // assignUsers
+
+// Code example
+GamificationAPI.postGamificationProfileMembers(performanceProfileId: performanceProfileId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationProfileMembers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **performanceProfileId** | **String**| Performance Profile Id | |
+| **body** | [**AssignUsers**](AssignUsers.html)| assignUsers | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Assignment**](Assignment.html)
+
+<a name="postGamificationProfileMembersValidate"></a>
+
+# **postGamificationProfileMembersValidate**
+
+
+
+> [AssignmentValidation](AssignmentValidation.html) postGamificationProfileMembersValidate(performanceProfileId, body)
+
+Validate member assignment
+
+
+
+Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/members/validate  
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let performanceProfileId: String = "" // Performance Profile Id
+let body: ValidateAssignUsers = new ValidateAssignUsers(...) // memberAssignments
+
+// Code example
+GamificationAPI.postGamificationProfileMembersValidate(performanceProfileId: performanceProfileId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationProfileMembersValidate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **performanceProfileId** | **String**| Performance Profile Id | |
+| **body** | [**ValidateAssignUsers**](ValidateAssignUsers.html)| memberAssignments | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssignmentValidation**](AssignmentValidation.html)
+
+<a name="postGamificationProfileMetricLink"></a>
+
+# **postGamificationProfileMetricLink**
+
+
+
+> [Metric](Metric.html) postGamificationProfileMetricLink(sourceProfileId, sourceMetricId, body)
+
+Creates a linked metric
+
+
+
+Wraps POST /api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link  
+
+Requires ANY permissions: 
+
+* gamification:profile:update
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sourceProfileId: String = "" // Source Performance Profile Id
+let sourceMetricId: String = "" // Source Metric Id
+let body: TargetPerformanceProfile = new TargetPerformanceProfile(...) // linkedMetric
+
+// Code example
+GamificationAPI.postGamificationProfileMetricLink(sourceProfileId: sourceProfileId, sourceMetricId: sourceMetricId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.postGamificationProfileMetricLink was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sourceProfileId** | **String**| Source Performance Profile Id | |
+| **sourceMetricId** | **String**| Source Metric Id | |
+| **body** | [**TargetPerformanceProfile**](TargetPerformanceProfile.html)| linkedMetric | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Metric**](Metric.html)
 
 <a name="postGamificationProfileMetrics"></a>
 

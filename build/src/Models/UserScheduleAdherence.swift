@@ -70,6 +70,8 @@ public class UserScheduleAdherence: Codable {
     public var name: String?
     /** The user for whom this status applies */
     public var user: UserReference?
+    /** The business unit to which this user belongs */
+    public var businessUnit: BusinessUnit?
     /** The management unit to which this user belongs */
     public var managementUnit: ManagementUnit?
     /** The team to which this user belongs */
@@ -103,13 +105,15 @@ public class UserScheduleAdherence: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, user: UserReference?, managementUnit: ManagementUnit?, team: Team?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, user: UserReference?, businessUnit: BusinessUnit?, managementUnit: ManagementUnit?, team: Team?, scheduledActivityCategory: ScheduledActivityCategory?, systemPresence: SystemPresence?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: ActualActivityCategory?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: Impact?, timeOfAdherenceChange: Date?, presenceUpdateTime: Date?, activeQueues: [QueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.user = user
+        
+        self.businessUnit = businessUnit
         
         self.managementUnit = managementUnit
         
@@ -149,6 +153,7 @@ public class UserScheduleAdherence: Codable {
         case _id = "id"
         case name
         case user
+        case businessUnit
         case managementUnit
         case team
         case scheduledActivityCategory

@@ -359,6 +359,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "result" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -889,6 +891,29 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example=[ {
   "removedFromManagementUnit" : true,
   "organizationSecondaryPresenceId" : "aeiou",
+  "businessUnit" : {
+    "division" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "settings" : {
+      "startDayOfWeek" : "aeiou",
+      "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
+        "modifiedBy" : "",
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "timeZone" : "aeiou",
+      "shortTermForecasting" : {
+        "defaultHistoryWeeks" : 123
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "impact" : "aeiou",
   "selfUri" : "aeiou",
   "adherenceState" : "aeiou",
@@ -911,16 +936,9 @@ open class WorkforceManagementAPI {
   "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+0000",
   "managementUnit" : {
     "startDayOfWeek" : "aeiou",
-    "division" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "division" : "",
     "settings" : {
-      "metadata" : {
-        "modifiedBy" : "",
-        "dateModified" : "2000-01-23T04:56:07.000+0000",
-        "version" : 123
-      },
+      "metadata" : "",
       "shiftTrading" : {
         "weeklyMaxPaidViolations" : "aeiou",
         "unequalPaid" : "aeiou",
@@ -1301,6 +1319,8 @@ open class WorkforceManagementAPI {
   "settings" : {
     "startDayOfWeek" : "aeiou",
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -1392,6 +1412,8 @@ open class WorkforceManagementAPI {
   "lengthInMinutes" : 123,
   "defaultCode" : true,
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -1479,6 +1501,8 @@ open class WorkforceManagementAPI {
     "lengthInMinutes" : 123,
     "defaultCode" : true,
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -1710,6 +1734,8 @@ open class WorkforceManagementAPI {
     },
     "settings" : {
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : {
           "selfUri" : "aeiou",
           "id" : "aeiou"
@@ -1867,6 +1893,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -1966,6 +1994,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -2451,6 +2481,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -2544,6 +2576,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -2647,6 +2681,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -3098,6 +3134,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -3216,6 +3254,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -3779,6 +3819,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -4317,6 +4359,8 @@ open class WorkforceManagementAPI {
   },
   "settings" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -4466,6 +4510,8 @@ open class WorkforceManagementAPI {
       "lengthInMinutes" : 123,
       "isDefault" : true,
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : {
           "selfUri" : "aeiou",
           "id" : "aeiou"
@@ -4553,6 +4599,29 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "removedFromManagementUnit" : true,
     "organizationSecondaryPresenceId" : "aeiou",
+    "businessUnit" : {
+      "division" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "settings" : {
+        "startDayOfWeek" : "aeiou",
+        "metadata" : {
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
+          "createdBy" : "",
+          "modifiedBy" : "",
+          "dateModified" : "2000-01-23T04:56:07.000+0000",
+          "version" : 123
+        },
+        "timeZone" : "aeiou",
+        "shortTermForecasting" : {
+          "defaultHistoryWeeks" : 123
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "impact" : "aeiou",
     "selfUri" : "aeiou",
     "adherenceState" : "aeiou",
@@ -4575,16 +4644,9 @@ open class WorkforceManagementAPI {
     "activeQueuesModifiedTime" : "2000-01-23T04:56:07.000+0000",
     "managementUnit" : {
       "startDayOfWeek" : "aeiou",
-      "division" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
+      "division" : "",
       "settings" : {
-        "metadata" : {
-          "modifiedBy" : "",
-          "dateModified" : "2000-01-23T04:56:07.000+0000",
-          "version" : 123
-        },
+        "metadata" : "",
         "shiftTrading" : {
           "weeklyMaxPaidViolations" : "aeiou",
           "unequalPaid" : "aeiou",
@@ -4749,6 +4811,8 @@ open class WorkforceManagementAPI {
     "id" : "aeiou"
   } ],
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -4860,6 +4924,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -5362,6 +5428,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -5443,6 +5511,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -5523,6 +5593,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -5611,6 +5683,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -5702,6 +5776,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "submittedBy" : "",
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -5811,6 +5887,8 @@ open class WorkforceManagementAPI {
     },
     "waitlistedMinutesPerInterval" : [ 123 ],
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -5907,6 +5985,8 @@ open class WorkforceManagementAPI {
   "timeOffRequests" : [ {
     "submittedBy" : "",
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -6354,6 +6434,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "result" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -6528,6 +6610,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -6651,6 +6735,8 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "trade" : {
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : "",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "version" : 123
@@ -6804,6 +6890,8 @@ open class WorkforceManagementAPI {
     "values" : [ "aeiou" ]
   },
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -6968,6 +7056,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -7077,6 +7167,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -7199,6 +7291,8 @@ open class WorkforceManagementAPI {
       "values" : [ "aeiou" ]
     },
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -7413,6 +7507,8 @@ open class WorkforceManagementAPI {
     },
     "settings" : {
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : {
           "selfUri" : "aeiou",
           "id" : "aeiou"
@@ -7582,6 +7678,8 @@ open class WorkforceManagementAPI {
     },
     "settings" : {
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : {
           "selfUri" : "aeiou",
           "id" : "aeiou"
@@ -7885,6 +7983,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -7979,6 +8079,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "submittedBy" : "",
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -8148,6 +8250,8 @@ open class WorkforceManagementAPI {
   "timeOffRequests" : [ {
     "submittedBy" : "",
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -8248,6 +8352,8 @@ open class WorkforceManagementAPI {
   "settings" : {
     "startDayOfWeek" : "aeiou",
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -8334,6 +8440,8 @@ open class WorkforceManagementAPI {
   "lengthInMinutes" : 123,
   "defaultCode" : true,
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -8422,6 +8530,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -8587,6 +8697,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -8686,6 +8798,8 @@ open class WorkforceManagementAPI {
   },
   "settings" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -8828,6 +8942,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -8912,6 +9028,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -9007,6 +9125,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "submittedBy" : "",
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -9110,6 +9230,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -9232,6 +9354,8 @@ open class WorkforceManagementAPI {
     "values" : [ "aeiou" ]
   },
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -9397,6 +9521,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -9499,6 +9625,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "submittedBy" : "",
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -9805,6 +9933,8 @@ open class WorkforceManagementAPI {
   "lengthInMinutes" : 123,
   "defaultCode" : true,
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -10126,6 +10256,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -10221,6 +10353,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -10332,6 +10466,8 @@ open class WorkforceManagementAPI {
         "description" : "aeiou"
       } ],
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : "",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "version" : 123
@@ -10467,6 +10603,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "result" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -10705,6 +10843,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -10936,6 +11076,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "result" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -11111,6 +11253,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "result" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -11278,6 +11422,8 @@ open class WorkforceManagementAPI {
   "settings" : {
     "startDayOfWeek" : "aeiou",
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -11862,6 +12008,8 @@ open class WorkforceManagementAPI {
         "delete" : true
       } ],
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : {
           "selfUri" : "aeiou",
           "id" : "aeiou"
@@ -11956,6 +12104,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -12040,6 +12190,8 @@ open class WorkforceManagementAPI {
     },
     "waitlistedMinutesPerInterval" : [ 123 ],
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -12118,6 +12270,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -12207,6 +12361,8 @@ open class WorkforceManagementAPI {
   "timeOffRequests" : [ {
     "submittedBy" : "",
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -12299,6 +12455,8 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "submittedBy" : "",
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -12471,6 +12629,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "trade" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : "",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
@@ -12588,6 +12748,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -12703,6 +12865,8 @@ open class WorkforceManagementAPI {
     },
     "trade" : {
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : "",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "version" : 123
@@ -12816,6 +12980,8 @@ open class WorkforceManagementAPI {
   "result" : {
     "entities" : [ {
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : "",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "version" : 123
@@ -12916,6 +13082,8 @@ open class WorkforceManagementAPI {
     "values" : [ "aeiou" ]
   },
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -13190,6 +13358,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -13291,6 +13461,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -13401,6 +13573,8 @@ open class WorkforceManagementAPI {
     "values" : [ "aeiou" ]
   },
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -13562,6 +13736,8 @@ open class WorkforceManagementAPI {
   },
   "settings" : {
     "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
       "modifiedBy" : {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -13772,6 +13948,8 @@ open class WorkforceManagementAPI {
         "delete" : true
       } ],
       "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
         "modifiedBy" : {
           "selfUri" : "aeiou",
           "id" : "aeiou"
@@ -13929,6 +14107,8 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "submittedBy" : "",
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "version" : 123
@@ -14017,6 +14197,8 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metadata" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : "",
     "modifiedBy" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"

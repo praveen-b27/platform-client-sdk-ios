@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesEdgegroupEdgetrunkbase) | Gets the edge trunk base associated with the edge group |
 | [**getTelephonyProvidersEdgesEdgegroups**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesEdgegroups) | Get the list of edge groups. |
 | [**getTelephonyProvidersEdgesEdgeversionreport**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesEdgeversionreport) | Get the edge version report. |
+| [**getTelephonyProvidersEdgesExpired**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExpired) | List of edges more than 4 edge versions behind the latest software. |
 | [**getTelephonyProvidersEdgesExtension**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtension) | Get an extension by ID. |
 | [**getTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtensionpool) | Get an extension pool by ID |
 | [**getTelephonyProvidersEdgesExtensionpools**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesExtensionpools) | Get a listing of extension pools |
@@ -2712,6 +2713,55 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EdgeVersionReport**](EdgeVersionReport.html)
+
+<a name="getTelephonyProvidersEdgesExpired"></a>
+
+# **getTelephonyProvidersEdgesExpired**
+
+
+
+> [ExpiredEdgeListing](ExpiredEdgeListing.html) getTelephonyProvidersEdgesExpired()
+
+List of edges more than 4 edge versions behind the latest software.
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/expired  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* internal:edge:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExpired() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExpired was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ExpiredEdgeListing**](ExpiredEdgeListing.html)
 
 <a name="getTelephonyProvidersEdgesExtension"></a>
 

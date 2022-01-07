@@ -29,6 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBots) | Get a list of botConnector bots for this integration |
 | [**getIntegrationsBotconnectorIntegrationIdBotsSummaries**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBotsSummaries) | Get a summary list of botConnector bots for this integration |
 | [**getIntegrationsClientapps**](IntegrationsAPI.html#getIntegrationsClientapps) | List permitted client app integrations for the logged in user |
+| [**getIntegrationsClientappsUnifiedcommunications**](IntegrationsAPI.html#getIntegrationsClientappsUnifiedcommunications) | UC integration client application configuration. |
 | [**getIntegrationsCredential**](IntegrationsAPI.html#getIntegrationsCredential) | Get a single credential with sensitive fields redacted |
 | [**getIntegrationsCredentials**](IntegrationsAPI.html#getIntegrationsCredentials) | List multiple sets of credentials |
 | [**getIntegrationsCredentialsTypes**](IntegrationsAPI.html#getIntegrationsCredentialsTypes) | List all credential types |
@@ -1324,6 +1325,68 @@ IntegrationsAPI.getIntegrationsClientapps(pageSize: pageSize, pageNumber: pageNu
 ### Return type
 
 [**ClientAppEntityListing**](ClientAppEntityListing.html)
+
+<a name="getIntegrationsClientappsUnifiedcommunications"></a>
+
+# **getIntegrationsClientappsUnifiedcommunications**
+
+
+
+> [UCIntegrationListing](UCIntegrationListing.html) getIntegrationsClientappsUnifiedcommunications(pageSize, pageNumber, sortBy, expand, nextPage, previousPage)
+
+UC integration client application configuration.
+
+This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+
+Wraps GET /api/v2/integrations/clientapps/unifiedcommunications  
+
+Requires ANY permissions: 
+
+* integration:unifiedCommunications:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // The total page size requested
+let pageNumber: Int = 1 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+
+// Code example
+IntegrationsAPI.getIntegrationsClientappsUnifiedcommunications(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsClientappsUnifiedcommunications was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **Int**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **String**| variable name requested to sort by | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **nextPage** | **String**| next page token | [optional] |
+| **previousPage** | **String**| Previous page token | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UCIntegrationListing**](UCIntegrationListing.html)
 
 <a name="getIntegrationsCredential"></a>
 

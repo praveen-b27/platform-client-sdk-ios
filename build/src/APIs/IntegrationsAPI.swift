@@ -2574,6 +2574,127 @@ open class IntegrationsAPI {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     UC integration client application configuration.
+     
+     - parameter pageSize: (query) The total page size requested (optional, default to 25)
+     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter sortBy: (query) variable name requested to sort by (optional)
+     - parameter expand: (query) variable name requested by expand list (optional)
+     - parameter nextPage: (query) next page token (optional)
+     - parameter previousPage: (query) Previous page token (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsClientappsUnifiedcommunications(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: UCIntegrationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsClientappsUnifiedcommunicationsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
+        requestBuilder.execute { (response: Response<UCIntegrationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     UC integration client application configuration.
+     
+     - GET /api/v2/integrations/clientapps/unifiedcommunications
+     - This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "integrationPresenceSource" : "aeiou",
+    "i10n" : {
+      "key" : {
+        "name" : "aeiou"
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "icon" : {
+      "vector" : "aeiou"
+    },
+    "ucIntegrationKey" : "aeiou",
+    "pbxPermission" : "aeiou",
+    "id" : "aeiou"
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) The total page size requested (optional, default to 25)
+     - parameter pageNumber: (query) The page number requested (optional, default to 1)
+     - parameter sortBy: (query) variable name requested to sort by (optional)
+     - parameter expand: (query) variable name requested by expand list (optional)
+     - parameter nextPage: (query) next page token (optional)
+     - parameter previousPage: (query) Previous page token (optional)
+
+     - returns: RequestBuilder<UCIntegrationListing> 
+     */
+    open class func getIntegrationsClientappsUnifiedcommunicationsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<UCIntegrationListing> {
+        let path = "/api/v2/integrations/clientapps/unifiedcommunications"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortBy": sortBy, 
+            
+            "expand": expand, 
+            
+            "nextPage": nextPage, 
+            
+            "previousPage": previousPage
+            
+        ])
+
+        let requestBuilder: RequestBuilder<UCIntegrationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     /**
      
      Get a single credential with sensitive fields redacted

@@ -105,6 +105,14 @@ open class WebMessagingAPI {
         }
       }
     } ],
+    "events" : [ {
+      "coBrowse" : {
+        "sessionJoinToken" : "aeiou",
+        "sessionId" : "aeiou",
+        "type" : "aeiou"
+      },
+      "eventType" : "aeiou"
+    } ],
     "direction" : "aeiou"
   } ],
   "pageSize" : 123

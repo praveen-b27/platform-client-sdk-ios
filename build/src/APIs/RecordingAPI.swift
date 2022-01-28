@@ -1084,11 +1084,11 @@ open class RecordingAPI {
      
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
-     - parameter formatId: (query) The desired media format. (optional, default to WEBM)
-     - parameter emailFormatId: (query) The desired media format when downloading an email recording. (optional, default to EML)
-     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. (optional, default to ZIP)
-     - parameter messageFormatId: (query) The desired media format when downloading a message recording. (optional, default to ZIP)
-     - parameter download: (query) requesting a download format of the recording (optional, default to false)
+     - parameter formatId: (query) The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)
+     - parameter emailFormatId: (query) The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)
+     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)
+     - parameter messageFormatId: (query) The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)
+     - parameter download: (query) requesting a download format of the recording. Valid values:true,false (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1697,11 +1697,11 @@ open class RecordingAPI {
      
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
-     - parameter formatId: (query) The desired media format. (optional, default to WEBM)
-     - parameter emailFormatId: (query) The desired media format when downloading an email recording. (optional, default to EML)
-     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. (optional, default to ZIP)
-     - parameter messageFormatId: (query) The desired media format when downloading a message recording. (optional, default to ZIP)
-     - parameter download: (query) requesting a download format of the recording (optional, default to false)
+     - parameter formatId: (query) The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE (optional, default to WEBM)
+     - parameter emailFormatId: (query) The desired media format when downloading an email recording. Valid values:EML,NONE (optional, default to EML)
+     - parameter chatFormatId: (query) The desired media format when downloading a chat recording. Valid values:ZIP,NONE  (optional, default to ZIP)
+     - parameter messageFormatId: (query) The desired media format when downloading a message recording. Valid values:ZIP,NONE (optional, default to ZIP)
+     - parameter download: (query) requesting a download format of the recording. Valid values:true,false (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
 
@@ -2453,7 +2453,7 @@ open class RecordingAPI {
     
     /**
      
-     Get recording metadata for a conversation. Does not return playable media.
+     Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if recording:recording:view permission is missing.
      
      - parameter conversationId: (path) Conversation ID 
      - parameter completion: completion handler to receive the data and the error objects
@@ -2478,7 +2478,7 @@ open class RecordingAPI {
 
     /**
      
-     Get recording metadata for a conversation. Does not return playable media.
+     Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if recording:recording:view permission is missing.
      
      - GET /api/v2/conversations/{conversationId}/recordingmetadata
      - 
@@ -3199,7 +3199,7 @@ open class RecordingAPI {
      
      - parameter conversationId: (path) Conversation ID 
      - parameter maxWaitMs: (query) The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)
-     - parameter formatId: (query) The desired media format (optional, default to WEBM)
+     - parameter formatId: (query) The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getConversationRecordings(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, completion: @escaping ((_ data: [Recording]?,_ error: Error?) -> Void)) {
@@ -3806,7 +3806,7 @@ open class RecordingAPI {
      
      - parameter conversationId: (path) Conversation ID 
      - parameter maxWaitMs: (query) The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)
-     - parameter formatId: (query) The desired media format (optional, default to WEBM)
+     - parameter formatId: (query) The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)
 
      - returns: RequestBuilder<[Recording]> 
      */
@@ -7654,13 +7654,22 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
   "entities" : [ {
     "recording" : "",
     "conversation" : {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     }
-  } ]
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter jobId: (path) jobId 
@@ -7783,6 +7792,9 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
   "entities" : [ {
     "totalConversations" : 123,
     "selfUri" : "aeiou",
@@ -7894,7 +7906,13 @@ open class RecordingAPI {
       "includeScreenRecordings" : true
     },
     "totalProcessedRecordings" : 123
-  } ]
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10463,7 +10481,11 @@ open class RecordingAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : ""
@@ -10661,11 +10683,7 @@ open class RecordingAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",

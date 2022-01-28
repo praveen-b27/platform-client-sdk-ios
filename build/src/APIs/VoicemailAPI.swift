@@ -418,7 +418,11 @@ open class VoicemailAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : {
@@ -880,11 +884,7 @@ open class VoicemailAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
@@ -1889,7 +1889,11 @@ open class VoicemailAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : {
@@ -2351,11 +2355,7 @@ open class VoicemailAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
@@ -2960,7 +2960,11 @@ open class VoicemailAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -3422,11 +3426,7 @@ open class VoicemailAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -4056,7 +4056,11 @@ open class VoicemailAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : {
@@ -4518,11 +4522,7 @@ open class VoicemailAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
@@ -5132,7 +5132,11 @@ open class VoicemailAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : {
@@ -5594,11 +5598,7 @@ open class VoicemailAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
@@ -6146,7 +6146,11 @@ open class VoicemailAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : {
@@ -6608,11 +6612,7 @@ open class VoicemailAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
@@ -7612,7 +7612,11 @@ open class VoicemailAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -8074,11 +8078,7 @@ open class VoicemailAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -8666,7 +8666,11 @@ open class VoicemailAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -9128,11 +9132,7 @@ open class VoicemailAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -9655,7 +9655,11 @@ open class VoicemailAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : {
@@ -10117,11 +10121,7 @@ open class VoicemailAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
@@ -10639,7 +10639,11 @@ open class VoicemailAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -11101,11 +11105,7 @@ open class VoicemailAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",

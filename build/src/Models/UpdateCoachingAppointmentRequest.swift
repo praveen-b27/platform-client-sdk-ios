@@ -31,8 +31,12 @@ public class UpdateCoachingAppointmentRequest: Codable {
     public var documentIds: [String]?
     /** The status of the coaching appointment. */
     public var status: Status?
+    /** The Workforce Management schedule the appointment is associated with. */
+    public var wfmSchedule: WfmScheduleReference?
+    /** The list of external links related to the appointment */
+    public var externalLinks: [String]?
 
-    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, conversationIds: [String]?, documentIds: [String]?, status: Status?) {
+    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, conversationIds: [String]?, documentIds: [String]?, status: Status?, wfmSchedule: WfmScheduleReference?, externalLinks: [String]?) {
         
         self.name = name
         
@@ -48,6 +52,10 @@ public class UpdateCoachingAppointmentRequest: Codable {
         
         self.status = status
         
+        self.wfmSchedule = wfmSchedule
+        
+        self.externalLinks = externalLinks
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -58,6 +66,8 @@ public class UpdateCoachingAppointmentRequest: Codable {
         case conversationIds
         case documentIds
         case status
+        case wfmSchedule
+        case externalLinks
     }
 
 

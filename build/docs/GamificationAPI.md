@@ -2038,7 +2038,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: Metric = new Metric(...) // Metric
+let body: CreateMetric = new CreateMetric(...) // Metric
 
 // Code example
 GamificationAPI.postGamificationMetrics(body: body) { (response, error) in
@@ -2056,7 +2056,7 @@ GamificationAPI.postGamificationMetrics(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Metric**](Metric.html)| Metric | |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric | |
 {: class="table-striped"}
 
 
@@ -2359,7 +2359,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let profileId: String = "" // Performance Profile Id
-let body: Metric = new Metric(...) // Metric
+let body: CreateMetric = new CreateMetric(...) // Metric
 
 // Code example
 GamificationAPI.postGamificationProfileMetrics(profileId: profileId, body: body) { (response, error) in
@@ -2378,7 +2378,7 @@ GamificationAPI.postGamificationProfileMetrics(profileId: profileId, body: body)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **profileId** | **String**| Performance Profile Id | |
-| **body** | [**Metric**](Metric.html)| Metric | |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric | |
 {: class="table-striped"}
 
 
@@ -2465,7 +2465,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let metricId: String = "" // metric Id
-let body: Metric = new Metric(...) // Metric
+let body: CreateMetric = new CreateMetric(...) // Metric
 let performanceProfileId: String = "" // The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given.
 
 // Code example
@@ -2485,7 +2485,7 @@ GamificationAPI.putGamificationMetric(metricId: metricId, body: body, performanc
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **metricId** | **String**| metric Id | |
-| **body** | [**Metric**](Metric.html)| Metric | |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric | |
 | **performanceProfileId** | **String**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional] |
 {: class="table-striped"}
 
@@ -2576,7 +2576,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let profileId: String = "" // Performance Profile Id
 let metricId: String = "" // Metric Id
-let body: Metric = new Metric(...) // Metric
+let body: CreateMetric = new CreateMetric(...) // Metric
 
 // Code example
 GamificationAPI.putGamificationProfileMetric(profileId: profileId, metricId: metricId, body: body) { (response, error) in
@@ -2596,7 +2596,7 @@ GamificationAPI.putGamificationProfileMetric(profileId: profileId, metricId: met
 | ------------- | ------------- | ------------- | ------------- |
 | **profileId** | **String**| Performance Profile Id | |
 | **metricId** | **String**| Metric Id | |
-| **body** | [**Metric**](Metric.html)| Metric | |
+| **body** | [**CreateMetric**](CreateMetric.html)| Metric | |
 {: class="table-striped"}
 
 

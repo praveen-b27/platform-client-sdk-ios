@@ -1125,7 +1125,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopicsGeneral(dialect: dialect) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: enUs ("en-US"), esUs ("es-US"), enAu ("en-AU"), enGb ("en-GB"), enZa ("en-ZA"), esEs ("es-ES"), enIn ("en-IN"), frFr ("fr-FR"), frCa ("fr-CA"), itIt ("it-IT"), deDe ("de-DE"), ptBr ("pt-BR") |
+| **dialect** | **String**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]<br />**Values**: enUs ("en-US"), esUs ("es-US"), enAu ("en-AU"), enGb ("en-GB"), enZa ("en-ZA"), esEs ("es-ES"), enIn ("en-IN"), frFr ("fr-FR"), frCa ("fr-CA"), itIt ("it-IT"), deDe ("de-DE"), ptBr ("pt-BR"), plPl ("pl-PL") |
 {: class="table-striped"}
 
 

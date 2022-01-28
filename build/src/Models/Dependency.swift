@@ -44,6 +44,7 @@ public class Dependency: Codable {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"

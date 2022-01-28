@@ -28,8 +28,12 @@ public class CreateCoachingAppointmentRequest: Codable {
     public var conversationIds: [String]?
     /** IDs of documents associated with this coaching appointment. */
     public var documentIds: [String]?
+    /** The Workforce Management schedule the appointment is associated with. */
+    public var wfmSchedule: WfmScheduleReference?
+    /** The list of external links related to the appointment */
+    public var externalLinks: [String]?
 
-    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, facilitatorId: String?, attendeeIds: [String]?, conversationIds: [String]?, documentIds: [String]?) {
+    public init(name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, facilitatorId: String?, attendeeIds: [String]?, conversationIds: [String]?, documentIds: [String]?, wfmSchedule: WfmScheduleReference?, externalLinks: [String]?) {
         
         self.name = name
         
@@ -47,6 +51,10 @@ public class CreateCoachingAppointmentRequest: Codable {
         
         self.documentIds = documentIds
         
+        self.wfmSchedule = wfmSchedule
+        
+        self.externalLinks = externalLinks
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -58,6 +66,8 @@ public class CreateCoachingAppointmentRequest: Codable {
         case attendeeIds
         case conversationIds
         case documentIds
+        case wfmSchedule
+        case externalLinks
     }
 
 

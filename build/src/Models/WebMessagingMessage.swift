@@ -16,6 +16,7 @@ public class WebMessagingMessage: Codable {
         case text = "Text"
         case structured = "Structured"
         case receipt = "Receipt"
+        case event = "Event"
     }
     public enum Direction: String, Codable { 
         case inbound = "Inbound"
@@ -35,12 +36,14 @@ public class WebMessagingMessage: Codable {
     public var text: String?
     /** List of content elements. */
     public var content: [WebMessagingContent]?
+    /** List of event elements. */
+    public var events: [WebMessagingEvent]?
     /** The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest. */
     public var direction: Direction?
     /** Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies. */
     public var originatingEntity: OriginatingEntity?
 
-    public init(_id: String?, channel: WebMessagingChannel?, type: ModelType?, text: String?, content: [WebMessagingContent]?, direction: Direction?, originatingEntity: OriginatingEntity?) {
+    public init(_id: String?, channel: WebMessagingChannel?, type: ModelType?, text: String?, content: [WebMessagingContent]?, events: [WebMessagingEvent]?, direction: Direction?, originatingEntity: OriginatingEntity?) {
         
         self._id = _id
         
@@ -51,6 +54,8 @@ public class WebMessagingMessage: Codable {
         self.text = text
         
         self.content = content
+        
+        self.events = events
         
         self.direction = direction
         
@@ -64,6 +69,7 @@ public class WebMessagingMessage: Codable {
         case type
         case text
         case content
+        case events
         case direction
         case originatingEntity
     }

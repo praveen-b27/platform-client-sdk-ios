@@ -27,7 +27,7 @@ public class SendAgentlessOutboundMessageRequest: Codable {
     public var toAddress: String?
     /** The recipient messaging address messenger type. Currently SMS and Open are the only supported types. WhatsApp will be supported in a future release */
     public var toAddressMessengerType: ToAddressMessengerType?
-    /** The text of the message to send. This field is required in the case of SMS messenger type */
+    /** The text of the message to send. This field is required in the case of SMS messenger type. Maximum character counts are: SMS - 765 characters, other channels - 2000 characters. */
     public var textBody: String?
     /** The messaging template to use in the case of WhatsApp messenger type. This field is required when using WhatsApp messenger type */
     public var messagingTemplate: MessagingTemplateRequest?

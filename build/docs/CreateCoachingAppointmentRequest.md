@@ -14,8 +14,10 @@ Create coaching appointment request
 | **lengthInMinutes** | **Int** | The duration of coaching appointment in minutes. | |
 | **facilitatorId** | **String** | The facilitator ID of coaching appointment. | [optional] |
 | **attendeeIds** | **[String]** | IDs of attendees in the coaching appointment. | |
-| **conversationIds** | **[String]** | IDs of conversations associated with this coaching appointment. | |
-| **documentIds** | **[String]** | IDs of documents associated with this coaching appointment. | |
+| **conversationIds** | **[String]** | IDs of conversations associated with this coaching appointment. | [optional] |
+| **documentIds** | **[String]** | IDs of documents associated with this coaching appointment. | [optional] |
+| **wfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference.html) | The Workforce Management schedule the appointment is associated with. | [optional] |
+| **externalLinks** | **[String]** | The list of external links related to the appointment | [optional] |
 {: class="table table-striped"}
 
 

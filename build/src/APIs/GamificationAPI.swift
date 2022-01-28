@@ -445,10 +445,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
-  "linkedMetric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "linkedMetric" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -478,6 +475,10 @@ open class GamificationAPI {
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -489,7 +490,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   }
 }}]
      
@@ -566,6 +568,10 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "unitType" : "aeiou",
   "defaultObjective" : {
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -577,7 +583,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   },
   "divisorMetrics" : [ "aeiou" ],
   "lockTemplateId" : "aeiou",
@@ -651,6 +658,10 @@ open class GamificationAPI {
   "entities" : [ {
     "unitType" : "aeiou",
     "defaultObjective" : {
+      "topics" : [ {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ],
       "id" : "aeiou",
       "templateId" : "aeiou",
       "zones" : [ {
@@ -662,7 +673,8 @@ open class GamificationAPI {
         "label" : "aeiou",
         "lowerLimitValue" : 123
       } ],
-      "enabled" : true
+      "enabled" : true,
+      "topicIdsFilterType" : "aeiou"
     },
     "divisorMetrics" : [ "aeiou" ],
     "lockTemplateId" : "aeiou",
@@ -1005,10 +1017,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
-  "linkedMetric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "linkedMetric" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -1038,6 +1047,10 @@ open class GamificationAPI {
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -1049,7 +1062,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   }
 }}]
      
@@ -1139,10 +1153,7 @@ open class GamificationAPI {
   "total" : 123456789,
   "entities" : [ {
     "metricDefinitionId" : "aeiou",
-    "linkedMetric" : {
-      "selfUri" : "aeiou",
-      "id" : "aeiou"
-    },
+    "linkedMetric" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -1172,6 +1183,10 @@ open class GamificationAPI {
     "performanceProfileId" : "aeiou",
     "objective" : {
       "dateStart" : "2000-01-23T04:56:07.000+0000",
+      "topics" : [ {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      } ],
       "id" : "aeiou",
       "templateId" : "aeiou",
       "zones" : [ {
@@ -1183,7 +1198,8 @@ open class GamificationAPI {
         "label" : "aeiou",
         "lowerLimitValue" : 123
       } ],
-      "enabled" : true
+      "enabled" : true,
+      "topicIdsFilterType" : "aeiou"
     }
   } ],
   "selfUri" : "aeiou"
@@ -1653,10 +1669,7 @@ open class GamificationAPI {
     } ],
     "metric" : {
       "metricDefinitionId" : "aeiou",
-      "linkedMetric" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
+      "linkedMetric" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -1686,6 +1699,10 @@ open class GamificationAPI {
       "performanceProfileId" : "aeiou",
       "objective" : {
         "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "topics" : [ {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        } ],
         "id" : "aeiou",
         "templateId" : "aeiou",
         "zones" : [ {
@@ -1697,7 +1714,8 @@ open class GamificationAPI {
           "label" : "aeiou",
           "lowerLimitValue" : 123
         } ],
-        "enabled" : true
+        "enabled" : true,
+        "topicIdsFilterType" : "aeiou"
       }
     },
     "value" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2192,10 +2210,7 @@ open class GamificationAPI {
     } ],
     "metric" : {
       "metricDefinitionId" : "aeiou",
-      "linkedMetric" : {
-        "selfUri" : "aeiou",
-        "id" : "aeiou"
-      },
+      "linkedMetric" : "",
       "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2225,6 +2240,10 @@ open class GamificationAPI {
       "performanceProfileId" : "aeiou",
       "objective" : {
         "dateStart" : "2000-01-23T04:56:07.000+0000",
+        "topics" : [ {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        } ],
         "id" : "aeiou",
         "templateId" : "aeiou",
         "zones" : [ {
@@ -2236,7 +2255,8 @@ open class GamificationAPI {
           "label" : "aeiou",
           "lowerLimitValue" : 123
         } ],
-        "enabled" : true
+        "enabled" : true,
+        "topicIdsFilterType" : "aeiou"
       }
     },
     "value" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3523,7 +3543,7 @@ open class GamificationAPI {
      - parameter body: (body) Metric 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postGamificationMetrics(body: Metric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+    open class func postGamificationMetrics(body: CreateMetric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
         let requestBuilder = postGamificationMetricsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
             do {
@@ -3552,10 +3572,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
-  "linkedMetric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "linkedMetric" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -3585,6 +3602,10 @@ open class GamificationAPI {
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -3596,7 +3617,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   }
 }}]
      
@@ -3604,7 +3626,7 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func postGamificationMetricsWithRequestBuilder(body: Metric) -> RequestBuilder<Metric> {
+    open class func postGamificationMetricsWithRequestBuilder(body: CreateMetric) -> RequestBuilder<Metric> {
         let path = "/api/v2/gamification/metrics"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -3984,10 +4006,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
-  "linkedMetric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "linkedMetric" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -4017,6 +4036,10 @@ open class GamificationAPI {
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4028,7 +4051,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   }
 }}]
      
@@ -4071,7 +4095,7 @@ open class GamificationAPI {
      - parameter body: (body) Metric 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postGamificationProfileMetrics(profileId: String, body: Metric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+    open class func postGamificationProfileMetrics(profileId: String, body: CreateMetric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
         let requestBuilder = postGamificationProfileMetricsWithRequestBuilder(profileId: profileId, body: body)
         requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
             do {
@@ -4100,10 +4124,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
-  "linkedMetric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "linkedMetric" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -4133,6 +4154,10 @@ open class GamificationAPI {
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4144,7 +4169,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   }
 }}]
      
@@ -4153,7 +4179,7 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func postGamificationProfileMetricsWithRequestBuilder(profileId: String, body: Metric) -> RequestBuilder<Metric> {
+    open class func postGamificationProfileMetricsWithRequestBuilder(profileId: String, body: CreateMetric) -> RequestBuilder<Metric> {
         var path = "/api/v2/gamification/profiles/{profileId}/metrics"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4266,7 +4292,7 @@ open class GamificationAPI {
      - parameter performanceProfileId: (query) The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putGamificationMetric(metricId: String, body: Metric, performanceProfileId: String? = nil, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+    open class func putGamificationMetric(metricId: String, body: CreateMetric, performanceProfileId: String? = nil, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
         let requestBuilder = putGamificationMetricWithRequestBuilder(metricId: metricId, body: body, performanceProfileId: performanceProfileId)
         requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
             do {
@@ -4295,10 +4321,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
-  "linkedMetric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "linkedMetric" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -4328,6 +4351,10 @@ open class GamificationAPI {
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4339,7 +4366,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   }
 }}]
      
@@ -4349,7 +4377,7 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func putGamificationMetricWithRequestBuilder(metricId: String, body: Metric, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
+    open class func putGamificationMetricWithRequestBuilder(metricId: String, body: CreateMetric, performanceProfileId: String? = nil) -> RequestBuilder<Metric> {
         var path = "/api/v2/gamification/metrics/{metricId}"
         let metricIdPreEscape = "\(metricId)"
         let metricIdPostEscape = metricIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4470,7 +4498,7 @@ open class GamificationAPI {
      - parameter body: (body) Metric 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putGamificationProfileMetric(profileId: String, metricId: String, body: Metric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
+    open class func putGamificationProfileMetric(profileId: String, metricId: String, body: CreateMetric, completion: @escaping ((_ data: Metric?,_ error: Error?) -> Void)) {
         let requestBuilder = putGamificationProfileMetricWithRequestBuilder(profileId: profileId, metricId: metricId, body: body)
         requestBuilder.execute { (response: Response<Metric>?, error) -> Void in
             do {
@@ -4499,10 +4527,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "metricDefinitionId" : "aeiou",
-  "linkedMetric" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "linkedMetric" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -4532,6 +4557,10 @@ open class GamificationAPI {
   "performanceProfileId" : "aeiou",
   "objective" : {
     "dateStart" : "2000-01-23T04:56:07.000+0000",
+    "topics" : [ {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    } ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4543,7 +4572,8 @@ open class GamificationAPI {
       "label" : "aeiou",
       "lowerLimitValue" : 123
     } ],
-    "enabled" : true
+    "enabled" : true,
+    "topicIdsFilterType" : "aeiou"
   }
 }}]
      
@@ -4553,7 +4583,7 @@ open class GamificationAPI {
 
      - returns: RequestBuilder<Metric> 
      */
-    open class func putGamificationProfileMetricWithRequestBuilder(profileId: String, metricId: String, body: Metric) -> RequestBuilder<Metric> {
+    open class func putGamificationProfileMetricWithRequestBuilder(profileId: String, metricId: String, body: CreateMetric) -> RequestBuilder<Metric> {
         var path = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}"
         let profileIdPreEscape = "\(profileId)"
         let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

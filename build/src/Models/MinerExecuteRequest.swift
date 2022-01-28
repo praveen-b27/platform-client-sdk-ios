@@ -14,6 +14,7 @@ public class MinerExecuteRequest: Codable {
     public enum MediaType: String, Codable { 
         case chat = "Chat"
         case call = "Call"
+        case message = "Message"
     }
     /** Start date for the date range to mine. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateStart: Date?

@@ -23,6 +23,7 @@ public class DevelopmentActivity: Codable {
         case inProgress = "InProgress"
         case completed = "Completed"
         case invalidSchedule = "InvalidSchedule"
+        case notCompleted = "NotCompleted"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

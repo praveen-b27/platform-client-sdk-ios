@@ -55,7 +55,7 @@ public class HistoricalAdherenceExceptionInfo: Codable {
     public var startOffsetSeconds: Int?
     /** Exception end offset in seconds relative to query start time */
     public var endOffsetSeconds: Int?
-    /** The ID of the scheduled activity for this user */
+    /** The ID of the scheduled activity code for this user */
     public var scheduledActivityCodeId: String?
     /** Activity for which the user is scheduled */
     public var scheduledActivityCategory: ScheduledActivityCategory?
@@ -67,7 +67,7 @@ public class HistoricalAdherenceExceptionInfo: Codable {
     public var routingStatus: RoutingStatus?
     /** The impact of the current adherence state for this user */
     public var impact: Impact?
-    /** The lookup ID used to retrieve secondary status from map of lookup ID to corresponding secondary presence ID */
+    /** The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID */
     public var secondaryPresenceLookupId: String?
 
     public init(startOffsetSeconds: Int?, endOffsetSeconds: Int?, scheduledActivityCodeId: String?, scheduledActivityCategory: ScheduledActivityCategory?, actualActivityCategory: ActualActivityCategory?, systemPresence: SystemPresence?, routingStatus: RoutingStatus?, impact: Impact?, secondaryPresenceLookupId: String?) {

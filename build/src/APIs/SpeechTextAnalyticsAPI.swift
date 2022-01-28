@@ -1523,6 +1523,7 @@ open class SpeechTextAnalyticsAPI {
         case itIt = "it-IT"
         case deDe = "de-DE"
         case ptBr = "pt-BR"
+        case plPl = "pl-PL"
     }
 
     

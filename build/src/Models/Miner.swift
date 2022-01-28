@@ -43,6 +43,7 @@ public class Miner: Codable {
     public enum MediaType: String, Codable { 
         case chat = "Chat"
         case call = "Call"
+        case message = "Message"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

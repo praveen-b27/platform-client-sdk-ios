@@ -36,10 +36,14 @@ public class FlowDivisionView: Codable {
     /** The division to which this entity belongs. */
     public var division: WritableDivision?
     public var type: ModelType?
+    /** the flow description */
+    public var _description: String?
     /** json schema describing the inputs for the flow */
     public var inputSchema: JsonSchemaDocument?
     /** json schema describing the outputs for the flow */
     public var outputSchema: JsonSchemaDocument?
+    /** List of supported languages for the published version of the flow. */
+    public var supportedLanguages: [SupportedLanguage]?
     /** published version information if there is a published version */
     public var publishedVersion: FlowVersion?
     /** debug version information if there is a debug version */
@@ -47,7 +51,7 @@ public class FlowDivisionView: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, publishedVersion: FlowVersion?, debugVersion: FlowVersion?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, type: ModelType?, _description: String?, inputSchema: JsonSchemaDocument?, outputSchema: JsonSchemaDocument?, supportedLanguages: [SupportedLanguage]?, publishedVersion: FlowVersion?, debugVersion: FlowVersion?, selfUri: String?) {
         
         self._id = _id
         
@@ -57,9 +61,13 @@ public class FlowDivisionView: Codable {
         
         self.type = type
         
+        self._description = _description
+        
         self.inputSchema = inputSchema
         
         self.outputSchema = outputSchema
+        
+        self.supportedLanguages = supportedLanguages
         
         self.publishedVersion = publishedVersion
         
@@ -74,8 +82,10 @@ public class FlowDivisionView: Codable {
         case name
         case division
         case type
+        case _description = "description"
         case inputSchema
         case outputSchema
+        case supportedLanguages
         case publishedVersion
         case debugVersion
         case selfUri

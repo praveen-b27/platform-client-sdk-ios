@@ -176,6 +176,15 @@ open class CoachingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "wfmSchedule" : {
+    "businessUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
   "documents" : [ {
     "selfUri" : "aeiou",
     "id" : "aeiou"
@@ -197,8 +206,10 @@ open class CoachingAPI {
   "isOverdue" : true,
   "dateStart" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
   "modifiedBy" : "",
+  "externalLinks" : [ "aeiou" ],
   "id" : "aeiou",
   "status" : "aeiou"
 }}]
@@ -556,6 +567,14 @@ open class CoachingAPI {
 
     
     
+    
+    public enum IntervalCondition_getCoachingAppointments: String { 
+        case startsIn = "StartsIn"
+        case overlaps = "Overlaps"
+    }
+
+    
+    
     /**
      
      Get appointments for users and optional date range
@@ -570,10 +589,11 @@ open class CoachingAPI {
      - parameter relationships: (query) Relationships to filter by (optional)
      - parameter completionInterval: (query) Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Overdue status to filter by (optional)
+     - parameter intervalCondition: (query) Filter condition for interval (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCoachingAppointments(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCoachingAppointmentsWithRequestBuilder(userIds: userIds, interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue)
+    open class func getCoachingAppointments(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil, intervalCondition: IntervalCondition_getCoachingAppointments? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCoachingAppointmentsWithRequestBuilder(userIds: userIds, interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue, intervalCondition: intervalCondition)
         requestBuilder.execute { (response: Response<CoachingAppointmentResponseList>?, error) -> Void in
             do {
                 if let e = error {
@@ -604,6 +624,15 @@ open class CoachingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "wfmSchedule" : {
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
     "documents" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -625,8 +654,10 @@ open class CoachingAPI {
     "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
     "name" : "aeiou",
     "modifiedBy" : "",
+    "externalLinks" : [ "aeiou" ],
     "id" : "aeiou",
     "status" : "aeiou"
   } ],
@@ -648,10 +679,11 @@ open class CoachingAPI {
      - parameter relationships: (query) Relationships to filter by (optional)
      - parameter completionInterval: (query) Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Overdue status to filter by (optional)
+     - parameter intervalCondition: (query) Filter condition for interval (optional)
 
      - returns: RequestBuilder<CoachingAppointmentResponseList> 
      */
-    open class func getCoachingAppointmentsWithRequestBuilder(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
+    open class func getCoachingAppointmentsWithRequestBuilder(userIds: [String], interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointments? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointments? = nil, intervalCondition: IntervalCondition_getCoachingAppointments? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
         let path = "/api/v2/coaching/appointments"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -682,7 +714,9 @@ open class CoachingAPI {
             
             "completionInterval": completionInterval, 
             
-            "overdue": overdue?.rawValue
+            "overdue": overdue?.rawValue, 
+            
+            "intervalCondition": intervalCondition?.rawValue
             
         ])
 
@@ -738,6 +772,14 @@ open class CoachingAPI {
 
     
     
+    
+    public enum IntervalCondition_getCoachingAppointmentsMe: String { 
+        case startsIn = "StartsIn"
+        case overlaps = "Overlaps"
+    }
+
+    
+    
     /**
      
      Get my appointments for a given date range
@@ -751,10 +793,11 @@ open class CoachingAPI {
      - parameter relationships: (query) Relationships to filter by (optional)
      - parameter completionInterval: (query) Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Overdue status to filter by (optional)
+     - parameter intervalCondition: (query) Filter condition for interval (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getCoachingAppointmentsMe(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getCoachingAppointmentsMeWithRequestBuilder(interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue)
+    open class func getCoachingAppointmentsMe(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil, intervalCondition: IntervalCondition_getCoachingAppointmentsMe? = nil, completion: @escaping ((_ data: CoachingAppointmentResponseList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getCoachingAppointmentsMeWithRequestBuilder(interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue, intervalCondition: intervalCondition)
         requestBuilder.execute { (response: Response<CoachingAppointmentResponseList>?, error) -> Void in
             do {
                 if let e = error {
@@ -785,6 +828,15 @@ open class CoachingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "wfmSchedule" : {
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
     "documents" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -806,8 +858,10 @@ open class CoachingAPI {
     "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
     "name" : "aeiou",
     "modifiedBy" : "",
+    "externalLinks" : [ "aeiou" ],
     "id" : "aeiou",
     "status" : "aeiou"
   } ],
@@ -828,10 +882,11 @@ open class CoachingAPI {
      - parameter relationships: (query) Relationships to filter by (optional)
      - parameter completionInterval: (query) Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
      - parameter overdue: (query) Overdue status to filter by (optional)
+     - parameter intervalCondition: (query) Filter condition for interval (optional)
 
      - returns: RequestBuilder<CoachingAppointmentResponseList> 
      */
-    open class func getCoachingAppointmentsMeWithRequestBuilder(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
+    open class func getCoachingAppointmentsMeWithRequestBuilder(interval: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, statuses: [String]? = nil, facilitatorIds: [String]? = nil, sortOrder: SortOrder_getCoachingAppointmentsMe? = nil, relationships: [String]? = nil, completionInterval: String? = nil, overdue: Overdue_getCoachingAppointmentsMe? = nil, intervalCondition: IntervalCondition_getCoachingAppointmentsMe? = nil) -> RequestBuilder<CoachingAppointmentResponseList> {
         let path = "/api/v2/coaching/appointments/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -860,7 +915,9 @@ open class CoachingAPI {
             
             "completionInterval": completionInterval, 
             
-            "overdue": overdue?.rawValue
+            "overdue": overdue?.rawValue, 
+            
+            "intervalCondition": intervalCondition?.rawValue
             
         ])
 
@@ -922,6 +979,15 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "appointment" : {
+    "wfmSchedule" : {
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
     "documents" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -940,8 +1006,10 @@ open class CoachingAPI {
     "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
     "name" : "aeiou",
     "modifiedBy" : "",
+    "externalLinks" : [ "aeiou" ],
     "id" : "aeiou",
     "status" : "aeiou"
   },
@@ -1044,6 +1112,15 @@ open class CoachingAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "appointment" : {
+      "wfmSchedule" : {
+        "businessUnit" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "weekDate" : "2000-01-23T04:56:07.000+0000"
+      },
       "documents" : [ {
         "selfUri" : "aeiou",
         "id" : "aeiou"
@@ -1062,8 +1139,10 @@ open class CoachingAPI {
       "isOverdue" : true,
       "dateStart" : "2000-01-23T04:56:07.000+0000",
       "createdBy" : "",
+      "dateCompleted" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "modifiedBy" : "",
+      "externalLinks" : [ "aeiou" ],
       "id" : "aeiou",
       "status" : "aeiou"
     },
@@ -1156,6 +1235,15 @@ open class CoachingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "wfmSchedule" : {
+    "businessUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
   "documents" : [ {
     "selfUri" : "aeiou",
     "id" : "aeiou"
@@ -1177,8 +1265,10 @@ open class CoachingAPI {
   "isOverdue" : true,
   "dateStart" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
   "modifiedBy" : "",
+  "externalLinks" : [ "aeiou" ],
   "id" : "aeiou",
   "status" : "aeiou"
 }}]
@@ -1412,6 +1502,15 @@ open class CoachingAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "appointment" : {
+    "wfmSchedule" : {
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
     "documents" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
@@ -1430,8 +1529,10 @@ open class CoachingAPI {
     "isOverdue" : true,
     "dateStart" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
+    "dateCompleted" : "2000-01-23T04:56:07.000+0000",
     "name" : "aeiou",
     "modifiedBy" : "",
+    "externalLinks" : [ "aeiou" ],
     "id" : "aeiou",
     "status" : "aeiou"
   },
@@ -1654,6 +1755,15 @@ open class CoachingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "wfmSchedule" : {
+    "businessUnit" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000"
+  },
   "documents" : [ {
     "selfUri" : "aeiou",
     "id" : "aeiou"
@@ -1675,8 +1785,10 @@ open class CoachingAPI {
   "isOverdue" : true,
   "dateStart" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
+  "dateCompleted" : "2000-01-23T04:56:07.000+0000",
   "name" : "aeiou",
   "modifiedBy" : "",
+  "externalLinks" : [ "aeiou" ],
   "id" : "aeiou",
   "status" : "aeiou"
 }}]

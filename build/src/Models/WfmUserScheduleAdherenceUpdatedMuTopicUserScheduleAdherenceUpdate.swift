@@ -31,6 +31,7 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
     public var managementUnitId: String?
     public var team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?
     public var scheduledActivityCategory: String?
+    public var scheduledActivityCode: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference?
     public var systemPresence: String?
     public var organizationSecondaryPresenceId: String?
     public var routingStatus: RoutingStatus?
@@ -44,7 +45,7 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
     public var activeQueuesModifiedTime: Date?
     public var removedFromManagementUnit: Bool?
 
-    public init(user: WfmUserScheduleAdherenceUpdatedMuTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?, scheduledActivityCategory: String?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
+    public init(user: WfmUserScheduleAdherenceUpdatedMuTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
         
         self.user = user
         
@@ -53,6 +54,8 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
         self.team = team
         
         self.scheduledActivityCategory = scheduledActivityCategory
+        
+        self.scheduledActivityCode = scheduledActivityCode
         
         self.systemPresence = systemPresence
         

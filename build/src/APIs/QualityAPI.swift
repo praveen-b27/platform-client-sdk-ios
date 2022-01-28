@@ -493,7 +493,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : ""
@@ -674,11 +678,7 @@ open class QualityAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -1085,11 +1085,7 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "externalTag" : "aeiou",
     "divisions" : [ {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "division" : "",
       "entities" : [ "" ]
     } ],
     "maxParticipants" : 123,
@@ -1248,7 +1244,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -3032,7 +3032,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : ""
@@ -3213,11 +3217,7 @@ open class QualityAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -4030,7 +4030,11 @@ open class QualityAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : ""
@@ -4211,11 +4215,7 @@ open class QualityAPI {
             },
             "division" : "",
             "dateCreated" : "2000-01-23T04:56:07.000+0000",
-            "queueFlow" : {
-              "selfUri" : "aeiou",
-              "name" : "aeiou",
-              "id" : "aeiou"
-            },
+            "queueFlow" : "",
             "callingPartyNumber" : "aeiou",
             "userMemberCount" : 123,
             "modifiedBy" : "aeiou",
@@ -4652,11 +4652,7 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "externalTag" : "aeiou",
     "divisions" : [ {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "division" : "",
       "entities" : [ "" ]
     } ],
     "maxParticipants" : 123,
@@ -4815,7 +4811,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -5791,7 +5791,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -6253,11 +6257,7 @@ open class QualityAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -6919,11 +6919,7 @@ open class QualityAPI {
       "selfUri" : "aeiou",
       "externalTag" : "aeiou",
       "divisions" : [ {
-        "division" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "division" : "",
         "entities" : [ "" ]
       } ],
       "maxParticipants" : 123,
@@ -7082,7 +7078,11 @@ open class QualityAPI {
           "language" : "",
           "scoredAgents" : [ {
             "score" : 123,
-            "agent" : ""
+            "agent" : {
+              "selfUri" : "aeiou",
+              "name" : "aeiou",
+              "id" : "aeiou"
+            }
           } ],
           "priority" : 123,
           "queue" : {
@@ -10780,7 +10780,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -11242,11 +11246,7 @@ open class QualityAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -12448,7 +12448,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : ""
@@ -12629,11 +12633,7 @@ open class QualityAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -13034,11 +13034,7 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "externalTag" : "aeiou",
     "divisions" : [ {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "division" : "",
       "entities" : [ "" ]
     } ],
     "maxParticipants" : 123,
@@ -13197,7 +13193,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -15244,7 +15244,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : ""
@@ -15425,11 +15429,7 @@ open class QualityAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -15831,11 +15831,7 @@ open class QualityAPI {
     "selfUri" : "aeiou",
     "externalTag" : "aeiou",
     "divisions" : [ {
-      "division" : {
-        "selfUri" : "aeiou",
-        "name" : "aeiou",
-        "id" : "aeiou"
-      },
+      "division" : "",
       "entities" : [ "" ]
     } ],
     "maxParticipants" : 123,
@@ -15994,7 +15990,11 @@ open class QualityAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {

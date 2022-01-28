@@ -76,10 +76,18 @@ public class SmsPhoneNumber: Codable {
     public var shortCodeBillingType: ShortCodeBillingType?
     /** Status of latest asynchronous provisioning action */
     public var provisioningStatus: SmsProvisioningStatus?
+    /** Localized country name for the country code this phone number belongs too */
+    public var country: String?
+    /** Set to true if this phone number has the capability to support SMS */
+    public var supportsSms: Bool?
+    /** Set to true if this phone number has the capability to support MMS */
+    public var supportsMms: Bool?
+    /** Set to true if this phone number has the capability to support voice */
+    public var supportsVoice: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, provisioningStatus: SmsProvisioningStatus?, selfUri: String?) {
+    public init(_id: String?, name: String?, phoneNumber: String?, phoneNumberType: PhoneNumberType?, provisionedThroughPureCloud: Bool?, phoneNumberStatus: PhoneNumberStatus?, capabilities: [Capabilities]?, countryCode: String?, dateCreated: Date?, dateModified: Date?, createdBy: User?, modifiedBy: User?, version: Int?, purchaseDate: Date?, cancellationDate: Date?, renewalDate: Date?, autoRenewable: AutoRenewable?, addressId: SmsAddress?, shortCodeBillingType: ShortCodeBillingType?, provisioningStatus: SmsProvisioningStatus?, country: String?, supportsSms: Bool?, supportsMms: Bool?, supportsVoice: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -121,6 +129,14 @@ public class SmsPhoneNumber: Codable {
         
         self.provisioningStatus = provisioningStatus
         
+        self.country = country
+        
+        self.supportsSms = supportsSms
+        
+        self.supportsMms = supportsMms
+        
+        self.supportsVoice = supportsVoice
+        
         self.selfUri = selfUri
         
     }
@@ -146,6 +162,10 @@ public class SmsPhoneNumber: Codable {
         case addressId
         case shortCodeBillingType
         case provisioningStatus
+        case country
+        case supportsSms
+        case supportsMms
+        case supportsVoice
         case selfUri
     }
 

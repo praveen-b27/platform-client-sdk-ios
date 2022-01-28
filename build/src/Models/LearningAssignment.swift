@@ -17,6 +17,7 @@ public class LearningAssignment: Codable {
         case inProgress = "InProgress"
         case completed = "Completed"
         case deleted = "Deleted"
+        case notCompleted = "NotCompleted"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

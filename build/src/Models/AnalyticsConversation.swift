@@ -11,6 +11,26 @@ import Foundation
 
 public class AnalyticsConversation: Codable {
 
+    public enum ConversationInitiator: String, Codable { 
+        case acd = "acd"
+        case agent = "agent"
+        case api = "api"
+        case botflow = "botflow"
+        case campaign = "campaign"
+        case customer = "customer"
+        case dialer = "dialer"
+        case external = "external"
+        case fax = "fax"
+        case group = "group"
+        case inbound = "inbound"
+        case ivr = "ivr"
+        case manual = "manual"
+        case outbound = "outbound"
+        case station = "station"
+        case user = "user"
+        case voicemail = "voicemail"
+        case workflow = "workflow"
+    }
     public enum OriginatingDirection: String, Codable { 
         case inbound = "inbound"
         case outbound = "outbound"
@@ -19,6 +39,8 @@ public class AnalyticsConversation: Codable {
     public var conversationEnd: Date?
     /** Unique identifier for the conversation */
     public var conversationId: String?
+    /** Indicates the participant purpose of the participant initiating a message conversation */
+    public var conversationInitiator: ConversationInitiator?
     /** The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conversationStart: Date?
     /** Identifier(s) of division(s) associated with a conversation */
@@ -44,11 +66,13 @@ public class AnalyticsConversation: Codable {
     /** Participants in the conversation */
     public var participants: [AnalyticsParticipant]?
 
-    public init(conversationEnd: Date?, conversationId: String?, conversationStart: Date?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
+    public init(conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
         
         self.conversationEnd = conversationEnd
         
         self.conversationId = conversationId
+        
+        self.conversationInitiator = conversationInitiator
         
         self.conversationStart = conversationStart
         

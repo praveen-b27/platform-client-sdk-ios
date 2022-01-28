@@ -16,6 +16,7 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
         case inProgress = "InProgress"
         case completed = "Completed"
         case deleted = "Deleted"
+        case notCompleted = "NotCompleted"
     }
     public var _id: String?
     public var user: LearningAssignmentTopicUserReference?

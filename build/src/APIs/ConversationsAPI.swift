@@ -697,6 +697,7 @@ open class ConversationsAPI {
     "evaluatorId" : "aeiou",
     "released" : true
   } ],
+  "conversationInitiator" : "aeiou",
   "conversationId" : "aeiou",
   "surveys" : [ {
     "queueId" : "aeiou",
@@ -841,6 +842,7 @@ open class ConversationsAPI {
         } ]
       } ],
       "journeyCustomerSessionIdType" : "aeiou",
+      "extendedDeliveryStatus" : "aeiou",
       "provider" : "aeiou",
       "journeyCustomerIdType" : "aeiou",
       "journeyCustomerId" : "aeiou",
@@ -966,6 +968,7 @@ open class ConversationsAPI {
       "evaluatorId" : "aeiou",
       "released" : true
     } ],
+    "conversationInitiator" : "aeiou",
     "conversationId" : "aeiou",
     "surveys" : [ {
       "queueId" : "aeiou",
@@ -1110,6 +1113,7 @@ open class ConversationsAPI {
           } ]
         } ],
         "journeyCustomerSessionIdType" : "aeiou",
+        "extendedDeliveryStatus" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
         "journeyCustomerId" : "aeiou",
@@ -1315,6 +1319,7 @@ open class ConversationsAPI {
       "evaluatorId" : "aeiou",
       "released" : true
     } ],
+    "conversationInitiator" : "aeiou",
     "conversationId" : "aeiou",
     "surveys" : [ {
       "queueId" : "aeiou",
@@ -1459,6 +1464,7 @@ open class ConversationsAPI {
           } ]
         } ],
         "journeyCustomerSessionIdType" : "aeiou",
+        "extendedDeliveryStatus" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
         "journeyCustomerId" : "aeiou",
@@ -1798,7 +1804,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -2260,11 +2270,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -3096,7 +3102,11 @@ open class ConversationsAPI {
         "language" : "",
         "scoredAgents" : [ {
           "score" : 123,
-          "agent" : ""
+          "agent" : {
+            "selfUri" : "aeiou",
+            "name" : "aeiou",
+            "id" : "aeiou"
+          }
         } ],
         "priority" : 123,
         "queue" : {
@@ -3558,11 +3568,7 @@ open class ConversationsAPI {
           },
           "division" : "",
           "dateCreated" : "2000-01-23T04:56:07.000+0000",
-          "queueFlow" : {
-            "selfUri" : "aeiou",
-            "name" : "aeiou",
-            "id" : "aeiou"
-          },
+          "queueFlow" : "",
           "callingPartyNumber" : "aeiou",
           "userMemberCount" : 123,
           "modifiedBy" : "aeiou",
@@ -10848,7 +10854,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -11310,11 +11320,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -12084,7 +12090,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -12546,11 +12556,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -13247,7 +13253,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -13709,11 +13719,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -14410,7 +14416,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -14872,11 +14882,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -15573,7 +15579,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -16035,11 +16045,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -16736,7 +16742,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -17198,11 +17208,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -18396,6 +18402,7 @@ open class ConversationsAPI {
       "evaluatorId" : "aeiou",
       "released" : true
     } ],
+    "conversationInitiator" : "aeiou",
     "conversationId" : "aeiou",
     "surveys" : [ {
       "queueId" : "aeiou",
@@ -18540,6 +18547,7 @@ open class ConversationsAPI {
           } ]
         } ],
         "journeyCustomerSessionIdType" : "aeiou",
+        "extendedDeliveryStatus" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
         "journeyCustomerId" : "aeiou",
@@ -19206,7 +19214,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -19668,11 +19680,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",
@@ -20425,7 +20433,11 @@ open class ConversationsAPI {
       "language" : "",
       "scoredAgents" : [ {
         "score" : 123,
-        "agent" : ""
+        "agent" : {
+          "selfUri" : "aeiou",
+          "name" : "aeiou",
+          "id" : "aeiou"
+        }
       } ],
       "priority" : 123,
       "queue" : {
@@ -20887,11 +20899,7 @@ open class ConversationsAPI {
         },
         "division" : "",
         "dateCreated" : "2000-01-23T04:56:07.000+0000",
-        "queueFlow" : {
-          "selfUri" : "aeiou",
-          "name" : "aeiou",
-          "id" : "aeiou"
-        },
+        "queueFlow" : "",
         "callingPartyNumber" : "aeiou",
         "userMemberCount" : 123,
         "modifiedBy" : "aeiou",

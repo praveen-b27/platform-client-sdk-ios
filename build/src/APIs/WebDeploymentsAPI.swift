@@ -224,6 +224,10 @@ open class WebDeploymentsAPI {
     },
     "enabled" : true,
     "apps" : {
+      "conversations" : {
+        "showUserTypingIndicator" : true,
+        "showAgentTypingIndicator" : true
+      },
       "knowledge" : {
         "knowledgeBase" : {
           "selfUri" : "aeiou",
@@ -375,6 +379,10 @@ open class WebDeploymentsAPI {
       },
       "enabled" : true,
       "apps" : {
+        "conversations" : {
+          "showUserTypingIndicator" : true,
+          "showAgentTypingIndicator" : true
+        },
         "knowledge" : {
           "knowledgeBase" : {
             "selfUri" : "aeiou",
@@ -522,6 +530,10 @@ open class WebDeploymentsAPI {
     },
     "enabled" : true,
     "apps" : {
+      "conversations" : {
+        "showUserTypingIndicator" : true,
+        "showAgentTypingIndicator" : true
+      },
       "knowledge" : {
         "knowledgeBase" : {
           "selfUri" : "aeiou",
@@ -669,6 +681,10 @@ open class WebDeploymentsAPI {
       },
       "enabled" : true,
       "apps" : {
+        "conversations" : {
+          "showUserTypingIndicator" : true,
+          "showAgentTypingIndicator" : true
+        },
         "knowledge" : {
           "knowledgeBase" : {
             "selfUri" : "aeiou",
@@ -992,6 +1008,10 @@ open class WebDeploymentsAPI {
     },
     "enabled" : true,
     "apps" : {
+      "conversations" : {
+        "showUserTypingIndicator" : true,
+        "showAgentTypingIndicator" : true
+      },
       "knowledge" : {
         "knowledgeBase" : {
           "selfUri" : "aeiou",
@@ -1137,6 +1157,10 @@ open class WebDeploymentsAPI {
     },
     "enabled" : true,
     "apps" : {
+      "conversations" : {
+        "showUserTypingIndicator" : true,
+        "showAgentTypingIndicator" : true
+      },
       "knowledge" : {
         "knowledgeBase" : {
           "selfUri" : "aeiou",
@@ -1362,6 +1386,10 @@ open class WebDeploymentsAPI {
     },
     "enabled" : true,
     "apps" : {
+      "conversations" : {
+        "showUserTypingIndicator" : true,
+        "showAgentTypingIndicator" : true
+      },
       "knowledge" : {
         "knowledgeBase" : {
           "selfUri" : "aeiou",

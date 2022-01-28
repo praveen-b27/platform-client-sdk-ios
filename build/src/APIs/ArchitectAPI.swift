@@ -1467,6 +1467,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -1535,6 +1536,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -1599,6 +1601,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2128,6 +2131,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2192,6 +2196,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2365,6 +2370,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2429,6 +2435,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2616,6 +2623,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2690,6 +2698,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2880,6 +2889,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -2948,6 +2958,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -3012,6 +3023,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -3346,6 +3358,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -3412,6 +3425,7 @@ open class ArchitectAPI {
         case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
         case ivrconfiguration = "IVRCONFIGURATION"
         case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
         case language = "LANGUAGE"
         case lexbot = "LEXBOT"
         case lexbotalias = "LEXBOTALIAS"
@@ -10441,10 +10455,7 @@ open class ArchitectAPI {
       "configurationVersion" : "aeiou",
       "dateCreated" : 123456789,
       "publishResultUri" : "aeiou",
-      "supportedLanguages" : [ {
-        "isDefault" : true,
-        "language" : "aeiou"
-      } ],
+      "supportedLanguages" : [ "" ],
       "createdBy" : {
         "addresses" : [ "" ],
         "acdAutoAnswer" : true,
@@ -10711,6 +10722,10 @@ open class ArchitectAPI {
       "commitVersion" : "aeiou"
     },
     "outputSchema" : "",
+    "supportedLanguages" : [ {
+      "isDefault" : true,
+      "language" : "aeiou"
+    } ],
     "inputSchema" : {
       "$schema" : "aeiou",
       "description" : "aeiou",
@@ -10725,6 +10740,7 @@ open class ArchitectAPI {
     },
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "description" : "aeiou",
     "id" : "aeiou",
     "type" : "aeiou",
     "debugVersion" : ""

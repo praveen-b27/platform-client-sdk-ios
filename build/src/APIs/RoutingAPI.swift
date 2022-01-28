@@ -3353,11 +3353,11 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "kpiResults" : [ {
-    "kpiTotalOff" : 123,
-    "interactionCountOff" : 123,
-    "interactionCountOn" : 123,
+    "kpiTotalOff" : 123456789,
+    "interactionCountOff" : 123456789,
+    "interactionCountOn" : 123456789,
     "mediaType" : "aeiou",
-    "kpiTotalOn" : 123
+    "kpiTotalOn" : 123456789
   } ],
   "kpiTotalOff" : 123456789,
   "kpi" : "aeiou",
@@ -3439,11 +3439,11 @@ open class RoutingAPI {
   "total" : 123456789,
   "entities" : [ {
     "kpiResults" : [ {
-      "kpiTotalOff" : 123,
-      "interactionCountOff" : 123,
-      "interactionCountOn" : 123,
+      "kpiTotalOff" : 123456789,
+      "interactionCountOff" : 123456789,
+      "interactionCountOn" : 123456789,
       "mediaType" : "aeiou",
-      "kpiTotalOn" : 123
+      "kpiTotalOn" : 123456789
     } ],
     "kpiTotalOff" : 123456789,
     "kpi" : "aeiou",
@@ -6228,16 +6228,10 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "supportsSms" : true,
+  "country" : "aeiou",
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
-  "capabilities" : [ "aeiou" ],
-  "shortCodeBillingType" : "aeiou",
-  "selfUri" : "aeiou",
-  "provisionedThroughPureCloud" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "autoRenewable" : "aeiou",
   "phoneNumberStatus" : "aeiou",
-  "renewalDate" : "2000-01-23T04:56:07.000+0000",
-  "version" : 123,
   "addressId" : {
     "validated" : true,
     "city" : "aeiou",
@@ -6249,8 +6243,47 @@ open class RoutingAPI {
     "id" : "aeiou",
     "region" : "aeiou"
   },
-  "phoneNumber" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "countryCode" : "aeiou",
+  "provisioningStatus" : {
+    "action" : "aeiou",
+    "state" : "aeiou",
+    "error" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "version" : 123456789
+  },
+  "phoneNumberType" : "aeiou",
+  "modifiedBy" : "",
+  "supportsMms" : true,
+  "id" : "aeiou",
+  "cancellationDate" : "2000-01-23T04:56:07.000+0000",
+  "supportsVoice" : true,
+  "capabilities" : [ "aeiou" ],
+  "shortCodeBillingType" : "aeiou",
+  "selfUri" : "aeiou",
+  "provisionedThroughPureCloud" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "autoRenewable" : "aeiou",
+  "renewalDate" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "phoneNumber" : "aeiou",
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -6516,36 +6549,7 @@ open class RoutingAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "countryCode" : "aeiou",
-  "provisioningStatus" : {
-    "action" : "aeiou",
-    "state" : "aeiou",
-    "error" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    },
-    "version" : 123456789
-  },
-  "name" : "aeiou",
-  "phoneNumberType" : "aeiou",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "cancellationDate" : "2000-01-23T04:56:07.000+0000"
+  "name" : "aeiou"
 }}]
      
      - parameter addressId: (path) Address ID 
@@ -6589,11 +6593,41 @@ open class RoutingAPI {
     public enum PhoneNumberStatus_getRoutingSmsPhonenumbers: String { 
         case active = "active"
         case invalid = "invalid"
+        case initiated = "initiated"
         case porting = "porting"
+        case pending = "pending"
+        case pendingCancellation = "pending-cancellation"
     }
 
     
     
+    
+    
+    
+    
+    
+    
+    
+    public enum SortBy_getRoutingSmsPhonenumbers: String { 
+        case phonenumber = "phoneNumber"
+        case countrycode = "countryCode"
+        case country = "country"
+        case phonenumberstatus = "phoneNumberStatus"
+        case phonenumbertype = "phoneNumberType"
+        case purchasedate = "purchaseDate"
+        case supportsmms = "supportsMms"
+        case supportssms = "supportsSms"
+        case supportsvoice = "supportsVoice"
+    }
+
+    
+    
+    
+    public enum SortOrder_getRoutingSmsPhonenumbers: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
     
     
     
@@ -6605,12 +6639,16 @@ open class RoutingAPI {
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
      - parameter phoneNumberType: (query) Filter on phone number type (optional)
      - parameter phoneNumberStatus: (query) Filter on phone number status (optional)
+     - parameter countryCode: (query) Filter on country code (optional)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortBy: (query) Optional field to sort results (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingSmsPhonenumbers(phoneNumber: String? = nil, phoneNumberType: PhoneNumberType_getRoutingSmsPhonenumbers? = nil, phoneNumberStatus: PhoneNumberStatus_getRoutingSmsPhonenumbers? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: SmsPhoneNumberEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, pageSize: pageSize, pageNumber: pageNumber)
+    open class func getRoutingSmsPhonenumbers(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, completion: @escaping ((_ data: SmsPhoneNumberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language)
         requestBuilder.execute { (response: Response<SmsPhoneNumberEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6641,16 +6679,10 @@ open class RoutingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "supportsSms" : true,
+    "country" : "aeiou",
     "purchaseDate" : "2000-01-23T04:56:07.000+0000",
-    "capabilities" : [ "aeiou" ],
-    "shortCodeBillingType" : "aeiou",
-    "selfUri" : "aeiou",
-    "provisionedThroughPureCloud" : true,
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "autoRenewable" : "aeiou",
     "phoneNumberStatus" : "aeiou",
-    "renewalDate" : "2000-01-23T04:56:07.000+0000",
-    "version" : 123,
     "addressId" : {
       "validated" : true,
       "city" : "aeiou",
@@ -6662,8 +6694,47 @@ open class RoutingAPI {
       "id" : "aeiou",
       "region" : "aeiou"
     },
-    "phoneNumber" : "aeiou",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "countryCode" : "aeiou",
+    "provisioningStatus" : {
+      "action" : "aeiou",
+      "state" : "aeiou",
+      "error" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
+      "version" : 123456789
+    },
+    "phoneNumberType" : "aeiou",
+    "modifiedBy" : "",
+    "supportsMms" : true,
+    "id" : "aeiou",
+    "cancellationDate" : "2000-01-23T04:56:07.000+0000",
+    "supportsVoice" : true,
+    "capabilities" : [ "aeiou" ],
+    "shortCodeBillingType" : "aeiou",
+    "selfUri" : "aeiou",
+    "provisionedThroughPureCloud" : true,
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "autoRenewable" : "aeiou",
+    "renewalDate" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
+    "phoneNumber" : "aeiou",
     "createdBy" : {
       "addresses" : [ "" ],
       "acdAutoAnswer" : true,
@@ -6929,36 +7000,7 @@ open class RoutingAPI {
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       }
     },
-    "countryCode" : "aeiou",
-    "provisioningStatus" : {
-      "action" : "aeiou",
-      "state" : "aeiou",
-      "error" : {
-        "messageWithParams" : "aeiou",
-        "code" : "aeiou",
-        "entityName" : "aeiou",
-        "entityId" : "aeiou",
-        "contextId" : "aeiou",
-        "details" : [ {
-          "fieldName" : "aeiou",
-          "entityName" : "aeiou",
-          "errorCode" : "aeiou",
-          "entityId" : "aeiou"
-        } ],
-        "messageParams" : {
-          "key" : "aeiou"
-        },
-        "message" : "aeiou",
-        "errors" : [ "" ],
-        "status" : 123
-      },
-      "version" : 123456789
-    },
-    "name" : "aeiou",
-    "phoneNumberType" : "aeiou",
-    "modifiedBy" : "",
-    "id" : "aeiou",
-    "cancellationDate" : "2000-01-23T04:56:07.000+0000"
+    "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -6971,12 +7013,16 @@ open class RoutingAPI {
      - parameter phoneNumber: (query) Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)
      - parameter phoneNumberType: (query) Filter on phone number type (optional)
      - parameter phoneNumberStatus: (query) Filter on phone number status (optional)
+     - parameter countryCode: (query) Filter on country code (optional)
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter sortBy: (query) Optional field to sort results (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to en-US)
 
      - returns: RequestBuilder<SmsPhoneNumberEntityListing> 
      */
-    open class func getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: String? = nil, phoneNumberType: PhoneNumberType_getRoutingSmsPhonenumbers? = nil, phoneNumberStatus: PhoneNumberStatus_getRoutingSmsPhonenumbers? = nil, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SmsPhoneNumberEntityListing> {
+    open class func getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil) -> RequestBuilder<SmsPhoneNumberEntityListing> {
         let path = "/api/v2/routing/sms/phonenumbers"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6991,13 +7037,21 @@ open class RoutingAPI {
             
             "phoneNumber": phoneNumber, 
             
-            "phoneNumberType": phoneNumberType?.rawValue, 
+            "phoneNumberType": phoneNumberType, 
             
-            "phoneNumberStatus": phoneNumberStatus?.rawValue, 
+            "phoneNumberStatus": phoneNumberStatus, 
+            
+            "countryCode": countryCode, 
             
             "pageSize": pageSize?.encodeToJSON(), 
             
-            "pageNumber": pageNumber?.encodeToJSON()
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            
+            "sortBy": sortBy?.rawValue, 
+            
+            "sortOrder": sortOrder?.rawValue, 
+            
+            "language": language
             
         ])
 
@@ -7827,6 +7881,14 @@ open class RoutingAPI {
     "state" : "aeiou",
     "version" : "aeiou"
   },
+  "scoredAgents" : [ {
+    "score" : 123,
+    "agent" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
   "priority" : 123
 }}]
      
@@ -10794,16 +10856,10 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "supportsSms" : true,
+  "country" : "aeiou",
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
-  "capabilities" : [ "aeiou" ],
-  "shortCodeBillingType" : "aeiou",
-  "selfUri" : "aeiou",
-  "provisionedThroughPureCloud" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "autoRenewable" : "aeiou",
   "phoneNumberStatus" : "aeiou",
-  "renewalDate" : "2000-01-23T04:56:07.000+0000",
-  "version" : 123,
   "addressId" : {
     "validated" : true,
     "city" : "aeiou",
@@ -10815,8 +10871,47 @@ open class RoutingAPI {
     "id" : "aeiou",
     "region" : "aeiou"
   },
-  "phoneNumber" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "countryCode" : "aeiou",
+  "provisioningStatus" : {
+    "action" : "aeiou",
+    "state" : "aeiou",
+    "error" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "version" : 123456789
+  },
+  "phoneNumberType" : "aeiou",
+  "modifiedBy" : "",
+  "supportsMms" : true,
+  "id" : "aeiou",
+  "cancellationDate" : "2000-01-23T04:56:07.000+0000",
+  "supportsVoice" : true,
+  "capabilities" : [ "aeiou" ],
+  "shortCodeBillingType" : "aeiou",
+  "selfUri" : "aeiou",
+  "provisionedThroughPureCloud" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "autoRenewable" : "aeiou",
+  "renewalDate" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "phoneNumber" : "aeiou",
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -11082,36 +11177,7 @@ open class RoutingAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "countryCode" : "aeiou",
-  "provisioningStatus" : {
-    "action" : "aeiou",
-    "state" : "aeiou",
-    "error" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    },
-    "version" : 123456789
-  },
-  "name" : "aeiou",
-  "phoneNumberType" : "aeiou",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "cancellationDate" : "2000-01-23T04:56:07.000+0000"
+  "name" : "aeiou"
 }}]
      
      - parameter body: (body) SmsPhoneNumber 
@@ -12269,16 +12335,10 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "supportsSms" : true,
+  "country" : "aeiou",
   "purchaseDate" : "2000-01-23T04:56:07.000+0000",
-  "capabilities" : [ "aeiou" ],
-  "shortCodeBillingType" : "aeiou",
-  "selfUri" : "aeiou",
-  "provisionedThroughPureCloud" : true,
-  "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "autoRenewable" : "aeiou",
   "phoneNumberStatus" : "aeiou",
-  "renewalDate" : "2000-01-23T04:56:07.000+0000",
-  "version" : 123,
   "addressId" : {
     "validated" : true,
     "city" : "aeiou",
@@ -12290,8 +12350,47 @@ open class RoutingAPI {
     "id" : "aeiou",
     "region" : "aeiou"
   },
-  "phoneNumber" : "aeiou",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "countryCode" : "aeiou",
+  "provisioningStatus" : {
+    "action" : "aeiou",
+    "state" : "aeiou",
+    "error" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "version" : 123456789
+  },
+  "phoneNumberType" : "aeiou",
+  "modifiedBy" : "",
+  "supportsMms" : true,
+  "id" : "aeiou",
+  "cancellationDate" : "2000-01-23T04:56:07.000+0000",
+  "supportsVoice" : true,
+  "capabilities" : [ "aeiou" ],
+  "shortCodeBillingType" : "aeiou",
+  "selfUri" : "aeiou",
+  "provisionedThroughPureCloud" : true,
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "autoRenewable" : "aeiou",
+  "renewalDate" : "2000-01-23T04:56:07.000+0000",
+  "version" : 123,
+  "phoneNumber" : "aeiou",
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -12557,36 +12656,7 @@ open class RoutingAPI {
       "longitude" : 1.3579000000000001069366817318950779736042022705078125
     }
   },
-  "countryCode" : "aeiou",
-  "provisioningStatus" : {
-    "action" : "aeiou",
-    "state" : "aeiou",
-    "error" : {
-      "messageWithParams" : "aeiou",
-      "code" : "aeiou",
-      "entityName" : "aeiou",
-      "entityId" : "aeiou",
-      "contextId" : "aeiou",
-      "details" : [ {
-        "fieldName" : "aeiou",
-        "entityName" : "aeiou",
-        "errorCode" : "aeiou",
-        "entityId" : "aeiou"
-      } ],
-      "messageParams" : {
-        "key" : "aeiou"
-      },
-      "message" : "aeiou",
-      "errors" : [ "" ],
-      "status" : 123
-    },
-    "version" : 123456789
-  },
-  "name" : "aeiou",
-  "phoneNumberType" : "aeiou",
-  "modifiedBy" : "",
-  "id" : "aeiou",
-  "cancellationDate" : "2000-01-23T04:56:07.000+0000"
+  "name" : "aeiou"
 }}]
      
      - parameter addressId: (path) Address ID 

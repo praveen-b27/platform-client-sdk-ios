@@ -36,6 +36,7 @@ public class SegmentDetailQueryPredicate: Codable {
         case edgeid = "edgeId"
         case errorcode = "errorCode"
         case exitreason = "exitReason"
+        case extendeddeliverystatus = "extendedDeliveryStatus"
         case externalcontactid = "externalContactId"
         case externalorganizationid = "externalOrganizationId"
         case flaggedreason = "flaggedReason"

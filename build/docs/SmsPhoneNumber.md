@@ -27,6 +27,10 @@ title: SmsPhoneNumber
 | **addressId** | [**SmsAddress**](SmsAddress.html) | The id of an address attached to this phone number. | [optional] |
 | **shortCodeBillingType** | **String** | BillingType of this phone number, if the phoneNumberType is shortcode. | [optional] |
 | **provisioningStatus** | [**SmsProvisioningStatus**](SmsProvisioningStatus.html) | Status of latest asynchronous provisioning action | [optional] |
+| **country** | **String** | Localized country name for the country code this phone number belongs too | [optional] |
+| **supportsSms** | **Bool** | Set to true if this phone number has the capability to support SMS | [optional] |
+| **supportsMms** | **Bool** | Set to true if this phone number has the capability to support MMS | [optional] |
+| **supportsVoice** | **Bool** | Set to true if this phone number has the capability to support voice | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

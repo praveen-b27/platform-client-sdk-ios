@@ -9,6 +9,7 @@ title: AnalyticsConversation
 |------------ | ------------- | ------------- | -------------|
 | **conversationEnd** | [**Date**](Date.html) | The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **conversationId** | **String** | Unique identifier for the conversation | [optional] |
+| **conversationInitiator** | **String** | Indicates the participant purpose of the participant initiating a message conversation | [optional] |
 | **conversationStart** | [**Date**](Date.html) | The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **divisionIds** | **[String]** | Identifier(s) of division(s) associated with a conversation | [optional] |
 | **externalTag** | **String** | External tag for the conversation | [optional] |

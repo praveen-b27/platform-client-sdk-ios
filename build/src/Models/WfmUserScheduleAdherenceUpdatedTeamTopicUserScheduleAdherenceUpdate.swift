@@ -31,6 +31,7 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
     public var managementUnitId: String?
     public var team: WfmUserScheduleAdherenceUpdatedTeamTopicUriReference?
     public var scheduledActivityCategory: String?
+    public var scheduledActivityCode: WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference?
     public var systemPresence: String?
     public var organizationSecondaryPresenceId: String?
     public var routingStatus: RoutingStatus?
@@ -44,7 +45,7 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
     public var activeQueuesModifiedTime: Date?
     public var removedFromManagementUnit: Bool?
 
-    public init(user: WfmUserScheduleAdherenceUpdatedTeamTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedTeamTopicUriReference?, scheduledActivityCategory: String?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
+    public init(user: WfmUserScheduleAdherenceUpdatedTeamTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedTeamTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
         
         self.user = user
         
@@ -53,6 +54,8 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
         self.team = team
         
         self.scheduledActivityCategory = scheduledActivityCategory
+        
+        self.scheduledActivityCode = scheduledActivityCode
         
         self.systemPresence = systemPresence
         

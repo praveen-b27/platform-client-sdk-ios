@@ -17,14 +17,18 @@ public class RoutingConversationAttributesResponse: Codable {
     public var skills: [RoutingSkill]?
     /** Current language on in-queue conversation */
     public var language: Language?
+    /** Current scored agents on in-queue conversation */
+    public var scoredAgents: [ScoredAgent]?
 
-    public init(priority: Int?, skills: [RoutingSkill]?, language: Language?) {
+    public init(priority: Int?, skills: [RoutingSkill]?, language: Language?, scoredAgents: [ScoredAgent]?) {
         
         self.priority = priority
         
         self.skills = skills
         
         self.language = language
+        
+        self.scoredAgents = scoredAgents
         
     }
 

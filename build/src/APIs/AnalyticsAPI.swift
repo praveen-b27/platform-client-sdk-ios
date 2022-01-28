@@ -370,6 +370,7 @@ open class AnalyticsAPI {
     "evaluatorId" : "aeiou",
     "released" : true
   } ],
+  "conversationInitiator" : "aeiou",
   "conversationId" : "aeiou",
   "surveys" : [ {
     "queueId" : "aeiou",
@@ -514,6 +515,7 @@ open class AnalyticsAPI {
         } ]
       } ],
       "journeyCustomerSessionIdType" : "aeiou",
+      "extendedDeliveryStatus" : "aeiou",
       "provider" : "aeiou",
       "journeyCustomerIdType" : "aeiou",
       "journeyCustomerId" : "aeiou",
@@ -639,6 +641,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "aeiou",
       "released" : true
     } ],
+    "conversationInitiator" : "aeiou",
     "conversationId" : "aeiou",
     "surveys" : [ {
       "queueId" : "aeiou",
@@ -783,6 +786,7 @@ open class AnalyticsAPI {
           } ]
         } ],
         "journeyCustomerSessionIdType" : "aeiou",
+        "extendedDeliveryStatus" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
         "journeyCustomerId" : "aeiou",
@@ -988,6 +992,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "aeiou",
       "released" : true
     } ],
+    "conversationInitiator" : "aeiou",
     "conversationId" : "aeiou",
     "surveys" : [ {
       "queueId" : "aeiou",
@@ -1132,6 +1137,7 @@ open class AnalyticsAPI {
           } ]
         } ],
         "journeyCustomerSessionIdType" : "aeiou",
+        "extendedDeliveryStatus" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
         "journeyCustomerId" : "aeiou",
@@ -2994,6 +3000,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "aeiou",
       "released" : true
     } ],
+    "conversationInitiator" : "aeiou",
     "conversationId" : "aeiou",
     "surveys" : [ {
       "queueId" : "aeiou",
@@ -3138,6 +3145,7 @@ open class AnalyticsAPI {
           } ]
         } ],
         "journeyCustomerSessionIdType" : "aeiou",
+        "extendedDeliveryStatus" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
         "journeyCustomerId" : "aeiou",
@@ -3258,6 +3266,7 @@ open class AnalyticsAPI {
       "evaluatorId" : "aeiou",
       "released" : true
     } ],
+    "conversationInitiator" : "aeiou",
     "conversationId" : "aeiou",
     "surveys" : [ {
       "queueId" : "aeiou",
@@ -3402,6 +3411,7 @@ open class AnalyticsAPI {
           } ]
         } ],
         "journeyCustomerSessionIdType" : "aeiou",
+        "extendedDeliveryStatus" : "aeiou",
         "provider" : "aeiou",
         "journeyCustomerIdType" : "aeiou",
         "journeyCustomerId" : "aeiou",

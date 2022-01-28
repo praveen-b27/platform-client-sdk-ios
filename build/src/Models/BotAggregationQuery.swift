@@ -34,6 +34,7 @@ public class BotAggregationQuery: Codable {
     public enum Metrics: String, Codable { 
         case nbotsessions = "nBotSessions"
         case obotintent = "oBotIntent"
+        case obotsessionquery = "oBotSessionQuery"
         case obotsessionturn = "oBotSessionTurn"
         case obotslot = "oBotSlot"
         case tbotdisconnect = "tBotDisconnect"

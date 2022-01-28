@@ -48,10 +48,16 @@ public class CoachingAppointmentResponse: Codable {
     public var documents: [DocumentReference]?
     /** Whether the appointment is overdue. */
     public var isOverdue: Bool?
+    /** The Workforce Management schedule the appointment is associated with. */
+    public var wfmSchedule: WfmScheduleReference?
+    /** The date/time the coaching appointment was set to completed status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCompleted: Date?
+    /** The list of external links related to the appointment */
+    public var externalLinks: [String]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: UserReference?, attendees: [UserReference]?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, conversations: [ConversationReference]?, documents: [DocumentReference]?, isOverdue: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, _description: String?, dateStart: Date?, lengthInMinutes: Int?, status: Status?, facilitator: UserReference?, attendees: [UserReference]?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, conversations: [ConversationReference]?, documents: [DocumentReference]?, isOverdue: Bool?, wfmSchedule: WfmScheduleReference?, dateCompleted: Date?, externalLinks: [String]?, selfUri: String?) {
         
         self._id = _id
         
@@ -83,6 +89,12 @@ public class CoachingAppointmentResponse: Codable {
         
         self.isOverdue = isOverdue
         
+        self.wfmSchedule = wfmSchedule
+        
+        self.dateCompleted = dateCompleted
+        
+        self.externalLinks = externalLinks
+        
         self.selfUri = selfUri
         
     }
@@ -103,6 +115,9 @@ public class CoachingAppointmentResponse: Codable {
         case conversations
         case documents
         case isOverdue
+        case wfmSchedule
+        case dateCompleted
+        case externalLinks
         case selfUri
     }
 

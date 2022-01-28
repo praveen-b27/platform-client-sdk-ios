@@ -14,6 +14,7 @@ public class BotAggregationView: Codable {
     public enum Target: String, Codable { 
         case nbotsessions = "nBotSessions"
         case obotintent = "oBotIntent"
+        case obotsessionquery = "oBotSessionQuery"
         case obotsessionturn = "oBotSessionTurn"
         case obotslot = "oBotSlot"
         case tbotdisconnect = "tBotDisconnect"

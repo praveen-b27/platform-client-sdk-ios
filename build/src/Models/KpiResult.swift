@@ -12,22 +12,22 @@ import Foundation
 public class KpiResult: Codable {
 
     public enum MediaType: String, Codable { 
-        case voice = "Voice"
-        case email = "Email"
-        case message = "Message"
+        case voice = "voice"
+        case email = "email"
+        case message = "message"
     }
     /** Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on) */
-    public var kpiTotalOn: Int?
+    public var kpiTotalOn: Int64?
     /** Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off) */
-    public var kpiTotalOff: Int?
+    public var kpiTotalOff: Int64?
     /** Total interactions handled by predictive routing (GPR was on) */
-    public var interactionCountOn: Int?
+    public var interactionCountOn: Int64?
     /** Total interactions not routed by predictive routing (GPR was off) */
-    public var interactionCountOff: Int?
+    public var interactionCountOff: Int64?
     /** Media type used for the KPI */
     public var mediaType: MediaType?
 
-    public init(kpiTotalOn: Int?, kpiTotalOff: Int?, interactionCountOn: Int?, interactionCountOff: Int?, mediaType: MediaType?) {
+    public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?) {
         
         self.kpiTotalOn = kpiTotalOn
         

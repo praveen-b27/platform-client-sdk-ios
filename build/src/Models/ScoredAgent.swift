@@ -12,11 +12,11 @@ import Foundation
 public class ScoredAgent: Codable {
 
     /** The agent */
-    public var agent: AddressableEntityRef?
+    public var agent: DomainEntityRef?
     /** Agent&#39;s score for the current conversation, from 0 - 100, higher being better */
     public var score: Int?
 
-    public init(agent: AddressableEntityRef?, score: Int?) {
+    public init(agent: DomainEntityRef?, score: Int?) {
         
         self.agent = agent
         

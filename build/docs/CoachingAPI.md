@@ -360,7 +360,7 @@ CoachingAPI.getCoachingAppointmentStatuses(appointmentId: appointmentId, pageNum
 
 
 
-> [CoachingAppointmentResponseList](CoachingAppointmentResponseList.html) getCoachingAppointments(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue)
+> [CoachingAppointmentResponseList](CoachingAppointmentResponseList.html) getCoachingAppointments(userIds, interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition)
 
 Get appointments for users and optional date range
 
@@ -390,9 +390,10 @@ let sortOrder: CoachingAPI.SortOrder_getCoachingAppointments = CoachingAPI.SortO
 let relationships: [String] = [CoachingAPI.Relationships_getCoachingAppointments.enummember.rawValue] // Relationships to filter by
 let completionInterval: String = "" // Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let overdue: CoachingAPI.Overdue_getCoachingAppointments = CoachingAPI.Overdue_getCoachingAppointments.enummember // Overdue status to filter by
+let intervalCondition: CoachingAPI.IntervalCondition_getCoachingAppointments = CoachingAPI.IntervalCondition_getCoachingAppointments.enummember // Filter condition for interval
 
 // Code example
-CoachingAPI.getCoachingAppointments(userIds: userIds, interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue) { (response, error) in
+CoachingAPI.getCoachingAppointments(userIds: userIds, interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue, intervalCondition: intervalCondition) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -417,6 +418,7 @@ CoachingAPI.getCoachingAppointments(userIds: userIds, interval: interval, pageNu
 | **relationships** | [**[String]**](String.html)| Relationships to filter by | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 | **completionInterval** | **String**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **overdue** | **String**| Overdue status to filter by | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **intervalCondition** | **String**| Filter condition for interval | [optional]<br />**Values**: startsIn ("StartsIn"), overlaps ("Overlaps") |
 {: class="table-striped"}
 
 
@@ -430,7 +432,7 @@ CoachingAPI.getCoachingAppointments(userIds: userIds, interval: interval, pageNu
 
 
 
-> [CoachingAppointmentResponseList](CoachingAppointmentResponseList.html) getCoachingAppointmentsMe(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue)
+> [CoachingAppointmentResponseList](CoachingAppointmentResponseList.html) getCoachingAppointmentsMe(interval, pageNumber, pageSize, statuses, facilitatorIds, sortOrder, relationships, completionInterval, overdue, intervalCondition)
 
 Get my appointments for a given date range
 
@@ -458,9 +460,10 @@ let sortOrder: CoachingAPI.SortOrder_getCoachingAppointmentsMe = CoachingAPI.Sor
 let relationships: [String] = [CoachingAPI.Relationships_getCoachingAppointmentsMe.enummember.rawValue] // Relationships to filter by
 let completionInterval: String = "" // Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
 let overdue: CoachingAPI.Overdue_getCoachingAppointmentsMe = CoachingAPI.Overdue_getCoachingAppointmentsMe.enummember // Overdue status to filter by
+let intervalCondition: CoachingAPI.IntervalCondition_getCoachingAppointmentsMe = CoachingAPI.IntervalCondition_getCoachingAppointmentsMe.enummember // Filter condition for interval
 
 // Code example
-CoachingAPI.getCoachingAppointmentsMe(interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue) { (response, error) in
+CoachingAPI.getCoachingAppointmentsMe(interval: interval, pageNumber: pageNumber, pageSize: pageSize, statuses: statuses, facilitatorIds: facilitatorIds, sortOrder: sortOrder, relationships: relationships, completionInterval: completionInterval, overdue: overdue, intervalCondition: intervalCondition) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -484,6 +487,7 @@ CoachingAPI.getCoachingAppointmentsMe(interval: interval, pageNumber: pageNumber
 | **relationships** | [**[String]**](String.html)| Relationships to filter by | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 | **completionInterval** | **String**| Appointment completion start and end to filter by. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 | **overdue** | **String**| Overdue status to filter by | [optional]<br />**Values**: _true ("True"), _false ("False"), any ("Any") |
+| **intervalCondition** | **String**| Filter condition for interval | [optional]<br />**Values**: startsIn ("StartsIn"), overlaps ("Overlaps") |
 {: class="table-striped"}
 
 

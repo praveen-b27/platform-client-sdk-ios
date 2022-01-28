@@ -70,7 +70,7 @@ open class UtilitiesAPI {
     
     /**
      
-     Get public ip address ranges for PureCloud
+     Get public ip address ranges for Genesys Cloud
      
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -94,7 +94,7 @@ open class UtilitiesAPI {
 
     /**
      
-     Get public ip address ranges for PureCloud
+     Get public ip address ranges for Genesys Cloud
      
      - GET /api/v2/ipranges
      - 

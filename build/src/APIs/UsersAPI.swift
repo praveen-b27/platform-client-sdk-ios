@@ -6797,6 +6797,11 @@ open class UsersAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+0000",
+    "isPassed" : true,
+    "attendees" : [ "" ],
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "facilitator" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "isOverdue" : true,
     "createdBy" : {
@@ -6804,13 +6809,10 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "attendees" : [ "" ],
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "status" : "aeiou",
-    "facilitator" : ""
+    "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -6982,6 +6984,11 @@ open class UsersAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+0000",
+    "isPassed" : true,
+    "attendees" : [ "" ],
+    "selfUri" : "aeiou",
+    "type" : "aeiou",
+    "facilitator" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "isOverdue" : true,
     "createdBy" : {
@@ -6989,13 +6996,10 @@ open class UsersAPI {
       "id" : "aeiou"
     },
     "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-    "attendees" : [ "" ],
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
-    "type" : "aeiou",
-    "status" : "aeiou",
-    "facilitator" : ""
+    "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
+    "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -7108,6 +7112,11 @@ open class UsersAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateDue" : "2000-01-23T04:56:07.000+0000",
+  "isPassed" : true,
+  "attendees" : [ "" ],
+  "selfUri" : "aeiou",
+  "type" : "aeiou",
+  "facilitator" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "isOverdue" : true,
   "createdBy" : {
@@ -7115,13 +7124,10 @@ open class UsersAPI {
     "id" : "aeiou"
   },
   "dateCompleted" : "2000-01-23T04:56:07.000+0000",
-  "attendees" : [ "" ],
-  "selfUri" : "aeiou",
   "name" : "aeiou",
   "id" : "aeiou",
-  "type" : "aeiou",
-  "status" : "aeiou",
-  "facilitator" : ""
+  "percentageScore" : 1.3579000000000001069366817318950779736042022705078125,
+  "status" : "aeiou"
 }}]
      
      - parameter activityId: (path) Specifies the activity ID, maps to either assignment or appointment ID 

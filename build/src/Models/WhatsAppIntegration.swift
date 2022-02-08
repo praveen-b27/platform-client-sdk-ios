@@ -37,6 +37,8 @@ public class WhatsAppIntegration: Codable {
     public var _id: String?
     /** The name of the WhatsApp integration. */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The phone number associated to the whatsApp integration. */
     public var phoneNumber: String?
     /** The status of the WhatsApp Integration */
@@ -64,11 +66,13 @@ public class WhatsAppIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, status: Status?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, activationStatusCode: ActivationStatusCode?, activationErrorInfo: ErrorBody?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, phoneNumber: String?, status: Status?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, activationStatusCode: ActivationStatusCode?, activationErrorInfo: ErrorBody?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.phoneNumber = phoneNumber
         
@@ -101,6 +105,7 @@ public class WhatsAppIntegration: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case phoneNumber
         case status
         case recipient

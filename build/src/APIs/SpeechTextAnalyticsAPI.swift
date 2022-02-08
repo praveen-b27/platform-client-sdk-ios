@@ -385,61 +385,6 @@ open class SpeechTextAnalyticsAPI {
     }
 
     
-    /**
-     
-     Get list of supported Speech & Text Analytics dialects
-     
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getSpeechandtextanalyticsDialects(completion: @escaping ((_ data: [JSON]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getSpeechandtextanalyticsDialectsWithRequestBuilder()
-        requestBuilder.execute { (response: Response<[JSON]>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     
-     Get list of supported Speech & Text Analytics dialects
-     
-     - GET /api/v2/speechandtextanalytics/dialects
-     - This api has been deprecated. Use api/v2/topics/dialects instead
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example=[ "{}" ]}]
-
-     - returns: RequestBuilder<[JSON]> 
-     */
-    open class func getSpeechandtextanalyticsDialectsWithRequestBuilder() -> RequestBuilder<[JSON]> {
-        let path = "/api/v2/speechandtextanalytics/dialects"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        
-        
-            
-            
-        let body: Data? = nil
-            
-        
-        let url = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<[JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: url!, body: body)
-    }
-
-    
     
     
     /**

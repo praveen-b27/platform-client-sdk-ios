@@ -607,6 +607,19 @@ open class ConversationsAPI {
     "status" : 123
   },
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -637,6 +650,61 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Delete a supported content profile
+     
+     - parameter supportedContentId: (path) Supported Content ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteConversationsMessagingSupportedcontentSupportedContentId(supportedContentId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteConversationsMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: supportedContentId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a supported content profile
+     
+     - DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter supportedContentId: (path) Supported Content ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteConversationsMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}"
+        let supportedContentIdPreEscape = "\(supportedContentId)"
+        let supportedContentIdPostEscape = supportedContentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{supportedContentId}", with: supportedContentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: url!, body: body)
     }
@@ -7935,6 +8003,127 @@ open class ConversationsAPI {
     "url" : "aeiou"
   } ],
   "toAddress" : "aeiou",
+  "normalizedMessage" : {
+    "metadata" : {
+      "key" : "aeiou"
+    },
+    "reasons" : [ {
+      "code" : "aeiou",
+      "message" : "aeiou"
+    } ],
+    "originatingEntity" : "aeiou",
+    "isFinalReceipt" : true,
+    "channel" : {
+      "messageId" : "aeiou",
+      "from" : {
+        "image" : "aeiou",
+        "firstName" : "aeiou",
+        "lastName" : "aeiou",
+        "idType" : "aeiou",
+        "nickname" : "aeiou",
+        "id" : "aeiou",
+        "email" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "to" : {
+        "image" : "aeiou",
+        "firstName" : "aeiou",
+        "lastName" : "aeiou",
+        "idType" : "aeiou",
+        "nickname" : "aeiou",
+        "id" : "aeiou",
+        "email" : "aeiou"
+      },
+      "time" : "2000-01-23T04:56:07.000+0000",
+      "platform" : "aeiou",
+      "dateDeleted" : "2000-01-23T04:56:07.000+0000"
+    },
+    "id" : "aeiou",
+    "text" : "aeiou",
+    "type" : "aeiou",
+    "content" : [ {
+      "template" : {
+        "footer" : {
+          "text" : "aeiou"
+        },
+        "header" : {
+          "text" : "aeiou",
+          "media" : "",
+          "type" : "aeiou",
+          "parameters" : [ {
+            "name" : "aeiou",
+            "text" : "aeiou"
+          } ]
+        },
+        "language" : "aeiou",
+        "id" : "aeiou",
+        "body" : {
+          "text" : "aeiou",
+          "parameters" : [ "" ]
+        }
+      },
+      "quickReply" : {
+        "image" : "aeiou",
+        "payload" : "aeiou",
+        "action" : "aeiou",
+        "text" : "aeiou"
+      },
+      "attachment" : {
+        "filename" : "aeiou",
+        "sha256" : "aeiou",
+        "mime" : "aeiou",
+        "mediaType" : "aeiou",
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "url" : "aeiou"
+      },
+      "buttonResponse" : {
+        "payload" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou"
+      },
+      "location" : {
+        "address" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "text" : "aeiou",
+        "url" : "aeiou",
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "contentType" : "aeiou",
+      "generic" : {
+        "image" : "aeiou",
+        "components" : [ {
+          "title" : "aeiou",
+          "actions" : ""
+        } ],
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : {
+          "urlTarget" : "aeiou",
+          "textback" : "aeiou",
+          "url" : "aeiou"
+        }
+      },
+      "story" : {
+        "replyToId" : "aeiou",
+        "type" : "aeiou",
+        "url" : "aeiou"
+      }
+    } ],
+    "events" : [ {
+      "coBrowse" : {
+        "sessionJoinToken" : "aeiou",
+        "sessionId" : "aeiou",
+        "type" : "aeiou"
+      },
+      "eventType" : "aeiou"
+    } ],
+    "status" : "aeiou",
+    "direction" : "aeiou"
+  },
+  "normalizedReceipts" : [ "" ],
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -8290,6 +8479,127 @@ open class ConversationsAPI {
     "url" : "aeiou"
   } ],
   "toAddress" : "aeiou",
+  "normalizedMessage" : {
+    "metadata" : {
+      "key" : "aeiou"
+    },
+    "reasons" : [ {
+      "code" : "aeiou",
+      "message" : "aeiou"
+    } ],
+    "originatingEntity" : "aeiou",
+    "isFinalReceipt" : true,
+    "channel" : {
+      "messageId" : "aeiou",
+      "from" : {
+        "image" : "aeiou",
+        "firstName" : "aeiou",
+        "lastName" : "aeiou",
+        "idType" : "aeiou",
+        "nickname" : "aeiou",
+        "id" : "aeiou",
+        "email" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "to" : {
+        "image" : "aeiou",
+        "firstName" : "aeiou",
+        "lastName" : "aeiou",
+        "idType" : "aeiou",
+        "nickname" : "aeiou",
+        "id" : "aeiou",
+        "email" : "aeiou"
+      },
+      "time" : "2000-01-23T04:56:07.000+0000",
+      "platform" : "aeiou",
+      "dateDeleted" : "2000-01-23T04:56:07.000+0000"
+    },
+    "id" : "aeiou",
+    "text" : "aeiou",
+    "type" : "aeiou",
+    "content" : [ {
+      "template" : {
+        "footer" : {
+          "text" : "aeiou"
+        },
+        "header" : {
+          "text" : "aeiou",
+          "media" : "",
+          "type" : "aeiou",
+          "parameters" : [ {
+            "name" : "aeiou",
+            "text" : "aeiou"
+          } ]
+        },
+        "language" : "aeiou",
+        "id" : "aeiou",
+        "body" : {
+          "text" : "aeiou",
+          "parameters" : [ "" ]
+        }
+      },
+      "quickReply" : {
+        "image" : "aeiou",
+        "payload" : "aeiou",
+        "action" : "aeiou",
+        "text" : "aeiou"
+      },
+      "attachment" : {
+        "filename" : "aeiou",
+        "sha256" : "aeiou",
+        "mime" : "aeiou",
+        "mediaType" : "aeiou",
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "url" : "aeiou"
+      },
+      "buttonResponse" : {
+        "payload" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou"
+      },
+      "location" : {
+        "address" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "text" : "aeiou",
+        "url" : "aeiou",
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "contentType" : "aeiou",
+      "generic" : {
+        "image" : "aeiou",
+        "components" : [ {
+          "title" : "aeiou",
+          "actions" : ""
+        } ],
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : {
+          "urlTarget" : "aeiou",
+          "textback" : "aeiou",
+          "url" : "aeiou"
+        }
+      },
+      "story" : {
+        "replyToId" : "aeiou",
+        "type" : "aeiou",
+        "url" : "aeiou"
+      }
+    } ],
+    "events" : [ {
+      "coBrowse" : {
+        "sessionJoinToken" : "aeiou",
+        "sessionId" : "aeiou",
+        "type" : "aeiou"
+      },
+      "eventType" : "aeiou"
+    } ],
+    "status" : "aeiou",
+    "direction" : "aeiou"
+  },
+  "normalizedReceipts" : [ "" ],
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -9039,6 +9349,19 @@ open class ConversationsAPI {
     "createdBy" : "",
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "supportedContent" : {
+      "mediaTypes" : {
+        "allow" : {
+          "inbound" : [ {
+            "type" : "aeiou"
+          } ],
+          "outbound" : [ "" ]
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -9180,6 +9503,19 @@ open class ConversationsAPI {
     "createdBy" : "",
     "appId" : "aeiou",
     "name" : "aeiou",
+    "supportedContent" : {
+      "mediaTypes" : {
+        "allow" : {
+          "inbound" : [ {
+            "type" : "aeiou"
+          } ],
+          "outbound" : [ "" ]
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -9308,6 +9644,19 @@ open class ConversationsAPI {
   "createdBy" : "",
   "appId" : "aeiou",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9431,6 +9780,19 @@ open class ConversationsAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
+    "supportedContent" : {
+      "mediaTypes" : {
+        "allow" : {
+          "inbound" : [ {
+            "type" : "aeiou"
+          } ],
+          "outbound" : [ "" ]
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -9557,6 +9919,19 @@ open class ConversationsAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9680,6 +10055,19 @@ open class ConversationsAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
     "name" : "aeiou",
+    "supportedContent" : {
+      "mediaTypes" : {
+        "allow" : {
+          "inbound" : [ {
+            "type" : "aeiou"
+          } ],
+          "outbound" : [ "" ]
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -9808,6 +10196,19 @@ open class ConversationsAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9938,6 +10339,19 @@ open class ConversationsAPI {
     "createdBy" : "",
     "envName" : "aeiou",
     "name" : "aeiou",
+    "supportedContent" : {
+      "mediaTypes" : {
+        "allow" : {
+          "inbound" : [ {
+            "type" : "aeiou"
+          } ],
+          "outbound" : [ "" ]
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -10068,6 +10482,19 @@ open class ConversationsAPI {
   "createdBy" : "",
   "envName" : "aeiou",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10195,6 +10622,19 @@ open class ConversationsAPI {
       "status" : 123
     },
     "name" : "aeiou",
+    "supportedContent" : {
+      "mediaTypes" : {
+        "allow" : {
+          "inbound" : [ {
+            "type" : "aeiou"
+          } ],
+          "outbound" : [ "" ]
+        }
+      },
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "recipient" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -10322,6 +10762,19 @@ open class ConversationsAPI {
     "status" : 123
   },
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10458,6 +10911,269 @@ open class ConversationsAPI {
         ])
 
         let requestBuilder: RequestBuilder<MessagingStickerEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Get a list of Supported Content profiles
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingSupportedcontent(pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: SupportedContentListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingSupportedcontentWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<SupportedContentListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of Supported Content profiles
+     
+     - GET /api/v2/conversations/messaging/supportedcontent
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "version" : 123
+  } ],
+  "firstUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "pageSize" : 123,
+  "nextUri" : "aeiou",
+  "previousUri" : "aeiou"
+}}]
+     
+     - parameter pageSize: (query) Page size (optional, default to 25)
+     - parameter pageNumber: (query) Page number (optional, default to 1)
+
+     - returns: RequestBuilder<SupportedContentListing> 
+     */
+    open class func getConversationsMessagingSupportedcontentWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<SupportedContentListing> {
+        let path = "/api/v2/conversations/messaging/supportedcontent"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "pageSize": pageSize?.encodeToJSON(), 
+            
+            "pageNumber": pageNumber?.encodeToJSON()
+            
+        ])
+
+        let requestBuilder: RequestBuilder<SupportedContentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get the organization's default supported content profile that will be used as the default when creating an integration.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingSupportedcontentDefault(completion: @escaping ((_ data: SupportedContent?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingSupportedcontentDefaultWithRequestBuilder()
+        requestBuilder.execute { (response: Response<SupportedContent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the organization's default supported content profile that will be used as the default when creating an integration.
+     
+     - GET /api/v2/conversations/messaging/supportedcontent/default
+     - When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaTypes" : {
+    "allow" : {
+      "inbound" : [ {
+        "type" : "aeiou"
+      } ],
+      "outbound" : [ "" ]
+    }
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+
+     - returns: RequestBuilder<SupportedContent> 
+     */
+    open class func getConversationsMessagingSupportedcontentDefaultWithRequestBuilder() -> RequestBuilder<SupportedContent> {
+        let path = "/api/v2/conversations/messaging/supportedcontent/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a supported content profile
+     
+     - parameter supportedContentId: (path) Supported Content ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsMessagingSupportedcontentSupportedContentId(supportedContentId: String, completion: @escaping ((_ data: SupportedContent?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: supportedContentId)
+        requestBuilder.execute { (response: Response<SupportedContent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a supported content profile
+     
+     - GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaTypes" : {
+    "allow" : {
+      "inbound" : [ {
+        "type" : "aeiou"
+      } ],
+      "outbound" : [ "" ]
+    }
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter supportedContentId: (path) Supported Content ID 
+
+     - returns: RequestBuilder<SupportedContent> 
+     */
+    open class func getConversationsMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String) -> RequestBuilder<SupportedContent> {
+        var path = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}"
+        let supportedContentIdPreEscape = "\(supportedContentId)"
+        let supportedContentIdPostEscape = supportedContentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{supportedContentId}", with: supportedContentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -17772,6 +18488,19 @@ open class ConversationsAPI {
   "createdBy" : "",
   "appId" : "aeiou",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -17871,6 +18600,19 @@ open class ConversationsAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -17978,6 +18720,19 @@ open class ConversationsAPI {
   "createdBy" : "",
   "envName" : "aeiou",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -18082,6 +18837,19 @@ open class ConversationsAPI {
     "status" : 123
   },
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -18110,6 +18878,91 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update a supported content profile
+     
+     - parameter supportedContentId: (path) Supported Content ID 
+     - parameter body: (body) SupportedContent 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchConversationsMessagingSupportedcontentSupportedContentId(supportedContentId: String, body: SupportedContent, completion: @escaping ((_ data: SupportedContent?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchConversationsMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: supportedContentId, body: body)
+        requestBuilder.execute { (response: Response<SupportedContent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a supported content profile
+     
+     - PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaTypes" : {
+    "allow" : {
+      "inbound" : [ {
+        "type" : "aeiou"
+      } ],
+      "outbound" : [ "" ]
+    }
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter supportedContentId: (path) Supported Content ID 
+     - parameter body: (body) SupportedContent 
+
+     - returns: RequestBuilder<SupportedContent> 
+     */
+    open class func patchConversationsMessagingSupportedcontentSupportedContentIdWithRequestBuilder(supportedContentId: String, body: SupportedContent) -> RequestBuilder<SupportedContent> {
+        var path = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}"
+        let supportedContentIdPreEscape = "\(supportedContentId)"
+        let supportedContentIdPostEscape = supportedContentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{supportedContentId}", with: supportedContentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -22524,6 +23377,127 @@ open class ConversationsAPI {
     "url" : "aeiou"
   } ],
   "toAddress" : "aeiou",
+  "normalizedMessage" : {
+    "metadata" : {
+      "key" : "aeiou"
+    },
+    "reasons" : [ {
+      "code" : "aeiou",
+      "message" : "aeiou"
+    } ],
+    "originatingEntity" : "aeiou",
+    "isFinalReceipt" : true,
+    "channel" : {
+      "messageId" : "aeiou",
+      "from" : {
+        "image" : "aeiou",
+        "firstName" : "aeiou",
+        "lastName" : "aeiou",
+        "idType" : "aeiou",
+        "nickname" : "aeiou",
+        "id" : "aeiou",
+        "email" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "to" : {
+        "image" : "aeiou",
+        "firstName" : "aeiou",
+        "lastName" : "aeiou",
+        "idType" : "aeiou",
+        "nickname" : "aeiou",
+        "id" : "aeiou",
+        "email" : "aeiou"
+      },
+      "time" : "2000-01-23T04:56:07.000+0000",
+      "platform" : "aeiou",
+      "dateDeleted" : "2000-01-23T04:56:07.000+0000"
+    },
+    "id" : "aeiou",
+    "text" : "aeiou",
+    "type" : "aeiou",
+    "content" : [ {
+      "template" : {
+        "footer" : {
+          "text" : "aeiou"
+        },
+        "header" : {
+          "text" : "aeiou",
+          "media" : "",
+          "type" : "aeiou",
+          "parameters" : [ {
+            "name" : "aeiou",
+            "text" : "aeiou"
+          } ]
+        },
+        "language" : "aeiou",
+        "id" : "aeiou",
+        "body" : {
+          "text" : "aeiou",
+          "parameters" : [ "" ]
+        }
+      },
+      "quickReply" : {
+        "image" : "aeiou",
+        "payload" : "aeiou",
+        "action" : "aeiou",
+        "text" : "aeiou"
+      },
+      "attachment" : {
+        "filename" : "aeiou",
+        "sha256" : "aeiou",
+        "mime" : "aeiou",
+        "mediaType" : "aeiou",
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "url" : "aeiou"
+      },
+      "buttonResponse" : {
+        "payload" : "aeiou",
+        "text" : "aeiou",
+        "type" : "aeiou"
+      },
+      "location" : {
+        "address" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "text" : "aeiou",
+        "url" : "aeiou",
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "contentType" : "aeiou",
+      "generic" : {
+        "image" : "aeiou",
+        "components" : [ {
+          "title" : "aeiou",
+          "actions" : ""
+        } ],
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : {
+          "urlTarget" : "aeiou",
+          "textback" : "aeiou",
+          "url" : "aeiou"
+        }
+      },
+      "story" : {
+        "replyToId" : "aeiou",
+        "type" : "aeiou",
+        "url" : "aeiou"
+      }
+    } ],
+    "events" : [ {
+      "coBrowse" : {
+        "sessionJoinToken" : "aeiou",
+        "sessionId" : "aeiou",
+        "type" : "aeiou"
+      },
+      "eventType" : "aeiou"
+    } ],
+    "status" : "aeiou",
+    "direction" : "aeiou"
+  },
+  "normalizedReceipts" : [ "" ],
   "createdBy" : {
     "addresses" : [ "" ],
     "acdAutoAnswer" : true,
@@ -22964,6 +23938,127 @@ open class ConversationsAPI {
       "url" : "aeiou"
     } ],
     "toAddress" : "aeiou",
+    "normalizedMessage" : {
+      "metadata" : {
+        "key" : "aeiou"
+      },
+      "reasons" : [ {
+        "code" : "aeiou",
+        "message" : "aeiou"
+      } ],
+      "originatingEntity" : "aeiou",
+      "isFinalReceipt" : true,
+      "channel" : {
+        "messageId" : "aeiou",
+        "from" : {
+          "image" : "aeiou",
+          "firstName" : "aeiou",
+          "lastName" : "aeiou",
+          "idType" : "aeiou",
+          "nickname" : "aeiou",
+          "id" : "aeiou",
+          "email" : "aeiou"
+        },
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "id" : "aeiou",
+        "to" : {
+          "image" : "aeiou",
+          "firstName" : "aeiou",
+          "lastName" : "aeiou",
+          "idType" : "aeiou",
+          "nickname" : "aeiou",
+          "id" : "aeiou",
+          "email" : "aeiou"
+        },
+        "time" : "2000-01-23T04:56:07.000+0000",
+        "platform" : "aeiou",
+        "dateDeleted" : "2000-01-23T04:56:07.000+0000"
+      },
+      "id" : "aeiou",
+      "text" : "aeiou",
+      "type" : "aeiou",
+      "content" : [ {
+        "template" : {
+          "footer" : {
+            "text" : "aeiou"
+          },
+          "header" : {
+            "text" : "aeiou",
+            "media" : "",
+            "type" : "aeiou",
+            "parameters" : [ {
+              "name" : "aeiou",
+              "text" : "aeiou"
+            } ]
+          },
+          "language" : "aeiou",
+          "id" : "aeiou",
+          "body" : {
+            "text" : "aeiou",
+            "parameters" : [ "" ]
+          }
+        },
+        "quickReply" : {
+          "image" : "aeiou",
+          "payload" : "aeiou",
+          "action" : "aeiou",
+          "text" : "aeiou"
+        },
+        "attachment" : {
+          "filename" : "aeiou",
+          "sha256" : "aeiou",
+          "mime" : "aeiou",
+          "mediaType" : "aeiou",
+          "id" : "aeiou",
+          "text" : "aeiou",
+          "url" : "aeiou"
+        },
+        "buttonResponse" : {
+          "payload" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou"
+        },
+        "location" : {
+          "address" : "aeiou",
+          "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+          "text" : "aeiou",
+          "url" : "aeiou",
+          "longitude" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "contentType" : "aeiou",
+        "generic" : {
+          "image" : "aeiou",
+          "components" : [ {
+            "title" : "aeiou",
+            "actions" : ""
+          } ],
+          "description" : "aeiou",
+          "video" : "aeiou",
+          "title" : "aeiou",
+          "actions" : {
+            "urlTarget" : "aeiou",
+            "textback" : "aeiou",
+            "url" : "aeiou"
+          }
+        },
+        "story" : {
+          "replyToId" : "aeiou",
+          "type" : "aeiou",
+          "url" : "aeiou"
+        }
+      } ],
+      "events" : [ {
+        "coBrowse" : {
+          "sessionJoinToken" : "aeiou",
+          "sessionId" : "aeiou",
+          "type" : "aeiou"
+        },
+        "eventType" : "aeiou"
+      } ],
+      "status" : "aeiou",
+      "direction" : "aeiou"
+    },
+    "normalizedReceipts" : [ "" ],
     "createdBy" : {
       "addresses" : [ "" ],
       "acdAutoAnswer" : true,
@@ -23760,6 +24855,19 @@ open class ConversationsAPI {
   "createdBy" : "",
   "appId" : "aeiou",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -23853,6 +24961,19 @@ open class ConversationsAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -23946,6 +25067,19 @@ open class ConversationsAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -24046,6 +25180,19 @@ open class ConversationsAPI {
   "createdBy" : "",
   "envName" : "aeiou",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -24143,6 +25290,19 @@ open class ConversationsAPI {
     "status" : 123
   },
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -24167,6 +25327,84 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<WhatsAppIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Create a Supported Content profile
+     
+     - parameter body: (body) SupportedContent 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsMessagingSupportedcontent(body: SupportedContent, completion: @escaping ((_ data: SupportedContent?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsMessagingSupportedcontentWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SupportedContent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Create a Supported Content profile
+     
+     - POST /api/v2/conversations/messaging/supportedcontent
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaTypes" : {
+    "allow" : {
+      "inbound" : [ {
+        "type" : "aeiou"
+      } ],
+      "outbound" : [ "" ]
+    }
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter body: (body) SupportedContent 
+
+     - returns: RequestBuilder<SupportedContent> 
+     */
+    open class func postConversationsMessagingSupportedcontentWithRequestBuilder(body: SupportedContent) -> RequestBuilder<SupportedContent> {
+        let path = "/api/v2/conversations/messaging/supportedcontent"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -24532,6 +25770,19 @@ open class ConversationsAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "createdBy" : "",
   "name" : "aeiou",
+  "supportedContent" : {
+    "mediaTypes" : {
+      "allow" : {
+        "inbound" : [ {
+          "type" : "aeiou"
+        } ],
+        "outbound" : [ "" ]
+      }
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
   "recipient" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -24561,6 +25812,84 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LineIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Set the organization's default supported content profile that may be assigned to an integration when it is created.
+     
+     - parameter body: (body) SupportedContent 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putConversationsMessagingSupportedcontentDefault(body: SupportedContentReference, completion: @escaping ((_ data: SupportedContent?,_ error: Error?) -> Void)) {
+        let requestBuilder = putConversationsMessagingSupportedcontentDefaultWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SupportedContent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Set the organization's default supported content profile that may be assigned to an integration when it is created.
+     
+     - PUT /api/v2/conversations/messaging/supportedcontent/default
+     - When an integration is created a supported content ID may be assigned to it. If the supported content ID is not supplied, the default supported content profile will be assigned to it.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaTypes" : {
+    "allow" : {
+      "inbound" : [ {
+        "type" : "aeiou"
+      } ],
+      "outbound" : [ "" ]
+    }
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter body: (body) SupportedContent 
+
+     - returns: RequestBuilder<SupportedContent> 
+     */
+    open class func putConversationsMessagingSupportedcontentDefaultWithRequestBuilder(body: SupportedContentReference) -> RequestBuilder<SupportedContent> {
+        let path = "/api/v2/conversations/messaging/supportedcontent/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SupportedContent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

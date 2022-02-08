@@ -24,6 +24,8 @@ public class TwitterIntegration: Codable {
     public var _id: String?
     /** The name of the Twitter Integration */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The Access Token Key from Twitter messenger */
     public var accessTokenKey: String?
     /** The Consumer Key from Twitter messenger */
@@ -57,11 +59,13 @@ public class TwitterIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.accessTokenKey = accessTokenKey
         
@@ -100,6 +104,7 @@ public class TwitterIntegration: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case accessTokenKey
         case consumerKey
         case username

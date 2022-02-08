@@ -15,6 +15,8 @@ public class FacebookIntegrationUpdateRequest: Codable {
     public var _id: String?
     /** The name of the Facebook Integration */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided. */
     public var pageAccessToken: String?
     /** The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided. */
@@ -22,11 +24,13 @@ public class FacebookIntegrationUpdateRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, pageAccessToken: String?, userAccessToken: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, pageAccessToken: String?, userAccessToken: String?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.pageAccessToken = pageAccessToken
         
@@ -39,6 +43,7 @@ public class FacebookIntegrationUpdateRequest: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case pageAccessToken
         case userAccessToken
         case selfUri

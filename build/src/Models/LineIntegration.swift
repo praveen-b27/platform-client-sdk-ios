@@ -20,6 +20,8 @@ public class LineIntegration: Codable {
     public var _id: String?
     /** The name of the LINE Integration */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The Channel Id from LINE messenger */
     public var channelId: String?
     /** The Webhook URI to be updated in LINE platform */
@@ -45,11 +47,13 @@ public class LineIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, channelId: String?, webhookUri: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, channelId: String?, webhookUri: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.channelId = channelId
         
@@ -80,6 +84,7 @@ public class LineIntegration: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case channelId
         case webhookUri
         case status

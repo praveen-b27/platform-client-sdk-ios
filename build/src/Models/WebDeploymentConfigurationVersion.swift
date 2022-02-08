@@ -33,6 +33,8 @@ public class WebDeploymentConfigurationVersion: Codable {
     public var defaultLanguage: String?
     /** The settings for messenger */
     public var messenger: MessengerSettings?
+    /** The settings for position */
+    public var position: PositionSettings?
     /** The settings for support center */
     public var supportCenter: SupportCenterSettings?
     /** The settings for cobrowse */
@@ -58,7 +60,7 @@ public class WebDeploymentConfigurationVersion: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, messenger: MessengerSettings?, supportCenter: SupportCenterSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
+    public init(_id: String?, name: String?, version: String?, _description: String?, languages: [String]?, defaultLanguage: String?, messenger: MessengerSettings?, position: PositionSettings?, supportCenter: SupportCenterSettings?, cobrowse: CobrowseSettings?, journeyEvents: JourneyEventsSettings?, authenticationSettings: AuthenticationSettings?, dateCreated: Date?, dateModified: Date?, datePublished: Date?, lastModifiedUser: AddressableEntityRef?, createdUser: AddressableEntityRef?, publishedUser: AddressableEntityRef?, status: Status?, selfUri: String?) {
         
         self._id = _id
         
@@ -73,6 +75,8 @@ public class WebDeploymentConfigurationVersion: Codable {
         self.defaultLanguage = defaultLanguage
         
         self.messenger = messenger
+        
+        self.position = position
         
         self.supportCenter = supportCenter
         
@@ -108,6 +112,7 @@ public class WebDeploymentConfigurationVersion: Codable {
         case languages
         case defaultLanguage
         case messenger
+        case position
         case supportCenter
         case cobrowse
         case journeyEvents

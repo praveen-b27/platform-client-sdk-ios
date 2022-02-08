@@ -15,6 +15,8 @@ public class OpenIntegrationRequest: Codable {
     public var _id: String?
     /** The name of the Open messaging integration. */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The outbound notification webhook URL for the Open messaging integration. */
     public var outboundNotificationWebhookUrl: String?
     /** The outbound notification webhook signature secret token. */
@@ -24,11 +26,13 @@ public class OpenIntegrationRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, outboundNotificationWebhookUrl: String?, outboundNotificationWebhookSignatureSecretToken: String?, webhookHeaders: [String:String]?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, outboundNotificationWebhookUrl: String?, outboundNotificationWebhookSignatureSecretToken: String?, webhookHeaders: [String:String]?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.outboundNotificationWebhookUrl = outboundNotificationWebhookUrl
         
@@ -43,6 +47,7 @@ public class OpenIntegrationRequest: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case outboundNotificationWebhookUrl
         case outboundNotificationWebhookSignatureSecretToken
         case webhookHeaders

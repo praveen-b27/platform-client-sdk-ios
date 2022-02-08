@@ -34,6 +34,8 @@ public class MessagingIntegration: Codable {
     public var _id: String?
     /** The name of the Integration */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The status of the Integration */
     public var status: Status?
     /** The type of Messaging Integration */
@@ -53,11 +55,13 @@ public class MessagingIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, status: Status?, messengerType: MessengerType?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, status: Status?, messengerType: MessengerType?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.status = status
         
@@ -82,6 +86,7 @@ public class MessagingIntegration: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case status
         case messengerType
         case recipient

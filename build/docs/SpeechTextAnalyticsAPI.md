@@ -13,7 +13,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsTopic) | Delete a Speech &amp; Text Analytics topic by id |
 | [**getSpeechandtextanalyticsConversation**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversation) | Get Speech and Text Analytics for a specific conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
-| [**getSpeechandtextanalyticsDialects**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsDialects) | Get list of supported Speech &amp; Text Analytics dialects |
 | [**getSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgram) | Get a Speech &amp; Text Analytics program by id |
 | [**getSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsProgramMappings) | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
 | [**getSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsPrograms) | Get the list of Speech &amp; Text Analytics programs |
@@ -350,53 +349,6 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscr
 ### Return type
 
 [**TranscriptUrl**](TranscriptUrl.html)
-
-<a name="getSpeechandtextanalyticsDialects"></a>
-
-# **getSpeechandtextanalyticsDialects**
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-> [[JSON]](JSON.html) getSpeechandtextanalyticsDialects()
-
-Get list of supported Speech &amp; Text Analytics dialects
-
-This api has been deprecated. Use api/v2/topics/dialects instead
-
-Wraps GET /api/v2/speechandtextanalytics/dialects  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-
-// Code example
-SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDialects() { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsDialects was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not require any parameters.
-
-
-
-### Return type
-
-[**[JSON]**](JSON.html)
 
 <a name="getSpeechandtextanalyticsProgram"></a>
 

@@ -432,6 +432,8 @@ open class ObjectsAPI {
         case team = "TEAM"
         case workbin = "WORKBIN"
         case worktype = "WORKTYPE"
+        case extensionpool = "EXTENSIONPOOL"
+        case skillgroup = "SKILLGROUP"
     }
 
     

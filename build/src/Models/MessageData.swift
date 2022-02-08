@@ -57,6 +57,10 @@ public class MessageData: Codable {
     public var media: [MessageMedia]?
     /** The sticker details associated to a message. */
     public var stickers: [MessageSticker]?
+    /** The message into normalized format */
+    public var normalizedMessage: ConversationNormalizedMessage?
+    /** The delivery event associated with this message in normalized format, if the message direction was outbound */
+    public var normalizedReceipts: [ConversationNormalizedMessage]?
     /** User who sent this message. */
     public var createdBy: User?
     /** The id of the conversation of this message. */
@@ -64,7 +68,7 @@ public class MessageData: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, providerMessageId: String?, timestamp: Date?, fromAddress: String?, toAddress: String?, direction: Direction?, messengerType: MessengerType?, textBody: String?, status: Status?, media: [MessageMedia]?, stickers: [MessageSticker]?, createdBy: User?, conversationId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, providerMessageId: String?, timestamp: Date?, fromAddress: String?, toAddress: String?, direction: Direction?, messengerType: MessengerType?, textBody: String?, status: Status?, media: [MessageMedia]?, stickers: [MessageSticker]?, normalizedMessage: ConversationNormalizedMessage?, normalizedReceipts: [ConversationNormalizedMessage]?, createdBy: User?, conversationId: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -90,6 +94,10 @@ public class MessageData: Codable {
         
         self.stickers = stickers
         
+        self.normalizedMessage = normalizedMessage
+        
+        self.normalizedReceipts = normalizedReceipts
+        
         self.createdBy = createdBy
         
         self.conversationId = conversationId
@@ -111,6 +119,8 @@ public class MessageData: Codable {
         case status
         case media
         case stickers
+        case normalizedMessage
+        case normalizedReceipts
         case createdBy
         case conversationId
         case selfUri

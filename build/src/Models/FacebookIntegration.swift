@@ -20,6 +20,8 @@ public class FacebookIntegration: Codable {
     public var _id: String?
     /** The name of the Facebook Integration */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The App Id from Facebook messenger */
     public var appId: String?
     /** The Page Id from Facebook messenger */
@@ -49,11 +51,13 @@ public class FacebookIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, appId: String?, pageId: String?, pageName: String?, pageProfileImageUrl: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, appId: String?, pageId: String?, pageName: String?, pageProfileImageUrl: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.appId = appId
         
@@ -88,6 +92,7 @@ public class FacebookIntegration: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case appId
         case pageId
         case pageName

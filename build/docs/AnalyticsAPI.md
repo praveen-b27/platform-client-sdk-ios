@@ -283,6 +283,7 @@ Wraps GET /api/v2/analytics/conversations/{conversationId}/details
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 
@@ -335,6 +336,7 @@ Wraps GET /api/v2/analytics/conversations/details
 Requires ANY permissions: 
 
 * analytics:conversationDetail:view
+* analytics:agentConversationDetail:view
 
 ### Example
 

@@ -15,6 +15,8 @@ public class WhatsAppIntegrationRequest: Codable {
     public var _id: String?
     /** The name of the WhatsApp Integration */
     public var name: String?
+    /** Defines the SupportedContent profile configured for an integration */
+    public var supportedContent: SupportedContentReference?
     /** The phone number associated to the whatsApp integration */
     public var phoneNumber: String?
     /** The waba(WhatsApp Business Manager) certificate associated to the WhatsApp integration phone number */
@@ -22,11 +24,13 @@ public class WhatsAppIntegrationRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, phoneNumber: String?, wabaCertificate: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, phoneNumber: String?, wabaCertificate: String?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
+        
+        self.supportedContent = supportedContent
         
         self.phoneNumber = phoneNumber
         
@@ -39,6 +43,7 @@ public class WhatsAppIntegrationRequest: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case name
+        case supportedContent
         case phoneNumber
         case wabaCertificate
         case selfUri

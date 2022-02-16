@@ -474,11 +474,13 @@ open class GamificationAPI {
   "externalMetricDefinitionId" : "aeiou",
   "performanceProfileId" : "aeiou",
   "objective" : {
+    "mediaTypes" : [ "aeiou" ],
     "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "topics" : [ {
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -568,10 +570,12 @@ open class GamificationAPI {
      - examples: [{contentType=application/json, example={
   "unitType" : "aeiou",
   "defaultObjective" : {
-    "topics" : [ {
+    "mediaTypes" : [ "aeiou" ],
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -658,10 +662,12 @@ open class GamificationAPI {
   "entities" : [ {
     "unitType" : "aeiou",
     "defaultObjective" : {
-      "topics" : [ {
+      "mediaTypes" : [ "aeiou" ],
+      "queues" : [ {
         "selfUri" : "aeiou",
         "id" : "aeiou"
       } ],
+      "topics" : [ "" ],
       "id" : "aeiou",
       "templateId" : "aeiou",
       "zones" : [ {
@@ -1046,11 +1052,13 @@ open class GamificationAPI {
   "externalMetricDefinitionId" : "aeiou",
   "performanceProfileId" : "aeiou",
   "objective" : {
+    "mediaTypes" : [ "aeiou" ],
     "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "topics" : [ {
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -1182,11 +1190,13 @@ open class GamificationAPI {
     "externalMetricDefinitionId" : "aeiou",
     "performanceProfileId" : "aeiou",
     "objective" : {
+      "mediaTypes" : [ "aeiou" ],
       "dateStart" : "2000-01-23T04:56:07.000+0000",
-      "topics" : [ {
+      "queues" : [ {
         "selfUri" : "aeiou",
         "id" : "aeiou"
       } ],
+      "topics" : [ "" ],
       "id" : "aeiou",
       "templateId" : "aeiou",
       "zones" : [ {
@@ -1698,11 +1708,13 @@ open class GamificationAPI {
       "externalMetricDefinitionId" : "aeiou",
       "performanceProfileId" : "aeiou",
       "objective" : {
+        "mediaTypes" : [ "aeiou" ],
         "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "topics" : [ {
+        "queues" : [ {
           "selfUri" : "aeiou",
           "id" : "aeiou"
         } ],
+        "topics" : [ "" ],
         "id" : "aeiou",
         "templateId" : "aeiou",
         "zones" : [ {
@@ -2239,11 +2251,13 @@ open class GamificationAPI {
       "externalMetricDefinitionId" : "aeiou",
       "performanceProfileId" : "aeiou",
       "objective" : {
+        "mediaTypes" : [ "aeiou" ],
         "dateStart" : "2000-01-23T04:56:07.000+0000",
-        "topics" : [ {
+        "queues" : [ {
           "selfUri" : "aeiou",
           "id" : "aeiou"
         } ],
+        "topics" : [ "" ],
         "id" : "aeiou",
         "templateId" : "aeiou",
         "zones" : [ {
@@ -2695,10 +2709,7 @@ open class GamificationAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "performanceProfile" : "",
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
   "metric" : "",
   "timezone" : "aeiou",
@@ -2711,6 +2722,10 @@ open class GamificationAPI {
   "results" : [ {
     "unitType" : "aeiou",
     "average" : 1.3579000000000001069366817318950779736042022705078125,
+    "metric" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "trend" : [ {
       "value" : 1.3579000000000001069366817318950779736042022705078125,
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
@@ -2912,10 +2927,7 @@ open class GamificationAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "performanceProfile" : "",
   "timezone" : "aeiou",
   "user" : {
     "selfUri" : "aeiou",
@@ -2924,6 +2936,10 @@ open class GamificationAPI {
   "results" : [ {
     "unitType" : "aeiou",
     "average" : 1.3579000000000001069366817318950779736042022705078125,
+    "metric" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "trend" : [ {
       "value" : 1.3579000000000001069366817318950779736042022705078125,
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
@@ -3033,10 +3049,7 @@ open class GamificationAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "performanceProfile" : "",
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
   "metric" : "",
   "timezone" : "aeiou",
@@ -3049,6 +3062,10 @@ open class GamificationAPI {
   "results" : [ {
     "unitType" : "aeiou",
     "average" : 1.3579000000000001069366817318950779736042022705078125,
+    "metric" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "trend" : [ {
       "value" : 1.3579000000000001069366817318950779736042022705078125,
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
@@ -3145,10 +3162,7 @@ open class GamificationAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "performanceProfile" : "",
   "timezone" : "aeiou",
   "user" : {
     "selfUri" : "aeiou",
@@ -3157,6 +3171,10 @@ open class GamificationAPI {
   "results" : [ {
     "unitType" : "aeiou",
     "average" : 1.3579000000000001069366817318950779736042022705078125,
+    "metric" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "trend" : [ {
       "value" : 1.3579000000000001069366817318950779736042022705078125,
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
@@ -3260,10 +3278,7 @@ open class GamificationAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "performanceProfile" : {
-    "selfUri" : "aeiou",
-    "id" : "aeiou"
-  },
+  "performanceProfile" : "",
   "dateEndWorkday" : "2000-01-23T04:56:07.000+0000",
   "metric" : "",
   "timezone" : "aeiou",
@@ -3276,6 +3291,10 @@ open class GamificationAPI {
   "results" : [ {
     "unitType" : "aeiou",
     "average" : 1.3579000000000001069366817318950779736042022705078125,
+    "metric" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "trend" : [ {
       "value" : 1.3579000000000001069366817318950779736042022705078125,
       "dateWorkday" : "2000-01-23T04:56:07.000+0000"
@@ -3601,11 +3620,13 @@ open class GamificationAPI {
   "externalMetricDefinitionId" : "aeiou",
   "performanceProfileId" : "aeiou",
   "objective" : {
+    "mediaTypes" : [ "aeiou" ],
     "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "topics" : [ {
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4035,11 +4056,13 @@ open class GamificationAPI {
   "externalMetricDefinitionId" : "aeiou",
   "performanceProfileId" : "aeiou",
   "objective" : {
+    "mediaTypes" : [ "aeiou" ],
     "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "topics" : [ {
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4153,11 +4176,13 @@ open class GamificationAPI {
   "externalMetricDefinitionId" : "aeiou",
   "performanceProfileId" : "aeiou",
   "objective" : {
+    "mediaTypes" : [ "aeiou" ],
     "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "topics" : [ {
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4350,11 +4375,13 @@ open class GamificationAPI {
   "externalMetricDefinitionId" : "aeiou",
   "performanceProfileId" : "aeiou",
   "objective" : {
+    "mediaTypes" : [ "aeiou" ],
     "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "topics" : [ {
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {
@@ -4556,11 +4583,13 @@ open class GamificationAPI {
   "externalMetricDefinitionId" : "aeiou",
   "performanceProfileId" : "aeiou",
   "objective" : {
+    "mediaTypes" : [ "aeiou" ],
     "dateStart" : "2000-01-23T04:56:07.000+0000",
-    "topics" : [ {
+    "queues" : [ {
       "selfUri" : "aeiou",
       "id" : "aeiou"
     } ],
+    "topics" : [ "" ],
     "id" : "aeiou",
     "templateId" : "aeiou",
     "zones" : [ {

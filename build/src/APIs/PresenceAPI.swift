@@ -308,6 +308,7 @@ open class PresenceAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -668,6 +669,7 @@ open class PresenceAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -1152,6 +1154,7 @@ open class PresenceAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -1561,6 +1564,7 @@ open class PresenceAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -2072,6 +2076,7 @@ open class PresenceAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -2410,6 +2415,7 @@ open class PresenceAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {

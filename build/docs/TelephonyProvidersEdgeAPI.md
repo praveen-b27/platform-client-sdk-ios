@@ -2895,7 +2895,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
-let sortBy: String = "startNumber" // Sort by
+let sortBy: String = "" // Sort by
 let number: String = "" // Number
 
 // Code example
@@ -2916,7 +2916,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpools(pageSize: pag
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
-| **sortBy** | **String**| Sort by | [optional] [default to startNumber] |
+| **sortBy** | **String**| Sort by | [optional] |
 | **number** | **String**| Number | [optional] |
 {: class="table-striped"}
 

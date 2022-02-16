@@ -34,6 +34,7 @@ public class JourneyAggregationQuery: Codable {
         case journeyoutcomeid = "journeyOutcomeId"
         case journeysegmentid = "journeySegmentId"
         case journeysegmentscope = "journeySegmentScope"
+        case journeysessionid = "journeySessionId"
         case journeysessionsegmentid = "journeySessionSegmentId"
         case journeysessiontype = "journeySessionType"
         case notcontainsallcondition = "notContainsAllCondition"

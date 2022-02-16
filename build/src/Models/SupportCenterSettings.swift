@@ -14,10 +14,14 @@ public class SupportCenterSettings: Codable {
 
     /** Whether or not support center is enabled */
     public var enabled: Bool?
+    /** The knowledge base for support center */
+    public var knowledgeBase: AddressableEntityRef?
 
-    public init(enabled: Bool?) {
+    public init(enabled: Bool?, knowledgeBase: AddressableEntityRef?) {
         
         self.enabled = enabled
+        
+        self.knowledgeBase = knowledgeBase
         
     }
 

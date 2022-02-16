@@ -32,6 +32,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case conversationinitiator = "conversationInitiator"
         case convertedfrom = "convertedFrom"
         case convertedto = "convertedTo"
+        case customerparticipation = "customerParticipation"
         case deliverystatus = "deliveryStatus"
         case destinationaddress = "destinationAddress"
         case direction = "direction"

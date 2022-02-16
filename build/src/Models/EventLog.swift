@@ -31,6 +31,8 @@ public class EventLog: Codable {
         case messagingCampaign = "MESSAGING_CAMPAIGN"
         case organizationConfiguration = "ORGANIZATION_CONFIGURATION"
         case schedule = "SCHEDULE"
+        case messagingCampaignSchedule = "MESSAGING_CAMPAIGN_SCHEDULE"
+        case emailCampaignSchedule = "EMAIL_CAMPAIGN_SCHEDULE"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

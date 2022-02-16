@@ -47,6 +47,8 @@ public class BuScheduleRun: Codable {
     public var schedulingCompletedTime: Date?
     /** The number of schedule generation messages for this schedule generation run */
     public var messageCount: Int?
+    /** The list of schedule generation message counts by severity for this schedule generation run */
+    public var messageSeverityCounts: [SchedulerMessageSeverityCount]?
     /** Rescheduling options for this run.  Null unless intradayRescheduling is true */
     public var reschedulingOptions: ReschedulingOptionsRunResponse?
     /** When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -54,7 +56,7 @@ public class BuScheduleRun: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, schedulerRunId: String?, intradayRescheduling: Bool?, state: State?, weekCount: Int?, percentComplete: Double?, targetWeek: Date?, schedule: BuScheduleReference?, scheduleDescription: String?, schedulingStartTime: Date?, schedulingStartedBy: UserReference?, schedulingCanceledBy: UserReference?, schedulingCompletedTime: Date?, messageCount: Int?, reschedulingOptions: ReschedulingOptionsRunResponse?, reschedulingResultExpiration: Date?, selfUri: String?) {
+    public init(_id: String?, schedulerRunId: String?, intradayRescheduling: Bool?, state: State?, weekCount: Int?, percentComplete: Double?, targetWeek: Date?, schedule: BuScheduleReference?, scheduleDescription: String?, schedulingStartTime: Date?, schedulingStartedBy: UserReference?, schedulingCanceledBy: UserReference?, schedulingCompletedTime: Date?, messageCount: Int?, messageSeverityCounts: [SchedulerMessageSeverityCount]?, reschedulingOptions: ReschedulingOptionsRunResponse?, reschedulingResultExpiration: Date?, selfUri: String?) {
         
         self._id = _id
         
@@ -84,6 +86,8 @@ public class BuScheduleRun: Codable {
         
         self.messageCount = messageCount
         
+        self.messageSeverityCounts = messageSeverityCounts
+        
         self.reschedulingOptions = reschedulingOptions
         
         self.reschedulingResultExpiration = reschedulingResultExpiration
@@ -107,6 +111,7 @@ public class BuScheduleRun: Codable {
         case schedulingCanceledBy
         case schedulingCompletedTime
         case messageCount
+        case messageSeverityCounts
         case reschedulingOptions
         case reschedulingResultExpiration
         case selfUri

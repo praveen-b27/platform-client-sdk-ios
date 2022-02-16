@@ -245,6 +245,7 @@ public class AuditQueryEntity: Codable {
         case cancel = "Cancel"
         case softDelete = "SoftDelete"
         case hardDelete = "HardDelete"
+        case reset = "Reset"
     }
     /** Name of the Entity */
     public var name: Name?

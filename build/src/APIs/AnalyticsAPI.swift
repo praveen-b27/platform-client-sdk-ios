@@ -396,6 +396,7 @@ open class AnalyticsAPI {
   "divisionIds" : [ "aeiou" ],
   "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
   "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+  "customerParticipation" : true,
   "knowledgeBaseIds" : [ "aeiou" ],
   "selfServed" : true,
   "participants" : [ {
@@ -667,6 +668,7 @@ open class AnalyticsAPI {
     "divisionIds" : [ "aeiou" ],
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "customerParticipation" : true,
     "knowledgeBaseIds" : [ "aeiou" ],
     "selfServed" : true,
     "participants" : [ {
@@ -1018,6 +1020,7 @@ open class AnalyticsAPI {
     "divisionIds" : [ "aeiou" ],
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "customerParticipation" : true,
     "knowledgeBaseIds" : [ "aeiou" ],
     "selfServed" : true,
     "participants" : [ {
@@ -2353,6 +2356,64 @@ open class AnalyticsAPI {
     
     /**
      
+     Get AnalyticsReportingSettings for an organization
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsReportingSettings(completion: @escaping ((_ data: AnalyticsReportingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AnalyticsReportingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get AnalyticsReportingSettings for an organization
+     
+     - GET /api/v2/analytics/reporting/settings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "piiMaskingEnabled" : true,
+  "queueAgentAccessObfuscation" : true
+}}]
+
+     - returns: RequestBuilder<AnalyticsReportingSettings> 
+     */
+    open class func getAnalyticsReportingSettingsWithRequestBuilder() -> RequestBuilder<AnalyticsReportingSettings> {
+        let path = "/api/v2/analytics/reporting/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsReportingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
      Get a list of report time periods.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -2624,6 +2685,66 @@ open class AnalyticsAPI {
         let requestBuilder: RequestBuilder<DataAvailabilityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Patch AnalyticsReportingSettings values for an organization
+     
+     - parameter body: (body) AnalyticsReportingSettingsRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchAnalyticsReportingSettings(body: AnalyticsReportingSettings, completion: @escaping ((_ data: AnalyticsReportingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchAnalyticsReportingSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AnalyticsReportingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Patch AnalyticsReportingSettings values for an organization
+     
+     - PATCH /api/v2/analytics/reporting/settings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "piiMaskingEnabled" : true,
+  "queueAgentAccessObfuscation" : true
+}}]
+     
+     - parameter body: (body) AnalyticsReportingSettingsRequest 
+
+     - returns: RequestBuilder<AnalyticsReportingSettings> 
+     */
+    open class func patchAnalyticsReportingSettingsWithRequestBuilder(body: AnalyticsReportingSettings) -> RequestBuilder<AnalyticsReportingSettings> {
+        let path = "/api/v2/analytics/reporting/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsReportingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
 
     
@@ -3027,6 +3148,7 @@ open class AnalyticsAPI {
     "divisionIds" : [ "aeiou" ],
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "customerParticipation" : true,
     "knowledgeBaseIds" : [ "aeiou" ],
     "selfServed" : true,
     "participants" : [ {
@@ -3293,6 +3415,7 @@ open class AnalyticsAPI {
     "divisionIds" : [ "aeiou" ],
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "customerParticipation" : true,
     "knowledgeBaseIds" : [ "aeiou" ],
     "selfServed" : true,
     "participants" : [ {

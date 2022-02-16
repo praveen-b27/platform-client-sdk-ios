@@ -762,6 +762,7 @@ open class VoicemailAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -1435,6 +1436,7 @@ open class VoicemailAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -2233,6 +2235,7 @@ open class VoicemailAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -3304,6 +3307,7 @@ open class VoicemailAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -4400,6 +4404,7 @@ open class VoicemailAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -5476,6 +5481,7 @@ open class VoicemailAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -6490,6 +6496,7 @@ open class VoicemailAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -7225,6 +7232,7 @@ open class VoicemailAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -7956,6 +7964,7 @@ open class VoicemailAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -9010,6 +9019,7 @@ open class VoicemailAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -9999,6 +10009,7 @@ open class VoicemailAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -10983,6 +10994,7 @@ open class VoicemailAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {

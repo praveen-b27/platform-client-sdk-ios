@@ -221,6 +221,7 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true
       },
       "knowledge" : {
@@ -242,6 +243,7 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "knowledgeBase" : "",
     "enabled" : true
   },
   "createdUser" : "",
@@ -376,6 +378,7 @@ open class WebDeploymentsAPI {
       "apps" : {
         "conversations" : {
           "showUserTypingIndicator" : true,
+          "autoStartType" : "aeiou",
           "showAgentTypingIndicator" : true
         },
         "knowledge" : {
@@ -397,6 +400,7 @@ open class WebDeploymentsAPI {
       "alignment" : "aeiou"
     },
     "supportCenter" : {
+      "knowledgeBase" : "",
       "enabled" : true
     },
     "createdUser" : "",
@@ -527,6 +531,7 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true
       },
       "knowledge" : {
@@ -548,6 +553,7 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "knowledgeBase" : "",
     "enabled" : true
   },
   "createdUser" : "",
@@ -678,6 +684,7 @@ open class WebDeploymentsAPI {
       "apps" : {
         "conversations" : {
           "showUserTypingIndicator" : true,
+          "autoStartType" : "aeiou",
           "showAgentTypingIndicator" : true
         },
         "knowledge" : {
@@ -699,6 +706,7 @@ open class WebDeploymentsAPI {
       "alignment" : "aeiou"
     },
     "supportCenter" : {
+      "knowledgeBase" : "",
       "enabled" : true
     },
     "createdUser" : "",
@@ -1005,6 +1013,7 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true
       },
       "knowledge" : {
@@ -1026,6 +1035,7 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "knowledgeBase" : "",
     "enabled" : true
   },
   "createdUser" : "",
@@ -1154,6 +1164,7 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true
       },
       "knowledge" : {
@@ -1175,6 +1186,7 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "knowledgeBase" : "",
     "enabled" : true
   },
   "createdUser" : "",
@@ -1383,6 +1395,7 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true
       },
       "knowledge" : {
@@ -1404,6 +1417,7 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "knowledgeBase" : "",
     "enabled" : true
   },
   "createdUser" : "",

@@ -12,9 +12,9 @@ import Foundation
 public class StatEventCampaignTopicStatsNotification: Codable {
 
     public var group: [String:String]?
-    public var data: [StatEventCampaignTopicDatum]?
+    public var data: [StatEventCampaignTopicIntervalMetrics]?
 
-    public init(group: [String:String]?, data: [StatEventCampaignTopicDatum]?) {
+    public init(group: [String:String]?, data: [StatEventCampaignTopicIntervalMetrics]?) {
         
         self.group = group
         

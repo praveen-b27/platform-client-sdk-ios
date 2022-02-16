@@ -898,7 +898,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let minerId: String = "" // Miner ID
 let intentId: String = "" // The ID of the intent to be retrieved.
-let expand: String = "" // Option to fetch utterances
+let expand: LanguageUnderstandingAPI.Expand_getLanguageunderstandingMinerIntent = LanguageUnderstandingAPI.Expand_getLanguageunderstandingMinerIntent.enummember // Option to fetch utterances
 
 // Code example
 LanguageUnderstandingAPI.getLanguageunderstandingMinerIntent(minerId: minerId, intentId: intentId, expand: expand) { (response, error) in
@@ -918,7 +918,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingMinerIntent(minerId: minerId, i
 | ------------- | ------------- | ------------- | ------------- |
 | **minerId** | **String**| Miner ID | |
 | **intentId** | **String**| The ID of the intent to be retrieved. | |
-| **expand** | **String**| Option to fetch utterances | [optional] |
+| **expand** | **String**| Option to fetch utterances | [optional]<br />**Values**: phrases ("phrases"), utterances ("utterances") |
 {: class="table-striped"}
 
 
@@ -953,7 +953,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let minerId: String = "" // Miner ID
-let expand: String = "" // Option to fetch utterances.
+let expand: LanguageUnderstandingAPI.Expand_getLanguageunderstandingMinerIntents = LanguageUnderstandingAPI.Expand_getLanguageunderstandingMinerIntents.enummember // Option to fetch utterances.
 
 // Code example
 LanguageUnderstandingAPI.getLanguageunderstandingMinerIntents(minerId: minerId, expand: expand) { (response, error) in
@@ -972,7 +972,7 @@ LanguageUnderstandingAPI.getLanguageunderstandingMinerIntents(minerId: minerId, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **minerId** | **String**| Miner ID | |
-| **expand** | **String**| Option to fetch utterances. | [optional] |
+| **expand** | **String**| Option to fetch utterances. | [optional]<br />**Values**: phrases ("phrases"), utterances ("utterances") |
 {: class="table-striped"}
 
 

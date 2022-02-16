@@ -258,6 +258,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1730,6 +1731,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -2394,6 +2396,7 @@ open class QualityAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -2797,6 +2800,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -3795,6 +3799,7 @@ open class QualityAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -5297,6 +5302,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -6135,6 +6141,7 @@ open class QualityAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -7564,6 +7571,7 @@ open class QualityAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -8118,6 +8126,7 @@ open class QualityAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -9083,6 +9092,120 @@ open class QualityAPI {
         ])
 
         let requestBuilder: RequestBuilder<EvaluationFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Retrieve a list of the latest published evaluation form versions by context ids
+     
+     - parameter contextId: (query) A comma-delimited list of valid evaluation form context ids 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getQualityFormsEvaluationsBulkContexts(contextId: [String], completion: @escaping ((_ data: [EvaluationForm]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityFormsEvaluationsBulkContextsWithRequestBuilder(contextId: contextId)
+        requestBuilder.execute { (response: Response<[EvaluationForm]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Retrieve a list of the latest published evaluation form versions by context ids
+     
+     - GET /api/v2/quality/forms/evaluations/bulk/contexts
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example=[ {
+  "publishedVersions" : {
+    "total" : 123456789,
+    "pageCount" : 123,
+    "pageNumber" : 123,
+    "entities" : [ "" ],
+    "firstUri" : "aeiou",
+    "selfUri" : "aeiou",
+    "lastUri" : "aeiou",
+    "pageSize" : 123,
+    "nextUri" : "aeiou",
+    "previousUri" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "modifiedDate" : "2000-01-23T04:56:07.000+0000",
+  "contextId" : "aeiou",
+  "id" : "aeiou",
+  "published" : true,
+  "questionGroups" : [ {
+    "defaultAnswersToHighest" : true,
+    "manualWeight" : true,
+    "visibilityCondition" : "",
+    "name" : "aeiou",
+    "questions" : [ {
+      "helpText" : "aeiou",
+      "commentsRequired" : true,
+      "visibilityCondition" : {
+        "combiningOperation" : "aeiou",
+        "predicates" : [ "{}" ]
+      },
+      "isCritical" : true,
+      "id" : "aeiou",
+      "text" : "aeiou",
+      "type" : "aeiou",
+      "isKill" : true,
+      "naEnabled" : true,
+      "answerOptions" : [ {
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "value" : 123
+      } ]
+    } ],
+    "weight" : 1.3579000000000001069366817318950779736042022705078125,
+    "id" : "aeiou",
+    "defaultAnswersToNA" : true,
+    "type" : "aeiou",
+    "naEnabled" : true
+  } ]
+} ]}]
+     
+     - parameter contextId: (query) A comma-delimited list of valid evaluation form context ids 
+
+     - returns: RequestBuilder<[EvaluationForm]> 
+     */
+    open class func getQualityFormsEvaluationsBulkContextsWithRequestBuilder(contextId: [String]) -> RequestBuilder<[EvaluationForm]> {
+        let path = "/api/v2/quality/forms/evaluations/bulk/contexts"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "contextId": contextId
+            
+        ])
+
+        let requestBuilder: RequestBuilder<[EvaluationForm]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -11124,6 +11247,7 @@ open class QualityAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -12213,6 +12337,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -13679,6 +13804,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -13960,6 +14086,93 @@ open class QualityAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<QualityAuditQueryExecutionStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Query for evaluation aggregates for the current user
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postQualityEvaluationsAggregatesQueryMe(body: EvaluationAggregationQueryMe, completion: @escaping ((_ data: EvaluationAggregateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postQualityEvaluationsAggregatesQueryMeWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EvaluationAggregateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for evaluation aggregates for the current user
+     
+     - POST /api/v2/quality/evaluations/aggregates/query/me
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "aeiou",
+      "metrics" : [ {
+        "metric" : "aeiou",
+        "stats" : {
+          "current" : 1.3579000000000001069366817318950779736042022705078125,
+          "min" : 1.3579000000000001069366817318950779736042022705078125,
+          "max" : 1.3579000000000001069366817318950779736042022705078125,
+          "count" : 123456789,
+          "sum" : 1.3579000000000001069366817318950779736042022705078125,
+          "countPositive" : 123456789,
+          "countNegative" : 123456789,
+          "ratio" : 1.3579000000000001069366817318950779736042022705078125,
+          "numerator" : 1.3579000000000001069366817318950779736042022705078125,
+          "denominator" : 1.3579000000000001069366817318950779736042022705078125,
+          "target" : 1.3579000000000001069366817318950779736042022705078125
+        },
+        "qualifier" : "aeiou"
+      } ],
+      "views" : [ {
+        "stats" : "",
+        "name" : "aeiou"
+      } ]
+    } ],
+    "group" : {
+      "key" : "aeiou"
+    }
+  } ]
+}}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<EvaluationAggregateQueryResponse> 
+     */
+    open class func postQualityEvaluationsAggregatesQueryMeWithRequestBuilder(body: EvaluationAggregationQueryMe) -> RequestBuilder<EvaluationAggregateQueryResponse> {
+        let path = "/api/v2/quality/evaluations/aggregates/query/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EvaluationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -15009,6 +15222,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -16476,6 +16690,7 @@ open class QualityAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {

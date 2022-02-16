@@ -53,6 +53,7 @@ public class DependencyObject: Codable {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"

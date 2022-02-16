@@ -15,6 +15,8 @@ public class UserExpands: Codable {
     public var routingStatus: RoutingStatus?
     /** Active presence */
     public var presence: UserPresence?
+    /** Active 3rd party presence */
+    public var integrationPresence: UserPresence?
     /** Summary of conversion statistics for conversation types. */
     public var conversationSummary: UserConversationSummary?
     /** Determine if out of office is enabled */
@@ -26,11 +28,13 @@ public class UserExpands: Codable {
     /** Roles and permissions assigned to the user */
     public var authorization: UserAuthorization?
 
-    public init(routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?) {
+    public init(routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?) {
         
         self.routingStatus = routingStatus
         
         self.presence = presence
+        
+        self.integrationPresence = integrationPresence
         
         self.conversationSummary = conversationSummary
         

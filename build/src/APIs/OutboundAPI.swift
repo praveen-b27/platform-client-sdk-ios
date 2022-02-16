@@ -788,6 +788,7 @@ open class OutboundAPI {
   "version" : 123,
   "dncLists" : [ "" ],
   "messagesPerMinute" : 123,
+  "contactListFilters" : [ "" ],
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -797,6 +798,7 @@ open class OutboundAPI {
   "contactList" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "smsConfig" : {
+    "contentTemplate" : "",
     "senderSmsPhoneNumber" : {
       "phoneNumber" : "aeiou",
       "selfUri" : "aeiou"
@@ -2691,6 +2693,7 @@ open class OutboundAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -6378,6 +6381,7 @@ open class OutboundAPI {
   "version" : 123,
   "dncLists" : [ "" ],
   "messagesPerMinute" : 123,
+  "contactListFilters" : [ "" ],
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -6387,6 +6391,7 @@ open class OutboundAPI {
   "contactList" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "smsConfig" : {
+    "contentTemplate" : "",
     "senderSmsPhoneNumber" : {
       "phoneNumber" : "aeiou",
       "selfUri" : "aeiou"
@@ -6600,6 +6605,7 @@ open class OutboundAPI {
     "version" : 123,
     "dncLists" : [ "" ],
     "messagesPerMinute" : 123,
+    "contactListFilters" : [ "" ],
     "division" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -6609,6 +6615,7 @@ open class OutboundAPI {
     "contactList" : "",
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "smsConfig" : {
+      "contentTemplate" : "",
       "senderSmsPhoneNumber" : {
         "phoneNumber" : "aeiou",
         "selfUri" : "aeiou"
@@ -9569,6 +9576,7 @@ open class OutboundAPI {
   "version" : 123,
   "dncLists" : [ "" ],
   "messagesPerMinute" : 123,
+  "contactListFilters" : [ "" ],
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -9578,6 +9586,7 @@ open class OutboundAPI {
   "contactList" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "smsConfig" : {
+    "contentTemplate" : "",
     "senderSmsPhoneNumber" : {
       "phoneNumber" : "aeiou",
       "selfUri" : "aeiou"
@@ -10808,6 +10817,7 @@ open class OutboundAPI {
   "version" : 123,
   "dncLists" : [ "" ],
   "messagesPerMinute" : 123,
+  "contactListFilters" : [ "" ],
   "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
@@ -10817,6 +10827,7 @@ open class OutboundAPI {
   "contactList" : "",
   "dateCreated" : "2000-01-23T04:56:07.000+0000",
   "smsConfig" : {
+    "contentTemplate" : "",
     "senderSmsPhoneNumber" : {
       "phoneNumber" : "aeiou",
       "selfUri" : "aeiou"

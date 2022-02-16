@@ -119,6 +119,7 @@ public class AuditLogMessage: Codable {
         case cancel = "Cancel"
         case softDelete = "SoftDelete"
         case hardDelete = "HardDelete"
+        case reset = "Reset"
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"

@@ -20,6 +20,7 @@ title: MessagingCampaign
 | **alwaysRunning** | **Bool** | Whether this messaging campaign is always running | [optional] |
 | **contactSorts** | [**[ContactSort]**](ContactSort.html) | The order in which to sort contacts for dialing, based on up to four columns. | [optional] |
 | **messagesPerMinute** | **Int** | How many messages this messaging campaign will send per minute. | |
+| **contactListFilters** | [**[DomainEntityRef]**](DomainEntityRef.html) | The contact list filter to check before sending a message for this messaging campaign. | [optional] |
 | **errors** | [**[RestErrorDetail]**](RestErrorDetail.html) | A list of current error conditions associated with this messaging campaign. | [optional] |
 | **smsConfig** | [**SmsConfig**](SmsConfig.html) | Configuration for this messaging campaign to send SMS messages. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |

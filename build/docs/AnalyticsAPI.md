@@ -26,10 +26,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsReportingScheduleHistoryLatest**](AnalyticsAPI.html#getAnalyticsReportingScheduleHistoryLatest) | Get most recently completed scheduled report job. |
 | [**getAnalyticsReportingScheduleHistoryRunId**](AnalyticsAPI.html#getAnalyticsReportingScheduleHistoryRunId) | A completed scheduled report job |
 | [**getAnalyticsReportingSchedules**](AnalyticsAPI.html#getAnalyticsReportingSchedules) | Get a list of scheduled report jobs |
+| [**getAnalyticsReportingSettings**](AnalyticsAPI.html#getAnalyticsReportingSettings) | Get AnalyticsReportingSettings for an organization |
 | [**getAnalyticsReportingTimeperiods**](AnalyticsAPI.html#getAnalyticsReportingTimeperiods) | Get a list of report time periods. |
 | [**getAnalyticsUsersDetailsJob**](AnalyticsAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
+| [**patchAnalyticsReportingSettings**](AnalyticsAPI.html#patchAnalyticsReportingSettings) | Patch AnalyticsReportingSettings values for an organization |
 | [**postAnalyticsBotsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsBotsAggregatesQuery) | Query for bot aggregates |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
@@ -1053,6 +1055,53 @@ AnalyticsAPI.getAnalyticsReportingSchedules(pageNumber: pageNumber, pageSize: pa
 
 [**ReportScheduleEntityListing**](ReportScheduleEntityListing.html)
 
+<a name="getAnalyticsReportingSettings"></a>
+
+# **getAnalyticsReportingSettings**
+
+
+
+> [AnalyticsReportingSettings](AnalyticsReportingSettings.html) getAnalyticsReportingSettings()
+
+Get AnalyticsReportingSettings for an organization
+
+
+
+Wraps GET /api/v2/analytics/reporting/settings  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AnalyticsAPI.getAnalyticsReportingSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsReportingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
+
 <a name="getAnalyticsReportingTimeperiods"></a>
 
 # **getAnalyticsReportingTimeperiods**
@@ -1255,6 +1304,61 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse.html)
+
+<a name="patchAnalyticsReportingSettings"></a>
+
+# **patchAnalyticsReportingSettings**
+
+
+
+> [AnalyticsReportingSettings](AnalyticsReportingSettings.html) patchAnalyticsReportingSettings(body)
+
+Patch AnalyticsReportingSettings values for an organization
+
+
+
+Wraps PATCH /api/v2/analytics/reporting/settings  
+
+Requires ANY permissions: 
+
+* recording:recordingSegment:view
+* analytics:conversationDetail:view
+* analytics:conversationAggregate:view
+* analytics:dashboardConfigurations:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AnalyticsReportingSettings = new AnalyticsReportingSettings(...) // AnalyticsReportingSettingsRequest
+
+// Code example
+AnalyticsAPI.patchAnalyticsReportingSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.patchAnalyticsReportingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)| AnalyticsReportingSettingsRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
 
 <a name="postAnalyticsBotsAggregatesQuery"></a>
 

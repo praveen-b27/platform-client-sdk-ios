@@ -19,8 +19,10 @@ public class ScheduleGenerationResult: Codable {
     public var messageCount: Int?
     /** User facing messages related to the schedule generation run */
     public var messages: [ScheduleGenerationMessage]?
+    /** The list of messages by severity in this schedule generation run */
+    public var messageSeverities: [SchedulerMessageTypeSeverity]?
 
-    public init(failed: Bool?, runId: String?, messageCount: Int?, messages: [ScheduleGenerationMessage]?) {
+    public init(failed: Bool?, runId: String?, messageCount: Int?, messages: [ScheduleGenerationMessage]?, messageSeverities: [SchedulerMessageTypeSeverity]?) {
         
         self.failed = failed
         
@@ -29,6 +31,8 @@ public class ScheduleGenerationResult: Codable {
         self.messageCount = messageCount
         
         self.messages = messages
+        
+        self.messageSeverities = messageSeverities
         
     }
 

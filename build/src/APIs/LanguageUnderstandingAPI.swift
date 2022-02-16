@@ -1672,6 +1672,12 @@ open class LanguageUnderstandingAPI {
     
     
     
+    public enum Expand_getLanguageunderstandingMinerIntent: String { 
+        case phrases = "phrases"
+        case utterances = "utterances"
+    }
+
+    
     
     /**
      
@@ -1682,7 +1688,7 @@ open class LanguageUnderstandingAPI {
      - parameter expand: (query) Option to fetch utterances (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLanguageunderstandingMinerIntent(minerId: String, intentId: String, expand: String? = nil, completion: @escaping ((_ data: MinerIntent?,_ error: Error?) -> Void)) {
+    open class func getLanguageunderstandingMinerIntent(minerId: String, intentId: String, expand: Expand_getLanguageunderstandingMinerIntent? = nil, completion: @escaping ((_ data: MinerIntent?,_ error: Error?) -> Void)) {
         let requestBuilder = getLanguageunderstandingMinerIntentWithRequestBuilder(minerId: minerId, intentId: intentId, expand: expand)
         requestBuilder.execute { (response: Response<MinerIntent>?, error) -> Void in
             do {
@@ -1756,7 +1762,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<MinerIntent> 
      */
-    open class func getLanguageunderstandingMinerIntentWithRequestBuilder(minerId: String, intentId: String, expand: String? = nil) -> RequestBuilder<MinerIntent> {
+    open class func getLanguageunderstandingMinerIntentWithRequestBuilder(minerId: String, intentId: String, expand: Expand_getLanguageunderstandingMinerIntent? = nil) -> RequestBuilder<MinerIntent> {
         var path = "/api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1775,7 +1781,7 @@ open class LanguageUnderstandingAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "expand": expand
+            "expand": expand?.rawValue
             
         ])
 
@@ -1788,6 +1794,12 @@ open class LanguageUnderstandingAPI {
     
     
     
+    public enum Expand_getLanguageunderstandingMinerIntents: String { 
+        case phrases = "phrases"
+        case utterances = "utterances"
+    }
+
+    
     
     /**
      
@@ -1797,7 +1809,7 @@ open class LanguageUnderstandingAPI {
      - parameter expand: (query) Option to fetch utterances. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLanguageunderstandingMinerIntents(minerId: String, expand: String? = nil, completion: @escaping ((_ data: MinedIntentsListing?,_ error: Error?) -> Void)) {
+    open class func getLanguageunderstandingMinerIntents(minerId: String, expand: Expand_getLanguageunderstandingMinerIntents? = nil, completion: @escaping ((_ data: MinedIntentsListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getLanguageunderstandingMinerIntentsWithRequestBuilder(minerId: minerId, expand: expand)
         requestBuilder.execute { (response: Response<MinedIntentsListing>?, error) -> Void in
             do {
@@ -1875,7 +1887,7 @@ open class LanguageUnderstandingAPI {
 
      - returns: RequestBuilder<MinedIntentsListing> 
      */
-    open class func getLanguageunderstandingMinerIntentsWithRequestBuilder(minerId: String, expand: String? = nil) -> RequestBuilder<MinedIntentsListing> {
+    open class func getLanguageunderstandingMinerIntentsWithRequestBuilder(minerId: String, expand: Expand_getLanguageunderstandingMinerIntents? = nil) -> RequestBuilder<MinedIntentsListing> {
         var path = "/api/v2/languageunderstanding/miners/{minerId}/intents"
         let minerIdPreEscape = "\(minerId)"
         let minerIdPostEscape = minerIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1891,7 +1903,7 @@ open class LanguageUnderstandingAPI {
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
             
-            "expand": expand
+            "expand": expand?.rawValue
             
         ])
 

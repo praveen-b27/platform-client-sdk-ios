@@ -677,6 +677,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -784,6 +785,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -1082,6 +1084,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -1189,6 +1192,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -1549,6 +1553,7 @@ open class OrganizationAuthorizationAPI {
     "profileSkills" : [ "aeiou" ],
     "chat" : "",
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1686,6 +1691,7 @@ open class OrganizationAuthorizationAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -1695,6 +1701,7 @@ open class OrganizationAuthorizationAPI {
     "jabberId" : "aeiou"
   },
   "name" : "aeiou",
+  "integrationPresence" : "",
   "locations" : [ "" ],
   "username" : "aeiou",
   "geolocation" : ""
@@ -2082,6 +2089,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -2219,6 +2227,7 @@ open class OrganizationAuthorizationAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -2228,6 +2237,7 @@ open class OrganizationAuthorizationAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -2527,6 +2537,7 @@ open class OrganizationAuthorizationAPI {
         "profileSkills" : [ "aeiou" ],
         "chat" : "",
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -2634,6 +2645,7 @@ open class OrganizationAuthorizationAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -2926,6 +2938,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -3033,6 +3046,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -3314,6 +3328,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -3421,6 +3436,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -3858,6 +3874,7 @@ open class OrganizationAuthorizationAPI {
     "profileSkills" : [ "aeiou" ],
     "chat" : "",
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -3995,6 +4012,7 @@ open class OrganizationAuthorizationAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -4004,6 +4022,7 @@ open class OrganizationAuthorizationAPI {
     "jabberId" : "aeiou"
   },
   "name" : "aeiou",
+  "integrationPresence" : "",
   "locations" : [ "" ],
   "username" : "aeiou",
   "geolocation" : ""
@@ -4292,6 +4311,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -4429,6 +4449,7 @@ open class OrganizationAuthorizationAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -4438,6 +4459,7 @@ open class OrganizationAuthorizationAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -4740,6 +4762,7 @@ open class OrganizationAuthorizationAPI {
         "profileSkills" : [ "aeiou" ],
         "chat" : "",
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -4847,6 +4870,7 @@ open class OrganizationAuthorizationAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -5140,6 +5164,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -5247,6 +5272,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -5540,6 +5566,7 @@ open class OrganizationAuthorizationAPI {
     "profileSkills" : [ "aeiou" ],
     "chat" : "",
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -5677,6 +5704,7 @@ open class OrganizationAuthorizationAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -5686,6 +5714,7 @@ open class OrganizationAuthorizationAPI {
     "jabberId" : "aeiou"
   },
   "name" : "aeiou",
+  "integrationPresence" : "",
   "locations" : [ "" ],
   "username" : "aeiou",
   "geolocation" : ""
@@ -5960,6 +5989,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -6067,6 +6097,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -6431,6 +6462,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -6538,6 +6570,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -6913,6 +6946,7 @@ open class OrganizationAuthorizationAPI {
       "profileSkills" : [ "aeiou" ],
       "chat" : "",
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -7020,6 +7054,7 @@ open class OrganizationAuthorizationAPI {
       "productPlatform" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ "" ],
     "username" : "aeiou",
     "geolocation" : ""
@@ -7581,6 +7616,7 @@ open class OrganizationAuthorizationAPI {
     "profileSkills" : [ "aeiou" ],
     "chat" : "",
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -7718,6 +7754,7 @@ open class OrganizationAuthorizationAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -7727,6 +7764,7 @@ open class OrganizationAuthorizationAPI {
     "jabberId" : "aeiou"
   },
   "name" : "aeiou",
+  "integrationPresence" : "",
   "locations" : [ "" ],
   "username" : "aeiou",
   "geolocation" : ""

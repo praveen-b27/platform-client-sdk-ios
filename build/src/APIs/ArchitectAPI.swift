@@ -560,6 +560,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1138,6 +1139,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1476,6 +1478,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1545,6 +1548,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -1610,6 +1614,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2006,6 +2011,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -2140,6 +2146,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2205,6 +2212,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2379,6 +2387,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2444,6 +2453,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2632,6 +2642,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2707,6 +2718,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2898,6 +2910,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -2967,6 +2980,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3032,6 +3046,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3367,6 +3382,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -3434,6 +3450,7 @@ open class ArchitectAPI {
         case nludomain = "NLUDOMAIN"
         case nuancemixbot = "NUANCEMIXBOT"
         case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
         case outboundcallflow = "OUTBOUNDCALLFLOW"
         case queue = "QUEUE"
         case recordingpolicy = "RECORDINGPOLICY"
@@ -4260,6 +4277,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -4687,6 +4705,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -5272,6 +5291,7 @@ open class ArchitectAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -6250,6 +6270,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -6957,6 +6978,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -7494,6 +7516,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -8025,6 +8048,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -8554,6 +8578,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -8996,6 +9021,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -10653,6 +10679,7 @@ open class ArchitectAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -11153,6 +11180,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -11853,6 +11881,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -12237,6 +12266,7 @@ open class ArchitectAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -12960,6 +12990,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -13390,6 +13421,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -13916,6 +13948,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -14346,6 +14379,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -14780,6 +14814,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -15119,6 +15154,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -15594,6 +15630,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -15938,6 +15975,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -16408,6 +16446,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -16888,6 +16927,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -17235,6 +17275,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -17705,6 +17746,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -18656,6 +18698,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -19190,6 +19233,7 @@ open class ArchitectAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -19905,6 +19949,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -20628,6 +20673,7 @@ open class ArchitectAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {

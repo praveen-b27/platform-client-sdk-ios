@@ -43,6 +43,8 @@ public class User: Codable {
     public var routingStatus: RoutingStatus?
     /** Active presence */
     public var presence: UserPresence?
+    /** Integration presence */
+    public var integrationPresence: UserPresence?
     /** Summary of conversion statistics for conversation types. */
     public var conversationSummary: UserConversationSummary?
     /** Determine if out of office is enabled */
@@ -75,7 +77,7 @@ public class User: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, selfUri: String?) {
         
         self._id = _id
         
@@ -114,6 +116,8 @@ public class User: Codable {
         self.routingStatus = routingStatus
         
         self.presence = presence
+        
+        self.integrationPresence = integrationPresence
         
         self.conversationSummary = conversationSummary
         
@@ -169,6 +173,7 @@ public class User: Codable {
         case employerInfo
         case routingStatus
         case presence
+        case integrationPresence
         case conversationSummary
         case outOfOffice
         case geolocation

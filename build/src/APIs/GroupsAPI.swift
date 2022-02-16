@@ -468,6 +468,7 @@ open class GroupsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -806,6 +807,7 @@ open class GroupsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1186,6 +1188,7 @@ open class GroupsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1629,6 +1632,7 @@ open class GroupsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -1989,6 +1993,7 @@ open class GroupsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -2493,6 +2498,7 @@ open class GroupsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -2823,6 +2829,7 @@ open class GroupsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -3148,6 +3155,7 @@ open class GroupsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {

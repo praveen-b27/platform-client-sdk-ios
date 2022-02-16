@@ -17,8 +17,10 @@ public class BuGenerateScheduleRequest: Codable {
     public var shortTermForecast: BuShortTermForecastReference?
     /** The number of weeks in the schedule. One extra day is added at the end */
     public var weekCount: Int?
+    /** Additional scheduling options */
+    public var options: SchedulingOptionsRequest?
 
-    public init(_description: String?, shortTermForecast: BuShortTermForecastReference?, weekCount: Int?) {
+    public init(_description: String?, shortTermForecast: BuShortTermForecastReference?, weekCount: Int?, options: SchedulingOptionsRequest?) {
         
         self._description = _description
         
@@ -26,12 +28,15 @@ public class BuGenerateScheduleRequest: Codable {
         
         self.weekCount = weekCount
         
+        self.options = options
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _description = "description"
         case shortTermForecast
         case weekCount
+        case options
     }
 
 

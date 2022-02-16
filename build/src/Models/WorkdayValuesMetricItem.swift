@@ -21,6 +21,8 @@ public class WorkdayValuesMetricItem: Codable {
         case unit = "Unit"
     }
     /** Gamification metric for the average and the trend */
+    public var metric: AddressableEntityRef?
+    /** Gamification metric definition for the average and the trend */
     public var metricDefinition: DomainEntityRef?
     /** The average value of the metric */
     public var average: Double?
@@ -29,7 +31,9 @@ public class WorkdayValuesMetricItem: Codable {
     /** The metric value trend */
     public var trend: [WorkdayValuesTrendItem]?
 
-    public init(metricDefinition: DomainEntityRef?, average: Double?, unitType: UnitType?, trend: [WorkdayValuesTrendItem]?) {
+    public init(metric: AddressableEntityRef?, metricDefinition: DomainEntityRef?, average: Double?, unitType: UnitType?, trend: [WorkdayValuesTrendItem]?) {
+        
+        self.metric = metric
         
         self.metricDefinition = metricDefinition
         

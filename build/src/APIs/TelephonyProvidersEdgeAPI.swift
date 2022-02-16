@@ -5604,7 +5604,7 @@ open class TelephonyProvidersEdgeAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to startNumber)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter number: (query) Number (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -5670,7 +5670,7 @@ open class TelephonyProvidersEdgeAPI {
      
      - parameter pageSize: (query) Page size (optional, default to 25)
      - parameter pageNumber: (query) Page number (optional, default to 1)
-     - parameter sortBy: (query) Sort by (optional, default to startNumber)
+     - parameter sortBy: (query) Sort by (optional)
      - parameter number: (query) Number (optional)
 
      - returns: RequestBuilder<ExtensionPoolEntityListing> 

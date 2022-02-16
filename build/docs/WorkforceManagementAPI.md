@@ -1199,7 +1199,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting") |
+| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling") |
 {: class="table-striped"}
 
 

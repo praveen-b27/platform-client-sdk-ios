@@ -423,6 +423,7 @@ open class SearchAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -1150,6 +1151,7 @@ open class SearchAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1830,6 +1832,7 @@ open class SearchAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -2335,6 +2338,7 @@ open class SearchAPI {
     "divisionIds" : [ "aeiou" ],
     "mediaStatsMinConversationRFactor" : 1.3579000000000001069366817318950779736042022705078125,
     "conversationEnd" : "2000-01-23T04:56:07.000+0000",
+    "customerParticipation" : true,
     "knowledgeBaseIds" : [ "aeiou" ],
     "selfServed" : true,
     "participants" : [ {
@@ -2912,6 +2916,7 @@ open class SearchAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -3694,6 +3699,7 @@ open class SearchAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -4357,6 +4363,7 @@ open class SearchAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {

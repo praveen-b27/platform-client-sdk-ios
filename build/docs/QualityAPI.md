@@ -27,6 +27,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityFormsEvaluation**](QualityAPI.html#getQualityFormsEvaluation) | Get an evaluation form |
 | [**getQualityFormsEvaluationVersions**](QualityAPI.html#getQualityFormsEvaluationVersions) | Gets all the revisions for a specific evaluation. |
 | [**getQualityFormsEvaluations**](QualityAPI.html#getQualityFormsEvaluations) | Get the list of evaluation forms |
+| [**getQualityFormsEvaluationsBulkContexts**](QualityAPI.html#getQualityFormsEvaluationsBulkContexts) | Retrieve a list of the latest published evaluation form versions by context ids |
 | [**getQualityFormsSurvey**](QualityAPI.html#getQualityFormsSurvey) | Get a survey form |
 | [**getQualityFormsSurveyVersions**](QualityAPI.html#getQualityFormsSurveyVersions) | Gets all the revisions for a specific survey. |
 | [**getQualityFormsSurveys**](QualityAPI.html#getQualityFormsSurveys) | Get the list of survey forms |
@@ -46,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postQualityCalibrations**](QualityAPI.html#postQualityCalibrations) | Create a calibration |
 | [**postQualityConversationEvaluations**](QualityAPI.html#postQualityConversationEvaluations) | Create an evaluation |
 | [**postQualityConversationsAuditsQuery**](QualityAPI.html#postQualityConversationsAuditsQuery) | Create audit query execution |
+| [**postQualityEvaluationsAggregatesQueryMe**](QualityAPI.html#postQualityEvaluationsAggregatesQueryMe) | Query for evaluation aggregates for the current user |
 | [**postQualityEvaluationsScoring**](QualityAPI.html#postQualityEvaluationsScoring) | Score evaluation |
 | [**postQualityForms**](QualityAPI.html#postQualityForms) | Create an evaluation form. |
 | [**postQualityFormsEvaluations**](QualityAPI.html#postQualityFormsEvaluations) | Create an evaluation form. |
@@ -1251,6 +1253,58 @@ QualityAPI.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber
 
 [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
+<a name="getQualityFormsEvaluationsBulkContexts"></a>
+
+# **getQualityFormsEvaluationsBulkContexts**
+
+
+
+> [[EvaluationForm]](EvaluationForm.html) getQualityFormsEvaluationsBulkContexts(contextId)
+
+Retrieve a list of the latest published evaluation form versions by context ids
+
+
+
+Wraps GET /api/v2/quality/forms/evaluations/bulk/contexts  
+
+Requires ALL permissions: 
+
+* quality:evaluationForm:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contextId: [String] = [""] // A comma-delimited list of valid evaluation form context ids
+
+// Code example
+QualityAPI.getQualityFormsEvaluationsBulkContexts(contextId: contextId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.getQualityFormsEvaluationsBulkContexts was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contextId** | [**[String]**](String.html)| A comma-delimited list of valid evaluation form context ids | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**[EvaluationForm]**](EvaluationForm.html)
+
 <a name="getQualityFormsSurvey"></a>
 
 # **getQualityFormsSurvey**
@@ -2283,6 +2337,57 @@ QualityAPI.postQualityConversationsAuditsQuery(body: body) { (response, error) i
 ### Return type
 
 [**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
+
+<a name="postQualityEvaluationsAggregatesQueryMe"></a>
+
+# **postQualityEvaluationsAggregatesQueryMe**
+
+
+
+> [EvaluationAggregateQueryResponse](EvaluationAggregateQueryResponse.html) postQualityEvaluationsAggregatesQueryMe(body)
+
+Query for evaluation aggregates for the current user
+
+
+
+Wraps POST /api/v2/quality/evaluations/aggregates/query/me  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: EvaluationAggregationQueryMe = new EvaluationAggregationQueryMe(...) // query
+
+// Code example
+QualityAPI.postQualityEvaluationsAggregatesQueryMe(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.postQualityEvaluationsAggregatesQueryMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**EvaluationAggregationQueryMe**](EvaluationAggregationQueryMe.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
 
 <a name="postQualityEvaluationsScoring"></a>
 

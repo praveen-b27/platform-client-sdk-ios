@@ -636,6 +636,7 @@ open class UserRecordingsAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -1726,6 +1727,7 @@ open class UserRecordingsAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -2788,6 +2790,7 @@ open class UserRecordingsAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {

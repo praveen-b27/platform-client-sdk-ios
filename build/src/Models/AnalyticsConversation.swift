@@ -43,6 +43,8 @@ public class AnalyticsConversation: Codable {
     public var conversationInitiator: ConversationInitiator?
     /** The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var conversationStart: Date?
+    /** Indicates a messaging conversation in which the customer participated by sending at least one message */
+    public var customerParticipation: Bool?
     /** Identifier(s) of division(s) associated with a conversation */
     public var divisionIds: [String]?
     /** External tag for the conversation */
@@ -66,7 +68,7 @@ public class AnalyticsConversation: Codable {
     /** Participants in the conversation */
     public var participants: [AnalyticsParticipant]?
 
-    public init(conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
+    public init(conversationEnd: Date?, conversationId: String?, conversationInitiator: ConversationInitiator?, conversationStart: Date?, customerParticipation: Bool?, divisionIds: [String]?, externalTag: String?, knowledgeBaseIds: [String]?, mediaStatsMinConversationMos: Double?, mediaStatsMinConversationRFactor: Double?, originatingDirection: OriginatingDirection?, selfServed: Bool?, evaluations: [AnalyticsEvaluation]?, surveys: [AnalyticsSurvey]?, resolutions: [AnalyticsResolution]?, participants: [AnalyticsParticipant]?) {
         
         self.conversationEnd = conversationEnd
         
@@ -75,6 +77,8 @@ public class AnalyticsConversation: Codable {
         self.conversationInitiator = conversationInitiator
         
         self.conversationStart = conversationStart
+        
+        self.customerParticipation = customerParticipation
         
         self.divisionIds = divisionIds
         

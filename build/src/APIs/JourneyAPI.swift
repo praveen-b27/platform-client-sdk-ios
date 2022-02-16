@@ -1635,6 +1635,7 @@ open class JourneyAPI {
   "id" : "aeiou",
   "customerIdType" : "aeiou",
   "awayDate" : "2000-01-23T04:56:07.000+0000",
+  "lastAcdOutcome" : "aeiou",
   "attributeLists" : {
     "key" : {
       "dataType" : "aeiou",
@@ -1658,6 +1659,7 @@ open class JourneyAPI {
   "idleDate" : "2000-01-23T04:56:07.000+0000",
   "ipAddress" : "aeiou",
   "externalId" : "aeiou",
+  "lastUserDisconnectType" : "aeiou",
   "pageviewCount" : 123,
   "externalContact" : "",
   "originatingDirection" : "aeiou",
@@ -1693,6 +1695,7 @@ open class JourneyAPI {
   },
   "createdDate" : "2000-01-23T04:56:07.000+0000",
   "conversationChannels" : [ {
+    "messageType" : "aeiou",
     "type" : "aeiou",
     "platform" : "aeiou"
   } ],

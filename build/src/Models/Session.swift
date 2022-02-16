@@ -12,8 +12,34 @@ import Foundation
 public class Session: Codable {
 
     public enum OriginatingDirection: String, Codable { 
+        case unknown = "Unknown"
         case inbound = "Inbound"
         case outbound = "Outbound"
+    }
+    public enum LastUserDisconnectType: String, Codable { 
+        case unknown = "Unknown"
+        case endpoint = "Endpoint"
+        case client = "Client"
+        case system = "System"
+        case transfer = "Transfer"
+        case error = "Error"
+        case peer = "Peer"
+        case other = "Other"
+        case spam = "Spam"
+        case timeout = "Timeout"
+        case transportFailure = "TransportFailure"
+        case conferenceTransfer = "ConferenceTransfer"
+        case consultTransfer = "ConsultTransfer"
+        case forwardTransfer = "ForwardTransfer"
+        case noAnswerTransfer = "NoAnswerTransfer"
+        case notAvailableTransfer = "NotAvailableTransfer"
+        case uncallable = "Uncallable"
+    }
+    public enum LastAcdOutcome: String, Codable { 
+        case unknown = "Unknown"
+        case abandon = "Abandon"
+        case answered = "Answered"
+        case flowOut = "FlowOut"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
@@ -79,6 +105,10 @@ public class Session: Codable {
     public var originatingDirection: OriginatingDirection?
     /** The subject for the conversation, for example an email subject. */
     public var conversationSubject: String?
+    /** Disconnect reason for the last user connected to the conversation. */
+    public var lastUserDisconnectType: LastUserDisconnectType?
+    /** Last ACD outcome for the conversation. */
+    public var lastAcdOutcome: LastAcdOutcome?
     /** Indicates whether or not the session is authenticated. */
     public var authenticated: Bool?
     /** The URI for this object */
@@ -96,7 +126,7 @@ public class Session: Codable {
     /** The conversation for this session. */
     public var conversation: AddressableEntityRef?
 
-    public init(_id: String?, customerId: String?, customerIdType: String?, type: String?, externalId: String?, externalUrl: String?, shortId: String?, outcomeAchievements: [OutcomeAchievement]?, segmentAssignments: [SessionSegmentAssignment]?, attributes: [String:CustomEventAttribute]?, attributeLists: [String:CustomEventAttributeList]?, browser: Browser?, device: Device?, geolocation: JourneyGeolocation?, ipAddress: String?, ipOrganization: String?, lastPage: JourneyPage?, mktCampaign: JourneyCampaign?, referrer: Referrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: SessionLastEvent?, lastConnectedQueue: ConnectedQueue?, lastConnectedUser: ConnectedUser?, lastUserDisposition: ConversationUserDisposition?, conversationChannels: [ConversationChannel]?, originatingDirection: OriginatingDirection?, conversationSubject: String?, authenticated: Bool?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: AddressableEntityRef?, awayDate: Date?, idleDate: Date?, conversation: AddressableEntityRef?) {
+    public init(_id: String?, customerId: String?, customerIdType: String?, type: String?, externalId: String?, externalUrl: String?, shortId: String?, outcomeAchievements: [OutcomeAchievement]?, segmentAssignments: [SessionSegmentAssignment]?, attributes: [String:CustomEventAttribute]?, attributeLists: [String:CustomEventAttributeList]?, browser: Browser?, device: Device?, geolocation: JourneyGeolocation?, ipAddress: String?, ipOrganization: String?, lastPage: JourneyPage?, mktCampaign: JourneyCampaign?, referrer: Referrer?, searchTerms: [String]?, userAgentString: String?, durationInSeconds: Int?, eventCount: Int?, pageviewCount: Int?, screenviewCount: Int?, lastEvent: SessionLastEvent?, lastConnectedQueue: ConnectedQueue?, lastConnectedUser: ConnectedUser?, lastUserDisposition: ConversationUserDisposition?, conversationChannels: [ConversationChannel]?, originatingDirection: OriginatingDirection?, conversationSubject: String?, lastUserDisconnectType: LastUserDisconnectType?, lastAcdOutcome: LastAcdOutcome?, authenticated: Bool?, selfUri: String?, createdDate: Date?, endedDate: Date?, externalContact: AddressableEntityRef?, awayDate: Date?, idleDate: Date?, conversation: AddressableEntityRef?) {
         
         self._id = _id
         
@@ -162,6 +192,10 @@ public class Session: Codable {
         
         self.conversationSubject = conversationSubject
         
+        self.lastUserDisconnectType = lastUserDisconnectType
+        
+        self.lastAcdOutcome = lastAcdOutcome
+        
         self.authenticated = authenticated
         
         self.selfUri = selfUri
@@ -213,6 +247,8 @@ public class Session: Codable {
         case conversationChannels
         case originatingDirection
         case conversationSubject
+        case lastUserDisconnectType
+        case lastAcdOutcome
         case authenticated
         case selfUri
         case createdDate

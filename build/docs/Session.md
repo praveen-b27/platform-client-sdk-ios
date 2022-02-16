@@ -39,6 +39,8 @@ title: Session
 | **conversationChannels** | [**[ConversationChannel]**](ConversationChannel.html) | Represents the channels used for this conversation. | [optional] |
 | **originatingDirection** | **String** | The original direction of the conversation. | [optional] |
 | **conversationSubject** | **String** | The subject for the conversation, for example an email subject. | [optional] |
+| **lastUserDisconnectType** | **String** | Disconnect reason for the last user connected to the conversation. | [optional] |
+| **lastAcdOutcome** | **String** | Last ACD outcome for the conversation. | [optional] |
 | **authenticated** | **Bool** | Indicates whether or not the session is authenticated. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **createdDate** | [**Date**](Date.html) | Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

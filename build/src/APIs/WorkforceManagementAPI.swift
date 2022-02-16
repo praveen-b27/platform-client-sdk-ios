@@ -381,6 +381,10 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "generationResults" : {
+      "messageSeverityCounts" : [ {
+        "severity" : "aeiou",
+        "count" : 123
+      } ],
       "messageCount" : 123,
       "failed" : true,
       "runId" : "aeiou"
@@ -905,6 +909,12 @@ open class WorkforceManagementAPI {
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "version" : 123
       },
+      "scheduling" : {
+        "messageSeverities" : [ {
+          "severity" : "aeiou",
+          "type" : "aeiou"
+        } ]
+      },
       "timeZone" : "aeiou",
       "shortTermForecasting" : {
         "defaultHistoryWeeks" : 123
@@ -1272,6 +1282,7 @@ open class WorkforceManagementAPI {
         case settingsTimezone = "settings.timeZone"
         case settingsStartdayofweek = "settings.startDayOfWeek"
         case settingsShorttermforecasting = "settings.shortTermForecasting"
+        case settingsScheduling = "settings.scheduling"
     }
 
     
@@ -1327,6 +1338,12 @@ open class WorkforceManagementAPI {
       },
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
+    },
+    "scheduling" : {
+      "messageSeverities" : [ {
+        "severity" : "aeiou",
+        "type" : "aeiou"
+      } ]
     },
     "timeZone" : "aeiou",
     "shortTermForecasting" : {
@@ -2094,6 +2111,10 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "messageSeverityCounts" : [ {
+    "severity" : "aeiou",
+    "count" : 123
+  } ],
   "messageCount" : 123,
   "targetWeek" : "2000-01-23T04:56:07.000+0000",
   "selfUri" : "aeiou",
@@ -2283,6 +2304,10 @@ open class WorkforceManagementAPI {
   } ],
   "generationResults" : {
     "messageCount" : 123,
+    "messageSeverities" : [ {
+      "severity" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "messages" : [ {
       "arguments" : [ {
         "type" : "aeiou",
@@ -2372,6 +2397,10 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "messageSeverityCounts" : [ {
+      "severity" : "aeiou",
+      "count" : 123
+    } ],
     "messageCount" : 123,
     "targetWeek" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -2704,6 +2733,10 @@ open class WorkforceManagementAPI {
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "generationResults" : {
+    "messageSeverityCounts" : [ {
+      "severity" : "aeiou",
+      "count" : 123
+    } ],
     "messageCount" : 123,
     "failed" : true,
     "runId" : "aeiou"
@@ -2803,6 +2836,10 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "messageCount" : 123,
+  "messageSeverities" : [ {
+    "severity" : "aeiou",
+    "type" : "aeiou"
+  } ],
   "messages" : [ {
     "arguments" : [ {
       "type" : "aeiou",
@@ -3147,6 +3184,10 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "generationResults" : {
+      "messageSeverityCounts" : [ {
+        "severity" : "aeiou",
+        "count" : 123
+      } ],
       "messageCount" : 123,
       "failed" : true,
       "runId" : "aeiou"
@@ -4615,6 +4656,12 @@ open class WorkforceManagementAPI {
           "dateModified" : "2000-01-23T04:56:07.000+0000",
           "version" : 123
         },
+        "scheduling" : {
+          "messageSeverities" : [ {
+            "severity" : "aeiou",
+            "type" : "aeiou"
+          } ]
+        },
         "timeZone" : "aeiou",
         "shortTermForecasting" : {
           "defaultHistoryWeeks" : 123
@@ -5298,6 +5345,7 @@ open class WorkforceManagementAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -6288,6 +6336,7 @@ open class WorkforceManagementAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -8363,6 +8412,12 @@ open class WorkforceManagementAPI {
       },
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
+    },
+    "scheduling" : {
+      "messageSeverities" : [ {
+        "severity" : "aeiou",
+        "type" : "aeiou"
+      } ]
     },
     "timeZone" : "aeiou",
     "shortTermForecasting" : {
@@ -10628,6 +10683,10 @@ open class WorkforceManagementAPI {
     "selfUri" : "aeiou",
     "description" : "aeiou",
     "generationResults" : {
+      "messageSeverityCounts" : [ {
+        "severity" : "aeiou",
+        "count" : 123
+      } ],
       "messageCount" : 123,
       "failed" : true,
       "runId" : "aeiou"
@@ -10725,6 +10784,10 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "result" : {
+    "messageSeverityCounts" : [ {
+      "severity" : "aeiou",
+      "count" : 123
+    } ],
     "messageCount" : 123,
     "targetWeek" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -10868,6 +10931,10 @@ open class WorkforceManagementAPI {
   "selfUri" : "aeiou",
   "description" : "aeiou",
   "generationResults" : {
+    "messageSeverityCounts" : [ {
+      "severity" : "aeiou",
+      "count" : 123
+    } ],
     "messageCount" : 123,
     "failed" : true,
     "runId" : "aeiou"
@@ -10955,6 +11022,10 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "result" : {
+    "messageSeverityCounts" : [ {
+      "severity" : "aeiou",
+      "count" : 123
+    } ],
     "messageCount" : 123,
     "targetWeek" : "2000-01-23T04:56:07.000+0000",
     "selfUri" : "aeiou",
@@ -11433,6 +11504,12 @@ open class WorkforceManagementAPI {
       },
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "version" : 123
+    },
+    "scheduling" : {
+      "messageSeverities" : [ {
+        "severity" : "aeiou",
+        "type" : "aeiou"
+      } ]
     },
     "timeZone" : "aeiou",
     "shortTermForecasting" : {

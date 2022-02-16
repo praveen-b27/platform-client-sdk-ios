@@ -9,6 +9,7 @@ Settings concerning support center
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Whether or not support center is enabled | [optional] |
+| **knowledgeBase** | [**AddressableEntityRef**](AddressableEntityRef.html) | The knowledge base for support center | [optional] |
 {: class="table table-striped"}
 
 

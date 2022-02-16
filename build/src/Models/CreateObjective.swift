@@ -11,6 +11,17 @@ import Foundation
 
 public class CreateObjective: Codable {
 
+    public enum MediaTypes: String, Codable { 
+        case callback = "callback"
+        case chat = "chat"
+        case cobrowse = "cobrowse"
+        case email = "email"
+        case message = "message"
+        case screenshare = "screenshare"
+        case unknown = "unknown"
+        case video = "video"
+        case voice = "voice"
+    }
     public enum TopicIdsFilterType: String, Codable { 
         case and = "and"
         case or = "or"
@@ -25,12 +36,16 @@ public class CreateObjective: Codable {
     public var enabled: Bool?
     /** A list of topic ids for detected topic metrics */
     public var topicIds: [String]?
+    /** A list of media types for the metric */
+    public var mediaTypes: [MediaTypes]?
+    /** A list of queue ids for the metric */
+    public var queueIds: [String]?
     /** A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;. */
     public var topicIdsFilterType: TopicIdsFilterType?
     /** start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateStart: Date?
 
-    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, topicIds: [String]?, topicIdsFilterType: TopicIdsFilterType?, dateStart: Date?) {
+    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, topicIds: [String]?, mediaTypes: [MediaTypes]?, queueIds: [String]?, topicIdsFilterType: TopicIdsFilterType?, dateStart: Date?) {
         
         self._id = _id
         
@@ -41,6 +56,10 @@ public class CreateObjective: Codable {
         self.enabled = enabled
         
         self.topicIds = topicIds
+        
+        self.mediaTypes = mediaTypes
+        
+        self.queueIds = queueIds
         
         self.topicIdsFilterType = topicIdsFilterType
         
@@ -54,6 +73,8 @@ public class CreateObjective: Codable {
         case zones
         case enabled
         case topicIds
+        case mediaTypes
+        case queueIds
         case topicIdsFilterType
         case dateStart
     }

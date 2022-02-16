@@ -301,6 +301,7 @@ open class RecordingAPI {
                 "productPlatform" : "aeiou"
               },
               "name" : "aeiou",
+              "integrationPresence" : "",
               "locations" : [ "" ],
               "username" : "aeiou",
               "geolocation" : ""
@@ -569,6 +570,7 @@ open class RecordingAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -1305,6 +1307,7 @@ open class RecordingAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -1577,6 +1580,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -2002,6 +2006,7 @@ open class RecordingAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -2353,6 +2358,7 @@ open class RecordingAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -2701,6 +2707,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -3064,6 +3071,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -3414,6 +3422,7 @@ open class RecordingAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -3686,6 +3695,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -4059,6 +4069,7 @@ open class RecordingAPI {
                 "productPlatform" : "aeiou"
               },
               "name" : "aeiou",
+              "integrationPresence" : "",
               "locations" : [ "" ],
               "username" : "aeiou",
               "geolocation" : ""
@@ -4327,6 +4338,7 @@ open class RecordingAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -4781,6 +4793,7 @@ open class RecordingAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -5053,6 +5066,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -5472,6 +5486,7 @@ open class RecordingAPI {
                   "productPlatform" : "aeiou"
                 },
                 "name" : "aeiou",
+                "integrationPresence" : "",
                 "locations" : [ "" ],
                 "username" : "aeiou",
                 "geolocation" : ""
@@ -5740,6 +5755,7 @@ open class RecordingAPI {
             "jabberId" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -6108,6 +6124,7 @@ open class RecordingAPI {
           "languages" : [ "" ],
           "dateRanges" : [ "aeiou" ],
           "forUsers" : [ "" ],
+          "customerParticipation" : "aeiou",
           "timeAllowed" : "",
           "forQueues" : [ "" ]
         },
@@ -6131,6 +6148,7 @@ open class RecordingAPI {
           "languages" : [ "" ],
           "dateRanges" : [ "aeiou" ],
           "forUsers" : [ "" ],
+          "customerParticipation" : "aeiou",
           "timeAllowed" : "",
           "forQueues" : [ "" ]
         },
@@ -6556,6 +6574,7 @@ open class RecordingAPI {
                 "jabberId" : "aeiou"
               },
               "name" : "aeiou",
+              "integrationPresence" : "",
               "locations" : [ {
                 "notes" : "aeiou",
                 "coordinates" : {
@@ -6818,6 +6837,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -6841,6 +6861,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -7245,6 +7266,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -8174,6 +8196,7 @@ open class RecordingAPI {
           "languages" : [ "" ],
           "dateRanges" : [ "aeiou" ],
           "forUsers" : [ "" ],
+          "customerParticipation" : "aeiou",
           "timeAllowed" : "",
           "forQueues" : [ "" ]
         },
@@ -8197,6 +8220,7 @@ open class RecordingAPI {
           "languages" : [ "" ],
           "dateRanges" : [ "aeiou" ],
           "forUsers" : [ "" ],
+          "customerParticipation" : "aeiou",
           "timeAllowed" : "",
           "forQueues" : [ "" ]
         },
@@ -8622,6 +8646,7 @@ open class RecordingAPI {
                 "jabberId" : "aeiou"
               },
               "name" : "aeiou",
+              "integrationPresence" : "",
               "locations" : [ {
                 "notes" : "aeiou",
                 "coordinates" : {
@@ -8884,6 +8909,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -8907,6 +8933,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -9332,6 +9359,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -9771,6 +9799,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -10253,6 +10282,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -11035,6 +11065,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -11058,6 +11089,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -11462,6 +11494,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -11693,6 +11726,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -11716,6 +11750,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -12141,6 +12176,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -12631,6 +12667,7 @@ open class RecordingAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -12829,6 +12866,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -12852,6 +12890,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -13256,6 +13295,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -13854,6 +13894,7 @@ open class RecordingAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -14048,6 +14089,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -14071,6 +14113,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -14496,6 +14539,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -14919,6 +14963,7 @@ open class RecordingAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -15391,6 +15436,7 @@ open class RecordingAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -15663,6 +15709,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -16065,6 +16112,7 @@ open class RecordingAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -16387,6 +16435,7 @@ open class RecordingAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -16659,6 +16708,7 @@ open class RecordingAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -16847,6 +16897,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -16870,6 +16921,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -17274,6 +17326,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -17751,6 +17804,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -17774,6 +17828,7 @@ open class RecordingAPI {
         "languages" : [ "" ],
         "dateRanges" : [ "aeiou" ],
         "forUsers" : [ "" ],
+        "customerParticipation" : "aeiou",
         "timeAllowed" : "",
         "forQueues" : [ "" ]
       },
@@ -18199,6 +18254,7 @@ open class RecordingAPI {
               "jabberId" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {

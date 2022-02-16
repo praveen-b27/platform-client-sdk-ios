@@ -43,6 +43,8 @@ public class MessagingCampaign: Codable {
     public var contactSorts: [ContactSort]?
     /** How many messages this messaging campaign will send per minute. */
     public var messagesPerMinute: Int?
+    /** The contact list filter to check before sending a message for this messaging campaign. */
+    public var contactListFilters: [DomainEntityRef]?
     /** A list of current error conditions associated with this messaging campaign. */
     public var errors: [RestErrorDetail]?
     /** Configuration for this messaging campaign to send SMS messages. */
@@ -50,7 +52,7 @@ public class MessagingCampaign: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, errors: [RestErrorDetail]?, smsConfig: SmsConfig?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: DomainEntityRef?, campaignStatus: CampaignStatus?, callableTimeSet: DomainEntityRef?, contactList: DomainEntityRef?, dncLists: [DomainEntityRef]?, alwaysRunning: Bool?, contactSorts: [ContactSort]?, messagesPerMinute: Int?, contactListFilters: [DomainEntityRef]?, errors: [RestErrorDetail]?, smsConfig: SmsConfig?, selfUri: String?) {
         
         self._id = _id
         
@@ -78,6 +80,8 @@ public class MessagingCampaign: Codable {
         
         self.messagesPerMinute = messagesPerMinute
         
+        self.contactListFilters = contactListFilters
+        
         self.errors = errors
         
         self.smsConfig = smsConfig
@@ -100,6 +104,7 @@ public class MessagingCampaign: Codable {
         case alwaysRunning
         case contactSorts
         case messagesPerMinute
+        case contactListFilters
         case errors
         case smsConfig
         case selfUri

@@ -11,6 +11,17 @@ import Foundation
 
 public class Objective: Codable {
 
+    public enum MediaTypes: String, Codable { 
+        case callback = "callback"
+        case chat = "chat"
+        case cobrowse = "cobrowse"
+        case email = "email"
+        case message = "message"
+        case screenshare = "screenshare"
+        case unknown = "unknown"
+        case video = "video"
+        case voice = "voice"
+    }
     public enum TopicIdsFilterType: String, Codable { 
         case and = "and"
         case or = "or"
@@ -23,6 +34,10 @@ public class Objective: Codable {
     public var zones: [ObjectiveZone]?
     /** A flag for whether this objective is enabled for the related metric */
     public var enabled: Bool?
+    /** A list of media types for the metric */
+    public var mediaTypes: [MediaTypes]?
+    /** A list of queues for the metric */
+    public var queues: [AddressableEntityRef]?
     /** A list of topic ids for detected topic metrics */
     public var topics: [AddressableEntityRef]?
     /** A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;. */
@@ -30,7 +45,7 @@ public class Objective: Codable {
     /** start date of the objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
     public var dateStart: Date?
 
-    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, topics: [AddressableEntityRef]?, topicIdsFilterType: TopicIdsFilterType?, dateStart: Date?) {
+    public init(_id: String?, templateId: String?, zones: [ObjectiveZone]?, enabled: Bool?, mediaTypes: [MediaTypes]?, queues: [AddressableEntityRef]?, topics: [AddressableEntityRef]?, topicIdsFilterType: TopicIdsFilterType?, dateStart: Date?) {
         
         self._id = _id
         
@@ -39,6 +54,10 @@ public class Objective: Codable {
         self.zones = zones
         
         self.enabled = enabled
+        
+        self.mediaTypes = mediaTypes
+        
+        self.queues = queues
         
         self.topics = topics
         
@@ -53,6 +72,8 @@ public class Objective: Codable {
         case templateId
         case zones
         case enabled
+        case mediaTypes
+        case queues
         case topics
         case topicIdsFilterType
         case dateStart

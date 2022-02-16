@@ -803,6 +803,7 @@ open class ExternalContactsAPI {
           "profileSkills" : [ "aeiou" ],
           "chat" : "",
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -910,6 +911,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -1227,6 +1229,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -1599,6 +1602,7 @@ open class ExternalContactsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -2087,6 +2091,7 @@ open class ExternalContactsAPI {
             "profileSkills" : [ "aeiou" ],
             "chat" : "",
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -2194,6 +2199,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -2961,6 +2967,7 @@ open class ExternalContactsAPI {
         "profileSkills" : [ "aeiou" ],
         "chat" : "",
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -3068,6 +3075,7 @@ open class ExternalContactsAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -3485,6 +3493,7 @@ open class ExternalContactsAPI {
             "profileSkills" : [ "aeiou" ],
             "chat" : "",
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -3592,6 +3601,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -3928,6 +3938,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -4300,6 +4311,7 @@ open class ExternalContactsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -4685,6 +4697,7 @@ open class ExternalContactsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -4877,6 +4890,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -5287,6 +5301,7 @@ open class ExternalContactsAPI {
           "profileSkills" : [ "aeiou" ],
           "chat" : "",
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -5394,6 +5409,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -6065,6 +6081,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -6257,6 +6274,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -6658,6 +6676,7 @@ open class ExternalContactsAPI {
             "profileSkills" : [ "aeiou" ],
             "chat" : "",
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -6765,6 +6784,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -7178,6 +7198,7 @@ open class ExternalContactsAPI {
             "profileSkills" : [ "aeiou" ],
             "chat" : "",
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -7285,6 +7306,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -7597,6 +7619,7 @@ open class ExternalContactsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -8031,6 +8054,7 @@ open class ExternalContactsAPI {
           "profileSkills" : [ "aeiou" ],
           "chat" : "",
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -8138,6 +8162,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -8432,6 +8457,7 @@ open class ExternalContactsAPI {
         "jabberId" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ {
         "notes" : "aeiou",
         "coordinates" : {
@@ -8624,6 +8650,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -9036,6 +9063,7 @@ open class ExternalContactsAPI {
               "profileSkills" : [ "aeiou" ],
               "chat" : "",
               "name" : "aeiou",
+              "integrationPresence" : "",
               "locations" : [ {
                 "notes" : "aeiou",
                 "coordinates" : {
@@ -9143,6 +9171,7 @@ open class ExternalContactsAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -9560,6 +9589,7 @@ open class ExternalContactsAPI {
               "profileSkills" : [ "aeiou" ],
               "chat" : "",
               "name" : "aeiou",
+              "integrationPresence" : "",
               "locations" : [ {
                 "notes" : "aeiou",
                 "coordinates" : {
@@ -9667,6 +9697,7 @@ open class ExternalContactsAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -10163,6 +10194,7 @@ open class ExternalContactsAPI {
               "profileSkills" : [ "aeiou" ],
               "chat" : "",
               "name" : "aeiou",
+              "integrationPresence" : "",
               "locations" : [ {
                 "notes" : "aeiou",
                 "coordinates" : {
@@ -10270,6 +10302,7 @@ open class ExternalContactsAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -10585,6 +10618,7 @@ open class ExternalContactsAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -10939,6 +10973,7 @@ open class ExternalContactsAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -11372,6 +11407,7 @@ open class ExternalContactsAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -11809,6 +11845,7 @@ open class ExternalContactsAPI {
             "profileSkills" : [ "aeiou" ],
             "chat" : "",
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -11916,6 +11953,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -12290,6 +12328,7 @@ open class ExternalContactsAPI {
             "profileSkills" : [ "aeiou" ],
             "chat" : "",
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -12397,6 +12436,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -12850,6 +12890,7 @@ open class ExternalContactsAPI {
             "profileSkills" : [ "aeiou" ],
             "chat" : "",
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ {
               "notes" : "aeiou",
               "coordinates" : {
@@ -12957,6 +12998,7 @@ open class ExternalContactsAPI {
             "productPlatform" : "aeiou"
           },
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ "" ],
           "username" : "aeiou",
           "geolocation" : ""
@@ -13254,6 +13296,7 @@ open class ExternalContactsAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -13446,6 +13489,7 @@ open class ExternalContactsAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -13742,6 +13786,7 @@ open class ExternalContactsAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -13934,6 +13979,7 @@ open class ExternalContactsAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -14309,6 +14355,7 @@ open class ExternalContactsAPI {
           "jabberId" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -14501,6 +14548,7 @@ open class ExternalContactsAPI {
               "productPlatform" : "aeiou"
             },
             "name" : "aeiou",
+            "integrationPresence" : "",
             "locations" : [ "" ],
             "username" : "aeiou",
             "geolocation" : ""
@@ -14781,6 +14829,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -15223,6 +15272,7 @@ open class ExternalContactsAPI {
           "profileSkills" : [ "aeiou" ],
           "chat" : "",
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -15330,6 +15380,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -15708,6 +15759,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -16127,6 +16179,7 @@ open class ExternalContactsAPI {
         "profileSkills" : [ "aeiou" ],
         "chat" : "",
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -16234,6 +16287,7 @@ open class ExternalContactsAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -16591,6 +16645,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -16783,6 +16838,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -17164,6 +17220,7 @@ open class ExternalContactsAPI {
           "profileSkills" : [ "aeiou" ],
           "chat" : "",
           "name" : "aeiou",
+          "integrationPresence" : "",
           "locations" : [ {
             "notes" : "aeiou",
             "coordinates" : {
@@ -17271,6 +17328,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""
@@ -17574,6 +17632,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -18145,6 +18204,7 @@ open class ExternalContactsAPI {
         "profileSkills" : [ "aeiou" ],
         "chat" : "",
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ {
           "notes" : "aeiou",
           "coordinates" : {
@@ -18252,6 +18312,7 @@ open class ExternalContactsAPI {
         "productPlatform" : "aeiou"
       },
       "name" : "aeiou",
+      "integrationPresence" : "",
       "locations" : [ "" ],
       "username" : "aeiou",
       "geolocation" : ""
@@ -18535,6 +18596,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -19046,6 +19108,7 @@ open class ExternalContactsAPI {
       "jabberId" : "aeiou"
     },
     "name" : "aeiou",
+    "integrationPresence" : "",
     "locations" : [ {
       "notes" : "aeiou",
       "coordinates" : {
@@ -19238,6 +19301,7 @@ open class ExternalContactsAPI {
           "productPlatform" : "aeiou"
         },
         "name" : "aeiou",
+        "integrationPresence" : "",
         "locations" : [ "" ],
         "username" : "aeiou",
         "geolocation" : ""

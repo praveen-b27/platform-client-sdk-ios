@@ -4224,15 +4224,18 @@ open class GamificationAPI {
     
     
     
+    
+    
     /**
      
      Create a new custom performance profile
      
      - parameter body: (body) performanceProfile 
+     - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postGamificationProfiles(body: CreatePerformanceProfile, completion: @escaping ((_ data: GetProfilesResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postGamificationProfilesWithRequestBuilder(body: body)
+    open class func postGamificationProfiles(body: CreatePerformanceProfile, copyMetrics: Bool? = nil, completion: @escaping ((_ data: GetProfilesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfilesWithRequestBuilder(body: body, copyMetrics: copyMetrics)
         requestBuilder.execute { (response: Response<GetProfilesResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -4284,17 +4287,23 @@ open class GamificationAPI {
 }}]
      
      - parameter body: (body) performanceProfile 
+     - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)
 
      - returns: RequestBuilder<GetProfilesResponse> 
      */
-    open class func postGamificationProfilesWithRequestBuilder(body: CreatePerformanceProfile) -> RequestBuilder<GetProfilesResponse> {
+    open class func postGamificationProfilesWithRequestBuilder(body: CreatePerformanceProfile, copyMetrics: Bool? = nil) -> RequestBuilder<GetProfilesResponse> {
         let path = "/api/v2/gamification/profiles"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "copyMetrics": copyMetrics
+            
+        ])
 
         let requestBuilder: RequestBuilder<GetProfilesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

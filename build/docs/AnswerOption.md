@@ -10,6 +10,7 @@ title: AnswerOption
 | **_id** | **String** |  | [optional] |
 | **text** | **String** |  | [optional] |
 | **value** | **Int** |  | [optional] |
+| **assistanceConditions** | [**[AssistanceCondition]**](AssistanceCondition.html) |  | [optional] |
 {: class="table table-striped"}
 
 

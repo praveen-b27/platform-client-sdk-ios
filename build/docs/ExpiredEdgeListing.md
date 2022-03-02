@@ -7,7 +7,7 @@ title: ExpiredEdgeListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[EdgeIdNamePair]**](EdgeIdNamePair.html) |  | [optional] |
+| **entities** | [**[DomainEntityRef]**](DomainEntityRef.html) |  | [optional] |
 {: class="table table-striped"}
 
 

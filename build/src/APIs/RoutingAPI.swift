@@ -1994,6 +1994,7 @@ open class RoutingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -2109,6 +2110,7 @@ open class RoutingAPI {
       },
       "team" : {
         "division" : "",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2494,6 +2496,7 @@ open class RoutingAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -2609,6 +2612,7 @@ open class RoutingAPI {
         },
         "team" : {
           "division" : "",
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3748,8 +3752,6 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
     "joined" : true,
@@ -3815,6 +3817,7 @@ open class RoutingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -3934,6 +3937,7 @@ open class RoutingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4028,7 +4032,6 @@ open class RoutingAPI {
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
-  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4170,9 +4173,9 @@ open class RoutingAPI {
      - parameter presence: (query) Filter by presence (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueueUsers(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueUsers? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil, completion: @escaping ((_ data: QueueMemberEntityListing?,_ error: Error?) -> Void)) {
+    open class func getRoutingQueueUsers(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueUsers? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil, completion: @escaping ((_ data: QueueMemberEntityListingV1?,_ error: Error?) -> Void)) {
         let requestBuilder = getRoutingQueueUsersWithRequestBuilder(queueId: queueId, pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, expand: expand, joined: joined, name: name, profileSkills: profileSkills, skills: skills, languages: languages, routingStatus: routingStatus, presence: presence)
-        requestBuilder.execute { (response: Response<QueueMemberEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<QueueMemberEntityListingV1>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -4265,6 +4268,7 @@ open class RoutingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -4384,6 +4388,7 @@ open class RoutingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4497,9 +4502,9 @@ open class RoutingAPI {
      - parameter routingStatus: (query) Filter by routing status (optional)
      - parameter presence: (query) Filter by presence (optional)
 
-     - returns: RequestBuilder<QueueMemberEntityListing> 
+     - returns: RequestBuilder<QueueMemberEntityListingV1> 
      */
-    open class func getRoutingQueueUsersWithRequestBuilder(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueUsers? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil) -> RequestBuilder<QueueMemberEntityListing> {
+    open class func getRoutingQueueUsersWithRequestBuilder(queueId: String, pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueueUsers? = nil, expand: [String]? = nil, joined: Bool? = nil, name: String? = nil, profileSkills: [String]? = nil, skills: [String]? = nil, languages: [String]? = nil, routingStatus: [String]? = nil, presence: [String]? = nil) -> RequestBuilder<QueueMemberEntityListingV1> {
         var path = "/api/v2/routing/queues/{queueId}/users"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -4539,7 +4544,7 @@ open class RoutingAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<QueueMemberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueueMemberEntityListingV1>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -6345,6 +6350,7 @@ open class RoutingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -6464,6 +6470,7 @@ open class RoutingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -6797,6 +6804,7 @@ open class RoutingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -6916,6 +6924,7 @@ open class RoutingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8276,8 +8285,6 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
     "joined" : true,
@@ -8343,6 +8350,7 @@ open class RoutingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -8462,6 +8470,7 @@ open class RoutingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8556,7 +8565,6 @@ open class RoutingAPI {
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
-  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8660,9 +8668,9 @@ open class RoutingAPI {
      - parameter body: (body) Queue Members 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchRoutingQueueUsers(queueId: String, body: [QueueMember], completion: @escaping ((_ data: QueueMemberEntityListing?,_ error: Error?) -> Void)) {
+    open class func patchRoutingQueueUsers(queueId: String, body: [QueueMember], completion: @escaping ((_ data: QueueMemberEntityListingV1?,_ error: Error?) -> Void)) {
         let requestBuilder = patchRoutingQueueUsersWithRequestBuilder(queueId: queueId, body: body)
-        requestBuilder.execute { (response: Response<QueueMemberEntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<QueueMemberEntityListingV1>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -8755,6 +8763,7 @@ open class RoutingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -8874,6 +8883,7 @@ open class RoutingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8977,9 +8987,9 @@ open class RoutingAPI {
      - parameter queueId: (path) Queue ID 
      - parameter body: (body) Queue Members 
 
-     - returns: RequestBuilder<QueueMemberEntityListing> 
+     - returns: RequestBuilder<QueueMemberEntityListingV1> 
      */
-    open class func patchRoutingQueueUsersWithRequestBuilder(queueId: String, body: [QueueMember]) -> RequestBuilder<QueueMemberEntityListing> {
+    open class func patchRoutingQueueUsersWithRequestBuilder(queueId: String, body: [QueueMember]) -> RequestBuilder<QueueMemberEntityListingV1> {
         var path = "/api/v2/routing/queues/{queueId}/users"
         let queueIdPreEscape = "\(queueId)"
         let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8991,7 +9001,7 @@ open class RoutingAPI {
         
         let url = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<QueueMemberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueueMemberEntityListingV1>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -10977,6 +10987,7 @@ open class RoutingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -11096,6 +11107,7 @@ open class RoutingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -11633,6 +11645,7 @@ open class RoutingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -11748,6 +11761,7 @@ open class RoutingAPI {
       },
       "team" : {
         "division" : "",
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -12458,6 +12472,7 @@ open class RoutingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -12577,6 +12592,7 @@ open class RoutingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",

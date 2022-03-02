@@ -16,11 +16,13 @@ public class SurveyQuestionScore: Codable {
     /** Unweighted score of the question */
     public var score: Int?
     public var markedNA: Bool?
+    /** AnswerId found with evaluation assistance conditions */
+    public var assistedAnswerId: String?
     public var npsScore: Int?
     public var npsTextAnswer: String?
     public var freeTextAnswer: String?
 
-    public init(questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, npsScore: Int?, npsTextAnswer: String?, freeTextAnswer: String?) {
+    public init(questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, assistedAnswerId: String?, npsScore: Int?, npsTextAnswer: String?, freeTextAnswer: String?) {
         
         self.questionId = questionId
         
@@ -29,6 +31,8 @@ public class SurveyQuestionScore: Codable {
         self.score = score
         
         self.markedNA = markedNA
+        
+        self.assistedAnswerId = assistedAnswerId
         
         self.npsScore = npsScore
         

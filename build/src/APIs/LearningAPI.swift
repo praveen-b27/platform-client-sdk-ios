@@ -237,7 +237,11 @@ open class LearningAPI {
           "answerOptions" : [ {
             "id" : "aeiou",
             "text" : "aeiou",
-            "value" : 123
+            "value" : 123,
+            "assistanceConditions" : [ {
+              "topicIds" : [ "aeiou" ],
+              "operator" : "aeiou"
+            } ]
           } ]
         } ],
         "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -542,7 +546,11 @@ open class LearningAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -889,7 +897,11 @@ open class LearningAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1149,7 +1161,11 @@ open class LearningAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1386,7 +1402,11 @@ open class LearningAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1602,7 +1622,11 @@ open class LearningAPI {
           "answerOptions" : [ {
             "id" : "aeiou",
             "text" : "aeiou",
-            "value" : 123
+            "value" : 123,
+            "assistanceConditions" : [ {
+              "topicIds" : [ "aeiou" ],
+              "operator" : "aeiou"
+            } ]
           } ]
         } ],
         "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1789,7 +1813,11 @@ open class LearningAPI {
           "answerOptions" : [ {
             "id" : "aeiou",
             "text" : "aeiou",
-            "value" : 123
+            "value" : 123,
+            "assistanceConditions" : [ {
+              "topicIds" : [ "aeiou" ],
+              "operator" : "aeiou"
+            } ]
           } ]
         } ],
         "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2085,7 +2113,11 @@ open class LearningAPI {
           "answerOptions" : [ {
             "id" : "aeiou",
             "text" : "aeiou",
-            "value" : 123
+            "value" : 123,
+            "assistanceConditions" : [ {
+              "topicIds" : [ "aeiou" ],
+              "operator" : "aeiou"
+            } ]
           } ]
         } ],
         "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2363,7 +2395,11 @@ open class LearningAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2704,7 +2740,11 @@ open class LearningAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2936,7 +2976,11 @@ open class LearningAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,

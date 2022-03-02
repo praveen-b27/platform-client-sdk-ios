@@ -21,8 +21,10 @@ public class UserStation: Codable {
     public var defaultUser: User?
     /** Provider-specific info for this station, e.g. { \&quot;edgeGroupId\&quot;: \&quot;ffe7b15c-a9cc-4f4c-88f5-781327819a49\&quot; } */
     public var providerInfo: [String:String]?
+    /** The number of call appearances on the station. */
+    public var webRtcCallAppearances: Int?
 
-    public init(_id: String?, name: String?, type: String?, associatedUser: User?, associatedDate: Date?, defaultUser: User?, providerInfo: [String:String]?) {
+    public init(_id: String?, name: String?, type: String?, associatedUser: User?, associatedDate: Date?, defaultUser: User?, providerInfo: [String:String]?, webRtcCallAppearances: Int?) {
         
         self._id = _id
         
@@ -38,6 +40,8 @@ public class UserStation: Codable {
         
         self.providerInfo = providerInfo
         
+        self.webRtcCallAppearances = webRtcCallAppearances
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -48,6 +52,7 @@ public class UserStation: Codable {
         case associatedDate
         case defaultUser
         case providerInfo
+        case webRtcCallAppearances
     }
 
 

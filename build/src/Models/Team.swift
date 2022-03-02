@@ -20,13 +20,15 @@ public class Team: Codable {
     /** Team information. */
     public var _description: String?
     /** Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateModified: Date?
     /** Number of members in a team */
     public var memberCount: Int64?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateModified: Date?, memberCount: Int64?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, memberCount: Int64?, selfUri: String?) {
         
         self._id = _id
         
@@ -35,6 +37,8 @@ public class Team: Codable {
         self.division = division
         
         self._description = _description
+        
+        self.dateCreated = dateCreated
         
         self.dateModified = dateModified
         
@@ -49,6 +53,7 @@ public class Team: Codable {
         case name
         case division
         case _description = "description"
+        case dateCreated
         case dateModified
         case memberCount
         case selfUri

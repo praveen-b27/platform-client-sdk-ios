@@ -45,6 +45,8 @@ public class EventMessage: Codable {
         case dataActionExecutionFailed = "DATA_ACTION_EXECUTION_FAILED"
         case dataActionAuthenticationFailure = "DATA_ACTION_AUTHENTICATION_FAILURE"
         case dataActionNotFound = "DATA_ACTION_NOT_FOUND"
+        case dataActionTooManyRequests = "DATA_ACTION_TOO_MANY_REQUESTS"
+        case dataActionTooManyRequestsRemote = "DATA_ACTION_TOO_MANY_REQUESTS_REMOTE"
         case dncAuthenticationFailure = "DNC_AUTHENTICATION_FAILURE"
         case exceededContactLimit = "EXCEEDED_CONTACT_LIMIT"
         case exceededDncRecordLimit = "EXCEEDED_DNC_RECORD_LIMIT"

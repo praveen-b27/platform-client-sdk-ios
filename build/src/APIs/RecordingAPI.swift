@@ -426,6 +426,7 @@ open class RecordingAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -545,6 +546,7 @@ open class RecordingAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -1080,6 +1082,8 @@ open class RecordingAPI {
     
     
     
+    
+    
     /**
      
      Gets a specific recording.
@@ -1093,10 +1097,11 @@ open class RecordingAPI {
      - parameter download: (query) requesting a download format of the recording. Valid values:true,false (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
+     - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationRecording(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, emailFormatId: EmailFormatId_getConversationRecording? = nil, chatFormatId: ChatFormatId_getConversationRecording? = nil, messageFormatId: MessageFormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale)
+    open class func getConversationRecording(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, emailFormatId: EmailFormatId_getConversationRecording? = nil, chatFormatId: ChatFormatId_getConversationRecording? = nil, messageFormatId: MessageFormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, mediaFormats: [String]? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationRecordingWithRequestBuilder(conversationId: conversationId, recordingId: recordingId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale, mediaFormats: mediaFormats)
         requestBuilder.execute { (response: Response<Recording>?, error) -> Void in
             do {
                 if let e = error {
@@ -1436,6 +1441,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -1555,6 +1561,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -1708,10 +1715,11 @@ open class RecordingAPI {
      - parameter download: (query) requesting a download format of the recording. Valid values:true,false (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
+     - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)
 
      - returns: RequestBuilder<Recording> 
      */
-    open class func getConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, emailFormatId: EmailFormatId_getConversationRecording? = nil, chatFormatId: ChatFormatId_getConversationRecording? = nil, messageFormatId: MessageFormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
+    open class func getConversationRecordingWithRequestBuilder(conversationId: String, recordingId: String, formatId: FormatId_getConversationRecording? = nil, emailFormatId: EmailFormatId_getConversationRecording? = nil, chatFormatId: ChatFormatId_getConversationRecording? = nil, messageFormatId: MessageFormatId_getConversationRecording? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, mediaFormats: [String]? = nil) -> RequestBuilder<Recording> {
         var path = "/api/v2/conversations/{conversationId}/recordings/{recordingId}"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1742,7 +1750,9 @@ open class RecordingAPI {
             
             "fileName": fileName, 
             
-            "locale": locale
+            "locale": locale, 
+            
+            "mediaFormats": mediaFormats
             
         ])
 
@@ -1862,6 +1872,7 @@ open class RecordingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -1981,6 +1992,7 @@ open class RecordingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2214,6 +2226,7 @@ open class RecordingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -2333,6 +2346,7 @@ open class RecordingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2563,6 +2577,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -2682,6 +2697,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2927,6 +2943,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -3046,6 +3063,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3201,17 +3219,20 @@ open class RecordingAPI {
 
     
     
+    
+    
     /**
      
      Get all of a Conversation's Recordings.
      
      - parameter conversationId: (path) Conversation ID 
      - parameter maxWaitMs: (query) The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)
-     - parameter formatId: (query) The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)
+     - parameter formatId: (query) The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)
+     - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationRecordings(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, completion: @escaping ((_ data: [Recording]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationRecordingsWithRequestBuilder(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId)
+    open class func getConversationRecordings(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, mediaFormats: [String]? = nil, completion: @escaping ((_ data: [Recording]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationRecordingsWithRequestBuilder(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats)
         requestBuilder.execute { (response: Response<[Recording]>?, error) -> Void in
             do {
                 if let e = error {
@@ -3551,6 +3572,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -3670,6 +3692,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3816,11 +3839,12 @@ open class RecordingAPI {
      
      - parameter conversationId: (path) Conversation ID 
      - parameter maxWaitMs: (query) The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)
-     - parameter formatId: (query) The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)
+     - parameter formatId: (query) The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)
+     - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)
 
      - returns: RequestBuilder<[Recording]> 
      */
-    open class func getConversationRecordingsWithRequestBuilder(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil) -> RequestBuilder<[Recording]> {
+    open class func getConversationRecordingsWithRequestBuilder(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, mediaFormats: [String]? = nil) -> RequestBuilder<[Recording]> {
         var path = "/api/v2/conversations/{conversationId}/recordings"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3838,7 +3862,9 @@ open class RecordingAPI {
             
             "maxWaitMs": maxWaitMs?.encodeToJSON(), 
             
-            "formatId": formatId?.rawValue
+            "formatId": formatId?.rawValue, 
+            
+            "mediaFormats": mediaFormats
             
         ])
 
@@ -4194,6 +4220,7 @@ open class RecordingAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -4313,6 +4340,7 @@ open class RecordingAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -4567,6 +4595,8 @@ open class RecordingAPI {
     
     
     
+    
+    
     /**
      
      Gets the media of a single orphan recording
@@ -4579,10 +4609,11 @@ open class RecordingAPI {
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
+     - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOrphanrecordingMedia(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, emailFormatId: EmailFormatId_getOrphanrecordingMedia? = nil, chatFormatId: ChatFormatId_getOrphanrecordingMedia? = nil, messageFormatId: MessageFormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOrphanrecordingMediaWithRequestBuilder(orphanId: orphanId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale)
+    open class func getOrphanrecordingMedia(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, emailFormatId: EmailFormatId_getOrphanrecordingMedia? = nil, chatFormatId: ChatFormatId_getOrphanrecordingMedia? = nil, messageFormatId: MessageFormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, mediaFormats: [String]? = nil, completion: @escaping ((_ data: Recording?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrphanrecordingMediaWithRequestBuilder(orphanId: orphanId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale, mediaFormats: mediaFormats)
         requestBuilder.execute { (response: Response<Recording>?, error) -> Void in
             do {
                 if let e = error {
@@ -4922,6 +4953,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -5041,6 +5073,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -5193,10 +5226,11 @@ open class RecordingAPI {
      - parameter download: (query) requesting a download format of the recording (optional, default to false)
      - parameter fileName: (query) the name of the downloaded fileName (optional)
      - parameter locale: (query) The locale for the requested file when downloading, as an ISO 639-1 code (optional)
+     - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)
 
      - returns: RequestBuilder<Recording> 
      */
-    open class func getOrphanrecordingMediaWithRequestBuilder(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, emailFormatId: EmailFormatId_getOrphanrecordingMedia? = nil, chatFormatId: ChatFormatId_getOrphanrecordingMedia? = nil, messageFormatId: MessageFormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil) -> RequestBuilder<Recording> {
+    open class func getOrphanrecordingMediaWithRequestBuilder(orphanId: String, formatId: FormatId_getOrphanrecordingMedia? = nil, emailFormatId: EmailFormatId_getOrphanrecordingMedia? = nil, chatFormatId: ChatFormatId_getOrphanrecordingMedia? = nil, messageFormatId: MessageFormatId_getOrphanrecordingMedia? = nil, download: Bool? = nil, fileName: String? = nil, locale: String? = nil, mediaFormats: [String]? = nil) -> RequestBuilder<Recording> {
         var path = "/api/v2/orphanrecordings/{orphanId}/media"
         let orphanIdPreEscape = "\(orphanId)"
         let orphanIdPostEscape = orphanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5224,7 +5258,9 @@ open class RecordingAPI {
             
             "fileName": fileName, 
             
-            "locale": locale
+            "locale": locale, 
+            
+            "mediaFormats": mediaFormats
             
         ])
 
@@ -5611,6 +5647,7 @@ open class RecordingAPI {
             "lastAssociatedStation" : "",
             "associatedStation" : {
               "associatedDate" : "2000-01-23T04:56:07.000+0000",
+              "webRtcCallAppearances" : 123,
               "name" : "aeiou",
               "defaultUser" : "",
               "id" : "aeiou",
@@ -5730,6 +5767,7 @@ open class RecordingAPI {
               "name" : "aeiou",
               "id" : "aeiou"
             },
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -6430,6 +6468,7 @@ open class RecordingAPI {
                 "lastAssociatedStation" : "",
                 "associatedStation" : {
                   "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                  "webRtcCallAppearances" : 123,
                   "name" : "aeiou",
                   "defaultUser" : "",
                   "id" : "aeiou",
@@ -6549,6 +6588,7 @@ open class RecordingAPI {
                   "name" : "aeiou",
                   "id" : "aeiou"
                 },
+                "dateCreated" : "2000-01-23T04:56:07.000+0000",
                 "memberCount" : 123456789,
                 "selfUri" : "aeiou",
                 "name" : "aeiou",
@@ -6679,7 +6719,11 @@ open class RecordingAPI {
                   "answerOptions" : [ {
                     "id" : "aeiou",
                     "text" : "aeiou",
-                    "value" : 123
+                    "value" : 123,
+                    "assistanceConditions" : [ {
+                      "topicIds" : [ "aeiou" ],
+                      "operator" : "aeiou"
+                    } ]
                   } ]
                 } ],
                 "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -7122,6 +7166,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -7241,6 +7286,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -7371,7 +7417,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -8502,6 +8552,7 @@ open class RecordingAPI {
                 "lastAssociatedStation" : "",
                 "associatedStation" : {
                   "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                  "webRtcCallAppearances" : 123,
                   "name" : "aeiou",
                   "defaultUser" : "",
                   "id" : "aeiou",
@@ -8621,6 +8672,7 @@ open class RecordingAPI {
                   "name" : "aeiou",
                   "id" : "aeiou"
                 },
+                "dateCreated" : "2000-01-23T04:56:07.000+0000",
                 "memberCount" : 123456789,
                 "selfUri" : "aeiou",
                 "name" : "aeiou",
@@ -8751,7 +8803,11 @@ open class RecordingAPI {
                   "answerOptions" : [ {
                     "id" : "aeiou",
                     "text" : "aeiou",
-                    "value" : 123
+                    "value" : 123,
+                    "assistanceConditions" : [ {
+                      "topicIds" : [ "aeiou" ],
+                      "operator" : "aeiou"
+                    } ]
                   } ]
                 } ],
                 "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9215,6 +9271,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -9334,6 +9391,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -9464,7 +9522,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9655,6 +9717,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -9774,6 +9837,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -10138,6 +10202,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -10257,6 +10322,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -10563,7 +10629,8 @@ open class RecordingAPI {
                 "score" : 123,
                 "questionId" : "aeiou",
                 "comments" : "aeiou",
-                "markedNA" : true
+                "markedNA" : true,
+                "assistedAnswerId" : "aeiou"
               } ],
               "questionGroupId" : "aeiou",
               "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10573,6 +10640,17 @@ open class RecordingAPI {
               "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
               "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
               "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+            } ],
+            "transcriptTopics" : [ {
+              "duration" : {
+                "totalMilliseconds" : 123456789
+              },
+              "startTimeMilliseconds" : 123456789,
+              "confidence" : 123,
+              "name" : "aeiou",
+              "topicPhrase" : "aeiou",
+              "id" : "aeiou",
+              "transcriptPhrase" : "aeiou"
             } ],
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "anyFailedKillQuestions" : true
@@ -10641,7 +10719,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -11350,6 +11432,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -11469,6 +11552,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -11599,7 +11683,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -12032,6 +12120,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -12151,6 +12240,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -12281,7 +12371,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -12523,6 +12617,7 @@ open class RecordingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -12642,6 +12737,7 @@ open class RecordingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -13151,6 +13247,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -13270,6 +13367,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -13400,7 +13498,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -13750,6 +13852,7 @@ open class RecordingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -13869,6 +13972,7 @@ open class RecordingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -14395,6 +14499,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -14514,6 +14619,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -14644,7 +14750,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14819,6 +14929,7 @@ open class RecordingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -14938,6 +15049,7 @@ open class RecordingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -15565,6 +15677,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -15684,6 +15797,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15968,6 +16082,7 @@ open class RecordingAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -16087,6 +16202,7 @@ open class RecordingAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -16564,6 +16680,7 @@ open class RecordingAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -16683,6 +16800,7 @@ open class RecordingAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -17182,6 +17300,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -17301,6 +17420,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -17431,7 +17551,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -18110,6 +18234,7 @@ open class RecordingAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -18229,6 +18354,7 @@ open class RecordingAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -18359,7 +18485,11 @@ open class RecordingAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,

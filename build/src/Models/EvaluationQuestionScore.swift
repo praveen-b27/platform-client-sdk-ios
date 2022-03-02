@@ -16,12 +16,14 @@ public class EvaluationQuestionScore: Codable {
     /** Unweighted score of the question */
     public var score: Int?
     public var markedNA: Bool?
+    /** AnswerId found with evaluation assistance conditions */
+    public var assistedAnswerId: String?
     /** Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question */
     public var failedKillQuestion: Bool?
     /** Comments from the evaluator specific to this question */
     public var comments: String?
 
-    public init(questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, failedKillQuestion: Bool?, comments: String?) {
+    public init(questionId: String?, answerId: String?, score: Int?, markedNA: Bool?, assistedAnswerId: String?, failedKillQuestion: Bool?, comments: String?) {
         
         self.questionId = questionId
         
@@ -30,6 +32,8 @@ public class EvaluationQuestionScore: Codable {
         self.score = score
         
         self.markedNA = markedNA
+        
+        self.assistedAnswerId = assistedAnswerId
         
         self.failedKillQuestion = failedKillQuestion
         

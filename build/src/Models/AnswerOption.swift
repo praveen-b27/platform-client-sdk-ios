@@ -14,8 +14,9 @@ public class AnswerOption: Codable {
     public var _id: String?
     public var text: String?
     public var value: Int?
+    public var assistanceConditions: [AssistanceCondition]?
 
-    public init(_id: String?, text: String?, value: Int?) {
+    public init(_id: String?, text: String?, value: Int?, assistanceConditions: [AssistanceCondition]?) {
         
         self._id = _id
         
@@ -23,12 +24,15 @@ public class AnswerOption: Codable {
         
         self.value = value
         
+        self.assistanceConditions = assistanceConditions
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case text
         case value
+        case assistanceConditions
     }
 
 

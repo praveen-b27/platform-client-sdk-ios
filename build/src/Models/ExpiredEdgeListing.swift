@@ -11,9 +11,9 @@ import Foundation
 
 public class ExpiredEdgeListing: Codable {
 
-    public var entities: [EdgeIdNamePair]?
+    public var entities: [DomainEntityRef]?
 
-    public init(entities: [EdgeIdNamePair]?) {
+    public init(entities: [DomainEntityRef]?) {
         
         self.entities = entities
         

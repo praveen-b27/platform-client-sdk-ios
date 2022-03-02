@@ -431,7 +431,7 @@ RecordingAPI.deleteRecordingMediaretentionpolicy(policyId: policyId) { (error) i
 
 
 
-> [Recording](Recording.html) getConversationRecording(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale)
+> [Recording](Recording.html) getConversationRecording(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats)
 
 Gets a specific recording.
 
@@ -461,9 +461,10 @@ let messageFormatId: RecordingAPI.MessageFormatId_getConversationRecording = Rec
 let download: Bool = false // requesting a download format of the recording. Valid values:true,false
 let fileName: String = "" // the name of the downloaded fileName
 let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
+let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3
 
 // Code example
-RecordingAPI.getConversationRecording(conversationId: conversationId, recordingId: recordingId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale) { (response, error) in
+RecordingAPI.getConversationRecording(conversationId: conversationId, recordingId: recordingId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale, mediaFormats: mediaFormats) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -487,6 +488,7 @@ RecordingAPI.getConversationRecording(conversationId: conversationId, recordingI
 | **download** | **Bool**| requesting a download format of the recording. Valid values:true,false | [optional] [default to false] |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
 | **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
+| **mediaFormats** | [**[String]**](String.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional] |
 {: class="table-striped"}
 
 
@@ -718,7 +720,7 @@ RecordingAPI.getConversationRecordingmetadataRecordingId(conversationId: convers
 
 
 
-> [[Recording]](Recording.html) getConversationRecordings(conversationId, maxWaitMs, formatId)
+> [[Recording]](Recording.html) getConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats)
 
 Get all of a Conversation&#39;s Recordings.
 
@@ -741,10 +743,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // Conversation ID
 let maxWaitMs: Int = 5000 // The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.
-let formatId: RecordingAPI.FormatId_getConversationRecordings = RecordingAPI.FormatId_getConversationRecordings.enummember // The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE.
+let formatId: RecordingAPI.FormatId_getConversationRecordings = RecordingAPI.FormatId_getConversationRecordings.enummember // The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE.
+let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3.
 
 // Code example
-RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId) { (response, error) in
+RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -761,7 +764,8 @@ RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| Conversation ID | |
 | **maxWaitMs** | **Int**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
-| **formatId** | **String**| The desired media format . Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **formatId** | **String**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
+| **mediaFormats** | [**[String]**](String.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional] |
 {: class="table-striped"}
 
 
@@ -827,7 +831,7 @@ RecordingAPI.getOrphanrecording(orphanId: orphanId) { (response, error) in
 
 
 
-> [Recording](Recording.html) getOrphanrecordingMedia(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale)
+> [Recording](Recording.html) getOrphanrecordingMedia(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats)
 
 Gets the media of a single orphan recording
 
@@ -855,9 +859,10 @@ let messageFormatId: RecordingAPI.MessageFormatId_getOrphanrecordingMedia = Reco
 let download: Bool = false // requesting a download format of the recording
 let fileName: String = "" // the name of the downloaded fileName
 let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
+let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3
 
 // Code example
-RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale) { (response, error) in
+RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale, mediaFormats: mediaFormats) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -880,6 +885,7 @@ RecordingAPI.getOrphanrecordingMedia(orphanId: orphanId, formatId: formatId, ema
 | **download** | **Bool**| requesting a download format of the recording | [optional] [default to false] |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
 | **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
+| **mediaFormats** | [**[String]**](String.html)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional] |
 {: class="table-striped"}
 
 

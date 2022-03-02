@@ -11,6 +11,11 @@ import Foundation
 
 public class DncListDivisionView: Codable {
 
+    public enum DncSourceType: String, Codable { 
+        case rds = "rds"
+        case dncCom = "dnc.com"
+        case gryphon = "gryphon"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -20,10 +25,12 @@ public class DncListDivisionView: Codable {
     public var importStatus: ImportStatus?
     /** The number of contacts in the DncList. */
     public var size: Int64?
+    /** The type of the DncList. */
+    public var dncSourceType: DncSourceType?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, importStatus: ImportStatus?, size: Int64?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, selfUri: String?) {
         
         self._id = _id
         
@@ -35,6 +42,8 @@ public class DncListDivisionView: Codable {
         
         self.size = size
         
+        self.dncSourceType = dncSourceType
+        
         self.selfUri = selfUri
         
     }
@@ -45,6 +54,7 @@ public class DncListDivisionView: Codable {
         case division
         case importStatus
         case size
+        case dncSourceType
         case selfUri
     }
 

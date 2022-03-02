@@ -2284,7 +2284,8 @@ open class OutboundAPI {
                 "score" : 123,
                 "questionId" : "aeiou",
                 "comments" : "aeiou",
-                "markedNA" : true
+                "markedNA" : true,
+                "assistedAnswerId" : "aeiou"
               } ],
               "questionGroupId" : "aeiou",
               "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2294,6 +2295,17 @@ open class OutboundAPI {
               "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
               "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
               "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+            } ],
+            "transcriptTopics" : [ {
+              "duration" : {
+                "totalMilliseconds" : 123456789
+              },
+              "startTimeMilliseconds" : 123456789,
+              "confidence" : 123,
+              "name" : "aeiou",
+              "topicPhrase" : "aeiou",
+              "id" : "aeiou",
+              "transcriptPhrase" : "aeiou"
             } ],
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "anyFailedKillQuestions" : true
@@ -2482,7 +2494,11 @@ open class OutboundAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2549,6 +2565,7 @@ open class OutboundAPI {
               "lastAssociatedStation" : "",
               "associatedStation" : {
                 "associatedDate" : "2000-01-23T04:56:07.000+0000",
+                "webRtcCallAppearances" : 123,
                 "name" : "aeiou",
                 "defaultUser" : "",
                 "id" : "aeiou",
@@ -2668,6 +2685,7 @@ open class OutboundAPI {
                 "name" : "aeiou",
                 "id" : "aeiou"
               },
+              "dateCreated" : "2000-01-23T04:56:07.000+0000",
               "memberCount" : 123456789,
               "selfUri" : "aeiou",
               "name" : "aeiou",
@@ -5884,6 +5902,7 @@ open class OutboundAPI {
   "size" : 123456789,
   "selfUri" : "aeiou",
   "name" : "aeiou",
+  "dncSourceType" : "aeiou",
   "id" : "aeiou"
 }}]
      
@@ -6031,6 +6050,7 @@ open class OutboundAPI {
     "size" : 123456789,
     "selfUri" : "aeiou",
     "name" : "aeiou",
+    "dncSourceType" : "aeiou",
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
@@ -7755,7 +7775,8 @@ open class OutboundAPI {
         "timeZoneId" : "America/New York",
         "earliestCallableTime" : "08:00"
       }
-    } ]
+    } ],
+    "supportedCountries" : [ "aeiou" ]
   },
   "selfUri" : "aeiou",
   "name" : "aeiou",
@@ -9400,16 +9421,19 @@ open class OutboundAPI {
     
     
     
+    
+    
     /**
      
      Add phone numbers to a DNC list.
      
      - parameter dncListId: (path) DncList ID 
      - parameter body: (body) DNC Phone Numbers 
+     - parameter expirationDateTime: (query) Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postOutboundDnclistPhonenumbers(dncListId: String, body: [String], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = postOutboundDnclistPhonenumbersWithRequestBuilder(dncListId: dncListId, body: body)
+    open class func postOutboundDnclistPhonenumbers(dncListId: String, body: [String], expirationDateTime: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOutboundDnclistPhonenumbersWithRequestBuilder(dncListId: dncListId, body: body, expirationDateTime: expirationDateTime)
         requestBuilder.execute { (response: Response<Void>?, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -9431,10 +9455,11 @@ open class OutboundAPI {
      
      - parameter dncListId: (path) DncList ID 
      - parameter body: (body) DNC Phone Numbers 
+     - parameter expirationDateTime: (query) Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postOutboundDnclistPhonenumbersWithRequestBuilder(dncListId: String, body: [String]) -> RequestBuilder<Void> {
+    open class func postOutboundDnclistPhonenumbersWithRequestBuilder(dncListId: String, body: [String], expirationDateTime: String? = nil) -> RequestBuilder<Void> {
         var path = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers"
         let dncListIdPreEscape = "\(dncListId)"
         let dncListIdPostEscape = dncListIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -9444,7 +9469,12 @@ open class OutboundAPI {
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         
         
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expirationDateTime": expirationDateTime
+            
+        ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

@@ -5393,6 +5393,7 @@ open class TelephonyProvidersEdgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou"
   } ]

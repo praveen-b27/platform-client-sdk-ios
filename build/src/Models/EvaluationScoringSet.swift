@@ -24,8 +24,10 @@ public class EvaluationScoringSet: Codable {
     public var comments: String?
     /** Comments from the agent while reviewing evaluation results */
     public var agentComments: String?
+    /** List of topics found within the conversation&#39;s transcripts */
+    public var transcriptTopics: [TranscriptTopic]?
 
-    public init(totalScore: Float?, totalCriticalScore: Float?, totalNonCriticalScore: Float?, questionGroupScores: [EvaluationQuestionGroupScore]?, anyFailedKillQuestions: Bool?, comments: String?, agentComments: String?) {
+    public init(totalScore: Float?, totalCriticalScore: Float?, totalNonCriticalScore: Float?, questionGroupScores: [EvaluationQuestionGroupScore]?, anyFailedKillQuestions: Bool?, comments: String?, agentComments: String?, transcriptTopics: [TranscriptTopic]?) {
         
         self.totalScore = totalScore
         
@@ -40,6 +42,8 @@ public class EvaluationScoringSet: Codable {
         self.comments = comments
         
         self.agentComments = agentComments
+        
+        self.transcriptTopics = transcriptTopics
         
     }
 

@@ -27,9 +27,9 @@ public class WebDeploymentConfigurationVersion: Codable {
     public var version: String?
     /** The description of the configuration */
     public var _description: String?
-    /** A list of languages supported on the configuration */
+    /** A list of languages supported on the configuration required if the messenger is enabled */
     public var languages: [String]?
-    /** The default language to use for the configuration */
+    /** The default language to use for the configuration required if the messenger is enabled */
     public var defaultLanguage: String?
     /** The settings for messenger */
     public var messenger: MessengerSettings?

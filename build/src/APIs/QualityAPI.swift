@@ -114,6 +114,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -233,6 +234,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -546,7 +548,8 @@ open class QualityAPI {
               "score" : 123,
               "questionId" : "aeiou",
               "comments" : "aeiou",
-              "markedNA" : true
+              "markedNA" : true,
+              "assistedAnswerId" : "aeiou"
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -556,6 +559,17 @@ open class QualityAPI {
             "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "transcriptTopics" : [ {
+            "duration" : {
+              "totalMilliseconds" : 123456789
+            },
+            "startTimeMilliseconds" : 123456789,
+            "confidence" : 123,
+            "name" : "aeiou",
+            "topicPhrase" : "aeiou",
+            "id" : "aeiou",
+            "transcriptPhrase" : "aeiou"
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "anyFailedKillQuestions" : true
@@ -607,7 +621,11 @@ open class QualityAPI {
               "answerOptions" : [ {
                 "id" : "aeiou",
                 "text" : "aeiou",
-                "value" : 123
+                "value" : 123,
+                "assistanceConditions" : [ {
+                  "topicIds" : [ "aeiou" ],
+                  "operator" : "aeiou"
+                } ]
               } ]
             } ],
             "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1044,7 +1062,8 @@ open class QualityAPI {
         "score" : 123,
         "questionId" : "aeiou",
         "comments" : "aeiou",
-        "markedNA" : true
+        "markedNA" : true,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1054,6 +1073,17 @@ open class QualityAPI {
       "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "transcriptTopics" : [ {
+      "duration" : {
+        "totalMilliseconds" : 123456789
+      },
+      "startTimeMilliseconds" : 123456789,
+      "confidence" : 123,
+      "name" : "aeiou",
+      "topicPhrase" : "aeiou",
+      "id" : "aeiou",
+      "transcriptPhrase" : "aeiou"
     } ],
     "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
     "anyFailedKillQuestions" : true
@@ -1520,7 +1550,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1587,6 +1621,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -1706,6 +1741,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -2184,7 +2220,7 @@ open class QualityAPI {
      Gets a list of Agent Activities
      
      - GET /api/v2/quality/agents/activity
-     - Includes the number of evaluations and average evaluation score. These statistics include released evaluations only when evaluatorUserId is provided. In the absence of evaluatorUserId in the request, the api excludes evaluations which are set to never release for the calculation of evaluation statistics. 
+     - Each item on the list shows one agent's evaluation activity comprised of the number of evaluations and the highest, average, and lowest standard and critical scores, as well as a sub list showing the number and average score of evaluations for each evaluator for that agent.  evaluatorUserId, startTime, and endTime are all filtering criteria. If specified, the only evaluations used to compile the agent activity response will be ones that match the filtering criteria. agentUserId, name, group, and agentTeamId are all agent selection criteria. criteria.  If one or more agent selection criteria are specified, then the returned activity will include users that match the criteria even if those users did not have any agent activity or evaluations that do not match any filtering criteria.  If no agent selection criteria are specified but an evaluatorUserId is, then the returned activity will be only for those agents that had evaluations where the evaluator is the evaluatorUserId.  If no agent selection criteria are specified and no evaluatorUserId is specified, then the returned activity will be for all users
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2252,6 +2288,7 @@ open class QualityAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -2371,6 +2408,7 @@ open class QualityAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -2656,6 +2694,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -2775,6 +2814,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -3088,7 +3128,8 @@ open class QualityAPI {
               "score" : 123,
               "questionId" : "aeiou",
               "comments" : "aeiou",
-              "markedNA" : true
+              "markedNA" : true,
+              "assistedAnswerId" : "aeiou"
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3098,6 +3139,17 @@ open class QualityAPI {
             "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "transcriptTopics" : [ {
+            "duration" : {
+              "totalMilliseconds" : 123456789
+            },
+            "startTimeMilliseconds" : 123456789,
+            "confidence" : 123,
+            "name" : "aeiou",
+            "topicPhrase" : "aeiou",
+            "id" : "aeiou",
+            "transcriptPhrase" : "aeiou"
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "anyFailedKillQuestions" : true
@@ -3149,7 +3201,11 @@ open class QualityAPI {
               "answerOptions" : [ {
                 "id" : "aeiou",
                 "text" : "aeiou",
-                "value" : 123
+                "value" : 123,
+                "assistanceConditions" : [ {
+                  "topicIds" : [ "aeiou" ],
+                  "operator" : "aeiou"
+                } ]
               } ]
             } ],
             "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3655,6 +3711,7 @@ open class QualityAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -3774,6 +3831,7 @@ open class QualityAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -4087,7 +4145,8 @@ open class QualityAPI {
                 "score" : 123,
                 "questionId" : "aeiou",
                 "comments" : "aeiou",
-                "markedNA" : true
+                "markedNA" : true,
+                "assistedAnswerId" : "aeiou"
               } ],
               "questionGroupId" : "aeiou",
               "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -4097,6 +4156,17 @@ open class QualityAPI {
               "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
               "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
               "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+            } ],
+            "transcriptTopics" : [ {
+              "duration" : {
+                "totalMilliseconds" : 123456789
+              },
+              "startTimeMilliseconds" : 123456789,
+              "confidence" : 123,
+              "name" : "aeiou",
+              "topicPhrase" : "aeiou",
+              "id" : "aeiou",
+              "transcriptPhrase" : "aeiou"
             } ],
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "anyFailedKillQuestions" : true
@@ -4148,7 +4218,11 @@ open class QualityAPI {
                 "answerOptions" : [ {
                   "id" : "aeiou",
                   "text" : "aeiou",
-                  "value" : 123
+                  "value" : 123,
+                  "assistanceConditions" : [ {
+                    "topicIds" : [ "aeiou" ],
+                    "operator" : "aeiou"
+                  } ]
                 } ]
               } ],
               "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -4615,7 +4689,8 @@ open class QualityAPI {
         "score" : 123,
         "questionId" : "aeiou",
         "comments" : "aeiou",
-        "markedNA" : true
+        "markedNA" : true,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -4625,6 +4700,17 @@ open class QualityAPI {
       "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "transcriptTopics" : [ {
+      "duration" : {
+        "totalMilliseconds" : 123456789
+      },
+      "startTimeMilliseconds" : 123456789,
+      "confidence" : 123,
+      "name" : "aeiou",
+      "topicPhrase" : "aeiou",
+      "id" : "aeiou",
+      "transcriptPhrase" : "aeiou"
     } ],
     "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
     "anyFailedKillQuestions" : true
@@ -5091,7 +5177,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5158,6 +5248,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -5277,6 +5368,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -5625,7 +5717,8 @@ open class QualityAPI {
         "npsTextAnswer" : "aeiou",
         "markedNA" : true,
         "freeTextAnswer" : "aeiou",
-        "npsScore" : 123
+        "npsScore" : 123,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125
@@ -5852,7 +5945,8 @@ open class QualityAPI {
               "score" : 123,
               "questionId" : "aeiou",
               "comments" : "aeiou",
-              "markedNA" : true
+              "markedNA" : true,
+              "assistedAnswerId" : "aeiou"
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5862,6 +5956,17 @@ open class QualityAPI {
             "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "transcriptTopics" : [ {
+            "duration" : {
+              "totalMilliseconds" : 123456789
+            },
+            "startTimeMilliseconds" : 123456789,
+            "confidence" : 123,
+            "name" : "aeiou",
+            "topicPhrase" : "aeiou",
+            "id" : "aeiou",
+            "transcriptPhrase" : "aeiou"
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "anyFailedKillQuestions" : true
@@ -5930,7 +6035,11 @@ open class QualityAPI {
               "answerOptions" : [ {
                 "id" : "aeiou",
                 "text" : "aeiou",
-                "value" : 123
+                "value" : 123,
+                "assistanceConditions" : [ {
+                  "topicIds" : [ "aeiou" ],
+                  "operator" : "aeiou"
+                } ]
               } ]
             } ],
             "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -5997,6 +6106,7 @@ open class QualityAPI {
             "lastAssociatedStation" : "",
             "associatedStation" : {
               "associatedDate" : "2000-01-23T04:56:07.000+0000",
+              "webRtcCallAppearances" : 123,
               "name" : "aeiou",
               "defaultUser" : "",
               "id" : "aeiou",
@@ -6116,6 +6226,7 @@ open class QualityAPI {
               "name" : "aeiou",
               "id" : "aeiou"
             },
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -6884,7 +6995,8 @@ open class QualityAPI {
           "score" : 123,
           "questionId" : "aeiou",
           "comments" : "aeiou",
-          "markedNA" : true
+          "markedNA" : true,
+          "assistedAnswerId" : "aeiou"
         } ],
         "questionGroupId" : "aeiou",
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -6894,6 +7006,17 @@ open class QualityAPI {
         "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
         "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "transcriptTopics" : [ {
+        "duration" : {
+          "totalMilliseconds" : 123456789
+        },
+        "startTimeMilliseconds" : 123456789,
+        "confidence" : 123,
+        "name" : "aeiou",
+        "topicPhrase" : "aeiou",
+        "id" : "aeiou",
+        "transcriptPhrase" : "aeiou"
       } ],
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
       "anyFailedKillQuestions" : true
@@ -7360,7 +7483,11 @@ open class QualityAPI {
           "answerOptions" : [ {
             "id" : "aeiou",
             "text" : "aeiou",
-            "value" : 123
+            "value" : 123,
+            "assistanceConditions" : [ {
+              "topicIds" : [ "aeiou" ],
+              "operator" : "aeiou"
+            } ]
           } ]
         } ],
         "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -7427,6 +7554,7 @@ open class QualityAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -7546,6 +7674,7 @@ open class QualityAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -7982,6 +8111,7 @@ open class QualityAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -8101,6 +8231,7 @@ open class QualityAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -8333,7 +8464,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -8455,7 +8590,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -8608,7 +8747,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -8750,7 +8893,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -8875,7 +9022,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9031,7 +9182,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9173,7 +9328,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -9288,7 +9447,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "id" : "aeiou",
@@ -9409,7 +9572,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "id" : "aeiou",
@@ -9561,7 +9728,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "id" : "aeiou",
@@ -9706,7 +9877,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "id" : "aeiou",
@@ -9829,7 +10004,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "id" : "aeiou",
@@ -9944,7 +10123,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10069,7 +10252,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10199,7 +10386,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10324,7 +10515,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10455,7 +10650,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "id" : "aeiou",
@@ -10579,7 +10778,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "id" : "aeiou",
@@ -10731,7 +10934,8 @@ open class QualityAPI {
         "npsTextAnswer" : "aeiou",
         "markedNA" : true,
         "freeTextAnswer" : "aeiou",
-        "npsScore" : 123
+        "npsScore" : 123,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125
@@ -10958,7 +11162,8 @@ open class QualityAPI {
               "score" : 123,
               "questionId" : "aeiou",
               "comments" : "aeiou",
-              "markedNA" : true
+              "markedNA" : true,
+              "assistedAnswerId" : "aeiou"
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -10968,6 +11173,17 @@ open class QualityAPI {
             "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "transcriptTopics" : [ {
+            "duration" : {
+              "totalMilliseconds" : 123456789
+            },
+            "startTimeMilliseconds" : 123456789,
+            "confidence" : 123,
+            "name" : "aeiou",
+            "topicPhrase" : "aeiou",
+            "id" : "aeiou",
+            "transcriptPhrase" : "aeiou"
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "anyFailedKillQuestions" : true
@@ -11036,7 +11252,11 @@ open class QualityAPI {
               "answerOptions" : [ {
                 "id" : "aeiou",
                 "text" : "aeiou",
-                "value" : 123
+                "value" : 123,
+                "assistanceConditions" : [ {
+                  "topicIds" : [ "aeiou" ],
+                  "operator" : "aeiou"
+                } ]
               } ]
             } ],
             "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -11103,6 +11323,7 @@ open class QualityAPI {
             "lastAssociatedStation" : "",
             "associatedStation" : {
               "associatedDate" : "2000-01-23T04:56:07.000+0000",
+              "webRtcCallAppearances" : 123,
               "name" : "aeiou",
               "defaultUser" : "",
               "id" : "aeiou",
@@ -11222,6 +11443,7 @@ open class QualityAPI {
               "name" : "aeiou",
               "id" : "aeiou"
             },
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -11744,7 +11966,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "id" : "aeiou",
@@ -11766,7 +11992,8 @@ open class QualityAPI {
         "npsTextAnswer" : "aeiou",
         "markedNA" : true,
         "freeTextAnswer" : "aeiou",
-        "npsScore" : 123
+        "npsScore" : 123,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125
@@ -11884,7 +12111,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "id" : "aeiou",
@@ -12193,6 +12424,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -12312,6 +12544,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -12625,7 +12858,8 @@ open class QualityAPI {
               "score" : 123,
               "questionId" : "aeiou",
               "comments" : "aeiou",
-              "markedNA" : true
+              "markedNA" : true,
+              "assistedAnswerId" : "aeiou"
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -12635,6 +12869,17 @@ open class QualityAPI {
             "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "transcriptTopics" : [ {
+            "duration" : {
+              "totalMilliseconds" : 123456789
+            },
+            "startTimeMilliseconds" : 123456789,
+            "confidence" : 123,
+            "name" : "aeiou",
+            "topicPhrase" : "aeiou",
+            "id" : "aeiou",
+            "transcriptPhrase" : "aeiou"
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "anyFailedKillQuestions" : true
@@ -12686,7 +12931,11 @@ open class QualityAPI {
               "answerOptions" : [ {
                 "id" : "aeiou",
                 "text" : "aeiou",
-                "value" : 123
+                "value" : 123,
+                "assistanceConditions" : [ {
+                  "topicIds" : [ "aeiou" ],
+                  "operator" : "aeiou"
+                } ]
               } ]
             } ],
             "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -13117,7 +13366,8 @@ open class QualityAPI {
         "score" : 123,
         "questionId" : "aeiou",
         "comments" : "aeiou",
-        "markedNA" : true
+        "markedNA" : true,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -13127,6 +13377,17 @@ open class QualityAPI {
       "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "transcriptTopics" : [ {
+      "duration" : {
+        "totalMilliseconds" : 123456789
+      },
+      "startTimeMilliseconds" : 123456789,
+      "confidence" : 123,
+      "name" : "aeiou",
+      "topicPhrase" : "aeiou",
+      "id" : "aeiou",
+      "transcriptPhrase" : "aeiou"
     } ],
     "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
     "anyFailedKillQuestions" : true
@@ -13593,7 +13854,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -13660,6 +13925,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -13779,6 +14045,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -14232,7 +14499,8 @@ open class QualityAPI {
       "score" : 123,
       "questionId" : "aeiou",
       "comments" : "aeiou",
-      "markedNA" : true
+      "markedNA" : true,
+      "assistedAnswerId" : "aeiou"
     } ],
     "questionGroupId" : "aeiou",
     "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14242,6 +14510,17 @@ open class QualityAPI {
     "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
     "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
     "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+  } ],
+  "transcriptTopics" : [ {
+    "duration" : {
+      "totalMilliseconds" : 123456789
+    },
+    "startTimeMilliseconds" : 123456789,
+    "confidence" : 123,
+    "name" : "aeiou",
+    "topicPhrase" : "aeiou",
+    "id" : "aeiou",
+    "transcriptPhrase" : "aeiou"
   } ],
   "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
   "anyFailedKillQuestions" : true
@@ -14342,7 +14621,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14448,7 +14731,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14555,7 +14842,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "id" : "aeiou",
@@ -14659,7 +14950,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14765,7 +15060,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14872,7 +15171,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "id" : "aeiou",
@@ -14948,7 +15251,8 @@ open class QualityAPI {
       "npsTextAnswer" : "aeiou",
       "markedNA" : true,
       "freeTextAnswer" : "aeiou",
-      "npsScore" : 123
+      "npsScore" : 123,
+      "assistedAnswerId" : "aeiou"
     } ],
     "questionGroupId" : "aeiou",
     "totalScore" : 1.3579000000000001069366817318950779736042022705078125
@@ -15078,6 +15382,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -15197,6 +15502,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -15510,7 +15816,8 @@ open class QualityAPI {
               "score" : 123,
               "questionId" : "aeiou",
               "comments" : "aeiou",
-              "markedNA" : true
+              "markedNA" : true,
+              "assistedAnswerId" : "aeiou"
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -15520,6 +15827,17 @@ open class QualityAPI {
             "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "transcriptTopics" : [ {
+            "duration" : {
+              "totalMilliseconds" : 123456789
+            },
+            "startTimeMilliseconds" : 123456789,
+            "confidence" : 123,
+            "name" : "aeiou",
+            "topicPhrase" : "aeiou",
+            "id" : "aeiou",
+            "transcriptPhrase" : "aeiou"
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "anyFailedKillQuestions" : true
@@ -15571,7 +15889,11 @@ open class QualityAPI {
               "answerOptions" : [ {
                 "id" : "aeiou",
                 "text" : "aeiou",
-                "value" : 123
+                "value" : 123,
+                "assistanceConditions" : [ {
+                  "topicIds" : [ "aeiou" ],
+                  "operator" : "aeiou"
+                } ]
               } ]
             } ],
             "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16003,7 +16325,8 @@ open class QualityAPI {
         "score" : 123,
         "questionId" : "aeiou",
         "comments" : "aeiou",
-        "markedNA" : true
+        "markedNA" : true,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16013,6 +16336,17 @@ open class QualityAPI {
       "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
       "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+    } ],
+    "transcriptTopics" : [ {
+      "duration" : {
+        "totalMilliseconds" : 123456789
+      },
+      "startTimeMilliseconds" : 123456789,
+      "confidence" : 123,
+      "name" : "aeiou",
+      "topicPhrase" : "aeiou",
+      "id" : "aeiou",
+      "transcriptPhrase" : "aeiou"
     } ],
     "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
     "anyFailedKillQuestions" : true
@@ -16479,7 +16813,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16546,6 +16884,7 @@ open class QualityAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -16665,6 +17004,7 @@ open class QualityAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -16990,7 +17330,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -17103,7 +17447,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -17217,7 +17565,11 @@ open class QualityAPI {
       "answerOptions" : [ {
         "id" : "aeiou",
         "text" : "aeiou",
-        "value" : 123
+        "value" : 123,
+        "assistanceConditions" : [ {
+          "topicIds" : [ "aeiou" ],
+          "operator" : "aeiou"
+        } ]
       } ]
     } ],
     "id" : "aeiou",
@@ -17327,7 +17679,11 @@ open class QualityAPI {
         "answerOptions" : [ {
           "id" : "aeiou",
           "text" : "aeiou",
-          "value" : 123
+          "value" : 123,
+          "assistanceConditions" : [ {
+            "topicIds" : [ "aeiou" ],
+            "operator" : "aeiou"
+          } ]
         } ]
       } ],
       "id" : "aeiou",
@@ -17349,7 +17705,8 @@ open class QualityAPI {
         "npsTextAnswer" : "aeiou",
         "markedNA" : true,
         "freeTextAnswer" : "aeiou",
-        "npsScore" : 123
+        "npsScore" : 123,
+        "assistedAnswerId" : "aeiou"
       } ],
       "questionGroupId" : "aeiou",
       "totalScore" : 1.3579000000000001069366817318950779736042022705078125

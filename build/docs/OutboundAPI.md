@@ -4994,7 +4994,7 @@ OutboundAPI.postOutboundDnclistExport(dncListId: dncListId) { (response, error) 
 
 
 
-> Void postOutboundDnclistPhonenumbers(dncListId, body)
+> Void postOutboundDnclistPhonenumbers(dncListId, body, expirationDateTime)
 
 Add phone numbers to a DNC list.
 
@@ -5016,9 +5016,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dncListId: String = "" // DncList ID
 let body: [String] = [new [String](...)] // DNC Phone Numbers
+let expirationDateTime: String = "" // Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format
 
 // Code example
-OutboundAPI.postOutboundDnclistPhonenumbers(dncListId: dncListId, body: body) { (error) in
+OutboundAPI.postOutboundDnclistPhonenumbers(dncListId: dncListId, body: body, expirationDateTime: expirationDateTime) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -5034,6 +5035,7 @@ OutboundAPI.postOutboundDnclistPhonenumbers(dncListId: dncListId, body: body) { 
 | ------------- | ------------- | ------------- | ------------- |
 | **dncListId** | **String**| DncList ID | |
 | **body** | **[String]**| DNC Phone Numbers | |
+| **expirationDateTime** | **String**| Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format | [optional] |
 {: class="table-striped"}
 
 

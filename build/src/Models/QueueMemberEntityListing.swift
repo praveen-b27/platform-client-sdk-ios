@@ -12,25 +12,20 @@ import Foundation
 public class QueueMemberEntityListing: Codable {
 
     public var entities: [QueueMember]?
-    public var pageSize: Int?
     public var pageNumber: Int?
-    public var total: Int64?
+    public var pageSize: Int?
     public var firstUri: String?
     public var selfUri: String?
     public var nextUri: String?
     public var previousUri: String?
-    public var lastUri: String?
-    public var pageCount: Int?
 
-    public init(entities: [QueueMember]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, pageCount: Int?) {
+    public init(entities: [QueueMember]?, pageNumber: Int?, pageSize: Int?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?) {
         
         self.entities = entities
         
-        self.pageSize = pageSize
-        
         self.pageNumber = pageNumber
         
-        self.total = total
+        self.pageSize = pageSize
         
         self.firstUri = firstUri
         
@@ -39,10 +34,6 @@ public class QueueMemberEntityListing: Codable {
         self.nextUri = nextUri
         
         self.previousUri = previousUri
-        
-        self.lastUri = lastUri
-        
-        self.pageCount = pageCount
         
     }
 

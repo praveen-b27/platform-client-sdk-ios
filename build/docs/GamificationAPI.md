@@ -2392,7 +2392,7 @@ GamificationAPI.postGamificationProfileMetrics(profileId: profileId, body: body)
 
 
 
-> [GetProfilesResponse](GetProfilesResponse.html) postGamificationProfiles(body)
+> [GetProfilesResponse](GetProfilesResponse.html) postGamificationProfiles(body, copyMetrics)
 
 Create a new custom performance profile
 
@@ -2413,9 +2413,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: CreatePerformanceProfile = new CreatePerformanceProfile(...) // performanceProfile
+let copyMetrics: Bool = true // Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile.
 
 // Code example
-GamificationAPI.postGamificationProfiles(body: body) { (response, error) in
+GamificationAPI.postGamificationProfiles(body: body, copyMetrics: copyMetrics) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2431,6 +2432,7 @@ GamificationAPI.postGamificationProfiles(body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**CreatePerformanceProfile**](CreatePerformanceProfile.html)| performanceProfile | |
+| **copyMetrics** | **Bool**| Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. | [optional] [default to true] |
 {: class="table-striped"}
 
 

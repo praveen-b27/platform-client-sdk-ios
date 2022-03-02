@@ -1930,7 +1930,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -1940,6 +1941,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -2008,7 +2020,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -2075,6 +2091,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -2194,6 +2211,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3229,7 +3247,8 @@ open class ConversationsAPI {
               "score" : 123,
               "questionId" : "aeiou",
               "comments" : "aeiou",
-              "markedNA" : true
+              "markedNA" : true,
+              "assistedAnswerId" : "aeiou"
             } ],
             "questionGroupId" : "aeiou",
             "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3239,6 +3258,17 @@ open class ConversationsAPI {
             "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
             "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+          } ],
+          "transcriptTopics" : [ {
+            "duration" : {
+              "totalMilliseconds" : 123456789
+            },
+            "startTimeMilliseconds" : 123456789,
+            "confidence" : 123,
+            "name" : "aeiou",
+            "topicPhrase" : "aeiou",
+            "id" : "aeiou",
+            "transcriptPhrase" : "aeiou"
           } ],
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "anyFailedKillQuestions" : true
@@ -3307,7 +3337,11 @@ open class ConversationsAPI {
               "answerOptions" : [ {
                 "id" : "aeiou",
                 "text" : "aeiou",
-                "value" : 123
+                "value" : 123,
+                "assistanceConditions" : [ {
+                  "topicIds" : [ "aeiou" ],
+                  "operator" : "aeiou"
+                } ]
               } ]
             } ],
             "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -3374,6 +3408,7 @@ open class ConversationsAPI {
             "lastAssociatedStation" : "",
             "associatedStation" : {
               "associatedDate" : "2000-01-23T04:56:07.000+0000",
+              "webRtcCallAppearances" : 123,
               "name" : "aeiou",
               "defaultUser" : "",
               "id" : "aeiou",
@@ -3493,6 +3528,7 @@ open class ConversationsAPI {
               "name" : "aeiou",
               "id" : "aeiou"
             },
+            "dateCreated" : "2000-01-23T04:56:07.000+0000",
             "memberCount" : 123456789,
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -5322,6 +5358,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -5441,6 +5478,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -8125,6 +8163,9 @@ open class ConversationsAPI {
         "sessionId" : "aeiou",
         "type" : "aeiou"
       },
+      "typing" : {
+        "type" : "aeiou"
+      },
       "eventType" : "aeiou"
     } ],
     "status" : "aeiou",
@@ -8188,6 +8229,7 @@ open class ConversationsAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -8307,6 +8349,7 @@ open class ConversationsAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -8602,6 +8645,9 @@ open class ConversationsAPI {
         "sessionId" : "aeiou",
         "type" : "aeiou"
       },
+      "typing" : {
+        "type" : "aeiou"
+      },
       "eventType" : "aeiou"
     } ],
     "status" : "aeiou",
@@ -8665,6 +8711,7 @@ open class ConversationsAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -8784,6 +8831,7 @@ open class ConversationsAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -11634,7 +11682,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -11644,6 +11693,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -11712,7 +11772,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -11779,6 +11843,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -11898,6 +11963,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -12871,7 +12937,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -12881,6 +12948,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -12949,7 +13027,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -13016,6 +13098,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -13135,6 +13218,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -14035,7 +14119,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14045,6 +14130,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -14113,7 +14209,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -14180,6 +14280,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -14299,6 +14400,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -15199,7 +15301,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -15209,6 +15312,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -15277,7 +15391,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -15344,6 +15462,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -15463,6 +15582,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -16363,7 +16483,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16373,6 +16494,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -16441,7 +16573,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -16508,6 +16644,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -16627,6 +16764,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -17527,7 +17665,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -17537,6 +17676,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -17605,7 +17755,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -17672,6 +17826,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -17791,6 +17946,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -20138,7 +20294,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -20148,6 +20305,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -20216,7 +20384,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -20283,6 +20455,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -20402,6 +20575,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -21358,7 +21532,8 @@ open class ConversationsAPI {
             "score" : 123,
             "questionId" : "aeiou",
             "comments" : "aeiou",
-            "markedNA" : true
+            "markedNA" : true,
+            "assistedAnswerId" : "aeiou"
           } ],
           "questionGroupId" : "aeiou",
           "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
@@ -21368,6 +21543,17 @@ open class ConversationsAPI {
           "maxTotalCriticalScore" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalCriticalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125,
           "maxTotalScoreUnweighted" : 1.3579000000000001069366817318950779736042022705078125
+        } ],
+        "transcriptTopics" : [ {
+          "duration" : {
+            "totalMilliseconds" : 123456789
+          },
+          "startTimeMilliseconds" : 123456789,
+          "confidence" : 123,
+          "name" : "aeiou",
+          "topicPhrase" : "aeiou",
+          "id" : "aeiou",
+          "transcriptPhrase" : "aeiou"
         } ],
         "totalScore" : 1.3579000000000001069366817318950779736042022705078125,
         "anyFailedKillQuestions" : true
@@ -21436,7 +21622,11 @@ open class ConversationsAPI {
             "answerOptions" : [ {
               "id" : "aeiou",
               "text" : "aeiou",
-              "value" : 123
+              "value" : 123,
+              "assistanceConditions" : [ {
+                "topicIds" : [ "aeiou" ],
+                "operator" : "aeiou"
+              } ]
             } ]
           } ],
           "weight" : 1.3579000000000001069366817318950779736042022705078125,
@@ -21503,6 +21693,7 @@ open class ConversationsAPI {
           "lastAssociatedStation" : "",
           "associatedStation" : {
             "associatedDate" : "2000-01-23T04:56:07.000+0000",
+            "webRtcCallAppearances" : 123,
             "name" : "aeiou",
             "defaultUser" : "",
             "id" : "aeiou",
@@ -21622,6 +21813,7 @@ open class ConversationsAPI {
             "name" : "aeiou",
             "id" : "aeiou"
           },
+          "dateCreated" : "2000-01-23T04:56:07.000+0000",
           "memberCount" : 123456789,
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -23510,6 +23702,9 @@ open class ConversationsAPI {
         "sessionId" : "aeiou",
         "type" : "aeiou"
       },
+      "typing" : {
+        "type" : "aeiou"
+      },
       "eventType" : "aeiou"
     } ],
     "status" : "aeiou",
@@ -23573,6 +23768,7 @@ open class ConversationsAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -23692,6 +23888,7 @@ open class ConversationsAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -24072,6 +24269,9 @@ open class ConversationsAPI {
           "sessionId" : "aeiou",
           "type" : "aeiou"
         },
+        "typing" : {
+          "type" : "aeiou"
+        },
         "eventType" : "aeiou"
       } ],
       "status" : "aeiou",
@@ -24135,6 +24335,7 @@ open class ConversationsAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -24254,6 +24455,7 @@ open class ConversationsAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -24653,7 +24855,7 @@ open class ConversationsAPI {
      Send an agentless outbound message
      
      - POST /api/v2/conversations/messages/agentless
-     - Send an agentlesss (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
+     - Send an agentless (api participant) outbound message using a client credential grant. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will generate a new Conversation, if there is an existing active Conversation between the fromAddress and toAddress already, then this POST will fail.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

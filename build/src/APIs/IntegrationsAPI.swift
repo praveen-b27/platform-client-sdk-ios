@@ -3068,6 +3068,7 @@ open class IntegrationsAPI {
         "lastAssociatedStation" : "",
         "associatedStation" : {
           "associatedDate" : "2000-01-23T04:56:07.000+0000",
+          "webRtcCallAppearances" : 123,
           "name" : "aeiou",
           "defaultUser" : "",
           "id" : "aeiou",
@@ -3187,6 +3188,7 @@ open class IntegrationsAPI {
           "name" : "aeiou",
           "id" : "aeiou"
         },
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
         "memberCount" : 123456789,
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3441,6 +3443,7 @@ open class IntegrationsAPI {
       "lastAssociatedStation" : "",
       "associatedStation" : {
         "associatedDate" : "2000-01-23T04:56:07.000+0000",
+        "webRtcCallAppearances" : 123,
         "name" : "aeiou",
         "defaultUser" : "",
         "id" : "aeiou",
@@ -3560,6 +3563,7 @@ open class IntegrationsAPI {
         "name" : "aeiou",
         "id" : "aeiou"
       },
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
       "memberCount" : 123456789,
       "selfUri" : "aeiou",
       "name" : "aeiou",

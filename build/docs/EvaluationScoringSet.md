@@ -14,6 +14,7 @@ title: EvaluationScoringSet
 | **anyFailedKillQuestions** | **Bool** | Indicates that at least one fatal question was answered without having the highest score available for the question | [optional] |
 | **comments** | **String** | Overall comments from the evaluator | [optional] |
 | **agentComments** | **String** | Comments from the agent while reviewing evaluation results | [optional] |
+| **transcriptTopics** | [**[TranscriptTopic]**](TranscriptTopic.html) | List of topics found within the conversation&#39;s transcripts | [optional] |
 {: class="table table-striped"}
 
 

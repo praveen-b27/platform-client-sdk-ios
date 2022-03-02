@@ -8,15 +8,12 @@ title: QueueMemberEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **entities** | [**[QueueMember]**](QueueMember.html) |  | [optional] |
-| **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
-| **total** | **Int64** |  | [optional] |
+| **pageSize** | **Int** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-| **lastUri** | **String** |  | [optional] |
-| **pageCount** | **Int** |  | [optional] |
 {: class="table table-striped"}
 
 

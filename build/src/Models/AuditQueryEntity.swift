@@ -13,6 +13,8 @@ public class AuditQueryEntity: Codable {
 
     public enum Name: String, Codable { 
         case accessToken = "AccessToken"
+        case action = "Action"
+        case actionDraft = "ActionDraft"
         case actionMap = "ActionMap"
         case actionTemplate = "ActionTemplate"
         case activityCode = "ActivityCode"

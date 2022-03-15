@@ -54,7 +54,7 @@ open class KnowledgeAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
-  "coreLanguage" : "en-us",
+  "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
   "id" : "aeiou",
@@ -96,6 +96,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -144,7 +150,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -202,6 +208,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -263,7 +275,7 @@ open class KnowledgeAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
-      "coreLanguage" : "en-us",
+      "coreLanguage" : "en-US",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
       "id" : "aeiou",
@@ -331,6 +343,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -443,7 +461,7 @@ open class KnowledgeAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
-  "coreLanguage" : "en-us",
+  "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
   "id" : "aeiou",
@@ -483,6 +501,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -546,7 +570,7 @@ open class KnowledgeAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
-      "coreLanguage" : "en-us",
+      "coreLanguage" : "en-US",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
       "id" : "aeiou",
@@ -622,6 +646,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -680,7 +710,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -739,6 +769,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -800,7 +836,7 @@ open class KnowledgeAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
-      "coreLanguage" : "en-us",
+      "coreLanguage" : "en-US",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
       "id" : "aeiou",
@@ -868,6 +904,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -970,7 +1012,7 @@ open class KnowledgeAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
-        "coreLanguage" : "en-us",
+        "coreLanguage" : "en-US",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
         "id" : "aeiou",
@@ -1068,6 +1110,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -1119,7 +1167,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -1189,6 +1237,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -1239,7 +1293,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -1297,6 +1351,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -1368,7 +1428,7 @@ open class KnowledgeAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
-      "coreLanguage" : "en-us",
+      "coreLanguage" : "en-US",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
       "id" : "aeiou",
@@ -1452,6 +1512,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -1526,7 +1592,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -1634,7 +1700,7 @@ open class KnowledgeAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
-  "coreLanguage" : "en-us",
+  "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
   "id" : "aeiou",
@@ -1674,6 +1740,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -1735,7 +1807,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -1792,6 +1864,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -1856,7 +1934,7 @@ open class KnowledgeAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
-      "coreLanguage" : "en-us",
+      "coreLanguage" : "en-US",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
       "id" : "aeiou",
@@ -1922,6 +2000,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -1986,7 +2070,7 @@ open class KnowledgeAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
-        "coreLanguage" : "en-us",
+        "coreLanguage" : "en-US",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
         "id" : "aeiou",
@@ -2052,6 +2136,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -2106,7 +2196,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -2237,6 +2327,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -2297,7 +2393,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -2348,6 +2444,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -2411,7 +2513,7 @@ open class KnowledgeAPI {
       "selfUri" : "aeiou",
       "name" : "aeiou",
       "description" : "aeiou",
-      "coreLanguage" : "en-us",
+      "coreLanguage" : "en-US",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "articleCount" : 123,
       "id" : "aeiou",
@@ -2473,6 +2575,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -2524,7 +2632,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -2588,6 +2696,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -2638,7 +2752,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -2696,6 +2810,12 @@ open class KnowledgeAPI {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
 
     
@@ -2743,7 +2863,7 @@ open class KnowledgeAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "description" : "aeiou",
-    "coreLanguage" : "en-us",
+    "coreLanguage" : "en-US",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "articleCount" : 123,
     "id" : "aeiou",
@@ -2867,7 +2987,7 @@ open class KnowledgeAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
-        "coreLanguage" : "en-us",
+        "coreLanguage" : "en-US",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
         "id" : "aeiou",
@@ -2950,7 +3070,7 @@ open class KnowledgeAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "description" : "aeiou",
-  "coreLanguage" : "en-us",
+  "coreLanguage" : "en-US",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "articleCount" : 123,
   "id" : "aeiou",

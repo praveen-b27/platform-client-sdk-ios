@@ -13,6 +13,7 @@ title: DncListDivisionView
 | **importStatus** | [**ImportStatus**](ImportStatus.html) | The status of the import process. | [optional] |
 | **size** | **Int64** | The number of contacts in the DncList. | [optional] |
 | **dncSourceType** | **String** | The type of the DncList. | [optional] |
+| **contactMethod** | **String** | The contact method. Required if dncSourceType is rds. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

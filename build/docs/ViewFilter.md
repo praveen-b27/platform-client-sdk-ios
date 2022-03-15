@@ -147,6 +147,9 @@ title: ViewFilter
 | **journeyUrlNotContainsAllConditions** | **[String]** | The list of url not contains all conditions to filter offer constraints | [optional] |
 | **flowMilestoneIds** | **[String]** | The list of flow milestones to filter exports | [optional] |
 | **isAssessmentPassed** | **Bool** | Filter to indicate if Agent passed assessment or not | [optional] |
+| **conversationInitiator** | **String** | Indicates the Brand (Bot/User/Agent) or End User who initiated the first message in the conversation | [optional] |
+| **hasCustomerParticipated** | **Bool** | Indicates if the customer has participated in an initiated conversation | [optional] |
+| **isAcdInteraction** | **Bool** | Filter to indicate if interaction was ACD or non-ACD | [optional] |
 {: class="table table-striped"}
 
 

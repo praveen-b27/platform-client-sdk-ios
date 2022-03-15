@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsEmailMessagesDraft**](ConversationsAPI.html#getConversationsEmailMessagesDraft) | Get conversation draft reply |
 | [**getConversationsEmailParticipantWrapup**](ConversationsAPI.html#getConversationsEmailParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationsEmailParticipantWrapupcodes**](ConversationsAPI.html#getConversationsEmailParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
+| [**getConversationsEmailSettings**](ConversationsAPI.html#getConversationsEmailSettings) | Get emails settings for a given conversation |
 | [**getConversationsEmails**](ConversationsAPI.html#getConversationsEmails) | Get active email conversations for the logged in user |
 | [**getConversationsMessage**](ConversationsAPI.html#getConversationsMessage) | Get message conversation |
 | [**getConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsAPI.html#getConversationsMessageCommunicationMessagesMediaMediaId) | Get media |
@@ -2669,6 +2670,57 @@ ConversationsAPI.getConversationsEmailParticipantWrapupcodes(conversationId: con
 ### Return type
 
 [**[WrapupCode]**](WrapupCode.html)
+
+<a name="getConversationsEmailSettings"></a>
+
+# **getConversationsEmailSettings**
+
+
+
+> [EmailsSettings](EmailsSettings.html) getConversationsEmailSettings(conversationId)
+
+Get emails settings for a given conversation
+
+
+
+Wraps GET /api/v2/conversations/emails/{conversationId}/settings  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+
+// Code example
+ConversationsAPI.getConversationsEmailSettings(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsEmailSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailsSettings**](EmailsSettings.html)
 
 <a name="getConversationsEmails"></a>
 

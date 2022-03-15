@@ -17,6 +17,7 @@ public class ObservationValue: Codable {
     }
     public enum RequestedRoutings: String, Codable { 
         case bullseye = "Bullseye"
+        case conditional = "Conditional"
         case last = "Last"
         case manual = "Manual"
         case predictive = "Predictive"
@@ -25,6 +26,7 @@ public class ObservationValue: Codable {
     }
     public enum UsedRouting: String, Codable { 
         case bullseye = "Bullseye"
+        case conditional = "Conditional"
         case last = "Last"
         case manual = "Manual"
         case predictive = "Predictive"

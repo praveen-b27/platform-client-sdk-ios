@@ -1568,7 +1568,8 @@ open class OutboundAPI {
   },
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
-  "version" : 123
+  "version" : 123,
+  "beepDetectionEnabled" : true
 }}]
      
      - parameter callAnalysisSetId: (path) Call Analysis Response Set ID 
@@ -1687,7 +1688,8 @@ open class OutboundAPI {
     },
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "id" : "aeiou",
-    "version" : 123
+    "version" : 123,
+    "beepDetectionEnabled" : true
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -2451,7 +2453,8 @@ open class OutboundAPI {
                 "key" : "aeiou"
               },
               "endTime" : "2000-01-23T04:56:07.000+0000",
-              "screenshares" : [ "" ]
+              "screenshares" : [ "" ],
+              "bargedParticipantId" : "aeiou"
             } ]
           },
           "evaluationForm" : {
@@ -3097,7 +3100,8 @@ open class OutboundAPI {
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou"
-        } ]
+        } ],
+        "bargedParticipantId" : "aeiou"
       } ]
     }
   } ],
@@ -5476,7 +5480,8 @@ open class OutboundAPI {
   "name" : "aeiou",
   "id" : "aeiou",
   "dncCodes" : [ "aeiou" ],
-  "licenseId" : "aeiou"
+  "licenseId" : "aeiou",
+  "contactMethod" : "aeiou"
 }}]
      
      - parameter dncListId: (path) DncList ID 
@@ -5777,7 +5782,8 @@ open class OutboundAPI {
     "name" : "aeiou",
     "id" : "aeiou",
     "dncCodes" : [ "aeiou" ],
-    "licenseId" : "aeiou"
+    "licenseId" : "aeiou",
+    "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -5903,7 +5909,8 @@ open class OutboundAPI {
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "dncSourceType" : "aeiou",
-  "id" : "aeiou"
+  "id" : "aeiou",
+  "contactMethod" : "aeiou"
 }}]
      
      - parameter dncListId: (path) Dnclist ID 
@@ -6051,7 +6058,8 @@ open class OutboundAPI {
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "dncSourceType" : "aeiou",
-    "id" : "aeiou"
+    "id" : "aeiou",
+    "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
   "selfUri" : "aeiou",
@@ -6974,19 +6982,40 @@ open class OutboundAPI {
     "id" : "aeiou",
     "category" : "aeiou",
     "conditions" : [ {
+      "callAnalysisResultField" : "aeiou",
       "codes" : [ "aeiou" ],
+      "contactIdField" : "aeiou",
+      "agentWrapupField" : "aeiou",
+      "type" : "aeiou",
+      "operator" : "aeiou",
+      "predicates" : [ {
+        "outputOperator" : "aeiou",
+        "comparisonValue" : "aeiou",
+        "inverted" : true,
+        "outputField" : "aeiou",
+        "outputFieldMissingResolution" : true
+      } ],
       "valueType" : "aeiou",
       "propertyType" : "aeiou",
+      "dataAction" : "",
+      "dataNotFoundResolution" : true,
       "property" : "aeiou",
+      "contactColumnToDataActionFieldMappings" : [ {
+        "contactColumnName" : "aeiou",
+        "dataActionField" : "aeiou"
+      } ],
       "attributeName" : "aeiou",
-      "type" : "aeiou",
       "inverted" : true,
-      "value" : "aeiou",
-      "operator" : "aeiou"
+      "value" : "aeiou"
     } ],
     "actions" : [ {
+      "callAnalysisResultField" : "aeiou",
       "actionTypeName" : "aeiou",
       "updateOption" : "aeiou",
+      "dataAction" : "",
+      "contactColumnToDataActionFieldMappings" : [ "" ],
+      "contactIdField" : "aeiou",
+      "agentWrapupField" : "aeiou",
       "type" : "aeiou",
       "properties" : {
         "key" : "aeiou"
@@ -7117,19 +7146,40 @@ open class OutboundAPI {
       "id" : "aeiou",
       "category" : "aeiou",
       "conditions" : [ {
+        "callAnalysisResultField" : "aeiou",
         "codes" : [ "aeiou" ],
+        "contactIdField" : "aeiou",
+        "agentWrapupField" : "aeiou",
+        "type" : "aeiou",
+        "operator" : "aeiou",
+        "predicates" : [ {
+          "outputOperator" : "aeiou",
+          "comparisonValue" : "aeiou",
+          "inverted" : true,
+          "outputField" : "aeiou",
+          "outputFieldMissingResolution" : true
+        } ],
         "valueType" : "aeiou",
         "propertyType" : "aeiou",
+        "dataAction" : "",
+        "dataNotFoundResolution" : true,
         "property" : "aeiou",
+        "contactColumnToDataActionFieldMappings" : [ {
+          "contactColumnName" : "aeiou",
+          "dataActionField" : "aeiou"
+        } ],
         "attributeName" : "aeiou",
-        "type" : "aeiou",
         "inverted" : true,
-        "value" : "aeiou",
-        "operator" : "aeiou"
+        "value" : "aeiou"
       } ],
       "actions" : [ {
+        "callAnalysisResultField" : "aeiou",
         "actionTypeName" : "aeiou",
         "updateOption" : "aeiou",
+        "dataAction" : "",
+        "contactColumnToDataActionFieldMappings" : [ "" ],
+        "contactIdField" : "aeiou",
+        "agentWrapupField" : "aeiou",
         "type" : "aeiou",
         "properties" : {
           "key" : "aeiou"
@@ -8252,7 +8302,8 @@ open class OutboundAPI {
   },
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
-  "version" : 123
+  "version" : 123,
+  "beepDetectionEnabled" : true
 }}]
      
      - parameter body: (body) ResponseSet 
@@ -9541,7 +9592,8 @@ open class OutboundAPI {
   "name" : "aeiou",
   "id" : "aeiou",
   "dncCodes" : [ "aeiou" ],
-  "licenseId" : "aeiou"
+  "licenseId" : "aeiou",
+  "contactMethod" : "aeiou"
 }}]
      
      - parameter body: (body) DncList 
@@ -9776,19 +9828,40 @@ open class OutboundAPI {
     "id" : "aeiou",
     "category" : "aeiou",
     "conditions" : [ {
+      "callAnalysisResultField" : "aeiou",
       "codes" : [ "aeiou" ],
+      "contactIdField" : "aeiou",
+      "agentWrapupField" : "aeiou",
+      "type" : "aeiou",
+      "operator" : "aeiou",
+      "predicates" : [ {
+        "outputOperator" : "aeiou",
+        "comparisonValue" : "aeiou",
+        "inverted" : true,
+        "outputField" : "aeiou",
+        "outputFieldMissingResolution" : true
+      } ],
       "valueType" : "aeiou",
       "propertyType" : "aeiou",
+      "dataAction" : "",
+      "dataNotFoundResolution" : true,
       "property" : "aeiou",
+      "contactColumnToDataActionFieldMappings" : [ {
+        "contactColumnName" : "aeiou",
+        "dataActionField" : "aeiou"
+      } ],
       "attributeName" : "aeiou",
-      "type" : "aeiou",
       "inverted" : true,
-      "value" : "aeiou",
-      "operator" : "aeiou"
+      "value" : "aeiou"
     } ],
     "actions" : [ {
+      "callAnalysisResultField" : "aeiou",
       "actionTypeName" : "aeiou",
       "updateOption" : "aeiou",
+      "dataAction" : "",
+      "contactColumnToDataActionFieldMappings" : [ "" ],
+      "contactIdField" : "aeiou",
+      "agentWrapupField" : "aeiou",
       "type" : "aeiou",
       "properties" : {
         "key" : "aeiou"
@@ -10105,7 +10178,8 @@ open class OutboundAPI {
   },
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "id" : "aeiou",
-  "version" : 123
+  "version" : 123,
+  "beepDetectionEnabled" : true
 }}]
      
      - parameter callAnalysisSetId: (path) Call Analysis Response Set ID 
@@ -10775,7 +10849,8 @@ open class OutboundAPI {
   "name" : "aeiou",
   "id" : "aeiou",
   "dncCodes" : [ "aeiou" ],
-  "licenseId" : "aeiou"
+  "licenseId" : "aeiou",
+  "contactMethod" : "aeiou"
 }}]
      
      - parameter dncListId: (path) DncList ID 
@@ -10956,19 +11031,40 @@ open class OutboundAPI {
     "id" : "aeiou",
     "category" : "aeiou",
     "conditions" : [ {
+      "callAnalysisResultField" : "aeiou",
       "codes" : [ "aeiou" ],
+      "contactIdField" : "aeiou",
+      "agentWrapupField" : "aeiou",
+      "type" : "aeiou",
+      "operator" : "aeiou",
+      "predicates" : [ {
+        "outputOperator" : "aeiou",
+        "comparisonValue" : "aeiou",
+        "inverted" : true,
+        "outputField" : "aeiou",
+        "outputFieldMissingResolution" : true
+      } ],
       "valueType" : "aeiou",
       "propertyType" : "aeiou",
+      "dataAction" : "",
+      "dataNotFoundResolution" : true,
       "property" : "aeiou",
+      "contactColumnToDataActionFieldMappings" : [ {
+        "contactColumnName" : "aeiou",
+        "dataActionField" : "aeiou"
+      } ],
       "attributeName" : "aeiou",
-      "type" : "aeiou",
       "inverted" : true,
-      "value" : "aeiou",
-      "operator" : "aeiou"
+      "value" : "aeiou"
     } ],
     "actions" : [ {
+      "callAnalysisResultField" : "aeiou",
       "actionTypeName" : "aeiou",
       "updateOption" : "aeiou",
+      "dataAction" : "",
+      "contactColumnToDataActionFieldMappings" : [ "" ],
+      "contactIdField" : "aeiou",
+      "agentWrapupField" : "aeiou",
       "type" : "aeiou",
       "properties" : {
         "key" : "aeiou"

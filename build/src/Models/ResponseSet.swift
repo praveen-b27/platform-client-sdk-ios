@@ -23,10 +23,12 @@ public class ResponseSet: Codable {
     public var version: Int?
     /** Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}. */
     public var responses: [String:Reaction]?
+    /** Whether to enable answering machine beep detection */
+    public var beepDetectionEnabled: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, responses: [String:Reaction]?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, responses: [String:Reaction]?, beepDetectionEnabled: Bool?, selfUri: String?) {
         
         self._id = _id
         
@@ -40,6 +42,8 @@ public class ResponseSet: Codable {
         
         self.responses = responses
         
+        self.beepDetectionEnabled = beepDetectionEnabled
+        
         self.selfUri = selfUri
         
     }
@@ -51,6 +55,7 @@ public class ResponseSet: Codable {
         case dateModified
         case version
         case responses
+        case beepDetectionEnabled
         case selfUri
     }
 

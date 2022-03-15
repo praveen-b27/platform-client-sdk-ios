@@ -2392,7 +2392,7 @@ GamificationAPI.postGamificationProfileMetrics(profileId: profileId, body: body)
 
 
 
-> [GetProfilesResponse](GetProfilesResponse.html) postGamificationProfiles(body, copyMetrics)
+> [PerformanceProfile](PerformanceProfile.html) postGamificationProfiles(body, copyMetrics)
 
 Create a new custom performance profile
 
@@ -2438,7 +2438,7 @@ GamificationAPI.postGamificationProfiles(body: body, copyMetrics: copyMetrics) {
 
 ### Return type
 
-[**GetProfilesResponse**](GetProfilesResponse.html)
+[**PerformanceProfile**](PerformanceProfile.html)
 
 <a name="putGamificationMetric"></a>
 

@@ -19,7 +19,7 @@ public class OpenIntegrationRequest: Codable {
     public var supportedContent: SupportedContentReference?
     /** The outbound notification webhook URL for the Open messaging integration. */
     public var outboundNotificationWebhookUrl: String?
-    /** The outbound notification webhook signature secret token. */
+    /** The outbound notification webhook signature secret token. This token must be longer than 15 characters. */
     public var outboundNotificationWebhookSignatureSecretToken: String?
     /** The user specified headers for the Open messaging integration. */
     public var webhookHeaders: [String:String]?

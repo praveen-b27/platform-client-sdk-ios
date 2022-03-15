@@ -960,7 +960,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : ""
@@ -1009,7 +1010,7 @@ open class QualityAPI {
      
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
-     - parameter expand: (query) evaluatorId (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteQualityConversationEvaluation(conversationId: String, evaluationId: String, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
@@ -1507,7 +1508,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : {
@@ -1957,7 +1959,7 @@ open class QualityAPI {
      
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
-     - parameter expand: (query) evaluatorId (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm (optional)
 
      - returns: RequestBuilder<Evaluation> 
      */
@@ -3540,7 +3542,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : ""
@@ -4557,7 +4560,8 @@ open class QualityAPI {
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou"
-        } ]
+        } ],
+        "bargedParticipantId" : "aeiou"
       } ]
     },
     "evaluationForm" : ""
@@ -5134,7 +5138,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : {
@@ -6638,7 +6643,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "queue" : {
@@ -7440,7 +7446,8 @@ open class QualityAPI {
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou"
-        } ]
+        } ],
+        "bargedParticipantId" : "aeiou"
       } ]
     },
     "evaluationForm" : {
@@ -11855,7 +11862,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "queue" : {
@@ -13270,7 +13278,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : ""
@@ -13811,7 +13820,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : {
@@ -16228,7 +16238,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : ""
@@ -16272,7 +16283,7 @@ open class QualityAPI {
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
      - parameter body: (body) evaluation 
-     - parameter expand: (query) evaluatorId (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func putQualityConversationEvaluation(conversationId: String, evaluationId: String, body: Evaluation, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
@@ -16770,7 +16781,8 @@ open class QualityAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   },
   "evaluationForm" : {
@@ -17221,7 +17233,7 @@ open class QualityAPI {
      - parameter conversationId: (path) conversationId 
      - parameter evaluationId: (path) evaluationId 
      - parameter body: (body) evaluation 
-     - parameter expand: (query) evaluatorId (optional)
+     - parameter expand: (query) evaluatorId, evaluationForm (optional)
 
      - returns: RequestBuilder<Evaluation> 
      */

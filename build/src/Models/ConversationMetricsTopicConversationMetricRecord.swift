@@ -54,8 +54,98 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         case tuserresponsetime = "tUserResponseTime"
         case tvoicemail = "tVoicemail"
     }
+    public enum ConversationInitiator: String, Codable { 
+        case acd = "acd"
+        case agent = "agent"
+        case api = "api"
+        case botflow = "botflow"
+        case campaign = "campaign"
+        case customer = "customer"
+        case dialer = "dialer"
+        case external = "external"
+        case fax = "fax"
+        case group = "group"
+        case inbound = "inbound"
+        case ivr = "ivr"
+        case manual = "manual"
+        case outbound = "outbound"
+        case station = "station"
+        case user = "user"
+        case voicemail = "voicemail"
+        case workflow = "workflow"
+    }
+    public enum DeliveryStatus: String, Codable { 
+        case deliveryFailed = "DeliveryFailed"
+        case deliverySuccess = "DeliverySuccess"
+        case failed = "Failed"
+        case queued = "Queued"
+        case read = "Read"
+        case received = "Received"
+        case sent = "Sent"
+    }
+    public enum Direction: String, Codable { 
+        case inbound = "inbound"
+        case outbound = "outbound"
+    }
+    public enum DisconnectType: String, Codable { 
+        case client = "client"
+        case conferencetransfer = "conferenceTransfer"
+        case consulttransfer = "consultTransfer"
+        case endpoint = "endpoint"
+        case error = "error"
+        case forwardtransfer = "forwardTransfer"
+        case noanswertransfer = "noAnswerTransfer"
+        case notavailabletransfer = "notAvailableTransfer"
+        case other = "other"
+        case peer = "peer"
+        case spam = "spam"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transportfailure = "transportFailure"
+        case uncallable = "uncallable"
+    }
+    public enum FlaggedReason: String, Codable { 
+        case general = "general"
+    }
+    public enum MediaType: String, Codable { 
+        case callback = "callback"
+        case chat = "chat"
+        case cobrowse = "cobrowse"
+        case email = "email"
+        case message = "message"
+        case screenshare = "screenshare"
+        case unknown = "unknown"
+        case video = "video"
+        case voice = "voice"
+    }
+    public enum OriginatingDirection: String, Codable { 
+        case inbound = "inbound"
+        case outbound = "outbound"
+    }
+    public enum Purpose: String, Codable { 
+        case acd = "acd"
+        case agent = "agent"
+        case api = "api"
+        case botflow = "botflow"
+        case campaign = "campaign"
+        case customer = "customer"
+        case dialer = "dialer"
+        case external = "external"
+        case fax = "fax"
+        case group = "group"
+        case inbound = "inbound"
+        case ivr = "ivr"
+        case manual = "manual"
+        case outbound = "outbound"
+        case station = "station"
+        case user = "user"
+        case voicemail = "voicemail"
+        case workflow = "workflow"
+    }
     public enum RequestedRoutings: String, Codable { 
         case bullseye = "Bullseye"
+        case conditional = "Conditional"
         case last = "Last"
         case manual = "Manual"
         case predictive = "Predictive"
@@ -64,6 +154,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     }
     public enum UsedRouting: String, Codable { 
         case bullseye = "Bullseye"
+        case conditional = "Conditional"
         case last = "Last"
         case manual = "Manual"
         case predictive = "Predictive"
@@ -99,19 +190,21 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Unique identifier for the conversation */
     public var conversationId: String?
     /** Indicates the participant purpose of the participant initiating a message conversation */
-    public var conversationInitiator: String?
+    public var conversationInitiator: ConversationInitiator?
     /** Session media type that was converted from in case of a media type conversion */
     public var convertedFrom: String?
     /** Session media type that was converted to in case of a media type conversion */
     public var convertedTo: String?
+    /** Indicates a messaging conversation in which the customer participated by sending at least one message */
+    public var customerParticipation: Bool?
     /** The email or SMS delivery status */
-    public var deliveryStatus: String?
+    public var deliveryStatus: DeliveryStatus?
     /** Destination address(es) of transfers or consults */
     public var destinationAddresses: [String]?
     /** The direction of the communication */
-    public var direction: String?
+    public var direction: Direction?
     /** The session disconnect type */
-    public var disconnectType: String?
+    public var disconnectType: DisconnectType?
     /** Identifier(s) of division(s) associated with a conversation */
     public var divisionIds: [String]?
     /** Dialed number identification service (number dialed by the calling party) */
@@ -133,7 +226,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Marker that is set if the current queue is the first queue in a conversation */
     public var firstQueue: Bool?
     /** Reason for which participant flagged conversation */
-    public var flaggedReason: String?
+    public var flaggedReason: FlaggedReason?
     /** Type of flow in that occurred when entering ACD. */
     public var flowInType: String?
     /** Type of flow out that occurred when emitting tFlowOut. */
@@ -161,11 +254,11 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Count of any media (images, files, etc) included in this session */
     public var mediaCount: Int?
     /** The session media type */
-    public var mediaType: String?
+    public var mediaType: MediaType?
     /** Message type for messaging services. E.g.: sms, facebook, twitter, line */
     public var messageType: String?
     /** The original direction of the conversation */
-    public var originatingDirection: String?
+    public var originatingDirection: OriginatingDirection?
     /** (Dialer) Unique identifier of the outbound campaign */
     public var outboundCampaignId: String?
     /** (Dialer) Unique identifier of the contact */
@@ -179,7 +272,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** The source provider for the communication. */
     public var provider: String?
     /** The participant&#39;s purpose */
-    public var purpose: String?
+    public var purpose: Purpose?
     /** Queue identifier */
     public var queueId: String?
     /** Name, phone number, or email address of the remote party. */
@@ -227,7 +320,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     /** Scored agents */
     public var scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?
 
-    public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: String?, convertedFrom: String?, convertedTo: String?, deliveryStatus: String?, destinationAddresses: [String]?, direction: String?, disconnectType: String?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: String?, flowInType: String?, flowOutType: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseIds: [String]?, mediaCount: Int?, mediaType: String?, messageType: String?, originatingDirection: String?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: String?, queueId: String?, remote: String?, removedSkillIds: [String]?, reoffered: Bool?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, stationId: String?, teamId: String?, usedRouting: UsedRouting?, userId: String?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [ConversationMetricsTopicConversationProposedAgent]?, scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?) {
+    public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowInType: String?, flowOutType: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseIds: [String]?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, remote: String?, removedSkillIds: [String]?, reoffered: Bool?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, stationId: String?, teamId: String?, usedRouting: UsedRouting?, userId: String?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [ConversationMetricsTopicConversationProposedAgent]?, scoredAgents: [ConversationMetricsTopicConversationScoredAgent]?) {
         
         self.metric = metric
         
@@ -262,6 +355,8 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
         self.convertedFrom = convertedFrom
         
         self.convertedTo = convertedTo
+        
+        self.customerParticipation = customerParticipation
         
         self.deliveryStatus = deliveryStatus
         

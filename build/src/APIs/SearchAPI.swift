@@ -2240,7 +2240,8 @@ open class SearchAPI {
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou"
-        } ]
+        } ],
+        "bargedParticipantId" : "aeiou"
       } ]
     },
     "queue" : "",
@@ -3111,7 +3112,7 @@ open class SearchAPI {
         "selfUri" : "aeiou",
         "name" : "aeiou",
         "description" : "aeiou",
-        "coreLanguage" : "en-us",
+        "coreLanguage" : "en-US",
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "articleCount" : 123,
         "id" : "aeiou",
@@ -4793,7 +4794,8 @@ open class SearchAPI {
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou"
-        } ]
+        } ],
+        "bargedParticipantId" : "aeiou"
       } ]
     },
     "queue" : "",

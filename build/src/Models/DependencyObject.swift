@@ -28,6 +28,7 @@ public class DependencyObject: Codable {
         case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
         case dialogflowagent = "DIALOGFLOWAGENT"
         case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
         case emailroute = "EMAILROUTE"
         case emergencygroup = "EMERGENCYGROUP"
         case flowaction = "FLOWACTION"

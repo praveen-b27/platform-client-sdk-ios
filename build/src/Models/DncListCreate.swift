@@ -16,6 +16,10 @@ public class DncListCreate: Codable {
         case dncCom = "dnc.com"
         case gryphon = "gryphon"
     }
+    public enum ContactMethod: String, Codable { 
+        case email = "Email"
+        case phone = "Phone"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The name of the DncList. */
@@ -32,6 +36,8 @@ public class DncListCreate: Codable {
     public var size: Int64?
     /** The type of the DncList. */
     public var dncSourceType: DncSourceType?
+    /** The contact method. Required if dncSourceType is rds. */
+    public var contactMethod: ContactMethod?
     /** A dnc.com loginId. Required if the dncSourceType is dnc.com. */
     public var loginId: String?
     /** The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com. */
@@ -43,7 +49,7 @@ public class DncListCreate: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, loginId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, selfUri: String?) {
+    public init(_id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, importStatus: ImportStatus?, size: Int64?, dncSourceType: DncSourceType?, contactMethod: ContactMethod?, loginId: String?, dncCodes: [String]?, licenseId: String?, division: DomainEntityRef?, selfUri: String?) {
         
         self._id = _id
         
@@ -60,6 +66,8 @@ public class DncListCreate: Codable {
         self.size = size
         
         self.dncSourceType = dncSourceType
+        
+        self.contactMethod = contactMethod
         
         self.loginId = loginId
         
@@ -82,6 +90,7 @@ public class DncListCreate: Codable {
         case importStatus
         case size
         case dncSourceType
+        case contactMethod
         case loginId
         case dncCodes
         case licenseId

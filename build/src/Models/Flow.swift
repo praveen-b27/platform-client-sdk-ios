@@ -14,6 +14,7 @@ public class Flow: Codable {
     public enum ModelType: String, Codable { 
         case bot = "BOT"
         case commonmodule = "COMMONMODULE"
+        case digitalbot = "DIGITALBOT"
         case inboundcall = "INBOUNDCALL"
         case inboundchat = "INBOUNDCHAT"
         case inboundemail = "INBOUNDEMAIL"
@@ -32,6 +33,7 @@ public class Flow: Codable {
     public enum CompatibleFlowTypes: String, Codable { 
         case bot = "BOT"
         case commonmodule = "COMMONMODULE"
+        case digitalbot = "DIGITALBOT"
         case inboundcall = "INBOUNDCALL"
         case inboundchat = "INBOUNDCHAT"
         case inboundemail = "INBOUNDEMAIL"

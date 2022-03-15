@@ -15,6 +15,7 @@ title: DncList
 | **importStatus** | [**ImportStatus**](ImportStatus.html) | The status of the import process | [optional] |
 | **size** | **Int64** | The total number of phone numbers in the DncList. | [optional] |
 | **dncSourceType** | **String** | The type of the DncList. | |
+| **contactMethod** | **String** | The contact method. Required if dncSourceType is rds. | [optional] |
 | **loginId** | **String** | A dnc.com loginId. Required if the dncSourceType is dnc.com. | [optional] |
 | **dncCodes** | **[String]** | The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com. | [optional] |
 | **licenseId** | **String** | A gryphon license number. Required if the dncSourceType is gryphon. | [optional] |

@@ -63,8 +63,22 @@ public class Condition: Codable {
     public var property: String?
     /** The type of the property associated with this Condition. Required for a contactPropertyCondition. */
     public var propertyType: PropertyType?
+    /** The Data Action to use for this condition. Required for a dataActionCondition. */
+    public var dataAction: DomainEntityRef?
+    /** The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition. */
+    public var dataNotFoundResolution: Bool?
+    /** The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition. */
+    public var contactIdField: String?
+    /** The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition. */
+    public var callAnalysisResultField: String?
+    /** The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition. */
+    public var agentWrapupField: String?
+    /** A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. */
+    public var contactColumnToDataActionFieldMappings: [ContactColumnToDataActionFieldMapping]?
+    /** A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. */
+    public var predicates: [DataActionConditionPredicate]?
 
-    public init(type: ModelType?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, property: String?, propertyType: PropertyType?) {
+    public init(type: ModelType?, inverted: Bool?, attributeName: String?, value: String?, valueType: ValueType?, _operator: Operator?, codes: [String]?, property: String?, propertyType: PropertyType?, dataAction: DomainEntityRef?, dataNotFoundResolution: Bool?, contactIdField: String?, callAnalysisResultField: String?, agentWrapupField: String?, contactColumnToDataActionFieldMappings: [ContactColumnToDataActionFieldMapping]?, predicates: [DataActionConditionPredicate]?) {
         
         self.type = type
         
@@ -84,6 +98,20 @@ public class Condition: Codable {
         
         self.propertyType = propertyType
         
+        self.dataAction = dataAction
+        
+        self.dataNotFoundResolution = dataNotFoundResolution
+        
+        self.contactIdField = contactIdField
+        
+        self.callAnalysisResultField = callAnalysisResultField
+        
+        self.agentWrapupField = agentWrapupField
+        
+        self.contactColumnToDataActionFieldMappings = contactColumnToDataActionFieldMappings
+        
+        self.predicates = predicates
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -96,6 +124,13 @@ public class Condition: Codable {
         case codes
         case property
         case propertyType
+        case dataAction
+        case dataNotFoundResolution
+        case contactIdField
+        case callAnalysisResultField
+        case agentWrapupField
+        case contactColumnToDataActionFieldMappings
+        case predicates
     }
 
 

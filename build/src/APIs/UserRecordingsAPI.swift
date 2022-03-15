@@ -1040,7 +1040,8 @@ open class UserRecordingsAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   }
 }}]
@@ -2149,7 +2150,8 @@ open class UserRecordingsAPI {
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou"
-        } ]
+        } ],
+        "bargedParticipantId" : "aeiou"
       } ]
     }
   } ],
@@ -3230,7 +3232,8 @@ open class UserRecordingsAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   }
 }}]

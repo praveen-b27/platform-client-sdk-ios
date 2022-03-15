@@ -57,9 +57,10 @@ public class AcwDetailEventTopicAfterCallWorkEvent: Codable {
     public var userId: String?
     public var queueId: String?
     public var wrapupCode: String?
+    public var wrapupNotes: String?
     public var wrapupDurationMs: Int?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, queueId: String?, wrapupCode: String?, wrapupDurationMs: Int?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, queueId: String?, wrapupCode: String?, wrapupNotes: String?, wrapupDurationMs: Int?) {
         
         self.eventTime = eventTime
         
@@ -98,6 +99,8 @@ public class AcwDetailEventTopicAfterCallWorkEvent: Codable {
         self.queueId = queueId
         
         self.wrapupCode = wrapupCode
+        
+        self.wrapupNotes = wrapupNotes
         
         self.wrapupDurationMs = wrapupDurationMs
         

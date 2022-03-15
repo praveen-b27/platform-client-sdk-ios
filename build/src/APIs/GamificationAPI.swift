@@ -4234,9 +4234,9 @@ open class GamificationAPI {
      - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postGamificationProfiles(body: CreatePerformanceProfile, copyMetrics: Bool? = nil, completion: @escaping ((_ data: GetProfilesResponse?,_ error: Error?) -> Void)) {
+    open class func postGamificationProfiles(body: CreatePerformanceProfile, copyMetrics: Bool? = nil, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
         let requestBuilder = postGamificationProfilesWithRequestBuilder(body: body, copyMetrics: copyMetrics)
-        requestBuilder.execute { (response: Response<GetProfilesResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<PerformanceProfile>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -4262,36 +4262,32 @@ open class GamificationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 123456789,
-  "entities" : [ {
-    "division" : {
-      "selfUri" : "aeiou",
-      "name" : "aeiou",
-      "id" : "aeiou"
-    },
-    "metricOrders" : [ "aeiou" ],
-    "dateCreated" : "2000-01-23T04:56:07.000+0000",
-    "maxLeaderboardRankSize" : 123,
-    "memberCount" : 123,
+  "division" : {
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "description" : "aeiou",
-    "active" : true,
-    "id" : "aeiou",
-    "reportingIntervals" : [ {
-      "intervalType" : "aeiou",
-      "intervalValue" : 123
-    } ]
-  } ],
-  "selfUri" : "aeiou"
+    "id" : "aeiou"
+  },
+  "metricOrders" : [ "aeiou" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "maxLeaderboardRankSize" : 123,
+  "memberCount" : 123,
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "description" : "aeiou",
+  "active" : true,
+  "id" : "aeiou",
+  "reportingIntervals" : [ {
+    "intervalType" : "aeiou",
+    "intervalValue" : 123
+  } ]
 }}]
      
      - parameter body: (body) performanceProfile 
      - parameter copyMetrics: (query) Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)
 
-     - returns: RequestBuilder<GetProfilesResponse> 
+     - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func postGamificationProfilesWithRequestBuilder(body: CreatePerformanceProfile, copyMetrics: Bool? = nil) -> RequestBuilder<GetProfilesResponse> {
+    open class func postGamificationProfilesWithRequestBuilder(body: CreatePerformanceProfile, copyMetrics: Bool? = nil) -> RequestBuilder<PerformanceProfile> {
         let path = "/api/v2/gamification/profiles"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -4305,7 +4301,7 @@ open class GamificationAPI {
             
         ])
 
-        let requestBuilder: RequestBuilder<GetProfilesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }

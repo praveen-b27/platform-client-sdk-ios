@@ -9648,6 +9648,7 @@ open class RecordingAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "keyConfigurationType" : "aeiou",
     "keydataSummary" : "aeiou",
     "localEncryptionConfiguration" : {
       "apiKey" : "aeiou",
@@ -11058,7 +11059,8 @@ open class RecordingAPI {
           "connectedTime" : "2000-01-23T04:56:07.000+0000",
           "state" : "aeiou",
           "id" : "aeiou"
-        } ]
+        } ],
+        "bargedParticipantId" : "aeiou"
       } ]
     }
   } ],
@@ -13783,6 +13785,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "keyConfigurationType" : "aeiou",
   "keydataSummary" : "aeiou",
   "localEncryptionConfiguration" : {
     "apiKey" : "aeiou",
@@ -14860,6 +14863,7 @@ open class RecordingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "keyConfigurationType" : "aeiou",
   "keydataSummary" : "aeiou",
   "localEncryptionConfiguration" : {
     "apiKey" : "aeiou",

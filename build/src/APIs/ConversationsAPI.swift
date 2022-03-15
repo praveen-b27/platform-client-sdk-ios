@@ -2623,7 +2623,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -3940,7 +3941,8 @@ open class ConversationsAPI {
         "connectedTime" : "2000-01-23T04:56:07.000+0000",
         "state" : "aeiou",
         "id" : "aeiou"
-      } ]
+      } ],
+      "bargedParticipantId" : "aeiou"
     } ]
   } ],
   "firstUri" : "aeiou",
@@ -4107,6 +4109,7 @@ open class ConversationsAPI {
     "consultParticipantId" : "aeiou",
     "coachedParticipantId" : "aeiou",
     "recordingState" : "aeiou",
+    "bargedTime" : "2000-01-23T04:56:07.000+0000",
     "name" : "aeiou",
     "wrapupPrompt" : "aeiou",
     "attributes" : {
@@ -4115,6 +4118,7 @@ open class ConversationsAPI {
     "documentId" : "aeiou",
     "endTime" : "2000-01-23T04:56:07.000+0000",
     "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+    "bargedParticipantId" : "aeiou",
     "user" : {
       "selfUri" : "aeiou",
       "name" : "aeiou",
@@ -4947,6 +4951,7 @@ open class ConversationsAPI {
       "consultParticipantId" : "aeiou",
       "coachedParticipantId" : "aeiou",
       "recordingState" : "aeiou",
+      "bargedTime" : "2000-01-23T04:56:07.000+0000",
       "name" : "aeiou",
       "wrapupPrompt" : "aeiou",
       "attributes" : {
@@ -4955,6 +4960,7 @@ open class ConversationsAPI {
       "documentId" : "aeiou",
       "endTime" : "2000-01-23T04:56:07.000+0000",
       "startHoldTime" : "2000-01-23T04:56:07.000+0000",
+      "bargedParticipantId" : "aeiou",
       "user" : {
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -7565,6 +7571,71 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[WrapupCode]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get emails settings for a given conversation
+     
+     - parameter conversationId: (path) conversationId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getConversationsEmailSettings(conversationId: String, completion: @escaping ((_ data: EmailsSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationsEmailSettingsWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<EmailsSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get emails settings for a given conversation
+     
+     - GET /api/v2/conversations/emails/{conversationId}/settings
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sendingSizeLimit" : 123
+}}]
+     
+     - parameter conversationId: (path) conversationId 
+
+     - returns: RequestBuilder<EmailsSettings> 
+     */
+    open class func getConversationsEmailSettingsWithRequestBuilder(conversationId: String) -> RequestBuilder<EmailsSettings> {
+        var path = "/api/v2/conversations/emails/{conversationId}/settings"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -12375,7 +12446,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -13630,7 +13702,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -14812,7 +14885,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -15994,7 +16068,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -17176,7 +17251,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -18358,7 +18434,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -20987,7 +21064,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      
@@ -22225,7 +22303,8 @@ open class ConversationsAPI {
       "connectedTime" : "2000-01-23T04:56:07.000+0000",
       "state" : "aeiou",
       "id" : "aeiou"
-    } ]
+    } ],
+    "bargedParticipantId" : "aeiou"
   } ]
 }}]
      

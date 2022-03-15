@@ -13,6 +13,7 @@ title: EncryptionKey
 | **keydataSummary** | **String** | key data summary (base 64 encoded public key) | [optional] |
 | **user** | [**User**](User.html) | user that requested generation of public key | [optional] |
 | **localEncryptionConfiguration** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) | Local configuration | [optional] |
+| **keyConfigurationType** | **String** | Key type used in this configuration | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

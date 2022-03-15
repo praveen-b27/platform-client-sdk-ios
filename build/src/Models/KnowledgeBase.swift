@@ -16,13 +16,19 @@ public class KnowledgeBase: Codable {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
     /** Knowledge base description */
     public var _description: String?
-    /** Core language for knowledge base in which initial content must be created first */
+    /** Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently, however the new DX knowledge will support all these language codes */
     public var coreLanguage: CoreLanguage?
     /** Knowledge base creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?

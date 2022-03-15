@@ -7876,7 +7876,7 @@ open class WorkforceManagementAPI {
      Get a list of notifications for the current user
      
      - GET /api/v2/workforcemanagement/notifications
-     - 
+     - Notifications are only initially sent if you have the relevant Notify and Edit permissions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

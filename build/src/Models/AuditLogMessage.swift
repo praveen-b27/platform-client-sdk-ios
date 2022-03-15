@@ -123,6 +123,8 @@ public class AuditLogMessage: Codable {
     }
     public enum EntityType: String, Codable { 
         case accessToken = "AccessToken"
+        case action = "Action"
+        case actionDraft = "ActionDraft"
         case actionMap = "ActionMap"
         case actionTemplate = "ActionTemplate"
         case activityCode = "ActivityCode"

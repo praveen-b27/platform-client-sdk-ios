@@ -31,6 +31,12 @@ public class KnowledgeImport: Codable {
         case enUk = "en-UK"
         case enAu = "en-AU"
         case deDe = "de-DE"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case ptBr = "pt-BR"
+        case nlNl = "nl-NL"
+        case itIt = "it-IT"
     }
     /** Id of the import operation */
     public var _id: String?

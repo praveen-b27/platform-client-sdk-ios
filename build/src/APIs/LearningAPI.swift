@@ -413,6 +413,7 @@ open class LearningAPI {
         case assigned = "Assigned"
         case inProgress = "InProgress"
         case completed = "Completed"
+        case notCompleted = "NotCompleted"
     }
 
     
@@ -765,6 +766,7 @@ open class LearningAPI {
         case assigned = "Assigned"
         case inProgress = "InProgress"
         case completed = "Completed"
+        case notCompleted = "NotCompleted"
     }
 
     

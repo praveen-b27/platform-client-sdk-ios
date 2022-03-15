@@ -11,6 +11,12 @@ import Foundation
 
 public class EncryptionKey: Codable {
 
+    public enum KeyConfigurationType: String, Codable { 
+        case kmsSymmetric = "KmsSymmetric"
+        case localKeyManager = "LocalKeyManager"
+        case native = "Native"
+        case _none = "None"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -22,10 +28,12 @@ public class EncryptionKey: Codable {
     public var user: User?
     /** Local configuration */
     public var localEncryptionConfiguration: LocalEncryptionConfiguration?
+    /** Key type used in this configuration */
+    public var keyConfigurationType: KeyConfigurationType?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, createDate: Date?, keydataSummary: String?, user: User?, localEncryptionConfiguration: LocalEncryptionConfiguration?, selfUri: String?) {
+    public init(_id: String?, name: String?, createDate: Date?, keydataSummary: String?, user: User?, localEncryptionConfiguration: LocalEncryptionConfiguration?, keyConfigurationType: KeyConfigurationType?, selfUri: String?) {
         
         self._id = _id
         
@@ -39,6 +47,8 @@ public class EncryptionKey: Codable {
         
         self.localEncryptionConfiguration = localEncryptionConfiguration
         
+        self.keyConfigurationType = keyConfigurationType
+        
         self.selfUri = selfUri
         
     }
@@ -50,6 +60,7 @@ public class EncryptionKey: Codable {
         case keydataSummary
         case user
         case localEncryptionConfiguration
+        case keyConfigurationType
         case selfUri
     }
 

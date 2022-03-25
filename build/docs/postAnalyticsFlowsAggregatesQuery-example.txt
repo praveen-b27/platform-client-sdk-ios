@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: FlowAggregationQuery = new FlowAggregationQuery(...) // query
+
+// Code example
+PostAnalyticsFlowsAggregatesQueryRequest.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostAnalyticsFlowsAggregatesQueryRequest.postAnalyticsFlowsAggregatesQuery was successful")
+        dump(response)
+    }
+}

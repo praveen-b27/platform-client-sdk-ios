@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let calendarId: String = "" // The id of the ics-formatted calendar
+
+// Code example
+GetWorkforcemanagementCalendarDataIcsRequest.getWorkforcemanagementCalendarDataIcs(calendarId: calendarId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementCalendarDataIcsRequest.getWorkforcemanagementCalendarDataIcs was successful")
+        dump(response)
+    }
+}

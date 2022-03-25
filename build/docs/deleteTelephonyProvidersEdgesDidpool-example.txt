@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let didPoolId: String = "" // DID pool ID
+
+// Code example
+DeleteTelephonyProvidersEdgesDidpoolRequest.deleteTelephonyProvidersEdgesDidpool(didPoolId: didPoolId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteTelephonyProvidersEdgesDidpoolRequest.deleteTelephonyProvidersEdgesDidpool was successful")
+    }
+}

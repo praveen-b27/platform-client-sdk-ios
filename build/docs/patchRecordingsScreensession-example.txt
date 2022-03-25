@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let recordingSessionId: String = "" // Screen recording session ID
+let body: ScreenRecordingSessionRequest = new ScreenRecordingSessionRequest(...) // 
+
+// Code example
+PatchRecordingsScreensessionRequest.patchRecordingsScreensession(recordingSessionId: recordingSessionId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PatchRecordingsScreensessionRequest.patchRecordingsScreensession was successful")
+    }
+}

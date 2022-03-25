@@ -1,0 +1,23 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // The total page size requested
+let pageNumber: Int = 1 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let hasConversation: Bool = false // Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization.
+let media: GetOrphanrecordingsRequest.Media_getOrphanrecordings = GetOrphanrecordingsRequest.Media_getOrphanrecordings.enummember // Filter resulting orphans based on their media type
+
+// Code example
+GetOrphanrecordingsRequest.getOrphanrecordings(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, hasConversation: hasConversation, media: media) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOrphanrecordingsRequest.getOrphanrecordings was successful")
+        dump(response)
+    }
+}

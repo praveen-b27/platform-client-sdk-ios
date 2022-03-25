@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let language: String = "" // The language of the builtin translation to retrieve
+
+// Code example
+GetLanguagesTranslationsBuiltinRequest.getLanguagesTranslationsBuiltin(language: language) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLanguagesTranslationsBuiltinRequest.getLanguagesTranslationsBuiltin was successful")
+        dump(response)
+    }
+}

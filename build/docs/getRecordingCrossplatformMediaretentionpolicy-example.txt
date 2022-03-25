@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // Policy ID
+
+// Code example
+GetRecordingCrossplatformMediaretentionpolicyRequest.getRecordingCrossplatformMediaretentionpolicy(policyId: policyId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRecordingCrossplatformMediaretentionpolicyRequest.getRecordingCrossplatformMediaretentionpolicy was successful")
+        dump(response)
+    }
+}

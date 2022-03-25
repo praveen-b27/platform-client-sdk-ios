@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let q64: String = "" // q64
+let expand: [String] = [GetSearchSuggestRequest.Expand_getSearchSuggest.enummember.rawValue] // Which fields, if any, to expand
+let profile: Bool = true // profile
+
+// Code example
+GetSearchSuggestRequest.getSearchSuggest(q64: q64, expand: expand, profile: profile) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetSearchSuggestRequest.getSearchSuggest was successful")
+        dump(response)
+    }
+}

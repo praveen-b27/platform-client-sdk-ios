@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The id of the management unit, or 'mine' for the management unit of the logged-in user.
+let agentId: String = "" // The agent id
+let excludeCapabilities: Bool = true // Excludes all capabilities of the agent such as queues, languages, and skills
+
+// Code example
+GetWorkforcemanagementManagementunitAgentRequest.getWorkforcemanagementManagementunitAgent(managementUnitId: managementUnitId, agentId: agentId, excludeCapabilities: excludeCapabilities) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementManagementunitAgentRequest.getWorkforcemanagementManagementunitAgent was successful")
+        dump(response)
+    }
+}

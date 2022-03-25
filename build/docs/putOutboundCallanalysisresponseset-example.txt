@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let callAnalysisSetId: String = "" // Call Analysis Response Set ID
+let body: ResponseSet = new ResponseSet(...) // ResponseSet
+
+// Code example
+PutOutboundCallanalysisresponsesetRequest.putOutboundCallanalysisresponseset(callAnalysisSetId: callAnalysisSetId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutOutboundCallanalysisresponsesetRequest.putOutboundCallanalysisresponseset was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let startWorkday: Date = new Date(...) // Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let endWorkday: Date = new Date(...) // End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let dayOfWeek: GetGamificationScorecardsPointsTrendsRequest.DayOfWeek_getGamificationScorecardsPointsTrends = GetGamificationScorecardsPointsTrendsRequest.DayOfWeek_getGamificationScorecardsPointsTrends.enummember // Optional filter to specify which day of weeks to be included in the response
+
+// Code example
+GetGamificationScorecardsPointsTrendsRequest.getGamificationScorecardsPointsTrends(startWorkday: startWorkday, endWorkday: endWorkday, dayOfWeek: dayOfWeek) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationScorecardsPointsTrendsRequest.getGamificationScorecardsPointsTrends was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let createDefault: Bool = false // If no settings are found, a new one is created with default values
+
+// Code example
+GetRecordingSettingsRequest.getRecordingSettings(createDefault: createDefault) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRecordingSettingsRequest.getRecordingSettings was successful")
+        dump(response)
+    }
+}

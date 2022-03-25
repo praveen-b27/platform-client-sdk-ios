@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let trusteeOrgId: String = "" // Trustee Organization Id
+
+// Code example
+DeleteOrgauthorizationTrusteeRequest.deleteOrgauthorizationTrustee(trusteeOrgId: trusteeOrgId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOrgauthorizationTrusteeRequest.deleteOrgauthorizationTrustee was successful")
+    }
+}

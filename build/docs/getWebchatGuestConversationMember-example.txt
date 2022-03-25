@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let memberId: String = "" // memberId
+
+// Code example
+GetWebchatGuestConversationMemberRequest.getWebchatGuestConversationMember(conversationId: conversationId, memberId: memberId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWebchatGuestConversationMemberRequest.getWebchatGuestConversationMember was successful")
+        dump(response)
+    }
+}

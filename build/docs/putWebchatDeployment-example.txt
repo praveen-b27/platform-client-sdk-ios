@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let deploymentId: String = "" // Deployment Id
+let body: WebChatDeployment = new WebChatDeployment(...) // Deployment
+
+// Code example
+PutWebchatDeploymentRequest.putWebchatDeployment(deploymentId: deploymentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutWebchatDeploymentRequest.putWebchatDeployment was successful")
+        dump(response)
+    }
+}

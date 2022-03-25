@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ParticipantAttributes = new ParticipantAttributes(...) // 
+
+// Code example
+PatchConversationsCobrowsesessionParticipantAttributesRequest.patchConversationsCobrowsesessionParticipantAttributes(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PatchConversationsCobrowsesessionParticipantAttributesRequest.patchConversationsCobrowsesessionParticipantAttributes was successful")
+    }
+}

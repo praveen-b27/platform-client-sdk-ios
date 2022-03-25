@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge ID
+let interfaceId: String = "" // Interface ID
+let body: DomainLogicalInterface = new DomainLogicalInterface(...) // Logical interface
+
+// Code example
+PutTelephonyProvidersEdgeLogicalinterfaceRequest.putTelephonyProvidersEdgeLogicalinterface(edgeId: edgeId, interfaceId: interfaceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutTelephonyProvidersEdgeLogicalinterfaceRequest.putTelephonyProvidersEdgeLogicalinterface was successful")
+        dump(response)
+    }
+}

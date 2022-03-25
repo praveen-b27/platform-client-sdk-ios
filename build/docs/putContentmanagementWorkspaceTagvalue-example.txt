@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let workspaceId: String = "" // Workspace ID
+let tagId: String = "" // Tag ID
+let body: TagValue = new TagValue(...) // Workspace
+
+// Code example
+PutContentmanagementWorkspaceTagvalueRequest.putContentmanagementWorkspaceTagvalue(workspaceId: workspaceId, tagId: tagId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutContentmanagementWorkspaceTagvalueRequest.putContentmanagementWorkspaceTagvalue was successful")
+        dump(response)
+    }
+}

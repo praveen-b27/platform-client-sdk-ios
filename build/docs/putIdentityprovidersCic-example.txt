@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: CustomerInteractionCenter = new CustomerInteractionCenter(...) // Provider
+
+// Code example
+PutIdentityprovidersCicRequest.putIdentityprovidersCic(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutIdentityprovidersCicRequest.putIdentityprovidersCic was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: SendAgentlessOutboundMessageRequest = new SendAgentlessOutboundMessageRequest(...) // Create agentless outbound messaging request
+
+// Code example
+PostConversationsMessagesAgentlessRequest.postConversationsMessagesAgentless(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationsMessagesAgentlessRequest.postConversationsMessagesAgentless was successful")
+        dump(response)
+    }
+}

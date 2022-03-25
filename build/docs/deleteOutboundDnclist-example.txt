@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let dncListId: String = "" // DncList ID
+
+// Code example
+DeleteOutboundDnclistRequest.deleteOutboundDnclist(dncListId: dncListId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundDnclistRequest.deleteOutboundDnclist was successful")
+    }
+}

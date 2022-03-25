@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let name: String = "" // Name
+let onlyLatestPerContext: Bool = false // onlyLatestPerContext
+
+// Code example
+GetQualityPublishedformsRequest.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, name: name, onlyLatestPerContext: onlyLatestPerContext) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityPublishedformsRequest.getQualityPublishedforms was successful")
+        dump(response)
+    }
+}

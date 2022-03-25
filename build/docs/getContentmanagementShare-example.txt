@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let shareId: String = "" // Share ID
+let expand: [String] = [GetContentmanagementShareRequest.Expand_getContentmanagementShare.enummember.rawValue] // Which fields, if any, to expand.
+
+// Code example
+GetContentmanagementShareRequest.getContentmanagementShare(shareId: shareId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetContentmanagementShareRequest.getContentmanagementShare was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let codeId: String = "" // Code ID
+
+// Code example
+DeleteRoutingQueueWrapupcodeRequest.deleteRoutingQueueWrapupcode(queueId: queueId, codeId: codeId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingQueueWrapupcodeRequest.deleteRoutingQueueWrapupcode was successful")
+    }
+}

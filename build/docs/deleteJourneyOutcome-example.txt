@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let outcomeId: String = "" // ID of the outcome.
+
+// Code example
+DeleteJourneyOutcomeRequest.deleteJourneyOutcome(outcomeId: outcomeId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteJourneyOutcomeRequest.deleteJourneyOutcome was successful")
+    }
+}

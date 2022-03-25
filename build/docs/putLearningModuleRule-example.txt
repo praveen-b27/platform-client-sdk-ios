@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // The ID of the learning module
+let body: LearningModuleRule = new LearningModuleRule(...) // The learning module rule to be updated
+
+// Code example
+PutLearningModuleRuleRequest.putLearningModuleRule(moduleId: moduleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutLearningModuleRuleRequest.putLearningModuleRule was successful")
+        dump(response)
+    }
+}

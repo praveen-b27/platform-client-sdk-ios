@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pairingId: String = "" // Pairing Id
+
+// Code example
+GetOrgauthorizationPairingRequest.getOrgauthorizationPairing(pairingId: pairingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOrgauthorizationPairingRequest.getOrgauthorizationPairing was successful")
+        dump(response)
+    }
+}

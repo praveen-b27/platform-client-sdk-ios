@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let divisionId: String = "" // Division ID
+let objectType: PostAuthorizationDivisionObjectRequest.ObjectType_postAuthorizationDivisionObject = PostAuthorizationDivisionObjectRequest.ObjectType_postAuthorizationDivisionObject.enummember // The type of the objects. Must be one of the valid object types
+let body: [String] = [new [String](...)] // Object Id List
+
+// Code example
+PostAuthorizationDivisionObjectRequest.postAuthorizationDivisionObject(divisionId: divisionId, objectType: objectType, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostAuthorizationDivisionObjectRequest.postAuthorizationDivisionObject was successful")
+    }
+}

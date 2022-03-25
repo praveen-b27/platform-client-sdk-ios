@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let assessmentId: String = "" // Benefit Assessment ID
+
+// Code example
+DeleteRoutingAssessmentRequest.deleteRoutingAssessment(assessmentId: assessmentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingAssessmentRequest.deleteRoutingAssessment was successful")
+    }
+}

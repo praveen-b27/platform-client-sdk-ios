@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+
+// Code example
+GetConversationsCobrowsesessionParticipantWrapupcodesRequest.getConversationsCobrowsesessionParticipantWrapupcodes(conversationId: conversationId, participantId: participantId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsCobrowsesessionParticipantWrapupcodesRequest.getConversationsCobrowsesessionParticipantWrapupcodes was successful")
+        dump(response)
+    }
+}

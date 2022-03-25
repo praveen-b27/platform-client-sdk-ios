@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let attachmentId: String = "" // attachmentId
+
+// Code example
+DeleteConversationsEmailMessagesDraftAttachmentRequest.deleteConversationsEmailMessagesDraftAttachment(conversationId: conversationId, attachmentId: attachmentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteConversationsEmailMessagesDraftAttachmentRequest.deleteConversationsEmailMessagesDraftAttachment was successful")
+    }
+}

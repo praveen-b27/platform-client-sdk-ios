@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let trustorOrgId: String = "" // Trustor Organization Id
+let trusteeUserId: String = "" // Trustee User Id
+
+// Code example
+GetOrgauthorizationTrustorCloneduserRequest.getOrgauthorizationTrustorCloneduser(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOrgauthorizationTrustorCloneduserRequest.getOrgauthorizationTrustorCloneduser was successful")
+        dump(response)
+    }
+}

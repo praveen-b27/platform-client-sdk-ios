@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The management unit ID of the management unit.
+let timeOffLimitId: String = "" // The ID of the time off limit object to delete
+
+// Code example
+DeleteWorkforcemanagementManagementunitTimeofflimitRequest.deleteWorkforcemanagementManagementunitTimeofflimit(managementUnitId: managementUnitId, timeOffLimitId: timeOffLimitId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWorkforcemanagementManagementunitTimeofflimitRequest.deleteWorkforcemanagementManagementunitTimeofflimit was successful")
+    }
+}

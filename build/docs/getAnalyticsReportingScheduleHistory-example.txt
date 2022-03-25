@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let scheduleId: String = "" // Schedule ID
+let pageNumber: Int = 1 // 
+let pageSize: Int = 25 // 
+
+// Code example
+GetAnalyticsReportingScheduleHistoryRequest.getAnalyticsReportingScheduleHistory(scheduleId: scheduleId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAnalyticsReportingScheduleHistoryRequest.getAnalyticsReportingScheduleHistory was successful")
+        dump(response)
+    }
+}

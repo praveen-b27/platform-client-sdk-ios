@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let contactListId: String = "" // Contact List ID
+
+// Code example
+PostOutboundContactlistClearRequest.postOutboundContactlistClear(contactListId: contactListId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostOutboundContactlistClearRequest.postOutboundContactlistClear was successful")
+    }
+}

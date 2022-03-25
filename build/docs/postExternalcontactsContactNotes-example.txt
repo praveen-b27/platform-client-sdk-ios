@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let contactId: String = "" // ExternalContact Id
+let body: Note = new Note(...) // ExternalContact
+
+// Code example
+PostExternalcontactsContactNotesRequest.postExternalcontactsContactNotes(contactId: contactId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostExternalcontactsContactNotesRequest.postExternalcontactsContactNotes was successful")
+        dump(response)
+    }
+}

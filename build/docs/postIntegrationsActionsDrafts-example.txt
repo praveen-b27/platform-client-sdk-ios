@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: PostActionInput = new PostActionInput(...) // Input used to create Action Draft.
+
+// Code example
+PostIntegrationsActionsDraftsRequest.postIntegrationsActionsDrafts(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostIntegrationsActionsDraftsRequest.postIntegrationsActionsDrafts was successful")
+        dump(response)
+    }
+}

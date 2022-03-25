@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // ID of the NLU domain.
+let feedbackId: String = "" // ID of the Feedback
+
+// Code example
+DeleteLanguageunderstandingDomainFeedbackFeedbackIdRequest.deleteLanguageunderstandingDomainFeedbackFeedbackId(domainId: domainId, feedbackId: feedbackId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteLanguageunderstandingDomainFeedbackFeedbackIdRequest.deleteLanguageunderstandingDomainFeedbackFeedbackId was successful")
+    }
+}

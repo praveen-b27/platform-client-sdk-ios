@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: GDPRRequest = new GDPRRequest(...) // GDPR request
+let deleteConfirmed: Bool = false // Confirm delete
+
+// Code example
+PostGdprRequestsRequest.postGdprRequests(body: body, deleteConfirmed: deleteConfirmed) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostGdprRequestsRequest.postGdprRequests was successful")
+        dump(response)
+    }
+}

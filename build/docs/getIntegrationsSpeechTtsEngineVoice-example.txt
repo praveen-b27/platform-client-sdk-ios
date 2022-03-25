@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let engineId: String = "" // The engine ID
+let voiceId: String = "" // The voice ID
+
+// Code example
+GetIntegrationsSpeechTtsEngineVoiceRequest.getIntegrationsSpeechTtsEngineVoice(engineId: engineId, voiceId: voiceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIntegrationsSpeechTtsEngineVoiceRequest.getIntegrationsSpeechTtsEngineVoice was successful")
+        dump(response)
+    }
+}

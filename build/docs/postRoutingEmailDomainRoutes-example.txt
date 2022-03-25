@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let domainName: String = "" // email domain
+let body: InboundRoute = new InboundRoute(...) // Route
+
+// Code example
+PostRoutingEmailDomainRoutesRequest.postRoutingEmailDomainRoutes(domainName: domainName, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostRoutingEmailDomainRoutesRequest.postRoutingEmailDomainRoutes was successful")
+        dump(response)
+    }
+}

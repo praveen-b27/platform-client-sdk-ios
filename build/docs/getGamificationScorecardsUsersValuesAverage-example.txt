@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let filterType: GetGamificationScorecardsUsersValuesAverageRequest.FilterType_getGamificationScorecardsUsersValuesAverage = GetGamificationScorecardsUsersValuesAverageRequest.FilterType_getGamificationScorecardsUsersValuesAverage.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type. For example, division Id
+let workday: Date = new Date(...) // The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let timeZone: String = "UTC" // Timezone for the workday. Defaults to UTC
+
+// Code example
+GetGamificationScorecardsUsersValuesAverageRequest.getGamificationScorecardsUsersValuesAverage(filterType: filterType, filterId: filterId, workday: workday, timeZone: timeZone) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationScorecardsUsersValuesAverageRequest.getGamificationScorecardsUsersValuesAverage was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit.
+let serviceGoalTemplateId: String = "" // The ID of the service goal template to delete
+
+// Code example
+DeleteWorkforcemanagementBusinessunitServicegoaltemplateRequest.deleteWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId: businessUnitId, serviceGoalTemplateId: serviceGoalTemplateId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWorkforcemanagementBusinessunitServicegoaltemplateRequest.deleteWorkforcemanagementBusinessunitServicegoaltemplate was successful")
+    }
+}

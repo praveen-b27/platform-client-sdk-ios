@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let orphanId: String = "" // Orphan ID
+let body: OrphanUpdateRequest = new OrphanUpdateRequest(...) // 
+
+// Code example
+PutOrphanrecordingRequest.putOrphanrecording(orphanId: orphanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutOrphanrecordingRequest.putOrphanrecording was successful")
+        dump(response)
+    }
+}

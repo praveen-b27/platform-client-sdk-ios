@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+DeleteIdentityprovidersPingRequest.deleteIdentityprovidersPing() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("DeleteIdentityprovidersPingRequest.deleteIdentityprovidersPing was successful")
+        dump(response)
+    }
+}

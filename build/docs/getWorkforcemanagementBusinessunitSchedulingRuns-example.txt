@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+GetWorkforcemanagementBusinessunitSchedulingRunsRequest.getWorkforcemanagementBusinessunitSchedulingRuns(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitSchedulingRunsRequest.getWorkforcemanagementBusinessunitSchedulingRuns was successful")
+        dump(response)
+    }
+}

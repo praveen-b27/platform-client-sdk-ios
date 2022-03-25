@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let divisionId: String = "" // the id of the division to which to make the grant
+let roleId: String = "" // the id of the role to grant
+let subjectType: String = "PC_USER" // what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints)
+
+// Code example
+PostAuthorizationSubjectDivisionRoleRequest.postAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: divisionId, roleId: roleId, subjectType: subjectType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostAuthorizationSubjectDivisionRoleRequest.postAuthorizationSubjectDivisionRole was successful")
+    }
+}

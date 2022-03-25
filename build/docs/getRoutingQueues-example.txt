@@ -1,0 +1,21 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortOrder: GetRoutingQueuesRequest.SortOrder_getRoutingQueues = GetRoutingQueuesRequest.SortOrder_getRoutingQueues.enummember // Note: results are sorted by name.
+let name: String = "" // Filter by queue name
+let _id: [String] = [""] // Filter by queue ID(s)
+let divisionId: [String] = [""] // Filter by queue division ID(s)
+
+// Code example
+GetRoutingQueuesRequest.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingQueuesRequest.getRoutingQueues was successful")
+        dump(response)
+    }
+}

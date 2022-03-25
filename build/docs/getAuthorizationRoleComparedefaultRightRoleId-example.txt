@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let leftRoleId: String = "" // Left Role ID
+let rightRoleId: String = "" // Right Role id
+
+// Code example
+GetAuthorizationRoleComparedefaultRightRoleIdRequest.getAuthorizationRoleComparedefaultRightRoleId(leftRoleId: leftRoleId, rightRoleId: rightRoleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAuthorizationRoleComparedefaultRightRoleIdRequest.getAuthorizationRoleComparedefaultRightRoleId was successful")
+        dump(response)
+    }
+}

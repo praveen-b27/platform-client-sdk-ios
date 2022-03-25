@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let q64: String = "" // q64
+let expand: [String] = [""] // expand
+let integrationPresenceSource: GetUsersSearchRequest.IntegrationPresenceSource_getUsersSearch = GetUsersSearchRequest.IntegrationPresenceSource_getUsersSearch.enummember // integrationPresenceSource
+
+// Code example
+GetUsersSearchRequest.getUsersSearch(q64: q64, expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUsersSearchRequest.getUsersSearch was successful")
+        dump(response)
+    }
+}

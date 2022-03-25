@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The management unit ID.
+let body: CreateTimeOffPlanRequest = new CreateTimeOffPlanRequest(...) // body
+
+// Code example
+PostWorkforcemanagementManagementunitTimeoffplansRequest.postWorkforcemanagementManagementunitTimeoffplans(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitTimeoffplansRequest.postWorkforcemanagementManagementunitTimeoffplans was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100)
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+
+// Code example
+GetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts(limit: limit, cursor: cursor) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts was successful")
+        dump(response)
+    }
+}

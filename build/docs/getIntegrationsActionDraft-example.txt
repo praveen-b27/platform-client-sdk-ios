@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+let expand: GetIntegrationsActionDraftRequest.Expand_getIntegrationsActionDraft = GetIntegrationsActionDraftRequest.Expand_getIntegrationsActionDraft.enummember // Indicates a field in the response which should be expanded.
+let includeConfig: Bool = false // Return config in response.
+
+// Code example
+GetIntegrationsActionDraftRequest.getIntegrationsActionDraft(actionId: actionId, expand: expand, includeConfig: includeConfig) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIntegrationsActionDraftRequest.getIntegrationsActionDraft was successful")
+        dump(response)
+    }
+}

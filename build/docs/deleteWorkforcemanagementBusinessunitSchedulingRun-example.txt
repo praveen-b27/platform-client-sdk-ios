@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let runId: String = "" // The ID of the schedule run
+
+// Code example
+DeleteWorkforcemanagementBusinessunitSchedulingRunRequest.deleteWorkforcemanagementBusinessunitSchedulingRun(businessUnitId: businessUnitId, runId: runId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWorkforcemanagementBusinessunitSchedulingRunRequest.deleteWorkforcemanagementBusinessunitSchedulingRun was successful")
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let communicationType: String = "" // Call or Chat communication filtering
+
+// Code example
+GetConversationsRequest.getConversations(communicationType: communicationType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsRequest.getConversations was successful")
+        dump(response)
+    }
+}

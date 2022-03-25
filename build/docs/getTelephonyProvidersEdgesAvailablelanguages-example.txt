@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages was successful")
+        dump(response)
+    }
+}

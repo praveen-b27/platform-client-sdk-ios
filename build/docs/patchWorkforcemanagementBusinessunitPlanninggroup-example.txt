@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit.
+let planningGroupId: String = "" // The ID of a planning group to update
+let body: UpdatePlanningGroupRequest = new UpdatePlanningGroupRequest(...) // body
+
+// Code example
+PatchWorkforcemanagementBusinessunitPlanninggroupRequest.patchWorkforcemanagementBusinessunitPlanninggroup(businessUnitId: businessUnitId, planningGroupId: planningGroupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchWorkforcemanagementBusinessunitPlanninggroupRequest.patchWorkforcemanagementBusinessunitPlanninggroup was successful")
+        dump(response)
+    }
+}

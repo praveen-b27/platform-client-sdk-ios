@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetWorkforcemanagementNotificationsRequest.getWorkforcemanagementNotifications() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementNotificationsRequest.getWorkforcemanagementNotifications was successful")
+        dump(response)
+    }
+}

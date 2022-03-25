@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let forceDelete: Bool = true // forceDelete
+
+// Code example
+DeleteRoutingQueueRequest.deleteRoutingQueue(queueId: queueId, forceDelete: forceDelete) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingQueueRequest.deleteRoutingQueue was successful")
+    }
+}

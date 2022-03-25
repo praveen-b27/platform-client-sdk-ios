@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: CreateCallbackCommand = new CreateCallbackCommand(...) // Callback
+
+// Code example
+PostConversationsCallbacksRequest.postConversationsCallbacks(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationsCallbacksRequest.postConversationsCallbacks was successful")
+        dump(response)
+    }
+}

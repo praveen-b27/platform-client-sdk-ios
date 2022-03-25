@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let dncListId: String = "" // DncList ID
+let body: DncList = new DncList(...) // DncList
+
+// Code example
+PutOutboundDnclistRequest.putOutboundDnclist(dncListId: dncListId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutOutboundDnclistRequest.putOutboundDnclist was successful")
+        dump(response)
+    }
+}

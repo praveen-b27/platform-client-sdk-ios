@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let trustorOrgId: String = "" // The organization ID of the trustor (customer) organization.
+let billingPeriodIndex: Int = 0 // 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on.
+
+// Code example
+GetBillingTrusteebillingoverviewTrustorOrgIdRequest.getBillingTrusteebillingoverviewTrustorOrgId(trustorOrgId: trustorOrgId, billingPeriodIndex: billingPeriodIndex) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetBillingTrusteebillingoverviewTrustorOrgIdRequest.getBillingTrusteebillingoverviewTrustorOrgId was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let rowId: String = "" // The key for the row
+let showbrief: Bool = true // if true returns just the key field for the row
+
+// Code example
+GetFlowsDatatableRowRequest.getFlowsDatatableRow(datatableId: datatableId, rowId: rowId, showbrief: showbrief) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsDatatableRowRequest.getFlowsDatatableRow was successful")
+        dump(response)
+    }
+}

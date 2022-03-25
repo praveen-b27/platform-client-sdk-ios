@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+let body: JSON = new JSON(...) // Map of parameters used for variable substitution.
+
+// Code example
+PostIntegrationsActionDraftTestRequest.postIntegrationsActionDraftTest(actionId: actionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostIntegrationsActionDraftTestRequest.postIntegrationsActionDraftTest was successful")
+        dump(response)
+    }
+}

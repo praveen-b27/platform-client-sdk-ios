@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let formId: String = "" // Form ID
+
+// Code example
+DeleteQualityFormsSurveyRequest.deleteQualityFormsSurvey(formId: formId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteQualityFormsSurveyRequest.deleteQualityFormsSurvey was successful")
+    }
+}

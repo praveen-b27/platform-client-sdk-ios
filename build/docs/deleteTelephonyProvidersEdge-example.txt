@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge ID
+
+// Code example
+DeleteTelephonyProvidersEdgeRequest.deleteTelephonyProvidersEdge(edgeId: edgeId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteTelephonyProvidersEdgeRequest.deleteTelephonyProvidersEdge was successful")
+    }
+}

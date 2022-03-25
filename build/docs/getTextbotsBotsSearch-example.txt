@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let botType: [String] = [GetTextbotsBotsSearchRequest.BotType_getTextbotsBotsSearch.enummember.rawValue] // Bot types
+let botName: String = "" // Bot name
+let botId: [String] = [""] // Bot IDs
+let pageSize: Int = 25 // The maximum results to return
+
+// Code example
+GetTextbotsBotsSearchRequest.getTextbotsBotsSearch(botType: botType, botName: botName, botId: botId, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTextbotsBotsSearchRequest.getTextbotsBotsSearch was successful")
+        dump(response)
+    }
+}

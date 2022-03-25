@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+
+// Code example
+DeleteWorkforcemanagementBusinessunitRequest.deleteWorkforcemanagementBusinessunit(businessUnitId: businessUnitId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWorkforcemanagementBusinessunitRequest.deleteWorkforcemanagementBusinessunit was successful")
+    }
+}

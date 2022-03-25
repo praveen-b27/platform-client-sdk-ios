@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let ruleSetId: String = "" // Rule Set ID
+
+// Code example
+DeleteOutboundRulesetRequest.deleteOutboundRuleset(ruleSetId: ruleSetId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundRulesetRequest.deleteOutboundRuleset was successful")
+    }
+}

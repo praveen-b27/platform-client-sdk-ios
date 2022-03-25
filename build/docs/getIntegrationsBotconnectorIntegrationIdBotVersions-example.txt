@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // The integration ID for this bot group
+let botId: String = "" // The botID for this bot
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+GetIntegrationsBotconnectorIntegrationIdBotVersionsRequest.getIntegrationsBotconnectorIntegrationIdBotVersions(integrationId: integrationId, botId: botId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIntegrationsBotconnectorIntegrationIdBotVersionsRequest.getIntegrationsBotconnectorIntegrationIdBotVersions was successful")
+        dump(response)
+    }
+}

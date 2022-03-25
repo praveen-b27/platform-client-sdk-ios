@@ -1,0 +1,25 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let recordingId: String = "" // Recording ID
+let formatId: GetConversationRecordingRequest.FormatId_getConversationRecording = GetConversationRecordingRequest.FormatId_getConversationRecording.enummember // The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE
+let emailFormatId: GetConversationRecordingRequest.EmailFormatId_getConversationRecording = GetConversationRecordingRequest.EmailFormatId_getConversationRecording.enummember // The desired media format when downloading an email recording. Valid values:EML,NONE
+let chatFormatId: GetConversationRecordingRequest.ChatFormatId_getConversationRecording = GetConversationRecordingRequest.ChatFormatId_getConversationRecording.enummember // The desired media format when downloading a chat recording. Valid values:ZIP,NONE 
+let messageFormatId: GetConversationRecordingRequest.MessageFormatId_getConversationRecording = GetConversationRecordingRequest.MessageFormatId_getConversationRecording.enummember // The desired media format when downloading a message recording. Valid values:ZIP,NONE
+let download: Bool = false // requesting a download format of the recording. Valid values:true,false
+let fileName: String = "" // the name of the downloaded fileName
+let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
+let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3
+
+// Code example
+GetConversationRecordingRequest.getConversationRecording(conversationId: conversationId, recordingId: recordingId, formatId: formatId, emailFormatId: emailFormatId, chatFormatId: chatFormatId, messageFormatId: messageFormatId, download: download, fileName: fileName, locale: locale, mediaFormats: mediaFormats) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationRecordingRequest.getConversationRecording was successful")
+        dump(response)
+    }
+}

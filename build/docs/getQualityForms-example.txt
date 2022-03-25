@@ -1,0 +1,23 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // The total page size requested
+let pageNumber: Int = 1 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let expand: String = "" // Expand
+let name: String = "" // Name
+let sortOrder: String = "" // Order to sort results, either asc or desc
+
+// Code example
+GetQualityFormsRequest.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityFormsRequest.getQualityForms was successful")
+        dump(response)
+    }
+}

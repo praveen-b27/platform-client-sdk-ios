@@ -1,0 +1,24 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let phoneNumber: String = "" // Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used.
+let phoneNumberType: [String] = [GetRoutingSmsPhonenumbersRequest.PhoneNumberType_getRoutingSmsPhonenumbers.enummember.rawValue] // Filter on phone number type
+let phoneNumberStatus: [String] = [GetRoutingSmsPhonenumbersRequest.PhoneNumberStatus_getRoutingSmsPhonenumbers.enummember.rawValue] // Filter on phone number status
+let countryCode: [String] = [""] // Filter on country code
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortBy: GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers.enummember // Optional field to sort results
+let sortOrder: GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order
+let language: String = "en-US" // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations
+
+// Code example
+GetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers was successful")
+        dump(response)
+    }
+}

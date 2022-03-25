@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+GetUserStateRequest.getUserState(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserStateRequest.getUserState was successful")
+        dump(response)
+    }
+}

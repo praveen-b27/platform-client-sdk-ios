@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: CreateWebChatConversationRequest = new CreateWebChatConversationRequest(...) // CreateConversationRequest
+
+// Code example
+PostWebchatGuestConversationsRequest.postWebchatGuestConversations(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWebchatGuestConversationsRequest.postWebchatGuestConversations was successful")
+        dump(response)
+    }
+}

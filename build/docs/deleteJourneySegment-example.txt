@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let segmentId: String = "" // ID of the segment.
+
+// Code example
+DeleteJourneySegmentRequest.deleteJourneySegment(segmentId: segmentId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteJourneySegmentRequest.deleteJourneySegment was successful")
+    }
+}

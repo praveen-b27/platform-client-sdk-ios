@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: Outcome = new Outcome(...) // 
+
+// Code example
+PostJourneyOutcomesRequest.postJourneyOutcomes(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostJourneyOutcomesRequest.postJourneyOutcomes was successful")
+        dump(response)
+    }
+}

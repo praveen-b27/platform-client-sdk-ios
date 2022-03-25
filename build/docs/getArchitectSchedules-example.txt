@@ -1,0 +1,21 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: String = "name" // Sort by
+let sortOrder: String = "ASC" // Sort order
+let name: String = "" // Name of the Schedule to filter by.
+let divisionId: [String] = [""] // List of divisionIds on which to filter.
+
+// Code example
+GetArchitectSchedulesRequest.getArchitectSchedules(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, name: name, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetArchitectSchedulesRequest.getArchitectSchedules was successful")
+        dump(response)
+    }
+}

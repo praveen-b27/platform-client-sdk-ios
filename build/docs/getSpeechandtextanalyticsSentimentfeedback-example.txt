@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let dialect: String = "" // The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+
+// Code example
+GetSpeechandtextanalyticsSentimentfeedbackRequest.getSpeechandtextanalyticsSentimentfeedback(dialect: dialect) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetSpeechandtextanalyticsSentimentfeedbackRequest.getSpeechandtextanalyticsSentimentfeedback was successful")
+        dump(response)
+    }
+}

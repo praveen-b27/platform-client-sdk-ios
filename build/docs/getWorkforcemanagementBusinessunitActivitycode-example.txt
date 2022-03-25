@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.
+let activityCodeId: String = "" // The ID of the activity code to fetch
+
+// Code example
+GetWorkforcemanagementBusinessunitActivitycodeRequest.getWorkforcemanagementBusinessunitActivitycode(businessUnitId: businessUnitId, activityCodeId: activityCodeId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitActivitycodeRequest.getWorkforcemanagementBusinessunitActivitycode was successful")
+        dump(response)
+    }
+}

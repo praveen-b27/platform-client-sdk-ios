@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge ID
+let expand: [String] = [GetTelephonyProvidersEdgeLogicalinterfacesRequest.Expand_getTelephonyProvidersEdgeLogicalinterfaces.enummember.rawValue] // Field to expand in the response
+
+// Code example
+GetTelephonyProvidersEdgeLogicalinterfacesRequest.getTelephonyProvidersEdgeLogicalinterfaces(edgeId: edgeId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgeLogicalinterfacesRequest.getTelephonyProvidersEdgeLogicalinterfaces was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let groupId: String = "" // Group ID
+let body: DefaultGreetingList = new DefaultGreetingList(...) // The updated defaultGreetingList
+
+// Code example
+PutGroupGreetingsDefaultsRequest.putGroupGreetingsDefaults(groupId: groupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutGroupGreetingsDefaultsRequest.putGroupGreetingsDefaults was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,24 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let isArchived: Bool = false // Archive status
+let types: [String] = [GetLearningModulesRequest.Types_getLearningModules.enummember.rawValue] // Specifies the module types.
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortOrder: GetLearningModulesRequest.SortOrder_getLearningModules = GetLearningModulesRequest.SortOrder_getLearningModules.enummember // Sort order
+let sortBy: GetLearningModulesRequest.SortBy_getLearningModules = GetLearningModulesRequest.SortBy_getLearningModules.enummember // Sort by
+let searchTerm: String = "" // Search Term (searchable by name)
+let expand: [String] = [GetLearningModulesRequest.Expand_getLearningModules.enummember.rawValue] // Fields to expand in response(case insensitive)
+let isPublished: GetLearningModulesRequest.IsPublished_getLearningModules = GetLearningModulesRequest.IsPublished_getLearningModules.enummember // Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned
+
+// Code example
+GetLearningModulesRequest.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLearningModulesRequest.getLearningModules was successful")
+        dump(response)
+    }
+}

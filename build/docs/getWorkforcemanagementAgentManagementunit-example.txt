@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The ID of the agent to look up
+
+// Code example
+GetWorkforcemanagementAgentManagementunitRequest.getWorkforcemanagementAgentManagementunit(agentId: agentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementAgentManagementunitRequest.getWorkforcemanagementAgentManagementunit was successful")
+        dump(response)
+    }
+}

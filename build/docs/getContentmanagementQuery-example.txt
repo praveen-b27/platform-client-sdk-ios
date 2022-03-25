@@ -1,0 +1,21 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let queryPhrase: String = "" // Phrase tokens are ANDed together over all searchable fields
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortBy: String = "name" // name or dateCreated
+let sortOrder: String = "ascending" // ascending or descending
+let expand: [String] = [GetContentmanagementQueryRequest.Expand_getContentmanagementQuery.enummember.rawValue] // Which fields, if any, to expand.
+
+// Code example
+GetContentmanagementQueryRequest.getContentmanagementQuery(queryPhrase: queryPhrase, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetContentmanagementQueryRequest.getContentmanagementQuery was successful")
+        dump(response)
+    }
+}

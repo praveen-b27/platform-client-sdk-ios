@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: PhonesReboot = new PhonesReboot(...) // Phones
+
+// Code example
+PostTelephonyProvidersEdgesPhonesRebootRequest.postTelephonyProvidersEdgesPhonesReboot(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostTelephonyProvidersEdgesPhonesRebootRequest.postTelephonyProvidersEdgesPhonesReboot was successful")
+    }
+}

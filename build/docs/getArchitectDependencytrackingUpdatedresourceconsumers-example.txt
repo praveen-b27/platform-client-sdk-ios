@@ -1,0 +1,21 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let name: String = "" // Name to search for
+let objectType: [String] = [GetArchitectDependencytrackingUpdatedresourceconsumersRequest.ObjectType_getArchitectDependencytrackingUpdatedresourceconsumers.enummember.rawValue] // Object type(s) to search for
+let consumedResources: Bool = false // Return consumed resources?
+let consumedResourceType: [String] = [GetArchitectDependencytrackingUpdatedresourceconsumersRequest.ConsumedResourceType_getArchitectDependencytrackingUpdatedresourceconsumers.enummember.rawValue] // Resource type(s) to return
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+
+// Code example
+GetArchitectDependencytrackingUpdatedresourceconsumersRequest.getArchitectDependencytrackingUpdatedresourceconsumers(name: name, objectType: objectType, consumedResources: consumedResources, consumedResourceType: consumedResourceType, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetArchitectDependencytrackingUpdatedresourceconsumersRequest.getArchitectDependencytrackingUpdatedresourceconsumers was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let locationId: String = "" // Location ID
+let expand: [String] = [GetLocationRequest.Expand_getLocation.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+GetLocationRequest.getLocation(locationId: locationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLocationRequest.getLocation was successful")
+        dump(response)
+    }
+}

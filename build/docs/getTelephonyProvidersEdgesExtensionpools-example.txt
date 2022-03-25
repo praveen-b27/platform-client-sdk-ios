@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortBy: String = "" // Sort by
+let number: String = "" // Number
+
+// Code example
+GetTelephonyProvidersEdgesExtensionpoolsRequest.getTelephonyProvidersEdgesExtensionpools(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, number: number) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesExtensionpoolsRequest.getTelephonyProvidersEdgesExtensionpools was successful")
+        dump(response)
+    }
+}

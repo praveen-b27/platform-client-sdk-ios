@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: AuditRealtimeQueryRequest = new AuditRealtimeQueryRequest(...) // query
+let expand: [String] = [PostAuditsQueryRealtimeRequest.Expand_postAuditsQueryRealtime.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+PostAuditsQueryRealtimeRequest.postAuditsQueryRealtime(body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostAuditsQueryRealtimeRequest.postAuditsQueryRealtime was successful")
+        dump(response)
+    }
+}

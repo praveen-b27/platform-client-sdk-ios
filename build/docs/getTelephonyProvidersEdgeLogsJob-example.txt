@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge ID
+let jobId: String = "" // Job ID
+
+// Code example
+GetTelephonyProvidersEdgeLogsJobRequest.getTelephonyProvidersEdgeLogsJob(edgeId: edgeId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgeLogsJobRequest.getTelephonyProvidersEdgeLogsJob was successful")
+        dump(response)
+    }
+}

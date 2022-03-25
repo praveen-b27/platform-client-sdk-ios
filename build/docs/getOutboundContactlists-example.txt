@@ -1,0 +1,26 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let includeImportStatus: Bool = false // Include import status
+let includeSize: Bool = false // Include size
+let pageSize: Int = 25 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let filterType: GetOutboundContactlistsRequest.FilterType_getOutboundContactlists = GetOutboundContactlistsRequest.FilterType_getOutboundContactlists.enummember // Filter type
+let name: String = "" // Name
+let _id: [String] = [""] // id
+let divisionId: [String] = [""] // Division ID(s)
+let sortBy: String = "" // Sort by
+let sortOrder: GetOutboundContactlistsRequest.SortOrder_getOutboundContactlists = GetOutboundContactlistsRequest.SortOrder_getOutboundContactlists.enummember // Sort order
+
+// Code example
+GetOutboundContactlistsRequest.getOutboundContactlists(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, _id: _id, divisionId: divisionId, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundContactlistsRequest.getOutboundContactlists was successful")
+        dump(response)
+    }
+}

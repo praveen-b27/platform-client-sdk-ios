@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let appointmentId: String = "" // The ID of the coaching appointment.
+let annotationId: String = "" // The ID of the annotation.
+
+// Code example
+GetCoachingAppointmentAnnotationRequest.getCoachingAppointmentAnnotation(appointmentId: appointmentId, annotationId: annotationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetCoachingAppointmentAnnotationRequest.getCoachingAppointmentAnnotation was successful")
+        dump(response)
+    }
+}

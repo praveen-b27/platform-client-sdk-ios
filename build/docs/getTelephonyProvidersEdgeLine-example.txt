@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge ID
+let lineId: String = "" // Line ID
+
+// Code example
+GetTelephonyProvidersEdgeLineRequest.getTelephonyProvidersEdgeLine(edgeId: edgeId, lineId: lineId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgeLineRequest.getTelephonyProvidersEdgeLine was successful")
+        dump(response)
+    }
+}

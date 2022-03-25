@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let entityId: String = "" // Filters the shares returned to only the entity specified by the value of this parameter.
+let expand: [String] = [GetContentmanagementSharesRequest.Expand_getContentmanagementShares.enummember.rawValue] // Which fields, if any, to expand.
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+
+// Code example
+GetContentmanagementSharesRequest.getContentmanagementShares(entityId: entityId, expand: expand, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetContentmanagementSharesRequest.getContentmanagementShares was successful")
+        dump(response)
+    }
+}

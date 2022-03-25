@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let messageId: String = "" // Message ID
+
+// Code example
+DeleteVoicemailMessageRequest.deleteVoicemailMessage(messageId: messageId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteVoicemailMessageRequest.deleteVoicemailMessage was successful")
+    }
+}

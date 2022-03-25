@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let calibrationId: String = "" // Calibration ID
+let calibratorId: String = "" // calibratorId
+
+// Code example
+DeleteQualityCalibrationRequest.deleteQualityCalibration(calibrationId: calibrationId, calibratorId: calibratorId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("DeleteQualityCalibrationRequest.deleteQualityCalibration was successful")
+        dump(response)
+    }
+}

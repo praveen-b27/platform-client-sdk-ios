@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size, maximum 50
+let pageNumber: Int = 1 // Page number
+let interval: String = "" // Interval string; format is ISO-8601. Separate start and end times with forward slash '/'
+let expand: [String] = [GetConversationsCallsHistoryRequest.Expand_getConversationsCallsHistory.enummember.rawValue] // Which fields, if any, to expand.
+
+// Code example
+GetConversationsCallsHistoryRequest.getConversationsCallsHistory(pageSize: pageSize, pageNumber: pageNumber, interval: interval, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsCallsHistoryRequest.getConversationsCallsHistory was successful")
+        dump(response)
+    }
+}

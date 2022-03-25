@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let workday: Date = new Date(...) // Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let expand: [String] = [GetGamificationScorecardsRequest.Expand_getGamificationScorecards.enummember.rawValue] // Which fields, if any, to expand.
+
+// Code example
+GetGamificationScorecardsRequest.getGamificationScorecards(workday: workday, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationScorecardsRequest.getGamificationScorecards was successful")
+        dump(response)
+    }
+}

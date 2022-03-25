@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit.
+let planningGroupId: String = "" // The ID of a planning group to delete
+
+// Code example
+DeleteWorkforcemanagementBusinessunitPlanninggroupRequest.deleteWorkforcemanagementBusinessunitPlanninggroup(businessUnitId: businessUnitId, planningGroupId: planningGroupId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteWorkforcemanagementBusinessunitPlanninggroupRequest.deleteWorkforcemanagementBusinessunitPlanninggroup was successful")
+    }
+}

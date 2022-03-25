@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let ruleId: String = "" // Rule ID
+let expand: [String] = [GetAlertingInteractionstatsRuleRequest.Expand_getAlertingInteractionstatsRule.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+GetAlertingInteractionstatsRuleRequest.getAlertingInteractionstatsRule(ruleId: ruleId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAlertingInteractionstatsRuleRequest.getAlertingInteractionstatsRule was successful")
+        dump(response)
+    }
+}

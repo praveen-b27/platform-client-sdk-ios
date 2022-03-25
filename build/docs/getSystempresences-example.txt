@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetSystempresencesRequest.getSystempresences() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetSystempresencesRequest.getSystempresences was successful")
+        dump(response)
+    }
+}

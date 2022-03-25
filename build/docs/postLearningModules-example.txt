@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: LearningModuleRequest = new LearningModuleRequest(...) // The learning module to be created
+
+// Code example
+PostLearningModulesRequest.postLearningModules(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLearningModulesRequest.postLearningModules was successful")
+        dump(response)
+    }
+}

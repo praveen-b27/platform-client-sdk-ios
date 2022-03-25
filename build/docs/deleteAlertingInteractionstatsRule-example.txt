@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let ruleId: String = "" // Rule ID
+
+// Code example
+DeleteAlertingInteractionstatsRuleRequest.deleteAlertingInteractionstatsRule(ruleId: ruleId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteAlertingInteractionstatsRuleRequest.deleteAlertingInteractionstatsRule was successful")
+    }
+}

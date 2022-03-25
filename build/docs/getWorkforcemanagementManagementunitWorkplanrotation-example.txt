@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let workPlanRotationId: String = "" // The ID of the work plan rotation to fetch
+
+// Code example
+GetWorkforcemanagementManagementunitWorkplanrotationRequest.getWorkforcemanagementManagementunitWorkplanrotation(managementUnitId: managementUnitId, workPlanRotationId: workPlanRotationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementManagementunitWorkplanrotationRequest.getWorkforcemanagementManagementunitWorkplanrotation was successful")
+        dump(response)
+    }
+}

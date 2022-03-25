@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let trustorOrgId: String = "" // Trustor Organization Id
+let trusteeUserId: String = "" // Trustee User Id
+
+// Code example
+DeleteOrgauthorizationTrustorCloneduserRequest.deleteOrgauthorizationTrustorCloneduser(trustorOrgId: trustorOrgId, trusteeUserId: trusteeUserId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOrgauthorizationTrustorCloneduserRequest.deleteOrgauthorizationTrustorCloneduser was successful")
+    }
+}

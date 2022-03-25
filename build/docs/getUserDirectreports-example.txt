@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let expand: [String] = [GetUserDirectreportsRequest.Expand_getUserDirectreports.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+GetUserDirectreportsRequest.getUserDirectreports(userId: userId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserDirectreportsRequest.getUserDirectreports was successful")
+        dump(response)
+    }
+}

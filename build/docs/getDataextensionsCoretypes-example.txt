@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetDataextensionsCoretypesRequest.getDataextensionsCoretypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetDataextensionsCoretypesRequest.getDataextensionsCoretypes was successful")
+        dump(response)
+    }
+}

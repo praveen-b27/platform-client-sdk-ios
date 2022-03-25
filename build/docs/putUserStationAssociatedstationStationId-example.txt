@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let stationId: String = "" // stationId
+
+// Code example
+PutUserStationAssociatedstationStationIdRequest.putUserStationAssociatedstationStationId(userId: userId, stationId: stationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PutUserStationAssociatedstationStationIdRequest.putUserStationAssociatedstationStationId was successful")
+    }
+}

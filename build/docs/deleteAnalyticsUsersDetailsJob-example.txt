@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+
+// Code example
+DeleteAnalyticsUsersDetailsJobRequest.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteAnalyticsUsersDetailsJobRequest.deleteAnalyticsUsersDetailsJob was successful")
+    }
+}

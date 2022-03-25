@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let didId: String = "" // DID ID
+let body: DID = new DID(...) // DID
+
+// Code example
+PutTelephonyProvidersEdgesDidRequest.putTelephonyProvidersEdgesDid(didId: didId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutTelephonyProvidersEdgesDidRequest.putTelephonyProvidersEdgesDid was successful")
+        dump(response)
+    }
+}

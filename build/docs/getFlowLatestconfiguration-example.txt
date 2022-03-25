@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // Flow ID
+let deleted: Bool = false // Deleted flows
+
+// Code example
+GetFlowLatestconfigurationRequest.getFlowLatestconfiguration(flowId: flowId, deleted: deleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowLatestconfigurationRequest.getFlowLatestconfiguration was successful")
+        dump(response)
+    }
+}

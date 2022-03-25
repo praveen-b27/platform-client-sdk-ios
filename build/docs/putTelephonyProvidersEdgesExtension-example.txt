@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let extensionId: String = "" // Extension ID
+let body: Extension = new Extension(...) // Extension
+
+// Code example
+PutTelephonyProvidersEdgesExtensionRequest.putTelephonyProvidersEdgesExtension(extensionId: extensionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutTelephonyProvidersEdgesExtensionRequest.putTelephonyProvidersEdgesExtension was successful")
+        dump(response)
+    }
+}

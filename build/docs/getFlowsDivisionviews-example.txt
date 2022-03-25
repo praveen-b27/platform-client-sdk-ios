@@ -1,0 +1,27 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let type: [String] = [GetFlowsDivisionviewsRequest.ModelType_getFlowsDivisionviews.enummember.rawValue] // Type
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: String = "id" // Sort by
+let sortOrder: String = "asc" // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let publishVersionId: String = "" // Publish version ID
+let publishedAfter: String = "" // Published after
+let publishedBefore: String = "" // Published before
+let divisionId: [String] = [""] // division ID(s)
+let includeSchemas: Bool = false // Include variable schemas
+
+// Code example
+GetFlowsDivisionviewsRequest.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, publishVersionId: publishVersionId, publishedAfter: publishedAfter, publishedBefore: publishedBefore, divisionId: divisionId, includeSchemas: includeSchemas) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsDivisionviewsRequest.getFlowsDivisionviews was successful")
+        dump(response)
+    }
+}

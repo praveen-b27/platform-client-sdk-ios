@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let expand: [String] = [GetUserRequest.Expand_getUser.enummember.rawValue] // Which fields, if any, to expand
+let integrationPresenceSource: GetUserRequest.IntegrationPresenceSource_getUser = GetUserRequest.IntegrationPresenceSource_getUser.enummember // Gets an integration presence for a user instead of their default.
+let state: GetUserRequest.State_getUser = GetUserRequest.State_getUser.enummember // Search for a user with this state
+
+// Code example
+GetUserRequest.getUser(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource, state: state) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserRequest.getUser was successful")
+        dump(response)
+    }
+}

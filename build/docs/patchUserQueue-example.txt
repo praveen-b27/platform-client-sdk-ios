@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let userId: String = "" // User ID
+let body: UserQueue = new UserQueue(...) // Queue Member
+
+// Code example
+PatchUserQueueRequest.patchUserQueue(queueId: queueId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchUserQueueRequest.patchUserQueue was successful")
+        dump(response)
+    }
+}

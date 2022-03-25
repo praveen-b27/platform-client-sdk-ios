@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let flowExecutionId: String = "" // flow execution ID
+
+// Code example
+GetFlowsExecutionRequest.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsExecutionRequest.getFlowsExecution was successful")
+        dump(response)
+    }
+}

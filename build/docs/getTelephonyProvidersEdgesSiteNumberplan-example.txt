@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let siteId: String = "" // Site ID
+let numberPlanId: String = "" // Number Plan ID
+
+// Code example
+GetTelephonyProvidersEdgesSiteNumberplanRequest.getTelephonyProvidersEdgesSiteNumberplan(siteId: siteId, numberPlanId: numberPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesSiteNumberplanRequest.getTelephonyProvidersEdgesSiteNumberplan was successful")
+        dump(response)
+    }
+}

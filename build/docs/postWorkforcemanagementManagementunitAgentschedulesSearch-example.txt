@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
+let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
+
+// Code example
+PostWorkforcemanagementManagementunitAgentschedulesSearchRequest.postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId: managementUnitId, body: body, forceAsync: forceAsync, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitAgentschedulesSearchRequest.postWorkforcemanagementManagementunitAgentschedulesSearch was successful")
+        dump(response)
+    }
+}

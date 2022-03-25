@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let participantId: String = "" // participant ID
+
+// Code example
+DeleteConversationParticipantFlaggedreasonRequest.deleteConversationParticipantFlaggedreason(conversationId: conversationId, participantId: participantId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteConversationParticipantFlaggedreasonRequest.deleteConversationParticipantFlaggedreason was successful")
+    }
+}

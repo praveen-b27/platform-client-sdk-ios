@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let scheduleId: String = "" // Schedule ID
+
+// Code example
+PostAnalyticsReportingScheduleRunreportRequest.postAnalyticsReportingScheduleRunreport(scheduleId: scheduleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostAnalyticsReportingScheduleRunreportRequest.postAnalyticsReportingScheduleRunreport was successful")
+        dump(response)
+    }
+}

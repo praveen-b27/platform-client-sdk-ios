@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let promptId: String = "" // Prompt ID
+let allResources: Bool = true // Whether or not to delete all the prompt resources
+
+// Code example
+DeleteArchitectPromptRequest.deleteArchitectPrompt(promptId: promptId, allResources: allResources) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteArchitectPromptRequest.deleteArchitectPrompt was successful")
+    }
+}

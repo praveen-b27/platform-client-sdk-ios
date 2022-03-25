@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: ActionTemplate = new ActionTemplate(...) // 
+
+// Code example
+PostJourneyActiontemplatesRequest.postJourneyActiontemplates(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostJourneyActiontemplatesRequest.postJourneyActiontemplates was successful")
+        dump(response)
+    }
+}

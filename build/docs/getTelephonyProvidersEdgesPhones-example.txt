@@ -1,0 +1,32 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: GetTelephonyProvidersEdgesPhonesRequest.SortBy_getTelephonyProvidersEdgesPhones = GetTelephonyProvidersEdgesPhonesRequest.SortBy_getTelephonyProvidersEdgesPhones.enummember // The field to sort by
+let sortOrder: String = "ASC" // Sort order
+let siteId: String = "" // Filter by site.id
+let webRtcUserId: String = "" // Filter by webRtcUser.id
+let phoneBaseSettingsId: String = "" // Filter by phoneBaseSettings.id
+let linesLoggedInUserId: String = "" // Filter by lines.loggedInUser.id
+let linesDefaultForUserId: String = "" // Filter by lines.defaultForUser.id
+let phoneHardwareId: String = "" // Filter by phone_hardwareId
+let linesId: String = "" // Filter by lines.id
+let linesName: String = "" // Filter by lines.name
+let name: String = "" // Name of the Phone to filter by
+let statusOperationalStatus: String = "" // The primary status to filter by
+let secondaryStatusOperationalStatus: String = "" // The secondary status to filter by
+let expand: [String] = [GetTelephonyProvidersEdgesPhonesRequest.Expand_getTelephonyProvidersEdgesPhones.enummember.rawValue] // Fields to expand in the response, comma-separated
+let fields: [String] = [GetTelephonyProvidersEdgesPhonesRequest.Fields_getTelephonyProvidersEdgesPhones.enummember.rawValue] // Fields and properties to get, comma-separated
+
+// Code example
+GetTelephonyProvidersEdgesPhonesRequest.getTelephonyProvidersEdgesPhones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, siteId: siteId, webRtcUserId: webRtcUserId, phoneBaseSettingsId: phoneBaseSettingsId, linesLoggedInUserId: linesLoggedInUserId, linesDefaultForUserId: linesDefaultForUserId, phoneHardwareId: phoneHardwareId, linesId: linesId, linesName: linesName, name: name, statusOperationalStatus: statusOperationalStatus, secondaryStatusOperationalStatus: secondaryStatusOperationalStatus, expand: expand, fields: fields) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesPhonesRequest.getTelephonyProvidersEdgesPhones was successful")
+        dump(response)
+    }
+}

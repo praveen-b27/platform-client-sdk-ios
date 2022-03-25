@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+
+// Code example
+GetKnowledgeKnowledgebaseRequest.getKnowledgeKnowledgebase(knowledgeBaseId: knowledgeBaseId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetKnowledgeKnowledgebaseRequest.getKnowledgeKnowledgebase was successful")
+        dump(response)
+    }
+}

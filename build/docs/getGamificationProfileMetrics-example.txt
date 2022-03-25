@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let profileId: String = "" // Performance Profile Id
+let expand: [String] = [GetGamificationProfileMetricsRequest.Expand_getGamificationProfileMetrics.enummember.rawValue] // Which fields, if any, to expand.
+let workday: Date = new Date(...) // The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GetGamificationProfileMetricsRequest.getGamificationProfileMetrics(profileId: profileId, expand: expand, workday: workday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationProfileMetricsRequest.getGamificationProfileMetrics was successful")
+        dump(response)
+    }
+}

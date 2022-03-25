@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+DeleteConversationsMessagingIntegrationsTwitterIntegrationIdRequest.deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteConversationsMessagingIntegrationsTwitterIntegrationIdRequest.deleteConversationsMessagingIntegrationsTwitterIntegrationId was successful")
+    }
+}

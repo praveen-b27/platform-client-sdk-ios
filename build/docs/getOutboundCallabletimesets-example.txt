@@ -1,0 +1,22 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 1 // Page number
+let allowEmptyResult: Bool = false // Whether to return an empty page when there are no results for that page
+let filterType: GetOutboundCallabletimesetsRequest.FilterType_getOutboundCallabletimesets = GetOutboundCallabletimesetsRequest.FilterType_getOutboundCallabletimesets.enummember // Filter type
+let name: String = "" // Name
+let sortBy: String = "" // Sort by
+let sortOrder: GetOutboundCallabletimesetsRequest.SortOrder_getOutboundCallabletimesets = GetOutboundCallabletimesetsRequest.SortOrder_getOutboundCallabletimesets.enummember // Sort order
+
+// Code example
+GetOutboundCallabletimesetsRequest.getOutboundCallabletimesets(pageSize: pageSize, pageNumber: pageNumber, allowEmptyResult: allowEmptyResult, filterType: filterType, name: name, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundCallabletimesetsRequest.getOutboundCallabletimesets was successful")
+        dump(response)
+    }
+}

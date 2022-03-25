@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: CreateBenefitAssessmentJobRequest = new CreateBenefitAssessmentJobRequest(...) // 
+
+// Code example
+PostRoutingAssessmentsJobsRequest.postRoutingAssessmentsJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostRoutingAssessmentsJobsRequest.postRoutingAssessmentsJobs was successful")
+        dump(response)
+    }
+}

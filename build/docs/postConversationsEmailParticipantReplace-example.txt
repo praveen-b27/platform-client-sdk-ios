@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: TransferRequest = new TransferRequest(...) // Transfer request
+
+// Code example
+PostConversationsEmailParticipantReplaceRequest.postConversationsEmailParticipantReplace(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostConversationsEmailParticipantReplaceRequest.postConversationsEmailParticipantReplace was successful")
+    }
+}

@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: OutboundSettings = new OutboundSettings(...) // outboundSettings
+
+// Code example
+PatchOutboundSettingsRequest.patchOutboundSettings(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PatchOutboundSettingsRequest.patchOutboundSettings was successful")
+    }
+}

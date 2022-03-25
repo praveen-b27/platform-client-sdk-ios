@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let body: SearchShiftTradesRequest = new SearchShiftTradesRequest(...) // body
+
+// Code example
+PostWorkforcemanagementManagementunitWeekShifttradesSearchRequest.postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId: managementUnitId, weekDateId: weekDateId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitWeekShifttradesSearchRequest.postWorkforcemanagementManagementunitWeekShifttradesSearch was successful")
+        dump(response)
+    }
+}

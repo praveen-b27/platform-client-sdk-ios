@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let requestId: String = "" // Unique id for the limit change request
+
+// Code example
+GetOrganizationsLimitsChangerequestRequest.getOrganizationsLimitsChangerequest(requestId: requestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOrganizationsLimitsChangerequestRequest.getOrganizationsLimitsChangerequest was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: CrossPlatformPolicyCreate = new CrossPlatformPolicyCreate(...) // Policy
+
+// Code example
+PostRecordingCrossplatformMediaretentionpoliciesRequest.postRecordingCrossplatformMediaretentionpolicies(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostRecordingCrossplatformMediaretentionpoliciesRequest.postRecordingCrossplatformMediaretentionpolicies was successful")
+        dump(response)
+    }
+}

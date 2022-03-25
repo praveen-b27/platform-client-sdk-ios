@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: PostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports = PostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports.enummember // Language code, format: iso2-LOCALE
+let body: KnowledgeImport = new KnowledgeImport(...) // 
+
+// Code example
+PostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.postKnowledgeKnowledgebaseLanguageDocumentsImports(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostKnowledgeKnowledgebaseLanguageDocumentsImportsRequest.postKnowledgeKnowledgebaseLanguageDocumentsImports was successful")
+        dump(response)
+    }
+}

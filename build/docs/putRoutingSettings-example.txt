@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: RoutingSettings = new RoutingSettings(...) // Organization Settings
+
+// Code example
+PutRoutingSettingsRequest.putRoutingSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutRoutingSettingsRequest.putRoutingSettings was successful")
+        dump(response)
+    }
+}

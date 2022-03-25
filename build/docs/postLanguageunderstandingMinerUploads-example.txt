@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let minerId: String = "" // Miner ID
+let body: Empty = new Empty(...) // query
+
+// Code example
+PostLanguageunderstandingMinerUploadsRequest.postLanguageunderstandingMinerUploads(minerId: minerId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLanguageunderstandingMinerUploadsRequest.postLanguageunderstandingMinerUploads was successful")
+        dump(response)
+    }
+}

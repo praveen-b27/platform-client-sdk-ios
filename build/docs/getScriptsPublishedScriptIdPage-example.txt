@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let scriptId: String = "" // Script ID
+let pageId: String = "" // Page ID
+let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+
+// Code example
+GetScriptsPublishedScriptIdPageRequest.getScriptsPublishedScriptIdPage(scriptId: scriptId, pageId: pageId, scriptDataVersion: scriptDataVersion) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetScriptsPublishedScriptIdPageRequest.getScriptsPublishedScriptIdPage was successful")
+        dump(response)
+    }
+}

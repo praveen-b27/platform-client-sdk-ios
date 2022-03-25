@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+let body: UpdateDraftInput = new UpdateDraftInput(...) // Input used to patch the Action Draft.
+
+// Code example
+PatchIntegrationsActionDraftRequest.patchIntegrationsActionDraft(actionId: actionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchIntegrationsActionDraftRequest.patchIntegrationsActionDraft was successful")
+        dump(response)
+    }
+}

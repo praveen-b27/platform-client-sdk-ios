@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortOrder: GetUserRoutingskillsRequest.SortOrder_getUserRoutingskills = GetUserRoutingskillsRequest.SortOrder_getUserRoutingskills.enummember // Ascending or descending sort order
+
+// Code example
+GetUserRoutingskillsRequest.getUserRoutingskills(userId: userId, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserRoutingskillsRequest.getUserRoutingskills was successful")
+        dump(response)
+    }
+}

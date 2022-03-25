@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let workday: Date = new Date(...) // Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+// Code example
+GetGamificationProfilesUsersMeRequest.getGamificationProfilesUsersMe(workday: workday) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetGamificationProfilesUsersMeRequest.getGamificationProfilesUsersMe was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let configurationId: String = "" // The configuration version ID
+
+// Code example
+GetWebdeploymentsConfigurationVersionsDraftRequest.getWebdeploymentsConfigurationVersionsDraft(configurationId: configurationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWebdeploymentsConfigurationVersionsDraftRequest.getWebdeploymentsConfigurationVersionsDraft was successful")
+        dump(response)
+    }
+}

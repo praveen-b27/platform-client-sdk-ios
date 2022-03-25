@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let pageSize: Int = 25 // The number of entries to return per page, or omitted for the default.
+let pageNumber: Int = 1 // The page number to return, or omitted for the first page.
+let excludeDisconnectedMembers: Bool = false // If true, the results will not contain members who have a DISCONNECTED state.
+
+// Code example
+GetWebchatGuestConversationMembersRequest.getWebchatGuestConversationMembers(conversationId: conversationId, pageSize: pageSize, pageNumber: pageNumber, excludeDisconnectedMembers: excludeDisconnectedMembers) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWebchatGuestConversationMembersRequest.getWebchatGuestConversationMembers was successful")
+        dump(response)
+    }
+}

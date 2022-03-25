@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let timeOffRequestId: String = "" // Time Off Request Id
+
+// Code example
+GetWorkforcemanagementTimeoffrequestWaitlistpositionsRequest.getWorkforcemanagementTimeoffrequestWaitlistpositions(timeOffRequestId: timeOffRequestId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementTimeoffrequestWaitlistpositionsRequest.getWorkforcemanagementTimeoffrequestWaitlistpositions was successful")
+        dump(response)
+    }
+}

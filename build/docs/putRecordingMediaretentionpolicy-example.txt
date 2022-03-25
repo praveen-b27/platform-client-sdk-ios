@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let policyId: String = "" // Policy ID
+let body: Policy = new Policy(...) // Policy
+
+// Code example
+PutRecordingMediaretentionpolicyRequest.putRecordingMediaretentionpolicy(policyId: policyId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutRecordingMediaretentionpolicyRequest.putRecordingMediaretentionpolicy was successful")
+        dump(response)
+    }
+}

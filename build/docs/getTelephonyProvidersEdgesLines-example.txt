@@ -1,0 +1,20 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let name: String = "" // Name
+let sortBy: String = "name" // Value by which to sort
+let expand: [String] = [GetTelephonyProvidersEdgesLinesRequest.Expand_getTelephonyProvidersEdgesLines.enummember.rawValue] // Fields to expand in the response, comma-separated
+
+// Code example
+GetTelephonyProvidersEdgesLinesRequest.getTelephonyProvidersEdgesLines(pageSize: pageSize, pageNumber: pageNumber, name: name, sortBy: sortBy, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesLinesRequest.getTelephonyProvidersEdgesLines was successful")
+        dump(response)
+    }
+}

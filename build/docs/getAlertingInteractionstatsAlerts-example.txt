@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let expand: [String] = [GetAlertingInteractionstatsAlertsRequest.Expand_getAlertingInteractionstatsAlerts.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+GetAlertingInteractionstatsAlertsRequest.getAlertingInteractionstatsAlerts(expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAlertingInteractionstatsAlertsRequest.getAlertingInteractionstatsAlerts was successful")
+        dump(response)
+    }
+}

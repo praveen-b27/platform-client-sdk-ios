@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+
+// Code example
+PostOutboundConversationDncRequest.postOutboundConversationDnc(conversationId: conversationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostOutboundConversationDncRequest.postOutboundConversationDnc was successful")
+    }
+}

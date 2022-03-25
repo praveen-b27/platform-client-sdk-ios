@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let recordingId: String = "" // User Recording ID
+let body: UserRecording = new UserRecording(...) // UserRecording
+let expand: [String] = [PutUserrecordingRequest.Expand_putUserrecording.enummember.rawValue] // Which fields, if any, to expand.
+
+// Code example
+PutUserrecordingRequest.putUserrecording(recordingId: recordingId, body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutUserrecordingRequest.putUserrecording was successful")
+        dump(response)
+    }
+}

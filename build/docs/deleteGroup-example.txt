@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let groupId: String = "" // Group ID
+
+// Code example
+DeleteGroupRequest.deleteGroup(groupId: groupId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteGroupRequest.deleteGroup was successful")
+    }
+}

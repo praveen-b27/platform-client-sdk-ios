@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let workspaceId: String = "" // Workspace ID
+let moveChildrenToWorkspaceId: String = "" // New location for objects in deleted workspace.
+
+// Code example
+DeleteContentmanagementWorkspaceRequest.deleteContentmanagementWorkspace(workspaceId: workspaceId, moveChildrenToWorkspaceId: moveChildrenToWorkspaceId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteContentmanagementWorkspaceRequest.deleteContentmanagementWorkspace was successful")
+    }
+}

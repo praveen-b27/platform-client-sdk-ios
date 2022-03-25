@@ -1,0 +1,25 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // Specifies the ID of the learning module.
+let interval: String = "" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let completionInterval: String = "" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let overdue: GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortOrder: GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)
+let types: [String] = [GetUsersDevelopmentActivitiesMeRequest.Types_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies the activity types.
+let statuses: [String] = [GetUsersDevelopmentActivitiesMeRequest.Statuses_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies the activity statuses to filter by
+let relationship: [String] = [GetUsersDevelopmentActivitiesMeRequest.Relationship_getUsersDevelopmentActivitiesMe.enummember.rawValue] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.
+
+// Code example
+GetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe was successful")
+        dump(response)
+    }
+}

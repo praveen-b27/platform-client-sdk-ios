@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let alertId: String = "" // Alert ID
+
+// Code example
+DeleteAlertingInteractionstatsAlertRequest.deleteAlertingInteractionstatsAlert(alertId: alertId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteAlertingInteractionstatsAlertRequest.deleteAlertingInteractionstatsAlert was successful")
+    }
+}

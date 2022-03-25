@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetVoicemailMeMailboxRequest.getVoicemailMeMailbox() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetVoicemailMeMailboxRequest.getVoicemailMeMailbox was successful")
+        dump(response)
+    }
+}

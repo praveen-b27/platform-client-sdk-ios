@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let campaignRuleId: String = "" // Campaign Rule ID
+
+// Code example
+DeleteOutboundCampaignruleRequest.deleteOutboundCampaignrule(campaignRuleId: campaignRuleId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundCampaignruleRequest.deleteOutboundCampaignrule was successful")
+    }
+}

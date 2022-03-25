@@ -1,0 +1,24 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: String = "id" // Sort by
+let sortOrder: String = "asc" // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let _description: String = "" // Description
+let nameOrDescription: String = "" // Name or description
+let divisionId: [String] = [""] // division ID(s)
+
+// Code example
+GetFlowsMilestonesRequest.getFlowsMilestones(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowsMilestonesRequest.getFlowsMilestones was successful")
+        dump(response)
+    }
+}

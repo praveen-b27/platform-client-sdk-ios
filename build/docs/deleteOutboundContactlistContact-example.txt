@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let contactListId: String = "" // Contact List ID
+let contactId: String = "" // Contact ID
+
+// Code example
+DeleteOutboundContactlistContactRequest.deleteOutboundContactlistContact(contactListId: contactListId, contactId: contactId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundContactlistContactRequest.deleteOutboundContactlistContact was successful")
+    }
+}

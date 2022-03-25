@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetAnalyticsReportingSettingsRequest.getAnalyticsReportingSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAnalyticsReportingSettingsRequest.getAnalyticsReportingSettings was successful")
+        dump(response)
+    }
+}

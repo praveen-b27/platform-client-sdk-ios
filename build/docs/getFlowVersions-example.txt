@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // Flow ID
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let deleted: Bool = true // Include Deleted flows
+
+// Code example
+GetFlowVersionsRequest.getFlowVersions(flowId: flowId, pageNumber: pageNumber, pageSize: pageSize, deleted: deleted) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFlowVersionsRequest.getFlowVersions was successful")
+        dump(response)
+    }
+}

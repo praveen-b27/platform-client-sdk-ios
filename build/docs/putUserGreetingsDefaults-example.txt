@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: DefaultGreetingList = new DefaultGreetingList(...) // The updated defaultGreetingList
+
+// Code example
+PutUserGreetingsDefaultsRequest.putUserGreetingsDefaults(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutUserGreetingsDefaultsRequest.putUserGreetingsDefaults was successful")
+        dump(response)
+    }
+}

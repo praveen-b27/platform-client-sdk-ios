@@ -1,0 +1,21 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let type: GetTelephonyProvidersEdgesDidpoolsDidsRequest.ModelType_getTelephonyProvidersEdgesDidpoolsDids = GetTelephonyProvidersEdgesDidpoolsDidsRequest.ModelType_getTelephonyProvidersEdgesDidpoolsDids.enummember // The type of numbers to return.
+let _id: [String] = [""] // Filter by a specific list of DID Pools.  If this is not provided, numbers from all DID Pools will be returned.
+let numberMatch: String = "" // A number to filter the results by.
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let sortOrder: String = "ascending" // Sort order
+
+// Code example
+GetTelephonyProvidersEdgesDidpoolsDidsRequest.getTelephonyProvidersEdgesDidpoolsDids(type: type, _id: _id, numberMatch: numberMatch, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgesDidpoolsDidsRequest.getTelephonyProvidersEdgesDidpoolsDids was successful")
+        dump(response)
+    }
+}

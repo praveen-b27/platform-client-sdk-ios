@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let callableTimeSetId: String = "" // Callable Time Set ID
+
+// Code example
+DeleteOutboundCallabletimesetRequest.deleteOutboundCallabletimeset(callableTimeSetId: callableTimeSetId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundCallabletimesetRequest.deleteOutboundCallabletimeset was successful")
+    }
+}

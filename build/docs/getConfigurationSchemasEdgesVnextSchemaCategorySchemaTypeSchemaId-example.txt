@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let schemaCategory: String = "" // Schema category
+let schemaType: String = "" // Schema type
+let schemaId: String = "" // Schema ID
+
+// Code example
+GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory: schemaCategory, schemaType: schemaType, schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdRequest.getConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId was successful")
+        dump(response)
+    }
+}

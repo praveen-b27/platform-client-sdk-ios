@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: SupportedContent = new SupportedContent(...) // SupportedContent
+
+// Code example
+PostConversationsMessagingSupportedcontentRequest.postConversationsMessagingSupportedcontent(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationsMessagingSupportedcontentRequest.postConversationsMessagingSupportedcontent was successful")
+        dump(response)
+    }
+}

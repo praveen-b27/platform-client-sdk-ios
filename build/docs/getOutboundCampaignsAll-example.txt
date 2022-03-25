@@ -1,0 +1,22 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let _id: [String] = [""] // Campaign ID(s)
+let name: String = "" // Campaign name(s)
+let divisionId: [String] = [""] // Division ID(s)
+let mediaType: [String] = [GetOutboundCampaignsAllRequest.MediaType_getOutboundCampaignsAll.enummember.rawValue] // Media type(s)
+let sortOrder: GetOutboundCampaignsAllRequest.SortOrder_getOutboundCampaignsAll = GetOutboundCampaignsAllRequest.SortOrder_getOutboundCampaignsAll.enummember // Sort order
+
+// Code example
+GetOutboundCampaignsAllRequest.getOutboundCampaignsAll(pageSize: pageSize, pageNumber: pageNumber, _id: _id, name: name, divisionId: divisionId, mediaType: mediaType, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundCampaignsAllRequest.getOutboundCampaignsAll was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let body: RoleDivisionGrants = new RoleDivisionGrants(...) // Pairs of role and division IDs
+
+// Code example
+PostAuthorizationSubjectBulkremoveRequest.postAuthorizationSubjectBulkremove(subjectId: subjectId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostAuthorizationSubjectBulkremoveRequest.postAuthorizationSubjectBulkremove was successful")
+    }
+}

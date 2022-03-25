@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let schemaId: String = "" // Schema ID
+
+// Code example
+GetExternalcontactsOrganizationsSchemaVersionsRequest.getExternalcontactsOrganizationsSchemaVersions(schemaId: schemaId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetExternalcontactsOrganizationsSchemaVersionsRequest.getExternalcontactsOrganizationsSchemaVersions was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+let body: ProgramRequest = new ProgramRequest(...) // The program to update
+
+// Code example
+PutSpeechandtextanalyticsProgramRequest.putSpeechandtextanalyticsProgram(programId: programId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutSpeechandtextanalyticsProgramRequest.putSpeechandtextanalyticsProgram was successful")
+        dump(response)
+    }
+}

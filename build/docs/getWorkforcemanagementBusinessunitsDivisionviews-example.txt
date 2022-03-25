@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let divisionId: [String] = [""] // The divisionIds to filter by. If omitted, will return business units in all divisions
+
+// Code example
+GetWorkforcemanagementBusinessunitsDivisionviewsRequest.getWorkforcemanagementBusinessunitsDivisionviews(divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitsDivisionviewsRequest.getWorkforcemanagementBusinessunitsDivisionviews was successful")
+        dump(response)
+    }
+}

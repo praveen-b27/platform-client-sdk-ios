@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let communicationId: String = "" // communicationId
+let body: MediaParticipantRequest = new MediaParticipantRequest(...) // Participant
+
+// Code example
+PatchConversationsEmailParticipantCommunicationRequest.patchConversationsEmailParticipantCommunication(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchConversationsEmailParticipantCommunicationRequest.patchConversationsEmailParticipantCommunication was successful")
+        dump(response)
+    }
+}

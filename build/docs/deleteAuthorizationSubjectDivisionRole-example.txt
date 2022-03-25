@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let subjectId: String = "" // Subject ID (user or group)
+let divisionId: String = "" // the id of the division of the grant
+let roleId: String = "" // the id of the role of the grant
+
+// Code example
+DeleteAuthorizationSubjectDivisionRoleRequest.deleteAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId: divisionId, roleId: roleId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteAuthorizationSubjectDivisionRoleRequest.deleteAuthorizationSubjectDivisionRole was successful")
+    }
+}

@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let minerId: String = "" // Miner ID
+
+// Code example
+DeleteLanguageunderstandingMinerRequest.deleteLanguageunderstandingMiner(minerId: minerId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteLanguageunderstandingMinerRequest.deleteLanguageunderstandingMiner was successful")
+    }
+}

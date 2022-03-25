@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+
+// Code example
+DeleteOutboundSchedulesCampaignRequest.deleteOutboundSchedulesCampaign(campaignId: campaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundSchedulesCampaignRequest.deleteOutboundSchedulesCampaign was successful")
+    }
+}

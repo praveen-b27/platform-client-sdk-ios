@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let domainId: String = "" // ID of the NLU domain.
+
+// Code example
+DeleteLanguageunderstandingDomainRequest.deleteLanguageunderstandingDomain(domainId: domainId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteLanguageunderstandingDomainRequest.deleteLanguageunderstandingDomain was successful")
+    }
+}

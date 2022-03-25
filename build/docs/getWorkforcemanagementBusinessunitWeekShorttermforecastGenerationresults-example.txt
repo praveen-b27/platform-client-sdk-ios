@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let forecastId: String = "" // The ID of the forecast
+
+// Code example
+GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresultsRequest.getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults was successful")
+        dump(response)
+    }
+}

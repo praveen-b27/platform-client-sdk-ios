@@ -1,0 +1,22 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let name: [String] = [""] // Name
+let _description: String = "" // Description
+let nameOrDescription: String = "" // Name or description
+let sortBy: String = "id" // Sort by
+let sortOrder: String = "asc" // Sort order
+
+// Code example
+GetArchitectPromptsRequest.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, name: name, _description: _description, nameOrDescription: nameOrDescription, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetArchitectPromptsRequest.getArchitectPrompts was successful")
+        dump(response)
+    }
+}

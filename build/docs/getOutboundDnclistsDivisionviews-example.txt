@@ -1,0 +1,25 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let includeImportStatus: Bool = false // Include import status
+let includeSize: Bool = false // Include size
+let pageSize: Int = 25 // Page size. The max that will be returned is 100.
+let pageNumber: Int = 1 // Page number
+let filterType: GetOutboundDnclistsDivisionviewsRequest.FilterType_getOutboundDnclistsDivisionviews = GetOutboundDnclistsDivisionviewsRequest.FilterType_getOutboundDnclistsDivisionviews.enummember // Filter type
+let name: String = "" // Name
+let dncSourceType: GetOutboundDnclistsDivisionviewsRequest.DncSourceType_getOutboundDnclistsDivisionviews = GetOutboundDnclistsDivisionviewsRequest.DncSourceType_getOutboundDnclistsDivisionviews.enummember // DncSourceType
+let _id: [String] = [""] // id
+let sortBy: String = "" // Sort by
+let sortOrder: GetOutboundDnclistsDivisionviewsRequest.SortOrder_getOutboundDnclistsDivisionviews = GetOutboundDnclistsDivisionviewsRequest.SortOrder_getOutboundDnclistsDivisionviews.enummember // Sort order
+
+// Code example
+GetOutboundDnclistsDivisionviewsRequest.getOutboundDnclistsDivisionviews(includeImportStatus: includeImportStatus, includeSize: includeSize, pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, name: name, dncSourceType: dncSourceType, _id: _id, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundDnclistsDivisionviewsRequest.getOutboundDnclistsDivisionviews was successful")
+        dump(response)
+    }
+}

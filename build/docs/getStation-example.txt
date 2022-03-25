@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let stationId: String = "" // Station ID
+
+// Code example
+GetStationRequest.getStation(stationId: stationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetStationRequest.getStation was successful")
+        dump(response)
+    }
+}

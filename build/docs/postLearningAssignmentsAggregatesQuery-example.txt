@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: LearningAssignmentAggregateParam = new LearningAssignmentAggregateParam(...) // Aggregate Request
+
+// Code example
+PostLearningAssignmentsAggregatesQueryRequest.postLearningAssignmentsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLearningAssignmentsAggregatesQueryRequest.postLearningAssignmentsAggregatesQuery was successful")
+        dump(response)
+    }
+}

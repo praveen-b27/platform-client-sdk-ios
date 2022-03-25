@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetScimV2ResourcetypesRequest.getScimV2Resourcetypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetScimV2ResourcetypesRequest.getScimV2Resourcetypes was successful")
+        dump(response)
+    }
+}

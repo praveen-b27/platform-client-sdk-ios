@@ -1,0 +1,25 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // The total page size requested
+let pageNumber: Int = 1 // The page number requested
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+let sortBy: String = "" // Root level field name to sort on.
+let sortOrder: GetIntegrationsActionsRequest.SortOrder_getIntegrationsActions = GetIntegrationsActionsRequest.SortOrder_getIntegrationsActions.enummember // Direction to sort 'sortBy' field.
+let category: String = "" // Filter by category name
+let name: String = "" // Filter by action name. Provide full or just the first part of name.
+let secure: GetIntegrationsActionsRequest.Secure_getIntegrationsActions = GetIntegrationsActionsRequest.Secure_getIntegrationsActions.enummember // Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+let includeAuthActions: GetIntegrationsActionsRequest.IncludeAuthActions_getIntegrationsActions = GetIntegrationsActionsRequest.IncludeAuthActions_getIntegrationsActions.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
+
+// Code example
+GetIntegrationsActionsRequest.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetIntegrationsActionsRequest.getIntegrationsActions was successful")
+        dump(response)
+    }
+}

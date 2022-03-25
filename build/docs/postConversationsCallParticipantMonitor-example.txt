@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+
+// Code example
+PostConversationsCallParticipantMonitorRequest.postConversationsCallParticipantMonitor(conversationId: conversationId, participantId: participantId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostConversationsCallParticipantMonitorRequest.postConversationsCallParticipantMonitor was successful")
+    }
+}

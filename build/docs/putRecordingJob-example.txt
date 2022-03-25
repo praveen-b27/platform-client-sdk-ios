@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // jobId
+let body: ExecuteRecordingJobsQuery = new ExecuteRecordingJobsQuery(...) // query
+
+// Code example
+PutRecordingJobRequest.putRecordingJob(jobId: jobId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutRecordingJobRequest.putRecordingJob was successful")
+        dump(response)
+    }
+}

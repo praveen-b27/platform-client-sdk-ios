@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let sequenceId: String = "" // Sequence ID
+let body: SequenceSchedule = new SequenceSchedule(...) // SequenceSchedule
+
+// Code example
+PutOutboundSchedulesSequenceRequest.putOutboundSchedulesSequence(sequenceId: sequenceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutOutboundSchedulesSequenceRequest.putOutboundSchedulesSequence was successful")
+        dump(response)
+    }
+}

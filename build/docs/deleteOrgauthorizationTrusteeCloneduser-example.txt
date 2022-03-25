@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let trusteeOrgId: String = "" // Trustee Organization Id
+let trusteeUserId: String = "" // Id of the cloned user to delete
+
+// Code example
+DeleteOrgauthorizationTrusteeCloneduserRequest.deleteOrgauthorizationTrusteeCloneduser(trusteeOrgId: trusteeOrgId, trusteeUserId: trusteeUserId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOrgauthorizationTrusteeCloneduserRequest.deleteOrgauthorizationTrusteeCloneduser was successful")
+    }
+}

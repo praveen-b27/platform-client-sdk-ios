@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let actionTemplateId: String = "" // ID of the action template.
+let hardDelete: Bool = true // Determines whether Action Template should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default.
+
+// Code example
+DeleteJourneyActiontemplateRequest.deleteJourneyActiontemplate(actionTemplateId: actionTemplateId, hardDelete: hardDelete) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteJourneyActiontemplateRequest.deleteJourneyActiontemplate was successful")
+    }
+}

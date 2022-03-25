@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+GetAuthorizationProductsRequest.getAuthorizationProducts() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetAuthorizationProductsRequest.getAuthorizationProducts was successful")
+        dump(response)
+    }
+}

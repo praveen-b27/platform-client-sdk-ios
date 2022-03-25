@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let dialect: GetSpeechandtextanalyticsTopicsGeneralRequest.Dialect_getSpeechandtextanalyticsTopicsGeneral = GetSpeechandtextanalyticsTopicsGeneralRequest.Dialect_getSpeechandtextanalyticsTopicsGeneral.enummember // The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard
+
+// Code example
+GetSpeechandtextanalyticsTopicsGeneralRequest.getSpeechandtextanalyticsTopicsGeneral(dialect: dialect) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetSpeechandtextanalyticsTopicsGeneralRequest.getSpeechandtextanalyticsTopicsGeneral was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: JourneySegment = new JourneySegment(...) // 
+
+// Code example
+PostJourneySegmentsRequest.postJourneySegments(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostJourneySegmentsRequest.postJourneySegments was successful")
+        dump(response)
+    }
+}

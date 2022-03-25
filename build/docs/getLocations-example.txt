@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let _id: [String] = [""] // id
+let sortOrder: GetLocationsRequest.SortOrder_getLocations = GetLocationsRequest.SortOrder_getLocations.enummember // Sort order
+
+// Code example
+GetLocationsRequest.getLocations(pageSize: pageSize, pageNumber: pageNumber, _id: _id, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetLocationsRequest.getLocations was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge ID
+let body: EdgeServiceStateRequest = new EdgeServiceStateRequest(...) // Edge Service State
+
+// Code example
+PostTelephonyProvidersEdgeStatuscodeRequest.postTelephonyProvidersEdgeStatuscode(edgeId: edgeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostTelephonyProvidersEdgeStatuscodeRequest.postTelephonyProvidersEdgeStatuscode was successful")
+        dump(response)
+    }
+}

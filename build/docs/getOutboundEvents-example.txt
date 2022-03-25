@@ -1,0 +1,22 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let filterType: GetOutboundEventsRequest.FilterType_getOutboundEvents = GetOutboundEventsRequest.FilterType_getOutboundEvents.enummember // Filter type
+let category: String = "" // Category
+let level: String = "" // Level
+let sortBy: String = "" // Sort by
+let sortOrder: GetOutboundEventsRequest.SortOrder_getOutboundEvents = GetOutboundEventsRequest.SortOrder_getOutboundEvents.enummember // Sort order
+
+// Code example
+GetOutboundEventsRequest.getOutboundEvents(pageSize: pageSize, pageNumber: pageNumber, filterType: filterType, category: category, level: level, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundEventsRequest.getOutboundEvents was successful")
+        dump(response)
+    }
+}

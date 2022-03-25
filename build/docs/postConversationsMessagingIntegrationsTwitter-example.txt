@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest
+
+// Code example
+PostConversationsMessagingIntegrationsTwitterRequest.postConversationsMessagingIntegrationsTwitter(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationsMessagingIntegrationsTwitterRequest.postConversationsMessagingIntegrationsTwitter was successful")
+        dump(response)
+    }
+}

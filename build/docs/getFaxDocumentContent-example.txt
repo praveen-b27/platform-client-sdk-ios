@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let documentId: String = "" // Document ID
+
+// Code example
+GetFaxDocumentContentRequest.getFaxDocumentContent(documentId: documentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetFaxDocumentContentRequest.getFaxDocumentContent was successful")
+        dump(response)
+    }
+}

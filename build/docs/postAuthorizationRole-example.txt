@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let roleId: String = "" // Role ID
+let body: SubjectDivisions = new SubjectDivisions(...) // Subjects and Divisions
+let subjectType: String = "PC_USER" // what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT)
+
+// Code example
+PostAuthorizationRoleRequest.postAuthorizationRole(roleId: roleId, body: body, subjectType: subjectType) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PostAuthorizationRoleRequest.postAuthorizationRole was successful")
+    }
+}

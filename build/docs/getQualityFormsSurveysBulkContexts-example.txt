@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let contextId: [String] = [""] // A comma-delimited list of valid survey form context ids
+let published: Bool = true // If true, the latest published version will be included. If false, only the unpublished version will be included.
+
+// Code example
+GetQualityFormsSurveysBulkContextsRequest.getQualityFormsSurveysBulkContexts(contextId: contextId, published: published) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityFormsSurveysBulkContextsRequest.getQualityFormsSurveysBulkContexts was successful")
+        dump(response)
+    }
+}

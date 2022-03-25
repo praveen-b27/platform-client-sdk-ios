@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let skillId: String = "" // Skill ID
+
+// Code example
+DeleteRoutingSkillRequest.deleteRoutingSkill(skillId: skillId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingSkillRequest.deleteRoutingSkill was successful")
+    }
+}

@@ -1,0 +1,21 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let dateStart: Date = new Date(...) // Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let dateEnd: Date = new Date(...) // End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+let callId: String = "" // unique identification of the placed call
+let toUser: String = "" // User to who the call was placed
+let fromUser: String = "" // user who placed the call
+let conversationId: String = "" // Unique identification of the conversation
+
+// Code example
+GetTelephonySiptracesRequest.getTelephonySiptraces(dateStart: dateStart, dateEnd: dateEnd, callId: callId, toUser: toUser, fromUser: fromUser, conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonySiptracesRequest.getTelephonySiptraces was successful")
+        dump(response)
+    }
+}

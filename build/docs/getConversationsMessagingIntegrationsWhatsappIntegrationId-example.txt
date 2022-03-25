@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let expand: GetConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsWhatsappIntegrationId = GetConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsWhatsappIntegrationId.enummember // Expand instructions for the return value.
+
+// Code example
+GetConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.getConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.getConversationsMessagingIntegrationsWhatsappIntegrationId was successful")
+        dump(response)
+    }
+}

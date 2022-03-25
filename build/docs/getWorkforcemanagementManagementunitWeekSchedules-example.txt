@@ -1,0 +1,20 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let weekId: String = "" // First day of schedule week in yyyy-MM-dd format.
+let includeOnlyPublished: Bool = true // Return only published schedules
+let earliestWeekDate: String = "" // The start date of the earliest week to query in yyyy-MM-dd format
+let latestWeekDate: String = "" // The start date of the latest week to query in yyyy-MM-dd format
+
+// Code example
+GetWorkforcemanagementManagementunitWeekSchedulesRequest.getWorkforcemanagementManagementunitWeekSchedules(managementUnitId: managementUnitId, weekId: weekId, includeOnlyPublished: includeOnlyPublished, earliestWeekDate: earliestWeekDate, latestWeekDate: latestWeekDate) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementManagementunitWeekSchedulesRequest.getWorkforcemanagementManagementunitWeekSchedules was successful")
+        dump(response)
+    }
+}

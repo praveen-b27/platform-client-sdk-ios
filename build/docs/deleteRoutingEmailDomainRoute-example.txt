@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let domainName: String = "" // email domain
+let routeId: String = "" // route ID
+
+// Code example
+DeleteRoutingEmailDomainRouteRequest.deleteRoutingEmailDomainRoute(domainName: domainName, routeId: routeId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingEmailDomainRouteRequest.deleteRoutingEmailDomainRoute was successful")
+    }
+}

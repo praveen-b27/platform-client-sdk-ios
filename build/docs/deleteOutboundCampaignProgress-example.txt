@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+
+// Code example
+DeleteOutboundCampaignProgressRequest.deleteOutboundCampaignProgress(campaignId: campaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteOutboundCampaignProgressRequest.deleteOutboundCampaignProgress was successful")
+    }
+}

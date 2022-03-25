@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body
+
+// Code example
+PostWorkforcemanagementManagementunitTimeoffrequestsQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostWorkforcemanagementManagementunitTimeoffrequestsQueryRequest.postWorkforcemanagementManagementunitTimeoffrequestsQuery was successful")
+        dump(response)
+    }
+}

@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: PatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport = PatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport.enummember // Language code, format: iso2-LOCALE
+let importId: String = "" // Import ID
+let body: ImportStatusRequest = new ImportStatusRequest(...) // 
+
+// Code example
+PatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, importId: importId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PatchKnowledgeKnowledgebaseLanguageDocumentsImportRequest.patchKnowledgeKnowledgebaseLanguageDocumentsImport was successful")
+        dump(response)
+    }
+}

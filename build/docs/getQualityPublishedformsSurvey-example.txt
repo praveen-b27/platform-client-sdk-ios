@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let formId: String = "" // Form ID
+
+// Code example
+GetQualityPublishedformsSurveyRequest.getQualityPublishedformsSurvey(formId: formId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetQualityPublishedformsSurveyRequest.getQualityPublishedformsSurvey was successful")
+        dump(response)
+    }
+}

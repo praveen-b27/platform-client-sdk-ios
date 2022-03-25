@@ -1,0 +1,18 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // userId
+let expand: [String] = [GetUserProfileRequest.Expand_getUserProfile.enummember.rawValue] // Which fields, if any, to expand
+let integrationPresenceSource: GetUserProfileRequest.IntegrationPresenceSource_getUserProfile = GetUserProfileRequest.IntegrationPresenceSource_getUserProfile.enummember // Gets an integration presence for a user instead of their default.
+
+// Code example
+GetUserProfileRequest.getUserProfile(userId: userId, expand: expand, integrationPresenceSource: integrationPresenceSource) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetUserProfileRequest.getUserProfile was successful")
+        dump(response)
+    }
+}

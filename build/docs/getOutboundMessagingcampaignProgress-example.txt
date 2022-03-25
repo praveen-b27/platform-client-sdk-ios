@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+GetOutboundMessagingcampaignProgressRequest.getOutboundMessagingcampaignProgress(messagingCampaignId: messagingCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetOutboundMessagingcampaignProgressRequest.getOutboundMessagingcampaignProgress was successful")
+        dump(response)
+    }
+}

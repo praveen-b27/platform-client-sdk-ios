@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: ContactCenterSettings = new ContactCenterSettings(...) // Contact Center Settings
+
+// Code example
+PatchRoutingSettingsContactcenterRequest.patchRoutingSettingsContactcenter(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("PatchRoutingSettingsContactcenterRequest.patchRoutingSettingsContactcenter was successful")
+    }
+}

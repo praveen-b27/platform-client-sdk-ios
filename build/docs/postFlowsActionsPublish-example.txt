@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let flow: String = "" // Flow ID
+let version: String = "" // version
+
+// Code example
+PostFlowsActionsPublishRequest.postFlowsActionsPublish(flow: flow, version: version) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostFlowsActionsPublishRequest.postFlowsActionsPublish was successful")
+        dump(response)
+    }
+}

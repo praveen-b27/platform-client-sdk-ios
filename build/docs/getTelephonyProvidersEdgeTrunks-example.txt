@@ -1,0 +1,22 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let edgeId: String = "" // Edge ID
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let sortBy: String = "name" // Value by which to sort
+let sortOrder: String = "ASC" // Sort order
+let trunkBaseId: String = "" // Filter by Trunk Base Ids
+let trunkType: GetTelephonyProvidersEdgeTrunksRequest.TrunkType_getTelephonyProvidersEdgeTrunks = GetTelephonyProvidersEdgeTrunksRequest.TrunkType_getTelephonyProvidersEdgeTrunks.enummember // Filter by a Trunk type
+
+// Code example
+GetTelephonyProvidersEdgeTrunksRequest.getTelephonyProvidersEdgeTrunks(edgeId: edgeId, pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, trunkBaseId: trunkBaseId, trunkType: trunkType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetTelephonyProvidersEdgeTrunksRequest.getTelephonyProvidersEdgeTrunks was successful")
+        dump(response)
+    }
+}

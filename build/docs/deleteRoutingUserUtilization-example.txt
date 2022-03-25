@@ -1,0 +1,15 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+DeleteRoutingUserUtilizationRequest.deleteRoutingUserUtilization(userId: userId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteRoutingUserUtilizationRequest.deleteRoutingUserUtilization was successful")
+    }
+}

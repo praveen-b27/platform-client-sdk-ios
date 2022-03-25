@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: [String] = [new [String](...)] // The IDs of the learning assignments to be removed
+
+// Code example
+PostLearningAssignmentsBulkremoveRequest.postLearningAssignmentsBulkremove(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostLearningAssignmentsBulkremoveRequest.postLearningAssignmentsBulkremove was successful")
+        dump(response)
+    }
+}

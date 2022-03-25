@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let resourceType: GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype = GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes.
+
+// Code example
+GetScimV2ResourcetypeRequest.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetScimV2ResourcetypeRequest.getScimV2Resourcetype was successful")
+        dump(response)
+    }
+}

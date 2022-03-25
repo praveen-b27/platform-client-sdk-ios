@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+
+// Code example
+PostIntegrationsActionDraftRequest.postIntegrationsActionDraft(actionId: actionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostIntegrationsActionDraftRequest.postIntegrationsActionDraft was successful")
+        dump(response)
+    }
+}

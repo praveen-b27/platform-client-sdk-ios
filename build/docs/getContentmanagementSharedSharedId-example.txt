@@ -1,0 +1,20 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let sharedId: String = "" // Shared ID
+let redirect: Bool = true // Turn on or off redirect
+let disposition: GetContentmanagementSharedSharedIdRequest.Disposition_getContentmanagementSharedSharedId = GetContentmanagementSharedSharedIdRequest.Disposition_getContentmanagementSharedSharedId.enummember // Request how the share content will be downloaded: attached as a file or inline. Default is attachment.
+let contentType: String = "" // The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav
+let expand: GetContentmanagementSharedSharedIdRequest.Expand_getContentmanagementSharedSharedId = GetContentmanagementSharedSharedIdRequest.Expand_getContentmanagementSharedSharedId.enummember // Expand some document fields
+
+// Code example
+GetContentmanagementSharedSharedIdRequest.getContentmanagementSharedSharedId(sharedId: sharedId, redirect: redirect, disposition: disposition, contentType: contentType, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetContentmanagementSharedSharedIdRequest.getContentmanagementSharedSharedId was successful")
+        dump(response)
+    }
+}

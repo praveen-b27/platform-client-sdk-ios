@@ -1,0 +1,20 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Deprecated, paging is not supported
+let pageNumber: Int = 0 // Deprecated, paging is not supported
+let expand: GetWorkforcemanagementManagementunitsRequest.Expand_getWorkforcemanagementManagementunits = GetWorkforcemanagementManagementunitsRequest.Expand_getWorkforcemanagementManagementunits.enummember // Deprecated, expand settings on the single MU route
+let feature: GetWorkforcemanagementManagementunitsRequest.Feature_getWorkforcemanagementManagementunits = GetWorkforcemanagementManagementunitsRequest.Feature_getWorkforcemanagementManagementunits.enummember // 
+let divisionId: String = "" // 
+
+// Code example
+GetWorkforcemanagementManagementunitsRequest.getWorkforcemanagementManagementunits(pageSize: pageSize, pageNumber: pageNumber, expand: expand, feature: feature, divisionId: divisionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetWorkforcemanagementManagementunitsRequest.getWorkforcemanagementManagementunits was successful")
+        dump(response)
+    }
+}

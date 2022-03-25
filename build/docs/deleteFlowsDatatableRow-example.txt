@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let datatableId: String = "" // id of datatable
+let rowId: String = "" // the key for the row
+
+// Code example
+DeleteFlowsDatatableRowRequest.deleteFlowsDatatableRow(datatableId: datatableId, rowId: rowId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteFlowsDatatableRowRequest.deleteFlowsDatatableRow was successful")
+    }
+}

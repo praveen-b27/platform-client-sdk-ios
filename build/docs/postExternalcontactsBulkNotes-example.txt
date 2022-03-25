@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: BulkIdsRequest = new BulkIdsRequest(...) // Note ids
+
+// Code example
+PostExternalcontactsBulkNotesRequest.postExternalcontactsBulkNotes(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostExternalcontactsBulkNotesRequest.postExternalcontactsBulkNotes was successful")
+        dump(response)
+    }
+}

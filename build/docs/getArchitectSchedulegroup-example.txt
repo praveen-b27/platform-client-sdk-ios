@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let scheduleGroupId: String = "" // Schedule group ID
+
+// Code example
+GetArchitectSchedulegroupRequest.getArchitectSchedulegroup(scheduleGroupId: scheduleGroupId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetArchitectSchedulegroupRequest.getArchitectSchedulegroup was successful")
+        dump(response)
+    }
+}

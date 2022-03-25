@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let recordingId: String = "" // Recording ID
+let annotationId: String = "" // Annotation ID
+
+// Code example
+DeleteConversationRecordingAnnotationRequest.deleteConversationRecordingAnnotation(conversationId: conversationId, recordingId: recordingId, annotationId: annotationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("DeleteConversationRecordingAnnotationRequest.deleteConversationRecordingAnnotation was successful")
+    }
+}

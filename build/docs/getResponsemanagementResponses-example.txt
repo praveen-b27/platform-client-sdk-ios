@@ -1,0 +1,19 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let libraryId: String = "" // Library ID
+let pageNumber: Int = 1 // Page number
+let pageSize: Int = 25 // Page size
+let expand: GetResponsemanagementResponsesRequest.Expand_getResponsemanagementResponses = GetResponsemanagementResponsesRequest.Expand_getResponsemanagementResponses.enummember // Expand instructions for the return value.
+
+// Code example
+GetResponsemanagementResponsesRequest.getResponsemanagementResponses(libraryId: libraryId, pageNumber: pageNumber, pageSize: pageSize, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GetResponsemanagementResponsesRequest.getResponsemanagementResponses was successful")
+        dump(response)
+    }
+}

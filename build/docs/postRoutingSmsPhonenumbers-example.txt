@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: SmsPhoneNumberProvision = new SmsPhoneNumberProvision(...) // SmsPhoneNumber
+let async: Bool = false // Provision a new phone number for SMS in an asynchronous manner. If the async parameter value is true, this initiates the provisioning of a new phone number. Check the phoneNumber's provisioningStatus for completion of this request.
+
+// Code example
+PostRoutingSmsPhonenumbersRequest.postRoutingSmsPhonenumbers(body: body, async: async) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostRoutingSmsPhonenumbersRequest.postRoutingSmsPhonenumbers was successful")
+        dump(response)
+    }
+}

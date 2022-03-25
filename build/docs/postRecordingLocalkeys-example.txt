@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: LocalEncryptionKeyRequest = new LocalEncryptionKeyRequest(...) // Local Encryption body
+
+// Code example
+PostRecordingLocalkeysRequest.postRecordingLocalkeys(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostRecordingLocalkeysRequest.postRecordingLocalkeys was successful")
+        dump(response)
+    }
+}

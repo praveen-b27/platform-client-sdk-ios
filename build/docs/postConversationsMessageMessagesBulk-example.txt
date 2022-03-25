@@ -1,0 +1,17 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // 
+let body: [String] = [new [String](...)] // messageIds
+
+// Code example
+PostConversationsMessageMessagesBulkRequest.postConversationsMessageMessagesBulk(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostConversationsMessageMessagesBulkRequest.postConversationsMessageMessagesBulk was successful")
+        dump(response)
+    }
+}

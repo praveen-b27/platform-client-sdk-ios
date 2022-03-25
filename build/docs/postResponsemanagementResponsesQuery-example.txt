@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: ResponseQueryRequest = new ResponseQueryRequest(...) // Response
+
+// Code example
+PostResponsemanagementResponsesQueryRequest.postResponsemanagementResponsesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PostResponsemanagementResponsesQueryRequest.postResponsemanagementResponsesQuery was successful")
+        dump(response)
+    }
+}

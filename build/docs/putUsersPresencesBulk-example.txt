@@ -1,0 +1,16 @@
+import 
+
+API.basePath = ""
+API.accessToken = "cwRto9ScT..."
+
+let body: [UserPresence] = [new UserPresence(...)] // List of User presences
+
+// Code example
+PutUsersPresencesBulkRequest.putUsersPresencesBulk(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("PutUsersPresencesBulkRequest.putUsersPresencesBulk was successful")
+        dump(response)
+    }
+}

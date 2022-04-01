@@ -15,9 +15,9 @@ public class QueueUserEventTopicQueueMember: Codable {
     public var user: QueueUserEventTopicUserReference?
     public var queueId: String?
     public var joined: Bool?
-    public var additionalProperties: JSON?
+    public var additionalProperties: [String:QueueUserEventTopicObject]?
 
-    public init(_id: String?, user: QueueUserEventTopicUserReference?, queueId: String?, joined: Bool?, additionalProperties: JSON?) {
+    public init(_id: String?, user: QueueUserEventTopicUserReference?, queueId: String?, joined: Bool?, additionalProperties: [String:QueueUserEventTopicObject]?) {
         
         self._id = _id
         

@@ -92,6 +92,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsCallbackParticipant**](ConversationsAPI.html#patchConversationsCallbackParticipant) | Update conversation participant |
 | [**patchConversationsCallbackParticipantAttributes**](ConversationsAPI.html#patchConversationsCallbackParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCallbackParticipantCommunication**](ConversationsAPI.html#patchConversationsCallbackParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
+| [**patchConversationsCallbacks**](ConversationsAPI.html#patchConversationsCallbacks) | Update a scheduled callback |
 | [**patchConversationsChat**](ConversationsAPI.html#patchConversationsChat) | Update a conversation by disconnecting all of the participants |
 | [**patchConversationsChatParticipant**](ConversationsAPI.html#patchConversationsChatParticipant) | Update conversation participant |
 | [**patchConversationsChatParticipantAttributes**](ConversationsAPI.html#patchConversationsChatParticipantAttributes) | Update the attributes on a conversation participant. |
@@ -131,6 +132,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsCallParticipants**](ConversationsAPI.html#postConversationsCallParticipants) | Add participants to a conversation |
 | [**postConversationsCallbackParticipantReplace**](ConversationsAPI.html#postConversationsCallbackParticipantReplace) | Replace this participant with the specified user and/or address |
 | [**postConversationsCallbacks**](ConversationsAPI.html#postConversationsCallbacks) | Create a Callback |
+| [**postConversationsCallbacksBulkDisconnect**](ConversationsAPI.html#postConversationsCallbacksBulkDisconnect) | Disconnect multiple scheduled callbacks |
+| [**postConversationsCallbacksBulkUpdate**](ConversationsAPI.html#postConversationsCallbacksBulkUpdate) | Update multiple scheduled callbacks |
 | [**postConversationsCalls**](ConversationsAPI.html#postConversationsCalls) | Create a call conversation |
 | [**postConversationsChatCommunicationMessages**](ConversationsAPI.html#postConversationsChatCommunicationMessages) | Send a message on behalf of a communication in a chat conversation. |
 | [**postConversationsChatCommunicationTyping**](ConversationsAPI.html#postConversationsChatCommunicationTyping) | Send a typing-indicator on behalf of a communication in a chat conversation. |
@@ -4665,6 +4668,58 @@ ConversationsAPI.patchConversationsCallbackParticipantCommunication(conversation
 
 [**Empty**](Empty.html)
 
+<a name="patchConversationsCallbacks"></a>
+
+# **patchConversationsCallbacks**
+
+
+
+> [PatchCallbackResponse](PatchCallbackResponse.html) patchConversationsCallbacks(body)
+
+Update a scheduled callback
+
+
+
+Wraps PATCH /api/v2/conversations/callbacks  
+
+Requires ANY permissions: 
+
+* conversation:callback:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: PatchCallbackRequest = new PatchCallbackRequest(...) // PatchCallbackRequest
+
+// Code example
+ConversationsAPI.patchConversationsCallbacks(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsCallbacks was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**PatchCallbackRequest**](PatchCallbackRequest.html)| PatchCallbackRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**PatchCallbackResponse**](PatchCallbackResponse.html)
+
 <a name="patchConversationsChat"></a>
 
 # **patchConversationsChat**
@@ -6782,6 +6837,109 @@ ConversationsAPI.postConversationsCallbacks(body: body) { (response, error) in
 ### Return type
 
 [**CreateCallbackResponse**](CreateCallbackResponse.html)
+
+<a name="postConversationsCallbacksBulkDisconnect"></a>
+
+# **postConversationsCallbacksBulkDisconnect**
+
+
+
+> Void postConversationsCallbacksBulkDisconnect(body)
+
+Disconnect multiple scheduled callbacks
+
+
+
+Wraps POST /api/v2/conversations/callbacks/bulk/disconnect  
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkCallbackDisconnectRequest = new BulkCallbackDisconnectRequest(...) // BulkCallbackDisconnectRequest
+
+// Code example
+ConversationsAPI.postConversationsCallbacksBulkDisconnect(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsCallbacksBulkDisconnect was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkCallbackDisconnectRequest**](BulkCallbackDisconnectRequest.html)| BulkCallbackDisconnectRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationsCallbacksBulkUpdate"></a>
+
+# **postConversationsCallbacksBulkUpdate**
+
+
+
+> [BulkCallbackPatchResponse](BulkCallbackPatchResponse.html) postConversationsCallbacksBulkUpdate(body)
+
+Update multiple scheduled callbacks
+
+
+
+Wraps POST /api/v2/conversations/callbacks/bulk/update  
+
+Requires ANY permissions: 
+
+* conversation:callback:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkCallbackPatchRequest = new BulkCallbackPatchRequest(...) // BulkCallbackPatchRequest
+
+// Code example
+ConversationsAPI.postConversationsCallbacksBulkUpdate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsCallbacksBulkUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkCallbackPatchRequest**](BulkCallbackPatchRequest.html)| BulkCallbackPatchRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BulkCallbackPatchResponse**](BulkCallbackPatchResponse.html)
 
 <a name="postConversationsCalls"></a>
 

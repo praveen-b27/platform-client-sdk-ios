@@ -58,7 +58,11 @@ open class WebMessagingAPI {
       "from" : {
         "firstName" : "aeiou",
         "lastName" : "aeiou",
-        "nickname" : "aeiou"
+        "nickname" : "aeiou",
+        "additionalIds" : [ {
+          "type" : "aeiou",
+          "value" : "aeiou"
+        } ]
       },
       "to" : "",
       "time" : "2000-01-23T04:56:07.000+0000"
@@ -111,7 +115,10 @@ open class WebMessagingAPI {
         "sessionId" : "aeiou",
         "type" : "aeiou"
       },
-      "eventType" : "aeiou"
+      "eventType" : "aeiou",
+      "presence" : {
+        "type" : "aeiou"
+      }
     } ],
     "direction" : "aeiou"
   } ],

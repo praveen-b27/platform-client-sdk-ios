@@ -73,7 +73,7 @@ public class CreateQueueRequest: Codable {
     /** The messaging addresses for the queue. */
     public var outboundMessagingAddresses: QueueMessagingAddresses?
     public var outboundEmailAddress: QueueEmailAddress?
-    /** The id of an existing queue to copy the settings from when creating a new queue. */
+    /** The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue. */
     public var sourceQueueId: String?
     /** The URI for this object */
     public var selfUri: String?

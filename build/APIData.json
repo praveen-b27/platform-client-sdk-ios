@@ -7111,6 +7111,20 @@
     "return": "Empty",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\nlet communicationId: String = \"\" // communicationId\nlet body: MediaParticipantRequest = new MediaParticipantRequest(...) // Participant\n\n// Code example\nPatchConversationsCallbackParticipantCommunicationRequest.patchConversationsCallbackParticipantCommunication(conversationId: conversationId, participantId: participantId, communicationId: communicationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsCallbackParticipantCommunicationRequest.patchConversationsCallbackParticipantCommunication was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchconversationscallbacks": {
+    "operationId": "patchconversationscallbacks",
+    "functionName": "patchConversationsCallbacks",
+    "signature": "patchConversationsCallbacks(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "PatchCallbackRequest",
+        "required": "true"
+      }
+    ],
+    "return": "PatchCallbackResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: PatchCallbackRequest = new PatchCallbackRequest(...) // PatchCallbackRequest\n\n// Code example\nPatchConversationsCallbacksRequest.patchConversationsCallbacks(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsCallbacksRequest.patchConversationsCallbacks was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchconversationschat": {
     "operationId": "patchconversationschat",
     "functionName": "patchConversationsChat",
@@ -7865,6 +7879,33 @@
     ],
     "return": "CreateCallbackResponse",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: CreateCallbackCommand = new CreateCallbackCommand(...) // Callback\n\n// Code example\nPostConversationsCallbacksRequest.postConversationsCallbacks(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsCallbacksRequest.postConversationsCallbacks was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationscallbacksbulkdisconnect": {
+    "operationId": "postconversationscallbacksbulkdisconnect",
+    "functionName": "postConversationsCallbacksBulkDisconnect",
+    "signature": "postConversationsCallbacksBulkDisconnect(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkCallbackDisconnectRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: BulkCallbackDisconnectRequest = new BulkCallbackDisconnectRequest(...) // BulkCallbackDisconnectRequest\n\n// Code example\nPostConversationsCallbacksBulkDisconnectRequest.postConversationsCallbacksBulkDisconnect(body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsCallbacksBulkDisconnectRequest.postConversationsCallbacksBulkDisconnect was successful\")\n    }\n}"
+  },
+  "postconversationscallbacksbulkupdate": {
+    "operationId": "postconversationscallbacksbulkupdate",
+    "functionName": "postConversationsCallbacksBulkUpdate",
+    "signature": "postConversationsCallbacksBulkUpdate(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkCallbackPatchRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkCallbackPatchResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: BulkCallbackPatchRequest = new BulkCallbackPatchRequest(...) // BulkCallbackPatchRequest\n\n// Code example\nPostConversationsCallbacksBulkUpdateRequest.postConversationsCallbacksBulkUpdate(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsCallbacksBulkUpdateRequest.postConversationsCallbacksBulkUpdate was successful\")\n        dump(response)\n    }\n}"
   },
   "postconversationscalls": {
     "operationId": "postconversationscalls",
@@ -15960,23 +16001,35 @@
   "getoauthauthorization": {
     "operationId": "getoauthauthorization",
     "functionName": "getOauthAuthorization",
-    "signature": "getOauthAuthorization(clientId)",
+    "signature": "getOauthAuthorization(clientId, acceptLanguage)",
     "parameters": [
       {
         "name": "clientId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "acceptLanguage",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "OAuthAuthorization",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet clientId: String = \"\" // The ID of client\n\n// Code example\nGetOauthAuthorizationRequest.getOauthAuthorization(clientId: clientId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOauthAuthorizationRequest.getOauthAuthorization was successful\")\n        dump(response)\n    }\n}"
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet clientId: String = \"\" // The ID of client\nlet acceptLanguage: String = \"en-us\" // The language in which to display the client descriptions.\n\n// Code example\nGetOauthAuthorizationRequest.getOauthAuthorization(clientId: clientId, acceptLanguage: acceptLanguage) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOauthAuthorizationRequest.getOauthAuthorization was successful\")\n        dump(response)\n    }\n}"
   },
   "getoauthauthorizations": {
     "operationId": "getoauthauthorizations",
     "functionName": "getOauthAuthorizations",
-    "signature": "getOauthAuthorizations()",
+    "signature": "getOauthAuthorizations(acceptLanguage)",
+    "parameters": [
+      {
+        "name": "acceptLanguage",
+        "type": "String",
+        "required": "false"
+      }
+    ],
     "return": "OAuthAuthorizationListing",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\n\n// Code example\nGetOauthAuthorizationsRequest.getOauthAuthorizations() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOauthAuthorizationsRequest.getOauthAuthorizations was successful\")\n        dump(response)\n    }\n}"
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet acceptLanguage: String = \"en-us\" // The language in which to display the client descriptions.\n\n// Code example\nGetOauthAuthorizationsRequest.getOauthAuthorizations(acceptLanguage: acceptLanguage) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOauthAuthorizationsRequest.getOauthAuthorizations was successful\")\n        dump(response)\n    }\n}"
   },
   "getoauthclient": {
     "operationId": "getoauthclient",
@@ -20791,6 +20844,642 @@
     "return": "ScorableSurvey",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: ScorableSurvey = new ScorableSurvey(...) // survey\nlet customerSurveyUrl: String = \"\" // customerSurveyUrl\n\n// Code example\nPutQualitySurveysScorableRequest.putQualitySurveysScorable(body: body, customerSurveyUrl: customerSurveyUrl) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutQualitySurveysScorableRequest.putQualitySurveysScorable was successful\")\n        dump(response)\n    }\n}"
   },
+  "deletescimuser": {
+    "operationId": "deletescimuser",
+    "functionName": "deleteScimUser",
+    "signature": "deleteScimUser(userId, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "Empty",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nDeleteScimUserRequest.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimUserRequest.deleteScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "deletescimv2user": {
+    "operationId": "deletescimv2user",
+    "functionName": "deleteScimV2User",
+    "signature": "deleteScimV2User(userId, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "Empty",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nDeleteScimV2UserRequest.deleteScimV2User(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimV2UserRequest.deleteScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimgroup": {
+    "operationId": "getscimgroup",
+    "functionName": "getScimGroup",
+    "signature": "getScimGroup(groupId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet attributes: [String] = [GetScimGroupRequest.Attributes_getScimGroup.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimGroupRequest.ExcludedAttributes_getScimGroup.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimGroupRequest.getScimGroup(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupRequest.getScimGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimgroups": {
+    "operationId": "getscimgroups",
+    "functionName": "getScimGroups",
+    "signature": "getScimGroups(startIndex, count, attributes, excludedAttributes, filter)",
+    "parameters": [
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimGroupListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimGroupsRequest.Attributes_getScimGroups.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimGroupsRequest.ExcludedAttributes_getScimGroups.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\n\n// Code example\nGetScimGroupsRequest.getScimGroups(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupsRequest.getScimGroups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimresourcetype": {
+    "operationId": "getscimresourcetype",
+    "functionName": "getScimResourcetype",
+    "signature": "getScimResourcetype(resourceType)",
+    "parameters": [
+      {
+        "name": "resourceType",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimConfigResourceType",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet resourceType: GetScimResourcetypeRequest.ResourceType_getScimResourcetype = GetScimResourcetypeRequest.ResourceType_getScimResourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/resourcetypes.\n\n// Code example\nGetScimResourcetypeRequest.getScimResourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypeRequest.getScimResourcetype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimresourcetypes": {
+    "operationId": "getscimresourcetypes",
+    "functionName": "getScimResourcetypes",
+    "signature": "getScimResourcetypes()",
+    "return": "ScimConfigResourceTypesListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\n\n// Code example\nGetScimResourcetypesRequest.getScimResourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypesRequest.getScimResourcetypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimschema": {
+    "operationId": "getscimschema",
+    "functionName": "getScimSchema",
+    "signature": "getScimSchema(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2SchemaDefinition",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet schemaId: GetScimSchemaRequest.SchemaId_getScimSchema = GetScimSchemaRequest.SchemaId_getScimSchema.enummember // The ID of a schema. Returned with GET /api/v2/scim/schemas.\n\n// Code example\nGetScimSchemaRequest.getScimSchema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemaRequest.getScimSchema was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimschemas": {
+    "operationId": "getscimschemas",
+    "functionName": "getScimSchemas",
+    "signature": "getScimSchemas(filter)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2SchemaListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet filter: String = \"\" // Filtered results are invalid and return 403 Unauthorized.\n\n// Code example\nGetScimSchemasRequest.getScimSchemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemasRequest.getScimSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimserviceproviderconfig": {
+    "operationId": "getscimserviceproviderconfig",
+    "functionName": "getScimServiceproviderconfig",
+    "signature": "getScimServiceproviderconfig(ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimServiceProviderConfig",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Code example\nGetScimServiceproviderconfigRequest.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimServiceproviderconfigRequest.getScimServiceproviderconfig was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimuser": {
+    "operationId": "getscimuser",
+    "functionName": "getScimUser",
+    "signature": "getScimUser(userId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet attributes: [String] = [GetScimUserRequest.Attributes_getScimUser.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimUserRequest.ExcludedAttributes_getScimUser.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimUserRequest.getScimUser(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUserRequest.getScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimusers": {
+    "operationId": "getscimusers",
+    "functionName": "getScimUsers",
+    "signature": "getScimUsers(startIndex, count, attributes, excludedAttributes, filter)",
+    "parameters": [
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimUserListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimUsersRequest.Attributes_getScimUsers.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimUsersRequest.ExcludedAttributes_getScimUsers.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Code example\nGetScimUsersRequest.getScimUsers(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUsersRequest.getScimUsers was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2group": {
+    "operationId": "getscimv2group",
+    "functionName": "getScimV2Group",
+    "signature": "getScimV2Group(groupId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet attributes: [String] = [GetScimV2GroupRequest.Attributes_getScimV2Group.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2GroupRequest.ExcludedAttributes_getScimV2Group.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimV2GroupRequest.getScimV2Group(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupRequest.getScimV2Group was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2groups": {
+    "operationId": "getscimv2groups",
+    "functionName": "getScimV2Groups",
+    "signature": "getScimV2Groups(filter, startIndex, count, attributes, excludedAttributes)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "ScimGroupListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimV2GroupsRequest.Attributes_getScimV2Groups.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2GroupsRequest.ExcludedAttributes_getScimV2Groups.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\n\n// Code example\nGetScimV2GroupsRequest.getScimV2Groups(filter: filter, startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupsRequest.getScimV2Groups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2resourcetype": {
+    "operationId": "getscimv2resourcetype",
+    "functionName": "getScimV2Resourcetype",
+    "signature": "getScimV2Resourcetype(resourceType)",
+    "parameters": [
+      {
+        "name": "resourceType",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimConfigResourceType",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet resourceType: GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype = GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes.\n\n// Code example\nGetScimV2ResourcetypeRequest.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypeRequest.getScimV2Resourcetype was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2resourcetypes": {
+    "operationId": "getscimv2resourcetypes",
+    "functionName": "getScimV2Resourcetypes",
+    "signature": "getScimV2Resourcetypes()",
+    "return": "ScimConfigResourceTypesListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\n\n// Code example\nGetScimV2ResourcetypesRequest.getScimV2Resourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypesRequest.getScimV2Resourcetypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2schema": {
+    "operationId": "getscimv2schema",
+    "functionName": "getScimV2Schema",
+    "signature": "getScimV2Schema(schemaId)",
+    "parameters": [
+      {
+        "name": "schemaId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2SchemaDefinition",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet schemaId: GetScimV2SchemaRequest.SchemaId_getScimV2Schema = GetScimV2SchemaRequest.SchemaId_getScimV2Schema.enummember // The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.\n\n// Code example\nGetScimV2SchemaRequest.getScimV2Schema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemaRequest.getScimV2Schema was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2schemas": {
+    "operationId": "getscimv2schemas",
+    "functionName": "getScimV2Schemas",
+    "signature": "getScimV2Schemas(filter)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2SchemaListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet filter: String = \"\" // Filtered results are invalid and return 403 Unauthorized.\n\n// Code example\nGetScimV2SchemasRequest.getScimV2Schemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemasRequest.getScimV2Schemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2serviceproviderconfig": {
+    "operationId": "getscimv2serviceproviderconfig",
+    "functionName": "getScimV2Serviceproviderconfig",
+    "signature": "getScimV2Serviceproviderconfig(ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimServiceProviderConfig",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Code example\nGetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2user": {
+    "operationId": "getscimv2user",
+    "functionName": "getScimV2User",
+    "signature": "getScimV2User(userId, attributes, excludedAttributes, ifNoneMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "ifNoneMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet attributes: [String] = [GetScimV2UserRequest.Attributes_getScimV2User.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2UserRequest.ExcludedAttributes_getScimV2User.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimV2UserRequest.getScimV2User(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UserRequest.getScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getscimv2users": {
+    "operationId": "getscimv2users",
+    "functionName": "getScimV2Users",
+    "signature": "getScimV2Users(startIndex, count, attributes, excludedAttributes, filter)",
+    "parameters": [
+      {
+        "name": "startIndex",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "count",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "attributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "excludedAttributes",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimUserListResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimV2UsersRequest.Attributes_getScimV2Users.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2UsersRequest.ExcludedAttributes_getScimV2Users.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Code example\nGetScimV2UsersRequest.getScimV2Users(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UsersRequest.getScimV2Users was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimgroup": {
+    "operationId": "patchscimgroup",
+    "functionName": "patchScimGroup",
+    "signature": "patchScimGroup(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimGroupRequest.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimGroupRequest.patchScimGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimuser": {
+    "operationId": "patchscimuser",
+    "functionName": "patchScimUser",
+    "signature": "patchScimUser(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimUserRequest.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimUserRequest.patchScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimv2group": {
+    "operationId": "patchscimv2group",
+    "functionName": "patchScimV2Group",
+    "signature": "patchScimV2Group(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimV2GroupRequest.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2GroupRequest.patchScimV2Group was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchscimv2user": {
+    "operationId": "patchscimv2user",
+    "functionName": "patchScimV2User",
+    "signature": "patchScimV2User(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2PatchRequest",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimV2UserRequest.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2UserRequest.patchScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postscimusers": {
+    "operationId": "postscimusers",
+    "functionName": "postScimUsers",
+    "signature": "postScimUsers(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ScimV2CreateUser",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Code example\nPostScimUsersRequest.postScimUsers(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimUsersRequest.postScimUsers was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postscimv2users": {
+    "operationId": "postscimv2users",
+    "functionName": "postScimV2Users",
+    "signature": "postScimV2Users(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ScimV2CreateUser",
+        "required": "true"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Code example\nPostScimV2UsersRequest.postScimV2Users(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimV2UsersRequest.postScimV2Users was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimgroup": {
+    "operationId": "putscimgroup",
+    "functionName": "putScimGroup",
+    "signature": "putScimGroup(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2Group",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimGroupRequest.putScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimGroupRequest.putScimGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimuser": {
+    "operationId": "putscimuser",
+    "functionName": "putScimUser",
+    "signature": "putScimUser(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2User",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimUserRequest.putScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimUserRequest.putScimUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimv2group": {
+    "operationId": "putscimv2group",
+    "functionName": "putScimV2Group",
+    "signature": "putScimV2Group(groupId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "groupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2Group",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2Group",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimV2GroupRequest.putScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2GroupRequest.putScimV2Group was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putscimv2user": {
+    "operationId": "putscimv2user",
+    "functionName": "putScimV2User",
+    "signature": "putScimV2User(userId, body, ifMatch)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ScimV2User",
+        "required": "true"
+      },
+      {
+        "name": "ifMatch",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ScimV2User",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimV2UserRequest.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2UserRequest.putScimV2User was successful\")\n        dump(response)\n    }\n}"
+  },
   "deleteconversationrecordingannotation": {
     "operationId": "deleteconversationrecordingannotation",
     "functionName": "deleteConversationRecordingAnnotation",
@@ -21942,6 +22631,19 @@
     ],
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet responseId: String = \"\" // Response ID\n\n// Code example\nDeleteResponsemanagementResponseRequest.deleteResponsemanagementResponse(responseId: responseId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteResponsemanagementResponseRequest.deleteResponsemanagementResponse was successful\")\n    }\n}"
   },
+  "deleteresponsemanagementresponseasset": {
+    "operationId": "deleteresponsemanagementresponseasset",
+    "functionName": "deleteResponsemanagementResponseasset",
+    "signature": "deleteResponsemanagementResponseasset(responseAssetId)",
+    "parameters": [
+      {
+        "name": "responseAssetId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet responseAssetId: String = \"\" // Asset Id\n\n// Code example\nDeleteResponsemanagementResponseassetRequest.deleteResponsemanagementResponseasset(responseAssetId: responseAssetId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteResponsemanagementResponseassetRequest.deleteResponsemanagementResponseasset was successful\")\n    }\n}"
+  },
   "getresponsemanagementlibraries": {
     "operationId": "getresponsemanagementlibraries",
     "functionName": "getResponsemanagementLibraries",
@@ -21999,6 +22701,34 @@
     "return": "ModelResponse",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet responseId: String = \"\" // Response ID\nlet expand: GetResponsemanagementResponseRequest.Expand_getResponsemanagementResponse = GetResponsemanagementResponseRequest.Expand_getResponsemanagementResponse.enummember // Expand instructions for the return value.\n\n// Code example\nGetResponsemanagementResponseRequest.getResponsemanagementResponse(responseId: responseId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetResponsemanagementResponseRequest.getResponsemanagementResponse was successful\")\n        dump(response)\n    }\n}"
   },
+  "getresponsemanagementresponseasset": {
+    "operationId": "getresponsemanagementresponseasset",
+    "functionName": "getResponsemanagementResponseasset",
+    "signature": "getResponsemanagementResponseasset(responseAssetId)",
+    "parameters": [
+      {
+        "name": "responseAssetId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ResponseAsset",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet responseAssetId: String = \"\" // Asset Id\n\n// Code example\nGetResponsemanagementResponseassetRequest.getResponsemanagementResponseasset(responseAssetId: responseAssetId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetResponsemanagementResponseassetRequest.getResponsemanagementResponseasset was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getresponsemanagementresponseassetsstatusstatusid": {
+    "operationId": "getresponsemanagementresponseassetsstatusstatusid",
+    "functionName": "getResponsemanagementResponseassetsStatusStatusId",
+    "signature": "getResponsemanagementResponseassetsStatusStatusId(statusId)",
+    "parameters": [
+      {
+        "name": "statusId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ResponseAssetStatus",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet statusId: String = \"\" // Status Id\n\n// Code example\nGetResponsemanagementResponseassetsStatusStatusIdRequest.getResponsemanagementResponseassetsStatusStatusId(statusId: statusId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetResponsemanagementResponseassetsStatusStatusIdRequest.getResponsemanagementResponseassetsStatusStatusId was successful\")\n        dump(response)\n    }\n}"
+  },
   "getresponsemanagementresponses": {
     "operationId": "getresponsemanagementresponses",
     "functionName": "getResponsemanagementResponses",
@@ -22041,6 +22771,39 @@
     ],
     "return": "Library",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: Library = new Library(...) // Library\n\n// Code example\nPostResponsemanagementLibrariesRequest.postResponsemanagementLibraries(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostResponsemanagementLibrariesRequest.postResponsemanagementLibraries was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postresponsemanagementresponseassetssearch": {
+    "operationId": "postresponsemanagementresponseassetssearch",
+    "functionName": "postResponsemanagementResponseassetsSearch",
+    "signature": "postResponsemanagementResponseassetsSearch(body, expand)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ResponseAssetSearchRequest",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "ResponseAssetSearchResults",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: ResponseAssetSearchRequest = new ResponseAssetSearchRequest(...) // request\nlet expand: [String] = [PostResponsemanagementResponseassetsSearchRequest.Expand_postResponsemanagementResponseassetsSearch.enummember.rawValue] // Which fields, if any, to expand\n\n// Code example\nPostResponsemanagementResponseassetsSearchRequest.postResponsemanagementResponseassetsSearch(body: body, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostResponsemanagementResponseassetsSearchRequest.postResponsemanagementResponseassetsSearch was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postresponsemanagementresponseassetsuploads": {
+    "operationId": "postresponsemanagementresponseassetsuploads",
+    "functionName": "postResponsemanagementResponseassetsUploads",
+    "signature": "postResponsemanagementResponseassetsUploads(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "CreateResponseAssetRequest",
+        "required": "true"
+      }
+    ],
+    "return": "CreateResponseAssetResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: CreateResponseAssetRequest = new CreateResponseAssetRequest(...) // request\n\n// Code example\nPostResponsemanagementResponseassetsUploadsRequest.postResponsemanagementResponseassetsUploads(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostResponsemanagementResponseassetsUploadsRequest.postResponsemanagementResponseassetsUploads was successful\")\n        dump(response)\n    }\n}"
   },
   "postresponsemanagementresponses": {
     "operationId": "postresponsemanagementresponses",
@@ -22117,6 +22880,25 @@
     ],
     "return": "ModelResponse",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet responseId: String = \"\" // Response ID\nlet body: ModelResponse = new ModelResponse(...) // Response\nlet expand: PutResponsemanagementResponseRequest.Expand_putResponsemanagementResponse = PutResponsemanagementResponseRequest.Expand_putResponsemanagementResponse.enummember // Expand instructions for the return value.\n\n// Code example\nPutResponsemanagementResponseRequest.putResponsemanagementResponse(responseId: responseId, body: body, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutResponsemanagementResponseRequest.putResponsemanagementResponse was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putresponsemanagementresponseasset": {
+    "operationId": "putresponsemanagementresponseasset",
+    "functionName": "putResponsemanagementResponseasset",
+    "signature": "putResponsemanagementResponseasset(responseAssetId, body)",
+    "parameters": [
+      {
+        "name": "responseAssetId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ResponseAssetRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ResponseAsset",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet responseAssetId: String = \"\" // Asset Id\nlet body: ResponseAssetRequest = new ResponseAssetRequest(...) // request\n\n// Code example\nPutResponsemanagementResponseassetRequest.putResponsemanagementResponseasset(responseAssetId: responseAssetId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutResponsemanagementResponseassetRequest.putResponsemanagementResponseasset was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteroutingassessment": {
     "operationId": "deleteroutingassessment",
@@ -24179,642 +24961,6 @@
     ],
     "return": "UserSkillEntityListing",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // User ID\nlet body: [UserRoutingSkillPost] = [new UserRoutingSkillPost(...)] // Skill\n\n// Code example\nPutUserRoutingskillsBulkRequest.putUserRoutingskillsBulk(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutUserRoutingskillsBulkRequest.putUserRoutingskillsBulk was successful\")\n        dump(response)\n    }\n}"
-  },
-  "deletescimuser": {
-    "operationId": "deletescimuser",
-    "functionName": "deleteScimUser",
-    "signature": "deleteScimUser(userId, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "Empty",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nDeleteScimUserRequest.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimUserRequest.deleteScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "deletescimv2user": {
-    "operationId": "deletescimv2user",
-    "functionName": "deleteScimV2User",
-    "signature": "deleteScimV2User(userId, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "Empty",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nDeleteScimV2UserRequest.deleteScimV2User(userId: userId, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteScimV2UserRequest.deleteScimV2User was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimgroup": {
-    "operationId": "getscimgroup",
-    "functionName": "getScimGroup",
-    "signature": "getScimGroup(groupId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet attributes: [String] = [GetScimGroupRequest.Attributes_getScimGroup.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimGroupRequest.ExcludedAttributes_getScimGroup.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimGroupRequest.getScimGroup(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupRequest.getScimGroup was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimgroups": {
-    "operationId": "getscimgroups",
-    "functionName": "getScimGroups",
-    "signature": "getScimGroups(startIndex, count, attributes, excludedAttributes, filter)",
-    "parameters": [
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimGroupListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimGroupsRequest.Attributes_getScimGroups.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimGroupsRequest.ExcludedAttributes_getScimGroups.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\n\n// Code example\nGetScimGroupsRequest.getScimGroups(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimGroupsRequest.getScimGroups was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimresourcetype": {
-    "operationId": "getscimresourcetype",
-    "functionName": "getScimResourcetype",
-    "signature": "getScimResourcetype(resourceType)",
-    "parameters": [
-      {
-        "name": "resourceType",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimConfigResourceType",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet resourceType: GetScimResourcetypeRequest.ResourceType_getScimResourcetype = GetScimResourcetypeRequest.ResourceType_getScimResourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/resourcetypes.\n\n// Code example\nGetScimResourcetypeRequest.getScimResourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypeRequest.getScimResourcetype was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimresourcetypes": {
-    "operationId": "getscimresourcetypes",
-    "functionName": "getScimResourcetypes",
-    "signature": "getScimResourcetypes()",
-    "return": "ScimConfigResourceTypesListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\n\n// Code example\nGetScimResourcetypesRequest.getScimResourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimResourcetypesRequest.getScimResourcetypes was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimschema": {
-    "operationId": "getscimschema",
-    "functionName": "getScimSchema",
-    "signature": "getScimSchema(schemaId)",
-    "parameters": [
-      {
-        "name": "schemaId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2SchemaDefinition",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet schemaId: GetScimSchemaRequest.SchemaId_getScimSchema = GetScimSchemaRequest.SchemaId_getScimSchema.enummember // The ID of a schema. Returned with GET /api/v2/scim/schemas.\n\n// Code example\nGetScimSchemaRequest.getScimSchema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemaRequest.getScimSchema was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimschemas": {
-    "operationId": "getscimschemas",
-    "functionName": "getScimSchemas",
-    "signature": "getScimSchemas(filter)",
-    "parameters": [
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2SchemaListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet filter: String = \"\" // Filtered results are invalid and return 403 Unauthorized.\n\n// Code example\nGetScimSchemasRequest.getScimSchemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimSchemasRequest.getScimSchemas was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimserviceproviderconfig": {
-    "operationId": "getscimserviceproviderconfig",
-    "functionName": "getScimServiceproviderconfig",
-    "signature": "getScimServiceproviderconfig(ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimServiceProviderConfig",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Code example\nGetScimServiceproviderconfigRequest.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimServiceproviderconfigRequest.getScimServiceproviderconfig was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimuser": {
-    "operationId": "getscimuser",
-    "functionName": "getScimUser",
-    "signature": "getScimUser(userId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet attributes: [String] = [GetScimUserRequest.Attributes_getScimUser.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimUserRequest.ExcludedAttributes_getScimUser.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimUserRequest.getScimUser(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUserRequest.getScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimusers": {
-    "operationId": "getscimusers",
-    "functionName": "getScimUsers",
-    "signature": "getScimUsers(startIndex, count, attributes, excludedAttributes, filter)",
-    "parameters": [
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimUserListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimUsersRequest.Attributes_getScimUsers.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimUsersRequest.ExcludedAttributes_getScimUsers.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Code example\nGetScimUsersRequest.getScimUsers(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimUsersRequest.getScimUsers was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2group": {
-    "operationId": "getscimv2group",
-    "functionName": "getScimV2Group",
-    "signature": "getScimV2Group(groupId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet attributes: [String] = [GetScimV2GroupRequest.Attributes_getScimV2Group.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2GroupRequest.ExcludedAttributes_getScimV2Group.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimV2GroupRequest.getScimV2Group(groupId: groupId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupRequest.getScimV2Group was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2groups": {
-    "operationId": "getscimv2groups",
-    "functionName": "getScimV2Groups",
-    "signature": "getScimV2Groups(filter, startIndex, count, attributes, excludedAttributes)",
-    "parameters": [
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      }
-    ],
-    "return": "ScimGroupListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all groups. Examples of valid values: \\\"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\\\", \\\"displayname eq Sales\\\".\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimV2GroupsRequest.Attributes_getScimV2Groups.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2GroupsRequest.ExcludedAttributes_getScimV2Groups.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns \\\"id\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\n\n// Code example\nGetScimV2GroupsRequest.getScimV2Groups(filter: filter, startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2GroupsRequest.getScimV2Groups was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2resourcetype": {
-    "operationId": "getscimv2resourcetype",
-    "functionName": "getScimV2Resourcetype",
-    "signature": "getScimV2Resourcetype(resourceType)",
-    "parameters": [
-      {
-        "name": "resourceType",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimConfigResourceType",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet resourceType: GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype = GetScimV2ResourcetypeRequest.ResourceType_getScimV2Resourcetype.enummember // The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes.\n\n// Code example\nGetScimV2ResourcetypeRequest.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypeRequest.getScimV2Resourcetype was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2resourcetypes": {
-    "operationId": "getscimv2resourcetypes",
-    "functionName": "getScimV2Resourcetypes",
-    "signature": "getScimV2Resourcetypes()",
-    "return": "ScimConfigResourceTypesListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\n\n// Code example\nGetScimV2ResourcetypesRequest.getScimV2Resourcetypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ResourcetypesRequest.getScimV2Resourcetypes was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2schema": {
-    "operationId": "getscimv2schema",
-    "functionName": "getScimV2Schema",
-    "signature": "getScimV2Schema(schemaId)",
-    "parameters": [
-      {
-        "name": "schemaId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2SchemaDefinition",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet schemaId: GetScimV2SchemaRequest.SchemaId_getScimV2Schema = GetScimV2SchemaRequest.SchemaId_getScimV2Schema.enummember // The ID of a schema. Returned with GET /api/v2/scim/v2/schemas.\n\n// Code example\nGetScimV2SchemaRequest.getScimV2Schema(schemaId: schemaId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemaRequest.getScimV2Schema was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2schemas": {
-    "operationId": "getscimv2schemas",
-    "functionName": "getScimV2Schemas",
-    "signature": "getScimV2Schemas(filter)",
-    "parameters": [
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2SchemaListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet filter: String = \"\" // Filtered results are invalid and return 403 Unauthorized.\n\n// Code example\nGetScimV2SchemasRequest.getScimV2Schemas(filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2SchemasRequest.getScimV2Schemas was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2serviceproviderconfig": {
-    "operationId": "getscimv2serviceproviderconfig",
-    "functionName": "getScimV2Serviceproviderconfig",
-    "signature": "getScimV2Serviceproviderconfig(ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimServiceProviderConfig",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. \n\n// Code example\nGetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2ServiceproviderconfigRequest.getScimV2Serviceproviderconfig was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2user": {
-    "operationId": "getscimv2user",
-    "functionName": "getScimV2User",
-    "signature": "getScimV2User(userId, attributes, excludedAttributes, ifNoneMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "ifNoneMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet attributes: [String] = [GetScimV2UserRequest.Attributes_getScimV2User.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2UserRequest.ExcludedAttributes_getScimV2User.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet ifNoneMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.\n\n// Code example\nGetScimV2UserRequest.getScimV2User(userId: userId, attributes: attributes, excludedAttributes: excludedAttributes, ifNoneMatch: ifNoneMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UserRequest.getScimV2User was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getscimv2users": {
-    "operationId": "getscimv2users",
-    "functionName": "getScimV2Users",
-    "signature": "getScimV2Users(startIndex, count, attributes, excludedAttributes, filter)",
-    "parameters": [
-      {
-        "name": "startIndex",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "count",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "attributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "excludedAttributes",
-        "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "filter",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimUserListResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet startIndex: Int = 1 // The 1-based index of the first query result.\nlet count: Int = 25 // The requested number of items per page. A value of 0 returns \\\"totalResults\\\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \\\"excludedAttributes\\\" or \\\"attributes\\\" query parameters to exclude or only include secondary lookup values such as \\\"externalId\\\",  \\\"roles\\\", \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\\\", or \\\"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\\\".\nlet attributes: [String] = [GetScimV2UsersRequest.Attributes_getScimV2Users.enummember.rawValue] // Indicates which attributes to include. Returns these attributes and the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"attributes\\\" to avoid expensive secondary calls for the default attributes.\nlet excludedAttributes: [String] = [GetScimV2UsersRequest.ExcludedAttributes_getScimV2Users.enummember.rawValue] // Indicates which attributes to exclude. Returns the default attributes minus \\\"excludedAttributes\\\". Always returns the \\\"id\\\", \\\"userName\\\", \\\"active\\\", and \\\"meta\\\" attributes. Use \\\"excludedAttributes\\\" to avoid expensive secondary calls for the default attributes.\nlet filter: String = \"\" // Filters results. If nothing is specified, returns all active users. Examples of valid values: \\\"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\\\", \\\"userName eq search@sample.org\\\", \\\"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\\\", \\\"email eq search@sample.org\\\", \\\"division eq divisionName\\\", \\\"externalId eq 167844\\\", \\\"active eq false\\\", \\\"employeeNumber eq 9876543210\\\".\n\n// Code example\nGetScimV2UsersRequest.getScimV2Users(startIndex: startIndex, count: count, attributes: attributes, excludedAttributes: excludedAttributes, filter: filter) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetScimV2UsersRequest.getScimV2Users was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimgroup": {
-    "operationId": "patchscimgroup",
-    "functionName": "patchScimGroup",
-    "signature": "patchScimGroup(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimGroupRequest.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimGroupRequest.patchScimGroup was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimuser": {
-    "operationId": "patchscimuser",
-    "functionName": "patchScimUser",
-    "signature": "patchScimUser(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimUserRequest.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimUserRequest.patchScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimv2group": {
-    "operationId": "patchscimv2group",
-    "functionName": "patchScimV2Group",
-    "signature": "patchScimV2Group(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimV2GroupRequest.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2GroupRequest.patchScimV2Group was successful\")\n        dump(response)\n    }\n}"
-  },
-  "patchscimv2user": {
-    "operationId": "patchscimv2user",
-    "functionName": "patchScimV2User",
-    "signature": "patchScimV2User(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2PatchRequest",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2PatchRequest = new ScimV2PatchRequest(...) // The information used to modify a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPatchScimV2UserRequest.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchScimV2UserRequest.patchScimV2User was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postscimusers": {
-    "operationId": "postscimusers",
-    "functionName": "postScimUsers",
-    "signature": "postScimUsers(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "ScimV2CreateUser",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Code example\nPostScimUsersRequest.postScimUsers(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimUsersRequest.postScimUsers was successful\")\n        dump(response)\n    }\n}"
-  },
-  "postscimv2users": {
-    "operationId": "postscimv2users",
-    "functionName": "postScimV2Users",
-    "signature": "postScimV2Users(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "ScimV2CreateUser",
-        "required": "true"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: ScimV2CreateUser = new ScimV2CreateUser(...) // The information used to create a user.\n\n// Code example\nPostScimV2UsersRequest.postScimV2Users(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostScimV2UsersRequest.postScimV2Users was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimgroup": {
-    "operationId": "putscimgroup",
-    "functionName": "putScimGroup",
-    "signature": "putScimGroup(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2Group",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimGroupRequest.putScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimGroupRequest.putScimGroup was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimuser": {
-    "operationId": "putscimuser",
-    "functionName": "putScimUser",
-    "signature": "putScimUser(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2User",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimUserRequest.putScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimUserRequest.putScimUser was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimv2group": {
-    "operationId": "putscimv2group",
-    "functionName": "putScimV2Group",
-    "signature": "putScimV2Group(groupId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "groupId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2Group",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2Group",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet groupId: String = \"\" // The ID of a group. Returned with GET /api/v2/scim/v2/groups.\nlet body: ScimV2Group = new ScimV2Group(...) // The information used to replace a group.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimV2GroupRequest.putScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2GroupRequest.putScimV2Group was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putscimv2user": {
-    "operationId": "putscimv2user",
-    "functionName": "putScimV2User",
-    "signature": "putScimV2User(userId, body, ifMatch)",
-    "parameters": [
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScimV2User",
-        "required": "true"
-      },
-      {
-        "name": "ifMatch",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "ScimV2User",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet userId: String = \"\" // The ID of a user. Returned with GET /api/v2/scim/v2/users.\nlet body: ScimV2User = new ScimV2User(...) // The information used to replace a user.\nlet ifMatch: String = \"\" // The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \\\"42\\\". If the ETag is different from the version on the server, returns 400 with a \\\"scimType\\\" of \\\"invalidVers\\\".\n\n// Code example\nPutScimV2UserRequest.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutScimV2UserRequest.putScimV2User was successful\")\n        dump(response)\n    }\n}"
   },
   "getscript": {
     "operationId": "getscript",
@@ -28751,20 +28897,6 @@
     "return": "UploadUrlResponse",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: UploadUrlRequest = new UploadUrlRequest(...) // query\n\n// Code example\nPostUploadsWorkforcemanagementHistoricaldataCsvRequest.postUploadsWorkforcemanagementHistoricaldataCsv(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUploadsWorkforcemanagementHistoricaldataCsvRequest.postUploadsWorkforcemanagementHistoricaldataCsv was successful\")\n        dump(response)\n    }\n}"
   },
-  "postuploadsworkforcemanagementhistoricaldatajson": {
-    "operationId": "postuploadsworkforcemanagementhistoricaldatajson",
-    "functionName": "postUploadsWorkforcemanagementHistoricaldataJson",
-    "signature": "postUploadsWorkforcemanagementHistoricaldataJson(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "UploadUrlRequest",
-        "required": "true"
-      }
-    ],
-    "return": "UploadUrlResponse",
-    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet body: UploadUrlRequest = new UploadUrlRequest(...) // query\n\n// Code example\nPostUploadsWorkforcemanagementHistoricaldataJsonRequest.postUploadsWorkforcemanagementHistoricaldataJson(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUploadsWorkforcemanagementHistoricaldataJsonRequest.postUploadsWorkforcemanagementHistoricaldataJson was successful\")\n        dump(response)\n    }\n}"
-  },
   "getusagequeryexecutionidresults": {
     "operationId": "getusagequeryexecutionidresults",
     "functionName": "getUsageQueryExecutionIdResults",
@@ -32677,6 +32809,64 @@
     "return": "BuAsyncScheduleRunResponse",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet scheduleId: String = \"\" // The ID of the schedule\nlet body: BuRescheduleRequest = new BuRescheduleRequest(...) // body\n\n// Code example\nPostWorkforcemanagementBusinessunitWeekScheduleRescheduleRequest.postWorkforcemanagementBusinessunitWeekScheduleReschedule(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekScheduleRescheduleRequest.postWorkforcemanagementBusinessunitWeekScheduleReschedule was successful\")\n        dump(response)\n    }\n}"
   },
+  "postworkforcemanagementbusinessunitweekscheduleupdate": {
+    "operationId": "postworkforcemanagementbusinessunitweekscheduleupdate",
+    "functionName": "postWorkforcemanagementBusinessunitWeekScheduleUpdate",
+    "signature": "postWorkforcemanagementBusinessunitWeekScheduleUpdate(businessUnitId, weekId, scheduleId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "scheduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ProcessScheduleUpdateUploadRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BuAsyncScheduleResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet scheduleId: String = \"\" // The ID of the schedule\nlet body: ProcessScheduleUpdateUploadRequest = new ProcessScheduleUpdateUploadRequest(...) // body\n\n// Code example\nPostWorkforcemanagementBusinessunitWeekScheduleUpdateRequest.postWorkforcemanagementBusinessunitWeekScheduleUpdate(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekScheduleUpdateRequest.postWorkforcemanagementBusinessunitWeekScheduleUpdate was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitweekscheduleupdateuploadurl": {
+    "operationId": "postworkforcemanagementbusinessunitweekscheduleupdateuploadurl",
+    "functionName": "postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl",
+    "signature": "postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl(businessUnitId, weekId, scheduleId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "scheduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UploadUrlRequestBody",
+        "required": "true"
+      }
+    ],
+    "return": "UpdateScheduleUploadResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet scheduleId: String = \"\" // The ID of the schedule\nlet body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body\n\n// Code example\nPostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlRequest.postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlRequest.postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl was successful\")\n        dump(response)\n    }\n}"
+  },
   "postworkforcemanagementbusinessunitweekschedules": {
     "operationId": "postworkforcemanagementbusinessunitweekschedules",
     "functionName": "postWorkforcemanagementBusinessunitWeekSchedules",
@@ -32724,6 +32914,54 @@
     ],
     "return": "BuAsyncScheduleRunResponse",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: BuGenerateScheduleRequest = new BuGenerateScheduleRequest(...) // body\n\n// Code example\nPostWorkforcemanagementBusinessunitWeekSchedulesGenerateRequest.postWorkforcemanagementBusinessunitWeekSchedulesGenerate(businessUnitId: businessUnitId, weekId: weekId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekSchedulesGenerateRequest.postWorkforcemanagementBusinessunitWeekSchedulesGenerate was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitweekschedulesimport": {
+    "operationId": "postworkforcemanagementbusinessunitweekschedulesimport",
+    "functionName": "postWorkforcemanagementBusinessunitWeekSchedulesImport",
+    "signature": "postWorkforcemanagementBusinessunitWeekSchedulesImport(businessUnitId, weekId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WfmProcessUploadRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ScheduleUploadProcessingResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // \n\n// Code example\nPostWorkforcemanagementBusinessunitWeekSchedulesImportRequest.postWorkforcemanagementBusinessunitWeekSchedulesImport(businessUnitId: businessUnitId, weekId: weekId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekSchedulesImportRequest.postWorkforcemanagementBusinessunitWeekSchedulesImport was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitweekschedulesimportuploadurl": {
+    "operationId": "postworkforcemanagementbusinessunitweekschedulesimportuploadurl",
+    "functionName": "postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl",
+    "signature": "postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl(businessUnitId, weekId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekId",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UploadUrlRequestBody",
+        "required": "true"
+      }
+    ],
+    "return": "ImportScheduleUploadResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body\n\n// Code example\nPostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlRequest.postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl(businessUnitId: businessUnitId, weekId: weekId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlRequest.postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunitweekshorttermforecastcopy": {
     "operationId": "postworkforcemanagementbusinessunitweekshorttermforecastcopy",
@@ -32787,6 +33025,54 @@
     ],
     "return": "AsyncForecastOperationResult",
     "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The business unit ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: GenerateBuForecastRequest = new GenerateBuForecastRequest(...) // \nlet forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes\n\n// Code example\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body, forceAsync: forceAsync) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerateRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitweekshorttermforecastsimport": {
+    "operationId": "postworkforcemanagementbusinessunitweekshorttermforecastsimport",
+    "functionName": "postWorkforcemanagementBusinessunitWeekShorttermforecastsImport",
+    "signature": "postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId, weekDateId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekDateId",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WfmProcessUploadRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ImportForecastResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The business unit ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // \n\n// Code example\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsImportRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitweekshorttermforecastsimportuploadurl": {
+    "operationId": "postworkforcemanagementbusinessunitweekshorttermforecastsimportuploadurl",
+    "functionName": "postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl",
+    "signature": "postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId, weekDateId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "weekDateId",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UploadUrlRequestBody",
+        "required": "true"
+      }
+    ],
+    "return": "ImportForecastUploadResponse",
+    "example": "import \n\nAPI.basePath = \"\"\nAPI.accessToken = \"cwRto9ScT...\"\n\nlet businessUnitId: String = \"\" // The business unit ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body\n\n// Code example\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunits": {
     "operationId": "postworkforcemanagementbusinessunits",

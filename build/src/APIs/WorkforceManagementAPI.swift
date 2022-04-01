@@ -9814,11 +9814,7 @@ open class WorkforceManagementAPI {
         "actualActivityCategory" : "aeiou",
         "endOffsetSeconds" : 123,
         "scheduledActivityCategory" : "aeiou",
-        "routingStatus" : {
-          "startTime" : "2000-01-23T04:56:07.000+0000",
-          "userId" : "aeiou",
-          "status" : "aeiou"
-        }
+        "routingStatus" : "aeiou"
       } ]
     } ],
     "entityId" : "aeiou"
@@ -10877,6 +10873,285 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     
+     Starts processing a schedule update
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdate(businessUnitId: String, weekId: Date, scheduleId: String, body: ProcessScheduleUpdateUploadRequest, completion: @escaping ((_ data: BuAsyncScheduleResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekScheduleUpdateWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
+        requestBuilder.execute { (response: Response<BuAsyncScheduleResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Starts processing a schedule update
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update
+     - Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "managementUnits" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "agentCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "agents" : [ "" ]
+    } ],
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "generationResults" : {
+      "messageSeverityCounts" : [ {
+        "severity" : "aeiou",
+        "count" : 123
+      } ],
+      "messageCount" : 123,
+      "failed" : true,
+      "runId" : "aeiou"
+    },
+    "id" : "aeiou",
+    "published" : true,
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "weekCount" : 123
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<BuAsyncScheduleResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdateWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: ProcessScheduleUpdateUploadRequest) -> RequestBuilder<BuAsyncScheduleResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAsyncScheduleResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Creates a signed upload URL for updating a schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl(businessUnitId: String, weekId: Date, scheduleId: String, body: UploadUrlRequestBody, completion: @escaping ((_ data: UpdateScheduleUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body)
+        requestBuilder.execute { (response: Response<UpdateScheduleUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates a signed upload URL for updating a schedule
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl
+     - Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "aeiou"
+  },
+  "uploadKey" : "aeiou",
+  "uploadBodySchema" : {
+    "metadata" : "",
+    "headcountForecast" : {
+      "entities" : [ {
+        "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+        "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+        "planningGroup" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        }
+      } ],
+      "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "agentSchedules" : [ {
+      "fullDayTimeOffMarkers" : [ {
+        "activityCodeId" : "aeiou",
+        "timeOffRequestId" : "aeiou",
+        "lengthMinutes" : 123,
+        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+        "paid" : true,
+        "description" : "aeiou"
+      } ],
+      "metadata" : {
+        "dateCreated" : "2000-01-23T04:56:07.000+0000",
+        "createdBy" : "",
+        "modifiedBy" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
+        "dateModified" : "2000-01-23T04:56:07.000+0000",
+        "version" : 123
+      },
+      "workPlanId" : {
+        "value" : "aeiou"
+      },
+      "workPlanIdsPerWeek" : {
+        "values" : [ "aeiou" ]
+      },
+      "shifts" : [ {
+        "schedule" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou",
+          "weekDate" : "2000-01-23T04:56:07.000+0000"
+        },
+        "lengthMinutes" : 123,
+        "activities" : [ {
+          "activityCodeId" : "aeiou",
+          "externalActivityType" : "aeiou",
+          "timeOffRequestId" : "aeiou",
+          "lengthMinutes" : 123,
+          "externalActivityId" : "aeiou",
+          "paid" : true,
+          "description" : "aeiou",
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        } ],
+        "id" : "aeiou",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "manuallyEdited" : true
+      } ],
+      "userId" : "aeiou",
+      "delete" : true
+    } ],
+    "description" : "aeiou",
+    "published" : true,
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    }
+  },
+  "url" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter scheduleId: (path) The ID of the schedule 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<UpdateScheduleUploadResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurlWithRequestBuilder(businessUnitId: String, weekId: Date, scheduleId: String, body: UploadUrlRequestBody) -> RequestBuilder<UpdateScheduleUploadResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let scheduleIdPreEscape = "\(scheduleId)"
+        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UpdateScheduleUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
     /**
      
      Create a blank schedule
@@ -11100,6 +11375,260 @@ open class WorkforceManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuAsyncScheduleRunResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Starts processing a schedule import
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesImport(businessUnitId: String, weekId: Date, body: WfmProcessUploadRequest, completion: @escaping ((_ data: ScheduleUploadProcessingResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulesImportWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, body: body)
+        requestBuilder.execute { (response: Response<ScheduleUploadProcessingResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Starts processing a schedule import
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import
+     - Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "managementUnits" : [ {
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "endDate" : "2000-01-23T04:56:07.000+0000",
+      "agentCount" : 123,
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "agents" : [ "" ]
+    } ],
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "generationResults" : {
+      "messageSeverityCounts" : [ {
+        "severity" : "aeiou",
+        "count" : 123
+      } ],
+      "messageCount" : 123,
+      "failed" : true,
+      "runId" : "aeiou"
+    },
+    "id" : "aeiou",
+    "published" : true,
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "weekCount" : 123
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<ScheduleUploadProcessingResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesImportWithRequestBuilder(businessUnitId: String, weekId: Date, body: WfmProcessUploadRequest) -> RequestBuilder<ScheduleUploadProcessingResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScheduleUploadProcessingResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Creates a signed upload URL for importing a schedule
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl(businessUnitId: String, weekId: Date, body: UploadUrlRequestBody, completion: @escaping ((_ data: ImportScheduleUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithRequestBuilder(businessUnitId: businessUnitId, weekId: weekId, body: body)
+        requestBuilder.execute { (response: Response<ImportScheduleUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates a signed upload URL for importing a schedule
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl
+     - Once the upload is complete, call the /import route to start the schedule import process
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "aeiou"
+  },
+  "uploadKey" : "aeiou",
+  "uploadBodySchema" : {
+    "headcountForecast" : {
+      "entities" : [ {
+        "requiredWithoutShrinkagePerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+        "requiredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+        "planningGroup" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        }
+      } ],
+      "referenceStartDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "agentSchedules" : [ {
+      "fullDayTimeOffMarkers" : [ {
+        "activityCodeId" : "aeiou",
+        "timeOffRequestId" : "aeiou",
+        "lengthMinutes" : 123,
+        "businessUnitDate" : "2000-01-23T04:56:07.000+0000",
+        "paid" : true,
+        "description" : "aeiou"
+      } ],
+      "workPlanId" : {
+        "value" : "aeiou"
+      },
+      "workPlanIdsPerWeek" : {
+        "values" : [ "aeiou" ]
+      },
+      "shifts" : [ {
+        "schedule" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou",
+          "weekDate" : "2000-01-23T04:56:07.000+0000"
+        },
+        "lengthMinutes" : 123,
+        "activities" : [ {
+          "activityCodeId" : "aeiou",
+          "externalActivityType" : "aeiou",
+          "timeOffRequestId" : "aeiou",
+          "lengthMinutes" : 123,
+          "externalActivityId" : "aeiou",
+          "paid" : true,
+          "description" : "aeiou",
+          "startDate" : "2000-01-23T04:56:07.000+0000"
+        } ],
+        "id" : "aeiou",
+        "startDate" : "2000-01-23T04:56:07.000+0000",
+        "manuallyEdited" : true
+      } ],
+      "userId" : "aeiou"
+    } ],
+    "description" : "aeiou",
+    "published" : true,
+    "shortTermForecast" : {
+      "selfUri" : "aeiou",
+      "description" : "aeiou",
+      "id" : "aeiou",
+      "weekDate" : "2000-01-23T04:56:07.000+0000"
+    },
+    "weekCount" : 123
+  },
+  "url" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter weekId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ImportScheduleUploadResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurlWithRequestBuilder(businessUnitId: String, weekId: Date, body: UploadUrlRequestBody) -> RequestBuilder<ImportScheduleUploadResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekIdPreEscape = "\(weekId)"
+        let weekIdPostEscape = weekIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekId}", with: weekIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ImportScheduleUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -11453,6 +11982,261 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<AsyncForecastOperationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Starts importing the uploaded short term forecast
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId: String, weekDateId: Date, body: WfmProcessUploadRequest, completion: @escaping ((_ data: ImportForecastResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body)
+        requestBuilder.execute { (response: Response<ImportForecastResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Starts importing the uploaded short term forecast
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import
+     - Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : {
+    "metadata" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "createdBy" : "",
+      "modifiedBy" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "version" : 123
+    },
+    "legacy" : true,
+    "referenceStartDate" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "description" : "aeiou",
+    "timeZone" : "aeiou",
+    "sourceDays" : [ {
+      "date" : "aeiou",
+      "dataKey" : "aeiou",
+      "fileName" : "aeiou",
+      "dayOfWeek" : "aeiou",
+      "weight" : 123
+    } ],
+    "weekCount" : 123,
+    "creationMethod" : "aeiou",
+    "planningGroupsVersion" : 123,
+    "planningGroups" : {
+      "entities" : [ {
+        "serviceGoalTemplate" : {
+          "abandonRate" : {
+            "percent" : 123
+          },
+          "averageSpeedOfAnswer" : {
+            "seconds" : 123
+          },
+          "serviceLevel" : {
+            "seconds" : 123,
+            "percent" : 123
+          }
+        },
+        "name" : "aeiou",
+        "id" : "aeiou",
+        "routePaths" : [ {
+          "skills" : [ {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          } ],
+          "mediaType" : "aeiou",
+          "language" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
+          "queue" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          }
+        } ]
+      } ]
+    },
+    "generationResults" : {
+      "planningGroupResults" : [ {
+        "planningGroupId" : "aeiou",
+        "metricResults" : [ {
+          "metric" : "aeiou",
+          "forecastingMethod" : "aeiou",
+          "forecastType" : "aeiou"
+        } ]
+      } ]
+    },
+    "id" : "aeiou",
+    "weekDate" : "2000-01-23T04:56:07.000+0000",
+    "canUseForScheduling" : true,
+    "modifications" : [ {
+      "startIntervalIndex" : 123,
+      "legacyMetric" : "aeiou",
+      "displayGranularity" : "aeiou",
+      "endIntervalIndex" : 123,
+      "metric" : "aeiou",
+      "granularity" : "aeiou",
+      "values" : [ {
+        "intervalIndex" : 123,
+        "value" : 1.3579000000000001069366817318950779736042022705078125
+      } ],
+      "type" : "aeiou",
+      "planningGroupIds" : [ "aeiou" ],
+      "value" : 1.3579000000000001069366817318950779736042022705078125,
+      "enabled" : true
+    } ]
+  },
+  "operationId" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<ImportForecastResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImportWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: WfmProcessUploadRequest) -> RequestBuilder<ImportForecastResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ImportForecastResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    /**
+     
+     Creates a signed upload URL for importing a short term forecast
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId: String, weekDateId: Date, body: UploadUrlRequestBody, completion: @escaping ((_ data: ImportForecastUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithRequestBuilder(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body)
+        requestBuilder.execute { (response: Response<ImportForecastUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates a signed upload URL for importing a short term forecast
+     
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl
+     - Once the upload is complete, call the /import route to start the short term forecast import process
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "aeiou"
+  },
+  "uploadKey" : "aeiou",
+  "uploadBodySchema" : {
+    "longTermPlanningGroups" : [ {
+      "averageHandleTimeSecondsPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "planningGroupId" : "aeiou",
+      "offeredPerDay" : [ 1.3579000000000001069366817318950779736042022705078125 ]
+    } ],
+    "planningGroups" : [ {
+      "averageHandleTimeSecondsPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ],
+      "planningGroupId" : "aeiou",
+      "offeredPerInterval" : [ 1.3579000000000001069366817318950779736042022705078125 ]
+    } ],
+    "description" : "aeiou",
+    "weekCount" : 123,
+    "canUseForScheduling" : true
+  },
+  "url" : "aeiou"
+}}]
+     
+     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ImportForecastUploadResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlWithRequestBuilder(businessUnitId: String, weekDateId: Date, body: UploadUrlRequestBody) -> RequestBuilder<ImportForecastUploadResponse> {
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let weekDateIdPreEscape = "\(weekDateId)"
+        let weekDateIdPostEscape = weekDateIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{weekDateId}", with: weekDateIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ImportForecastUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -11929,11 +12713,7 @@ open class WorkforceManagementAPI {
         "actualActivityCategory" : "aeiou",
         "endOffsetSeconds" : 123,
         "scheduledActivityCategory" : "aeiou",
-        "routingStatus" : {
-          "startTime" : "2000-01-23T04:56:07.000+0000",
-          "userId" : "aeiou",
-          "status" : "aeiou"
-        }
+        "routingStatus" : "aeiou"
       } ]
     } ],
     "entityId" : "aeiou"

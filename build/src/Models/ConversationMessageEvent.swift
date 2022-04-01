@@ -15,6 +15,8 @@ public class ConversationMessageEvent: Codable {
     public enum EventType: String, Codable { 
         case coBrowse = "CoBrowse"
         case typing = "Typing"
+        case presence = "Presence"
+        case unknown = "Unknown"
     }
     /** Type of this event element */
     public var eventType: EventType?
@@ -22,14 +24,18 @@ public class ConversationMessageEvent: Codable {
     public var coBrowse: ConversationEventCoBrowse?
     /** Typing event. */
     public var typing: ConversationEventTyping?
+    /** Presence event. */
+    public var presence: ConversationEventPresence?
 
-    public init(eventType: EventType?, coBrowse: ConversationEventCoBrowse?, typing: ConversationEventTyping?) {
+    public init(eventType: EventType?, coBrowse: ConversationEventCoBrowse?, typing: ConversationEventTyping?, presence: ConversationEventPresence?) {
         
         self.eventType = eventType
         
         self.coBrowse = coBrowse
         
         self.typing = typing
+        
+        self.presence = presence
         
     }
 

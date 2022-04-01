@@ -18,14 +18,18 @@ public class WebMessagingRecipient: Codable {
     public var lastName: String?
     /** Nickname or display name of the recipient. */
     public var nickname: String?
+    /** List of recipient additional identifiers */
+    public var additionalIds: [RecipientAdditionalIdentifier]?
 
-    public init(firstName: String?, lastName: String?, nickname: String?) {
+    public init(firstName: String?, lastName: String?, nickname: String?, additionalIds: [RecipientAdditionalIdentifier]?) {
         
         self.firstName = firstName
         
         self.lastName = lastName
         
         self.nickname = nickname
+        
+        self.additionalIds = additionalIds
         
     }
 

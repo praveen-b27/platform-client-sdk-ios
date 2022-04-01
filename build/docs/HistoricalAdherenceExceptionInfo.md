@@ -13,7 +13,7 @@ title: HistoricalAdherenceExceptionInfo
 | **scheduledActivityCategory** | **String** | Activity for which the user is scheduled | [optional] |
 | **actualActivityCategory** | **String** | Activity for which the user is actually engaged | [optional] |
 | **systemPresence** | **String** | Actual underlying system presence value | [optional] |
-| **routingStatus** | [**RoutingStatus**](RoutingStatus.html) | Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue | [optional] |
+| **routingStatus** | **String** | Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue | [optional] |
 | **impact** | **String** | The impact of the current adherence state for this user | [optional] |
 | **secondaryPresenceLookupId** | **String** | The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID | [optional] |
 {: class="table table-striped"}

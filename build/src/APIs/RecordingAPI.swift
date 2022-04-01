@@ -9658,6 +9658,7 @@ open class RecordingAPI {
       "url" : "aeiou",
       "apiId" : "aeiou"
     },
+    "kmsKeyArn" : "aeiou",
     "selfUri" : "aeiou",
     "name" : "aeiou",
     "id" : "aeiou",
@@ -13795,6 +13796,7 @@ open class RecordingAPI {
     "url" : "aeiou",
     "apiId" : "aeiou"
   },
+  "kmsKeyArn" : "aeiou",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "id" : "aeiou",
@@ -14873,6 +14875,7 @@ open class RecordingAPI {
     "url" : "aeiou",
     "apiId" : "aeiou"
   },
+  "kmsKeyArn" : "aeiou",
   "selfUri" : "aeiou",
   "name" : "aeiou",
   "id" : "aeiou",

@@ -45,6 +45,13 @@ public class HistoricalAdherenceExceptionInfo: Codable {
         case meeting = "Meeting"
         case _break = "Break"
     }
+    public enum RoutingStatus: String, Codable { 
+        case offQueue = "OFF_QUEUE"
+        case idle = "IDLE"
+        case interacting = "INTERACTING"
+        case notResponding = "NOT_RESPONDING"
+        case communicating = "COMMUNICATING"
+    }
     public enum Impact: String, Codable { 
         case positive = "Positive"
         case negative = "Negative"

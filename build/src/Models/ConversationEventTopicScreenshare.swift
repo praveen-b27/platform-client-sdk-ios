@@ -55,6 +55,7 @@ public class ConversationEventTopicScreenshare: Codable {
     public var scriptId: String?
     /** The id of the peer communication corresponding to a matching leg for this communication. */
     public var peerId: String?
+    public var peerCount: ConversationEventTopicObject?
     /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
     public var disconnectType: DisconnectType?
     /** The timestamp when this communication was connected in the cloud clock. */
@@ -68,7 +69,7 @@ public class ConversationEventTopicScreenshare: Codable {
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, _self: ConversationEventTopicAddress?, _id: String?, context: String?, sharing: Bool?, provider: String?, scriptId: String?, peerId: String?, peerCount: ConversationEventTopicObject?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, wrapup: ConversationEventTopicWrapup?, afterCallWork: ConversationEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
         
         self.state = state
         
@@ -85,6 +86,8 @@ public class ConversationEventTopicScreenshare: Codable {
         self.scriptId = scriptId
         
         self.peerId = peerId
+        
+        self.peerCount = peerCount
         
         self.disconnectType = disconnectType
         
@@ -109,6 +112,7 @@ public class ConversationEventTopicScreenshare: Codable {
         case provider
         case scriptId
         case peerId
+        case peerCount
         case disconnectType
         case connectedTime
         case disconnectedTime

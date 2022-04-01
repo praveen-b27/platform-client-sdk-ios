@@ -14,6 +14,7 @@ title: QueueConversationVideoEventTopicVideo
 | **audioMuted** | **Bool** | Indicates whether this participant has muted their outgoing audio. | [optional] |
 | **videoMuted** | **Bool** | Indicates whether this participant has muted/paused their outgoing video. | [optional] |
 | **sharingScreen** | **Bool** | Indicates whether this participant is sharing their screen to the session. | [optional] |
+| **peerCount** | [**QueueConversationVideoEventTopicObject**](QueueConversationVideoEventTopicObject.html) | The number of peer participants from the perspective of the participant in the conference. | [optional] |
 | **provider** | **String** | The media provider controlling the video. | [optional] |
 | **scriptId** | **String** | The UUID of the script to use. | [optional] |
 | **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |

@@ -15,8 +15,8 @@ title: EvaluationQuestion
 | **commentsRequired** | **Bool** |  | [optional] |
 | **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
 | **answerOptions** | [**[AnswerOption]**](AnswerOption.html) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
-| **isCritical** | **Bool** |  | [optional] |
 | **isKill** | **Bool** |  | [optional] |
+| **isCritical** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

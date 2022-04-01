@@ -68,15 +68,18 @@ open class OAuthAPI {
     
     
     
+    
+    
     /**
      
      Get a client that is authorized by the resource owner
      
      - parameter clientId: (path) The ID of client 
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOauthAuthorization(clientId: String, completion: @escaping ((_ data: OAuthAuthorization?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOauthAuthorizationWithRequestBuilder(clientId: clientId)
+    open class func getOauthAuthorization(clientId: String, acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthAuthorization?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthAuthorizationWithRequestBuilder(clientId: clientId, acceptLanguage: acceptLanguage)
         requestBuilder.execute { (response: Response<OAuthAuthorization>?, error) -> Void in
             do {
                 if let e = error {
@@ -107,6 +110,7 @@ open class OAuthAPI {
   "createdBy" : "",
   "resourceOwner" : "",
   "scope" : [ "aeiou" ],
+  "roles" : [ "aeiou" ],
   "pending" : true,
   "selfUri" : "aeiou",
   "client" : {
@@ -136,14 +140,16 @@ open class OAuthAPI {
     } ]
   },
   "dateModified" : "2000-01-23T04:56:07.000+0000",
-  "modifiedBy" : ""
+  "modifiedBy" : "",
+  "state" : "aeiou"
 }}]
      
      - parameter clientId: (path) The ID of client 
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
 
      - returns: RequestBuilder<OAuthAuthorization> 
      */
-    open class func getOauthAuthorizationWithRequestBuilder(clientId: String) -> RequestBuilder<OAuthAuthorization> {
+    open class func getOauthAuthorizationWithRequestBuilder(clientId: String, acceptLanguage: String? = nil) -> RequestBuilder<OAuthAuthorization> {
         var path = "/api/v2/oauth/authorizations/{clientId}"
         let clientIdPreEscape = "\(clientId)"
         let clientIdPostEscape = clientIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -157,21 +163,28 @@ open class OAuthAPI {
             
         
         let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "Accept-Language": acceptLanguage
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
 
         let requestBuilder: RequestBuilder<OAuthAuthorization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
     }
 
     
+    
+    
     /**
      
-     List clients that are authorized by the resource owner
+     List clients that have been authorized, requested, or revoked by the resource owner
      
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOauthAuthorizations(completion: @escaping ((_ data: OAuthAuthorizationListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getOauthAuthorizationsWithRequestBuilder()
+    open class func getOauthAuthorizations(acceptLanguage: String? = nil, completion: @escaping ((_ data: OAuthAuthorizationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOauthAuthorizationsWithRequestBuilder(acceptLanguage: acceptLanguage)
         requestBuilder.execute { (response: Response<OAuthAuthorizationListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -190,7 +203,7 @@ open class OAuthAPI {
 
     /**
      
-     List clients that are authorized by the resource owner
+     List clients that have been authorized, requested, or revoked by the resource owner
      
      - GET /api/v2/oauth/authorizations
      - 
@@ -204,6 +217,7 @@ open class OAuthAPI {
     "createdBy" : "",
     "resourceOwner" : "",
     "scope" : [ "aeiou" ],
+    "roles" : [ "aeiou" ],
     "pending" : true,
     "selfUri" : "aeiou",
     "client" : {
@@ -233,14 +247,17 @@ open class OAuthAPI {
       } ]
     },
     "dateModified" : "2000-01-23T04:56:07.000+0000",
-    "modifiedBy" : ""
+    "modifiedBy" : "",
+    "state" : "aeiou"
   } ],
   "selfUri" : "aeiou"
 }}]
+     
+     - parameter acceptLanguage: (header) The language in which to display the client descriptions. (optional, default to en-us)
 
      - returns: RequestBuilder<OAuthAuthorizationListing> 
      */
-    open class func getOauthAuthorizationsWithRequestBuilder() -> RequestBuilder<OAuthAuthorizationListing> {
+    open class func getOauthAuthorizationsWithRequestBuilder(acceptLanguage: String? = nil) -> RequestBuilder<OAuthAuthorizationListing> {
         let path = "/api/v2/oauth/authorizations"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -251,10 +268,14 @@ open class OAuthAPI {
             
         
         let url = URLComponents(string: URLString)
+        let nillableHeaders: [String: Any?] = [
+            "Accept-Language": acceptLanguage
+        ]
+        let headerParameters = APIHelper.rejectNilHeaders(nillableHeaders)
 
         let requestBuilder: RequestBuilder<OAuthAuthorizationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
     }
 
     

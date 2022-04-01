@@ -53,6 +53,8 @@ public class QueueConversationSocialExpressionEventTopicVideo: Codable {
     public var videoMuted: Bool?
     /** Indicates whether this participant is sharing their screen to the session. */
     public var sharingScreen: Bool?
+    /** The number of peer participants from the perspective of the participant in the conference. */
+    public var peerCount: QueueConversationSocialExpressionEventTopicObject?
     /** The media provider controlling the video. */
     public var provider: String?
     /** The UUID of the script to use. */
@@ -74,7 +76,7 @@ public class QueueConversationSocialExpressionEventTopicVideo: Codable {
     /** Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. */
     public var afterCallWorkRequired: Bool?
 
-    public init(state: State?, _self: QueueConversationSocialExpressionEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
+    public init(state: State?, _self: QueueConversationSocialExpressionEventTopicAddress?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: QueueConversationSocialExpressionEventTopicObject?, provider: String?, scriptId: String?, peerId: String?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, msids: [String]?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, afterCallWork: QueueConversationSocialExpressionEventTopicAfterCallWork?, afterCallWorkRequired: Bool?) {
         
         self.state = state
         
@@ -89,6 +91,8 @@ public class QueueConversationSocialExpressionEventTopicVideo: Codable {
         self.videoMuted = videoMuted
         
         self.sharingScreen = sharingScreen
+        
+        self.peerCount = peerCount
         
         self.provider = provider
         
@@ -120,6 +124,7 @@ public class QueueConversationSocialExpressionEventTopicVideo: Codable {
         case audioMuted
         case videoMuted
         case sharingScreen
+        case peerCount
         case provider
         case scriptId
         case peerId

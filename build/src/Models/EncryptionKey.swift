@@ -30,10 +30,12 @@ public class EncryptionKey: Codable {
     public var localEncryptionConfiguration: LocalEncryptionConfiguration?
     /** Key type used in this configuration */
     public var keyConfigurationType: KeyConfigurationType?
+    /** ARN of internal key to be wrapped by AWS KMS Symmetric key */
+    public var kmsKeyArn: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, createDate: Date?, keydataSummary: String?, user: User?, localEncryptionConfiguration: LocalEncryptionConfiguration?, keyConfigurationType: KeyConfigurationType?, selfUri: String?) {
+    public init(_id: String?, name: String?, createDate: Date?, keydataSummary: String?, user: User?, localEncryptionConfiguration: LocalEncryptionConfiguration?, keyConfigurationType: KeyConfigurationType?, kmsKeyArn: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -49,6 +51,8 @@ public class EncryptionKey: Codable {
         
         self.keyConfigurationType = keyConfigurationType
         
+        self.kmsKeyArn = kmsKeyArn
+        
         self.selfUri = selfUri
         
     }
@@ -61,6 +65,7 @@ public class EncryptionKey: Codable {
         case user
         case localEncryptionConfiguration
         case keyConfigurationType
+        case kmsKeyArn
         case selfUri
     }
 

@@ -9,7 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteOauthClient**](OAuthAPI.html#deleteOauthClient) | Delete OAuth Client |
 | [**getOauthAuthorization**](OAuthAPI.html#getOauthAuthorization) | Get a client that is authorized by the resource owner |
-| [**getOauthAuthorizations**](OAuthAPI.html#getOauthAuthorizations) | List clients that are authorized by the resource owner |
+| [**getOauthAuthorizations**](OAuthAPI.html#getOauthAuthorizations) | List clients that have been authorized, requested, or revoked by the resource owner |
 | [**getOauthClient**](OAuthAPI.html#getOauthClient) | Get OAuth Client |
 | [**getOauthClientUsageQueryResult**](OAuthAPI.html#getOauthClientUsageQueryResult) | Get the results of a usage query |
 | [**getOauthClientUsageSummary**](OAuthAPI.html#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
@@ -79,7 +79,7 @@ OAuthAPI.deleteOauthClient(clientId: clientId) { (error) in
 
 
 
-> [OAuthAuthorization](OAuthAuthorization.html) getOauthAuthorization(clientId)
+> [OAuthAuthorization](OAuthAuthorization.html) getOauthAuthorization(clientId, acceptLanguage)
 
 Get a client that is authorized by the resource owner
 
@@ -100,9 +100,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let clientId: String = "" // The ID of client
+let acceptLanguage: String = "en-us" // The language in which to display the client descriptions.
 
 // Code example
-OAuthAPI.getOauthAuthorization(clientId: clientId) { (response, error) in
+OAuthAPI.getOauthAuthorization(clientId: clientId, acceptLanguage: acceptLanguage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -118,6 +119,7 @@ OAuthAPI.getOauthAuthorization(clientId: clientId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| The ID of client | |
+| **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] [default to en-us] |
 {: class="table-striped"}
 
 
@@ -131,9 +133,9 @@ OAuthAPI.getOauthAuthorization(clientId: clientId) { (response, error) in
 
 
 
-> [OAuthAuthorizationListing](OAuthAuthorizationListing.html) getOauthAuthorizations()
+> [OAuthAuthorizationListing](OAuthAuthorizationListing.html) getOauthAuthorizations(acceptLanguage)
 
-List clients that are authorized by the resource owner
+List clients that have been authorized, requested, or revoked by the resource owner
 
 
 
@@ -151,9 +153,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let acceptLanguage: String = "en-us" // The language in which to display the client descriptions.
 
 // Code example
-OAuthAPI.getOauthAuthorizations() { (response, error) in
+OAuthAPI.getOauthAuthorizations(acceptLanguage: acceptLanguage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -165,8 +168,11 @@ OAuthAPI.getOauthAuthorizations() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] [default to en-us] |
+{: class="table-striped"}
 
 
 ### Return type

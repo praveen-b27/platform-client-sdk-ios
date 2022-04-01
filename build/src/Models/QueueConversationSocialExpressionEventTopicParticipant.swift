@@ -65,6 +65,8 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
     public var monitoredParticipantId: String?
     /** If this participant is a coach, then this will be the id of the participant that is being coached. */
     public var coachedParticipantId: String?
+    /** If this participant created a barge in conference, then this will be the id of the participant that is barged in. */
+    public var bargedParticipantId: String?
     /** The current screen recording state for this participant. */
     public var screenRecordingState: ScreenRecordingState?
     /** If this participant has flagged the conversation, the reason code given. */
@@ -81,7 +83,7 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
     public var socialExpressions: [QueueConversationSocialExpressionEventTopicSocialExpression]?
     public var videos: [QueueConversationSocialExpressionEventTopicVideo]?
 
-    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationSocialExpressionEventTopicConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationSocialExpressionEventTopicCall]?, callbacks: [QueueConversationSocialExpressionEventTopicCallback]?, chats: [QueueConversationSocialExpressionEventTopicChat]?, cobrowsesessions: [QueueConversationSocialExpressionEventTopicCobrowse]?, emails: [QueueConversationSocialExpressionEventTopicEmail]?, messages: [QueueConversationSocialExpressionEventTopicMessage]?, screenshares: [QueueConversationSocialExpressionEventTopicScreenshare]?, socialExpressions: [QueueConversationSocialExpressionEventTopicSocialExpression]?, videos: [QueueConversationSocialExpressionEventTopicVideo]?) {
+    public init(_id: String?, connectedTime: Date?, endTime: Date?, userId: String?, externalContactId: String?, externalOrganizationId: String?, name: String?, queueId: String?, groupId: String?, teamId: String?, purpose: String?, consultParticipantId: String?, address: String?, wrapupRequired: Bool?, wrapupExpected: Bool?, wrapupPrompt: String?, wrapupTimeoutMs: Int?, wrapup: QueueConversationSocialExpressionEventTopicWrapup?, startAcwTime: Date?, endAcwTime: Date?, conversationRoutingData: QueueConversationSocialExpressionEventTopicConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, screenRecordingState: ScreenRecordingState?, flaggedReason: String?, attributes: [String:String]?, calls: [QueueConversationSocialExpressionEventTopicCall]?, callbacks: [QueueConversationSocialExpressionEventTopicCallback]?, chats: [QueueConversationSocialExpressionEventTopicChat]?, cobrowsesessions: [QueueConversationSocialExpressionEventTopicCobrowse]?, emails: [QueueConversationSocialExpressionEventTopicEmail]?, messages: [QueueConversationSocialExpressionEventTopicMessage]?, screenshares: [QueueConversationSocialExpressionEventTopicScreenshare]?, socialExpressions: [QueueConversationSocialExpressionEventTopicSocialExpression]?, videos: [QueueConversationSocialExpressionEventTopicVideo]?) {
         
         self._id = _id
         
@@ -130,6 +132,8 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
         self.monitoredParticipantId = monitoredParticipantId
         
         self.coachedParticipantId = coachedParticipantId
+        
+        self.bargedParticipantId = bargedParticipantId
         
         self.screenRecordingState = screenRecordingState
         
@@ -182,6 +186,7 @@ public class QueueConversationSocialExpressionEventTopicParticipant: Codable {
         case alertingTimeoutMs
         case monitoredParticipantId
         case coachedParticipantId
+        case bargedParticipantId
         case screenRecordingState
         case flaggedReason
         case attributes

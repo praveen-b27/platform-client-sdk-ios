@@ -1469,6 +1469,7 @@ open class SpeechTextAnalyticsAPI {
         case deDe = "de-DE"
         case ptBr = "pt-BR"
         case plPl = "pl-PL"
+        case ptPt = "pt-PT"
     }
 
     

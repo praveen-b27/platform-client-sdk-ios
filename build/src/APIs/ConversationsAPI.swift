@@ -8138,7 +8138,8 @@ open class ConversationsAPI {
         "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
-        "email" : "aeiou"
+        "email" : "aeiou",
+        "additionalIds" : [ "" ]
       },
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
@@ -8149,7 +8150,11 @@ open class ConversationsAPI {
         "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
-        "email" : "aeiou"
+        "email" : "aeiou",
+        "additionalIds" : [ {
+          "type" : "aeiou",
+          "value" : "aeiou"
+        } ]
       },
       "time" : "2000-01-23T04:56:07.000+0000",
       "platform" : "aeiou",
@@ -8237,7 +8242,10 @@ open class ConversationsAPI {
       "typing" : {
         "type" : "aeiou"
       },
-      "eventType" : "aeiou"
+      "eventType" : "aeiou",
+      "presence" : {
+        "type" : "aeiou"
+      }
     } ],
     "status" : "aeiou",
     "direction" : "aeiou"
@@ -8620,7 +8628,8 @@ open class ConversationsAPI {
         "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
-        "email" : "aeiou"
+        "email" : "aeiou",
+        "additionalIds" : [ "" ]
       },
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
@@ -8631,7 +8640,11 @@ open class ConversationsAPI {
         "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
-        "email" : "aeiou"
+        "email" : "aeiou",
+        "additionalIds" : [ {
+          "type" : "aeiou",
+          "value" : "aeiou"
+        } ]
       },
       "time" : "2000-01-23T04:56:07.000+0000",
       "platform" : "aeiou",
@@ -8719,7 +8732,10 @@ open class ConversationsAPI {
       "typing" : {
         "type" : "aeiou"
       },
-      "eventType" : "aeiou"
+      "eventType" : "aeiou",
+      "presence" : {
+        "type" : "aeiou"
+      }
     } ],
     "status" : "aeiou",
     "direction" : "aeiou"
@@ -13929,6 +13945,73 @@ open class ConversationsAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Empty>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update a scheduled callback
+     
+     - parameter body: (body) PatchCallbackRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchConversationsCallbacks(body: PatchCallbackRequest, completion: @escaping ((_ data: PatchCallbackResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchConversationsCallbacksWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<PatchCallbackResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a scheduled callback
+     
+     - PATCH /api/v2/conversations/callbacks
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "callbackIdentifiers" : [ {
+    "id" : "aeiou",
+    "type" : "aeiou"
+  } ],
+  "conversation" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter body: (body) PatchCallbackRequest 
+
+     - returns: RequestBuilder<PatchCallbackResponse> 
+     */
+    open class func patchConversationsCallbacksWithRequestBuilder(body: PatchCallbackRequest) -> RequestBuilder<PatchCallbackResponse> {
+        let path = "/api/v2/conversations/callbacks"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PatchCallbackResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: url!, body: body)
     }
@@ -22465,6 +22548,122 @@ open class ConversationsAPI {
     
     /**
      
+     Disconnect multiple scheduled callbacks
+     
+     - parameter body: (body) BulkCallbackDisconnectRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsCallbacksBulkDisconnect(body: BulkCallbackDisconnectRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsCallbacksBulkDisconnectWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Disconnect multiple scheduled callbacks
+     
+     - POST /api/v2/conversations/callbacks/bulk/disconnect
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) BulkCallbackDisconnectRequest 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postConversationsCallbacksBulkDisconnectWithRequestBuilder(body: BulkCallbackDisconnectRequest) -> RequestBuilder<Void> {
+        let path = "/api/v2/conversations/callbacks/bulk/disconnect"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Update multiple scheduled callbacks
+     
+     - parameter body: (body) BulkCallbackPatchRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postConversationsCallbacksBulkUpdate(body: BulkCallbackPatchRequest, completion: @escaping ((_ data: BulkCallbackPatchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postConversationsCallbacksBulkUpdateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BulkCallbackPatchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update multiple scheduled callbacks
+     
+     - POST /api/v2/conversations/callbacks/bulk/update
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 123 ],
+  "results" : [ {
+    "error" : {
+      "code" : "aeiou",
+      "message" : "aeiou"
+    },
+    "entity" : "{}"
+  } ],
+  "errorCount" : 123
+}}]
+     
+     - parameter body: (body) BulkCallbackPatchRequest 
+
+     - returns: RequestBuilder<BulkCallbackPatchResponse> 
+     */
+    open class func postConversationsCallbacksBulkUpdateWithRequestBuilder(body: BulkCallbackPatchRequest) -> RequestBuilder<BulkCallbackPatchResponse> {
+        let path = "/api/v2/conversations/callbacks/bulk/update"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkCallbackPatchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Create a call conversation
      
      - parameter body: (body) Call request 
@@ -23685,7 +23884,8 @@ open class ConversationsAPI {
         "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
-        "email" : "aeiou"
+        "email" : "aeiou",
+        "additionalIds" : [ "" ]
       },
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "id" : "aeiou",
@@ -23696,7 +23896,11 @@ open class ConversationsAPI {
         "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
-        "email" : "aeiou"
+        "email" : "aeiou",
+        "additionalIds" : [ {
+          "type" : "aeiou",
+          "value" : "aeiou"
+        } ]
       },
       "time" : "2000-01-23T04:56:07.000+0000",
       "platform" : "aeiou",
@@ -23784,7 +23988,10 @@ open class ConversationsAPI {
       "typing" : {
         "type" : "aeiou"
       },
-      "eventType" : "aeiou"
+      "eventType" : "aeiou",
+      "presence" : {
+        "type" : "aeiou"
+      }
     } ],
     "status" : "aeiou",
     "direction" : "aeiou"
@@ -24252,7 +24459,8 @@ open class ConversationsAPI {
           "idType" : "aeiou",
           "nickname" : "aeiou",
           "id" : "aeiou",
-          "email" : "aeiou"
+          "email" : "aeiou",
+          "additionalIds" : [ "" ]
         },
         "dateModified" : "2000-01-23T04:56:07.000+0000",
         "id" : "aeiou",
@@ -24263,7 +24471,11 @@ open class ConversationsAPI {
           "idType" : "aeiou",
           "nickname" : "aeiou",
           "id" : "aeiou",
-          "email" : "aeiou"
+          "email" : "aeiou",
+          "additionalIds" : [ {
+            "type" : "aeiou",
+            "value" : "aeiou"
+          } ]
         },
         "time" : "2000-01-23T04:56:07.000+0000",
         "platform" : "aeiou",
@@ -24351,7 +24563,10 @@ open class ConversationsAPI {
         "typing" : {
           "type" : "aeiou"
         },
-        "eventType" : "aeiou"
+        "eventType" : "aeiou",
+        "presence" : {
+          "type" : "aeiou"
+        }
       } ],
       "status" : "aeiou",
       "direction" : "aeiou"

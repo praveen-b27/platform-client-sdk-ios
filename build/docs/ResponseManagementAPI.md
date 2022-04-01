@@ -9,15 +9,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteResponsemanagementLibrary**](ResponseManagementAPI.html#deleteResponsemanagementLibrary) | Delete an existing response library. |
 | [**deleteResponsemanagementResponse**](ResponseManagementAPI.html#deleteResponsemanagementResponse) | Delete an existing response. |
+| [**deleteResponsemanagementResponseasset**](ResponseManagementAPI.html#deleteResponsemanagementResponseasset) | Delete response asset |
 | [**getResponsemanagementLibraries**](ResponseManagementAPI.html#getResponsemanagementLibraries) | Gets a list of existing response libraries. |
 | [**getResponsemanagementLibrary**](ResponseManagementAPI.html#getResponsemanagementLibrary) | Get details about an existing response library. |
 | [**getResponsemanagementResponse**](ResponseManagementAPI.html#getResponsemanagementResponse) | Get details about an existing response. |
+| [**getResponsemanagementResponseasset**](ResponseManagementAPI.html#getResponsemanagementResponseasset) | Get response asset information |
+| [**getResponsemanagementResponseassetsStatusStatusId**](ResponseManagementAPI.html#getResponsemanagementResponseassetsStatusStatusId) | Get response asset upload status |
 | [**getResponsemanagementResponses**](ResponseManagementAPI.html#getResponsemanagementResponses) | Gets a list of existing responses. |
 | [**postResponsemanagementLibraries**](ResponseManagementAPI.html#postResponsemanagementLibraries) | Create a response library. |
+| [**postResponsemanagementResponseassetsSearch**](ResponseManagementAPI.html#postResponsemanagementResponseassetsSearch) | Search response assets |
+| [**postResponsemanagementResponseassetsUploads**](ResponseManagementAPI.html#postResponsemanagementResponseassetsUploads) | Creates pre-signed url for uploading response asset |
 | [**postResponsemanagementResponses**](ResponseManagementAPI.html#postResponsemanagementResponses) | Create a response. |
 | [**postResponsemanagementResponsesQuery**](ResponseManagementAPI.html#postResponsemanagementResponsesQuery) | Query responses |
 | [**putResponsemanagementLibrary**](ResponseManagementAPI.html#putResponsemanagementLibrary) | Update an existing response library. |
 | [**putResponsemanagementResponse**](ResponseManagementAPI.html#putResponsemanagementResponse) | Update an existing response. |
+| [**putResponsemanagementResponseasset**](ResponseManagementAPI.html#putResponsemanagementResponseasset) | Update response asset |
 {: class="table-striped"}
 
 <a name="deleteResponsemanagementLibrary"></a>
@@ -113,6 +119,57 @@ ResponseManagementAPI.deleteResponsemanagementResponse(responseId: responseId) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **responseId** | **String**| Response ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteResponsemanagementResponseasset"></a>
+
+# **deleteResponsemanagementResponseasset**
+
+
+
+> Void deleteResponsemanagementResponseasset(responseAssetId)
+
+Delete response asset
+
+
+
+Wraps DELETE /api/v2/responsemanagement/responseassets/{responseAssetId}  
+
+Requires ANY permissions: 
+
+* responseAssets:asset:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let responseAssetId: String = "" // Asset Id
+
+// Code example
+ResponseManagementAPI.deleteResponsemanagementResponseasset(responseAssetId: responseAssetId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ResponseManagementAPI.deleteResponsemanagementResponseasset was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **responseAssetId** | **String**| Asset Id | |
 {: class="table-striped"}
 
 
@@ -279,6 +336,110 @@ ResponseManagementAPI.getResponsemanagementResponse(responseId: responseId, expa
 
 [**ModelResponse**](ModelResponse.html)
 
+<a name="getResponsemanagementResponseasset"></a>
+
+# **getResponsemanagementResponseasset**
+
+
+
+> [ResponseAsset](ResponseAsset.html) getResponsemanagementResponseasset(responseAssetId)
+
+Get response asset information
+
+
+
+Wraps GET /api/v2/responsemanagement/responseassets/{responseAssetId}  
+
+Requires ANY permissions: 
+
+* responseAssets:asset:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let responseAssetId: String = "" // Asset Id
+
+// Code example
+ResponseManagementAPI.getResponsemanagementResponseasset(responseAssetId: responseAssetId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.getResponsemanagementResponseasset was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **responseAssetId** | **String**| Asset Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ResponseAsset**](ResponseAsset.html)
+
+<a name="getResponsemanagementResponseassetsStatusStatusId"></a>
+
+# **getResponsemanagementResponseassetsStatusStatusId**
+
+
+
+> [ResponseAssetStatus](ResponseAssetStatus.html) getResponsemanagementResponseassetsStatusStatusId(statusId)
+
+Get response asset upload status
+
+
+
+Wraps GET /api/v2/responsemanagement/responseassets/status/{statusId}  
+
+Requires ANY permissions: 
+
+* responseAssets:asset:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let statusId: String = "" // Status Id
+
+// Code example
+ResponseManagementAPI.getResponsemanagementResponseassetsStatusStatusId(statusId: statusId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.getResponsemanagementResponseassetsStatusStatusId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **statusId** | **String**| Status Id | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ResponseAssetStatus**](ResponseAssetStatus.html)
+
 <a name="getResponsemanagementResponses"></a>
 
 # **getResponsemanagementResponses**
@@ -386,6 +547,112 @@ ResponseManagementAPI.postResponsemanagementLibraries(body: body) { (response, e
 ### Return type
 
 [**Library**](Library.html)
+
+<a name="postResponsemanagementResponseassetsSearch"></a>
+
+# **postResponsemanagementResponseassetsSearch**
+
+
+
+> [ResponseAssetSearchResults](ResponseAssetSearchResults.html) postResponsemanagementResponseassetsSearch(body, expand)
+
+Search response assets
+
+
+
+Wraps POST /api/v2/responsemanagement/responseassets/search  
+
+Requires ALL permissions: 
+
+* responseAssets:asset:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ResponseAssetSearchRequest = new ResponseAssetSearchRequest(...) // request
+let expand: [String] = [ResponseManagementAPI.Expand_postResponsemanagementResponseassetsSearch.enummember.rawValue] // Which fields, if any, to expand
+
+// Code example
+ResponseManagementAPI.postResponsemanagementResponseassetsSearch(body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.postResponsemanagementResponseassetsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ResponseAssetSearchRequest**](ResponseAssetSearchRequest.html)| request | |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user"), division ("division") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ResponseAssetSearchResults**](ResponseAssetSearchResults.html)
+
+<a name="postResponsemanagementResponseassetsUploads"></a>
+
+# **postResponsemanagementResponseassetsUploads**
+
+
+
+> [CreateResponseAssetResponse](CreateResponseAssetResponse.html) postResponsemanagementResponseassetsUploads(body)
+
+Creates pre-signed url for uploading response asset
+
+
+
+Wraps POST /api/v2/responsemanagement/responseassets/uploads  
+
+Requires ANY permissions: 
+
+* responseAssets:asset:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateResponseAssetRequest = new CreateResponseAssetRequest(...) // request
+
+// Code example
+ResponseManagementAPI.postResponsemanagementResponseassetsUploads(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.postResponsemanagementResponseassetsUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateResponseAssetRequest**](CreateResponseAssetRequest.html)| request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CreateResponseAssetResponse**](CreateResponseAssetResponse.html)
 
 <a name="postResponsemanagementResponses"></a>
 
@@ -598,4 +865,58 @@ ResponseManagementAPI.putResponsemanagementResponse(responseId: responseId, body
 ### Return type
 
 [**ModelResponse**](ModelResponse.html)
+
+<a name="putResponsemanagementResponseasset"></a>
+
+# **putResponsemanagementResponseasset**
+
+
+
+> [ResponseAsset](ResponseAsset.html) putResponsemanagementResponseasset(responseAssetId, body)
+
+Update response asset
+
+
+
+Wraps PUT /api/v2/responsemanagement/responseassets/{responseAssetId}  
+
+Requires ALL permissions: 
+
+* responseAssets:asset:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let responseAssetId: String = "" // Asset Id
+let body: ResponseAssetRequest = new ResponseAssetRequest(...) // request
+
+// Code example
+ResponseManagementAPI.putResponsemanagementResponseasset(responseAssetId: responseAssetId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.putResponsemanagementResponseasset was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **responseAssetId** | **String**| Asset Id | |
+| **body** | [**ResponseAssetRequest**](ResponseAssetRequest.html)| request | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ResponseAsset**](ResponseAsset.html)
 

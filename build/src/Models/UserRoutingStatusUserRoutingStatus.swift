@@ -11,15 +11,24 @@ import Foundation
 
 public class UserRoutingStatusUserRoutingStatus: Codable {
 
+    public var _id: UserRoutingStatusObject?
     public var routingStatus: UserRoutingStatusRoutingStatus?
     public var errorInfo: UserRoutingStatusErrorInfo?
 
-    public init(routingStatus: UserRoutingStatusRoutingStatus?, errorInfo: UserRoutingStatusErrorInfo?) {
+    public init(_id: UserRoutingStatusObject?, routingStatus: UserRoutingStatusRoutingStatus?, errorInfo: UserRoutingStatusErrorInfo?) {
+        
+        self._id = _id
         
         self.routingStatus = routingStatus
         
         self.errorInfo = errorInfo
         
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case routingStatus
+        case errorInfo
     }
 
 

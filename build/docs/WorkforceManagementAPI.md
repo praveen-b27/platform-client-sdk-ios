@@ -106,10 +106,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery) | Loads agent schedule data from the schedule. Used in combination with the metadata route |
 | [**postWorkforcemanagementBusinessunitWeekScheduleCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleCopy) | Copy a schedule |
 | [**postWorkforcemanagementBusinessunitWeekScheduleReschedule**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleReschedule) | Start a rescheduling run |
+| [**postWorkforcemanagementBusinessunitWeekScheduleUpdate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleUpdate) | Starts processing a schedule update |
+| [**postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl) | Creates a signed upload URL for updating a schedule |
 | [**postWorkforcemanagementBusinessunitWeekSchedules**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedules) | Create a blank schedule |
 | [**postWorkforcemanagementBusinessunitWeekSchedulesGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulesGenerate) | Generate a schedule |
+| [**postWorkforcemanagementBusinessunitWeekSchedulesImport**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulesImport) | Starts processing a schedule import |
+| [**postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl) | Creates a signed upload URL for importing a schedule |
 | [**postWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastCopy) | Copy a short term forecast |
 | [**postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate) | Generate a short term forecast |
+| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsImport**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsImport) | Starts importing the uploaded short term forecast |
+| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl) | Creates a signed upload URL for importing a short term forecast |
 | [**postWorkforcemanagementBusinessunits**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunits) | Add a new business unit |
 | [**postWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI.html#postWorkforcemanagementCalendarUrlIcs) | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
 | [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
@@ -5827,6 +5833,122 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleReschedule
 
 [**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html)
 
+<a name="postWorkforcemanagementBusinessunitWeekScheduleUpdate"></a>
+
+# **postWorkforcemanagementBusinessunitWeekScheduleUpdate**
+
+
+
+> [BuAsyncScheduleResponse](BuAsyncScheduleResponse.html) postWorkforcemanagementBusinessunitWeekScheduleUpdate(businessUnitId, weekId, scheduleId, body)
+
+Starts processing a schedule update
+
+Call after uploading the schedule data to the url supplied by the /update/uploadurl route
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update  
+
+Requires ANY permissions: 
+
+* wfm:schedule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let scheduleId: String = "" // The ID of the schedule
+let body: ProcessScheduleUpdateUploadRequest = new ProcessScheduleUpdateUploadRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleUpdate(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **scheduleId** | **String**| The ID of the schedule | |
+| **body** | [**ProcessScheduleUpdateUploadRequest**](ProcessScheduleUpdateUploadRequest.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl"></a>
+
+# **postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl**
+
+
+
+> [UpdateScheduleUploadResponse](UpdateScheduleUploadResponse.html) postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl(businessUnitId, weekId, scheduleId, body)
+
+Creates a signed upload URL for updating a schedule
+
+Once the upload is complete, call the /{scheduleId}/update route to start the schedule update process
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl  
+
+Requires ANY permissions: 
+
+* wfm:schedule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let scheduleId: String = "" // The ID of the schedule
+let body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl(businessUnitId: businessUnitId, weekId: weekId, scheduleId: scheduleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **scheduleId** | **String**| The ID of the schedule | |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UpdateScheduleUploadResponse**](UpdateScheduleUploadResponse.html)
+
 <a name="postWorkforcemanagementBusinessunitWeekSchedules"></a>
 
 # **postWorkforcemanagementBusinessunitWeekSchedules**
@@ -5938,6 +6060,118 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesGenerate(
 ### Return type
 
 [**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitWeekSchedulesImport"></a>
+
+# **postWorkforcemanagementBusinessunitWeekSchedulesImport**
+
+
+
+> [ScheduleUploadProcessingResponse](ScheduleUploadProcessingResponse.html) postWorkforcemanagementBusinessunitWeekSchedulesImport(businessUnitId, weekId, body)
+
+Starts processing a schedule import
+
+Call after uploading the schedule data to the url supplied by the /import/uploadurl route
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import  
+
+Requires ANY permissions: 
+
+* wfm:schedule:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // 
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesImport(businessUnitId: businessUnitId, weekId: weekId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScheduleUploadProcessingResponse**](ScheduleUploadProcessingResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl"></a>
+
+# **postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl**
+
+
+
+> [ImportScheduleUploadResponse](ImportScheduleUploadResponse.html) postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl(businessUnitId, weekId, body)
+
+Creates a signed upload URL for importing a schedule
+
+Once the upload is complete, call the /import route to start the schedule import process
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl  
+
+Requires ANY permissions: 
+
+* wfm:schedule:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let weekId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl(businessUnitId: businessUnitId, weekId: weekId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportScheduleUploadResponse**](ImportScheduleUploadResponse.html)
 
 <a name="postWorkforcemanagementBusinessunitWeekShorttermforecastCopy"></a>
 
@@ -6056,6 +6290,118 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 ### Return type
 
 [**AsyncForecastOperationResult**](AsyncForecastOperationResult.html)
+
+<a name="postWorkforcemanagementBusinessunitWeekShorttermforecastsImport"></a>
+
+# **postWorkforcemanagementBusinessunitWeekShorttermforecastsImport**
+
+
+
+> [ImportForecastResponse](ImportForecastResponse.html) postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId, weekDateId, body)
+
+Starts importing the uploaded short term forecast
+
+Call after uploading the forecast data to the url supplied by the /import/uploadurl route
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import  
+
+Requires ANY permissions: 
+
+* wfm:shortTermForecast:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // 
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecastsImport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **weekDateId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportForecastResponse**](ImportForecastResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl"></a>
+
+# **postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl**
+
+
+
+> [ImportForecastUploadResponse](ImportForecastUploadResponse.html) postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId, weekDateId, body)
+
+Creates a signed upload URL for importing a short term forecast
+
+Once the upload is complete, call the /import route to start the short term forecast import process
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl  
+
+Requires ANY permissions: 
+
+* wfm:shortTermForecast:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **weekDateId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ImportForecastUploadResponse**](ImportForecastUploadResponse.html)
 
 <a name="postWorkforcemanagementBusinessunits"></a>
 

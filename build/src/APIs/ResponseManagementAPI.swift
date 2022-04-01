@@ -123,6 +123,61 @@ open class ResponseManagementAPI {
     
     
     
+    /**
+     
+     Delete response asset
+     
+     - parameter responseAssetId: (path) Asset Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteResponsemanagementResponseasset(responseAssetId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteResponsemanagementResponseassetWithRequestBuilder(responseAssetId: responseAssetId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete response asset
+     
+     - DELETE /api/v2/responsemanagement/responseassets/{responseAssetId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter responseAssetId: (path) Asset Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteResponsemanagementResponseassetWithRequestBuilder(responseAssetId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/responsemanagement/responseassets/{responseAssetId}"
+        let responseAssetIdPreEscape = "\(responseAssetId)"
+        let responseAssetIdPostEscape = responseAssetIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{responseAssetId}", with: responseAssetIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -1216,6 +1271,158 @@ open class ResponseManagementAPI {
     
     
     
+    /**
+     
+     Get response asset information
+     
+     - parameter responseAssetId: (path) Asset Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getResponsemanagementResponseasset(responseAssetId: String, completion: @escaping ((_ data: ResponseAsset?,_ error: Error?) -> Void)) {
+        let requestBuilder = getResponsemanagementResponseassetWithRequestBuilder(responseAssetId: responseAssetId)
+        requestBuilder.execute { (response: Response<ResponseAsset>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get response asset information
+     
+     - GET /api/v2/responsemanagement/responseassets/{responseAssetId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "responses" : [ "" ],
+  "contentLength" : 123456789,
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "contentLocation" : "aeiou",
+  "contentType" : "aeiou"
+}}]
+     
+     - parameter responseAssetId: (path) Asset Id 
+
+     - returns: RequestBuilder<ResponseAsset> 
+     */
+    open class func getResponsemanagementResponseassetWithRequestBuilder(responseAssetId: String) -> RequestBuilder<ResponseAsset> {
+        var path = "/api/v2/responsemanagement/responseassets/{responseAssetId}"
+        let responseAssetIdPreEscape = "\(responseAssetId)"
+        let responseAssetIdPostEscape = responseAssetIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{responseAssetId}", with: responseAssetIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ResponseAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get response asset upload status
+     
+     - parameter statusId: (path) Status Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getResponsemanagementResponseassetsStatusStatusId(statusId: String, completion: @escaping ((_ data: ResponseAssetStatus?,_ error: Error?) -> Void)) {
+        let requestBuilder = getResponsemanagementResponseassetsStatusStatusIdWithRequestBuilder(statusId: statusId)
+        requestBuilder.execute { (response: Response<ResponseAssetStatus>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get response asset upload status
+     
+     - GET /api/v2/responsemanagement/responseassets/status/{statusId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorMessage" : "aeiou",
+  "errorCode" : "aeiou",
+  "id" : "aeiou",
+  "status" : "aeiou"
+}}]
+     
+     - parameter statusId: (path) Status Id 
+
+     - returns: RequestBuilder<ResponseAssetStatus> 
+     */
+    open class func getResponsemanagementResponseassetsStatusStatusIdWithRequestBuilder(statusId: String) -> RequestBuilder<ResponseAssetStatus> {
+        var path = "/api/v2/responsemanagement/responseassets/status/{statusId}"
+        let statusIdPreEscape = "\(statusId)"
+        let statusIdPostEscape = statusIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{statusId}", with: statusIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ResponseAssetStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
     
     
     
@@ -1950,6 +2157,168 @@ open class ResponseManagementAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Library>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Expand_postResponsemanagementResponseassetsSearch: String { 
+        case user = "user"
+        case division = "division"
+    }
+
+    
+    
+    /**
+     
+     Search response assets
+     
+     - parameter body: (body) request 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postResponsemanagementResponseassetsSearch(body: ResponseAssetSearchRequest, expand: [String]? = nil, completion: @escaping ((_ data: ResponseAssetSearchResults?,_ error: Error?) -> Void)) {
+        let requestBuilder = postResponsemanagementResponseassetsSearchWithRequestBuilder(body: body, expand: expand)
+        requestBuilder.execute { (response: Response<ResponseAssetSearchResults>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Search response assets
+     
+     - POST /api/v2/responsemanagement/responseassets/search
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "pageSize" : 123,
+  "results" : [ {
+    "division" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "responses" : [ "" ],
+    "contentLength" : 123456789,
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "modifiedBy" : "",
+    "id" : "aeiou",
+    "contentLocation" : "aeiou",
+    "contentType" : "aeiou"
+  } ]
+}}]
+     
+     - parameter body: (body) request 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<ResponseAssetSearchResults> 
+     */
+    open class func postResponsemanagementResponseassetsSearchWithRequestBuilder(body: ResponseAssetSearchRequest, expand: [String]? = nil) -> RequestBuilder<ResponseAssetSearchResults> {
+        let path = "/api/v2/responsemanagement/responseassets/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+            
+            "expand": expand
+            
+        ])
+
+        let requestBuilder: RequestBuilder<ResponseAssetSearchResults>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Creates pre-signed url for uploading response asset
+     
+     - parameter body: (body) request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postResponsemanagementResponseassetsUploads(body: CreateResponseAssetRequest, completion: @escaping ((_ data: CreateResponseAssetResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postResponsemanagementResponseassetsUploadsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CreateResponseAssetResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Creates pre-signed url for uploading response asset
+     
+     - POST /api/v2/responsemanagement/responseassets/uploads
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "aeiou"
+  },
+  "id" : "aeiou",
+  "url" : "aeiou"
+}}]
+     
+     - parameter body: (body) request 
+
+     - returns: RequestBuilder<CreateResponseAssetResponse> 
+     */
+    open class func postResponsemanagementResponseassetsUploadsWithRequestBuilder(body: CreateResponseAssetRequest) -> RequestBuilder<CreateResponseAssetResponse> {
+        let path = "/api/v2/responsemanagement/responseassets/uploads"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CreateResponseAssetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -3438,6 +3807,91 @@ open class ResponseManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<ModelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update response asset
+     
+     - parameter responseAssetId: (path) Asset Id 
+     - parameter body: (body) request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putResponsemanagementResponseasset(responseAssetId: String, body: ResponseAssetRequest, completion: @escaping ((_ data: ResponseAsset?,_ error: Error?) -> Void)) {
+        let requestBuilder = putResponsemanagementResponseassetWithRequestBuilder(responseAssetId: responseAssetId, body: body)
+        requestBuilder.execute { (response: Response<ResponseAsset>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update response asset
+     
+     - PUT /api/v2/responsemanagement/responseassets/{responseAssetId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "createdBy" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "responses" : [ "" ],
+  "contentLength" : 123456789,
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "modifiedBy" : "",
+  "id" : "aeiou",
+  "contentLocation" : "aeiou",
+  "contentType" : "aeiou"
+}}]
+     
+     - parameter responseAssetId: (path) Asset Id 
+     - parameter body: (body) request 
+
+     - returns: RequestBuilder<ResponseAsset> 
+     */
+    open class func putResponsemanagementResponseassetWithRequestBuilder(responseAssetId: String, body: ResponseAssetRequest) -> RequestBuilder<ResponseAsset> {
+        var path = "/api/v2/responsemanagement/responseassets/{responseAssetId}"
+        let responseAssetIdPreEscape = "\(responseAssetId)"
+        let responseAssetIdPostEscape = responseAssetIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{responseAssetId}", with: responseAssetIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ResponseAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

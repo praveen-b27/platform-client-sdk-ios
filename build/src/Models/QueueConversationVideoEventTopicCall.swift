@@ -92,6 +92,8 @@ public class QueueConversationVideoEventTopicCall: Codable {
     public var faxStatus: QueueConversationVideoEventTopicFaxStatus?
     /** User to User Information (UUI) data managed by SIP session application. */
     public var uuiData: String?
+    /** The timestamp when this participant was connected to the barge conference in the provider clock. */
+    public var bargedTime: Date?
     /** Call wrap up or disposition data. */
     public var wrapup: QueueConversationVideoEventTopicWrapup?
     public var afterCallWork: QueueConversationVideoEventTopicAfterCallWork?
@@ -100,7 +102,7 @@ public class QueueConversationVideoEventTopicCall: Codable {
     /** UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. */
     public var agentAssistantId: String?
 
-    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationVideoEventTopicAddress?, other: QueueConversationVideoEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationVideoEventTopicDisconnectReason]?, faxStatus: QueueConversationVideoEventTopicFaxStatus?, uuiData: String?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
+    public init(_id: String?, state: State?, recording: Bool?, recordingState: RecordingState?, muted: Bool?, confined: Bool?, held: Bool?, errorInfo: QueueConversationVideoEventTopicErrorDetails?, disconnectType: DisconnectType?, startHoldTime: Date?, direction: Direction?, documentId: String?, _self: QueueConversationVideoEventTopicAddress?, other: QueueConversationVideoEventTopicAddress?, provider: String?, scriptId: String?, peerId: String?, connectedTime: Date?, disconnectedTime: Date?, disconnectReasons: [QueueConversationVideoEventTopicDisconnectReason]?, faxStatus: QueueConversationVideoEventTopicFaxStatus?, uuiData: String?, bargedTime: Date?, wrapup: QueueConversationVideoEventTopicWrapup?, afterCallWork: QueueConversationVideoEventTopicAfterCallWork?, afterCallWorkRequired: Bool?, agentAssistantId: String?) {
         
         self._id = _id
         
@@ -146,6 +148,8 @@ public class QueueConversationVideoEventTopicCall: Codable {
         
         self.uuiData = uuiData
         
+        self.bargedTime = bargedTime
+        
         self.wrapup = wrapup
         
         self.afterCallWork = afterCallWork
@@ -179,6 +183,7 @@ public class QueueConversationVideoEventTopicCall: Codable {
         case disconnectReasons
         case faxStatus
         case uuiData
+        case bargedTime
         case wrapup
         case afterCallWork
         case afterCallWorkRequired

@@ -11,7 +11,7 @@ title: QueueUserEventTopicQueueMember
 | **user** | [**QueueUserEventTopicUserReference**](QueueUserEventTopicUserReference.html) |  | [optional] |
 | **queueId** | **String** |  | [optional] |
 | **joined** | **Bool** |  | [optional] |
-| **additionalProperties** | [**JSON**](JSON.html) |  | [optional] |
+| **additionalProperties** | [**[String:QueueUserEventTopicObject]**](QueueUserEventTopicObject.html) |  | [optional] |
 {: class="table table-striped"}
 
 

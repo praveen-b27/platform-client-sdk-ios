@@ -15,7 +15,7 @@ title: SystemMessageSystemMessage
 | **oauthClientId** | **String** |  | [optional] |
 | **reason** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
-| **data** | [**JSON**](JSON.html) |  | [optional] |
+| **data** | [**[String:SystemMessageObject]**](SystemMessageObject.html) |  | [optional] |
 {: class="table table-striped"}
 
 

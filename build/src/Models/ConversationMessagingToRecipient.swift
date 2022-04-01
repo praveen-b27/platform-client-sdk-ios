@@ -31,8 +31,10 @@ public class ConversationMessagingToRecipient: Codable {
     public var lastName: String?
     /** E-mail address of the recipient. */
     public var email: String?
+    /** List of recipient additional identifiers */
+    public var additionalIds: [ConversationRecipientAdditionalIdentifier]?
 
-    public init(nickname: String?, _id: String?, idType: IdType?, image: String?, firstName: String?, lastName: String?, email: String?) {
+    public init(nickname: String?, _id: String?, idType: IdType?, image: String?, firstName: String?, lastName: String?, email: String?, additionalIds: [ConversationRecipientAdditionalIdentifier]?) {
         
         self.nickname = nickname
         
@@ -48,6 +50,8 @@ public class ConversationMessagingToRecipient: Codable {
         
         self.email = email
         
+        self.additionalIds = additionalIds
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -58,6 +62,7 @@ public class ConversationMessagingToRecipient: Codable {
         case firstName
         case lastName
         case email
+        case additionalIds
     }
 
 

@@ -465,8 +465,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -780,8 +780,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -881,8 +881,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -997,8 +997,8 @@ open class AuthorizationAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1453,6 +1453,7 @@ open class AuthorizationAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -1941,6 +1942,7 @@ open class AuthorizationAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -2160,8 +2162,8 @@ open class AuthorizationAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2528,8 +2530,8 @@ open class AuthorizationAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2945,6 +2947,7 @@ open class AuthorizationAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -3058,8 +3061,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3808,6 +3811,7 @@ open class AuthorizationAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -3970,6 +3974,7 @@ open class AuthorizationAPI {
         case worktype = "WORKTYPE"
         case extensionpool = "EXTENSIONPOOL"
         case skillgroup = "SKILLGROUP"
+        case script = "SCRIPT"
     }
 
     
@@ -4584,6 +4589,7 @@ open class AuthorizationAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -5073,6 +5079,7 @@ open class AuthorizationAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -5551,6 +5558,7 @@ open class AuthorizationAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -5664,8 +5672,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6380,6 +6388,7 @@ open class AuthorizationAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -6990,6 +6999,7 @@ open class AuthorizationAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -7103,8 +7113,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

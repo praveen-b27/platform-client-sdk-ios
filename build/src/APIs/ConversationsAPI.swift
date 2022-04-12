@@ -620,10 +620,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -1987,8 +2013,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -2333,6 +2359,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -3305,8 +3332,8 @@ open class ConversationsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
             "nextUri" : "aeiou",
             "previousUri" : "aeiou"
@@ -3651,6 +3678,7 @@ open class ConversationsAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -3946,8 +3974,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4794,8 +4822,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4971,8 +4999,8 @@ open class ConversationsAPI {
     "maxParticipants" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5602,6 +5630,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -5700,8 +5729,8 @@ open class ConversationsAPI {
     "direction" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6471,8 +6500,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6943,8 +6972,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7293,8 +7322,8 @@ open class ConversationsAPI {
     "time" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7778,8 +7807,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8211,6 +8240,9 @@ open class ConversationsAPI {
         "url" : "aeiou",
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       },
+      "carousel" : {
+        "cards" : [ "" ]
+      },
       "contentType" : "aeiou",
       "generic" : {
         "image" : "aeiou",
@@ -8227,6 +8259,19 @@ open class ConversationsAPI {
           "url" : "aeiou"
         }
       },
+      "card" : {
+        "image" : "aeiou",
+        "defaultAction" : {
+          "payload" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "url" : "aeiou"
+        },
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : [ "" ]
+      },
       "story" : {
         "replyToId" : "aeiou",
         "type" : "aeiou",
@@ -8240,6 +8285,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       },
       "typing" : {
+        "duration" : 123456789,
         "type" : "aeiou"
       },
       "eventType" : "aeiou",
@@ -8701,6 +8747,9 @@ open class ConversationsAPI {
         "url" : "aeiou",
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       },
+      "carousel" : {
+        "cards" : [ "" ]
+      },
       "contentType" : "aeiou",
       "generic" : {
         "image" : "aeiou",
@@ -8717,6 +8766,19 @@ open class ConversationsAPI {
           "url" : "aeiou"
         }
       },
+      "card" : {
+        "image" : "aeiou",
+        "defaultAction" : {
+          "payload" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "url" : "aeiou"
+        },
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : [ "" ]
+      },
       "story" : {
         "replyToId" : "aeiou",
         "type" : "aeiou",
@@ -8730,6 +8792,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       },
       "typing" : {
+        "duration" : 123456789,
         "type" : "aeiou"
       },
       "eventType" : "aeiou",
@@ -9350,8 +9413,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9489,9 +9552,12 @@ open class ConversationsAPI {
   "pageCount" : 123,
   "pageNumber" : 123,
   "entities" : [ {
+    "selfUri" : "aeiou",
+    "messengerType" : "aeiou",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "version" : 123,
     "dateCreated" : "2000-01-23T04:56:07.000+0000",
     "createdBy" : "",
-    "selfUri" : "aeiou",
     "name" : "aeiou",
     "supportedContent" : {
       "mediaTypes" : {
@@ -9506,21 +9572,44 @@ open class ConversationsAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "recipient" : {
+    "recipient" : "",
+    "messagingSetting" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "updatedBy" : "",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "id" : "aeiou"
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "event" : {
+        "typing" : {
+          "on" : {
+            "inbound" : "aeiou",
+            "outbound" : "aeiou"
+          }
+        }
+      },
+      "version" : "aeiou",
+      "content" : {
+        "story" : {
+          "reply" : "",
+          "mention" : {
+            "inbound" : "aeiou"
+          }
+        }
+      }
     },
-    "messengerType" : "aeiou",
-    "dateModified" : "2000-01-23T04:56:07.000+0000",
     "modifiedBy" : "",
     "id" : "aeiou",
-    "version" : 123,
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9660,18 +9749,44 @@ open class ConversationsAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "recipient" : {
+    "recipient" : "",
+    "messagingSetting" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "updatedBy" : "",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "id" : "aeiou"
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "event" : {
+        "typing" : {
+          "on" : {
+            "inbound" : "aeiou",
+            "outbound" : "aeiou"
+          }
+        }
+      },
+      "version" : "aeiou",
+      "content" : {
+        "story" : {
+          "reply" : "",
+          "mention" : {
+            "inbound" : "aeiou"
+          }
+        }
+      }
     },
     "modifiedBy" : "",
     "id" : "aeiou",
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9801,10 +9916,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -9937,10 +10078,36 @@ open class ConversationsAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "recipient" : {
+    "recipient" : "",
+    "messagingSetting" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "updatedBy" : "",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "id" : "aeiou"
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "event" : {
+        "typing" : {
+          "on" : {
+            "inbound" : "aeiou",
+            "outbound" : "aeiou"
+          }
+        }
+      },
+      "version" : "aeiou",
+      "content" : {
+        "story" : {
+          "reply" : "",
+          "mention" : {
+            "inbound" : "aeiou"
+          }
+        }
+      }
     },
     "modifiedBy" : "",
     "id" : "aeiou",
@@ -9948,8 +10115,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10076,10 +10243,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -10212,10 +10405,36 @@ open class ConversationsAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "recipient" : {
+    "recipient" : "",
+    "messagingSetting" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "updatedBy" : "",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "id" : "aeiou"
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "event" : {
+        "typing" : {
+          "on" : {
+            "inbound" : "aeiou",
+            "outbound" : "aeiou"
+          }
+        }
+      },
+      "version" : "aeiou",
+      "content" : {
+        "story" : {
+          "reply" : "",
+          "mention" : {
+            "inbound" : "aeiou"
+          }
+        }
+      }
     },
     "webhookHeaders" : {
       "key" : "aeiou"
@@ -10226,8 +10445,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10353,10 +10572,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "webhookHeaders" : {
     "key" : "aeiou"
@@ -10496,10 +10741,36 @@ open class ConversationsAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "recipient" : {
+    "recipient" : "",
+    "messagingSetting" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "updatedBy" : "",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "id" : "aeiou"
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "event" : {
+        "typing" : {
+          "on" : {
+            "inbound" : "aeiou",
+            "outbound" : "aeiou"
+          }
+        }
+      },
+      "version" : "aeiou",
+      "content" : {
+        "story" : {
+          "reply" : "",
+          "mention" : {
+            "inbound" : "aeiou"
+          }
+        }
+      }
     },
     "modifiedBy" : "",
     "id" : "aeiou",
@@ -10508,8 +10779,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10639,10 +10910,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -10779,18 +11076,44 @@ open class ConversationsAPI {
       "name" : "aeiou",
       "id" : "aeiou"
     },
-    "recipient" : {
+    "recipient" : "",
+    "messagingSetting" : {
+      "dateCreated" : "2000-01-23T04:56:07.000+0000",
+      "updatedBy" : "",
+      "createdBy" : {
+        "selfUri" : "aeiou",
+        "name" : "aeiou",
+        "id" : "aeiou"
+      },
       "selfUri" : "aeiou",
       "name" : "aeiou",
-      "id" : "aeiou"
+      "dateModified" : "2000-01-23T04:56:07.000+0000",
+      "id" : "aeiou",
+      "event" : {
+        "typing" : {
+          "on" : {
+            "inbound" : "aeiou",
+            "outbound" : "aeiou"
+          }
+        }
+      },
+      "version" : "aeiou",
+      "content" : {
+        "story" : {
+          "reply" : "",
+          "mention" : {
+            "inbound" : "aeiou"
+          }
+        }
+      }
     },
     "modifiedBy" : "",
     "id" : "aeiou",
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10919,10 +11242,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -10961,6 +11310,11 @@ open class ConversationsAPI {
 
     
     
+    public enum MessengerType_getConversationsMessagingSticker: String { 
+        case line = "line"
+    }
+
+    
     
     
     
@@ -10975,7 +11329,7 @@ open class ConversationsAPI {
      - parameter pageNumber: (query) Page number (optional, default to 1)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationsMessagingSticker(messengerType: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: MessagingStickerEntityListing?,_ error: Error?) -> Void)) {
+    open class func getConversationsMessagingSticker(messengerType: MessengerType_getConversationsMessagingSticker, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: MessagingStickerEntityListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getConversationsMessagingStickerWithRequestBuilder(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber)
         requestBuilder.execute { (response: Response<MessagingStickerEntityListing>?, error) -> Void in
             do {
@@ -11019,8 +11373,8 @@ open class ConversationsAPI {
     "stickerType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11032,9 +11386,9 @@ open class ConversationsAPI {
 
      - returns: RequestBuilder<MessagingStickerEntityListing> 
      */
-    open class func getConversationsMessagingStickerWithRequestBuilder(messengerType: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<MessagingStickerEntityListing> {
+    open class func getConversationsMessagingStickerWithRequestBuilder(messengerType: MessengerType_getConversationsMessagingSticker, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<MessagingStickerEntityListing> {
         var path = "/api/v2/conversations/messaging/stickers/{messengerType}"
-        let messengerTypePreEscape = "\(messengerType)"
+        let messengerTypePreEscape = "\(messengerType.rawValue)"
         let messengerTypePostEscape = messengerTypePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{messengerType}", with: messengerTypePostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
@@ -11126,8 +11480,8 @@ open class ConversationsAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11517,7 +11871,7 @@ open class ConversationsAPI {
     
     /**
      
-     Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+     Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
      
      - parameter conversationId: (path) conversationId 
      - parameter body: (body) Conversation 
@@ -11543,7 +11897,7 @@ open class ConversationsAPI {
 
     /**
      
-     Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+     Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
      
      - PATCH /api/v2/conversations/calls/{conversationId}
      - 
@@ -11826,8 +12180,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -12172,6 +12526,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -13082,8 +13437,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -13428,6 +13783,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -14332,8 +14688,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -14678,6 +15034,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -15515,8 +15872,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -15861,6 +16218,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -16698,8 +17056,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -17044,6 +17402,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -17881,8 +18240,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -18227,6 +18586,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -18832,10 +19192,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -18944,10 +19330,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "webhookHeaders" : {
     "key" : "aeiou"
@@ -19064,10 +19476,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -19181,10 +19619,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -20511,8 +20975,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -20857,6 +21321,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -21750,8 +22215,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -22096,6 +22561,7 @@ open class ConversationsAPI {
             "selfUri" : "aeiou",
             "customActions" : "{}",
             "versionDate" : "2000-01-23T04:56:07.000+0000",
+            "division" : "",
             "features" : "{}",
             "versionId" : "aeiou",
             "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -23957,6 +24423,9 @@ open class ConversationsAPI {
         "url" : "aeiou",
         "longitude" : 1.3579000000000001069366817318950779736042022705078125
       },
+      "carousel" : {
+        "cards" : [ "" ]
+      },
       "contentType" : "aeiou",
       "generic" : {
         "image" : "aeiou",
@@ -23973,6 +24442,19 @@ open class ConversationsAPI {
           "url" : "aeiou"
         }
       },
+      "card" : {
+        "image" : "aeiou",
+        "defaultAction" : {
+          "payload" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "url" : "aeiou"
+        },
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : [ "" ]
+      },
       "story" : {
         "replyToId" : "aeiou",
         "type" : "aeiou",
@@ -23986,6 +24468,7 @@ open class ConversationsAPI {
         "type" : "aeiou"
       },
       "typing" : {
+        "duration" : 123456789,
         "type" : "aeiou"
       },
       "eventType" : "aeiou",
@@ -24532,6 +25015,9 @@ open class ConversationsAPI {
           "url" : "aeiou",
           "longitude" : 1.3579000000000001069366817318950779736042022705078125
         },
+        "carousel" : {
+          "cards" : [ "" ]
+        },
         "contentType" : "aeiou",
         "generic" : {
           "image" : "aeiou",
@@ -24548,6 +25034,19 @@ open class ConversationsAPI {
             "url" : "aeiou"
           }
         },
+        "card" : {
+          "image" : "aeiou",
+          "defaultAction" : {
+            "payload" : "aeiou",
+            "text" : "aeiou",
+            "type" : "aeiou",
+            "url" : "aeiou"
+          },
+          "description" : "aeiou",
+          "video" : "aeiou",
+          "title" : "aeiou",
+          "actions" : [ "" ]
+        },
         "story" : {
           "replyToId" : "aeiou",
           "type" : "aeiou",
@@ -24561,6 +25060,7 @@ open class ConversationsAPI {
           "type" : "aeiou"
         },
         "typing" : {
+          "duration" : 123456789,
           "type" : "aeiou"
         },
         "eventType" : "aeiou",
@@ -24852,8 +25352,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -25384,10 +25884,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -25490,10 +26016,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -25596,10 +26148,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "webhookHeaders" : {
     "key" : "aeiou"
@@ -25709,10 +26287,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -25819,10 +26423,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",
@@ -26299,10 +26929,36 @@ open class ConversationsAPI {
     "name" : "aeiou",
     "id" : "aeiou"
   },
-  "recipient" : {
+  "recipient" : "",
+  "messagingSetting" : {
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "updatedBy" : "",
+    "createdBy" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    },
     "selfUri" : "aeiou",
     "name" : "aeiou",
-    "id" : "aeiou"
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "event" : {
+      "typing" : {
+        "on" : {
+          "inbound" : "aeiou",
+          "outbound" : "aeiou"
+        }
+      }
+    },
+    "version" : "aeiou",
+    "content" : {
+      "story" : {
+        "reply" : "",
+        "mention" : {
+          "inbound" : "aeiou"
+        }
+      }
+    }
   },
   "modifiedBy" : "",
   "id" : "aeiou",

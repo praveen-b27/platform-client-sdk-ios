@@ -849,6 +849,61 @@ open class OutboundAPI {
     
     /**
      
+     Reset messaging campaign progress and recycle the messaging campaign
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteOutboundMessagingcampaignProgress(messagingCampaignId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteOutboundMessagingcampaignProgressWithRequestBuilder(messagingCampaignId: messagingCampaignId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Reset messaging campaign progress and recycle the messaging campaign
+     
+     - DELETE /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter messagingCampaignId: (path) The Messaging Campaign ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteOutboundMessagingcampaignProgressWithRequestBuilder(messagingCampaignId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete a Rule Set.
      
      - parameter ruleSetId: (path) Rule Set ID 
@@ -1242,8 +1297,8 @@ open class OutboundAPI {
     "maxAttemptsPerContact" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1467,8 +1522,8 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1692,8 +1747,8 @@ open class OutboundAPI {
     "beepDetectionEnabled" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2464,8 +2519,8 @@ open class OutboundAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -2810,6 +2865,7 @@ open class OutboundAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -3506,8 +3562,8 @@ open class OutboundAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3704,8 +3760,8 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3857,8 +3913,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3992,8 +4048,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4205,8 +4261,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4905,8 +4961,8 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5083,8 +5139,8 @@ open class OutboundAPI {
     "zipCodeColumnName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5357,8 +5413,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5786,8 +5842,8 @@ open class OutboundAPI {
     "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6062,8 +6118,8 @@ open class OutboundAPI {
     "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6314,8 +6370,8 @@ open class OutboundAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6665,8 +6721,8 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6879,8 +6935,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7192,8 +7248,8 @@ open class OutboundAPI {
     "queue" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7723,8 +7779,8 @@ open class OutboundAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

@@ -101,6 +101,8 @@ public class ReportingExportJobResponse: Codable {
         case agentInteractionsMeView = "AGENT_INTERACTIONS_ME_VIEW"
         case alertRulesView = "ALERT_RULES_VIEW"
         case configureAlertRuleView = "CONFIGURE_ALERT_RULE_VIEW"
+        case predictiveRoutingView = "PREDICTIVE_ROUTING_VIEW"
+        case predictiveRoutingQueueOverview = "PREDICTIVE_ROUTING_QUEUE_OVERVIEW"
     }
     public enum ExportErrorMessagesType: String, Codable { 
         case failedConvertingExportJob = "FAILED_CONVERTING_EXPORT_JOB"

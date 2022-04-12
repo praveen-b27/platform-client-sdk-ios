@@ -20,16 +20,20 @@ public class ConversationAppSettings: Codable {
     public var showAgentTypingIndicator: Bool?
     /** The toggle to enable or disable typing indicator for messenger */
     public var showUserTypingIndicator: Bool?
-    /** The auto start type for the messenger conversation */
+    /** Deprecated. The auto start type for the messenger conversation */
     public var autoStartType: AutoStartType?
+    /** The auto start for the messenger conversation */
+    public var autoStart: AutoStart?
 
-    public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?) {
+    public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?) {
         
         self.showAgentTypingIndicator = showAgentTypingIndicator
         
         self.showUserTypingIndicator = showUserTypingIndicator
         
         self.autoStartType = autoStartType
+        
+        self.autoStart = autoStart
         
     }
 

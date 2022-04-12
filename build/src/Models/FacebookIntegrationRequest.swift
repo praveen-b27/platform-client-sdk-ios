@@ -17,6 +17,7 @@ public class FacebookIntegrationRequest: Codable {
     public var name: String?
     /** Defines the SupportedContent profile configured for an integration */
     public var supportedContent: SupportedContentReference?
+    public var messagingSetting: MessagingSettingReference?
     /** The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When a pageAccessToken is provided, pageId and userAccessToken are not required. */
     public var pageAccessToken: String?
     /** The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  When userAccessToken is provided, pageId is mandatory.  When userAccessToken/pageId combination is provided, pageAccessToken is not required. */
@@ -30,13 +31,15 @@ public class FacebookIntegrationRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, pageAccessToken: String?, userAccessToken: String?, pageId: String?, appId: String?, appSecret: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, pageAccessToken: String?, userAccessToken: String?, pageId: String?, appId: String?, appSecret: String?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.supportedContent = supportedContent
+        
+        self.messagingSetting = messagingSetting
         
         self.pageAccessToken = pageAccessToken
         
@@ -56,6 +59,7 @@ public class FacebookIntegrationRequest: Codable {
         case _id = "id"
         case name
         case supportedContent
+        case messagingSetting
         case pageAccessToken
         case userAccessToken
         case pageId

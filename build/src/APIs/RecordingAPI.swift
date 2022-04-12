@@ -123,6 +123,7 @@ open class RecordingAPI {
   "recording" : {
     "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
     "maxAllowedRestorationsForOrg" : 123,
+    "creationTime" : "2000-01-23T04:56:07.000+0000",
     "emailTranscript" : [ {
       "cc" : [ "" ],
       "htmlBody" : "aeiou",
@@ -1130,6 +1131,7 @@ open class RecordingAPI {
      - examples: [{contentType=application/json, example={
   "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
+  "creationTime" : "2000-01-23T04:56:07.000+0000",
   "emailTranscript" : [ {
     "cc" : [ "" ],
     "htmlBody" : "aeiou",
@@ -3261,6 +3263,7 @@ open class RecordingAPI {
      - examples: [{contentType=application/json, example=[ {
   "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
+  "creationTime" : "2000-01-23T04:56:07.000+0000",
   "emailTranscript" : [ {
     "cc" : [ "" ],
     "htmlBody" : "aeiou",
@@ -3917,6 +3920,7 @@ open class RecordingAPI {
   "recording" : {
     "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
     "maxAllowedRestorationsForOrg" : 123,
+    "creationTime" : "2000-01-23T04:56:07.000+0000",
     "emailTranscript" : [ {
       "cc" : [ "" ],
       "htmlBody" : "aeiou",
@@ -4642,6 +4646,7 @@ open class RecordingAPI {
      - examples: [{contentType=application/json, example={
   "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
+  "creationTime" : "2000-01-23T04:56:07.000+0000",
   "emailTranscript" : [ {
     "cc" : [ "" ],
     "htmlBody" : "aeiou",
@@ -5344,6 +5349,7 @@ open class RecordingAPI {
     "recording" : {
       "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
       "maxAllowedRestorationsForOrg" : 123,
+      "creationTime" : "2000-01-23T04:56:07.000+0000",
       "emailTranscript" : [ {
         "cc" : [ "" ],
         "htmlBody" : "aeiou",
@@ -5952,8 +5958,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6107,6 +6113,8 @@ open class RecordingAPI {
     
     
     
+    
+    
     /**
      
      Gets media retention policy list with query options to filter on name and enabled.
@@ -6121,10 +6129,11 @@ open class RecordingAPI {
      - parameter enabled: (query) checks to see if policy is enabled - use enabled = true or enabled = false (optional)
      - parameter summary: (query) provides a less verbose response of policy lists. (optional, default to false)
      - parameter hasErrors: (query) provides a way to fetch all policies with errors or policies that do not have errors (optional)
+     - parameter deleteDaysThreshold: (query) provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRecordingCrossplatformMediaretentionpolicies(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, completion: @escaping ((_ data: PolicyEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRecordingCrossplatformMediaretentionpoliciesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors)
+    open class func getRecordingCrossplatformMediaretentionpolicies(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, deleteDaysThreshold: Int? = nil, completion: @escaping ((_ data: PolicyEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingCrossplatformMediaretentionpoliciesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors, deleteDaysThreshold: deleteDaysThreshold)
         requestBuilder.execute { (response: Response<PolicyEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6256,6 +6265,7 @@ open class RecordingAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -6686,8 +6696,8 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
+                "selfUri" : "aeiou",
                 "pageSize" : 123,
                 "nextUri" : "aeiou",
                 "previousUri" : "aeiou"
@@ -6776,8 +6786,8 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6793,10 +6803,11 @@ open class RecordingAPI {
      - parameter enabled: (query) checks to see if policy is enabled - use enabled = true or enabled = false (optional)
      - parameter summary: (query) provides a less verbose response of policy lists. (optional, default to false)
      - parameter hasErrors: (query) provides a way to fetch all policies with errors or policies that do not have errors (optional)
+     - parameter deleteDaysThreshold: (query) provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)
 
      - returns: RequestBuilder<PolicyEntityListing> 
      */
-    open class func getRecordingCrossplatformMediaretentionpoliciesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil) -> RequestBuilder<PolicyEntityListing> {
+    open class func getRecordingCrossplatformMediaretentionpoliciesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, deleteDaysThreshold: Int? = nil) -> RequestBuilder<PolicyEntityListing> {
         let path = "/api/v2/recording/crossplatform/mediaretentionpolicies"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -6827,7 +6838,9 @@ open class RecordingAPI {
             
             "summary": summary, 
             
-            "hasErrors": hasErrors
+            "hasErrors": hasErrors, 
+            
+            "deleteDaysThreshold": deleteDaysThreshold?.encodeToJSON()
             
         ])
 
@@ -6975,6 +6988,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -7384,8 +7398,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -7737,8 +7751,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7980,8 +7994,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8191,6 +8205,8 @@ open class RecordingAPI {
     
     
     
+    
+    
     /**
      
      Gets media retention policy list with query options to filter on name and enabled.
@@ -8205,10 +8221,11 @@ open class RecordingAPI {
      - parameter enabled: (query) checks to see if policy is enabled - use enabled = true or enabled = false (optional)
      - parameter summary: (query) provides a less verbose response of policy lists. (optional, default to false)
      - parameter hasErrors: (query) provides a way to fetch all policies with errors or policies that do not have errors (optional)
+     - parameter deleteDaysThreshold: (query) provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRecordingMediaretentionpolicies(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, completion: @escaping ((_ data: PolicyEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRecordingMediaretentionpoliciesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors)
+    open class func getRecordingMediaretentionpolicies(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, deleteDaysThreshold: Int? = nil, completion: @escaping ((_ data: PolicyEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingMediaretentionpoliciesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors, deleteDaysThreshold: deleteDaysThreshold)
         requestBuilder.execute { (response: Response<PolicyEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -8340,6 +8357,7 @@ open class RecordingAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -8770,8 +8788,8 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "selfUri" : "aeiou",
                 "lastUri" : "aeiou",
+                "selfUri" : "aeiou",
                 "pageSize" : 123,
                 "nextUri" : "aeiou",
                 "previousUri" : "aeiou"
@@ -8860,8 +8878,8 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8877,10 +8895,11 @@ open class RecordingAPI {
      - parameter enabled: (query) checks to see if policy is enabled - use enabled = true or enabled = false (optional)
      - parameter summary: (query) provides a less verbose response of policy lists. (optional, default to false)
      - parameter hasErrors: (query) provides a way to fetch all policies with errors or policies that do not have errors (optional)
+     - parameter deleteDaysThreshold: (query) provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)
 
      - returns: RequestBuilder<PolicyEntityListing> 
      */
-    open class func getRecordingMediaretentionpoliciesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil) -> RequestBuilder<PolicyEntityListing> {
+    open class func getRecordingMediaretentionpoliciesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, name: String? = nil, enabled: Bool? = nil, summary: Bool? = nil, hasErrors: Bool? = nil, deleteDaysThreshold: Int? = nil) -> RequestBuilder<PolicyEntityListing> {
         let path = "/api/v2/recording/mediaretentionpolicies"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -8911,7 +8930,9 @@ open class RecordingAPI {
             
             "summary": summary, 
             
-            "hasErrors": hasErrors
+            "hasErrors": hasErrors, 
+            
+            "deleteDaysThreshold": deleteDaysThreshold?.encodeToJSON()
             
         ])
 
@@ -9059,6 +9080,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -9489,8 +9511,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -9933,8 +9955,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10688,8 +10710,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -10770,6 +10792,7 @@ open class RecordingAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -11066,8 +11089,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11244,6 +11267,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -11653,8 +11677,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -11911,6 +11935,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -12341,8 +12366,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -13059,6 +13084,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -13468,8 +13494,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -14292,6 +14318,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -14722,8 +14749,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -15373,6 +15400,7 @@ open class RecordingAPI {
      - examples: [{contentType=application/json, example={
   "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
+  "creationTime" : "2000-01-23T04:56:07.000+0000",
   "emailTranscript" : [ {
     "cc" : [ "" ],
     "htmlBody" : "aeiou",
@@ -16376,6 +16404,7 @@ open class RecordingAPI {
      - examples: [{contentType=application/json, example={
   "originalRecordingStartTime" : "2000-01-23T04:56:07.000+0000",
   "maxAllowedRestorationsForOrg" : 123,
+  "creationTime" : "2000-01-23T04:56:07.000+0000",
   "emailTranscript" : [ {
     "cc" : [ "" ],
     "htmlBody" : "aeiou",
@@ -17116,6 +17145,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -17525,8 +17555,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -18029,6 +18059,7 @@ open class RecordingAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -18459,8 +18490,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"

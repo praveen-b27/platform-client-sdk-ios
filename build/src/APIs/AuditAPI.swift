@@ -299,7 +299,8 @@ open class AuditAPI {
       "id" : "aeiou"
     },
     "entity" : "",
-    "eventDate" : "2000-01-23T04:56:07.000+0000"
+    "eventDate" : "2000-01-23T04:56:07.000+0000",
+    "status" : "aeiou"
   } ],
   "pageSize" : 123,
   "id" : "aeiou"
@@ -494,7 +495,8 @@ open class AuditAPI {
       "id" : "aeiou"
     },
     "entity" : "",
-    "eventDate" : "2000-01-23T04:56:07.000+0000"
+    "eventDate" : "2000-01-23T04:56:07.000+0000",
+    "status" : "aeiou"
   } ],
   "pageSize" : 123
 }}]

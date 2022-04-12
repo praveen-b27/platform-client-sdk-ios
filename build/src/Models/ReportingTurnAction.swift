@@ -41,7 +41,11 @@ public class ReportingTurnAction: Codable {
         case askForStringAction = "AskForStringAction"
         case sendResponseAction = "SendResponseAction"
         case getResponseAction = "GetResponseAction"
-        case jumpToTaskAction = "JumpToTaskAction"
+        case extractSecureDataAction = "ExtractSecureDataAction"
+        case secureAction = "SecureAction"
+        case transferTaskAction = "TransferTaskAction"
+        case digitalMenuAction = "DigitalMenuAction"
+        case waitForInputAction = "WaitForInputAction"
         case unknown = "Unknown"
     }
     /** The ID of the action in the bot flow. */

@@ -1498,6 +1498,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -1569,6 +1570,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -1636,6 +1638,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -1711,8 +1714,8 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2171,6 +2174,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -2238,6 +2242,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -2304,8 +2309,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2414,6 +2419,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -2481,6 +2487,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -2558,8 +2565,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2671,6 +2678,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -2748,6 +2756,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -2826,8 +2835,8 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2941,6 +2950,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -3012,6 +3022,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -3079,6 +3090,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -3318,8 +3330,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3416,6 +3428,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -3485,6 +3498,7 @@ open class ArchitectAPI {
         case ttsvoice = "TTSVOICE"
         case user = "USER"
         case userprompt = "USERPROMPT"
+        case voiceflow = "VOICEFLOW"
         case voicemailflow = "VOICEMAILFLOW"
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
@@ -3562,8 +3576,8 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3782,8 +3796,8 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3999,8 +4013,8 @@ open class ArchitectAPI {
     "closedHoursFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5000,8 +5014,8 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5413,8 +5427,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5724,8 +5738,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5854,8 +5868,8 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6577,8 +6591,8 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6707,8 +6721,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8684,8 +8698,8 @@ open class ArchitectAPI {
     "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8744,6 +8758,7 @@ open class ArchitectAPI {
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case voice = "voice"
         case voicemail = "voicemail"
         case workflow = "workflow"
         case workitem = "workitem"
@@ -9260,8 +9275,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9907,8 +9922,8 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10044,8 +10059,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10288,8 +10303,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10356,6 +10371,7 @@ open class ArchitectAPI {
         case speech = "speech"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case voice = "voice"
         case voicemail = "voicemail"
         case workflow = "workflow"
         case workitem = "workitem"
@@ -10815,8 +10831,8 @@ open class ArchitectAPI {
     "debugVersion" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11493,8 +11509,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11620,8 +11636,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -12393,8 +12409,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -12520,8 +12536,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

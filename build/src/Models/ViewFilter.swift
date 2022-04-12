@@ -75,6 +75,7 @@ public class ViewFilter: Codable {
         case outboundcall = "outboundcall"
         case securecall = "securecall"
         case surveyinvite = "surveyinvite"
+        case voice = "voice"
         case voicemail = "voicemail"
         case workflow = "workflow"
         case workitem = "workitem"
@@ -133,6 +134,7 @@ public class ViewFilter: Codable {
         case invalidSchedule = "InvalidSchedule"
         case inProgress = "InProgress"
         case completed = "Completed"
+        case notCompleted = "NotCompleted"
     }
     public enum BotMessageTypes: String, Codable { 
         case unknown = "Unknown"

@@ -48,6 +48,7 @@ public class AuditQueryService: Codable {
         case callback = "Callback"
         case workitems = "Workitems"
         case scim = "SCIM"
+        case numberPurchasing = "NumberPurchasing"
     }
     /** Name of the Service */
     public var name: Name?

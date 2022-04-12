@@ -1581,8 +1581,8 @@ open class RoutingAPI {
     "spamFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1684,8 +1684,8 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1835,8 +1835,8 @@ open class RoutingAPI {
     "version" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2839,8 +2839,8 @@ open class RoutingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3197,6 +3197,7 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "customActions" : "{}",
       "versionDate" : "2000-01-23T04:56:07.000+0000",
+      "division" : "",
       "features" : "{}",
       "versionId" : "aeiou",
       "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -4482,8 +4483,8 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4606,8 +4607,8 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4735,6 +4736,7 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "customActions" : "{}",
         "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "division" : "",
         "features" : "{}",
         "versionId" : "aeiou",
         "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -4831,8 +4833,8 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4978,6 +4980,7 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "customActions" : "{}",
         "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "division" : "",
         "features" : "{}",
         "versionId" : "aeiou",
         "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -5074,8 +5077,8 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5205,6 +5208,7 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "customActions" : "{}",
         "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "division" : "",
         "features" : "{}",
         "versionId" : "aeiou",
         "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -5301,8 +5305,8 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5422,6 +5426,7 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "customActions" : "{}",
         "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "division" : "",
         "features" : "{}",
         "versionId" : "aeiou",
         "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -5519,8 +5524,8 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5863,8 +5868,8 @@ open class RoutingAPI {
     "version" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6034,8 +6039,8 @@ open class RoutingAPI {
     "region" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7018,8 +7023,8 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7356,8 +7361,8 @@ open class RoutingAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7480,6 +7485,7 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "customActions" : "{}",
         "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "division" : "",
         "features" : "{}",
         "versionId" : "aeiou",
         "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -7577,8 +7583,8 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7688,8 +7694,8 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7796,8 +7802,8 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8977,8 +8983,8 @@ open class RoutingAPI {
     "ringNumber" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9124,6 +9130,7 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "customActions" : "{}",
       "versionDate" : "2000-01-23T04:56:07.000+0000",
+      "division" : "",
       "features" : "{}",
       "versionId" : "aeiou",
       "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -9320,6 +9327,7 @@ open class RoutingAPI {
         "selfUri" : "aeiou",
         "customActions" : "{}",
         "versionDate" : "2000-01-23T04:56:07.000+0000",
+        "division" : "",
         "features" : "{}",
         "versionId" : "aeiou",
         "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -9417,8 +9425,8 @@ open class RoutingAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9583,8 +9591,8 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9665,8 +9673,8 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10588,6 +10596,7 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "customActions" : "{}",
       "versionDate" : "2000-01-23T04:56:07.000+0000",
+      "division" : "",
       "features" : "{}",
       "versionId" : "aeiou",
       "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -12077,6 +12086,7 @@ open class RoutingAPI {
       "selfUri" : "aeiou",
       "customActions" : "{}",
       "versionDate" : "2000-01-23T04:56:07.000+0000",
+      "division" : "",
       "features" : "{}",
       "versionId" : "aeiou",
       "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -13055,8 +13065,8 @@ open class RoutingAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

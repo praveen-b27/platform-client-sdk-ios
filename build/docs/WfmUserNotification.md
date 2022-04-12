@@ -13,6 +13,7 @@ title: WfmUserNotification
 | **type** | **String** | The type of this notification | [optional] |
 | **shiftTrade** | [**ShiftTradeNotification**](ShiftTradeNotification.html) | A shift trade notification.  Only set if type == ShiftTrade | [optional] |
 | **timeOffRequest** | [**TimeOffRequestNotification**](TimeOffRequestNotification.html) | A time off request notification.  Only set if type == TimeOffRequest | [optional] |
+| **adherenceExplanation** | [**AdherenceExplanationNotification**](AdherenceExplanationNotification.html) | An adherence explanation notification.  Only set if type == AdherenceExplanation | [optional] |
 | **markedAsRead** | **Bool** | Whether this notification has been marked \&quot;read\&quot; | |
 | **agentNotification** | **Bool** | Whether this notification is for an agent | [optional] |
 | **otherNotificationIdsInGroup** | **[String]** | Other notification IDs in group.  This field is only populated in real-time notifications | [optional] |

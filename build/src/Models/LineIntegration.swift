@@ -22,6 +22,7 @@ public class LineIntegration: Codable {
     public var name: String?
     /** Defines the SupportedContent profile configured for an integration */
     public var supportedContent: SupportedContentReference?
+    public var messagingSetting: MessagingSettingReference?
     /** The Channel Id from LINE messenger */
     public var channelId: String?
     /** The Webhook URI to be updated in LINE platform */
@@ -47,13 +48,15 @@ public class LineIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, channelId: String?, webhookUri: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, channelId: String?, webhookUri: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.supportedContent = supportedContent
+        
+        self.messagingSetting = messagingSetting
         
         self.channelId = channelId
         
@@ -85,6 +88,7 @@ public class LineIntegration: Codable {
         case _id = "id"
         case name
         case supportedContent
+        case messagingSetting
         case channelId
         case webhookUri
         case status

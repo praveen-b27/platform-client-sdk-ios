@@ -208,6 +208,9 @@ open class WebDeploymentsAPI {
     "launcherButton" : {
       "visibility" : "aeiou"
     },
+    "homeScreen" : {
+      "enabled" : true
+    },
     "styles" : {
       "primaryColor" : "#a7017c"
     },
@@ -222,7 +225,10 @@ open class WebDeploymentsAPI {
       "conversations" : {
         "showUserTypingIndicator" : true,
         "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true
+        "showAgentTypingIndicator" : true,
+        "autoStart" : {
+          "enabled" : true
+        }
       },
       "knowledge" : {
         "knowledgeBase" : {
@@ -243,8 +249,35 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "customMessages" : [ {
+      "defaultValue" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "knowledgeBase" : "",
-    "enabled" : true
+    "screens" : [ {
+      "type" : "aeiou",
+      "moduleSettings" : [ {
+        "type" : "aeiou",
+        "enabled" : true
+      } ]
+    } ],
+    "enabledCategories" : [ "" ],
+    "routerType" : "aeiou",
+    "enabled" : true,
+    "styleSetting" : {
+      "globalStyle" : {
+        "backgroundColor" : "aeiou",
+        "fontFamily" : "aeiou",
+        "primaryColorDark" : "aeiou",
+        "primaryColor" : "aeiou",
+        "primaryColorLight" : "aeiou",
+        "textColor" : "aeiou"
+      },
+      "heroStyle" : {
+        "backgroundColor" : "aeiou",
+        "textColor" : "aeiou"
+      }
+    }
   },
   "createdUser" : "",
   "status" : "aeiou"
@@ -365,6 +398,9 @@ open class WebDeploymentsAPI {
       "launcherButton" : {
         "visibility" : "aeiou"
       },
+      "homeScreen" : {
+        "enabled" : true
+      },
       "styles" : {
         "primaryColor" : "#a7017c"
       },
@@ -379,7 +415,10 @@ open class WebDeploymentsAPI {
         "conversations" : {
           "showUserTypingIndicator" : true,
           "autoStartType" : "aeiou",
-          "showAgentTypingIndicator" : true
+          "showAgentTypingIndicator" : true,
+          "autoStart" : {
+            "enabled" : true
+          }
         },
         "knowledge" : {
           "knowledgeBase" : {
@@ -400,8 +439,35 @@ open class WebDeploymentsAPI {
       "alignment" : "aeiou"
     },
     "supportCenter" : {
+      "customMessages" : [ {
+        "defaultValue" : "aeiou",
+        "type" : "aeiou"
+      } ],
       "knowledgeBase" : "",
-      "enabled" : true
+      "screens" : [ {
+        "type" : "aeiou",
+        "moduleSettings" : [ {
+          "type" : "aeiou",
+          "enabled" : true
+        } ]
+      } ],
+      "enabledCategories" : [ "" ],
+      "routerType" : "aeiou",
+      "enabled" : true,
+      "styleSetting" : {
+        "globalStyle" : {
+          "backgroundColor" : "aeiou",
+          "fontFamily" : "aeiou",
+          "primaryColorDark" : "aeiou",
+          "primaryColor" : "aeiou",
+          "primaryColorLight" : "aeiou",
+          "textColor" : "aeiou"
+        },
+        "heroStyle" : {
+          "backgroundColor" : "aeiou",
+          "textColor" : "aeiou"
+        }
+      }
     },
     "createdUser" : "",
     "status" : "aeiou"
@@ -518,6 +584,9 @@ open class WebDeploymentsAPI {
     "launcherButton" : {
       "visibility" : "aeiou"
     },
+    "homeScreen" : {
+      "enabled" : true
+    },
     "styles" : {
       "primaryColor" : "#a7017c"
     },
@@ -532,7 +601,10 @@ open class WebDeploymentsAPI {
       "conversations" : {
         "showUserTypingIndicator" : true,
         "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true
+        "showAgentTypingIndicator" : true,
+        "autoStart" : {
+          "enabled" : true
+        }
       },
       "knowledge" : {
         "knowledgeBase" : {
@@ -553,8 +625,35 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "customMessages" : [ {
+      "defaultValue" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "knowledgeBase" : "",
-    "enabled" : true
+    "screens" : [ {
+      "type" : "aeiou",
+      "moduleSettings" : [ {
+        "type" : "aeiou",
+        "enabled" : true
+      } ]
+    } ],
+    "enabledCategories" : [ "" ],
+    "routerType" : "aeiou",
+    "enabled" : true,
+    "styleSetting" : {
+      "globalStyle" : {
+        "backgroundColor" : "aeiou",
+        "fontFamily" : "aeiou",
+        "primaryColorDark" : "aeiou",
+        "primaryColor" : "aeiou",
+        "primaryColorLight" : "aeiou",
+        "textColor" : "aeiou"
+      },
+      "heroStyle" : {
+        "backgroundColor" : "aeiou",
+        "textColor" : "aeiou"
+      }
+    }
   },
   "createdUser" : "",
   "status" : "aeiou"
@@ -671,6 +770,9 @@ open class WebDeploymentsAPI {
       "launcherButton" : {
         "visibility" : "aeiou"
       },
+      "homeScreen" : {
+        "enabled" : true
+      },
       "styles" : {
         "primaryColor" : "#a7017c"
       },
@@ -685,7 +787,10 @@ open class WebDeploymentsAPI {
         "conversations" : {
           "showUserTypingIndicator" : true,
           "autoStartType" : "aeiou",
-          "showAgentTypingIndicator" : true
+          "showAgentTypingIndicator" : true,
+          "autoStart" : {
+            "enabled" : true
+          }
         },
         "knowledge" : {
           "knowledgeBase" : {
@@ -706,8 +811,35 @@ open class WebDeploymentsAPI {
       "alignment" : "aeiou"
     },
     "supportCenter" : {
+      "customMessages" : [ {
+        "defaultValue" : "aeiou",
+        "type" : "aeiou"
+      } ],
       "knowledgeBase" : "",
-      "enabled" : true
+      "screens" : [ {
+        "type" : "aeiou",
+        "moduleSettings" : [ {
+          "type" : "aeiou",
+          "enabled" : true
+        } ]
+      } ],
+      "enabledCategories" : [ "" ],
+      "routerType" : "aeiou",
+      "enabled" : true,
+      "styleSetting" : {
+        "globalStyle" : {
+          "backgroundColor" : "aeiou",
+          "fontFamily" : "aeiou",
+          "primaryColorDark" : "aeiou",
+          "primaryColor" : "aeiou",
+          "primaryColorLight" : "aeiou",
+          "textColor" : "aeiou"
+        },
+        "heroStyle" : {
+          "backgroundColor" : "aeiou",
+          "textColor" : "aeiou"
+        }
+      }
     },
     "createdUser" : "",
     "status" : "aeiou"
@@ -1000,6 +1132,9 @@ open class WebDeploymentsAPI {
     "launcherButton" : {
       "visibility" : "aeiou"
     },
+    "homeScreen" : {
+      "enabled" : true
+    },
     "styles" : {
       "primaryColor" : "#a7017c"
     },
@@ -1014,7 +1149,10 @@ open class WebDeploymentsAPI {
       "conversations" : {
         "showUserTypingIndicator" : true,
         "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true
+        "showAgentTypingIndicator" : true,
+        "autoStart" : {
+          "enabled" : true
+        }
       },
       "knowledge" : {
         "knowledgeBase" : {
@@ -1035,8 +1173,35 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "customMessages" : [ {
+      "defaultValue" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "knowledgeBase" : "",
-    "enabled" : true
+    "screens" : [ {
+      "type" : "aeiou",
+      "moduleSettings" : [ {
+        "type" : "aeiou",
+        "enabled" : true
+      } ]
+    } ],
+    "enabledCategories" : [ "" ],
+    "routerType" : "aeiou",
+    "enabled" : true,
+    "styleSetting" : {
+      "globalStyle" : {
+        "backgroundColor" : "aeiou",
+        "fontFamily" : "aeiou",
+        "primaryColorDark" : "aeiou",
+        "primaryColor" : "aeiou",
+        "primaryColorLight" : "aeiou",
+        "textColor" : "aeiou"
+      },
+      "heroStyle" : {
+        "backgroundColor" : "aeiou",
+        "textColor" : "aeiou"
+      }
+    }
   },
   "createdUser" : "",
   "status" : "aeiou"
@@ -1151,6 +1316,9 @@ open class WebDeploymentsAPI {
     "launcherButton" : {
       "visibility" : "aeiou"
     },
+    "homeScreen" : {
+      "enabled" : true
+    },
     "styles" : {
       "primaryColor" : "#a7017c"
     },
@@ -1165,7 +1333,10 @@ open class WebDeploymentsAPI {
       "conversations" : {
         "showUserTypingIndicator" : true,
         "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true
+        "showAgentTypingIndicator" : true,
+        "autoStart" : {
+          "enabled" : true
+        }
       },
       "knowledge" : {
         "knowledgeBase" : {
@@ -1186,8 +1357,35 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "customMessages" : [ {
+      "defaultValue" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "knowledgeBase" : "",
-    "enabled" : true
+    "screens" : [ {
+      "type" : "aeiou",
+      "moduleSettings" : [ {
+        "type" : "aeiou",
+        "enabled" : true
+      } ]
+    } ],
+    "enabledCategories" : [ "" ],
+    "routerType" : "aeiou",
+    "enabled" : true,
+    "styleSetting" : {
+      "globalStyle" : {
+        "backgroundColor" : "aeiou",
+        "fontFamily" : "aeiou",
+        "primaryColorDark" : "aeiou",
+        "primaryColor" : "aeiou",
+        "primaryColorLight" : "aeiou",
+        "textColor" : "aeiou"
+      },
+      "heroStyle" : {
+        "backgroundColor" : "aeiou",
+        "textColor" : "aeiou"
+      }
+    }
   },
   "createdUser" : "",
   "status" : "aeiou"
@@ -1382,6 +1580,9 @@ open class WebDeploymentsAPI {
     "launcherButton" : {
       "visibility" : "aeiou"
     },
+    "homeScreen" : {
+      "enabled" : true
+    },
     "styles" : {
       "primaryColor" : "#a7017c"
     },
@@ -1396,7 +1597,10 @@ open class WebDeploymentsAPI {
       "conversations" : {
         "showUserTypingIndicator" : true,
         "autoStartType" : "aeiou",
-        "showAgentTypingIndicator" : true
+        "showAgentTypingIndicator" : true,
+        "autoStart" : {
+          "enabled" : true
+        }
       },
       "knowledge" : {
         "knowledgeBase" : {
@@ -1417,8 +1621,35 @@ open class WebDeploymentsAPI {
     "alignment" : "aeiou"
   },
   "supportCenter" : {
+    "customMessages" : [ {
+      "defaultValue" : "aeiou",
+      "type" : "aeiou"
+    } ],
     "knowledgeBase" : "",
-    "enabled" : true
+    "screens" : [ {
+      "type" : "aeiou",
+      "moduleSettings" : [ {
+        "type" : "aeiou",
+        "enabled" : true
+      } ]
+    } ],
+    "enabledCategories" : [ "" ],
+    "routerType" : "aeiou",
+    "enabled" : true,
+    "styleSetting" : {
+      "globalStyle" : {
+        "backgroundColor" : "aeiou",
+        "fontFamily" : "aeiou",
+        "primaryColorDark" : "aeiou",
+        "primaryColor" : "aeiou",
+        "primaryColorLight" : "aeiou",
+        "textColor" : "aeiou"
+      },
+      "heroStyle" : {
+        "backgroundColor" : "aeiou",
+        "textColor" : "aeiou"
+      }
+    }
   },
   "createdUser" : "",
   "status" : "aeiou"

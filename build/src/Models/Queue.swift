@@ -39,9 +39,9 @@ public class Queue: Codable {
     public var joinedMemberCount: Int?
     /** The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM */
     public var mediaSettings: [String:MediaSetting]?
-    /** The routing rules for the queue, used for routing to known or preferred agents. */
+    /** The routing rules for the queue, used for Preferred Agent Routing. */
     public var routingRules: [RoutingRule]?
-    /** The bulls-eye settings for the queue. */
+    /** The bullseye settings for the queue. */
     public var bullseye: Bullseye?
     /** The ACW settings for the queue. */
     public var acwSettings: AcwSettings?

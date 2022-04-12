@@ -83,7 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingThreadingtimeline**](ConversationsAPI.html#getConversationsMessagingThreadingtimeline) | Get conversation threading window timeline for each messaging type |
 | [**patchConversationParticipant**](ConversationsAPI.html#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI.html#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
-| [**patchConversationsCall**](ConversationsAPI.html#patchConversationsCall) | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
+| [**patchConversationsCall**](ConversationsAPI.html#patchConversationsCall) | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**patchConversationsCallParticipant**](ConversationsAPI.html#patchConversationsCallParticipant) | Update conversation participant |
 | [**patchConversationsCallParticipantAttributes**](ConversationsAPI.html#patchConversationsCallParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsCallParticipantCommunication**](ConversationsAPI.html#patchConversationsCallParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
@@ -3835,7 +3835,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let messengerType: String = "" // Messenger Type
+let messengerType: ConversationsAPI.MessengerType_getConversationsMessagingSticker = ConversationsAPI.MessengerType_getConversationsMessagingSticker.enummember // Messenger Type
 let pageSize: Int = 25 // Page size
 let pageNumber: Int = 1 // Page number
 
@@ -3855,7 +3855,7 @@ ConversationsAPI.getConversationsMessagingSticker(messengerType: messengerType, 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messengerType** | **String**| Messenger Type | |
+| **messengerType** | **String**| Messenger Type |<br />**Values**: line ("line") |
 | **pageSize** | **Int**| Page size | [optional] [default to 25] |
 | **pageNumber** | **Int**| Page number | [optional] [default to 1] |
 {: class="table-striped"}
@@ -4183,7 +4183,7 @@ ConversationsAPI.patchConversationParticipantAttributes(conversationId: conversa
 
 > [Conversation](Conversation.html) patchConversationsCall(conversationId, body)
 
-Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
 
 
 

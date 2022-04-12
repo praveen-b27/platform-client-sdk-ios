@@ -20,6 +20,8 @@ public class ConversationMessageContent: Codable {
         case notification = "Notification"
         case buttonResponse = "ButtonResponse"
         case genericTemplate = "GenericTemplate"
+        case card = "Card"
+        case carousel = "Carousel"
     }
     /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
     public var contentType: ContentType?
@@ -37,8 +39,12 @@ public class ConversationMessageContent: Codable {
     public var buttonResponse: ConversationContentButtonResponse?
     /** Generic Template Object */
     public var generic: ConversationContentGeneric?
+    /** Card (Generic Template) Object */
+    public var card: ConversationContentCard?
+    /** Carousel (Multiple Generic Template) Object */
+    public var carousel: ConversationContentCarousel?
 
-    public init(contentType: ContentType?, location: ConversationContentLocation?, story: ConversationContentStory?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?, generic: ConversationContentGeneric?) {
+    public init(contentType: ContentType?, location: ConversationContentLocation?, story: ConversationContentStory?, attachment: ConversationContentAttachment?, quickReply: ConversationContentQuickReply?, template: ConversationContentNotificationTemplate?, buttonResponse: ConversationContentButtonResponse?, generic: ConversationContentGeneric?, card: ConversationContentCard?, carousel: ConversationContentCarousel?) {
         
         self.contentType = contentType
         
@@ -55,6 +61,10 @@ public class ConversationMessageContent: Codable {
         self.buttonResponse = buttonResponse
         
         self.generic = generic
+        
+        self.card = card
+        
+        self.carousel = carousel
         
     }
 

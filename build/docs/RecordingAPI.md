@@ -1016,7 +1016,7 @@ RecordingAPI.getRecordingBatchrequest(jobId: jobId) { (response, error) in
 
 
 
-> [PolicyEntityListing](PolicyEntityListing.html) getRecordingCrossplatformMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors)
+> [PolicyEntityListing](PolicyEntityListing.html) getRecordingCrossplatformMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold)
 
 Gets media retention policy list with query options to filter on name and enabled.
 
@@ -1046,9 +1046,10 @@ let name: String = "" // the policy name - used for filtering results in searche
 let enabled: Bool = true // checks to see if policy is enabled - use enabled = true or enabled = false
 let summary: Bool = false // provides a less verbose response of policy lists.
 let hasErrors: Bool = true // provides a way to fetch all policies with errors or policies that do not have errors
+let deleteDaysThreshold: Int = 0 // provides a way to fetch all policies with any actions having deleteDays exceeding the provided value
 
 // Code example
-RecordingAPI.getRecordingCrossplatformMediaretentionpolicies(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors) { (response, error) in
+RecordingAPI.getRecordingCrossplatformMediaretentionpolicies(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors, deleteDaysThreshold: deleteDaysThreshold) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1073,6 +1074,7 @@ RecordingAPI.getRecordingCrossplatformMediaretentionpolicies(pageSize: pageSize,
 | **enabled** | **Bool**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional] |
 | **summary** | **Bool**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **Bool**| provides a way to fetch all policies with errors or policies that do not have errors | [optional] |
+| **deleteDaysThreshold** | **Int**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional] |
 {: class="table-striped"}
 
 
@@ -1416,7 +1418,7 @@ This endpoint does not require any parameters.
 
 
 
-> [PolicyEntityListing](PolicyEntityListing.html) getRecordingMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors)
+> [PolicyEntityListing](PolicyEntityListing.html) getRecordingMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold)
 
 Gets media retention policy list with query options to filter on name and enabled.
 
@@ -1446,9 +1448,10 @@ let name: String = "" // the policy name - used for filtering results in searche
 let enabled: Bool = true // checks to see if policy is enabled - use enabled = true or enabled = false
 let summary: Bool = false // provides a less verbose response of policy lists.
 let hasErrors: Bool = true // provides a way to fetch all policies with errors or policies that do not have errors
+let deleteDaysThreshold: Int = 0 // provides a way to fetch all policies with any actions having deleteDays exceeding the provided value
 
 // Code example
-RecordingAPI.getRecordingMediaretentionpolicies(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors) { (response, error) in
+RecordingAPI.getRecordingMediaretentionpolicies(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, name: name, enabled: enabled, summary: summary, hasErrors: hasErrors, deleteDaysThreshold: deleteDaysThreshold) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1473,6 +1476,7 @@ RecordingAPI.getRecordingMediaretentionpolicies(pageSize: pageSize, pageNumber: 
 | **enabled** | **Bool**| checks to see if policy is enabled - use enabled = true or enabled = false | [optional] |
 | **summary** | **Bool**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **Bool**| provides a way to fetch all policies with errors or policies that do not have errors | [optional] |
+| **deleteDaysThreshold** | **Int**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional] |
 {: class="table-striped"}
 
 

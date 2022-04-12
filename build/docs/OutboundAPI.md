@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundContactlists**](OutboundAPI.html#deleteOutboundContactlists) | Delete multiple contact lists. |
 | [**deleteOutboundDnclist**](OutboundAPI.html#deleteOutboundDnclist) | Delete dialer DNC list |
 | [**deleteOutboundMessagingcampaign**](OutboundAPI.html#deleteOutboundMessagingcampaign) | Delete an Outbound Messaging Campaign |
+| [**deleteOutboundMessagingcampaignProgress**](OutboundAPI.html#deleteOutboundMessagingcampaignProgress) | Reset messaging campaign progress and recycle the messaging campaign |
 | [**deleteOutboundRuleset**](OutboundAPI.html#deleteOutboundRuleset) | Delete a Rule Set. |
 | [**deleteOutboundSchedulesCampaign**](OutboundAPI.html#deleteOutboundSchedulesCampaign) | Delete a dialer campaign schedule. |
 | [**deleteOutboundSchedulesSequence**](OutboundAPI.html#deleteOutboundSchedulesSequence) | Delete a dialer sequence schedule. |
@@ -788,6 +789,58 @@ OutboundAPI.deleteOutboundMessagingcampaign(messagingCampaignId: messagingCampai
 ### Return type
 
 [**MessagingCampaign**](MessagingCampaign.html)
+
+<a name="deleteOutboundMessagingcampaignProgress"></a>
+
+# **deleteOutboundMessagingcampaignProgress**
+
+
+
+> Void deleteOutboundMessagingcampaignProgress(messagingCampaignId)
+
+Reset messaging campaign progress and recycle the messaging campaign
+
+
+
+Wraps DELETE /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:edit
+* outbound:emailCampaign:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.deleteOutboundMessagingcampaignProgress(messagingCampaignId: messagingCampaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundMessagingcampaignProgress was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteOutboundRuleset"></a>
 

@@ -447,7 +447,7 @@ open class WorkforceManagementAPI {
      
      Delete a short term forecast
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter completion: completion handler to receive the data and the error objects
@@ -473,7 +473,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
 
@@ -616,7 +616,7 @@ open class WorkforceManagementAPI {
      
      Deletes a time off limit object
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to delete 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -641,7 +641,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to delete 
 
      - returns: RequestBuilder<Void> 
@@ -678,7 +678,7 @@ open class WorkforceManagementAPI {
      
      Deletes a time off plan
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to delete 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -703,7 +703,7 @@ open class WorkforceManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to delete 
 
      - returns: RequestBuilder<Void> 
@@ -1572,7 +1572,7 @@ open class WorkforceManagementAPI {
      
      Get intraday planning groups for the given date
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter businessUnitId: (path) The ID of the business unit 
      - parameter date: (query) yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -1638,7 +1638,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter businessUnitId: (path) The ID of the business unit 
      - parameter date: (query) yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
 
      - returns: RequestBuilder<WfmIntradayPlanningGroupListing> 
@@ -3262,7 +3262,7 @@ open class WorkforceManagementAPI {
      
      Get a short term forecast
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter expand: (query)  (optional)
@@ -3385,7 +3385,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter expand: (query)  (optional)
@@ -3438,7 +3438,7 @@ open class WorkforceManagementAPI {
      
      Get the result of a short term forecast calculation
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter weekNumber: (query) The week number to fetch (for multi-week forecasts) (optional)
@@ -3486,7 +3486,7 @@ open class WorkforceManagementAPI {
   "downloadUrl" : "aeiou"
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter weekNumber: (query) The week number to fetch (for multi-week forecasts) (optional)
@@ -3538,7 +3538,7 @@ open class WorkforceManagementAPI {
      
      Gets the forecast generation results
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter completion: completion handler to receive the data and the error objects
@@ -3581,7 +3581,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
 
@@ -3626,7 +3626,7 @@ open class WorkforceManagementAPI {
      
      Get the result of a long term forecast calculation
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
@@ -3672,7 +3672,7 @@ open class WorkforceManagementAPI {
   "downloadUrl" : "aeiou"
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
@@ -3721,7 +3721,7 @@ open class WorkforceManagementAPI {
      
      Gets the forecast planning group snapshot
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
      - parameter completion: completion handler to receive the data and the error objects
@@ -3787,7 +3787,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast 
 
@@ -3828,7 +3828,7 @@ open class WorkforceManagementAPI {
      
      Get short term forecasts
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -3882,7 +3882,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts 
 
      - returns: RequestBuilder<BuShortTermForecastListing> 
@@ -4608,7 +4608,7 @@ open class WorkforceManagementAPI {
      
      Get a list of user schedule adherence records for the requested management unit
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4783,7 +4783,7 @@ open class WorkforceManagementAPI {
   "downloadUrl" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
 
      - returns: RequestBuilder<UserScheduleAdherenceListing> 
@@ -4824,7 +4824,7 @@ open class WorkforceManagementAPI {
      
      Get data for agent in the management unit
      
-     - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
      - parameter excludeCapabilities: (query) Excludes all capabilities of the agent such as queues, languages, and skills (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -4898,7 +4898,7 @@ open class WorkforceManagementAPI {
   "acceptDirectShiftTrades" : true
 }}]
      
-     - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
      - parameter excludeCapabilities: (query) Excludes all capabilities of the agent such as queues, languages, and skills (optional)
 
@@ -4941,7 +4941,7 @@ open class WorkforceManagementAPI {
      
      Gets all the shift trades for a given agent
      
-     - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -5012,7 +5012,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
 
      - returns: RequestBuilder<ShiftTradeListResponse> 
@@ -5047,7 +5047,7 @@ open class WorkforceManagementAPI {
      
      Gets a summary of all shift trades in the matched state
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitShifttradesMatched(managementUnitId: String, completion: @escaping ((_ data: ShiftTradeMatchesSummaryResponse?,_ error: Error?) -> Void)) {
@@ -5084,7 +5084,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
 
      - returns: RequestBuilder<ShiftTradeMatchesSummaryResponse> 
      */
@@ -5115,7 +5115,7 @@ open class WorkforceManagementAPI {
      
      Gets list of users available for whom you can send direct shift trade requests
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitShifttradesUsers(managementUnitId: String, completion: @escaping ((_ data: WfmUserEntityListing?,_ error: Error?) -> Void)) {
@@ -5416,7 +5416,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
 
      - returns: RequestBuilder<WfmUserEntityListing> 
      */
@@ -5449,7 +5449,7 @@ open class WorkforceManagementAPI {
      
      Gets a time off limit object
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit to fetch 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -5497,7 +5497,7 @@ open class WorkforceManagementAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit to fetch 
 
      - returns: RequestBuilder<TimeOffLimit> 
@@ -5532,7 +5532,7 @@ open class WorkforceManagementAPI {
      
      Gets a list of time off limit objects under management unit.
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitTimeofflimits(managementUnitId: String, completion: @escaping ((_ data: TimeOffLimitListing?,_ error: Error?) -> Void)) {
@@ -5581,7 +5581,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
 
      - returns: RequestBuilder<TimeOffLimitListing> 
      */
@@ -5614,7 +5614,7 @@ open class WorkforceManagementAPI {
      
      Gets a time off plan
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to fetch 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -5669,7 +5669,7 @@ open class WorkforceManagementAPI {
   "daysBeforeStartToExpireFromWaitlist" : 123
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to fetch 
 
      - returns: RequestBuilder<TimeOffPlan> 
@@ -5704,7 +5704,7 @@ open class WorkforceManagementAPI {
      
      Gets a list of time off plans
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitTimeoffplans(managementUnitId: String, completion: @escaping ((_ data: TimeOffPlanListing?,_ error: Error?) -> Void)) {
@@ -5760,7 +5760,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
 
      - returns: RequestBuilder<TimeOffPlanListing> 
      */
@@ -5795,7 +5795,7 @@ open class WorkforceManagementAPI {
      
      Get a time off request
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
      - parameter timeOffRequestId: (path) Time Off Request Id 
      - parameter completion: completion handler to receive the data and the error objects
@@ -5857,7 +5857,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
      - parameter timeOffRequestId: (path) Time Off Request Id 
 
@@ -5900,7 +5900,7 @@ open class WorkforceManagementAPI {
      
      Retrieves time off limit, allocated and waitlisted values according to specific time off request
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter userId: (path) The userId to whom the time off request applies. 
      - parameter timeOffRequestId: (path) The ID of the time off request, which dates and activityCodeId determine limit values to retrieve 
      - parameter completion: completion handler to receive the data and the error objects
@@ -5957,7 +5957,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter userId: (path) The userId to whom the time off request applies. 
      - parameter timeOffRequestId: (path) The ID of the time off request, which dates and activityCodeId determine limit values to retrieve 
 
@@ -6000,7 +6000,7 @@ open class WorkforceManagementAPI {
      
      Get a list of time off requests for a given user
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
      - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
@@ -6067,7 +6067,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
      - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)
 
@@ -6108,7 +6108,7 @@ open class WorkforceManagementAPI {
      
      Get users in the management unit
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementManagementunitUsers(managementUnitId: String, completion: @escaping ((_ data: WfmUserEntityListing?,_ error: Error?) -> Void)) {
@@ -6409,7 +6409,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
 
      - returns: RequestBuilder<WfmUserEntityListing> 
      */
@@ -6756,7 +6756,7 @@ open class WorkforceManagementAPI {
      
      Gets all the shift trades for a given week
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional, default to true)
      - parameter completion: completion handler to receive the data and the error objects
@@ -6854,7 +6854,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional, default to true)
 
@@ -7882,6 +7882,16 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "adherenceExplanation" : {
+      "agent" : "",
+      "notes" : "aeiou",
+      "lengthMinutes" : 123,
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "type" : "aeiou",
+      "startDate" : "2000-01-23T04:56:07.000+0000",
+      "status" : "aeiou"
+    },
     "markedAsRead" : true,
     "mutableGroupId" : "aeiou",
     "otherNotificationIdsInGroup" : [ "aeiou" ],
@@ -8104,7 +8114,7 @@ open class WorkforceManagementAPI {
      
      Get a time off request for the current user
      
-     - parameter timeOffRequestId: (path) Time Off Request Id 
+     - parameter timeOffRequestId: (path) The ID of the time off request 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementTimeoffrequest(timeOffRequestId: String, completion: @escaping ((_ data: TimeOffRequestResponse?,_ error: Error?) -> Void)) {
@@ -8164,7 +8174,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter timeOffRequestId: (path) Time Off Request Id 
+     - parameter timeOffRequestId: (path) The ID of the time off request 
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
      */
@@ -8195,7 +8205,7 @@ open class WorkforceManagementAPI {
      
      Get the daily waitlist positions of a time off request for the current user
      
-     - parameter timeOffRequestId: (path) Time Off Request Id 
+     - parameter timeOffRequestId: (path) The ID of the time off request 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWorkforcemanagementTimeoffrequestWaitlistpositions(timeOffRequestId: String, completion: @escaping ((_ data: WaitlistPositionListing?,_ error: Error?) -> Void)) {
@@ -8240,7 +8250,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter timeOffRequestId: (path) Time Off Request Id 
+     - parameter timeOffRequestId: (path) The ID of the time off request 
 
      - returns: RequestBuilder<WaitlistPositionListing> 
      */
@@ -8972,7 +8982,7 @@ open class WorkforceManagementAPI {
      
      Updates a time off limit object.
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The id of time off limit object to update 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -9021,7 +9031,7 @@ open class WorkforceManagementAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The id of time off limit object to update 
      - parameter body: (body) body (optional)
 
@@ -9058,7 +9068,7 @@ open class WorkforceManagementAPI {
      
      Updates a time off plan
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to update 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -9114,7 +9124,7 @@ open class WorkforceManagementAPI {
   "daysBeforeStartToExpireFromWaitlist" : 123
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter timeOffPlanId: (path) The ID of the time off plan to update 
      - parameter body: (body) body (optional)
 
@@ -9153,7 +9163,7 @@ open class WorkforceManagementAPI {
      
      Update a time off request
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The id of the user the requested time off request belongs to 
      - parameter timeOffRequestId: (path) The id of the time off request to update 
      - parameter body: (body) body (optional)
@@ -9216,7 +9226,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The id of the user the requested time off request belongs to 
      - parameter timeOffRequestId: (path) The id of the time off request to update 
      - parameter body: (body) body (optional)
@@ -9259,7 +9269,7 @@ open class WorkforceManagementAPI {
      
      Updates a shift trade. This route can only be called by the initiating agent
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
@@ -9330,7 +9340,7 @@ open class WorkforceManagementAPI {
   "initiatingShiftId" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
@@ -9655,7 +9665,7 @@ open class WorkforceManagementAPI {
      
      Update a time off request for the current user
      
-     - parameter timeOffRequestId: (path) Time Off Request Id 
+     - parameter timeOffRequestId: (path) The ID of the time off request 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -9716,7 +9726,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter timeOffRequestId: (path) Time Off Request Id 
+     - parameter timeOffRequestId: (path) The ID of the time off request 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestResponse> 
@@ -10173,7 +10183,7 @@ open class WorkforceManagementAPI {
      
      Get intraday data for the given date for the requested planningGroupIds
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter businessUnitId: (path) The ID of the business unit 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -10246,7 +10256,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit 
+     - parameter businessUnitId: (path) The ID of the business unit 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter body: (body) body (optional)
 
@@ -11648,7 +11658,7 @@ open class WorkforceManagementAPI {
      
      Copy a short term forecast
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast to copy 
      - parameter body: (body) body 
@@ -11777,7 +11787,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter forecastId: (path) The ID of the forecast to copy 
      - parameter body: (body) body 
@@ -11826,7 +11836,7 @@ open class WorkforceManagementAPI {
      
      Generate a short term forecast
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body)  
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
@@ -11954,7 +11964,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body)  
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
@@ -11997,7 +12007,7 @@ open class WorkforceManagementAPI {
      
      Starts importing the uploaded short term forecast
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
@@ -12123,7 +12133,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body)  
 
@@ -12160,7 +12170,7 @@ open class WorkforceManagementAPI {
      
      Creates a signed upload URL for importing a short term forecast
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
@@ -12215,7 +12225,7 @@ open class WorkforceManagementAPI {
   "url" : "aeiou"
 }}]
      
-     - parameter businessUnitId: (path) The business unit ID of the business unit to which the forecast belongs 
+     - parameter businessUnitId: (path) The ID of the business unit to which the forecast belongs 
      - parameter weekDateId: (path) First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
 
@@ -12519,7 +12529,7 @@ open class WorkforceManagementAPI {
      
      Query published schedules for given given time range for set of users
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
@@ -12603,7 +12613,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service.  For testing/app development purposes (optional)
@@ -12643,7 +12653,7 @@ open class WorkforceManagementAPI {
      
      Request a historical adherence report
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -12724,7 +12734,7 @@ open class WorkforceManagementAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WfmHistoricalAdherenceResponse> 
@@ -12825,7 +12835,7 @@ open class WorkforceManagementAPI {
      
      Query published schedules for given given time range for set of users
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -12906,7 +12916,7 @@ open class WorkforceManagementAPI {
   }
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<UserScheduleContainer> 
@@ -12937,7 +12947,7 @@ open class WorkforceManagementAPI {
      
      Creates a new time off limit object under management unit.
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -12985,7 +12995,7 @@ open class WorkforceManagementAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffLimit> 
@@ -13016,7 +13026,7 @@ open class WorkforceManagementAPI {
      
      Retrieves time off limit related values based on a given set of filters.
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -13072,7 +13082,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<QueryTimeOffLimitValuesResponse> 
@@ -13103,7 +13113,7 @@ open class WorkforceManagementAPI {
      
      Creates a new time off plan
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -13158,7 +13168,7 @@ open class WorkforceManagementAPI {
   "daysBeforeStartToExpireFromWaitlist" : 123
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID. 
+     - parameter managementUnitId: (path) The ID of the management unit 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffPlan> 
@@ -13189,7 +13199,7 @@ open class WorkforceManagementAPI {
      
      Create a new time off request
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -13255,7 +13265,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestList> 
@@ -13286,7 +13296,7 @@ open class WorkforceManagementAPI {
      
      Fetches time off requests matching the conditions specified in the request body
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -13347,7 +13357,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<TimeOffRequestListing> 
@@ -13378,7 +13388,7 @@ open class WorkforceManagementAPI {
      
      Retrieves daily waitlist position for a list of time off requests
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -13424,7 +13434,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter body: (body) body (optional)
 
      - returns: RequestBuilder<WaitlistPositionListing> 
@@ -13459,7 +13469,7 @@ open class WorkforceManagementAPI {
      
      Matches a shift trade. This route can only be called by the receiving agent
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
@@ -13539,7 +13549,7 @@ open class WorkforceManagementAPI {
   "adminReviewViolations" : [ "" ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter tradeId: (path) The ID of the shift trade to update 
@@ -13580,7 +13590,7 @@ open class WorkforceManagementAPI {
      
      Adds a shift trade
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
@@ -13650,7 +13660,7 @@ open class WorkforceManagementAPI {
   "initiatingShiftId" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
 
@@ -13687,7 +13697,7 @@ open class WorkforceManagementAPI {
      
      Searches for potential shift trade matches for the current agent
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
@@ -13770,7 +13780,7 @@ open class WorkforceManagementAPI {
   } ]
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
 
@@ -13809,7 +13819,7 @@ open class WorkforceManagementAPI {
      
      Updates the state of a batch of shift trades
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
@@ -13866,7 +13876,7 @@ open class WorkforceManagementAPI {
   "status" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
@@ -15029,7 +15039,7 @@ open class WorkforceManagementAPI {
      
      Sets daily values for a date range of time off limit object
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to set values for 
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -15078,7 +15088,7 @@ open class WorkforceManagementAPI {
   "id" : "aeiou"
 }}]
      
-     - parameter managementUnitId: (path) The management unit ID of the management unit. 
+     - parameter managementUnitId: (path) The ID of the management unit. 
      - parameter timeOffLimitId: (path) The ID of the time off limit object to set values for 
      - parameter body: (body) body (optional)
 

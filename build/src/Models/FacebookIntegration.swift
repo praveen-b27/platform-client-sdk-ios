@@ -22,6 +22,7 @@ public class FacebookIntegration: Codable {
     public var name: String?
     /** Defines the SupportedContent profile configured for an integration */
     public var supportedContent: SupportedContentReference?
+    public var messagingSetting: MessagingSettingReference?
     /** The App Id from Facebook messenger */
     public var appId: String?
     /** The Page Id from Facebook messenger */
@@ -51,13 +52,15 @@ public class FacebookIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, appId: String?, pageId: String?, pageName: String?, pageProfileImageUrl: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, appId: String?, pageId: String?, pageName: String?, pageProfileImageUrl: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.supportedContent = supportedContent
+        
+        self.messagingSetting = messagingSetting
         
         self.appId = appId
         
@@ -93,6 +96,7 @@ public class FacebookIntegration: Codable {
         case _id = "id"
         case name
         case supportedContent
+        case messagingSetting
         case appId
         case pageId
         case pageName

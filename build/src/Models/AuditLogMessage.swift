@@ -48,6 +48,7 @@ public class AuditLogMessage: Codable {
         case callback = "Callback"
         case workitems = "Workitems"
         case scim = "SCIM"
+        case numberPurchasing = "NumberPurchasing"
     }
     public enum Action: String, Codable { 
         case create = "Create"
@@ -296,6 +297,11 @@ public class AuditLogMessage: Codable {
         case wrapUpCodeMapping = "WrapUpCodeMapping"
         case participant = "Participant"
     }
+    public enum Status: String, Codable { 
+        case success = "SUCCESS"
+        case failure = "FAILURE"
+        case warning = "WARNING"
+    }
     /** Id of the audit message. */
     public var _id: String?
     /** Home Organization Id associated with this audit message. */
@@ -318,12 +324,14 @@ public class AuditLogMessage: Codable {
     public var entity: DomainEntityRef?
     /** Type of the entity that was impacted. */
     public var entityType: EntityType?
+    /** Status of the event being audited */
+    public var status: Status?
     /** List of properties that were changed and changes made to those properties. */
     public var propertyChanges: [PropertyChange]?
     /** Additional context for this message. */
     public var context: [String:String]?
 
-    public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
+    public init(_id: String?, userHomeOrgId: String?, user: DomainEntityRef?, client: AddressableEntityRef?, remoteIp: [String]?, serviceName: ServiceName?, eventDate: Date?, message: MessageInfo?, action: Action?, entity: DomainEntityRef?, entityType: EntityType?, status: Status?, propertyChanges: [PropertyChange]?, context: [String:String]?) {
         
         self._id = _id
         
@@ -347,6 +355,8 @@ public class AuditLogMessage: Codable {
         
         self.entityType = entityType
         
+        self.status = status
+        
         self.propertyChanges = propertyChanges
         
         self.context = context
@@ -365,6 +375,7 @@ public class AuditLogMessage: Codable {
         case action
         case entity
         case entityType
+        case status
         case propertyChanges
         case context
     }

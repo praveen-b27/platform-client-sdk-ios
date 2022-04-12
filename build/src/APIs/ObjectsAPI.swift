@@ -231,8 +231,8 @@ open class ObjectsAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -434,6 +434,7 @@ open class ObjectsAPI {
         case worktype = "WORKTYPE"
         case extensionpool = "EXTENSIONPOOL"
         case skillgroup = "SKILLGROUP"
+        case script = "SCRIPT"
     }
 
     

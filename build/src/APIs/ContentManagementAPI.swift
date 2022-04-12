@@ -609,8 +609,8 @@ open class ContentManagementAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -886,8 +886,8 @@ open class ContentManagementAPI {
     "uploadDestinationUri" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1047,8 +1047,8 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
@@ -1209,8 +1209,8 @@ open class ContentManagementAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2387,8 +2387,8 @@ open class ContentManagementAPI {
     "group" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2549,8 +2549,8 @@ open class ContentManagementAPI {
     "statusCode" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3010,8 +3010,8 @@ open class ContentManagementAPI {
     "uploadDestinationUri" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3772,8 +3772,8 @@ open class ContentManagementAPI {
     "group" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3971,8 +3971,8 @@ open class ContentManagementAPI {
     "acl" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4120,8 +4120,8 @@ open class ContentManagementAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4251,8 +4251,8 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
@@ -4751,8 +4751,8 @@ open class ContentManagementAPI {
       }
     } ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"
@@ -5265,8 +5265,8 @@ open class ContentManagementAPI {
     "acl" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

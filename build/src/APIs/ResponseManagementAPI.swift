@@ -504,8 +504,8 @@ open class ResponseManagementAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1787,8 +1787,8 @@ open class ResponseManagementAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3058,8 +3058,8 @@ open class ResponseManagementAPI {
       "id" : "aeiou"
     } ],
     "firstUri" : "aeiou",
-    "selfUri" : "aeiou",
     "lastUri" : "aeiou",
+    "selfUri" : "aeiou",
     "pageSize" : 123,
     "nextUri" : "aeiou",
     "previousUri" : "aeiou"

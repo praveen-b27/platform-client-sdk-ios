@@ -11,7 +11,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getScriptPage**](ScriptsAPI.html#getScriptPage) | Get a page |
 | [**getScriptPages**](ScriptsAPI.html#getScriptPages) | Get the list of pages |
 | [**getScripts**](ScriptsAPI.html#getScripts) | Get the list of scripts |
+| [**getScriptsDivisionviews**](ScriptsAPI.html#getScriptsDivisionviews) | Get the metadata for a list of scripts |
 | [**getScriptsPublished**](ScriptsAPI.html#getScriptsPublished) | Get the published scripts. |
+| [**getScriptsPublishedDivisionviews**](ScriptsAPI.html#getScriptsPublishedDivisionviews) | Get the published scripts metadata. |
 | [**getScriptsPublishedScriptId**](ScriptsAPI.html#getScriptsPublishedScriptId) | Get the published script. |
 | [**getScriptsPublishedScriptIdPage**](ScriptsAPI.html#getScriptsPublishedScriptIdPage) | Get the published page. |
 | [**getScriptsPublishedScriptIdPages**](ScriptsAPI.html#getScriptsPublishedScriptIdPages) | Get the list of published pages |
@@ -188,7 +190,7 @@ ScriptsAPI.getScriptPages(scriptId: scriptId, scriptDataVersion: scriptDataVersi
 
 
 
-> [ScriptEntityListing](ScriptEntityListing.html) getScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion)
+> [ScriptEntityListing](ScriptEntityListing.html) getScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds)
 
 Get the list of scripts
 
@@ -217,9 +219,10 @@ let flowId: String = "" // Secure flow id filter
 let sortBy: ScriptsAPI.SortBy_getScripts = ScriptsAPI.SortBy_getScripts.enummember // SortBy
 let sortOrder: ScriptsAPI.SortOrder_getScripts = ScriptsAPI.SortOrder_getScripts.enummember // SortOrder
 let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+let divisionIds: String = "" // Filters scripts to requested divisionIds
 
 // Code example
-ScriptsAPI.getScripts(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, sortBy: sortBy, sortOrder: sortOrder, scriptDataVersion: scriptDataVersion) { (response, error) in
+ScriptsAPI.getScripts(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, sortBy: sortBy, sortOrder: sortOrder, scriptDataVersion: scriptDataVersion, divisionIds: divisionIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -243,6 +246,77 @@ ScriptsAPI.getScripts(pageSize: pageSize, pageNumber: pageNumber, expand: expand
 | **sortBy** | **String**| SortBy | [optional]<br />**Values**: modifieddate ("modifiedDate"), createddate ("createdDate") |
 | **sortOrder** | **String**| SortOrder | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
+| **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScriptEntityListing**](ScriptEntityListing.html)
+
+<a name="getScriptsDivisionviews"></a>
+
+# **getScriptsDivisionviews**
+
+
+
+> [ScriptEntityListing](ScriptEntityListing.html) getScriptsDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds)
+
+Get the metadata for a list of scripts
+
+
+
+Wraps GET /api/v2/scripts/divisionviews  
+
+Requires ANY permissions: 
+
+* scripter:script:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let expand: String = "" // Expand
+let name: String = "" // Name filter
+let feature: String = "" // Feature filter
+let flowId: String = "" // Secure flow id filter
+let sortBy: ScriptsAPI.SortBy_getScriptsDivisionviews = ScriptsAPI.SortBy_getScriptsDivisionviews.enummember // SortBy
+let sortOrder: ScriptsAPI.SortOrder_getScriptsDivisionviews = ScriptsAPI.SortOrder_getScriptsDivisionviews.enummember // SortOrder
+let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+let divisionIds: String = "" // Filters scripts to requested divisionIds
+
+// Code example
+ScriptsAPI.getScriptsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, sortBy: sortBy, sortOrder: sortOrder, scriptDataVersion: scriptDataVersion, divisionIds: divisionIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ScriptsAPI.getScriptsDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand | [optional] |
+| **name** | **String**| Name filter | [optional] |
+| **feature** | **String**| Feature filter | [optional] |
+| **flowId** | **String**| Secure flow id filter | [optional] |
+| **sortBy** | **String**| SortBy | [optional]<br />**Values**: modifieddate ("modifiedDate"), createddate ("createdDate") |
+| **sortOrder** | **String**| SortOrder | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
+| **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
 {: class="table-striped"}
 
 
@@ -256,7 +330,7 @@ ScriptsAPI.getScripts(pageSize: pageSize, pageNumber: pageNumber, expand: expand
 
 
 
-> [ScriptEntityListing](ScriptEntityListing.html) getScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion)
+> [ScriptEntityListing](ScriptEntityListing.html) getScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds)
 
 Get the published scripts.
 
@@ -283,9 +357,10 @@ let name: String = "" // Name filter
 let feature: String = "" // Feature filter
 let flowId: String = "" // Secure flow id filter
 let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+let divisionIds: String = "" // Filters scripts to requested divisionIds
 
 // Code example
-ScriptsAPI.getScriptsPublished(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, scriptDataVersion: scriptDataVersion) { (response, error) in
+ScriptsAPI.getScriptsPublished(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, scriptDataVersion: scriptDataVersion, divisionIds: divisionIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -307,6 +382,73 @@ ScriptsAPI.getScriptsPublished(pageSize: pageSize, pageNumber: pageNumber, expan
 | **feature** | **String**| Feature filter | [optional] |
 | **flowId** | **String**| Secure flow id filter | [optional] |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
+| **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ScriptEntityListing**](ScriptEntityListing.html)
+
+<a name="getScriptsPublishedDivisionviews"></a>
+
+# **getScriptsPublishedDivisionviews**
+
+
+
+> [ScriptEntityListing](ScriptEntityListing.html) getScriptsPublishedDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds)
+
+Get the published scripts metadata.
+
+
+
+Wraps GET /api/v2/scripts/published/divisionviews  
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 25 // Page size
+let pageNumber: Int = 1 // Page number
+let expand: String = "" // Expand
+let name: String = "" // Name filter
+let feature: String = "" // Feature filter
+let flowId: String = "" // Secure flow id filter
+let scriptDataVersion: String = "" // Advanced usage - controls the data version of the script
+let divisionIds: String = "" // Filters scripts to requested divisionIds
+
+// Code example
+ScriptsAPI.getScriptsPublishedDivisionviews(pageSize: pageSize, pageNumber: pageNumber, expand: expand, name: name, feature: feature, flowId: flowId, scriptDataVersion: scriptDataVersion, divisionIds: divisionIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ScriptsAPI.getScriptsPublishedDivisionviews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] [default to 25] |
+| **pageNumber** | **Int**| Page number | [optional] [default to 1] |
+| **expand** | **String**| Expand | [optional] |
+| **name** | **String**| Name filter | [optional] |
+| **feature** | **String**| Feature filter | [optional] |
+| **flowId** | **String**| Secure flow id filter | [optional] |
+| **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
+| **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
 {: class="table-striped"}
 
 
@@ -554,7 +696,7 @@ Wraps GET /api/v2/scripts/uploads/{uploadId}/status
 
 Requires ANY permissions: 
 
-* scripter:script:view
+* scripter:script:search
 
 ### Example
 

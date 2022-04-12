@@ -9,6 +9,7 @@ A Typing event.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Describes the type of Typing event. | |
+| **duration** | **Int64** | The duration of the Typing event in milliseconds. | [optional] |
 {: class="table table-striped"}
 
 

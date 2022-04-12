@@ -26,6 +26,7 @@ public class TwitterIntegration: Codable {
     public var name: String?
     /** Defines the SupportedContent profile configured for an integration */
     public var supportedContent: SupportedContentReference?
+    public var messagingSetting: MessagingSettingReference?
     /** The Access Token Key from Twitter messenger */
     public var accessTokenKey: String?
     /** The Consumer Key from Twitter messenger */
@@ -59,13 +60,15 @@ public class TwitterIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
         self.name = name
         
         self.supportedContent = supportedContent
+        
+        self.messagingSetting = messagingSetting
         
         self.accessTokenKey = accessTokenKey
         
@@ -105,6 +108,7 @@ public class TwitterIntegration: Codable {
         case _id = "id"
         case name
         case supportedContent
+        case messagingSetting
         case accessTokenKey
         case consumerKey
         case username

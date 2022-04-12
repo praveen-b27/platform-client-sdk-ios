@@ -492,7 +492,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
 
@@ -511,7 +511,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitWeekShorttermforecas
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 {: class="table-striped"}
@@ -645,7 +645,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The ID of the time off limit object to delete
 
 // Code example
@@ -663,7 +663,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitTimeofflimit(manag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The ID of the time off limit object to delete | |
 {: class="table-striped"}
 
@@ -698,7 +698,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID.
+let managementUnitId: String = "" // The ID of the management unit
 let timeOffPlanId: String = "" // The ID of the time off plan to delete
 
 // Code example
@@ -716,7 +716,7 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitTimeoffplan(manage
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID. | |
+| **managementUnitId** | **String**| The ID of the management unit | |
 | **timeOffPlanId** | **String**| The ID of the time off plan to delete | |
 {: class="table-striped"}
 
@@ -1402,7 +1402,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit
+let businessUnitId: String = "" // The ID of the business unit
 let date: Date = new Date(...) // yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 
 // Code example
@@ -1421,7 +1421,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitIntradayPlanninggroups(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit | |
+| **businessUnitId** | **String**| The ID of the business unit | |
 | **date** | **Date**| yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 {: class="table-striped"}
 
@@ -2190,7 +2190,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
 let expand: [String] = [WorkforceManagementAPI.Expand_getWorkforcemanagementBusinessunitWeekShorttermforecast.enummember.rawValue] // 
@@ -2211,7 +2211,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecast(b
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 | **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: planninggroups ("planningGroups"), generationresults ("generationResults") |
@@ -2248,7 +2248,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
 let weekNumber: Int = 0 // The week number to fetch (for multi-week forecasts)
@@ -2270,7 +2270,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastDa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 | **weekNumber** | **Int**| The week number to fetch (for multi-week forecasts) | [optional] |
@@ -2308,7 +2308,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
 
@@ -2328,7 +2328,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastGe
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 {: class="table-striped"}
@@ -2364,7 +2364,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
@@ -2385,7 +2385,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastLo
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
@@ -2424,7 +2424,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast
 
@@ -2444,7 +2444,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastPl
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 {: class="table-striped"}
@@ -2481,7 +2481,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: String = "" // The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts
 
 // Code example
@@ -2500,7 +2500,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecasts(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format or &#39;recent&#39; (without quotes) to fetch recent forecasts | |
 {: class="table-striped"}
 
@@ -3039,7 +3039,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
 
 // Code example
@@ -3058,7 +3058,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAdherence(managementU
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
 {: class="table-striped"}
 
@@ -3093,7 +3093,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The id of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let agentId: String = "" // The agent id
 let excludeCapabilities: Bool = true // Excludes all capabilities of the agent such as queues, languages, and skills
 
@@ -3113,7 +3113,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
 | **excludeCapabilities** | **Bool**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional] |
 {: class="table-striped"}
@@ -3150,7 +3150,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The id of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let agentId: String = "" // The agent id
 
 // Code example
@@ -3169,7 +3169,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgentShifttrades(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The id of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
 {: class="table-striped"}
 
@@ -3205,7 +3205,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(managementUnitId: managementUnitId) { (response, error) in
@@ -3223,7 +3223,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3257,7 +3257,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(managementUnitId: managementUnitId) { (response, error) in
@@ -3275,7 +3275,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3309,7 +3309,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The ID of the time off limit to fetch
 
 // Code example
@@ -3328,7 +3328,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeofflimit(manageme
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The ID of the time off limit to fetch | |
 {: class="table-striped"}
 
@@ -3364,7 +3364,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeofflimits(managementUnitId: managementUnitId) { (response, error) in
@@ -3382,7 +3382,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeofflimits(managem
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 {: class="table-striped"}
 
 
@@ -3416,7 +3416,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID.
+let managementUnitId: String = "" // The ID of the management unit
 let timeOffPlanId: String = "" // The ID of the time off plan to fetch
 
 // Code example
@@ -3435,7 +3435,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeoffplan(managemen
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID. | |
+| **managementUnitId** | **String**| The ID of the management unit | |
 | **timeOffPlanId** | **String**| The ID of the time off plan to fetch | |
 {: class="table-striped"}
 
@@ -3470,7 +3470,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID.
+let managementUnitId: String = "" // The ID of the management unit
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeoffplans(managementUnitId: managementUnitId) { (response, error) in
@@ -3488,7 +3488,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeoffplans(manageme
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID. | |
+| **managementUnitId** | **String**| The ID of the management unit | |
 {: class="table-striped"}
 
 
@@ -3522,7 +3522,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
 let timeOffRequestId: String = "" // Time Off Request Id
 
@@ -3542,7 +3542,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequest(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
 | **timeOffRequestId** | **String**| Time Off Request Id | |
 {: class="table-striped"}
@@ -3579,7 +3579,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let userId: String = "" // The userId to whom the time off request applies.
 let timeOffRequestId: String = "" // The ID of the time off request, which dates and activityCodeId determine limit values to retrieve
 
@@ -3599,7 +3599,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequestTim
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **userId** | **String**| The userId to whom the time off request applies. | |
 | **timeOffRequestId** | **String**| The ID of the time off request, which dates and activityCodeId determine limit values to retrieve | |
 {: class="table-striped"}
@@ -3635,7 +3635,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
 let recentlyReviewed: Bool = false // Limit results to requests that have been reviewed within the preceding 30 days
 
@@ -3655,7 +3655,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(m
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
 | **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table-striped"}
@@ -3698,7 +3698,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(managementUnitId: managementUnitId) { (response, error) in
@@ -3716,7 +3716,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(managementUnitI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 {: class="table-striped"}
 
 
@@ -3873,7 +3873,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let evaluateMatches: Bool = true // Whether to evaluate the matches for violations
 
@@ -3893,7 +3893,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(manag
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **evaluateMatches** | **Bool**| Whether to evaluate the matches for violations | [optional] [default to true] |
 {: class="table-striped"}
@@ -4415,7 +4415,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let timeOffRequestId: String = "" // Time Off Request Id
+let timeOffRequestId: String = "" // The ID of the time off request
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementTimeoffrequest(timeOffRequestId: timeOffRequestId) { (response, error) in
@@ -4433,7 +4433,7 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequest(timeOffRequestId: ti
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **timeOffRequestId** | **String**| Time Off Request Id | |
+| **timeOffRequestId** | **String**| The ID of the time off request | |
 {: class="table-striped"}
 
 
@@ -4467,7 +4467,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let timeOffRequestId: String = "" // Time Off Request Id
+let timeOffRequestId: String = "" // The ID of the time off request
 
 // Code example
 WorkforceManagementAPI.getWorkforcemanagementTimeoffrequestWaitlistpositions(timeOffRequestId: timeOffRequestId) { (response, error) in
@@ -4485,7 +4485,7 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequestWaitlistpositions(tim
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **timeOffRequestId** | **String**| Time Off Request Id | |
+| **timeOffRequestId** | **String**| The ID of the time off request | |
 {: class="table-striped"}
 
 
@@ -4903,7 +4903,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The id of time off limit object to update
 let body: UpdateTimeOffLimitRequest = new UpdateTimeOffLimitRequest(...) // body
 
@@ -4923,7 +4923,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeofflimit(manage
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The id of time off limit object to update | |
 | **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest.html)| body | [optional] |
 {: class="table-striped"}
@@ -4959,7 +4959,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID.
+let managementUnitId: String = "" // The ID of the management unit
 let timeOffPlanId: String = "" // The ID of the time off plan to update
 let body: UpdateTimeOffPlanRequest = new UpdateTimeOffPlanRequest(...) // body
 
@@ -4979,7 +4979,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffplan(managem
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID. | |
+| **managementUnitId** | **String**| The ID of the management unit | |
 | **timeOffPlanId** | **String**| The ID of the time off plan to update | |
 | **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest.html)| body | [optional] |
 {: class="table-striped"}
@@ -5015,7 +5015,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The id of the user the requested time off request belongs to
 let timeOffRequestId: String = "" // The id of the time off request to update
 let body: AdminTimeOffRequestPatch = new AdminTimeOffRequestPatch(...) // body
@@ -5036,7 +5036,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **userId** | **String**| The id of the user the requested time off request belongs to | |
 | **timeOffRequestId** | **String**| The id of the time off request to update | |
 | **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch.html)| body | [optional] |
@@ -5073,7 +5073,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: PatchShiftTradeRequest = new PatchShiftTradeRequest(...) // body
 let tradeId: String = "" // The ID of the shift trade to update
@@ -5094,7 +5094,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
@@ -5245,7 +5245,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let timeOffRequestId: String = "" // Time Off Request Id
+let timeOffRequestId: String = "" // The ID of the time off request
 let body: AgentTimeOffRequestPatch = new AgentTimeOffRequestPatch(...) // body
 
 // Code example
@@ -5264,7 +5264,7 @@ WorkforceManagementAPI.patchWorkforcemanagementTimeoffrequest(timeOffRequestId: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **timeOffRequestId** | **String**| Time Off Request Id | |
+| **timeOffRequestId** | **String**| The ID of the time off request | |
 | **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -5516,7 +5516,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit
+let businessUnitId: String = "" // The ID of the business unit
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 let body: IntradayPlanningGroupRequest = new IntradayPlanningGroupRequest(...) // body
 
@@ -5536,7 +5536,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitIntraday(businessUnitI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit | |
+| **businessUnitId** | **String**| The ID of the business unit | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
 | **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest.html)| body | [optional] |
 {: class="table-striped"}
@@ -6199,7 +6199,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let forecastId: String = "" // The ID of the forecast to copy
 let body: CopyBuForecastRequest = new CopyBuForecastRequest(...) // body
@@ -6221,7 +6221,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecastC
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast to copy | |
 | **body** | [**CopyBuForecastRequest**](CopyBuForecastRequest.html)| body | |
@@ -6259,7 +6259,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: GenerateBuForecastRequest = new GenerateBuForecastRequest(...) // 
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
@@ -6280,7 +6280,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)|  | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
@@ -6317,7 +6317,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: WfmProcessUploadRequest = new WfmProcessUploadRequest(...) // 
 
@@ -6337,7 +6337,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)|  | |
 {: class="table-striped"}
@@ -6373,7 +6373,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let businessUnitId: String = "" // The business unit ID of the business unit to which the forecast belongs
+let businessUnitId: String = "" // The ID of the business unit to which the forecast belongs
 let weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body
 
@@ -6393,7 +6393,7 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **businessUnitId** | **String**| The business unit ID of the business unit to which the forecast belongs | |
+| **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | |
 {: class="table-striped"}
@@ -6634,7 +6634,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service.  For testing/app development purposes
@@ -6655,7 +6655,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
@@ -6692,7 +6692,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit
+let managementUnitId: String = "" // The ID of the management unit
 let body: WfmHistoricalAdherenceQuery = new WfmHistoricalAdherenceQuery(...) // body
 
 // Code example
@@ -6711,7 +6711,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherenceq
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit | |
+| **managementUnitId** | **String**| The ID of the management unit | |
 | **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -6801,7 +6801,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: UserListScheduleRequestBody = new UserListScheduleRequestBody(...) // body
 
 // Code example
@@ -6820,7 +6820,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -6855,7 +6855,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let body: CreateTimeOffLimitRequest = new CreateTimeOffLimitRequest(...) // body
 
 // Code example
@@ -6874,7 +6874,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeofflimits(manage
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -6909,7 +6909,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let body: QueryTimeOffLimitValuesRequest = new QueryTimeOffLimitValuesRequest(...) // body
 
 // Code example
@@ -6928,7 +6928,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeofflimitsValuesQ
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -6963,7 +6963,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID.
+let managementUnitId: String = "" // The ID of the management unit
 let body: CreateTimeOffPlanRequest = new CreateTimeOffPlanRequest(...) // body
 
 // Code example
@@ -6982,7 +6982,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffplans(managem
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID. | |
+| **managementUnitId** | **String**| The ID of the management unit | |
 | **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -7017,7 +7017,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: CreateAdminTimeOffRequest = new CreateAdminTimeOffRequest(...) // body
 
 // Code example
@@ -7036,7 +7036,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -7071,7 +7071,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let body: TimeOffRequestQueryBody = new TimeOffRequestQueryBody(...) // body
 
 // Code example
@@ -7090,7 +7090,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -7125,7 +7125,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let body: QueryWaitlistPositionsRequest = new QueryWaitlistPositionsRequest(...) // body
 
 // Code example
@@ -7144,7 +7144,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsWaitl
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest.html)| body | [optional] |
 {: class="table-striped"}
 
@@ -7179,7 +7179,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: MatchShiftTradeRequest = new MatchShiftTradeRequest(...) // body
 let tradeId: String = "" // The ID of the shift trade to update
@@ -7200,7 +7200,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradeMatch(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
@@ -7237,7 +7237,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: AddShiftTradeRequest = new AddShiftTradeRequest(...) // body
 
@@ -7257,7 +7257,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttrades(mana
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest.html)| body | |
 {: class="table-striped"}
@@ -7293,7 +7293,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: SearchShiftTradesRequest = new SearchShiftTradesRequest(...) // body
 
@@ -7313,7 +7313,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearc
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body | |
 {: class="table-striped"}
@@ -7350,7 +7350,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: BulkShiftTradeStateUpdateRequest = new BulkShiftTradeStateUpdateRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
@@ -7371,7 +7371,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesState
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
+| **managementUnitId** | **String**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**BulkShiftTradeStateUpdateRequest**](BulkShiftTradeStateUpdateRequest.html)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
@@ -7948,7 +7948,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let managementUnitId: String = "" // The management unit ID of the management unit.
+let managementUnitId: String = "" // The ID of the management unit.
 let timeOffLimitId: String = "" // The ID of the time off limit object to set values for
 let body: SetTimeOffLimitValuesRequest = new SetTimeOffLimitValuesRequest(...) // body
 
@@ -7968,7 +7968,7 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **managementUnitId** | **String**| The management unit ID of the management unit. | |
+| **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The ID of the time off limit object to set values for | |
 | **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest.html)| body | [optional] |
 {: class="table-striped"}

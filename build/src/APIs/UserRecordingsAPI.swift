@@ -404,8 +404,8 @@ open class UserRecordingsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
             "nextUri" : "aeiou",
             "previousUri" : "aeiou"
@@ -750,6 +750,7 @@ open class UserRecordingsAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -1514,8 +1515,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -1860,6 +1861,7 @@ open class UserRecordingsAPI {
                 "selfUri" : "aeiou",
                 "customActions" : "{}",
                 "versionDate" : "2000-01-23T04:56:07.000+0000",
+                "division" : "",
                 "features" : "{}",
                 "versionId" : "aeiou",
                 "createdDate" : "2000-01-23T04:56:07.000+0000",
@@ -2156,8 +2158,8 @@ open class UserRecordingsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2596,8 +2598,8 @@ open class UserRecordingsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
             "nextUri" : "aeiou",
             "previousUri" : "aeiou"
@@ -2942,6 +2944,7 @@ open class UserRecordingsAPI {
               "selfUri" : "aeiou",
               "customActions" : "{}",
               "versionDate" : "2000-01-23T04:56:07.000+0000",
+              "division" : "",
               "features" : "{}",
               "versionId" : "aeiou",
               "createdDate" : "2000-01-23T04:56:07.000+0000",

@@ -7884,7 +7884,15 @@ open class WorkforceManagementAPI {
   "entities" : [ {
     "adherenceExplanation" : {
       "agent" : "",
+      "businessUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "notes" : "aeiou",
+      "managementUnit" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "lengthMinutes" : 123,
       "selfUri" : "aeiou",
       "id" : "aeiou",

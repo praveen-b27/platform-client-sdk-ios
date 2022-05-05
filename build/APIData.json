@@ -7575,7 +7575,7 @@
       }
     ],
     "return": "WhatsAppIntegration",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: WhatsAppIntegrationUpdateRequest = new WhatsAppIntegrationUpdateRequest(...) // WhatsAppIntegrationUpdateRequest\n\n// Update or activate a WhatsApp messaging integration.\nPatchConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.patchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.patchConversationsMessagingIntegrationsWhatsappIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: WhatsAppIntegrationUpdateRequest = new WhatsAppIntegrationUpdateRequest(...) // WhatsAppIntegrationUpdateRequest\n\n// Update or activate a WhatsApp messaging integration\nPatchConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.patchConversationsMessagingIntegrationsWhatsappIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsMessagingIntegrationsWhatsappIntegrationIdRequest.patchConversationsMessagingIntegrationsWhatsappIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "patchconversationsmessagingsupportedcontentsupportedcontentid": {
     "operationId": "patchconversationsmessagingsupportedcontentsupportedcontentid",
@@ -8502,92 +8502,6 @@
     "signature": "getDataextensionsLimits()",
     "return": "SchemaQuantityLimits",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get quantitative limits on schemas\nGetDataextensionsLimitsRequest.getDataextensionsLimits() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetDataextensionsLimitsRequest.getDataextensionsLimits was successful\")\n        dump(response)\n    }\n}"
-  },
-  "deletefaxdocument": {
-    "operationId": "deletefaxdocument",
-    "functionName": "deleteFaxDocument",
-    "signature": "deleteFaxDocument(documentId)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\n\n// Delete a fax document.\nDeleteFaxDocumentRequest.deleteFaxDocument(documentId: documentId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteFaxDocumentRequest.deleteFaxDocument was successful\")\n    }\n}"
-  },
-  "getfaxdocument": {
-    "operationId": "getfaxdocument",
-    "functionName": "getFaxDocument",
-    "signature": "getFaxDocument(documentId)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "FaxDocument",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\n\n// Get a document.\nGetFaxDocumentRequest.getFaxDocument(documentId: documentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxDocumentRequest.getFaxDocument was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getfaxdocumentcontent": {
-    "operationId": "getfaxdocumentcontent",
-    "functionName": "getFaxDocumentContent",
-    "signature": "getFaxDocumentContent(documentId)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "return": "DownloadResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\n\n// Download a fax document.\nGetFaxDocumentContentRequest.getFaxDocumentContent(documentId: documentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxDocumentContentRequest.getFaxDocumentContent was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getfaxdocuments": {
-    "operationId": "getfaxdocuments",
-    "functionName": "getFaxDocuments",
-    "signature": "getFaxDocuments(pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "pageSize",
-        "type": "Int",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "Int",
-        "required": "false"
-      }
-    ],
-    "return": "FaxDocumentEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 25 // Page size\nlet pageNumber: Int = 1 // Page number\n\n// Get a list of fax documents.\nGetFaxDocumentsRequest.getFaxDocuments(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxDocumentsRequest.getFaxDocuments was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getfaxsummary": {
-    "operationId": "getfaxsummary",
-    "functionName": "getFaxSummary",
-    "signature": "getFaxSummary()",
-    "return": "FaxSummary",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get fax summary\nGetFaxSummaryRequest.getFaxSummary() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxSummaryRequest.getFaxSummary was successful\")\n        dump(response)\n    }\n}"
-  },
-  "putfaxdocument": {
-    "operationId": "putfaxdocument",
-    "functionName": "putFaxDocument",
-    "signature": "putFaxDocument(documentId, body)",
-    "parameters": [
-      {
-        "name": "documentId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "FaxDocument",
-        "required": "true"
-      }
-    ],
-    "return": "FaxDocument",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet body: FaxDocument = new FaxDocument(...) // Document\n\n// Update a fax document.\nPutFaxDocumentRequest.putFaxDocument(documentId: documentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutFaxDocumentRequest.putFaxDocument was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteexternalcontactscontact": {
     "operationId": "deleteexternalcontactscontact",
@@ -9739,6 +9653,92 @@
     "return": "Relationship",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet relationshipId: String = \"\" // Relationship Id\nlet body: Relationship = new Relationship(...) // Relationship\n\n// Update a relationship\nPutExternalcontactsRelationshipRequest.putExternalcontactsRelationship(relationshipId: relationshipId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutExternalcontactsRelationshipRequest.putExternalcontactsRelationship was successful\")\n        dump(response)\n    }\n}"
   },
+  "deletefaxdocument": {
+    "operationId": "deletefaxdocument",
+    "functionName": "deleteFaxDocument",
+    "signature": "deleteFaxDocument(documentId)",
+    "parameters": [
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\n\n// Delete a fax document.\nDeleteFaxDocumentRequest.deleteFaxDocument(documentId: documentId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteFaxDocumentRequest.deleteFaxDocument was successful\")\n    }\n}"
+  },
+  "getfaxdocument": {
+    "operationId": "getfaxdocument",
+    "functionName": "getFaxDocument",
+    "signature": "getFaxDocument(documentId)",
+    "parameters": [
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "FaxDocument",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\n\n// Get a document.\nGetFaxDocumentRequest.getFaxDocument(documentId: documentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxDocumentRequest.getFaxDocument was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getfaxdocumentcontent": {
+    "operationId": "getfaxdocumentcontent",
+    "functionName": "getFaxDocumentContent",
+    "signature": "getFaxDocumentContent(documentId)",
+    "parameters": [
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DownloadResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\n\n// Download a fax document.\nGetFaxDocumentContentRequest.getFaxDocumentContent(documentId: documentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxDocumentContentRequest.getFaxDocumentContent was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getfaxdocuments": {
+    "operationId": "getfaxdocuments",
+    "functionName": "getFaxDocuments",
+    "signature": "getFaxDocuments(pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "FaxDocumentEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 25 // Page size\nlet pageNumber: Int = 1 // Page number\n\n// Get a list of fax documents.\nGetFaxDocumentsRequest.getFaxDocuments(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxDocumentsRequest.getFaxDocuments was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getfaxsummary": {
+    "operationId": "getfaxsummary",
+    "functionName": "getFaxSummary",
+    "signature": "getFaxSummary()",
+    "return": "FaxSummary",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get fax summary\nGetFaxSummaryRequest.getFaxSummary() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxSummaryRequest.getFaxSummary was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putfaxdocument": {
+    "operationId": "putfaxdocument",
+    "functionName": "putFaxDocument",
+    "signature": "putFaxDocument(documentId, body)",
+    "parameters": [
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "FaxDocument",
+        "required": "true"
+      }
+    ],
+    "return": "FaxDocument",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet body: FaxDocument = new FaxDocument(...) // Document\n\n// Update a fax document.\nPutFaxDocumentRequest.putFaxDocument(documentId: documentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutFaxDocumentRequest.putFaxDocument was successful\")\n        dump(response)\n    }\n}"
+  },
   "getgamificationleaderboard": {
     "operationId": "getgamificationleaderboard",
     "functionName": "getGamificationLeaderboard",
@@ -9890,16 +9890,16 @@
   "getgamificationprofile": {
     "operationId": "getgamificationprofile",
     "functionName": "getGamificationProfile",
-    "signature": "getGamificationProfile(performanceProfileId)",
+    "signature": "getGamificationProfile(profileId)",
     "parameters": [
       {
-        "name": "performanceProfileId",
+        "name": "profileId",
         "type": "String",
         "required": "true"
       }
     ],
     "return": "PerformanceProfile",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet performanceProfileId: String = \"\" // Performance Profile Id\n\n// Performance profile by id\nGetGamificationProfileRequest.getGamificationProfile(performanceProfileId: performanceProfileId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationProfileRequest.getGamificationProfile was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet profileId: String = \"\" // performanceProfileId\n\n// Performance profile by id\nGetGamificationProfileRequest.getGamificationProfile(profileId: profileId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationProfileRequest.getGamificationProfile was successful\")\n        dump(response)\n    }\n}"
   },
   "getgamificationprofilemembers": {
     "operationId": "getgamificationprofilemembers",
@@ -10443,30 +10443,30 @@
   "postgamificationprofileactivate": {
     "operationId": "postgamificationprofileactivate",
     "functionName": "postGamificationProfileActivate",
-    "signature": "postGamificationProfileActivate(performanceProfileId)",
+    "signature": "postGamificationProfileActivate(profileId)",
     "parameters": [
       {
-        "name": "performanceProfileId",
+        "name": "profileId",
         "type": "String",
         "required": "true"
       }
     ],
     "return": "PerformanceProfile",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet performanceProfileId: String = \"\" // Performance Profile Id\n\n// Activate a performance profile\nPostGamificationProfileActivateRequest.postGamificationProfileActivate(performanceProfileId: performanceProfileId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGamificationProfileActivateRequest.postGamificationProfileActivate was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet profileId: String = \"\" // performanceProfileId\n\n// Activate a performance profile\nPostGamificationProfileActivateRequest.postGamificationProfileActivate(profileId: profileId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGamificationProfileActivateRequest.postGamificationProfileActivate was successful\")\n        dump(response)\n    }\n}"
   },
   "postgamificationprofiledeactivate": {
     "operationId": "postgamificationprofiledeactivate",
     "functionName": "postGamificationProfileDeactivate",
-    "signature": "postGamificationProfileDeactivate(performanceProfileId)",
+    "signature": "postGamificationProfileDeactivate(profileId)",
     "parameters": [
       {
-        "name": "performanceProfileId",
+        "name": "profileId",
         "type": "String",
         "required": "true"
       }
     ],
     "return": "PerformanceProfile",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet performanceProfileId: String = \"\" // Performance Profile Id\n\n// Deactivate a performance profile\nPostGamificationProfileDeactivateRequest.postGamificationProfileDeactivate(performanceProfileId: performanceProfileId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGamificationProfileDeactivateRequest.postGamificationProfileDeactivate was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet profileId: String = \"\" // performanceProfileId\n\n// Deactivate a performance profile\nPostGamificationProfileDeactivateRequest.postGamificationProfileDeactivate(profileId: profileId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostGamificationProfileDeactivateRequest.postGamificationProfileDeactivate was successful\")\n        dump(response)\n    }\n}"
   },
   "postgamificationprofilemembers": {
     "operationId": "postgamificationprofilemembers",
@@ -10595,10 +10595,10 @@
   "putgamificationprofile": {
     "operationId": "putgamificationprofile",
     "functionName": "putGamificationProfile",
-    "signature": "putGamificationProfile(performanceProfileId, body)",
+    "signature": "putGamificationProfile(profileId, body)",
     "parameters": [
       {
-        "name": "performanceProfileId",
+        "name": "profileId",
         "type": "String",
         "required": "true"
       },
@@ -10609,7 +10609,7 @@
       }
     ],
     "return": "PerformanceProfile",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet performanceProfileId: String = \"\" // Performance Profile Id\nlet body: PerformanceProfile = new PerformanceProfile(...) // performanceProfile\n\n// Updates a performance profile\nPutGamificationProfileRequest.putGamificationProfile(performanceProfileId: performanceProfileId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutGamificationProfileRequest.putGamificationProfile was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet profileId: String = \"\" // performanceProfileId\nlet body: PerformanceProfile = new PerformanceProfile(...) // performanceProfile\n\n// Updates a performance profile\nPutGamificationProfileRequest.putGamificationProfile(profileId: profileId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutGamificationProfileRequest.putGamificationProfile was successful\")\n        dump(response)\n    }\n}"
   },
   "putgamificationprofilemetric": {
     "operationId": "putgamificationprofilemetric",
@@ -11936,7 +11936,7 @@
   "getintegrationsactions": {
     "operationId": "getintegrationsactions",
     "functionName": "getIntegrationsActions",
-    "signature": "getIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions)",
+    "signature": "getIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions)",
     "parameters": [
       {
         "name": "pageSize",
@@ -11979,6 +11979,11 @@
         "required": "false"
       },
       {
+        "name": "ids",
+        "type": "String",
+        "required": "false"
+      },
+      {
         "name": "secure",
         "type": "String",
         "required": "false"
@@ -11990,7 +11995,7 @@
       }
     ],
     "return": "ActionEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 25 // The total page size requested\nlet pageNumber: Int = 1 // The page number requested\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet sortBy: String = \"\" // Root level field name to sort on.\nlet sortOrder: GetIntegrationsActionsRequest.SortOrder_getIntegrationsActions = GetIntegrationsActionsRequest.SortOrder_getIntegrationsActions.enummember // Direction to sort 'sortBy' field.\nlet category: String = \"\" // Filter by category name\nlet name: String = \"\" // Filter by action name. Provide full or just the first part of name.\nlet secure: GetIntegrationsActionsRequest.Secure_getIntegrationsActions = GetIntegrationsActionsRequest.Secure_getIntegrationsActions.enummember // Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.\nlet includeAuthActions: GetIntegrationsActionsRequest.IncludeAuthActions_getIntegrationsActions = GetIntegrationsActionsRequest.IncludeAuthActions_getIntegrationsActions.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.\n\n// Retrieves all actions associated with filters passed in via query param.\nGetIntegrationsActionsRequest.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsActionsRequest.getIntegrationsActions was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 25 // The total page size requested\nlet pageNumber: Int = 1 // The page number requested\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet sortBy: String = \"\" // Root level field name to sort on.\nlet sortOrder: GetIntegrationsActionsRequest.SortOrder_getIntegrationsActions = GetIntegrationsActionsRequest.SortOrder_getIntegrationsActions.enummember // Direction to sort 'sortBy' field.\nlet category: String = \"\" // Filter by category name.\nlet name: String = \"\" // Filter by partial or complete action name.\nlet ids: String = \"\" // Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids.\nlet secure: GetIntegrationsActionsRequest.Secure_getIntegrationsActions = GetIntegrationsActionsRequest.Secure_getIntegrationsActions.enummember // Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions.\nlet includeAuthActions: GetIntegrationsActionsRequest.IncludeAuthActions_getIntegrationsActions = GetIntegrationsActionsRequest.IncludeAuthActions_getIntegrationsActions.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.\n\n// Retrieves all actions associated with filters passed in via query param.\nGetIntegrationsActionsRequest.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsActionsRequest.getIntegrationsActions was successful\")\n        dump(response)\n    }\n}"
   },
   "getintegrationsactionscategories": {
     "operationId": "getintegrationsactionscategories",
@@ -12039,7 +12044,7 @@
   "getintegrationsactionsdrafts": {
     "operationId": "getintegrationsactionsdrafts",
     "functionName": "getIntegrationsActionsDrafts",
-    "signature": "getIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions)",
+    "signature": "getIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions)",
     "parameters": [
       {
         "name": "pageSize",
@@ -12082,6 +12087,11 @@
         "required": "false"
       },
       {
+        "name": "ids",
+        "type": "String",
+        "required": "false"
+      },
+      {
         "name": "secure",
         "type": "String",
         "required": "false"
@@ -12093,7 +12103,7 @@
       }
     ],
     "return": "ActionEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 25 // The total page size requested\nlet pageNumber: Int = 1 // The page number requested\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet sortBy: String = \"\" // Root level field name to sort on.\nlet sortOrder: GetIntegrationsActionsDraftsRequest.SortOrder_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.SortOrder_getIntegrationsActionsDrafts.enummember // Direction to sort 'sortBy' field.\nlet category: String = \"\" // Filter by category name\nlet name: String = \"\" // Filter by action name. Provide full or just the first part of name.\nlet secure: GetIntegrationsActionsDraftsRequest.Secure_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.Secure_getIntegrationsActionsDrafts.enummember // Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.\nlet includeAuthActions: GetIntegrationsActionsDraftsRequest.IncludeAuthActions_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.IncludeAuthActions_getIntegrationsActionsDrafts.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.\n\n// Retrieves all action drafts associated with the filters passed in via query param.\nGetIntegrationsActionsDraftsRequest.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsActionsDraftsRequest.getIntegrationsActionsDrafts was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 25 // The total page size requested\nlet pageNumber: Int = 1 // The page number requested\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet sortBy: String = \"\" // Root level field name to sort on.\nlet sortOrder: GetIntegrationsActionsDraftsRequest.SortOrder_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.SortOrder_getIntegrationsActionsDrafts.enummember // Direction to sort 'sortBy' field.\nlet category: String = \"\" // Filter by category name.\nlet name: String = \"\" // Filter by partial or complete action name.\nlet ids: String = \"\" // Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids.\nlet secure: GetIntegrationsActionsDraftsRequest.Secure_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.Secure_getIntegrationsActionsDrafts.enummember // Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions.\nlet includeAuthActions: GetIntegrationsActionsDraftsRequest.IncludeAuthActions_getIntegrationsActionsDrafts = GetIntegrationsActionsDraftsRequest.IncludeAuthActions_getIntegrationsActionsDrafts.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.\n\n// Retrieves all action drafts associated with the filters passed in via query param.\nGetIntegrationsActionsDraftsRequest.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsActionsDraftsRequest.getIntegrationsActionsDrafts was successful\")\n        dump(response)\n    }\n}"
   },
   "getintegrationsbotconnectorintegrationidbot": {
     "operationId": "getintegrationsbotconnectorintegrationidbot",
@@ -21401,6 +21411,27 @@
     "return": "RecordingJobEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 25 // Page size\nlet pageNumber: Int = 1 // Page number\nlet sortBy: GetRecordingJobsRequest.SortBy_getRecordingJobs = GetRecordingJobsRequest.SortBy_getRecordingJobs.enummember // Sort by\nlet state: GetRecordingJobsRequest.State_getRecordingJobs = GetRecordingJobsRequest.State_getRecordingJobs.enummember // Filter by state\nlet showOnlyMyJobs: Bool = true // Show only my jobs\nlet jobType: GetRecordingJobsRequest.JobType_getRecordingJobs = GetRecordingJobsRequest.JobType_getRecordingJobs.enummember // Job Type (Can be left empty for both)\nlet includeTotal: Bool = true // If false, cursor will be used to locate the page instead of pageNumber.\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\n\n// Get the status of all jobs within the user's organization\nGetRecordingJobsRequest.getRecordingJobs(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, state: state, showOnlyMyJobs: showOnlyMyJobs, jobType: jobType, includeTotal: includeTotal, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingJobsRequest.getRecordingJobs was successful\")\n        dump(response)\n    }\n}"
   },
+  "getrecordingkeyconfiguration": {
+    "operationId": "getrecordingkeyconfiguration",
+    "functionName": "getRecordingKeyconfiguration",
+    "signature": "getRecordingKeyconfiguration(keyConfigurationId)",
+    "parameters": [
+      {
+        "name": "keyConfigurationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "RecordingEncryptionConfiguration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet keyConfigurationId: String = \"\" // Key Configurations Id\n\n// Get the encryption key configurations\nGetRecordingKeyconfigurationRequest.getRecordingKeyconfiguration(keyConfigurationId: keyConfigurationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingKeyconfigurationRequest.getRecordingKeyconfiguration was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getrecordingkeyconfigurations": {
+    "operationId": "getrecordingkeyconfigurations",
+    "functionName": "getRecordingKeyconfigurations",
+    "signature": "getRecordingKeyconfigurations()",
+    "return": "RecordingEncryptionConfigurationListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of key configurations data\nGetRecordingKeyconfigurationsRequest.getRecordingKeyconfigurations() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingKeyconfigurationsRequest.getRecordingKeyconfigurations was successful\")\n        dump(response)\n    }\n}"
+  },
   "getrecordinglocalkeyssetting": {
     "operationId": "getrecordinglocalkeyssetting",
     "functionName": "getRecordingLocalkeysSetting",
@@ -21679,7 +21710,35 @@
       }
     ],
     "return": "RecordingJob",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RecordingJobsQuery = new RecordingJobsQuery(...) // query\n\n// Create a recording bulk job\nPostRecordingJobsRequest.postRecordingJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRecordingJobsRequest.postRecordingJobs was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RecordingJobsQuery = new RecordingJobsQuery(...) // query\n\n// Create a recording bulk job.\nPostRecordingJobsRequest.postRecordingJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRecordingJobsRequest.postRecordingJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postrecordingkeyconfigurations": {
+    "operationId": "postrecordingkeyconfigurations",
+    "functionName": "postRecordingKeyconfigurations",
+    "signature": "postRecordingKeyconfigurations(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "RecordingEncryptionConfiguration",
+        "required": "true"
+      }
+    ],
+    "return": "RecordingEncryptionConfiguration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RecordingEncryptionConfiguration = new RecordingEncryptionConfiguration(...) // Encryption Configuration\n\n// Setup configurations for encryption key creation\nPostRecordingKeyconfigurationsRequest.postRecordingKeyconfigurations(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRecordingKeyconfigurationsRequest.postRecordingKeyconfigurations was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postrecordingkeyconfigurationsvalidate": {
+    "operationId": "postrecordingkeyconfigurationsvalidate",
+    "functionName": "postRecordingKeyconfigurationsValidate",
+    "signature": "postRecordingKeyconfigurationsValidate(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "RecordingEncryptionConfiguration",
+        "required": "true"
+      }
+    ],
+    "return": "RecordingEncryptionConfiguration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RecordingEncryptionConfiguration = new RecordingEncryptionConfiguration(...) // Encryption Configuration\n\n// Validate encryption key configurations without saving it\nPostRecordingKeyconfigurationsValidateRequest.postRecordingKeyconfigurationsValidate(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostRecordingKeyconfigurationsValidateRequest.postRecordingKeyconfigurationsValidate was successful\")\n        dump(response)\n    }\n}"
   },
   "postrecordinglocalkeys": {
     "operationId": "postrecordinglocalkeys",
@@ -21879,6 +21938,25 @@
     ],
     "return": "RecordingJob",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\nlet body: ExecuteRecordingJobsQuery = new ExecuteRecordingJobsQuery(...) // query\n\n// Execute the recording bulk job.\nPutRecordingJobRequest.putRecordingJob(jobId: jobId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRecordingJobRequest.putRecordingJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putrecordingkeyconfiguration": {
+    "operationId": "putrecordingkeyconfiguration",
+    "functionName": "putRecordingKeyconfiguration",
+    "signature": "putRecordingKeyconfiguration(keyConfigurationId, body)",
+    "parameters": [
+      {
+        "name": "keyConfigurationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "RecordingEncryptionConfiguration",
+        "required": "true"
+      }
+    ],
+    "return": "RecordingEncryptionConfiguration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet keyConfigurationId: String = \"\" // Key Configurations Id\nlet body: RecordingEncryptionConfiguration = new RecordingEncryptionConfiguration(...) // Encryption key configuration metadata\n\n// Update the encryption key configurations\nPutRecordingKeyconfigurationRequest.putRecordingKeyconfiguration(keyConfigurationId: keyConfigurationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRecordingKeyconfigurationRequest.putRecordingKeyconfiguration was successful\")\n        dump(response)\n    }\n}"
   },
   "putrecordinglocalkeyssetting": {
     "operationId": "putrecordinglocalkeyssetting",
@@ -22647,9 +22725,16 @@
   "getroutingemaildomains": {
     "operationId": "getroutingemaildomains",
     "functionName": "getRoutingEmailDomains",
-    "signature": "getRoutingEmailDomains()",
+    "signature": "getRoutingEmailDomains(excludeStatus)",
+    "parameters": [
+      {
+        "name": "excludeStatus",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
     "return": "InboundDomainEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get domains\nGetRoutingEmailDomainsRequest.getRoutingEmailDomains() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainsRequest.getRoutingEmailDomains was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet excludeStatus: Bool = false // Exclude MX record data\n\n// Get domains\nGetRoutingEmailDomainsRequest.getRoutingEmailDomains(excludeStatus: excludeStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingEmailDomainsRequest.getRoutingEmailDomains was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemailsetup": {
     "operationId": "getroutingemailsetup",

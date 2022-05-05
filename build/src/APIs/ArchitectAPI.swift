@@ -1714,8 +1714,8 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2309,8 +2309,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2565,8 +2565,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2835,8 +2835,8 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3330,8 +3330,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3576,8 +3576,8 @@ open class ArchitectAPI {
     "consumingResources" : [ "" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3796,8 +3796,8 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4013,8 +4013,8 @@ open class ArchitectAPI {
     "closedHoursFlow" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5014,8 +5014,8 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5427,8 +5427,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5738,8 +5738,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5868,8 +5868,8 @@ open class ArchitectAPI {
     "state" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6591,8 +6591,8 @@ open class ArchitectAPI {
     "text" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6721,8 +6721,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8698,8 +8698,8 @@ open class ArchitectAPI {
     "commitVersion" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9275,8 +9275,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9922,8 +9922,8 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10059,8 +10059,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10303,8 +10303,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10831,8 +10831,8 @@ open class ArchitectAPI {
     "debugVersion" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11509,8 +11509,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11636,8 +11636,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -12409,8 +12409,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -12536,8 +12536,8 @@ open class ArchitectAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

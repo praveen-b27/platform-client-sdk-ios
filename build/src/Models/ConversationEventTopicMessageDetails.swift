@@ -30,10 +30,12 @@ public class ConversationEventTopicMessageDetails: Codable {
     public var messageSegmentCount: Int?
     /** The media (images, files, etc) associated with this message, if any */
     public var media: [ConversationEventTopicMessageMedia]?
+    /** Detailed information about an error response. */
+    public var errorInfo: ConversationEventTopicErrorDetails?
     /** A list of stickers included in the message */
     public var stickers: [ConversationEventTopicMessageSticker]?
 
-    public init(messageId: String?, messageTime: Date?, messageStatus: MessageStatus?, messageSegmentCount: Int?, media: [ConversationEventTopicMessageMedia]?, stickers: [ConversationEventTopicMessageSticker]?) {
+    public init(messageId: String?, messageTime: Date?, messageStatus: MessageStatus?, messageSegmentCount: Int?, media: [ConversationEventTopicMessageMedia]?, errorInfo: ConversationEventTopicErrorDetails?, stickers: [ConversationEventTopicMessageSticker]?) {
         
         self.messageId = messageId
         
@@ -44,6 +46,8 @@ public class ConversationEventTopicMessageDetails: Codable {
         self.messageSegmentCount = messageSegmentCount
         
         self.media = media
+        
+        self.errorInfo = errorInfo
         
         self.stickers = stickers
         

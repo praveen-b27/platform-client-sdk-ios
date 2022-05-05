@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Message content element. */
+/** Message content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
 
 public class MessageContent: Codable {
 
@@ -23,8 +23,11 @@ public class MessageContent: Codable {
         case reactions = "Reactions"
         case mention = "Mention"
         case buttonResponse = "ButtonResponse"
+        case story = "Story"
+        case card = "Card"
+        case carousel = "Carousel"
     }
-    /** Type of this content element. If contentType = \&quot;Attachment\&quot; only one item is allowed. */
+    /** Type of this content element. */
     public var contentType: ContentType?
     /** Location content. */
     public var location: ContentLocation?
@@ -34,9 +37,9 @@ public class MessageContent: Codable {
     public var quickReply: ContentQuickReply?
     /** Button response content. */
     public var buttonResponse: ContentButtonResponse?
-    /** Generic content. */
+    /** Generic content (Deprecated). */
     public var generic: ContentGeneric?
-    /** List content. */
+    /** List content (Deprecated). */
     public var list: ContentList?
     /** Template notification content. */
     public var template: ContentNotificationTemplate?
@@ -46,8 +49,14 @@ public class MessageContent: Codable {
     public var mention: MessagingRecipient?
     /** Structured message postback (Deprecated). */
     public var postback: ContentPostback?
+    /** Ephemeral story content. */
+    public var story: ContentStory?
+    /** Card content */
+    public var card: ContentCard?
+    /** Carousel content */
+    public var carousel: ContentCarousel?
 
-    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, buttonResponse: ContentButtonResponse?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?) {
+    public init(contentType: ContentType?, location: ContentLocation?, attachment: ContentAttachment?, quickReply: ContentQuickReply?, buttonResponse: ContentButtonResponse?, generic: ContentGeneric?, list: ContentList?, template: ContentNotificationTemplate?, reactions: [ContentReaction]?, mention: MessagingRecipient?, postback: ContentPostback?, story: ContentStory?, card: ContentCard?, carousel: ContentCarousel?) {
         
         self.contentType = contentType
         
@@ -70,6 +79,12 @@ public class MessageContent: Codable {
         self.mention = mention
         
         self.postback = postback
+        
+        self.story = story
+        
+        self.card = card
+        
+        self.carousel = carousel
         
     }
 

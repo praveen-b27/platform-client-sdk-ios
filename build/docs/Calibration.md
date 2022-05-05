@@ -11,7 +11,7 @@ title: Calibration
 | **name** | **String** |  | [optional] |
 | **calibrator** | [**User**](User.html) |  | [optional] |
 | **agent** | [**User**](User.html) |  | [optional] |
-| **conversation** | [**Conversation**](Conversation.html) |  | [optional] |
+| **conversation** | [**ConversationReference**](ConversationReference.html) |  | [optional] |
 | **evaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
 | **contextId** | **String** |  | [optional] |
 | **averageScore** | **Int** |  | [optional] |

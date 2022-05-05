@@ -635,8 +635,8 @@ open class WebChatAPI {
     "email" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

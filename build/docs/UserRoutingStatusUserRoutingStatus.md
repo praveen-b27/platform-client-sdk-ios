@@ -7,7 +7,7 @@ title: UserRoutingStatusUserRoutingStatus
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | [**UserRoutingStatusObject**](UserRoutingStatusObject.html) |  | [optional] |
+| **_id** | **String** | The unique identifier of the user. | [optional] |
 | **routingStatus** | [**UserRoutingStatusRoutingStatus**](UserRoutingStatusRoutingStatus.html) |  | [optional] |
 | **errorInfo** | [**UserRoutingStatusErrorInfo**](UserRoutingStatusErrorInfo.html) |  | [optional] |
 {: class="table table-striped"}

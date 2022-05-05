@@ -842,7 +842,7 @@ IntegrationsAPI.getIntegrationsActionTemplate(actionId: actionId, fileName: file
 
 
 
-> [ActionEntityListing](ActionEntityListing.html) getIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions)
+> [ActionEntityListing](ActionEntityListing.html) getIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions)
 
 Retrieves all actions associated with filters passed in via query param.
 
@@ -869,13 +869,14 @@ let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let sortBy: String = "" // Root level field name to sort on.
 let sortOrder: IntegrationsAPI.SortOrder_getIntegrationsActions = IntegrationsAPI.SortOrder_getIntegrationsActions.enummember // Direction to sort 'sortBy' field.
-let category: String = "" // Filter by category name
-let name: String = "" // Filter by action name. Provide full or just the first part of name.
-let secure: IntegrationsAPI.Secure_getIntegrationsActions = IntegrationsAPI.Secure_getIntegrationsActions.enummember // Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+let category: String = "" // Filter by category name.
+let name: String = "" // Filter by partial or complete action name.
+let ids: String = "" // Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids.
+let secure: IntegrationsAPI.Secure_getIntegrationsActions = IntegrationsAPI.Secure_getIntegrationsActions.enummember // Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions.
 let includeAuthActions: IntegrationsAPI.IncludeAuthActions_getIntegrationsActions = IntegrationsAPI.IncludeAuthActions_getIntegrationsActions.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
 
 // Code example
-IntegrationsAPI.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
+IntegrationsAPI.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -896,9 +897,10 @@ IntegrationsAPI.getIntegrationsActions(pageSize: pageSize, pageNumber: pageNumbe
 | **previousPage** | **String**| Previous page token | [optional] |
 | **sortBy** | **String**| Root level field name to sort on. | [optional] |
 | **sortOrder** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: asc ("ASC"), desc ("DESC") |
-| **category** | **String**| Filter by category name | [optional] |
-| **name** | **String**| Filter by action name. Provide full or just the first part of name. | [optional] |
-| **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **category** | **String**| Filter by category name. | [optional] |
+| **name** | **String**| Filter by partial or complete action name. | [optional] |
+| **ids** | **String**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional] |
+| **secure** | **String**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
@@ -978,7 +980,7 @@ IntegrationsAPI.getIntegrationsActionsCategories(pageSize: pageSize, pageNumber:
 
 
 
-> [ActionEntityListing](ActionEntityListing.html) getIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, secure, includeAuthActions)
+> [ActionEntityListing](ActionEntityListing.html) getIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions)
 
 Retrieves all action drafts associated with the filters passed in via query param.
 
@@ -1005,13 +1007,14 @@ let nextPage: String = "" // next page token
 let previousPage: String = "" // Previous page token
 let sortBy: String = "" // Root level field name to sort on.
 let sortOrder: IntegrationsAPI.SortOrder_getIntegrationsActionsDrafts = IntegrationsAPI.SortOrder_getIntegrationsActionsDrafts.enummember // Direction to sort 'sortBy' field.
-let category: String = "" // Filter by category name
-let name: String = "" // Filter by action name. Provide full or just the first part of name.
-let secure: IntegrationsAPI.Secure_getIntegrationsActionsDrafts = IntegrationsAPI.Secure_getIntegrationsActionsDrafts.enummember // Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions.
+let category: String = "" // Filter by category name.
+let name: String = "" // Filter by partial or complete action name.
+let ids: String = "" // Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids.
+let secure: IntegrationsAPI.Secure_getIntegrationsActionsDrafts = IntegrationsAPI.Secure_getIntegrationsActionsDrafts.enummember // Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions.
 let includeAuthActions: IntegrationsAPI.IncludeAuthActions_getIntegrationsActionsDrafts = IntegrationsAPI.IncludeAuthActions_getIntegrationsActionsDrafts.enummember // Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions.
 
 // Code example
-IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
+IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1032,9 +1035,10 @@ IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pag
 | **previousPage** | **String**| Previous page token | [optional] |
 | **sortBy** | **String**| Root level field name to sort on. | [optional] |
 | **sortOrder** | **String**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: asc ("ASC"), desc ("DESC") |
-| **category** | **String**| Filter by category name | [optional] |
-| **name** | **String**| Filter by action name. Provide full or just the first part of name. | [optional] |
-| **secure** | **String**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
+| **category** | **String**| Filter by category name. | [optional] |
+| **name** | **String**| Filter by partial or complete action name. | [optional] |
+| **ids** | **String**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional] |
+| **secure** | **String**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **includeAuthActions** | **String**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 

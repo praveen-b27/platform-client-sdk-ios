@@ -495,13 +495,13 @@ GamificationAPI.getGamificationMetrics(performanceProfileId: performanceProfileI
 
 
 
-> [PerformanceProfile](PerformanceProfile.html) getGamificationProfile(performanceProfileId)
+> [PerformanceProfile](PerformanceProfile.html) getGamificationProfile(profileId)
 
 Performance profile by id
 
 
 
-Wraps GET /api/v2/gamification/profiles/{performanceProfileId}  
+Wraps GET /api/v2/gamification/profiles/{profileId}  
 
 Requires ANY permissions: 
 
@@ -517,10 +517,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let performanceProfileId: String = "" // Performance Profile Id
+let profileId: String = "" // performanceProfileId
 
 // Code example
-GamificationAPI.getGamificationProfile(performanceProfileId: performanceProfileId) { (response, error) in
+GamificationAPI.getGamificationProfile(profileId: profileId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -535,7 +535,7 @@ GamificationAPI.getGamificationProfile(performanceProfileId: performanceProfileI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **performanceProfileId** | **String**| Performance Profile Id | |
+| **profileId** | **String**| performanceProfileId | |
 {: class="table-striped"}
 
 
@@ -2070,13 +2070,13 @@ GamificationAPI.postGamificationMetrics(body: body) { (response, error) in
 
 
 
-> [PerformanceProfile](PerformanceProfile.html) postGamificationProfileActivate(performanceProfileId)
+> [PerformanceProfile](PerformanceProfile.html) postGamificationProfileActivate(profileId)
 
 Activate a performance profile
 
 
 
-Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/activate  
+Wraps POST /api/v2/gamification/profiles/{profileId}/activate  
 
 Requires ANY permissions: 
 
@@ -2090,10 +2090,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let performanceProfileId: String = "" // Performance Profile Id
+let profileId: String = "" // performanceProfileId
 
 // Code example
-GamificationAPI.postGamificationProfileActivate(performanceProfileId: performanceProfileId) { (response, error) in
+GamificationAPI.postGamificationProfileActivate(profileId: profileId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2108,7 +2108,7 @@ GamificationAPI.postGamificationProfileActivate(performanceProfileId: performanc
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **performanceProfileId** | **String**| Performance Profile Id | |
+| **profileId** | **String**| performanceProfileId | |
 {: class="table-striped"}
 
 
@@ -2122,13 +2122,13 @@ GamificationAPI.postGamificationProfileActivate(performanceProfileId: performanc
 
 
 
-> [PerformanceProfile](PerformanceProfile.html) postGamificationProfileDeactivate(performanceProfileId)
+> [PerformanceProfile](PerformanceProfile.html) postGamificationProfileDeactivate(profileId)
 
 Deactivate a performance profile
 
 
 
-Wraps POST /api/v2/gamification/profiles/{performanceProfileId}/deactivate  
+Wraps POST /api/v2/gamification/profiles/{profileId}/deactivate  
 
 Requires ANY permissions: 
 
@@ -2142,10 +2142,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let performanceProfileId: String = "" // Performance Profile Id
+let profileId: String = "" // performanceProfileId
 
 // Code example
-GamificationAPI.postGamificationProfileDeactivate(performanceProfileId: performanceProfileId) { (response, error) in
+GamificationAPI.postGamificationProfileDeactivate(profileId: profileId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2160,7 +2160,7 @@ GamificationAPI.postGamificationProfileDeactivate(performanceProfileId: performa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **performanceProfileId** | **String**| Performance Profile Id | |
+| **profileId** | **String**| performanceProfileId | |
 {: class="table-striped"}
 
 
@@ -2502,13 +2502,13 @@ GamificationAPI.putGamificationMetric(metricId: metricId, body: body, performanc
 
 
 
-> [PerformanceProfile](PerformanceProfile.html) putGamificationProfile(performanceProfileId, body)
+> [PerformanceProfile](PerformanceProfile.html) putGamificationProfile(profileId, body)
 
 Updates a performance profile
 
 
 
-Wraps PUT /api/v2/gamification/profiles/{performanceProfileId}  
+Wraps PUT /api/v2/gamification/profiles/{profileId}  
 
 Requires ANY permissions: 
 
@@ -2522,11 +2522,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let performanceProfileId: String = "" // Performance Profile Id
+let profileId: String = "" // performanceProfileId
 let body: PerformanceProfile = new PerformanceProfile(...) // performanceProfile
 
 // Code example
-GamificationAPI.putGamificationProfile(performanceProfileId: performanceProfileId, body: body) { (response, error) in
+GamificationAPI.putGamificationProfile(profileId: profileId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2541,7 +2541,7 @@ GamificationAPI.putGamificationProfile(performanceProfileId: performanceProfileI
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **performanceProfileId** | **String**| Performance Profile Id | |
+| **profileId** | **String**| performanceProfileId | |
 | **body** | [**PerformanceProfile**](PerformanceProfile.html)| performanceProfile | [optional] |
 {: class="table-striped"}
 

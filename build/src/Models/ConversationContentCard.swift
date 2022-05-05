@@ -15,36 +15,38 @@ public class ConversationContentCard: Codable {
     public var title: String?
     /** Text to show in the description. */
     public var _description: String?
-    /** Default action to be taken. */
-    public var defaultAction: ConversationCardAction?
-    /** A List of action objects. */
-    public var actions: [ConversationCardAction]?
+    /** URL of an image. */
     public var image: String?
+    /** URL of a video. */
     public var video: String?
+    /** The default button action. */
+    public var defaultAction: ConversationContentCardAction?
+    /** An array of action objects. */
+    public var actions: [ConversationContentCardAction]?
 
-    public init(title: String?, _description: String?, defaultAction: ConversationCardAction?, actions: [ConversationCardAction]?, image: String?, video: String?) {
+    public init(title: String?, _description: String?, image: String?, video: String?, defaultAction: ConversationContentCardAction?, actions: [ConversationContentCardAction]?) {
         
         self.title = title
         
         self._description = _description
         
-        self.defaultAction = defaultAction
-        
-        self.actions = actions
-        
         self.image = image
         
         self.video = video
+        
+        self.defaultAction = defaultAction
+        
+        self.actions = actions
         
     }
 
     public enum CodingKeys: String, CodingKey { 
         case title
         case _description = "description"
-        case defaultAction
-        case actions
         case image
         case video
+        case defaultAction
+        case actions
     }
 
 

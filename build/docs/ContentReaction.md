@@ -8,8 +8,8 @@ User reaction to public message.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **reactionType** | **String** | Type of reaction. | [optional] |
-| **count** | **Int** | Number of users that reacted this way to the message. | [optional] |
+| **reactionType** | **String** | Type of reaction. | |
+| **count** | **Int** | Number of users that reacted this way to the message. | |
 {: class="table table-striped"}
 
 

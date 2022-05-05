@@ -872,8 +872,8 @@ open class AlertingAPI {
     "ruleUri" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1651,8 +1651,8 @@ open class AlertingAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

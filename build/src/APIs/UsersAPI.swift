@@ -846,8 +846,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -947,8 +947,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1642,8 +1642,8 @@ open class UsersAPI {
     "version" : 123456789
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3574,8 +3574,8 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4696,8 +4696,8 @@ open class UsersAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4899,8 +4899,8 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5007,8 +5007,8 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6259,8 +6259,8 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6675,8 +6675,8 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6856,8 +6856,8 @@ open class UsersAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7043,8 +7043,8 @@ open class UsersAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9477,8 +9477,8 @@ open class UsersAPI {
     "name" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9643,8 +9643,8 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9725,8 +9725,8 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10064,8 +10064,8 @@ open class UsersAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -12774,8 +12774,8 @@ open class UsersAPI {
     "proficiency" : 1.3579000000000001069366817318950779736042022705078125
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

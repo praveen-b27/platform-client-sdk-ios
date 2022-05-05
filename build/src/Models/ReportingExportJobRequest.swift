@@ -94,6 +94,7 @@ public class ReportingExportJobRequest: Codable {
         case configureAlertRuleView = "CONFIGURE_ALERT_RULE_VIEW"
         case predictiveRoutingView = "PREDICTIVE_ROUTING_VIEW"
         case predictiveRoutingQueueOverview = "PREDICTIVE_ROUTING_QUEUE_OVERVIEW"
+        case predictiveRoutingModelView = "PREDICTIVE_ROUTING_MODEL_VIEW"
     }
     public enum CsvDelimiter: String, Codable { 
         case semicolon = "SEMICOLON"

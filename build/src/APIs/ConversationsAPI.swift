@@ -579,6 +579,13 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
+  "availablePhoneNumbers" : {
+    "entities" : [ {
+      "phoneNumber" : "aeiou",
+      "name" : "aeiou",
+      "status" : "aeiou"
+    } ]
+  },
   "selfUri" : "aeiou",
   "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
@@ -2005,7 +2012,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -2013,8 +2023,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -2589,6 +2599,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -3324,7 +3335,10 @@ open class ConversationsAPI {
           "conversation" : "",
           "evaluationForm" : ""
         },
-        "conversation" : "",
+        "conversation" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
         "evaluationForm" : {
           "publishedVersions" : {
             "total" : 123456789,
@@ -3332,8 +3346,8 @@ open class ConversationsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "lastUri" : "aeiou",
             "selfUri" : "aeiou",
+            "lastUri" : "aeiou",
             "pageSize" : 123,
             "nextUri" : "aeiou",
             "previousUri" : "aeiou"
@@ -3908,6 +3922,7 @@ open class ConversationsAPI {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
           "messageId" : "aeiou",
+          "errorInfo" : "",
           "stickers" : [ {
             "id" : "aeiou",
             "url" : "aeiou"
@@ -3974,8 +3989,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4822,8 +4837,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4999,8 +5014,8 @@ open class ConversationsAPI {
     "maxParticipants" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5729,8 +5744,8 @@ open class ConversationsAPI {
     "direction" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6500,8 +6515,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6972,8 +6987,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7322,8 +7337,8 @@ open class ConversationsAPI {
     "time" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7807,8 +7822,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7958,6 +7973,25 @@ open class ConversationsAPI {
       "messageStatus" : "aeiou",
       "messageTime" : "2000-01-23T04:56:07.000+0000",
       "messageId" : "aeiou",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "stickers" : [ {
         "id" : "aeiou",
         "url" : "aeiou"
@@ -9413,8 +9447,8 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9608,8 +9642,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9785,8 +9819,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10115,8 +10149,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10445,8 +10479,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10779,8 +10813,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11035,6 +11069,13 @@ open class ConversationsAPI {
   "pageNumber" : 123,
   "entities" : [ {
     "activationStatusCode" : "aeiou",
+    "availablePhoneNumbers" : {
+      "entities" : [ {
+        "phoneNumber" : "aeiou",
+        "name" : "aeiou",
+        "status" : "aeiou"
+      } ]
+    },
     "selfUri" : "aeiou",
     "createError" : "",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
@@ -11112,8 +11153,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11201,6 +11242,13 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
+  "availablePhoneNumbers" : {
+    "entities" : [ {
+      "phoneNumber" : "aeiou",
+      "name" : "aeiou",
+      "status" : "aeiou"
+    } ]
+  },
   "selfUri" : "aeiou",
   "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
@@ -11373,8 +11421,8 @@ open class ConversationsAPI {
     "stickerType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11480,8 +11528,8 @@ open class ConversationsAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -12172,7 +12220,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -12180,8 +12231,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -12756,6 +12807,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -13429,7 +13481,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -13437,8 +13492,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -14013,6 +14068,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -14680,7 +14736,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -14688,8 +14747,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -15264,6 +15323,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -15864,7 +15924,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -15872,8 +15935,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -16448,6 +16511,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -17048,7 +17112,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -17056,8 +17123,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -17632,6 +17699,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -18232,7 +18300,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -18240,8 +18311,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -18816,6 +18887,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -19543,7 +19615,7 @@ open class ConversationsAPI {
     
     /**
      
-     Update or activate a WhatsApp messaging integration.
+     Update or activate a WhatsApp messaging integration
      
      - parameter integrationId: (path) Integration ID 
      - parameter body: (body) WhatsAppIntegrationUpdateRequest 
@@ -19569,15 +19641,22 @@ open class ConversationsAPI {
 
     /**
      
-     Update or activate a WhatsApp messaging integration.
+     Update or activate a WhatsApp messaging integration
      
      - PATCH /api/v2/conversations/messaging/integrations/whatsapp/{integrationId}
-     - The following steps are required in order to fully activate a Whatsapp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
+     - The following steps are required in order to fully activate a WhatsApp Integration: Initially, you will need to get an activation code by sending: an action set to Activate, and an authenticationMethod choosing from Sms or Voice. Finally, once you have been informed of an activation code on selected authenticationMethod, you will need to confirm the code by sending: an action set to Confirm, and the confirmationCode you have received from Whatsapp.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
+  "availablePhoneNumbers" : {
+    "entities" : [ {
+      "phoneNumber" : "aeiou",
+      "name" : "aeiou",
+      "status" : "aeiou"
+    } ]
+  },
   "selfUri" : "aeiou",
   "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
@@ -20967,7 +21046,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -20975,8 +21057,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -21551,6 +21633,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -22207,7 +22290,10 @@ open class ConversationsAPI {
         "conversation" : "",
         "evaluationForm" : ""
       },
-      "conversation" : "",
+      "conversation" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "evaluationForm" : {
         "publishedVersions" : {
           "total" : 123456789,
@@ -22215,8 +22301,8 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "lastUri" : "aeiou",
           "selfUri" : "aeiou",
+          "lastUri" : "aeiou",
           "pageSize" : 123,
           "nextUri" : "aeiou",
           "previousUri" : "aeiou"
@@ -22791,6 +22877,7 @@ open class ConversationsAPI {
         "messageStatus" : "aeiou",
         "messageTime" : "2000-01-23T04:56:07.000+0000",
         "messageId" : "aeiou",
+        "errorInfo" : "",
         "stickers" : [ {
           "id" : "aeiou",
           "url" : "aeiou"
@@ -25352,8 +25439,8 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -25569,6 +25656,25 @@ open class ConversationsAPI {
       "messageStatus" : "aeiou",
       "messageTime" : "2000-01-23T04:56:07.000+0000",
       "messageId" : "aeiou",
+      "errorInfo" : {
+        "messageWithParams" : "aeiou",
+        "code" : "aeiou",
+        "entityName" : "aeiou",
+        "entityId" : "aeiou",
+        "contextId" : "aeiou",
+        "details" : [ {
+          "fieldName" : "aeiou",
+          "entityName" : "aeiou",
+          "errorCode" : "aeiou",
+          "entityId" : "aeiou"
+        } ],
+        "messageParams" : {
+          "key" : "aeiou"
+        },
+        "message" : "aeiou",
+        "errors" : [ "" ],
+        "status" : 123
+      },
       "stickers" : [ {
         "id" : "aeiou",
         "url" : "aeiou"
@@ -26382,6 +26488,13 @@ open class ConversationsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "activationStatusCode" : "aeiou",
+  "availablePhoneNumbers" : {
+    "entities" : [ {
+      "phoneNumber" : "aeiou",
+      "name" : "aeiou",
+      "status" : "aeiou"
+    } ]
+  },
   "selfUri" : "aeiou",
   "createError" : "",
   "dateModified" : "2000-01-23T04:56:07.000+0000",

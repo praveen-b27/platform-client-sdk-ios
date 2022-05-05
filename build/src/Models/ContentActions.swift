@@ -16,7 +16,7 @@ public class ContentActions: Codable {
     public var url: String?
     /** The target window in which to open the URL. If empty will open a blank page or tab. */
     public var urlTarget: String?
-    /** Text to be sent back in reply when the item is selected. */
+    /** Text to be returned as the payload from a ButtonResponse when a button is clicked. The textback and title are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel. */
     public var textback: String?
 
     public init(url: String?, urlTarget: String?, textback: String?) {

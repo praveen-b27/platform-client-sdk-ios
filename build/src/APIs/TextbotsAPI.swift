@@ -239,32 +239,12 @@ open class TextbotsAPI {
             "id" : "aeiou",
             "text" : "aeiou"
           },
-          "attachment" : {
-            "filename" : "aeiou",
-            "sha256" : "aeiou",
-            "mime" : "aeiou",
-            "mediaType" : "aeiou",
-            "id" : "aeiou",
-            "text" : "aeiou",
-            "url" : "aeiou"
-          },
           "buttonResponse" : {
             "payload" : "aeiou",
             "id" : "aeiou",
             "text" : "aeiou",
             "type" : "aeiou"
           },
-          "location" : {
-            "address" : "aeiou",
-            "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-            "text" : "aeiou",
-            "url" : "aeiou",
-            "longitude" : 1.3579000000000001069366817318950779736042022705078125
-          },
-          "reactions" : [ {
-            "reactionType" : "aeiou",
-            "count" : 123
-          } ],
           "list" : {
             "submitLabel" : "aeiou",
             "components" : [ {
@@ -282,7 +262,9 @@ open class TextbotsAPI {
             "listType" : "aeiou",
             "actions" : ""
           },
-          "contentType" : "aeiou",
+          "carousel" : {
+            "cards" : [ "" ]
+          },
           "generic" : {
             "image" : "aeiou",
             "components" : [ {
@@ -305,7 +287,50 @@ open class TextbotsAPI {
             "idType" : "aeiou",
             "nickname" : "aeiou",
             "id" : "aeiou",
-            "email" : "aeiou"
+            "email" : "aeiou",
+            "additionalIds" : [ {
+              "type" : "aeiou",
+              "value" : "aeiou"
+            } ]
+          },
+          "attachment" : {
+            "filename" : "aeiou",
+            "sha256" : "aeiou",
+            "mime" : "aeiou",
+            "mediaType" : "aeiou",
+            "id" : "aeiou",
+            "text" : "aeiou",
+            "url" : "aeiou"
+          },
+          "location" : {
+            "address" : "aeiou",
+            "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+            "text" : "aeiou",
+            "url" : "aeiou",
+            "longitude" : 1.3579000000000001069366817318950779736042022705078125
+          },
+          "reactions" : [ {
+            "reactionType" : "aeiou",
+            "count" : 123
+          } ],
+          "contentType" : "aeiou",
+          "card" : {
+            "image" : "aeiou",
+            "defaultAction" : {
+              "payload" : "aeiou",
+              "text" : "aeiou",
+              "type" : "aeiou",
+              "url" : "aeiou"
+            },
+            "description" : "aeiou",
+            "video" : "aeiou",
+            "title" : "aeiou",
+            "actions" : [ "" ]
+          },
+          "story" : {
+            "replyToId" : "aeiou",
+            "type" : "aeiou",
+            "url" : "aeiou"
           }
         } ]
       } ]
@@ -483,32 +508,12 @@ open class TextbotsAPI {
         "id" : "aeiou",
         "text" : "aeiou"
       },
-      "attachment" : {
-        "filename" : "aeiou",
-        "sha256" : "aeiou",
-        "mime" : "aeiou",
-        "mediaType" : "aeiou",
-        "id" : "aeiou",
-        "text" : "aeiou",
-        "url" : "aeiou"
-      },
       "buttonResponse" : {
         "payload" : "aeiou",
         "id" : "aeiou",
         "text" : "aeiou",
         "type" : "aeiou"
       },
-      "location" : {
-        "address" : "aeiou",
-        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
-        "text" : "aeiou",
-        "url" : "aeiou",
-        "longitude" : 1.3579000000000001069366817318950779736042022705078125
-      },
-      "reactions" : [ {
-        "reactionType" : "aeiou",
-        "count" : 123
-      } ],
       "list" : {
         "submitLabel" : "aeiou",
         "components" : [ {
@@ -526,7 +531,9 @@ open class TextbotsAPI {
         "listType" : "aeiou",
         "actions" : ""
       },
-      "contentType" : "aeiou",
+      "carousel" : {
+        "cards" : [ "" ]
+      },
       "generic" : {
         "image" : "aeiou",
         "components" : [ {
@@ -549,7 +556,50 @@ open class TextbotsAPI {
         "idType" : "aeiou",
         "nickname" : "aeiou",
         "id" : "aeiou",
-        "email" : "aeiou"
+        "email" : "aeiou",
+        "additionalIds" : [ {
+          "type" : "aeiou",
+          "value" : "aeiou"
+        } ]
+      },
+      "attachment" : {
+        "filename" : "aeiou",
+        "sha256" : "aeiou",
+        "mime" : "aeiou",
+        "mediaType" : "aeiou",
+        "id" : "aeiou",
+        "text" : "aeiou",
+        "url" : "aeiou"
+      },
+      "location" : {
+        "address" : "aeiou",
+        "latitude" : 1.3579000000000001069366817318950779736042022705078125,
+        "text" : "aeiou",
+        "url" : "aeiou",
+        "longitude" : 1.3579000000000001069366817318950779736042022705078125
+      },
+      "reactions" : [ {
+        "reactionType" : "aeiou",
+        "count" : 123
+      } ],
+      "contentType" : "aeiou",
+      "card" : {
+        "image" : "aeiou",
+        "defaultAction" : {
+          "payload" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "url" : "aeiou"
+        },
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : [ "" ]
+      },
+      "story" : {
+        "replyToId" : "aeiou",
+        "type" : "aeiou",
+        "url" : "aeiou"
       }
     } ]
   } ],

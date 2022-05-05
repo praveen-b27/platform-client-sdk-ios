@@ -1,7 +1,7 @@
 ---
-title: ConversationCardAction
+title: ConversationContentCardAction
 ---
-## ConversationCardAction
+## ConversationContentCardAction
 CardAction Object
 
 ## Properties

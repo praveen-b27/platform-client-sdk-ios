@@ -15,14 +15,14 @@ public class ReportScheduleEntityListing: Codable {
     public var pageSize: Int?
     public var pageNumber: Int?
     public var total: Int64?
-    public var lastUri: String?
     public var firstUri: String?
     public var selfUri: String?
     public var nextUri: String?
     public var previousUri: String?
+    public var lastUri: String?
     public var pageCount: Int?
 
-    public init(entities: [ReportSchedule]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
+    public init(entities: [ReportSchedule]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, lastUri: String?, pageCount: Int?) {
         
         self.entities = entities
         
@@ -32,8 +32,6 @@ public class ReportScheduleEntityListing: Codable {
         
         self.total = total
         
-        self.lastUri = lastUri
-        
         self.firstUri = firstUri
         
         self.selfUri = selfUri
@@ -41,6 +39,8 @@ public class ReportScheduleEntityListing: Codable {
         self.nextUri = nextUri
         
         self.previousUri = previousUri
+        
+        self.lastUri = lastUri
         
         self.pageCount = pageCount
         

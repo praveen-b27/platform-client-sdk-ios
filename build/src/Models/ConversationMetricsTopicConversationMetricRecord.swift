@@ -213,7 +213,7 @@ public class ConversationMetricsTopicConversationMetricRecord: Codable {
     public var edgeId: String?
     /** Number of eligible agents for each predictive routing attempt */
     public var eligibleAgentCounts: [Int]?
-    /** Extended email delivery status */
+    /** Extended delivery status */
     public var extendedDeliveryStatus: String?
     /** External contact identifier */
     public var externalContactId: String?

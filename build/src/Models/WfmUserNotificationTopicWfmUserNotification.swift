@@ -14,6 +14,7 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
     public enum ModelType: String, Codable { 
         case shiftTrade = "ShiftTrade"
         case timeOffRequest = "TimeOffRequest"
+        case adherenceExplanation = "AdherenceExplanation"
     }
     public var _id: String?
     public var mutableGroupId: String?
@@ -21,11 +22,12 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
     public var type: ModelType?
     public var shiftTrade: WfmUserNotificationTopicShiftTradeNotification?
     public var timeOffRequest: WfmUserNotificationTopicTimeOffRequestNotification?
+    public var adherenceExplanation: WfmUserNotificationTopicAdherenceExplanationNotification?
     public var agentNotification: Bool?
     public var otherNotificationIdsInGroup: [String]?
     public var markedAsRead: Bool?
 
-    public init(_id: String?, mutableGroupId: String?, timestamp: Date?, type: ModelType?, shiftTrade: WfmUserNotificationTopicShiftTradeNotification?, timeOffRequest: WfmUserNotificationTopicTimeOffRequestNotification?, agentNotification: Bool?, otherNotificationIdsInGroup: [String]?, markedAsRead: Bool?) {
+    public init(_id: String?, mutableGroupId: String?, timestamp: Date?, type: ModelType?, shiftTrade: WfmUserNotificationTopicShiftTradeNotification?, timeOffRequest: WfmUserNotificationTopicTimeOffRequestNotification?, adherenceExplanation: WfmUserNotificationTopicAdherenceExplanationNotification?, agentNotification: Bool?, otherNotificationIdsInGroup: [String]?, markedAsRead: Bool?) {
         
         self._id = _id
         
@@ -38,6 +40,8 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
         self.shiftTrade = shiftTrade
         
         self.timeOffRequest = timeOffRequest
+        
+        self.adherenceExplanation = adherenceExplanation
         
         self.agentNotification = agentNotification
         
@@ -54,6 +58,7 @@ public class WfmUserNotificationTopicWfmUserNotification: Codable {
         case type
         case shiftTrade
         case timeOffRequest
+        case adherenceExplanation
         case agentNotification
         case otherNotificationIdsInGroup
         case markedAsRead

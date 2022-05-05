@@ -40,8 +40,10 @@ public class WhatsAppIntegration: Codable {
     /** Defines the SupportedContent profile configured for an integration */
     public var supportedContent: SupportedContentReference?
     public var messagingSetting: MessagingSettingReference?
-    /** The phone number associated to the whatsApp integration. */
+    /** The phone number associated to the WhatsApp integration. */
     public var phoneNumber: String?
+    /** The list of available WhatsApp phone numbers for this account. Please select one phone number from this list to use with the created integration. */
+    public var availablePhoneNumbers: WhatsAppAvailablePhoneNumberDetailsListing?
     /** The status of the WhatsApp Integration */
     public var status: Status?
     /** The recipient associated to the WhatsApp Integration. This recipient is used to associate a flow to an integration */
@@ -67,7 +69,7 @@ public class WhatsAppIntegration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, phoneNumber: String?, status: Status?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, activationStatusCode: ActivationStatusCode?, activationErrorInfo: ErrorBody?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, phoneNumber: String?, availablePhoneNumbers: WhatsAppAvailablePhoneNumberDetailsListing?, status: Status?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, activationStatusCode: ActivationStatusCode?, activationErrorInfo: ErrorBody?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
         
         self._id = _id
         
@@ -78,6 +80,8 @@ public class WhatsAppIntegration: Codable {
         self.messagingSetting = messagingSetting
         
         self.phoneNumber = phoneNumber
+        
+        self.availablePhoneNumbers = availablePhoneNumbers
         
         self.status = status
         
@@ -111,6 +115,7 @@ public class WhatsAppIntegration: Codable {
         case supportedContent
         case messagingSetting
         case phoneNumber
+        case availablePhoneNumbers
         case status
         case recipient
         case dateCreated

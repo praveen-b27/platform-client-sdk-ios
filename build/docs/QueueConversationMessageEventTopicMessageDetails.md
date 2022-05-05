@@ -13,6 +13,7 @@ title: QueueConversationMessageEventTopicMessageDetails
 | **messageStatus** | **String** |  | [optional] |
 | **media** | [**[QueueConversationMessageEventTopicMessageMedia]**](QueueConversationMessageEventTopicMessageMedia.html) |  | [optional] |
 | **stickers** | [**[QueueConversationMessageEventTopicMessageSticker]**](QueueConversationMessageEventTopicMessageSticker.html) |  | [optional] |
+| **errorInfo** | [**QueueConversationMessageEventTopicErrorDetails**](QueueConversationMessageEventTopicErrorDetails.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -23,7 +23,7 @@ public class RecordingJobsQuery: Codable {
     public var integrationId: String?
     /** Include Screen recordings for export action, default value = true  */
     public var includeScreenRecordings: Bool?
-    /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query. */
+    /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability */
     public var conversationQuery: AsyncConversationQuery?
 
     public init(action: Action?, actionDate: Date?, integrationId: String?, includeScreenRecordings: Bool?, conversationQuery: AsyncConversationQuery?) {

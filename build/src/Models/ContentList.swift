@@ -26,7 +26,7 @@ public class ContentList: Codable {
     public var _description: String?
     /** Label for Submit button. */
     public var submitLabel: String?
-    /** The list actions. */
+    /** The list actions (Deprecated). */
     public var actions: ContentActions?
     /** An array of component objects. */
     public var components: [ListItemComponent]?

@@ -26,6 +26,7 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
         case unscheduled = "Unscheduled"
         case unknown = "Unknown"
         case ignored = "Ignored"
+        case explained = "Explained"
     }
     public var user: WfmUserScheduleAdherenceUpdatedTeamTopicUserReference?
     public var managementUnitId: String?

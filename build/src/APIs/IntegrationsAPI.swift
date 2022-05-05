@@ -749,8 +749,8 @@ open class IntegrationsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1483,6 +1483,8 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     public enum Secure_getIntegrationsActions: String { 
         case _true = "true"
         case _false = "false"
@@ -1508,14 +1510,15 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
-     - parameter category: (query) Filter by category name (optional)
-     - parameter name: (query) Filter by action name. Provide full or just the first part of name. (optional)
-     - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
+     - parameter category: (query) Filter by category name. (optional)
+     - parameter name: (query) Filter by partial or complete action name. (optional)
+     - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
+     - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsActions(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, secure: secure, includeAuthActions: includeAuthActions)
+    open class func getIntegrationsActions(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions)
         requestBuilder.execute { (response: Response<ActionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1602,8 +1605,8 @@ open class IntegrationsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1615,14 +1618,15 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
-     - parameter category: (query) Filter by category name (optional)
-     - parameter name: (query) Filter by action name. Provide full or just the first part of name. (optional)
-     - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
+     - parameter category: (query) Filter by category name. (optional)
+     - parameter name: (query) Filter by partial or complete action name. (optional)
+     - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
+     - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
 
      - returns: RequestBuilder<ActionEntityListing> 
      */
-    open class func getIntegrationsActionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil) -> RequestBuilder<ActionEntityListing> {
+    open class func getIntegrationsActionsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActions? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActions? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActions? = nil) -> RequestBuilder<ActionEntityListing> {
         let path = "/api/v2/integrations/actions"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1650,6 +1654,8 @@ open class IntegrationsAPI {
             "category": category, 
             
             "name": name, 
+            
+            "ids": ids, 
             
             "secure": secure?.rawValue, 
             
@@ -1807,6 +1813,8 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     public enum Secure_getIntegrationsActionsDrafts: String { 
         case _true = "true"
         case _false = "false"
@@ -1832,14 +1840,15 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
-     - parameter category: (query) Filter by category name (optional)
-     - parameter name: (query) Filter by action name. Provide full or just the first part of name. (optional)
-     - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
+     - parameter category: (query) Filter by category name. (optional)
+     - parameter name: (query) Filter by partial or complete action name. (optional)
+     - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
+     - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsActionsDrafts(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionsDraftsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, secure: secure, includeAuthActions: includeAuthActions)
+    open class func getIntegrationsActionsDrafts(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil, completion: @escaping ((_ data: ActionEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionsDraftsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, nextPage: nextPage, previousPage: previousPage, sortBy: sortBy, sortOrder: sortOrder, category: category, name: name, ids: ids, secure: secure, includeAuthActions: includeAuthActions)
         requestBuilder.execute { (response: Response<ActionEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -1926,8 +1935,8 @@ open class IntegrationsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1939,14 +1948,15 @@ open class IntegrationsAPI {
      - parameter previousPage: (query) Previous page token (optional)
      - parameter sortBy: (query) Root level field name to sort on. (optional)
      - parameter sortOrder: (query) Direction to sort &#39;sortBy&#39; field. (optional, default to asc)
-     - parameter category: (query) Filter by category name (optional)
-     - parameter name: (query) Filter by action name. Provide full or just the first part of name. (optional)
-     - parameter secure: (query) Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional)
+     - parameter category: (query) Filter by category name. (optional)
+     - parameter name: (query) Filter by partial or complete action name. (optional)
+     - parameter ids: (query) Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional)
+     - parameter secure: (query) Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional)
      - parameter includeAuthActions: (query) Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional, default to false)
 
      - returns: RequestBuilder<ActionEntityListing> 
      */
-    open class func getIntegrationsActionsDraftsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil) -> RequestBuilder<ActionEntityListing> {
+    open class func getIntegrationsActionsDraftsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, nextPage: String? = nil, previousPage: String? = nil, sortBy: String? = nil, sortOrder: SortOrder_getIntegrationsActionsDrafts? = nil, category: String? = nil, name: String? = nil, ids: String? = nil, secure: Secure_getIntegrationsActionsDrafts? = nil, includeAuthActions: IncludeAuthActions_getIntegrationsActionsDrafts? = nil) -> RequestBuilder<ActionEntityListing> {
         let path = "/api/v2/integrations/actions/drafts"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
@@ -1974,6 +1984,8 @@ open class IntegrationsAPI {
             "category": category, 
             
             "name": name, 
+            
+            "ids": ids, 
             
             "secure": secure?.rawValue, 
             
@@ -2142,8 +2154,8 @@ open class IntegrationsAPI {
     "version" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2324,8 +2336,8 @@ open class IntegrationsAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2523,8 +2535,8 @@ open class IntegrationsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2644,8 +2656,8 @@ open class IntegrationsAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2828,8 +2840,8 @@ open class IntegrationsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2910,8 +2922,8 @@ open class IntegrationsAPI {
     "required" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3282,8 +3294,8 @@ open class IntegrationsAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3821,8 +3833,8 @@ open class IntegrationsAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4040,8 +4052,8 @@ open class IntegrationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4140,8 +4152,8 @@ open class IntegrationsAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4421,8 +4433,8 @@ open class IntegrationsAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4533,8 +4545,8 @@ open class IntegrationsAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4924,8 +4936,8 @@ open class IntegrationsAPI {
     "vendorOAuthClientIds" : [ "aeiou" ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5116,8 +5128,8 @@ open class IntegrationsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6569,8 +6581,8 @@ open class IntegrationsAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

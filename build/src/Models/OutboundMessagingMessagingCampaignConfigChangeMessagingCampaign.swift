@@ -32,14 +32,13 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
     public var contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?
     /** How many messages this messaging campaign will send per minute. */
     public var messagesPerMinute: Int?
+    public var ruleSets: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?
     public var smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?
     public var emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?
     /** A list of current error conditions associated with this messaging campaign */
     public var errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?
     /** The globally unique identifier for the object. */
     public var _id: String?
-    /** A UriReference for a resource */
-    public var division: OutboundMessagingMessagingCampaignConfigChangeUriReference?
     /** The UI-visible name of the object */
     public var name: String?
     /** Creation time of the entity */
@@ -48,8 +47,10 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
     public var dateModified: Date?
     /** Required for updates, must match the version number of the most recent update */
     public var version: Int?
+    /** A UriReference for a resource */
+    public var division: OutboundMessagingMessagingCampaignConfigChangeUriReference?
 
-    public init(campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?, contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?, emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?, errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?, _id: String?, division: OutboundMessagingMessagingCampaignConfigChangeUriReference?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?) {
+    public init(campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingMessagingCampaignConfigChangeUriReference?, contactList: OutboundMessagingMessagingCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingMessagingCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, ruleSets: [OutboundMessagingMessagingCampaignConfigChangeUriReference]?, smsConfig: OutboundMessagingMessagingCampaignConfigChangeSmsConfig?, emailConfig: OutboundMessagingMessagingCampaignConfigChangeEmailConfig?, errors: [OutboundMessagingMessagingCampaignConfigChangeErrorDetail]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: OutboundMessagingMessagingCampaignConfigChangeUriReference?) {
         
         self.campaignStatus = campaignStatus
         
@@ -67,6 +68,8 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         
         self.messagesPerMinute = messagesPerMinute
         
+        self.ruleSets = ruleSets
+        
         self.smsConfig = smsConfig
         
         self.emailConfig = emailConfig
@@ -75,8 +78,6 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         
         self._id = _id
         
-        self.division = division
-        
         self.name = name
         
         self.dateCreated = dateCreated
@@ -84,6 +85,8 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         self.dateModified = dateModified
         
         self.version = version
+        
+        self.division = division
         
     }
 
@@ -96,15 +99,16 @@ public class OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign: Co
         case alwaysRunning
         case contactSorts
         case messagesPerMinute
+        case ruleSets
         case smsConfig
         case emailConfig
         case errors
         case _id = "id"
-        case division
         case name
         case dateCreated
         case dateModified
         case version
+        case division
     }
 
 

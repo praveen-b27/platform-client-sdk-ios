@@ -5958,8 +5958,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6696,8 +6696,8 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "lastUri" : "aeiou",
                 "selfUri" : "aeiou",
+                "lastUri" : "aeiou",
                 "pageSize" : 123,
                 "nextUri" : "aeiou",
                 "previousUri" : "aeiou"
@@ -6786,8 +6786,8 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7398,8 +7398,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -7751,8 +7751,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7994,8 +7994,8 @@ open class RecordingAPI {
     "totalProcessedRecordings" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -8044,6 +8044,180 @@ open class RecordingAPI {
         ])
 
         let requestBuilder: RequestBuilder<RecordingJobEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get the encryption key configurations
+     
+     - parameter keyConfigurationId: (path) Key Configurations Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRecordingKeyconfiguration(keyConfigurationId: String, completion: @escaping ((_ data: RecordingEncryptionConfiguration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingKeyconfigurationWithRequestBuilder(keyConfigurationId: keyConfigurationId)
+        requestBuilder.execute { (response: Response<RecordingEncryptionConfiguration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get the encryption key configurations
+     
+     - GET /api/v2/recording/keyconfigurations/{keyConfigurationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "keyConfigurationType" : "aeiou",
+  "lastError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "apiKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "id" : "aeiou",
+  "url" : "aeiou",
+  "apiId" : "aeiou"
+}}]
+     
+     - parameter keyConfigurationId: (path) Key Configurations Id 
+
+     - returns: RequestBuilder<RecordingEncryptionConfiguration> 
+     */
+    open class func getRecordingKeyconfigurationWithRequestBuilder(keyConfigurationId: String) -> RequestBuilder<RecordingEncryptionConfiguration> {
+        var path = "/api/v2/recording/keyconfigurations/{keyConfigurationId}"
+        let keyConfigurationIdPreEscape = "\(keyConfigurationId)"
+        let keyConfigurationIdPostEscape = keyConfigurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{keyConfigurationId}", with: keyConfigurationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Get a list of key configurations data
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRecordingKeyconfigurations(completion: @escaping ((_ data: RecordingEncryptionConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingKeyconfigurationsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<RecordingEncryptionConfigurationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a list of key configurations data
+     
+     - GET /api/v2/recording/keyconfigurations
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "entities" : [ {
+    "keyConfigurationType" : "aeiou",
+    "lastError" : {
+      "messageWithParams" : "aeiou",
+      "code" : "aeiou",
+      "entityName" : "aeiou",
+      "entityId" : "aeiou",
+      "contextId" : "aeiou",
+      "details" : [ {
+        "fieldName" : "aeiou",
+        "entityName" : "aeiou",
+        "errorCode" : "aeiou",
+        "entityId" : "aeiou"
+      } ],
+      "messageParams" : {
+        "key" : "aeiou"
+      },
+      "message" : "aeiou",
+      "errors" : [ "" ],
+      "status" : 123
+    },
+    "apiKey" : "aeiou",
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "url" : "aeiou",
+    "apiId" : "aeiou"
+  } ],
+  "selfUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<RecordingEncryptionConfigurationListing> 
+     */
+    open class func getRecordingKeyconfigurationsWithRequestBuilder() -> RequestBuilder<RecordingEncryptionConfigurationListing> {
+        let path = "/api/v2/recording/keyconfigurations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RecordingEncryptionConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -8788,8 +8962,8 @@ open class RecordingAPI {
                 "pageNumber" : 123,
                 "entities" : [ "" ],
                 "firstUri" : "aeiou",
-                "lastUri" : "aeiou",
                 "selfUri" : "aeiou",
+                "lastUri" : "aeiou",
                 "pageSize" : 123,
                 "nextUri" : "aeiou",
                 "previousUri" : "aeiou"
@@ -8878,8 +9052,8 @@ open class RecordingAPI {
     "order" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -9511,8 +9685,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -9955,8 +10129,8 @@ open class RecordingAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -10702,7 +10876,10 @@ open class RecordingAPI {
             "conversation" : "",
             "evaluationForm" : ""
           },
-          "conversation" : "",
+          "conversation" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
           "evaluationForm" : {
             "publishedVersions" : {
               "total" : 123456789,
@@ -10710,8 +10887,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -11022,6 +11199,7 @@ open class RecordingAPI {
             "messageStatus" : "aeiou",
             "messageTime" : "2000-01-23T04:56:07.000+0000",
             "messageId" : "aeiou",
+            "errorInfo" : "",
             "stickers" : [ {
               "id" : "aeiou",
               "url" : "aeiou"
@@ -11089,8 +11267,8 @@ open class RecordingAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -11677,8 +11855,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -12366,8 +12544,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -13494,8 +13672,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -13611,7 +13789,7 @@ open class RecordingAPI {
     
     /**
      
-     Create a recording bulk job
+     Create a recording bulk job.
      
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
@@ -13636,10 +13814,10 @@ open class RecordingAPI {
 
     /**
      
-     Create a recording bulk job
+     Create a recording bulk job.
      
      - POST /api/v2/recording/jobs
-     - 
+     - Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -13770,6 +13948,172 @@ open class RecordingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Setup configurations for encryption key creation
+     
+     - parameter body: (body) Encryption Configuration 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRecordingKeyconfigurations(body: RecordingEncryptionConfiguration, completion: @escaping ((_ data: RecordingEncryptionConfiguration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRecordingKeyconfigurationsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<RecordingEncryptionConfiguration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Setup configurations for encryption key creation
+     
+     - POST /api/v2/recording/keyconfigurations
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "keyConfigurationType" : "aeiou",
+  "lastError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "apiKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "id" : "aeiou",
+  "url" : "aeiou",
+  "apiId" : "aeiou"
+}}]
+     
+     - parameter body: (body) Encryption Configuration 
+
+     - returns: RequestBuilder<RecordingEncryptionConfiguration> 
+     */
+    open class func postRecordingKeyconfigurationsWithRequestBuilder(body: RecordingEncryptionConfiguration) -> RequestBuilder<RecordingEncryptionConfiguration> {
+        let path = "/api/v2/recording/keyconfigurations"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Validate encryption key configurations without saving it
+     
+     - parameter body: (body) Encryption Configuration 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRecordingKeyconfigurationsValidate(body: RecordingEncryptionConfiguration, completion: @escaping ((_ data: RecordingEncryptionConfiguration?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRecordingKeyconfigurationsValidateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<RecordingEncryptionConfiguration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Validate encryption key configurations without saving it
+     
+     - POST /api/v2/recording/keyconfigurations/validate
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "keyConfigurationType" : "aeiou",
+  "lastError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "apiKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "id" : "aeiou",
+  "url" : "aeiou",
+  "apiId" : "aeiou"
+}}]
+     
+     - parameter body: (body) Encryption Configuration 
+
+     - returns: RequestBuilder<RecordingEncryptionConfiguration> 
+     */
+    open class func postRecordingKeyconfigurationsValidateWithRequestBuilder(body: RecordingEncryptionConfiguration) -> RequestBuilder<RecordingEncryptionConfiguration> {
+        let path = "/api/v2/recording/keyconfigurations/validate"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -14749,8 +15093,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -17555,8 +17899,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -17842,6 +18186,96 @@ open class RecordingAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update the encryption key configurations
+     
+     - parameter keyConfigurationId: (path) Key Configurations Id 
+     - parameter body: (body) Encryption key configuration metadata 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRecordingKeyconfiguration(keyConfigurationId: String, body: RecordingEncryptionConfiguration, completion: @escaping ((_ data: RecordingEncryptionConfiguration?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRecordingKeyconfigurationWithRequestBuilder(keyConfigurationId: keyConfigurationId, body: body)
+        requestBuilder.execute { (response: Response<RecordingEncryptionConfiguration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update the encryption key configurations
+     
+     - PUT /api/v2/recording/keyconfigurations/{keyConfigurationId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "keyConfigurationType" : "aeiou",
+  "lastError" : {
+    "messageWithParams" : "aeiou",
+    "code" : "aeiou",
+    "entityName" : "aeiou",
+    "entityId" : "aeiou",
+    "contextId" : "aeiou",
+    "details" : [ {
+      "fieldName" : "aeiou",
+      "entityName" : "aeiou",
+      "errorCode" : "aeiou",
+      "entityId" : "aeiou"
+    } ],
+    "messageParams" : {
+      "key" : "aeiou"
+    },
+    "message" : "aeiou",
+    "errors" : [ "" ],
+    "status" : 123
+  },
+  "apiKey" : "aeiou",
+  "selfUri" : "aeiou",
+  "id" : "aeiou",
+  "url" : "aeiou",
+  "apiId" : "aeiou"
+}}]
+     
+     - parameter keyConfigurationId: (path) Key Configurations Id 
+     - parameter body: (body) Encryption key configuration metadata 
+
+     - returns: RequestBuilder<RecordingEncryptionConfiguration> 
+     */
+    open class func putRecordingKeyconfigurationWithRequestBuilder(keyConfigurationId: String, body: RecordingEncryptionConfiguration) -> RequestBuilder<RecordingEncryptionConfiguration> {
+        var path = "/api/v2/recording/keyconfigurations/{keyConfigurationId}"
+        let keyConfigurationIdPreEscape = "\(keyConfigurationId)"
+        let keyConfigurationIdPostEscape = keyConfigurationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{keyConfigurationId}", with: keyConfigurationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
@@ -18490,8 +18924,8 @@ open class RecordingAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"

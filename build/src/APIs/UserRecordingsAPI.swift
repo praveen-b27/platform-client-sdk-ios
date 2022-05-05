@@ -396,7 +396,10 @@ open class UserRecordingsAPI {
           "conversation" : "",
           "evaluationForm" : ""
         },
-        "conversation" : "",
+        "conversation" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
         "evaluationForm" : {
           "publishedVersions" : {
             "total" : 123456789,
@@ -404,8 +407,8 @@ open class UserRecordingsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "lastUri" : "aeiou",
             "selfUri" : "aeiou",
+            "lastUri" : "aeiou",
             "pageSize" : 123,
             "nextUri" : "aeiou",
             "previousUri" : "aeiou"
@@ -980,6 +983,7 @@ open class UserRecordingsAPI {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
           "messageId" : "aeiou",
+          "errorInfo" : "",
           "stickers" : [ {
             "id" : "aeiou",
             "url" : "aeiou"
@@ -1507,7 +1511,10 @@ open class UserRecordingsAPI {
             "conversation" : "",
             "evaluationForm" : ""
           },
-          "conversation" : "",
+          "conversation" : {
+            "selfUri" : "aeiou",
+            "id" : "aeiou"
+          },
           "evaluationForm" : {
             "publishedVersions" : {
               "total" : 123456789,
@@ -1515,8 +1522,8 @@ open class UserRecordingsAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -2091,6 +2098,7 @@ open class UserRecordingsAPI {
             "messageStatus" : "aeiou",
             "messageTime" : "2000-01-23T04:56:07.000+0000",
             "messageId" : "aeiou",
+            "errorInfo" : "",
             "stickers" : [ {
               "id" : "aeiou",
               "url" : "aeiou"
@@ -2158,8 +2166,8 @@ open class UserRecordingsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2590,7 +2598,10 @@ open class UserRecordingsAPI {
           "conversation" : "",
           "evaluationForm" : ""
         },
-        "conversation" : "",
+        "conversation" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
         "evaluationForm" : {
           "publishedVersions" : {
             "total" : 123456789,
@@ -2598,8 +2609,8 @@ open class UserRecordingsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "lastUri" : "aeiou",
             "selfUri" : "aeiou",
+            "lastUri" : "aeiou",
             "pageSize" : 123,
             "nextUri" : "aeiou",
             "previousUri" : "aeiou"
@@ -3174,6 +3185,7 @@ open class UserRecordingsAPI {
           "messageStatus" : "aeiou",
           "messageTime" : "2000-01-23T04:56:07.000+0000",
           "messageId" : "aeiou",
+          "errorInfo" : "",
           "stickers" : [ {
             "id" : "aeiou",
             "url" : "aeiou"

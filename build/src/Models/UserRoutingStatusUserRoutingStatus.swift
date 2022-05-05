@@ -11,11 +11,12 @@ import Foundation
 
 public class UserRoutingStatusUserRoutingStatus: Codable {
 
-    public var _id: UserRoutingStatusObject?
+    /** The unique identifier of the user. */
+    public var _id: String?
     public var routingStatus: UserRoutingStatusRoutingStatus?
     public var errorInfo: UserRoutingStatusErrorInfo?
 
-    public init(_id: UserRoutingStatusObject?, routingStatus: UserRoutingStatusRoutingStatus?, errorInfo: UserRoutingStatusErrorInfo?) {
+    public init(_id: String?, routingStatus: UserRoutingStatusRoutingStatus?, errorInfo: UserRoutingStatusErrorInfo?) {
         
         self._id = _id
         

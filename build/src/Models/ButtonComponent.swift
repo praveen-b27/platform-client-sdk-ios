@@ -14,7 +14,7 @@ public class ButtonComponent: Codable {
 
     /** Text to show inside the button. */
     public var title: String?
-    /** The button actions. */
+    /** The button actions (Deprecated). */
     public var actions: ContentActions?
 
     public init(title: String?, actions: ContentActions?) {

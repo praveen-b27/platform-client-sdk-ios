@@ -32,10 +32,12 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
     public var authenticationMethod: AuthenticationMethod?
     /** The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field. */
     public var confirmationCode: String?
+    /** Phone number to associate with the WhatsApp integration */
+    public var phoneNumber: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, action: Action?, authenticationMethod: AuthenticationMethod?, confirmationCode: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, action: Action?, authenticationMethod: AuthenticationMethod?, confirmationCode: String?, phoneNumber: String?, selfUri: String?) {
         
         self._id = _id
         
@@ -51,6 +53,8 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
         
         self.confirmationCode = confirmationCode
         
+        self.phoneNumber = phoneNumber
+        
         self.selfUri = selfUri
         
     }
@@ -63,6 +67,7 @@ public class WhatsAppIntegrationUpdateRequest: Codable {
         case action
         case authenticationMethod
         case confirmationCode
+        case phoneNumber
         case selfUri
     }
 

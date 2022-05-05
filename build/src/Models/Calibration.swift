@@ -16,7 +16,7 @@ public class Calibration: Codable {
     public var name: String?
     public var calibrator: User?
     public var agent: User?
-    public var conversation: Conversation?
+    public var conversation: ConversationReference?
     public var evaluationForm: EvaluationForm?
     public var contextId: String?
     public var averageScore: Int?
@@ -31,7 +31,7 @@ public class Calibration: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, calibrator: User?, agent: User?, conversation: Conversation?, evaluationForm: EvaluationForm?, contextId: String?, averageScore: Int?, highScore: Int?, lowScore: Int?, createdDate: Date?, evaluations: [Evaluation]?, evaluators: [User]?, scoringIndex: Evaluation?, expertEvaluator: User?, selfUri: String?) {
+    public init(_id: String?, name: String?, calibrator: User?, agent: User?, conversation: ConversationReference?, evaluationForm: EvaluationForm?, contextId: String?, averageScore: Int?, highScore: Int?, lowScore: Int?, createdDate: Date?, evaluations: [Evaluation]?, evaluators: [User]?, scoringIndex: Evaluation?, expertEvaluator: User?, selfUri: String?) {
         
         self._id = _id
         

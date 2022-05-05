@@ -8,7 +8,7 @@
 import Foundation
 
 
-/** Generic content object. */
+/** Deprecated, should use Card. */
 
 public class ContentGeneric: Codable {
 
@@ -20,7 +20,7 @@ public class ContentGeneric: Codable {
     public var image: String?
     /** URL of a video. */
     public var video: String?
-    /** Actions to be taken. */
+    /** Actions to be taken (Deprecated). */
     public var actions: ContentActions?
     /** An array of component objects. */
     public var components: [ButtonComponent]?

@@ -13,6 +13,7 @@ title: WfmUserNotificationTopicWfmUserNotification
 | **type** | **String** |  | [optional] |
 | **shiftTrade** | [**WfmUserNotificationTopicShiftTradeNotification**](WfmUserNotificationTopicShiftTradeNotification.html) |  | [optional] |
 | **timeOffRequest** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification.html) |  | [optional] |
+| **adherenceExplanation** | [**WfmUserNotificationTopicAdherenceExplanationNotification**](WfmUserNotificationTopicAdherenceExplanationNotification.html) |  | [optional] |
 | **agentNotification** | **Bool** |  | [optional] |
 | **otherNotificationIdsInGroup** | **[String]** |  | [optional] |
 | **markedAsRead** | **Bool** |  | [optional] |

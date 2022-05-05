@@ -1297,8 +1297,8 @@ open class OutboundAPI {
     "maxAttemptsPerContact" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1522,8 +1522,8 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -1747,8 +1747,8 @@ open class OutboundAPI {
     "beepDetectionEnabled" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -2391,126 +2391,8 @@ open class OutboundAPI {
             "evaluationForm" : ""
           },
           "conversation" : {
-            "address" : "aeiou",
             "selfUri" : "aeiou",
-            "externalTag" : "aeiou",
-            "divisions" : [ "" ],
-            "maxParticipants" : 123,
-            "conversationIds" : [ "aeiou" ],
-            "recordingState" : "aeiou",
-            "name" : "aeiou",
-            "startTime" : "2000-01-23T04:56:07.000+0000",
-            "id" : "aeiou",
-            "endTime" : "2000-01-23T04:56:07.000+0000",
-            "state" : "aeiou",
-            "participants" : [ {
-              "queueId" : "aeiou",
-              "monitoredParticipantId" : "aeiou",
-              "externalContactId" : "aeiou",
-              "wrapupSkipped" : true,
-              "purpose" : "aeiou",
-              "groupId" : "aeiou",
-              "wrapupTimeoutMs" : 123,
-              "callbacks" : [ {
-                "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
-                "peerId" : "aeiou",
-                "callbackScheduledTime" : "2000-01-23T04:56:07.000+0000",
-                "held" : true,
-                "afterCallWorkRequired" : true,
-                "callbackNumbers" : [ "aeiou" ],
-                "skipEnabled" : true,
-                "segments" : [ "" ],
-                "automatedCallbackConfigId" : "aeiou",
-                "provider" : "aeiou",
-                "externalCampaign" : true,
-                "callbackUserName" : "aeiou",
-                "afterCallWork" : "",
-                "disconnectType" : "aeiou",
-                "connectedTime" : "2000-01-23T04:56:07.000+0000",
-                "state" : "aeiou",
-                "id" : "aeiou",
-                "dialerPreview" : "",
-                "direction" : "aeiou",
-                "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-                "wrapup" : "",
-                "voicemail" : "",
-                "scriptId" : "aeiou",
-                "timeoutSeconds" : 123,
-                "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-                "callerId" : "aeiou",
-                "callerIdName" : "aeiou"
-              } ],
-              "videos" : [ "" ],
-              "externalOrganizationId" : "aeiou",
-              "locale" : "aeiou",
-              "cobrowsesessions" : [ "" ],
-              "alertingTimeoutMs" : 123,
-              "emails" : [ "" ],
-              "conversationRoutingData" : "",
-              "endAcwTime" : "2000-01-23T04:56:07.000+0000",
-              "wrapupRequired" : true,
-              "connectedTime" : "2000-01-23T04:56:07.000+0000",
-              "aniName" : "aeiou",
-              "startTime" : "2000-01-23T04:56:07.000+0000",
-              "id" : "aeiou",
-              "userUri" : "aeiou",
-              "dnis" : "aeiou",
-              "ani" : "aeiou",
-              "startAcwTime" : "2000-01-23T04:56:07.000+0000",
-              "wrapup" : "",
-              "address" : "aeiou",
-              "evaluations" : [ "" ],
-              "participantType" : "aeiou",
-              "userId" : "aeiou",
-              "flaggedReason" : "aeiou",
-              "consultParticipantId" : "aeiou",
-              "screenRecordingState" : "aeiou",
-              "queueName" : "aeiou",
-              "coachedParticipantId" : "aeiou",
-              "calls" : [ {
-                "startAlertingTime" : "2000-01-23T04:56:07.000+0000",
-                "peerId" : "aeiou",
-                "other" : "",
-                "confined" : true,
-                "held" : true,
-                "afterCallWorkRequired" : true,
-                "recording" : true,
-                "errorInfo" : "",
-                "segments" : [ "" ],
-                "provider" : "aeiou",
-                "afterCallWork" : "",
-                "disconnectType" : "aeiou",
-                "connectedTime" : "2000-01-23T04:56:07.000+0000",
-                "state" : "aeiou",
-                "id" : "aeiou",
-                "faxStatus" : "",
-                "uuiData" : "aeiou",
-                "muted" : true,
-                "direction" : "aeiou",
-                "disconnectedTime" : "2000-01-23T04:56:07.000+0000",
-                "wrapup" : "",
-                "scriptId" : "aeiou",
-                "recordingState" : "aeiou",
-                "self" : "",
-                "documentId" : "aeiou",
-                "startHoldTime" : "2000-01-23T04:56:07.000+0000",
-                "recordingId" : "aeiou",
-                "agentAssistantId" : "aeiou",
-                "disconnectReasons" : [ "" ]
-              } ],
-              "teamId" : "aeiou",
-              "name" : "aeiou",
-              "wrapupPrompt" : "aeiou",
-              "chats" : [ "" ],
-              "messages" : [ "" ],
-              "socialExpressions" : [ "" ],
-              "attributes" : {
-                "key" : "aeiou"
-              },
-              "endTime" : "2000-01-23T04:56:07.000+0000",
-              "screenshares" : [ "" ],
-              "bargedParticipantId" : "aeiou"
-            } ]
+            "id" : "aeiou"
           },
           "evaluationForm" : {
             "publishedVersions" : {
@@ -2519,8 +2401,8 @@ open class OutboundAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "lastUri" : "aeiou",
               "selfUri" : "aeiou",
+              "lastUri" : "aeiou",
               "pageSize" : 123,
               "nextUri" : "aeiou",
               "previousUri" : "aeiou"
@@ -3095,6 +2977,7 @@ open class OutboundAPI {
             "messageStatus" : "aeiou",
             "messageTime" : "2000-01-23T04:56:07.000+0000",
             "messageId" : "aeiou",
+            "errorInfo" : "",
             "stickers" : [ {
               "id" : "aeiou",
               "url" : "aeiou"
@@ -3562,8 +3445,8 @@ open class OutboundAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3760,8 +3643,8 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -3913,8 +3796,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4048,8 +3931,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4261,8 +4144,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -4961,8 +4844,8 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5139,8 +5022,8 @@ open class OutboundAPI {
     "zipCodeColumnName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5413,8 +5296,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -5842,8 +5725,8 @@ open class OutboundAPI {
     "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6118,8 +6001,8 @@ open class OutboundAPI {
     "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6370,8 +6253,8 @@ open class OutboundAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6721,8 +6604,8 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -6935,8 +6818,8 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7248,8 +7131,8 @@ open class OutboundAPI {
     "queue" : ""
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"
@@ -7779,8 +7662,8 @@ open class OutboundAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "lastUri" : "aeiou",
   "selfUri" : "aeiou",
+  "lastUri" : "aeiou",
   "pageSize" : 123,
   "nextUri" : "aeiou",
   "previousUri" : "aeiou"

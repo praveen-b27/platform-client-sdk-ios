@@ -835,11 +835,11 @@ open class GamificationAPI {
      
      Performance profile by id
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamificationProfile(performanceProfileId: String, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
-        let requestBuilder = getGamificationProfileWithRequestBuilder(performanceProfileId: performanceProfileId)
+    open class func getGamificationProfile(profileId: String, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationProfileWithRequestBuilder(profileId: profileId)
         requestBuilder.execute { (response: Response<PerformanceProfile>?, error) -> Void in
             do {
                 if let e = error {
@@ -860,7 +860,7 @@ open class GamificationAPI {
      
      Performance profile by id
      
-     - GET /api/v2/gamification/profiles/{performanceProfileId}
+     - GET /api/v2/gamification/profiles/{profileId}
      - 
      - OAuth:
        - type: oauth2
@@ -886,15 +886,15 @@ open class GamificationAPI {
   } ]
 }}]
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func getGamificationProfileWithRequestBuilder(performanceProfileId: String) -> RequestBuilder<PerformanceProfile> {
-        var path = "/api/v2/gamification/profiles/{performanceProfileId}"
-        let performanceProfileIdPreEscape = "\(performanceProfileId)"
-        let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
+    open class func getGamificationProfileWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {
+        var path = "/api/v2/gamification/profiles/{profileId}"
+        let profileIdPreEscape = "\(profileId)"
+        let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         
@@ -3668,11 +3668,11 @@ open class GamificationAPI {
      
      Activate a performance profile
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postGamificationProfileActivate(performanceProfileId: String, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
-        let requestBuilder = postGamificationProfileActivateWithRequestBuilder(performanceProfileId: performanceProfileId)
+    open class func postGamificationProfileActivate(profileId: String, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfileActivateWithRequestBuilder(profileId: profileId)
         requestBuilder.execute { (response: Response<PerformanceProfile>?, error) -> Void in
             do {
                 if let e = error {
@@ -3693,7 +3693,7 @@ open class GamificationAPI {
      
      Activate a performance profile
      
-     - POST /api/v2/gamification/profiles/{performanceProfileId}/activate
+     - POST /api/v2/gamification/profiles/{profileId}/activate
      - 
      - OAuth:
        - type: oauth2
@@ -3719,15 +3719,15 @@ open class GamificationAPI {
   } ]
 }}]
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func postGamificationProfileActivateWithRequestBuilder(performanceProfileId: String) -> RequestBuilder<PerformanceProfile> {
-        var path = "/api/v2/gamification/profiles/{performanceProfileId}/activate"
-        let performanceProfileIdPreEscape = "\(performanceProfileId)"
-        let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
+    open class func postGamificationProfileActivateWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {
+        var path = "/api/v2/gamification/profiles/{profileId}/activate"
+        let profileIdPreEscape = "\(profileId)"
+        let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         
@@ -3750,11 +3750,11 @@ open class GamificationAPI {
      
      Deactivate a performance profile
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postGamificationProfileDeactivate(performanceProfileId: String, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
-        let requestBuilder = postGamificationProfileDeactivateWithRequestBuilder(performanceProfileId: performanceProfileId)
+    open class func postGamificationProfileDeactivate(profileId: String, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
+        let requestBuilder = postGamificationProfileDeactivateWithRequestBuilder(profileId: profileId)
         requestBuilder.execute { (response: Response<PerformanceProfile>?, error) -> Void in
             do {
                 if let e = error {
@@ -3775,7 +3775,7 @@ open class GamificationAPI {
      
      Deactivate a performance profile
      
-     - POST /api/v2/gamification/profiles/{performanceProfileId}/deactivate
+     - POST /api/v2/gamification/profiles/{profileId}/deactivate
      - 
      - OAuth:
        - type: oauth2
@@ -3801,15 +3801,15 @@ open class GamificationAPI {
   } ]
 }}]
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func postGamificationProfileDeactivateWithRequestBuilder(performanceProfileId: String) -> RequestBuilder<PerformanceProfile> {
-        var path = "/api/v2/gamification/profiles/{performanceProfileId}/deactivate"
-        let performanceProfileIdPreEscape = "\(performanceProfileId)"
-        let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
+    open class func postGamificationProfileDeactivateWithRequestBuilder(profileId: String) -> RequestBuilder<PerformanceProfile> {
+        var path = "/api/v2/gamification/profiles/{profileId}/deactivate"
+        let profileIdPreEscape = "\(profileId)"
+        let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         
@@ -4440,12 +4440,12 @@ open class GamificationAPI {
      
      Updates a performance profile
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
      - parameter body: (body) performanceProfile (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putGamificationProfile(performanceProfileId: String, body: PerformanceProfile? = nil, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
-        let requestBuilder = putGamificationProfileWithRequestBuilder(performanceProfileId: performanceProfileId, body: body)
+    open class func putGamificationProfile(profileId: String, body: PerformanceProfile? = nil, completion: @escaping ((_ data: PerformanceProfile?,_ error: Error?) -> Void)) {
+        let requestBuilder = putGamificationProfileWithRequestBuilder(profileId: profileId, body: body)
         requestBuilder.execute { (response: Response<PerformanceProfile>?, error) -> Void in
             do {
                 if let e = error {
@@ -4466,7 +4466,7 @@ open class GamificationAPI {
      
      Updates a performance profile
      
-     - PUT /api/v2/gamification/profiles/{performanceProfileId}
+     - PUT /api/v2/gamification/profiles/{profileId}
      - 
      - OAuth:
        - type: oauth2
@@ -4492,16 +4492,16 @@ open class GamificationAPI {
   } ]
 }}]
      
-     - parameter performanceProfileId: (path) Performance Profile Id 
+     - parameter profileId: (path) performanceProfileId 
      - parameter body: (body) performanceProfile (optional)
 
      - returns: RequestBuilder<PerformanceProfile> 
      */
-    open class func putGamificationProfileWithRequestBuilder(performanceProfileId: String, body: PerformanceProfile? = nil) -> RequestBuilder<PerformanceProfile> {
-        var path = "/api/v2/gamification/profiles/{performanceProfileId}"
-        let performanceProfileIdPreEscape = "\(performanceProfileId)"
-        let performanceProfileIdPostEscape = performanceProfileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{performanceProfileId}", with: performanceProfileIdPostEscape, options: .literal, range: nil)
+    open class func putGamificationProfileWithRequestBuilder(profileId: String, body: PerformanceProfile? = nil) -> RequestBuilder<PerformanceProfile> {
+        var path = "/api/v2/gamification/profiles/{profileId}"
+        let profileIdPreEscape = "\(profileId)"
+        let profileIdPostEscape = profileIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{profileId}", with: profileIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

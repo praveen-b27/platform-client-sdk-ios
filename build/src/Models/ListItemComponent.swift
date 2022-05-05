@@ -28,7 +28,7 @@ public class ListItemComponent: Codable {
     public var title: String?
     /** Text to show in the list item description. */
     public var _description: String?
-    /** The list item actions. */
+    /** The list item actions (Deprecated). */
     public var actions: ContentActions?
 
     public init(_id: String?, rmid: String?, type: ModelType?, image: String?, title: String?, _description: String?, actions: ContentActions?) {

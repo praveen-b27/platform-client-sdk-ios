@@ -90,6 +90,7 @@ public class ReportingExportMetadataJobResponse: Codable {
         case configureAlertRuleView = "CONFIGURE_ALERT_RULE_VIEW"
         case predictiveRoutingView = "PREDICTIVE_ROUTING_VIEW"
         case predictiveRoutingQueueOverview = "PREDICTIVE_ROUTING_QUEUE_OVERVIEW"
+        case predictiveRoutingModelView = "PREDICTIVE_ROUTING_MODEL_VIEW"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

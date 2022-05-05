@@ -14,6 +14,7 @@ public class MemberGroup: Codable {
     public enum ModelType: String, Codable { 
         case team = "TEAM"
         case group = "GROUP"
+        case skillgroup = "SKILLGROUP"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

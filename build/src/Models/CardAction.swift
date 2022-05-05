@@ -24,9 +24,10 @@ public class CardAction: Codable {
     public var payload: String?
     /** The location of the image file associated with action. */
     public var url: String?
-    public var selected: Bool?
+    /** Indicates if the card option is selected by end customer. */
+    public var isSelected: Bool?
 
-    public init(type: ModelType?, text: String?, payload: String?, url: String?, selected: Bool?) {
+    public init(type: ModelType?, text: String?, payload: String?, url: String?, isSelected: Bool?) {
         
         self.type = type
         
@@ -36,7 +37,7 @@ public class CardAction: Codable {
         
         self.url = url
         
-        self.selected = selected
+        self.isSelected = isSelected
         
     }
 

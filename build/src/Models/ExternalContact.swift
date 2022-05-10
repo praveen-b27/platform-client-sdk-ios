@@ -11,6 +11,11 @@ import Foundation
 
 public class ExternalContact: Codable {
 
+    public enum ModelType: String, Codable { 
+        case ephemeral = "Ephemeral"
+        case identified = "Identified"
+        case curated = "Curated"
+    }
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The first name of the contact. */
@@ -46,10 +51,18 @@ public class ExternalContact: Codable {
     public var customFields: [String:JSON]?
     /** Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. */
     public var externalDataSources: [ExternalDataSource]?
+    /** The type of contact */
+    public var type: ModelType?
+    /** The contact at the head of the merge tree. If null, this contact is not a part of any merge. */
+    public var canonicalContact: ContactAddressableEntityRef?
+    /** The set of all contacts that are a part of the merge tree. If null, this contact is not a part of any merge. */
+    public var mergeSet: [ContactAddressableEntityRef]?
+    /** Information about the merge history of this contact. If null, this contact is not a part of any merge. */
+    public var mergeOperation: MergeOperation?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: PhoneNumber?, cellPhone: PhoneNumber?, homePhone: PhoneNumber?, otherPhone: PhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ContactAddress?, twitterId: TwitterId?, lineId: LineId?, whatsAppId: WhatsAppId?, facebookId: FacebookId?, modifyDate: Date?, createDate: Date?, externalOrganization: ExternalOrganization?, surveyOptOut: Bool?, externalSystemUrl: String?, schema: DataSchema?, customFields: [String:JSON]?, externalDataSources: [ExternalDataSource]?, selfUri: String?) {
+    public init(_id: String?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: PhoneNumber?, cellPhone: PhoneNumber?, homePhone: PhoneNumber?, otherPhone: PhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ContactAddress?, twitterId: TwitterId?, lineId: LineId?, whatsAppId: WhatsAppId?, facebookId: FacebookId?, modifyDate: Date?, createDate: Date?, externalOrganization: ExternalOrganization?, surveyOptOut: Bool?, externalSystemUrl: String?, schema: DataSchema?, customFields: [String:JSON]?, externalDataSources: [ExternalDataSource]?, type: ModelType?, canonicalContact: ContactAddressableEntityRef?, mergeSet: [ContactAddressableEntityRef]?, mergeOperation: MergeOperation?, selfUri: String?) {
         
         self._id = _id
         
@@ -103,6 +116,14 @@ public class ExternalContact: Codable {
         
         self.externalDataSources = externalDataSources
         
+        self.type = type
+        
+        self.canonicalContact = canonicalContact
+        
+        self.mergeSet = mergeSet
+        
+        self.mergeOperation = mergeOperation
+        
         self.selfUri = selfUri
         
     }
@@ -134,6 +155,10 @@ public class ExternalContact: Codable {
         case schema
         case customFields
         case externalDataSources
+        case type
+        case canonicalContact
+        case mergeSet
+        case mergeOperation
         case selfUri
     }
 

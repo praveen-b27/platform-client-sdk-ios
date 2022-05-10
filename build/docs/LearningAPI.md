@@ -177,7 +177,7 @@ LearningAPI.getLearningAssignment(assignmentId: assignmentId, expand: expand) { 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assignmentId** | **String**| The ID of Learning Assignment | |
-| **expand** | [**[String]**](String.html)| Fields to expand in response | [optional]<br />**Values**: module ("module"), assessment ("assessment"), assessmentform ("assessmentForm") |
+| **expand** | [**[String]**](String.html)| Fields to expand in response | [optional]<br />**Values**: module ("module"), assessment ("assessment"), assessmentform ("assessmentForm"), moduleCoverart ("module.coverArt") |
 {: class="table-striped"}
 
 
@@ -388,7 +388,7 @@ LearningAPI.getLearningModule(moduleId: moduleId, expand: expand) { (response, e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **moduleId** | **String**| The ID of the learning module | |
-| **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: assessmentform ("assessmentForm") |
+| **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: assessmentform ("assessmentForm"), coverart ("coverArt") |
 {: class="table-striped"}
 
 
@@ -496,7 +496,7 @@ LearningAPI.getLearningModuleVersion(moduleId: moduleId, versionId: versionId, e
 | ------------- | ------------- | ------------- | ------------- |
 | **moduleId** | **String**| The ID of the learning module | |
 | **versionId** | **String**| The version of learning module | |
-| **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: assessmentform ("assessmentForm") |
+| **expand** | [**[String]**](String.html)| Fields to expand in response(case insensitive) | [optional]<br />**Values**: assessmentform ("assessmentForm"), coverart ("coverArt") |
 {: class="table-striped"}
 
 

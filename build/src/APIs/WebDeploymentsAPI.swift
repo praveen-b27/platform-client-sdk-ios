@@ -224,6 +224,9 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "markdown" : {
+          "enabled" : true
+        },
         "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true,
         "autoStart" : {
@@ -414,6 +417,9 @@ open class WebDeploymentsAPI {
       "apps" : {
         "conversations" : {
           "showUserTypingIndicator" : true,
+          "markdown" : {
+            "enabled" : true
+          },
           "autoStartType" : "aeiou",
           "showAgentTypingIndicator" : true,
           "autoStart" : {
@@ -600,6 +606,9 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "markdown" : {
+          "enabled" : true
+        },
         "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true,
         "autoStart" : {
@@ -786,6 +795,9 @@ open class WebDeploymentsAPI {
       "apps" : {
         "conversations" : {
           "showUserTypingIndicator" : true,
+          "markdown" : {
+            "enabled" : true
+          },
           "autoStartType" : "aeiou",
           "showAgentTypingIndicator" : true,
           "autoStart" : {
@@ -1148,6 +1160,9 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "markdown" : {
+          "enabled" : true
+        },
         "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true,
         "autoStart" : {
@@ -1332,6 +1347,9 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "markdown" : {
+          "enabled" : true
+        },
         "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true,
         "autoStart" : {
@@ -1596,6 +1614,9 @@ open class WebDeploymentsAPI {
     "apps" : {
       "conversations" : {
         "showUserTypingIndicator" : true,
+        "markdown" : {
+          "enabled" : true
+        },
         "autoStartType" : "aeiou",
         "showAgentTypingIndicator" : true,
         "autoStart" : {

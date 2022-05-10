@@ -16,10 +16,10 @@ public class QueueMemberEntityListing: Codable {
     public var pageSize: Int?
     public var firstUri: String?
     public var selfUri: String?
-    public var nextUri: String?
     public var previousUri: String?
+    public var nextUri: String?
 
-    public init(entities: [QueueMember]?, pageNumber: Int?, pageSize: Int?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?) {
+    public init(entities: [QueueMember]?, pageNumber: Int?, pageSize: Int?, firstUri: String?, selfUri: String?, previousUri: String?, nextUri: String?) {
         
         self.entities = entities
         
@@ -31,9 +31,9 @@ public class QueueMemberEntityListing: Codable {
         
         self.selfUri = selfUri
         
-        self.nextUri = nextUri
-        
         self.previousUri = previousUri
+        
+        self.nextUri = nextUri
         
     }
 

@@ -170,6 +170,9 @@ public class ViewFilter: Codable {
         case nuanceDlg = "NuanceDlg"
         case googleDialogFlowCx = "GoogleDialogFlowCx"
         case genesysByob = "GenesysByob"
+        case amazonLexV2 = "AmazonLexV2"
+        case googleDialogFlowCxResell = "GoogleDialogFlowCxResell"
+        case microsoftSttBotFlow = "MicrosoftSttBotFlow"
     }
     public enum BotRecognitionFailureReasonList: String, Codable { 
         case unknown = "Unknown"

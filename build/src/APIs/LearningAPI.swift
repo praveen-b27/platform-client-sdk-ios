@@ -128,6 +128,7 @@ open class LearningAPI {
         case module = "module"
         case assessment = "assessment"
         case assessmentform = "assessmentForm"
+        case moduleCoverart = "module.coverArt"
     }
 
     
@@ -190,6 +191,11 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "coverArt" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "url" : "aeiou"
+    },
     "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
@@ -500,6 +506,11 @@ open class LearningAPI {
       "description" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "source" : "aeiou",
+      "coverArt" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "url" : "aeiou"
+      },
       "type" : "aeiou",
       "version" : 123,
       "completionTimeInDays" : 123,
@@ -628,11 +639,11 @@ open class LearningAPI {
     "user" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -852,6 +863,11 @@ open class LearningAPI {
       "description" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "source" : "aeiou",
+      "coverArt" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "url" : "aeiou"
+      },
       "type" : "aeiou",
       "version" : 123,
       "completionTimeInDays" : 123,
@@ -980,11 +996,11 @@ open class LearningAPI {
     "user" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. Fetch assignments for learning module ID (optional)
@@ -1058,6 +1074,7 @@ open class LearningAPI {
     
     public enum Expand_getLearningModule: String { 
         case assessmentform = "assessmentForm"
+        case coverart = "coverArt"
     }
 
     
@@ -1116,6 +1133,11 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "coverArt" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "url" : "aeiou"
+  },
   "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,
@@ -1298,6 +1320,7 @@ open class LearningAPI {
     
     public enum Expand_getLearningModuleVersion: String { 
         case assessmentform = "assessmentForm"
+        case coverart = "coverArt"
     }
 
     
@@ -1357,6 +1380,11 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "coverArt" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "url" : "aeiou"
+  },
   "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,
@@ -1577,6 +1605,11 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "coverArt" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "url" : "aeiou"
+    },
     "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
@@ -1648,11 +1681,11 @@ open class LearningAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter isArchived: (query) Archive status (optional, default to false)
@@ -1768,6 +1801,11 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "coverArt" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "url" : "aeiou"
+    },
     "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
@@ -2068,6 +2106,11 @@ open class LearningAPI {
     "description" : "aeiou",
     "dateModified" : "2000-01-23T04:56:07.000+0000",
     "source" : "aeiou",
+    "coverArt" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou",
+      "url" : "aeiou"
+    },
     "type" : "aeiou",
     "version" : 123,
     "completionTimeInDays" : 123,
@@ -2350,6 +2393,11 @@ open class LearningAPI {
       "description" : "aeiou",
       "dateModified" : "2000-01-23T04:56:07.000+0000",
       "source" : "aeiou",
+      "coverArt" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou",
+        "url" : "aeiou"
+      },
       "type" : "aeiou",
       "version" : 123,
       "completionTimeInDays" : 123,
@@ -2695,6 +2743,11 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "coverArt" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "url" : "aeiou"
+  },
   "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,
@@ -2837,11 +2890,11 @@ open class LearningAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
   "previousUri" : "aeiou",
+  "nextUri" : "aeiou",
   "unfilteredTotal" : 123
 }}]
      
@@ -2931,6 +2984,11 @@ open class LearningAPI {
   "description" : "aeiou",
   "dateModified" : "2000-01-23T04:56:07.000+0000",
   "source" : "aeiou",
+  "coverArt" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou",
+    "url" : "aeiou"
+  },
   "type" : "aeiou",
   "version" : 123,
   "completionTimeInDays" : 123,

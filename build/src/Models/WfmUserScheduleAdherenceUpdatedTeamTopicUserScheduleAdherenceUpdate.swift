@@ -40,13 +40,14 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
     public var isOutOfOffice: Bool?
     public var adherenceState: AdherenceState?
     public var impact: String?
+    public var adherenceExplanation: WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation?
     public var adherenceChangeTime: Date?
     public var presenceUpdateTime: Date?
     public var activeQueues: [WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference]?
     public var activeQueuesModifiedTime: Date?
     public var removedFromManagementUnit: Bool?
 
-    public init(user: WfmUserScheduleAdherenceUpdatedTeamTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedTeamTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
+    public init(user: WfmUserScheduleAdherenceUpdatedTeamTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedTeamTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceExplanation: WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
         
         self.user = user
         
@@ -71,6 +72,8 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
         self.adherenceState = adherenceState
         
         self.impact = impact
+        
+        self.adherenceExplanation = adherenceExplanation
         
         self.adherenceChangeTime = adherenceChangeTime
         

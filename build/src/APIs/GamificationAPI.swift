@@ -3381,6 +3381,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateStart" : "2000-01-23T04:56:07.000+0000",
+  "dateStartPersonalBest" : "2000-01-23T04:56:07.000+0000",
   "automaticUserAssignment" : true,
   "isActive" : true
 }}]
@@ -4676,6 +4677,7 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateStart" : "2000-01-23T04:56:07.000+0000",
+  "dateStartPersonalBest" : "2000-01-23T04:56:07.000+0000",
   "automaticUserAssignment" : true,
   "isActive" : true
 }}]

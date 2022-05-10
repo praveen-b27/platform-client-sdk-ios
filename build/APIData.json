@@ -2474,6 +2474,25 @@
     "return": "FlowRuntimeExecution",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowExecutionId: String = \"\" // flow execution ID\n\n// Get a flow execution's details. Flow execution details are available for several days after the flow is started.\nGetFlowsExecutionRequest.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowsExecutionRequest.getFlowsExecution was successful\")\n        dump(response)\n    }\n}"
   },
+  "getflowsjob": {
+    "operationId": "getflowsjob",
+    "functionName": "getFlowsJob",
+    "signature": "getFlowsJob(jobId, expand)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      }
+    ],
+    "return": "ArchitectJobStateResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // Job ID\nlet expand: [String] = [GetFlowsJobRequest.Expand_getFlowsJob.enummember.rawValue] // Which fields, if any, to expand.\n\n// Fetch Architect Job Status\nGetFlowsJobRequest.getFlowsJob(jobId: jobId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowsJobRequest.getFlowsJob was successful\")\n        dump(response)\n    }\n}"
+  },
   "getflowsmilestone": {
     "operationId": "getflowsmilestone",
     "functionName": "getFlowsMilestone",
@@ -3060,6 +3079,13 @@
     ],
     "return": "FlowExecutionLaunchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowLaunchRequest: FlowExecutionLaunchRequest = new FlowExecutionLaunchRequest(...) // \n\n// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.\nPostFlowsExecutionsRequest.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostFlowsExecutionsRequest.postFlowsExecutions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postflowsjobs": {
+    "operationId": "postflowsjobs",
+    "functionName": "postFlowsJobs",
+    "signature": "postFlowsJobs()",
+    "return": "RegisterArchitectJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.\nPostFlowsJobsRequest.postFlowsJobs() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostFlowsJobsRequest.postFlowsJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "postflowsmilestones": {
     "operationId": "postflowsmilestones",
@@ -17218,6 +17244,32 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet campaignId: String = \"\" // Campaign ID\n\n// Delete a dialer campaign schedule.\nDeleteOutboundSchedulesCampaignRequest.deleteOutboundSchedulesCampaign(campaignId: campaignId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundSchedulesCampaignRequest.deleteOutboundSchedulesCampaign was successful\")\n    }\n}"
   },
+  "deleteoutboundschedulesemailcampaign": {
+    "operationId": "deleteoutboundschedulesemailcampaign",
+    "functionName": "deleteOutboundSchedulesEmailcampaign",
+    "signature": "deleteOutboundSchedulesEmailcampaign(emailCampaignId)",
+    "parameters": [
+      {
+        "name": "emailCampaignId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet emailCampaignId: String = \"\" // Email Campaign ID\n\n// Delete an email campaign schedule.\nDeleteOutboundSchedulesEmailcampaignRequest.deleteOutboundSchedulesEmailcampaign(emailCampaignId: emailCampaignId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundSchedulesEmailcampaignRequest.deleteOutboundSchedulesEmailcampaign was successful\")\n    }\n}"
+  },
+  "deleteoutboundschedulesmessagingcampaign": {
+    "operationId": "deleteoutboundschedulesmessagingcampaign",
+    "functionName": "deleteOutboundSchedulesMessagingcampaign",
+    "signature": "deleteOutboundSchedulesMessagingcampaign(messagingCampaignId)",
+    "parameters": [
+      {
+        "name": "messagingCampaignId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet messagingCampaignId: String = \"\" // Messaging Campaign ID\n\n// Delete a messaging campaign schedule.\nDeleteOutboundSchedulesMessagingcampaignRequest.deleteOutboundSchedulesMessagingcampaign(messagingCampaignId: messagingCampaignId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteOutboundSchedulesMessagingcampaignRequest.deleteOutboundSchedulesMessagingcampaign was successful\")\n    }\n}"
+  },
   "deleteoutboundschedulessequence": {
     "operationId": "deleteoutboundschedulessequence",
     "functionName": "deleteOutboundSchedulesSequence",
@@ -18561,6 +18613,48 @@
     "return": "[CampaignSchedule]",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Query for a list of dialer campaign schedules.\nGetOutboundSchedulesCampaignsRequest.getOutboundSchedulesCampaigns() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundSchedulesCampaignsRequest.getOutboundSchedulesCampaigns was successful\")\n        dump(response)\n    }\n}"
   },
+  "getoutboundschedulesemailcampaign": {
+    "operationId": "getoutboundschedulesemailcampaign",
+    "functionName": "getOutboundSchedulesEmailcampaign",
+    "signature": "getOutboundSchedulesEmailcampaign(emailCampaignId)",
+    "parameters": [
+      {
+        "name": "emailCampaignId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "EmailCampaignSchedule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet emailCampaignId: String = \"\" // Email Campaign ID\n\n// Get an email campaign schedule.\nGetOutboundSchedulesEmailcampaignRequest.getOutboundSchedulesEmailcampaign(emailCampaignId: emailCampaignId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundSchedulesEmailcampaignRequest.getOutboundSchedulesEmailcampaign was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundschedulesemailcampaigns": {
+    "operationId": "getoutboundschedulesemailcampaigns",
+    "functionName": "getOutboundSchedulesEmailcampaigns",
+    "signature": "getOutboundSchedulesEmailcampaigns()",
+    "return": "MessagingCampaignScheduleEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Query for a list of email campaign schedules.\nGetOutboundSchedulesEmailcampaignsRequest.getOutboundSchedulesEmailcampaigns() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundSchedulesEmailcampaignsRequest.getOutboundSchedulesEmailcampaigns was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundschedulesmessagingcampaign": {
+    "operationId": "getoutboundschedulesmessagingcampaign",
+    "functionName": "getOutboundSchedulesMessagingcampaign",
+    "signature": "getOutboundSchedulesMessagingcampaign(messagingCampaignId)",
+    "parameters": [
+      {
+        "name": "messagingCampaignId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "MessagingCampaignSchedule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet messagingCampaignId: String = \"\" // Messaging Campaign ID\n\n// Get a messaging campaign schedule.\nGetOutboundSchedulesMessagingcampaignRequest.getOutboundSchedulesMessagingcampaign(messagingCampaignId: messagingCampaignId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundSchedulesMessagingcampaignRequest.getOutboundSchedulesMessagingcampaign was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundschedulesmessagingcampaigns": {
+    "operationId": "getoutboundschedulesmessagingcampaigns",
+    "functionName": "getOutboundSchedulesMessagingcampaigns",
+    "signature": "getOutboundSchedulesMessagingcampaigns()",
+    "return": "MessagingCampaignScheduleEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Query for a list of messaging campaign schedules.\nGetOutboundSchedulesMessagingcampaignsRequest.getOutboundSchedulesMessagingcampaigns() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundSchedulesMessagingcampaignsRequest.getOutboundSchedulesMessagingcampaigns was successful\")\n        dump(response)\n    }\n}"
+  },
   "getoutboundschedulessequence": {
     "operationId": "getoutboundschedulessequence",
     "functionName": "getOutboundSchedulesSequence",
@@ -19321,6 +19415,44 @@
     ],
     "return": "CampaignSchedule",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet campaignId: String = \"\" // Campaign ID\nlet body: CampaignSchedule = new CampaignSchedule(...) // CampaignSchedule\n\n// Update a new campaign schedule.\nPutOutboundSchedulesCampaignRequest.putOutboundSchedulesCampaign(campaignId: campaignId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundSchedulesCampaignRequest.putOutboundSchedulesCampaign was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putoutboundschedulesemailcampaign": {
+    "operationId": "putoutboundschedulesemailcampaign",
+    "functionName": "putOutboundSchedulesEmailcampaign",
+    "signature": "putOutboundSchedulesEmailcampaign(emailCampaignId, body)",
+    "parameters": [
+      {
+        "name": "emailCampaignId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "EmailCampaignSchedule",
+        "required": "true"
+      }
+    ],
+    "return": "EmailCampaignSchedule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet emailCampaignId: String = \"\" // Email Campaign ID\nlet body: EmailCampaignSchedule = new EmailCampaignSchedule(...) // EmailCampaignSchedule\n\n// Update an email campaign schedule.\nPutOutboundSchedulesEmailcampaignRequest.putOutboundSchedulesEmailcampaign(emailCampaignId: emailCampaignId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundSchedulesEmailcampaignRequest.putOutboundSchedulesEmailcampaign was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putoutboundschedulesmessagingcampaign": {
+    "operationId": "putoutboundschedulesmessagingcampaign",
+    "functionName": "putOutboundSchedulesMessagingcampaign",
+    "signature": "putOutboundSchedulesMessagingcampaign(messagingCampaignId, body)",
+    "parameters": [
+      {
+        "name": "messagingCampaignId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "MessagingCampaignSchedule",
+        "required": "true"
+      }
+    ],
+    "return": "MessagingCampaignSchedule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet messagingCampaignId: String = \"\" // Messaging Campaign ID\nlet body: MessagingCampaignSchedule = new MessagingCampaignSchedule(...) // MessagingCampaignSchedule\n\n// Update a new messaging campaign schedule.\nPutOutboundSchedulesMessagingcampaignRequest.putOutboundSchedulesMessagingcampaign(messagingCampaignId: messagingCampaignId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutOutboundSchedulesMessagingcampaignRequest.putOutboundSchedulesMessagingcampaign was successful\")\n        dump(response)\n    }\n}"
   },
   "putoutboundschedulessequence": {
     "operationId": "putoutboundschedulessequence",

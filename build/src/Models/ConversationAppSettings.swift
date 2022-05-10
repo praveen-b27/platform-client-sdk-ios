@@ -24,8 +24,10 @@ public class ConversationAppSettings: Codable {
     public var autoStartType: AutoStartType?
     /** The auto start for the messenger conversation */
     public var autoStart: AutoStart?
+    /** The markdown for the messenger app */
+    public var markdown: Markdown?
 
-    public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?) {
+    public init(showAgentTypingIndicator: Bool?, showUserTypingIndicator: Bool?, autoStartType: AutoStartType?, autoStart: AutoStart?, markdown: Markdown?) {
         
         self.showAgentTypingIndicator = showAgentTypingIndicator
         
@@ -34,6 +36,8 @@ public class ConversationAppSettings: Codable {
         self.autoStartType = autoStartType
         
         self.autoStart = autoStart
+        
+        self.markdown = markdown
         
     }
 

@@ -19,6 +19,7 @@ title: WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate
 | **isOutOfOffice** | **Bool** |  | [optional] |
 | **adherenceState** | **String** |  | [optional] |
 | **impact** | **String** |  | [optional] |
+| **adherenceExplanation** | [**WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation**](WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation.html) |  | [optional] |
 | **adherenceChangeTime** | [**Date**](Date.html) |  | [optional] |
 | **presenceUpdateTime** | [**Date**](Date.html) |  | [optional] |
 | **activeQueues** | [**[WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]**](WfmUserScheduleAdherenceUpdatedMuTopicQueueReference.html) |  | [optional] |

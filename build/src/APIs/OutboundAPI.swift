@@ -1014,6 +1014,116 @@ open class OutboundAPI {
     
     /**
      
+     Delete an email campaign schedule.
+     
+     - parameter emailCampaignId: (path) Email Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteOutboundSchedulesEmailcampaign(emailCampaignId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteOutboundSchedulesEmailcampaignWithRequestBuilder(emailCampaignId: emailCampaignId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete an email campaign schedule.
+     
+     - DELETE /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter emailCampaignId: (path) Email Campaign ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteOutboundSchedulesEmailcampaignWithRequestBuilder(emailCampaignId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}"
+        let emailCampaignIdPreEscape = "\(emailCampaignId)"
+        let emailCampaignIdPostEscape = emailCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{emailCampaignId}", with: emailCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Delete a messaging campaign schedule.
+     
+     - parameter messagingCampaignId: (path) Messaging Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteOutboundSchedulesMessagingcampaign(messagingCampaignId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteOutboundSchedulesMessagingcampaignWithRequestBuilder(messagingCampaignId: messagingCampaignId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Delete a messaging campaign schedule.
+     
+     - DELETE /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter messagingCampaignId: (path) Messaging Campaign ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteOutboundSchedulesMessagingcampaignWithRequestBuilder(messagingCampaignId: String) -> RequestBuilder<Void> {
+        var path = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
      Delete a dialer sequence schedule.
      
      - parameter sequenceId: (path) Sequence ID 
@@ -1297,11 +1407,11 @@ open class OutboundAPI {
     "maxAttemptsPerContact" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -1522,11 +1632,11 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -1747,11 +1857,11 @@ open class OutboundAPI {
     "beepDetectionEnabled" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -2401,11 +2511,11 @@ open class OutboundAPI {
               "pageNumber" : 123,
               "entities" : [ "" ],
               "firstUri" : "aeiou",
-              "selfUri" : "aeiou",
               "lastUri" : "aeiou",
+              "selfUri" : "aeiou",
               "pageSize" : 123,
-              "nextUri" : "aeiou",
-              "previousUri" : "aeiou"
+              "previousUri" : "aeiou",
+              "nextUri" : "aeiou"
             },
             "selfUri" : "aeiou",
             "name" : "aeiou",
@@ -3445,11 +3555,11 @@ open class OutboundAPI {
     "enabled" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -3643,11 +3753,11 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -3796,11 +3906,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -3931,11 +4041,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -4144,11 +4254,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -4844,11 +4954,11 @@ open class OutboundAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -5022,11 +5132,11 @@ open class OutboundAPI {
     "zipCodeColumnName" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -5296,11 +5406,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -5725,11 +5835,11 @@ open class OutboundAPI {
     "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Import status (optional, default to false)
@@ -6001,11 +6111,11 @@ open class OutboundAPI {
     "contactMethod" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter includeImportStatus: (query) Include import status (optional, default to false)
@@ -6253,11 +6363,11 @@ open class OutboundAPI {
     "timestamp" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -6604,11 +6714,11 @@ open class OutboundAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -6818,11 +6928,11 @@ open class OutboundAPI {
     "id" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -7131,11 +7241,11 @@ open class OutboundAPI {
     "queue" : ""
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -7330,6 +7440,332 @@ open class OutboundAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[CampaignSchedule]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get an email campaign schedule.
+     
+     - parameter emailCampaignId: (path) Email Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundSchedulesEmailcampaign(emailCampaignId: String, completion: @escaping ((_ data: EmailCampaignSchedule?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundSchedulesEmailcampaignWithRequestBuilder(emailCampaignId: emailCampaignId)
+        requestBuilder.execute { (response: Response<EmailCampaignSchedule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get an email campaign schedule.
+     
+     - GET /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intervals" : [ {
+    "start" : "aeiou",
+    "end" : "aeiou"
+  } ],
+  "emailCampaign" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "timeZone" : "Africa/Abidjan",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter emailCampaignId: (path) Email Campaign ID 
+
+     - returns: RequestBuilder<EmailCampaignSchedule> 
+     */
+    open class func getOutboundSchedulesEmailcampaignWithRequestBuilder(emailCampaignId: String) -> RequestBuilder<EmailCampaignSchedule> {
+        var path = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}"
+        let emailCampaignIdPreEscape = "\(emailCampaignId)"
+        let emailCampaignIdPostEscape = emailCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{emailCampaignId}", with: emailCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailCampaignSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Query for a list of email campaign schedules.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundSchedulesEmailcampaigns(completion: @escaping ((_ data: MessagingCampaignScheduleEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundSchedulesEmailcampaignsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<MessagingCampaignScheduleEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for a list of email campaign schedules.
+     
+     - GET /api/v2/outbound/schedules/emailcampaigns
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "intervals" : [ {
+      "start" : "aeiou",
+      "end" : "aeiou"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "timeZone" : "Africa/Abidjan",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "version" : 123,
+    "messagingCampaign" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
+  "firstUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "pageSize" : 123,
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<MessagingCampaignScheduleEntityListing> 
+     */
+    open class func getOutboundSchedulesEmailcampaignsWithRequestBuilder() -> RequestBuilder<MessagingCampaignScheduleEntityListing> {
+        let path = "/api/v2/outbound/schedules/emailcampaigns"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaignScheduleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     
+     Get a messaging campaign schedule.
+     
+     - parameter messagingCampaignId: (path) Messaging Campaign ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundSchedulesMessagingcampaign(messagingCampaignId: String, completion: @escaping ((_ data: MessagingCampaignSchedule?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundSchedulesMessagingcampaignWithRequestBuilder(messagingCampaignId: messagingCampaignId)
+        requestBuilder.execute { (response: Response<MessagingCampaignSchedule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Get a messaging campaign schedule.
+     
+     - GET /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intervals" : [ {
+    "start" : "aeiou",
+    "end" : "aeiou"
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "timeZone" : "Africa/Abidjan",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "version" : 123,
+  "messagingCampaign" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter messagingCampaignId: (path) Messaging Campaign ID 
+
+     - returns: RequestBuilder<MessagingCampaignSchedule> 
+     */
+    open class func getOutboundSchedulesMessagingcampaignWithRequestBuilder(messagingCampaignId: String) -> RequestBuilder<MessagingCampaignSchedule> {
+        var path = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaignSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    
+    /**
+     
+     Query for a list of messaging campaign schedules.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOutboundSchedulesMessagingcampaigns(completion: @escaping ((_ data: MessagingCampaignScheduleEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOutboundSchedulesMessagingcampaignsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<MessagingCampaignScheduleEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Query for a list of messaging campaign schedules.
+     
+     - GET /api/v2/outbound/schedules/messagingcampaigns
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 123456789,
+  "pageCount" : 123,
+  "pageNumber" : 123,
+  "entities" : [ {
+    "intervals" : [ {
+      "start" : "aeiou",
+      "end" : "aeiou"
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+0000",
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "timeZone" : "Africa/Abidjan",
+    "dateModified" : "2000-01-23T04:56:07.000+0000",
+    "id" : "aeiou",
+    "version" : 123,
+    "messagingCampaign" : {
+      "selfUri" : "aeiou",
+      "name" : "aeiou",
+      "id" : "aeiou"
+    }
+  } ],
+  "firstUri" : "aeiou",
+  "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
+  "pageSize" : 123,
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
+}}]
+
+     - returns: RequestBuilder<MessagingCampaignScheduleEntityListing> 
+     */
+    open class func getOutboundSchedulesMessagingcampaignsWithRequestBuilder() -> RequestBuilder<MessagingCampaignScheduleEntityListing> {
+        let path = "/api/v2/outbound/schedules/messagingcampaigns"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        
+            
+            
+        let body: Data? = nil
+            
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaignScheduleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: url!, body: body)
     }
@@ -7662,11 +8098,11 @@ open class OutboundAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size. The max that will be returned is 100. (optional, default to 25)
@@ -11115,6 +11551,168 @@ open class OutboundAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CampaignSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update an email campaign schedule.
+     
+     - parameter emailCampaignId: (path) Email Campaign ID 
+     - parameter body: (body) EmailCampaignSchedule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putOutboundSchedulesEmailcampaign(emailCampaignId: String, body: EmailCampaignSchedule, completion: @escaping ((_ data: EmailCampaignSchedule?,_ error: Error?) -> Void)) {
+        let requestBuilder = putOutboundSchedulesEmailcampaignWithRequestBuilder(emailCampaignId: emailCampaignId, body: body)
+        requestBuilder.execute { (response: Response<EmailCampaignSchedule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update an email campaign schedule.
+     
+     - PUT /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intervals" : [ {
+    "start" : "aeiou",
+    "end" : "aeiou"
+  } ],
+  "emailCampaign" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  },
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "timeZone" : "Africa/Abidjan",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "version" : 123
+}}]
+     
+     - parameter emailCampaignId: (path) Email Campaign ID 
+     - parameter body: (body) EmailCampaignSchedule 
+
+     - returns: RequestBuilder<EmailCampaignSchedule> 
+     */
+    open class func putOutboundSchedulesEmailcampaignWithRequestBuilder(emailCampaignId: String, body: EmailCampaignSchedule) -> RequestBuilder<EmailCampaignSchedule> {
+        var path = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}"
+        let emailCampaignIdPreEscape = "\(emailCampaignId)"
+        let emailCampaignIdPostEscape = emailCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{emailCampaignId}", with: emailCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailCampaignSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    /**
+     
+     Update a new messaging campaign schedule.
+     
+     - parameter messagingCampaignId: (path) Messaging Campaign ID 
+     - parameter body: (body) MessagingCampaignSchedule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putOutboundSchedulesMessagingcampaign(messagingCampaignId: String, body: MessagingCampaignSchedule, completion: @escaping ((_ data: MessagingCampaignSchedule?,_ error: Error?) -> Void)) {
+        let requestBuilder = putOutboundSchedulesMessagingcampaignWithRequestBuilder(messagingCampaignId: messagingCampaignId, body: body)
+        requestBuilder.execute { (response: Response<MessagingCampaignSchedule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     
+     Update a new messaging campaign schedule.
+     
+     - PUT /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}
+     - 
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intervals" : [ {
+    "start" : "aeiou",
+    "end" : "aeiou"
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+0000",
+  "selfUri" : "aeiou",
+  "name" : "aeiou",
+  "timeZone" : "Africa/Abidjan",
+  "dateModified" : "2000-01-23T04:56:07.000+0000",
+  "id" : "aeiou",
+  "version" : 123,
+  "messagingCampaign" : {
+    "selfUri" : "aeiou",
+    "name" : "aeiou",
+    "id" : "aeiou"
+  }
+}}]
+     
+     - parameter messagingCampaignId: (path) Messaging Campaign ID 
+     - parameter body: (body) MessagingCampaignSchedule 
+
+     - returns: RequestBuilder<MessagingCampaignSchedule> 
+     */
+    open class func putOutboundSchedulesMessagingcampaignWithRequestBuilder(messagingCampaignId: String, body: MessagingCampaignSchedule) -> RequestBuilder<MessagingCampaignSchedule> {
+        var path = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}"
+        let messagingCampaignIdPreEscape = "\(messagingCampaignId)"
+        let messagingCampaignIdPostEscape = messagingCampaignIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{messagingCampaignId}", with: messagingCampaignIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<MessagingCampaignSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: url!, body: body)
     }

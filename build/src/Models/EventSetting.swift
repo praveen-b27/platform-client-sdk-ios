@@ -13,10 +13,14 @@ public class EventSetting: Codable {
 
     /** Settings regarding typing events */
     public var typing: TypingSetting?
+    /** Settings regarding presence events */
+    public var presence: PresenceSetting?
 
-    public init(typing: TypingSetting?) {
+    public init(typing: TypingSetting?, presence: PresenceSetting?) {
         
         self.typing = typing
+        
+        self.presence = presence
         
     }
 

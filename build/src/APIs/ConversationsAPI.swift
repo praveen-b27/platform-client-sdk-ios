@@ -646,6 +646,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -2023,11 +2026,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -3346,11 +3349,11 @@ open class ConversationsAPI {
             "pageNumber" : 123,
             "entities" : [ "" ],
             "firstUri" : "aeiou",
-            "selfUri" : "aeiou",
             "lastUri" : "aeiou",
+            "selfUri" : "aeiou",
             "pageSize" : 123,
-            "nextUri" : "aeiou",
-            "previousUri" : "aeiou"
+            "previousUri" : "aeiou",
+            "nextUri" : "aeiou"
           },
           "selfUri" : "aeiou",
           "name" : "aeiou",
@@ -3989,11 +3992,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter communicationType: (query) Call or Chat communication filtering (optional)
@@ -4837,11 +4840,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallbackConversationEntityListing> 
@@ -5014,11 +5017,11 @@ open class ConversationsAPI {
     "maxParticipants" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CallConversationEntityListing> 
@@ -5162,11 +5165,21 @@ open class ConversationsAPI {
       "externalContact" : {
         "schema" : "",
         "lastName" : "aeiou",
+        "canonicalContact" : {
+          "selfUri" : "aeiou",
+          "id" : "aeiou"
+        },
         "workEmail" : "aeiou",
         "customFields" : {
           "key" : "{}"
         },
+        "mergeOperation" : {
+          "resultingContact" : "",
+          "targetContact" : "",
+          "sourceContact" : ""
+        },
         "title" : "aeiou",
+        "type" : "aeiou",
         "twitterId" : {
           "profileUrl" : "aeiou",
           "name" : "aeiou",
@@ -5175,6 +5188,7 @@ open class ConversationsAPI {
           "screenName" : "aeiou"
         },
         "personalEmail" : "aeiou",
+        "mergeSet" : [ "" ],
         "externalSystemUrl" : "aeiou",
         "id" : "aeiou",
         "otherEmail" : "aeiou",
@@ -5744,11 +5758,11 @@ open class ConversationsAPI {
     "direction" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size, maximum 50 (optional, default to 25)
@@ -6515,11 +6529,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<ChatConversationEntityListing> 
@@ -6987,11 +7001,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<CobrowseConversationEntityListing> 
@@ -7337,11 +7351,11 @@ open class ConversationsAPI {
     "time" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path) conversationId 
@@ -7822,11 +7836,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<EmailConversationEntityListing> 
@@ -9447,11 +9461,11 @@ open class ConversationsAPI {
     } ]
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
 
      - returns: RequestBuilder<MessageConversationEntityListing> 
@@ -9625,6 +9639,9 @@ open class ConversationsAPI {
             "inbound" : "aeiou",
             "outbound" : "aeiou"
           }
+        },
+        "presence" : {
+          "join" : ""
         }
       },
       "version" : "aeiou",
@@ -9642,11 +9659,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9802,6 +9819,9 @@ open class ConversationsAPI {
             "inbound" : "aeiou",
             "outbound" : "aeiou"
           }
+        },
+        "presence" : {
+          "join" : ""
         }
       },
       "version" : "aeiou",
@@ -9819,11 +9839,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -9969,6 +9989,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -10131,6 +10154,9 @@ open class ConversationsAPI {
             "inbound" : "aeiou",
             "outbound" : "aeiou"
           }
+        },
+        "presence" : {
+          "join" : ""
         }
       },
       "version" : "aeiou",
@@ -10149,11 +10175,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10296,6 +10322,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -10458,6 +10487,9 @@ open class ConversationsAPI {
             "inbound" : "aeiou",
             "outbound" : "aeiou"
           }
+        },
+        "presence" : {
+          "join" : ""
         }
       },
       "version" : "aeiou",
@@ -10479,11 +10511,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10625,6 +10657,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -10794,6 +10829,9 @@ open class ConversationsAPI {
             "inbound" : "aeiou",
             "outbound" : "aeiou"
           }
+        },
+        "presence" : {
+          "join" : ""
         }
       },
       "version" : "aeiou",
@@ -10813,11 +10851,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -10963,6 +11001,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -11136,6 +11177,9 @@ open class ConversationsAPI {
             "inbound" : "aeiou",
             "outbound" : "aeiou"
           }
+        },
+        "presence" : {
+          "join" : ""
         }
       },
       "version" : "aeiou",
@@ -11153,11 +11197,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -11309,6 +11353,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -11421,11 +11468,11 @@ open class ConversationsAPI {
     "stickerType" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter messengerType: (path) Messenger Type 
@@ -11528,11 +11575,11 @@ open class ConversationsAPI {
     "version" : 123
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (optional, default to 25)
@@ -12231,11 +12278,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -13492,11 +13539,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -14747,11 +14794,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -15935,11 +15982,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -17123,11 +17170,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -18311,11 +18358,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -19283,6 +19330,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -19421,6 +19471,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -19567,6 +19620,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -19717,6 +19773,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -21057,11 +21116,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -22301,11 +22360,11 @@ open class ConversationsAPI {
           "pageNumber" : 123,
           "entities" : [ "" ],
           "firstUri" : "aeiou",
-          "selfUri" : "aeiou",
           "lastUri" : "aeiou",
+          "selfUri" : "aeiou",
           "pageSize" : 123,
-          "nextUri" : "aeiou",
-          "previousUri" : "aeiou"
+          "previousUri" : "aeiou",
+          "nextUri" : "aeiou"
         },
         "selfUri" : "aeiou",
         "name" : "aeiou",
@@ -25439,11 +25498,11 @@ open class ConversationsAPI {
     "status" : "aeiou"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter conversationId: (path)  
@@ -26009,6 +26068,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -26141,6 +26203,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -26273,6 +26338,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -26412,6 +26480,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -26555,6 +26626,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",
@@ -27061,6 +27135,9 @@ open class ConversationsAPI {
           "inbound" : "aeiou",
           "outbound" : "aeiou"
         }
+      },
+      "presence" : {
+        "join" : ""
       }
     },
     "version" : "aeiou",

@@ -66,6 +66,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsDatatablesDivisionviews**](ArchitectAPI.html#getFlowsDatatablesDivisionviews) | Retrieve a list of datatables for the org |
 | [**getFlowsDivisionviews**](ArchitectAPI.html#getFlowsDivisionviews) | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**getFlowsExecution**](ArchitectAPI.html#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**getFlowsJob**](ArchitectAPI.html#getFlowsJob) | Fetch Architect Job Status |
 | [**getFlowsMilestone**](ArchitectAPI.html#getFlowsMilestone) | Get a flow milestone |
 | [**getFlowsMilestones**](ArchitectAPI.html#getFlowsMilestones) | Get a pageable list of flow milestones, filtered by query parameters |
 | [**getFlowsMilestonesDivisionviews**](ArchitectAPI.html#getFlowsMilestonesDivisionviews) | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
@@ -96,6 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postFlowsDatatableRows**](ArchitectAPI.html#postFlowsDatatableRows) | Create a new row entry for the datatable. |
 | [**postFlowsDatatables**](ArchitectAPI.html#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
 | [**postFlowsExecutions**](ArchitectAPI.html#postFlowsExecutions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**postFlowsJobs**](ArchitectAPI.html#postFlowsJobs) | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
 | [**postFlowsMilestones**](ArchitectAPI.html#postFlowsMilestones) | Create a flow milestone |
 | [**postFlowsOutcomes**](ArchitectAPI.html#postFlowsOutcomes) | Create a flow outcome |
 | [**putArchitectEmergencygroup**](ArchitectAPI.html#putArchitectEmergencygroup) | Updates a emergency group by ID |
@@ -3493,6 +3495,60 @@ ArchitectAPI.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, er
 
 [**FlowRuntimeExecution**](FlowRuntimeExecution.html)
 
+<a name="getFlowsJob"></a>
+
+# **getFlowsJob**
+
+
+
+> [ArchitectJobStateResponse](ArchitectJobStateResponse.html) getFlowsJob(jobId, expand)
+
+Fetch Architect Job Status
+
+
+
+Wraps GET /api/v2/flows/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* architect:job:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // Job ID
+let expand: [String] = [ArchitectAPI.Expand_getFlowsJob.enummember.rawValue] // Which fields, if any, to expand.
+
+// Code example
+ArchitectAPI.getFlowsJob(jobId: jobId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| Job ID | |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: messages ("messages") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ArchitectJobStateResponse**](ArchitectJobStateResponse.html)
+
 <a name="getFlowsMilestone"></a>
 
 # **getFlowsMilestone**
@@ -5122,6 +5178,54 @@ ArchitectAPI.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (respon
 ### Return type
 
 [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
+
+<a name="postFlowsJobs"></a>
+
+# **postFlowsJobs**
+
+
+
+> [RegisterArchitectJobResponse](RegisterArchitectJobResponse.html) postFlowsJobs()
+
+Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
+
+
+
+Wraps POST /api/v2/flows/jobs  
+
+Requires ALL permissions: 
+
+* architect:job:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ArchitectAPI.postFlowsJobs() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**RegisterArchitectJobResponse**](RegisterArchitectJobResponse.html)
 
 <a name="postFlowsMilestones"></a>
 

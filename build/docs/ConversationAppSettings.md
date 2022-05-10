@@ -12,6 +12,7 @@ Conversation settings that handles chats within the messenger
 | **showUserTypingIndicator** | **Bool** | The toggle to enable or disable typing indicator for messenger | [optional] |
 | **autoStartType** | **String** | Deprecated. The auto start type for the messenger conversation | [optional] |
 | **autoStart** | [**AutoStart**](AutoStart.html) | The auto start for the messenger conversation | [optional] |
+| **markdown** | [**Markdown**](Markdown.html) | The markdown for the messenger app | [optional] |
 {: class="table table-striped"}
 
 

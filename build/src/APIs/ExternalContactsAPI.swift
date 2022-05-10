@@ -498,11 +498,21 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "schema" : "",
   "lastName" : "aeiou",
+  "canonicalContact" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
   "workEmail" : "aeiou",
   "customFields" : {
     "key" : "{}"
   },
+  "mergeOperation" : {
+    "resultingContact" : "",
+    "targetContact" : "",
+    "sourceContact" : ""
+  },
   "title" : "aeiou",
+  "type" : "aeiou",
   "twitterId" : {
     "profileUrl" : "aeiou",
     "name" : "aeiou",
@@ -511,6 +521,7 @@ open class ExternalContactsAPI {
     "screenName" : "aeiou"
   },
   "personalEmail" : "aeiou",
+  "mergeSet" : [ "" ],
   "externalSystemUrl" : "aeiou",
   "id" : "aeiou",
   "otherEmail" : "aeiou",
@@ -1684,11 +1695,11 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter contactId: (path) ExternalContact Id 
@@ -1792,11 +1803,21 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "schema" : "",
     "lastName" : "aeiou",
+    "canonicalContact" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "workEmail" : "aeiou",
     "customFields" : {
       "key" : "{}"
     },
+    "mergeOperation" : {
+      "resultingContact" : "",
+      "targetContact" : "",
+      "sourceContact" : ""
+    },
     "title" : "aeiou",
+    "type" : "aeiou",
     "twitterId" : {
       "profileUrl" : "aeiou",
       "name" : "aeiou",
@@ -1805,6 +1826,7 @@ open class ExternalContactsAPI {
       "screenName" : "aeiou"
     },
     "personalEmail" : "aeiou",
+    "mergeSet" : [ "" ],
     "externalSystemUrl" : "aeiou",
     "id" : "aeiou",
     "otherEmail" : "aeiou",
@@ -2242,11 +2264,11 @@ open class ExternalContactsAPI {
     "surveyOptOut" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)
@@ -3198,11 +3220,21 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "schema" : "",
     "lastName" : "aeiou",
+    "canonicalContact" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "workEmail" : "aeiou",
     "customFields" : {
       "key" : "{}"
     },
+    "mergeOperation" : {
+      "resultingContact" : "",
+      "targetContact" : "",
+      "sourceContact" : ""
+    },
     "title" : "aeiou",
+    "type" : "aeiou",
     "twitterId" : {
       "profileUrl" : "aeiou",
       "name" : "aeiou",
@@ -3211,6 +3243,7 @@ open class ExternalContactsAPI {
       "screenName" : "aeiou"
     },
     "personalEmail" : "aeiou",
+    "mergeSet" : [ "" ],
     "externalSystemUrl" : "aeiou",
     "id" : "aeiou",
     "otherEmail" : "aeiou",
@@ -3648,11 +3681,11 @@ open class ExternalContactsAPI {
     "surveyOptOut" : true
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -4403,11 +4436,11 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization Id 
@@ -4924,11 +4957,11 @@ open class ExternalContactsAPI {
     }
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -5444,11 +5477,11 @@ open class ExternalContactsAPI {
     "createDate" : "2000-01-23T04:56:07.000+0000"
   } ],
   "firstUri" : "aeiou",
-  "selfUri" : "aeiou",
   "lastUri" : "aeiou",
+  "selfUri" : "aeiou",
   "pageSize" : 123,
-  "nextUri" : "aeiou",
-  "previousUri" : "aeiou"
+  "previousUri" : "aeiou",
+  "nextUri" : "aeiou"
 }}]
      
      - parameter pageSize: (query) Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)
@@ -6393,11 +6426,21 @@ open class ExternalContactsAPI {
   "contacts" : [ {
     "schema" : "",
     "lastName" : "aeiou",
+    "canonicalContact" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "workEmail" : "aeiou",
     "customFields" : {
       "key" : "{}"
     },
+    "mergeOperation" : {
+      "resultingContact" : "",
+      "targetContact" : "",
+      "sourceContact" : ""
+    },
     "title" : "aeiou",
+    "type" : "aeiou",
     "twitterId" : {
       "profileUrl" : "aeiou",
       "name" : "aeiou",
@@ -6406,6 +6449,7 @@ open class ExternalContactsAPI {
       "screenName" : "aeiou"
     },
     "personalEmail" : "aeiou",
+    "mergeSet" : [ "" ],
     "externalSystemUrl" : "aeiou",
     "id" : "aeiou",
     "otherEmail" : "aeiou",
@@ -6917,11 +6961,21 @@ open class ExternalContactsAPI {
   "entities" : [ {
     "schema" : "",
     "lastName" : "aeiou",
+    "canonicalContact" : {
+      "selfUri" : "aeiou",
+      "id" : "aeiou"
+    },
     "workEmail" : "aeiou",
     "customFields" : {
       "key" : "{}"
     },
+    "mergeOperation" : {
+      "resultingContact" : "",
+      "targetContact" : "",
+      "sourceContact" : ""
+    },
     "title" : "aeiou",
+    "type" : "aeiou",
     "twitterId" : {
       "profileUrl" : "aeiou",
       "name" : "aeiou",
@@ -6930,6 +6984,7 @@ open class ExternalContactsAPI {
       "screenName" : "aeiou"
     },
     "personalEmail" : "aeiou",
+    "mergeSet" : [ "" ],
     "externalSystemUrl" : "aeiou",
     "id" : "aeiou",
     "otherEmail" : "aeiou",
@@ -8790,11 +8845,21 @@ open class ExternalContactsAPI {
     "entity" : {
       "schema" : "",
       "lastName" : "aeiou",
+      "canonicalContact" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "workEmail" : "aeiou",
       "customFields" : {
         "key" : "{}"
       },
+      "mergeOperation" : {
+        "resultingContact" : "",
+        "targetContact" : "",
+        "sourceContact" : ""
+      },
       "title" : "aeiou",
+      "type" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
         "name" : "aeiou",
@@ -8803,6 +8868,7 @@ open class ExternalContactsAPI {
         "screenName" : "aeiou"
       },
       "personalEmail" : "aeiou",
+      "mergeSet" : [ "" ],
       "externalSystemUrl" : "aeiou",
       "id" : "aeiou",
       "otherEmail" : "aeiou",
@@ -9318,11 +9384,21 @@ open class ExternalContactsAPI {
     "entity" : {
       "schema" : "",
       "lastName" : "aeiou",
+      "canonicalContact" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "workEmail" : "aeiou",
       "customFields" : {
         "key" : "{}"
       },
+      "mergeOperation" : {
+        "resultingContact" : "",
+        "targetContact" : "",
+        "sourceContact" : ""
+      },
       "title" : "aeiou",
+      "type" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
         "name" : "aeiou",
@@ -9331,6 +9407,7 @@ open class ExternalContactsAPI {
         "screenName" : "aeiou"
       },
       "personalEmail" : "aeiou",
+      "mergeSet" : [ "" ],
       "externalSystemUrl" : "aeiou",
       "id" : "aeiou",
       "otherEmail" : "aeiou",
@@ -9925,11 +10002,21 @@ open class ExternalContactsAPI {
     "entity" : {
       "schema" : "",
       "lastName" : "aeiou",
+      "canonicalContact" : {
+        "selfUri" : "aeiou",
+        "id" : "aeiou"
+      },
       "workEmail" : "aeiou",
       "customFields" : {
         "key" : "{}"
       },
+      "mergeOperation" : {
+        "resultingContact" : "",
+        "targetContact" : "",
+        "sourceContact" : ""
+      },
       "title" : "aeiou",
+      "type" : "aeiou",
       "twitterId" : {
         "profileUrl" : "aeiou",
         "name" : "aeiou",
@@ -9938,6 +10025,7 @@ open class ExternalContactsAPI {
         "screenName" : "aeiou"
       },
       "personalEmail" : "aeiou",
+      "mergeSet" : [ "" ],
       "externalSystemUrl" : "aeiou",
       "id" : "aeiou",
       "otherEmail" : "aeiou",
@@ -15025,11 +15113,21 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "schema" : "",
   "lastName" : "aeiou",
+  "canonicalContact" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
   "workEmail" : "aeiou",
   "customFields" : {
     "key" : "{}"
   },
+  "mergeOperation" : {
+    "resultingContact" : "",
+    "targetContact" : "",
+    "sourceContact" : ""
+  },
   "title" : "aeiou",
+  "type" : "aeiou",
   "twitterId" : {
     "profileUrl" : "aeiou",
     "name" : "aeiou",
@@ -15038,6 +15136,7 @@ open class ExternalContactsAPI {
     "screenName" : "aeiou"
   },
   "personalEmail" : "aeiou",
+  "mergeSet" : [ "" ],
   "externalSystemUrl" : "aeiou",
   "id" : "aeiou",
   "otherEmail" : "aeiou",
@@ -16981,11 +17080,21 @@ open class ExternalContactsAPI {
      - examples: [{contentType=application/json, example={
   "schema" : "",
   "lastName" : "aeiou",
+  "canonicalContact" : {
+    "selfUri" : "aeiou",
+    "id" : "aeiou"
+  },
   "workEmail" : "aeiou",
   "customFields" : {
     "key" : "{}"
   },
+  "mergeOperation" : {
+    "resultingContact" : "",
+    "targetContact" : "",
+    "sourceContact" : ""
+  },
   "title" : "aeiou",
+  "type" : "aeiou",
   "twitterId" : {
     "profileUrl" : "aeiou",
     "name" : "aeiou",
@@ -16994,6 +17103,7 @@ open class ExternalContactsAPI {
     "screenName" : "aeiou"
   },
   "personalEmail" : "aeiou",
+  "mergeSet" : [ "" ],
   "externalSystemUrl" : "aeiou",
   "id" : "aeiou",
   "otherEmail" : "aeiou",

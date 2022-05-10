@@ -40,13 +40,14 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
     public var isOutOfOffice: Bool?
     public var adherenceState: AdherenceState?
     public var impact: String?
+    public var adherenceExplanation: WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation?
     public var adherenceChangeTime: Date?
     public var presenceUpdateTime: Date?
     public var activeQueues: [WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]?
     public var activeQueuesModifiedTime: Date?
     public var removedFromManagementUnit: Bool?
 
-    public init(user: WfmUserScheduleAdherenceUpdatedMuTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
+    public init(user: WfmUserScheduleAdherenceUpdatedMuTopicUserReference?, managementUnitId: String?, team: WfmUserScheduleAdherenceUpdatedMuTopicUriReference?, scheduledActivityCategory: String?, scheduledActivityCode: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference?, systemPresence: String?, organizationSecondaryPresenceId: String?, routingStatus: RoutingStatus?, actualActivityCategory: String?, isOutOfOffice: Bool?, adherenceState: AdherenceState?, impact: String?, adherenceExplanation: WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation?, adherenceChangeTime: Date?, presenceUpdateTime: Date?, activeQueues: [WfmUserScheduleAdherenceUpdatedMuTopicQueueReference]?, activeQueuesModifiedTime: Date?, removedFromManagementUnit: Bool?) {
         
         self.user = user
         
@@ -71,6 +72,8 @@ public class WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate: 
         self.adherenceState = adherenceState
         
         self.impact = impact
+        
+        self.adherenceExplanation = adherenceExplanation
         
         self.adherenceChangeTime = adherenceChangeTime
         

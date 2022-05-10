@@ -23,6 +23,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteOutboundMessagingcampaignProgress**](OutboundAPI.html#deleteOutboundMessagingcampaignProgress) | Reset messaging campaign progress and recycle the messaging campaign |
 | [**deleteOutboundRuleset**](OutboundAPI.html#deleteOutboundRuleset) | Delete a Rule Set. |
 | [**deleteOutboundSchedulesCampaign**](OutboundAPI.html#deleteOutboundSchedulesCampaign) | Delete a dialer campaign schedule. |
+| [**deleteOutboundSchedulesEmailcampaign**](OutboundAPI.html#deleteOutboundSchedulesEmailcampaign) | Delete an email campaign schedule. |
+| [**deleteOutboundSchedulesMessagingcampaign**](OutboundAPI.html#deleteOutboundSchedulesMessagingcampaign) | Delete a messaging campaign schedule. |
 | [**deleteOutboundSchedulesSequence**](OutboundAPI.html#deleteOutboundSchedulesSequence) | Delete a dialer sequence schedule. |
 | [**deleteOutboundSequence**](OutboundAPI.html#deleteOutboundSequence) | Delete a dialer campaign sequence. |
 | [**getOutboundAttemptlimit**](OutboundAPI.html#getOutboundAttemptlimit) | Get attempt limits |
@@ -71,6 +73,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundRulesets**](OutboundAPI.html#getOutboundRulesets) | Query a list of Rule Sets. |
 | [**getOutboundSchedulesCampaign**](OutboundAPI.html#getOutboundSchedulesCampaign) | Get a dialer campaign schedule. |
 | [**getOutboundSchedulesCampaigns**](OutboundAPI.html#getOutboundSchedulesCampaigns) | Query for a list of dialer campaign schedules. |
+| [**getOutboundSchedulesEmailcampaign**](OutboundAPI.html#getOutboundSchedulesEmailcampaign) | Get an email campaign schedule. |
+| [**getOutboundSchedulesEmailcampaigns**](OutboundAPI.html#getOutboundSchedulesEmailcampaigns) | Query for a list of email campaign schedules. |
+| [**getOutboundSchedulesMessagingcampaign**](OutboundAPI.html#getOutboundSchedulesMessagingcampaign) | Get a messaging campaign schedule. |
+| [**getOutboundSchedulesMessagingcampaigns**](OutboundAPI.html#getOutboundSchedulesMessagingcampaigns) | Query for a list of messaging campaign schedules. |
 | [**getOutboundSchedulesSequence**](OutboundAPI.html#getOutboundSchedulesSequence) | Get a dialer sequence schedule. |
 | [**getOutboundSchedulesSequences**](OutboundAPI.html#getOutboundSchedulesSequences) | Query for a list of dialer sequence schedules. |
 | [**getOutboundSequence**](OutboundAPI.html#getOutboundSequence) | Get a dialer campaign sequence. |
@@ -115,6 +121,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putOutboundMessagingcampaign**](OutboundAPI.html#putOutboundMessagingcampaign) | Update an Outbound Messaging Campaign |
 | [**putOutboundRuleset**](OutboundAPI.html#putOutboundRuleset) | Update a Rule Set. |
 | [**putOutboundSchedulesCampaign**](OutboundAPI.html#putOutboundSchedulesCampaign) | Update a new campaign schedule. |
+| [**putOutboundSchedulesEmailcampaign**](OutboundAPI.html#putOutboundSchedulesEmailcampaign) | Update an email campaign schedule. |
+| [**putOutboundSchedulesMessagingcampaign**](OutboundAPI.html#putOutboundSchedulesMessagingcampaign) | Update a new messaging campaign schedule. |
 | [**putOutboundSchedulesSequence**](OutboundAPI.html#putOutboundSchedulesSequence) | Update a new sequence schedule. |
 | [**putOutboundSequence**](OutboundAPI.html#putOutboundSequence) | Update a new campaign sequence. |
 | [**putOutboundWrapupcodemappings**](OutboundAPI.html#putOutboundWrapupcodemappings) | Update the Dialer wrap up code mapping. |
@@ -937,6 +945,108 @@ OutboundAPI.deleteOutboundSchedulesCampaign(campaignId: campaignId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **campaignId** | **String**| Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOutboundSchedulesEmailcampaign"></a>
+
+# **deleteOutboundSchedulesEmailcampaign**
+
+
+
+> Void deleteOutboundSchedulesEmailcampaign(emailCampaignId)
+
+Delete an email campaign schedule.
+
+
+
+Wraps DELETE /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let emailCampaignId: String = "" // Email Campaign ID
+
+// Code example
+OutboundAPI.deleteOutboundSchedulesEmailcampaign(emailCampaignId: emailCampaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundSchedulesEmailcampaign was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **emailCampaignId** | **String**| Email Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteOutboundSchedulesMessagingcampaign"></a>
+
+# **deleteOutboundSchedulesMessagingcampaign**
+
+
+
+> Void deleteOutboundSchedulesMessagingcampaign(messagingCampaignId)
+
+Delete a messaging campaign schedule.
+
+
+
+Wraps DELETE /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // Messaging Campaign ID
+
+// Code example
+OutboundAPI.deleteOutboundSchedulesMessagingcampaign(messagingCampaignId: messagingCampaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.deleteOutboundSchedulesMessagingcampaign was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| Messaging Campaign ID | |
 {: class="table-striped"}
 
 
@@ -3719,6 +3829,206 @@ This endpoint does not require any parameters.
 
 [**[CampaignSchedule]**](CampaignSchedule.html)
 
+<a name="getOutboundSchedulesEmailcampaign"></a>
+
+# **getOutboundSchedulesEmailcampaign**
+
+
+
+> [EmailCampaignSchedule](EmailCampaignSchedule.html) getOutboundSchedulesEmailcampaign(emailCampaignId)
+
+Get an email campaign schedule.
+
+
+
+Wraps GET /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let emailCampaignId: String = "" // Email Campaign ID
+
+// Code example
+OutboundAPI.getOutboundSchedulesEmailcampaign(emailCampaignId: emailCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundSchedulesEmailcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **emailCampaignId** | **String**| Email Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailCampaignSchedule**](EmailCampaignSchedule.html)
+
+<a name="getOutboundSchedulesEmailcampaigns"></a>
+
+# **getOutboundSchedulesEmailcampaigns**
+
+
+
+> [MessagingCampaignScheduleEntityListing](MessagingCampaignScheduleEntityListing.html) getOutboundSchedulesEmailcampaigns()
+
+Query for a list of email campaign schedules.
+
+
+
+Wraps GET /api/v2/outbound/schedules/emailcampaigns  
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OutboundAPI.getOutboundSchedulesEmailcampaigns() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundSchedulesEmailcampaigns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html)
+
+<a name="getOutboundSchedulesMessagingcampaign"></a>
+
+# **getOutboundSchedulesMessagingcampaign**
+
+
+
+> [MessagingCampaignSchedule](MessagingCampaignSchedule.html) getOutboundSchedulesMessagingcampaign(messagingCampaignId)
+
+Get a messaging campaign schedule.
+
+
+
+Wraps GET /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // Messaging Campaign ID
+
+// Code example
+OutboundAPI.getOutboundSchedulesMessagingcampaign(messagingCampaignId: messagingCampaignId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundSchedulesMessagingcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| Messaging Campaign ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignSchedule**](MessagingCampaignSchedule.html)
+
+<a name="getOutboundSchedulesMessagingcampaigns"></a>
+
+# **getOutboundSchedulesMessagingcampaigns**
+
+
+
+> [MessagingCampaignScheduleEntityListing](MessagingCampaignScheduleEntityListing.html) getOutboundSchedulesMessagingcampaigns()
+
+Query for a list of messaging campaign schedules.
+
+
+
+Wraps GET /api/v2/outbound/schedules/messagingcampaigns  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OutboundAPI.getOutboundSchedulesMessagingcampaigns() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundSchedulesMessagingcampaigns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html)
+
 <a name="getOutboundSchedulesSequence"></a>
 
 # **getOutboundSchedulesSequence**
@@ -6063,6 +6373,114 @@ OutboundAPI.putOutboundSchedulesCampaign(campaignId: campaignId, body: body) { (
 ### Return type
 
 [**CampaignSchedule**](CampaignSchedule.html)
+
+<a name="putOutboundSchedulesEmailcampaign"></a>
+
+# **putOutboundSchedulesEmailcampaign**
+
+
+
+> [EmailCampaignSchedule](EmailCampaignSchedule.html) putOutboundSchedulesEmailcampaign(emailCampaignId, body)
+
+Update an email campaign schedule.
+
+
+
+Wraps PUT /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:emailCampaignSchedule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let emailCampaignId: String = "" // Email Campaign ID
+let body: EmailCampaignSchedule = new EmailCampaignSchedule(...) // EmailCampaignSchedule
+
+// Code example
+OutboundAPI.putOutboundSchedulesEmailcampaign(emailCampaignId: emailCampaignId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.putOutboundSchedulesEmailcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **emailCampaignId** | **String**| Email Campaign ID | |
+| **body** | [**EmailCampaignSchedule**](EmailCampaignSchedule.html)| EmailCampaignSchedule | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EmailCampaignSchedule**](EmailCampaignSchedule.html)
+
+<a name="putOutboundSchedulesMessagingcampaign"></a>
+
+# **putOutboundSchedulesMessagingcampaign**
+
+
+
+> [MessagingCampaignSchedule](MessagingCampaignSchedule.html) putOutboundSchedulesMessagingcampaign(messagingCampaignId, body)
+
+Update a new messaging campaign schedule.
+
+
+
+Wraps PUT /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaignSchedule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // Messaging Campaign ID
+let body: MessagingCampaignSchedule = new MessagingCampaignSchedule(...) // MessagingCampaignSchedule
+
+// Code example
+OutboundAPI.putOutboundSchedulesMessagingcampaign(messagingCampaignId: messagingCampaignId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.putOutboundSchedulesMessagingcampaign was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| Messaging Campaign ID | |
+| **body** | [**MessagingCampaignSchedule**](MessagingCampaignSchedule.html)| MessagingCampaignSchedule | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**MessagingCampaignSchedule**](MessagingCampaignSchedule.html)
 
 <a name="putOutboundSchedulesSequence"></a>
 

@@ -59,8 +59,10 @@ public class LearningModule: Codable {
     public var assessmentForm: AssessmentForm?
     /** The learning module summary data */
     public var summaryData: LearningModuleSummary?
+    /** The cover art for the learning module */
+    public var coverArt: LearningModuleCoverArtResponse?
 
-    public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?) {
+    public init(_id: String?, name: String?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, coverArt: LearningModuleCoverArtResponse?) {
         
         self._id = _id
         
@@ -100,6 +102,8 @@ public class LearningModule: Codable {
         
         self.summaryData = summaryData
         
+        self.coverArt = coverArt
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -122,6 +126,7 @@ public class LearningModule: Codable {
         case informSteps
         case assessmentForm
         case summaryData
+        case coverArt
     }
 
 

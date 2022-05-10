@@ -29,8 +29,10 @@ public class LearningModuleRequest: Codable {
     public var type: ModelType?
     /** The assessment form for learning module */
     public var assessmentForm: AssessmentForm?
+    /** The cover art for the learning module */
+    public var coverArt: LearningModuleCoverArtRequest?
 
-    public init(name: String?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStepRequest]?, type: ModelType?, assessmentForm: AssessmentForm?) {
+    public init(name: String?, _description: String?, completionTimeInDays: Int?, informSteps: [LearningModuleInformStepRequest]?, type: ModelType?, assessmentForm: AssessmentForm?, coverArt: LearningModuleCoverArtRequest?) {
         
         self.name = name
         
@@ -44,6 +46,8 @@ public class LearningModuleRequest: Codable {
         
         self.assessmentForm = assessmentForm
         
+        self.coverArt = coverArt
+        
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -53,6 +57,7 @@ public class LearningModuleRequest: Codable {
         case informSteps
         case type
         case assessmentForm
+        case coverArt
     }
 
 

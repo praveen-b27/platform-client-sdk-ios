@@ -93,6 +93,9 @@ open class WebMessagingAPI {
         "text" : "aeiou",
         "type" : "aeiou"
       },
+      "carousel" : {
+        "cards" : [ "" ]
+      },
       "contentType" : "aeiou",
       "generic" : {
         "image" : "aeiou",
@@ -107,6 +110,19 @@ open class WebMessagingAPI {
           "textback" : "aeiou",
           "url" : "aeiou"
         }
+      },
+      "card" : {
+        "image" : "aeiou",
+        "defaultAction" : {
+          "payload" : "aeiou",
+          "text" : "aeiou",
+          "type" : "aeiou",
+          "url" : "aeiou"
+        },
+        "description" : "aeiou",
+        "video" : "aeiou",
+        "title" : "aeiou",
+        "actions" : [ "" ]
       }
     } ],
     "events" : [ {

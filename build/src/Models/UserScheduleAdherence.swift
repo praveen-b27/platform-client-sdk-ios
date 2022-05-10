@@ -95,7 +95,7 @@ public class UserScheduleAdherence: Codable {
     public var impact: Impact?
     /** Time when the user entered the current adherenceState in ISO-8601 format */
     public var timeOfAdherenceChange: Date?
-    /** Time when presence was last updated.  Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** Time when presence was last updated. Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var presenceUpdateTime: Date?
     /** The list of queues to which this user is joined */
     public var activeQueues: [QueueReference]?
